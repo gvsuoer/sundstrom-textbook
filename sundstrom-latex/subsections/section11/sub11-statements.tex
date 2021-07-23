@@ -1,0 +1,89 @@
+%\subsection*{Statements}
+%Much of our work in mathematics deals with statements.  In mathematics, a \textbf{statement}
+%\label{D:prop}%
+%\index{statement}%
+%  is a declarative sentence that is either true or false but not both.    
+%A statement is sometimes called a \textbf{proposition}.
+%\index{proposition}%
+%The key is that there must be no ambiguity.  To be a statement, a sentence must be  true or false, and it cannot be both.  So a sentence such as ``The sky is beautiful'' is not a statement since whether the sentence is true or not is a matter of opinion.  A question such as ``Is it raining?'' is not a statement because it is a question and is not declaring or asserting that something is true.
+%
+%\begin{prog}[\textbf{Statements}] \label{prog:statements} \hfill \\
+%Determine which of the following sentences are statements?  Do not worry about determining whether a statement is true or false; just determine whether each sentence is a statement or not.
+%\begin{multicols}{2}
+%\begin{enumerate}
+%\item $3 \cdot 4 + 7 = 19$.
+%\item $3 \cdot 5 + 7 = 19$.
+%\item $3x + 7 = 19$.
+%\end{enumerate}
+%\end{multicols}
+%\begin{enumerate} \setcounter{enumi}{3}
+%\item The derivative of $f(x) = \sin x$ is $f'(x) = \cos x$.
+%\item Does the equation $3x^2 - 5x - 7 = 0$ have two real number solutions?
+%\end{enumerate}
+%\end{prog}
+%\hbreak
+
+\subsection*{Statements}
+As we saw in \typeu Activity~\ref*{PA:prop}, some sentences that are mathematical in nature often are not statements because we may not know precisely what a variable represents.  Following are some more examples
+
+
+\begin{itemize}
+  \item There exists a real number $x$ such that $x+7 = 10$. \\
+This is a statement because either such a real number exists or such a real number does not exist.  In this case, this is a true statement since such a real number does exist, namely $x = 3$.
+  \item For each real number $x$, $2x + 5 = 2\left(x + \dfrac{5}{2} \right)$.\\
+This is a statement since either the sentence $2x + 5 = 2\left(x + \dfrac{5}{2} \right)$ is true when any real number is substituted for $x$ (in which case, the statement is true) or there is at least one real number that can be substituted for $x$ and produce a false statement (in which case, the statement is false).  In this case, the given statement is true.
+  \item Solve the equation $x^2 - 7x + 10 = 0$. \\
+This is not a statement since it is a directive.  It does not assert that something is true.
+  \item $(a + b)^2 = a^2 + b^2$ is not a statement since it is not known what $a$ and $b$ represent.  However, the sentence, ``There exist real numbers $a$ and $b$ such that $(a + b)^2 = a^2 + b^2$'' is a statement.  In fact, this is a true statement since there are such integers.  For example, if $a = 1$ and $b = 0$, then 
+$(a + b)^2 = a^2 + b^2$.
+  \item Compare the statement in the previous item to the statement, ``For all real numbers $a$ and $b$, 
+$(a + b)^2 = a^2 + b^2$.''  This is a false statement since there are values for $a$ and $b$ for which 
+$(a + b)^2 \ne a^2 + b^2$.  For example, if $a = 2$ and $b = 3$, then $(a + b)^2 = 5^2 = 25$ and 
+$a^2 + b^2 = 2^2 + 3^2 = 13$.
+\end{itemize}
+
+
+\begin{prog}[\textbf{Statements}] \label{prog:statements2} \hfill \\
+Which of the following sentences are statements?  Do not worry about determining the truth value of those that are statements; just determine whether each sentence is a statement or not.
+
+\begin{multicols}{2}
+\begin{enumerate}
+%\item $3 + 4 = 8$.
+
+\item $2 \cdot 7 + 8 = 22$.
+
+%\item	$\left( {x - 1} \right) = \sqrt {x + 11}$.
+
+\item $2x + 5y = 7$.\label{PA:prop3}
+\end{enumerate}
+\end{multicols}
+\begin{enumerate} \setcounter{enumi}{2}
+\item There are integers  $x$  and  $y$  such that $2x + 5y = 7.$\label{PA:prop4}
+
+%\item There are integers  $x$  and  $y$  such that $23x + 37y = 52.$
+
+%\item If  $x$  and  $y$  are odd integers, then $x \cdot y$ is an odd integer.
+
+\item Given a line  $L$  and a point  $P$  not on that line and in the same plane, there is a unique line in that plane through  $P$  that does not intersect  $L$.
+
+\item $\left( {a + b} \right)^3  = a^3 + 3a^2b + 3ab^2  + b^3.$\label{PA:prop8}
+
+\item For all real numbers $a$ and $b$, $\left( {a + b} \right)^3  = a^3  + 3a^2b + 3ab^2 + b^3$.
+\label{PA:prop9}
+
+%\item The derivative of the sine function is the cosine function.  %$f(x) = \sin x$ is $f'(x) = \cos x$.
+
+\item Does the equation $3x^2 - 5x - 7 = 0$ have two real number solutions?
+
+\item If $ABC$ is a right triangle with right angle at vertex $B$, and if $D$ is the midpoint of the hypotenuse, then the line segment connecting vertex $B$ to $D$ is half the length of the hypotenuse.
+
+%\item If you pick  $N$  distinct points on the circumference of a circle and draw line segments connecting them all with each other, then the interior of the circle will be divided into  
+%$2^{N - 1}$ portions.
+
+\item There do not exist three integers  $x$, $y$, and  $z$ such that 
+ $x^3  + y^3  = z^3.$
+\end{enumerate}
+\end{prog}
+\hbreak
+
+\endinput

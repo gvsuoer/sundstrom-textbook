@@ -1,0 +1,65 @@
+\documentclass[11pt]{article}
+\usepackage{c://pctex/activity}
+
+\lhead{}
+\chead{\textbf{\large{Exercise 10 -- Section 5.4\\A Set Theoretic Definition of an Ordered Pair}}}
+\rhead{}
+\lfoot{\emph{Mathematical Reasoning: Writing and Proof, Third Ed.} \\Ted Sundstrom}
+\cfoot{}
+\rfoot{\copyright \the\year\, by Pearson Education, Inc.\\}
+
+
+\begin{document}
+\begin{enumerate}
+\item Notice that $\left( {3, 5} \right) = \left\{ {\left\{ 3 \right\},\left\{ {3, 5} \right\}} \right\}$ and that  $\left( {5, 3} \right) = \left\{ {\left\{ 5 \right\},\left\{ {5, 3} \right\}} \right\}$.  Each of these ordered pairs is a set whose elements are sets.  In particular,
+\begin{center}
+$\left\{ 3 \right\} \in \left( {3, 5} \right)$ and 
+$\left\{ 3 \right\} \notin \left( {5, 3} \right)$.
+
+$\left\{ 5 \right\} \notin \left( {3, 5} \right)$ and 
+$\left\{ 5 \right\} \in \left( {5, 3} \right)$.
+\end{center}
+Hence, as sets, $\left( {3, 5} \right) \ne \left( {5, 3} \right)$.
+
+\item Let  $A$  and  $B$  be sets and let  $a,c \in A$  and  $b,d \in B$.  We will prove that  $\left( {a,b} \right) = \left( {c,d} \right)$  if and only if  $a = c$ and $b = d$.
+
+First, assume that $a = c$ and $b = d$.  Then, $\left\{ a \right\} = \left\{ c \right\}$ and 
+$\left\{ a, b \right\} = \left\{ c, d \right\}$.  This means that 
+$\left\{ {\left\{ a \right\},\left\{ {a, b} \right\}} \right\} = 
+\left\{ {\left\{ c \right\},\left\{ {c, d} \right\}} \right\}$ and hence, 
+$\left( {a,b} \right) = \left( {c,d} \right)$.
+
+Now assume that $\left( {a,b} \right) = \left( {c,d} \right)$.  Then, 
+$\left\{ {\left\{ a \right\},\left\{ {a, b} \right\}} \right\} = 
+\left\{ {\left\{ c \right\},\left\{ {c, d} \right\}} \right\}$, and hence
+\[
+\left\{ a \right\} \in \left\{ {\left\{ c \right\},\left\{ {c, d} \right\}} \right\}.
+\]
+In the case where $c = d$, then  $a$ must be equal to $c$. In addition,
+\[
+\left\{ a, b \right\} \in \left\{ {\left\{ c \right\},\left\{ {c, d} \right\}} \right\},
+\]
+and hence, $a = b = c = d$.  
+
+In the case where $c \ne d$, then 
+$\left\{ a \right\} \in \left\{ {\left\{ c \right\},\left\{ {c, d} \right\}} \right\}$ implies that $\left\{ a \right\} = \left\{ c \right\}$ and hence, $a = c$.  Now, $a \ne b$ since if 
+$a = b$, then the set $\left\{ {\left\{ a \right\},\left\{ {a, b} \right\}} \right\}$ would only contain one set as an element and the equal set 
+$\left\{ {\left\{ c \right\},\left\{ {c, d} \right\}} \right\}$ would contain two sets as elements since $c \ne d$.  Because the two ordered pairs are equal, we conclude that 
+$\left\{ a, b \right\} = \left\{ c, d \right\}$.  Since we have already proven that $a = c$, we may conclude that $b = d$.  This completes the proof.
+
+\item Let $A$, $B$, and $C$ be sets and let $x \in A$, $y \in B$, and $z \in C$.  The \textbf{ordered triple} $(x, y, z)$ is defined to be the set $\left\{ \left\{ x \right\}, \left\{ x, y \right\}, \left\{ x, y, z \right\} \right\}$.  That is,
+\[
+\left( x, y, z \right) = 
+\left\{ \left\{ x \right\}, \left\{ x, y \right\}, \left\{ x, y, z \right\} \right\}.
+\]
+
+
+
+
+\end{enumerate}
+
+
+
+
+
+\end{document}

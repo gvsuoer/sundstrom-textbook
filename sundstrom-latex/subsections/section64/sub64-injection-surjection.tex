@@ -1,0 +1,239 @@
+\subsection*{Theorems about Composite Functions}
+If $f \x A \to B$ and $g \x B \to C$, then we can form the composite function $g \circ f \x A \to C$.  In Section~\ref{S:typesoffunctions}, we learned about injections and surjections.  We now explore what type of function $g \circ f$ will be if the functions $f$ and $g$ are injections (or surjections).  
+
+\begin{prog}[\textbf{Compositions of Injections and Surjections}] \label{prog:compositesofinjections} \hfill \\
+Although other representations of functions can be used, it will be helpful to use arrow diagrams to represent the functions in this progress check.  We will use the following sets:
+\[
+A = \{ a, b, c \}, \quad B = \{p, q, r\}, \quad C = \{u, v, w, x \}, \quad \text{and} \quad D = \{u, v \}.
+\]
+\begin{enumerate}
+  \item Draw an arrow diagram for a function $f \x A \to B$ that is an injection and an arrow diagram for a function $g \x B \to C$ that is an injection.  In this case, is the composite function 
+$g \circ f \x A \to C$ an injection?  Explain.
+
+    \item Draw an arrow diagram for a function $f \x A \to B$ that is a surjection and an arrow diagram for a function $g \x B \to D$ that is a surjection.  In this case, is the composite function 
+$g \circ f \x A \to D$ a surjection?  Explain.
+
+  \item Draw an arrow diagram for a function $f \x A \to B$ that is a bijection and an arrow diagram for a function $g \x B \to A$ that is a bijection.  In this case, is the composite function 
+$g \circ f \x A \to A$ bijection?  Explain.
+\end{enumerate}
+\end{prog}
+\hbreak
+
+%
+In Progress Check~\ref{prog:compositesofinjections}, we explored some properties of composite functions related to injections, surjections, and bijections.  The following theorem contains results that these explorations were intended to illustrate.  Some of the proofs will be included in the exercises.
+
+\begin{theorem} \label{T:compositefunctions}
+Let  $A$, $B$, and  $C$  be nonempty sets and assume that $f\x A \to B$ and 
+$g\x B \to C$.
+
+\begin{enumerate}
+\item If  $f$  and  $g$  are both injections, then  $(g \circ f) \x A \to C$  is an injection. 
+\label{T:compositefunctions1}
+
+\item If  $f$  and  $g$  are both surjections, then  $(g \circ f) \x A \to C$  is a surjection. \label{T:compositefunctions2}
+
+\item If  $f$  and  $g$  are both bijections, then  $(g \circ f) \x A \to C$  is a bijection. \label{T:compositefunctions3}
+\end{enumerate}
+\end{theorem}
+%\hbreak
+%
+The proof of Part~(\ref{T:compositefunctions1}) is Exercise~(\ref{exer:compositefunctions1}).   Part~(\ref{T:compositefunctions3}) is a direct consequence of the first two parts.  We will discuss a process for constructing a proof  of Part~(\ref{T:compositefunctions2}).  Using the forward-backward process, we first look at the conclusion of the conditional statement in Part~(\ref{T:compositefunctions2}).  The goal is to prove that  $g \circ f$  is a surjection.  Since  $g \circ f\x A \to C$, this is equivalent to proving that
+
+\begin{center}
+For all  $c \in C$, there exists an  $a \in A$  such that  
+$( {g \circ f} )( a ) = c$.
+\end{center}
+
+Since this statement in the backward process uses a universal quantifier, we will use the choose-an-element method and choose an arbitrary element $c$ in the set $C$.  The goal now is to find an  $a \in A$  such that  
+$( {g \circ f} )( a ) = c$.
+
+Now we can look at the hypotheses.  In particular, we are assuming that both  $f\x A \to B$  and  $g\x B \to C$  are surjections.  Since  we have chosen  $c \in C$,  and  $g\x B \to C$  is a surjection, we know that
+
+\begin{center}
+there exists a  $b \in B$  such that  $g( b ) = c$.
+\end{center}
+
+\noindent
+Now, $b \in B$  and   $f\x A \to B$  is a surjection.  Hence
+
+\begin{center}
+there exists an  $a \in A$  such that  $f( a ) = b$.
+\end{center}
+
+\noindent
+If we now compute  $( {g \circ f} )( a )$, we will see that
+\[
+( {g \circ f} )( a ) = g \left( f ( a ) \right) = g ( b ) = c.
+\]
+We can now write the proof as follows:
+\eighth
+
+%\pagebreak
+\noindent
+\textbf{Proof of Theorem~\ref{T:compositefunctions}, Part~(\ref{T:compositefunctions2}).}
+%\begin{myproof}
+Let  $A$, $B$, and  $C$  be nonempty sets and assume that  $f\x A \to B$  and  $g\x B \to C$  are both surjections.  We will prove that  $g \circ f\x A \to C$  is a surjection.
+%\vskip10pt
+%\noindent
+
+Let  $c$ be an arbitrary element of  $C$.  We will prove there exists an $a \in A$ such that 
+$( g \circ f ) ( a ) = c$.  Since  $g\x B \to C$  is a surjection, we conclude that
+
+\begin{center}
+there exists a  $b \in B$  such that  $g( b ) = c$.
+\end{center}
+
+\noindent
+Now, $b \in B$  and   $f\x A \to B$  is a surjection.  Hence 
+
+\begin{center}
+there exists an  $a \in A$  such that  $f( a ) = b$.
+\end{center}
+
+\noindent
+We now  see that
+\[
+\begin{aligned}
+  ( {g \circ f} )( a ) &= g\left( {f( a )} \right) \\ 
+                       &= g( b ) \\ 
+                       &= c. \\ 
+\end{aligned} 
+\]
+We have now shown that for every  $c \in C$, there exists an  $a \in A$  such that  $( {g \circ f} )( a ) = c$, and this proves that  $g \circ f$  is a surjection. \qed
+%\end{myproof}
+%\hbreak
+
+Theorem~\ref{T:compositefunctions} shows us that if $f$ and $g$ are both special types of functions, then the composition of $f$ followed by $g$ is also that type of function.  The next question is, ``If the composition of $f$ followed by $g$ is an injection (or surjection), can we make any conclusions about $f$ or $g$?''  A partial answer to this question is provided in Theorem~\ref{T:morecompositefunctions}.  This theorem will be investigated and proved in the Explorations and Activities for this section.  See 
+Exercise~(\ref{exer:morecompositefunctions1}).
+
+\begin{theorem} \label{T:morecompositefunctions}
+Let  $A$, $B$, and $C$ be nonempty sets and assume that $f\x A \to B$ and  $g\x B \to C$.
+
+\begin{enumerate}
+\item If  $g \circ f\x A \to C$  is an injection, then  $f\x A \to B$  is an injection. \label{T:morecompositefunctions1}
+
+\item If  $g \circ f\x A \to C$ is a surjection, then  $g\x B \to C$ is a surjection. \label{T:morecompositefunctions2}
+\end{enumerate}
+\end{theorem}
+
+\endinput
+
+\begin{activity}[Exploring Composite Functions] \label{A:exploringcomposites} \hfill \\
+%Although other representations of functions can be used, it might be helpful to use arrow diagrams to represent the functions in this activity.  When possible, use an example where the finite domains and codomains have different numbers of elements.
+Let  $A$, $B$, and  $C$  be nonempty sets and let  $f\x A \to B$  and  $g\x B \to C$.  For this activity, it may be useful to draw your arrow diagrams in a triangular arrangement as follows:
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics{figps-comparrow.eps}
+%\caption{Composition of Functions} \label{fig:functioncomposition2}
+\end{center}
+\end{figure}
+
+\begin{enumerate}
+\item Is it possible to construct an example where  $g \circ f$  is an injection,  $f$  is an injection, but  $g$  is not an injection?  Either construct such an example or explain why it is not possible.
+
+\item Is it possible to construct an example where  $g \circ f$  is an injection,  $g$  is an injection, but  $f$  is not an injection?  Either construct such an example or explain why it is not possible.
+
+\item Is it possible to construct an example where  $g \circ f$  is a surjection,  $f$  is a surjection, but  $g$  is not a surjection?  Either construct such an example or explain why it is not possible.
+
+\item Is it possible to construct an example where  $g \circ f$  is surjection,  $g$  is a surjection, but  $f$  is not a surjection?  Either construct such an example or explain why it is not possible.
+\end{enumerate}
+%
+%\subsection*{Theorems about Composite Functions}\index{composite function!theorems about}
+%In the previous two activities, we explored some properties of composite functions related to injections, surjections, and bijections.  The following two theorems contain results that these explorations were intended to illustrate.  Many of the proofs will be included in the exercises.
+%
+%\begin{theorem} \label{T:compositefunctions}
+%Let  $A$, $B$, and  $C$  be nonempty sets and let  $f\x A \to B$ and  $g\x B \to C$.
+%
+%\begin{enumerate}
+%\item If  $f$  and  $g$  are both injections, then  $g \circ f$  is an injection. \label{T:compositefunctions1}
+%
+%\item If  $f$  and  $g$  are both surjections, then  $g \circ f$  is a surjection. \label{T:compositefunctions2}
+%
+%\item If  $f$  and  $g$  are both bijections, then  $g \circ f$  is a bijection. \label{T:compositefunctions3}
+%\end{enumerate}
+%\end{theorem}
+%%\hbreak
+%%
+%The results of Theorem~\ref{T:compositefunctions} are related to the explorations in Activity~\ref{A:compositesofinjections}.  Part~(\ref{T:compositefunctions3}) of Theorem~\ref{T:compositefunctions} is a direct consequence of the first two parts.  We will discuss constructing a proof  of Part~(\ref{T:compositefunctions2}).  Using the forward-backward process, we first look at the conclusion of the conditional statement in Part~(\ref{T:compositefunctions2}).  The goal is to prove that  $g \circ f$  is a surjection.  Since  $g \circ f\x A \to C$, this is equivalent to proving that
+%
+%\begin{center}
+%For all  $c \in C$, there exists an  $a \in A$  such that  
+%$( {g \circ f} )( a ) = c$.
+%\end{center}
+%
+%Since this statement in the backward process uses a universal quantifier, we will start by selecting an arbitrary element $c$ in the set $C$.  The goal now is to find an  $a \in A$  such that  $( {g \circ f} )( a ) = c$.
+%
+%Now we can look at the hypotheses.  In particular, we are assuming that both  $f\x A \to B$  and  $g\x B \to C$  are surjections.  
+%
+%Since  we have chosen  $c \in C$,  and  $g\x B \to C$  is a surjection, we know that
+%
+%\begin{center}
+%there exists a  $b \in B$  such that  $g( b ) = c$.
+%\end{center}
+%
+%Now, $b \in B$  and   $f\x A \to B$  is a surjection.  Hence
+%
+%\begin{center}
+%there exists an  $a \in A$  such that  $f( a ) = b$.
+%\end{center}
+%
+%If we now compute  $( {g \circ f} )( a )$, we will see that
+%\[
+%( {g \circ f} )( a ) = g ( f ( a ) ) = g ( b ) = c.
+%\]
+%We can now write the proof as follows:
+%%
+%
+%\pagebreak
+%\noindent
+%\textbf{Proof of Theorem~\ref{T:compositefunctions}, Part~(\ref{T:compositefunctions2}).}
+%\begin{myproof}
+%Let  $A$, $B$, and  $C$  be nonempty sets and assume that  $f\x A \to B$  and  $g\x B \to C$  are both surjections.  We will prove that  $g \circ f\x A \to C$  is a surjection.
+%%\vskip10pt
+%%\noindent
+%
+%Let  $c$ be an arbitrary element of  $C$.  We will prove there exists an $a \in A$ such that 
+%$( g \circ f ) ( a ) = c$.  Since  $g\x B \to C$  is a surjection, we conclude that
+%
+%\begin{center}
+%there exists a  $b \in B$  such that  $g( b ) = c$.
+%\end{center}
+%
+%\noindent
+%Now, $b \in B$  and   $f\x A \to B$  is a surjection.  Hence 
+%
+%\begin{center}
+%there exists an  $a \in A$  such that  $f( a ) = b$.
+%\end{center}
+%
+%\noindent
+%We now  see that
+%\[
+%\begin{aligned}
+%  ( {g \circ f} )( a ) &= g( {f( a )} ) \\ 
+%                                             &= g( b ) \\ 
+%                                             &= c. \\ 
+%\end{aligned} 
+%\]
+%We have now shown that for every  $c \in C$, there exists an  $a \in A$  such that  $( {g \circ f} )( a ) = c$, and this proves that  $g \circ f$  is a surjection.
+%\end{myproof}
+%\hbreak
+%
+The results of Theorem~\ref{T:morecompositefunctions} are related to the explorations in Activity~\ref{A:exploringcomposites}.  The proof Theorem~\ref{T:morecompositefunctions} is 
+Exercise~(\ref{exer:morecompositefunctions1}).
+
+\begin{theorem} \label{T:morecompositefunctions}
+Let  $A$, $B$, and $C$ be nonempty sets and assume that $f\x A \to B$ and  $g\x B \to C$.
+
+\begin{enumerate}
+\item If  $g \circ f\x A \to C$  is an injection, then  $f\x A \to B$  is an injection. \label{T:morecompositefunctions1}
+
+\item If  $g \circ f\x A \to C$ is a surjection, then  $g\x B \to C$ is a surjection. \label{T:morecompositefunctions2}
+\end{enumerate}
+\end{theorem}
+\end{activity}
+\hbreak
+
+\endinput
+

@@ -1,0 +1,140 @@
+\usepackage{amsmath,amssymb,amsthm, amsfonts,graphics,multicol}
+\usepackage{times}
+\usepackage[subscriptcorrection,nofontinfo]{mtpro2}
+\usepackage[mathscr]{eucal}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{xr}
+\externaldocument{0-MR}
+
+\setlength{\topmargin}{-36pt}
+\setlength{\textheight}{8in}
+\setlength{\textwidth}{6.5in}
+\setlength{\oddsidemargin}{0pt}
+\setlength{\marginparwidth}{0pt}
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0pt}
+
+\renewcommand\headrulewidth{0pt}
+
+
+\newcommand{\xsubsection}[1]{\subsection*{#1} \vspace{-10pt}}
+\newcommand{\xsection}[1]{\section*{#1} \vspace{-10pt}}
+\newcommand{\xsubsubsection}[1]{\subsubsection*{#1} \vspace{-10pt}}
+\newcommand{\mynot}{\neg}
+\newcommand{\hbreak}{\vskip6pt \hrule \vskip6pt}
+\newcommand{\hint}{\textbf{Hint}:\,\,}
+\newcommand{\note}{\textbf{Note}:\,\,}
+\newcommand{\solution}{\noindent \textbf{Solution. }}
+\newcommand{\answer}{\noindent \textbf{Answer. }}
+\newcommand{\bsq}{\hfill $\blacksquare$}
+\newcommand{\ansblank}[1]{\underline{\hspace{#1}}}
+\newcommand{\ans}[1]{\underline{~~~~~{#1}~~~~~}}
+
+
+\newcommand{\eighth}{\vspace{0.125in}}
+\newcommand{\quarter}{\vspace{0.25in}}
+\newcommand{\half}{\vspace{0.5in}}
+\newcommand{\one}{\vspace{1.0in}}
+\newcommand{\two}{\vspace{2.0in}}
+\newcommand{\three}{\vspace{3.0in}}
+\newcommand{\newpar}{\eighth \noindent}
+
+\newcommand{\zmod}[1]{\mathbb{Z}_{#1}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Line}[1]{\overleftrightarrow{#1}}
+\newcommand{\Ray}[1]{\overrightarrow{#1}}
+
+%Linear Algebra Commands
+\newcommand{\replace}[3]{Replace $R_{#2}$ with $R_{#2} + \left(#3 \right)R_{#1}$}
+\newcommand{\swap}[2]{Interchange $R_{#1}$ and $R_{#2}$}
+\newcommand{\mulrow}[2]{Multiply $R_{#1}$ by $#2$}
+\newcommand{\To}{\longrightarrow}
+\newcommand{\vect}[1]{\ensuremath{\mathbf{#1}}}
+\newcommand{\vu}{\ensuremath{\mathbf{u}}}
+\newcommand{\vv}{\ensuremath{\mathbf{v}}}
+\newcommand{\vw}{\ensuremath{\mathbf{w}}}
+\newcommand{\vx}{\ensuremath{\mathbf{x}}}
+\newcommand{\vy}{\ensuremath{\mathbf{y}}}
+\newcommand{\va}{\ensuremath{\mathbf{a}}}
+\newcommand{\vb}{\ensuremath{\mathbf{b}}}
+\newcommand{\vc}{\ensuremath{\mathbf{c}}}
+\newcommand{\vi}{\ensuremath{\mathbf{i}}}
+\newcommand{\vj}{\ensuremath{\mathbf{j}}}
+\newcommand{\vk}{\ensuremath{\mathbf{k}}}
+\newcommand{\vn}{\ensuremath{\mathbf{n}}}
+\newcommand{\vr}{\ensuremath{\mathbf{r}}}
+\newcommand{\vzero}{\ensuremath{\mathbf{0}}}
+\newcommand{\scb}{\mathscr{B}}
+\newcommand{\scs}{\mathscr{S}}
+\newcommand{\myvec}[1]{\overrightarrow{#1}}
+
+
+\newcommand{\vectwo}[2]{\left[ \begin{matrix} #1 \\ #2 \end{matrix} \right]}
+\newcommand{\vecthree}[3]{\left[ \begin{matrix} #1 \\ #2 \\ #3 \end{matrix} \right]}
+\newcommand{\vecfour}[4]{\left[ \begin{matrix} #1 \\ #2 \\ #3 \\ #4 \end{matrix} \right]}
+\newcommand{\vecfive}[5]{\left[ \begin{matrix} #1 \\ #2 \\ #3 \\ #4 \\ #5 \end{matrix} \right]}
+
+\newcommand{\vecn}[1]{\left[ \begin{matrix} #1_1 \\ #1_2 \\ \vdots \\ #1_n \end{matrix} \right]}
+\newcommand{\vecnn}[3]{\left[ \begin{matrix} #1 \\ #2 \\ \vdots \\ #3 \end{matrix} \right]}
+
+\newcommand{\twotwo}[4]{\left[ \begin{matrix} #1 & #2 \\ #3 & #4 \end{matrix} \right]}
+\newcommand{\permthree}[3]{\left( \begin{matrix} 1 & 2 & 3\\ #1 & #2 & #3 \end{matrix} \right)}
+\newcommand{\permfour}[4]{\left( \begin{matrix} 1 & 2 & 3 & 4 \\ #1 & #2 & #3 & #4 \end{matrix} \right)}
+
+\newcommand{\Span}{\text{Span}}
+\newcommand{\col}{\text{Col }}
+\newcommand{\nul}{\text{Nul }}
+
+
+\newenvironment{myproof}
+  {\begin{proof}[\textbf{Proof}]}
+  {\end{proof}}
+
+\newenvironment{defbox}[2]{\begin{center}
+  \fbox{\parbox{6in}{\begin{definition}\label{#1}{#2}
+  \end{definition}}}
+  \end{center}}
+
+\newenvironment{mybox}[1]{\begin{center}
+  \fbox{\parbox{6in}{{#1}}}
+  \end{center}}
+
+\newenvironment{focus} {\vspace*{3pt} \textbf{\large{Focus Questions}}  \vspace*{-2pt}\hbreak   \vspace{3pt} \emph{The following questions are meant to guide our study of the material in this section.  After studying this section, we should understand the concepts motivated by these questions and be able to write precise, coherent answers to these questions.}  \hbreak
+}
+
+\renewcommand{\theequation}{\arabic{equation}}
+\renewcommand{\theenumi}{\textbf{\arabic{enumi}}}
+\renewcommand{\theenumii}{\textbf{\alph{enumii}}}
+\renewcommand{\qedsymbol}{\ensuremath{\blacksquare}}
+\renewcommand{\pmod}[1]{\; \left( \text{mod } #1 \right)}
+\renewcommand{\mod}[3]{{#1} \equiv {#2} \pmod {#3}}
+\newcommand{\notmod}[3]{{#1} \not \equiv {#2} \pmod {#3}}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem*{divalgo}{The Division Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition}
+
+\newtheorem{activity}{Activity}
+\newtheoremstyle{activity}%
+{9pt}{9pt}% space above and below
+{\normalfont}% body style
+{0pt}% heading indent amount
+{\bfseries}{}% heading font and punctuation after it
+{}% space after heading (\newline = linebreak)
+{}% head spec (empty = same as 'plain' style)
+
+%\lhead{}
+%\chead{\textbf{MTH 310 \\ Standard Number Systems}}
+%\rhead{}

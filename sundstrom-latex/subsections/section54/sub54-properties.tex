@@ -1,0 +1,105 @@
+One purpose of the work in Progress Checks~\ref{prog:relationscartesian} 
+and~\ref{prog:cartprodintervals} was to indicate the plausibility of many of the results contained in the next theorem.
+%
+%\pagebreak
+\begin{theorem}\label{T:propsofcartprod}
+Let  $A$, $B$, and  $C$  be sets.  Then
+\begin{enumerate}
+\item $A \times \left( {B \cap C} \right) = \left( {A \times B} \right) \cap \left( {A \times C} \right)$ 
+\label{T:propsofcartprod1}%
+ 
+\item $A \times \left( {B \cup C} \right) = \left( {A \times B} \right) \cup \left( {A \times C} \right)$ 
+\label{T:propsofcartprod2}%
+
+\item $\left( {A \cap B} \right) \times C = \left( {A \times C} \right) \cap \left( {B \times C} \right)$ 
+\label{T:propsofcartprod3}%
+
+\item $\left( {A \cup B} \right) \times C = \left( {A \times C} \right) \cup \left( {B \times C} \right)$ 
+\label{T:propsofcartprod4}%
+
+\item $A \times \left( {B - C} \right) = \left( {A \times B} \right) - \left( {A \times C} \right)$ 
+\label{T:propsofcartprod5}%
+
+\item $\left( {A - B} \right) \times C = \left( {A \times C} \right) - \left( {B \times C} \right)$ 
+\label{T:propsofcartprod6}%
+
+\item If  $T \subseteq A$, then  $T \times B \subseteq A \times B$. 
+\label{T:propsofcartprod7}%
+
+\item If  $Y \subseteq B$, then  $A \times Y \subseteq A \times B$. 
+\label{T:propsofcartprod8}%
+\end{enumerate}
+\end{theorem}
+%
+We will not prove all these results; rather, we will prove 
+Part~(\ref{T:propsofcartprod2}) of Theorem~\ref{T:propsofcartprod} and leave some of the rest to the exercises.  In constructing these proofs, we need to keep in mind that Cartesian products are sets, and so we follow many of the same principles to prove set relationships that were introduced in Sections~\ref{S:provingset} and~\ref{S:setproperties}.  
+
+The other thing to remember is that the elements of a Cartesian product are ordered pairs.  So when we start a proof of a result such as Part~(\ref{T:propsofcartprod2}) of Theorem~\ref{T:propsofcartprod}, the primary goal is to prove that the two sets are equal.  We will do this by proving that each one is a subset of the other one.  So if we want to prove that   
+$A \times \left( {B \cup C} \right) \subseteq \left( {A \times B} \right) \cup \left( {A \times C} \right)$, we can start by choosing an arbitrary element of  
+$A \times \left( {B \cup C} \right)$.  The goal is then to show that this element must be in  
+$\left( {A \times B} \right) \cup \left( {A \times C} \right)$.  When we start by choosing an arbitrary element of  $A \times \left( {B \cup C} \right)$, we could give that element a name.  For example, we could start by letting
+\setcounter{equation}{0}
+\begin{equation} \label{eq:cartprod}
+u \text{ be an element of } A \times \left( {B \cup C} \right)\!.
+\end{equation}
+We can then use the definition of ``ordered pair'' to conclude that 
+\begin{equation} \label{eq:cartprod2}
+\text{there exists } x \in A  \text{ and there exists } y \in B \cup C \text{ such that }  u = \left( {x,y} \right).
+\end{equation}
+In order to prove that $A \times \left( {B \cup C} \right) \subseteq \left( {A \times B} \right) \cup \left( {A \times C} \right)$, we must now show that the ordered pair $u$ from~(\ref{eq:cartprod}) is in 
+$\left( {A \times B} \right) \cup \left( {A \times C} \right)$. In order to do this, we can use the definition of set union and prove that
+\begin{equation} \label{eq:cartprod3}
+u \in (A \times B) \text{ or } u \in (A \times C).
+\end{equation}
+Since $u = (x, y)$, we can prove~(\ref{eq:cartprod3}) by proving that
+\begin{equation} \label{eq:cartprod4}
+\left( x \in A \text{ and } y \in B \right) \text{ or } \left( x \in A \text{ and } y \in C \right).
+\end{equation}
+If we look at the sentences in~(\ref{eq:cartprod2}) and~(\ref{eq:cartprod4}), it would seem that we are very close to proving that 
+$A \times \left( {B \cup C} \right) \subseteq \left( {A \times B} \right) \cup \left( {A \times C} \right)$.  
+Following is a proof of Part~(\ref{T:propsofcartprod2}) of Theorem~\ref{T:propsofcartprod}.
+%
+\addtocounter{theorem}{-1}
+\setcounter{equation}{0}
+%
+
+\begin{theorem}[Part~(\ref{T:propsofcartprod2})] \label{T:propsofcartprodx}
+Let  $A$, $B$, and  $C$  be sets.  Then
+\[
+A \times \left( {B \cup C} \right) = \left( {A \times B} \right) \cup \left( {A \times C} \right).
+\]
+\end{theorem}
+%
+\begin{myproof}
+Let  $A$, $B$, and  $C$  be sets.  We will prove that $A \times \left( {B \cup C} \right)$ is equal to $\left( {A \times B} \right) \cup \left( {A \times C} \right)$ by proving that each set is a subset of the other set.
+
+To prove that  $A \times \left( {B \cup C} \right) \subseteq \left( {A \times B} \right) \cup \left( {A \times C} \right)$, we let  $u \in A \times \left( {B \cup C} \right)$. Then there exists $x \in A$ and there exists  $y \in B \cup C$ such that  $u = \left( {x,y} \right)$.  Since  $y \in B \cup C$, we know that  $y \in B$  or  $y \in C$.
+
+In the case where  $y \in B$, we have  $u = \left( {x,y} \right)$, where  $x \in A$  and  $y \in B$.  So in this case,  $u \in A \times B$, and hence  $u \in \left( {A \times B} \right) \cup \left( {A \times C} \right)$.  Similarly, in the case where  $y \in C$, we have  $u = \left( {x,y} \right)$, where  $x \in A$  and  $y \in C$.  So in this case,  $u \in A \times C$ and, hence, $u \in \left( {A \times B} \right) \cup \left( {A \times C} \right)$.  
+
+In both cases, $u \in \left( {A \times B} \right) \cup \left( {A \times C} \right)$.  Hence, we may conclude that if  $u$ is an element of  $A \times \left( {B \cup C} \right)$, then  $u \in \left( {A \times B} \right) \cup \left( {A \times C} \right)$, and this proves that
+\begin{equation} \label{eq:4m}
+A \times \left( {B \cup C} \right) \subseteq \left( {A \times B} \right) \cup \left( {A \times C} \right)\!.
+\end{equation}
+%\vskip10pt
+
+We must now prove that  $\left( {A \times B} \right) \cup \left( {A \times C} \right) \subseteq A \times \left( {B \cup C} \right)$. So we let $v \in \left( {A \times B} \right) \cup \left( {A \times C} \right)$.  Then $v \in \left( {A \times B} \right)$  or  $v \in \left( {A \times C} \right)$.
+
+In the case where  $v \in \left( {A \times B} \right)$, we know that there exists  $s \in A$ and there exists  $t \in B$ such that  $v = \left( {s,\;t} \right)$.  But since  $t \in B$, we know that  $t \in B \cup C$, and hence  $v \in A \times \left( {B \cup C} \right)$.  Similarly, in the case where  $v \in \left( {A \times C} \right)$, we know that there exists  $s \in A$ and there exists  $t \in C$ such that  $v = \left( {s,t} \right)$.  But because  $t \in C$, we can conclude that  $t \in B \cup C$ and, hence,  $v \in A \times \left( {B \cup C} \right)$.
+
+In both cases, $v \in A \times \left( {B \cup C} \right)$.  Hence, we may conclude that if \linebreak 
+$v \in \left( {A \times B} \right) \cup \left( {A \times C} \right)$, then $v \in A \times \left( {B \cup C} \right)$, and this proves that
+\begin{equation}  \label{eq:4n}
+\left( {A \times B} \right) \cup \left( {A \times C} \right) \subseteq A \times \left( {B \cup C} \right)\!.
+\end{equation}
+The relationships in~(\ref{eq:4m}) and~(\ref{eq:4n}) prove that $A \times \left( {B \cup C} \right) = \left( {A \times B} \right) \cup \left( {A \times C} \right)$.
+\end{myproof}
+%\hbreak
+
+\noindent
+\textbf{Final Note}.  The definition of an ordered pair in \typeu Activity~\ref*{prev54-cartesian} may have seemed like a lengthy definition, but in some areas of mathematics, an even more formal and precise definition of ``ordered pair'' is needed.  This definition is explored in  
+Exercise~(\ref{exer:defoforderedpair}).
+\hbreak
+
+
+\endinput

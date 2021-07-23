@@ -1,0 +1,53 @@
+\documentclass[11pt]{article}
+\usepackage{c://pctex/activity}
+
+\lhead{}
+\chead{\textbf{\large{Exercise 13 - Section 2.2\\Working with Truth Values of Statements}}}
+\rhead{}
+\lfoot{\emph{Mathematical Reasoning: Writing and Proof, Third Ed.} \\Ted Sundstrom}
+\cfoot{}
+\rfoot{\copyright 2009 by Pearson Education, Inc.\\}
+
+
+\begin{document}
+\noindent
+Suppose we are trying to prove the following for integers  $x$  and  $y$:
+
+\begin{center}
+If  $x \cdot y$  is even then  $x$  is  even  or  $y$  is even.
+\end{center}
+
+\begin{enumerate}
+%\item By letting  $P$  be the statement, ``$x \cdot y$ is even'', $Q$ be the statement, 
+%``$x$  is even'', and  $R$  be the statement, ``$y$  is even'', we can write this statement in the symbolic form:
+%\[
+%P \to \left( {Q \vee R} \right).
+%\]
+
+\item The contrapositive of  $P \to \left( {Q \vee R} \right)$ can be written as  
+$\mynot  \left( {Q \vee R} \right) \to \mynot  P$.  We can use one of De Morgan's Laws to rewrite the hypothesis of this conditional statement and obtain the following logical equivalency:
+
+\[
+\mynot  \left( {Q \vee R} \right) \to \mynot  P \equiv \left( {\mynot  Q \wedge \mynot  R} \right) \to \mynot  P.
+\]
+
+This shows that
+\[
+P \to \left( {Q \vee R} \right) \equiv \left( {\mynot  Q \wedge \mynot  R} \right) \to \mynot  P.
+\]
+
+\item Using the notation from Part (1),  $\mynot  P$ is, ``$x \cdot y$  is odd'',  
+$\mynot  Q$  is, ``$x$  is odd'', and  $\mynot  R$  is, `$y$ is odd.''  So the logical equivalency in Part (2) tells us that  the given statement is logically equivalent to the following statement:
+
+\begin{center}
+If  $x$  is  odd and  $y$  is odd, then  $x \cdot y$  is odd.
+\end{center}
+\end{enumerate}
+The statements in this activity are logically equivalent.  We now have the choice of proving either of the bulleted statements.  If we prove one, we prove the other, or if we show one is false, the other is also false.
+
+\newpar
+We proved the second statement in Section~1.2.  See Theorem~1.7.
+
+
+
+\end{document}

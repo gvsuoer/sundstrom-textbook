@@ -1,0 +1,43 @@
+\documentclass[11pt]{article}
+\usepackage{c://pctex/activity}
+
+\lhead{}
+\chead{\textbf{\large{Exercise 13 -- Section 3.6\\A Special Case of Fermat's Last Theorem}}}
+\rhead{}
+\lfoot{\emph{Mathematical Reasoning: Writing and Proof, Third Ed.} \\Ted Sundstrom}
+\cfoot{}
+\rfoot{\copyright \the\year\, by Pearson Education, Inc.\\}
+
+
+\begin{document}
+\noindent
+\textbf{Proposition}.  There do not exist prime numbers $a$, $b$,and $c$ such that $a^3 + b^3 = c^3$.
+
+\begin{myproof}
+We will use a proof by contradiction and so we assume that there exist prime numbers $a$, $b$,and $c$ such that $a^3 + b^3 = c^3$.  In this proof, we will use the facts that 2 is the only even prime number and that any odd prime number is greater than 2.  So we know we can use the following cases:  (1) $a = b = 2$; (2) $a$ and $b$ are both odd; and (3) one of $a$ and $b$ is odd and the other one is 2.  We will show that each of these cases leads to a contradiction.
+
+\newpar
+In the case where $a = 2$ and $b = 2$, we conclude that $a^3$ and $b^3$ are even and hence, 
+$c^3$ must also be even.  In addition, since $c^3 > a^3$, $c > a$ or $c > 2$.  This is a contradiction since there are no even primes greater than 2.
+
+\newpar
+In the case where both $a$ and $b$ are odd, we conclude that $a^3$ and $b^3$ are both odd and hence, 
+$c^3$ is even.  This means that $c = 2$ since 2 is the only even prime.  In addition, since $c^3 = a^3 _+ b^3$, we can conclude that $c > a$ and this is a contradiction since 2 cannot be greater than an odd prime.
+
+\newpar
+In the last case, we assume that one of $a$ and $b$ is even and the other is odd.  We can use $b = 2$ and assume that $a$ is an odd prime.  Since $b^3 = c^3 - a^3$, we can conclude that
+\[
+c^3 - a^3 = 2^3 = 8.
+\]
+We can factor the left side of this equation and obtain
+\begin{equation}
+(c - a) \left( c^2 + c a + a^2 \right) = 8.
+\end{equation}
+Since $c^3 = a^3 + b^3$, we can conclude that $c > a$ and hence, $c - a > 0$ or $c - a \geq 1$.  In addition, since $a$ and $c$ are both greater than 2, we know that $c^2 > 4$, $c a > 4$, and $a^2 > 4$.  So in equation~(1), we see that $c - a \geq 1$ and $c^2 + c a + a^2 > 12$.  Therefore, the left side of equation~(1) is greater than 12 and so we have a contradiction.
+
+\newpar
+Since each of the possible cases has led to a contradiction, we conclude that the proposition cannot be false and we have proved that there do not exist prime numbers $a$, $b$,and $c$ such that $a^3 + b^3 = c^3$.
+\end{myproof}
+
+
+\end{document}

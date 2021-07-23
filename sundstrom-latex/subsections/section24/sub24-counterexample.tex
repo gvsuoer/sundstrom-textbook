@@ -1,0 +1,66 @@
+\subsection*{Counterexamples and Negations of Conditional Statements}
+\index{negation!of a conditional statement}%
+The real number  $x =  - 1$ in the previous example was used to show that the statement  
+$\left( {\forall x \in \mathbb{R}} \right)\left( {x^3  \geq x^2 } \right)$ is false.  This is called a \textbf{counterexample} to the statement.  In general, a \textbf{counterexample} 
+\label{D:counterexample2}% 
+to a statement of the form  $\left( {\forall x} \right)\left[ {P( x )} \right]$ is an object  $a$  in the universal set  $U$  for which  $P( a )$ is false.  It is an example that proves that  $\left( {\forall x} \right)\left[ {P( x )} \right]$ is a false statement, and hence its negation, 
+$\left( {\exists x} \right)\left[ {\mynot  P( x )} \right]$,  is a  true statement.
+
+In the preceding example, we also wrote the universally quantified statement as a conditional statement.  The number  $x =  - 1$ is a counterexample for the statement 
+%
+\begin{center}
+If  $x$  is a real number, then  $x^3 $ is greater than or equal to  $x^2 $.
+\end{center}
+%
+So the number $-1$  is an example that makes the hypothesis of the conditional statement true and the conclusion false.  Remember that a conditional statement often contains a ``hidden'' universal quantifier.  Also, recall that in Section~\ref{S:logequiv} we saw that the negation of the conditional statement ``If $P$ then $Q$'' is the statement ``$P$ and not $Q$.''  Symbolically, this can be written as follows:
+\[
+\mynot  \left( {P \to Q} \right) \equiv \;P \wedge \mynot  Q.
+\]
+So when we specifically include the universal quantifier, the symbolic form of the negation of a conditional statement is
+%
+\[
+\begin{aligned}
+  \mynot  \left( {\forall x} \in U \right)\left[ {P( x ) \to Q( x )} \right] &\equiv \left( {\exists x} \in U \right)\mynot  \left[ {P( x ) \to Q( x )} \right] \\ 
+&\equiv \left( {\exists x} \in U \right)\left[ {P( x ) \wedge \mynot  Q( x )} \right]. \\ 
+\end{aligned} 
+\]
+%
+That is,
+%
+\[
+\mynot  \left( {\forall x} \in U \right)\left[ {P( x ) \to Q( x )} \right] \equiv \left( {\exists x} \in U \right)\left[ {P( x ) \wedge \mynot  Q( x )} \right].
+\]
+%
+\hbreak
+\begin{prog}[\textbf{Using Counterexamples}]\label{pr:counterexamples} \hfill \\
+Use counterexamples to explain why each of the following statements is false.
+\begin{enumerate}
+\item For each integer $n$, $\left( n^2 + n + 1 \right)$ is a prime number.
+
+\item For each real number $x$, if $x$ is positive, then $2x^2 > x$.
+\end{enumerate}
+\end{prog}
+\hbreak
+
+%\begin{prog}[Negating Quantified Statements] \label{pr:negating} \hfill \\
+%For each of the following statements:
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\begin{itemize}
+%  \item Write the statement in the form of an English sentence that does not use the symbols for quantifiers.
+%  \item Write the negation of the statement in a symbolic form that does not use the negation symbol.
+%  \item Write the negation of the statement in the form of an English sentence that does not use the symbols for quantifiers.
+%\end{itemize}
+%
+%%\renewcommand{\theenumi}{\arabic{enumi}}
+%\begin{enumerate}
+%  \item $\forall a \in \mathbb{R},\;a + 0 = a$.
+%  \item $\forall x \in \mathbb{R},\;\sin \left( {2x} \right) = 2\left( {\sin x} \right)\left( {\cos x} \right)$.
+%  \item $\forall x \in \mathbb{R},\;\tan ^2 x + 1 = \sec ^2 x$.
+%  \item $\exists x \in \mathbb{Q}\mathbf{ }\text{ such that }x^2  - 3x - 7 = 0$.
+%  \item $\exists x \in \mathbb{R}\mathbf{ }\text{ such that }x^2  + 1 = 0$.
+%\end{enumerate}
+%\end{prog}
+%\hbreak
+
+
+\endinput

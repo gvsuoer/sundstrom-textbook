@@ -1,0 +1,60 @@
+\begin{previewactivity}[Attempting a Proof]\label{PA:attempt} \hfill \\
+The following statement was proven in Exercise (\ref{exer:x2odd}) on page~\pageref{exer:x2odd} in Section \ref{S:direct}.
+
+\begin{list}{}
+  \item If  $n$  is an odd integer, then  $n^2$ is an odd integer.
+\end{list}
+\vskip10pt
+%It is also a direct consequence of Theorem \ref{T:xyodd} on page \pageref{T:xyodd} in Section \ref{S:direct}.
+%
+%\begin{list}{}
+%  \item If  $x$  and  $y$  are odd integers, then  $x \cdot y$ is an odd integer.
+%\end{list}
+%\vskip10pt
+\noindent
+Now consider the following proposition:
+%\begin{flushleft}
+\begin{list}{}
+  \item For each integer $n$, if  $n^2 $ is an odd integer, then  $n$  is an odd integer.
+\end{list}
+%\end{flushleft}
+%
+\begin{enumerate}
+  \item After examining several examples, decide whether you think this proposition is true or false.
+
+  \item Try completing the following know-show~table for a direct proof of this proposition.
+\end{enumerate}
+$$
+\BeginTable
+\def\C{\JustCenter}
+\BeginFormat
+|p(0.4in)|p(2in)|p(1.8in)|
+\EndFormat
+\_
+ | \textbf{Step}  |  \textbf{Know}  |  \textbf{Reason}   |  \\+02 \_
+ | $P$   |  $n^2$ is an odd integer.  |  Hypothesis  | \\ \_1
+ | $P1$  |   $\left( \exists k \in \Z \right) \left( n^2 = 2k + 1 \right)$          |  Definition of ``odd integer''          |  \\ \_1
+ | \C $\vdots$  |  \C $\vdots$                         | \C $\vdots$     |  \\ \_1
+ | $Q1$    |  $\left( \exists q \in \Z \right) \left( n=2q+1 \right) $  |       | \\  \_1  
+ | $Q$     | $n$ is an odd  integer.     |  Definition of ``odd integer''       |    \\ \_
+ | \textbf{Step}  |  \textbf{Show}  |  \textbf{Reason}    | \\+20 \_
+\EndTable
+$$
+
+%\begin{center}
+%\begin{tabular}[h]{|p{0.4in}|p{2in}|p{1.8in}|}
+%  \hline
+%  \textbf{Step}  &  \textbf{Know}  &  \textbf{Reason}     \\ \hline
+%  $P$   &  $n^2$ is an odd integer.  &  Hypothesis \\ \hline
+%  $P1$  &   $\left( \exists k \in \Z \right) \left( n^2 = 2k + 1 \right)$          &  Definition of ``odd integer''            \\ \hline
+%  \vdots  &  \vdots                         & \vdots      \\ \hline
+%  $Q1$    &  $\left( \exists q \in \Z \right) \left( n=2q+1 \right) $         &             \\  \hline  
+%  $Q$     & $n$ is an odd  integer.     &  Definition of ``odd integer''           \\ \hline
+%  \textbf{Step}  &  \textbf{Show}  &  \textbf{Reason}     \\ \hline
+%\end{tabular}
+%\end{center}
+The question is, ``Can we perform algebraic manipulations to get from the `know' portion of the table to the `show' portion of the table?''
+Be careful with this!  Remember that we are working with integers and we want to make sure that we can end up with an integer  $q$  as stated in Step $Q1$.
+\end{previewactivity}
+
+\endinput

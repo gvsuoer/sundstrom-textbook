@@ -1,0 +1,55 @@
+\subsection*{Partitions and Equivalence Relations}
+A partition of a set  $A$  is a collection of subsets of  $A$  that ``breaks up'' the set  $A$  into disjoint subsets.  Technically, each pair of distinct subsets in the collection must be disjoint.  We then say that the collection of subsets is \textbf{pairwise disjoint}.
+\index{pairwise disjoint}%
+\index{disjoint!pairwise}%
+  We introduce the following formal definition.
+
+\begin{defbox}{partition}{Let  $A$  be a nonempty set, and let  $\mathcal{C}$   be a collection of subsets of  $A$.  
+%That is,  $\mathcal{C} \subseteq \mathcal{P}\left( A \right)$.  
+The collection of subsets $\mathcal{C}$  is a \textbf{partition of}
+\index{partition}%
+  $\boldsymbol{A}$  provided that
+
+\begin{enumerate}
+\item For each  $V \in \mathcal{C}$,  $V \ne \emptyset $. 
+
+\item For each  $x \in A$, there exists a  $V \in \mathcal{C}$ such that  $x \in V$\!.
+
+\item For every  $V, W \in \mathcal{C}$,  $V = W$ or $V \cap W = \emptyset $.
+\end{enumerate}}
+\end{defbox}
+
+There is a close relation between partitions and equivalence classes since the equivalence classes of an equivalence relation form a partition of the underlying set, as will be proven in Theorem~\ref{T:equivclasses-partition}.  The proof of this theorem relies on the results in Theorem~\ref{T:propsofequivclasses}.
+
+\begin{theorem}\label{T:equivclasses-partition}
+Let  $\sim$  be an equivalence relation on the nonempty set  $A$.  Then the  collection  $\mathcal{C}$  of all equivalence classes determined by  $\sim$  is a partition of the set  $A$.
+\end{theorem}
+%
+\begin{myproof}
+Let  $\sim$  be an equivalence relation on the nonempty set  $A$, and let $\mathcal{C}$  be the collection of all equivalence classes determined by  $\sim$.  That is,
+\[
+\mathcal{C} = \left\{ { {[ a ]} \mid a \in A} \right\}\!.
+\]
+We will use Theorem~\ref{T:propsofequivclasses} to prove that $\mathcal{C}$  is a partition of  $A$.  
+
+Part~(\ref{T:propsofequivclasses1}) of Theorem~\ref{T:propsofequivclasses} states that for each  $a \in A$,  $a \in [ a ]$.  In terms of the equivalence classes, this means that each equivalence class is nonempty since each element of  $A$  is in its own equivalence class.  Consequently, $\mathcal{C}$, the collection of all equivalence classes determined by  $\sim$, satisfies the first two conditions of the definition of a partition.  
+
+We must now show that the collection $\mathcal{C}$ of all equivalence classes determined by  $\sim$ satisfies the third condition for being a partition. That is, we need to show that any two equivalence classes are either equal or are disjoint.  However, this is exactly the result in Part~(\ref{T:propsofequivclasses3}) of Theorem~\ref{T:propsofequivclasses}.
+
+Hence, we have proven that the collection $\mathcal{C}$ of all equivalence classes determined by  $\sim$ is a partition of the set $A$.
+\end{myproof}
+%
+
+\noindent
+\note  
+Theorem~\ref{T:equivclasses-partition} has shown us that if  $\sim$  is an equivalence relation on a nonempty set  $A$, then the collection of the equivalence classes determined by  $\sim$  form a partition of the set  $A$.  
+
+This process can be reversed.  This means that given a partition  $\mathcal{C}$  of a nonempty set  $A$, we can define an equivalence relation on  $A$  whose equivalence classes are precisely the subsets of  $A$  that form the partition.  This will be explored in Exercise~(\ref{exer:partition-equivrelation}).
+\hbreak
+
+\endinput
+
+
+
+
+

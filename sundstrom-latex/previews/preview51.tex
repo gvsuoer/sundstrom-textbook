@@ -1,0 +1,140 @@
+\begin{previewactivity}[Set Equality and Set Containment] \label{PA:setequality} \hfill \\
+In Section~\ref{S:predicates}, we considered a set to be any collection of objects that can be thought of as a single entity itself.  We introduced the notation  $y \in A$  to mean, ``$y$ is an element of the set  $A$.''  In addition, we write  $x \notin A$  to mean, ``$x$  is not an element of the set  $A$.''  We also discussed defining sets using the roster method and using set builder notation.
+
+\begin{defbox}{setequality}{
+Let $A$ and $B$ be two sets contained in some universal set $U$.  
+
+The sets  $A$  and  $B$ are \textbf{equal}, \label{sym:setequal2} 
+\index{equal sets}%
+\index{set!equality}%
+written  $A = B$, when they have precisely the same elements.  More formally,
+\begin{center}
+$A = B$ provided that for all $x \in U, x \in A \text{ if and only if } x \in B$.
+\end{center}
+We write  $A \ne B$ when the two sets  $A$  and  $B$ are not equal.\\
+
+The set  $A$  is a \textbf{subset} of a set  $B$  if each element of  $A$  is an element of 
+$B$.  In this case, we write  $A \subseteq B$ and also say that  $A$  is \textbf{contained} \label{sym:subset2}
+\index{subset}%
+ in  $B$.  More formally,
+\begin{center}
+$A \subseteq B$ provided that for all $x \in U$, if $x \in A$, then $x \in B$.
+\end{center}
+When  $A$  is not a subset of  $B$, we write  $A\not  \subseteq B$. \label{sym:notsubset2} \\
+
+The set  $A$  is a \textbf{proper subset} \label{sym:propersub}
+\index{proper subset}%
+\index{subset!proper}%
+of $B$ provided that $A \subseteq B$ and  $A \ne B$.  When $A$ is a proper subset of $B$, we write $A \subset B$.}
+\end{defbox}
+
+%\begin{defbox}{setequality}{
+%Let $A$ and $B$ be two sets contained in some universal set $U$. The sets  $A$  and  $B$ are \textbf{equal}, 
+%\index{equal sets}%
+%\index{set!equality}%
+%written  $A = B$ \label{sym:setequal}, when they have precisely the same elements.  We write  $A \ne B$ when the two sets  $A$  and  $B$ are not equal.\\
+%
+%The set  $A$  is \textbf{contained} in a set  $B$  if each element of  $A$  is an element of  $B$.  In this case, we write  $A \subseteq B$ \label{sym:subset} and say that  $A$  is a \textbf{sym:subset}
+%\index{subset}%
+% of  $B$.  When  $A$  is not a subset of  $B$, we write  $A\not  \subseteq B$ \label{sym:notsubset}.}
+%\end{defbox}
+%After the preview activities, we will introduce more formal definitions of these concepts that use quantifiers and conditional statements.  These formal definitions will be useful in proofs and forming negations of the definitions.
+
+We will now use the following sets:
+\[
+\begin{aligned}
+A &= \left\{ { - 3, - 2, - 1,0,1,2,3} \right\}  &  B &= \left\{ {\left. {x \in \mathbb{Z}} \right|x^2  < 12} \right\} \\
+C &= \left\{ {\left. {x \in \mathbb{Z}} \right|2x - 3 \leq 7} \right\}  &  D &= \left\{ {\left. {y \in \mathbb{Z}} \right|\left| y \right| \leq 5} \right\}   \\
+S &= \left\{ {\left. {x \in \mathbb{R}} \right|2x - 3 \leq 7} \right\}  &  T &= \left\{ {\left. {y \in \mathbb{R}} \right|\left| y \right| \leq 5} \right\}  \\
+\end{aligned}
+\]
+%
+\begin{enumerate} \item \begin{enumerate}
+  \item Write the elements of the set  $B$  using the roster method.
+  \item Is the set  $A$   equal to the set  $B$?  Explain.
+  \item Is  $A$  a subset of  $B$?  Explain.
+  \item Is $A$ a proper subset of $B$?  Explain.
+  \item Is  $B$  a subset of  $A$?  Explain.
+\end{enumerate}
+
+\item \begin{enumerate} \item Write the elements of the sets  $C$  and  $D$  using the roster method.
+  \item Is the set  $C$   equal to the set  $D$?  Explain.
+  \item Is  $C$  a subset of  $D$?  Explain.
+  \item Is  $D$  a subset of  $C$?  Explain.
+  \item Is  $D$  a proper subset of $C$?  Explain.
+\end{enumerate}
+
+\item \begin{enumerate} \item Is it possible to write the elements of the sets  $S$  and  $T$  using the roster method?
+  \item Is the set  $S$   equal to the set  $T$?  Explain.
+  \item Is  $S$  a subset of  $T$?  Explain.
+  \item Is  $T$  a subset of  $S$?  Explain.
+  \item Is  $T$  a proper subset of $S$?  Explain.
+\end{enumerate}
+
+\item The formal definition of ``subset'' states that  $X \subseteq Y$ provided that for all 
+$x \in U$, if $x \in X$, then $x \in Y$.  Use this formal definition to complete the following sentence in English:  ``The set  $X$   is not a subset of the set  $Y$ provided that $\ldots$ .''
+
+\end{enumerate}
+\end{previewactivity}
+\hbreak
+%
+\begin{previewactivity}[Subsets of a Given Set] \label{PA:subsets} \hfill \\
+When a set contains no elements, we say that the set is the \textbf{empty set}.
+\index{empty set}%
+\index{set!empty}%
+The empty set is usually designated by the symbol  $\emptyset $.  For example, the set of all real numbers whose square is equal to $-1$ contains no elements and hence is the empty set.  Using set builder notation, this can be written as 
+$\left\{ {x \in \mathbb{R} \mid x^2 = -1} \right\} = \emptyset $.
+
+\begin{enumerate}
+\item Let  $A$  be a subset of some universal set  $U$\!.  \label{PA:subsets1}
+Are the following statements true or false?  Explain.
+
+  \begin{enumerate}
+    \item For all $x \in U$, if  $x \in \emptyset $, then  $x \in A$.
+    \item The empty set is a subset of $A$.
+  \end{enumerate}
+
+\item Determine all the subsets of the set  $\left\{ a \right\}$. How many subsets does the set  $\left\{ a \right\}$ have?  \label{PA:subsets2}
+
+\item Determine all the subsets of the set  $\left\{ {a, b} \right\}$.  How many subsets does the set  $\left\{ {a, b} \right\}$ have?  \hint  Start with the sets listed in Part~(\ref{PA:subsets2}) and then create the subsets of   $\left\{ {a, b} \right\}$  that are not subsets of   $\left\{ a \right\}$.  \label{PA:subsets3}
+
+\item Determine all the subsets of the set  $\left\{ {a, b, c} \right\}$.  How many subsets does the set  $\left\{ {a, b, c} \right\}$  have?  \hint  Start with the sets listed in Part~(\ref{PA:subsets3}) and then create the subsets of   $\left\{ {a, b, c} \right\}$  that are not subsets of   $\left\{ {a, b} \right\}$.  \label{PA:subsets4}
+
+\item Based on your work in Parts~(\ref{PA:subsets2}), (\ref{PA:subsets3}), and~(\ref{PA:subsets4}), how many subsets do you think a set with  four  elements will have? How many subsets do you think a set with  five  elements will have?  Let  $n \in \mathbb{N}$.  How many subsets do you think a set with  $n$  elements will have?
+
+\end{enumerate}
+\end{previewactivity}
+\hbreak
+%
+\begin{previewactivity}[Truth Sets] \label{PA:truthsets} \hfill \\
+In Section~\ref{S:predicates}, we studied the truth set of a predicate (open sentence). The \textbf{truth set}
+\index{truth set}%
+ of a predicate is the collection of objects in the universal set that can be substituted to make the predicate a true statement.  For example,
+\begin{itemize}
+\item If the universal set is  $\mathbb{R}$, then the truth set of  ``$x^2  - 3x - 10 = 0$''  is  $\left\{ { - 2, 5} \right\}$.
+
+\item If the universal set is  $\mathbb{N}$, then the truth set of  ``$\sqrt n  \in \mathbb{N}$''  is $\left\{ {1, 4, 9, 16,  \ldots } \right\}$.
+\end{itemize}
+For this activity, the universal set is  $U = \left\{ {0, 1, 2, 3,  \ldots , 10} \right\}$.  We will use the following subsets of  $U$:
+\begin{center}
+$A = \left\{ {0, 1, 2, 9} \right\}$ \quad and \quad  $B = \left\{ {2, 3, 4, 5, 6} \right\}$.
+\end{center}
+Use the roster method to list all of the elements of  $U$  that are in the truth set of each of the following predicates.  
+%Remember that the connective ``or'' is always used in the inclusive sense.
+\begin{multicols}{2}
+\begin{enumerate}
+  \item $x \in A \text{  and  } x \in B$
+  \item $x \in A \text{  or  } x \in B$
+  \item $x \notin A$
+  \item $x \notin B$
+  \item $x \in A\text{  and  }x \notin B$
+  \item $x \notin A \text{  or  } x \notin B$
+  \item $\mynot  \left( {x \in A\text{  and  }x \in B} \right)$
+  \item $\mynot  \left( {x \in A\text{  or  }x \in B} \right)$
+\end{enumerate}
+\end{multicols}
+%\hbreak
+\end{previewactivity}
+
+\endinput
+ 

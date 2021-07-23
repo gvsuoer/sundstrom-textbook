@@ -1,0 +1,44 @@
+\documentclass[11pt]{article}
+\usepackage{c://pctex/activity}
+
+\lhead{}
+\chead{\textbf{\large{Exercise 14 -- Section 6.5\\The Inverse Sine Function}}}
+\rhead{}
+\lfoot{\emph{Mathematical Reasoning: Writing and Proof, Third Ed.} \\Ted Sundstrom}
+\cfoot{}
+\rfoot{\copyright 2009 by Pearson Education, Inc.\\}
+
+
+\begin{document}
+\begin{enumerate}
+\item Let $f: \R \to \R$ be defined by $f(x) = \sin x$.  Since the range of the sine function is the closed interval $[-1, 1]$, the function $f$ is not a surjection.  Since the sine function is periodic, the function $f$ is not an injection.  Consequently, the inverse of $f$ is not a function.
+
+\item Let $F:\left[ {- \dfrac{{\pi }}{2}, \dfrac{\pi }{2}} \right] \to \left[ { - 1, 1} \right]$
+be defined by $F\left( x \right) = \sin x$.  For all 
+$x, t \in \left[ {- \dfrac{{\pi }}{2}, \dfrac{\pi }{2}} \right]$, if $x \ne t$, then 
+$\sin x \ne \sin t$, and so, the function $F$ is an injection.  Also, for each 
+$y \in [-1, 1]$, there exists an $x \in \left[ {- \dfrac{{\pi }}{2}, \dfrac{\pi }{2}} \right]$ such that $\sin x = y$.  Hence, $F$ is a surjection and so, $F$ is a bijection.
+
+\item The domain of the inverse sine function is the closed interval $[-1, 1]$, and the range of the inverse sine function is the closed interval 
+$\left[ {- \dfrac{{\pi }}{2}, \dfrac{\pi }{2}} \right]$.
+
+\item We know that if $F$ is a bijection (and so $F^{-1}$ is a function), then
+\begin{equation}
+F^{-1}(y) = x \text{ if and only if } F(x) = y.
+\end{equation}
+For this particular function
+\begin{center}
+$F(x) = y$ means that $y = \sin x$ and $-\dfrac{\pi}{2} \leq x \leq \dfrac{\pi}{2}$,
+\end{center}
+and that
+\begin{center}
+$F^{-1}(y) = x$ means that $\text{Sin}^{-1}y = x$.
+\end{center}
+Using this information in equation~(1), we see that
+\begin{center}
+$\text{Sin}^{-1}y = x$ if and only if $y = \sin x$ and 
+$-\dfrac{\pi}{2} \leq x \leq \dfrac{\pi}{2}$.
+\end{center}
+\end{enumerate}
+
+\end{document}

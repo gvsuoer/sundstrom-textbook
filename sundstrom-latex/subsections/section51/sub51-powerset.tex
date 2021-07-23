@@ -1,0 +1,53 @@
+\subsection*{The Power Set of a Set}
+The symbol  $ \in $  is used to describe a relationship between an element of the universal set and a subset of the universal set, and the symbol  $ \subseteq $  is used to describe a relationship between two subsets of the universal set.  For example, the number 5 is an integer, and so it is appropriate to write  $5 \in \mathbb{Z}$.  It is not appropriate, however, to write  $5 \subseteq \mathbb{Z}$ since 5 is not a set.  It is important to distinguish between 5 and $\left\{ 5 \right\}$.  The difference is that 5 is an integer and $\left\{ 5 \right\}$ is a set consisting of one element.  Consequently, it is appropriate to write  
+$\left\{ 5 \right\} \subseteq \mathbb{Z}$, but it is not appropriate to write  
+$\left\{ 5 \right\} \in \mathbb{Z}$.  The distinction between these two symbols 
+$\left( 5 \text{ and } \left\{ 5 \right\} \right)$ is important when we discuss what is called the power set of a given set.
+%
+\begin{defbox}{D:powerset}{If  $A$  is a subset of a universal set  $U$, then the set whose members are all the subsets of  $A$  is called the \textbf{power set}
+\index{power set}%
+\index{set!power}%
+ of  $A$.  We denote the power set of  $A$  by  $\mathcal{P}( A )$ 
+\label{sym:powerset}.  Symbolically, we write
+\[
+\mathcal{P}( A ) = \left\{ {X \subseteq U  \mid X \subseteq A} \right\}.
+\]
+That is,  $X \in \mathcal{P}( A )$  if and  only if  $X \subseteq A$.}
+\end{defbox}
+When dealing with the power set of  $A$, we must always remember that  $\emptyset  \subseteq A$
+and  $A \subseteq A$.  %For reference, we state this as Theorem~\ref{T:subsets}.
+%
+%\begin{theorem} \label{T:subsets}
+%For any set  $A$, $\emptyset  \subseteq A$  and  $A \subseteq A$.  That is,  $\emptyset \in \mathcal{P}\left( A \right)$ and  $A \in \mathcal{P}\left( A \right)$.
+%\end{theorem}
+%
+For example, if  $A = \left\{ {a,b} \right\}$, then the subsets of  $A$  are
+\begin{equation} \label{eq:subsets2}
+\emptyset,\left\{ a \right\}\!,\left\{ b \right\}\!,\left\{ {a,b} \right\}\!.
+\end{equation}
+ We can write this as
+\[
+\mathcal{P}( A ) = \left\{ {\emptyset,\left\{ a \right\}\!,\left\{ b \right\}\!,\left\{ {a,b} \right\}} \right\}\!.
+\]
+Now let $B = \left\{ {a, b, c} \right\}$.  Notice that $B = A \cup \{ c \}$.  We can determine the subsets of $B$ by starting with the subsets of $A$ in~(\ref{eq:subsets2}).  We can form the other subsets of $B$ by taking the union of each set in~(\ref{eq:subsets2}) with the set $\{c \}$.  This gives us the following subsets of $B$.
+\begin{equation} \label{eq:subsets2a}
+\{ c \},\left\{ a, c \right\}\!,\left\{ b, c \right\}\!,\left\{ {a,b, c} \right\}\!.
+\end{equation}
+So the subsets of $B$ are those sets in~(\ref{eq:subsets2}) combined with those sets in~(\ref{eq:subsets2a}).  That is, the subsets of $B$ are
+\begin{equation} \label{eq:subsets2b}
+\emptyset,\left\{ a \right\}\!,\left\{ b \right\}\!,\left\{ {a,b} \right\}, \{ c \},\left\{ a, c \right\}\!,\left\{ b, c \right\}\!,\left\{ {a,b, c} \right\}\!,
+\end{equation}
+which means that
+\[
+\mathcal{P}( B ) = \left\{ {\emptyset,\left\{ a \right\}\!, \left\{ b \right\}\!, \left\{ {a, b} \right\}\!,\left\{ c \right\}\!,\left\{ {a,c} \right\}\!,\left\{ {b,c} \right\}\!,\left\{ {a,b,c} \right\}} \right\}\!.
+\]
+Notice that we could write
+\[
+\left\{ {a,c} \right\} \subseteq B \text{  or that  }\left\{ {a,c} \right\} \in \mathcal{P}( B ).
+\]
+Also, notice that $A$  has two  elements and $A$ has four subsets, and $B$  has  three  elements and $B$  has  eight  subsets.  Now, let  $n$  be a  nonnegative integer.  The following result can be proved using mathematical induction.  (See Exercise~\ref{exer:powerset}.)
+\begin{theorem} \label{T:powerset}
+Let $n$ be a nonnegative integer and let $T$ be a subset of some universal set.  If the set $T$ has $n$ elements, then the set $T$ has $2^n$ subsets.  That is, $\mathcal{P}(T)$ has $2^n$ elements.
+\end{theorem}
+
+\endinput

@@ -1,0 +1,152 @@
+\begin{previewactivity}[The Union and Intersection of Four Sets] \label{PA:foursets} \hfill
+\\
+In Section 4.3, we discussed various properties of set operations.  We will now focus on the associative properties for set union  and set intersection.  Notice that the definition of ``set union'' tells us how to form the union of two sets.  It is the associative law that allows us to discuss the union of three sets.  Using the associate law, if $A$, $B$, and $C$ are subsets of some universal set, then we can define $A \cup B \cup C$ to be 
+$\left( A \cup B \right) \cup C$ or $A \cup \left( B \cup C \right)$.  That is,
+\[
+A \cup B \cup C = \left(A \cup B \right) \cup C = A \cup \left( B \cup C \right)\!.
+\]
+For this activity, the universal set is $\N$ and we will use the following four sets:
+\begin{multicols}{2}
+
+$A = \left\{ 1, 2, 3, 4, 5 \right\}$
+
+$B = \left\{ 2, 3, 4, 5, 6 \right\}$
+
+$C = \left\{ 3, 4, 5, 6, 7 \right\}$
+
+$D = \left\{ 4, 5, 6, 7, 8 \right\}$.
+\end{multicols}
+
+\begin{enumerate}
+\item Use the roster method to specify the sets $A \cup B \cup C$, $B \cup C \cup D$, 
+$A \cap B \cap C$, and  $B \cap C \cap D$.
+
+\item Use the roster method to specify each of the following sets.  In each case, be sure to follow the order specified by the parentheses.
+\begin{multicols}{2}
+\begin{enumerate}
+\item $\left( A \cup B \cup C \right) \cup D$
+\item $A \cup \left( B \cup C \cup D \right)$
+\item $A \cup \left( B \cup C \right) \cup D$
+\item $\left( A \cup B \right) \cup \left( C \cup D \right)$
+\item $\left( A \cap B \cap C \right) \cap D$
+\item $A \cap \left( B \cap C \cap D \right)$
+\item $A \cap \left( B \cap C \right) \cap D$
+\item $\left( A \cap B \right) \cap \left( C \cap D \right)$
+\end{enumerate}
+\end{multicols}
+\item Based on the work in Part~(2), does the placement of the parentheses matter when determining the union (or intersection) of these four sets?  Does this make it possible to define $A \cup B \cup C \cup D$ and $A \cap B \cap C \cap D$?
+\end{enumerate}
+\end{previewactivity}
+\hbreak
+
+
+\begin{previewactivity}[Families of Sets] \label{PA:families} \hfill
+
+We have already seen that the elements of a set may themselves be sets.  For example, the power set of a set $T$, $\mathcal{P}( T )$, is the set of all subsets of $T$.    The phrase, ``a set of sets'' sounds confusing, and so we often use the terms \textbf{\emph{collection}} and 
+\textbf{\emph{family}}
+\index{family of sets}%
+ when we wish to emphasize that the elements of a given set are themselves sets.  We would then say that the power set of $T$ is the family (or collection) of sets that are subsets of $T$.
+
+One of the purposes of Preview Activity~\ref{PA:foursets} was to show that it is possible to define the union and intersection of a family of sets.
+
+\begin{defbox}{D:familyoper}{Let $\mathcal{C}$ be a family of sets.  The \textbf{union over 
+$\mathbf{\mathcal{C}}$}
+\index{union!of a family of sets}%
+\index{family of sets!union}%
+ is defined as the set of all elements that are in at least one of the sets in $\mathcal{C}$.  We write
+\[
+\bigcup_{X \in \mathscr{C}}^{}X = \left\{x \in U \mid x \in X \text{ for some } X \in \mathscr{C} \right\} \label{sym:bigcup}
+\]
+The \textbf{interesection over $\mathbf{\mathcal{C}}$}
+\index{intersection!of a family of sets}%
+\index{family of sets!intersection}%
+ is defined as the set of all elements that are in all of the sets in $\mathcal{C}$.  That is, 
+\[
+\bigcap_{X \in \mathscr{C}}^{}X = \left\{x \in U \mid x \in X \text{ for all } X \in \mathscr{C} \right\} \label{sym:bigcap}
+\]
+}
+\end{defbox}
+
+For example, consider the four sets used in Preview Activity~\ref{PA:foursets} and the sets
+\[
+S = \left\{5, 6, 7, 8, 9 \right\} \quad \text{and} \quad T = \left\{6, 7, 8, 9, 10 \right\}.
+\]
+
+We can then consider the following families of sets:  
+$\mathscr{A} = \left\{A, B, C , D \right\}$  and  
+$\mathscr{B} = \left\{A, B, C , D, S, T \right\}$.
+
+
+\begin{enumerate}
+\item Explain why 
+\[
+\bigcup_{X \in \mathscr{A}}^{}X = A \cup B \cup C \cup D \quad \text{and} \quad
+\bigcap_{X \in \mathscr{A}}^{}X = A \cap B \cap C \cap D,
+\]
+and use your work in Preview Activity~\ref{PA:foursets} to determine 
+$\bigcup\limits_{X \in \mathscr{A}}^{}X$ and $\bigcap\limits_{X \in \mathscr{A}}^{}X$\!.
+
+\item Use the roster method to specify
+$\bigcup\limits_{X \in \mathscr{B}}^{}X$ and   $\bigcap\limits_{X \in \mathscr{B}}^{}X$\!.
+
+\item Use the roster method to specify the sets 
+$\left( \bigcup\limits_{X \in \mathscr{A}}^{}X \right)^c$ and $\bigcap\limits_{X \in \mathscr{A}}^{}X^c$\!.  Remember that the universal set is $\N$.
+\end{enumerate}
+\end{previewactivity}
+\hbreak
+
+
+\begin{previewactivity}[An Indexed Family of Sets] \label{PA:indexfamily} \hfill \\
+We often use subscripts to identify sets.  For example, in 
+Preview Activity~\ref{PA:foursets}, instead of using $A$, $B$, $C$, and $D$ as the names of the sets, we could have used $A_1$, $A_2$, $A_3$, and $A_4$.  When we do this, we are using the subscript as an indentifying tag, or index, for each set.  We can also use this idea to specify an infinite family of sets.  For example, for each natural number $n$, we define
+\[
+A_n = \left\{ n, n+1, n+2, n+3, n+4 \right\}\!.
+\]
+So if we have a family of sets $\mathscr{A} = \left\{ A_1, A_2, A_3, A_4 \right\}$, we use the notation $\bigcup\limits_{j=1}^{4}A_j$ to mean the same thing as 
+$\bigcup\limits_{X \in \mathscr{A}}^{}X$\!.
+\begin{enumerate}
+\item Determine $\bigcup\limits_{j=1}^{4}A_j$  and  $\bigcap\limits_{j=1}^{4}A_j$\!.
+\end{enumerate}
+We can see that with the use of subscripts, we do not even have to define the family of sets 
+$\mathscr{A}$.  We can work with the infinite family of sets
+\[
+\mathscr{C} = \left\{ A_n \mid n \in \N \right\}
+\]
+and use the subscripts to indicate which sets to use in a union or an intersection.
+
+\begin{enumerate} \setcounter{enumi}{1}
+\item Use the roster method to specify each of the following pairs of sets.  The universal set is 
+$\N$.
+\begin{multicols}{2}
+\begin{enumerate}
+\item $\bigcup\limits_{j=1}^{6}A_j$  and  $\bigcap\limits_{j=1}^{6}A_j$
+\item $\bigcup\limits_{j=1}^{8}A_j$  and  $\bigcap\limits_{j=1}^{8}A_j$
+\item $\bigcup\limits_{j=4}^{8}A_j$  and  $\bigcap\limits_{j=4}^{8}A_j$
+\item $\left( \bigcap\limits_{j=1}^{4}A_j \right)^c$  and  $\bigcup\limits_{j=1}^{4}A_j^c$
+\end{enumerate}
+\end{multicols}
+\end{enumerate}
+\end{previewactivity}
+\hbreak
+\endinput
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{enumerate}
+\item Without using the associative law, how would you define $A \cup B \cup C$?  That is, how would you complete the following sentence:
+\begin{list}{}
+\item An element $x$ in the universal set is in $A \cup B \cup C$ if and only if \ldots
+\end{list}
+\end{enumerate}

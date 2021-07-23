@@ -1,0 +1,87 @@
+% LaTeX Book Template - using defaults
+%\documentclass[11pt,draft,openany]{book}
+\documentclass[11pt,openany]{book}
+\usepackage{patch}
+
+\usepackage{c://pctex/author3}
+
+%\usepackage{../styles/author2}
+\usepackage{times}
+\usepackage[subscriptcorrection,nofontinfo]{mtpro2}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{datetime}
+\graphicspath{{./epsfigs/}}
+
+\newcommand{\typeu}{Beginning }
+\newcommand{\typel}{beginning }
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\
+                                         \thechapter. #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection. #1}}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[LO]{\rightmark}
+\fancyhead[RE]{\leftmark}
+%\fancyfoot[LE,RO]{\small{\copyright~2013 Ted Sundstrom}}
+
+\fancyfoot[LE,RO]{\scalebox{0.35}{\includegraphics{CClicense.eps}}}
+\fancyfoot[LE,RO]{\scalebox{0.35}{\includegraphics{CClicense.eps}}}
+
+%\includeonly{chapters/chapter-preface}
+
+\renewcommand{\thesubsection}{\arabic{subsection}}
+%Use the first command for Scholarworks version and the second command for the KDP version
+\usepackage[dvips,bookmarks=true,colorlinks=true, plainpages = false,
+  linkcolor=blue,citecolor = blue, urlcolor = blue, filecolor = blue]{hyperref}
+
+%\usepackage[dvips, bookmarks, colorlinks=true, plainpages = false,
+%  linkcolor=black,citecolor = black, urlcolor = black, filecolor = blue]{hyperref}
+\makeindex
+
+
+\begin{document}
+\input table
+\input{titlepage-new}
+\input{blankpage}
+\input{creditpage-new}
+%\input{dedication}
+
+\frontmatter
+
+\setcounter{page}{3}
+\tableofcontents
+%\thispagestyle{myheadings}
+\markboth{Contents}{Contents}
+%\markright{Contents}
+%\input{blankpage}
+
+\include{chapters/chapter-versions}
+\include{chapters/chapter-note}
+\include{chapters/chapter-preface}
+
+\mainmatter
+\include{chapters/chapter1}
+\include{chapters/chapter2}
+\include{chapters/chapter3}
+\include{chapters/chapter4}
+\include{chapters/chapter5}
+\include{chapters/chapter6}
+\include{chapters/chapter7}
+\include{chapters/chapter8}
+\include{chapters/chapter9}
+%
+\appendix
+\include{chapters/chapter-writing}
+\include{chapters/chapter-progress}
+\include{chapters/chapter-answers}
+\include{chapters/chapter-symbols}
+
+\backmatter
+\addcontentsline{toc}{chapter}{\hspace{18pt}Index} \label{C:index}
+\pagestyle{myheadings}
+\markboth{Index}{Index}
+\printindex
+
+%\input{emptypages}
+
+\end{document}

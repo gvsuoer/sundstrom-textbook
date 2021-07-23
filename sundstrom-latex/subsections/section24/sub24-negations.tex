@@ -1,0 +1,93 @@
+\subsection*{Negations of Quantified Statements}
+\index{negation!of a quantified statement|(}%
+In \typeu Activity~\ref*{PA:quantifier}, we wrote negations of some quantified statements.  This is a very important mathematical activity.  As we will see in future sections, it is sometimes just as important to be able to describe when some object does not satisfy a certain property as it is to describe when the object satisfies the property.  Our next task is to learn how to write negations of quantified statements in a useful English form.
+
+We first look at the negation of a statement involving a universal quantifier.  The general form for such a statement can be written as
+$\left( {\forall x} \in U \right)\left( {P( x )} \right)$,
+where  $P( x )$ is an open sentence and $U$ is the universal set for the variable $x$.  When we write
+\[
+\mynot  \left( {\forall x} \in U \right)\left[ {P\left( x \right)} \right],
+\]
+we are asserting that the statement  $\left( {\forall x} \in U \right)\left[ {P( x )} \right]$ is false.  This is equivalent to saying that the truth set of the open sentence   
+$P( x )$ is not the universal set.  That is, there exists an element  $x$  in the universal set  $U$  such that  $P( x )$ is false.  This in turn means that there exists an element  $x$  in  $U$  such that  $\mynot  P( x )$ is true,   which is equivalent to saying that  $\left( {\exists x} \in U \right)\left[ {\mynot  P( x )} \right]$ is true.  This explains why the following result is true:
+%
+\[
+\mynot  \left( {\forall x} \in U \right)\left[ {P( x )} \right] \equiv \left( {\exists x} \in U \right)\left[ {\mynot  P( x )} \right].
+\]
+Similarly, when we write
+\[
+\mynot  \left( {\exists x} \in U \right)\left[ {P( x )} \right],
+\]
+we are asserting that the statement  $\left( {\exists x} \in U \right)\left[ {P( x )} \right]$ is false.  This is equivalent to saying that the truth set of the open sentence  $P( x )$ is the empty set.  That is, there is no element  $x$  in the universal set  $U$  such that  
+$P( x )$ is true.  This in turn means that for each element  $x$  in  $U$, 
+$\mynot  P( x )$ is true, and this is equivalent to saying that  
+$\left( {\forall x} \in U \right)\left[ {\mynot  P( x )} \right]$ is true.  This explains why the following result is true: 
+\[
+\mynot  \left( {\exists x} \in U \right)\left[ {P( x )} \right] \equiv \left( {\forall x} \in U \right)\left[ {\mynot  P( x )} \right].
+\]
+We summarize these results in the following theorem.
+%\hbreak
+\begin{theorem}\label{T:negations}
+For any open sentence  $P( x )$,
+\[
+\begin{aligned}
+  \mynot  \left( {\forall x} \in U \right)\left[ {P( x )} \right] &\equiv \left( {\exists x} \in U \right)\left[ {\mynot  P( x )} \right]\text{, and} \\ 
+  \mynot  \left( {\exists x} \in U \right)\left[ {P( x )} \right] &\equiv \left( {\forall x} \in U \right)\left[ {\mynot  P( x )} \right]. \\ 
+\end{aligned}
+\] 
+\end{theorem}
+\hbreak
+%
+\begin{example}[\textbf{Negations of Quantified Statements}]\label{E:negations} \hfill \\
+Consider the following statement:  $\left( {\forall x \in \mathbb{R}} \right)\left( {x^3  \geq x^2 } \right)$.
+
+We can write this statement as an English sentence in several ways.  Following are two different ways to do so.
+\begin{itemize}
+  \item For each real number $x$, $x^3  \geq x^2 $.
+  \item If  $x$  is a real number, then  $x^3 $ is greater than or equal to  $x^2 $.
+\end{itemize}
+The second statement shows that in a conditional statement, there is often a hidden universal quantifier.  This statement is false since there are real numbers  $x$  for which  $x^3 $ is not greater than or equal to  $x^2 $. For example, we could use  $x =  - 1$ or  $x = \frac{1}{2}$.
+
+%Since the phrase ``is not greater than or equal to'' means the same thing as ``is less than,'' we usually say that there are real numbers  $x$  for which  $x^3  < x^2 $. 
+This means that the negation must be true.  We can form the negation as follows:
+\[
+\mynot  \left( {\forall x \in \mathbb{R}} \right)\left( {x^3  \geq x^2 } \right) \equiv \left( {\exists x \in \mathbb{R}} \right)\mynot  \left( {x^3  \geq x^2 } \right).
+\]
+In most cases, we want to write this negation in a way that does not use the negation symbol.  In this case, we can now write the open sentence $\mynot  \left( {x^3  \geq x^2 } \right)$ as  $\left( {x^3  < x^2 } \right)$.  (That is, the negation of ``is greater than or equal to'' is ``is less than.'')  So we obtain the following:
+\[
+\mynot  \left( {\forall x \in \mathbb{R}} \right)\left( {x^3  \geq x^2 } \right) \equiv \left( {\exists x \in \mathbb{R}} \right)\left( {x^3  < x^2 } \right).
+\]
+The statement $\left( {\exists x \in \mathbb{R}} \right)\left( {x^3  < x^2 } \right)$
+could be written in English as follows:
+\begin{itemize}
+  \item There exists a real number  $x$  such that  $x^3  < x^2 $.
+  \item There exists an  $x$  such that  $x$  is a real number and  $x^3  < x^2 $.
+\end{itemize}
+%
+\end{example}
+\hbreak
+%
+\begin{prog}[\textbf{Negating Quantified Statements}]\label{pr:negating} \hfill \\
+For each of the following statements
+\renewcommand{\theenumi}{\alph{enumi}}
+\begin{itemize}
+  \item Write the statement in the form of an English sentence that does not use the symbols for quantifiers.
+  \item Write the negation of the statement in a symbolic form that does not use the negation symbol.
+  \item Write the negation of the statement in the form of an English sentence that does not use the symbols for quantifiers.
+\end{itemize}
+
+%\renewcommand{\theenumi}{\arabic{enumi}}
+\begin{enumerate}
+  \item $\left( \forall a \in \mathbb{R}\right) \left( a + 0 = a \right)$.
+  \item $\left( \forall x \in \mathbb{R} \right) \left[ \sin ( {2x} ) = 2 ( {\sin x} )( {\cos x} ) \right]$.
+  \item $\left( \forall x \in \mathbb{R} \right) \left( \tan ^2 x + 1 = \sec ^2 x \right)$.
+  \item $\left( \exists x \in \mathbb{Q} \right) \left( x^2  - 3x - 7 = 0 \right)$.
+  \item $\left( \exists x \in \mathbb{R} \right) \left( x^2  + 1 = 0 \right)$.
+\end{enumerate}
+\end{prog}
+\index{negation!of a quantified statement|)}%
+\index{counterexample}%
+\hbreak
+
+
+\endinput

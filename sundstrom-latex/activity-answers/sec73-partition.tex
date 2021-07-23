@@ -1,0 +1,51 @@
+\documentclass[11pt]{article}
+\usepackage{c://pctex/activity}
+
+\lhead{}
+\chead{\textbf{\large{Exercise 13 -- Section 7.3\\A Partition Defines an Equivalence Relation}}}
+\rhead{}
+\lfoot{\emph{Mathematical Reasoning: Writing and Proof, Third Ed.} \\Ted Sundstrom}
+\cfoot{}
+\rfoot{\copyright \the\year\, by Pearson Education, Inc.\\}
+%\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+%\renewcommand{\labelenumii}{(\textbf{\alph{enumii}})}
+
+
+\begin{document}
+\noindent
+Let  $A = \left\{ {a, b, c, d, e} \right\}$ and let  
+$\mathcal{C} = \left\{ {\left\{ {a, b, c} \right\}, \left\{ {d, e} \right\}} \right\}$. 
+
+\begin{enumerate}
+\item $\mathcal{C}$ is a partition of $A$  since each set in  $\mathcal{C}$  is nonempty, each element of  $A$  is in one set contained in  $\mathcal{C}$ , and the two unequal subsets  of  $A$  contained in  $\mathcal{C}$  are disjoint.
+
+\item Let  $x \in A$.  Then ,  $x \sim x$ since there exists a set  $T$  in  $\mathcal{C}$  such that  $x \in T$ and  $x \in T$.  This means that the relation  $\sim$  is reflexive on  $A$.
+\vskip6pt
+Now let  $x, y \in A$ and assume that  $x \sim y$.  Then, there exists a set  $T$  in  
+$\mathcal{C}$  such that  $x \in T$ and  $y \in T$.  But then,  $y \in T$ and  $x \in T$, and hence,  $y \sim x$.  Therefore, the relation  $\sim$  is symmetric.
+\vskip6pt
+
+Finally, let  $x, y, z \in A$  and assume that  $x \sim y$  and  $y \sim z$.  Then, there exists a set  $T$  in  $\mathcal{C}$  such that  $x \in T$ and  $y \in T$  and  there exists a set  $V$  in  $\mathcal{C}$  such that  $y \in V$ and  $z \in V$.  Since  $y \in T \cap V$, we can conclude that  $T \cap V \ne \emptyset $.  Since  $T$  and  $V$  are sets in the partition  $\mathcal{C}$ , this implies that  $T = V$.  Therefore,  $x \in T$ and  $z \in T$ and hence, the relation  $\sim$  is transitive. So, we have proven that  $\sim$  is an equivalence relation on  $A$.
+\vskip6pt
+
+The equivalence classes for $\mathcal{C}$ are:  $\left[ a \right] = \left[ b \right] = \left[ c \right] = \left\{ {a, b, c} \right\}$  and   
+$\left[ d \right] = \left[ e \right] = \left\{ {d, e} \right\}$.  These are the same subsets of 
+$A$ that form the partition $\mathcal{C}$.
+
+
+\item Repeat the proof in Part (b).
+
+\item Let  $a \in A$  and let  $T \in \mathcal{C}$ such that  $a \in T$.  Now assume that  
+$x \in \left[ a \right]$.  Then,  $x \sim a$ and hence,  there exists a set  $V$  in  
+$\mathcal{C}$  such that  $x \in V$ and  $a \in V$.  Since  $a \in T \cap V$, we know that  
+$T \cap V \ne \emptyset $, and  since  $T$  and  $V$  are sets in the partition  $\mathcal{C}$, this implies that  $T = V$.   Therefore, $x \in T$, and we conclude that  
+$\left[ a \right] \subseteq T$.
+
+Now let  $x \in T$.  Then by the definition of  $\sim$,  $x \sim a$ and  
+$x \in \left[ a \right]$.  This proves that  $T \subseteq \left[ a \right]$ and hence that  
+$\left[ a \right] = T$.
+\end{enumerate}
+
+
+
+\end{document}

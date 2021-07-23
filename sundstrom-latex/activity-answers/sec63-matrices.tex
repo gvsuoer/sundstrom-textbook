@@ -1,0 +1,110 @@
+\documentclass[11pt]{article}
+\usepackage{c://pctex/activity}
+
+\lhead{}
+\chead{\textbf{\large{Exercise 19 -- Section 6.3\\Functions Whose Domain is $\boldsymbol{\mathcal{M}_2(\R)}$}}}
+\rhead{}
+\lfoot{\emph{Mathematical Reasoning: Writing and Proof, Third Ed.} \\Ted Sundstrom}
+\cfoot{}
+\rfoot{\copyright \the\year\, by Pearson Education, Inc.\\}
+
+
+\begin{document}
+\begin{enumerate}
+\item The determinant function is not an injection.  For example,
+\[
+\det \left[ {\begin{array}{*{20}c}
+   1 & 0  \\
+   0 & 1  \\
+\end{array} } \right] =  \det \left[ {\begin{array}{*{20}c}
+   1 & 2  \\
+   0 & 1  \\
+ \end{array} } \right].
+\]
+The determinant function is a surjection.  To prove this, let $a \in \mathbb{R}$.  Then
+\[
+\det \left[ {\begin{array}{*{20}c}
+   a & 0  \\
+   0 & 1  \\
+\end{array} } \right] =  a.
+\]
+
+\item The transpose function is a bijection.  To prove it is an injection, let 
+$\left[ {\begin{array}{*{20}c}
+   a & b  \\
+   c & d  \\
+\end{array} } \right], \left[ {\begin{array}{*{20}c}
+   p & q  \\
+   r & s  \\
+\end{array} } \right] \in \mathcal{M}_2(\R)$ and assume that
+\[
+\text{tran}\left[ {\begin{array}{*{20}c}
+   a & b  \\
+   c & d  \\
+ \end{array} } \right] = \text{tran}\left[ {\begin{array}{*{20}c}
+   p & q  \\
+   r & s  \\
+ \end{array} } \right].
+\]
+Then, $\left[ {\begin{array}{*{20}c}
+   a & c  \\
+   b & d  \\
+\end{array} } \right] = \left[ {\begin{array}{*{20}c}
+   p & r  \\
+   q & s  \\
+\end{array} } \right]$.  Therefore, $a = p$, $b = q$, $c = r$, and $d = s$ and hence, 
+$\left[ {\begin{array}{*{20}c}
+   a & b  \\
+   c & d  \\
+\end{array} } \right] = \left[ {\begin{array}{*{20}c}
+   p & q  \\
+   r & s  \\
+\end{array} } \right]$.  To prove that the transpose function is a surjection, let 
+$\left[ {\begin{array}{*{20}c}
+   a & b  \\
+   c & d  \\
+\end{array} } \right] \in \mathcal{M}_2(\R)$.  Then,
+\[
+\text{tran}\left[ {\begin{array}{*{20}c}
+   a & c  \\
+   b & d  \\
+ \end{array} } \right] = \left[ {\begin{array}{*{20}c}
+   a & b  \\
+   c & d  \\
+ \end{array} } \right].
+\]
+
+\item The function $F$ is not an injection.  For example
+\[
+F \left[ {\begin{array}{*{20}c}
+   0 & 0  \\
+   0 & 0  \\
+\end{array} } \right] =  0 \qquad \text{and} \qquad
+F \left[ {\begin{array}{*{20}c}
+   1 & 1  \\
+   1 & 1  \\
+\end{array} } \right] =  0.
+\]
+The function $F$ is a surjection.  To prove this, let $y \in \R$.  Consider three cases.
+\begin{itemize}
+\item If $y = 0$, then $F \left[ {\begin{array}{*{20}c}
+   0 & 0  \\
+   0 & 0  \\
+\end{array} } \right] =  0 = y$.
+
+\item If $y > 0$, then $\sqrt{y} \in \R$ and $F \left[ {\begin{array}{*{20}c}
+   \sqrt{y} & 0  \\
+   0 & 0  \\
+\end{array} } \right] =  \left( \sqrt{y} \right)^2 = y$.
+
+\item If $y < 0$, then $\sqrt{-y} \in \R$ and $F \left[ {\begin{array}{*{20}c}
+   0 & \sqrt{-y}  \\
+   0 & 0  \\
+\end{array} } \right] =  -\left( \sqrt{-y} \right)^2 = y$.
+
+\end{itemize}
+
+\end{enumerate}
+
+
+\end{document}

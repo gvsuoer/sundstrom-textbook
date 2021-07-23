@@ -1,0 +1,92 @@
+\subsection*{The Greatest Common Divisor}
+One of the most important concepts in elementary number theory is that of the greatest common divisor of two integers.  The definition for the greatest common divisor of two integers (not both zero) was given in \typeu Activity~\ref*{PA:gcd}.
+
+\begin{enumerate}
+\item If  $a, b \in \mathbb{Z}$ and $a$ and $b$ are not both 0, and  if  $d \in \mathbb{N}$, then $d = \gcd( {a, b} )$ provided that it satisfies all of the following properties:
+\begin{itemize}
+\item $d \mid a$  and  $d \mid b$.  That is, $d$  is a common divisor of $a$ and $b$.
+
+\item If  $k$  is a natural number such that  $k \mid a$  and  $k \mid b$, then 
+$k \leq d$\!.  That is,  any other common divisor of $a$ and $b$ is less than or equal to $d$\!.
+\end{itemize}
+
+\item Consequently, a natural number  $d$  is not the greatest common divisor of  $a$  and  $b$  provided that it does not satisfy at least one of these properties.  That is,  $d$  is not equal to  $\gcd( {a, b} )$
+provided that
+
+\begin{itemize}
+\item $d$  does not divide  $a$  or $d$  does not divide  $b$; or
+
+\item There exists a natural number $k$  such that  $k \mid a$  and  $k \mid b$  and  $k > d$\!.
+\end{itemize}
+This means that $d$ is not the greatest common divisor of $a$ and $b$ provided that it is not a common divisor of $a$ and $b$ or that there exists a common divisor of $a$ and $b$ that is greater than $d$\!.
+\end{enumerate}
+%\hbreak
+%
+In the \typel activities, we determined the greatest common divisors for several pairs of integers.  The process we used was to list all the divisors of both integers, then list all the common divisors of both integers and, finally, from the list of all common divisors, find the greatest (largest) common divisor.  This method works reasonably well for small integers but can get quite cumbersome if the integers are large.  Before we develop an efficient method for determining the greatest common divisor of two integers, we need to establish some properties of greatest common divisors.
+
+One property was suggested in \typeu Activity~\ref*{PA:gcd}.  If we look at the results in Part~(\ref{PA:gcd5}) of that \typel activity, we should observe that any common divisor of  $a$  and  $b$  will divide  $\gcd( {a, b} )$.  In fact, the primary goals of the remainder of this section are
+
+\begin{enumerate}
+\item To find an efficient method for determining $\gcd( {a, b} )$, where  $a$  and  $b$  are integers.
+
+\item To prove that the natural number  $\gcd( {a, b} )$ is the only natural number  $d$  that satisfies the following properties:
+
+\begin{itemize}
+  \item $d$ divides  $a$ and $d$ divides  $b$; and
+
+  \item if  $k$  is a natural number such that  $k \mid a$  and  $k \mid b$, then $k \mid d$\!.
+\end{itemize}
+\end{enumerate}
+%
+The second goal is only slightly different from the definition of the greatest common divisor.  The only difference is in the second condition where  $k \leq d$  is replaced by  
+$k \mid d$\!.
+
+We will first consider the case where  $a$  and  $b$  are integers with $a \ne 0$ and  $b > 0$.    The proof of the result stated in the second goal contains a method (called the Euclidean Algorithm) for determining the greatest common divisor of the two integers  $a$  and  $b$.  The main idea of the method is to keep replacing the pair of integers  $\left( {a, b} \right)$ with another pair of integers  $\left( {b, r} \right)$, where  $0 \leq r < b$ and  
+$\gcd ( {b, r} ) = \gcd ( {a, b} )$.  This idea was explored in \typeu Activity~\ref*{PA:gcdanddivalgo}.  Lemma~\ref{L:gcdanddivalgo} is a conjecture that could have been formulated in \typeu Activity~\ref*{PA:gcdanddivalgo}.
+
+\begin{lemma}\label{L:gcdanddivalgo}
+Let  $c$  and  $d$  be integers, not both equal to zero.  If  $q$  and  $r$  are integers such that  $c = d \cdot q + r$, then  $\gcd( {c, d} ) = \gcd( {d, r} )$.
+\end{lemma}
+%
+\begin{myproof}
+Let  $c$  and  $d$  be integers, not both equal to zero.  Assume that  $q$  and  $r$  are integers such that  $c = d \cdot q + r$.  For ease of notation, we will let
+\[
+m = \gcd( {c, d} )\text{  and  } n = \gcd( {d, r} ).
+\]
+Now,  $m$  divides  $c$  and  $m$  divides  $d$.  Consequently, there exist integers  $x$  and  $y$  such that  $c = mx$ and  $d = my$.  Hence,
+\[
+\begin{aligned}
+  r &= c - d \cdot q \\ 
+  r &= mx - ( {my} )q \\ 
+  r &= m ( {x - yq} ). \\ 
+\end{aligned} 
+\]
+But this means that  $m$  divides  $r$.  Since  $m$  divides  $d$  and  $m$ divides  $r$,  $m$  is less than or equal to  $\gcd( {d, r} )$.  Thus,  $m \leq n$.
+
+Using a similar argument, we see that  $n$  divides  $d$  and  $n$  divides $r$.  Since  
+$c = d \cdot q + r$, we can prove that  $n$  divides  $c$.  Hence,  $n$  divides  $c$  and  $n$  divides  $d$.  Thus,  $n \leq \gcd( {c, d} )$  or  $n \leq m$.  We now have  $m \leq n$  and  $n \leq m$.  Hence,  $m = n$ and   
+$\gcd( {c, d} ) = \gcd( {d, r} )$.
+\end{myproof}
+\hrule
+%
+\begin{prog}[\textbf{Illustrations of Lemma~\ref{L:gcdanddivalgo}}]\label{prog:lemma81} \hfill \\
+We completed several examples illustrating Lemma~\ref{L:gcdanddivalgo} in \typeu Activity~\ref*{PA:gcdanddivalgo}.  For another example, let  $c = 56$  and  $d = 12$. The greatest common divisor of 56 and 12 is 4. 
+
+\begin{enumerate}
+%\item What is the greatest common divisor of 56 and 12?
+\item According to the Division Algorithm, what is the remainder $r$ when 56 is divided by 12?
+\item What is the greatest common divisor of 12 and the remainder $r$?
+\end{enumerate}
+
+The key to finding the greatest common divisor (in more complicated cases) is to use the Division Algorithm again, this time with  12  and  $r$.    We now find integers  
+$q_2 \text{ and }r_2 $ such that
+\[
+  12 = r \cdot q_2  + r_2.
+\]
+\begin{enumerate} \setcounter{enumi}{2}
+\item What is the greatest common divisor of $r$ and $r_2$\!?
+\end{enumerate}
+\end{prog}
+\hbreak
+
+\endinput

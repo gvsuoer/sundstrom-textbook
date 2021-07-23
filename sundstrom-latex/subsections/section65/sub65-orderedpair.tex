@@ -1,0 +1,62 @@
+\setcounter{equation}{0}
+\subsection*{The Ordered Pair Representation of a Function}
+\index{function!as set of ordered pairs}%
+In \typeu Activity~\ref*{PA:functionasordered}, we observed that if we have a function  
+$f\x A \to B$, we can generate a set of ordered pairs $f$  that is a subset of  $A \times B$ as follows:
+\[
+  f = \left\{ { {\left( {a, f( a )} \right)} \mid a \in A} \right\} \quad \text{ or}  
+  \quad f = \left\{ {( {a, b} ) \in A \times B \mid b = f( a )} \right\}\!.  
+\]
+However, we also learned that some sets of ordered pairs cannot be used to define a function.  We now wish to explore under what conditions a set of ordered pairs can be used to define a function.
+  Starting with a function $f\x  A \to B$, since  $\text{dom}( f ) = A$, we know that
+%
+\begin{equation} \label{eq:65a}
+\text{For every }  a \in A, \text{ there exists a }  b \in B  \text{ such that }  
+( {a, b} ) \in f.
+\end{equation}
+%
+Specifically, we use  $b = f( a )$.  This says that every element of  $A$  can be used as an input.  In addition, to be a function, each input can produce only one output.  In terms of ordered pairs, this means that there will never be two ordered pairs   
+$( {a, b} )$  and  $( {a, c} )$  in the function  $f$  where  
+$a \in A$, $b, c \in B$, and  $b \ne c$.  We can formulate this as a conditional statement as follows:
+\begin{align} 
+&\text{For every } a \in A \text{ and every } b, c \in B,  \notag \\
+&\text{ if } ( {a, b} ) \in f  \text{ and } ( {a, c} ) \in f, 
+\text{ then } b = c. \label{eq:65b}
+\end{align}
+%
+This also means that if we start with a subset  $f$  of  $A \times B$  that satisfies  conditions~(\ref{eq:65a})  and~(\ref{eq:65b}), then we can consider  $f$  to be a function  from  $A$  to  $B$  by using  \linebreak
+$b = f( a )$  whenever $( {a, b} )$  is in  $f$.  This proves the following theorem.
+\enlargethispage{\baselineskip}
+%\hbreak
+%
+\begin{theorem} \label{T:functionasordered}
+Let  $A$  and  $B$  be nonempty sets and let $f$ be a subset of $A \times B$ that satisfies the following two properties:
+
+\begin{itemize}
+\item For every  $a \in A$, there exists  $b \in B$  such that  
+$( {a, b} ) \in f$\!; and
+
+\item For every  $a \in A$ and every  $b, c \in B$, if  $( {a,\;b} ) \in f$  and  $( {a, c} ) \in f$, then  $b = c$.
+\end{itemize}
+If we use  $f( a ) = b$ whenever  $( {a, b} ) \in f$, then  $f$  is a function from  $A$  to  $B$.
+\end{theorem}
+%
+\noindent
+\textbf{A Note about Theorem~\ref{T:functionasordered}}.    
+The first condition in Theorem~\ref{T:functionasordered} means that every element of  $A$  is an input, and the second condition ensures that every input has exactly one output.  Many texts will use Theorem~\ref{T:functionasordered} as the definition of a function.  Many mathematicians believe that this ordered pair representation of a function is the most rigorous definition of a function.  It allows us to use set theory to work with and compare functions.  For example, equality of functions becomes a question of equality of sets.  Therefore, many textbooks will use the ordered pair representation of a function as the definition of a function.
+\hbreak
+%
+\begin{prog}[\textbf{Sets of Ordered Pairs that Are Not Functions}] \label{prog:ordered} \hfill \\
+Let  $A = \left\{ {1, 2, 3} \right\}$  and let  $B = \left\{ {a, b} \right\}$.  Explain why each of the following subsets of $A \times B$ cannot be used to define a function from $A$ to $B$.
+\begin{multicols}{2}
+\begin{enumerate}
+\item $F = \left\{ {( {1, a} ), ( {2, a} )} \right\}$.
+
+\item $G = \left\{ {( {1, a} ), ( {2, b} ), ( {3, c} ), ( {2, c} )} \right\}$.
+\end{enumerate}
+\end{multicols}
+\end{prog}
+\hbreak
+%
+
+\endinput

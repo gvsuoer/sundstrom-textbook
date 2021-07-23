@@ -1,0 +1,203 @@
+\subsection*{Finite Sets}
+In Section~\ref{S:setoperations}, we defined the \textbf{cardinality}
+\index{cardinality!finite set}%
+ of a finite set $A$, denoted by $\card (A)$, to be the number of elements in the set $A$.  Now that we know about functions and bijections, we can define this concept more formally and more rigorously.  First, for each $k \in \mathbb{N}$, we define $\mathbb{N}_k$ to be the set of all natural numbers between 1 and $k$, inclusive.  That is,
+\label{sym:firstk}
+\[
+\mathbb{N}_k = \left\{ 1, 2, \ldots, k \right\}\!.
+\]
+We will use the concept of \textbf{equivalent sets}
+\index{equivalent sets}%
+ introduced in \typeu Activity~\ref*{PA:equivalentsets} to define a finite set.
+
+\begin{defbox}{cardinalityfinite}{A set $A$ is a \textbf{finite set}
+\index{finite set}%
+\index{finite set!properties of|(}%
+ provided that $A = \emptyset$ or there exists a natural number $k$ such that 
+$A \approx \mathbb{N}_k$.  A set is an \textbf{infinite set}
+\index{infinite set}%
+ provided that it is not a finite set.
+
+If $A \approx \mathbb{N}_k$, we say that the set $A$ has \textbf{cardinality}
+\index{cardinality}%
+ $\boldsymbol{k}$ (or \textbf{cardinal number}
+\index{cardinal number}%
+ $\boldsymbol{k}$), and we write  $\text{card} \left( A \right) = k$.  \label{sym:cardk} 
+
+In addition, we say that the empty set has \textbf{cardinality 0} (or \textbf{cardinal number 0}), and we write $\text{card} \left( \emptyset \right) = 0$.}
+\end{defbox}
+%
+Notice that by this definition, the empty set is a finite set.  In addition, for each 
+$k \in \mathbb{N}$, the identity function on $\mathbb{N}_k$ is a bijection and hence, by definition, the set $\mathbb{N}_k$ is a finite set with cardinality $k$.
+
+\begin{theorem}\label{T:equivfinitesets}
+Any set equivalent to a finite nonempty set $A$ is a finite set and has the same cardinality as 
+$A$.
+\end{theorem}
+%
+\begin{myproof}
+Suppose that $A$ is a finite nonempty set, $B$ is a set, and $A \approx B$.  Since $A$ is a finite set, there exists a $k \in \mathbb{N}$ such that $A \approx \mathbb{N}_k$.  We also have assumed that $A \approx B$ and so by part~(b) of Theorem~\ref{T:equivsets} (in \typeu Activity~\ref*{PA:equivsets2}), we can conclude that 
+$B \approx A$.  Since $A \approx \mathbb{N}_k$, we can use part~(c) of Theorem~\ref{T:equivsets} to conclude that $B \approx \mathbb{N}_k$.  Thus, $B$ is finite and has the same cardinality as $A$.
+\end{myproof}
+%\hbreak
+
+It may seem that we have done a lot of work to prove an ``obvious'' result in 
+Theorem~\ref{T:equivfinitesets}.  The same may be true of the remaining results in this section, which give further results about finite sets.  One of the goals is to make sure that the concept of cardinality for a finite set corresponds to our intuitive notion of the number of elements in the set.  Another important goal is to lay the groundwork for a more rigorous and mathematical treatment of infinite sets than we have encountered before.  Along the way, we will see the mathematical distinction between finite and infinite sets.
+
+The following two lemmas will be used to prove the theorem that states that every subset of a finite set is finite.
+
+\begin{lemma} \label{L:addone}
+If $A$ is a finite set and $x \notin A$, then $A \cup \left\{ x \right\}$ is a finite set and  
+$\text{card} \!\left( A \cup \left\{ x \right\} \right) = \text{card}( A ) + 1$.
+\end{lemma}
+%
+\begin{myproof}
+Let $A$ be a finite set and assume $\text{card}( A ) = k$, where 
+$k = 0$ or $k \in \mathbb{N}$.  Assume $x \notin A$.
+
+If $A = \emptyset$, then $\text{card}( A ) = 0$ and 
+$A \cup \left\{ x \right\} = \left\{ x \right\}$, which is equivalent to $\mathbb{N}_1$.  Thus, 
+$A \cup \left\{ x \right\}$ is finite with cardinality 1, which equals 
+$\text{card}( A ) + 1$.
+
+If $A \ne \emptyset$, then $A \approx \mathbb{N}_k$, for some $k \in \mathbb{N}$.  This means that $\text{card}( A ) = k$, and there exists a bijection $f\x A \to \mathbb{N}_k$.  We will now use this bijection to define a function $g\x A \cup \left\{ x \right\} \to \mathbb{N}_{k+1}$ and then prove that the function $g$ is a bijection.  We define $g\x A \cup \left\{ x \right\} \to \mathbb{N}_{k+1}$ as follows:  For each 
+$t \in A \cup \left\{ x \right\}$,
+\[
+g \left( t \right) = \left\{ \begin{gathered}
+  f \left( t \right) \text{  if  }t \in A \hfill \\
+  k + 1 \text{  if  }t = x. \hfill \\ 
+\end{gathered}  \right.
+\]
+To prove that $g$ is an injection, we let $x_1, x_2 \in A \cup \left\{ x \right\}$ and assume 
+$x_1 \ne x_2$.
+\begin{itemize}
+\item If $x_1, x_2 \in A$, then since $f$ is a bijection, 
+$f( x_1 ) \ne f ( x_2 )$, and this implies that 
+$g( x_1 ) \ne g( x_2 )$.
+
+\item If $x_1 = x$, then since $x_2 \ne x_1$, we conclude that $x_2 \ne x$ and hence 
+$x_2 \in A$.  So $g( x_1 ) = k + 1$, and since $f( x_2 ) \in \mathbb{N}_k$ and 
+$g( x_2 ) = f ( x_2 )$, we can conclude that $g( x_1 ) \ne g( x_2 )$.
+
+\item The case where $x_2 = x$ is handled similarly to the previous case.
+\end{itemize}
+
+\noindent
+This proves that the function $g$ is an injection.  The proof that $g$ is a surjection is 
+Exercise~(\ref{exer:addonesurjection}).  Since $g$ is a bijection, we conclude that $A \cup \left\{ x \right\} \approx \mathbb{N}_{k+1}$, and
+\[
+\text{card} \!\left(A \cup \left\{ x \right\} \right) = k + 1.
+\]
+Since $\text{card} \left(A \right) = k$, we have proved that
+$\text{card} \!\left(A \cup \left\{ x \right\} \right) = \text{card}( A ) + 1.$
+\end{myproof}
+%\hbreak
+%
+%Lemma~\ref{L:addone} implies that adding one element to a finite set increases its cardinality by %one.  It is also true that removing one element from a finite set reduces the cardinality by one.  %The proof of Corollary~\ref{C:removeone} is left as Exercise~(\ref{exer:sec92corollary}).
+
+%\begin{corollary} \label{C:removeone}
+%If $A$ is a finite set and $x \in A$, then $A - \left\{ x \right\}$ is a finite set and  
+%$\text{card} \left( A - \left\{ x \right\} \right) = \text{card} \left( A \right) - 1$.
+%\end{corollary}
+%\hbreak
+%
+\begin{lemma} \label{L:subsetsofNk}
+For each natural number $m$, if $A \subseteq \mathbb{N}_m$, then $A$ is a finite set and 
+$\text{card} \left( A \right) \leq m$.
+\end{lemma}
+%
+\begin{myproof}
+We will use a proof using induction on $m$.  For each $m \in \mathbb{N}$, let 
+$P( m )$ be, ``If $A \subseteq \mathbb{N}_m$, then $A$ is finite and 
+$\text{card}( A ) \leq m$.''
+
+We first prove that $P( 1 )$ is true.  If $A \subseteq \mathbb{N}_1$, then 
+$A = \emptyset$ or $A = \left\{ 1 \right\}$, both of which are finite and have cardinality less than or equal to the cardinality of $\mathbb{N}_1$.  This proves that $P( 1 )$ is true.
+
+%\vskip6pt
+For the inductive step, let $k \in \mathbb{N}$ and assume that $P( k )$ is true.  That is, assume that if $B \subseteq \mathbb{N}_k$, then $B$ is a finite set and 
+$\text{card}( B ) \leq k$.  We need to prove that 
+$P( k+1 )$ is true.
+
+So assume that $A$ is a subset of $\mathbb{N}_{k+1}$.  Then $A - \left\{ k+1 \right\}$ is a subset of $\mathbb{N}_k$.  Since $P( k )$ is true, $A - \left\{ k+1 \right\}$ is a finite set and 
+\[
+\text{card} \!\left( A - \left\{ k+1 \right\} \right) \leq k.
+\]
+There are two cases to consider:  Either $k+1 \in A$ or $k+1 \not \in A$.
+
+\vskip6pt
+If $k+1 \not \in A$, then $A = A - \left\{ k+1 \right\}$.  Hence, $A$ is finite and
+\[
+\text{card} ( A ) \leq k < k+1.
+\]
+
+If $k+1 \in A$, then $A = ( A - \left\{ k+1 \right\} ) \cup \left\{ k+1 \right\}$. Hence, by Lemma~\ref{L:addone}, $A$ is a finite set and
+\[
+\text{card} ( A ) = 
+\text{card} \!\left(  A - \left\{ k+1 \right\}  \right) + 1.
+\]
+Since $\text{card} \!\left( A - \left\{ k+1 \right\} \right) \leq k$, we can conclude that 
+$\text{card} ( A ) \leq k + 1$. 
+
+This means that we have proved the inductive step.  Hence, by mathematical induction, for each 
+$m \in \mathbb{N}$, if $A \subseteq \mathbb{N}_m$, then $A$ is finite and 
+$\text{card} ( A ) \leq m$.
+\end{myproof}
+%\hbreak
+The preceding two lemmas were proved to aid in the proof of the following theorem.
+
+\begin{theorem} \label{T:finitesubsets}
+If $S$ is a finite set and $A$ is a subset of $S$, then $A$ is a finite set and 
+$\text{card} ( A ) \leq \text{card} ( S )$.
+\end{theorem}
+%
+\begin{myproof}
+Let $S$ be a finite set and assume that $A$ is a subset of $S$.  If $A = \emptyset$, then $A$ is a finite set and $\text{card} ( A ) \leq \text{card} ( S )$.  So we assume that $A \ne \emptyset$.  
+
+Since $S$ is finite, there exists a bijection $f\x S \to \mathbb{N}_k$ for some $k \in \mathbb{N}$.  In this case, $\text{card} ( S ) = k$.  We need to show that $A$ is equivalent to a finite set.  To do this, we define 
+$g\x A \to f ( A )$ by
+\begin{center}
+$g ( x ) = f ( x )$ for each $x \in A$.
+\end{center}
+Since $f$ is an injection, we conclude that $g$ is an injection.  Now let 
+$y \in f ( A )$.  Then there exists an $a \in A$ such that $f ( a ) = y$.  But by the definition of $g$, this means that $g ( a ) = y$, and hence $g$ is a surjection.  This proves that $g$ is a bijection.
+
+Hence, we have proved that $A \approx f ( A )$.  Since $f ( A )$ is a subset of $\mathbb{N}_k$, we use Lemma~\ref{L:subsetsofNk} to conclude that $f ( A )$ is finite and $\text{card} ( f ( A ) ) \leq k$.  In addition, by 
+Theorem~\ref{T:equivfinitesets}, $A$ is a finite set and 
+$\text{card} ( A ) = \text{card} ( f ( A ) )$.  This proves that $A$ is a finite set and $\text{card} ( A ) \leq \text{card} ( S )$.
+\end{myproof}
+\hbreak
+
+Lemma~\ref{L:addone} implies that adding one element to a finite set increases its cardinality by 1.  It is also true that removing one element from a finite nonempty set reduces the cardinality by 1.  The proof of Corollary~\ref{C:removeone} is 
+Exercise~(\ref{exer:sec92corollary}).
+
+\begin{corollary} \label{C:removeone}
+If $A$ is a finite set and $x \in A$, then $A - \left\{ x \right\}$ is a finite set and  
+$\text{card} \!\left( A - \left\{ x \right\} \right) = \text{card} ( A ) - 1$.
+\end{corollary}
+%
+The next corollary will be used in the next section to provide a mathematical distinction between finite and infinite sets.
+\begin{corollary} \label{C:propersubsets}
+A finite set is not equivalent to any of its proper subsets.
+\end{corollary}
+%
+\begin{myproof}
+Let $B$ be a finite set and assume that $A$ is a proper subset of $B$.  Since $A$ is a proper subset of $B$, there exists an element $x$ in $B - A$.  This means that $A$ is a subset of 
+$B - \left\{ x \right\}$.  Hence, by Theorem~\ref{T:finitesubsets},
+\[
+\text{card} ( A ) \leq \text{card} \!\left( B - \left\{ x \right\} \right).
+\]
+Also, by Corollary~\ref{C:removeone}
+\[
+\text{card} \!\left( B - \left\{ x \right\} \right) = \text{card} ( B ) - 1.
+\]
+Hence, we may conclude that $\text{card} ( A ) \leq \text{card} ( B ) - 1$ and that 
+\[
+\text{card} ( A ) < \text{card} ( B ).
+\]
+Theorem~\ref{T:equivfinitesets}
+implies that $B \not \approx A$.  This proves that a finite set is not equivalent to any of its proper subsets.
+\end{myproof}
+\hbreak
+
+\endinput

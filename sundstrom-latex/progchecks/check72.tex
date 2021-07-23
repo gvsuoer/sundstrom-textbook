@@ -1,0 +1,58 @@
+\section*{Section~\ref{S:equivrelations}}
+
+\subsection*{Progress Check~\ref{prog:proprelations}}
+The relation $R$:
+\begin{itemize}
+  \item  Is not reflexive since $(c, c) \notin R$ and $(d, d) \notin R$.
+  \item Is symmetric.
+  \item Is not transitive.  For example, $(c, a) \in R$, $(a, c) \in R$, but $(c, c) \notin R$.
+\end{itemize}
+
+
+\subsection*{Progress Check~\ref{prog:example-equiv}}
+\begin{itemize}
+\item Proof that the relation $\sim$ is symmetric:  Let $a, b \in \Q$ and assume that $a \sim b$.  This means that 
+$a - b \in \Z$.  Therefore, $-(a - b) \in \Z$ and this means that $b - a \in \Z$, and hence, $b \sim a$.
+
+\item Proof that the relation $\sim$ is transitive:  Let $a, b, c \in \Q$ and assume that $a \sim b$ and $b \sim c$.  This means that 
+$a - b \in \Z$ and that $b - c \in \Z$.  Therefore, 
+$\left((a - b) + (b - c) \right) \in \Z$ and this means that $a - c \in \Z$, and hence, 
+$a \sim c$.
+\end{itemize}
+
+
+
+\subsection*{Progress Check~\ref{prog:anotherequiv}}
+The relation  $ \approx $  is reflexive on  $\mathcal{P}\left( U \right)$  since for all  
+$A \in \mathcal{P}\left( U \right)$,  $\card(A) = \card(A)$.
+
+\newpar
+The relation  $ \approx $ is symmetric since  for all  $A, B \in \mathcal{P}\left( U \right)$, if  $\card(A) = \card(B)$, then using the fact that equality on $\Z$ is symmetric,  we conclude that $\card(B) = \card(A)$.  That is, if  $A$  has the same number of elements as  $B$, then  $B$  has the same number of elements as  $A$.
+
+\newpar
+The relation  $ \approx $ is transitive since  for all  $A, B, C \in \mathcal{P}\left( U \right)$, if  $\card(A) = \card(B)$ and  $\card(B) = \card(C)$, then  using the fact that equality on $\Z$ is transitive, we conclude that $\card(A) = \card(C)$.  That is,  if  $A$  and  $B$  have the same number of elements and  $B$  and  $C$  have the same number of elements, then  $A$  and  $C$  have the same number of elements.
+
+\newpar
+Therefore, the relation $\approx$ is an equivalence relation on $\mathcal{P}\left( U \right)$.
+
+
+
+%\subsection*{Progress Check~\ref{prog:negproprelations}}
+%Let  $A$  be a nonempty set and let  $R$  be a relation on  $A$.
+%\begin{enumerate}
+%\item The relation  $R$  is not reflexive on  $A$  provided that there exists an  $x \in A$  such that  $\left( {x, x} \right) \notin R$ (or equivalently,  $x \not \mathrel{R} x$).
+%
+%\item The relation  $R$ is not symmetric provided that there exist  $x, y \in A$ such that  
+%$\left( {x, y} \right) \in R$ and  $\left( {y, x} \right) \notin R$ (or  $x \mathrel{R} y$
+% and  $y \not \mathrel{R} x$).
+%
+%\item The relation  $R$ is not transitive provided that there exist  $x, y, z \in A$ such that  $\left( {x, y} \right) \in R$, $\left( {y, z} \right) \in R$, and  
+%$\left( {x, z} \right) \notin R$ (or  $x \mathrel{R} y$, $y \mathrel{R} z$, and  
+%$x \not \mathrel{R} z$).
+%\end{enumerate}
+
+\hbreak
+
+
+\endinput
+

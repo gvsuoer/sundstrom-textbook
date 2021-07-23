@@ -1,0 +1,127 @@
+\subsection*{Important Properties of Set Complements}
+The three main set operations are union, intersection, and complementation.  Theorems~\ref{T:algebraofsets} and~\ref{T:intersectandunion} deal with properties of unions and intersections.  The next theorem states some basic properties of complements and the important relations dealing with complements of unions and complements of intersections.  Two relationships in the next theorem are known as \textbf{De Morgan's Laws}
+ for sets and are closely related to De Morgan's Laws for statements.
+%
+\begin{theorem} \label{T:propsofcomplements}
+Let  $A$  and  $B$  be subsets of some universal set  $U$.  Then the following are true:
+
+\BeginTable
+\BeginFormat
+| p(2in) |  p(2.2in) |
+\EndFormat
+"Basic Properties    "  $\left( A^c \right)^c = A$ " \\+20
+"                    "  $A - B = A \cap B^c$   " \\+03
+\EndTable
+
+\BeginTable
+\BeginFormat
+| p(2in) |  p(2.2in) |
+\EndFormat
+"Empty Set and Universal Set      "  $A - \emptyset = A$ and $A - U = \emptyset$ " \\
+"                    "  ${\emptyset}^c = U$ and $U^c = \emptyset$ " \\+02
+\EndTable
+
+\BeginTable
+\BeginFormat
+| p(2in) |  p(2.2in) |
+\EndFormat
+"De Morgan's Laws
+\index{De Morgan's Laws!for sets}%
+    "  $\left ({A \cap B} \right)^c = A^c \cup B^c$ " \\
+"                    "  $\left ({A \cup B} \right)^c = A^c \cap B^c$ " \\+02
+\EndTable
+
+\BeginTable
+\BeginFormat
+| p(2in) |  p(2.2in) |
+\EndFormat
+"Subsets and Complements        "  $A \subseteq B$ if and only if $B^c \subseteq A^c$ " \\
+\EndTable
+\end{theorem}
+
+\setcounter{equation}{0}
+\noindent
+\begin{myproof} 
+We will only prove one of De Morgan's Laws, namely, the one that was explored in 
+\typeu Activity~\ref*{PA:workingwithvenn2}.  The proofs of the other parts are left as exercises.  Let  $A$  and  $B$  be subsets of some universal set  $U$.  We will prove that  
+$\left( {A \cup B} \right)^c  = A^c  \cap B^c $ by proving that an element is in  $\left( {A \cup B} \right)^c$
+ if and only if it is in  $A^c  \cap B^c $.  So let  $x$  be in the universal set  $U$.  Then
+%
+\begin{equation} \label{eq:4d}
+x \in \left( {A \cup B} \right)^c \text{  if and only if  } x \notin A \cup B,
+\end{equation}
+%
+and
+%
+\begin{equation} \label{eq:4e}
+x \notin A \cup B\text{  if and only if  }x \notin A\text{  and  }x \notin B.
+\end{equation}
+%
+Combining~(\ref{eq:4d}) and~(\ref{eq:4e}), we see that
+%
+\begin{equation} \label{eq:4f}
+x \in \left( {A \cup B} \right)^c \text{  if and only if  }x \notin A\text{  and  }x \notin B.
+\end{equation}
+%
+In addition, we know that
+%
+\begin{equation} \label{eq:4g}
+x \notin A \text{  and  } x \notin B \text{  if and only if  } x \in A^c \text{  and  } x \in B^c, 
+\end{equation}
+
+\noindent
+and this is true if and only if  $x \in A^c  \cap B^c $.  So we can use~(\ref{eq:4f}) and~(\ref{eq:4g}) to conclude that
+%
+\[
+x \in \left( {A \cup B} \right)^c \text{  if and only if  }x \in A^c  \cap B^c, 
+\]
+%
+and, hence, that  $\left( {A \cup B} \right)^c  = A^c  \cap B^c $.
+\end{myproof}
+\hbreak
+
+%\newpage
+\begin{prog}[\textbf{Using the Algebra of Sets}] \label{prog:usingalgebrasets} \hfill
+\begin{enumerate}
+  \item Draw two general Venn diagrams for the sets  $A$, $B$, and  $C$.  On one, shade the region that represents  $\left( {A \cup B} \right) - C$, and on the other, shade the region that represents  $\left( {A - C} \right) \cup \left( {B - C} \right)$.  Explain carefully how you determined these regions and why they indicate that $\left( {A \cup B} \right) - C = \left( {A - C} \right) \cup \left( {B - C} \right)$.  \label{A:usingalgebrasets1}
+\end{enumerate}
+It is possible to prove the relationship suggested in Part~(\ref{A:usingalgebrasets1}) by proving that each set is a subset of the other set.  However, the results in Theorems~\ref{T:algebraofsets} and~\ref{T:propsofcomplements} can be used to prove other results about set operations.  When we do this, we say that we are using the algebra of sets to prove the result.  For example, we can start by using one of the basic properties in Theorem~\ref{T:propsofcomplements} to write
+%
+\[
+\left( {A \cup B} \right) - C = \left( {A \cup B} \right) \cap C^c.
+\]
+We can then use one of the commutative properties to write
+\begin{align*}
+\left( {A \cup B} \right) - C &= \left( {A \cup B} \right) \cap C^c \\
+                              &= C^c  \cap \left( {A \cup B} \right).
+\end{align*}
+%%
+%We can then conclude that  
+%%
+%\[
+%\left( {A \cup B} \right) - C = C^c  \cap \left( {A \cup B} \right).
+%\]
+\begin{enumerate} \setcounter{enumi}{1}
+  \item Determine which properties from Theorems~\ref{T:algebraofsets} and~\ref{T:propsofcomplements} justify each of the last three steps in the following outline of the proof that $\left( {A \cup B} \right) - C = \left( {A - C} \right) \cup \left( {B - C} \right)$.
+\begin{align*}
+\left( {A \cup B} \right) - C &= \left( {A \cup B} \right) \cap C^c & \text{(Theorem \ref{T:propsofcomplements})} \\
+                              &= C^c  \cap \left( {A \cup B} \right) &\text{(Commutative Property)} \\
+                              &= \left( C^c \cap A \right) \cup \left( C^c \cap B \right) \\
+                              &= \left( A \cap C^c \right) \cup \left( B \cap C^c \right) \\
+                              &= \left( A - C \right) \cup \left( B - C \right)
+\end{align*}
+\note It is sometimes difficult to use the properties in the theorems when the theorems use the same letters to represent the sets as those being used in the current problem.  For example, one of the distributive properties from Theorems~\ref{T:algebraofsets} can be written as follows:  For all sets $X$, $Y$, and $Z$ that are subsets of a universal set $U$,
+\[
+X \cap \left( Y \cup Z \right) = \left( X \cap Y \right) \cup \left( X \cap Z \right).
+\]
+%Now, use a distributive property (from Theorem~\ref{T:algebraofsets}) to rewrite the right side of the last equation.  Then use a commutative property and  other properties to prove that
+%%
+%\[
+%\left( {A \cup B} \right) - C = \left( {A - C} \right) \cup \left( {B - C} \right).
+%\]
+\end{enumerate}
+\end{prog}
+\hbreak
+
+
+\endinput

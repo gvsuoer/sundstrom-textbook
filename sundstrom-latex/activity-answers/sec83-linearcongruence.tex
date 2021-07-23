@@ -1,0 +1,125 @@
+\documentclass[11pt]{article}
+\usepackage{c://pctex/activity}
+
+\lhead{}
+\chead{\textbf{\large{Exercise 11 -- Section 8.3\\Linear Congruences in One Variable}}}
+\rhead{}
+\lfoot{\emph{Mathematical Reasoning: Writing and Proof, Third Ed.} \\Ted Sundstrom}
+\cfoot{}
+\rfoot{\copyright \the\year\, by Pearson Education, Inc.\\}
+
+
+\begin{document}
+\begin{enumerate}
+  \item The following table shows that $x = 2$ and  $x = 5$ are the only solutions of the congruence \\ $4x \equiv 2 \pmod 6$ with $0 \leq x < 6$.
+
+\begin{center}
+\begin{tabular}[t]{ c | c  c  c | c } 
+$x$  &  $4x \pmod 6$ & & $x$  &  $4x \pmod 6$ \\ \cline{1-2} \cline{4-5}
+0  &  0  &  &  3  &  0 \\ \cline{1-2} \cline{4-5}
+1  &  4  &  &  4  &  4 \\ \cline{1-2} \cline{4-5}
+2  &  2  &  &  5  &  2 \\ \cline{1-2} \cline{4-5}
+\end{tabular}
+\end{center}
+
+
+  \item The table in Part (a) shows that the congruence $4x \equiv 3 \pmod 6$ has no solution $x$ with $0 \leq x < 6$.
+
+
+
+\item The following table shows that $x = 5$  is the only solution of the congruence \\ $3x \equiv 7 \pmod 8$ with $0 \leq x < 8$.
+
+\begin{center}
+\begin{tabular}[t]{ c | c  c  c | c } 
+$x$  &  $3x \pmod 8$ & & $x$  &  $3x \pmod 8$ \\ \cline{1-2} \cline{4-5}
+0  &  0  &  &  4  &  4 \\ \cline{1-2} \cline{4-5}
+1  &  3  &  &  5  &  7 \\ \cline{1-2} \cline{4-5}
+2  &  6  &  &  6  &  2 \\ \cline{1-2} \cline{4-5}
+3  &  1  &  &  7  &  5 \\ \cline{1-2} \cline{4-5}
+\end{tabular}
+\end{center}
+
+
+\item The following table shows that $x = 2$ and  $x = 6$ are the only solutions of the congruence \\ $6x \equiv 4 \pmod 8$ with $0 \leq x < 8$.
+
+\begin{center}
+\begin{tabular}[t]{ c | c  c  c | c } 
+$x$  &  $6x \pmod 8$ & & $x$  &  $6x \pmod 8$ \\ \cline{1-2} \cline{4-5}
+0  &  0  &  &  4  &  0 \\ \cline{1-2} \cline{4-5}
+1  &  6  &  &  5  &  6 \\ \cline{1-2} \cline{4-5}
+2  &  4  &  &  6  &  4 \\ \cline{1-2} \cline{4-5}
+3  &  2  &  &  7  &  2 \\ \cline{1-2} \cline{4-5}
+\end{tabular}
+\end{center}
+
+
+\item $6x \equiv 4 \pmod 8$ if and only if  $8 \mid \left( {6x-4} \right)$.
+
+\item $8 \mid \left( {6x-4} \right)$ if and only if there exists an integer $m$ such that 
+$6x - 4 = 8m$.
+
+\item Using Parts~(e) and~(f), we see that $6x \equiv 4 \pmod 8$ if and only if there exists an integer $k$ such that $6x - 4 = 8m$.  We rewrite this equation in the form of a linear Diophantine equation in two variables as follows:
+\[
+6x - 8m = 4.
+\]
+We notice that $x = 2, m = 1$ is a solution of this equation.  If we let 
+$d = \gcd \left( {6,-8} \right) = 2$, we can use Theorem~8.22 to solve this equation.  The solution is
+\begin{align}
+x &= 2 + \frac{-8}{2} k & y &= 1 - \frac{6}{2} k \notag \\
+x &= 2 -4k              & y &= 1 - 3k     \notag  
+\end{align}
+where $k$ is an integer.
+
+This means that all solutions of the congruence $6x \equiv 4 \pmod 8$ can be written in the form 
+$x = 2 - 4k$, where $k$ is an integer.
+
+\item $ax \equiv c \pmod n$ if and only if  $n \mid \left( {ax-c} \right)$.
+
+\item $n \mid \left( {ax-c} \right)$ if and only if there exists an integer $m$ such that 
+$ax - c = nm$.
+\end{enumerate}
+
+We now see that $ax \equiv c \pmod n$ if and only if there exists an integer $m$ such that 
+$ax - c = nm$.  We write this last equation in the form of a linear Diophantine equation in two variables as follows:
+\[
+ax - nm = c.
+\]
+By letting $d = \gcd \left( {a,n} \right) = \gcd \left( {a,-n} \right)$, we can use Theorem~8.22 to obtain the following theorems.
+
+\begin{enumerate} \setcounter{enumi}{9}
+\item Let $n$ be a natural, let $a$ and $c$ be integers with $a \ne 0$, and let 
+$d = \gcd \left( {a, n} \right)$.  If  $d$ does  not divide $c$, then the linear congruence 
+$ax \equiv c \pmod n$ has no solution.
+
+\eighth
+For the proof, we can say that $ax \equiv c \pmod n$ if and only if there exists an integer $m$ such that
+\[
+ax - nm = c.
+\]
+Theorem~8.25 states that if $d$ does not divide $c$, then this equation has no solution, and hence, the congruence $ax \equiv c \pmod n$ has no solution.
+
+\item Let $n$ be a natural number, let $a$ and $c$ be integers with $a \ne 0$, and let 
+$d = \gcd \left( {a, n} \right)$.  If  $d$ divides $c$, then the linear congruence 
+$ax \equiv c \pmod n$ has infinitely many solutions.  In addition, if $x_0$ is a particular solution of this congruence, then all the solutions of the congruence are given by
+\[
+x = x_0 - \frac{n}{d} k
+\]
+where $k \in \mathbb{Z}$.
+
+\eighth
+Again, we can say that $ax \equiv c \pmod n$ if and only if there exists an integer $m$ such that
+\[
+ax - nm = c.
+\]
+We can then use Theorem~8.22 to conclude that this equation (and corresponding congruence) has infinitely many solutions, and if $x_0$ is a particular solution of this congruence, then any solution can be written in the form 
+\begin{align*}
+x &= x_0 + \frac{-n}{d} k \quad \text{or} \\
+x &= x_0 - \frac{n}{d} k
+\end{align*}
+where $k \in \mathbb{Z}$.
+
+
+
+\end{enumerate}
+
+\end{document}

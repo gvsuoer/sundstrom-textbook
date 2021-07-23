@@ -1,0 +1,58 @@
+%In Section~\ref{S:introfunctions} and in the beginning activities for this section, we have seen many examples of functions.  Functions are everywhere in mathematics.  We have also seen various ways to represent functions and to convey information about them.  For example, we have seen that the rule for determining outputs of a function can be given by a formula, a graph, or a table of values.  We have also seen that sometimes it is more convenient to give a verbal description of the rule for a function.  In cases where the domain and codomain are small, finite sets, we used an arrow diagram to convey information about how inputs and outputs are associated without explicitly stating a rule.  In this section, we will study some types of functions that we may not have encountered in previous mathematics courses.
+
+
+\subsection*{Functions Involving Congruences} \label{sub:functioncong}
+Theorem~\ref{T:congtorem} and Corollary~\ref{C:congtorem} (see page~\pageref{T:congtorem}) state that an integer is congruent (mod $n$) to its remainder when it is divided by  $n$.  (Recall that we always mean the remainder guaranteed by the Division Algorithm, which is the least nonnegative remainder.)  Since this remainder is unique and since the only possible remainders for division by $n$  are  $0, 1, 2,  \ldots , n - 1$, we then know that each integer is congruent, modulo $n$, to precisely one of the integers $0,1,2, \ldots ,n - 1$.  So for each natural number 
+$n$, we will define a new set $R_n$ as the set of remainders upon division by $n$.  So \label{page:R_n}
+\[
+R_n = \{ 0, 1, 2, \ldots , n - 1 \}.
+\]
+For example, $R_4 = \{0, 1, 2, 3 \}$ and $R_6 = \{ 0, 1, 2, 3, 4, 5 \}$.  We will now explore a method to define a function from $R_6$ to $R_6$.
+
+For each  $x \in R_6 $, we can compute $x^2  + 3$ and then determine the value of  $r$  in  
+$R_6 $ so that
+\[
+\left( {x^2  + 3} \right) \equiv r\pmod 6.
+\]
+Since $r$ must be in $R_6$, we must have $0 \leq r < 6$.  The results are shown in the following table.
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}[t]{| c | c | c | c | c |} \cline{1-2} \cline{4-5}
+   &  $r$ where  &  &  & $r$ where   \\
+$x$ & $( {x^2  + 3} ) \equiv r( {\bmod 6} )$ & &  $x$ &  
+$( {x^2  + 3} ) \equiv r( {\bmod 6} )$ \\ \cline{1-2} \cline{4-5} %\hline
+0  &  3  &  & 3  &  0  \\ \cline{1-2} \cline{4-5}
+1  &  4  &  & 4  &  1  \\ \cline{1-2} \cline{4-5}
+2  &  1  &  & 5  &  4  \\ \cline{1-2} \cline{4-5}
+\end{tabular}
+\caption{Table of Values Defined by a Congruence}
+\label{Ta:congruence}
+\end{center}
+\end{table}
+The value of  $x$  in the first column can be thought of as the input for a function with the value of  $r$  in the second column as the corresponding output.  Each input produces exactly one output.  So we could write  
+\begin{center}
+$f:R_6  \to R_6 $  by  $f( x ) = r$ where  
+$( {x^2  + 3} ) \equiv r  {\pmod 6} $.
+\end{center}
+This description and the notation for the outputs of this function are quite cumbersome.  So we will use a more concise notation.  We will, instead, write 
+\begin{center}
+Let  $f\x R_6  \to R_6 $ by   
+$f( x ) = \left( {x^2  + 3} \right) \pmod 6$.
+\end{center}
+\hbreak
+
+\begin{prog}[\textbf{Functions Defined by Congruences}] \label{pr:congfunctions} \hfill \\
+We have   $R_5  = \left\{ {0, 1, 2, 3, 4} \right\}$. Define 
+\begin{center} $f\x R_5  \to R_5$ by $f(x) = x^4 \pmod 5$, for each $x \in R_5$; 
+
+$g\x R_5 \to R_5$ by $g(x) = x^5 \pmod 5$, for each $x \in R_5$.
+\end{center}
+\begin{enumerate}
+\item Determine $f(0)$, $f(1)$, $f(2)$, $f(3)$, and $f(4)$ and represent the function $f$ with an arrow diagram.
+\item Determine $g(0)$, $g(1)$, $g(2)$, $g(3)$, and $g(4)$ and represent the function $g$ with an arrow diagram.
+\end{enumerate}
+\end{prog}
+\hbreak
+
+\endinput

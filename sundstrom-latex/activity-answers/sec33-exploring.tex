@@ -1,0 +1,67 @@
+\documentclass[11pt]{article}
+\usepackage{c://pctex/activity}
+
+\lhead{}
+\chead{\textbf{\large{Exercise 22 -- Section 3.3\\Exploring a Quadratic Equation}}}
+\rhead{}
+\lfoot{\emph{Mathematical Reasoning: Writing and Proof, Third Ed.} \\Ted Sundstrom}
+\cfoot{}
+\rfoot{\copyright \the\year\, by Pearson Education, Inc.\\}
+
+
+\begin{document}
+\begin{multicols}{2}
+\begin{enumerate}
+\item $x = \dfrac{{ - 2 \pm \sqrt {12} }}{2}$
+
+\item $x = \dfrac{{ - 4 \pm \sqrt 8 }}{2}$
+
+%\item $x = \dfrac{{ - 2 \pm i\sqrt {20} }}{2}$
+\end{enumerate}
+\end{multicols}
+
+\begin{enumerate} \setcounter{enumi}{3}
+\item A proof by contradiction is reasonable since the conclusion of the conditional statement is in the form of a negation.  With a proof by contradiction, we have the additional assumption that the equation $x^2  + 2mx + 2n = 0$ has an integer solution.
+
+\item We assume that there exists an integer  $m$  and there exists an odd integer $n$  such that the equation $x^2  + 2mx + 2n = 0$ has an integer solution for  $x$.
+
+\item
+\noindent
+\textbf{Proposition}.  For all integers $m$ and $n$, if $n$ is odd, then the equation
+   \[
+   x^2+2mx+2n=0
+   \]
+   has no integer solution for $x$.
+\begin{myproof}
+We will use a proof by contradiction.  So, we assume that the proposition is false.  That is, we assume that there exists an integer  $m$  and there exists an odd integer $n$  such that the equation $x^2  + 2mx + 2n = 0$ has an integer solution for  $x$.  We will let  $r$ represent an integer solution for this equation.  So, we have integers  $m$, $n$, and  $r$, with  $n$  being an odd integer, and
+\setcounter{equation}{0}
+\begin{equation} \label{eq:act318a}
+r^2  + 2mr + 2n = 0.
+\end{equation}
+We can rewrite equation~(\ref{eq:act318a}) in the following form:
+\begin{align}
+  r^2  &=  - 2mr - 2n \notag \\ 
+       &= 2\left( { - 2m - n} \right) \label{eq:act318b} 
+\end{align} 
+Since  $\left( { - 2m - n} \right) \in \mathbb{Z}$, equation~(\ref{eq:act318b}) implies that  
+$r^2 $ is an even integer.  So, by Theorem 3.6, we may conclude that  $r$  is an even integer.  Consequently, there exists an integer  $k$  such that  $r = 2k$.  If we substitute this into equation~(\ref{eq:act318a}), we obtain
+\begin{align}
+  \left( {2k} \right)^2  + 2m\left( {2k} \right) + 2n &= 0 \notag \\ 
+                                     4k^2  + 4mk + 2n &= 0 \label{eq:act318c} 
+\end{align}
+We now solve equation~(\ref{eq:act318c}) for  $n$ and obtain
+\[
+\begin{aligned}
+  2n &=  - 4k^2  - 4mk \\ 
+  2n &= 4\left( { - k^2  - mk} \right) \\ 
+   n &=  - 2\left( { - k^2  - mk} \right) \\ 
+\end{aligned} 
+\]
+However, since  $\left( { - k^2  - mk} \right)$ is an integer, this last equation tells us that  
+$n$  is an even integer.  This contradicts the assumption that  $n$  is an odd integer.  So, our assumption that the proposition is false is incorrect, and we have proven that if  $m$  and  $n$  are integers and  $n$  is odd, then the equation  $x^2  + 2mx + 2n = 0$ has no integer solution for  x.
+\end{myproof}
+\end{enumerate}
+
+
+
+\end{document}

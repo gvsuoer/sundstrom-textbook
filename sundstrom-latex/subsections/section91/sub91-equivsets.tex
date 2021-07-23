@@ -1,0 +1,37 @@
+\subsection*{Equivalent Sets}
+
+In \typeu Activity~\ref*{PA:equivalentsets}, we introduced the concept of equivalent sets.  The motivation for this definition was to have a formal method for determining whether or not two sets ``have the same number of elements.''  This idea was described in terms of a one-to-one correspondence (a bijection) from one set onto the other set.  This idea may seem simple for finite sets, but as we will see, this idea has surprising consequences when we deal with infinite sets.  (We will soon provide precise definitions for finite and infinite sets.)
+
+\newpar
+\textbf{Technical Note}:   The three properties we proved in Theorem~\ref{T:equivsets} in \typeu Activity~\ref*{PA:equivsets2} are very similar to the concepts of reflexive, symmetric, and transitive relations.  However, we do not consider equivalence of sets to be an equivalence relation on a set $U$ since an equivalence relation requires an underlying (universal) set $U$.  In this case, our elements would be the sets $A$, $B$, and $C$, and these would then have to be subsets of some universal set $W$ (elements of the power set of $W$).  For equivalence of sets, we are not requiring that the sets $A$, $B$, and $C$ be subsets of the same universal set.  So we do not use the term relation in regards to the equivalence of sets.  However, if $A$ and $B$ are sets and 
+$A \approx B$, then we often say that $A$ and $B$ are \textbf{equivalent sets}.
+
+\hbreak
+
+\begin{prog}[\textbf{Examples of Equivalent Sets}]\label{prog:equivsets} \hfill \\
+We will use the definition of equivalent sets from \typeu Activity~\ref*{PA:equivalentsets} in all parts of this progress check.  It is no longer sufficient to say that two sets are equivalent by simply saying that the two sets have the same number of elements.
+
+\begin{enumerate}
+  \item Let $A = \left\{ 1, 2, 3, \ldots, 99, 100 \right\}$ and let 
+$B = \left\{ 351, 352, 353, \ldots, 449, 450 \right\}$.  Define $f\x A \to B$ by $f(x) = x + 350$, for each $x$ in $A$.  Prove that $f$ is a bijection from the set $A$ to the set $B$ and hence, $A \approx B$.
+
+\item Let $E$ be the set of all even integers and let $D$ be the set of all odd integers.  Prove that $E \approx D$ by proving that $F\x E \to D$, where $F \left( x \right) = x + 1$, for all $x \in E$, is a bijection.
+
+\item Let $\left( 0, 1 \right)$ be the open interval of real numbers between 0 and 1.  Similarly, if $b \in \mathbb{R}$ with $b > 0$, let $\left( 0, b \right)$ be the open interval of real numbers between 0 and $b$. \label{A:equivsets4}
+
+Prove that the function $f\x \left( 0, 1 \right) \to \left( 0, b \right)$ by $f \left( x \right) = bx$, for all 
+$x \in \left( 0, 1 \right)$, is a bijection and hence 
+$\left( 0, 1 \right) \approx \left( 0, b \right)$.
+\end{enumerate}
+\end{prog}
+\hbreak
+%
+In Part~(\ref{A:equivsets4}) of Progress Check~\ref{prog:equivsets}, notice that if $b > 1$, then 
+$\left( 0, 1 \right)$ is a proper subset of $\left( 0, b \right)$ and 
+$\left( 0, 1 \right) \approx \left( 0, b \right)$.
+
+Also, in Part~(\ref{PA:equivalentsets5}) of \typeu Activity~\ref*{PA:equivalentsets}, we proved that the set $D$ of all odd natural numbers is equivalent to $\mathbb{N}$, and we know that $D$ is a proper subset of $\mathbb{N}$.  
+
+These results may seem a bit strange, but they are logical consequences of the definition of equivalent sets.  Although we have not defined the terms yet, we will see that one thing that will distinguish an infinite set from a finite set is that an infinite set can be equivalent to one of its proper subsets, whereas a finite set cannot be equivalent to one of its proper subsets.  
+
+\endinput

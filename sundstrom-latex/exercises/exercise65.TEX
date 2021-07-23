@@ -1,0 +1,266 @@
+\section*{Exercises 6.5}
+%
+\begin{enumerate}
+\item Let  $A = \left\{ {1, 2, 3} \right\}$  and  $B = \left\{ {a, b, c} \right\}$. 
+\label{exer:sec65-1}
+
+\begin{enumerate}
+  \item Construct an example of a function  $f\x A \to B$  that is not a bijection.  Write the inverse of this function as a set of ordered pairs.  Is the inverse of  $f$  a function?  Explain.  If so, draw an arrow diagram for  $f$  and  $f^{ - 1} $.
+
+  \item Construct an example of a function  $g\x A \to B$  that is a bijection.  Write the inverse of this function as a set of ordered pairs.  Is the inverse of  $g$  a function?  Explain. If so, draw an arrow diagram for  $g$  and  $g^{ - 1} $.
+\end{enumerate}
+
+\item Let  $S = \left\{ {a, b, c, d} \right\}$.  Define  $f\x S \to S$ by defining  $f$  to be the following set of ordered pairs. \label{exer:sec65-2}
+\[
+f = \left\{ {( {a, c} ), ( {b, b} ), ( {c, d} ), ( {d, a} )} \right\}
+\]
+\begin{enumerate}
+  \item Draw an arrow diagram to represent the function  $f$.  Is the function  $f$  a bijection? \label{exer:bijectiona}
+
+  \yitem Write the inverse of  $f$ as a set of ordered pairs.  Is  $f^{ - 1} $
+  a function?  Explain.
+
+  \item Draw an arrow diagram for  $f^{ - 1} $  using the arrow diagram from Exercise~(\ref{exer:bijectiona}).
+
+  \yitem Compute  $\left( {f^{ - 1}  \circ f} \right)( x )$  and  
+$\left( {f \circ f^{ - 1} } \right)( x )$ for each  $x$ in  $S$.  What theorem does this illustrate?
+\end{enumerate}
+
+\xitem 
+%This exercise uses ideas in Beginning Activity~\ref{PA:cubes}.
+Inverse functions can be used to help solve certain equations.  The idea is to use an inverse function to undo the function.  
+\label{exer:solveequation}
+\begin{enumerate}
+  \item Since the cube root function and the cubing function are inverses of each other, we can often use the cube root function to help solve an equation involving a cube.  For example, the main step in solving the equation
+\[
+( {2t - 1} )^3  = 20
+\]
+is to take the cube root of each side of the equation.  This gives
+\[
+\begin{aligned}
+\sqrt[3]{{( {2t - 1} )^3 }} &= \sqrt[3]{{20}} \\ 
+                                2t - 1 &= \sqrt[3]{{20}}. \\ 
+\end{aligned} 
+\]
+Explain how this step in solving the equation is a use of Corollary~\ref{C:inversecomposition}. \label{exer:solveequationa}
+
+  \item A main step in solving the equation  $e^{2t - 1}  = 20$ is to take the natural logarithm of both sides of this equation.  Explain how this step is a use of Corollary~\ref{C:inversecomposition}, and then solve the resulting equation to obtain a solution for  $t$  in terms of the natural logarithm function.  \label{exer:solveequationb}
+
+  \item How are the methods of solving the equations in Exercise~(\ref{exer:solveequationa}) and Exercise~(\ref{exer:solveequationb}) similar?
+\end{enumerate}
+
+\xitem Prove Part~(\ref{C:inversecomposition2}) of Corollary~\ref{C:inversecomposition}.  Let  $A$  and  $B$  be nonempty sets and let  $f\x A \to B$  be a bijection.  Then for every $y$ in $B$, 
+$\left( f \circ f^{ - 1}\right)(y) = y$.
+\label{exer:inversecomposition}%
+
+\item In Progress Check~\ref{pr:equalfunc} on page~\pageref{pr:equalfunc}, we defined the identity function on a set. The \textbf{identity function on the set}
+\index{identity function}%
+  $\boldsymbol{T}$, denoted by  $I_T $ \label{sym:idfunc1}, is the function  \linebreak
+$I_T \x T \to T$ defined by  $I_T ( t ) = t$ for every  $t$  in  $T$.  Explain how 
+Corollary~\ref{C:inversecomposition} can be stated using the concept of equality of functions and the identity functions on the sets $A$ and $B$.
+
+\item Let  $f\x A \to B$ and  $g\x B \to A$.  Let  $I_A $ and  $I_B $ be the identity functions on the sets  $A$  and  $B$, respectively.  Prove each of the following:
+
+\begin{enumerate}
+  \yitem If  $g \circ f = I_A $, then  $f$  is an injection.
+
+  \yitem If  $f \circ g = I_B $, then  $f$  is a surjection.
+
+  \item If  $g \circ f = I_A $  and  $f \circ g = I_B $, then  $f$ and $g$ are bijections and  
+$g = f^{ - 1} $.
+\end{enumerate} \label{exer:compequalidentity}
+
+%\item This exercise uses ideas that are contained in Activity~\ref{A:constructinverse}. \label{exer:sec65-5}
+%Let  \\
+%$\mathbb{R}^ +   = \left\{ { {y \in \mathbb{R}} \mid y > 0} \right\}$.  Define  $f\x \mathbb{R} \to \mathbb{R}^ +  $ by  $f( x ) = e^{2x - 1}$.
+%
+%\begin{enumerate}
+%  \yitem Set   $y = e^{2x - 1} $ and solve for  $x$  in terms of  $y$. 
+%\label{exer:constructinversea}
+%
+%  \yitem Use your work in Exercise~(\ref{exer:constructinversea}) to define a function   
+%$g\x \mathbb{R}^ +   \to \mathbb{R}$.
+%
+%  \item For each  $x \in \mathbb{R}$, determine  $( {g \circ f} )( x )$
+%and for each  $y \in \mathbb{R}^ +  $, determine  $( {f \circ g} )( y )$.
+%
+%  \item Use Exercise~(\ref{exer:compequalidentity}) to explain why  $g = f^{ - 1} $.
+%\end{enumerate}
+
+\xitem \label{exer:sec65-6} \begin{enumerate} 
+\item Define  $f\x \mathbb{R} \to \mathbb{R}$  by  
+$f( x ) = e^{ - x^2 } $.  Is the inverse of  $f$  a function?  Justify your conclusion.
+
+  \item Let  
+$\mathbb{R}^*  = \left\{ { {x \in \mathbb{R} } \mid x \geq 0} \right\}$.  Define
+$g\x \mathbb{R}^*  \to ( {0, 1} ]$ by  $g( x ) = e^{ - x^2 } $.  Is the inverse of  $g$  a function?  Justify your conclusion.
+\end{enumerate}
+
+%\pagebreak
+\item %This exercise uses ideas discussed in Activity~\ref{A:inversesine}.
+\begin{enumerate}
+  \item Let  $f\x \mathbb{R} \to \mathbb{R}$ be defined by  $f( x ) = x^2 $.  Explain why the inverse of  $f$  is not a function. \label{exer:restrictdoma}
+
+  \item Let $\R^* = \left \{ t \in \R \mid t \geq 0 \right\}$.  Define $g \x \R^* \to \R^*$ by $g(x) = x^2$.  Explain why this squaring function (with a restricted domain and codomain) is a bijection. \label{exer:restrictdomb}
+
+  \item Explain how to define the square root function as the inverse of the function in Exercise~(\ref{exer:restrictdomb}).
+
+  \item True or false:  $\left( \sqrt{x} \right)^2 = x$ for all $x \in \mathbb{R}$ such that 
+$x \geq 0$.
+
+  \item True or false:  $\sqrt{x^2} = x$ for all $x \in \mathbb{R}$.
+\end{enumerate}
+
+\item Prove the following: \label{exer:finversebijection}
+\begin{list}{}
+\item If  $f\x A \to B$ is a bijection, then  $f^{ - 1} \x B \to A$ is also a bijection.
+\end{list}
+
+\item For each natural number  $k$, let  $A_k $ be a set, and for each natural number  $n$, let  $f_n \x A_n  \to A_{n + 1} $.  \label{exer:sec65-9}
+
+For example,  $f_1 \x A_1  \to A_2 $, $f_2 \x A_2  \to A_3 $, $f_3 \x A_3  \to A_4 $, and so on.  
+
+Use mathematical induction to prove that for each natural number  $n$  with  $n \geq 2$, if  $f_1 , f_2 ,  \ldots , f_n $ are all bijections, then  
+$f_n  \circ f_{n - 1}  \circ  \cdots  \circ f_2  \circ f_1 $ is a bijection and
+\[
+( {f_n  \circ f_{n - 1}  \circ  \cdots  \circ f_2  \circ f_1 } )^{ - 1}  = f_1^{ - 1}  \circ f_2^{ - 1}  \circ  \cdots  \circ f_{n - 1}^{ - 1}  \circ f_n^{ - 1}.
+\]
+
+\note  This is an extension of Theorem~\ref{compositionofbijections}.  In fact, Theorem~\ref{compositionofbijections} is the basis step of this proof for  $n = 2$.
+
+\item \begin{enumerate}
+\item Define $f\x \R \to \R$ by $f(x) = x^2 - 4$ for all $x \in \R$.  Explain why the inverse of the function $f$ is not a function.
+
+\item Let $\R^* = \left\{ x \in \R \mid x \geq 0 \right\}$ and let 
+$T = \left\{ y \in \R \mid y \geq -4 \right\}$. Define $F\x \R^* \to T$ by $F(x) = x^2 - 4$ for all $x \in \R^*$.  Explain why the inverse of the function $F$ is a function and find a formula for $F^{-1}(y)$, where $y \in T$.
+\end{enumerate}
+
+\item Let $R_5 = \left\{ 0, 1, 2, 3, 4 \right\}$.
+\begin{enumerate}
+\item Define $f\x R_5 \to R_5$ by $f(x) = x^2 + 4 \pmod 5$ for all $x \in R_5$.  Write the inverse of $f$ as a set of ordered pairs and explain why $f^{-1}$ is not a function.
+
+\item Define $g\x R_5 \to R_5$ by $g(x) = x^3 + 4 \pmod 5$ for all $x \in R_5$.  Write the inverse of $g$ as a set of ordered pairs and explain why $g^{-1}$ is a function.
+
+\item Is it possible to write a formula for $g^{-1}(y)$, where $y \in R_5$?  The answer to this question depends on whether or not it is possible to define a cube root of elements of $R_5$.  Recall that for a real number $x$, we define the cube root of $x$ to be the real number $y$ such that $y^3 = x$.  That is,
+
+\begin{center}
+$y = \sqrt[3]{x}$ if and only if $y^3 = x$.
+\end{center}
+
+Using this idea, is it possible to define the cube root of each number in $R_5$?  If so, what are 
+$\sqrt[3]{0}$, $\sqrt[3]{1}$, $\sqrt[3]{2}$, $\sqrt[3]{3}$, and $\sqrt[3]{4}$?
+
+\item Now answer the question posed at the beginning of Part~(c).  If possible, determine a formula for $g^{-1}(y)$ where $g^{-1}\x R_5 \to R_5$.
+\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection*{Explorations and Activities}
+\setcounter{oldenumi}{\theenumi}
+\begin{enumerate} \setcounter{enumi}{\theoldenumi}
+  \item \textbf{Constructing an Inverse Function}.  If $f\x A \to B$ is a bijection, then we know that its inverse is a function.  If  we are given a formula for the function  $f$, it may be desirable to determine a formula for the function  $f^{ - 1} $.  This can sometimes be done, while at other times it is very difficult or even impossible.
+
+%\textbf{Construction of an Inverse Function}. 
+Let  $f\x \R \to \R$ be defined by  $f( x ) = 2x^3  - 7$.  A graph of this function would suggest that this function is a bijection.
+\begin{enumerate}
+  \item Prove that the function $f$ is an injection and a surjection.
+\end{enumerate}
+Let $y \in \R$.  One way to prove that $f$ is a surjection is to set $y = f( x )$ and solve for  $x$.  If this can be done, then we would know that there exists an $x \in \R$ such that $f(x) = y$.  
+For the function $f$, we are using  $x$  for the input and  $y$  for the output.  
+By solving for  $x$  in terms of  $y$, we are attempting to write a formula where   $y$  is the input and  $x$  is the output.  This formula represents the inverse function.
+%\setcounter{oldenumii}{\theenumii}
+\begin{enumerate} \setcounter{enumii}{1}
+  \item Solve the equation  $y = 2x^3  - 7$ for  $x$.  Use this to write a formula for  
+$f^{ - 1} ( y )$, where  $f^{ - 1} \x \R \to \R$.  \label{A:constructinverse2}
+
+\item Use the result of Part~(\ref{A:constructinverse2}) to verify that for each  
+$x \in \R$,  $f^{ - 1} \!\left( {f( x )} \right) = x$ and for each  
+$y \in \R$,  $f \!\left( {f^{ - 1} ( y )} \right) = y$.
+\end{enumerate}
+
+Now let $\R^+   = \left\{ { {y \in \mathbb{R}} \mid y > 0} \right\}$.  Define  $ g \x \mathbb{R} \to \R^+$ by  
+$g( x ) = e^{2x - 1}$.
+
+\begin{enumerate} \setcounter{enumii}{3}
+  \item Set   $y = e^{2x - 1} $ and solve for  $x$  in terms of  $y$. 
+\label{exer:constructinversea}
+
+  \item Use your work in Exercise~(\ref{exer:constructinversea}) to define a function   
+$h\x \mathbb{R}^ +   \to \mathbb{R}$.
+
+  \item For each  $x \in \mathbb{R}$, determine  $( {h \circ g} )( x )$
+and for each  $y \in \mathbb{R}^ +  $, determine  $( {g \circ h} )( y )$.
+
+  \item Use Exercise~(\ref{exer:compequalidentity}) to explain why  $h = g^{ - 1} $.
+\end{enumerate}
+
+
+\item \textbf{The Inverse Sine Function}. \label{A:inversesine} 
+We have seen that in order to obtain an inverse function, it is sometimes necessary to restrict the domain (or the codomain) of a function.
+
+\begin{enumerate}
+\item Let  $f\x \R \to \R$ be defined by  $f( x ) = \sin x$.  Explain why the inverse of the function  $f$  is not a function.  (A graph may be helpful.)  \label{A:inversesine1}
+\end{enumerate}
+
+Notice that if we use the ordered pair representation, then the sine function can be represented as
+\[
+f  = \left\{ { {( {x, y} ) \in \R \times \R } \mid y = \sin x} \right\}\!.
+\]
+If we denote the inverse of the sine function by  $\sin ^{ - 1} $, then
+\[
+f^{ - 1}  = \left\{ { {( {y, x} ) \in \R \times \R } \mid y = \sin x} \right\}\!.
+\]
+Part~(\ref{A:inversesine1}) proves that  $f^{ - 1} $  is not a function.  However, in previous mathematics courses, we frequently used the ``inverse sine function.''  This is not really the inverse of the sine function as defined in Part~(\ref{A:inversesine1}) but, rather, it is the inverse of the 
+%\vspace{2pt}
+%\noindent
+sine function \textbf{restricted to the domain}  
+$\left[ {-\dfrac{{\pi }}{2}, \dfrac{\pi }{2}} \right]$.
+
+\begin{enumerate}
+\setcounter{enumii}{1}
+\item Explain why the function  
+$F\x \left[ {- \dfrac{{\pi }}{2}, \dfrac{\pi }{2}} \right] \to \left[ { - 1, 1} \right]$
+defined by 
+$F( x ) = \sin x$ is a bijection.  \label{A:inversesine2}
+\end{enumerate}
+
+The inverse of the function in Part~(\ref{A:inversesine2}) is itself a function and is called the \textbf{inverse sine function}
+\index{inverse sine function}%
+ (or sometimes the \textbf{arcsine function}).
+\index{arcsine function}%
+
+\begin{enumerate}
+\setcounter{enumii}{2}
+\item What is the domain of the inverse sine function?  What are the range and codomain of the inverse sine function?
+\end{enumerate}
+%
+Let us now use  $F ( x ) = \text{Sin} ( x )$ 
+\label{sym:restrictsine} to represent the restricted sine function in Part~(\ref{A:inversesine2}).  Therefore, 
+$F^{-1} ( x ) = \text{Sin}^{ - 1} ( x ) $
+\label{sym:inversesine} can be used to represent the inverse sine function.  Observe that
+\[
+F\x \left[ -{\frac{{\pi }}{2}, \frac{\pi }{2}} \right] \to \left[ { - 1, 1} \right]
+	\text{ and }	
+F^{ - 1} \x \left[ { - 1, 1} \right] \to \left[ -{\frac{{\pi }}{2}, \frac{\pi }
+{2}} \right].
+\]
+%
+\begin{enumerate}
+\setcounter{enumii}{3}
+\item Using this notation, explain why
+\begin{list}{}
+\item $\text{Sin}^{ - 1} y = x	\text{ if and only if }	
+\left[ {y = \sin x\text{  and  } -\dfrac{{\pi }}{2} \leq x \leq \dfrac{\pi }
+{2}} \right]$;
+
+\item $\text{Sin} \!\left( \text{Sin}^{-1} ( y ) \right) = y$ for all 
+$y \in \left[ -1, 1 \right]$; and
+\item $\text{Sin}^{-1} \!\left( \text{Sin} ( x ) \right) = x$ for all 
+$x \in \left[ - \dfrac{\pi}{2}, \dfrac{\pi}{2} \right]$.
+\end{list}
+\end{enumerate}
+\end{enumerate}
+
+\hbreak
+\endinput

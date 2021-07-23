@@ -1,0 +1,99 @@
+\documentclass[11pt]{article}
+\usepackage{../../styles/activity}
+
+\usepackage{xr}
+\externaldocument{0-MR}
+
+\lhead{}
+%\chead{\textbf{\Large{\hspace{0pt}Beginning Activities for Section~5.5}}\\\hspace{0pt}\emph{Mathematical Reasoning: Writing and Proof}}
+\bahead{5.5}
+\rhead{}
+\lfoot{}
+\rfoot{}
+\cfoot{\hspace{0pt}\scalebox{0.4}{\includegraphics{cc-by-nc-sa.eps}}}
+
+\begin{document}
+\input table
+
+\subsection*{Beginning Activity 1 (The Union and Intersection of a Family of Sets)}
+
+\begin{enumerate}
+\item \begin{multicols}{2}
+$A \cup B \cup C = \left\{1, 2, 3, 4, 5, 6, 7 \right\}$ \\
+$B \cup C \cup D = \left\{2, 3, 4, 5, 6, 7, 8 \right\}$ \\
+$A \cap B \cap C = \left\{3, 4, 5 \right\}$ \\
+$B \cap C \cap D = \left\{4, 5, 6 \right\}$ 
+\end{multicols}
+
+\item 
+\begin{enumerate}
+\item $( A \cup B \cup C  ) \cup D = \left\{1, 2, 3, 4, 5, 6, 7, 8 \right\}$
+\item $A \cup ( B \cup C  \cup D ) = \left\{1, 2, 3, 4, 5, 6, 7, 8 \right\}$
+\item $A \cup ( B \cup C )   \cup D = \left\{1, 2, 3, 4, 5, 6, 7, 8 \right\}$
+\item $( A \cup B ) \cup ( C \cup D ) = \left\{1, 2, 3, 4, 5, 6, 7, 8 \right\}$
+\item $( A \cap B \cap C  ) \cap D = \left\{4, 5 \right\}$
+\item $A \cap ( B \cap C  \cap D ) = \left\{4, 5 \right\}$
+\item $A \cap ( B \cap C )   \cap D = \left\{4, 5 \right\}$
+\item $( A \cap B ) \cap ( C \cap D ) = \left\{4, 5 \right\}$
+\end{enumerate}
+
+\item It appears that the placement of the parentheses in the union or intersection of these four sets does not make a difference.  This means that we can define $A \cup B \cup C \cup D$ and $A \cap B \cap C \cap D$ as $( A \cup B \cup C  ) \cup D$ and 
+$( A \cap B \cap C  ) \cap D$, respectively.
+
+\item Since $\mathscr{A} = \left\{A, B, C , D \right\}$,
+\begin{itemize}
+\item $\bigcup\limits_{X \in \mathscr{A}}^{}X$ consists of all the elements that are in one of the four sets $A$, $B$, $C$, and $D$.  This is the same set as  $A \cup B \cup C \cup D$.
+
+\item $\bigcap\limits_{X \in \mathscr{A}}^{}X$ consists of all the elements that are in all of the four sets $A$, $B$, $C$, and $D$.  This is the same set as  $A \cap B \cap C \cap D$.
+\end{itemize}  
+So,
+\[
+\bigcup_{X \in \mathscr{A}}^{}X = \left\{1, 2, 3, 4, 5, 6, 7, 8 \right\} \qquad \text{and} \qquad
+\bigcap_{X \in \mathscr{A}}^{}X = \left\{4, 5 \right\}.
+\]
+
+\item $\bigcup\limits_{X \in \mathscr{B}}^{}X = \left\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10 \right\}$ \qquad and \qquad $\bigcap_{X \in \mathscr{B}}^{}X = \emptyset$
+
+\item Recall the the universal set is $\N$.  Therefore,
+\[
+\left( \bigcup_{X \in \mathscr{A}}^{}X \right)^c = \left\{9, 10, 11, 12, 13, \ldots \right\}.
+\]
+In addition,
+\begin{multicols}{2}
+$A^c = \left\{6, 7, 8, 9, \ldots \right\}$ \\
+$B^c = \left\{7, 8, 9, 10, \ldots \right\}$ \\
+$C^c = \left\{8, 9, 10, 11, \ldots \right\}$ \\
+$D^c = \left\{9, 10, 11, 12, \ldots \right\}$. 
+\end{multicols}
+Therefore,
+\[
+\bigcap_{X \in \mathscr{A}}^{}X^c = \left\{9, 10, 11, 12, \ldots \right\}.
+\]
+\end{enumerate}
+\hbreak
+
+
+
+\subsection*{Beginning Activity 2 (An Indexed Family of Sets)}
+\begin{enumerate}
+\item $\bigcup\limits_{j=1}^{4}C_j = \left\{ 1, 2, 3, 4, 5, 6, 7, 8 \right\}$ \qquad and  \qquad
+$\bigcap\limits_{j=1}^{4}C_j = \left\{ 4, 5 \right\}$
+
+\item \begin{enumerate}
+\item $\bigcup\limits_{j=1}^{6}C_j = \left\{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 \right\}$ and  
+$\bigcap\limits_{j=1}^{6}C_j = \emptyset$
+
+\item $\bigcup\limits_{j=1}^{8}C_j = \left\{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 \right\}$ and  $\bigcap\limits_{j=1}^{8}C_j = \emptyset$
+
+\item $\bigcup\limits_{j=4}^{8}C_j = \left\{ 4, 5, 6, 7, 8, 9, 10, 11, 12 \right\}$ and  
+$\bigcap\limits_{j=1}^{8}C_j = \left\{ 8 \right\}$
+
+
+\item $( \bigcap\limits_{j=1}^{4}C_j )^c = \left\{1, 2, 3, 6, 7, 8, 9, 10, \ldots \right\}$ and \\
+$\bigcup\limits_{j=1}^{4}C_j^c = \left\{1, 2, 3, 6, 7, 8, 9, 10, \ldots \right\}$
+
+\end{enumerate}
+\end{enumerate}
+\hbreak
+
+\end{document}

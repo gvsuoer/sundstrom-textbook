@@ -1,0 +1,51 @@
+\subsection*{Writing Guidelines: Keep the Reader Informed}
+\index{writing guidelines}%
+
+A very important piece of information about a proof is the method of proof to be used.  So when we are going to prove a result using the contrapositive or a proof by contradiction, we indicate this at the start of the proof.
+
+\begin{itemize}
+  \item We will prove this result by proving the contrapositive of the statement.
+  \item We will prove this statement using a proof by contradiction.
+  \item We will use a proof by contradiction.
+\end{itemize}
+We have discussed the logic behind a proof by contradiction in the \typel activities for this section.  The basic idea for a proof by contradiction of a proposition is to assume the proposition is false and show that this leads to a contradiction.  We can then conclude that the proposition cannot be false, and hence, must be true.  When we assume a proposition is false, we are, in effect, assuming that its negation is true.  This is one reason why it is so important to be able to write negations of propositions quickly and correctly.  We will illustrate the process with the proposition discussed in \typeu Activity~\ref*{PA:contradicton}.
+
+\begin{proposition}
+For each real number  $x$, if $0 < x < 1$, then $\dfrac{1}{x(1 - x)} \geq 4$.
+\end{proposition}
+
+\setcounter{equation}{0}
+\begin{myproof}
+We will use a proof by contradiction.  So we assume that the proposition is false, or that there exists a real number $x$ such that $0 < x < 1$ and
+\begin{equation} \label{eq:contradiction1}
+\dfrac{1}{x(1 - x)} < 4.
+\end{equation}
+We note that since $0 < x < 1$, we can conclude that $x > 0$ and that $(1 - x)>0$.  Hence, $x(1 - x) >0$ and if we multiply both sides of inequality~(\ref{eq:contradiction1}) by $x(1 - x)$, we obtain
+\[
+1 < 4x(1 - x).
+\]
+We can now use algebra to rewrite the last inequality as follows:
+\begin{align*}
+1 &< 4x - 4x^2 \\
+4x^2 - 4x + 1 &< 0 \\
+(2x - 1)^2 &< 0
+\end{align*}
+However, $(2x - 1)$ is a real number and the last inequality says that a real number squared is less than zero.  This is a contradiction since the square of any real number must be greater than or equal to zero.  Hence, the proposition cannot be false, and we have proved that for each real number  $x$, if $0 < x < 1$, then $\dfrac{1}{x(1 - x)} \geq 4$.
+\end{myproof}
+\hbreak
+
+\begin{prog}[\textbf{Starting a Proof by Contradiction}]\label{pr:start-con} \hfill \\
+One of the most important parts of a proof by contradiction is the very first part, which is to state the assumptions that will be used in the proof by contradiction.  This usually involves writing a clear negation of the proposition to be proven.  Review De Morgan's Laws and the negation of a conditional statement in Section~\ref{S:logequiv}.  (See Theorem~\ref{T:logequiv} on page~\pageref{T:logequiv}.)  Also, review Theorem~\ref{T:negations} (on page~\pageref{T:negations}) and then write a negation of each of the following statements.  (Remember that a real number is ``not irrational'' means that the real number is rational.)
+
+\begin{enumerate}
+\item For each real number $x$, if $x$ is irrational, then $\sqrt[3]{x}$ is irrational.
+\item For each real number $x$, $\left(x + \sqrt{2} \right)$ is irrational or 
+$\left(-x + \sqrt{2} \right)$ is irrational.
+\item For all integers $a$ and $b$, if 5 divides $ab$, then 5 divides $a$ or 5 divides $b$.
+\item For all real numbers $a$ and $b$, if $a > 0$ and $b > 0$, then 
+$\dfrac{2}{a} + \dfrac{2}{b} \ne \dfrac{4}{a + b}$.
+\end{enumerate}
+\end{prog}
+\hbreak
+
+\endinput

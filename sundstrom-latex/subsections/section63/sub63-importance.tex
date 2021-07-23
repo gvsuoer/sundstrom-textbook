@@ -1,0 +1,116 @@
+\subsection*{The Importance of the Domain and Codomain}
+The functions in the next two examples will illustrate why the domain and the codomain of a function are just as important as the rule defining the outputs of a function when we need to determine if the function is a surjection.
+
+\begin{example}[\textbf{A Function that Is Neither an Injection nor a Surjection}]\label{E:domainandcodomain} \hfill \\
+Let  $f\x \mathbb{R} \to \mathbb{R}$  be defined by  $f( x ) = x^2  + 1$.  Notice that  
+\[
+f( 2 ) = 5  \text{ and } f( { - 2} ) = 5.
+\]
+This is enough to prove that the function  $f$  is not an injection since this shows that there exist two different inputs that produce the same output.
+
+Since  $f( x ) = x^2  + 1$, we know that  $f( x ) \geq 1$ for all $x \in \mathbb{R}$.  This implies that the function  $f$  is not a surjection.  For example,  $ - 2$
+  is in the codomain of  $f$  and  $f( x ) \ne  - 2$ for all  $x$  in the domain of  $f$\!.  
+\end{example}
+
+\begin{example}[\textbf{A Function that Is Not an Injection but Is a Surjection}]\label{E:domainandcodomain2} \hfill \\
+Let  $T = \left\{ y \in \mathbb{R} \mid y \geq 1 \right\}$, and define  $F\x \mathbb{R} \to T$  by 
+ $F( x ) = x^2  + 1$.
+As in Example~\ref{E:domainandcodomain}, the function  $F$  is not an injection since  
+$F( 2 ) = F( { - 2} ) = 5$.
+
+Is the function  $F$ a surjection?  That is, does  $F$  map $\mathbb{R}$ onto  $T$?   As in Example~\ref{E:domainandcodomain}, we do know that  $F( x ) \geq 1$ for all 
+$x \in \mathbb{R}$.  
+
+To see if it is a surjection, we must determine if it is true that for every $y \in T$, there exists an $x \in \mathbb{R}$ such that $F ( x ) = y$.  So we choose  $y \in T$\!.  The goal is to determine if  there exists an $x \in \mathbb{R}$ such that
+\[
+\begin{aligned}
+  F( x ) &= y \text{, or} \\ 
+           x^2  + 1 &= y. \\ 
+\end{aligned} 
+\]
+One way to proceed is to work backward and  solve the last equation (if possible) for  $x$.  Doing so, we get
+\[
+\begin{aligned}
+  x^2  &= y - 1 \\ 
+  x = \sqrt {y - 1} &\text{   or   }x =  - \sqrt {y - 1}.  \\ 
+\end{aligned} 
+\]
+Now,  since  $y \in T$, we know that  $y \geq 1$  and hence that  $y - 1 \geq 0$.  This means that  $\sqrt {y - 1}  \in \mathbb{R}$.  Hence, if we use  $x = \sqrt {y - 1} $, then  $x \in \mathbb{R}$, and
+\[
+\begin{aligned}
+  F( x ) &= F\left( {\sqrt {y - 1} } \:\right) \\ 
+                    &= \left( {\sqrt {y - 1} } \: \right)^2  + 1 \\ 
+                    &= ( {y - 1} ) + 1 \\ 
+                    &= y. \\ 
+\end{aligned}
+\]
+This proves that  $F$  is a surjection since we have shown that for all  $y \in T$\!, there exists an  $x \in \mathbb{R}$  such that  $F( x ) = y$.  Notice that for each $y \in T$\!, this was a constructive proof of the existence of an $x \in \mathbb{R}$ such that $F ( x ) = y$.
+\end{example}
+%\hbreak
+
+\begin{center}
+\fbox{\parbox{4.68in}{ 
+%\begin{center}
+\textbf{An Important Lesson}.  In Examples~\ref{E:domainandcodomain} and~\ref{E:domainandcodomain2}, the same mathematical formula was used to determine the outputs for the functions.  However, one function was not a surjection and the other one was a surjection.  This illustrates the important fact that whether a function is surjective depends not only on the formula that defines the output of the function but also on the domain and codomain of the function.
+}}
+\end{center}
+The next example will show that whether or not a function is an injection also depends on the domain of the function.
+%
+\begin{example}[\textbf{A Function that Is an Injection but Is Not a Surjection}]\label{E:domainandcodomain3}  \hfill \\
+Let  
+$\mathbb{Z}^*  = \left\{ { {x \in \mathbb{Z}} \mid x \geq 0} \right\} = \mathbb{N} \cup \left\{ 0 \right\}$.  Define  $g\x \mathbb{Z}^*  \to \mathbb{N}$ by  
+$g( x ) = x^2  + 1$.  (Notice that this is the same formula used in Examples~\ref{E:domainandcodomain} and~\ref{E:domainandcodomain2}.)  Following is a table of values for some inputs for the function  $g$.
+
+\begin{center}
+\begin{tabular}{ c | c  c  c | c}
+  $x$ &  $g ( x )$ &   &  $x$ &  $g ( x )$ \\ \cline{1-2} \cline{4-5}
+   0 &            1           &   &   3  &       10               \\ \cline{1-2} \cline{4-5}
+   1 &            2           &   &   4  &       17               \\ \cline{1-2} \cline{4-5}
+   2 &            5           &   &   5  &       26               \\ \cline{1-2} \cline{4-5}
+\end{tabular}
+\end{center}
+Notice that the codomain is  $\mathbb{N}$, and the table of values suggests that some natural numbers are not outputs of this function.  So it appears that the function  $g$  is not a surjection.
+
+To prove that   $g$  is not a surjection, pick an element of  $\N$  that does not appear to be in the range.  We will use  3, and we will use a proof by contradiction to prove that there is no $x$ in the domain $\left( \Z^*\right)$ such that  
+$g( x ) = 3$.  So we assume that there exists an $x \in \Z^* $ with  $g( x ) = 3$.  Then
+\begin{align*}
+  x^2  + 1 &= 3 \\ 
+       x^2 &= 2 \\ 
+         x &=  \pm \sqrt 2.  \\ 
+\end{align*}
+But this is not possible since  $\sqrt 2  \notin \mathbb{Z}^* $.  Therefore, there is no 
+$x \in \mathbb{Z}^* $ with  $g( x ) = 3$.  This means that for every  
+$x \in \mathbb{Z}^* $,  $g( x ) \ne 3$.  Therefore,  3  is not in the range of  $g$,  and hence  $g$ is not a surjection.
+
+The table of values suggests that different inputs produce different outputs, and hence that  $g$  is an injection.  To prove that  $g$  is an injection,  assume that  
+$s, t \in \Z^* $ (the domain) with  $g( s ) = g( t )$.  Then
+\begin{align*}
+  s^2  + 1 &= t^2  + 1 \\ 
+      s^2  &= t^2.  \\ 
+\end{align*}
+Since  $s, t \in \mathbb{Z}^* $, we know that  $s \geq 0\text{ and }t \geq 0$.  So the preceding equation implies that  $s = t$.  Hence,  $g$  is an injection.
+\end{example}
+%
+\begin{center}
+\fbox{\parbox{4.68in}{ 
+%\begin{center}
+\textbf{An Important Lesson}.  The functions in the three preceding examples all used the same formula to determine the outputs.  The functions in Examples~\ref{E:domainandcodomain} and~\ref{E:domainandcodomain2} are not injections but the function in Example~\ref{E:domainandcodomain3} is an injection.  This illustrates the important fact that whether a function is injective not only depends on the formula that defines the output of the function but also on the domain of the function.
+}}
+\end{center}
+
+
+\begin{prog}[\textbf{The Importance of the Domain and Codomain}] 
+\label{pr:domainandcodomain} \hfill \\
+Let $\R^+ = \{ y \in \R \mid y > 0 \}$.  Define  
+\begin{list}{}
+\item $f \x \R \to \R$ by $f(x) = e^{-x}$, for each $x \in \R$, and
+\item $g \x \R \to \R^+$ by $g(x) = e^{-x}$, for each $x \in \R$.
+\end{list}
+\end{prog}
+Determine if each of these functions is an injection or a surjection.  Justify your conclusions.  \note Before writing proofs, it might be helpful to draw the graph of $y = e^{-x}$.  A reasonable graph can be obtained using $-3 \leq x \leq 3$ and $-2 \leq y \leq 10$.  Please keep in mind that the graph does not prove any conclusion, but may help us  arrive at the correct conclusions, which will still need proof.
+%\subsection*{Another Important Lesson}
+%The functions in the three preceding examples all used the same formula to determine the outputs.  The functions in Examples~\ref{E:domainandcodomain} and~\ref{E:domainandcodomain2} are not injections but the function in Example~\ref{E:domainandcodomain3} is an injection.  This illustrates the important fact that whether a function is injective not only depends on the formula that defines the output of the function but also on the domain of the function.
+\hbreak
+%
+
+\endinput

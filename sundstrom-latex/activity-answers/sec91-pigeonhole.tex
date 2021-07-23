@@ -1,0 +1,65 @@
+\documentclass[11pt]{article}
+\usepackage{c://pctex/activity}
+
+\lhead{}
+\chead{\textbf{\large{Exercise 11 - Section 9.1\\Using the Pigeonhole Principle}}}
+\rhead{}
+\lfoot{\emph{Mathematical Reasoning: Writing and Proof, Third Ed.} \\Ted Sundstrom}
+\cfoot{}
+\rfoot{\copyright \the\year\, by Pearson Education, Inc.\\}
+
+\begin{document}
+\begin{enumerate}
+\item Let $A = \left\{ 3, 5, 11, 17, 21, 24, 26, 29 \right\}$.  Notice that
+\begin{align}
+\left\{3, 21, 24, 26 \right\} &\subseteq A \quad \text{ and }   &3 + 21 + 24 + 26 &= 74 \notag \\
+\left\{3, 5, 11, 26, 29 \right\} &\subseteq A \quad \text{ and }   &3 + 5 + 11 + 26 + 29 &= 74 \notag
+\end{align}
+By removing the elements common to the two subsets of $A$, we we see that 
+$\left\{21, 24,  \right\}$ and  $\left\{5, 11, 29 \right\}$ are two disjoint subsets of $A$ whose elements have the same sum.
+
+\item Let $B = \left\{ 3, 6, 9, 12, 15, 18, 21, 24 \right\}$.  The sets $\left\{ 3, 6 \right\}$ and $\left\{ 9 \right\}$ are two disjoint subsets of $B$ whose elements have the same sum.  There are several other examples.
+
+\item Now let $C$ be any subset of $\mathbb{N}_{30}$ that contains 8 elements.  
+\begin{enumerate}
+\item By Proposition~5.11 in Section~5.2, the set $C$ has $2^8 = 256$ subsets.
+
+\item If $C = \left\{23, 24, 25, 26, 27, 28, 29, 30 \right\}$, then the sum of the elements of $C$ will be as large as possible.  These elements sum to 212.  So, the maximum of the elements for any subset of $C$ is 212.
+
+\item Now define a function $f:\mathcal{P} \left( C \right) \to \mathbb{N}_M$ so that for each 
+$X \in \mathcal{P} \left( C \right)$, $f \left( X \right)$ is equal to the sum of the elements in $X$.
+
+Since $\text{card} \left( \mathcal{P} \left( C \right) \right) = 256$ and 
+$\text{card} \left( \mathbb{N}_M \right) = 212$, the Pigeonhole Principle tells us that the function $f$ is not an injection.  This means that 
+\begin{center}
+there exist $A, B \in \mathcal{P} \left( C \right)$ such that 
+$f \left( A \right) = f \left( B \right)$.
+\end{center}
+In other words, $A$ and $B$ are subsets of $C$ whose elements have the same sum.
+\end{enumerate}
+
+\item If the two sets $A$ and $B$ from Part~(3c) are not disjoint, we remove the elements common to both the sets to obtain two disjoint subsets of $C$ whose elements have the same sum.  These two sets are $A_1$ and $B_1$ where
+\[
+\begin{aligned}
+A_1 &= A - \left( A \cap B \right), \\
+B_1 &= B - \left( A \cap B \right).
+\end{aligned}
+\]
+
+
+\item The set $S$ has $2^{10} = 1024$ subsets.  The sum of the elements of $\emptyset$ is 0.  The maximum sum of the elements for a subset of $S$ is $90 + 91 + \cdots + 99 = 945$.  So define
+\[
+f: \mathcal{P} \left( S \right) \to \mathbb{N}_{945}
+\]
+so that for each $X \in \mathcal{P} \left( S \right)$, $f \left( X \right) $ equals the sum of the elements in $X$.  By the Pigeonhole Principle, $f$ is not an injection.  This means that there exist subsets $A$ and $B$ of $S$ such that $A \ne B$ and 
+$f \left( A \right) = f \left( B \right)$.  So the sum of the elements of $A$ is equal to the sum of the elements of $B$.  So if
+\[
+C = A - \left( A \cap B \right) \quad \text{and} \quad D = B - \left( A \cap B \right)
+\]
+then $C$ and $D$ are disjoint and the sum of the elements of $C$ equals the sum of the elements of $D$.
+
+\end{enumerate}
+
+
+
+\end{document}

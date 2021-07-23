@@ -1,0 +1,332 @@
+\section{Linear Diophantine Equations} \label{S:diophantine}
+%
+%\markboth{Chapter~\ref{C:numbertheory}. Topics in Number Theory}{\ref{S:diophantine}. Linear 
+%Diophantine Equations}
+\setcounter{previewactivity}{0}
+%
+\input{previews/prev83-integersoln}
+\input{previews/prev83-twovars}
+%
+In the two \typel activities, we were interested only in integer solutions for certain equations.  In such instances, we give the equation a special name.
+
+\begin{defbox}{diophantineequation}{An equation whose solutions are required to be integers is called a \textbf{Diophantine equation}. }
+\index{Diophantine equation}%
+\end{defbox}
+
+Diophantine equations are named in honor of the Greek mathematician Diophantus of Alexandria
+\index{Diophantus of Alexandria}%
+ (third century {\smallc c.e.}).  Very little is known about Diophantus' life except that he probably lived in Alexandria in the early part of the fourth century {\smallc c.e.} and was probably the first to use letters for unknown quantities in arithmetic problems.  His most famous work, \textit{Arithmetica}, consists of approximately 130 problems and their solutions.  Most of these problems involved solutions of equations in various numbers of variables. It is interesting to note that Diophantus did not restrict his solutions to the integers but recognized rational number solutions as well.  Today, however, the solutions for a so-called Diophantine equation must be integers. 
+
+\begin{defbox}{lineardiophantine-one}{If $a$ and $b$ are integers with $a \ne 0$, then the equation
+$ax = b$ is a \textbf{linear Diophantine equation in one variable}.
+\index{Diophantine equation!linear in one variable}}
+\end{defbox}
+%
+Theorem~\ref{prop:lindiophone} in  
+\typeu Activity~\ref*{PA:integersolutions} provides us with results that allow us to determine which linear diophantine equations in one variable have solutions and which ones do not have a solution.
+% where the following theorem was proved.
+%
+%\begin{theorem} \label{T:lindiophone}
+%Let $a, b \in \mathbb{Z}$ with $a \ne 0$.
+%\begin{itemize}
+%\item If $a$ does not divide $b$, then the linear Diophantine equation $ax = b$ has no solution.  
+%\item If $a$ divides $b$, then the linear Diophantine equation $ax = b$ has exactly one solution.
+%\end{itemize}
+%\end{theorem}
+
+A linear Diophantine equation in two variables can be defined in a manner similar to the definition for a linear Diophantine equation in one variable.
+
+\begin{defbox}{lineardiophantine}{Let $a$, $b$, and $c$ be integers with $a \ne 0$ and 
+$b \ne 0$.  The Diophantine equation $ax + by = c$ is called a \textbf{linear Diophantine equation in two variables}.}
+\index{Diophantine equation!linear in two variables|(}%
+\index{linear Diophantine equations|(}%
+\end{defbox}
+
+The equations that were investigated in \typeu Activity~\ref*{exploringlinear} were linear Diophantine equations in two variables.  The problem of determining all the solutions of a linear Diophantine equation has been completely solved.  Before stating the general result, we will provide a few more examples.
+%\hbreak
+%
+
+\begin{example}[\textbf{A Linear Diophantine Equation in Two Variables}] \label{E:lineardioph} \hfill \\
+The following  example is similar to the examples studied in 
+\typeu Activity~\ref*{exploringlinear}.
+
+%\begin{enumerate}
+%\item 
+We can use substitution to verify that $x = 2$ and $y = -1$ is a solution of the linear Diophantine equation
+\[
+4x + 3y = 5.
+\]
+The following table shows other solutions of this Diophantine equation.
+\begin{center}
+\begin{tabular}{c | c  c c | c}
+$x$  &  $y$  &  &  $x$  &  $y$ \\ \cline{1-2} \cline{4-5}
+2  &  $-1$ &  &  $-1$ &  3 \\
+5  &  $-5$ &  &  $-4$ &  7 \\
+8  &  $-9$ &  &  $-7$ & 11 \\
+11 &  $-13$ &  & $-10$ & 15 \\
+\end{tabular}
+\end{center}
+It would be nice to determine the pattern that these solutions exhibit.  If we consider the solution $x = 2$ and $y =-1$ to be the ``starting point,'' then we can see that the other solutions are obtained by adding 3 to $x$ and subtracting 4 from $y$ in the previous solution.  So we can write these solutions to the equation as
+\[
+x = 2 + 3k \qquad \text{and} \qquad y = -1 - 4k, 
+\]
+where $k$ is an integer.  We can use substitution and algebra to verify that these expressions for $x$ and $y$ give solutions of this equation as follows:
+\begin{align*}
+4x + 3y &= 4 \left( 2+3k \right) + 3 \left( -1-4k \right) \\
+        &= \left( 8 + 12k \right) + \left( -3 - 12k \right) \\
+        &= 5.
+\end{align*}
+We should note that we have not yet proved that these solutions are all of the solutions of the Diophantine equation $4x + 3y = 5$.  This will be done later.
+
+If the general form for a linear Diophantine equation is $ax + by = c$, then for this example, 
+$a = 4$ and $b = 3$.  Notice that for this equation, we started with one solution and obtained other solutions by adding $b = 3$ to $x$ and subtracting $a = 4$ from $y$ in the previous solution.  Also, notice that $\gcd( 3, 4 ) = 1$.
+\end{example}
+\hbreak
+
+%\item 
+\begin{prog}[\textbf{An Example of a Linear Diophantine Equation}]\label{prog:lineardioph} \hfill
+\begin{enumerate}
+\item Verify that the following table shows some solutions of the linear Diophantine equation 
+$6x + 9y = 12$.
+\begin{center}
+\begin{tabular}{c | c  c c | c}
+$x$  &  $y$  &  &  $x$  &  $y$ \\ \cline{1-2} \cline{4-5}
+2  &  0 &  &  $-1$ &  2 \\
+5  &  $-2$ &  &  $-4$ & 4 \\
+8  &  $-4$ &  &  $-7$ & 6 \\
+11 &  $-6$ &  & $-10$ & 8 \\
+\end{tabular}
+\end{center}
+\item Follow the pattern in this table to determine formulas for $x$ and $y$ that will generate integer solutions of the equation $6x + 9y = 12$. Verify that the formulas actually produce solutions for the equation $6x + 9y = 12$.
+%\[
+%x = 2 + 3k \qquad y = 0 - 2k,
+%\]
+%where $k$ can be any integer.  Again, this does not prove that these are the only solutions. 
+\end{enumerate}
+
+%If the general form for a linear Diophantine equation is $ax + by = c$, then for this example, $a = 6$ and $b = 9$.  Notice that for this equation, we started with one solution. We then obtained other solutions by adding 3 to $x$ and subtracting 2 from $y$ in the previous solutions.  Notice that these are not the values of $b$ and $a$ as in the previous example. However, notice that $\gcd( 6, 9 ) = 3$ and that
+%\[
+%\frac{b}{3} = \frac{9}{3} = 3, \qquad  \frac{a}{3} = \frac{6}{2} = 2.
+%\]
+\end{prog}
+%\hrule
+
+\begin{prog}[\textbf{Revisiting \typeu Activity~\ref*{exploringlinear}}] \label{prog:prevact2} \hfill \\
+Do the solutions for the linear Diophantine equations in \typeu Activity~\ref*{exploringlinear} show the same type of pattern as the solutions for the linear Diophantine equations in Example~\ref{E:lineardioph} and Progress Check~\ref{prog:lineardioph}?  Explain.
+\end{prog}
+\hbreak
+%\pagebreak
+
+The solutions for the linear Diophantine equations in \typeu Activity~\ref*{exploringlinear}, Example~\ref{E:lineardioph}, and Progress Check~\ref{prog:lineardioph} provide examples for the second part of Theorem~\ref{T:lindioph2}.
+\begin{theorem} \label{T:lindioph2}
+Let $a$, $b$, and $c$ be integers with $a \ne 0$ and $b \ne 0$, and let \linebreak 
+$d = \gcd( a, b )$.
+\begin{enumerate}
+\item If $d$ does not divide $c$, then the linear Diophantine equation $ax + by = c$ has no solution.  \label{T:lindiop2-1}
+
+\item If $d$ divides $c$, then the linear Diophantine equation $ax + by = c$ has infinitely many solutions.  In addition, if  $\left( x_0, y_0 \right)$ is a particular solution of this equation, then all the solutions of this equation can be written in the form
+\[
+x = x_0 + \frac{b}{d} k  \quad \text{and} \quad  y = y_0 - \frac{a}{d} k,
+\]
+for some integer  $k$.
+\label{T:lindiop2-2}%
+\end{enumerate}
+\end{theorem}
+%
+\setcounter{equation}{0}
+\begin{myproof}
+The proof of Part~(\ref{T:lindiop2-1}) is Exercise~(\ref{exer:lindioph2}).
+For Part~(\ref{T:lindiop2-2}), we let $a$, $b$, and $c$ be integers with $a \ne 0$ and 
+$b \ne 0$, and let $d = \gcd( a,b )$.  We also assume that  $d \mid c$.
+Since $d = \gcd( a,b )$, Theorem~\ref{T:gcdaslincomb} tells us that $d$ is a linear combination of $a$ and $b$.  So there exist integers $s$ and $t$ such that
+\begin{equation}
+d = as + bt. \label{eq:lindioph1}
+\end{equation}
+Since $d \mid c$, there exists an integer $m$ such that $c = dm$.  We can now multiply both sides of equation~(\ref{eq:lindioph1}) by $m$ and obtain
+\[
+\begin{aligned}
+dm &= ( {as + bt} ) m \\
+ c &= a( sm ) + b( tm ).
+\end{aligned}
+\]
+This means that $x = sm$, $y = tm$ is a solution of $ax + by = c$, and we have proved that the Diophantine equation $ax + by = c$ has at least one solution.
+
+Now let $x = x_0$, $y = y_0$ be any particular solution of $ax + by = c$, let 
+$k \in \mathbb{Z}$, and let
+\begin{equation}
+x = x_0 + \frac{b}{d} k  \qquad  y = y_0 - \frac{a}{d} k. 
+\label{eq:x0andy0}%
+\end{equation}
+We now verify that for each $k \in \mathbb{Z}$, the equations in~(\ref{eq:x0andy0}) produce a solution of $ax + by = c$.
+\[
+\begin{aligned}
+ax + by &= a \!\left( {x_0 + \frac{b}{d} k } \right) + b \!\left( {y_0 - \frac{a}{d} k} \right ) \\
+        &= a x_0 + \frac{ab}{d} k + b y_0 - \frac{ab}{d} k \\
+        &= a x_0 + b y_0 \\
+        &= c.
+\end{aligned}
+\]
+This proves that the Diophantine equation $ax + by = c$ has infinitely many solutions.
+
+We now show that every solution of this equation can be written in the form described in~(\ref{eq:x0andy0}).  So suppose that $x$ and $y$ are integers such that $ax + by = c$.  Then
+\[
+( {ax + by} ) - ( {ax_0 + by_0} ) = c - c = 0,
+\]
+and this equation can be rewritten in the following form:
+\begin{equation}
+a( {x - x_0} ) = b( {y_0 - y} ). \label{eq:dioph3}
+\end{equation}
+Dividing both sides of this equation by $d$, we obtain
+\[
+\left( \frac{a}{d} \right) \left( {x - x_0} \right ) = \left( \frac{b}{d} \right) \left( {y_0 - y} \right).
+\]
+This implies that 
+\[
+\frac{a}{d} \text{ divides } \left( \frac{b}{d} \right) ( {y_0 - y} ).
+\]
+However, by Exercise~(\ref{exer:dividebygcd})  in Section~\ref{S:primefactorizations}, 
+$\gcd \!\left( \dfrac{a}{d}, \dfrac{b}{d} \right) = 1$, and so by 
+Theorem~\ref{T:relativelyprimeprop}, we can conclude that 
+$\dfrac{a}{d}$ divides  $\left( {y_0 - y} \right)$.  This means that there exists an integer $k$ such that $y_0 - y = \dfrac{a}{d} k$, and solving for $y$ gives
+\[
+y = y_0 - \frac{a}{d} k.
+\]
+Substituting this value for $y$ in equation~(\ref{eq:dioph3}) and solving for $x$ yields
+\[
+x = x_0 + \frac{b}{d} k.
+\]
+This proves that every solution of the Diophantine equation $ax + by = c$ can be written in the form prescribed  in~(\ref{eq:x0andy0}).
+\end{myproof}
+%
+\noindent
+The proof of the following corollary to Theorem~\ref{T:lindioph2} is 
+Exercise~(\ref{exer:cor-lindioph2}).
+
+\begin{corollary} \label{C:lindioph2}
+Let $a$, $b$, and $c$ be integers with $a \ne 0$ and $b \ne 0$.  If $a$ and $b$ are relatively prime, then the linear Diophantine equation $ax + by = c$ has infinitely many solutions.  In addition, if  $x_0$, $y_0$ is a particular solution of this equation, then all the solutions of the equation are given by
+\[
+x = x_0 + b k  \qquad y = y_0 - a k
+\]
+where $k \in \mathbb{Z}$. 
+\end{corollary}
+\hbreak
+%\pagebreak
+%
+\begin{prog} [\textbf{Linear Diophantine Equations}] \label{prog:lindiophequations} \hfill
+\begin{enumerate}
+\item Use the Euclidean Algorithm to verify that $\gcd ({63, 336} ) = 21$.  What conclusion can be made about linear Diophantine equation $63x + 336y = 40$ using 
+Theorem~\ref{T:lindioph2}?  If this Diophantine equation has solutions, write formulas that will generate the solutions.
+
+\item Use the Euclidean Algorithm to verify that $\gcd( {144, 225} ) = 9$.  What conclusion can be made about linear Diophantine equation $144x + 225y = 27$ using 
+Theorem~\ref{T:lindioph2}?  If this Diophantine equation has solutions, write formulas that will generate the solutions.
+%Remember that this means there is no ordered pair of integers $\left( x, y \right)$ such that 
+%$63x + 336y = 40$.  However, if we allow $x$ and $y$ to be real numbers, then there are real number solutions.  In fact, we can graph the straight line whose equation is 
+%$63x + 336y = 40$ in the Cartesian plane.  From the fact that there is no pair of integers $x, y$ such that $63x + 336y = 40$, we can conclude that there is no point on the graph of this line in which both coordinates are integers.
+\end{enumerate}
+\end{prog}
+\index{Diophantine equation!linear in two variables|)}%
+\index{linear Diophantine equations|)}%
+\hbreak
+%%
+%\begin{example}  $144x + 225y = 27$ \hfill
+%
+%For this equation, we can use the Euclidean algorithm to determine that 
+%$\gcd( {144, 225} ) = 9$.  Since $9 \mid 27$, Theorem~\ref{T:lindioph2} tells us that the Diophantine equation $144x + 225y = 27$ has infinitely many solutions.
+%
+%To write formulas that will generate all the solutions, we first need to find one solution for 
+%$144x + 225y = 27$.  This can sometimes be done by trial and error, but there is a systematic way to find a solution.  The first step is to use the Euclidean algorithm in reverse to write 
+%$\gcd( {144, 225} )$ as a linear combination of 144 and 225.  See Section~\ref{S:gcd} to review how to do this.  The result from using the Euclidean algorithm in reverse for this situation is
+%\[
+%144 \cdot 11 + 225 \cdot \left( {-7} \right) = 9.
+%\]
+%If we multiply both sides of this equation by 3, we obtain
+%\[
+%144 \cdot 33 + 225 \cdot \left( {-21} \right) = 27.
+%\]
+%This means that $x_0 = 33, y_0 = -21$ is a solution of the linear Diophantine equation 
+%$144x + 225y = 27$.  We can now use Theorem~\ref{T:lindioph2} to conclude that all solutions of this Diophantine equation can be written in the form
+%\[
+%x = 33 + \frac{225}{9} k \qquad
+%y = -21 -\frac{144}{9} k,
+%\]
+%where $k \in \mathbb{Z}$.  Simplifying, we see that all solutions can be written in the form
+%\[
+%x = 33 + 25 k \qquad
+%y = -21 -16 k,
+%\]
+%where $k \in \mathbb{Z}$.
+%\vskip10pt
+%
+%We can check this general solution as follows:  Let $k \in \mathbb{Z}$.  Then
+%\[
+%\begin{aligned}
+%144x + 225y &= 144 \left( {33 + 25k} \right) + 225 \left( {-21 - 16k} \right) \\
+%            &= \left( {4752 + 3600k} \right) + \left( {-4725 - 3600k} \right) \\
+%            &= 27. \\
+%\end{aligned}
+%\]
+%\end{example}
+%\hbreak
+%
+%\begin{activity}[Linear Congruences in One Variable] \label{A:lincongruence}\hfill \\
+%Let $n$ be a natural number and let $a, b \in \mathbb{Z}$ with $a \ne 0$.  A congruence of the form $ax \equiv b \pmod n$ is called a \textbf{linear congruence in one variable}.
+%\index{linear congruence}%
+%This is called a linear congruence since the variable $x$ occurs to the first power.  
+%
+%A \textbf{solution of a linear congruence in one variable} is defined similarly to the solution of an equation.  A solution is an integer that makes the resulting congruence true when the integer is substituted for the variable $x$.  For example,
+%
+%\begin{itemize}
+%\item The integer $x = 3$ is a solution for the congruence 
+%$2x \equiv 1 \pmod 5$ since $2 \cdot 3 \equiv 1 \pmod 5$ is a true congruence.
+%
+%\item The integer $x = 7$ is not a solution for the congruence 
+%$3x \equiv 1 \pmod 6$ since $3 \cdot 7 \equiv 1 \pmod 6$ is a not a true congruence.
+%
+%\end{itemize}
+%
+%\begin{enumerate}
+%\item Verify that $x = 2$ and $x = 6$ are the only solutions for the linear congruence 
+%$6x \equiv 4 \pmod 8$ with $0 \leq x < 8$. \label{lincongruence1}
+%\end{enumerate}
+%The following parts of this activity show that we can use the results of Theorem~\ref{T:lindioph2} to help find all solutions of the linear congruence 
+%$6x \equiv 4 \pmod 8$.
+%
+%\begin{enumerate}
+%\setcounter{enumi}{1}
+%\item Use the definition of ``congruence'' to rewrite the congruence \linebreak
+%$6x \equiv 4 \pmod 8$ in terms of ``divides.'' \label{lincongruence2}
+%
+%\item Use the definition of ``divides'' to rewrite the result in Part~(\ref{lincongruence2}) in the form of an equation.  (To do this, an existential quantifier must be used.) \label{lincongruence3}
+%
+%\item Use the results of Part~(\ref{lincongruence1}) and Part~(\ref{lincongruence3}) to write an equation that will generate all the solutions of the linear congruence 
+%$6x \equiv 4 \pmod 8$.
+%
+%\hint  Use Theorem~\ref{T:lindioph2}.  This can be used to generate solutions for $x$ and the variable introduced in Part~(\ref{lincongruence3}).  In this case, we are interested only in the  solutions for $x$.
+%
+%\end{enumerate}
+%Now let $n$ be a natural number and let $a, c \in \mathbb{Z}$ with $a \ne 0$.  A general linear congruence of the form $ax \equiv c \pmod n$ can be handled in the same way that we handled in 
+%$6x \equiv 4 \pmod 8$.
+%
+%\begin{enumerate}
+%\setcounter{enumi}{4}
+%\item Use the definition of ``congruence'' to rewrite $ax \equiv c \pmod n$ in terms of ``divides.'' \label{lincongruence5}
+%
+%\item Use the definition of ``divides'' to rewrite the result in Part~(\ref{lincongruence5}) in the form of an equation.  (To do this, an existential quantifier must be used.) \label{lincongruence6}
+%
+%\item Let $d = \gcd( {a, n} )$.  State and prove a theorem about the solutions of the linear congruence $ax \equiv c \pmod n$ in the case where $d$ does not divide $c$.
+%
+%\hint  Use Theorem~\ref{T:lindioph2}.
+%
+%\item Let $d = \gcd( {a, n} )$.  State and prove a theorem about the solutions of the linear congruence $ax \equiv c \pmod n$ in the case where $d$ divides $c$.
+%
+%\end{enumerate}
+%
+%\end{activity}
+%\hbreak
+
+
+
+
+
+
+\endinput

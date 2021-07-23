@@ -1,0 +1,161 @@
+\subsection*{Constructing Mathematical Proofs}
+To create a proof of a theorem, we must use correct logical reasoning and mathematical statements that we already accept as true.  These statements include axioms, definitions, theorems, lemmas, and corollaries.
+
+In Section~\ref{S:direct}, we introduced the use of a \textbf{know-show table}
+\index{know-show table}%
+ to help us organize our work when we are attempting to prove a statement.  We also introduced some guidelines for writing mathematical proofs once we have created the proof.  These guidelines should be reviewed before proceeding.
+
+Please remember that when we start the process of writing a proof, we are essentially ``reporting the news.''  That is, we have already discovered the proof, and now we need to report it.  This reporting often does not describe the process of discovering the news (the investigative portion of the process).
+
+Quite often, the first step is to develop a conjecture.  This is often done after working within certain objects for some time.  This is what we did in \typeu Activity~\ref*{PA:divisor} when we used examples to provide evidence that the following conjecture is true:
+%\hbreak
+
+\newpar
+\setlength{\hangindent}{60pt}
+\noindent
+\textbf{Conjecture:} \emph{Let $a$, $b$, and $c$ be integers with $a \ne 0$ and $b \ne 0$.  If $a$ divides $b$ and $b$ divides $c$, then $a$ divides $c$.}
+%\hbreak
+
+%\eighth
+%To try to prove this conjecture, we will, of course, have to use the definitions in Beginning 
+%Activity~\ref{PA:divisor} on page~\pageref{PA:divisor}.  
+
+%\begin{defbox}{divides2}{A nonzero integer $m$  \textbf{divides}
+%\index{divides}%
+% an integer  $n$  provided that there is an integer  $q$  such that  $n = m \cdot q$.  We also say that  $m$  is a \textbf{divisor}
+%\index{divisor}%
+% of  $n$, $m$ is a \textbf{factor}
+%\index{factor}%
+% of $n$, and $n$  is a \textbf{multiple}
+%\index{multiple}%
+% of  $m$.  The integer 0 is not a divisor of any integer.}
+%\end{defbox}
+%
+
+%\noindent
+%\textbf{Important Comment about Notation}: When a nonzero integer  $m$  divides an integer $n$, we frequently use the notation  $m \mid n$. 
+%\label{sym:divides}%
+%  Be careful with this notation.  It does not represent the rational number  $\dfrac{m}{n}$.  The notation  $m \mid n$  represents a relationship between the integers  $m$  and  $n$  and is simply a shorthand for ``$m$  divides  $n$.''
+%\hbreak
+%
+Before we try to prove a conjecture, we should make sure we have explored some examples.  This simply means to construct some specific examples where the integers  $a$, $b$, and  $c$  satisfy the hypothesis of the conjecture in order to see if they also satisfy the conclusion.   We did this for this conjecture in \typeu Activity~\ref*{PA:divisor}.  %If we happen to find an example of three integers that satisfy the hypothesis but make the conclusion false, then we would have found a counterexample for the conjecture.  We could then conclude the conjecture is false.  This will not happen for the current conjecture.
+
+%One example for this conjecture is  $a = 3, b = 12, c = 48$.  Notice that  $3 \mid 12$ and  
+%$12 \mid 48$, and we observe that  $3 \mid 48$.  In particular, if we use the definition of divides, we see that
+%\[
+%12 = 3 \cdot 4\text{ and that  }48 = 12 \cdot 4.
+%\]
+%Now, substitute the right side of the first equation for 12 in the second equation.  This gives
+%\[
+%\begin{aligned}
+%  48 &= \left( {3 \cdot 4} \right) \cdot 4 \\ 
+%  48 &= 3 \cdot \left( {4 \cdot 4} \right). \\ 
+%\end{aligned} 
+%\]
+%This last equation shows that  3  divides  48.  While the examples for this conjecture may seem trivial, this is not always the case.  Exploring examples can sometimes lead to a counterexample for a conjecture, and other times examples can suggest a method of proof.  For this example, the main step was to substitute the expression  $3 \cdot 4$ for  12  from one equation into the other equation.  
+
+We will now start a know-show~table for this conjecture.
+$$
+\BeginTable
+\def\C{\JustCenter}
+\BeginFormat
+|p(0.4in)|p(2in)|p(1.8in)|
+\EndFormat
+\_
+ | \textbf{Step}  |  \textbf{Know}  |  \textbf{Reason} |    \\+02 \_
+ | $P$     |  $a, b, c \in \Z$, $a \ne 0$, $b \ne 0$, $a \mid b$ and  $b \mid c$     |  Hypothesis | \\ \_1
+ | $P1$    |                                 |           |  \\ \_1
+ | \C $\vdots$  |  \C $\vdots$                         | \C $\vdots$   |   \\ \_1
+ | $Q1$    |                                 |            | \\  \_1 
+ | $Q$     |  $a \mid c$                     |            | \\  \_
+ | \textbf{Step}  |  \textbf{Show}  |  \textbf{Reason}    | \\+20  \_
+\EndTable
+$$
+
+
+%
+%\begin{center}
+%\begin{tabular}[h]{|p{0.4in}|p{2in}|p{1.8in}|}
+%  \hline
+%  \textbf{Step}  &  \textbf{Know}  &  \textbf{Reason}     \\ \hline
+%  $P$     &  $a, b, c \in \Z$, $a \ne 0$, $b \ne 0$, $a \mid b$ and  $b \mid c$     &  Hypothesis \\ \hline
+%  $P1$    &                                 &             \\ \hline
+%  $\vdots$  &  $\vdots$                         & $\vdots$      \\ \hline
+%  $Q1$    &                                 &             \\  \hline  
+%  $Q$     &  $a \mid c$                     &             \\ \hline
+%  \textbf{Step}  &  \textbf{Show}  &  \textbf{Reason}     \\ \hline
+%\end{tabular}
+%\end{center}
+%
+The backward question we ask is, ``How can we prove that  $a$  divides  $c$?''  One answer is to use the definition and show that there exists an integer  $q$  such that  $c = a \cdot q$.  This could be step $Q1$ in the know-show table.
+
+We now have to prove that a certain integer $q$ exists, so we ask the question, ``How do we prove that this integer exists?''  When we are at such a stage in the backward process of a proof, we usually turn to what is known in order to prove that the object exists or to find or construct the object we are trying to prove exists.  We often say that we try to ``construct'' the object or at least prove it exists from the known information.  So at this point, we go to the forward part of the proof to try to prove that there exists an integer $q$ such that $c = a \cdot q$.
+
+The forward question we ask is, ``What can we conclude from the facts that  $a \mid b$  and  $b \mid c$?''  Again, using the definition, we know that there exist integers  $s$  and  $t$  such that  $b = a \cdot s$ and  $c = b \cdot t$.   This could be step $P1$ in the know-show table.
+
+The key now is to determine how to get from $P1$ to $Q1$.  That is, can we use the conclusions that the integers $s$ and $t$ exist in order to prove that the integer $q$ (from the backward process) exists.  
+%We might get some motivation from the numerical example we explored.  
+Using the equation  $b = a \cdot s$, we can substitute  $a \cdot s$ for  $b$  in the second equation, $c = b \cdot t$.  This gives
+\[
+\begin{aligned}
+  c &= b \cdot t \\ 
+    &= ( {a \cdot s} ) \cdot t \\ 
+    &= a( {s \cdot t}). \\ 
+\end{aligned}
+\]
+The last step used the associative property of multiplication. (See 
+Table~\ref{Ta:propertiesofreals} on page~\pageref{Ta:propertiesofreals}.) This shows that  $c$  is equal to  
+$a$  times some integer.  (This is because  $s \cdot t$ is an integer by the closure property for integers.)  So although we did not use the letter  $q$, we have arrived at step $Q1$.  The completed know-show~table follows.
+$$
+\BeginTable
+\def\C{\JustCenter}
+\BeginFormat
+|p(0.4in)|p(2in)|p(1.8in)|
+\EndFormat
+\_
+ | \textbf{Step}  |  \textbf{Know}  |  \textbf{Reason} |    \\+02 \_
+ | $P$     |  $a, b, c \in \Z$, $a \ne 0$, $b \ne 0$, $a \mid b$ and  $b \mid c$     |  Hypothesis | \\ \_1
+ | $P1$    | $\left( {\exists s \in \mathbb{Z}} \right)\left( {b = a \cdot s} \right)$\\ $\left( {\exists t \in \mathbb{Z}} \right)\left( {c = b \cdot t} \right)$   | Definition of ``divides''          |  \\ \_1
+ | $P2$  |  $c = \left( {a \cdot s} \right) \cdot t$                         | Substitution for $b$   |   \\ \_1
+ | $P3$  | $c = a \cdot \left( {s \cdot t} \right)$ | Associative property of multiplication | \\ \_1
+ | $Q1$    |  $\left( {\exists q \in \mathbb{Z}} \right)\left( {c = a \cdot q} \right)$                               | Step $P3$ and the closure properties of the integers            | \\  \_1 
+ | $Q$     |  $a \mid c$                     | Definition of ``divides''            | \\  \_
+% | \textbf{Step}  |  \textbf{Show}  |  \textbf{Reason}    | \\+20  \_
+\EndTable
+$$
+
+\newpar
+Notice the similarities between what we did for this proof and many of the proofs about even and odd integers we constructed in Section~\ref{S:direct}.  When we try to prove that a certain object exists, we often use what is called the  \textbf{construction method for a proof}.
+\index{construction method}%
+  The appearance of an existential quantifier in the show (or backward) portion of the proof is usually the indicator to go to what is known in order to prove the object exists.
+
+\newpar
+We can now report the news by writing a formal proof.
+%
+\setcounter{equation}{0}
+\begin{theorem}\label{T:transdivide}
+Let  $a$, $b$, and  $c$  be integers with $a \ne 0$ and $b \ne 0$.  If  $a$  divides  $b$  and  $b$  divides  $c$, then  $a$  divides  $c$.
+\end{theorem}
+%
+\begin{myproof}
+We assume that $a$, $b$, and  $c$  are integers with $a \ne 0$ and $b \ne 0$.  We further assume that  $a$  divides  $b$  and that  $b$  divides  $c$.  We  will prove that  $a$  divides  $c$.
+
+Since  $a$  divides  $b$ and $b$ divides $c$, there exist integers  $s$ and $t$  such that
+\begin{align}\label{eq:3a}
+b &= a \cdot s, \text{ and } \\
+c &= b \cdot t.\label{eq:3b}
+\end{align}
+We can now substitute the expression for  $b$  from equation~(\ref{eq:3a}) into equation~(\ref{eq:3b}).  This gives
+\begin{equation}\label{eq:3c} \notag
+c = ( {a \cdot s}) \cdot t.
+\end{equation}
+Using the associate property for multiplication, we can rearrange the right side of the last equation to obtain
+\begin{equation}\label{eq:3d} \notag
+c = a \cdot ( {s \cdot t} ).
+\end{equation}
+Because both  $s$  and  $t$  are integers, and since the integers are closed under multiplication, we know that  $s \cdot t \in \mathbb{Z}$.  Therefore, the previous equation 
+proves that  $a$  divides  $c$.  Consequently, we have proven that whenever  $a$, $b$, and  $c$  are integers with $a \ne 0$ and $b \ne 0$ such that  $a$  divides  $b$ and  $b$ divides  $c$, then  $a$  divides  $c$.
+\end{myproof}
+\hbreak
+
+\endinput

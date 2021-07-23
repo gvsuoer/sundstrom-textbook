@@ -1,0 +1,65 @@
+\documentclass[11pt]{article}
+\usepackage{c://pctex/activity}
+
+\lhead{}
+\chead{\textbf{\large{Exercise 20 -- Section 3.2\\Using a Logical Equivalency}}}
+\rhead{}
+\lfoot{\emph{Mathematical Reasoning: Writing and Proof, Third Ed.} \\Ted Sundstrom}
+\cfoot{}
+\rfoot{\copyright \the\year\, by Pearson Education, Inc.\\}
+
+
+\begin{document}
+\begin{enumerate}
+\item If we use the symbolic form  
+$\left( {\mynot  Q \wedge \mynot  R} \right) \to \mynot  P$  as a model for this proposition, then  $P$  is, ``3 divides the product  $a \cdot b$'',  $Q$  is, ``3  divides  $a$'', and  $R$ is, 
+``3 divides  $b$.''  
+
+\item A  symbolic form for the contrapositive of   
+$\left( {\mynot  Q \wedge \mynot  R} \right) \to \mynot  P$ is  $P \to \left( {Q \vee R} \right)$.
+
+\item For all integers $a$  and  $b$, if  3  divides the product  $a \cdot b$, then  3  divides  $a$  or  3  divides  $b$.
+
+\item \begin{enumerate}
+  \item When  $a = 5$, we see that  $2 \cdot 3 + 5\left( { - 1} \right) = 1$.
+  \item When  $a = 2$, we see that  $1 \cdot 3 + 2\left( { - 1} \right) = 1$.
+  \item When $a =  - 2$, we see that  $1 \cdot 3 + \left( { - 2} \right)\left( 1 \right) = 1$.
+\end{enumerate}
+
+\item
+For all integers $a$  and  $b$, if  3  divides the product  $a \cdot b$, then  3  divides  $a$  or  3  divides  $b$.
+
+\begin{myproof}
+Let  $a$  and  $b$  be integers.  We will prove this proposition by proving that if  3  divides the product  $a \cdot b$ and  3  does not divide  $a$, then  3  divides  $b$.
+
+So, assume that   3  divides the product  $a \cdot b$  and  3  does not divide  $a$.  Since  3  divides  $a \cdot b$, there exists an integer  $m$  such that
+\setcounter{equation}{0}
+\begin{equation} \label{eq:act312a}
+a b = 3m,
+\end{equation}
+%
+and since  3  does not divide  $a$, there exist integers  $x$  and  $y$  such that
+\begin{equation} \label{eq:act312b}
+3x + ay = 1.
+\end{equation}
+
+If we multiply Equation~(\ref{eq:act312b}) by  $b$, we obtain
+\begin{equation} \label{eq:act312c}
+3bx + aby = b.
+\end{equation}
+
+We can now use Equation~(\ref{eq:act312a}) to substitute for  $a b$ in 
+Equation~(\ref{eq:act312c}).  This gives:
+\[
+3bx + 3my = b.
+\]
+Factoring a  3  from the left side of this equation gives 
+\[
+3\left( {bx + my} \right) = b.
+\]
+By the closure properties of the integers, we know that  $bx + my$ is an integer, and hence we have proven that  3 divides  $b$.  So, we have proven that if  3  divides the product  
+$a \cdot b$, then  3  divides  $a$  or  3  divides  $b$.
+\end{myproof}
+\end{enumerate}
+
+\end{document}

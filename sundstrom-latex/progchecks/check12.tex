@@ -1,0 +1,61 @@
+\section*{Section~\ref{S:direct}}
+
+\subsection*{Progress Check~\ref{prog:proving}}
+\begin{enumerate}
+  \item We assume that $x$ and $y$ are even integers and will prove that $x+y$ is an even integer.  Since $x$ and $y$ are even, there exist integers $m$ and $n$ such that $x = 2m$ and $y = 2n$.  We can then conclude that
+\begin{align*}
+x + y &= 2m + 2n\\
+        &= 2(m + n)
+\end{align*}
+Since the integers are closed under addition, $m + n$ is an integer and the last equation shows that $x + y$ is an even integer.  This proves that if $x$ is an even integer and $y$ is an even integer, then $x + y$ is an even integer.
+\end{enumerate}
+The other two parts would be written in a similar manner as Part~(1).  Only the algebraic details are shown below for~(2) and~(3).
+\begin{enumerate} \setcounter{enumi}{1}
+  \item If $x$ is an even integer and $y$ is an odd integer, then there exist integers $m$ and $n$ such that $x = 2m$ and $y = 2n+1$.  Then
+\begin{align*}
+x + y &= 2m + (2n + 1) \\
+         &= 2(m + n) + 1
+\end{align*}
+Since the integers are closed under addition, $m + n$ is an integer and the last equation shows that $x + y$ is an odd integer.  This proves that if $x$ is an even integer and $y$ is an odd integer, then $x + y$ is an odd integer.
+  \item If $x$ is an odd integer and $y$ is an odd integer, then there exist integers $m$ and $n$ such that $x = 2m+1$ and $y = 2n+1$.  Then
+\begin{align*}
+x + y &= (2m+1) + (2n + 1) \\
+         &= 2(m + n + 1)
+\end{align*}
+Since the integers are closed under addition, $m + n+1$ is an integer and the last equation shows that $x + y$ is an even integer.  This proves that if $x$ is an odd integer and $y$ is an odd integer, then $x + y$ is an even integer.
+
+\end{enumerate}
+
+\subsection*{Progress Check~\ref{A:kstable2}}
+All examples should indicate the proposition is true.  Following is a proof.
+\begin{myproof}
+We assume that $m$ is an odd integer and will prove that $\left( 3m^2 + 4m + 6 \right)$ is an odd integer.  Since $m$ is an odd integer, there exists an integer $k$ such that $m = 2k + 1$.  Substituting this into the expression $\left( 3m^2 + 4m + 6 \right)$ and using algebra, we obtain
+\begin{align*}
+3m^2 + 4m + 6 &= 3\left(2k + 1 \right)^2 + 4 \left(2k + 1 \right) + 6 \\
+              &= \left( 12k^2 + 12k + 3 \right) + \left( 8k + 4 \right) + 6  \\
+              &= 12k^2 + 20k + 13 \\
+              &= 12k^2 + 20k + 12 + 1 \\
+              &= 2 \left(6k^2 + 10k + 6 \right) + 1
+\end{align*}
+By the closure properties of the integers, $\left(6k^2 + 10k + 6 \right)$ is an integer, and hence, the last equation shows that $3m^2 + 4m + 6$ is an odd integer.  This proves that if $m$ is an odd integer, then $\left( 3m^2 + 4m + 6 \right)$ is an odd integer.
+\end{myproof}
+
+
+\subsection*{Progress Check~\ref{pr:pythag}}
+\begin{myproof}
+We let $m$ be a real number and assume that $m$, $m + 1$, and $m + 2$ are the lengths of the three sides of a right triangle.  We will use the Pythagorean Theorem to prove that $m = 3$.  Since the hypotenuse is the longest of the three sides, the Pythagorean Theorem implies that $m^2 + (m + 1)^2 = (m + 2)^2$.  We will now use algebra to rewrite both sides of this equation as follows:
+\begin{align*}
+m^2 + \left( m^2 + 2m + 1 \right) &= m^2 + 4m + 4 \\
+2m^2 + 2m + 1 &= m^2 + 4m + 4 \\
+\end{align*}
+The last equation is a quadratic equation.  To solve for $m$, we rewrite the equation in standard form and then factor the left side.  This gives
+\begin{align*}
+m^2 - 2m - 3 &= 0 \\
+(m - 3)(m + 1) &= 0
+\end{align*}
+The two solutions of this equation are $m = 3$ and $m = -1$.  However, since $m$ is the length of a side of a right triangle, $m$ must be positive and we conclude that $m = 3$.  This proves that if $m$, $m + 1$, and $m + 2$ are the lengths of the three sides of a right triangle, then $m = 3$.
+\end{myproof}
+\hbreak
+
+
+\endinput

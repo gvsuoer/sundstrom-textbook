@@ -1,0 +1,49 @@
+\subsection*{Summation Notation}
+The result in Proposition~\ref{P:suminduction} could be written using summation notation as follows:
+%
+\begin{center}
+For each natural number $n$, $\sum\limits_{j = 1}^n {j^2 }  = \dfrac{{n(n + 1)(2n + 1)}}{6}$.
+\end{center}
+%
+\noindent
+In this case, we use  $j$  for the index for the summation, and the notation 
+%\[
+$\sum\limits_{j = 1}^n {j^2 }$
+%\]
+tells us to add all the values of  $j^2 $ for  $j$  from  1  to  $n$, inclusive.  That is, 
+\[
+\sum\limits_{j = 1}^n {j^2 }  = 1^2  + 2^2  +  \cdots  + n^2.
+\]
+So in the proof of Proposition~\ref{P:suminduction}, we would let $P( n )$  be  
+%\[
+$\sum\limits_{j = 1}^n {j^2 }  = \dfrac{{n(n + 1)(2n + 1)}}{6}$,
+%\]
+and we would use the fact that for each natural number  $k$,
+\[
+\sum\limits_{j = 1}^{k + 1} {j^2 }  = \left( {\sum\limits_{j = 1}^k {j^2 } } \right) + \left( {k + 1} \right)^2 .
+\]
+\hbreak
+\setcounter{equation}{0}
+
+%
+\begin{prog}[\textbf{An Example of a Proof by Induction}] \label{prog:indexample} \hfill
+\begin{enumerate}
+\item Calculate  $1 + 2 + 3 +  \cdots  + n$ and $\dfrac{n(n + 1)}{2}$ 
+for several natural numbers  $n$. What do you observe?
+
+\item Use mathematical induction to prove that 
+$1 + 2 + 3 +  \cdots  + n = \dfrac{n \left( n + 1 \right)}{2}$.
+
+To do this, let $P ( n )$ be the open sentence, 
+``$1 + 2 + 3 +  \cdots  + n = \dfrac{n \left( n + 1 \right)}{2}$.''  For the basis step, notice that the equation $1 = \dfrac{1 \left( 1 + 1 \right)}{2}$ shows that 
+$P( 1 )$ is true.  Now let $k$ be a natural number and assume that 
+$P (k )$ is true.  That is, assume that
+\[
+1 + 2 + 3 +  \cdots  + k = \frac{k \left( k + 1 \right)}{2},
+\]
+and complete the proof.
+\end{enumerate}
+\end{prog}
+\hbreak
+
+\endinput

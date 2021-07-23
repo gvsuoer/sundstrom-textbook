@@ -1,0 +1,97 @@
+\begin{previewactivity}[\textbf{An Introduction to Quantifiers}]\label{PA:quantifier} \hfill \\
+\index{quantifier}%
+We have seen that one way to create a statement from an open sentence is to substitute a specific element from the universal set for each variable in the open sentence.  Another way is to make some claim about the truth set of the open sentence.  This is often done by using a quantifier.    For example, if the universal set is  $\mathbb{R}$, then the following sentence is a statement.
+\begin{center}
+For each real number  $x$,  $x^2 > 0$.
+\end{center}
+The phrase ``For each real number  $x$'' is said to \textbf{quantify the variable} that follows it in the sense that the sentence is claiming that something is true for all real numbers.  So this sentence is a statement (which happens to be false).
+%
+\begin{defbox}{D:every}{The phrase ``for every'' (or its equivalents) is called a \textbf{universal quantifier}.
+\index{universal quantifier}%
+\index{quantifier!universal}%
+  The phrase ``there exists'' (or its equivalents) is called an \textbf{existential quantifier}.
+\index{existential quantifier}%
+\index{quantifier!existential}%
+  The symbol $\forall$ 
+\label{sym:forall}%
+ is used to denote a universal quantifier, and the symbol  $\exists $ 
+\label{sym:exist}%
+ is used to denote an existential quantifier.}
+\end{defbox}
+Using this notation, the statement ``For each real number  $x$,  $x^2 > 0$'' could be written in symbolic form as: $\left( {\forall x \in \mathbb{R}} \right)\left( {x^2 > 0} \right)$.
+%\[
+%\left( {\forall x \in \mathbb{R}} \right)\left( {x^2 > 0} \right).
+%\]
+The following is an example of a statement involving an existential quantifier.
+\begin{center}
+There exists an integer $x$ such that  $3x - 2 = 0$.
+\end{center}
+This could be written in symbolic form as
+\[
+\left( {\exists x \in \Z} \right) \left( 3x - 2 = 0 \right).
+\]
+This statement is false because there are no integers that are solutions of the linear equation $3x - 2 = 0$.
+Table~\ref{T:quantifiers} summarizes the facts about the two types of quantifiers.
+
+\begin{table}[!h]
+$$
+\BeginTable
+\BeginFormat
+|p(1.2in)|p(1.5in)|p(1.5in)|
+\EndFormat
+\_
+ | \textbf{A statement involving }  |  \textbf{Often has the form}  |  \textbf{The statement is true provided that} | \\+22 \_
+ | A universal quantifier: $\left( \forall x, P(x) \right)$  |  ``For every $x$, $P(x)$,'' where $P(x)$ is a predicate.  |  Every value of $x$ in the universal set makes $P(x)$ true. | \\ \_
+ | An existential quantifier: $\left( \exists x, P(x) \right)$     |   ``There exists an $x$ such that $P(x)$,'' where $P(x)$ is a predicate.                              |   There is at least one value of $x$ in the universal set that makes $P(x)$ true.   |       \\ \_
+\EndTable
+$$
+\caption{Properties of Quantifiers}
+\label{T:quantifiers}
+\end{table}
+
+In effect, the table indicates that the universally quantified statement is true provided that the truth set of the predicate equals the universal set, and the existentially quantified statement is true provided that the truth set of the predicate contains at least one element.  
+%We will study quantifiers more extensively in Section~\ref{S:quantifier}.
+  \item Each of the following sentences is a statement or an open sentence.  Assume that the universal set for each variable in these sentences is the set of all real numbers.  If a sentence is an open sentence (predicate), determine its truth set.  If a sentence is a statement, determine whether it is true or false. \label{exer:sec21-4}
+  \begin{enumerate}
+    \item $\left( \forall a \in \mathbb{R}\right) \left(a + 0 = a\right)$.
+    \item $3x - 5 = 9$.
+    \item $\sqrt x  \in \mathbb{R}$.
+    %\item $\left( \forall x \in \mathbb{R}\right) \left( \sin( {2x}) = 2( {\sin x})( {\cos x})$\right).
+    \item $\sin( {2x} ) = 2( {\sin x} )( {\cos x})$.
+    \item $\left( \forall x \in \R\right) \left(\sin( {2x} ) = 2( {\sin x})( {\cos x}) \right)$.
+    \item $\left( \exists x \in \R \right)\left( x^2  + 1 = 0 \right)$.
+    \item $\left( \forall x \in \R \right) \left( x^3  \geq x^2 \right)$.
+    \item $x^2  + 1 = 0$. 
+    \item If  $x^2 \geq 1$, then  $x  \geq 1$.
+    \item $\left( \forall x \in \R \right)\left( \text{If } x^2 \geq 1, \text{ then } x \geq 1 \right)$.
+%    \item $\forall x \in \mathbb{R}, \exists y \in \mathbb{R}\text{ such that } x + y = 0$.
+%    \item $\exists y \in \mathbb{R}\text{ such that }\forall x \in \mathbb{R}, x + y = 0$.
+%    \item $\sqrt x  \in \mathbb{Z}$.
+  \end{enumerate}
+
+
+
+
+%\begin{enumerate}
+%\item Consider the following statement written in symbolic form:\\  $\left( {\forall x \in \mathbb{Z}} \right)\left( {x\text{ is a multiple of 2}} \right)$.
+%  \begin{enumerate}
+%    \item Write this statement as an English sentence.
+%    \item Is the statement true or false?  Why?
+%    \item How would you write the negation of this statement as an English sentence?
+%    \item Is it possible to write your negation of this statement from part~(2) symbolically (using a quantifier)?
+%  \end{enumerate}
+%%
+%
+%
+%\item Consider the following statement written in symbolic form:\\  $\left( {\exists x \in \mathbb{Z}} \right)\left( {x^3 > 0} \right)$.
+%  \begin{enumerate}
+%    \item Write this statement as an English sentence.
+%    \item Is the statement true or false?  Why?
+%    \item How would you write the negation of this statement as an English sentence?
+%    \item Is it possible to write your negation of this statement from part~(2) symbolically (using a quantifier)?
+%  \end{enumerate}
+%\end{enumerate}
+\end{previewactivity}
+\hbreak
+%
+\endinput

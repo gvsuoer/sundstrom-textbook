@@ -1,0 +1,91 @@
+\section{Chapter \ref{C:logic} Summary}
+
+\subsection*{Important Definitions}
+\begin{multicols}{2}
+\begin{itemize}
+\item Logically equivalent statements, page~\pageref*{D:logequiv}
+\item Converse of a conditional statement, page~\pageref*{D:converse}
+\item Contrapositive of a conditional statement, page~\pageref*{D:contrapositive}
+\item Variable, page~\pageref*{D:universal}
+\item Universal set for a variable, page~\pageref*{D:universal}
+\item Constant, page~\pageref*{D:universal}
+\item Equal sets, page~\pageref*{D:setequality}
+\item Predicate, page~\pageref*{D:predicate}
+\item Open sentence, page~\pageref*{D:predicate}
+\item Truth set of a predicate, page~\pageref*{D:truthset}
+\item Universal quantifier, page~\pageref*{D:every}
+\item Existential quantifier, page~\pageref*{D:every}
+\item Empty set, page~\pageref*{sym:empty}
+\item Counterexample, pages~\pageref*{D:counterexample} and~\pageref*{D:counterexample2}
+\item Perfect square, page~\pageref*{D:square}
+\item Prime number, page~\pageref*{D:prime}
+\item Composite number, page~\pageref*{D:prime}
+\end{itemize}
+\end{multicols}
+\hbreak
+
+
+\subsection*{Important Theorems and Results}
+\textbf{Theorem~\ref{T:logequiv}. Important Logical Equivalencies}.
+\emph{For statements $P$, $Q$, and $R$},
+
+\BeginTable
+\BeginFormat
+| l | l |
+\EndFormat
+
+" \textbf{De Morgan's Laws}   "  $\mynot  \left( {P \wedge Q} \right) \equiv \;\mynot  P \vee \mynot  Q$ " \\ 
+ "                       " $\mynot  \left( {P \vee Q} \right) \equiv \;\mynot  P \wedge \mynot  Q$ " \\+02
+
+" \textbf{Conditional Statements} "  $P \to Q \equiv \;\mynot  Q \to \mynot  P$  (contrapositive) " \\
+"   "  $P \to Q \equiv \;\mynot  P \vee Q$ " \\
+"   "  $\mynot  \left( {P \to Q} \right) \equiv P \wedge \mynot  Q$ " \\+02
+
+" \textbf{Biconditional Statement} "  
+$\left( {P \leftrightarrow Q} \right) \equiv \left( {P \to Q} \right) \wedge \left( {Q \to P} \right)$ " \\+02
+
+" \textbf{Double Negation} "  $\mynot  \left( {\mynot  P} \right) \equiv P$ \\+02
+
+" \textbf{Distributive Laws} "  
+$P \vee \left( {Q \wedge R} \right) \equiv \left( {P \vee Q} \right) \wedge \left( {P \vee R} \right)$  " \\
+"   "  $P \wedge \left( {Q \vee R} \right) \equiv \left( {P \wedge Q} \right) \vee \left( {P \wedge R} \right)$ " \\+02
+
+" \textbf{Conditionals with}  " $P \to \left( {Q \vee R} \right) \equiv \left( {P \wedge \mynot  Q} \right) \to R$ " \\
+" \textbf{Disjunctions}    "  $\left( {P \vee Q} \right) \to R\; \equiv \;\left( {P \to R} \right) \wedge \left( {Q \to R} \right)$ " \\
+\EndTable
+
+\quarter
+\noindent
+\textbf{Theorem~\ref{T:negations}. Negations of Quantified Statements}.    
+\emph{For any predicate  $P\left( x \right)$},
+\[
+\begin{aligned}
+  \mynot  \left( {\forall x} \right)\left[ {P( x )} \right] &\equiv \left( {\exists x} \right)\left[ {\mynot  P( x )} \right]\text{, and} \\ 
+  \mynot  \left( {\exists x} \right)\left[ {P( x )} \right] &\equiv \left( {\forall x} \right)\left[ {\mynot  P( x )} \right]. \\ 
+\end{aligned}
+\]
+\hbreak
+
+\subsection*{Important Set Theory Notation}
+
+$$\BeginTable
+\BeginFormat
+|  c  |  l  |  c  |
+\EndFormat
+\_
+| \textbf{Notation} | \textbf{Description} | \textbf{Page} | \\+22 \_
+| $y \in A$ | $y$ is an element of the set $A$. | ~\pageref{sym:elementof} | \\ \_1
+| $z \notin A$ | $z$ is not an element of the set $A$. | ~\pageref{sym:notelement} | \\ \_1
+| $\left\{ \quad \right\}$ | The roster method | ~\pageref{sym:roster} | \\ \_1
+| $\left\{ x \in U \mid P(x) \right\}$ | Set builder notation | ~\pageref{sym:setbuilder} | \\ \_
+\EndTable
+$$
+\hbreak
+
+
+
+
+
+
+
+\endinput

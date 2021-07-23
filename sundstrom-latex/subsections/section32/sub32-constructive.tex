@@ -1,0 +1,101 @@
+\subsection*{Constructive Proofs}
+\index{constructive proof|(}%
+We all know how to solve an equation such as $3x + 8 = 23$, where $x$ is a real number.  To do so, we first add $-8$ to both sides of the equation and then divide both sides of the resulting equation by 3.  Doing so, we obtain the following result:
+
+\begin{center}
+If $x$ is a real number and $3x + 8 = 23$, then $x = 5$.
+\end{center}
+
+Notice that the process of solving the equation actually does not prove that $x = 5$ is a solution of the equation $3x + 8 = 23$.  This process really shows that if there is a solution, then that solution must be $x = 5$.  To show that this is a solution, we use the process of substituting $5$ for $x$ in the left side of the equation as follows:  If 
+$x = 5$, then
+
+\[
+3x + 8 = 3 \left( 5 \right) + 8 = 15 + 8 = 23.
+\]
+
+This proves that $x = 5$ is a solution of the equation $3x + 8 = 23$.  Hence, we have proven that $x = 5$ is the only real number solution of $3x + 8 = 23$.
+
+We can use this same process to show that any linear equation has a real number solution.  An equation of the form
+\[
+ax + b = c,
+\]
+where $a$, $b$, and $c$ are real numbers with $a \ne 0$, is called a \textbf{linear equation in one variable}.  
+
+\begin{proposition}\label{P:linearequation}
+If $a$, $b$, and $c$ are real numbers with $a \ne 0$, then the linear equation $ax + b = c$ has exactly one real number solution, which is $x = \dfrac{c - b}{a}$. 
+\end{proposition}
+
+\begin{myproof}
+Assume that $a$, $b$, and $c$ are real numbers with $a \ne 0$.  We can solve the linear equation $ax + b = c$ by adding $-b$ to both sides of the equation and then dividing both sides of the resulting equation by $a$ $\left( \text{since } a \ne 0 \right)$, to obtain
+\[
+x = \frac{c - b}{a}.
+\]
+This shows that if there is a solution, then it must be $x = \dfrac{c - b}{a}$.  We also see that if $x = \dfrac{c - b}{a}$, then
+\[
+\begin{aligned}
+ax + b &= a \left( \frac{c - b}{a} \right) + b \\
+       &= \left( c - b \right) + b \\
+       &= c.
+\end{aligned}
+\]
+Therefore, the linear equation $ax + b = c$ has exactly one real number solution and the solution is $x = \dfrac{c - b}{a}$.
+\end{myproof}
+
+The proof given for Proposition~\ref{P:linearequation} is called a 
+\textbf{constructive proof.}
+\index{constructive proof}%
+\index{proof!constructive}%
+  This is a technique that is often used to prove a so-called \textbf{existence theorem.}
+\index{existence theorem}%
+  The objective of an existence theorem is to prove that a certain mathematical object exists.  That is, the goal is usually to prove a statement of the form  
+\begin{center}
+There exists an $x$  such that  $P( x )$.
+\end{center}
+%The symbolic form is  $\left( {\exists x} \right)\left( {P( x )}\right)$.  
+For a constructive proof of such a proposition, we actually name, describe, or explain how to construct  some object in the universe that makes  $P( x )$ true.  This is what we did in Proposition~\ref{P:linearequation} since in the proof, we actually proved that 
+$\dfrac{c - b}{a}$ is a solution of the equation $ax + b = c$.  In fact, we proved that this is the only solution of this equation.
+\index{constructive proof|)}%
+  
+
+
+\subsection*{Nonconstructive Proofs}
+Another type of proof that is often used to prove an existence theorem is the so-called \textbf{nonconstructive proof.}
+\index{existence theorem}%
+\index{proof!non-constructive}%
+  For this type of proof, we make an argument that an object  in the universal set that makes  
+$P( x )$ true must exist but we never construct or name the object that makes  
+$P( x )$  true.  The advantage of a constructive proof over a nonconstructive proof is that the constructive proof will yield a procedure or algorithm for obtaining the desired object.
+
+The proof of the \textbf{Intermediate Value Theorem}
+\index{Intermediate Value Theorem}%
+ from calculus is an example of a nonconstructive proof.  The Intermediate Value Theorem can be stated as follows:
+\begin{list}{}
+\item If  $f$  is a continuous function on the closed interval  $\left[ {a,b} \right]$ and if  $q$  is any real number strictly between  $f( a )$  and  $f( b )$, then there exists a number  $c$  in the interval  $\left( {a,b} \right)$ such that  $f( c ) = q$.
+\end{list}
+\vskip10pt
+%
+The Intermediate Value Theorem can be used to prove that a solution to some equations must exist.  This is shown in the next example.
+%\hbreak
+%
+\begin{example}[\textbf{Using the Intermediate Value Theorem}] \hfill \\
+Let  $x$  represent a real number.  We will use the Intermediate Value Theorem to prove that the equation  $x^3  - x + 1 = 0$ has a real number solution.
+
+To investigate solutions of the equation  $x^3  - x + 1 = 0$, we will use the function
+\[
+f( x ) = x^3  - x + 1.
+\]
+Notice that  $f( { - 2} ) =  - 5$  and that  $f( 0 ) = 1$.  Since 
+$f ( -2 ) < 0$ and $f ( 0 ) > 0$, the Intermediate Value Theorem tells us that there is a real number  $c$  between  $-2$ and  $0$  such that  $f( c ) = 0$.  This means that there exists a real number $c$ between $-2$ and $0$ such that
+\[
+c^3  - c + 1 = 0,
+\]
+and hence  $c$  is a real number solution of the equation  $x^3  - x + 1 = 0$.  This proves that the equation  $x^3  - x + 1 = 0$  has at least one real number solution.
+
+
+Notice that this proof does not tell us how to find the exact value of  $c$.  It does, however, suggest a method for approximating the value of  $c$.  This can be done by finding smaller and smaller intervals  $\left[ {a,\;b} \right]$  such that  
+$f( a )$  and  $f( b )$  have opposite signs.
+\end{example}
+\hbreak
+
+
+\endinput

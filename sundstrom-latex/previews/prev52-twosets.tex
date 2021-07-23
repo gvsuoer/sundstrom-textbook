@@ -1,0 +1,81 @@
+\begin{previewactivity}[\textbf{Working with Two Specific Sets}] \label{PA:working2sets} \hfill \\
+Let  $S$  be the set of all integers that are multiples of  6, and let  $T$  be the set of all even integers.
+
+\begin{enumerate}
+\item List at least  four  different positive elements of  $S$  and at least  four  different negative elements of  $S$.  Are all of these integers even?
+
+\item Use the roster method to specify the sets  $S$  and  $T$.  (See Section~\ref{S:predicates} for a review of the roster method.)  Does there appear to be any relationship between these two sets?  That is, does it appear that the sets are equal or that one set is a subset of the other set?
+
+\item Use set builder notation to specify the sets  $S$  and  $T$.  (See Section~\ref{S:predicates} for a review of the set builder notation.)
+
+\item Using appropriate definitions, describe what it means to say that an integer  $x$  is a multiple of  6 and what it means to say that an integer  $y$  is even.  
+
+%\item How do we prove that the set $S$ is a subset of the set $T$?
+
+
+%
+
+%\begin{previewactivity}[Proving a Subset Relationship] \label{PA:provingsubset} \hfill \\
+%Review the definition of subset in Section~\ref{S:setoperations}.  
+\item In order to prove that $S$ is a subset of $T$, we need to prove that for each integer $x$, if $x \in S$, then $x \in T$. 
+
+Complete the know-show~table 
+in Table~\ref{table:preview42} 
+for the proposition that  $S$  is a subset of   $T$.
+
+This table is in the form of a proof method called the \textbf{choose-an-element method.}
+\index{choose-an-element method}%
+  This method is frequently used when we encounter a universal quantifier in a statement in the backward process.  (In this case, this is Step $Q1$.)  The key is that we have to prove something about all elements in  $\Z$.  We can then add something to the forward process by choosing an arbitrary element from the set 
+$S$.  (This is done in Step $P1$.)  This does not mean that we can choose a specific element of $S$.  Rather, we must give the arbitrary element a name and use only the properties it has by being a member of the set 
+$S$.  In this case, the element is a multiple of 6.  
+
+\begin{table}[h]
+$$
+\BeginTable
+\def\C{\JustCenter}
+\BeginFormat
+|p(0.4in)|p(2in)|p(1.8in)|
+\EndFormat
+  \_
+  | \textbf{Step}  |  \textbf{Know}  |  \textbf{Reason}  |    \\+02 \_
+|  $P$     |  $S$  is the set of all integers that are multiples of 6.
+$T$ is the set of all even integers.  |  Hypothesis | \\ \_1
+|  $P1$    |  Let  $x \in S$.         | Choose an arbitrary element of  $S$.  | \\ \_1
+|  $P2$    | $\left( {\exists m \in \mathbb{Z}} \right)\left( {x = 6m} \right)$ | Definition of ``multiple'' | \\ \_1
+|  \vdots  |  \vdots  |  \vdots | \\ \_1
+|  $Q2$    |  $x$   is an element of  $T$. |  $x$ is even | \\ \_1
+|  $Q1$    |  $\left( \forall x \in \Z \right) \left[ \left( x \in S \right) \to \left( x \in T \right) \right]$ |  Step  $P1$  and Step $Q2$            | \\  \_1 
+|  $Q$     |  $S \subseteq T$. |  Definition of ``subset''          | \\ \_
+|  \textbf{Step}  |  \textbf{Show}  |  \textbf{Reason}     | \\+20 \_
+\EndTable
+$$
+\caption{Know-show table for \typeu Activity~\ref*{PA:working2sets}}
+\label{table:preview42}%
+\end{table}
+
+%\begin{center}
+%\begin{table}[h!]
+%\begin{tabular}[h!]{|p{0.4in}|p{2in}|p{1.8in}|}
+%  \hline
+%  \textbf{Step}  &  \textbf{Know}  &  \textbf{Reason}     \\ \hline
+%  $P$     &  $S$  is the set of all integers that are multiples of 6.
+%$T$ is the set of all even integers.
+%     &  Hypothesis \\ \hline
+%  $P1$    &   Let  $x \in S$.        &  Choose an arbitrary element of  $S$.     \\ \hline
+%  $P2$  &  $\left( {\exists m \in \mathbb{Z}} \right)\left( {x = 6m} \right)$  &  Definition of ``multiple''  \\  \hline
+%  \vdots  &  \vdots                         & \vdots      \\ \hline
+%  $Q2$   &  $x$   is an element of  $T$.  &  $x$ is even.  \\  \hline
+%  $Q1$    &   $\left( \forall x \in \Z \right) \left[ \left( x \in S \right) \to \left( x \in T \right) \right]$                         & Step  $P1$  and Step $Q2$            \\  \hline  
+%  $Q$     &  $S \subseteq T$                     &  Definition of ``subset''     \\ \hline
+%  \textbf{Step}  &  \textbf{Show}  &  \textbf{Reason}     \\ \hline
+%\end{tabular}
+%\caption{Know-show table for Beginning Activity~\ref{PA:working2sets}}
+%\label{table:preview42}%
+%\end{table}
+%\end{center}
+\end{enumerate}
+\end{previewactivity}
+\hbreak
+
+
+\endinput

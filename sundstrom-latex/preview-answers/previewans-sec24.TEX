@@ -1,0 +1,74 @@
+\documentclass[11pt]{article}
+\usepackage{../../styles/activity}
+
+\usepackage{xr}
+\externaldocument{0-MR}
+
+\lhead{}
+%\chead{\textbf{\Large{\hspace{0pt}Beginning Activities for Section~2.4}}\\\prevhead}
+\bahead{2.4}
+\rhead{}
+\lfoot{}
+\rfoot{}
+\cfoot{\hspace{0pt}\scalebox{0.4}{\includegraphics{cc-by-nc-sa.eps}}}
+
+\begin{document}
+
+\subsection*{Beginning Activity 1 (An Introduction to Quantifiers)}
+In this preview activity, we were introduced to the important concept of quantifiers in mathematics.  Another important part of this preview activity is the distinction between open sentences and statements.  Notice that for the open sentences, we need to determine its truth set.  Make sure proper set notation is used to do so.
+\begin{enumerate}
+    \item $\left( \forall a \in \mathbb{R}\right) \left(a + 0 = a\right)$.  This is a true statement.
+    \item $3x - 5 = 9$.  This is an open sentence whose truth set is $\left\{ \dfrac{14}{3} \right\}$.
+    \item $\sqrt x  \in \mathbb{R}$.  This is an open sentence whose truth set is the set of nonnegative real numbers.
+    %\item $\left( \forall x \in \mathbb{R}\right) \left( \sin( {2x}) = 2( {\sin x})( {\cos x})$\right).
+    \item $\sin( {2x} ) = 2( {\sin x} )( {\cos x})$.  This is an open sentence whose truth set is the set of real numbers.
+    \item $\left( \forall x \in \R\right) \left(\sin( {2x} ) = 2( {\sin x})( {\cos x}) \right)$.  This is a true statement.
+    \item $\left( \exists x \in \R \right)\left( x^2  + 1 = 0 \right)$.  This is a false statement.
+    \item $\left( \forall x \in \R \right) \left( x^3  \geq x^2 \right)$.  This is a false statement.  A counterexample is $x = 0.5$.
+    \item $x^2  + 1 = 0$.  This is an open sentence.  If the universal set is $\R$, then the truth set is the empty set.
+    \item If  $x^2 \geq 1$, then  $x  \geq 1$.  This is an open sentence whose truth set is 
+$\left\{ x \in \R \mid x > -1 \right\}$.
+    \item $\left( \forall x \in \Z \right)\left( \text{If } x^2 \geq 1, \text{ then } x \geq 1 \right)$.  This is a false statement.  A counterexample is $x = -1$.
+\end{enumerate}
+\hbreak
+
+
+\newpage
+\subsection*{Beginning Activity 2 (Attempting to Negate Quantified Statements)}
+\begin{enumerate}
+\item \begin{enumerate}
+  \item Every integer is even.
+  \item The statement is false since there are integers that are not even.
+  \item There exists an integer that is not even.
+  \item $( {\exists x \in \mathbb{Z}} )( {x\text{ is not even}} )$.
+\end{enumerate}
+
+\item \begin{enumerate}
+  \item There exists a real number $x$ such that $x^3 > 0$.
+  \item The statement is true since there are real numbers whose cube is positive.  For examaple, if $x = 1$, then $x^3 > 0$.
+  \item For each real number $x$, $x^3 \leq 0$.
+  \item $\left( \forall x \in \R \right) \left( x^3 \leq 0 \right)$.
+  \end{enumerate}
+\end{enumerate}
+Negating quantified statements is an important skill in the study of mathematics.  We will work on this quite extensively in this section.  Recall that in the solutions for the beginning activities for Section~1.2, we attempted to write a negation of the definition of even and odd integers.  For example, an integer $a$ is an even integer provided that there exists an integer $m$ such that $a = 2m + 1$.  Notice the use of the existential quantifier in this definition.  For a negation of this, we could write:
+\begin{list}{}
+\item An integer $a$ is not an even integer provided that there does not exist an integer $m$ such that $a = 2m + 1$.
+\end{list}
+
+\eighth
+\noindent
+This means that we could write this negation as follows:
+\begin{list}{}
+\item An integer $a$ is not an even integer provided that for each integer $m$,  $a \ne 2m + 1$.
+\end{list}
+
+\eighth
+\noindent
+We will discuss this idea more in this section.
+\hbreak
+
+
+
+
+\end{document}
+

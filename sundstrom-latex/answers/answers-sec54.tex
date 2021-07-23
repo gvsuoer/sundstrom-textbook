@@ -1,0 +1,66 @@
+\section*{Section \ref{S:cartesian}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+
+\begin{list}{\bf{\ref{exer:sec44-1}.}}
+%\item \begin{list}{\bf{(a)}}
+%\item $A \times B = \left\{ {( {1, a} ), ( {1, b} ), ( {1, c} ), ( {1, d} ), ( {2, a} ), ( {2, b} ), ( {2, c} ), ( {2, d} )} \right\}$
+%\end{list}
+%\end{list}
+%
+%\begin{list}{}
+%\item \begin{list}{\bf{(b)}}
+%\item $B \times A = \left\{ {( {a, 1} ), ( {b, 1} ), ( {c, 1} ), ( {d, 1} ), ( {a, 2} ), ( {b, 2} ), ( {c, 2} ), ( {d, 2} )} \right\}$
+%\end{list}
+%\end{list}
+%
+%\begin{list}{}
+%\item \begin{list}{\bf{(e)}}
+%\item $A \times ( {B \cap C} ) = \left\{ {( {1, a} ), ( {1, b} ), ( {2, a} ), ( {2, b} )} \right\}$
+%\end{list}
+\item \begin{enumerate}
+\item $A \times B = \left\{ {\left( {1, a} \right), \left( {1, b} \right), \left( {1, c} \right), \left( {1, d} \right), \left( {2, a} \right), \left( {2, b} \right), \left( {2, c} \right), \left( {2, d} \right)} \right\}$.
+
+\item $B \times A = \left\{ {\left( {a, 1} \right), \left( {b, 1} \right), \left( {c, 1} \right), \left( {d, 1} \right), \left( {a, 2} \right), \left( {b, 2} \right), \left( {c, 2} \right), \left( {d, 2} \right)} \right\}$.
+
+\item $A \times C = \left\{ { \left( 1, 1 \right), \left( {1, a} \right), \left( {1, b} \right), \left( 2, 1 \right), \left( {2, a} \right), \left( {2, b} \right)} \right\}$.
+
+\item $A^2 = \left\{ \left( 1, 1 \right), \left( 1, 2 \right), \left( 2, 1 \right), \left( 2, 2 \right) \right\}$.
+
+\item $A \times \left( {B \cap C} \right) = \left\{ {\left( {1, a} \right), \left( {1, b} \right), \left( {2, a} \right), \left( {2, b} \right)} \right\}$.
+
+\item $\left( A \times B \right) \cap \left( A \times C \right) = 
+\left\{ {\left( {1, a} \right), \left( {1, b} \right), \left( {2, a} \right), \left( {2, b} \right)} \right\}$.
+
+\item $A \times \emptyset = \emptyset$.
+
+\item $B \times \left\{ 2 \right\} = \left\{ \left( a, 2 \right), \left( b, 2 \right), 
+\left( c, 2 \right), \left( d, 2 \right) \right\}$.
+\end{enumerate}
+
+\end{list}
+
+\begin{list}{\bf{\ref{exer:sec44-3}.}}
+\item  Let $u \in A \times \left( {B \cap C} \right)$. Then, there exists $x \in A$ and there exists  $y \in B \cap C$ such that  $u = \left( {x, y} \right)$.  Since  $y \in B \cap C$, we know that  $y \in B$ and  $y \in C$.  So,  we have:
+\begin{list}{}
+\item $u = \left( x, y \right) \in A \times B$ and  $u = \left( x, y \right) \in A \times C$.
+\end{list}
+Hence, $u \in \left( A \times B \right) \cap \left( A \times C \right)$ and this proves that 
+$A \times \left( {B \cap C} \right) \subseteq \left( A \times B \right) \cap \left( A \times C \right)$.
+
+Now let $v \in \left( A \times B \right) \cap \left( A \times C \right)$.  Then, 
+$v \in A \times B$ and $v \in A \times C$.  So, there exists an $s$ in $A$ and a $t$ in $B$ such that $v = \left( s, t \right)$.  But, since $v$ is also in $A \times C$, we see that $t$ must also be in $C$.  Thus, $t \in B \cap C$ and so, $v \in A \times \left( B \cap C \right)$.  This proves that $\left( A \times B \right) \cap \left( A \times C \right) \subseteq A \times \left( B \cap C \right)$.
+\end{list}
+%\end{list}
+
+\begin{list}{\bf{\ref{exer:sec44-4}.}}
+\item Let  $u \in \left( {A \cup B} \right) \times C$. Then, there exists $x \in A \cup B$ and there exists  $y \in C$ such that  $u = \left( {x, y} \right)$.  Since  $x \in A \cup B$, we know that  $x \in A$  or  $x \in B$.  In the case where $x \in A$, we see that $u \in A \times C$, and in the case where $x \in B$, we see that $u \in B \times C$.  Hence, 
+$u \in \left( A \times C \right) \cup \left( B \times C \right)$.  This proves that 
+$\left( {A \cup B} \right) \times C \subseteq \left( {A \times C} \right) \cup \left( {B \times C} \right)$.
+
+We still need to prove that $(A \times C) \cup (B \times C) \subseteq A \times (B \cup C)$.
+\end{list}
+\hbreak
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+
+\endinput
+

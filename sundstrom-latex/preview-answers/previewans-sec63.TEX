@@ -1,0 +1,131 @@
+\documentclass[11pt]{article}
+\usepackage{../../styles/activity}
+
+\usepackage{xr}
+\externaldocument{0-MR}
+
+\lhead{}
+%\chead{\textbf{\Large{\hspace{0pt}Beginning Activities for Section~6.3}}\\\hspace{0pt}\emph{Mathematical Reasoning: Writing and Proof}}
+\bahead{6.3}
+\rhead{}
+\lfoot{}
+\rfoot{}
+\cfoot{\hspace{0pt}\scalebox{0.4}{\includegraphics{cc-by-nc-sa.eps}}}
+
+\begin{document}
+
+\subsection*{Beginning Activity 1 (Functions with Finite Domains)}
+Notice that for a function with a finite domain, we can specify the ``rule'' for the function simply by giving the output for each input.  In this situation, each function has the set $A = \{1, 2, 3 \}$ as its domain.  So for the function $f$, for example, all we have to do is specify $f(1)$, $f(2)$, and $f(3)$.  In this beginning activity, we actually did this in two ways.  One was the arrow diagram for $f$ and the other just listed $f(1) = a$, $f(2) = b$, and $f(3) = c$.
+\begin{enumerate}
+\item The function  $f$  satisfies the stated property.  The functions  $g$  and  $h$  do not.
+
+\item The property in (2) is the contrapositive of the property in (1).  So the function  $f$  satisfies the stated property.  The functions  $g$  and  $h$  do not.
+
+\item $\text{range}\left( f \right) = \left\{ {a, b, c} \right\}$, 
+	$\text{range}\left( g \right) = \left\{ {a, b} \right\}$, 
+	$\text{range}\left( h \right) = \left\{ {s, t} \right\}$.
+
+\item For the function  $h$, the range is equal to the codomain.  For the functions  $f$  and  
+$g$, the range is not equal to the codomain.
+
+%\item The function  $f$  satisfies the stated property.  The functions  $g$  and  $h$  do not.  
+
+
+
+
+\item The function  $h$  satisfies the stated property.  The functions  $f$  and  $g$  do not.
+Note:  The property in (5) is asking if the codomain of the function is a subset of the range.  Since the range is always a subset of the codomain, if a function satisfies this property, then its range is equal to its codomain.  This is why the answer to (5) is the same as the answer to (4).
+\end{enumerate}
+\hbreak
+
+\newpage
+\noindent
+\subsection*{Beginning Activity 2 (Statements Involving Functions)}
+\begin{enumerate}
+\item \begin{enumerate}
+\item The contrapositive is:  For all $x, y \in A$, if 
+$f \left( x \right) = f \left( y \right)$, then $x = y$.
+\item The negation is:  There exist $x, y \in A$ such that $x \ne y$ and 
+$f \left( x \right) = f \left( y \right)$.
+\end{enumerate}
+
+\item The negation is:  There exists a $y$ in  $B$ such that for all $x$ in $A$, 
+$f \left( x \right) \ne y$.
+
+\item \begin{enumerate}
+\item For all $a, b \in \R$, if $g \left( a \right) = g \left( b \right)$, then $a = b$.
+
+\noindent
+\textbf{\emph{Proof}}.  We let $a, b \in \R$, and we assume that 
+$g \left( a \right) = g \left( b \right)$.  This means that
+\[
+5a + 3 = 5b + 3.
+\]
+By subtracting 3 from both sides of this equation and then dividing both sides by 5, we obtain
+\begin{align*}
+5a &= 5b \\
+ a &= b 
+\end{align*}
+This proves that for all $a, b \in \R$, if $g \left( a \right) = g \left( b \right)$, then 
+$a = b$.
+
+\item For all $b \in \R$, there exists an $a \in \R$ such that $g \left( a \right) = b$.
+
+\noindent
+\textbf{\emph{Proof}}.  We let $b \in \R$.  We need to find an $a \in \R$ such that 
+$g \left( a \right) = b$.  In order for this to happen, we need $5a + 3 = b$.    Solving this equation for $a$ gives $a = \dfrac{b-3}{5}$.  We then see that $a \in \R$ and
+\begin{align*}
+g \left( a \right) &=g \left( \frac{b-3}{5} \right) \\
+                   &= 5 \left( \frac{b-3}{5} \right) + 3 \\
+                   &= \left( b - 3 \right) + 3 \\
+                   &= b
+\end{align*}
+This proves that for all $b \in \R$, there exists an $a \in \R$ such that 
+$g \left( a \right) = b$.
+\end{enumerate}
+\end{enumerate}
+\hbreak
+%\begin{enumerate}
+%\item One possibility is:  $f\left( a \right) = s$, $f\left( b \right) = t$, 
+%$f\left( c \right) = u$, $f\left( d \right) = v$.
+%
+%\item This is not possible since such a function can have at most  3  different outputs, and the set  $C$ contains  4  elements.
+%
+%\item The function in Part (1) satisfies this condition.
+%
+%\item It is not possible to create such a function.  In order to do so, we would need four different outputs, and the set  $\left\{ {s, t, u} \right\}$  contains only  3  elements.
+%\end{enumerate}
+
+
+
+
+
+\end{document}
+
+\noindent
+\subsection*{Beginning Activity 3 (A Function of Two Variables)}
+\begin{enumerate}
+\item \begin{multicols}{3}
+$f\left( {3, 2} \right) =  - 3$	
+
+$f\left( {3,  - 2} \right) = 9$	
+
+$f\left( {0, 2} \right) =  - 6$
+
+$f\left( {2, 0} \right) = 2$	
+
+$f\left( { - 6, 0} \right) =  - 6$
+\end{multicols}
+
+\item $f\left( {m, 0} \right) = m$ and $f\left( {0, n} \right) =  - 3n$.
+
+\item Since  $f\left( {m, 0} \right) = m$ for all  $m \in \mathbb{Z}$, we can conclude that 
+$\text{range}\left( f \right) = \mathbb{Z}$.
+
+\item The statement is true.  If  $y \in \mathbb{Z}$, then  
+$\left( {y, 0} \right) \in \mathbb{Z} \times \mathbb{Z}$  and  $f\left( {y, 0} \right) = y$.
+\end{enumerate}
+
+The statements in (5) and (6) are contrapositives of each other.  They are both false.  This is proven by the facts that  $f\left( {0, 2} \right) =  - 6$ and   
+$f\left( { - 6, 0} \right) =  - 6$, but  $\left( {0, 2} \right) \ne \left( { - 6, 0} \right)$.
+\hbreak

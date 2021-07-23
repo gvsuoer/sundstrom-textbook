@@ -1,0 +1,156 @@
+\subsection*{Absolute Value}
+Most students by now have studied the concept of the absolute value of a real number.  We use the notation $\left| x \right|$ to stand for the absolute value of the real number 
+$x$.  One way to think of the absolute value of $x$ is as the ``distance'' between $x$ and 0 on the number line.  For example,
+\[
+\left| 5 \right| = 5 \quad \text{and} \quad \left| -7 \right| = 7.
+\]
+Although this notion of absolute value is convenient for determining the absolute value of a specific number, if we want to prove properties about absolute value, we need a more careful and precise definition.
+
+\begin{defbox}{D:absvalue}{For $x \in \R$, we define $\left| x \right|$, \label{sym:absvalue} called the \textbf{absolute value of } \emph{\textbf{x}},
+\index{absolute value|(} %
+  by
+\begin{equation}
+\left| x \right| = 
+\begin{cases}
+x,    &  \text{if $x \geq 0$;} \\
+-x    &  \text{if $x < 0$.}
+\end{cases} \notag
+\end{equation}}
+\end{defbox}
+
+\noindent
+Let's first see if this definition is consistent with our intuitive notion of absolute value by looking at two specific examples.
+
+\begin{itemize}
+\item Since $5 > 0$, we see that $\left| 5 \right| = 5$, which should be no surprise.
+
+\item Since $-7 < 0$, we see that $\left| -7 \right| = - \left( -7 \right) = 7$.
+\end{itemize}
+Notice that the definition of the absolute value of $x$ is given in two parts, one for when $x \geq 0$ and the other for when $x <0$.  This means that when attempting to prove something about absolute value, we often uses cases.  This will be illustrated in Theorem~\ref{P:absvalue}.
+
+\begin{theorem}
+Let $a$ be a positive real number.  For each real number $x$,
+\label{P:absvalue}%
+\begin{enumerate}
+\item $\left| x \right| = a$ if and only if $x = a$ or $x = -a$.
+\label{P:absvalue-1}%
+\item $\left| -x \right| = \left| x \right|$.
+\label{P:absvalue-2}%
+\end{enumerate}
+\end{theorem}
+
+\begin{myproof}
+The proof of Part~(\ref{P:absvalue-2}) is part of Exercise~(\ref{exer:absvalue}).  We will prove 
+Part~(\ref{P:absvalue-1}).
+
+We let $a$ be a positive real number and let $x \in \R$.  We will first prove that if $|x| = a$, then $x = a$ or $x = -a$.  So we assume that 
+$\left| x \right| = a$.  In the case where $x \geq 0$, we see that $\left| x \right| = x$, and since $\left| x \right| = a$, we can conclude that $x = a$.
+
+In the case where $x < 0$, we see that $\left| x \right| = -x$.  Since 
+$\left| x \right| = a$, we can conclude that $-x = a$ and hence that $x = -a$.  These two cases prove that if $\left| x \right| = a$, then $x = a$ or $x = -a$.
+
+We will now prove that if $x = a$ or $x = -a$, then $|x| = a$.  We start by assuming that $x = a$ or 
+$x = -a$.  Since the hypothesis of this conditional statement is a disjunction, we use two cases.  When 
+$x = a$, we see that 
+\[
+\left| x \right| = \left| a \right| = a \quad \text{since } a > 0.
+\]
+When $x = -a$, we conclude that 
+\[
+\left| x \right| = \left| -a \right| = - \left( -a  \right) \quad \text{since } -a < 0,
+\]
+and hence, $\left| x \right| = a$.  This proves that if $x = a$ or $x = -a$, then 
+$\left| x \right| = a$. Because we have proven both conditional statements, we have proven that $\left| x \right| = a$ if and only if $x = a$ or $x = -a$.
+\end{myproof}
+\hbreak
+
+\begin{prog}[\textbf{Equations Involving Absolute Values}]\label{pr:absvalue} \hfill  
+\begin{enumerate}
+\item What is $\left| 4.3 \right|$ and what is $\left| - \pi \right|$?
+
+\item Use the properties of absolute value in Proposition~\ref{P:absvalue} to help solve the following equations for $t$, where $t$ is a real number.
+
+\begin{multicols}{2}
+\begin{enumerate}
+\item $\left| t  \right| = 12$.
+\item $\left| t + 3 \right| = 5$.
+\item $\left| t -4 \right| = \dfrac{1}{5}$.
+\item $\left| 3t - 4 \right| = 8$.
+\end{enumerate}
+\end{multicols}
+\end{enumerate}
+\end{prog}
+\hbreak
+
+Although solving equations involving absolute values may not seem to have anything to do with writing proofs, the point of Progress Check~\ref{pr:absvalue} is to emphasize the importance of using cases when dealing with absolute value.  The following theorem provides some important properties of absolute value.
+
+%\pagebreak
+\begin{theorem}\label{T:absvalue}
+Let $a$ be a positive real number.  For all real numbers $x$ and $y$,
+
+\begin{enumerate}
+\item $\left| x \right| < a$ if and only if $-a < x < a$.
+\label{T:absvalue-1}%
+\item $\left| xy \right| = \left| x \right| \left| y \right|$.
+\label{T:absvalue-2}%
+\item $\left| x + y \right| \leq \left| x \right| + \left| y \right|$.
+\label{T:absvalue-3}%
+  This is known as the \textbf{Triangle Inequality}.
+\index{Triangle Inequality}%
+\end{enumerate}
+\end{theorem}
+
+\begin{myproof}
+We will prove Part~(\ref{T:absvalue-1}).  The proof of Part~(\ref{T:absvalue-2}) is included in Exercise~(\ref{exer:absvalue}), and the proof of Part~(\ref{T:absvalue-3}) is Exercise~(\ref{exer:triangleineq}).  
+For Part~(\ref{T:absvalue-1}), we will prove the biconditional proposition by proving the two associated conditional propositions.
+
+So we let $a$ be a positive real number and let $x \in \R$ and first assume that 
+$\left| x \right| < a$.  We will use two cases:  either $x \geq 0$ or $x < 0$.
+
+\begin{itemize}
+\item In the case where $x \geq 0$, we know that $\left| x \right| = x$ and so the inequality 
+$\left| x \right| < a$ implies that $x < a$.  However, we also know that $-a < 0$ and that 
+$x > 0$.  Therefore, we conclude that $-a < x$ and, hence, $-a < x < a$.
+
+\item When $x < 0$, we see that $\left| x \right| = -x$.  Therefore, the inequality 
+$\left| x \right| < a$ implies that $-x < a$, which in turn implies that $-a < x$.  In this case, we also know that $x < a$ since $x$ is negative and $a$ is positive.  Hence, 
+$-a < x < a$.
+\end{itemize}
+
+So in both cases, we have proven that $-a < x < a$ and this proves that if 
+$\left| x \right| < a$, then $-a < x < a$.
+We now assume that $-a < x < a$.
+\begin{itemize}
+\item If $x \geq 0$, then $\left| x \right| = x$ and hence, $\left| x \right| < a$.
+\item If $x < 0$, then $\left| x \right| = -x$ and so $x = -\left| x \right|$.  Thus, 
+$-a < - \left| x \right|$.  By multiplying both sides of the last inequality by $-1$, we conclude that $\left| x \right| < a$.
+\end{itemize}
+
+These two cases prove that if $-a < x < a$, then $\left| x \right| < a$.  Hence, we have proven that $\left| x \right| < a$ if and only if $-a < x < a$.
+\end{myproof}
+\hbreak
+
+%Part~(\ref{T:absvalue-3}) of Theorem~\ref{T:absvalue} is known as the 
+%\textbf{Triangle Inequality}.
+%\index{Triangle Inequality} %
+
+%\pagebreak
+%\begin{activity}[Proof of the Triangle Inequality]\label{A:triangleinequality} \hfill
+%\begin{enumerate}
+%\item  Verify that the triangle inequality is true for several different real numbers $x$ and 
+%$y$.  Be sure to have some examples where the real numbers are negative.
+%
+%\item Explain why the following proposition is true:
+%For each real number $r$, $- \left| r \right| \leq r \leq \left| r \right|$.
+%\label{A:triangleinequality-2}%
+%
+%\item Now let $x$ and $y$ be real numbers.  Apply the result in 
+%Part~(\ref{A:triangleinequality-2}) to both $x$ and $y$.  Then add the corresponding parts of the two inequalities to obtain another inequality.  Use this to prove that 
+%$\left| x + y \right| \leq \left| x \right| + \left| y \right|$.
+%\end{enumerate}
+%\end{activity}
+%\index{absolute value|)} %
+%\hbreak
+
+
+\endinput

@@ -1,0 +1,181 @@
+\subsection*{Constructing a Proof of a Conditional Statement}
+In order to prove that a conditional statement $P \to Q$ is true, we only need to prove that  $Q$  is true whenever  $P$  is true.  This is because the conditional statement is true whenever the hypothesis is false.  So in a direct proof of  $P \to Q$, we assume that  $P$  is true, and using this assumption, we proceed through a logical sequence of steps to arrive at the conclusion that  $Q$  is true.  
+
+Unfortunately, it is often not easy to discover how to start this logical sequence of steps or how to get to the conclusion that $Q$  is true.  We will describe a method of exploration that often can help in discovering the steps of a proof.  This method will involve working forward from the hypothesis, $P$, and backward from the conclusion, $Q$.  We will use a device called the \textbf{``know-show table''}
+\index{know-show table|(}%
+ to help organize our thoughts and the steps of the proof.  This will be illustrated with the proposition from Preview Activity~\ref{PA:thinking}.
+\begin{flushleft}
+\textbf{Proposition.}  \emph{If  $x$  and  $y$  are odd integers, then $ x \cdot y$  is an odd integer.}
+\end{flushleft}
+The first step is to identify the hypothesis,  $ P$,  and the conclusion,$Q$,  of the conditional statement.  
+%The hypothesis consists of everything you are assuming, and the conclusion consists of everything you are trying to prove.  
+In this case,  we have the following:
+\begin{center}
+$P$: $x$ and $y$ are odd integers. \qquad $Q$: $x \cdot y$ is an odd integer.
+\end{center}
+%\vskip11pt
+%\begin{multicols}{2}
+%$P$:	$x$  and  $y$  are odd integers.
+%
+%$Q$:	$x \cdot y$ is an odd integer.
+%\end{multicols}
+%\noindent
+We now treat  $P$  as what we know (we have assumed it to be true) and treat $Q$ as what we want to show (that is, the goal).  So we organize this by using  $P$  as the first step in the know portion of the table and  $Q$  as the last step in the show portion of the table.  We will put the know portion of the table at the top and the show portion of the table at the bottom.
+$$
+\BeginTable
+\def\C{\JustCenter}
+\BeginFormat
+|p(0.4in)|p(2in)|p(1.8in)|
+\EndFormat
+  \_
+  | \textbf{Step}  |  \textbf{Know}  |  \textbf{Reason}  |    \\+02 \_
+|  $P$     |  $x$ and $y$ are odd integers.  |  Hypothesis | \\ \_1
+|  $P1$    |                                 |             | \\ \_1
+|  \C $\vdots$  |  \C $\vdots$                         | \C $\vdots$      | \\ \_1
+|  $Q1$    |                                 |             | \\  \_1 
+|  $Q$     |  $x \cdot y$ is an odd integer. |  ?          | \\ \_
+|  \textbf{Step}  |  \textbf{Show}  |  \textbf{Reason}     | \\+20 \_
+\EndTable
+$$
+We have not yet filled in the reason for the last step because we do not yet know how we will reach the goal.  The idea now is to ask ourselves questions about what we know and what we are trying to prove.  We usually start with the conclusion that we are trying to prove by asking a so-called \textbf{backward question.}
+\index{know-show table!backward question}%
+  The basic form of the question is, ``Under what conditions can we conclude that  $Q$  is true?''  How we ask the question is crucial since we must be able to answer it.  We should first try to ask and answer the question in an abstract manner and then apply it to the particular form of statement  $Q$.  
+
+In this case, we are trying to prove that some integer is an odd integer.  So our backward question could be, ``How do we prove that an integer is odd?''  At this time, the only way we have of answering this question is to use the definition of an odd integer.  So our answer could be, ``We need to prove that there exists an integer  $q$  such that the integer equals  $2q + 1$.''  We apply this answer to statement  $Q$  and insert it as the next to last line in the know-show table.
+$$
+\BeginTable
+\def\C{\JustCenter}
+\BeginFormat
+|p(0.4in)|p(2in)|p(1.8in)|
+\EndFormat
+  \_
+  | \textbf{Step}  |  \textbf{Know}  |  \textbf{Reason}  |    \\+02 \_
+|  $P$     |  $x$ and $y$ are odd integers.  |  Hypothesis | \\ \_1
+|  $P1$    |                                 |             | \\ \_1
+|  \C $\vdots$  |  \C $\vdots$                         | \C $\vdots$      | \\ \_1
+|  $Q1$    |  There exists an integer $q$ such that $xy = 2q + 1$.                               |             | \\  \_1 
+|  $Q$     |  $x \cdot y$ is an odd integer. |  Definition of an odd integer          | \\ \_
+|  \textbf{Step}  |  \textbf{Show}  |  \textbf{Reason}     | \\+20 \_
+\EndTable
+$$
+%The idea is to write the first step for the beginning of the proof ($P$) and the steps for the end of the proof ($Q$ and $Q1$).  We then try to fill in the steps for the middle of the proof, working backward from $Q1$ and working forward from $P$.
+We now focus our effort on proving statement $Q1$ since we know that if we can prove $Q1$, then we can conclude that  $Q$  is true.  We ask a backward question about  $Q1$ such as, ``How can  we prove that there exists an integer $q$  such that  %\linebreak
+$x \cdot y = 2q + 1$?''  We may not have a ready answer for this question, and so we look at the know portion of the table and try to connect the know portion to the show portion.  To do this, we work forward from step $P$, and this involves asking a \textbf{forward question.}
+\index{know-show table!forward question}%
+  The basic form of this type of question is, ``What can we conclude from the fact that  $P$  is true?''  In this case, we can use the definition of an odd integer to conclude that there exist integers  $m$  and $ n$  such that  $x = 2m + 1$  and  $y = 2n + 1$.  We will call this Step $P1$ in the know-show table.  It is important to notice that we were careful not to use the letter $q$ to denote these integers.  If we had used  $q$  again, we would be claiming that the same integer that gives  $x \cdot y = 2q + 1$  also gives  $x = 2q + 1$.  This is why we used  $m$  and  $n$  for the integers  $x$  and $y$  since there is no guarantee that  $x$ equals $y$.  The basic rule of thumb is to use a different symbol for each new object we introduce in a proof.  So at this point, we have:
+\begin{itemize}
+  \item Step $P1$.  We know that there exist integers $m$ and $n$ such that $x = 2m + 1$ and $y = 2n + 1$.
+  \item Step $Q1$.  We need to prove that there exists an integer $q$ such that \\$x = 2q + 1$.
+\end{itemize}
+%\end{flushleft}
+%
+%$$
+%\BeginTable
+%\def\C{\JustCenter}
+%\BeginFormat
+%|p(0.4in)|p(2in)|p(1.8in)|
+%\EndFormat
+%  \_
+%  | \textbf{Step}  |  \textbf{Know}  |  \textbf{Reason}  |    \\+02 \_
+%|  $P$     |  $x$ and $y$ are odd integers.  |  Hypothesis | \\ \_1
+%|  $P1$    |  There exist integers $m$ and $n$ such that $x = 2m + 1$ and $y = 2n + 1$.                               | Definition of an odd integer |  \\ \_1
+%|  \C $\vdots$  |  \C $\vdots$                         | \C $\vdots$      | \\ \_1
+%|  $Q1$  |  There exists an integer $q$ such that $xy = 2q + 1$.                               |             | \\  \_1 
+%|  $Q$     |  $x \cdot y$ is an odd integer. |  Definition of an odd integer          | \\ \_
+%|  \textbf{Step}  |  \textbf{Show}  |  \textbf{Reason}     | \\+20 \_
+%\EndTable
+%$$
+We must always be looking for a way to link the ``know part'' to the ``show part''.  There are conclusions we can make from $P1$, but as we proceed, we must always keep in mind the form of statement in $Q1$.  The next forward question is, ``What can we conclude about  $x \cdot y$  from what we know?''  One way to answer this is to use our prior knowledge of algebra.  That is, we can first use substitution to write  $x \cdot y = \left( {2m + 1} \right)\left( {2n + 1} \right)$.  Although this equation does not prove that $x \cdot y$ is odd, we can use algebra to try to rewrite the right side of this equation 
+$\left( {2m + 1} \right)\left( {2n + 1} \right)$ in the form of an odd integer so that we can arrive at 
+step $Q1$.  We first expand the right side of the equation to obtain
+\begin{align*}
+x \cdot y &= (2m + 1)(2n + 1) \\
+          &= 4mn + 2m + 2n + 1
+\end{align*}
+%$$
+%\BeginTable
+%\def\C{\JustCenter}
+%\BeginFormat
+%|p(0.4in)|p(2in)|p(1.8in)|
+%\EndFormat
+%  \_
+%  | \textbf{Step}  |  \textbf{Know}  |  \textbf{Reason}  |    \\+02 \_
+%|  $P$     |  $x$ and $y$ are odd integers.  |  Hypothesis | \\ \_1
+%|  $P1$    |  There exist integers $m$ and $n$ such that $x = 2m + 1$ and $y = 2n + 1$.                               | Definition of an odd integer |  \\ \_1
+%| $P2$   | $xy = \left(2m + 1\right)\left(2n + 1 \right)$ | Substitution | \\ \_1
+%| $P3$   | $xy = 4mn + 2m + 2n + 1$                       |  Algebra      | \\ \_1
+%|  \C $\vdots$  |  \C $\vdots$                         | \C $\vdots$      | \\ \_1
+%|  $Q1$  |  There exists an integer $q$ such that $xy = 2q + 1$.                               |             | \\  \_1 
+%|  $Q$     |  $x \cdot y$ is an odd integer. |  Definition of an odd integer          | \\ \_
+%|  \textbf{Step}  |  \textbf{Show}  |  \textbf{Reason}     | \\+20 \_
+%\EndTable
+%$$
+Now compare the right side of the last equation to the right side of the equation in step $Q1$.  Sometimes the difficult part at this point is the realization that  $q$  stands for  some integer and that we only have to show that $x \cdot y$ equals two times some integer plus one.  Can we now make that conclusion?  The answer is yes because we can factor a 2 from the first three terms on the right side of the equation and obtain
+\begin{align*}
+x \cdot y &= 4mn + 2m + 2n + 1 \\
+          &= 2 (2mn + m + n) + 1
+\end{align*}
+We can now complete the table showing the outline of the proof as follows:
+
+$$
+\BeginTable
+\def\C{\JustCenter}
+\BeginFormat
+|p(0.4in)|p(2in)|p(1.8in)|
+\EndFormat
+  \_
+  | \textbf{Step}  |  \textbf{Know}  |  \textbf{Reason}  |    \\+02 \_
+|  $P$     |  $x$ and $y$ are odd integers.  |  Hypothesis | \\ \_1
+|  $P1$    |  There exist integers $m$ and $n$ such that $x = 2m + 1$ and $y = 2n + 1$.                               | Definition of an odd integer. |  \\ \_1
+| $P2$   | $xy = \left(2m + 1\right)\left(2n + 1 \right)$ | Substitution | \\ \_1
+| $P3$   | $xy = 4mn + 2m + 2n + 1$                       |  Algebra      | \\ \_1
+| $P4$   | $xy = 2 \left( 2mn + m + n \right) + 1$        |  Algebra      | \\ \_1
+| $P5$   | $\left( 2mn + m + n \right)$ is an integer. | Closure properties of the integers | \\ \_1
+|  $Q1$  |  There exists an integer $q$ such that $xy = 2q + 1$.                               | Use $q = \left( 2mn + m + n \right)$            | \\  \_1 
+|  $Q$     |  $x \cdot y$ is an odd integer. |  Definition of an odd integer          | \\ \_
+%|  \textbf{Step}  |  \textbf{Show}  |  \textbf{Reason}     | \\+20 \_
+\EndTable
+$$
+
+%
+%\begin{center}
+%\begin{tabular}[h]{|p{0.4in}|p{2in}|p{1.8in}|}
+%  \hline
+%  \textbf{Step}  &  \textbf{Know}  &  \textbf{Reason} \\ \hline
+%  $P$  &  $x$ and $y$ are odd integers.  &  Hypothesis \\ \hline
+%  $P1$ &  There exist integers $m$ and $n$ such that $x = 2m+1$ and   &  Definition of an odd integer \\ 
+%       &  $y = 2n+1$.                    &  \\  \hline
+%  $P2$  &  $x \cdot y = \left( 2m+1 \right) \left( 2n+1 \right)$  &  Substitution \\ \hline
+%  $P3$  &  $x \cdot y = 4mn+2m+2n+1$  &  Algebra  \\ \hline
+%  $P4$  &  $x \cdot y = 2 \left( 2mn+m+n \right)+1$  &  Algebra  \\ \hline
+%  $P5$  &  $\left( 2mn+m+n \right)$ is an integer.  &  Closure properties of the integers \\ \hline
+%  $Q1$  &  There exists an integer $q$ such that $x \cdot y = 2q+1$.  &   \\ \hline
+%  $Q$  &  $x \cdot y$ is an odd integer. &  Definition of an odd integer \\ \hline
+%\end{tabular}
+%\end{center}
+%
+It is very important to realize that we have only constructed an outline of a proof.  Mathematical proofs are not written in table form.  They are written in narrative form using complete sentences and correct paragraph structure, and they follow certain conventions used in writing mathematics.  In addition, most proofs are written only from the forward perspective.  That is, although the use of the backward process was essential in discovering the proof, when we write the proof in narrative form, we use the forward process described in the preceding table.
+\index{know-show table|)}%
+  A completed proof follows.
+
+\hbreak
+
+\begin{theorem}\label{T:xyodd}
+If  $x$  and  $y$  are odd integers, then  $x \cdot y$  is an odd integer.
+\end{theorem}
+\begin{myproof}
+We assume that  $x$  and  $y$  are odd integers and will prove that  $x \cdot y$ is an odd integer.  Since $x$ and $y$ are odd, there exist integers  $m$  and  $n$  such that
+\[
+x = 2m + 1 \text{ and } y = 2n + 1.
+\]
+Using algebra, we obtain
+\begin{align}
+  x \cdot y &= \left( {2m + 1} \right)\left( {2n + 1} \right) \notag \\
+   &= 4mn + 2m + 2n + 1 \notag \\
+   &= 2\left( {2mn + m + n} \right) + 1. \notag
+\end{align}
+ Since  $m$  and  $n$  are integers and the integers are closed under addition and multiplication, we conclude that  $\left( {2mn + m + n} \right)$ is an integer.  This means that  $x \cdot y$ has been written in the form  $\left( {2q + 1} \right)$ for some integer  $q$, and hence, $x \cdot y$ is an odd integer.  Consequently, it has been proven that if  $x$  and  $y$  are odd integers, then  $x \cdot y$ is an odd integer.
+\end{myproof}
+\hbreak
+
+\endinput

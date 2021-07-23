@@ -1,0 +1,202 @@
+\begin{previewactivity}[\textbf{Directed Graphs and Relations}] \label{PA:directedgraphs} \hfill \\
+If  $A$  is a (small) finite set, a relation  $R$  on  $A$  can be specified by simply listing all the ordered pairs in  $R$.  For example,  if  $A = \left\{ {1, 2, 3, 4} \right\}$, then 
+\[
+R = \left\{ {( {1, 1} ), ( {4, 4} ), ( {1, 3} ), ( {3, 2} ), ( {1, 2} ), ( {2, 1} )} \right\}
+\]
+is a relation  on  $A$.  A convenient way to represent such a relation is to draw a point in the plane for each of the elements of  $A$  and then for each  $\left( {x, y} \right) \in R$ (or  
+$x \mathrel{R} y$),  we draw an arrow starting at point $x$  and pointing to point $y$.  If  
+$\left( {x, x} \right) \in R$ (or  $x \mathrel{R} x$), we draw a loop at the point  $x$.  The resulting diagram is called a \textbf{directed graph} \label{directedgraph}
+\index{directed graph}%
+ or a \textbf{digraph}.
+\index{digraph}%
+  The diagram in Figure~\ref{fig:dirgraph} is a digraph for the relation  $R$.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics{figps-prev72digraph.eps}
+\caption{Directed Graph for a Relation} \label{fig:dirgraph}
+\end{center}
+\end{figure}
+
+In a directed graph, the points are called the \textbf{vertices}.  So each element of  $A$  corresponds to a \textbf{vertex}.
+\index{vertex}%
+\index{directed graph!vertex}%
+  The arrows, including the loops, are called the \textbf{directed edges}
+\index{directed edge}%
+\index{directed graph!directed edge}%
+ of the directed graph.
+
+\begin{enumerate}
+\item Let  $A = \left\{ {1, 2, 3, 4} \right\}$ and  
+$R = \left\{ {( {1, 1} ), ( {2, 2} ), ( {3, 3} ), ( {4, 4} ), ( {1, 3} ), ( {3, 2} )} \right\}$.  Draw a digraph for this relation and then determine whether the following statements are true or false.  \label{PA:directedgraphs1}
+
+\begin{enumerate}
+  \item For each  $x \in A$,  $x \mathrel{R} x$.
+
+  \item For every  $x, y \in A$, if  $x \mathrel{R} y$, then  $y \mathrel{R} x$.
+
+  \item For every  $x, y, z \in A$, if  $x \mathrel{R} y$ and  $y \mathrel{R} z$, then  
+                   $x \mathrel{R} z$.
+\end{enumerate}
+
+\item Let  $A = \left\{ {1, 2, 3, 4} \right\}$ and  
+$S = \left\{ {( {1, 1} ), ( {1, 4} ), ( {2, 4} ), ( {4, 1} ), ( {4, 2} )} \right\}$.  Draw a digraph for this relation and then determine whether the following statements are true or false.
+
+\begin{enumerate}
+  \item For each  $x \in A$,  $x \mathrel{S} x$.
+
+  \item For every  $x, y \in A$, if  $x \mathrel{S} y$, then  $y \mathrel{S} x$.
+
+  \item For every  $x, y, z \in A$, if  $x \mathrel{S} y$ and  $y \mathrel{S} z$, then  
+                   $x \mathrel{S} z$.
+\end{enumerate}
+\end{enumerate}
+\end{previewactivity}
+\hbreak
+%
+\begin{previewactivity}[\textbf{Properties of Relations}] \label{PA:propsofrelaitons} \hfill \\
+In Preview Activity~\ref{PA:directedgraphs}, the same three questions were asked about two different relations on the set $A = \left\{ {1, 2, 3, 4} \right\}$.  These were questions about certain properties of relations, and these properties occur frequently enough to warrant names.
+
+\begin{defbox}{ref-sym-trans}{Let  $A$  be a nonempty set and let  $R$  be a relation on  $A$.
+\begin{itemize}
+\item The relation  $R$  is \textbf{reflexive on}
+\index{reflexive}%
+\index{relation!reflexive on}%
+ $\boldsymbol{A}$  provided that for each  
+$x \in A$,  $x \mathrel{R} x$ or, equivalently,  $\left( {x, x} \right) \in R$.
+
+\item The relation  $R$  is \textbf{symmetric}
+\index{symmetric}%
+\index{relation!symmetric}%
+  provided that for every  $x, y \in A$,  if  
+$x \mathrel{R} y$, then  $y \mathrel{R} x$ or, equivalently, for every  $x, y \in A$,  if  $\left( {x, y} \right) \in R$, then  $\left( {y, x} \right) \in R$.
+
+\item The relation  $R$  is \textbf{transitive}
+\index{transitive}%
+\index{relation!transitive}%
+  provided that for every $x, y, z \in A$,  if  $x \mathrel{R} y$ and  $y \mathrel{R} z$, then  $x \mathrel{R} z$ or, equivalently, for every  $x, y, z \in A$,  if  $\left( {x, y} \right) \in R$ and $\left( {y, z} \right) \in R$, then  $\left( {x, z} \right) \in R$.
+\end{itemize}
+}
+\end{defbox}
+
+\noindent
+Define the relations  $\sim$  and  $ \approx $  on  $\Q$  as follows:  For all $a, b \in Q$,
+\begin{itemize}
+\item $a \sim b$  if and only if  $a - b \in \Z $.	
+
+\item $a \approx b$  if and only if  $a + b \in \Z$.
+\end{itemize}
+
+\noindent
+For example, $\dfrac{3}{4} \sim \dfrac{7}{4}$ since $\dfrac{3}{4} - \dfrac{7}{4} = -1$, and 
+$\dfrac{3}{4} \not  \approx \dfrac{7}{4}$ since $\dfrac{3}{4} + \dfrac{7}{4} = \dfrac{5}{2}$.
+
+\begin{enumerate}
+\item Is the relation  $\sim$  a reflexive relation on  $\Q$?  Is it a symmetric relation?  Is it a transitive relation? 
+
+\item Is the relation  $ \approx $  a reflexive relation on  $\Q$?  Is it a symmetric relation?  Is it a transitive relation?
+\end{enumerate}
+\end{previewactivity}
+\hbreak
+%
+\pagebreak
+\begin{previewactivity}[\textbf{Review of Congruence Modulo} $\boldsymbol{n}$]\label{PA:reviewofcongruence} \hfill
+\begin{enumerate}
+\item Let  $a, b \in \mathbb{Z}$ and let  $n \in \mathbb{N}$.  On page~\pageref{congruence} of Section~\ref{S:directproof}, we defined what it means to say that  $a$  is congruent to  $b$  modulo  $n$.  Write this definition and state two different conditions that are equivalent to the definition.
+
+\item %Let  $a, b \in \mathbb{Z}$ and let  $n \in \mathbb{N}$.  We use  
+%$a \equiv b \pmod n$ as a notation for  ``$a$  is congruent to  $b$  modulo  $n$.''  
+Explain why congruence modulo  $n$  is a relation on  $\mathbb{Z}$.
+
+\item Carefully review Theorem~\ref{T:modprops} and the proofs given on page~\pageref{T:modprops} of Section~\ref{S:directproof}.  In terms of the properties of relations introduced in Preview Activity~\ref{PA:propsofrelaitons}, what does this theorem say about the relation of congruence modulo  $n$  on the integers?
+
+\item Write a complete statement of Theorem~\ref{T:congtorem} on page~\pageref{T:congtorem} and Corollary~\ref{C:congtorem}.
+
+\item Write a proof of the symmetric property for congruence modulo  $n$.  That is, prove the following:
+
+\begin{list}{}
+\item Let  $a, b \in \mathbb{Z}$ and let  $n \in \mathbb{N}$.  If  
+$a \equiv b \pmod n$, then  $b \equiv a \pmod n$.
+\end{list}
+
+\end{enumerate}
+\end{previewactivity}
+\hbreak
+
+
+
+
+\endinput
+
+
+\begin{center}
+\setlength{\unitlength}{0.5cm}
+\begin{picture}(8,8)
+\put(2,2){\circle*{.25}}
+\put(2,6){\circle*{.25}}
+\put(6,2){\circle*{.25}}
+\put(6,6){\circle*{.25}}
+
+\put(1.8,1.2){3}
+\put(5.8,1.2){4}
+\put(5.8,6.4){2}
+\put(1.6,6.3){1}
+
+\put(2.3,5.8){\vector(1,0){3.4}}
+\put(5.7,6.2){\vector(-1,0){3.4}}
+\put(2.2,2.2){\vector(1,1){3.4}}
+\put(2,5.7){\vector(0, -1){3.4}}
+
+\put(6,1){\circle{2}}
+\put(6,2){\vector(1,0){0}}
+
+\put(1.3,6.7){\circle{2}}
+\put(2,6){\vector(1,1){0}}
+
+\end{picture}
+\end{center}
+
+In Preview Activity~(\ref{PA:directedgraphs}), the same three questions were asked about two different relations on the set $A = \left\{ {1, 2, 3, 4} \right\}$.  These were questions about certain properties of relations, and these properties occur frequently enough to warrant names.
+
+\begin{defbox}{ref-sym-trans}{Let  $A$  be a nonempty set and let  $R$  be a relation on  $A$.
+\begin{itemize}
+\item The relation  $R$  is \textbf{reflexive on}
+\index{reflexive}%
+\index{relation!reflexive on}%
+ $\boldsymbol{A}$  provided that for each  
+$x \in A$,  $x \mathrel{R} x$ or, equivalently,  $\left( {x, x} \right) \in R$.
+
+\item The relation  $R$  is \textbf{symmetric}
+\index{symmetric}%
+\index{relation!symmetric}%
+  provided that for every  $x, y \in A$,  if  
+$x \mathrel{R} y$, then  $y \mathrel{R} x$ or, equivalently, for every  $x, y \in A$,  if  $\left( {x, y} \right) \in R$, then  $\left( {y, x} \right) \in R$.
+
+\item The relation  $R$  is \textbf{transitive}
+\index{transitive}%
+\index{relation!transitive}%
+  provided that for every $x, y, z \in A$,  if  $x \mathrel{R} y$ and  $y \mathrel{R} z$, then  $x \mathrel{R} z$ or, equivalently, for every  $x, y, z \in A$,  if  $\left( {x, y} \right) \in R$ and $\left( {y, z} \right) \in R$, then  $\left( {x, z} \right) \in R$.
+\end{itemize}
+}
+\end{defbox}
+
+Let  $U$  be a finite, nonempty set and let  $\mathcal{P}\left( U \right)$ be the power set of  $U$.  Define the relations  $\sim$  and  $ \approx $  on  $\mathcal{P}\left( U \right)$  as follows:
+
+\vskip10pt
+\noindent
+For  $A, B \in P\left( U \right)$,
+\begin{itemize}
+\item $A \sim B$  if and only if  $A \cap B = \emptyset $.	That is,  the ordered pair  
+$\left( {A, B} \right)$  is in the relation  $\sim$  if and only if  $A$  and  $B$  are disjoint.
+
+\item $A \approx B$  if and only if  $\left| A \right| = \left| B \right|$.	That is, the ordered pair  $\left( {A, B} \right)$  is in the relation  $ \approx $  if and only if  $A$  and  $B$  have the same cardinality (same number of elements).
+\end{itemize}
+
+\begin{enumerate}
+\item Is the relation  $\sim$  a reflexive relation on  $\mathcal{P}\left( U \right)$?  Is it a symmetric relation?  Is it a transitive relation? 
+
+\item Is the relation  $ \approx $  a reflexive relation on  $\mathcal{P}\left( U \right)$?  Is it a symmetric relation?  Is it a transitive relation?
+\end{enumerate}
+\end{previewactivity}
+\hbreak
+

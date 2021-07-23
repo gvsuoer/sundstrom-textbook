@@ -1,0 +1,42 @@
+\begin{previewactivity}[\textbf{Using Cases in a Proof}]\label{PA:cases} \hfill \\
+The work in \typeu Activity~\ref*{PA:logicalequiv} was meant to introduce the idea of using cases in a proof.  
+%See the solutions for Activity~\ref{PA:logicalequiv} for complete proof of the proposition in 
+%part~(\ref{PA:logicalequiv3}) from Activity~\ref{PA:logicalequiv}. 
+The method of using cases is often used when the hypothesis of the proposition is a disjunction.  This is justified by the logical equivalency 
+\[
+\left[ \left( {P \vee Q} \right) \to R \right] \equiv \left[ \left( {P \to R} \right) \wedge \left( {Q \to R} \right) \right].
+\]
+See Theorem~\ref{T:logequiv} on page~\pageref{T:logequiv} and Exercise~(\ref{exer:sec23-6}) on page~\pageref{exer:sec23-6}.
+
+\index{cases, proof using}%
+\index{proof!using cases}%
+In some other situations when we are trying to prove a proposition or a theorem about an element $x$ in some set $U$, we often run into the problem that there does not seem to be enough information about $x$ to proceed.  For example, consider the following proposition:
+
+\newpar
+\textbf{Proposition 1}.  If $n$ is an integer, then $\left( n^2 + n \right)$ is an even integer. 
+
+\newpar
+If we were trying to write a direct proof of this proposition, the only thing we could assume is that $n$ is an integer.  This is not much help.  In a situation such as this, we will sometimes use cases to provide additional assumptions for the forward process of the proof.  Cases are usually based on some common properties that the element $x$ may or may not possess.  The cases must be chosen so that they exhaust all possibilities for the object $x$ in the hypothesis of the original proposition.  For Proposition~1, we know that an integer must be even or it must be odd.  We can thus use the following two cases for the integer $n$:
+\begin{itemize}
+  \item The integer  $n$  is an even integer;
+  \item The integer  $n$  is an odd integer.
+\end{itemize}
+
+\begin{enumerate}
+\item Complete the proof for the following proposition:
+
+\textbf{Proposition 2:}  If  $n$  is an even integer, then  $n^2  + n$ is an even integer.
+
+\textbf{\emph{Proof}}.  Let  $n$  be an even integer.  Then there exists an integer  $m$  such that $n = 2m$.  Substituting this into the expression  $n^2  + n$ yields \ldots .
+
+\item Construct a proof for the following proposition:
+
+\textbf{Proposition 3:}  If  $n$  is an odd integer, then  $n^2  + n$ is an even integer.
+
+\item Explain why the proofs of Proposition~2 and Proposition~3 can be used to construct a proof of Proposition~1.
+\end{enumerate}
+
+\end{previewactivity}
+\hbreak
+
+\endinput

@@ -1,0 +1,63 @@
+\section*{Section~\ref{S:divalgo}}
+
+\subsection*{Progress Check \ref{pr:usingdivalgo}}
+\begin{enumerate}
+\item \begin{enumerate}
+\item The possible remainders are 0, 1, 2, and 3.
+\item The possible remainders are 0, 1, 2, 3, 4, 5, 6, 7, and 8.
+\end{enumerate}
+
+\begin{multicols}{2}
+\begin{enumerate}
+\item $17 = 5 \cdot 3 + 2$
+
+\item $-17 = \left( -6 \right) \cdot 3 + 1$
+
+\item $73 = 10 \cdot 7 + 3$
+
+\item $-73 = \left( -11 \right) \cdot 7 + 4$
+
+\item $436 = 16 \cdot 27 + 4$
+
+\item $539 = 4 \cdot 110 + 99$
+\end{enumerate}
+\end{multicols}
+\end{enumerate}
+%\hbreak
+
+
+
+\subsection*{Progress Check~\ref{pr:propsofcong}}
+\begin{myproof}
+Let  $n$  be a natural number and let  $a, b, c, \text{and }  d$  be integers.  We assume that  
+$a \equiv b \pmod n$ and $c \equiv d \pmod n$ and will prove that $\mod{(a + c)}{(b + d)}{n}$.  Since $\mod{a}{b}{n}$ and $\mod{c}{d}{n}$, $n$ divides $(a - b)$ and $(c - d)$ and so there exist integers $k$ and $q$ such that $a - b = nk$ and $c - d = nq$.  We can then write 
+$a = b + nk$ and $c = d + nq$ and obtain
+\begin{align*}
+a + c &= (b + nk) + (d + nq) \\
+      &= (b + d) + n(k + q)
+\end{align*}
+By subtracting $(b + d)$ from both sides of the last equation, we see that
+\[
+(a + c) - (b + d) = n(k + q).
+\]
+Since $(k + q)$ is an integer, this proves that $n$ divides $(a + c) - (b + d)$, and hence, we can conclude that $\mod{(a + c)}{(b + d)}{n}$.
+\end{myproof}
+
+\subsection*{Progress Check \ref{prog:propertiesofcong}}
+\textbf{Case 2}.  $\left( \mod{a}{2}{5} \right)$.  In this case, we use Theorem~\ref{T:propsofcong} to conclude that
+\[
+\mod{a^2}{2^2}{5} \quad \text{or} \quad \mod{a^2}{4}{5}.
+\]
+This proves that if $\mod{a}{2}{5}$, then $\mod{a^2}{4}{5}$.
+
+\newpar
+\textbf{Case 3}.  $\left( \mod{a}{3}{5} \right)$.  In this case, we use Theorem~\ref{T:propsofcong} to conclude that
+\[
+\mod{a^2}{3^2}{5} \quad \text{or} \quad \mod{a^2}{9}{5}.
+\]
+We also know that $\mod{9}{4}{5}$.  So we have $\mod{a^2}{9}{5}$ and $\mod{9}{4}{5}$, and we can now use the transitive property of congruence (Theorem~\ref{T:modprops}) to conclude that $\mod{a^2}{4}{5}$.  This proves that if $\mod{a}{3}{5}$, then $\mod{a^2}{4}{5}$.
+
+\hbreak
+
+
+\endinput

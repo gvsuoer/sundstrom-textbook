@@ -1,0 +1,84 @@
+\section*{Working with a Function of Two Variables}
+It takes time and practice to become efficient at working with the formal definitions of injection and surjection.  As we have seen, all parts of a function are important (the domain, the codomain, and the rule for determining outputs).  This is especially true for functions of two variables.
+
+
+For example, we define  $f\x \mathbb{R} \times \mathbb{R} \to \mathbb{R} \times \mathbb{R}$  by  
+\[
+f( {a, b} ) = ( {2a + b, a - b} )  \text{ for all } 
+( {a, b} ) \in \R \times \R.
+\]
+
+Notice that both the domain and the codomain of this function are the set  
+$\mathbb{R} \times \mathbb{R}$.  Thus, the inputs and the outputs of this function are ordered pairs of real numbers.  For example,
+\[
+ f( {1, 1} ) = ( {3, 0} ) \quad \text{and} \quad f( { - 1, 2} ) = ( {0,  - 3} ). \\ 
+\]
+To explore whether or not  $f$  is an injection, we assume that  
+$( {a, b} ) \in \mathbb{R} \times \mathbb{R}$, 
+$( {c, d} ) \in \mathbb{R} \times \mathbb{R}$, and   
+$f( {a, b} ) = f( {c, d} )$.  This means that
+\[
+( {2a + b, a - b} ) = ( {2c + d, c - d} ).
+\]
+Since this equation is an equality of ordered pairs, we see that
+\[
+\begin{aligned}
+   2a + b &= 2c + d\text{\!, and} \\ 
+    a - b &= c - d\!. \\ 
+\end{aligned}
+\]
+By adding the corresponding sides of the two equations in this system, we obtain  $3a = 3c$ and hence, $a = c$.  Substituting  $a = c$ into either equation in the system give us  $b = d$.  Since  $a = c$
+  and   $b = d$, we conclude that
+\[
+( {a, b} ) = ( {c, d} ).
+\]
+Hence, we have shown that if $f( {a, b} ) = f( {c, d} )$, then  
+$( {a, b} ) = ( {c, d} )$.  Therefore,  $f$  is an injection.
+
+Now, to determine if  $f$  is a surjection, we let  
+$( {r, s} ) \in \mathbb{R} \times \mathbb{R}$, where  $( {r, s} )$ is considered to be an arbitrary element of the codomain of the function  $f$.  Can we find an ordered pair $( {a, b} ) \in \mathbb{R} \times \mathbb{R}$ such that  $f( {a, b} ) = ( {r, s} )$?  Working backward, we see that in order to do this, we need
+\[
+( {2a + b, a - b} ) = ( {r, s} ).
+\]
+That is, we need
+\[
+  2a + b = r \quad \text{and} \quad    a - b = s. 
+\]
+Solving this system for  $a$  and  $b$  yields  
+\[
+a = \frac{{r + s}}{3} \text{ and } b = \frac{{r - 2s}}{3}.
+\]
+Since  $r, s \in \mathbb{R}$, we can conclude that  $a \in \mathbb{R}$ and 
+$b \in \mathbb{R}$ and hence that  
+\mbox{$( {a, b} ) \in \mathbb{R} \times \mathbb{R}$}.  We now need to verify that for these values of  $a$  and  $b$, we get  
+$f( {a, b} ) = ( {r, s} )$.  So
+\[
+\begin{aligned}
+  f( {a, b} ) &= f\!\left( {\frac{{r + s}}{3}, \frac{{r - 2s}}{3}} \right) \\ 
+                         &= \left( {2\left( {\frac{{r + s}}{3}} \right) + \frac{{r - 2s}}{3},                             \frac{{r + s}}{3} - \frac{{r - 2s}}{3}} \right) \\ 
+                         &= \left( {\frac{{2r + 2s + r - 2s}}{3}, \frac{{r + s - r + 2s}}{3}}                             \right) \\ 
+                         &= ( {r, s} ). \\ 
+\end{aligned} 
+\]
+This proves that for all  $( {r, s} ) \in \mathbb{R} \times \mathbb{R}$, there exists  $( {a, b} ) \in \mathbb{R} \times \mathbb{R}$ such that  
+$f( {a, b} ) = ( {r, s} )$.  Hence, the function  $f$  is a surjection.  Since  $f$  is both an injection and a surjection,  it is a bijection.
+\hbreak
+
+\begin{prog}[\textbf{A Function of Two Variables}] 
+\label{pr:function2variables} \hfill \\
+Let $g \x \R \times \R \to \R$ be defined by $g(x, y) = 2x + y$, for all $(x, y) \in \R \times \R$.  
+
+\noindent
+\note Be careful! One major difference between this function and the previous example is that for the function $g$, the codomain is $\R$, not $\R \times \R$.  It is a good idea to begin by computing several outputs for several inputs (and remember that the inputs are ordered pairs).
+
+\begin{enumerate}
+  \item Notice that the ordered pair $(1, 0) \in \R \times \R$.  That is, $(1, 0)$ is in the domain of $g$.  Also notice that $g(1, 0) = 2$.  Is it possible to find another ordered pair $(a, b) \in \R \times \R$ such that $g(a, b) = 2$?  %What does this imply about the function $g$?
+
+  \item Let $z \in \R$.  Then $(0, z) \in \R \times \R$ and so $(0, z) \in \text{dom } (g)$.  Now determine $g(0, z)$.
+
+  \item Is the function $g$ an injection?  Is the function $g$ a surjection?  Justify your conclusions.
+\end{enumerate}
+ 
+\end{prog}
+\hbreak
+\endinput

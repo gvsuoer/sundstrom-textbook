@@ -1,0 +1,123 @@
+\section*{Section \ref{S:contradiction}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+
+\begin{list}{\bf{\ref{exer:sec33-1}.}}
+\item \begin{list}{\bf{(a)}}
+\item $P \vee C$
+\end{list}
+\end{list}
+
+
+\begin{list}{\bf{\ref{exer:sec32-truefalse}.}}
+\item \begin{enumerate}
+\item This statement is true.  Use a proof by contradiction.  So assume that there exist integers  $a$ and $b$ such that $a$ is even, $b$ is odd, and 4 divides $a^2 + b^2$.  So there exist integers $m$ and 
+$n$ such that
+\[
+a = 2m \qquad \text{and} \qquad a^2 + b^2 = 4n.
+\]
+Substitute $a = 2m$ into the second equation and use algebra to rewrite in the form 
+$b^2 = 4(n - m^2)$.  This means that $b^2$ is even and hence, that $b$ is even.  This is a contradiction to the assumption that $b$ is odd.
+
+
+\item This statement is true.  Use a proof by contradiction.  So assume that there exist integers $a$ and $b$ such that  $a$ is even, $b$ is odd, and 6 divides $a^2 + b^2$.  So there exist integers $m$ and 
+$n$ such that
+\[
+a = 2m \qquad \text{and} \qquad a^2 + b^2 = 6n.
+\]
+Substitute $a = 2m$ into the second equation and use algebra to rewrite in the form 
+$b^2 = 2(3n - 2m^2)$.  This means that $b^2$ is even and hence, that $b$ is even.  This is a contradiction.
+
+%\item This statement is true.  Use a proof by contradiction.  So assume that $a$ and $b$ are integers, $a$ is even, $b$ is odd, and 4 divides $a^2 + 2b^2$.  So there exist integers $m$ and 
+%$n$ such that
+%\[
+%a = 2m \qquad \text{and} \qquad a^2 + 2b^2 = 4n.
+%\]
+%Substitute $a = 2m$ into the second equation and use algebra to rewrite in the form 
+%$b^2 = 2(n - m^2)$.  This means that $b^2$ is even and hence, that $b$ is even.  This is a contradiction to the assumption that $b$ is odd.
+\addtocounter{enumi}{1}
+\item This statement is true.  Use a direct proof.  Let $a$ and $b$ be integers and assume they are odd.  So there exist integers $m$ and $n$ such that
+\[
+a = 2m + 1 \qquad \text{and} \qquad b = 2n + 1.
+\]
+We then see that
+\begin{align*}
+a^2 + 3b^2 &= 4m^2 + 4m + 1 + 12n^2 + 12n + 3 \\
+           &= 4\left( m^2 + m + 3n^2 + 3n + 1 \right).
+\end{align*}
+This shows that 4 divides $a^2 + 3b^2$.
+\end{enumerate}
+\end{list}
+
+
+
+
+%Exercise 3
+\begin{list}{\bf{\ref{exer:sec33-2}.}}
+\item \begin{list}{\bf{(a)}}
+\item We would assume that there exists a positive real number $r$  such that $r^2 = 18$ and $r$ is a rational number.
+\end{list}
+\end{list}
+
+\begin{list}{}
+\item \begin{list}{\bf{(b)}}
+\item Do not attempt to mimic the proof that the square root of 2 is irrational 
+(Theorem~\ref{T:squareroot2}).  You should still use the definition of a rational number but then use the fact that  $\sqrt {18}  = \sqrt {9 \cdot 2}  = \sqrt 9 \sqrt 2  = 3\sqrt 2 $.  So, if we assume that $r = \sqrt{18} = 3 \sqrt{2}$ is rational, then $\dfrac{r}{3} = \dfrac{\sqrt{18}}{3}$ is rational since the rational numbers are closed under division.  Hence, $\sqrt{2}$ is rational and this is a contradiction to Theorem~\ref{T:squareroot2}.
+\end{list}
+\end{list}
+
+
+%Exercise 4
+\begin{list}{\bf{\ref{exer:sec33-3}.}}
+%\item In each part, what is the contrapositive of the proposition?  Why does it seem like the contrapositive will not be a good approach?  For each statement, try a proof by contradiction.  
+\item \begin{enumerate}
+\item Use a proof by contradiction.  So, we assume that there exist real numbers $x$ and $y$ such that $x$ is rational, $y$ is irrational, and $x + y$ is rational.  Since the rational numbers are closed under addition, this implies that $\left( x + y \right) - x$ is a rational number.  Since $\left( x + y \right) - x = y$, we conclude that $y$ is a rational number and this contradicts the assumption that $y$ is irrational.
+
+\item Use a proof by contradiction.  So, we assume that there exist nonzero real numbers $x$ and $y$ such that $x$ is rational, $y$ is irrational, and $xy$ is rational.  Since the rational numbers are closed under division by nonzero rational numbers, this implies that 
+$\dfrac{xy}{x}$ is a rational number.  Since $\dfrac{xy}{x} = y$, we conclude that $y$ is a rational number and this contradicts the assumption that $y$ is irrational.
+\end{enumerate}
+\end{list}
+
+%Exercise 5
+\begin{list}{\bf{\ref{exer:sec33-4}.}}
+%Two of the propositions are true and the other two are false. 
+\item \begin{enumerate}
+\item This statement is false.  A counterexample is $x = \sqrt{2}$.
+\item This statement is true since the contrapositive is true.  The contrapositive is:
+\begin{list}{}
+\item For any real number $x$, if $\sqrt{x}$ is rational, then $x$ is rational.
+\end{list}
+If there exist integers $a$ and $b$ with $b \ne 0$ such that $\sqrt{x} = \dfrac{a}{b}$, then 
+$x^2 = \dfrac{a^2}{b^2}$ and hence, $x^2$ is rational.
+\end{enumerate} 
+\end{list}
+
+%Exercise 9
+\begin{list}{\bf{\ref{exer:sec33-9}.}}
+\item Recall that $\log _2 (32)$  is the real number  $a$  such that  $2^a  = 32$.  That is, 
+$a = \log _2 (32)$  means that  $2^a  = 32$.  If we assume that  $a$ is rational, then there exist integers $m$ and $n$, with $n \ne 0$, such that $a = \dfrac{m}{n}$.
+\end{list}
+
+
+%Exercise 11
+\begin{list}{\bf{\ref{exer:sec33IVT}.}}
+\item \hint  The only factors of 7 are $-1, 1, -7,$ and $7$.
+\end{list}
+
+
+%Exercise 12
+\begin{list}{\bf{\ref{exer:sec33-11}.}}
+\item \begin{list}{\bf{(a)}}
+\item What happens if you expand  $[ {\sin (\theta)  + \cos (\theta) } ]^2$?  Don't forget your trigonometric identities.
+\end{list}
+\end{list}
+
+
+%Exercise 13
+\begin{list}{\bf{\ref{exer:sec35-10}.}}
+\item \hint Three consecutive natural numbers can be represented by $n$, $n + 1$, and 
+$n + 2$, where $n \in \mathbb{N}$, or three consecutive natural numbers can be represented by 
+$m - 1$, $m$, and $m + 1$, where $m \in \mathbb{N}$.
+\end{list}
+\hbreak
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\endinput

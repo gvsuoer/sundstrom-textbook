@@ -1,0 +1,50 @@
+\documentclass[11pt]{article}
+\usepackage{c://pctex/activity}
+
+\lhead{}
+\chead{\textbf{\large{Exercise 9 -- Section 6.4\\Exploring Composite Functions}}}
+\rhead{}
+\lfoot{\emph{Mathematical Reasoning: Writing and Proof, Third Ed.} \\Ted Sundstrom}
+\cfoot{}
+\rfoot{\copyright 2009 by Pearson Education, Inc.\\}
+
+
+\begin{document}
+\noindent
+Let  $A$, $B$, and  $C$  be nonempty sets and let  $f\x A \to B$  and  $g\x B \to C$.
+
+\begin{enumerate} 
+\item One example is:  $A = \left\{ {a, b} \right\}$, $B = \left\{ {p, q, r} \right\}$, 
+$C = \left\{ {x, y} \right\}$.
+
+$f\x A \to B$  with  $f\left( a \right) = p$ and  $f\left( b \right) = q$.
+
+$g\x B \to C$ with  $g\left( p \right) = x$, $g\left( q \right) = y$, and  $g\left( r \right) = x$. 
+
+Then,
+$g \circ f\x A \to C$  with  $\left( {g \circ f} \right)\left( a \right) = x$  and   
+$\left( {g \circ f} \right)\left( b \right) = y$, the function  $f$  is an injection,  $g$  is not an injection, and  $g \circ f$ is an injection.
+
+\item This is not possible.  If  $f$  is not an injection, then there exist  $s, t \in A$ with  
+$s \ne t$  and  $f\left( s \right) = f\left( t \right)$.  Then,  
+$g\left( {f\left( s \right)} \right) = g\left( {f\left( t \right)} \right)$ and hence, $g \circ f$
+is not an injection.
+
+\item This is not possible.  If  $g$  is not a surjection, then there exists a  $y \in C$ such that  $g\left( x \right) \ne y$ for all  $x \in B$.  So, for each  $a \in A$,  
+$f\left( a \right) \in B$ and hence  $g\left( {f\left( a \right)} \right) \ne y$.  This means that  $g \circ f$ is not a surjection.
+
+\item One example is:  $A = \left\{ {a, b} \right\}$, $B = \left\{ {p, q, r} \right\}$, 
+$C = \left\{ {x, y} \right\}$.
+
+$f\x A \to B$  with  $f\left( a \right) = p$ and  $f\left( b \right) = q$.
+
+$g\x B \to C$ with  $g\left( p \right) = x$, $g\left( q \right) = y$, and  $g\left( r \right) = x$. 
+
+Then, $g \circ f\x A \to C$  with  $\left( {g \circ f} \right)\left( a \right) = x$  and   
+$\left( {g \circ f} \right)\left( b \right) = y$, the function  $f$  is not a surjection,  $g$  is not a surjection, and  $g \circ f$ is a surjection.
+
+\end{enumerate}
+
+
+
+\end{document}

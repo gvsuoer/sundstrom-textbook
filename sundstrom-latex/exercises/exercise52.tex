@@ -1,0 +1,322 @@
+\section*{Exercises for Section~\ref{S:provingset}}
+%
+\begin{enumerate}
+\xitem Let  $A = \left\{ {\left. {x \in \mathbb{R}} \right| x^2  < 4} \right\}$  and let  $B = \left\{ {x \in \mathbb{R}\left.  \right| x < 2} \right\}$. \label{exer:sec42-2}
+
+\begin{enumerate}
+  \item Is  $A \subseteq B$?  Justify your conclusion with a proof or a counterexample.
+  \item Is  $B \subseteq A$?  Justify your conclusion with a proof or a counterexample.
+\end{enumerate}
+
+\item Let  $A$, $B$, and  $C$  be subsets of a universal set  $U$.  \label{exer:sec42-3}
+
+\begin{enumerate}
+  \item Draw a Venn diagram with  $A \subseteq B$  and  $B \subseteq C$.  Does it appear that  $A \subseteq C$?
+
+  \item Prove the following proposition:
+  \begin{center}
+    If  $A \subseteq B$ and $B \subseteq C$, then  $A \subseteq C$.
+  \end{center}
+
+\note  This may seem like an obvious result.  However, one of the reasons for this exercise is to provide practice at properly writing a proof that one set is a subset of another set.  So we should start the proof by assuming that  $A \subseteq B$ and  $B \subseteq C$.  Then we should choose an arbitrary element of  $A$.
+\end{enumerate}
+
+\xitem Let  $A = \{ x \in \mathbb{Z} \mid x \equiv 7 \pmod 8 \}$ and 
+$B = \{ x \in \mathbb{Z} \mid x \equiv 3 \pmod 4 \}$.
+\label{exer:modsubset}%
+\begin{enumerate}
+\item List at least five different elements of the set $A$ and at least five elements of the set $B$.
+%\item List at least five different elements of the set $B$.
+\item Is $A \subseteq B$?  Justify your conclusion with a proof or a counterexample.
+\item Is $B \subseteq A$?  Justify your conclusion with a proof or a counterexample.
+\end{enumerate}
+
+\item Let  $C = \{ x \in \mathbb{Z} \mid x \equiv 7 \pmod {9} \}$ and 
+$D = \{ x \in \mathbb{Z} \mid x \equiv 1 \pmod {3} \}$.
+\label{exer:modsubset2}%
+\begin{enumerate}
+\item List at least five different elements of the set $C$ and at least five elements of the set $D$.
+%\item List at least five different elements of the set $D$.
+\item Is $C \subseteq D$?  Justify your conclusion with a proof or a counterexample.
+\item Is $D \subseteq C$?  Justify your conclusion with a proof or a counterexample.
+\end{enumerate}
+
+
+\item In each case, determine if $A \subseteq B$, $B \subseteq A$, $A = B$, or $A \cap B = \emptyset$ or none of these. 
+\label{exer51:modsets}
+\begin{enumerate}
+  \yitem $A = \left\{ x \in \Z \mid \mod{x}{2}{3} \right\}$ and 
+$B = \left\{ y \in \Z \mid 6 \text{ divides } (2y - 4) \right\}$.
+  \item $A = \left\{ x \in \Z \mid \mod{x}{3}{4} \right\}$ and 
+$B = \left\{ y \in \Z \mid 3 \text{ divides } (y - 2) \right\}$.
+  \yitem $A = \left\{ x \in \Z \mid \mod{x}{1}{5} \right\}$ and 
+$B = \left\{ y \in \Z \mid \mod{y}{7}{10} \right\}$.
+%  \item Need more.
+\end{enumerate}
+
+
+
+\item To prove the following set equalities, it may be necessary to use some of the properties of positive and negative real numbers.  For example, it may be necessary to use the facts that:
+\begin{itemize}
+\item The product of two real numbers is positive if and only if the two real numbers are either both positive or both negative.
+\item The product of two real numbers is negative if and only if one of the two numbers is positive and the other is negative.
+\end{itemize}
+For example, if $x \left( x - 2 \right) < 0$, then we can conclude that either 
+(1) $x < 0$ and $x - 2 > 0$ or (2) $x > 0$ and $x - 2 < 0$.  However, in the first case, we must have $x < 0$ and $x > 2$, and this is impossible.  Therefore, we conclude that 
+$x > 0$ and $x - 2 < 0$, which means that $0 < x < 2$.
+
+Use the choose-an-element method to prove each of the following:
+\begin{enumerate}
+\item $\left\{x \in \R \mid x^2 - 3x - 10 < 0 \right\} = \left\{ x \in \R \mid -2 < x < 5 \right\}$
+\item $\left\{x \in \R \mid x^2 - 5x + 6 < 0 \right\} = \left\{ x \in \R \mid 2 < x < 3 \right\}$
+\item $\left\{ x \in \R \mid x^2 \geq 4 \right\} = \left\{ x \in \R \mid x \leq -2 \right\} \cup \left\{ x \in \R \mid x \geq 2 \right\}$
+\end{enumerate} 
+
+\item Let  $A$  and  $B$  be subsets of some universal set  $U$.  Prove each of the following: 
+\label{exer:intersectandunion}
+\begin{multicols}{3}
+\begin{enumerate}
+  \yitem $A \cap B \subseteq A$
+  \yitem $A \subseteq A \cup B$
+  \item $A \cap A = A$
+  \item $A \cup A = A$
+  \yitem $A \cap \emptyset  = \emptyset $
+  \item $A \cup \emptyset  = A$
+\end{enumerate}
+\end{multicols}
+
+%\item Let  $A$  and  $B$  be subsets of some universal set  $U$.  Is the following proposition true or false?  Justify your conclusion with a proof or a counterexample. 
+%\label{exer:sec42-5}
+%\begin{center}
+%If  $A \cap B^c  = \emptyset $, then  $A \subseteq B$.
+%\end{center}
+
+\item Let  $A$  and  $B$  be subsets of some universal set  $U$.  From 
+Proposition~\ref{P:subsetandcomp}, we know that if  $A \subseteq B$, then  
+$B^c  \subseteq A^c$.  Now prove the following proposition: \label{exer:sec43-2}
+\begin{list}{}
+\item For all sets  $A$  and  $B$  that are subsets of some universal set  $U$, $A \subseteq B$ if and only if   $B^c  \subseteq A^c $.
+\end{list}
+
+
+\item Is the following proposition true or false?  Justify your conclusion with a proof or a counterexample.
+\label{exer:sec42-6}%
+\begin{list}{}
+\item For all sets  $A$  and  $B$  that are subsets of some universal set  $U$, the sets  $A \cap B$ and  $A - B$ are disjoint.
+\end{list}
+
+
+
+\xitem \label{exer:subsetprop} Complete the proof of Proposition~\ref{P:subsetprop} by proving the following conditional statement:
+\begin{list}{}
+\item Let $A$  and  $B$  be subsets of some universal set.  If $A \cap B^c  = \emptyset $, then 
+$A \subseteq B$ .
+\end{list}
+
+
+\item Let $A$, $B$, $C$, and $D$ be subsets of some universal set $U$.  Are the following propositions true or false?  Justify your conclusions.
+\label{exer:sec42-disjoint}%
+\begin{enumerate}
+\item If $A \subseteq B$ and $C \subseteq D$ and $A$ and $C$ are disjoint, then $B$ and $D$ are disjoint.
+\item If $A \subseteq B$ and $C \subseteq D$ and $B$ and $D$ are disjoint, then $A$ and $C$ are disjoint.
+\end{enumerate}
+
+
+\item Let  $A$, $B$, and  $C$  be subsets of a universal set  $U$. Prove: 
+%Prove each of the following: 
+\label{exer:unionandintersect}%
+\begin{enumerate}
+  \yitem If  $A \subseteq B$, then  $A \cap C \subseteq B \cap C$.
+  \item If  $A \subseteq B$, then  $A \cup C \subseteq B \cup C$.
+\end{enumerate}
+
+
+\item Let $A$, $B$, and  $C$  be subsets of a universal set  $U$.  Are the following propositions true or false?  Justify your conclusions.
+\label{exer:sec42-unionandintersect}%  
+
+\begin{enumerate}
+  \item If  $A \cap C \subseteq B \cap C$, then  $A \subseteq B$.
+  \item If  $A \cup C \subseteq B \cup C$, then  $A \subseteq B$.
+  \item If  $A \cup C = B \cup C$, then $A = B$.
+  \item If  $A \cap C = B \cap C$, then $A = B$.
+  \item If  $A \cup C = B \cup C$ and $A \cap C = B \cap C$, then $A = B$.
+\end{enumerate}
+
+
+\item Prove the following proposition:
+\begin{list}{}
+\item For all sets $A$, $B$, and $C$ that are subsets of some universal set, if \linebreak
+$A \cap B = A \cap C$ and $A^c \cap B = A^c \cap C$, then $B = C$.
+\end{list}
+
+\item Are the following biconditional statements true or false?  Justify your conclusion.  If a biconditional statement is found to be false, you should clearly determine if one of the conditional statements within it is true and provide a proof of this conditional statement.
+\label{exer42:setstruefalse}
+ 
+\begin{enumerate}
+\yitem For all subsets  $A$  and  $B$ of some universal set  $U$\!,  $A \subseteq B$ if and only if  
+$A \cap B^c = \emptyset$.
+
+\yitem For all subsets  $A$  and  $B$ of some universal set  $U$\!,  $A \subseteq B$ if and only if  
+$A \cup B = B$.
+
+\item For all subsets  $A$  and  $B$ of some universal set  $U$\!,  $A \subseteq B$ if and only if  
+$A \cap B = A$.
+
+\item For all subsets  $A$, $B$, and $C$ of some universal set  $U$\!,  $A \subseteq B \cup C$ if and only if  $A \subseteq B$ or $A \subseteq C$\!.
+
+\item For all subsets  $A$, $B$, and $C$ of some universal set  $U$\!,  $A \subseteq B \cap C$ if and only if  $A \subseteq B$ and $A \subseteq C$\!.
+\end{enumerate}
+
+\item Let $S$, $T$, $X$, and $Y$ be subsets of some universal set.  Assume that
+
+\begin{multicols}{3}
+(i) $S \cup T \subseteq X \cup Y$\!;
+
+(ii) $S \cap T = \emptyset$; and
+
+(iii) $X \subseteq S$\!.
+\end{multicols}
+
+\begin{enumerate}
+\item Using assumption (i), what conclusion(s) can be made if it is known that $a \in T$?
+
+\item Using assumption (ii), what conclusion(s) can be made if it is known that $a \in T$?
+
+\item Using all three assumptions, either prove that $T \subseteq Y$ or explain why it is not possible to do so.
+\end{enumerate}
+
+
+%\item We have used the choose-an-element method to prove propositions about sets.  This method can be used in other settings as well.  Explain how the choose-an-element method is used in proving the following proposition. \label{exer:sec42-9}%Is the following proposition true or false?  Justify your conclusion. 
+%\begin{quote}
+%For all integers $a$ and $b$ with $a \ne 0$, if  $a \mid b$ , then for all  $x \in \mathbb{Z}$ with  
+%$x \ne 0$,  $ax$ divides  $bx$.
+%\end{quote}
+
+
+%\item One of the most famous unsolved problems in mathematics is a conjecture made by Christian Goldbach in a letter to Leonhard Euler in 1742.  The conjecture made in this letter is now known as \textbf{Goldbach's Conjecture}.
+%\index{Goldbach's Conjecture}%
+%  The conjecture is as follows:
+%
+%\begin{list}{}
+%\item \emph{Every even integer greater than 2 can be expressed as the sum of two (not necessarily distinct) prime numbers}.
+%\end{list}
+%
+%Currently, it is not known if this conjecture is true or false, although most mathematicians believe it to be true. \label{exer:goldbach}
+%
+%\begin{enumerate}
+%\item Describe one way to prove that Goldbach's Conjecture is false.
+%
+%\item Prove the following:
+%\begin{list}{}
+%\item If there exists an odd integer greater than 5 that is not the sum of three prime numbers, then Goldbach's Conjecture is false.
+%\end{list}
+%\end{enumerate}
+
+\item \textbf{Evaluation of Proofs}  \hfill \\
+See the instructions for Exercise~(\ref{exer:proofeval}) on 
+page~\pageref{exer:proofeval} from Section~\ref{S:directproof}.
+
+\begin{enumerate}
+\item Let $A$, $B$, and $C$ be subsets of some universal set.  If $A \not \subseteq B$ and 
+$B \not \subseteq C$, then $A \not \subseteq C$.
+
+\begin{myproof}
+We assume that $A$, $B$, and $C$ are subsets of some universal set and that 
+$A \not \subseteq B$ and $B \not \subseteq C$.  This means that there exists an element $x$ in 
+$A$ that is not in $B$ and there exists an element $x$ that is in $B$ and not in $C$.  Therefore, $x \in A$ and $x \notin C$, and we have proved that $A \not \subseteq C$.
+\end{myproof}
+
+\item Let $A$, $B$, and $C$ be subsets of some universal set.  If $A \cap B = A \cap C$, then $B = C$.
+
+\begin{myproof}
+We assume that $A \cap B = A \cap C$ and will prove that $B = C$.  We will first prove that 
+$B \subseteq C$.
+
+So let $x \in B$.  If $x \in A$, then $x \in A \cap B$, and hence, $x \in A \cap C$.  From this we can conclude that $x \in C$.  If $x \notin A$, then $x \notin A \cap B$, and hence, 
+$x \notin A \cap C$.  However, since $x \notin A$, we may conclude that $x \in C$.  Therefore, 
+$B \subseteq C$.
+
+The proof that $C \subseteq B$ may be done in a similar manner.  Hence, $B = C$.
+\end{myproof}
+
+\item Let $A$, $B$, and $C$ be subsets of some universal set.  If $A \not \subseteq B$ and 
+$B \subseteq C$, then $A \not \subseteq C$.
+
+\begin{myproof}
+Assume that $A \not \subseteq B$ and $B \subseteq C$.  Since $A \not \subseteq B$, there exists an element $x$ such that $x \in A$ and $x \notin B$.  Since $B \subseteq C$, we may conclude that 
+$x \notin C$.  Hence, $x \in A$ and $x \notin C$, and we have proved that 
+$A \not \subseteq C$.
+\end{myproof}
+\end{enumerate}
+\end{enumerate}
+
+
+\subsection*{Explorations and Activities}
+%\newcounter{oldenumi}
+\setcounter{oldenumi}{\theenumi}
+\begin{enumerate} \setcounter{enumi}{\theoldenumi}
+\item \textbf{Using the Choose-an-Element Method in a Different Setting}.  
+We have used the choose-an-element method to prove results about sets.  This method, however, is a general proof technique and can be used in settings other than set theory.  It is often used whenever we encounter a universal quantifier in a statement in the backward process.  Consider the following proposition. 
+\label{exer52-choose}
+
+\begin{proposition} \label{P:divlinearcomb}
+Let a, b, and  t  be integers with $t \ne 0$.  If  t  divides  a  and  t  divides  b, then for all integers  x  and  y,  t  divides  (ax + by).
+\end{proposition}
+%
+\begin{enumerate}
+\item Whenever we encounter a new proposition, it is a good idea to explore the proposition by looking at specific examples.  For example, let  \linebreak
+$a = 20$, $b = 12$, and  $t = 4$.  In this case,  $t \mid a$  and  $t \mid b$.  In each of the following cases, determine the value of  $\left(ax + by \right)$ and determine if $t$ divides 
+$\left(ax + by\right)$.  \label{A:divlincomb1}
+
+\begin{multicols}{2}
+\begin{enumerate}
+\item $x=1, y=1$
+\item $x=1, y=-1$
+\item $x=2, y=2$
+\item $x=2, y=-3$
+\item $x=-2, y=3$
+\item $x=-2, y=-5$
+\end{enumerate}
+\end{multicols}
+
+\item Repeat Part~(\ref{A:divlincomb1}) with  $a = 21$, $b =  - 6$, and  $t = 3$.
+\end{enumerate}
+
+
+Notice that the conclusion of the conditional statement in this proposition involves the universal quantifier.  So in the backward process, we would have
+\begin{list}{}
+\item $Q$:	For all integers  $x$  and  $y$, $t$  divides  $ax + by$.
+\end{list}
+\vskip10pt
+%
+The ``elements'' in this sentence are the integers  $x$  and  $y$.  In this case, these integers have no ``given property'' other than that they are integers.  The ``something that happens'' is that 
+$t$  divides  $\left(ax + by\right)$.  
+%
+This means that in the forward process, we can use the hypothesis of the proposition and choose integers  $x$  and  $y$.  That is, in the forward process, we could have
+\begin{list}{}
+\item $P$:	$a$, $b$, and  $t$  are integers with $t \ne 0$, $t$  divides  $a$  and  $t$  divides  $b$.
+\item $P1$:	Let  $x \in \Z$ and let  $y \in \Z$.
+\end{list}
+\vskip10pt
+%
+\begin{enumerate} \setcounter{enumii}{2}
+\item Complete the following proof of Proposition~\ref{P:divlinearcomb}.
+%
+%\addtocounter{theorem}{-1}
+%\begin{proposition}
+%Let a, b, and  t  be integers with $t \ne 0$.  If  t  divides  a  and  t  divides  b, then for all integers  x  and  y,  t  divides  ax + by.
+%\end{proposition}
+%
+\begin{myproof}
+Let $a$, $b$, and  $t$  be integers with $t \ne 0$, and assume that $t$  divides  $a$  and  $t$  divides  $b$.  We will prove that for all integers  $x$  and  $y$,  $t$  divides  
+$\left(ax + by\right)$.
+
+So let  $x \in \Z$ and let  $y \in \Z$.  Since  $t$  divides  $a$, there exists an integer  $m$  such that $ \ldots .$
+\end{myproof}
+\end{enumerate}
+%\addtocounter{theorem}{1}
+\end{enumerate}
+
+\hbreak
+
+\endinput

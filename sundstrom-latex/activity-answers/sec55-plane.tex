@@ -1,0 +1,68 @@
+\documentclass[11pt]{article}
+\usepackage{c://pctex/activity}
+
+\lhead{}
+\chead{\textbf{\large{Exercise 13 -- Section 5.5\\An Indexed Family of Sets in the Cartesian Plane}}}
+\rhead{}
+\lfoot{\emph{Mathematical Reasoning: Writing and Proof, Third Ed.} \\Ted Sundstrom}
+\cfoot{}
+\rfoot{\copyright \the\year\, by Pearson Education, Inc.\\}
+
+
+\begin{document}
+\begin{enumerate}
+\item $\bigcup\limits_{r \in \R^*}^{}C_r = \R \times \R$ \quad and \quad 
+$\bigcap\limits_{r \in \R^*}^{}C_r = \emptyset$.
+
+\item $\bigcup\limits_{r \in \R^*}^{}D_r = \R \times \R$ \quad and \quad 
+$\bigcap\limits_{r \in \R^*}^{}D_r = \left\{ \left( 0, 0 \right) \right\}$.
+
+\item $\bigcup\limits_{r \in \R^*}^{}T_r = \R \times \R - \left\{ \left( 0, 0 \right) \right\}$ \quad and \quad 
+$\bigcap\limits_{r \in \R^*}^{}T_r = \emptyset$.
+
+\item Only $\mathscr{C} = \left\{ C_r \mid r \in \R^* \right\}$ is a collection of pairwise disjoint sets.
+\end{enumerate}
+
+\noindent
+Now let $I$ be the closed interval $[0, 2]$ and let $J$ be the closed interval $[1, 2]$.
+
+\begin{enumerate} \setcounter{enumi}{4}
+\item $\bigcup\limits_{r \in I}^{}C_r = D_2$ \qquad $\bigcap\limits_{r \in I}^{}C_r = \emptyset$
+
+$\bigcup\limits_{r \in J}^{}C_r = D_2 - \left\{ (x, y) \in \R \times \R \mid x^2 + y^2 < 1 \right\}$ \qquad $\bigcap\limits_{r \in J}^{}C_r = \emptyset$
+
+\item $\bigcup\limits_{r \in I}^{}D_r = D_2$ \qquad 
+$\bigcap\limits_{r \in I}^{}D_r = \left\{ \left( 0, 0 \right) \right\} = D_0$
+
+$\bigcup\limits_{r \in J}^{}D_r = D_2$ \qquad $\bigcap\limits_{r \in J}^{}D_r = D_1$
+
+
+\item $\left( \bigcup\limits_{r \in I}^{}D_r \right)^c = {D_2}^c = T_2$ \qquad 
+$\left( \bigcap\limits_{r \in I}^{}D_r \right)^c = {D_0}^c = T_0$
+ 
+$\left( \bigcup\limits_{r \in J}^{}D_r \right)^c = {D_2}^c = T_2$ \qquad 
+$\left( \bigcap\limits_{r \in J}^{}D_r \right)^c = {D_1}^c = T_1$.
+
+
+\item $\bigcup\limits_{r \in I}^{}T_r = \R \times \R - \left\{ \left( 0, 0 \right) \right\} = T_0$ \qquad 
+$\bigcap\limits_{r \in I}^{}T_r = T_2$
+
+$\bigcup\limits_{r \in J}^{}T_r = T_1$ \qquad 
+$\bigcap\limits_{r \in J}^{}T_r = T_2$
+
+
+\item By De Morgan's Laws:
+
+$\left( \bigcup\limits_{r \in I}^{}D_r \right)^c = \bigcap\limits_{r \in I}^{}{D_r}^c = \bigcap\limits_{r \in I}^{}T_r$ \qquad
+$\left( \bigcap\limits_{r \in I}^{}D_r \right)^c = \bigcup\limits_{r \in I}^{}{D_r}^c = \bigcup\limits_{r \in I}^{}T_r$
+
+$\left( \bigcup\limits_{r \in J}^{}D_r \right)^c = \bigcap\limits_{r \in J}^{}{D_r}^c = \bigcap\limits_{r \in J}^{}T_r$ \qquad
+$\left( \bigcap\limits_{r \in J}^{}D_r \right)^c = \bigcup\limits_{r \in J}^{}{D_r}^c = \bigcup\limits_{r \in J}^{}T_r$
+\end{enumerate}
+
+
+
+
+
+
+\end{document}

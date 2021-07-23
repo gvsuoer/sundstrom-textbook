@@ -1,0 +1,152 @@
+\subsection*{The Second Principle of Mathematical Induction}
+Let  $P( n )$ be 
+\begin{center}
+$n$  is a prime number or $n$ is a product of prime numbers.
+\end{center}
+(This is related to the work in \typeu Activity~\ref*{PA:primefactors}.)
+
+Suppose we would like to use induction to prove that $P( n )$ is true for all natural numbers greater than 1.  We have seen that the idea of the inductive step in a proof by induction is to prove that if one statement in an infinite list of statements is true, then the next statement must also be true.  The problem here is that when we factor a composite number, we do not get to the previous case.  For example, if assume that $P(39)$ is true and we want to prove that $P(40)$ is true, we could factor 40 as $40 = 2 \cdot 20$.  However, the assumption that $P(39)$ is true does not help us prove that $P(40)$ is true.  %We do know that we can factor 20 as a product of primes, but how do we handle this in a general case?
+
+This work is intended to show the need for another principle of induction.  In the inductive step of a proof by induction, we assume one statement is true and prove the next one is true.  The idea of this new principle is to assume that \emph{all} of the previous statements are true and use this assumption to prove the next statement is true.  This is stated formally in terms of subsets of natural numbers in the 
+\emph{Second Principle of Mathematical Induction}.  Rather than stating this principle in two versions, we will state the extended version of the Second Principle.  In many cases, we will use  $M = 1$  or  $M = 0$.
+
+
+\begin{center}
+\fbox{\parbox{4.68in}{
+\textbf{The Second Principle of Mathematical Induction} \\
+\index{Second Principle of Mathematical Induction}%
+\index{mathematical induction!Extended Principle}%
+Let  $M$  be an integer.  If  $T$  is a subset of  $\mathbb{Z}$ such that
+\begin{enumerate}
+  \item $M \in T$\!, and
+
+  \item For every  $k \in \mathbb{Z}$ with $k \geq M$\!, if  
+$\left\{ {M, M + 1, \ldots ,k} \right\} \subseteq T$\!, then  $\left( {k + 1} \right) \in T$\!,
+\end{enumerate}
+
+then  $T$  contains all integers greater than or equal to  $M$\!.  That is,  
+$\left\{ { {n \in \mathbb{Z} } \mid n \geq M} \right\} \subseteq T$\!.
+}}
+\end{center}
+%
+%
+\subsection*{Using the Second Principle of Mathematical Induction}
+The primary use of mathematical induction is to prove statements of the form
+\[
+\left( {\forall n \in \mathbb{Z},\text{with }n \geq M} \right)\left( {P( n )} \right),
+\]
+where  $M$  is an integer and  $P( n )$ is some predicate. So our goal is to prove that the truth set  $T$  of the predicate   $P( n )$ contains all integers greater than or equal to  $M$.  To use the Second Principle of Mathematical Induction, we must
+
+\begin{enumerate}
+\item Prove that  $M \in T$\!.  That is, prove that  $P( M )$ is true.
+
+\item Prove that for every  $k \in \mathbb{N}$, if  $k \geq M$ and  
+$\left\{ {M,M + 1, \ldots ,k} \right\} \subseteq T$\!, then  $\left( {k + 1} \right) \in T$\!.  That is, prove that if  $P( M ),P( {M + 1} ), \ldots ,P( k )$ are true, then  $P( {k + 1} )$ is true.
+\end{enumerate}
+
+As before, the first step is called the \textbf{basis step}
+\index{basis step}%
+\index{mathematical induction!basis step}%
+ or the \textbf{initial step}, and the second step is called the \textbf{inductive step}.
+\index{inductive step}%
+\index{mathematical induction!inductive step}%
+  This means that a proof using the Second Principle of Mathematical Induction will have the following form:
+%
+\begin{flushleft}
+\fbox{\parbox{4.68in}{\textbf{Using the Second Principle of Mathematical Induction} \\
+Let  $M$  be an integer.  To prove: 
+$\left( {\forall n \in \mathbb{Z} \text{ with } n \geq M} \right)\left( {P( n )} \right)$
+
+\begin{tabular}{r l}
+                &                              \\
+Basis step:    &  Prove  $P( M )$. \\
+                &                              \\
+Inductive step: &	 Let  $k \in \mathbb{Z}$ with  $k \geq M$.  Prove that if \\
+                &  $P( M ),P( {M + 1} ), \ldots ,P( k )$ are true, then  \\
+                &  $P( {k + 1} )$ is true. \\
+\end{tabular}
+\vskip10pt
+We can then conclude that  $P( n )$ is true for all  $n \in \mathbb{Z}$ with  $n \geq M$\!.}}
+\end{flushleft}
+
+\newpar
+We will use this procedure to prove the proposition suggested in \typeu Activity~\ref*{PA:primefactors}.
+
+\begin{theorem} \label{T:primefactors}
+Each natural number greater than 1 either is a prime number or is a product of prime numbers.
+\end{theorem}
+%
+\begin{myproof}
+We will use the Second Principle of Mathematical Induction.  We let $P( n )$  be 
+\begin{center}
+$n$  is a prime number or $n$ is a product of prime numbers.
+\end{center}
+
+\noindent
+For the basis step,  $P ( 2 )$ is true since  2  is a prime number.
+\vskip6pt
+\noindent
+To prove the inductive step, we let  $k$  be a natural number with  $k \geq 2$.  We assume that  $P( 2 ),P( 3 ), \ldots ,P( k )$ are true.  That is, we assume that each of the natural numbers  $2,3, \ldots ,k$ is a prime number or a product of prime numbers.
+The goal is to prove that   $P( {k + 1} )$ is true or that  $(k + 1)$ is a prime number or a product of prime numbers.
+
+\vskip6pt
+\noindent
+\textit{Case 1}:  If  $\left( {k + 1} \right)$ is a prime number, then  
+$P( {k + 1} )$ is true.
+
+\vskip6pt
+\noindent
+\textit{Case 2}: If  $\left( {k + 1} \right)$ is not a prime number, then  
+$\left( {k + 1} \right)$ can be factored into a product of natural numbers with each one being less than  $\left( {k + 1} \right)$.  That is, there exist natural numbers $a$ and $b$ with
+\[
+k + 1 = a \cdot b, \quad \text{and} \quad 1 < a \leq k \text{ and }  1 < b \leq k.
+\]
+Using the inductive assumption, this means that $P( a )$ and  $P( b )$ are both true.  Consequently,   $a$  and  $b$  are prime numbers or are products of prime numbers.  Since  $k + 1 = a \cdot b$, we conclude that  
+$\left( {k + 1} \right)$ is a product of prime numbers.  That is, we conclude that  $P\left( {k + 1} \right)$ is true.  This proves the inductive step.
+
+Hence, by the Second Principle of Mathematical Induction, we conclude that  $P( n )$
+is true for all  $n \in \mathbb{N}$ with  $n \geq 2$, and this means that each natural number greater than 1 is either a prime number or is a product of prime numbers.
+\end{myproof}
+%\hbreak
+
+We will conclude this section with a progress check that is really more of an activity.  We do this rather than including the activity at the end of the exercises since this activity illustrates a use of the Second Principle of Mathematical Induction in which it is convenient to have the basis step consist of the proof of more than one statement.
+\hbreak
+
+\begin{prog}[\textbf{Using the Second Principle of Induction}] \label{A:lincomb3and5} \hfill \\
+Consider the following question: 
+\begin{list}{}
+\item For which natural numbers  $n$  do there exist nonnegative integers  $x$  and  $y$  such that  $n = 3x + 5y$?
+\end{list}
+
+\newpar
+To help answer this question, we will let
+$\mathbb{Z}^*  = \left\{ {x \in \mathbb{Z} \mid x \geq 0} \right\}$,
+and  let  $P \left( n \right)$ be
+\begin{center}
+There exist $x,y \in \mathbb{Z}^*$ such that $n = 3x + 5y$.
+\end{center}
+%
+Notice that $P(1)$ is false since if both $x$ and $y$ are zero, then $3x + 5y = 0$ and if either $x > 0$ or $y > 0$, then $3x + 5y \geq 3$.  Also notice that $P(6)$ is true since $6 = 3 \cdot 2 + 5 \cdot 0$ and $P(8)$ is true since $8 = 3 \cdot 1 + 5 \cdot 1$.
+\begin{enumerate}
+  \item Explain why $P(2)$, $P(4)$, and $P(7)$ are false and why $P(3)$ and $P(5)$ are true.
+
+  \item Explain why $P(9)$, $P(10)$, $P(11)$, and $P(12)$ are true.
+\end{enumerate}
+We could continue trying to determine other values of $n$ for which  $P(n)$ is true.  However, let us see if we can use the work in part~(2) to determine if $P(13)$ is true.  Notice that $13 = 3 + 10$ and we know that 
+$P(10)$ is true.  We should be able to use this to prove that $P(13)$ is true.  This is formalized in the next part.
+\setcounter{oldenumi}{\theenumi}
+\begin{enumerate} \setcounter{enumi}{\theoldenumi}
+\item Let  $k \in \mathbb{N}$  with  $k \geq 10$.  Prove that if  $P( 8 )$, $P ( 9 )$, $\ldots$, $P( k )$ are true, then $P( {k+1} )$ is true.  \hint  $k + 1 = 3 + \left( {k - 2} \right)$.
+
+\item Prove the following proposition using mathematical induction.  Use the Second Principle of Induction and have the basis step be a proof that $P(8)$, $P(9)$, and $P(10)$ are true.  (The inductive step is part~(3).)
+
+\begin{proposition} \label{prop:lincomb}
+For each $n \in \mathbb{N}$ with  $n \geq 8$, there exist nonnegative integers  $x$  and  $y$  such that  $n = 3x + 5y$.
+\end{proposition}
+\end{enumerate}
+\end{prog}
+\hbreak
+
+
+\newpar
+\endinput

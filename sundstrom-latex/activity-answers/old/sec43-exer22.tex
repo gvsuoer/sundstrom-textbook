@@ -1,0 +1,37 @@
+\documentclass[11pt]{article}
+\usepackage{c://pctex/activity}
+
+\lhead{}
+\chead{\textbf{\large{Exercise 23 -- Section 4.3\\The Future Value of an Ordinary Annuity}}}
+\rhead{}
+\lfoot{\emph{Mathematical Reasoning: Writing and Proof, Third Ed.} \\Ted Sundstrom}
+\cfoot{}
+\rfoot{\copyright 2009 by Pearson Education, Inc.\\}
+
+
+\begin{document}
+\begin{enumerate}
+\item For each $n \in \mathbb{N}$, $S_{n+1} = R + \left( {1+i} \right) S_n$.
+
+\item This is a geometric series with initial condition  $S_1 = R$ and recurrence relation  \\
+$S_{n+1} = R + \left( {1+i} \right) S_n$.  So in the  formula for a geometric series,
+\[
+a = r \text{ and } r = \left( {1+i} \right).
+\]
+So,
+\[
+\begin{aligned}
+  S_n  &= a\left( {\frac{{1 - r^n }}{{1 - r}}} \right) \\
+       &= R\left( {\frac{{1 - \left( {1 + i} \right)^n }}{{1 - \left( {1 + i} \right)}}} \right) \\
+       &= R\left( {\frac{{1 - \left( {1 + i} \right)^n }}{{ - i}}} \right) \\
+       &= R\left( {\frac{{\left( {1 + i} \right)^n  - 1}}{i}} \right)  \\ 
+\end{aligned}
+\]
+\item Using $R = 200$, $i = \dfrac{0.06}{12} = 0.005$, and $n = 20 \cdot 12 = 240$, we use the formula in Part (2) and get $S_{240} = 92408.18$.  This means that there will be \$92,408.18 in the account at the end of 20 years.  The total amount deposited is 240 times \$200 or \$48,000.  Thus, the total amount of interest accumulated in the account during the 20 years is \$52,408.18. 
+
+
+\end{enumerate}
+
+
+
+\end{document}

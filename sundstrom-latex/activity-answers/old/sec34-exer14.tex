@@ -1,0 +1,46 @@
+\documentclass[11pt]{article}
+\usepackage{c://pctex/activity}
+
+\lhead{}
+\chead{\textbf{\large{Exercise 14 -- Section 3.4\\Proof of the Triangle Inequality}}}
+\rhead{}
+\lfoot{\emph{Mathematical Reasoning: Writing and Proof, Third Ed.} \\Ted Sundstrom}
+\cfoot{}
+\rfoot{\copyright 2009 by Pearson Education, Inc.\\}
+
+
+\begin{document}
+\begin{enumerate}
+\item One example is $x = 5$ and $y = -7$.  In this case, 
+\[
+\left| x + y \right| = \left| 2 \right| = 2 \qquad \text{and} \qquad \left| x \right| + \left| y \right| = 5 + 7 = 12.
+\]
+So for these values of $x$ and $y$, we see that 
+$\left| x + y \right| \leq \left| x \right| + \left| y \right|$.
+
+\item Let $r$ be a real number. In the case where $r \geq 0$, we see that $\left| r \right| = r$ and this implies that $r \leq \left| r \right|$. In addition, $-\left| r \right| \leq 0$ and so 
+$-\left| r \right| \leq r$.  So in this case, $-\left| r \right| \leq r \leq \left| r \right|$.
+
+In the case where $r < 0$, we see that $\left| r \right| = -r$ and hence, 
+$r = -\left| r \right|$.  This implies that 
+$-\left| r \right| \leq r$. In addition, $\left| r \right| > 0$ and so 
+$r < \left| r \right|$.  So in this case, $-\left| r \right| \leq r \leq \left| r \right|$.
+
+Since the result is true in both cases, we have proven that for each real number $r$, 
+$-\left| r \right| \leq r \leq \left| r \right|$.
+
+\item Let $x$ and $y$ be real numbers.  By the result in Part~(2), we see that
+\begin{align*}
+-\left| x \right| &\leq x \leq \left| x \right| \quad \text{and} \\
+-\left| y \right| &\leq y \leq \left| y \right|.
+\end{align*}
+If we now add the corresponding parts of these inequalities, we obtain
+\begin{align*}
+-\left| x \right| - \left| y \right| &\leq x + y \leq \left| x \right| + \left| y \right| \\
+-\left( \left| x \right| + \left| y \right| \right) &\leq x + y \leq \left| x \right| + \left| y \right|
+\end{align*}
+We can now use Part~(a) of Theorem~3.25 to conclude that 
+$\left| x + y \right| \leq \left| x \right| + \left| y \right|$.
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,145 @@
+\section{Relations} \label{S:relations}
+\setcounter{previewactivity}{0}
+%
+\input{previews/prev71-usa}
+\input{previews/prev71-sets}
+%\input{previews/preview71}
+%
+\input{subsections/section71/sub71-intro}
+\input{subsections/section71/sub71-standardrelations}
+\input{subsections/section71/sub71-notation}
+\input{subsections/section71/sub71-functions}
+%\input{subsections/section71/sub71-inverse}
+\input{subsections/section71/sub71-visual}
+\endinput
+Use the example in the old Preview Activity 3 as a progress check in the next subsection.
+
+%
+
+\subsection*{The Inverse of a Relation}
+In Section~\ref{S:inversefunctions}, we introduced the \textbf{inverse of a function}.
+\index{inverse of a function}%
+\index{function!inverse of}%
+ If  $A$ and $B$ are nonempty sets and if $f:A \to B$ is a function, then the inverse of  $f$, denoted by  $f^{ - 1} $, is defined as
+\begin{align*}
+f^{ - 1}  &= \left\{ { {\left( {b, a} \right) \in B \times A } \mid f\left( a \right) = b} \right\} \\
+          &= \left\{ { {\left( {b, a} \right) \in B \times A } \mid \left( {a, b} \right) \in f} \right\}\!.
+\end{align*}
+%If we use the ordered pair representation for  $f$, we could also write
+%\[
+%f^{ - 1} = \left\{ { {\left( {b, a} \right) \in B \times A } \mid \left( {a, b} \right) \in f} \right\}.
+%\]
+Now that we know about relations, we see that  $f^{ - 1} $  is always a relation from  $B$  to 
+$A$.  The concept of the inverse of a function is actually a special case of the more general concept of the inverse of a relation, which we now define.
+
+\begin{defbox}{inverseofrelation}{Let  $R$  be a relation from the set  $A$  to the set  $B$.  The \textbf{inverse of}  $\boldsymbol{R}$,
+\index{inverse of a relation}%
+\index{relation!inverse of}%
+ written  $R^{ - 1} $ 
+\label{sym:Rinverse} and read  ``$R$  inverse,'' is the relation from  $B$  to  $A$  defined by
+\[
+\begin{aligned}
+  R^{ - 1}  &= \left\{ { {\left( {y, x} \right) \in B \times A } \mid \left( {x, y} \right) \in R} \right\}\text{, or} \hfill \\
+  R^{ - 1}  &= \left\{ { {\left( {y, x} \right) \in B \times A } \mid x \mathrel{R} y} \right\}\!. \\ 
+\end{aligned} 
+\]
+That is, $R^{ - 1} $ is the subset of  $B \times A$ consisting of all ordered pairs  
+$\left( {y, x} \right)$  such that  $x \mathrel{R} y$.}
+\end{defbox}
+%
+\subsection*{An Example of an Inverse Relation}
+Let $D$ be the ``divides'' relation on  $\mathbb{Z}$.  See Progress 
+Check~\ref{prog:dividesrelation}.  So
+\[
+D = \left\{ { {\left( {m, n} \right) \in \mathbb{Z} \times \mathbb{Z} } \mid m\text{  divides  }n} \right\}\!.
+\]
+This means that we can write
+%\begin{center}
+$m \mid n$ if and only if $\left( {m, n} \right) \in D$.
+%\end{center}
+So, in this case,
+\[
+\begin{aligned}
+D^{ - 1}  &= \left\{ { {\left( {n, m} \right) \in \mathbb{Z} \times \mathbb{Z} } \mid \left( {m, n} \right) \in D} \right\} \\ 
+          &= \left\{ { {\left( {n, m} \right) \in \mathbb{Z} \times \mathbb{Z} } \mid m\text{  divides  }n} \right\}\!. \\ 
+\end{aligned}
+\]
+Now, if we would like to focus on the first coordinate instead of the second coordinate in  
+$D^{ - 1} $, we know that  ``$m$  divides  $n$''  means the same thing as  ``$n$  is a multiple of  $m$.''  Hence,
+\[
+D^{ - 1}  = \left\{ { {\left( {n, m} \right) \in \mathbb{Z} \times \mathbb{Z} } \mid n\text{  is a multiple of  }m} \right\}\!.
+\]
+We can say that the inverse of the ``divides'' relation on  $\mathbb{Z}$  is the ``is a multiple of'' relation on  $\mathbb{Z}$.
+\hbreak
+%
+Theorem~\ref{T:inverserelations}, which follows, contains some elementary facts about inverse relations.  The proofs of these results are included in Activity~\ref{A:provinginverse}.
+%
+\begin{theorem} \label{T:inverserelations}
+Let  $R$  be a relation from the set  $A$  to the set  $B$.  Then
+
+\begin{enumerate}
+\item The domain of  $R^{ - 1} $ is the range of  $R$.  That is, 
+$\text{dom}\!\left( {R^{ - 1} } \right) = \text{range}( R )$.  \label{T:inverserelations1}
+
+\item The range of  $R^{ - 1} $  is the domain of  $R$.   That is, 
+$\text{range}\!\left( {R^{ - 1} } \right) = \text{dom}( R )$.  \label{T:inverserelations2}
+
+\item The inverse of  $R^{ - 1} $  is  $R$.  That is, $\left( {R^{ - 1} } \right)^{ - 1}  = R$.  \label{T:inverserelations3}
+
+\end{enumerate}
+\end{theorem}
+\hbreak
+%
+\begin{activity}[Proving Theorem \ref{T:inverserelations}] \label{A:provinginverse} \hfill \\
+To prove Part~(\ref{T:inverserelations1}) of 
+Theorem~\ref{T:inverserelations}, observe that the goal is to prove that two sets are equal, 
+\[
+\text{dom}\!\left( {R^{ - 1} } \right) = \text{range}( R )\!.
+\]
+One way to do this is to prove that each is a subset of the other.  Another way is to use a sequence of  ``if and only if'' statements.
+
+To prove that  $\text{dom}\!\left( {R^{ - 1} } \right) \subseteq \text{range}( R )$, we can start by choosing an arbitrary element of  $\text{dom}\!\left( {R^{ - 1} } \right)$.  So let  
+$y \in \text{dom}\!\left( {R^{ - 1} } \right)$.  The goal now is to prove that 
+$y~\in~\text{range}( R )$.  What does it mean to say that  
+$y \in \text{dom}\!\left( {R^{ - 1} } \right)$?  It means that there exists an  $x \in A$  such that
+\[
+\left( {y, x} \right) \in R^{ - 1}. 
+\]
+Now what does it mean to say that  $( {y, x} ) \in R^{ - 1} $?  It means that  
+$( {x, y} ) \in R$.  What does this tell us about  $y$?
+
+Complete the proof of Part~(\ref{T:inverserelations1}) of Theorem~\ref{T:inverserelations}.  Then, complete the proofs of Part~(\ref{T:inverserelations2}) and Part~(\ref{T:inverserelations3}) of Theorem~\ref{T:inverserelations}.
+\end{activity}
+\hbreak
+
+\endinput
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

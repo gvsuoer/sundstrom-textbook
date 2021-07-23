@@ -1,0 +1,36 @@
+\section*{Section~\ref{S:typesoffunctions}}
+
+\subsection*{Progress Check~\ref{pr:injections}}
+The functions $k$, $F$, and $s$ are injections.  The functions $f$ and $h$ are not injections.
+
+
+\subsection*{Progress Check~\ref{pr:functionswithfinitedom}}
+The functions $f$ and $s$ are surjections.  The functions $k$ and $F$ are not surjections.
+
+
+\subsection*{Progress Check~\ref{pr:domainandcodomain}}
+The function $f$ is an injection but not a surjection.  To see that it is an injection, let  $a, b \in \R$ and assume that $f(a) = f(b)$.  This implies that $e^{-a} = e^{-b}$. Now use the natural logarithm function to prove that $a = b$.  Since 
+$e^{-x} > 0$ for each real number $x$, there is no $x \in \R$ such that $f(x) = -1$.  So $f$ is not a surjection.
+
+\newpar
+The function $g$ is an injection and is a surjection.  The proof that $g$ is an injection is basically the same as the proof that $f$ is an injection.  To prove that $g$ is a surjection, let $b \in \R^+$.  To construct the real number $a$ such that 
+$g(a) = b$, solve the equation $e^{-a} = b$ for $a$.  The solution is $a = -\ln b$.  It can then be verified that 
+$g(a) = b$.
+
+
+
+\subsection*{Progress Check~\ref{pr:function2variables}}
+\begin{enumerate}
+  \item There are several ordered pairs $(a, b) \in \R \times \R$ such that $g(a, b) = 2$.  For example, $g(0, 2) = 2$, $g(-1, 4) = 2$, and $g(2, -2) = 2$.
+  \item For each $z \in \R$, $g(0, z) = z$.
+  \item Part~(1) implies that the function $g$ is not an injection.  Part~(2) implies that the function $g$ is a surjection since for each $z \in \R$, $(0, z)$ is in the domain of $g$ and $g(0, z) = z$.
+\end{enumerate}
+
+%There are several examples that can be used to prove that $g$ is not an injection.  For instance, $g(0, 1) = 2$ and 
+%$g(2, 0) = 2$.  There are several ways to prove that $g$ is a surjection.  To start, let $z \in \R$.  The goal now is to find $(x, y) \in \R \times \R$ such that $g(x, y) = z$ or $x + 2y = z$.  One way to do this is to use $y = 0$ and notice that 
+%$g(z, 0) = z$.  Therefore, $g$ is a surjection.
+\hbreak
+
+
+\endinput
+

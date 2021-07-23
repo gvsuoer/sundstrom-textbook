@@ -1,0 +1,48 @@
+\documentclass[11pt]{article}
+\usepackage{c://pctex/activity}
+
+\lhead{}
+\chead{\textbf{\large{Exercise 14 -- Section 7.3\\Equivalence Relations on a Set of Matrices}}}
+\rhead{}
+\lfoot{\emph{Mathematical Reasoning: Writing and Proof, Third Ed.} \\Ted Sundstrom}
+\cfoot{}
+\rfoot{\copyright \the\year\, by Pearson Education, Inc.\\}
+%\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+%\renewcommand{\labelenumii}{(\textbf{\alph{enumii}})}
+
+
+\begin{document}
+\noindent
+Let $I$ be the identity matrix in $\mathcal{M}_{n, n}\left( \R \right)$.
+\begin{enumerate}
+\item For $A \in \mathcal{M}_{n, n}\left( \R \right)$, $A = IAI^{-1}$ and so $A \sim A$.  Hence, the relation $\sim$ is reflexive.  
+
+Now let $A, B, C \in \mathcal{M}_{n, n}\left( \R \right)$.  First assume that $A \sim B$.  Then there exists an invertible matrix $P$ in $\mathcal{M}_{n, n}\left( \R \right)$ such that $B = PAP^{-1}$.  From linear algebra, we know that $P^{-1}$ is invertible and so
+\begin{align*}
+P^{-1}BP &= P^{-1} \left( PAP^{-1} \right) P \\
+         &= \left( P^{-1}P \right) A \left( P^{-1} P \right) \\
+         &= A.
+\end{align*}
+Hence, $B \sim A$ and the relation $\sim$ is symmetric.  Now assume that $A \sim B$ and 
+$B \sim C$.  Then there exist invertible matrices $P$ and $Q$ in 
+$\mathcal{M}_{n, n}\left( \R \right)$ such that $B = PAP^{-1}$ and $C = QBQ^{-1}$.  We then see that
+\begin{align*}
+C &= Q \left( PAP^{-1} \right) Q^{-1} \\
+  &= \left(QP \right) A \left( P^{-1} Q^{-1} \right) \\
+  &= \left( QP \right) A \left( QP \right)^{-1}.
+\end{align*}
+This proves that the relation $\sim$ is transitive and hence, $\sim$ is an equivalence relation.
+
+\item Let $A, B, C \in \mathcal{M}_{n, n}\left( \R \right)$.  Since $\det(A) = \det(A)$, we see that $A \mathrel{R} A$ and $R$ is reflexive.  In addition, if $\det(A) = \det(B)$, then $\det(B) = \det(A)$.  This can be used to prove that $R$ is symmetric.  Finally, if 
+$\det(A) = \det(B)$ and $\det(B) = \det(C)$, then $\det(A) = \det(C)$.  This can be used to prove that $R$ is transitive.
+
+\item For this problem, $\sim$ is an equivalence relation on $\R$. Let $A, B, C \in \mathcal{M}_{n, n}\left( \R \right)$.  Since $\det(A) \in \R$ and $\sim$ is reflexive, 
+$\det(A) \sim \det(A)$.  This proves that $\approx$ is reflexive on 
+$\mathcal{M}_{n, n}\left( \R \right)$.  Now assume that $A \approx B$.  Then $\det(A) \sim \det(B)$.  Since $\sim$ is symmetric, we conclude that $\det(B) \sim \det(A)$ and hence, 
+$B \approx A$.  This proves that $\approx$ is symmetric.
+
+Finally, assume that $A \approx B$ and $B \approx C$.  Then $\det(A) \sim \det(B)$ and 
+$\det(B) \sim \det(C)$.  Since $\sim$ is transitive, we can conclude that 
+$\det(A) \sim \det(C)$.  Hence, $A \approx C$ and so $\approx$ is transitive.  This proves that $\approx$ is an equivalence relation on $\mathcal{M}_{n, n}\left( \R \right)$.
+\end{enumerate}
+\end{document}

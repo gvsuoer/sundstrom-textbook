@@ -1,0 +1,120 @@
+\subsection*{Uncountable Subsets of $\boldsymbol{\mathbb{R}}$}
+In the proof that follows, we will use only the normalized form for the decimal representation of a real number in the interval $( 0, 1 )$.
+%\hbreak
+%
+\begin{theorem}\label{T:uncountableinterval}
+The open interval $( 0, 1 )$ is an uncountable set.
+\end{theorem}
+%
+\begin{myproof}
+Since the interval $( 0, 1 )$ contains the infinite subset 
+$\left\{\dfrac{1}{2}, \dfrac{1}{3}, \dfrac{1}{4}, \ldots \,\right\}$, we can use 
+Theorem~\ref{T:subsetisinfinite}, to conclude that $( 0, 1 )$ is an infinite set.  So $( 0, 1 )$ is either countably infinite or uncountable.  We will prove that $( 0, 1 )$ is uncountable by proving that any function from $\N$ to $(0, 1)$ is not a surjection, and hence, there is no bijection from $\N$ to  $(0, 1)$.
+
+So suppose that $f\x \mathbb{N} \to ( 0, 1 )$ is a function.  We will show that $f$ is not a surjection by showing that there exists an element in 
+$( 0, 1 )$ that cannot be in the range of $f$.  Writing the images of the elements of 
+$\mathbb{N}$ in normalized form, we can write
+\[
+\begin{aligned}
+f ( 1 ) &= 0.a_{1 1} a_{1 2} a_{1 3} a_{1 4} a_{1 5} \ldots \\
+f ( 2 ) &= 0.a_{2 1} a_{2 2} a_{2 3} a_{2 4} a_{2 5} \ldots \\
+f ( 3 ) &= 0.a_{3 1} a_{3 2} a_{3 3} a_{3 4} a_{3 5} \ldots \\
+f ( 4 ) &= 0.a_{4 1} a_{4 2} a_{4 3} a_{4 4} a_{4 5} \ldots \\
+f ( 5 ) &= 0.a_{5 1} a_{5 2} a_{5 3} a_{5 4} a_{5 5} \ldots \\
+                   & \vdots \\
+f ( n ) &= 0.a_{n 1} a_{n 2} a_{n 3} a_{n 4} a_{n 5} \ldots \\
+                   & \vdots \\
+\end{aligned}
+\]
+Notice the use of the double subscripts. The number $a_{i j}$ is the $j^\text{th}$ digit to the right of the decimal point in the normalized decimal representation of $f ( i )$.
+
+We will now construct a real number $b = 0.b_1 b_2 b_3 b_4 b_5 \ldots$ in $( 0, 1 )$ and in normalized form that is not in this list.  
+
+\vskip6pt
+\noindent
+%\emph{Informal Side Note}:  
+\note The idea is to start in the upper left corner and move down the diagonal in a manner similar to the winning strategy for Player Two in the game in 
+\typeu Activity~\ref*{PA:dodgeball}.  At each step, we choose a digit that is not equal to the diagonal digit.
+\vskip6pt
+
+Start with $a_{1 1}$ in $f ( 1 )$.  We want to choose $b_1$ so that $b_1 \ne 0$, 
+$b_1 \ne a_{1 1}$, and $b_1 \ne 9$. (To ensure that we end up with a decimal that is in normalized form, we make sure that each digit is not equal to 9.)  We then repeat this process with $a_{2 2}$, $a_{3 3}$, 
+$a_{4 4}$, $a_{5 5}$, and so on.  So we let $b$ be the real number 
+$b = 0.b_1 b_2 b_3 b_4 b_5 \ldots ,$ where for each $k \in \mathbb{N}$
+\begin{equation} \notag
+b_k = 
+\begin{cases}
+3         &\text{if $a_{k k} \ne 3$} \\
+5         &\text{if $a_{k k} = 3$.}
+\end{cases}
+\end{equation}
+
+\noindent
+(The choice of 3 and 5 is arbitrary.  Other choices of distinct digits will also work.)
+
+Now for each $n \in \mathbb{N}$, $b \ne f ( n )$ since $b$ and $f ( n )$ are in normalized form and $b$ and $f ( n )$ differ in the $n${th} decimal place.  Therefore, $f$ is not a surjection.  This proves that any function from $\mathbb{N}$ to $( 0, 1 )$ is not a surjection and hence, there is no bijection from $\mathbb{N}$ to $( 0, 1 )$.  Therefore, 
+$( 0, 1 )$ is not countably infinite and hence must be an uncountable set.
+\end{myproof}
+\hbreak
+%
+\begin{prog} [\textbf{Dodge Ball and Cantor's Diagonal Argument}]\label{prog:diagonal} \hfill \\
+The proof of Theorem~\ref{T:uncountableinterval} is often referred to as \textbf{Cantor's diagonal argument}.
+\index{Cantor's diagonal argument}%
+  It is named after the mathematician Georg Cantor, who first published the proof in 1874.  Explain the connection between the winning strategy for Player Two in Dodge Ball
+\index{Dodge Ball}%
+ (see \typeu Activity~\ref*{PA:dodgeball})  and the proof of Theorem~\ref{T:uncountableinterval} using Cantor's diagonal argument.
+\end{prog}
+\hbreak
+%
+The open interval $( 0, 1 )$ is our first example of an uncountable set.  The cardinal number of $( 0, 1 )$ is defined to be $\boldsymbol{c}$, 
+\label{sym:continuum}% 
+which stands for 
+\textbf{the cardinal number of the continuum}.
+\index{continuum}%
+  So the two infinite cardinal numbers we have seen are $\aleph_0$ for countably infinite sets and $\boldsymbol{c}$.
+
+\begin{defbox}{cardinalityc}{A set $A$ is said to have \textbf{cardinality}
+\index{cardinality}%
+\index{cardinality!$\boldsymbol{c}$}%
+%\index{$\boldsymbol{c}$}%
+  $\boldsymbol{c}$ provided that $A$ is equivalent to $( 0, 1 )$.  In this case, we write 
+$\text{card} ( A ) = \boldsymbol{c}$ and say that the cardinal number of $A$ is 
+$\boldsymbol{c}$.}
+\end{defbox}
+
+\noindent
+The proof of Theorem~\ref{T:openintervals} is included in Progress Check~\ref{prog:openintervals}.
+
+\begin{theorem}\label{T:openintervals}
+Let $a$ and $b$ be real numbers with $a < b$.  The open interval $( a, b )$ is uncountable and has cardinality $\boldsymbol{c}$.
+\end{theorem}
+%
+\begin{prog}[\textbf{Proof of Theorem~\ref{T:openintervals}}]\label{prog:openintervals} \hfill
+\begin{enumerate}
+\item In Part~(\ref{A:equivsets4}) of Progress Check~\ref{prog:equivsets}, we proved that if 
+$b \in \R$ and $b > 0$, then the open interval $( 0, 1 )$ is equivalent to the open interval $( 0, b )$.  Now let $a$ and $b$ be real numbers with $a < b$.  Find a function 
+\[
+f\x  ( 0, 1 ) \to ( a, b )
+\]
+that is a bijection and conclude that the open interval $( 0, 1) \approx ( a, b )$.
+
+\hint Find a linear function that passes through the points $( 0, a )$ and 
+$( 1, b )$.  Use this to define the function $f$.  Make sure you prove that this function $f$ is a bijection.
+
+\item Let $a, b, c, d$ be real numbers with $a < b$ and $c < d$.  Prove that the open interaval $( a, b )$ is equivalent to the open interval $( c, d )$.
+\end{enumerate}
+\end{prog}
+\hbreak
+%
+\begin{theorem}\label{T:realsuncount}
+The set of real numbers $\mathbb{R}$ is uncountable and has cardinality $\boldsymbol{c}$.
+\end{theorem}
+%
+\begin{myproof}
+Let $f\x  \left( -\dfrac{\pi}{2}, \dfrac{\pi}{2} \right) \to \mathbb{R}$ be defined by 
+$f ( x ) = \tan x$, for each $x \in \mathbb{R}$.  The function $f$ is a bijection and, hence, 
+$\left(-\dfrac{\pi}{2}, \dfrac{\pi}{2} \right) \approx \mathbb{R}$.  So by 
+Theorem~\ref{T:openintervals}, $\mathbb{R}$ is uncountable and has cardinality $\boldsymbol{c}$.
+\end{myproof}
+
+\endinput

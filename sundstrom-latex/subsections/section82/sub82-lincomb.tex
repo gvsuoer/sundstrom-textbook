@@ -1,0 +1,35 @@
+\subsection*{Greatest Common Divisors and Linear Combinations}
+In Section~\ref{S:gcd}, we introduced the concept of the greatest common divisor of two integers.  We showed how the Euclidean Algorithm can be used to find the greatest common divisor of two integers, $a$  and  $b$, and also showed how to use the results of the Euclidean Algorithm to write the greatest common divisor of  $a$  and  $b$  as a linear combination of  $a$ and  $b$.
+
+In this section, we will use these results to help prove the so-called Fundamental Theorem of Arithmetic, which states that any natural number greater than 1 that is not prime can be written as  product of primes in ``essentially'' only one way.  This means that given two prime factorizations, the prime factors are exactly the same, and the only difference may be in the order in which the prime factors are written.  We start with more results concerning greatest common divisors.  We first prove Proposition~\ref{P:divlinearcomb}, which was part of Exercise~(\ref{exer52-choose}) on page~\pageref{exer52-choose} in Section~\ref{S:provingset} and Exercise~(\ref{exer81:lincomb}) on page~\pageref{exer81:lincomb} in Section~\ref{S:gcd}.
+
+\noindent
+\textbf{Proposition \ref{P:divlinearcomb}}  \emph{Let a, b, and  t  be integers with $t \ne 0$.  If  t  divides  a  and  t  divides  b, then for all integers  x  and  y,  t  divides  
+\text{(}ax + by\text{)}.}
+
+\begin{myproof} Let $a$, $b$, and  $t$  be integers with $t \ne 0$, and assume that $t$  divides  $a$  and  $t$  divides  $b$.  We will prove that for all integers  $x$  and  $y$,  $t$  divides  $(ax + by)$.
+
+So let  $x \in \mathbb{Z}$ and let  $y \in \mathbb{Z}$.  Since  $t$  divides  $a$, there exists an integer  $m$  such that $a = mt$ and since $t$ divides $b$, there exists an integer $n$ such that $b = nt$.  Using substitution and algebra, we then see that
+\begin{align*}
+ax + by &= (mt)x + (nt)y \\
+        &= t(mx + ny)
+\end{align*}
+Since $(mx + ny)$ is an integer, the last equation proves that $t$ divides $ax + by$ and this proves that for all integers  $x$  and  $y$,  $t$  divides  $(ax + by)$.
+\end{myproof}
+
+We now let  $a, b \in \mathbb{Z}$, not both 0, and let  $d = \gcd( {a, b} )$.  Theorem~\ref{T:gcdaslincomb} states that  $d$  can be written as a linear combination of  $a$  and  $b$.  Now, since  $d \mid a$  and  $d \mid b$, we can use the result of Proposition~\ref{P:divlinearcomb} to conclude that for all  $x, y \in \mathbb{Z}$,  
+$d \mid \left( {ax + by} \right)$.  This means that  $d$  divides every linear combination of  $a$  and  $b$.  In addition, this means that $d$ must be the smallest positive number that is a linear combination of $a$ and $b$.  We summarize these results in Theorem~\ref{T:gcddivideslincombs}.
+
+\begin{theorem} \label{T:gcddivideslincombs}
+Let  $a, b \in \mathbb{Z}$, not both 0.  %The greatest common divisor of $a$ and $b$ divides every linear combination of $a$ and $b$ and is the least positive integer that is a linear combination of $a$ and $b$.
+\begin{enumerate}
+\item The greatest common divisor,  $d$, is a linear combination of  $a$  and  $b$.  That is, there exist integers  $m$  and  $n$  such that  $d = am + bn$.
+
+\item The greatest common divisor,  $d$,  divides every linear combination of  $a$  and  $b$.  That is, for all  $x, y \in \mathbb{Z}$\,,  $d \mid \left( {ax + by} \right)$.
+
+\item The greatest common divisor, $d$, is the smallest positive number that is a linear combination of $a$ and $b$.
+\end{enumerate}
+\end{theorem}
+%
+
+\endinput

@@ -1,0 +1,58 @@
+\subsection*{Geometric Sequences and Geometric Series}
+Let  $a,r \in \mathbb{R}$.  The following sequence was introduced in \typeu Activity~\ref*{PA:recursivesequences}.
+
+%\vskip10pt
+\begin{tabular}{r l}
+Initial condition:    &  $a_1  = a$. \\
+Recurrence relation:  &  For each  $n \in \mathbb{N}$,  $a_{n + 1}  = r \cdot a_n $. \\
+\end{tabular}
+%\vskip10pt
+
+This is a recursive definition for a \textbf{geometric sequence} \label{geomseq}
+\index{geometric sequence}%
+\index{sequence!geometric}%
+ with \textbf{initial term}  $a$  and (common) \textbf{ratio}  $r$.  The basic idea is that the next term in the sequence is obtained by multiplying the previous term by the ratio  $r$.  The work in \typeu Activity~\ref*{PA:recursivesequences} suggests that the following proposition is true.
+
+\begin{theorem} \label{P:geometricsequence}
+Let  $a, r \in \mathbb{R}$.  If a geometric sequence is defined by  $a_1  = a$ and for each  $n \in \mathbb{N}$,  $a_{n + 1}  = r \cdot a_n $, then for each  $n \in \mathbb{N}$,   $a_n  = a \cdot r^{n - 1} $.
+\end{theorem}
+
+\noindent
+The proof of this proposition is Exercise~(\ref{exer:geomseq}).
+
+%\hbreak
+%
+%\subsection*{Geometric Series}
+Another sequence that was introduced in \typeu Activity~\ref*{PA:recursivesequences} is related to geometric series and is defined as follows:
+
+%Let  $a, r \in \mathbb{R}$. The following sequence was introduced in Beginning Activity~\ref{PA:recursivesequences}.
+
+%\vskip10pt
+\begin{tabular}{r l}
+Initial condition:    &  $S_1  = a$. \\
+Recurrence relation:  &  For each  $n \in \mathbb{N}$,  $S_{n + 1}  = a + r \cdot S_n $. \\
+\end{tabular}
+%\vskip10pt
+
+\noindent
+For each  $n \in \mathbb{N}$, the term  $S_n $ is a (finite) \textbf{geometric series}
+\label{geometricseries}
+\index{geometric series}%
+ with \textbf{initial term}  $a$  and (common) \textbf{ratio}  $r$.  The work in \typeu Activity~\ref*{PA:recursivesequences} suggests that the following proposition is true.
+
+\begin{theorem} \label{P:geometricseries}
+Let  $a, r \in \mathbb{R}$.  If the sequence  $S_1 ,S_2 , \ldots ,S_n , \ldots $ is defined by  $S_1  = a$ and for each  $n \in \mathbb{N}$,  $S_{n + 1}  = a + r \cdot S_n $, then for each  $n \in \mathbb{N}$,   $S_n  = a + a \cdot r + a \cdot r^2  +  \cdots  + a \cdot r^{n - 1} $.  That is, the geometric series  $S_n $ is the sum of the first  $n$  terms of the corresponding geometric sequence.
+\end{theorem}
+%
+The proof of Proposition~\ref{P:geometricseries} is Exercise~(\ref{exer:geomser}).
+%\hbreak
+%
+The recursive definition of a geometric series and Proposition~\ref{P:geometricseries} give two different ways to look at geometric series.   Proposition~\ref{P:geometricseries} represents a geometric series as the sum of the first  $n$  terms of the corresponding geometric sequence.  Another way to determine the sum of a geometric series is given in Theorem~\ref{P:geometricseries2}, which gives a formula for the sum of a geometric series that does not use a summation.
+
+\begin{theorem} \label{P:geometricseries2}
+Let  $a, r \in \mathbb{R}$ and  $r \ne 1$.  If the sequence  $S_1 ,S_2 , \ldots ,S_n , \ldots $ is defined by  $S_1  = a$ and for each  $n \in \mathbb{N}$,  $S_{n + 1}  = a + r \cdot S_n $, then for each  $n \in \mathbb{N}$,   $S_n  = a\left( {\dfrac{{1 - r^n }}{{1 - r}}} \right)$.
+\end{theorem}
+
+The proof of Proposition~\ref{P:geometricseries2} is Exercise~(\ref{exer:geometricseries2}).
+
+\endinput

@@ -1,0 +1,54 @@
+\documentclass[11pt]{article}
+\usepackage{c://pctex/activity}
+
+\lhead{}
+\chead{\textbf{\large{Exercise 15 - Section 2.1\\Working with Truth Values of Statements}}}
+\rhead{}
+\lfoot{\emph{Mathematical Reasoning: Writing and Proof, Third Ed.} \\Ted Sundstrom}
+\cfoot{}
+\rfoot{\copyright \the\year\, by Pearson Education, Inc.\\}
+
+
+
+
+\begin{document}
+
+\vskip20pt
+\noindent
+Suppose that $P$ and $Q$ are true statements, that $U$ and $V$ are false statements, and that $W$ is a statement and it is not known if $W$ is true or false.
+
+\begin{enumerate}
+  \item $(P \vee Q) \vee (U \wedge W)$ is true.
+
+Since $P$ and $Q$ are true, $(P \vee Q)$ is true, and hence, $(P \vee Q) \vee (U \wedge W)$ is true
+
+  \item It is not possible to determine if $P \wedge (Q \to W)$ is true or false.
+
+Since $Q$ is true, we cannot tell if $Q \to W$ is true or false.  Hence, we cannot tell if $P \wedge (Q \to W)$ is true or false.
+  \item $P \wedge (W \to Q)$ is true.
+
+Since $W$ is false and $Q$ is true, $(W \to Q)$ is true.  Since $P$ is also true, $P \wedge (W \to Q)$ is true.
+  \item It is not possible to determine if $W \to (P \wedge U)$ is true or false.
+
+Since $P$ is true and $U$ is false, $(P \wedge U)$ is false.  However, since we do not know if $W$ is true or false, we cannot determine if $W \to (P \wedge U)$ is true or false.
+  \item $W \to (P \wedge \mynot U)$ is true.
+
+Since $P$ is true and $U$ is false, $(P \wedge \mynot U)$ is true.  Hence, even though we do not know if $W$ is true or false, we can conclude that $W \to (P \wedge \mynot U)$ is true.
+
+  \item $(\mynot P \vee \mynot U) \wedge (Q \vee \mynot V)$ is true.
+
+Since $P$ is true and $U$ is false, $(\mynot P \vee \mynot U)$ is true.  Since $Q$ is true and $V$ is false, 
+$(Q \vee \mynot V)$ is true.  Therefore, $(\mynot P \vee \mynot U) \wedge (Q \vee \mynot V)$ is true.
+
+  \item $(P \wedge \mynot V) \wedge (U \vee W)$
+  \item $(P \vee \mynot Q) \to (U \wedge W)$
+  \item $(P \vee W) \to (U \wedge W)$
+  \item $(U \wedge \mynot V) \to (P \wedge W)$
+
+\end{enumerate}
+
+
+
+
+
+\end{document}

@@ -1,0 +1,64 @@
+\documentclass[11pt]{article}
+\usepackage{c://pctex/activity}
+
+\lhead{}
+\chead{\textbf{\large{Exercise 19 -- Section 4.2\\De Moivre's Theorem}}}
+\rhead{}
+\lfoot{\emph{Mathematical Reasoning: Writing and Proof, Third Ed.} \\Ted Sundstrom}
+\cfoot{}
+\rfoot{\copyright 2009 by Pearson Education, Inc.\\}
+
+
+\begin{document}
+\begin{enumerate}
+\item For the inductive step, the following trigonometric identities are useful:
+\begin{list}{}
+\item $\cos \left( \alpha + \beta \right) = \cos \alpha \cos \beta - \sin \alpha \sin \beta$.
+\item $\sin \left( \alpha + \beta \right) = \sin \alpha \cos \beta + \cos \alpha \sin \beta$.
+\end{list}
+
+\item Using algebra, we obtain
+\begin{align*}
+\left[ {\cos x + i(\sin x)} \right]^2 &= \cos^2 x + 2i (\cos x)(\sin x) + i^2 \sin^2 x \\
+                                      &= \cos^2 x + 2i (\cos x)(\sin x) - \sin^2 x \\
+                                      &= \left( \cos^2 x - \sin^2 x \right) + 2i (\cos x)(\sin x) \\
+                                      &= \cos(x + x) + i \sin(x + x) \\
+                                      &= \cos (2x) + i \sin(2x)
+\end{align*}
+
+\item For each natural number $n$, we let $P(n)$ be:  
+\item $\left[ {\cos x + i(\sin x)} \right]^n  = \cos (nx) + i( {\sin (nx)} )$.  For the basis step, using $n = 1$, we obtain
+\[
+\left[ {\cos x + i(\sin x)} \right]^1 = \cos x + i(\sin x),
+\]
+and this shows that $P(1)$ is true.
+
+\newpar
+For the inductive step, we let $k$ be a natural number and assume that $P(k)$ is true.  That is, we assume that 
+\begin{equation}
+\left[ {\cos x + i(\sin x)} \right]^k  = \cos (kx) + i\left( {\sin (kx)} \right).
+\end{equation}
+We need to prove that $P(k+1)$ is true or that
+\begin{equation}
+\left[ {\cos x + i(\sin x)} \right]^{k+1}  = \cos ((k + 1)x) + i\left( {\sin ((k + 1)x)} \right).
+\end{equation}
+To do this, we multpliply both sides of equation~(1) by $\left( \cos x + i(\sin x) \right)$ and use the assumption that $P9k)$ is true to obtain
+\begin{align*}
+\left[ {\cos x + i(\sin x)} \right]^{k+1} &= \left[ {\cos x + i(\sin x)} \right]^k \left[ {\cos x + i \left(\sin x \right)} \right] \\
+  &= \left( \cos (kx) + i {\sin (kx)} \right) \left( \cos x + i \left(\sin x \right) \right)
+\end{align*}
+We now expand the right side of the last equation and use the identities for the cosine and sine of the sum of two angles.  This gives
+\begin{align*}
+  \left[ {\cos x + i(\sin x)} \right]^{k+1}&= \left( \cos \left( kx \right) \cos x - \sin \left( kx \right) \sin x \right) \\
+  &+ i \left( \sin \left( kx \right) \cos x + \cos \left( kx \right) \sin x \right)\\
+  &= \cos \left(kx + x \right) + i \sin \left( kx + x \right) \\
+  &= \cos \left( \left( k + 1 \right ) x \right) + i \sin \left( \left( k + 1 \right ) x \right).
+\end{align*}
+The last equation proves that if $P(k)$ is true, then $P(k + 1)$ is true and hence, the inductive step has been established.  Hence, by the Principle of Mathematical Induction, we have proved that for each natural number $n$, 
+$\left[ {\cos x + i(\sin x)} \right]^n  = \cos (nx) + i\left( {\sin (nx)} \right)$.
+
+
+\end{enumerate}
+
+
+\end{document}

@@ -1,0 +1,47 @@
+\documentclass[11pt]{article}
+\usepackage{c://pctex/activity}
+
+\lhead{}
+\chead{\textbf{\large{Exercise 17 -- Section 5.1\\Proof of Theorem 5.5}}}
+\rhead{}
+\lfoot{\emph{Mathematical Reasoning: Writing and Proof, Third Ed.} \\Ted Sundstrom}
+\cfoot{}
+\rfoot{\copyright \the\year\, by Pearson Education, Inc.\\}
+
+
+\begin{document}
+\setcounter{equation}{0}
+\noindent
+\textbf{Theorem 5.5}.  Let  $n$  be a nonnegative integer and let  $T$  be a subset of some universal set.  If  $T$  is a finite set with  $n$  elements, then  $T$  has  $2^n $  subsets.  That is,  $ {\mathcal{P}\left( T \right)}$ has $2^n$ elements.
+
+\vskip6pt
+\noindent
+For each nonnegative integer  $n$, let  $P\left( n \right)$ be, if  $T$  is a finite set with  
+$n$  elements, then  $T$  has  $2^n $  subsets.
+
+\begin{enumerate}
+\item The statement  $P\left( 0 \right)$ is true since the empty set has  $2^0  = 1$ subset. 
+
+\item The statement  $P\left( 1 \right)$ is true since a set with one element has  $2^1  = 2$ subsets.
+
+The statement  $P\left( 2 \right)$ is true since a set with two elements has  $2^2  = 4$
+ subsets. (The subsets of  $\left\{ {a, b} \right\}$ are  
+$\emptyset$ , $\left\{ a \right\}, \left\{ b \right\}$, $\left\{ {a, b} \right\}$.)
+
+\item Now assume that  $k$  is a nonnegative integer and assume that  $P\left( k \right)$ is true.  That is, assume that if a set has  $k$  elements, then that set has  $2^k $ subsets. 
+
+Let  $T$  be a subset of the universal set with  $\text{card}(T) = k + 1$, and let  $x \in T$.  Then, the set  $B = T - \left\{ x \right\}$  has  $k$  elements.  Since  $P\left( k \right)$
+ is true, the set  $B$  has  $2^k $ subsets.
+
+Now, $T = B \cup \{ x \}$ and so by Lemma 5.6,  each subset of  $T$  is a subset of  $B$  or a set of the form  
+$C  \cup \left\{ x \right\}$ where  $C$  is a subset of  $B$.  So, if  $B$  has  $2^k $
+ subsets, then the number of subsets of  $T$ is equal to
+\[
+2^k  + 2^k  = 2 \cdot 2^k  = 2^{k + 1} .
+\]
+This proves that if  $P\left( k \right)$ is true, then  $P\left( {k + 1} \right)$ is true.  Hence, by the Second Principle of Mathematical Induction,  $P\left( n \right)$ is true for each nonnegative integer  $n$.
+\end{enumerate}
+
+
+
+\end{document}

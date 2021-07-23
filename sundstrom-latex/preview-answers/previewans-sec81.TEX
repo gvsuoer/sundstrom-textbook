@@ -1,0 +1,70 @@
+\documentclass[11pt]{article}
+\usepackage{../../styles/activity}
+
+\usepackage{xr}
+\externaldocument{0-MR}
+
+\lhead{}
+%\chead{\textbf{\Large{\hspace{0pt}Beginning Activities for Section~8.1}}\\\hspace{0pt}\emph{Mathematical Reasoning: Writing and Proof}}
+\bahead{8.1}
+\rhead{}
+\lfoot{}
+\rfoot{}
+\cfoot{\hspace{0pt}\scalebox{0.4}{\includegraphics{cc-by-nc-sa.eps}}}
+\graphicspath{{./epsfigs/}}
+
+\begin{document}
+\subsection*{Beginning Activity 1 (The Greatest Common Divisor)}
+\begin{enumerate}
+\item A nonzero integer  $m$  divides an integer  $n$  provided that there is an integer  $q$  such that  $n = m \cdot q$.
+
+\item The nonzero integer  $m$  does not divide the integer  $n$  means that for all  $q \in \mathbb{Z}$, $n \ne m \cdot q$.
+
+\begin{multicols}{2}
+\item $\left\{ {1, 2, 3, 4, 6, 8, 12, 16, 24, 48} \right\}$	
+\item $\left\{ {1, 2, 3, 4, 6, 7, 12, 14, 21, 28, 42, 84} \right\}$
+\item $\left\{ {1, 2, 3, 4, 6, 12} \right\}$
+\item $\gcd \left( {48, 84} \right) = 12$
+\end{multicols}
+
+\item \begin{tabular}[t]{| c | c | c | c |}  \hline
+   &   &  Common Divisors  &   \\
+$a$  &  $b$  &  of $a$ and $b$  &  $\gcd \left( {a, b} \right) $ \\ \hline
+%12  &  20  &  1, 2, 4  &  4  \\ \hline
+8  &  $-12$  &  1, 2, 4  &  4  \\ \hline
+0  &  5  &  1, 5  &  5  \\ \hline
+8  &  27  &  1  &  1  \\ \hline
+28  &  42  &  1, 2, 7, 14  &  14  \\ \hline
+\end{tabular}
+
+\item One possible conjecture is:  Any common divisor of  $a$  and  $b$  divides  
+$\gcd \left( {a, b} \right)$.
+\end{enumerate}
+\hbreak
+
+
+
+
+\subsection*{Beginning Activity 2 (The GCD and the Division Algorithm)}
+\textbf{The Division Algorithm.}  Let  $a$  and  $b$  be integers with  $b > 0$.  Then, there exist unique integers  $q$  and  $r$  such that  $a = bq + r$ and $0 \leq r < b$.
+
+\begin{enumerate}
+\item \begin{tabular}[t]{| c | c | c | c | c |} \hline
+$a$  &  $b$  &  $\gcd \left( {a, b} \right)$  &  Remainder $r$  &  $\gcd \left( {b, r} \right)$
+\\ \hline
+44  &  12  &  4  &  8  &  4  \\ \hline
+75  &  21  &  3  &  12  &  3  \\ \hline
+50  &  33  &  1  &  17  &  1  \\ \hline
+\end{tabular}
+
+\item Let  $a$  and  $b$  be integers with  $b > 0$.  If  $q$  and  $r$  are integers such that  
+$a = bq + r$ and  $0 \leq r < b$, then  
+$\gcd \left( {a, b} \right) = \gcd \left( {b, r} \right)$.
+\end{enumerate}
+
+\eighth
+\noindent
+We will prove a somewhat more general result in this section (Lemma 8.1).  This will be the crucial result for the Euclidean Algorithm, which provides a method to find the greatest common divisor of two integers.
+\hbreak
+
+\end{document}

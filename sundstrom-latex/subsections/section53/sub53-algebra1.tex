@@ -1,0 +1,167 @@
+\subsection*{Algebra of Sets -- Part 1}
+This section contains many results concerning the properties of the set operations.  We have already proved some of the results.  Others will be proved in this section or in the exercises.  The primary purpose of this section is to have in one place many of the properties of set operations that we may use in later proofs.  These results are part of what is known as the \textbf{algebra of sets}
+\index{algebra of sets}%
+ or as \textbf{set theory}.
+
+\begin{theorem} \label{T:intersectandunion}
+Let  $A$, $B$, and  $C$  be subsets of some universal set  $U$.  Then
+\begin{itemize}  
+\item $A \cap B \subseteq A\text{  and  }A \subseteq A \cup B$.
+\item If  $A \subseteq B$, then  $A \cap C \subseteq B \cap C$  and  $A \cup C \subseteq B \cup C$.
+\end{itemize}
+\end{theorem}
+
+\begin{myproof}
+The first part of this theorem was included in Exercise~(\ref{exer:intersectandunion}) from Section~\ref{S:provingset}.  The second part of the theorem was Exercise~(\ref{exer:unionandintersect}) from Section~\ref{S:provingset}.
+\end{myproof}
+
+The next theorem provides many of the properties of set operations dealing with intersection and union.  Many of these results may be intuitively obvious, but to be complete in the development of set theory, we should prove all of them.  We choose to prove only some of them and leave some as exercises.
+
+
+\begin{theorem}[\textbf{Algebra of Set Operations}] \label{T:algebraofsets}
+Let  $A$, $B$, and  $C$  be subsets of some universal set  $U$.  Then all of the following equalities hold.
+
+\vskip6pt
+\noindent
+\BeginTable
+\def\L{\JustLeft}
+\BeginFormat
+| p(1.7in) | p(1.25in) | p(1.25in) |
+\EndFormat
+" Properties of the Empty Set
+\index{empty set!properties}%
+ and the Universal Set
+\index{universal set!properties} " %  
+$A \cap \emptyset  = \emptyset$ \\    
+$A \cup \emptyset  = A$ 
+" 
+$A \cap U = A$ \\       
+$A \cup U = U$ 
+" \\
+\EndTable
+
+\vskip6pt
+\BeginTable
+\def\L{\JustLeft}
+\BeginFormat
+| p(1.7in) | p(1.25in) | p(1.25in) |
+\EndFormat
+"Idempotent Laws " $A \cap A = A$ " $A \cup A = A$ " \\
+\EndTable
+\index{idempotent laws for sets}%
+
+\vskip6pt
+\BeginTable
+\def\L{\JustLeft}
+\BeginFormat
+| p(1.7in) | p(1.25in) | p(1.25in) |
+\EndFormat
+"Commutative Laws " $A \cap B = B \cap A$ " $A \cup B = B \cup A$ " \\
+\EndTable
+\index{commutative laws!for sets}%
+
+\vskip6pt
+\BeginTable
+\def\L{\JustLeft}
+\BeginFormat
+| p(1.7in) | p(2.5in) |
+\EndFormat"Associative Laws "  \L $\left( {A \cap B} \right) \cap C = A \cap \left( {B \cap C} \right)$ " \\
+"                  "  \L $\left( {A \cup B} \right) \cup C = A \cup \left( {B \cup C} \right) $ " \\
+\EndTable
+\index{associative laws!for sets}%
+
+\vskip6pt
+\BeginTable
+\def\L{\JustLeft}
+\BeginFormat
+| p(1.7in) | p(2.5in) |
+\EndFormat"Distributive Laws "  \L $A \cap \left( {B \cup C} \right) = \left( {A \cap B} \right) \cup \left( {A \cap C} \right)$ " \\
+"                  "  \L $A \cup \left( {B \cap C} \right) = \left( {A \cup B} \right) \cap \left( {A \cup C} \right)$ " \\
+\EndTable
+\index{distributive laws!for sets}%
+\end{theorem}
+
+Before proving some of these properties, we note that in Section~\ref{S:provingset}, we learned that we can prove that two sets are equal by proving that each one is a subset of the other one.  However, we also know that if  $S$  and  $T$  are both subsets of a universal set $U$, then
+\begin{list}{}
+\item $S = T$  if and only if  for each $x \in U$, ${x \in S\text{  if and only if  }x \in T}$.
+\end{list}
+\vskip10pt
+We can use this to prove that two sets are equal by choosing an element from one set and chasing  the element to the other set through a sequence of  ``if and only if'' statements.  We now use this idea to prove one of the commutative laws.
+
+\setcounter{equation}{0}
+\subsection*{Proof of One of the Commutative Laws in Theorem~\ref{T:algebraofsets}}
+\begin{myproof}
+We will prove that  $A \cap B = B \cap A$.  Let  $x \in U$.  Then
+%
+\begin{equation} \label{eq:4a}
+x \in A \cap B\text{  if and only if  }x \in A\text{  and  }x \in B.
+\end{equation}
+%
+However, we know that if  $P$  and  $Q$  are statements, then  $P \wedge Q$  is logically equivalent to  $Q \wedge P$.  Consequently, we can conclude that
+%
+\begin{equation} \label{eq:4b}
+x \in A\text{ and }x \in B\text{  if and only if }\;x \in B\text{ and }x \in A.
+\end{equation}
+%
+Now we know that
+%
+\begin{equation} \label{eq:4c}
+x \in B\text{ and }x \in A\text{  if and only if  }x \in B \cap A.
+\end{equation}
+%
+This means that we can use (\ref{eq:4a}), (\ref{eq:4b}), and (\ref{eq:4c}) to conclude that
+%
+\[
+x \in A \cap B\text{  if and only if  }x \in B \cap A,
+\]
+%
+and, hence, we have proved that  $A \cap B = B \cap A$.
+\end{myproof}
+
+
+\begin{prog}[\textbf{Exploring a Distributive Property}]\label{prog:workingvenn3} \hfill \\ 
+We can use Venn diagrams to explore  the more complicated properties in Theorem~\ref{T:algebraofsets}, such as the associative and distributive laws.  To that end, let  $A$, $B$, and  $C$  be subsets of some universal set  $U$. 
+\begin{enumerate}
+\item Draw two general Venn diagrams for the sets  $A$, $B$, and  $C$.  On one, shade the region that represents  $A \cup \left( {B \cap C} \right)$, and on the other, shade the region that represents  $\left( {A \cup B} \right) \cap \left( {A \cup C} \right)$.  Explain carefully how you determined these regions. 
+\label{A:workingvenn3-1}%
+
+\item Based on the Venn diagrams in Part~(\ref{A:workingvenn3-1}), what appears to be the relationship between the sets   $A \cup \left( {B \cap C} \right)$  and   
+$\left( {A \cup B} \right) \cap \left( {A \cup C} \right)$?
+\end{enumerate}
+\end{prog}
+
+
+
+\subsection*{Proof of One of the Distributive Laws in Theorem~\ref{T:algebraofsets}}
+We will now prove the distributive law explored in Progress Check~\ref{prog:workingvenn3}.  Notice that we will prove two subset relations, and that for each subset relation, we will begin by choosing an arbitrary element from a set.  Also notice how nicely a proof dealing with the union of two sets can be broken into cases.
+\noindent
+
+\setcounter{equation}{0}
+%\textbf{Proof of One of the Distributive Laws in Theorem~\ref{T:algebraofsets}.}
+\begin{myproof}
+Let  $A$, $B$, and  $C$  be subsets of some universal set  $U$.  We will prove that  $A \cup \left( {B \cap C} \right) = \left( {A \cup B} \right) \cap \left( {A \cup C} \right)$ by proving that each set is a subset of the other set.
+
+We will first prove that  $A \cup \left( {B \cap C} \right) \subseteq \left( {A \cup B} \right) \cap \left( {A \cup C} \right)$.  We let \linebreak  
+$x \in A \cup \left( {B \cap C} \right)$.  Then  $x \in A\text{  or  }x \in B \cap C$.
+
+So in one case, if  $x \in A$, then  $x \in A \cup B$  and  $x \in A \cup C$.  This means that  $x \in \left( {A \cup B} \right) \cap \left( {A \cup C} \right)$.
+
+On the other hand, if  $x \in B \cap C$, then  $x \in B$ and $x \in C$.  But  $x \in B$ implies that  $x \in A \cup B$, and  $x \in C$ implies that  $x \in A \cup C$.  Since $x$ is in both sets, we conclude that $x \in \left( {A \cup B} \right) \cap \left( {A \cup C} \right)$.  So in both cases, we see that $x \in \left( {A \cup B} \right) \cap \left( {A \cup C} \right)$, and this proves that $A \cup \left( {B \cap C} \right) \subseteq \left( {A \cup B} \right) \cap \left( {A \cup C} \right)$.
+
+\vskip6pt
+We next prove that  $\left( {A \cup B} \right) \cap \left( {A \cup C} \right) \subseteq A \cup \left( {B \cap C} \right)$.  So let \linebreak
+$y \in \left( {A \cup B} \right) \cap \left( {A \cup C} \right)$.  Then,  $y \in A \cup B\text{  and  }y \in A \cup C$. We must prove that $y \in A \cup \left( {B \cap C} \right)$.  We will consider the two cases where $y \in A$ or $y \notin A$.
+In the case where $y \in A$, we see that $y \in A \cup \left( {B \cap C} \right)$.
+
+So we consider the case that $y \notin A$.  It has been established that  $y \in A \cup B$ and $y \in A \cup C$.  Since  $y \notin A$  and  $y \in A \cup B$,  $y$  must be an element of  $B$.  Similarly, since  $y \notin A$  and  $y \in A \cup C$,  $y$  must be an element of  $C$.  Thus,  $y \in B \cap C$  and, hence,  $y \in A \cup \left( {B \cap C} \right)$.
+
+
+In both cases, we have proved that $y \in A \cup \left( {B \cap C} \right)$.  This proves that 
+$\left( {A \cup B} \right) \cap \left( {A \cup C} \right) \subseteq A \cup \left( {B \cap C} \right)$.  The two subset relations establish the equality of the two sets.  Thus, 
+ $A \cup \left( {B \cap C} \right) = \left( {A \cup B} \right) \cap \left( {A \cup C} \right)$.
+\end{myproof}
+\hbreak
+
+
+
+\endinput

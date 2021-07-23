@@ -1,0 +1,116 @@
+\documentclass[11pt]{article}
+\usepackage{../../styles/activity}
+
+\usepackage{xr}
+\externaldocument{0-MR}
+
+\lhead{}
+%\chead{\textbf{\Large{\hspace{0pt}Beginning Activities for Section~3.5}}\\\prevhead}
+\bahead{3.5}
+\rhead{}
+\lfoot{}
+\rfoot{}
+\cfoot{\hspace{0pt}\scalebox{0.4}{\includegraphics{cc-by-nc-sa.eps}}}
+
+\begin{document}
+\input table
+
+\subsection*{Beginning Activity 1 (Quotients and Remainders)}
+In elementary school, we may have written somethins like, ``27 divided by 4 is 6 with a remainder of 3.''  We usually write this in the form of an equation such as
+\[
+\frac{27}{4} = 6 + \frac{3}{4}.
+\]
+This idea is used in the beginning activity to motivate a result know as The Division Algorithm.
+\begin{enumerate}
+\item 
+$$
+\BeginTable
+\BeginFormat
+| c | c | c | c | c | c | c | c | c | c | c | 
+\EndFormat
+\_
+| $q$ | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | \\+33 \_
+| $r$ | 23  | 19 | 15 | 11  |  7 |  3 | $-1$  | $-5$  | $-9$     | $-13$     |  \\+33 \_
+| $4q + r$ | 27  | 27  | 27 | 27 | 27 | 27 | 27 | 27 | 27 | 27 | \\+33 \_
+\EndTable
+$$
+
+
+\item The smallest value for  $r$  from part (1) is  3. $( {27 = 4 \cdot 6 + 3} )$
+
+\item When 27 is divided by 4, the quotient is 6 and the remainder is 3.  These are the values for $q$ and $r$ from part~(2).
+
+\item 
+$$
+\BeginTable
+\BeginFormat
+| c | c | c | c | c | c | c | c | 
+\EndFormat
+\_
+| $q$ | $-7$ | $-6$ | $-5$ | $-4$ | $-3$ | $-2$ | $-1$ |  \\+33 \_
+| $r$ | 18 | 13 | 8  | 3  | $-2$  | $-7$  | $-12$  |  \\+33 \_
+| $5q + r$ | $-17$  | $-17$ | $-17$ | $-17$ | $-17$ | $-17$ | $-17$ |  \\+33 \_
+\EndTable
+$$
+
+\item When $-17$ is divided by 5, the quotient is $-4$ and the remainder is 3. $(-17 = 5 \cdot (-4) + 3)$
+
+\end{enumerate}
+\hbreak
+
+
+\newpage
+\subsection*{Beginning Activity 2 (Some Work with Congruence Modulo \emph{n})}
+In this section, we will develop some properties of congruence and then show how to use cases in proofs involving congruence.  In this beginning, we proved the result that for all integers $a$ and $b$, if $\mod{a}{3}{6}$ and $\mod{b}{5}{6}$, then $\mod{(a+b)}{2}{6}$.  Notice that we did not just dive into proving this proposition, but first experimented with some examples by adding integers that are congruent to 3 mod 6 to integers that are congruenct to 5 mod 6 and seeing if the sum came out congruent to 2 mod 6.  This is a good practice in mathematics because we by doing so, we get a better understanding of the proposition and how to approach proving it, or we may find an example that provides a counterexample for the proposition and therefore, show it is false.
+\begin{enumerate}
+\item \begin{enumerate}
+\item Let  $n \in \mathbb{N}$.  If  $a$  and  $b$  are integers, then we say that \textbf{$\boldsymbol{a}$  is congruent to  $\boldsymbol{b}$  modulo  $\boldsymbol{n}$}
+\index{congruent modulo $n$}%
+  provided that  $n$  divides  $a - b$.  A standard notation for this is   
+$a \equiv b \pmod n$.  This is read as ``$a$  is congruent to  $b$  modulo  $n$''   or  ``$a$  is congruent to  $b$  mod  $n$ .''
+
+\item When $a \equiv b \pmod n$, there exists an integer $k$ such that $a - b = nk$.
+\end{enumerate}
+
+\item $B = \left\{ b \in \Z \mid b \equiv 5 \pmod 6 \right\} = \{ \ldots, -13, -7, -1, 5, 11, 17, 23, \ldots \}$.
+
+\item 
+$$
+\BeginTable
+\BeginFormat
+| c | c | c | c |
+\EndFormat
+\_
+| $a \in A$ | $b \in B$ | $a + b$ | $r$, where $(a+b) \equiv r \pmod 6 \text{ and } 0 \leq r < 6$ | \\ \_
+| 9 | 5 | 14 | 2 | \\ \_
+| $-9$ | 17 | 8 | 2 | \\ \_
+| 3 | $-7$ | $-4$ | 2 | \\ \_
+| 21 | 23 | 44| 2 | \\ \_
+\EndTable
+$$
+ 
+\item \textbf{Proposition}.  For all integers $a$ and $b$, if $a \equiv 3 \pmod 6$ and $b \equiv 5 \pmod 6$, then \\
+$(a + b) \equiv 2 \pmod 6$.
+
+\begin{myproof}
+We assume that $a$ and $b$ are integers and that $a \equiv 3 \pmod 6$ and $b \equiv 5 \pmod 6$.  We will prove that 
+$(a + b) \equiv 2 \pmod 6$.  Since $a \equiv 3 \pmod 6$ and $b \equiv 5 \pmod 6$, there exist integers $k$ and $m$ such that
+\[
+a - 3 = 6k \quad \text{and} \quad b - 5 = 6m.
+\]
+We can then write $a = 6k + 3$ and $b = 6m + 5$ and obtain
+\begin{align*}
+(a + b) - 2 &= (6k + 3) + (6m + 5) - 2 \\
+            &= 6k + 6m + 6 \\
+            &= 6(k + m + 1)
+\end{align*}
+Since $(k + m + 1) \in \Z$, the last equation shows that 6 divides $(a + b) - 2$, which implies that
+$(a + b) \equiv 2 \pmod 6$.  This proves that if $a \equiv 3 \pmod 6$ and $b \equiv 5 \pmod 6$, then \\
+$(a + b) \equiv 2 \pmod 6$.
+\end{myproof}
+
+\end{enumerate}
+\hbreak
+
+\end{document}
+

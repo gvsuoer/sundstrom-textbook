@@ -1,0 +1,70 @@
+\subsection*{Surjections}
+In previous sections and in \typeu Activity~\ref*{PA:functionswithfinitedom}, we have seen that there exist functions  $f\x A \to B$ for which $\text{range}(f) = B$.  This means that every element of $B$ is an output of the function $f$ for some input from the set $A$.  Using quantifiers, this means that for every $y \in B$, there exists an $x \in A$ such that $f( x ) = y$ . One of the objectives of the \typel activities was to motivate the following definition.  
+
+%What does it mean to say that this does not happen?  One way to express this is to say that every element in the codomain is an output or that the codomain is equal to the range.  Using quantifiers, this means that  for every  
+%$y \in B$, there exists an  $x \in A$  such that  $f( x ) = y$.
+%
+\begin{defbox}{surjection}{Let  $f\x A \to B$  be a function from the set  $A$  to the set  $B$.  The function  $f$  is called a \textbf{surjection}
+\index{surjection}%
+  provided that the range of  $f$   equals the codomain of  $f$.  This means that
+\begin{center}
+for every  $y \in B$, there exists an  $x \in A$  such that  $f( x ) = y$.
+\end{center}
+When  $f$  is a surjection, we also say that  $f$  is an \textbf{onto function}
+\index{onto function}%
+\index{function!onto}%
+ or that  $f$  maps  $\boldsymbol{A}$  \textbf{onto}  $\boldsymbol{B}$\!.  We also say that  $f$  is a \textbf{surjective function}.}
+\index{function!surjective}%
+\end{defbox}
+%
+One of the conditions that specifies that a function  $f$  is a surjection is given in the form of a universally quantified statement, which is the primary statement used in proving a function is (or is not) a surjection.  Although we did not define the term then, we have already written the negation for the statement defining a surjection in Part~(\ref{PA:functionstatements2}) of \typeu Activity~\ref*{PA:functionstatements}.  We now summarize the conditions for  $f$  being a surjection or not being a surjection.
+%
+\begin{center}
+\fbox{\parbox{4.68in}{
+\begin{center}
+\textbf{Let } $\boldsymbol{f\x A \to B}$\!.
+\end{center}
+\textbf{``The function $\boldsymbol{f}$ is a surjection'' means that}
+\begin{itemize}
+\item $\text{range}( f ) = \text{codom}( f ) = B$; or
+
+\item For every  $y \in B$, there exists an  $x \in A$  such that  $f( x ) = y$.
+\end{itemize}
+
+\noindent
+\textbf{``The function $\boldsymbol{f}$ is not a surjection'' means that}
+\begin{itemize}
+\item $\text{range}( f ) \ne \text{codom}( f )$; or
+
+\item There exists a  $y \in B$ such that for all  $x \in A$, $f( x ) \ne y$.
+\end{itemize}
+}}
+\end{center}
+%
+One other important type of function is when a function is both an injection and surjection.  This type of function is called a bijection.
+\begin{defbox}{bijection}{A \textbf{bijection}
+\index{bijection}%
+ is a function that is both an injection and a surjection.  If the function  $f$  is a bijection, we also say that  $f$  is \textbf{one-to-one  and onto} and that  $f$  is a \textbf{bijective function}.}
+\index{function!bijective}%
+\end{defbox}
+
+\begin{prog}[\textbf{Working with the Definition of a Surjection}] 
+\label{pr:functionswithfinitedom} \hfill \\
+Now that we have defined what it means for a function to be a surjection, we can see that in Part~(\ref{PA:functionstatements3}) of \typeu Activity~\ref*{PA:functionstatements}, we proved that the function $g: \R \to \R$ is a surjection, where $g ( x ) = 5x + 3$ for all $x \in \R$.  Determine whether or not the following functions are surjections.
+
+\begin{enumerate}
+\item $k\x A \to B$, where $A = \left\{a, b, c \right\}$, $B = \left\{1, 2, 3, 4 \right\}$, and 
+$k (a) = 4$, $k(b) = 1$, and $k(c) = 3$.
+
+\item $f\x \R \to \R$ defined by $f ( x ) = 3x + 2$ for all $x \in \R$.
+
+\item $F\x \Z \to \Z$ defined by $F ( m ) = 3m + 2$ for all $m \in \Z$.
+
+\item $s:R_5 \to R_5$ defined by $s ( x ) = x^3 \pmod 5$ for all $x \in R_5$.
+
+\end{enumerate}
+%\end{enumerate}
+\end{prog}
+\hbreak
+
+\endinput

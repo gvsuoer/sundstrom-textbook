@@ -1,0 +1,131 @@
+\documentclass[11pt]{article}
+\usepackage{../../styles/activity}
+
+\usepackage{xr}
+\externaldocument{0-MR}
+
+\lhead{}
+%\chead{\textbf{\Large{\hspace{0pt}Beginning Activities for Section~6.5}}\\\hspace{0pt}\emph{Mathematical Reasoning: Writing and Proof}}
+\bahead{6.5}
+\rhead{}
+\lfoot{}
+\rfoot{}
+\cfoot{\hspace{0pt}\scalebox{0.4}{\includegraphics{cc-by-nc-sa.eps}}}
+
+\begin{document}
+
+\subsection*{Beginning Activity 1 (A Function as a Set of Ordered Pairs)}
+The use of correct set notation is important in this beginning activity.  For functions with a small, finite domain, we can use the roster method to determine the set of ordered pairs associated with this function.  For functions whose domain is an infinite set, we have to use set builder notation to describe the set of ordered pairs associated with the function.
+\begin{enumerate}
+\item $g = \left\{ (1, a), (2, b), (3, d) \right\}$
+
+\item $f = \left\{ (m, n) \in \Z \times \Z \left| n = 3m + 5 \right. \right\}$, or \\
+$f = \left\{  \ldots , (-3, -4), (-2, -1), (-1, 2), (0, 5), (1, 8), (2, 11), (3, 14), \ldots \right\}$.
+
+%\item $F = \left\{ {\left( {1, a} \right), \left( {2, b} \right), \left( {3, b} \right)} \right\}$.
+
+\item The set of ordered pairs, $f$, cannot be used to define a function from  $A$  to  $B$  since  $\left( {1, a} \right) \in f$ and  $\left( {1, b} \right) \in f$.
+
+\item The set of ordered pairs, $g$, can be used to define a function from  $A$  to  $B$.  We would have  $g\left( 1 \right) = a$, $g\left( 2 \right) = b$, and $g\left( 3 \right) = a$.
+
+\item The set of ordered pairs, $h$, cannot be used to define a function from  $A$  to  $B$  since there is no ordered pair with  3  as the first coordinate.
+\end{enumerate}
+\hbreak
+
+\noindent
+\subsection*{Beginning Activity 2 (A Composition of Two Specific Functions)}
+\begin{enumerate} \setcounter{enumi}{1}
+\item This defines a function from  $B$  to  $A$  since each element of  $B$  corresponds to exactly one element of  $A$.
+
+\item  The answser depends on the function is in (1).
+
+\item For any choice of a bijection in (1), the following table should be obtained.
+
+\begin{tabular}[t]{ c | c  c  c | c } 
+$x$  &  $\left( {g \circ f} \right)\left( x \right)$  &  &  $y$  &  
+$\left( {f \circ g} \right)\left( y \right)$ \\ \cline{1-2} \cline{4-5}
+$a$  &  $a$  &  &  $p$  &  $p$  \\ \cline{1-2} \cline{4-5}
+$b$  &  $b$  &  &  $q$  &  $q$  \\ \cline{1-2} \cline{4-5}
+$c$  &  $c$  &  &  $r$  &  $r$  \\ \cline{1-2} \cline{4-5}
+$d$  &  $d$  &  &  $s$  &  $s$  \\ \cline{1-2} \cline{4-5}
+\end{tabular}
+
+\newpar
+The table shows that for each $x$ in $A$, $\left( {g \circ f} \right)\left( x \right) = x$, and for each 
+$y$ in $B$, $\left( {f \circ g} \right)\left( y \right) = y$.
+
+\end{enumerate}
+\hbreak
+
+
+
+
+\end{document}
+
+\noindent
+\subsection*{Beginning Activity 3 (Cubes and Cube Roots)}
+
+\begin{center}
+\begin{tabular}[t]{ c | c  c  c | c } 
+$x$  &  $f \left( x \right)$  &  &  $x$  &  $g \left( x \right))$ \\ \cline{1-2} \cline{4-5}
+$0$  &  $0$  &  &  $0$  &  $0$  \\ \cline{1-2} \cline{4-5}
+$1$  &  $1$  &  &  $1$  &  $1$  \\ \cline{1-2} \cline{4-5}
+$2$  &  $8$  &  &  $8$  &  $2$  \\ \cline{1-2} \cline{4-5}
+$3$  &  $27$  &  &  $27$  &  $3$  \\ \cline{1-2} \cline{4-5}
+$-1$  &  $-1$  &  &  $-1$  &  $-1$  \\ \cline{1-2} \cline{4-5}
+$-3$  &  $-27$  &  &  $-27$  &  $-3$  \\ \cline{1-2} \cline{4-5}
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+\item The ordered pairs for  $g$  can be obtained by switching the coordinates of the ordered pairs for  $f$.  Also, the ordered pairs for  $f$  can be obtained by switching the coordinates of the ordered pairs for  $g$.
+\item \begin{tabular}[t]{ p{2in} p{2in} }
+The first step is to apply the cube root function to both sides of the equation.  The left side is then simplified by using the fact that  $\sqrt[3]{{\left( {2t - 1} \right)^3 }} = 2t - 1$. 
+&
+\[
+\begin{aligned}
+  \left( {2t - 1} \right)^3  &= 20 \\ 
+  \sqrt[3]{{\left( {2t - 1} \right)^3 }} &= \sqrt[3]{{20}} \\ 
+  2t - 1 &= \sqrt[3]{{20}} \\ 
+  t &= \frac{{1 + \sqrt[3]{{20}}}}{2} \\ 
+\end{aligned} 
+\]
+\\
+\end{tabular}
+
+\item \begin{tabular}[t]{p{2in} p{2in}}
+The first step is to apply the cubing function to both sides of the equation.  The left side is then simplified by using the fact that  $\left( {\sqrt[3]{{t - 3}}} \right)^3  = t - 3$.
+&
+\[
+\begin{aligned}
+  \sqrt[3]{{t - 3}} &= 2 \\ 
+  \left( {\sqrt[3]{{t - 3}}} \right)^3  &= 2^3  \\ 
+  t - 3 &= 8 \\ 
+  t &= 11 \\ 
+\end{aligned} 
+\]
+\\
+\end{tabular}
+
+\item \begin{tabular}[t]{p{2in} p{2in}}
+\[
+\begin{aligned}
+  \left( {g \circ f} \right)\left( x \right) &= g\left( {f\left( x \right)} \right) \\ 
+   &= g\left( {x^3 } \right) \\ 
+   &= \sqrt[3]{{x^3 }} \\ 
+   &= x \\ 
+\end{aligned}
+\]
+&
+\[
+\begin{aligned}
+  \left( {f \circ g} \right)\left( x \right) &= f\left( {g\left( x \right)} \right) \\ 
+   &= f\left( {\sqrt[3]{x}} \right) \\ 
+   &= \left( {\sqrt[3]{x}} \right)^3  \\ 
+   &= x \\ 
+\end{aligned}
+\]
+\end{tabular}
+
+\end{enumerate}
+\hbreak

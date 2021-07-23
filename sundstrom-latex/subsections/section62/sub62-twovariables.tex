@@ -1,0 +1,49 @@
+\subsection*{Functions of Two Variables} \label{ss:functiontwovar}
+In Section~\ref{S:cartesian}, we learned how to form the Cartesian product of two sets.  Recall that a Cartesian product of two sets is a set of ordered pairs.  For example, the set $\Z \times \Z$ is the set of all ordered pairs, where each coordinate of an ordered pair is an integer.  Since a Cartesian product is a set, it could be used as the domain or codomain of a function.  For example, we could use  $\Z \times \Z$ as the domain of a function as follows:
+%
+\begin{center}
+Let $f\x \mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}$ be defined by  
+$f( {m, n} ) = 2m + n$.
+\end{center}
+
+\begin{itemize}
+\item Technically, an element of  $\mathbb{Z} \times \mathbb{Z}$  is an ordered pair, and so we should write  $f( {( {m, n} )} )$ for the output of the function  $f$   when the input is  the ordered pair 
+$\left( {m, n} \right)$.  However, the double parentheses seem unnecessary in this context and there should be no confusion if we write  $f( {m, n} )$ for the output of the function  $f$   when the input is  
+$\left( {m, n} \right)$.  So, for example, we simply write
+\begin{align*}
+  f( {3, 2} )    &= 2 \cdot 3 + 2 = 8,\text{ and} \\ 
+  f( { - 4, 5} ) &= 2 \cdot \left( { - 4} \right) + 5 =  - 3. \\ 
+\end{align*} 
+\item Since the domain of this function is $\Z \times \Z$ and each element of $\Z \times \Z$ is an ordered pair of integers, we frequently call this type of function a \textbf{function of two variables}.
+\index{function!of two variables}%
+\end{itemize}
+
+Finding the preimages of an element of the codomain for the function $f$, $\mathbb{Z}$, usually involves solving an equation with two variables.  For example, to find the preimages of  $0 \in \mathbb{Z}$, we need to find all ordered pairs  $\left( {m, n} \right) \in \mathbb{Z} \times \mathbb{Z}$ such that 
+$f( {m, n} ) = 0$.  This means that we must find all ordered pairs  $\left( {m, n} \right) \in \mathbb{Z} \times \mathbb{Z}$ such that
+\[
+2m + n = 0.
+\]
+Three such ordered pairs are  $\left( {0, 0} \right)$, $\left( {1,  - 2} \right)$, and  $\left( { - 1, 2} \right)$.  In fact, whenever we choose an integer value for  $m$, we can find a corresponding integer  $n$  such that  $2m + n = 0$.  This means that  0  has infinitely many preimages, and it may be difficult to specify the set of all of the preimages of 0 using the roster method.  One way that can be used to specify this set is to use set builder notation and say that the following set consists of all of the preimages of 0:
+\[
+\left\{ { {\left( {m, n} \right) \in \mathbb{Z} \times \mathbb{Z} } \mid 2m + n = 0} \right\} = \left\{ { {\left( {m, n} \right) \in \mathbb{Z} \times \mathbb{Z} } \mid n =  - 2m} \right\}\!.
+\]
+The second formulation for this set was obtained by solving the equation  
+\linebreak $2m + n = 0$
+for  $n$.
+%\end{example}
+\hbreak
+
+\begin{prog}[\textbf{Working with a Function of Two Variables}] \label{pr:function-two} \hfill \\
+Let $g\x \mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}$ be defined by  
+$g( {m, n} ) = m^2 - n$ for all $\left(m, n \right) \in \Z \times \Z$.
+
+\begin{enumerate}
+\item Determine $g(0, 3)$, $g(3,-2)$, $g(-3, -2)$, and $g(7, -1)$.
+\item Determine the set of all preimages of the integer 0 for the function $g$.  Write your answer using set builder notation.
+\item Determine the set of all preimages of the integer 5 for the function $g$.  Write your answer using set builder notation.
+\end{enumerate}
+
+\end{prog}
+\hbreak
+
+\endinput

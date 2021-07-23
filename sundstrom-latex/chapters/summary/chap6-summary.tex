@@ -1,0 +1,125 @@
+\section{Chapter \ref{C:functions} Summary}
+
+\subsection*{Important Definitions}
+\begin{multicols}{2}
+\begin{itemize}
+\item Function, page~\pageref*{function}
+\item Domain of a function, page~\pageref*{domainfunction}
+\item Codomain of a function, page~\pageref*{domainfunction}
+\item Image of $x$ under $f$, page~\pageref*{domainfunction}
+\item preimage of $y$ under $f$, page~\pageref*{domainfunction}
+\item Independent variable, page~\pageref*{domainfunction}
+\item Dependent variable, page~\pageref*{domainfunction}
+\item Range of a function, page~\pageref*{rangeandimage}
+\item Image of a function, page~\pageref*{rangeandimage}
+\item Equal functions, page~\pageref*{functionequality}
+\item Sequence, page~\pageref*{sequence}
+\item Injection, page~\pageref*{injection}
+\item One-to-one function, page~\pageref*{injection}
+\item Surjection, page~\pageref*{surjection}
+\item Onto function, page~\pageref*{surjection}
+\item Bijection, page~\pageref*{bijection}
+\item One-to-one and onto, page~\pageref*{bijection}
+\item Composition of $f$ and $g$, page~\pageref*{functioncomposition}
+\item Composite function, page~\pageref*{functioncomposition}
+\item $f$ followed by $g$, page~\pageref*{functioncomposition}
+\item Inverse of a function, page~\pageref*{inversefunction}
+\item Image of a set under a function, page~\pageref*{imageofA}
+\item preimage of a set under a function, page~\pageref*{inverseimage}
+\end{itemize}
+\end{multicols}
+%\hbreak
+
+
+
+\subsection*{Important Theorems and Results about Functions} 
+\begin{itemize}
+\item \textbf{Theorem~\ref{T:compositefunctions}}.
+\emph{Let  $A$, $B$, and  $C$  be nonempty sets and let  $f\x A \to B$ and  $g\x B \to C$.}
+
+\begin{enumerate}
+\item \emph{If  $f$  and  $g$  are both injections, then  $g \circ f$  is an injection.} 
+
+\item \emph{If  $f$  and  $g$  are both surjections, then  $g \circ f$  is a surjection.}
+
+\item \emph{If  $f$  and  $g$  are both bijections, then  $g \circ f$  is a bijection.} 
+\end{enumerate}
+
+\item \textbf{Theorem~\ref{T:morecompositefunctions}}.
+\emph{Let  $A$, $B$, and  $C$  be nonempty sets and let  $f\x A \to B$ and  $g\x B \to C$.}
+
+\begin{enumerate}
+\item \emph{If  $g \circ f\x A \to C$  is an injection, then  $f\x A \to B$  is an injection. }
+
+\item \emph{If  $g \circ f\x A \to C$ is a surjection, then  $g\x B \to C$ is a surjection. }
+\end{enumerate}
+
+\item \textbf{Theorem~\ref{T:functionasordered}}.  
+\emph{Let  $A$  and  $B$  be nonempty sets and let $f$ be a subset of $A \times B$ that satisfies the following two properties:}
+
+\begin{itemize}
+\item[$\bullet$] \emph{For every  $a \in A$, there exists  $b \in B$  such that  
+$( {a, b} ) \in f$; and}
+
+\item[$\bullet$] \emph{For every  $a \in A$ and every  $b, c \in B$, if  $( {a,\;b} ) \in f$  and  $( {a, c} ) \in f$, then  $b = c$}.
+\end{itemize}
+
+\emph{If we use  $f( a ) = b$ whenever  $( {a, b} ) \in f$, then  $f$  is a function from  $A$  to  $B$.}
+
+\item \textbf{Theorem~\ref{T:inverseandbijection}}.
+\emph{Let  $A$  and  $B$  be nonempty sets and let  $f\x A \to B$.  The inverse of  $f$ is a function from  $B$  to  $A$  if and only if  $f$  is a bijection.}
+
+\item \textbf{Theorem~\ref{T:inversenotation}}.
+\emph{Let  $A$  and  $B$  be nonempty sets and let  $f\x A \to B$  be a bijection.  Then 
+$f^{ - 1} \x B \to A$ is a function, and for every  $a \in A$ and $b \in B$,}
+\[
+f( a ) = b  \text{ if and only if } f^{ - 1} ( b ) = a.
+\]
+
+\item \textbf{Corollary~\ref{C:inversecomposition}}.
+\emph{Let  $A$  and  $B$  be nonempty sets and let  $f\x A \to B$  be a bijection.  Then}
+\begin{enumerate}
+\item \emph{For every $x$ in $A$, $( f^{ - 1}  \circ f )(x) = x$.}
+\item \emph{For every $y$ in $B$, $( f \circ f^{ - 1})(y) = y$.}
+\end{enumerate}
+
+\item \textbf{Theorem~\ref{compositionofbijections}}.
+\emph{Let $f\x A \to B$  and  $g\x B \to C$  be bijections.  Then  $g \circ f$  is a bijection and  $( {g \circ f} )^{ - 1}  = f^{ - 1}  \circ g^{ - 1} $.}
+
+
+\item \textbf{Theorem~\ref{T:imageofoperations}}.
+\emph{Let $f\x S \to T$ be a function and let $A$ and $B$ be subsets of $S$.  Then}
+\begin{enumerate}
+\item $f ( A \cap B ) \subseteq f ( A ) \cap f ( B )$
+\index{image!of an intersection}%
+
+\item $f ( A \cup B ) = f ( A ) \cup f ( B )$
+\index{image!of a union}%
+\end{enumerate}
+
+\item \textbf{Theorem~\ref{T:invimageofoperations}}.
+\emph{Let $f\x S \to T$ be a function and let $C$ and $D$ be subsets of $T$.  Then}
+\begin{enumerate}
+\item $f^{-1} ( C \cap D ) = f^{-1} ( C ) \cap f^{-1} ( D )$
+\index{preimage!of an intersection}%
+
+\item $f^{-1} ( C \cup D ) = f^{-1} ( C ) \cup f^{-1} ( D )$
+\index{preimage!of a union}%
+\end{enumerate}
+
+
+\item \textbf{Theorem~\ref{T:imageofinvimage}}.
+\emph{Let $f\x S \to T$ be a function and let $A$ be a subset of $S$ and let $C$ be a subset of $T$.  Then}
+\begin{multicols}{2}
+\begin{enumerate}
+\item $A \subseteq f^{-1} \!\left( f ( A ) \right)$
+
+\item $f \!\left( f^{-1} ( C ) \right) \subseteq C$
+\end{enumerate}
+\end{multicols}
+
+\end{itemize}
+
+\hbreak
+
+\endinput

@@ -1,0 +1,167 @@
+\subsection*{Properties of Congruence}
+\index{congruence|(}%
+Most of the work we have done so far has involved using definitions to help prove results.  We will continue to prove some results but we will now prove some theorems about congruence (Theorem~\ref{T:propsofcong} and Theorem~\ref{T:modprops}) that we will then use to help prove other results.  
+
+Let  $n \in \mathbb{N}$.  Recall that if  $a$  and  $b$  are integers, then we say that  $a$  is congruent to  $b$  modulo  $n$  provided that  $n$  divides  $a - b$, and we write  
+$a \equiv b \pmod n$.  (See Section~\ref{S:directproof}.)  
+%For example,
+%\begin{align}
+%3 &\equiv 3 \pmod{5} \text{ since } 5 \text{ divides } \left( 3 - 3 \right), \text{ and} \notag \\ 
+%17 &\equiv -7 \pmod{4} \text{ since } 4 \text{ divides } \left( 17 - \left(-7 \right) \right). \notag \\
+%\notag
+%\end{align}
+%\begin{prog}[Working with Congruences]\label{pr:workingwithcong} \hfill  \\
+%We may use set builder notation and the roster method to specify the set $A$ of all integers that are congruent to 1 modulo 3 as follows:
+%\[
+%A = \left\{ \left. n \in \Z \right| n \equiv 1 \pmod{3} \right\} = 
+%\left\{ \ldots, -8, -5, -2, 1, 4, 7, 10, \ldots \right\}.
+%\]
+%\begin{enumerate}
+%   \item Use  set builder notation and the roster method to specify the set $B$ of all integers that are congruent to 2 modulo 3.  
+%   \item Square five different integers from set $A$.  For each integer  $a$  that is used, determine  $r$  so that   $a^2  \equiv r \pmod 3$ and  $0 \leq r < 3$.
+%
+%  \item Square five different integers from set $B$. For each integer  $b$  that is used, determine  $r$  so that $b^2  \equiv r \pmod 3$  and  $0 \leq r < 3$.
+%
+%  \item Now multiply an integer from set $A$ with an integer from set $B$.  Repeat this several times.  For each  $a$  that is used from set $A$ and each  integer $b$  that is used from set 
+%$B$, determine  $r$  so that   $ab \equiv r \pmod 3$  and  $0 \leq r < 3$.
+%\end{enumerate}
+%
+%These activities should have provided examples of the general result stated in 
+%Exercise~(\ref{exer:congprops}) from Section~\ref{S:directproof}.  This exercise was to prove the first two parts of Theorem~\ref{T:propsofcong}.
+%\end{prog}
+%\hbreak
+We are now going to prove some properties of congruence that are direct consequences of the definition.  One of these properties was suggested by the work in \typeu  Activity~\ref*{PA:congruencereview} and is 
+Part~(\ref{T:propsofcong1}) of the next theorem.
+
+\begin{theorem}[\textbf{Properties of Congruence Modulo} $\boldsymbol{n}$] \label{T:propsofcong}
+Let  $n$  be a natural number and let  $a, b, c, \text{and }  d$  be integers.  If 
+$a \equiv b \pmod n$ and $c \equiv d \pmod n$, then
+\begin{enumerate}
+  \item $\left( {a + c} \right) \equiv \left( {b + d} \right) \pmod n$.
+\label{T:propsofcong1}%
+  \item $ac \equiv bd \pmod n$.
+\label{T:propsofcong2}%
+  \item For each $m \in \mathbb{N}$, $a^m  \equiv b^m \pmod n$.
+\label{T:propsofcong3}%
+\end{enumerate}
+\end{theorem}
+%
+\begin{myproof}
+We will prove Parts~(\ref{T:propsofcong2}) and~(\ref{T:propsofcong3}).  The proof of 
+Part~(\ref{T:propsofcong1}) is Progress Check~\ref{pr:propsofcong}.  
+%and leave the proof of Part~(\ref{T:propsofcong1}) as an exercise.  
+Let $n$ be a natural number and let $a, b, c, \text{and }  d$  be integers.  Assume that $a \equiv b \pmod n$ and that $c \equiv d \pmod n$.  This means that  $n$ divides $a-b$ and that $n$ divides $c-d$.  Hence, there exist integers $k$ and $q$ such that $a-b=nk$ and  $c-d=nq$. We can then write  $a = b + nk$  and  $c = d + nq$  and obtain
+\[
+\begin{aligned}
+  ac &= \left( {b + nk} \right)\left( {d + nq} \right) \\ 
+     &= bd + bnq + dnk + n^2 kq \\ 
+     &= bd + n\left( {bq + dk + nkq} \right). \\ 
+\end{aligned} 
+\]
+By subtracting  $bd$ from both sides of the last equation, we see that
+\[
+ac - bd = n\left( {bq + dk + nkq} \right).
+\]
+Since $bq + dk + nkq$ is an integer, this proves that  
+$n \mid \left( {ac - bd} \right)$, and hence we can conclude that $ac \equiv bd \pmod n$.  This completes the proof of  Part~(\ref{T:propsofcong2}).    
+
+%\enlargethispage{\baselineskip}
+Part~(2) basically means that if we have two congruences, we can multiply the corresponding sides of these congruences to obtain another congruence.  We have assumed that $\mod{a}{b}{n}$ and so we write this twice as follows:
+\begin{align*}
+a &\equiv b \pmod n, \quad \text{and} \\
+a &\equiv b \pmod n.
+\end{align*}
+If we now use the result in Part~(2) and multiply the corresponding sides of these two congruences, we obtain 
+$\mod{a^2}{b^2}{n}$.
+%If we use the idea that  $a^m $ and  $b^m $ represent repeated multiplications, we see that Part~(\ref{T:propsofcong3}) is actually a corollary of Part~(\ref{T:propsofcong2}).  For example, we have assumed that $\mod{a}{b}{n}$.
+%
+%
+%
+% by using $c = a$ and $d = b$, we can use Part~(\ref{T:propsofcong2}) to conclude that
+%\[
+%a \cdot a \equiv b \cdot b \pmod n,
+%\]
+%or that $a^2 \equiv b^2 \pmod n$.  
+We can then use this congruence and the congruence 
+$a \equiv b \pmod n$ and the result in Part~(2) to conclude that
+\[
+a^2 \cdot a \equiv b^2 \cdot b \pmod n,
+\]
+or that $a^3 \equiv b^3 \pmod n$.  We can say that we can continue with this process to prove Part~(\ref{T:propsofcong3}), but this is not considered to be a formal proof of this result.  To construct a formal proof for this, we could use a proof by mathematical induction.  This will be studied in Chapter~\ref{C:induction}.  See Exercise~(\ref{exer:sec51-cong}) in 
+Section~\ref{S:mathinduction}.
+\end{myproof}
+
+\begin{prog}[\textbf{Proving Part~(\ref{T:propsofcong1}) of Theorem~\ref{T:propsofcong}}] \label{pr:propsofcong} \hfill \\
+Prove part~(\ref{T:propsofcong1}) of Theorem~\ref{T:propsofcong}.
+\end{prog}
+\hbreak
+
+\newpar
+Exercise~(\ref{exer:cong-props}) in Section~\ref{S:directproof} gave three important properties of congruence modulo  $n$. Because of their importance, these properties are stated and proved in Theorem~\ref{T:modprops}.  Please remember that textbook proofs are usually written in final form of ``reporting the news.''  Before reading these proofs, it might be instructive to first try to construct a know-show~table for each proof.
+%
+\setcounter{equation}{0}
+\begin{theorem} [\textbf{Properties of Congruence Modulo} $\boldsymbol{n}$]\label{T:modprops}
+Let  $n \in \mathbb{N}$, \\and let  $a$, $b$, and  $c$  be integers.
+\begin{enumerate}
+  \item For every integer  $a$,  $a \equiv a \pmod n$.
+
+This is called the \textbf{reflexive property}
+\index{congruence!reflexive property}%
+ of congruence modulo $n$.
+
+  \item If  $a \equiv b \pmod n$, then  $b \equiv a \pmod n$.
+
+This is called the \textbf{symmetric property}
+\index{congruence!symmetric property}%
+ of congruence modulo $n$.
+
+  \item If  $a \equiv b \pmod n$ and $b \equiv c \pmod n$, then  
+$a \equiv c \pmod n$.
+
+This is called the \textbf{transitive property}
+\index{congruence!transitive property}%
+ of congruence modulo $n$.
+
+\end{enumerate}
+\end{theorem}
+%
+\begin{myproof}
+We will prove the reflexive property and the transitive property.  The proof of the symmetric property is Exercise~(\ref{exer:cong-symm}).
+
+Let  $n \in \mathbb{N}$, and let  $a \in \mathbb{Z}$.  We will show that  
+$a \equiv a \pmod n$.  Notice that
+\[
+a - a = 0 = n \cdot 0.
+\]
+
+This proves that  $n$  divides  $\left( {a - a} \right)$ and hence, by the definition of congruence modulo $n$, we have proven that  $a \equiv a \pmod n$.
+
+To prove the transitive property, we let  $n \in \mathbb{N}$, and let  $a$, $b$, and  $c$  be integers.  We assume that  $a \equiv b \pmod n$ and that  $b \equiv c \pmod n$.  We will use the definition of congruence modulo  $n$  to prove that  $a \equiv c \pmod n$.  Since  
+$a \equiv b \pmod n$ and  $b \equiv c \pmod n$, we know that $ n \mid \left( a-b \right)$ and  $ n \mid \left( b-c \right)$.  Hence, there exist integers  $k$ and  $q$ such that
+
+\[
+\begin{aligned}
+a-b &= nk \\
+b-c &= nq. \\
+\end{aligned}
+\]
+
+\noindent
+By adding the corresponding sides of these two equations, we obtain
+\[
+\left( {a - b} \right) + \left( {b - c} \right) = nk + nq.
+\]
+If we simplify the left side of the last equation and factor the right side, we get
+\[
+a - c = n\left( {k + q} \right).
+\]
+By the closure property of the integers,  $\left( {k + q} \right) \in \mathbb{Z}$, and so this equation proves that  $ n \mid \left(a-c \right)$ and hence that  
+$a \equiv c \pmod n$.  This completes the proof of the transitive property of congruence modulo $n$.
+\end{myproof}
+\index{congruence|)}%
+\hbreak
+
+
+
+
+\endinput

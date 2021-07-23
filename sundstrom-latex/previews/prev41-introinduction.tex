@@ -1,0 +1,57 @@
+\begin{previewactivity}[\textbf{Exploring Statements of the Form \mathversion{bold} $\left( \forall n \in \N \right)\left( P(n) \right)$}] \label{PA:exploringstatements} \hfill \\
+%In Section~\ref{S:predicates}, we defined the \textbf{truth set}
+%\index{truth set}%
+% of a predicate 
+%$P( x )$ to be the collection of objects in the universal set that make the predicate a true statement when substituted for  $x$.  
+One of the most fundamental sets in mathematics is the set of natural numbers $\N$.  In this section, we will learn a new proof technique, called mathematical induction, that is often used to prove statements of the form 
+$\left( \forall n \in \N \right)\left( P(n) \right)$.  In Section~\ref{S:otherinduction}, we will learn how to extend this method to statements of the form $\left( \forall n \in T \right)\left( P(n) \right)$, where $T$ is a certain type of subset of the integers $\Z$.
+
+\newpar
+For each natural number $n$, let $P(n)$ be the following open sentence:
+\[
+4 \text{ divides }  \left( {5^n  - 1} \right)\!.
+\]
+\begin{enumerate}
+\item Does this open sentence become a true statement when  $n = 1$?  That is, is  1  in the truth set of $P(n)$?
+
+\item Does this open sentence become a true statement when  $n = 2$?  That is, is  2  in the truth set of $P(n)$?
+
+\item Choose at least four more natural numbers and determine whether the open sentence is true or false for each of your choices.
+\end{enumerate}
+All of the examples that were used should provide evidence that the following proposition is true:
+\begin{center}
+For each natural number  $n$, 4  divides  $\left( {5^n  - 1} \right)$.
+\end{center}
+We should keep in mind that no matter how many examples we try, we cannot prove this proposition with a list of examples because we can never check if 4 divides $\left( {5^n  - 1} \right)$ for every natural number $n$.  Mathematical induction will provide a method for proving this proposition.
+
+\setcounter{equation}{0}
+For another example, for each natural number $n$, we now let $Q( n )$ be the following open sentence:
+\begin{equation} \label{eq:PAexplore}
+1^2  + 2^2  + \, \cdots \, + n^2  = \frac{{n(n + 1)(2n + 1)}}{6}.
+\end{equation}
+The expression on the left side of the previous equation is the sum of the squares of the first  $n$  natural numbers.  So when  $n = 1$, the left side of equation~(\ref{eq:PAexplore}) is  
+$1^2 $.  When  $n = 2$, the left side of equation~(\ref{eq:PAexplore}) is  $1^2  + 2^2 $.
+
+\setcounter{oldenumi}{\theenumi}
+\begin{enumerate} \setcounter{enumi}{\theoldenumi}
+\item Does $Q ( n )$ become a true statement when
+\begin{itemize}
+\item  $n = 1$?  (Is  1  in the truth set of $Q ( n )$?)
+
+\item $n = 2$?  (Is  2  in the truth set of $Q ( n )$?)
+
+\item $n = 3$?  (Is  3  in the truth set of $Q ( n )$?)
+\end{itemize}
+
+\item Choose at least four more natural numbers and determine whether the open sentence is true or false for each of your choices.  A table with the columns $n$, $1^2  + 2^2  + \, \cdots \, + n^2$, and $\dfrac{{n(n + 1)(2n + 1)}}{6}$ may help you organize your work.
+\end{enumerate}
+All of the examples we have explored, should indicate the following proposition is true:
+\begin{center}
+For each natural number  $n$,  $1^2  + 2^2  + \, \cdots \, + n^2  = \dfrac{{n(n + 1)(2n + 1)}}{6}$.
+\end{center}
+In this section, we will learn how to use mathematical induction to prove this statement.
+\end{previewactivity}
+\hbreak
+
+
+\endinput

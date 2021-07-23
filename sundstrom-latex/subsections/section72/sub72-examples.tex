@@ -1,0 +1,90 @@
+\subsection*{Examples of Other Equivalence Relations}
+\begin{enumerate}
+\item The relation $\sim$ on $\Q$ from Progress Check~\ref{prog:example-equiv} is an equivalence relation.
+
+
+\item Let  $A$  be a nonempty set.  The \textbf{equality relation on}
+\index{equality relation}%
+\index{relation!equality}%
+\index{identity relation}%
+\index{relation!identity}%
+  $\boldsymbol{A}$  is an equivalence relation.  This relation is also called the \textbf{identity relation on}  $\boldsymbol{A}$    and is denoted by  $I_A $, where
+\[
+I_A  = \left\{ {\left( {x, x} \right)   \mid x \in A} \right\}\!.
+\]
+
+\item Define the relation  $\sim$  on  $\mathbb{R}$  as follows:
+
+\begin{list}{}
+\item For  $a, b \in \mathbb{R}$,  $a \sim b$ if and only if there exists an integer  $k$  such that  $a - b = 2k\pi$.
+\end{list}
+\vskip10pt
+
+We will prove that the relation  $\sim$  is an equivalence relation on  $\mathbb{R}$.  The relation  $\sim$  is reflexive on  $\mathbb{R}$ since for each  $a \in \mathbb{R}$,  
+$a - a = 0 = 2 \cdot 0 \cdot \pi $.
+
+%\vskip10pt
+Now, let  $a, b \in \mathbb{R}$ and assume that  $a \sim b$.  We will prove that  $b \sim a$.  Since  $a \sim b$, there exists an integer  $k$  such that
+\[
+a - b = 2k\pi.
+\]
+By multiplying both sides of this equation by $-1$, we obtain
+\[
+\begin{aligned}
+  ( { - 1} )( {a - b} ) &= ( { - 1} )( {2k\pi } ) \\ 
+                  b - a &= 2( { - k} )\pi . \\ 
+\end{aligned}
+\]
+Since  $ - k \in \mathbb{Z}$, the last equation proves that  $b \sim a$.  Hence, we have proven that if  $a \sim b$, then  $b \sim a$ and, therefore, the relation  $\sim$  is symmetric.
+
+%\vskip10pt
+To prove transitivity, let  $a, b, c \in \mathbb{R}$ and assume that  $a \sim b$ and  
+$b \sim c$.  We will prove that  $a \sim c$.  Now, there exist integers  $k$  and  $n$  such that
+\[
+a - b = 2k\pi \text{  and  }b - c = 2n\pi .
+\]
+By adding the corresponding sides of these two equations, we see that
+\[
+\begin{aligned}
+( {a - b} ) + ( {b - c} ) &= 2k\pi  + 2n\pi  \\ 
+                    a - c &= 2( {k + n} )\pi . \\ 
+\end{aligned} 
+\]
+By the closure properties of the integers,  $k + n \in \mathbb{Z}$.  So this proves that  
+$a \sim c$ and, hence the relation  $\sim$  is transitive.
+
+%\vskip10pt
+We have now proven that  $\sim$  is an equivalence relation on  $\mathbb{R}$.  This equivalence relation is important in trigonometry.  If   $a \sim b$, then there exists an integer  $k$  such that  $a - b = 2k\pi $ and, hence,  $a = b + k( {2\pi } )$.  Since the sine and cosine functions are periodic with a period of  $2\pi $, we see that
+\[
+\begin{aligned}
+  \sin a &= \sin( {b + k( {2\pi } )} ) = \sin b,\text{ and} \\ 
+  \cos a &= \cos( {b + k( {2\pi } )} ) = \cos b. \\ 
+\end{aligned} 
+\]
+Therefore, when  $a \sim b$, each of the trigonometric functions have the same value at  $a$  and  $b$.
+
+\item For an example from Euclidean geometry, we define a relation  $P$  on the set  $\mathcal{L}$ of all lines in the plane as follows:
+
+\begin{list}{}
+\item For  $l_1 , l_2  \in \mathcal{L}$,  $l_1 \mathrel{P}l_2 $  if and only if  $l_1 $  is parallel to  
+$l_2 $  or  $l_1  = l_2 $.
+\end{list}
+%\vskip6pt
+
+We added the second condition to the definition of  $P$  to ensure that  $P$  is reflexive on  $\mathcal{L}$.  Theorems from Euclidean geometry tell us that if  $l_1 $  is parallel to  $l_2 $, then  $l_2 $  is parallel to  $l_1 $, and if $l_1 $  is parallel to  $l_2 $ and  $l_2 $  is parallel to  $l_3 $, then  $l_1 $  is parallel to  $l_3 $.  (Drawing pictures will help visualize these properties.)  This tells us that the relation  $P$  is reflexive, symmetric, and transitive and, hence, an equivalence relation on  $\mathcal{L}$.
+\end{enumerate}
+\hbreak
+
+\begin{prog}[\textbf{Another Equivalence Relation}] \label{prog:anotherequiv} \hfill \\
+Let  $U$  be a finite, nonempty set and let  $\mathcal{P}\left( U \right)$ be the power set of  $U$.  Recall that $\mathcal{P}\left( U \right)$ consists of all subsets of $U$. (See page~\pageref{D:powerset}.)   Define the relation  $ \approx $  on  $\mathcal{P}\left( U \right)$  as follows:
+
+\begin{center}
+For  $A, B \in \mathcal{P}\left( U \right)$,  $A \approx B$  if and only if  
+$\card(A) = \card(B)$.
+\end{center}
+For the definition of the cardinality of a finite set, see page~\pageref{D:cardinality}.  This relation states that two subsets of $U$  are equivalent provided that they have the same number of elements. Prove that 
+$\approx$ is an equivalence relation on the power set $\mathcal{P}\left( U \right)$.
+\end{prog}
+%\hbreak
+
+\endinput

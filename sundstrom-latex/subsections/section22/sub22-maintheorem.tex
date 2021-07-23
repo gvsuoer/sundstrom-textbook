@@ -1,0 +1,79 @@
+
+As we will see, it is often difficult to construct a direct proof for a conditional statement of the form $P \to \left( {Q \vee R} \right)$.  The logical equivalency in Progress Check~\ref{pr:workingeq2} gives us another way to attempt to prove a statement of the form  \linebreak
+$P \to \left( {Q \vee R} \right)$.  The advantage of the equivalent form,  
+$\left( {P \wedge \mynot  Q} \right) \to R$, 
+is that we have an additional assumption, $\mynot  Q$,  in the hypothesis.  This gives us more information with which to work.
+
+%\begin{itemize}
+%  \item The first logical equivalency is basically the contrapositive of  \\
+%$P \to \left( {Q \vee R} \right)$.
+%  \item The advantage of the equivalent form,  $\left( {P \wedge \mynot  Q} \right) \to R
+%$, is that we have an additional assumption, $\mynot  Q$,  in the hypothesis.  This just gives us more information with which to work.
+%\end{itemize}
+
+Theorem~\ref{T:logequiv} states some of the most frequently used logical equivalencies used when writing mathematical proofs.  
+
+%\pagebreak
+\begin{nametheorem}[\textbf{Important Logical Equivalencies}]\label{T:logequiv} \hfill \\
+For statements $P$, $Q$, and $R$,
+$$
+\BeginTable
+\BeginFormat
+| l | l |
+\EndFormat
+
+" \textbf{De Morgan's Laws}   "  $\mynot  \left( {P \wedge Q} \right) \equiv \;\mynot  P \vee \mynot  Q$ " \\ 
+ "                       " $\mynot  \left( {P \vee Q} \right) \equiv \;\mynot  P \wedge \mynot  Q$ " \\+02
+\index{De Morgan's Laws!for statements}%
+
+" \textbf{Conditional Statements} "  $P \to Q \equiv \;\mynot  Q \to \mynot  P$  (contrapositive) " \\
+"   "  $P \to Q \equiv \;\mynot  P \vee Q$ " \\
+"   "  $\mynot  \left( {P \to Q} \right) \equiv P \wedge \mynot  Q$ " \\+02
+
+" \textbf{Biconditional Statement} "  
+$\left( {P \leftrightarrow Q} \right) \equiv \left( {P \to Q} \right) \wedge \left( {Q \to P} \right)$ " \\+02
+
+" \textbf{Double Negation} "  $\mynot  \left( {\mynot  P} \right) \equiv P$ \\+02
+
+" \textbf{Distributive Laws} "  
+$P \vee \left( {Q \wedge R} \right) \equiv \left( {P \vee Q} \right) \wedge \left( {P \vee R} \right)$  " \\
+"   "  $P \wedge \left( {Q \vee R} \right) \equiv \left( {P \wedge Q} \right) \vee \left( {P \wedge R} \right)$ " \\+02
+
+" \textbf{Conditionals with}  " $P \to \left( {Q \vee R} \right) \equiv \left( {P \wedge \mynot  Q} \right) \to R$ " \\
+" \textbf{Disjunctions}    "  $\left( {P \vee Q} \right) \to R\; \equiv \;\left( {P \to R} \right) \wedge \left( {Q \to R} \right)$ " \\
+\EndTable
+$$
+\index{distributive laws!for statements}%
+\end{nametheorem}
+
+
+%\begin{theorem}[Important Logical Equivalencies] \hfill \label{T:logequiv}
+%\begin{tabular}[h]{l l}
+%\textbf{De Morgan's Laws}   &  $\mynot  \left( {P \wedge Q} \right) \equiv \;\mynot  P \vee \mynot  Q$ \\ 
+%                        & $\mynot  \left( {P \vee Q} \right) \equiv \;\mynot  P \wedge \mynot  Q$ \\
+%  &  \\
+%\textbf{Conditional Statements} &  $P \to Q \equiv \;\mynot  Q \to \mynot  P$  (contrapositive) \\
+%   &  $P \to Q \equiv \;\mynot  P \vee Q$ \\
+%   &  $\mynot  \left( {P \to Q} \right) \equiv P \wedge \mynot  Q$ \\
+%  &  \\
+%%\end{tabular}
+%
+%%\begin{tabular}[h]{l l}
+%\textbf{Biconditional Statement} &  
+%$\left( {P \leftrightarrow Q} \right) \equiv \left( {P \to Q} \right) \wedge \left( {Q \to P} \right)$ \\
+%  &  \\
+%\textbf{Double Negation} &  $\mynot  \left( {\mynot  P} \right) \equiv P$ \\
+%  &  \\
+%\textbf{Distributive Laws} &  
+%$P \vee \left( {Q \wedge R} \right) \equiv \left( {P \vee Q} \right) \wedge \left( {P \vee R} \right)$  \\
+%  &  $P \wedge \left( {Q \vee R} \right) \equiv \left( {P \wedge Q} \right) \vee \left( {P \wedge R} \right)$ \\
+%  &  \\
+%\textbf{Conditionals with}  & $P \to \left( {Q \vee R} \right) \equiv \left( {P \wedge \mynot  Q} \right) \to R$ \\
+%\textbf{Disjunctions}    &  $\left( {P \vee Q} \right) \to R\; \equiv \;\left( {P \to R} \right) \wedge \left( {Q \to R} \right)$  \\
+%\end{tabular}
+%\end{theorem}
+
+We have already established many of these equivalencies.  Others will be established in the exercises.
+
+
+\hbreak

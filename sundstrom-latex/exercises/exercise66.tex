@@ -1,0 +1,147 @@
+\section*{Exercises \ref{S:functionsonsets}}
+
+\begin{enumerate}
+\item Let $f\x S \to T$, let $A$ and $B$ be subsets of $S$, and let $C$ and $D$ be subsets of $T$.  For $x \in S$ and $y \in T$, carefully explain what it means to say that \label{exer:sec91-1}
+
+\begin{multicols}{2}
+\begin{enumerate}
+\yitem $y \in f ( A \cap B )$
+\item $y \in f ( A \cup B )$
+\item $y \in f ( A ) \cap f ( B )$
+\yitem $y \in f ( A ) \cup f ( B )$
+\item $x \in f^{-1} ( C \cap D )$
+\yitem $x \in f^{-1} ( C \cup D )$
+\item $x \in f^{-1} ( C ) \cap f^{-1} ( D )$
+\yitem $x \in f^{-1} ( C ) \cup f^{-1} ( D )$
+\end{enumerate}
+\end{multicols}
+
+\item Let $f\x \mathbb{R} \to \mathbb{R}$ by $f ( x ) = -2x + 1$.  Let 
+\begin{multicols}{4}
+$A = \left[ 2, 5 \right]$
+
+$B = \left[ -1, 3 \right]$
+
+$C = \left[ -2, 3 \right]$
+
+$D = \left[ 1, 4 \right]$.
+\end{multicols}
+
+Find each of the following:  \label{exer:sec91-2}
+
+\begin{multicols}{2}
+\begin{enumerate}
+\item $f ( A )$
+
+\yitem $f^{-1} ( f ( A ) )$
+
+\item $f^{-1} ( C )$
+
+\yitem $f ( f^{-1} ( C ) )$
+
+\yitem $f ( A \cap B )$
+
+\yitem $f ( A ) \cap f ( B )$
+
+\item $f^{-1} ( C \cap D )$
+
+\item $f^{-1} ( C ) \cap f^{-1} ( D )$
+
+\end{enumerate}
+\end{multicols}
+
+\item Let $g\x \mathbb{N} \times \mathbb{N} \to \mathbb{N}$ by $g ( m, n ) = 2^m 3^n$, let $A = \left\{ 1, 2, 3 \right\}$, and let $C = \left\{ 1, 4, 6, 9, 12, 16, 18 \right\}$.  Find \label{exer:sec91-3}
+\begin{multicols}{2}
+\begin{enumerate}
+\yitem $g ( A \times A )$
+\yitem $g^{-1} ( C )$
+\item $g^{-1} \!\left( g ( A \times A ) \right)$
+\item $g \!\left( g^{-1} ( C ) \right)$
+\end{enumerate}
+\end{multicols}
+
+\item \begin{enumerate}
+\yitem Let $S = \left\{1, 2, 3, 4 \right\}$.  Define $F\x S \to \mathbb{N}$ by 
+$F ( x ) = x^2$ for each $x \in S$.  What is the range of the function $F$ and what is $F ( S )$?  How do these two sets compare?
+\end{enumerate} \label{exer:sec91-4}
+Now let $A$ and $B$ be sets and let $f\x A \to B$ be an arbitrary function from $A$ to $B$.
+\begin{enumerate} \addtocounter{enumii}{1}
+\item Explain why $f ( A ) = \text{range} ( f )$.
+
+\item Define a function $g\x A \to f ( A )$ by 
+$g ( x  ) = f ( x )$ for all $x$ in $A$.  Prove that the function $g$ is a surjection.
+\end{enumerate}
+
+\xitem Prove Part~(\ref{T:imageofoperations2}) of Theorem~\ref{T:imageofoperations}.
+\label{exer:sec91-5}
+
+Let $f\x S \to T$ be a function and let $A$ and $B$ be subsets of $S$.  Then 
+$f ( A \cup B ) = f ( A ) \cup f ( B )$.
+
+\xitem Prove Part~(\ref{T:invimageofoperations1}) of Theorem~\ref{T:invimageofoperations}.
+\label{exer:sec91-6}
+
+Let $f\x S \to T$ be a function and let $C$ and $D$ be subsets of $T$.  Then
+$f^{-1} ( C \cap D ) = f^{-1} ( C ) \cap f^{-1} ( D )$.
+
+\item Prove Part~(\ref{T:imageofinvimage2}) of Theorem~\ref{T:imageofinvimage}.
+\label{exer:sec91-7}
+
+Let $f\x S \to T$ be a function and let $C \subseteq T$.  Then 
+$f \!\left( f^{-1} ( C ) \right) \subseteq C$.
+
+
+\item Let $f\x S \to T$ and let $A$ and $B$ be subsets of $S$.  Prove or disprove each of the following:
+\begin{enumerate}
+\item If $A \subseteq B$, then $f( A ) \subseteq f( B )$.
+
+\item If $f ( A ) \subseteq f (B )$, then $A \subseteq B$.
+\end{enumerate}
+
+
+\xitem \label{exer:invimagetruefalse} Let $f\x S \to T$ and let $C$ and $D$ be subsets of $T$.  Prove or disprove each of the following:
+\begin{enumerate}
+\item If $C \subseteq D$, then $f^{-1} ( C ) \subseteq f^{-1} (D )$.
+
+\item If $f^{-1} ( C ) \subseteq f^{-1} (D )$, then $C \subseteq D$.
+\end{enumerate}
+
+\item Prove or disprove:
+
+If $f\x S \to T$ is a function and  $A$ and $B$ are subsets of $S$,  then \\
+$f ( A ) \cap f ( B ) \subseteq f ( A \cap B )$.
+
+\underline{Note}:  Part~(\ref{T:imageofoperations1}) of Theorem~\ref{T:imageofoperations} states that 
+$f ( A \cap B ) \subseteq f ( A ) \cap f ( B )$.
+
+\item Let $f\x S \to T$ be a function, let $A \subseteq S$, and let $C \subseteq T$.
+\label{exer:sec91-11}
+\begin{enumerate}
+\item Part~(\ref{T:imageofinvimage1}) of Theorem~\ref{T:imageofinvimage} states that 
+$A \subseteq f^{-1} \!\left( f ( A ) \right)$.  Give an example where 
+$f^{-1} \!\left( f ( A ) \right) \not \subseteq A$.
+
+\item Part~(\ref{T:imageofinvimage2}) of Theorem~\ref{T:imageofinvimage} states that 
+$f \!\left( f^{-1} ( C ) \right) \subseteq C$.  Give an example where 
+$C \not \subseteq f \!\left( f^{-1} ( C ) \right)$.
+\end{enumerate}
+
+\item Is the following proposition true or false?  Justify your conclusion with a proof or a counterexample. \label{exer:sec91-12}
+
+If $f\x  S \to T$ is an injection and $A \subseteq S$, then 
+$f^{-1} \!\left( f ( A ) \right) = A$.
+
+\item Is the following proposition true or false?  Justify your conclusion with a proof or a counterexample. \label{exer:sec91-13}
+
+If $f\x  S \to T$ is a surjection and $C \subseteq T$, then 
+$f \!\left( f^{-1} ( C ) \right) = C$.
+
+\item Let $f\x S \to T$.  Prove that 
+$f ( A \cap B ) = f ( A ) \cap f ( B )$ for all subsets $A$ and $B$ of $S$ if and only if $f$ is an injection.
+
+%\item Let $f\x S \to T$ and let $A$ and $B$ be subsets of $S$.  Investigate the relationship between the sets $f ( A - B )$ and $f ( A ) - f ( B )$.  Are the two sets equal?  If not, is one a subset of the other?  Are there any conditions on the function $f$ that will ensure that the two sets are equal?  Justify your conclusions.
+\hbreak
+\end{enumerate}
+
+
+\endinput

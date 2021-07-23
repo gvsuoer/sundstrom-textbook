@@ -1,0 +1,120 @@
+\subsection*{Further Results and Conjectures about Prime Numbers}
+\begin{enumerate}
+  \item \textbf{The Number of Prime Numbers} \\
+Prime numbers have fascinated mathematicians for centuries.  For example, we can easily start writing a list of prime numbers in ascending order.  Following is a list of the prime numbers less than 100.
+
+\begin{list}{}
+\item 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97
+\end{list}
+\newpar
+This list contains the first 25 prime numbers.  Does this list ever stop?  The question was answered in \emph{Euclid's Elements}, and the result is stated in 
+Theorem~\ref{T:infiniteprimes}.  The proof of this theorem is considered to be one of the classical proofs by contradiction.
+%
+%\hbreak
+
+\begin{theorem}\label{T:infiniteprimes}
+There are infinitely many prime numbers.
+\end{theorem}
+
+\setcounter{equation}{0}
+\begin{myproof}
+We will use a proof by contradiction.  We assume that there are only finitely many primes, and let
+\[
+p_1 , p_2 ,  \ldots , p_m
+\]
+be the list of all the primes.  Let
+\begin{equation} \label{T:infiniteprimes1}
+M = p_1 p_2  \cdots p_m  + 1.
+\end{equation}
+Notice that  $M \ne 1$. So  $M$  is either a prime number or, by the Fundamental Theorem of Arithmetic,  $M$  is a product of prime numbers.  In either case,  $M$  has a factor that is a prime number.  Since we have listed all the prime numbers, this means that there exists a natural number  $j$  with  
+$1 \leq j \leq m$  such that  $p_j \mid  M$. Now, we can rewrite equation~(\ref{T:infiniteprimes1}) as follows:
+\begin{equation} \label{T:infiniteprimes2}
+1 = M - p_1 p_2  \cdots p_m. 
+\end{equation}
+We have proved $p_j \mid M$, and since  $p_j $ is one of the prime factors of  
+$p_1 p_2  \cdots p_m $, we can also conclude that   
+$p_j  \mid \left( {p_1 p_2  \cdots p_m } \right)$.  Since   $p_j $  divides both of the terms on the right side of equation~(\ref{T:infiniteprimes2}), we can use this equation to conclude that   $p_j$ divides 1.  This is a contradiction since a prime number is greater than 1 and cannot divide 1.  Hence, our assumption that there are only finitely many primes is false, and so there must be infinitely many primes.
+\end{myproof}
+
+%\begin{activity}[Proof of Theorem~\ref{T:infiniteprimes}]\label{A:infiniteprimes} \hfill \\
+%Complete the following proof of Theorem~\ref{T:infiniteprimes}.
+%\setcounter{equation}{0}
+%\begin{myproof}
+%We will use a proof by contradiction.  We assume that there are only finitely many primes, and let
+%\[
+%p_1 , p_2 ,  \ldots , p_m
+%\]
+%be the list of all the primes.  Let
+%\begin{equation}
+%M = p_1 p_2  \cdots p_m  + 1.\label{eq:infiniteprimes1}
+%\end{equation}
+%\begin{enumerate}
+%\item Explain why $M \ne 1$ and why $M$ must have a factor that is a prime number.
+%
+%\item Since we have listed all the prime numbers, there exists a natural number $j$ with 
+%$1 \leq j \leq m$ such that $p_j$ divides $M$. Use equation~(\ref{eq:infiniteprimes1}) to conclude that $p_j$ divides 1.
+%
+%\item Explain why this is a contradiction and why this proves that there are infinitely many prime numbers. \qedhere
+%\end{enumerate}
+%\end{myproof}
+%\end{activity}
+%\hbreak
+
+
+
+\item \textbf{The Distribution of Prime Numbers} 
+\index{prime numbers!distribution of}%
+
+There are infinitely many primes, but when we write a list of the prime numbers, we can see some long sequences of consecutive natural numbers that contain no prime numbers.  For example, there are no prime numbers between 113 and 127.  The following theorem shows that there exist arbitrarily long sequences of consecutive natural numbers containing no prime numbers.  A guided proof of this theorem is included in Exercise~(\ref{exer:consecutivecomposites}).
+
+\begin{theorem}\label{P:consecutivecomposites}
+For any natural number  $n$, there exist at least  $n$  consecutive natural numbers that are composite numbers.
+\end{theorem}
+\end{enumerate}
+%
+There are many unanswered questions about prime numbers, two of which will now be discussed.
+
+\begin{enumerate}
+\setcounter{enumi}{2}
+\item \textbf{The Twin Prime Conjecture}
+
+By looking at the list of the first 25 prime numbers, we see several cases where consecutive prime numbers differ by 2.  Examples are:  3  and  5;  11 and  13;  17 and  19; 29  and  31.  Such pairs of prime numbers are said to be \textbf{twin primes}.
+\index{twin primes}%
+\index{prime numbers!twin}%
+  How many twin primes exist?  The answer is not known.  The \textbf{Twin Prime Conjecture}
+\index{Twin Prime Conjecture}%
+ states that there are infinitely many twin primes.  As of June 25, 2010, this is still a conjecture as it has not been proved or disproved.
+
+
+For some interesting information on prime numbers, visit the Web site \textit{The Prime Pages} 
+% (http://www.utm.edu/research/primes/), 
+ (http://primes.utm.edu/), 
+where there is a link to The Largest Known Primes Web site. 
+According to information at this site  
+%(http://www.utm.edu/research/primes/largest.html\#twin),
+%(http://primes.utm.edu/largest.html\#twin),
+ as of June 25, 2010, the largest known twin primes are
+\[ 
+\left( 65516468355 \times 2^{333333} - 1 \right) \text{ and } 
+\left( 65516468355 \times 2^{333333} + 1 \right).
+\]
+%$\left( 33218925 \times 2^{169690} - 1 \right)$ and \linebreak
+%$\left( 33218925 \times 2^{169690} + 1 \right)$.  
+Each of these prime numbers contains 100355 digits. 
+
+\item \textbf{Goldbach's Conjecture} \index{Goldbach's Conjecture}
+
+Given an even natural number, is it possible to write it as a sum of two prime numbers?  For example,
+\begin{align*}
+4 &= 2 + 2  &   6 &= 3 + 3  &  8 &= 5+3 \\ 
+78 &= 37 + 41 &  90 &= 43 + 47  &  138 &= 67 + 71 
+\end{align*}
+One of the most famous unsolved problems in mathematics is a conjecture made by Christian Goldbach in a letter to Leonhard Euler in 1742.  The conjecture, now known as \textbf{Goldbach's Conjecture}, is as follows:
+\begin{list}{}
+\item Every even integer greater than 2 can be expressed as the sum of two (not necessarily distinct) prime numbers.
+\end{list}
+As of June 25, 2010, it is not known if this conjecture is true or false, although most mathematicians believe it to be true.
+\hbreak
+\end{enumerate}
+
+\endinput

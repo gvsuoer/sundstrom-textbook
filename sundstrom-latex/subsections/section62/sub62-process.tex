@@ -1,0 +1,50 @@
+\subsection*{Mathematical Processes as Functions}
+Certain mathematical processes can be thought of as functions.  In \typeu Activity~\ref*{PA:derivatives}, we reviewed how to find the derivatives of certain functions, and we considered whether or not we could think of this differentiation process as a function.  If we use a differentiable function as the input and consider the derivative of that function to be the output, then we have the makings of a function.  Computer algebra systems such as \emph{Maple} and \textit{Mathematica} have this derivative function as one of their predefined operators.  %Even some calculators now have a derivative function.  
+
+Different computer algebra systems will have different syntax for entering functions and for the derivative function.   The first step will be to input a real function $f$.  This is usually done by entering a formula for $f(x)$, which is valid for all real numbers $x$ for which $f(x)$ is defined.  The next step is to apply the derivative function to the function $f$.  For purposes of illustration, we will use $D$ to represent this derivative function.  So this function will give $D(f) = f'$.
+
+For example, if we enter
+\[
+f(x) = x^2 \sin (x) 
+\]
+for the function $f$, we will get
+\begin{center}
+$D(f) = f'$, where $f'(x) = 2x\sin \left( x \right) + x^2 \cos \left( x \right)$.
+\end{center}
+
+%Following is some \emph{Maple} code (using the Classic Worksheet version of \emph{Maple}) that can be used to find the derivative function of the function given by  $f( x ) = x^2( {\sin x} )$.  The lines that start with the \emph{Maple} prompt, $\left[ > \right.$, are the lines typed by the user.  The centered lines following these show the resulting \emph{Maple} output.  The first line defines the function  $f$\!, and the second line uses the derivative function  $D$  to produce the derivative of the function  $f$\!.
+%\vskip6pt
+%\noindent
+%$\left[ > \right.$ \texttt{f := x} $\to$ \texttt{x}$\; \widehat{ }\; \texttt{2} *$ \texttt{sin(x)};
+%
+%%$\left[ > \right.$ f :$=$ x $\to$ x$\; \widehat{ }\; 2 *$ sin(x);
+%\[
+%f: = x \to x^2 \sin \left( x \right)
+%\]
+%$\left[ > \right.$ \texttt{f1 := D(f)};
+%\[
+%f1: = x \to 2x\sin \left( x \right) + x^2 \cos \left( x \right)
+%\]
+We must be careful when determining the domain for the derivative function since there are functions that are not differentiable.  To make things reasonably easy, we will let  $F$  be the set of all real functions that are differentiable and call this the domain of the derivative function  $D$.  We will use the set  $T$ of all real functions as the codomain.  So our function  $D$  is
+\[
+D\x F \to T  \text{ by } D( f ) = f'.
+\]
+%\hbreak
+%\newpage
+%
+\begin{prog}[\textbf{Average of a Finite Set of Numbers}]\label{pr:average} \hfill \\
+\index{average!of a finite set of numbers}%
+Let $A = \left\{ a_1, a_2, \ldots, a_n \right\}$ be a finite set whose elements are the distinct real numbers $a_1, a_2, \ldots, a_n$.  We define the \textbf{average of the set $A$} to be the real number $\bar{A}$, where
+\[
+\bar{A} = \frac{a_1 + a_2 + \cdots + a_n}{n}.
+\]
+\begin{enumerate}
+\item Find the average of $A = \left\{ 3, 7, -1, 5 \right\}$.
+\item Find the average of $B = \left\{ 7, -2, 3.8, 4.2, 7.1 \right\}$.
+\item Find the average of $C = \left\{ \sqrt{2}, \sqrt{3}, \pi - \sqrt{3} \right\}$.
+\item Now let $\mathscr{F}( \R )$ be the set of all nonempty finite subsets of $\R$.  That is, a subset $A$ of $\R$ is in $\mathscr{F}( \R )$ if and only if $A$ contains only a finite number of elements.  Carefully explain how the process of finding the average of a finite subset of $\R$ can be thought of as a function.  In doing this, be sure to specify the domain of the function and the codomain of the function.
+\end{enumerate}
+\end{prog}
+\hbreak
+
+\endinput

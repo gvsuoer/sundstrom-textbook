@@ -1,0 +1,77 @@
+\subsection*{Some Comments about Constructing Direct Proofs}
+\index{direct proof|(}%
+\index{proof!direct|(}%
+\begin{enumerate}
+  \item When we constructed the know-show table prior to writing a proof for Theorem~\ref{T:xyodd}, we had only one answer for the backward question and one answer for the forward question.  Often, there can be more than one answer for these questions.  For example, consider the following statement:
+\begin{center}
+If  $x$  is an odd integer, then  $x^2$ is an odd integer.
+\end{center}
+The backward question for this could be, ``How do I prove that an integer is an odd integer?''  One way to answer this is to use the definition of an odd integer, but another way is to use the result of 
+Theorem~\ref{T:xyodd}.  That is, we can prove an integer is odd by proving that it is a product of two odd integers.
+
+The difficulty then is deciding which answer to use.  Sometimes we can tell by carefully watching the interplay between the forward process and the backward process.  Other times, we may have to work with more than one possible answer.  
+\label{proofcomment1}%
+%\hrulefill
+
+%\begin{prog}[Constructing a Know-Show Table]\label{pr:kstable1} \hfill \\
+%Construct a know-show table for the following statement that uses the result of 
+%Theorem~\ref{T:xyodd}:
+%
+%\begin{list}{}
+%\item If  $x$  is an odd integer, then  $x^2$ is an odd integer.
+%\end{list}
+%%\hrulefill
+%\end{prog}
+%
+\item Sometimes we can use previously proven results to answer a forward question or a backward question.  This was the case in the example given in 
+Comment~(\ref{proofcomment1}), where Theorem~\ref{T:xyodd} was used to answer a backward question.
+
+\item Although we start with two separate processes (forward and backward), the key to constructing a proof is to find a way to link these two processes.  This can be difficult.  One way to proceed is to use the know portion of the table to motivate answers to backward questions and to use the show portion of the table to motivate answers to forward questions.
+
+\item Answering a backward question can sometimes be tricky.  If the goal is the statement  $Q$, we must construct the know-show table so that if we know that  $Q$1 is true, then we can conclude that $Q$ is true.  It is sometimes easy to answer this in a way that if it is known that  $Q$ is true, then we can conclude that $Q$1 is true.  For example, suppose the goal is to prove 
+\[
+y^2  = 4,
+\]
+where  $y$  is a real number.  A backward question could be, ``How do we prove the square of a real number equals four?''  One possible answer is to prove that the real number equals 2.  Another way is to prove that the real number equals $-2$.  This is an appropriate backward question, and these are appropriate answers.
+
+However, if the goal is to prove
+\[
+y = 2,
+\]
+where  $y$  is a real number, we could ask, ``How do we prove a real number equals 2?''  It is not appropriate to answer this question with ``prove that the square of the real number equals 4.''  
+%That is, we should not have the show portion of the table as follows:
+%$$
+%\BeginTable
+%\BeginFormat
+%|p(0.4in)|p(1.6in)|p(1.6in)|
+%\EndFormat
+%\_
+%  | $Q1$  |   $y^2=4$             |           |  \\ \_1
+%  | $Q$   |  $y=2$                |  Square root of both sides | \\ \_
+%  |\textbf{Step}  |  \textbf{Show}  |  \textbf{Reason} | \\+20 \_
+%\EndTable
+%$$
+%\begin{center}
+%\begin{tabular}[h]{|p{0.4in}|p{1.6in}|p{1.6in}|}
+%  \hline
+%  $Q1$  &   $y^2=4$             &             \\ \hline
+%  $Q$  &  $y=2$  &  Square root of both sides \\ \hline
+%  \textbf{Step}  &  \textbf{Show}  &  \textbf{Reason} \\ \hline
+%\end{tabular}
+%\end{center}
+This is because if $y^2=4$, then it is not necessarily true that $y=2$.
+
+\item Finally, it is very important to realize that not every proof can be constructed by the use of a simple know-show table.  Proofs will get more complicated than the ones that are in this section.  The main point of this section is not the know-show table itself, but the way of thinking about a proof that is indicated by a know-show table.  In most proofs, it is very important to specify carefully what it is that is being assumed and what it is that we are trying to prove.  The process of asking the ``backward questions'' and the ``forward questions'' is the important part of the know-show table.  It is very important to get into the ``habit of mind'' of working backward from what it is we are trying to prove and working forward from what it is we are assuming.  Instead of immediately trying to write a complete proof, we need to stop, think, and ask questions such as
+
+\begin{itemize}
+\item Just exactly what is it that I am trying to prove?
+\item How can I prove this?
+\item What methods do I have that may allow me to prove this?
+\item What are the assumptions?
+\item How can I use these assumptions to prove the result?
+\end{itemize}
+\index{direct proof|)}%
+\index{proof!direct|)}%
+
+\end{enumerate}
+%\hrule

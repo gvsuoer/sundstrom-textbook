@@ -1,0 +1,70 @@
+\section*{Section~\ref{S:logop}}
+
+
+\subsection*{Progress Check \ref{pr:onlyif}}
+\begin{enumerate}
+\item Whenever a quadrilateral is a square, it is a rectangle, or a quadrilateral is a rectangle whenever it is a square.
+
+\item A quadrilateral is a square only if it is a rectangle.
+
+\item Being a rectangle is necessary for a quadrilateral to be a square.
+
+\item Being a square is sufficient for a quadrilateral to be a rectangle.
+\end{enumerate}
+
+
+
+\subsection*{Progress Check~\ref{pr:truthtables}}
+$$
+\BeginTable
+\BeginFormat
+ | c | c | c | c | c | c |
+\EndFormat
+\_6
+   |   $P$ | $Q$ \|6 $P \wedge \mynot Q$  |  $\mynot \left( P \wedge Q \right)$  |  
+$ \mynot P \wedge \mynot Q$ | $\mynot P \vee \mynot Q $ | \\+22  \_6
+   |    T  |  T  \|6 F  | F  | F | F | \\
+   |    T  |  F  \|6 T  | T  | F | T | \\ 
+   |    F  |  T  \|6 F  | T  | F | T | \\ 
+   |    F  |  F  \|6 F  | T  | T | T | \\ \_6
+\EndTable
+$$
+\noindent
+Statements (2) and (4) have the same truth table.
+
+
+
+
+\subsection*{Progress Check~\ref{pr:tautology}}
+$$
+\BeginTable
+\BeginFormat
+| c | c | c | c |
+\EndFormat
+\_6
+| $P$ | $\mynot P$ \|6 $P \vee \mynot P$ | $P \wedge \mynot P$ | \\+22 \_6
+  | T | F \|6 T | F | \\
+  | F | T \|6 T | F | \\ \_6
+\EndTable
+$$
+
+$$
+\BeginTable
+\BeginFormat
+| c | c | c | c |
+\EndFormat
+\_6
+| $P$ | $Q$ \|6 $P \vee Q$ | $P \to (P \vee Q)$ | \\+22 \_6
+  | T | T | T | T | \\
+  | T | F | T | T | \\
+  | F | T | T | T | \\
+  | F | F | F | T | \\ \_6
+\EndTable
+$$
+\[
+P \to (P \vee Q) \text{ is a tautology}.
+\]
+
+\hbreak
+
+\endinput

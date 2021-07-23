@@ -1,0 +1,65 @@
+\section*{Section~\ref{S:otherinduction}}
+
+\subsection*{Progress Check~\ref{prog:extendedind}} 
+\begin{enumerate}
+\item For each natural number $n$, if $n \geq 2$, then $3^n > 1 + 2^n$.
+\item For each natural number $n$, if $n \geq 6$, then $2^n > (n + 1 )^2$.
+\item For each natural number $n$, if $n \geq 6$, then $\left( 1 + \dfrac{1}{n} \right)^n > 2.5$.
+\end{enumerate}
+
+
+
+\subsection*{Progress Check~\ref{A:lincomb3and5}}
+%Let  $\mathbb{Z}^*  = \left\{ {x \in \mathbb{Z}\left.  \right|\,x \geq 0} \right\}$, and for each  $n \in \mathbb{Z}^* $, let  $P\left( n \right)$ be 	
+%\[
+%\left( {\exists x, y \in \mathbb{Z}^* } \right)\left( {n = 3x + 5y} \right).
+%\]
+Construct the following table and use it to answer the first two questions.  The table shows that  $P\left( 3 \right)$, $P\left( 5 \right)$, and  $P\left( 6 \right)$ are true.  We can also see that $P(2)$, $P(4)$, and $P(7)$ are false.  It also appears that if  $n \in \mathbb{N}$ and $n \geq 8$, then  $P\left( n \right)$ is true.
+
+\begin{tabular}[t]{| c | c | c | c | c | c | c | c | c | c | c | c |} \hline
+$x$       & 0 & 1 & 2 & 3 & 4 & 0 & 1 & 2 & 0 & 1 & 1  \\ \hline
+$y$       & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 2 & 2 & 3  \\ \hline
+$3x + 5y$ & 0 & 3 & 6 & 9 & 12 & 5 & 8 & 11 & 10 & 13 & 18 \\ \hline
+\end{tabular}
+
+\vskip6pt
+\noindent
+The following proposition provides answers for Problems (3) and (4).
+
+\vskip6pt
+\noindent
+\textbf{Proposition~\ref{prop:lincomb}}.  For all natural numbers  $n$  with  $n \geq 8$, there exist non-negative integers  $x$  and  $y$  such that  $n = 3x + 5y$.
+
+\begin{myproof}
+(by mathematical induction)  Let  
+$\mathbb{Z}^*  = \left\{ {x \in \mathbb{Z}\left.  \right| x \geq 0} \right\}$, and for each natural number  $n$, let  $P\left( n \right)$ be,  ``there exist  $x, y \in \mathbb{Z}^*$ such that  $n = 3x + 5y$.''
+
+\vskip6pt
+\noindent
+\textbf{Basis Step}:  Using the table above, we see that  $P\left( 8 \right)$, 
+$P\left( 9 \right)$, and $P\left( {10} \right)$ are true. 
+
+\vskip6pt
+\noindent
+\textbf{Inductive Step}:  Let  $k \in \mathbb{N}$  with  $k \geq 10$.  Assume that  
+$P\left( 8 \right)$, $P\left( 9 \right)$,  \ldots , $P\left( k \right)$ are true.  Now, notice that
+\[
+k + 1 = 3 + \left( {k - 2} \right).
+\]
+Since  $k \geq 10$, we can conclude that  $k - 2 \geq 8$ and hence  
+$P\left( {k - 2} \right)$ is true.  Therefore, there exist non-negative integers  $u$  and  $v$  such that   
+$k - 2 = \left( {3u + 5v} \right)$.  Using this equation, we see that
+\[
+\begin{aligned}
+k + 1 &= 3  + \left( {3u + 5v} \right) \\ 
+      &= 3\left( {1 + u} \right) + 5v. \\ 
+\end{aligned}
+\]
+Hence, we can conclude that  $P\left( {k + 1} \right)$ is true.  This proves that if  
+$P\left( 8 \right)$, $P\left( 9 \right)$,  \ldots , $P\left( k \right) $ are true, then  
+$P\left( {k + 1} \right)$ is true.  Hence, by the Second Principle of Mathematical Induction, for all natural numbers  $n$  with  $n \geq 8$, there exist nonnegative integers  $x$  and  $y$  such that  $n = 3x + 5y$.
+\end{myproof}
+\hbreak
+
+
+\endinput

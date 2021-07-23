@@ -1,0 +1,35 @@
+\subsection*{The Domino Theory}\index{domino theory}
+Mathematical induction is frequently used to prove statements of the form
+\begin{equation} \label{eq:5f}
+\left( {\forall n \in \mathbb{N}} \right)\left( {P( n )} \right),
+\end{equation}
+where  $P( n )$ is an open sentence.  This means that we are proving that every statement in the following infinite list is true.
+\begin{equation} \label{eq:5g}
+P( 1 ),P( 2 ),P( 3 ), \ldots 
+\end{equation}
+%
+The inductive step in a proof by induction is to prove that if one statement in this infinite list of statements is true, then the next statement in the list must be true.  Now imagine that each statement in~(\ref{eq:5g})  is a domino in a chain of dominoes.  When we prove the inductive step, we are proving that if one domino is knocked over, then it will knock over the next one in the chain.  Even if the dominoes are set up so that when one falls, the next one will fall, no dominoes will fall unless we start by knocking one over.  This is why we need the basis step in an induction proof.  The basis step guarantees that we knock over the first domino.  The inductive step, then, guarantees that all dominoes after the first one will also fall.
+
+Now think about what would happen if instead of knocking over the first domino, we knock over the sixth domino.  If we also prove the inductive step, then we would know that every domino after the sixth domino would also fall.  This is the idea of the \emph{Extended Principle of Mathematical Induction}.  It is not necessary for the basis step to be the proof that  $P( 1 )$  is true.  We can make the basis step be the proof that  $P( M )$ is true,  where  $M$  is some natural number.  The Extended Principle of Mathematical Induction can be generalized somewhat by allowing  $M$  to be any integer.  We are still only concerned with those integers that are greater than or equal to  $M$\!.  
+%The set  $\left\{ n \in \mathbb{Z} \mid n \geq M \right\}$ is still an inductive set.  This slight change allows us to use  $M = 0$ as well as  allowing  $M$  to be any natural number.  In most induction proofs, we will use a value of $M$ that is greater than or equal to zero.
+
+%
+\begin{center}
+\fbox{\parbox{4.68in}{
+\textbf{The Extended Principle of Mathematical Induction} \\
+\index{Extended Principle of Mathematical Induction}%
+\index{mathematical induction!Extended Principle}%
+Let  $M$  be an integer.  If  $T$  is a subset of  $\mathbb{Z}$ such that
+\begin{enumerate}
+  \item $M \in T$\!, and
+
+  \item For every  $k \in \mathbb{Z}$ with $k \geq M$\!, if  $k \in T$\!, then  $\left( {k + 1} \right) \in T$\!,
+\end{enumerate}
+
+then  $T$  contains all integers greater than or equal to  $M$\!.  That is,  
+$\left\{ n \in \mathbb{Z}  \mid n \geq M \right\} \subseteq T$\!.
+}}
+\end{center}
+
+
+\endinput

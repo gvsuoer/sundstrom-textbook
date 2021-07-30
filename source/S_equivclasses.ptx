@@ -1,0 +1,1095 @@
+<section xml:id="S_equivclasses">
+  <title>Equivalence Classes</title>
+  <introduction>
+    <exploration xml:id="PA_setswithrelation">
+      <title><em>Sets Associated with a Relation</em></title>
+      <p>
+        As was indicated in <xref ref="S_equivrelations">Section</xref>,
+        an equivalence relation on a set <m>A</m> is a relation with a certain combination of properties (reflexive,
+        symmetric,
+        and transitive) that allow us to sort the elements of the set into certain classes.
+        This is done by means of certain subsets of <m>A</m> that are associated with the elements of the set <m>A</m>.
+        This will be illustrated with the following example.
+        Let <m>A = \left\{ {a, b, c, d, e} \right\}</m>,
+        and let <m>R</m> be the relation on the set <m>A</m> defined as follows:
+        <md>
+          <mrow>a \amp \mathrel{R} a  \amp b \amp \mathrel{R} b  \amp c \amp \mathrel{R} c  \amp d \amp \mathrel{R} d   \amp e \amp \mathrel{R} e</mrow>
+          <mrow>a \amp \mathrel{R} b  \amp b \amp \mathrel{R} a  \amp b \amp \mathrel{R} e  \amp e \amp \mathrel{R} b</mrow>
+          <mrow>a \amp \mathrel{R} e  \amp e \amp \mathrel{R} a  \amp c \amp \mathrel{R} d  \amp d \amp \mathrel{R} c</mrow>
+        </md>
+      </p>
+      <p>
+        For each <m>y \in A</m>,
+        define the subset <m>R[y]</m> of <m>A</m> as follows:
+        <me>
+          R[y] = \left\{ x \in A \mid x \mathrel{R} y \right\}
+        </me>.
+      </p>
+      <p>
+        That is, <m>R[y]</m> consists of those elements in <m>A</m> such that <m>x \mathrel{R} y</m>.
+        For example, using <m>y = a</m>,
+        we see that <m>a \mathrel{R} a</m>, <m>b \mathrel{R} a</m>,
+        and <m>e \mathrel{R} a</m>, and so <m>R[a] = \{ a, b, e \}</m>.
+        <ol>
+          <li>
+            <p>
+              Determine <m>R[b]</m>, <m>R[c]</m>,
+              <m>R[d]</m>, and <m>R[e]</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Draw a directed graph for the relation <m>R</m> and explain why <m>R</m> is an equivalence relation on <m>A</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Which of the sets <m>R[ a ]</m>, <m>R[ b ]</m>,
+              <m>R[ c ]</m>, <m>R[ d ]</m>,
+              and <m>R[ e ]</m> are equal?
+            </p>
+          </li>
+          <li>
+            <p>
+              Which of the sets <m>R[ a ]</m>, <m>R[ b ]</m>,
+              <m>R[ c ]</m>, <m>R[ d ]</m>,
+              and <m>R[ e ]</m> are disjoint?
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        As we will see in this section,
+        the relationships between these sets are typical for an equivalence relation.
+        The following example will show how different this can be for a relation that is not an equivalence relation.
+      </p>
+      <p>
+        Let <m>A = \left\{ {a, b, c, d, e} \right\}</m>,
+        and let <m>S</m> be the relation on the set <m>A</m> defined as follows:
+        <md>
+          <mrow>b \amp \mathrel{S} b  \amp c \amp \mathrel{S} c  \amp d \amp \mathrel{S} d   \amp e \amp \mathrel{S} e</mrow>
+          <mrow>a \amp \mathrel{S} b  \amp a \amp \mathrel{S} d  \amp b \amp \mathrel{S} c</mrow>
+          <mrow>c \amp \mathrel{S} d  \amp d \amp \mathrel{S} c</mrow>
+        </md>
+        <ol>
+          <li>
+            <p>
+              Draw a digraph that represents the relation <m>S</m> on <m>A</m>.
+              Explain why <m>S</m> is not an equivalence relation on <m>A</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        For each <m>y \in A</m>,
+        define the subset <m>S[y]</m> of <m>A</m> as follows:
+        <me>
+          S[ y ] = \left\{ { {x \in A } \mid x \mathrel{S} y} \right\} = \left\{ { {x \in A } \mid \left( {x, y} \right) \in S} \right\}
+        </me>.
+      </p>
+      <p>
+        For example, using <m>y = b</m>,
+        we see that <m>S[b] = \{ a, b \}</m> since
+        <m>(a, b) \in S</m> and <m>(b, b) \in S</m>.
+        In addition,
+        we see that <m>S[a] = \emptyset</m> since there is no <m>x \in A</m> such that <m>(x, a) \in S</m>.
+        <ol>
+          <li>
+            <p>
+              Determine <m>S[ c ]</m>, <m>S[ d ]</m>, and <m>S[ e ]</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Which of the sets <m>S[ a ]</m>, <m>S[ b ]</m>,
+              <m>S[ c ]</m>, <m>S[ d ]</m>,
+              and <m>S[ e ]</m> are equal?
+            </p>
+          </li>
+          <li>
+            <p>
+              Which of the sets <m>S[ b ]</m>,
+              <m>S[ c ]</m>, <m>S[ d ]</m>,
+              and <m>S[ e ]</m> are disjoint?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </exploration>
+    <exploration xml:id="PA_congruencemodulo3">
+      <title><em>Congruence Modulo 3</em></title>
+      <p>
+        An important equivalence relation that we have studied is congruence modulo <m>n</m> on the integers.
+        We can also define subsets of the integers based on congruence modulo <m>n</m>.
+        We will illustrate this with congruence modulo 3.
+        For example,
+        we can define <m>C[0]</m> to be the set of all integers <m>a</m> that are congruent to 0 modulo 3.
+        That is,
+        <me>
+          C[ 0 ] = \left\{ { {a \in \mathbb{Z} } \mid a \equiv 0 \pmod 3} \right\}\!
+        </me>.
+      </p>
+      <p>
+        Since an integer <m>a</m> is congruent to 0 modulo 3 if and only if 3 divides <m>a</m>,
+        we can use the roster method to specify this set as follows:
+        <me>
+          C[0] = \left\{  \ldots, -9, -6, -3, 0, 3, 6, 9, \ldots \right\}
+        </me>.
+      </p>
+      <ol>
+        <li>
+          <p>
+            Use the roster method to specify each of the following sets:
+          </p>
+          <ol>
+            <li xml:id="PA_congruencemodulo3-2">
+              <p>
+                The set <m>C[ 1 ]</m> of all integers <m>a</m> that are congruent to 1 modulo 3.
+                That is, <m>C[ 1 ] = \left\{ { {a \in \mathbb{Z} } \mid a \equiv 1 \pmod 3} \right\}\!</m>.
+              </p>
+            </li>
+            <li xml:id="PA_congruencemodulo3-3">
+              <p>
+                The set <m>C[ 2 ]</m> of all integers <m>a</m> that are congruent to 2 modulo 3.
+                That is, <m>C[ 2 ] = \left\{ { {a \in \mathbb{Z} } \mid a \equiv 2 \pmod 3} \right\}\!</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                The set <m>C[ 3 ]</m> of all integers <m>a</m> that are congruent to 3 modulo 3.
+                That is, <m>C[ 3 ] = \left\{ { {a \in \mathbb{Z} } \mid a \equiv 3 \pmod 3} \right\}\!</m>.
+              </p>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <p>
+            Now consider the three sets, <m>C[ 0 ]</m>,
+            <m>C[ 1 ]</m>, and <m>C[ 2 ]</m>.
+            <ol>
+              <li>
+                <p>
+                  Determine the intersection of any two of these sets.
+                  That is, determine <m>C[ 0 ] \cap C[ 1 ]</m>,
+                  <m>C[ 0 ] \cap C[ 2 ]</m>, and <m>C[ 1 ] \cap C[ 2 ]</m>.
+                </p>
+              </li>
+              <li xml:id="PA_congruencemodulo3-5b">
+                <p>
+                  Let <m>n = 734</m>.
+                  What is the remainder when <m>n</m> is divided by 3?
+                  Which of the three sets, if any, contains <m>n = 734</m>?
+                </p>
+              </li>
+              <li>
+                <p>
+                  Repeat Part<nbsp/><xref ref="PA_congruencemodulo3-5b"/> for <m>n = 79</m> and for <m>n=-79</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Do you think that <m>C[ 0 ] \cup C[ 1 ] \cup C[ 2 ] = \mathbb{Z}</m>?
+                  Explain.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Is the set <m>C[3]</m> equal to one of the sets <m>C[0], C[1]</m>,
+                  or <m>C[2]</m>?
+                </p>
+              </li>
+              <li>
+                <p>
+                  We can also define <m>C[4] = \left\{ { {a \in \mathbb{Z} } \mid a \equiv 4 \pmod 3} \right\}\!</m>.
+                  Is this set equal to any of the previous sets we have studied in this part?
+                  Explain.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </li>
+      </ol>
+    </exploration>
+  </introduction>
+  <subsection>
+    <title>The Definition of an Equivalence Class</title>
+    <p>
+      We have indicated that an equivalence relation on a set is a relation with a certain combination of properties (reflexive,
+      symmetric,
+      and transitive) that allow us to sort the elements of the set into certain classes.
+      We saw this happen in the beginning  activities.
+      We can now illustrate specifically what this means.
+      For example,
+      in Beginning  <xref ref="PA_congruencemodulo3">Activity</xref>,
+      we used the equivalence relation of congruence modulo 3 on
+      <m>\mathbb{Z}</m> to construct the following three sets:
+      <me>
+        \begin{aligned}C[ 0 ] \amp = \left\{ { {a \in \mathbb{Z} } \mid a \equiv 0 \pmod 3} \right\}\!, \\ C[ 1 ] \amp = \left\{ { {a \in \mathbb{Z} } \mid a \equiv 1 \pmod 3} \right\}\!,\text{ and }  \\ C[ 2 ] \amp = \left\{ { {a \in \mathbb{Z} } \mid a \equiv 2 \pmod 3} \right\}\!. \end{aligned}
+      </me>
+    </p>
+    <p>
+      The main results that we want to use now are <xref ref="T_congtorem">Theorem</xref>
+      and <xref ref="C_congtorem">Corollary</xref>
+      on <xref ref="T_congtorem">page</xref>.
+      This corollary tells us that for any <m>a \in \mathbb{Z}</m>,
+      <m>a</m> is congruent to precisely one of the integers 0, 1, or 2.
+      Consequently,
+      the integer <m>a</m> must be congruent to 0, 1, or 2, and it cannot be congruent to two of these numbers.
+      Thus
+      <ol>
+        <li>
+          <p>
+            For each <m>a \in \mathbb{Z}</m>,
+            <m>a \in C[ 0 ]</m>, <m>a \in C[ 1 ]</m>,
+            or <m>a \in C[ 2 ]</m>; and
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>C[ 0 ] \cap C[ 1 ] = \emptyset</m>,
+            <m>C[ 0 ] \cap C[ 2 ] = \emptyset</m> , and <m>C[ 1 ] \cap C[ 2 ] = \emptyset</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      This means that the relation of congruence modulo 3 sorts the integers into three distinct sets,
+      or classes,
+      and that each pair of these sets have no elements in common.
+      So if we use a rectangle to represent <m>\mathbb{Z}</m>,
+      we can divide that rectangle into three smaller rectangles,
+      corresponding to <m>C[ 0 ]</m>, <m>C[ 1 ]</m>,
+      and <m>C[ 2 ]</m>, and we might picture this situation as follows:
+      <me>
+        <tabular>
+          <row>
+            <cell>" \use3 \JustCenter <em>The Integers</em> "</cell>
+          </row>
+          <row>
+            <cell>+02 _ |\(C[ 0 ]\) consisting of all integers with a remainder of 0 when divided by 3 | \(C[ 1 ]\) consisting of all integers with a remainder of 1 when divided by 3 | \(C[ 2 ]\) consisting of all integers with a remainder of 2 when divided by 3 |</cell>
+          </row>
+          <row>
+            <cell>+33 _</cell>
+          </row>
+        </tabular>
+      </me>
+    </p>
+    <p>
+      Each integer is in exactly one of the three sets <m>C[ 0 ]</m>,
+      <m>C[ 1 ]</m>, or <m>C[ 2 ]</m>,
+      and two integers are congruent modulo 3 if and only if they are in the same set.
+      We will see that, in a similar manner,
+      if <m>n</m> is any natural number,
+      then the relation of congruence modulo <m>n</m> can be used to sort the integers into <m>n</m> classes.
+      We will also see that in general,
+      if we have an equivalence relation <m>R</m> on a set <m>A</m>,
+      we can sort the elements of the set <m>A</m> into classes in a similar manner.
+    </p>
+    <definition xml:id="equivalenceclass">
+      <statement>
+        <p>
+          Let <m>\sim</m> be an equivalence relation on a nonempty set <m>A</m>.
+          For each <m>a \in A</m>, the <term>equivalence class of</term>
+              <idx><h>equivalence class</h></idx>
+          <m>\boldsymbol{a}</m> determined by <m>\sim</m> is the subset of <m>A</m>,
+          denoted by <m>[ a ]</m>,
+          consisting of all the elements of <m>A</m> that are equivalent to <m>a</m>.
+          That is,
+          <me>
+            [ a ] = \left\{ { {x \in A } \mid x \sim a} \right\}\!
+          </me>.
+        </p>
+        <p>
+          We read <m>[ a ]</m> as
+          <q>the equivalence class of <m>a</m></q>
+          or as
+          <q>bracket <m>a</m>.</q>
+        </p>
+      </statement>
+    </definition>
+    <p>
+      <em>Notes</em>
+      <ol>
+        <li>
+          <p>
+            We use the notation <m>[ a ]</m> when only one equivalence relation is being used.
+            If there is more than one equivalence relation,
+            then we need to distinguish between the equivalence classes for each relation.
+            We often use something like <m>[ a ]_{ \sim}</m>,
+            or if <m>R</m> is the name of the relation,
+            we can use <m>R[ a ]</m> or <m>[a]_R</m> for the equivalence class of <m>a</m> determined by <m>R</m>.
+            In any case,
+            always remember that when we are working with any equivalence relation on a set <m>A</m> if <m>a \in A</m>,
+            then <em>the equivalence class <m>[ a ]</m> is a subset of <m>A</m>.</em>
+          </p>
+        </li>
+        <li>
+          <p>
+            We know that each integer has an equivalence class for the equivalence relation of congruence modulo 3.
+            But as we have seen, there are really only three
+            <em>distinct</em> equivalence classes.
+            Using the notation from the definition, they are:
+            <md>
+              <mrow>\amp = \left\{ a \in \Z \mid \mod{a}{0}{3} \right\}, \amp  [1] \amp = \left\{ a \in \Z \mid \mod{a}{1}{3} \right\}, \text{ and }</mrow>
+              <mrow>[2] \amp = \left\{ a \in \Z \mid \mod{a}{2}{3} \right\}</mrow>
+            </md>.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <investigation xml:id="prog_prev73">
+      <title><em>Equivalence Classes from \typeu <xref ref="PA_setswithrelation">Activity</xref></em></title>
+      <p>
+        Without using the terminology at that time,
+        we actually determined the equivalence classes of the equivalence relation <m>R</m> in Beginning <xref ref="PA_setswithrelation">Activity</xref>.
+        What are the distinct equivalence classes for this equivalence relation?
+      </p>
+    </investigation>
+  </subsection>
+  <subsection>
+    <title>Congruence Modulo <m>\boldsymbol{n}</m> and Congruence Classes</title>
+    <p>
+      In Beginning <xref ref="PA_congruencemodulo3">Activity</xref>,
+      we used the notation <m>C[ k ]</m> for the set of all integers that are congruent to <m>k</m> modulo 3.
+      We could have used a similar notation for equivalence classes,
+      and this would have been perfectly acceptable.
+      However, the notation <m>[ a ]</m> is probably the most common notation for the equivalence class of <m>a</m>.
+      We will now use this same notation when dealing with congruence modulo <m>n</m> when only one congruence relation is under consideration.
+    </p>
+    <definition xml:id="congclass">
+      <statement>
+        <p>
+          Let <m>n \in \mathbb{N}</m>.
+          Congruence modulo <m>n</m> is an equivalence relation on <m>\mathbb{Z}</m>.
+          So for <m>a \in \mathbb{Z}</m>,
+          <me>
+            [ a ] = \left\{ { {x \in \mathbb{Z} } \mid x \equiv a \pmod n} \right\}\!
+          </me>.
+        </p>
+        <p>
+          In this case, <m>[ a ]</m> is called the
+          <term>congruence class of</term>
+              <idx><h>congruence class</h></idx>
+          <m>\boldsymbol{a}</m> <term>modulo</term> <m>\boldsymbol{n}</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      We have seen that congruence modulo 3 divides the integers into three distinct congruence classes.
+      Each congruence class consists of those integers with the same remainder when divided by 3.
+      In a similar manner,
+      if we use congruence modulo 2, we simply divide the integers into two classes.
+      One class will consist of all the integers that have a remainder of 0 when divided by 2, and the other class will consist of all the integers that have a remainder of 1 when divided by 2.
+      That is, congruence modulo 2 simply divides the integers into the even and odd integers.
+    </p>
+    <investigation xml:id="prog_congmod4">
+      <title><em>Congruence Modulo 4</em></title>
+      <p>
+        Determine all of the distinct congruence classes for the equivalence relation of congruence modulo 4 on the integers.
+        Specify each congruence class using the roster method.
+      </p>
+    </investigation>
+  </subsection>
+  <subsection>
+    <title>Properties of Equivalence Classes</title>
+    <p>
+      As we have seen,
+      in Beginning <xref ref="PA_setswithrelation">Activity</xref>,
+      the relation <m>R</m> was an equivalence relation.
+      For that activity,
+      we used <m>R[ y ]</m> to denote the equivalence class of <m>y \in A</m>,
+      and we observed that these equivalence classes were either equal or disjoint.
+    </p>
+    <p>
+      However, in Beginning <xref ref="PA_setswithrelation">Activity</xref>,
+      the relation <m>S</m> was not an equivalence relation,
+      and hence we do not use the term
+      <q>equivalence class</q>
+      for this relation.
+      We should note, however,
+      that the sets <m>S[ y ]</m> were not equal and were not disjoint.
+      This exhibits one of the main distinctions between equivalence relations and relations that are not equivalence relations.
+    </p>
+    <p>
+      In <xref ref="T_propsofequivclasses">Theorem</xref>,
+      we will prove that if <m>\sim</m> is an equivalence relation on the set <m>A</m>,
+      then we can
+      <q>sort</q>
+      the elements of <m>A</m> into distinct equivalence classes.
+      The properties of equivalence classes that we will prove are as follows:
+      <idx><h>equivalence class</h><h>properties of</h></idx>(1) Every element of <m>A</m> is in its own equivalence class; (2) two elements are equivalent if and only if their equivalence classes are equal;
+      and (3) two equivalence classes are either identical or they are disjoint.
+    </p>
+    <theorem xml:id="T_propsofequivclasses">
+      <statement>
+        <p>
+          Let <m>A</m> be a nonempty set and let <m>\sim</m> be an equivalence relation on the set <m>A</m>.
+          Then,
+          <ol>
+            <li xml:id="T_propsofequivclasses1">
+              <p>
+                For each <m>a \in A</m>, <m>a \in [ a ]</m>.
+              </p>
+            </li>
+            <li xml:id="T_propsofequivclasses2">
+              <p>
+                For each <m>a, b \in A</m>,
+                <m>a \sim b</m> if and only if <m>[ a ] = [ b ]</m>.
+              </p>
+            </li>
+            <li xml:id="T_propsofequivclasses3">
+              <p>
+                For each <m>a, b \in A</m>,
+                <m>[ a ] = [ b ]</m> or <m>[ a ] \cap [ b ] = \emptyset</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Let <m>A</m> be a nonempty set and assume that <m>\sim</m> is an equivalence relation on <m>A</m>.
+        To prove the first part of the theorem, let <m>a \in A</m>.
+        Since <m>\sim</m> is an equivalence relation on <m>A</m>,
+        it is reflexive on <m>A</m>.
+        Thus, <m>a \sim a</m>, and we can conclude that <m>a \in [ a ]</m>.
+      </p>
+      <p>
+        The second part of this theorem is a biconditional statement.
+        We will prove it by proving two conditional statements.
+        We will first prove that if <m>a \sim b</m>,
+        then <m>[ a ] = [ b ]</m>.
+        So let <m>a, b \in A</m> and assume that <m>a \sim b</m>.
+        We will now prove that the two sets <m>[ a ]</m> and <m>[ b ]</m> are equal.
+        We will do this by proving that each is a subset of the other.
+      </p>
+      <p>
+        First, assume that <m>x \in [ a ]</m>.
+        Then, by definition, <m>x \sim a</m>.
+        Since we have assumed that <m>a \sim b</m>,
+        we can use the transitive property of <m>\sim</m> to conclude that <m>x \sim b</m>,
+        and this means that <m>x \in [ b ]</m>.
+        This proves that <m>[ a ] \subseteq [ b ]</m>.
+      </p>
+      <p>
+        We now assume that <m>y \in [ b ]</m>.
+        This means that <m>y \sim b</m>,
+        and hence by the symmetric property, that <m>b \sim y</m>.
+        Again, we are assuming that <m>a \sim b</m>.
+        So we have <m>a \sim b</m> and <m>b \sim y</m>.
+        We use the transitive property to conclude that <m>a \sim y</m> and then,
+        using the symmetric property,
+        we conclude that <m>y \sim a</m>.
+        This proves that <m>y \in [ a ]</m> and, hence,
+        that <m>[ b ] \subseteq [ a ]</m>.
+        This means that we can conclude that if <m>a \sim b</m>,
+        then <m>[ a ] = [ b ]</m>.
+      </p>
+      <p>
+        We must now prove that if <m>[ a ] = [ b ]</m>, then <m>a \sim b</m>.
+        Let <m>a, b \in A</m> and assume that <m>[ a ] = [ b ]</m>.
+        Using the first part of the theorem,
+        we know that <m>a \in [ a ]</m> and since the two sets are equal,
+        this tells us that <m>a \in [ b ]</m>.
+        Hence by the definition of <m>[ b ]</m>,
+        we conclude that <m>a \sim b</m>.
+        This completes the proof of the second part of the theorem.
+      </p>
+      <p>
+        For the third part of the theorem, let <m>a, b \in A</m>.
+        Since this part of the theorem is a disjunction,
+        we will consider two cases: Either
+        <me>
+          [ a ] \cap [ b ] = \emptyset   \text{ or } [ a ] \cap [ b ] \ne \emptyset
+        </me>.
+      </p>
+      <p>
+        In the case where <m>[ a ] \cap [ b ] = \emptyset</m>,
+        the first part of the disjunction is true,
+        and hence there is nothing to prove.
+        So we assume that <m>[ a ] \cap [ b ] \ne \emptyset</m> and will show that <m>[ a ] = [ b ]</m>.
+        Since <m>[ a ] \cap [ b ] \ne \emptyset</m>,
+        there is an element <m>x</m> in <m>A</m> such that
+        <me>
+          x \in [ a ] \cap [ b ]
+        </me>.
+      </p>
+      <p>
+        This means that <m>x \in [ a ]</m> and <m>x \in [ b ]</m>.
+        Consequently, <m>x \sim a</m> and <m>x \sim b</m>,
+        and so we can use the second part of the theorem to conclude that
+        <m>[ x ] = [ a ]</m> and <m>[ x ] = [ b ]</m>.
+        Hence, <m>[ a ] = [ b ]</m>,
+        and we have proven that <m>[ a ] = [ b ]</m> or <m>[ a ] \cap [ b ] = \emptyset</m>.
+      </p>
+    </proof>
+    <p>
+      <xref ref="T_propsofequivclasses">Theorem</xref>
+      gives the primary properties of equivalence classes.
+      Consequences of these properties will be explored in the exercises.
+      The following table restates the properties in <xref ref="T_propsofequivclasses">Theorem</xref>
+      and gives a verbal description of each one.
+      <me>
+        <tabular>
+          <row>
+            <cell>_ | Formal Statement from</cell>
+          </row>
+          <row>
+            <cell>Theorem\  <xref ref="T_propsofequivclasses"></xref> | <em>Verbal Description</em> |</cell>
+          </row>
+          <row>
+            <cell>+22 _ | For each  \(a \in A\), \(a \in [a]\).  | Every element of \(A\) is in its own equivalence class. |</cell>
+          </row>
+          <row>
+            <cell>+24 _ | For each  \(a, b \in A\), \(a \sim b\)  if and only if \([ a ] = [ b ]\). | Two elements of \(A\) are equivalent if and only if their equivalence classes are equal. |</cell>
+          </row>
+          <row>
+            <cell>+24 _ | For each  \(a, b \in A\),   \([ a ] = [ b ]\)  or \([ a ] \cap [ b ] = \emptyset \). | Any two equivalence classes are either equal or they are disjoint.  This means that if two equivalence classes are not disjoint then they must be equal. |</cell>
+          </row>
+          <row>
+            <cell>+24 _</cell>
+          </row>
+        </tabular>
+      </me>
+    </p>
+    <investigation xml:id="prog_equivclass">
+      <title><em>Equivalence Classes</em></title>
+      <p>
+        Let <m>f\x \mathbb{R} \to \mathbb{R}</m> be defined by
+        <m>f( x ) = x^2 - 4</m> for each <m>x \in \mathbb{R}</m>.
+        Define a relation <m>\sim</m> on
+        <m>\mathbb{R}</m> as follows: For <m>a, b \in \mathbb{R}</m>,
+        <m>a \sim b</m> if and only if <m>f( a ) = f( b )</m>.
+        In Exercise<nbsp/><xref ref="exer_equivrelwithfunction"/> of <xref ref="S_equivrelations">Section</xref>,
+        we proved that <nbsp/><m>\sim</m> is an equivalence relation on <m>\mathbb{R}</m>.
+        Consequently, each real number has an equivalence class.
+        For this equivalence relation,
+        <ol>
+          <li>
+            <p>
+              Determine the equivalence classes of 5, <m>-5</m>, 10,
+              <m>-10</m>, <m>\pi</m>, and <m>-\pi</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Determine the equivalence class of 0.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>a \in \R</m>,
+              use the roster method to specify the elements of the equivalence class <m>[ a ]</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </investigation>
+    <p>
+      The results of <xref ref="T_propsofequivclasses">Theorem</xref>
+      are consistent with all the equivalence relations studied in the beginning activities and in the progress checks.
+      Since this theorem applies to all equivalence relations,
+      it applies to the relation of congruence modulo <m>n</m> on the integers.
+      Because of the importance of this equivalence relation,
+      these results for congruence modulo <m>n</m> are given in the following corollary.
+    </p>
+    <corollary xml:id="C_propsofcongclasses">
+      <statement>
+        <p>
+          Let <m>n \in \mathbb{N}</m>.
+          For each <m>a \in \mathbb{Z}</m>,
+          let <m>[ a ]</m> represent the congruence class of <m>a</m> modulo <m>n</m>.
+          <ol>
+            <li>
+              <p>
+                For each <m>a \in \mathbb{Z}</m>, <m>a \in [ a ]</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                For each <m>a, b \in \mathbb{Z}</m>,
+                <m>a \equiv b \pmod n</m> if and only if <m>[ a ] = [ b ]</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                For each <m>a, b \in \mathbb{Z}</m>,
+                <m>[ a ] = [ b ]</m> or <m>[ a ] \cap [ b ] = \emptyset</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </corollary>
+    <p>
+      For the equivalence relation of congruence modulo <m>n</m>,
+      <xref ref="T_congtorem">Theorem</xref>
+      and <xref ref="C_congtorem">Corollary</xref>
+      tell us that each integer is congruent to its remainder when divided by <m>n</m>,
+      and that each integer is congruent modulo <m>n</m> to precisely one of one of the integers <m>0, 1, 2, \ldots , n - 1</m>.
+      This means that each integer is in precisely one of the congruence classes <m>[ 0 ]</m>,
+      <m>[ 1 ]</m>,
+      <m>[ 2 ], \ldots , [ {n - 1} ]</m>.
+      Hence, <xref ref="C_propsofcongclasses">Corollary</xref>
+      gives us the following result.
+    </p>
+    <corollary xml:id="C_propsofcongclasses2">
+      <statement>
+        <p>
+          Let <m>n \in \mathbb{N}</m>.
+          For each <m>a \in \mathbb{Z}</m>,
+          let <m>[ a ]</m> represent the congruence class of <m>a</m> modulo <m>n</m>.
+          <ol>
+            <li>
+              <p>
+                <m>\mathbb{Z} = [ 0 ] \cup [ 1 ] \cup [ 2 ] \cup \cdots \cup [ {n - 1} ]</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                For <m>j, k \in \left\{ {0, 1, 2, \ldots , n - 1} \right\}</m>,
+                if <m>j \ne k</m>, then <m>[ j ] \cap [ k ] = \emptyset</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </corollary>
+  </subsection>
+  <subsection>
+    <title>Partitions and Equivalence Relations</title>
+    <p>
+      A partition of a set <m>A</m> is a collection of subsets of <m>A</m> that
+      <q>breaks up</q>
+      the set <m>A</m> into disjoint subsets.
+      Technically,
+      each pair of distinct subsets in the collection must be disjoint.
+      We then say that the collection of subsets is
+      <em>pairwise disjoint</em>.
+          <idx><h>pairwise disjoint</h></idx>
+          <idx><h>disjoint</h><h>pairwise</h></idx>
+      We introduce the following formal definition.
+    </p>
+    <definition xml:id="partition">
+      <statement>
+        <p>
+          Let <m>A</m> be a nonempty set,
+          and let <m>\mathcal{C}</m> be a collection of subsets of <m>A</m>.
+          The collection of subsets <m>\mathcal{C}</m> is a
+          <term>partition of</term>
+              <idx><h>partition</h></idx>
+          <m>\boldsymbol{A}</m> provided that
+          <ol>
+            <li>
+              <p>
+                For each <m>V \in \mathcal{C}</m>, <m>V \ne \emptyset</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                For each <m>x \in A</m>,
+                there exists a <m>V \in \mathcal{C}</m> such that <m>x \in V</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                For every <m>V, W \in \mathcal{C}</m>,
+                <m>V = W</m> or <m>V \cap W = \emptyset</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </definition>
+    <p>
+      There is a close relation between partitions and equivalence classes since the equivalence classes of an equivalence relation form a partition of the underlying set,
+      as will be proven in <xref ref="T_equivclasses-partition">Theorem</xref>.
+      The proof of this theorem relies on the results in <xref ref="T_propsofequivclasses">Theorem</xref>.
+    </p>
+    <theorem xml:id="T_equivclasses-partition">
+      <statement>
+        <p>
+          Let <m>\sim</m> be an equivalence relation on the nonempty set <m>A</m>.
+          Then the collection <m>\mathcal{C}</m> of all equivalence classes determined by <m>\sim</m> is a partition of the set <m>A</m>.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Let <m>\sim</m> be an equivalence relation on the nonempty set <m>A</m>,
+        and let <m>\mathcal{C}</m> be the collection of all equivalence classes determined by <m>\sim</m>.
+        That is,
+        <me>
+          \mathcal{C} = \left\{ { {[ a ]} \mid a \in A} \right\}\!
+        </me>.
+      </p>
+      <p>
+        We will use <xref ref="T_propsofequivclasses">Theorem</xref>
+        to prove that <m>\mathcal{C}</m> is a partition of <m>A</m>.
+      </p>
+      <p>
+        Part<nbsp/><xref ref="T_propsofequivclasses1"/> of <xref ref="T_propsofequivclasses">Theorem</xref>
+        states that for each <m>a \in A</m>, <m>a \in [ a ]</m>.
+        In terms of the equivalence classes,
+        this means that each equivalence class is nonempty since each element of <m>A</m> is in its own equivalence class.
+        Consequently, <m>\mathcal{C}</m>,
+        the collection of all equivalence classes determined by <m>\sim</m>,
+        satisfies the first two conditions of the definition of a partition.
+      </p>
+      <p>
+        We must now show that the collection
+        <m>\mathcal{C}</m> of all equivalence classes determined by <m>\sim</m> satisfies the third condition for being a partition.
+        That is, we need to show that any two equivalence classes are either equal or are disjoint.
+        However, this is exactly the result in Part<nbsp/><xref ref="T_propsofequivclasses3"/> of <xref ref="T_propsofequivclasses">Theorem</xref>.
+      </p>
+      <p>
+        Hence, we have proven that the collection
+        <m>\mathcal{C}</m> of all equivalence classes determined by <m>\sim</m> is a partition of the set <m>A</m>.
+      </p>
+    </proof>
+    <p>
+      \note <xref ref="T_equivclasses-partition">Theorem</xref>
+      has shown us that if <m>\sim</m> is an equivalence relation on a nonempty set <m>A</m>,
+      then the collection of the equivalence classes determined by <m>\sim</m> form a partition of the set <m>A</m>.
+    </p>
+    <p>
+      This process can be reversed.
+      This means that given a partition
+      <m>\mathcal{C}</m> of a nonempty set <m>A</m>,
+      we can define an equivalence relation on <m>A</m> whose equivalence classes are precisely the subsets of <m>A</m> that form the partition.
+      This will be explored in Exercise<nbsp/><xref ref="exer_partition-equivrelation"/>.
+    </p>
+    <p>
+      \exercises{Exercises 7.3}
+    </p>
+    <ol>
+      <li xml:id="exer_sec73-1">
+        <p>
+          Let <m>A = \left\{ {a, b, c, d, e} \right\}</m> and let <m>\sim</m> be the relation on <m>A</m> that is represented by the directed graph in <xref ref="fig_dirgraph-exer1">Figure</xref>.
+          <figure xml:id="fig_dirgraph-exer1">
+            <caption>Directed Graph for the Relation in Exercise<nbsp/><xref ref="exer_sec73-1"/></caption>
+            <image width="73%" source="images/figps-exer73digraph.png"/>
+          </figure>
+          Prove that <m>\sim</m> is an equivalence relation on the set <m>A</m>,
+          and determine all of the equivalence classes determined by this equivalence relation.
+        </p>
+      </li>
+      <li xml:id="exer_drawdirgraph">
+        <p>
+          Let <m>A = \left\{ a, b, c, d, e, f \right\}</m>,
+          and assume that <m>\sim</m> is an equivalence relation on <m>A</m>.
+          Also assume that it is known that
+          <me>
+            <tabular>
+              <row>
+                <cell>" \(a \sim b\)  "  \(a \not \sim c\)  "  \(e \sim f\) "</cell>
+              </row>
+              <row>
+                <cell>" \(a \sim d\)  "  \(a \not \sim f\)  "  \(e \not \sim c\). "</cell>
+              </row>
+            </tabular>
+          </me>
+          Draw a complete directed graph for the equivalence relation  <m>\sim</m>  on the set <m>A</m>,
+          and then determine all of the equivalence classes for this equivalence relation.
+        </p>
+      </li>
+      <li xml:id="exer_sec73-2">
+        <p>
+          Let <m>A = \left\{ {0, 1, 2, 3, \ldots , 999, 1000} \right\}</m>.
+          Define the relation <m>R</m> on <m>A</m> as follows:
+        </p>
+        <ul>
+          \item For <m>x, y \in A</m>, <m>x \mathrel{R} y</m> if and only if <m>x</m> and <m>y</m> have the same number of digits.
+        </ul>
+        Prove that <m>R</m> is an equivalence relation on the set <m>A</m> and determine all of the distinct equivalence classes determined by <m>R</m>.
+      </li>
+      <li xml:id="exer_sec73-congclass">
+        <p>
+          Determine all of the congruence classes for the relation of congruence modulo 5 on the set of integers.
+        </p>
+      </li>
+      <li xml:id="exer_modpowers">
+        <p>
+          Let <m>\Z_{9} = \left\{ 0, 1, 2, 3, 4, 5, 6, 7, 8 \right\}</m>.
+        </p>
+        <ol>
+          <li>
+            <p>
+              Define the relation <m>\sim</m> on <m>\Z_{9}</m> as follows: For all <m>a,
+              b \in \Z_{9}</m>,
+              <m>a \sim b</m> if and only if <m>a^2 \equiv b^2 \pmod {9}</m>.
+              Prove that <m>\sim</m> is an equivalence relation on <m>\Z_{9}</m> and determine all of the distinct equivalence classes of this equivalence relation.
+            </p>
+          </li>
+          <li>
+            <p>
+              Define the relation <m>\approx</m> on <m>\Z_{9}</m> as follows: For all <m>a,
+              b \in \Z_{9}</m>,
+              <m>a \approx b</m> if and only if <m>a^3 \equiv b^3 \pmod {9}</m>.
+              Prove that <m>\approx</m> is an equivalence relation on <m>\Z_{9}</m> and determine all of the distinct equivalence classes of this equivalence relation.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li xml:id="exer_sec73-integer">
+        <p>
+          Define the relation <m>\sim</m> on <m>\Q</m> as follows: For <m>a,
+          b \in \Q</m>,
+          <m>a \sim b</m> if and only if <m>a - b \in \Z</m>.
+          In Progress <xref ref="prog_example-equiv">Check</xref>
+          of <xref ref="S_equivrelations">Section</xref>,
+          we showed that the relation <m>\sim</m> is an equivalence relation on <m>\Q</m>.
+          Also, see Exercise<nbsp/><xref ref="exer_sec72-diffQ"/> in <xref ref="S_equivrelations">Section</xref>.
+          <ol>
+            <li>
+              <p>
+                Prove that <m>\left[ \dfrac{5}{7} \right] = \left\{ \left. m + \dfrac{5}{7} \right| m \in \Z \right\}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>a \in \Z</m>, then what is the equivalence class of <m>a</m>?
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>a \in \Z</m>, prove that there is a bijection from
+                <m>\left[ a \right]</m> to <m>\left[ \dfrac{5}{7} \right]</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec73-rationaldiff">
+        <p>
+          Define the relation <m>\sim</m> on <m>\R</m> as follows: For <m>x,
+          y \in \R</m>,
+          <m>x \sim y</m> if and only if <m>x - y \in \Q</m>.
+          <ol>
+            <li>
+              <p>
+                Prove that <m>\sim</m> is an equivalence relation on <m>\R</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                List four different real numbers that are in the equivalence class of <m>\sqrt{2}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>a \in \Q</m>, what is the equivalence class of <m>a</m>?
+              </p>
+            </li>
+            <li>
+              <p>
+                Prove that <m>\left[ \sqrt{2} \right] = \left\{ r + \sqrt{2} \mid r \in \Q \right\}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>a \in \Q</m>, prove that there is a bijection from
+                <m>\left[ a \right]</m> to <m>\left[ \sqrt{2} \right]</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <p>
+          Define the relation <m>\sim</m> on <m>\Z</m> as follows: For <m>a,
+          b \in \Z</m>,
+          <m>a \sim b</m> if and only if <m>2a + 3b \equiv 0 \pmod 5</m>.
+          The relation <m>\sim</m> is an equivalence relation on <m>\Z</m>. (See Exercise<nbsp/><xref ref="exer_modequivrel"/> in <xref ref="S_equivrelations">Section</xref>).
+          Determine all the distinct equivalence classes for this equivalence relation.
+        </p>
+      </li>
+      <li xml:id="exer_sec73-rationals">
+        <p>
+          Let <m>A = \mathbb{Z} \times \left( {\mathbb{Z} - \left\{ 0 \right\}} \right)</m>.
+          That is, <m>A = \left\{ { {\left( {a, b} \right) \in \mathbb{Z} \times \mathbb{Z} } \mid b \ne 0} \right\}</m>.
+          Define the relation <m>\approx</m> on <m>A</m> as follows:
+          <ul>
+            \item For <m>\left( {a, b} \right), \left( {c, d} \right) \in A</m>, <m>\left( {a, b} \right) \approx \left( {c, d} \right)</m> if and only if <m>ad = bc</m>.
+          </ul>
+          <ol>
+            <li>
+              <p>
+                Prove that <m>\approx</m> is an equivalence relation on <m>A</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Why was it necessary to include the restriction that <m>b \ne 0</m> in the definition of the set <m>A</m>?
+              </p>
+            </li>
+            <li>
+              <p>
+                Determine an equation that gives a relation between <m>a</m> and <m>b</m> if
+                <m>\left( {a, b} \right) \in A</m> and <m>\left( {a, b} \right) \approx \left( {2, 3} \right)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Determine at least four different elements in <m>\left[ {\left( {2, 3} \right)} \right]</m>,
+                the equivalence class of <m>\left( {2, 3} \right)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Use set builder notation to describe <m>\left[ {\left( {2, 3} \right)} \right]</m>,
+                the equivalence class of <m>\left( {2, 3} \right)</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <p>
+          For <m>\left(a, b \right), \left( c, d \right) \in \R \times \R</m>,
+          define <m>\left(a, b \right) \sim \left(c, d \right)</m> if and only if <m>a^2 + b^2 = c^2 + d^2</m>.
+          In Exercise<nbsp/><xref ref="exer_sec72-circles"/> of <xref ref="S_equivrelations">Section</xref>,
+          we proved that <m>\sim</m> is an equivalence relation on <m>\R \times \R</m>.
+          <ol>
+            <li>
+              <p>
+                Determine the equivalence class of <m>\left(0, 0 \right)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Use set builder notation
+                (and do not use the symbol <m>\sim</m>)
+                to describe the equivalence class of
+                <m>\left(2, 3 \right)</m> and then give a geometric description of this equivalence class.
+              </p>
+            </li>
+            <li>
+              <p>
+                Give a geometric description of a typical equivalence class for this equivalence relation.
+              </p>
+            </li>
+            <li>
+              <p>
+                Let <m>\R^* = \left\{ x \in \R \mid x \geq 0 \right\}</m>.
+                Prove that there is a one-to-one correspondence (bijection) between <m>\R^*</m> and the set of all equivalence classes for this equivalence relation.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <p>
+          Let <m>A</m> be a nonempty set and let <m>\sim</m> be an equivalence relation on <m>A</m>.
+          Prove each of the following:
+          <ol>
+            <li>
+              <p>
+                For each <m>a, b \in A</m>,
+                <m>a\nsim b</m> if and only if <m>\left[ a \right] \cap \left[ b \right] = \emptyset</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                For each <m>a,
+                b \in A</m>, if <m>\left[ a \right] \ne \left[ b \right]</m>,
+                then <m>\left[ a \right] \cap \left[ b \right] = \emptyset</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                For each <m>a, b \in A</m>,
+                if <m>\left[ a \right] \cap \left[ b \right] \ne \emptyset</m> then <m>\left[ a \right] = \left[ b \right]</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+  <subsection>
+    <title>Explorations and Activities</title>
+    <ol>
+      <li xml:id="exer_partition-equivrelation">
+        <p>
+          <em>A Partition Defines an Equivalence Relation</em>.
+          Let <m>A = \left\{ {a, b, c, d, e} \right\}</m> and let <m>\mathcal{C} = \left\{ {\left\{ {a, b, c} \right\}, \left\{ {d, e} \right\}} \right\}</m>.
+          <ol>
+            <li>
+              <p>
+                Explain why <m>\mathcal{C}</m> is a partition of <m>A</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+        Define a relation <m>\sim</m> on <m>A</m> as follows: For <m>x, y \in A</m>, <m>x \sim y</m> if and only if there exists a set <m>U</m> in <m>\mathcal{C}</m> such that <m>x \in U</m> and <m>y \in U</m>.
+        <ol>
+          <li xml:id="A_partition-equivrelation1">
+            <p>
+              Prove that <m>\sim</m> is an equivalence relation on the set <m>A</m>,
+              and then determine all the equivalence classes for <m>\sim</m>.
+              How does the collection of all equivalence classes compare to <m>\mathcal{C}</m>?
+            </p>
+          </li>
+        </ol>
+        What we did for the specific partition in Part<nbsp/><xref ref="A_partition-equivrelation1"/> can be done for any partition of a set. So to generalize Part<nbsp/><xref ref="A_partition-equivrelation1"/>, we let <m>A</m> be a nonempty set and let <m>\mathcal{C}</m> be a partition of <m>A</m>. We then define a relation <m>\sim</m> on <m>A</m> as follows:
+        <ul>
+          \item For <m>x, y \in A</m>, <m>x \sim y</m> if and only if there exists a set <m>U</m> in <m>\mathcal{C}</m> such that <m>x \in U</m> and <m>y \in U</m>.
+        </ul>
+        <ol>
+          <li>
+            <p>
+              Prove that <m>\sim</m> is an equivalence relation on the set <m>A</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Let <m>a \in A</m> and let
+              <m>U \in \mathcal{C}</m> such that <m>a \in U</m>.
+              Prove that <m>[ a ] = U</m>.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <p>
+          <em>Equivalence Relations on a Set of Matrices</em>.
+          The following exercises require a knowledge of elementary linear algebra.
+          We let <m>\mathcal{M}_{n, n}\left( \R \right)</m> be the set of all <m>n</m> by <m>n</m> matrices with real number entries.
+          <ol>
+            <li>
+              <p>
+                Define a relation <m>\sim</m> on
+                <m>\mathcal{M}_{n, n}( \R )</m> as follows: For all <m>A, B \in \mathcal{M}_{n, n}( \R )</m>,
+                <m>A \sim B</m> if and only if there exists an invertible matrix <m>P</m> in
+                <m>\mathcal{M}_{n, n}( \R )</m> such that <m>B = PAP^{-1}</m>.
+                Is <m>\sim</m> an equivalence relation on <m>\mathcal{M}_{n, n}( \R )</m>?
+                Justify your conclusion.
+              </p>
+            </li>
+            <li>
+              <p>
+                Define a relation <m>R</m> on
+                <m>\mathcal{M}_{n, n} (\R )</m> as follows: For all <m>A, B \in \mathcal{M}_{n, n}( \R )</m>,
+                <m>A \mathrel{R} B</m> if and only if <m>\text{ det } (A) = \text{ det } (B)</m>.
+                Is <m>R</m> an equivalence relation on <m>\mathcal{M}_{n, n}( \R )</m>?
+                Justify your conclusion.
+              </p>
+            </li>
+            <li>
+              <p>
+                Let <m>\sim</m> be an equivalence relation on <m>\R</m>.
+                Define a relation <m>\approx</m> on
+                <m>\mathcal{M}_{n, n}( \R )</m> as follows: For all <m>A, B \in \mathcal{M}_{n, n}( \R )</m>,
+                <m>A \approx B</m> if and only if <m>\text{ det } (A) \sim \text{ det } (B)</m>.
+                Is <m>\approx</m> an equivalence relation on <m>\mathcal{M}_{n, n}( \R )</m>?
+                Justify your conclusion.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+</section>

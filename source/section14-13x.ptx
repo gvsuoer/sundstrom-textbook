@@ -1,0 +1,118 @@
+<section>
+  <title><xref ref="S_contradiction">Section</xref></title>
+  <subsection>
+    <title>Progress <xref ref="pr_start-con">Check</xref></title>
+    <ol>
+      <li>
+        <p>
+          There exists a real number <m>x</m> such that <m>x</m> is irrational and <m>\sqrt[3]{x}</m> is rational.
+        </p>
+      </li>
+      <li>
+        <p>
+          There exists a real number <m>x</m> such that
+          <m>\left(x + \sqrt{2} \right)</m> is rational and <m>\left(-x + \sqrt{2} \right)</m> is rational.
+        </p>
+      </li>
+      <li>
+        <p>
+          There exist integers <m>a</m> and <m>b</m> such that 5 divides <m>ab</m> and 5 does not divide <m>a</m> and 5 does not divide <m>b</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          There exist real numbers <m>a</m> and <m>b</m> such that <m>a > 0</m> and <m>b > 0</m> and <m>\dfrac{2}{a} + \dfrac{2}{b} = \dfrac{4}{a + b}</m>.
+        </p>
+      </li>
+    </ol>
+  </subsection>
+  <subsection>
+    <title>Progress <xref ref="pr_exploreproof">Check</xref></title>
+    <ol>
+      <li>
+        <p>
+          Some integers that are congruent to 2 modulo 4 are <m>-6, -2, 2, 6, 10</m>,
+          and some integers that are congruent to 3 modulo 6 are:
+          <m>-9, -3, 3, 9, 15</m>.
+          There are no integers that are in both of the lists.
+        </p>
+      </li>
+      <li>
+        <p>
+          For this proposition,
+          it is reasonable to try a proof by contradiction since the conclusion is stated as a negation.
+        </p>
+      </li>
+      <li>
+        <p>
+          <proof>
+            <p>
+              We will use a proof by contradiction.
+              Let <m>n \in \mathbb{Z}</m> and assume that
+              <m>n \equiv 2 \pmod 4</m> and that <m>n \equiv 3 \pmod 6</m>.
+              Since <m>n \equiv 2 \pmod 4</m>,
+              we know that 4 divides <m>n - 2</m>.
+              Hence, there exists an integer <m>k</m> such that
+              <men xml:id="eq_exploreproof1">
+                n - 2 = 4k
+              </men>.
+            </p>
+            <p>
+              We can also use the assumption that
+              <m>n \equiv 3 \pmod 6</m> to conclude that 6 divides <m>n - 3</m> and that there exists an integer <m>m</m> such that
+              <men xml:id="eq_exploreproof2">
+                n - 3 = 6m
+              </men>.
+            </p>
+            <p>
+              If we now solve equations<nbsp/><xref ref="eq_exploreproof1"/> and<nbsp/><xref ref="eq_exploreproof2"/> for <m>n</m> and set the two expressions equal to each other,
+              we obtain
+              <me>
+                4k + 2 = 6m + 3
+              </me>.
+            </p>
+            <p>
+              However, this equation can be rewritten as
+              <me>
+                2\left( {2k + 1} \right) = 2\left( {3m + 1} \right) + 1
+              </me>.
+            </p>
+            <p>
+              Since <m>2k + 1</m> is an integer and <m>3m + 1</m> is an integer,
+              this last equation is a contradiction since the left side is an even integer and the right side is an odd integer.
+              Hence, we have proven that if <m>n \equiv 2 \pmod 4</m>,
+              then <m>n\not \equiv 3 \pmod 6</m>.
+            </p>
+          </proof>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+  <subsection>
+    <title>Progress <xref ref="prog_persquare">Check</xref></title>
+    <ol>
+      <li>
+        <p>
+          <m>x^2 + y^2 = (2m + 1)^2 + (2n + 1)^2 = 2 \left( 2m^2 + 2m + 2n^2 + 2n + 1 \right)</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Using algebra to rewrite the last equation, we obtain
+          <me>
+            4m^2 + 4m + 4n^2 + 4n + 2 = 4k^2
+          </me>.
+          If we divide both sides of this equation by 2, we see that <m>2m^2 + 2m + 2n^2 + 2n + 1 = 2k^2</m> or
+          <me>
+            2 \left(m^2 + m + n^2 + n \right) + 1 = 2k^2
+          </me>.
+          However, the left side of the last equation is an odd integer and the right side is an even integer.
+          This is a contradiction,
+          and so we have proved that for all integers <m>x</m> and <m>y</m>,
+          if <m>x</m> and <m>y</m> are odd integers,
+          then there does not exist an integer <m>z</m> such that <m>x^2 + y^2 = z^2</m>.
+        </p>
+      </li>
+    </ol>
+  </subsection>
+</section>

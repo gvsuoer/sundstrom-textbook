@@ -1,0 +1,1046 @@
+<section xml:id="S_moreaboutfunctions">
+  <title>More about Functions</title>
+  <introduction>
+    <p>
+      In <xref ref="S_introfunctions">Section</xref>,
+      we have seen many examples of functions.
+      We have also seen various ways to represent functions and to convey information about them.
+      For example,
+      we have seen that the rule for determining outputs of a function can be given by a formula,
+      a graph, or a table of values.
+      We have also seen that sometimes it is more convenient to give a verbal description of the rule for a function.
+      In cases where the domain and codomain are small, finite sets,
+      we used an arrow diagram to convey information about how inputs and outputs are associated without explicitly stating a rule.
+      In this section, we will study some types of functions,
+      some of which we may not have encountered in previous mathematics courses.
+    </p>
+    <exploration xml:id="PA_diagonals">
+      <title><em>The Number of Diagonals of a Polygon</em></title>
+      <p>
+        A <term>polygon</term>
+            <idx><h>polygon</h></idx>
+        is a closed plane figure formed by the joining of three or more straight lines.
+        For example, a <term>triangle</term>
+            <idx><h>triangle</h></idx>
+        is a polygon that has three sides;
+        a <term>quadrilateral</term>
+            <idx><h>quadrilateral</h></idx>
+        is a polygon that has four sides and includes squares,
+        rectangles, and parallelograms;
+        a <term>pentagon</term>
+            <idx><h>pentagon</h></idx>
+        is a polygon that has five sides;
+        and an <term>octagon</term> <idx><h>octagon</h></idx> is a polygon that has eight sides.
+        A <term>regular polygon</term>
+            <idx><h>regular polygon</h></idx>
+            <idx><h>polygon</h><h>regular</h></idx>
+        is one that has equal-length sides and congruent interior angles.
+      </p>
+      <p>
+        A <term>diagonal of a polygon</term>
+            <idx><h>diagonal</h></idx>
+            <idx><h>polygon</h><h>diagonal</h></idx>
+        is a line segment that connects two nonadjacent vertices of the polygon.
+        In this activity, we will assume that all polygons are
+        <term>convex polygons</term> so that,
+        except for the vertices, each diagonal lies inside the polygon.
+        For example,
+        a triangle (3-sided polygon) has no diagonals and a rectangle has two diagonals.
+        <ol>
+          <li>
+            <p>
+              How many diagonals does any quadrilateral (4-sided polygon) have?
+            </p>
+          </li>
+          <li xml:id="PA_diagonals2">
+            <p>
+              Let <m>D = \mathbb{N} - \left\{ {1, 2} \right\}</m>.
+              Define <m>d\x D \to \mathbb{N} \cup \left\{ 0 \right\}</m> so that <m>d( n )</m> is the number of diagonals of a convex polygon with <m>n</m> sides.
+              Determine the values of <m>d(3)</m>, <m>d(4)</m>,
+              <m>d(5)</m>, <m>d(6)</m>, <m>d(7)</m>, and <m>d(8)</m>.
+              Arrange the results in the form of a table of values for the function <m>d</m>.
+            </p>
+          </li>
+          <li xml:id="PA_diagonals3">
+            <p>
+              Let  <m>f\x \mathbb{R} \to \mathbb{R}</m>  be defined by
+              <me>
+                f( x ) = \frac{{x\left( {x - 3} \right)}}{2}
+              </me>.
+              Determine the values of <m>f(0)</m>,
+              <m>f(1)</m>,
+              <m>f(2)</m>, <m>f(3)</m>, <m>f(4)</m>, <m>f(5)</m>,
+              <m>f(6)</m>, <m>f(7)</m>, <m>f(8)</m>, and <m>f(9)</m>.
+              Arrange the results in the form of a table of values for the function <m>f</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Compare the functions in Parts<nbsp/><xref ref="PA_diagonals2"/> and<nbsp/><xref ref="PA_diagonals3"/>.
+              What are the similarities between the two functions and what are the differences?
+              Should these two functions be considered equal functions?
+              Explain.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </exploration>
+    <exploration xml:id="PA_derivatives">
+      <title><em>Derivatives</em></title>
+      <p>
+        In calculus, we learned how to find the derivatives
+            <idx><h>derivative</h></idx>
+        of certain functions.
+        For example, if <m>f( x ) = x^2( {\sin x} )</m>,
+        then we can use the product rule to obtain
+        <me>
+          f'( x ) = 2x( {\sin x} ) + x^2( {\cos x} )
+        </me>.
+      </p>
+      <ol>
+        <li>
+          <p>
+            If possible,
+            find the derivative of each of the following functions:
+          </p>
+          <ol>
+            <li>
+              <p>
+                <m>f( x ) = x^4 - 5x^3 + 3x - 7</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>g( x ) = \cos ( {5x} )</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>h( x ) = \dfrac{{\sin x}}{x}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>k( x ) = e^{ - x^2 }</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>r( x ) = \left| x \right|</m>
+              </p>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <p>
+            Is it possible to think of differentiation as a function?
+            Explain.
+            If so, what would be the domain of the function,
+            what could be the codomain of the function,
+            and what is the rule for computing the element of the codomain (output) that is associated with a given element of the domain (input)?
+          </p>
+        </li>
+      </ol>
+    </exploration>
+  </introduction>
+  <subsection xml:id="sub_functioncong">
+    <title>Functions Involving Congruences</title>
+    <p>
+      <xref ref="T_congtorem">Theorem</xref>
+      and <xref ref="C_congtorem">Corollary</xref>
+      (see <xref ref="T_congtorem">page</xref>)
+      state that an integer is congruent
+      (mod <m>n</m>)
+      to its remainder when it is divided by <m>n</m>.
+      (Recall that we always mean the remainder guaranteed by the Division Algorithm,
+      which is the least nonnegative remainder.)
+      Since this remainder is unique and since the only possible remainders for division by <m>n</m> are <m>0, 1, 2,  \ldots , n - 1</m>,
+      we then know that each integer is congruent, modulo <m>n</m>,
+      to precisely one of the integers <m>0,1,2, \ldots ,n - 1</m>.
+      So for each natural number <m>n</m>,
+      we will define a new set <m>R_n</m> as the set of remainders upon division by <m>n</m>.
+      So
+      <me>
+        R_n = \{ 0, 1, 2, \ldots , n - 1 \}
+      </me>.
+    </p>
+    <p>
+      For example,
+      <m>R_4 = \{0, 1, 2, 3 \}</m> and <m>R_6 = \{ 0, 1, 2, 3, 4, 5 \}</m>.
+      We will now explore a method to define a function from <m>R_6</m> to <m>R_6</m>.
+    </p>
+    <p>
+      For each <m>x \in R_6</m>,
+      we can compute <m>x^2  + 3</m> and then determine the value of <m>r</m> in <m>R_6</m> so that
+      <me>
+        \left( {x^2  + 3} \right) \equiv r\pmod 6
+      </me>.
+    </p>
+    <p>
+      Since <m>r</m> must be in <m>R_6</m>,
+      we must have <m>0 \leq r \lt 6</m>.
+      The results are shown in the following table.
+    </p>
+    <table xml:id="Ta_congruence">
+      <title>Table of Values Defined by a Congruence</title>
+      <tabular>
+        <row>
+          <cell></cell>
+          <cell><m>r</m> where</cell>
+          <cell></cell>
+          <cell></cell>
+          <cell><m>r</m> where</cell>
+        </row>
+        <row>
+          <cell><m>x</m></cell>
+          <cell><m>( {x^2  + 3} ) \equiv r( {\bmod 6} )</m></cell>
+          <cell></cell>
+          <cell><m>x</m></cell>
+          <cell><m>( {x^2  + 3} ) \equiv r( {\bmod 6} )</m></cell>
+        </row>
+        <row>
+          <cell>0</cell>
+          <cell>3</cell>
+          <cell></cell>
+          <cell>3</cell>
+          <cell>0</cell>
+        </row>
+        <row>
+          <cell>1</cell>
+          <cell>4</cell>
+          <cell></cell>
+          <cell>4</cell>
+          <cell>1</cell>
+        </row>
+        <row>
+          <cell>2</cell>
+          <cell>1</cell>
+          <cell></cell>
+          <cell>5</cell>
+          <cell>4</cell>
+        </row>
+        <row>
+          <cell></cell>
+        </row>
+      </tabular>
+    </table>
+    <p>
+      The value of <m>x</m> in the first column can be thought of as the input for a function with the value of <m>r</m> in the second column as the corresponding output.
+      Each input produces exactly one output.
+      So we could write <m>f:R_6 \to R_6</m> by
+      <m>f( x ) = r</m> where <m>( {x^2 + 3} ) \equiv r {\pmod 6}</m>.
+      This description and the notation for the outputs of this function are quite cumbersome.
+      So we will use a more concise notation.
+      We will, instead, write Let
+      <m>f\x R_6 \to R_6</m> by <m>f( x ) = \left( {x^2 + 3} \right) \pmod 6</m>.
+    </p>
+    <investigation xml:id="pr_congfunctions">
+      <title><em>Functions Defined by Congruences</em></title>
+      <p>
+        We have <m>R_5 = \left\{ {0, 1, 2, 3, 4} \right\}</m>.
+        Define <m>f\x R_5 \to R_5</m> by <m>f(x) = x^4 \pmod 5</m>,
+        for each <m>x \in R_5</m>;
+      </p>
+      <p>
+        <m>g\x R_5 \to R_5</m> by <m>g(x) = x^5 \pmod 5</m>,
+        for each <m>x \in R_5</m>.
+        <ol>
+          <li>
+            <p>
+              Determine <m>f(0)</m>, <m>f(1)</m>, <m>f(2)</m>, <m>f(3)</m>,
+              and <m>f(4)</m> and represent the function <m>f</m> with an arrow diagram.
+            </p>
+          </li>
+          <li>
+            <p>
+              Determine <m>g(0)</m>, <m>g(1)</m>, <m>g(2)</m>, <m>g(3)</m>,
+              and <m>g(4)</m> and represent the function <m>g</m> with an arrow diagram.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </investigation>
+  </subsection>
+  <subsection>
+    <title>Equality of Functions</title>
+    <p>
+      The idea of equality of functions has been in the background of our discussion of functions,
+      and it is now time to discuss it explicitly.
+      The preliminary work for this discussion was Beginning <xref ref="PA_diagonals">Activity</xref>,
+      in which <m>D = \mathbb{N} - \left\{ {1, 2} \right\}</m>,
+      and there were two functions:
+      <ul>
+        <li>
+          <p>
+            <m>d\x D \to \mathbb{N} \cup \left\{ 0 \right\}</m>,
+            where <m>d( n )</m> is the number of diagonals of a convex polygon with <m>n</m> sides
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>f\x \mathbb{R} \to \mathbb{R}</m>,
+            where <m>f( x ) = \dfrac{{x\left( {x - 3} \right)}}{2}</m>,
+            for each real number <m>x</m>.
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      In Beginning  <xref ref="PA_diagonals">Activity</xref>,
+      we saw that these two functions produced the same outputs for certain values of the input
+      (independent variable).
+      For example, we can verify that
+      <md>
+        <mrow>d( 3 ) \amp = f( 3 ) = 0, \qquad \amp d( 4 ) = f( 4 ) = 2,</mrow>
+        <mrow>d( 5 ) \amp = f( 5 ) = 5, \qquad \text{ and }   \amp d( 6 ) = f( 6 ) = 9</mrow>
+      </md>.
+    </p>
+    <p>
+      Although the functions produce the same outputs for some inputs,
+      these are two different functions.
+      For example,
+      the outputs of the function <m>f</m> are determined by a formula,
+      and the outputs of the function <m>d</m> are determined by a verbal description.
+      This is not enough,
+      however, to say that these are two different functions.
+      Based on the evidence from Beginning <xref ref="PA_diagonals">Activity</xref>,
+      we might make the following conjecture: For <m>n \geq 3</m>,
+      <m>d( n ) = \dfrac{{n\left( {n - 3} \right)}}{2}</m>.
+      Although we have not proved this statement, it is a true statement.
+      (See <xref ref="exer_sec62-6">Exercise</xref>.)
+      However, we know the function <m>d</m> and the function <m>f</m> are not the same function.
+      For example,
+      <ul>
+        <li>
+          <p>
+            <m>f( 0 ) = 0</m>, but 0 is not in the domain of <m>d</m>;
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>f( \pi ) = \dfrac{{\pi \left( {\pi - 3} \right)}}{2}</m>,
+            but <m>\pi</m> is not in the domain of <m>d</m>.
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      We thus see the importance of considering the domain and codomain of each of the two functions in determining whether the two functions are equal or not.
+      This motivates the following definition.
+    </p>
+    <definition xml:id="functionequality">
+      <statement>
+        <p>
+          Two functions <m>f</m> and <m>g</m> are <term>equal</term>
+              <idx><h>equal functions</h></idx>
+              <idx><h>function</h><h>equality</h></idx>
+          provided that
+          <ul>
+            <li>
+              <p>
+                The domain of <m>f</m> equals the domain of <m>g</m>.
+                That is, <m>\text{ dom } ( f ) = \text{ dom } ( g )</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                The codomain of <m>f</m> equals the codomain of <m>g</m>.
+                That is, <m>\text{ codom } ( f ) = \text{ codom } ( g )</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                For each <m>x</m> in the domain of <m>f</m>
+                (which equals the domain of <m>g</m>),
+                <m>f( x ) = g( x )</m>.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </definition>
+    <investigation xml:id="pr_equalfunc">
+      <title><em>Equality of Functions</em></title>
+      <p>
+        Let <m>A</m> be a nonempty set.
+        The <em>identity function on the set</em>
+            <idx><h>identity function</h></idx>
+        <m>\boldsymbol{A}</m>,
+        denoted by <m>I_A</m> , is the function <m>I_A\x A \to A</m> defined by
+        <m>I_A ( x ) = x</m> for every <m>x</m> in <m>A</m>.
+        That is, for the identity map,
+        the output is always equal to the input.
+      </p>
+      <p>
+        For this progress check,
+        we will use the functions <m>f</m> and <m>g</m> from Progress <xref ref="pr_congfunctions">Check</xref>.
+        The identity function on the set <m>R_5</m> is
+        <m>I_{R_5}:R_5 \to R_5</m> by <m>I_{R_5}(x) = x \pmod 5</m>,
+        for each <m>x \in R_5</m>.
+        Is the identity function on <m>R_5</m> equal to either of the functions <m>f</m> or <m>g</m> from Progress <xref ref="pr_congfunctions">Check</xref>?
+        Explain.
+      </p>
+    </investigation>
+  </subsection>
+  <subsection>
+    <title>Mathematical Processes as Functions</title>
+    <p>
+      Certain mathematical processes can be thought of as functions.
+      In Beginning <xref ref="PA_derivatives">Activity</xref>,
+      we reviewed how to find the derivatives of certain functions,
+      and we considered whether or not we could think of this differentiation process as a function.
+      If we use a differentiable function as the input and consider the derivative of that function to be the output,
+      then we have the makings of a function.
+      Computer algebra systems such as
+      <em>Maple</em> and <em>Mathematica</em>
+      have this derivative function as one of their predefined operators.
+    </p>
+    <p>
+      Different computer algebra systems will have different syntax for entering functions and for the derivative function.
+      The first step will be to input a real function <m>f</m>.
+      This is usually done by entering a formula for <m>f(x)</m>,
+      which is valid for all real numbers <m>x</m> for which <m>f(x)</m> is defined.
+      The next step is to apply the derivative function to the function <m>f</m>.
+      For purposes of illustration,
+      we will use <m>D</m> to represent this derivative function.
+      So this function will give <m>D(f) = f'</m>.
+    </p>
+    <p>
+      For example, if we enter
+      <me>
+        f(x) = x^2 \sin (x)
+      </me>
+      for the function <m>f</m>, we will get <m>D(f) = f'</m>,
+      where <m>f'(x) = 2x\sin \left( x \right) + x^2 \cos \left( x \right)</m>.
+    </p>
+    <p>
+      We must be careful when determining the domain for the derivative function since there are functions that are not differentiable.
+      To make things reasonably easy,
+      we will let <m>F</m> be the set of all real functions that are differentiable and call this the domain of the derivative function <m>D</m>.
+      We will use the set <m>T</m> of all real functions as the codomain.
+      So our function <m>D</m> is
+      <me>
+        D\x F \to T  \text{ by }  D( f ) = f'
+      </me>.
+    </p>
+    <investigation xml:id="pr_average">
+      <title><em>Average of a Finite Set of Numbers</em></title>
+      <p>
+            <idx><h>average</h><h>of a finite set of numbers</h></idx>
+        Let <m>A = \left\{ a_1, a_2, \ldots,
+        a_n \right\}</m> be a finite set whose elements are the distinct real numbers <m>a_1, a_2, \ldots, a_n</m>.
+        We define the <em>average of the set <m>A</m></em>
+        to be the real number <m>\bar{A}</m>, where
+        <me>
+          \bar{A} = \frac{a_1 + a_2 + \cdots + a_n}{n}
+        </me>.
+        <ol>
+          <li>
+            <p>
+              Find the average of <m>A = \left\{ 3, 7, -1, 5 \right\}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Find the average of <m>B = \left\{ 7, -2, 3.8, 4.2, 7.1 \right\}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Find the average of <m>C = \left\{ \sqrt{2}, \sqrt{3}, \pi - \sqrt{3} \right\}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Now let <m>\mathscr{F}( \R )</m> be the set of all nonempty finite subsets of <m>\R</m>.
+              That is, a subset <m>A</m> of <m>\R</m> is in
+              <m>\mathscr{F}( \R )</m> if and only if <m>A</m> contains only a finite number of elements.
+              Carefully explain how the process of finding the average of a finite subset of <m>\R</m> can be thought of as a function.
+              In doing this,
+              be sure to specify the domain of the function and the codomain of the function.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </investigation>
+  </subsection>
+  <subsection>
+    <title>Sequences as Functions</title>
+    <p>
+      A sequence can be considered to be an infinite list of objects that are indexed (subscripted) by the natural numbers
+      (or some infinite subset of <m>\mathbb{N} \cup \left\{ 0 \right\}</m>).
+      Using this idea, we often write a sequence in the following form:
+      <me>
+        a_1 , a_2 ,  \ldots , a_n ,  \ldots
+      </me>.
+    </p>
+    <p>
+      In order to shorten our notation,
+      we will often use the notation
+      <m>\left\langle {a_n } \right\rangle</m> to represent this sequence.
+      Sometimes a formula can be used to represent the terms of a sequence,
+      and we might include this formula as the <m>n</m>th term in the list for a sequence such as in the following example:
+      <me>
+        1, \frac{1}{2}, \frac{1}{3},  \ldots , \frac{1}{n},  \ldots
+      </me>.
+    </p>
+    <p>
+      In this case,
+      the <m>n^\text{ th }</m> term of the sequence is <m>\dfrac{1}{n}</m>.
+      If we know a formula for the <m>n</m>th term,
+      we often use this formula to represent the sequence.
+      For example,
+      we might say Define the sequence <m>\left\langle {a_n } \right\rangle</m> by
+      <m>a_n  = \dfrac{1}{n}</m> for each <m>n \in \mathbb{N}</m>.
+      This shows that this sequence is a function with domain <m>\mathbb{N}</m>.
+      If it is understood that the domain is <m>\N</m>,
+      we could refer to this as the sequence <m>\left\langle \dfrac{1}{n} \right \rangle</m>.
+      Given an element of the domain,
+      we can consider <m>a_n</m> to be the output.
+      In this case,
+      we have used subscript notation to indicate the output rather than the usual function notation.
+      We could just as easily write
+      <me>
+        a( n ) = \frac{1}{n} \text{ instead of }  a_n  = \frac{1}{n}
+      </me>.
+    </p>
+    <p>
+      We make the following formal definition.
+    </p>
+    <definition xml:id="sequence">
+      <statement>
+        <p>
+          An (infinite) <term>sequence</term>
+              <idx><h>sequence</h></idx>
+          is a function whose domain is
+          <m>\mathbb{N}</m> or some infinite subset of <m>\mathbb{N} \cup \left\{ 0 \right\}</m>.
+        </p>
+      </statement>
+    </definition>
+    <investigation xml:id="pr_sequences">
+      <title><em>Sequences</em></title>
+      <p>
+        Find the sixth and tenth terms of the following sequences,
+        each of whose domain is <m>\N</m>:
+        <ol>
+          <li>
+            <p>
+              <m>\dfrac{1}{3}, \dfrac{1}{6}, \dfrac{1}{9}, \dfrac{1}{12}, \ldots</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\langle a_n \rangle</m>,
+              where <m>a_n = \dfrac{1}{n^2}</m> for each <m>n \in \N</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\langle (-1)^n \rangle</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </investigation>
+  </subsection>
+  <subsection xml:id="ss_functiontwovar">
+    <title>Functions of Two Variables</title>
+    <p>
+      In <xref ref="S_cartesian">Section</xref>,
+      we learned how to form the Cartesian product of two sets.
+      Recall that a Cartesian product of two sets is a set of ordered pairs.
+      For example,
+      the set <m>\Z \times \Z</m> is the set of all ordered pairs,
+      where each coordinate of an ordered pair is an integer.
+      Since a Cartesian product is a set,
+      it could be used as the domain or codomain of a function.
+      For example,
+      we could use <m>\Z \times \Z</m> as the domain of a function as follows: Let
+      <m>f\x \mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}</m> be defined by <m>f( {m, n} ) = 2m + n</m>.
+      <ul>
+        <li>
+          <p>
+            Technically,
+            an element of  <m>\mathbb{Z} \times \mathbb{Z}</m>  is an ordered pair,
+            and so we should write  <m>f( {( {m, n} )} )</m> for the output of the function  <m>f</m>   when the input is  the ordered pair <m>\left( {m, n} \right)</m>.
+            However, the double parentheses seem unnecessary in this context and there should be no confusion if we write
+            <m>f( {m, n} )</m> for the output of the function  <m>f</m>   when the input is <m>\left( {m, n} \right)</m>.
+            So, for example, we simply write
+            <md>
+              <mrow>f( {3, 2} )    \amp = 2 \cdot 3 + 2 = 8,\text{ and }</mrow>
+              <mrow>f( { - 4, 5} ) \amp = 2 \cdot \left( { - 4} \right) + 5 =  - 3</mrow>
+            </md>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Since the domain of this function is <m>\Z \times \Z</m> and each element of
+            <m>\Z \times \Z</m> is an ordered pair of integers,
+            we frequently call this type of function a
+            <em>function of two variables</em>.
+              <idx><h>function</h><h>of two variables</h></idx>
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      Finding the preimages of an element of the codomain for the function <m>f</m>,
+      <m>\mathbb{Z}</m>,
+      usually involves solving an equation with two variables.
+      For example, to find the preimages of <m>0 \in \mathbb{Z}</m>,
+      we need to find all ordered pairs
+      <m>\left( {m, n} \right) \in \mathbb{Z} \times \mathbb{Z}</m> such that <m>f( {m, n} ) = 0</m>.
+      This means that we must find all ordered pairs <m>\left( {m, n} \right) \in \mathbb{Z} \times \mathbb{Z}</m> such that
+      <me>
+        2m + n = 0
+      </me>.
+    </p>
+    <p>
+      Three such ordered pairs are <m>\left( {0, 0} \right)</m>,
+      <m>\left( {1,  - 2} \right)</m>,
+      and <m>\left( { - 1, 2} \right)</m>.
+      In fact, whenever we choose an integer value for <m>m</m>,
+      we can find a corresponding integer <m>n</m> such that <m>2m + n = 0</m>.
+      This means that 0 has infinitely many preimages,
+      and it may be difficult to specify the set of all of the preimages of 0 using the roster method.
+      One way that can be used to specify this set is to use set builder notation and say that the following set consists of all of the preimages of 0:
+      <me>
+        \left\{ { {\left( {m, n} \right) \in \mathbb{Z} \times \mathbb{Z} } \mid 2m + n = 0} \right\} = \left\{ { {\left( {m, n} \right) \in \mathbb{Z} \times \mathbb{Z} } \mid n =  - 2m} \right\}\!
+      </me>.
+    </p>
+    <p>
+      The second formulation for this set was obtained by solving the equation
+    </p>
+    <p>
+      <m>2m + n = 0</m> for <m>n</m>.
+    </p>
+    <investigation xml:id="pr_function-two">
+      <title><em>Working with a Function of Two Variables</em></title>
+      <p>
+        Let <m>g\x \mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}</m> be defined by
+        <m>g( {m, n} ) = m^2 - n</m> for all <m>\left(m, n \right) \in \Z \times \Z</m>.
+        <ol>
+          <li>
+            <p>
+              Determine <m>g(0, 3)</m>,
+              <m>g(3,-2)</m>, <m>g(-3, -2)</m>, and <m>g(7, -1)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Determine the set of all preimages of the integer 0 for the function <m>g</m>.
+              Write your answer using set builder notation.
+            </p>
+          </li>
+          <li>
+            <p>
+              Determine the set of all preimages of the integer 5 for the function <m>g</m>.
+              Write your answer using set builder notation.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </investigation>
+    <p>
+      \exercises{Exercises 6.2}
+    </p>
+    <ol>
+      <li xml:id="exer_sec62-1">
+        <p>
+          Let <m>R_5 = \left\{ {0, 1, 2, 3, 4} \right\}</m>.
+          Define <m>f\x R_5 \to R_5</m> by <m>f( x ) = x^2 + 4 \pmod 5</m>,
+          and define <m>g\x R_5 \to R_5</m> by <m>g( x ) = (x + 1)(x + 4) \pmod 5</m>.
+        </p>
+        <ol>
+          <li>
+            <p>
+              Calculate <m>f( 0 )</m>,
+              <m>f( 1 ), f( 2 )</m>, <m>f( 3 )</m>, and <m>f( 4 )</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Calculate <m>g( 0 )</m>,
+              <m>g( 1 ), g( 2 )</m>, <m>g( 3 )</m>, and <m>g( 4 )</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Is the function <m>f</m> equal to the function <m>g</m>?
+              Explain.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li xml:id="exer_sec62-2">
+        <p>
+          Let <m>R_6 = \left\{ {0, 1, 2, 3, 4, 5} \right\}</m>.
+          Define <m>f\x R_6 \to R_6</m> by <m>f( x ) = x^2 + 4 \pmod 6</m>,
+          and define <m>g\x R_6 \to R_6</m> by <m>g( x ) = (x + 1)(x + 4) \pmod 6</m>.
+          <ol>
+            <li>
+              <p>
+                Calculate <m>f( 0 )</m>,
+                <m>f( 1 ), f( 2 )</m>, <m>f( 3 )</m>,
+                <m>f( 4 )</m>, and <m>f( 5 )</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Calculate <m>g( 0 )</m>,
+                <m>g( 1 ), g( 2 )</m>, <m>g( 3 )</m>,
+                <m>g( 4 )</m>, and <m>g( 5 )</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Is the function <m>f</m> equal to the function <m>g</m>?
+                Explain.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer62_realfunction">
+        <p>
+          Let <m>f\x \left(\R - \{0 \} \right) \to \R</m> by <m>f(x) = \dfrac{x^3 + 5x}{x}</m> and let
+          <m>g\x \R \to \R</m> by <m>g(x) = x^2 + 5</m>.
+          <ol>
+            <li>
+              <p>
+                Calculate <m>f( 2 ), f( -2 )</m>,
+                <m>f( 3 )</m>, and <m>f( \sqrt{2} )</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Calculate <m>g( 0 )</m>,
+                <m>g( 2 ), g( -2 )</m>, <m>g( 3 )</m>, and <m>g( \sqrt{2} )</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Is the function <m>f</m> equal to the function <m>g</m>?
+                Explain.
+              </p>
+            </li>
+            <li>
+              <p>
+                Now let <m>h\x \left(\R - \{0 \} \right) \to \R</m> by <m>h(x) = x^2 + 5</m>.
+                Is the function <m>f</m> equal to the function <m>h</m>?
+                Explain.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec62-3">
+        <p>
+          Represent each of the following sequences as functions.
+          In each case, state a domain, codomain,
+          and rule for determining the outputs of the function.
+          Also, determine if any of the sequences are equal.
+          <ol>
+            <li>
+              <p>
+                <m>1, \dfrac{1}{4}, \dfrac{1}{9}, \dfrac{1}{{16}}, \ldots</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\dfrac{1}{3}, \dfrac{1}{9}, \dfrac{1}{{27}}, \dfrac{1}{{81}}, \ldots</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>1, - 1, 1, - 1, 1, - 1, \ldots</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\cos( 0 ), \cos( \pi ), \cos( {2\pi } ), \cos( {3\pi } ), \cos( {4\pi } ), \ldots</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="sym_projfunc">
+        <p>
+          Let <m>A</m> and <m>B</m> be two nonempty sets.
+          There are two <em>projection functions</em>
+    <idx><h>projection function</h></idx>
+    <idx><h>function</h><h>projection</h></idx>
+          with domain <m>A \times B</m>,
+          the Cartesian product of <m>A</m> and <m>B</m>.
+          One projection function will map an ordered pair to its first coordinate,
+          and the other projection function will map the ordered pair to its second coordinate.
+          So we define
+          <ul>
+            \item <m>p_1\x A \times B \to A</m> by <m>p_1( {a, b} ) = a</m> for every <m>( {a, b} ) \in A \times B</m>; and \item <m>p_2\x A \times B \to B</m> by <m>p_2( {a, b} ) = b</m> for every <m>( {a, b} ) \in A \times B</m>.
+          </ul>
+        </p>
+        Let <m>A = \left\{ {1, 2} \right\}</m> and let <m>B = \left\{ {x, y, z} \right\}</m>.
+        <ol>
+          <li>
+            <p>
+              Determine the outputs for all possible inputs for the projection function <m>p_1\x A \times B \to A</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Determine the outputs for all possible inputs for the projection function <m>p_2\x A \times B \to B</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              What is the range of these projection functions?
+            </p>
+          </li>
+          <li>
+            <p>
+              Is the following statement true or false?
+              Explain.
+              <ul>
+                \item For all <m>( {m, n} ), ( {u, v} ) \in A \times B</m>, if <m>( {m, n} ) \ne ( {u, v} )</m>, then <m>p_1( {m, n} ) \ne p_1( {u, v} )</m>.
+              </ul>
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li xml:id="exer_sec62-6">
+        <p>
+          Let  <m>D = \mathbb{N} - \left\{ {1, 2} \right\}</m> and define <m>d\x D \to \mathbb{N} \cup \left\{ 0 \right\}</m>  by
+          <m>d( n ) =</m> the number of diagonals of a convex polygon with  <m>n</m>  sides.
+          In Beginning  <xref ref="PA_diagonals">Activity</xref>,
+          we showed that for values of  <m>n</m>  from  3 through 8,
+          <me>
+            d( n ) = \frac{{n\left( {n - 3} \right)}}{2}
+          </me>.
+          Use mathematical induction to prove that for all  <m>n \in D</m>,
+          <m>d( n ) = \dfrac{{n\left( {n - 3} \right)}}{2}</m>. \hint  To get an idea of how to handle the inductive step,
+          use a pentagon.
+          First, form all the diagonals that can be made from  four  of the vertices.
+          Then consider how to make new diagonals when the fifth vertex is used.
+          This may generate an idea of how to proceed from a polygon with  <m>k</m>  sides  to a polygon with  <m>k + 1</m>  sides.
+        </p>
+      </li>
+      <li xml:id="exer_sec61-7">
+        <p>
+          Let <m>f\x \Z \times \Z \to \mathbb{Z}</m> be defined by <m>f( {m, n} ) = m + 3n</m>.
+          <ol>
+            <li>
+              <p>
+                Calculate <m>f( { - 3, 4} )</m> and <m>f( { - 2, - 7} )</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Determine the set of all the preimages of 4 by using set builder notation to describe the set of all
+                <m>\left( {m, n} \right) \in \mathbb{Z} \times \mathbb{Z}</m> such that <m>f( {m, n} ) = 4</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec61-8">
+        <p>
+          Let <m>g\x \mathbb{Z} \times \mathbb{Z} \to \mathbb{Z} \times \mathbb{Z}</m> be defined by <m>g( {m, n} ) = \left( {2m, m - n} \right)</m>.
+          <ol>
+            <li>
+              <p>
+                Calculate <m>g( {3, 5} )</m> and <m>g( { - 1, 4} )</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Determine all the preimages of <m>\left( {0, 0} \right)</m>.
+                That is, find all <m>( {m, n} ) \in \mathbb{Z} \times \mathbb{Z}</m> such that <m>g( {m, n} ) = ( {0, 0} )</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Determine the set of all the preimages of <m>( {8, - 3} )</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Determine the set of all the preimages of <m>( {1, 1} )</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Is the following proposition true or false?
+                Justify your conclusion.
+                <ul>
+                  \item For each <m>( {s, t} ) \in \mathbb{Z} \times \mathbb{Z}</m>, there exists an <m>( {m, n}) \in \mathbb{Z} \times \mathbb{Z}</m> such that <m>g( {m, n} ) = ( {s, t} )</m>.
+                </ul>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="sym_determinant">
+        <p>
+          A <em>2 by 2 matrix over</em>
+    <idx><h>matrix</h></idx>
+          <m>\mathbb{R}</m> is a rectangular array of four real numbers arranged in two rows and two columns.
+          We usually write this array inside brackets
+          (or parentheses)
+          as follows:
+          <me>
+            A = \left[ {\begin{array}{*{20}c} a \amp  b  \\ c \amp  d \end{array}  } \right]
+          </me>,
+          where  <m>a</m>, <m>b</m>, <m>c</m>,
+          and  <m>d</m>  are real numbers.
+          The <em>determinant</em>
+    <idx><h>determinant</h></idx>
+    <idx><h>matrix</h><h>determinant</h></idx>
+          of the 2 by 2 matrix  <m>A</m>,
+          denoted by  <m>\det( A )</m> ,  is defined as
+          <me>
+            \det( A ) = ad - bc
+          </me>.
+          <ol>
+            <li>
+              <p>
+                Calculate the determinant of each of the following matrices:
+                <me>
+                  \left[ {\begin{array}{*{20}c} 3 \amp  5  \\ 4 \amp  1 \end{array}  } \right],\;\left[ {\begin{array}{*{20}c} 1 \amp  0  \\ 0 \amp  7 \end{array}  } \right],\;\text{ and } \left[ {\begin{array}{*{20}c} 3 \amp  { - 2}  \\ 5 \amp  0 \end{array}  } \right]
+                </me>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Let <m>\mathcal{M}_2( \R )</m> be the set of all 2 by 2 matrices over <m>\R</m>.
+                The mathematical process of finding the determinant of a 2 by 2 matrix over <m>\R</m> can be thought of as a function.
+                Explain carefully how to do so,
+                including a clear statement of the domain and codomain of this function.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="sym_transpose">
+        <p>
+          Using the notation from Exercise<nbsp/>(exer_determinant), let
+          <me>
+            A = \left[ {\begin{array}{*{20}c} a \amp  b  \\ c \amp  d \end{array}  } \right]
+          </me>
+          be a  2 by 2  matrix over  <m>\R</m>.
+          The <em>transpose of the matrix</em>
+    <idx><h>transpose</h></idx>
+    <idx><h>matrix</h><h>transpose</h></idx> <m>\boldsymbol{A}</m>, denoted by  <m>A^T</m>, is the  2 by 2  matrix over  <m>\mathbb{R}</m> defined by
+          <me>
+            A^T  = \left[ {\begin{array}{*{20}c} a \amp  c  \\ b \amp  d \end{array}  } \right]
+          </me>.
+          <ol>
+            <li>
+              <p>
+                Calculate the transpose  of each of the following matrices:
+                <me>
+                  \left[ {\begin{array}{*{20}c} 3 \amp  5  \\ 4 \amp  1 \end{array}  } \right],\;\left[ {\begin{array}{*{20}c} 1 \amp  0  \\ 0 \amp  7 \end{array}  } \right],\;\text{ and } \left[ {\begin{array}{*{20}c} 3 \amp  { - 2}  \\ 5 \amp  0 \end{array}  } \right]
+                </me>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Let <m>\mathcal{M}_2( \R )</m> be the set of all 2 by 2 matrices over <m>\mathbb{R}</m>.
+                The mathematical process of finding the transpose of a 2 by 2 matrix over
+                <m>\mathbb{R}</m> can be thought of as a function.
+                Carefully explain how to do so,
+                including a clear statement of the domain and codomain of this function.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+  <subsection>
+    <title>Explorations and Activities</title>
+    <ol>
+      <li>
+        <p>
+          <em>Integration as a Function</em>.
+          In calculus,
+          we learned that if  <m>f</m>  is real function that is continuous on the closed interval  <m>\left[ {a, b} \right]</m>,
+          then the definite integral  <m>\int_a^b {f( x ) \, dx}</m> is a real number.
+          In fact, one form of the <em>Fundamental Theorem of Calculus</em>
+            <idx><h>Fundamental Theorem</h><h>of Calculus</h></idx>
+          states that
+          <me>
+            \int_a^b {f( x ) \, dx} = F( b ) - F( a )
+          </me>,
+          where  <m>F</m>  is any antiderivative of  <m>f</m>,
+          that is, where  <m>F \,' = f</m>.
+        </p>
+        <ol>
+          <li>
+            <p>
+              Let  <m>\left[ {a, b} \right]</m> be a closed interval of real numbers and let
+              <m>C {\left[ {a, b} \right]}</m> be the set of all real functions that are continuous on <m>\left[ {a, b} \right]</m>.
+              That is,
+              <me>
+                C{\left[ {a, b} \right]}  = \left\{ {f\x \left[ {a, b} \right] \to \mathbb{R}  \mid f\text{ is continuous on } \left[ {a, b} \right]} \right\}
+              </me>.
+            </p>
+            <ol>
+              <li>
+                <p>
+                  Explain how the definite integral
+                  <m>\int_a^b {f( x ) \, dx}</m> can be used to define a function <m>I</m> from
+                  <m>C{\left[ {a, b} \right]}</m> to <m>\mathbb{R}</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Let <m>\left[ {a, b} \right] = \left[ {0, 2} \right]</m>.
+                  Calculate <m>I( f )</m>, where <m>f( x ) = x^2 + 1</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Let <m>\left[ {a, b} \right] = \left[ {0, 2} \right]</m>.
+                  Calculate <m>I( g )</m>, where <m>g( x ) = \sin ( {\pi x} )</m>.
+                </p>
+              </li>
+            </ol>
+          </li>
+        </ol>
+        In calculus,
+        we also learned how to determine the indefinite integral
+        <m>\int {f( x )} \;dx</m> of a continuous function  <m>f</m>.
+        <ol>
+          <li>
+            <p>
+              Let <m>f( x ) = x^2 + 1</m> and <m>g(x) = \cos( 2x )</m>.
+              Determine <m>\int {f( x )} \;dx</m> and <m>\int {g( x )} \;dx</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Let <m>f</m> be a continuous function on the closed interval
+              <m>\left[ {0, 1} \right]</m> and let <m>T</m> be the set of all real functions.
+              Can the process of determining the indefinite integral of a continuous function be used to define a function from <m>C{\left[ {0, 1} \right]}</m> to <m>T</m>?
+              Explain.
+            </p>
+          </li>
+          <li>
+            <p>
+              Another form of the Fundamental Theorem of Calculus states that if  <m>f</m>  is continuous on the interval  <m>\left[ {a, b} \right]</m> and if
+              <me>
+                g( x ) = \int_a^x {f( t ) \, dt}
+              </me>
+              for each  <m>x</m>  in  <m>\left[ {a, b} \right]</m>,
+              then  <m>g'\left( x \right) = f\left( x \right)</m>.
+              That is,  <m>g</m>  is an antiderivative of  <m>f</m>.
+              Explain how this theorem can be used to define a function from <m>C{\left[ {a,\;b} \right]}</m> to  <m>T</m>,
+              where the output of the function is an antiderivative of the input.
+              (Recall that  <m>T</m>  is the set of all real functions.)
+            </p>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </subsection>
+</section>

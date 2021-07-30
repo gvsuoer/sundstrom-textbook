@@ -1,0 +1,1252 @@
+<section xml:id="S_direct">
+  <title>Constructing Direct Proofs</title>
+  <introduction>
+    <exploration xml:id="PA_even">
+      <title><em>Definition of Even and Odd Integers</em></title>
+      <p>
+        Definitions play a very important role in mathematics.
+        A direct proof of a proposition in mathematics is often a demonstration that the proposition follows logically from certain definitions and previously proven propositions.
+        A <term>definition</term>
+            <idx><h>definition</h></idx>
+        is an agreement that a particular word or phrase will stand for some object,
+        property, or other concept that we expect to refer to often.
+        In many elementary proofs, the answer to the question,
+        <q>How do we prove a certain proposition?</q>, is often answered by means of a definition.
+        For example, in Progress <xref ref="pr_explores">Check</xref>
+        on <xref ref="pr_explores">page</xref>,
+        all of the examples should have indicated that the following conditional statement is true: If <m>x</m> and <m>y</m> are odd integers,
+        then <m>x \cdot y</m> is an odd integer.
+        In order to construct a mathematical proof of this conditional statement,
+        we need a precise definition of what it means to say that an integer is an even integer and what it means to say that an integer is an odd integer.
+      </p>
+      <definition xml:id="D_even">
+        <statement>
+          <p>
+            An integer <m>a</m> is an <term>even integer</term>
+                <idx><h>even integer</h></idx>
+            provided that there exists an integer <m>n</m> such that <m>a = 2n</m>.
+            An integer <m>a</m> is an <term>odd integer</term>
+                <idx><h>odd integer</h></idx>
+            provided there exists an integer <m>n</m> such that <m>a = 2n + 1</m>.
+          </p>
+        </statement>
+      </definition>
+      <p>
+        Using this definition,
+        we can conclude that the integer 16 is an even integer since <m>16 = 2 \cdot 8</m> and 8 is an integer.
+        By answering the following questions,
+        you should obtain a better understanding of these definitions.
+        These questions are not here just to have questions in the textbook.
+        Constructing and answering such questions is a way in which many mathematicians will try to gain a better understanding of a definition.
+      </p>
+      <ol>
+        <li>
+          <p>
+            Use the definitions given above to
+          </p>
+          <ol>
+            <li>
+              <p>
+                Explain why 28, <m>-42</m>, 24, and 0 are even integers.
+              </p>
+            </li>
+            <li>
+              <p>
+                Explain why 51, <m>-11</m>, 1, and <m>-1</m> are odd integers.
+              </p>
+            </li>
+          </ol>
+        </li>
+      </ol>
+      <p>
+        It is important to realize that mathematical definitions are not made randomly.
+        In most cases,
+        they are motivated by a mathematical concept that occurs frequently.
+        <ol>
+          <li>
+            <p>
+              Are the definitions of even integers and odd integers consistent with your previous ideas about even and odd integers?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </exploration>
+    <exploration xml:id="PA_thinking">
+      <title><em>Thinking about a Proof</em></title>
+      <p>
+        Consider the following proposition:
+      </p>
+      <term>Proposition.</term>  If  <m>x</m>  and  <m>y</m>  are odd integers, then <m>x \cdot y</m>  is an odd integer.
+      <p>
+        Think about how you might go about proving this proposition.
+        A <term>direct proof</term>
+            <idx><h>direct proof</h></idx>
+            <idx><h>proof</h><h>direct</h></idx>
+        of a conditional statement is a demonstration that the conclusion of the conditional statement follows logically from the hypothesis of the conditional statement.
+        Definitions and previously proven propositions are used to justify each step in the proof.
+        To help get started in proving this proposition,
+        answer the following questions:
+        <ol>
+          <li>
+            <p>
+              The proposition is a conditional statement.
+              What is the hypothesis of this conditional statement?
+              What is the conclusion of this conditional statement?
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>x = 2</m> and <m>y = 3</m>,
+              then <m>x \cdot y = 6</m>, and 6 is an even integer.
+              Does this example prove that the proposition is false?
+              Explain.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>x = 5</m> and <m>y = 3</m>,
+              then <m>x \cdot y = 15</m>.
+              Does this example prove that the proposition is true?
+              Explain.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        In order to prove this proposition,
+        we need to prove that whenever both <m>x</m> and <m>y</m> are odd integers,
+        <m>x \cdot y</m> is an odd integer.
+        Since we cannot explore all possible pairs of integer values for <m>x</m> and <m>y</m>,
+        we will use the definition of an odd integer to help us construct a proof.
+        <ol>
+          <li xml:id="PA_prev12-Q4">
+            <p>
+              To start a proof of this proposition,
+              we will assume that the hypothesis of the conditional statement is true.
+              So in this case,
+              we assume that both <m>x</m> and <m>y</m> are odd integers.
+              We can then use the definition of an odd integer to conclude that there exists an integer <m>m</m> such that <m>x = 2m + 1</m>.
+              Now use the definition of an odd integer to make a conclusion about the integer <m>y</m>. \note The definition of an odd integer says that a certain other integer exists.
+              This definition may be applied to both <m>x</m> and <m>y</m>.
+              However, do not use the same letter in both cases.
+              To do so would imply that <m>x = y</m> and we have not made that assumption.
+              To be more specific,
+              if <m>x = 2m + 1</m> and <m>y = 2m +1</m>, then <m>x = y</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              We need to prove that if the hypothesis is true,
+              then the conclusion is true.
+              So, in this case,
+              we need to prove that <m>x \cdot y</m> is an odd integer.
+              At this point, we usually ask ourselves a so-called
+              <em>backward question</em>.
+              In this case, we ask,
+              <q>Under what conditions can we conclude that
+              <m>x \cdot y</m> is an odd integer?</q>
+              Use the definition of an odd integer to answer this question.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </exploration>
+  </introduction>
+  <subsection xml:id="SS_properties">
+    <title>Properties of Number Systems</title>
+    <p>
+      At the end of <xref ref="S_prop">Section</xref>,
+      we introduced notations for the standard number systems we use in mathematics and discussed their closure properties.
+      For this text,
+      it is assumed that the reader is familiar with these closure properties and the basic rules of algebra that apply to all real numbers that are given in <xref ref="Ta_propertiesofreals">Table</xref>.
+    </p>
+    <table xml:id="Ta_propertiesofreals">
+      <title>Properties of the Real Numbers</title>
+      <me>
+        <tabular>
+          <row>
+            <cell>"   " For all real numbers \(x\), \(y\), and \(z\) "</cell>
+          </row>
+          <row>
+            <cell>+02  _
+              | Identity Properties |  \(x+0=x\) and \(x \cdot 1=x\) |</cell>
+          </row>
+          <row>
+            <cell>_1
+              | Inverse Properties  |  \(x + \left( { - x} \right) = 0\) and if \(x \ne 0\), then
+              \(x \cdot \dfrac{1}{x} = 1\).  |</cell>
+          </row>
+          <row>
+            <cell>+55 _1
+              |Commutative Properties  |  \Lower{\(x + y = y + x\) and  \(x  y = y  x\)} |</cell>
+          </row>
+          <row>
+            <cell>_1
+              |Associative Properties  |   \Lower{\(\left( {x + y} \right) + z = x + \left( {y + z} \right)\) and
+              \(\left( {x  y} \right)  z = x  \left( {y  z} \right)\)} |</cell>
+          </row>
+          <row>
+            <cell>_1
+              |Distributive Properties |  \Lower{\(x\left( {y + z} \right) = x  y + x  z\) and
+              \(\left( {y + z} \right)x = y  x + z  x\)}  |</cell>
+          </row>
+          <row>
+            <cell>_</cell>
+          </row>
+        </tabular>
+      </me>
+    </table>
+  </subsection>
+  <subsection>
+    <title>Constructing a Proof of a Conditional Statement</title>
+    <p>
+      In order to prove that a conditional statement <m>P \to Q</m> is true,
+      we only need to prove that <m>Q</m> is true whenever <m>P</m> is true.
+      This is because the conditional statement is true whenever the hypothesis is false.
+      So in a direct proof of <m>P \to Q</m>,
+      we assume that <m>P</m> is true,
+      and using this assumption,
+      we proceed through a logical sequence of steps to arrive at the conclusion that <m>Q</m> is true.
+    </p>
+    <p>
+      Unfortunately,
+      it is often not easy to discover how to start this logical sequence of steps.
+      We will describe a method of exploration that often can help in discovering the steps of a proof.
+      This method will involve working forward from the hypothesis,
+      <m>P</m>, and backward from the conclusion, <m>Q</m>.
+      We will use a device called the <em>
+      <q>know-show table</q>
+      </em>
+          <idx><h>know-show table|(</h></idx>
+      to help organize our thoughts and the steps of the proof.
+      This will be illustrated with the proposition from Beginning <xref ref="PA_thinking">Activity</xref>.
+    </p>
+    <em>Proposition.</em>  <em>If  <m>x</m>  and  <m>y</m>  are odd integers, then <m>x \cdot y</m>  is an odd integer.</em>
+    <p>
+      The first step is to identify the hypothesis, <m>P</m>,
+      and the conclusion, <m>Q</m>,
+      of the conditional statement.
+      In this case, we have the following: <m>P</m>:
+      <m>x</m> and <m>y</m> are odd integers.
+      <m>Q</m>: <m>x \cdot y</m> is an odd integer.
+      We now treat <m>P</m> as what we know
+      (we have assumed it to be true)
+      and treat <m>Q</m> as what we want to show
+      (that is, the goal).
+      So we organize this by using <m>P</m> as the first step in the know portion of the table and <m>Q</m> as the last step in the show portion of the table.
+      We will put the know portion of the table at the top and the show portion of the table at the bottom.
+      <me>
+        <tabular>
+          <row>
+            <cell>_ | <em>Step</em>  |  <em>Know</em>  |  <em>Reason</em>  |</cell>
+          </row>
+          <row>
+            <cell>+02 _ |  \(P\)     |  \(x\) and \(y\) are odd integers.  |  Hypothesis |</cell>
+          </row>
+          <row>
+            <cell>_1 |  \(P1\)    |                                 |             |</cell>
+          </row>
+          <row>
+            <cell>_1 |  \C \(\vdots\)  |  \C \(\vdots\)                         | \C \(\vdots\)      |</cell>
+          </row>
+          <row>
+            <cell>_1 |  \(Q1\)    |                                 |             |</cell>
+          </row>
+          <row>
+            <cell>_1 |  \(Q\)     |  \(x \cdot y\) is an odd integer. |  ?          |</cell>
+          </row>
+          <row>
+            <cell>_ |  <em>Step</em>  |  <em>Show</em>  |  <em>Reason</em>     |</cell>
+          </row>
+          <row>
+            <cell>+20 _</cell>
+          </row>
+        </tabular>
+      </me>
+    </p>
+    <p>
+      We have not yet filled in the reason for the last step because we do not yet know how we will reach the goal.
+      The idea now is to ask ourselves questions about what we know and what we are trying to prove.
+      We usually start with the conclusion that we are trying to prove by asking a so-called
+      <em>backward question.</em>
+      <idx><h>know-show table</h><h>backward question</h></idx>
+  The basic form of the question is,
+      <q>Under what conditions can we conclude that <m>Q</m> is true?</q>
+      How we ask the question is crucial since we must be able to answer it.
+      We should first try to ask and answer the question in an abstract manner and then apply it to the particular form of statement <m>Q</m>.
+    </p>
+    <p>
+      In this case,
+      we are trying to prove that some integer is an odd integer.
+      So our backward question could be,
+      <q>How do we prove that an integer is odd?</q>
+      At this time,
+      the only way we have of answering this question is to use the definition of an odd integer.
+      So our answer could be,
+      <q>We need to prove that there exists an integer <m>q</m> such that the integer equals <m>2q + 1</m>.</q>
+      We apply this answer to statement <m>Q</m> and insert it as the next to last line in the know-show table.
+      <me>
+        <tabular>
+          <row>
+            <cell>_ | <em>Step</em>  |  <em>Know</em>  |  <em>Reason</em>  |</cell>
+          </row>
+          <row>
+            <cell>+02 _ |  \(P\)     |  \(x\) and \(y\) are odd integers.  |  Hypothesis |</cell>
+          </row>
+          <row>
+            <cell>_1 |  \(P1\)    |                                 |             |</cell>
+          </row>
+          <row>
+            <cell>_1 |  \C \(\vdots\)  |  \C \(\vdots\)                         | \C \(\vdots\)      |</cell>
+          </row>
+          <row>
+            <cell>_1 |  \(Q1\)    |  There exists an integer \(q\) such that \(xy = 2q + 1\).                               |             |</cell>
+          </row>
+          <row>
+            <cell>_1 |  \(Q\)     |  \(x \cdot y\) is an odd integer. |  Definition of an odd integer          |</cell>
+          </row>
+          <row>
+            <cell>_ |  <em>Step</em>  |  <em>Show</em>  |  <em>Reason</em>     |</cell>
+          </row>
+          <row>
+            <cell>+20 _</cell>
+          </row>
+        </tabular>
+      </me>
+    </p>
+    <p>
+      We now focus our effort on proving statement <m>Q1</m> since we know that if we can prove <m>Q1</m>,
+      then we can conclude that <m>Q</m> is true.
+      We ask a backward question about <m>Q1</m> such as,
+      <q>How can we prove that there exists an integer <m>q</m> such that <m>x \cdot y = 2q + 1</m>?</q>
+      We may not have a ready answer for this question,
+      and so we look at the know portion of the table and try to connect the know portion to the show portion.
+      To do this, we work forward from step <m>P</m>,
+      and this involves asking a <em>forward question.</em>
+      <idx><h>know-show table</h><h>forward question</h></idx>
+  The basic form of this type of question is,
+      <q>What can we conclude from the fact that <m>P</m> is true?</q>
+      In this case,
+      we can use the definition of an odd integer to conclude that there exist integers <m>m</m> and <m>n</m> such that
+      <m>x = 2m + 1</m> and <m>y = 2n + 1</m>.
+      We will call this Step <m>P1</m> in the know-show table.
+      It is important to notice that we were careful not to use the letter <m>q</m> to denote these integers.
+      If we had used <m>q</m> again,
+      we would be claiming that the same integer that gives
+      <m>x \cdot y = 2q + 1</m> also gives <m>x = 2q + 1</m>.
+      This is why we used <m>m</m> and <m>n</m> for the integers <m>x</m> and <m>y</m> since there is no guarantee that <m>x</m> equals <m>y</m>.
+      The basic rule of thumb is to use a different symbol for each new object we introduce in a proof.
+      So at this point, we have:
+      <ul>
+        <li>
+          <p>
+            Step <m>P1</m>.
+            We know that there exist integers <m>m</m> and <m>n</m> such that
+            <m>x = 2m + 1</m> and <m>y = 2n + 1</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Step <m>Q1</m>.
+            We need to prove that there exists an integer <m>q</m> such that <m>x \cdot y = 2q + 1</m>.
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      We must always be looking for a way to link the
+      <q>know part</q>
+      to the
+      <q>show part</q>. There are conclusions we can make from <m>P1</m>, but as we proceed,
+      we must always keep in mind the form of statement in <m>Q1</m>.
+      The next forward question is,
+      <q>What can we conclude about
+      <m>x \cdot y</m> from what we know?</q>
+      One way to answer this is to use our prior knowledge of algebra.
+      That is, we can first use substitution to write <m>x \cdot y = \left( {2m + 1} \right)\left( {2n + 1} \right)</m>.
+      Although this equation does not prove that <m>x \cdot y</m> is odd,
+      we can use algebra to try to rewrite the right side of this equation
+      <m>\left( {2m + 1} \right)\left( {2n + 1} \right)</m> in the form of an odd integer so that we can arrive at step <m>Q1</m>.
+      We first expand the right side of the equation to obtain
+      <md>
+        <mrow>x \cdot y \amp = (2m + 1)(2n + 1)</mrow>
+        <mrow>\amp = 4mn + 2m + 2n + 1</mrow>
+      </md>
+    </p>
+    <p>
+      Now compare the right side of the last equation to the right side of the equation in step <m>Q1</m>.
+      Sometimes the difficult part at this point is the realization that <m>q</m> stands for some integer and that we only have to show that
+      <m>x \cdot y</m> equals two times some integer plus one.
+      Can we now make that conclusion?
+      The answer is yes because we can factor a 2 from the first three terms on the right side of the equation and obtain
+      <md>
+        <mrow>x \cdot y \amp = 4mn + 2m + 2n + 1</mrow>
+        <mrow>\amp = 2 (2mn + m + n) + 1</mrow>
+      </md>
+    </p>
+    <p>
+      We can now complete the table showing the outline of the proof as follows:
+      <me>
+        <tabular>
+          <row>
+            <cell>_ | <em>Step</em>  |  <em>Know</em>  |  <em>Reason</em>  |</cell>
+          </row>
+          <row>
+            <cell>+02 _ |  \(P\)     |  \(x\) and \(y\) are odd integers.  |  Hypothesis |</cell>
+          </row>
+          <row>
+            <cell>_1 |  \(P1\)    |  There exist integers \(m\) and \(n\) such that \(x = 2m + 1\) and \(y = 2n + 1\).                               | Definition of an odd integer. |</cell>
+          </row>
+          <row>
+            <cell>_1 | \(P2\)   | \(xy = \left(2m + 1\right)\left(2n + 1 \right)\) | Substitution |</cell>
+          </row>
+          <row>
+            <cell>_1 | \(P3\)   | \(xy = 4mn + 2m + 2n + 1\)                       |  Algebra      |</cell>
+          </row>
+          <row>
+            <cell>_1 | \(P4\)   | \(xy = 2 \left( 2mn + m + n \right) + 1\)        |  Algebra      |</cell>
+          </row>
+          <row>
+            <cell>_1 | \(P5\)   | \(\left( 2mn + m + n \right)\) is an integer. | Closure properties of the integers |</cell>
+          </row>
+          <row>
+            <cell>_1 |  \(Q1\)  |  There exists an integer \(q\) such that \(xy = 2q + 1\).                               | Use \(q = \left( 2mn + m + n \right)\)            |</cell>
+          </row>
+          <row>
+            <cell>_1 |  \(Q\)     |  \(x \cdot y\) is an odd integer. |  Definition of an odd integer          |</cell>
+          </row>
+          <row>
+            <cell>_</cell>
+          </row>
+        </tabular>
+      </me>
+    </p>
+    <p>
+      It is very important to realize that we have only constructed an outline of a proof.
+      Mathematical proofs are not written in table form.
+      They are written in narrative form using complete sentences and correct paragraph structure,
+      and they follow certain conventions used in writing mathematics.
+      In addition,
+      most proofs are written only from the forward perspective.
+      That is, although the use of the backward process was essential in discovering the proof,
+      when we write the proof in narrative form,
+      we use the forward process described in the preceding table.
+          <idx><h>know-show table|)</h></idx>
+      A completed proof follows.
+    </p>
+    <theorem xml:id="T_xyodd">
+      <statement>
+        <p>
+          If <m>x</m> and <m>y</m> are odd integers,
+          then <m>x \cdot y</m> is an odd integer.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        We assume that <m>x</m> and <m>y</m> are odd integers and will prove that <m>x \cdot y</m> is an odd integer.
+        Since <m>x</m> and <m>y</m> are odd,
+        there exist integers <m>m</m> and <m>n</m> such that
+        <me>
+          x = 2m + 1 \text{ and }  y = 2n + 1
+        </me>.
+      </p>
+      <p>
+        Using algebra, we obtain
+        <md>
+          <mrow>x \cdot y \amp = \left( {2m + 1} \right)\left( {2n + 1} \right)</mrow>
+          <mrow>\amp = 4mn + 2m + 2n + 1</mrow>
+          <mrow>\amp = 2\left( {2mn + m + n} \right) + 1</mrow>
+        </md>.
+      </p>
+      <p>
+        Since <m>m</m> and <m>n</m> are integers and the integers are closed under addition and multiplication,
+        we conclude that <m>\left( {2mn + m + n} \right)</m> is an integer.
+        This means that <m>x \cdot y</m> has been written in the form
+        <m>\left( {2q + 1} \right)</m> for some integer <m>q</m>,
+        and hence,
+        <m>x \cdot y</m> is an odd integer.
+        Consequently,
+        it has been proven that if <m>x</m> and <m>y</m> are odd integers,
+        then <m>x \cdot y</m> is an odd integer.
+      </p>
+    </proof>
+  </subsection>
+  <subsection>
+    <title>Writing Guidelines for Mathematics Proofs</title>
+    <p>
+          <idx><h>writing guidelines|(</h></idx>
+      At the risk of oversimplification,
+      doing mathematics can be considered to have two distinct stages.
+      The first stage is to convince yourself that you have solved the problem or proved a conjecture.
+      This stage is a creative one and is quite often how mathematics is actually done.
+      The second equally important stage is to convince other people that you have solved the problem or proved the conjecture.
+      This second stage often has little in common with the first stage in the sense that it does not really communicate the process by which you solved the problem or proved the conjecture.
+      However, it is an important part of the process of communicating mathematical results to a wider audience.
+    </p>
+    <p>
+      A <em>mathematical proof</em> is a convincing argument
+      (within the accepted standards of the mathematical community)
+      that a certain
+          <idx><h>proof</h></idx>
+      mathematical statement is necessarily true.
+      A proof generally uses deductive reasoning and logic but also contains some amount of ordinary language
+      (such as English).
+      A mathematical proof that you write should convince an appropriate audience that the result you are proving is in fact true.
+      So we do not consider a proof complete until there is a well-written proof.
+      So it is important to introduce some writing guidelines.
+      The preceding proof was written according to the following basic guidelines for writing proofs.
+      More writing guidelines will be given in <xref ref="C_proofs">Chapter</xref>.
+      <ol>
+        <li>
+          <p>
+            <em>Begin with a carefully worded statement of the theorem or result to be proven.</em>
+            This should be a simple declarative statement of the theorem or result.
+            Do not simply rewrite the problem as stated in the textbook or given on a handout.
+            Problems often begin with phrases such as
+            <q>Show that</q>
+            or
+            <q>Prove that.</q>
+            This should be reworded as a simple declarative statement of the theorem.
+            Then skip a line and write
+            <q>Proof</q>
+            in italics or boldface font
+            (when using a word processor).
+            Begin the proof on the same line.
+            Make sure that all paragraphs can be easily identified.
+            Skipping a line between paragraphs or indenting each paragraph can accomplish this.
+            As an example, an exercise in a text might read,
+            <q>Prove that if <m>x</m> is an odd integer,
+            then <m>x^2</m> is an odd integer.</q>
+            This could be started as follows:
+            <em>Theorem.</em> If <m>x</m> is an odd integer,
+            then <m>x^2</m> is an odd integer.
+            <em><em>Proof</em></em>: We assume that <m>x</m> is an odd integer <m>\ldots</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Begin the proof with a statement of your assumptions.</em>
+            Follow the statement of your assumptions with a statement of what you will prove.
+            <em>Theorem.</em> If <m>x</m> is an odd integer,
+            then <m>x^2</m> is an odd integer.
+            <em><em>Proof</em></em>.
+            We assume that <m>x</m> is an odd integer and will prove that <m>x^2</m> is an odd integer.
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Use the pronoun
+            <q>we.</q>
+            </em> If a pronoun is used in a proof,
+            the usual convention is to use
+            <q>we</q>
+            instead of
+            <q>I.</q>
+            The idea is to stress that you and the reader are doing the mathematics together.
+            It will help encourage the reader to continue working through the mathematics.
+            Notice that we started the proof of <xref ref="T_xyodd">Theorem</xref> with
+            <q>We assume that <m>\ldots</m> .</q>
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Use italics for variables when using a word processor.</em>
+            When using a word processor to write mathematics,
+            the word processor needs to be capable of producing the appropriate mathematical symbols and equations.
+            The mathematics that is written with a word processor should look like typeset mathematics.
+            This means that italics is used for variables,
+            boldface font is used for vectors,
+            and regular font is used for mathematical terms such as the names of the trigonometric and logarithmic functions.
+            For example, we do not write sin (x) or <em>sin (x)</em>.
+            The proper way to typeset this is <m>\sin (x)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Display important equations and mathematical expressions.</em>
+            Equations and manipulations are often an integral part of mathematical exposition.
+            Do not write equations, algebraic manipulations,
+            or formulas in one column with reasons given in another column.
+            Important equations and manipulations should be displayed.
+            This means that they should be centered with blank lines before and after the equation or manipulations,
+            and if the left side of the equations does not change,
+            it should not be repeated.
+            For example,  Using algebra, we obtain
+            <md>
+              <mrow>x \cdot y \amp = \left( {2m + 1} \right)\left( {2n + 1} \right)</mrow>
+              <mrow>\amp = 4mn + 2m + 2n + 1</mrow>
+              <mrow>\amp = 2\left( {2mn + m + n} \right) + 1</mrow>
+            </md>.
+            Since  <m>m</m>  and  <m>n</m>  are integers,
+            we conclude that <m>\ldots</m> .
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Tell the reader when the proof has been completed.</em>
+            Perhaps the best way to do this is to simply write,
+            <q>This completes the proof.</q>
+            Although it may seem repetitive,
+            a good alternative is to finish a proof with a sentence that states precisely what has been proven.
+            In any case, it is usually good practice to use some
+            <q>end of proof symbol</q>
+            such as <m>\blacksquare</m>.
+              <idx><h>writing guidelines|)</h></idx>
+          </p>
+        </li>
+      </ol>
+    </p>
+    <investigation xml:id="prog_proving">
+      <title><em>Proving Propositions</em></title>
+      <p>
+        Construct a know-show table for each of the following propositions and then write a formal proof for one of the propositions.
+        <ol>
+          <li>
+            <p>
+              If <m>x</m> is an even integer and <m>y</m> is an even integer,
+              then <m>x + y</m> is an even integer.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>x</m> is an even integer and <m>y</m> is an odd integer,
+              then <m>x + y</m> is an odd integer.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>x</m> is an odd integer and <m>y</m> is an odd integer,
+              then <m>x + y</m> is an even integer.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </investigation>
+  </subsection>
+  <subsection>
+    <title>Some Comments about Constructing Direct Proofs</title>
+    <p>
+          <idx><h>direct proof|(</h></idx>
+          <idx><h>proof</h><h>direct|(</h></idx>
+      <ol>
+        <li xml:id="proofcomment1">
+          <p>
+            When we constructed the know-show table prior to writing a proof for <xref ref="T_xyodd">Theorem</xref>,
+            we had only one answer for the backward question and one answer for the forward question.
+            Often, there can be more than one answer for these questions.
+            For example,
+            consider the following statement: If <m>x</m> is an odd integer,
+            then <m>x^2</m> is an odd integer.
+            The backward question for this could be,
+            <q>How do I prove that an integer is an odd integer?</q>
+            One way to answer this is to use the definition of an odd integer,
+            but another way is to use the result of <xref ref="T_xyodd">Theorem</xref>.
+            That is, we can prove an integer is odd by proving that it is a product of two odd integers.
+            The difficulty then is deciding which answer to use.
+            Sometimes we can tell by carefully watching the interplay between the forward process and the backward process.
+            Other times,
+            we may have to work with more than one possible answer.
+          </p>
+        </li>
+        <li>
+          <p>
+            Sometimes we can use previously proven results to answer a forward question or a backward question.
+            This was the case in the example given in Comment<nbsp/><xref ref="proofcomment1"/>,
+            where <xref ref="T_xyodd">Theorem</xref>
+            was used to answer a backward question.
+          </p>
+        </li>
+        <li>
+          <p>
+            Although we start with two separate processes
+            (forward and backward),
+            the key to constructing a proof is to find a way to link these two processes.
+            This can be difficult.
+            One way to proceed is to use the know portion of the table to motivate answers to backward questions and to use the show portion of the table to motivate answers to forward questions.
+          </p>
+        </li>
+        <li>
+          <p>
+            Answering a backward question can sometimes be tricky.
+            If the goal is the statement  <m>Q</m>,
+            we must construct the know-show table so that if we know that  <m>Q</m>1 is true,
+            then we can conclude that <m>Q</m> is true.
+            It is sometimes easy to answer this in a way that if it is known that  <m>Q</m> is true,
+            then we can conclude that <m>Q</m>1 is true.
+            For example, suppose the goal is to prove
+            <me>
+              y^2  = 4
+            </me>,
+            where  <m>y</m>  is a real number.
+            A backward question could be,
+            <q>How do we prove the square of a real number equals four?</q>
+            One possible answer is to prove that the real number equals 2.
+            Another way is to prove that the real number equals <m>-2</m>.
+            This is an appropriate backward question,
+            and these are appropriate answers.
+            However, if the goal is to prove
+            <me>
+              y = 2
+            </me>,
+            where  <m>y</m>  is a real number, we could ask,
+            <q>How do we prove a real number equals 2?</q>
+            It is not appropriate to answer this question with
+            <q>prove that the square of the real number equals 4.</q>
+            This is because if <m>y^2=4</m>,
+            then it is not necessarily true that <m>y=2</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Finally, it is very important to realize that not every proof can be constructed by the use of a simple know-show table.
+            Proofs will get more complicated than the ones that are in this section.
+            The main point of this section is not the know-show table itself,
+            but the way of thinking about a proof that is indicated by a know-show table.
+            In most proofs,
+            it is very important to specify carefully what it is that is being assumed and what it is that we are trying to prove.
+            The process of asking the
+            <q>backward questions</q>
+            and the
+            <q>forward questions</q>
+            is the important part of the know-show table.
+            It is very important to get into the
+            <q>habit of mind</q>
+            of working backward from what it is we are trying to prove and working forward from what it is we are assuming.
+            Instead of immediately trying to write a complete proof,
+            we need to stop,
+            think, and ask questions such as
+            <ul>
+              <li>
+                <p>
+                  Just exactly what is it that I am trying to prove?
+                </p>
+              </li>
+              <li>
+                <p>
+                  How can I prove this?
+                </p>
+              </li>
+              <li>
+                <p>
+                  What methods do I have that may allow me to prove this?
+                </p>
+              </li>
+              <li>
+                <p>
+                  What are the assumptions?
+                </p>
+              </li>
+              <li>
+                <p>
+                  How can I use these assumptions to prove the result?
+                </p>
+              </li>
+            </ul>
+          </p>
+              <idx><h>direct proof|)</h></idx>
+              <idx><h>proof</h><h>direct|)</h></idx>
+        </li>
+      </ol>
+    </p>
+    <investigation xml:id="A_kstable2">
+      <title><em>Exploring a Proposition</em></title>
+      <p>
+        Construct a table of values for
+        <m>\left( {3m^2 + 4m + 6} \right)</m> using at least six different integers for <m>m</m>.
+        Make one-half of the values for <m>m</m> even integers and the other half odd integers.
+        Is the following proposition true or false?
+      </p>
+      <p>
+        If <m>m</m> is an odd integer,
+        then <m>\left(3m^2 + 4m + 6 \right)</m> is an odd integer.
+        Justify your conclusion.
+        This means that if the proposition is true,
+        then you should write a proof of the proposition.
+        If the proposition is false,
+        you need to provide an example of an odd integer for which <m>\left(3m^2 + 4m + 6 \right)</m> is an even integer.
+      </p>
+    </investigation>
+    <investigation xml:id="pr_pythag">
+      <title><em>Constructing and Writing a Proof</em></title>
+      <p>
+        The <em>Pythagorean Theorem</em>
+            <idx><h>Pythagorean Theorem</h></idx>
+        for right triangles states that if <m>a</m> and <m>b</m> are the lengths of the legs of a right triangle and <m>c</m> is the length of the hypotenuse,
+        then <m>a^2 + b^2 = c^2</m>.
+        For example,
+        if <m>a = 5</m> and <m>b = 12</m> are the lengths of the two sides of a right triangle and if <m>c</m> is the length of the hypotenuse,
+        then the <m>c^2 = 5^2 + 12^2</m> and so <m>c^2 = 169</m>.
+        Since <m>c</m> is a length and must be positive,
+        we conclude that <m>c = 13</m>.
+      </p>
+      <p>
+        Construct and provide a well-written proof for the following proposition.
+      </p>
+      <p>
+        <em>Proposition</em>.
+        If <m>m</m> is a real number and <m>m</m>, <m>m + 1</m>,
+        and <m>m + 2</m> are the lengths of the three sides of a right triangle,
+        then <m>m = 3</m>.
+      </p>
+      <p>
+        Although this proposition uses different mathematical concepts than the one used in this section,
+        the process of constructing a proof for this proposition is the same forward-backward method that was used to construct a proof for <xref ref="T_xyodd">Theorem</xref>.
+        However, the backward question,
+        <q>How do we prove that <m>m = 3</m>?</q>
+        is simple but may be difficult to answer.
+        The basic idea is to develop an equation from the forward process and show that <m>m = 3</m> is a solution of that equation.
+      </p>
+    </investigation>
+    <p>
+      \exercises{Exercises for <xref ref="S_direct">Section</xref>}
+    </p>
+    <ol>
+      <li xml:id="exer_evenodd">
+        <p>
+          Construct a know-show table for each of the following statements and then write a formal proof for one of the statements.
+        </p>
+        <ol>
+          <li>
+            <p>
+              If <m>m</m> is an even integer,
+              then <m>m + 1</m> is an odd integer.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>m</m> is an odd integer,
+              then <m>m + 1</m> is an even integer.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li xml:id="exer_evenoddadd">
+        <p>
+          Construct a know-show table for each of the following statements and then write a formal proof for one of the statements.
+          <ol>
+            <li>
+              <p>
+                If <m>x</m> is an even integer and <m>y</m> is an even integer,
+                then <m>x + y</m> is an even integer.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>x</m> is an even integer and <m>y</m> is an odd integer,
+                then <m>x + y</m> is an odd integer.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>x</m> is an odd integer and <m>y</m> is an odd integer,
+                then <m>x + y</m> is an even integer.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_evenoddmult">
+        <p>
+          Construct a know-show table for each of the following statements and then write a formal proof for one of the statements.
+          <ol>
+            <li>
+              <p>
+                If <m>m</m> is an even integer and <m>n</m> is an integer,
+                then <m>m \cdot n</m> is an even integer.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>n</m> is an even integer,
+                then <m>n^2</m> is an even integer.
+              </p>
+            </li>
+            <li xml:id="exer_x2odd">
+              <p>
+                If <m>n</m> is an odd integer,
+                then <m>n^2</m> is an odd integer.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_5m_7">
+        <p>
+          Construct a know-show table and write a complete proof for each of the following statements:
+          <ol>
+            <li>
+              <p>
+                If <m>m</m> is an even integer,
+                then <m>5m + 7</m> is an odd integer.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>m</m> is an odd integer,
+                then <m>5m + 7</m> is an even integer.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>m</m> and <m>n</m> are odd integers,
+                then <m>mn + 7</m> is an even integer.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_3m2">
+        <p>
+          Construct a know-show table and write a complete proof for each of the following statements:
+          <ol>
+            <li>
+              <p>
+                If <m>m</m> is an even integer,
+                then <m>3m^2 + 2m + 3</m> is an odd integer.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>m</m> is an odd integer,
+                then <m>3m^2 + 7m + 12</m> is an even integer.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec12-7">
+        <p>
+          In this section,
+          it was noted that there is often more than one way to answer a backward question.
+          For example, if the backward question is,
+          <q>How can we prove that two real numbers are equal?</q>, one possible answer is to prove that their difference equals 0.
+          Another possible answer is to prove that the first is less than or equal to the second and that the second is less than or equal to the first.
+          <ol>
+            <li>
+              <p>
+                Give at least one more answer to the backward question,
+                <q>How can we prove that two real numbers are equal?</q>
+              </p>
+            </li>
+            <li>
+              <p>
+                List as many answers as you can for the backward question,
+                <q>How can we prove that a real number is equal to zero?</q>
+              </p>
+            </li>
+            <li>
+              <p>
+                List as many answers as you can for the backward question,
+                <q>How can we prove that two lines are parallel?</q>
+              </p>
+            </li>
+            <li>
+              <p>
+                List as many answers as you can for the backward question,
+                <q>How can we prove that a triangle is isosceles?</q>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec12-new7">
+        <p>
+          Are the following statements true or false?
+          Justify your conclusions.
+          <ol>
+            <li>
+              <p>
+                If <m>a</m>, <m>b</m>, and <m>c</m> are integers,
+                then <m>ab + ac</m> is an even integer.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>b</m> and <m>c</m> are odd integers and <m>a</m> is an integer,
+                then <m>ab + ac</m> is an even integer.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec12-8">
+        <p>
+          Is the following statement true or false?
+          Justify your conclusion.
+          <ul>
+            \item If <m>a</m> and <m>b</m> are nonnegative real numbers and <m>a + b = 0</m>, then <m>a = 0</m>.
+          </ul>
+        </p>
+        Either give a counterexample to show that it is false or outline a proof by completing a know-show table.
+      </li>
+      <li xml:id="exer_sec12-type">
+        <p>
+          An integer <m>a</m> is said to be a <em>type 0 integer</em>
+          if there exists an integer <m>n</m> such that <m>a=3n</m>.
+          An integer <m>a</m> is said to be a <em>type 1 integer</em>
+          if there exists an integer <m>n</m> such that <m>a=3n+1</m>.
+          An integer <m>a</m> is said to be a <em>type 2 integer</em>
+          if there exists an integer <m>m</m> such that <m>a=3m+2</m>.
+          <ol>
+            <li xml:id="exer_mod3a">
+              <p>
+                Give examples of at least four different integers that are type 1 integers.
+              </p>
+            </li>
+            <li>
+              <p>
+                Give examples of at least four different integers that are type 2 integers.
+              </p>
+            </li>
+            <li>
+              <p>
+                By multiplying pairs of integers from the list in Exercise<nbsp/><xref ref="exer_mod3a"/>,
+                does it appear that the following statement is true or false?
+                <ul>
+                  \item If <m>a</m> and <m>b</m> are both type 1 integers, then <m>a \cdot b</m> is a type 1 integer.
+                </ul>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec12-typeproof">
+        <p>
+          Use the definitions in Exercise<nbsp/><xref ref="exer_sec12-type"/> to help write a proof for each of the following statements:
+          <ol>
+            <li>
+              <p>
+                If <m>a</m> and <m>b</m> are both type 1 integers,
+                then <m>a + b</m> is a type 2 integer.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>a</m> and <m>b</m> are both type 2 integers,
+                then <m>a + b</m> is a type 1 integer.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>a</m> is a type 1 integer and <m>b</m> is a type 2 integer,
+                then <m>a \cdot b</m> is a type 2 integer.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>a</m> and <m>b</m> are both type 2 integers,
+                then <m>a \cdot b</m> is type 1 integer.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec12-11">
+        <p>
+          Let <m>a</m>,
+          <m>b</m>, and <m>c</m> be real numbers with <m>a \ne 0</m>.
+          The solutions of the <em>quadratic equation</em>
+          <m>ax^2 + bx + c = 0</m>
+    <idx><h>quadratic equation</h></idx>
+          are given by the <em>quadratic formula</em>,
+    <idx><h>quadratic formula</h></idx>
+          which states that the solutions are <m>x_1</m> and <m>x_2</m>, where
+          <me>
+            x_1 = \frac{-b + \sqrt{b^2 - 4ac}}{2a}  \text{ and }   x_2 = \frac{-b - \sqrt{b^2 - 4ac}}{2a}
+          </me>.
+          <ol>
+            <li>
+              <p>
+                Prove that the sum of the two solutions of the quadratic equation
+                <m>ax^2 + bx + c = 0</m> is equal to <m>- \dfrac{b}{a}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Prove that the product of the two solutions of the quadratic equation
+                <m>ax^2 + bx + c = 0</m> is equal to <m>\dfrac{c}{a}</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec12-quadratic2">
+        <ol>
+          <li>
+            <p>
+              See Exercise<nbsp/><xref ref="exer_sec12-11"/> for the quadratic formula,
+              which gives the solutions to a quadratic equation.
+              Let <m>a</m>,
+              <m>b</m>, and <m>c</m> be real numbers with <m>a \ne 0</m>.
+              The discriminant of the quadratic equation
+              <m>ax^2 + bx + c = 0</m> is defined to be <m>b^2 - 4ac</m>.
+              Explain how to use this discriminant to determine if the quadratic equation has two real number solutions,
+              one real number solution, or no real number solutions.
+            </p>
+          </li>
+          <li>
+            <p>
+              Prove that if <m>a</m>, <m>b</m>,
+              and <m>c</m> are real numbers with <m>a > 0</m> and <m>c \lt 0</m>,
+              then one solutions of the quadratic equation
+              <m>ax^2 + bx + c = 0</m> is a positive real number.
+            </p>
+          </li>
+          <li>
+            <p>
+              Prove that if <m>a</m>, <m>b</m>,
+              and <m>c</m> are real numbers with <m>a \ne 0</m>,
+              <m>b > 0</m>, and <m>b \lt 2 \sqrt{ac}</m>,
+              then the quadratic equation
+              <m>ax^2 + bx + c = 0</m> has no real number solutions.
+            </p>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </subsection>
+  <subsection>
+    <title>Explorations and Activities</title>
+    <ol>
+      <li xml:id="exer_pythag">
+        <p>
+          <em>Pythagorean Triples</em>.
+          Three natural numbers <m>a</m>, <m>b</m>,
+          and <m>c</m> with <m>a \lt b \lt c</m> are said to form a
+          <em>Pythagorean triple</em>
+    <idx><h>Pythagorean triple</h></idx>
+          provided that <m>a^2 + b^2 = c^2</m>.
+          For example, 3, 4, and 5 form a Pythagorean triple since <m>3^2 + 4^2 = 5^2</m>.
+          The study of Pythagorean triples began with the development of the
+          <em>Pythagorean Theorem</em> for right triangles,
+          which states that if <m>a</m> and <m>b</m> are the lengths of the legs of a right triangle and <m>c</m> is the length of the hypotenuse,
+          then <m>a^2 + b^2 = c^2</m>.
+          For example,
+          if the lengths of the legs of a right triangle are 4 and 7 units,
+          then <m>c^2 = 4^2 + 7^2 = 63</m>,
+          and the length of the hypotenuse must be <m>\sqrt{63}</m> units
+          (since the length must be a positive real number).
+          Notice that <m>4</m>, <m>7</m>,
+          and <m>\sqrt{63}</m> are not a Pythagorean triple since
+          <m>\sqrt{63}</m> is not a natural number.
+          <ol>
+            <li>
+              <p>
+                Verify that each of the following triples of natural numbers forms a Pythagorean triple.
+                <ul>
+                  <li>
+                    <p>
+                      3, 4, and 5
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      6, 8, and 10
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      8, 15, and 17
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      10, 24, and 26
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      12, 35, and 37
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      14, 48, and 50
+                    </p>
+                  </li>
+                </ul>
+              </p>
+            </li>
+            <li>
+              <p>
+                Does there exist a Pythagorean triple of the form <m>m</m>,
+                <m>m + 7</m>,
+                and <m>m + 8</m>, where <m>m</m> is a natural number?
+                If the answer is yes, determine all such Pythagorean triples.
+                If the answer is no, prove that no such Pythagorean triple exists.
+              </p>
+            </li>
+            <li>
+              <p>
+                Does there exist a Pythagorean triple of the form <m>m</m>,
+                <m>m + 11</m>,
+                and <m>m + 12</m>, where <m>m</m> is a natural number?
+                If the answer is yes, determine all such Pythagorean triples.
+                If the answer is no, prove that no such Pythagorean triple exists.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_morepythag">
+        <p>
+          <em>More Work with Pythagorean Triples</em>.
+          In Exercise<nbsp/>({ <xref ref="exer_pythag"></xref>}), we verified that all of the following triples of natural numbers are Pythagorean triples:
+          <ul>
+            <li>
+              <p>
+                3, 4, and 5
+              </p>
+            </li>
+            <li>
+              <p>
+                6, 8, and 10
+              </p>
+            </li>
+            <li>
+              <p>
+                8, 15, and 17
+              </p>
+            </li>
+            <li>
+              <p>
+                10, 24, and 26
+              </p>
+            </li>
+            <li>
+              <p>
+                12, 35, and 37
+              </p>
+            </li>
+            <li>
+              <p>
+                14, 48, and 50
+              </p>
+            </li>
+          </ul>
+          <ol>
+            <li>
+              <p>
+                Focus on the least even natural number in each of these Pythagorean triples.
+                Let <m>n</m> be this even number and find <m>m</m> so that <m>n = 2m</m>.
+                Now try to write formulas for the other two numbers in the Pythagorean triple in terms of <m>m</m>.
+                For example, for 3, 4, and 5, <m>n = 4</m> and <m>m = 2</m>.
+                Once you think you have formulas,
+                test your results with <m>m = 10</m>.
+                That is, check to see that you have a Pythagorean triple whose smallest even number is 20.
+              </p>
+            </li>
+            <li>
+              <p>
+                Write a proposition and then write a proof of the proposition.
+                The proposition should be in the form: If <m>m</m> is a natural number and <m>m \geq 2</m>,
+                then <ellipsis/> <ellipsis/>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+</section>

@@ -1,0 +1,139 @@
+<section>
+  <title><xref ref="S_typesoffunctions">Section</xref></title>
+  <ul>
+    {{ <xref ref="exer_sec63-mod5function"></xref>.}}
+    \item
+    <ul>
+      {{(a)}}
+      \item Notice that <m>f(0) = 4</m>, <m>f(1) = 0</m>, <m>f(2) = 3</m>, <m>f(3) = 3</m>, and <m>f(4) = 0</m>.  So the function <m>f</m> is not an injection and is not a surjection.
+    </ul>
+  </ul>
+  <ul>
+    \item
+    <ul>
+      {{(c)}}
+      \item Notice that <m>F(0) = 4</m>, <m>F(1) = 0</m>, <m>F(2) = 2</m>, <m>F(3) = 1</m>, and <m>F(4) = 3</m>.  So the function <m>F</m> is an injection and is a surjection.
+    </ul>
+  </ul>
+  <ul>
+    {{ <xref ref="exer_sec63-5"></xref>.}}
+    \item
+    <ul>
+      {{(a)}}
+      \item The function <m>f</m> is an injection.  To prove this, let <m>x_1, x_2 \in \mathbb{Z}</m> and assume that <m>f ( x_1 ) = f ( x_2 )</m>.  Then,
+      <md>
+        <mrow>3x_1 + 1 \amp = 3x_2 + 1</mrow>
+        <mrow>3x_1 \amp = 3x_2</mrow>
+        <mrow>x_1 \amp = x_2</mrow>
+      </md>.
+      Hence, <m>f</m> is an injection.  Now, for each <m>x \in \mathbb{Z}</m>, <m>3x + 1 \equiv 1 \pmod 3</m>, and hence
+      <m>f ( x ) \equiv 1 \pmod 3</m>.  This means that there is no integer <m>x</m> such that
+      <m>f ( x ) = 0</m>.  Therefore, <m>f</m> is not a surjection.
+    </ul>
+  </ul>
+  <ul>
+    \item
+    <ul>
+      {{(b)}}
+      \item The proof that <m>F</m> is an injection is similar to the proof in Part<nbsp/>(a) that <m>f</m> is an injection.  To prove that <m>F</m> is a surjection, let <m>y \in \mathbb{Q}</m>.  Then,
+      <m>\dfrac{y-1}{3} \in \mathbb{Q}</m> and <m>F \left( \dfrac{y-1}{3} \right) = y</m> and hence, <m>F</m> is a surjection.
+    </ul>
+  </ul>
+  <ul>
+    \item
+    <ul>
+      {{(h)}}
+      \item Since <m>h(1) = h(4)</m>, the function <m>h</m> is not an injection.  Using calculus, we can see that the function <m>h</m> has a maximum when <m>x = 2</m> and a minimum when <m>x = -2</m>, and so for each <m>x \in \R</m>, <m>h(-2) \leq h(x) \leq h(2)</m> or
+      <me>
+        -\frac{1}{2} \leq h(x) \leq \frac{1}{2}
+      </me>.
+      This can be used to prove that <m>h</m> is not a surjection.
+      We can also prove that there is no <m>x \in \R</m> such that <m>h(x) = 1</m> using a proof by contradiction.  If such an <m>x</m> were to exist, then <m>\dfrac{2x}{x^2 + 4} = 1</m> or <m>2x = x^2 + 4</m>.  Hence, <m>x^2 - 2x + 4 = 0</m>.  We can then use the quadratic formula to prove that <m>x</m> is not a real number.  Hence, there is no real number <m>x</m> such that <m>h(x) = 1</m> and so <m>h</m> is not a surjection.
+    </ul>
+  </ul>
+  <ul>
+    {{ <xref ref="exer_forexample"></xref>.}}
+    \item
+    <ul>
+      {{(a)}}
+      \item Let <m>F\x \mathbb{R} \to \mathbb{R}</m> be defined by <m>F( x ) = 5x + 3</m> for all
+      <m>x \in \mathbb{R}</m>.  Let  <m>x_1, x_2 \in \mathbb{R}</m> and assume that
+      <m>F( x_1 ) = F( x_2 )</m>.  Then  <m>5x_1 + 3 = 5x_2 + 3</m>.  Show that this implies that <m>x_1 = x_2</m> and, hence, <m>F</m> is an injection.
+      Now let <m>y \in \mathbb{R}</m>.  Then <m>\dfrac{y - 3}{5} \in \mathbb{R}</m>.  Prove that
+      <m>F \!\left( \dfrac{y - 3}{5} \right) = y</m>.   Thus, <m>F</m> is a surjection and hence <m>F</m> is a bijection.
+    </ul>
+  </ul>
+  <ul>
+    \item
+    <ul>
+      {{(b)}}
+      \item The proof that <m>G</m> is an injection is similar to the proof in Part<nbsp/>(a) that <m>F</m> is an injection.  Notice that for each <m>x \in \Z</m>, <m>G(x) \equiv 3 \pmod 5</m>.  Now explain why <m>G</m> is not a surjection.
+    </ul>
+  </ul>
+  <ul>
+    {{ <xref ref="exer_sec63-9"></xref>.}}
+    \item The birthday function is not an injection since there are two different people with the same birthday.  The birthday function is a surjection since for each day of the year, there is a person that was born on that day.
+  </ul>
+  <ul>
+    {{ <xref ref="exer_sec63-11"></xref>.}}
+    \item
+    <ul>
+      {{(a)}}
+      \item The function  <m>f</m>  is an injection and a surjection.  To prove that <m>f</m>  is an injection, we assume that
+      <m>( {a, b} ) \in \mathbb{R} \times \mathbb{R}</m>,
+      <m>( {c, d} ) \in \mathbb{R} \times \mathbb{R}</m>, and that
+      <m>f( {a, b} ) = f( {c, d} )</m>.  This means that
+      <me>
+        ( {2a, a + b} ) = ( {2c, c + d} )
+      </me>.
+      Since this equation is an equality of ordered pairs, we see that
+      <me>
+        \begin{aligned}2a \amp = 2c \text{ , and }  \\
+        a + b \amp = c + d.
+        \end{aligned}
+      </me>
+      The first equation implies that <m>a = c</m>.  Substituting this into the second equation shows that
+      <m>b = d</m>.  Hence,
+      <me>
+        ( {a, b} ) = ( {c, d} )
+      </me>,
+      and we have shown that if <m>f( {a, b} ) = f( {c, d} )</m>, then
+      <m>( {a, b} ) = ( {c, d} )</m>.  Therefore,  <m>f</m>  is an injection.
+      Now, to determine if  <m>f</m>  is a surjection, we let
+      <m>( {r, s} ) \in \mathbb{R} \times \mathbb{R}</m>. To find an ordered pair
+      <m>( {a, b} ) \in \mathbb{R} \times \mathbb{R}</m> such that
+      <m>f( {a, b} ) = ( {r, s} )</m>, we need
+      <me>
+        ( {2a, a + b} ) = ( {r, s} )
+      </me>.
+      That is, we need
+      <me>
+        \begin{aligned}2a \amp = r\text{ , and }  \\
+        a + b \amp = s.
+        \end{aligned}
+      </me>
+      Solving this system for  <m>a</m>  and  <m>b</m>  yields
+      <me>
+        a = \frac{{r}}{2} \text{ and }  b = \frac{{2s - r}}{2}
+      </me>.
+      Since  <m>r, s \in \mathbb{R}</m>, we can conclude that  <m>a \in \mathbb{R}</m> and
+      <m>b \in \mathbb{R}</m> and hence that
+      \mbox{<m>( {a, b} ) \in \mathbb{R} \times \mathbb{R}</m>} .  So,
+      <me>
+        \begin{aligned}f( {a, b} ) \amp = f\left( {\frac{{r}}{2}, \frac{{2s - r}}{2}} \right) \\
+        \amp = \left( {2\left( {\frac{{r}}{2}} \right),\frac{{r}}{2} + \frac{{2s - r}}{2}} \right) \\
+        \amp = ( {r, s} ).
+        \end{aligned}
+      </me>
+      This proves that for all  <m>( {r, s} ) \in \mathbb{R} \times \mathbb{R}</m>, there exists  <m>( {a, b} ) \in \mathbb{R} \times \mathbb{R}</m> such that
+      <m>f( {a, b} ) = ( {r, s} )</m>.  Hence, the function  <m>f</m>  is a surjection.  Since  <m>f</m>  is both an injection and a surjection,  it is a bijection.
+    </ul>
+  </ul>
+  <ul>
+    \item
+    <ul>
+      {{(b)}}
+      \item The proof that the function <m>g</m> is an injection is similar to the proof that <m>f</m> is an injection in Part<nbsp/>(a).  Now use the fact that the first coordinate of <m>g(x, y)</m> is an even integer to explain why the function <m>g</m> is not a surjection.
+    </ul>
+  </ul>
+</section>

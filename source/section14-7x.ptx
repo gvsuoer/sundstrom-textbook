@@ -1,0 +1,108 @@
+<section>
+  <title><xref ref="S_logop">Section</xref></title>
+  <subsection>
+    <title>Progress <xref ref="pr_onlyif">Check</xref></title>
+    <ol>
+      <li>
+        <p>
+          Whenever a quadrilateral is a square, it is a rectangle,
+          or a quadrilateral is a rectangle whenever it is a square.
+        </p>
+      </li>
+      <li>
+        <p>
+          A quadrilateral is a square only if it is a rectangle.
+        </p>
+      </li>
+      <li>
+        <p>
+          Being a rectangle is necessary for a quadrilateral to be a square.
+        </p>
+      </li>
+      <li>
+        <p>
+          Being a square is sufficient for a quadrilateral to be a rectangle.
+        </p>
+      </li>
+    </ol>
+  </subsection>
+  <subsection>
+    <title>Progress <xref ref="pr_truthtables">Check</xref></title>
+    <me>
+      <tabular>
+        <row>
+          <cell>_6
+            |   \(P\) | \(Q\) \|6 \(P \wedge \mynot Q\)  |  \(\mynot \left( P \wedge Q \right)\)  |
+            \( \mynot P \wedge \mynot Q\) | \(\mynot P \vee \mynot Q \) |</cell>
+        </row>
+        <row>
+          <cell>+22  _6
+            |    T  |  T  \|6 F  | F  | F | F |</cell>
+        </row>
+        <row>
+          <cell>|    T  |  F  \|6 T  | T  | F | T |</cell>
+        </row>
+        <row>
+          <cell>|    F  |  T  \|6 F  | T  | F | T |</cell>
+        </row>
+        <row>
+          <cell>|    F  |  F  \|6 F  | T  | T | T |</cell>
+        </row>
+        <row>
+          <cell>_6</cell>
+        </row>
+      </tabular>
+    </me>
+    <p>
+      Statements (2) and (4) have the same truth table.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Progress <xref ref="pr_tautology">Check</xref></title>
+    <me>
+      <tabular>
+        <row>
+          <cell>_6
+            | \(P\) | \(\mynot P\) \|6 \(P \vee \mynot P\) | \(P \wedge \mynot P\) |</cell>
+        </row>
+        <row>
+          <cell>+22 _6
+            | T | F \|6 T | F |</cell>
+        </row>
+        <row>
+          <cell>| F | T \|6 T | F |</cell>
+        </row>
+        <row>
+          <cell>_6</cell>
+        </row>
+      </tabular>
+    </me>
+    <me>
+      <tabular>
+        <row>
+          <cell>_6
+            | \(P\) | \(Q\) \|6 \(P \vee Q\) | \(P \to (P \vee Q)\) |</cell>
+        </row>
+        <row>
+          <cell>+22 _6
+            | T | T | T | T |</cell>
+        </row>
+        <row>
+          <cell>| T | F | T | T |</cell>
+        </row>
+        <row>
+          <cell>| F | T | T | T |</cell>
+        </row>
+        <row>
+          <cell>| F | F | F | T |</cell>
+        </row>
+        <row>
+          <cell>_6</cell>
+        </row>
+      </tabular>
+    </me>
+    <me>
+      P \to (P \vee Q) \text{ is a tautology }
+    </me>.
+  </subsection>
+</section>

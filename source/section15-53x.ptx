@@ -1,0 +1,179 @@
+<section>
+  <title><xref ref="S_recursion">Section</xref></title>
+  <ul>
+    {{ <xref ref="exer_sec51-factorial"></xref>.}}
+    \item  Let <m>P(n)</m> be <m>a_n = n!</m>.  Since <m>a_0 = 1</m> and <m>0 ! = 1</m>, we see that <m>P(0)</m> is true.  For the inductive step, we assume that <m>k \in \N \cup \{0\}</m> and that <m>P(k)</m> is true or that  <m>a_k = k!</m>.
+    <md>
+      <mrow>a_{k+1} \amp = \left( k + 1 \right)a_k</mrow>
+      <mrow>\amp = \left( k + 1 \right) k!</mrow>
+      <mrow>\amp = \left( k + 1 \right)!</mrow>
+    </md>.
+    This proves the inductive step that  if <m>P(k)</m> is true, then <m>P(k+1)</m> is true.
+  </ul>
+  <ul>
+    {{ <xref ref="exer_sec53-fib"></xref>.}}
+    \item
+    <ul>
+      {{(a)}}
+      \item Let <m>P( n )</m> be,
+      <q><m>f_{4n}</m> is a multiple of 3.</q>
+      Since <m>f_4 = 3</m>,
+      <m>P( 1 )</m> is true.  If <m>P( k )</m> is true, then there exists an integer <m>m</m> such that <m>f_{4k} = 3m</m>.  We now need to prove that <m>P(k+1)</m> is true or that <m>f_{4(k+1)}</m> is a multiple of 3.  We use the following:
+      <md>
+        <mrow>f_{4 \left( k + 1 \right)} \amp = f_{4k + 4}</mrow>
+        <mrow>\amp = f_{4k+3} + f_{4k+2}</mrow>
+        <mrow>\amp = \left( f_{4k+2} + f_{4k+1} \right) + \left( f_{4k+1} + f_{4k} \right)</mrow>
+        <mrow>\amp = f_{4k+2} + 2 f_{4k+1} + f_{4k}</mrow>
+        <mrow>\amp = \left( f_{4k+1} + f_{4k} \right) + 2 f_{4k+1} + f_{4k}</mrow>
+        <mrow>\amp = 3f_{4k + 1} + 2f_{4k}</mrow>
+      </md>
+      We now use the assumption that <m>f_{4k} = 3m</m> and the last equation to obtain <m>f_{4(k+1)} = 3f_{4k + 1} + 2\cdot 3m</m> and hence,
+      <m>f_{4(k+1)} = 3 \left( f_{4k +1} + 2m \right)</m>.  Therefore, <m>f_{4(k+1)}</m> is a multiple of 3 and this completes the proof of the inductive step.
+    </ul>
+  </ul>
+  <ul>
+    \item
+    <ul>
+      {{(c)}}
+      \item Let <m>P( n )</m> be,
+      <q><m>f_1  + f_2  +  \cdots  + f_{n - 1}  = f_{n + 1}  - 1</m>.</q>
+      Since <m>f_1 = f_3 - 1</m>, <m>P ( 2 )</m> is true.  For <m>k \geq 2</m>, if <m>P ( k )</m> is true, then
+      <m>f_1  + f_2  +  \cdots  + f_{k - 1}  = f_{k + 1}  - 1</m>.  Then
+      <me>
+        \begin{aligned}\left( f_1  + f_2  +  \cdots  + f_{k - 1} \right) + f_k  \amp = \left( f_{k + 1}  - 1 \right) + f_k \\
+        \amp = \left( f_{k+1} + f_k \right) - 1 \\
+        \amp = f_{k+2} - 1.
+        \end{aligned}
+      </me>
+      This proves that if <m>P \left( k \right)</m> is true, then <m>P \left( k + 1\right)</m> is true.
+    </ul>
+  </ul>
+  <ul>
+    \item
+    <ul>
+      {{(f)}}
+      \item Let <m>P( n )</m> be,
+      <q><m>f_1^2  + f_2^2  +  \cdots  + f_n^2  = f_n f_{n + 1}</m>.</q>
+      For the basis step, we notice that <m>f_1^2 = 1</m> and <m>f_1 \cdot f_2 = 1</m> and hence, <m>P(1)</m> is true.  For the inductive step, we need to prove that if <m>P(k)</m> is true, then <m>P(k+1)</m> is true.  That is, we need to prove that if <m>f_1^2  + f_2^2  +  \cdots  + f_k^2  = f_k f_{k + 1}</m>, then
+      <m>f_1^2  + f_2^2  +  \cdots  + f_k^2 + f_{k+1}^2  = f_{k+1} f_{k + 2}</m>.  To do this, we can use
+      <me>
+        \begin{aligned}\left( f_1^2  + f_2^2  +  \cdots  + f_k^2  \right) + f_{k+1}^2  \amp =
+        f_k f_{k + 1} + f_{k+1}^2 \\
+        f_1^2  + f_2^2  +  \cdots  + f_k^2 + f_{k+1}^2  \amp = f_{k+1} \left( f_k + f_{k+1} \right) \\
+        \amp = f_{k+1} f_{k+2}.
+        \end{aligned}
+      </me>
+    </ul>
+  </ul>
+  <ul>
+    {{ <xref ref="exer_geomseq"></xref>.}}
+    \item For the inductive step, if <m>a_k = a \cdot r^{k - 1}</m>, then
+    <me>
+      \begin{aligned}a_{k+1} \amp = r \cdot a_k \\
+      \amp = r \left( a \cdot r^{k-1} \right) \\
+      \amp = a \cdot r^k.
+      \end{aligned}
+    </me>
+  </ul>
+  <ul>
+    {{ <xref ref="exer_geometricseries2"></xref>.}}
+    \item For the inductive step, use the assumption that
+    <m>S_k  = a\left( {\dfrac{{1 - r^k }}{{1 - r}}} \right)</m> and the recursive definiton to write
+    <m>S_{k + 1}  = a + r \cdot S_k</m>.
+  </ul>
+  <ul>
+    {{ <xref ref="exer_sec53-arithexample"></xref>.}}
+    \item
+    <ul>
+      {{(a)}}
+      \item <m>a_2 = 7</m>, <m>a_3 = 12</m>, <m>a_4 = 17</m>, <m>a_5 = 22</m>, <m>a_6 = 27</m>.
+    </ul>
+  </ul>
+  <ul>
+    \item
+    <ul>
+      {{(b)}}
+      \item One possibility is:  For each <m>n \in \N</m>, <m>a_n = 2 + 5(n - 1)</m>.
+    </ul>
+  </ul>
+  <ul>
+    {{ <xref ref="exer_sec53-5"></xref>.}}
+    \item
+    <ul>
+      {{(a)}}
+      \item <m>a_2 = \sqrt{6}</m>, <m>a_3 = \sqrt{\sqrt{6} + 5} \approx 2.729</m>, <m>a_4 \approx 2.780</m>,
+      <m>a_5 \approx 2.789</m>, <m>a_6 \approx 2.791</m>
+    </ul>
+  </ul>
+  <ul>
+    \item
+    <ul>
+      {{(b)}}
+      \item Let <m>P( n )</m> be,
+      <q><m>a_n \lt  3</m>.</q>
+      Since <m>a_1 = 1</m>, <m>P( 1 )</m> is true.  For <m>k \in \mathbb{N}</m>, if <m>P( k )</m> is true, then <m>a_k \lt  3</m>.  Now
+      <me>
+        a_{k+1} = \sqrt{5 + a_k}
+      </me>.
+      Since <m>a_k \lt  3</m>, this implies that <m>a_{k+1} \lt  \sqrt{8}</m> and hence, <m>a_{k+1} \lt  3</m>.
+      This proves that if <m>P \left( k \right)</m> is true, then <m>P \left( k + 1\right)</m> is true.
+    </ul>
+  </ul>
+  <ul>
+    {{ <xref ref="exer_sec53-6"></xref>.}}
+    \item
+    <ul>
+      {{(a)}}
+      \item <m>a_3 = 7</m>, <m>a_4 =15</m>, <m>a_5 =31</m>, <m>a_6 =63</m>
+    </ul>
+  </ul>
+  <ul>
+    \item
+    <ul>
+      {{(b)}}
+      \item Think in terms of powers of 2.
+    </ul>
+  </ul>
+  <ul>
+    {{ <xref ref="exer_sec53-7"></xref>.}}
+    \item
+    <ul>
+      {{(a)}}
+      \item <m>a_3 = \dfrac{3}{2}</m>, <m>a_4 =\dfrac{7}{4}</m>, <m>a_5 =\dfrac{37}{24}</m>, <m>a_6 =\dfrac{451}{336}</m>
+    </ul>
+  </ul>
+  <ul>
+    {{ <xref ref="exer_sec53-9"></xref>.}}
+    \item
+    <ul>
+      {{(b)}}
+      \item
+      <m>a_2 = 5</m>
+      <m>a_3 = 23</m>
+      <m>a_4 = 119</m>
+      <m>a_5 = 719</m>
+      <m>a_6 = 5039</m>
+      <m>a_7 = 40319</m>
+      <m>a_8 = 362879</m>
+      <m>a_9 = 3628799</m>
+      <m>a_{10} = 39916799</m>
+    </ul>
+  </ul>
+  <ul>
+    {{ <xref ref="exer_lucasnumbers"></xref>.}}
+    \item
+    <ul>
+      {{(a)}}
+      \item Let <m>P(n)</m> be,
+      <q><m>L_n = 2f_{n+1} - f_n</m>.</q>
+      First, verify that <m>P(1)</m> and <m>P(2)</m> are true.  Now let <m>k</m> be a natural number with <m>k \geq 2</m> and assume that <m>P(1)</m>, <m>P(2)</m>, \ldots,
+      <m>P(k)</m> are all true. Since <m>P(k)</m> and <m>P(k-1)</m> are both assumed to be true, we can use them to help prove that <m>P(k+1)</m> must then be true as follows:
+      <md>
+        <mrow>L_{k+1} \amp = L_k + L_{k-1}</mrow>
+        <mrow>\amp = \left( 2f_{k+1} - f_k \right) + \left( 2f_k - f_{k-1} \right)</mrow>
+        <mrow>\amp = 2 \left( f_{k+1} + f_k \right) - \left( f_k + f_{k-1} \right)</mrow>
+        <mrow>\amp = 2f_{k+2} - f_{k+1}</mrow>
+      </md>.
+    </ul>
+  </ul>
+</section>

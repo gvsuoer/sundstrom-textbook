@@ -1,0 +1,845 @@
+<section xml:id="S_compositionoffunctions">
+  <title>Composition of Functions</title>
+  <introduction>
+    <exploration xml:id="PA_compositionintro">
+      <title><em>Constructing a New Function</em></title>
+      <p>
+        Let <m>A = \left\{ {a, b, c, d} \right\}</m>,
+        <m>B = \left\{ {p, q, r} \right\}</m>,
+        and <m>C = \left\{ {s, t, u, v} \right\}</m>.
+        The arrow diagram in <xref ref="fig_preview64">Figure</xref> shows two functions:
+        <m>f\x A \to B</m> and <m>g\x B \to C</m>.
+      </p>
+      <figure xml:id="fig_preview64">
+        <caption>Arrow Diagram Showing Two Functions</caption>
+        <image width="73%" source="images/figps-prev641.png"/>
+      </figure>
+      <p>
+        Notice that if <m>x \in A</m>, then <m>f(x) \in B</m>.
+        Since <m>f(x) \in B</m>, we can apply the function <m>g</m> to <m>f(x)</m>,
+        and we obtain <m>g(f(x))</m>,
+        which is an element of <m>C</m>.
+      </p>
+      <p>
+        Using this process, determine <m>g(f(a))</m>,
+        <m>g ( f(b) )</m>, <m>g ( f(c) )</m>, and <m>g ( f(d) )</m>.
+        Then explain how we can use this information to define a function from <m>A</m> to <m>C</m>.
+      </p>
+    </exploration>
+    <exploration xml:id="PA_verbaldescriptions">
+      <title><em>Verbal Descriptions of Functions</em></title>
+      <p>
+        The outputs of most real functions we have studied in previous mathematics courses have been determined by mathematical expressions.
+        In many cases,
+        it is possible to use these expressions to give step-by-step verbal descriptions of how to compute the outputs.
+        For example, if
+        <me>
+          f\x \mathbb{R} \to \mathbb{R}\text{  is defined by  } f( x ) = ( {3x + 2} )^3
+        </me>,
+        we could describe how to compute the outputs as follows:
+      </p>
+      <tabular>
+        <row bottom="minor">
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>Step</cell>
+          <cell><em>Verbal Description</em></cell>
+          <cell><em>Symbolic Result</em></cell>
+        </row>
+        <row bottom="minor">
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>1</cell>
+          <cell>Choose an input.</cell>
+          <cell><m>x</m></cell>
+        </row>
+        <row bottom="minor">
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>2</cell>
+          <cell>Multiply by 3.</cell>
+          <cell><m>3x</m></cell>
+        </row>
+        <row bottom="minor">
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>3</cell>
+          <cell>Add 2.</cell>
+          <cell><m>3x + 2</m></cell>
+        </row>
+        <row bottom="minor">
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>4</cell>
+          <cell>Cube the result.</cell>
+          <cell><m>( {3x + 2} )^3</m></cell>
+        </row>
+        <row bottom="minor">
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+      </tabular>
+      <p>
+        Complete step-by-step verbal descriptions for each of the following functions.
+        <ol>
+          <li>
+            <p>
+              <m>f\x \mathbb{R} \to \mathbb{R}</m> by
+              <m>f( x ) = \sqrt {3x^2 + 2}</m>, for each <m>x \in \R</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>g\x \mathbb{R} \to \mathbb{R}</m> by
+              <m>g( x ) = \sin \! \left( {3x^2 + 2} \right)</m>, for each <m>x \in \R</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>h\x \mathbb{R} \to \mathbb{R}</m> by
+              <m>h( x ) = e^{3x^2 + 2}</m>, for each <m>x \in \R</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>G\x \R \to \R</m> by <m>G(x) = \ln ( x^4 + 3 )</m>,
+              for each <m>x \in \R</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>k \x \R \to \R</m> by <m>k(x) = \sqrt[3]{\dfrac{\sin (4x + 3)}{x^2 + 1}}</m>,
+              for each <m>x \in \R</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </exploration>
+  </introduction>
+  <subsection>
+    <title>Composition of Functions</title>
+    <p>
+      There are several ways to combine two existing functions to create a new function.
+      For example, in calculus,
+      we learned how to form the product and quotient of two functions and then how to use the product rule to determine the derivative of a product of two functions and the quotient rule to determine the derivative of the quotient of two functions.
+    </p>
+    <p>
+      The chain rule in calculus was used to determine the derivative of the composition of two functions,
+      and in this section,
+      we will focus only on the composition of two functions.
+      We will then consider some results about the compositions of injections and surjections.
+    </p>
+    <p>
+      The basic idea of function composition is that when possible,
+      the output of a function <m>f</m> is used as the input of a function <m>g</m>.
+      This can be referred to as
+      <q><m>f</m> followed by <m>g</m></q>
+      and is called the composition of <m>f</m> and <m>g</m>.
+      In previous mathematics courses,
+      we used this idea to determine a formula for the composition of two real functions.
+    </p>
+    <p>
+      For example, if
+      <me>
+        f( x ) = 3x^2  + 2  \text{ and }   g( x ) = \sin x
+      </me>,
+      then we can compute <m>g( f( x ) )</m> as follows:
+      <me>
+        \begin{aligned} g( {f( x )} ) \amp = g \! \left( {3x^2  + 2} \right) \\ \amp = \sin \! \left( {3x^2  + 2} \right). \end{aligned}
+      </me>
+    </p>
+    <p>
+      In this case, <m>f( x )</m>,
+      the output of the function <m>f</m>,
+      was used as the input for the function <m>g</m>.
+      We now give the formal definition of the composition of two functions.
+    </p>
+    <definition xml:id="functioncomposition">
+      <statement>
+        <p>
+          Let <m>A</m>, <m>B</m>, and <m>C</m> be nonempty sets,
+          and let <m>f\x A \to B</m> and <m>g\x B \to C</m> be functions.
+          The <term>composition of</term> <idx><h>composition of functions</h></idx>
+              <idx><h>function</h><h>composition</h></idx> <m>\boldsymbol{f}</m> <term>and</term> <m>\boldsymbol{g}</m> is the function <m>g \circ f\x A \to C</m> defined by
+          <me>
+            ( {g \circ f} )( x ) = g\left( {f( x )} \right)
+          </me>
+          for all <m>x \in A</m>.
+          We often refer to the function <m>g \circ f</m> as a
+          <term>composite function</term>.
+              <idx><h>function</h><h>composite</h></idx>
+              <idx><h>composite function</h></idx>
+        </p>
+      </statement>
+    </definition>
+    <p>
+      It is helpful to think of the composite function <m>g \circ f</m> as
+      <q><m>\boldsymbol{f}</m> <em>followed by</em>
+      <m>\boldsymbol{g}</m>.</q>
+      We then refer to <m>f</m> as the
+      <em>inner function</em>
+          <idx><h>inner function</h></idx>
+          <idx><h>composition of functions</h><h>inner function</h></idx>
+      and <m>g</m> as the <em>outer function</em>.
+          <idx><h>outer function</h></idx>
+          <idx><h>composition of functions</h><h>outer function</h></idx>
+    </p>
+  </subsection>
+  <subsection>
+    <title>Composition and Arrow Diagrams</title>
+    <p>
+      The concept of the composition of two functions can be illustrated with arrow diagrams when the domain and codomain of the functions are small,
+      finite sets.
+      Although the term
+      <q>composition</q>
+      was not used then,
+      this was done in Beginning <xref ref="PA_compositionintro">Activity</xref>,
+      and another example is given here.
+    </p>
+    <p>
+      Let <m>A = \left\{ {a, b, c, d} \right\}</m>,
+      <m>B = \left\{ {p, q, r} \right\}</m>,
+      and <m>C = \left\{ {s, t, u, v} \right\}</m>.
+      The arrow diagram in <xref ref="fig_arrow64-1">Figure</xref> shows two functions:
+      <m>f\x A \to B</m> and <m>g\x B \to C</m>.
+    </p>
+    <figure xml:id="fig_arrow64-1">
+      <caption>Arrow Diagram for Two Functions</caption>
+      <image width="73%" source="images/figps-sec641.png"/>
+    </figure>
+    <p>
+      If we follow the arrows from the set <m>A</m> to the set <m>C</m>,
+      we will use the outputs of <m>f</m> as inputs of <m>g</m>,
+      and get the arrow diagram from <m>A</m> to <m>C</m> shown in <xref ref="fig_arrow64-2">Figure</xref>.
+      This diagram represents the composition of <m>f</m> followed by <m>g</m>.
+    </p>
+    <figure xml:id="fig_arrow64-2">
+      <caption>Arrow Diagram for <m>g \circ f\x  A \to C</m></caption>
+      <image width="73%" source="images/figps-sec642.png"/>
+    </figure>
+    <investigation xml:id="pr_compose">
+      <title><em>The Composition of Two Functions</em></title>
+      <p>
+        Let <m>A = \{ a, b, c, d \}</m> and <m>B = \{ 1, 2, 3 \}</m>.
+        Define the functions <m>f</m> and <m>g</m> as follows:
+        <ul>
+          \item <m>f \x A \to B</m> defined by <m>f(a) = 2</m>, <m>f(b) = 3</m>, <m>f(c) = 1</m>, and <m>f(d) = 2</m>. \item <m>g \x B \to B</m> defined by <m>g(1) = 3</m>, <m>g(2) = 1</m>, and <m>g(3) = 2</m>.
+        </ul>
+      </p>
+      <p>
+        Create arrow diagrams for the functions <m>f</m>, <m>g</m>,
+        <m>g \circ f</m>, and <m>g \circ g</m>.
+      </p>
+    </investigation>
+  </subsection>
+  <subsection>
+    <title>Decomposing Functions</title>
+    <p>
+          <idx><h>decomposing functions</h></idx>
+    </p>
+    <p>
+      We use the <em>chain rule</em>
+          <idx><h>chain rule</h></idx>
+      in calculus to find the derivative of a composite function.
+      The first step in the process is to recognize a given function as a composite function.
+      This can be done in many ways,
+      but the work in Beginning  <xref ref="PA_verbaldescriptions">Activity</xref>
+      can be used to decompose a function in a way that works well with the chain rule.
+      The use of the terms
+      <q>inner function</q>
+      and
+      <q>outer function</q>
+      can also be helpful.
+      The idea is that we use the last step in the process to represent the outer function,
+      and the steps prior to that to represent the inner function.
+      So for the function,
+      <me>
+        f\x \mathbb{R} \to \mathbb{R}\text{  by  } f( x ) = ( {3x + 2} )^3
+      </me>,
+      the last step in the verbal description table was to cube the result.
+      This means that we will use the function <m>g</m>
+      (the cubing function)
+      as the outer function and will use the prior steps as the inner function.
+      We will denote the inner function by <m>h</m>.
+      So we let <m>h\x \R \to \R</m> by <m>h( x ) = 3x + 2</m> and
+      <m>g\x \R \to \R</m> by <m>g( x ) = x^3</m>.
+      Then
+      <md>
+        <mrow>( {g \circ h} )( x ) \amp = g\left( {h( x )} \right)</mrow>
+        <mrow>\amp = g( {3x + 2} )</mrow>
+        <mrow>\amp = ( {3x + 2} )^3</mrow>
+        <mrow>\amp = f( x )</mrow>
+      </md>.
+    </p>
+    <p>
+      We see that <m>g \circ h = f</m> and, hence, we have
+      <q>decomposed</q>
+      the function <m>f</m>.
+      It should be noted that there are other ways to write the function <m>f</m> as a composition of two functions,
+      but the way just described is the one that works well with the chain rule.
+      In this case, the chain rule gives
+      <md>
+        <mrow>f'(x) \amp = ( g \circ h )'(x)</mrow>
+        <mrow>\amp = g'(h(x))\; h'(x)</mrow>
+        <mrow>\amp = 3(h(x))^2 \cdot 3</mrow>
+        <mrow>\amp = 9 (3x + 2)^2</mrow>
+      </md>
+    </p>
+    <investigation xml:id="prog_decompose">
+      <title><em>Decomposing Functions</em></title>
+      <p>
+        Write each of the following functions as the composition of two functions.
+        <ol>
+          <li>
+            <p>
+              <m>F\x \R \to \R</m> by <m>F(x) = ( x^2 +3 )^3</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>G\x \R \to \R</m> by <m>G(x) = \ln ( x^2 + 3 )</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f\x \Z \to \Z</m> by <m>f(x) = | x^2 - 3 |</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>g\x \R \to \R</m> by <m>g(x) = \cos \! \left( \dfrac{2x-3}{x^2+1} \right)</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </investigation>
+  </subsection>
+  <subsection>
+    <title>Theorems about Composite Functions</title>
+    <p>
+      If <m>f \x A \to B</m> and <m>g \x B \to C</m>,
+      then we can form the composite function <m>g \circ f \x A \to C</m>.
+      In <xref ref="S_typesoffunctions">Section</xref>,
+      we learned about injections and surjections.
+      We now explore what type of function
+      <m>g \circ f</m> will be if the functions <m>f</m> and <m>g</m> are injections
+      (or surjections).
+    </p>
+    <investigation xml:id="prog_compositesofinjections">
+      <title><em>Compositions of Injections and Surjections</em></title>
+      <p>
+        Although other representations of functions can be used,
+        it will be helpful to use arrow diagrams to represent the functions in this progress check.
+        We will use the following sets:
+        <me>
+          A = \{ a, b, c \},  B = \{p, q, r\},  C = \{u, v, w, x \},  \text{ and }   D = \{u, v \}
+        </me>.
+        <ol>
+          <li>
+            <p>
+              Draw an arrow diagram for a function
+              <m>f \x A \to B</m> that is an injection and an arrow diagram for a function
+              <m>g \x B \to C</m> that is an injection.
+              In this case,
+              is the composite function <m>g \circ f \x A \to C</m> an injection?
+              Explain.
+            </p>
+          </li>
+          <li>
+            <p>
+              Draw an arrow diagram for a function
+              <m>f \x A \to B</m> that is a surjection and an arrow diagram for a function
+              <m>g \x B \to D</m> that is a surjection.
+              In this case,
+              is the composite function <m>g \circ f \x A \to D</m> a surjection?
+              Explain.
+            </p>
+          </li>
+          <li>
+            <p>
+              Draw an arrow diagram for a function
+              <m>f \x A \to B</m> that is a bijection and an arrow diagram for a function <m>g \x B \to A</m> that is a bijection.
+              In this case,
+              is the composite function <m>g \circ f \x A \to A</m> bijection?
+              Explain.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </investigation>
+    <p>
+      In Progress <xref ref="prog_compositesofinjections">Check</xref>,
+      we explored some properties of composite functions related to injections,
+      surjections, and bijections.
+      The following theorem contains results that these explorations were intended to illustrate.
+      Some of the proofs will be included in the exercises.
+    </p>
+    <theorem xml:id="T_compositefunctions">
+      <statement>
+        <p>
+          Let <m>A</m>,
+          <m>B</m>, and <m>C</m> be nonempty sets and assume that
+          <m>f\x A \to B</m> and <m>g\x B \to C</m>.
+          <ol>
+            <li xml:id="T_compositefunctions1">
+              <p>
+                If <m>f</m> and <m>g</m> are both injections,
+                then <m>(g \circ f) \x A \to C</m> is an injection.
+              </p>
+            </li>
+            <li xml:id="T_compositefunctions2">
+              <p>
+                If <m>f</m> and <m>g</m> are both surjections,
+                then <m>(g \circ f) \x A \to C</m> is a surjection.
+              </p>
+            </li>
+            <li xml:id="T_compositefunctions3">
+              <p>
+                If <m>f</m> and <m>g</m> are both bijections,
+                then <m>(g \circ f) \x A \to C</m> is a bijection.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      The proof of Part<nbsp/><xref ref="T_compositefunctions1"/> is Exercise<nbsp/><xref ref="exer_compositefunctions1"/>.
+      Part<nbsp/><xref ref="T_compositefunctions3"/> is a direct consequence of the first two parts.
+      We will discuss a process for constructing a proof of Part<nbsp/><xref ref="T_compositefunctions2"/>.
+      Using the forward-backward process,
+      we first look at the conclusion of the conditional statement in Part<nbsp/><xref ref="T_compositefunctions2"/>.
+      The goal is to prove that <m>g \circ f</m> is a surjection.
+      Since <m>g \circ f\x A \to C</m>,
+      this is equivalent to proving that
+    </p>
+    <p>
+      For all <m>c \in C</m>,
+      there exists an <m>a \in A</m> such that <m>( {g \circ f} )( a ) = c</m>.
+    </p>
+    <p>
+      Since this statement in the backward process uses a universal quantifier,
+      we will use the choose-an-element method and choose an arbitrary element <m>c</m> in the set <m>C</m>.
+      The goal now is to find an <m>a \in A</m> such that <m>( {g \circ f} )( a ) = c</m>.
+    </p>
+    <p>
+      Now we can look at the hypotheses.
+      In particular, we are assuming that both
+      <m>f\x A \to B</m> and <m>g\x B \to C</m> are surjections.
+      Since we have chosen <m>c \in C</m>,
+      and <m>g\x B \to C</m> is a surjection, we know that
+    </p>
+    <p>
+      there exists a <m>b \in B</m> such that <m>g( b ) = c</m>.
+    </p>
+    <p>
+      Now, <m>b \in B</m> and <m>f\x A \to B</m> is a surjection.
+      Hence
+    </p>
+    <p>
+      there exists an <m>a \in A</m> such that <m>f( a ) = b</m>.
+    </p>
+    <p>
+      If we now compute <m>( {g \circ f} )( a )</m>, we will see that
+      <me>
+        ( {g \circ f} )( a ) = g \left( f ( a ) \right) = g ( b ) = c
+      </me>.
+    </p>
+    <p>
+      We can now write the proof as follows: \eighth
+    </p>
+    <p>
+      <em>Proof of <xref ref="T_compositefunctions">Theorem</xref>, Part<nbsp/><xref ref="T_compositefunctions2"/>.</em> Let <m>A</m>,
+      <m>B</m>,
+      and <m>C</m> be nonempty sets and assume that <m>f\x A \to B</m> and
+      <m>g\x B \to C</m> are both surjections.
+      We will prove that <m>g \circ f\x A \to C</m> is a surjection.
+    </p>
+    <p>
+      Let <m>c</m> be an arbitrary element of <m>C</m>.
+      We will prove there exists an <m>a \in A</m> such that <m>( g \circ f ) ( a ) = c</m>.
+      Since <m>g\x B \to C</m> is a surjection, we conclude that
+    </p>
+    <p>
+      there exists a <m>b \in B</m> such that <m>g( b ) = c</m>.
+    </p>
+    <p>
+      Now, <m>b \in B</m> and <m>f\x A \to B</m> is a surjection.
+      Hence
+    </p>
+    <p>
+      there exists an <m>a \in A</m> such that <m>f( a ) = b</m>.
+    </p>
+    <p>
+      We now see that
+      <me>
+        \begin{aligned}( {g \circ f} )( a ) \amp = g\left( {f( a )} \right) \\ \amp = g( b ) \\ \amp = c. \end{aligned}
+      </me>
+    </p>
+    <p>
+      We have now shown that for every <m>c \in C</m>,
+      there exists an <m>a \in A</m> such that <m>( {g \circ f} )( a ) = c</m>,
+      and this proves that <m>g \circ f</m> is a surjection.
+    </p>
+    <p>
+      <xref ref="T_compositefunctions">Theorem</xref>
+      shows us that if <m>f</m> and <m>g</m> are both special types of functions,
+      then the composition of <m>f</m> followed by <m>g</m> is also that type of function.
+      The next question is,
+      <q>If the composition of <m>f</m> followed by <m>g</m> is an injection
+      (or surjection),
+      can we make any conclusions about <m>f</m> or <m>g</m>?</q>
+      A partial answer to this question is provided in <xref ref="T_morecompositefunctions">Theorem</xref>.
+      This theorem will be investigated and proved in the Explorations and Activities for this section.
+      See Exercise<nbsp/><xref ref="exer_morecompositefunctions1"/>.
+    </p>
+    <theorem xml:id="T_morecompositefunctions">
+      <statement>
+        <p>
+          Let <m>A</m>,
+          <m>B</m>, and <m>C</m> be nonempty sets and assume that
+          <m>f\x A \to B</m> and <m>g\x B \to C</m>.
+          <ol>
+            <li xml:id="T_morecompositefunctions1">
+              <p>
+                If <m>g \circ f\x A \to C</m> is an injection,
+                then <m>f\x A \to B</m> is an injection.
+              </p>
+            </li>
+            <li xml:id="T_morecompositefunctions2">
+              <p>
+                If <m>g \circ f\x A \to C</m> is a surjection,
+                then <m>g\x B \to C</m> is a surjection.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      \exercises{Exercises 6.4}
+    </p>
+    <ol>
+      <li xml:id="exer_sec64-1">
+        <p>
+          In our definition of the composition of two functions,
+          <m>f</m> and <m>g</m>,
+          we required that the domain of <m>g</m> be equal to the codomain of <m>f</m>.
+          However, it is sometimes possible to form the composite function
+          <m>g \circ f</m> even though <m>\text{ dom } ( g ) \ne \text{ codom } ( f )</m>.
+          For example, let
+          <tabular>
+            <row>
+              <cell><m>f\x \mathbb{R} \to \mathbb{R}</m></cell>
+              <cell>be defined by</cell>
+              <cell><m>f( x ) = x^2 + 1</m>, and let</cell>
+            </row>
+            <row>
+              <cell><m>g\x \mathbb{R} - \left\{ 0 \right\} \to \mathbb{R}</m></cell>
+              <cell>be defined by</cell>
+              <cell><m>g( x ) = \dfrac{1}{x}</m>.</cell>
+            </row>
+          </tabular>
+        </p>
+        <ol>
+          <li>
+            <p>
+              Is it possible to determine
+              <m>( {g \circ f} )( x )</m> for all <m>x \in \mathbb{R}</m>?
+              Explain.
+            </p>
+          </li>
+          <li>
+            <p>
+              In general, let <m>f\x A \to T</m> and <m>g\x B \to C</m>.
+              Find a condition on the domain of <m>g</m>
+              (other than <m>B = T</m>)
+              that results in a meaningful definition of the composite function <m>g \circ f\x A \to C</m>.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li xml:id="exer64_notcommutative">
+        <p>
+          Let <m>h\x \mathbb{R} \to \mathbb{R}</m> be defined by <m>h( x ) = 3x + 2</m> and
+          <m>g\x \mathbb{R} \to \mathbb{R}</m> be defined by <m>g( x ) = x^3</m>.
+          Determine formulas for the composite functions
+          <m>g \circ h</m> and <m>h \circ g</m>.
+          Is the function <m>g \circ h</m> equal to the function <m>h \circ g</m>?
+          Explain.
+          What does this tell you about the operation of composition of functions?
+        </p>
+      </li>
+      <li xml:id="exer_sec64-2">
+        <p>
+          Following are formulas for certain real functions.
+          Write each of these real functions as the composition of two functions.
+          That is, decompose each of the functions.
+          <ol>
+            <li>
+              <p>
+                <m>F( x ) = \cos ( {e^x } )</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>G( x ) = e^{\cos ( x )}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>H( x ) = \dfrac{1}{{\sin x}}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>K( x ) = \cos \!\left( {e^{ - x^2 } } \right)</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec64-4">
+        <p>
+          The <em>identity function</em>
+    <idx><h>identity function</h></idx>
+          on a set <m>S</m>, denoted by <m>I_S</m>, is defined as follows:
+          <m>I_S \x S \to S</m> by <m>I_S ( x ) = x</m> for each <m>x \in S</m>.
+          Let <m>f\x A \to B</m>.
+          <ol>
+            <li>
+              <p>
+                For each <m>x \in A</m>,
+                determine <m>( {f \circ I_A } )( x )</m> and use this to prove that <m>f \circ I_A = f</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Prove that <m>I_B \circ f = f</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec64-3">
+        <ol>
+          <li>
+            <p>
+              Let <m>f\x \mathbb{R} \to \mathbb{R}</m> be defined by <m>f( x ) = x^2</m>,
+              let <m>g\x \mathbb{R} \to \mathbb{R}</m> be defined by <m>g( x ) = \sin x</m>,
+              and let <m>h\x \mathbb{R} \to \mathbb{R}</m> be defined by
+              <m>h( x ) = \sqrt[3]{x}</m>. \vskip10pt Determine formulas for <m>\left[ ( {h \circ g} ) \circ f \right] ( x )</m> and
+              <m>\left[ h \circ ( {g \circ f} ) \right] ( x )</m>. \vskip10pt Does this prove that
+              <m>( {h \circ g} ) \circ f = h \circ ( {g \circ f} )</m> for these particular functions?
+              Explain.
+            </p>
+          </li>
+          <li>
+            <p>
+              Now let <m>A</m>, <m>B</m>, <m>C</m>,
+              and <m>D</m> be sets and let <m>f\x A \to B</m>,
+              <m>g\x B \to C</m>, and <m>h\x C \to D</m>.
+              Prove that <m>( {h \circ g} ) \circ f = h \circ ( {g \circ f} )</m>.
+              That is, prove that function composition is an associative operation.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li xml:id="exer_compositefunctions1">
+        <p>
+          Prove Part<nbsp/><xref ref="T_compositefunctions1"/> of <xref ref="T_compositefunctions">Theorem</xref>.
+          Let <m>A</m>, <m>B</m>, and <m>C</m> be nonempty sets and let
+          <m>f\x A \to B</m> and <m>g\x B \to C</m>.
+          If <m>f</m> and <m>g</m> are both injections,
+          then <m>g \circ f</m> is an injection.
+        </p>
+      </li>
+      <li xml:id="exer_sec64-8">
+        <p>
+          For each of the following,
+          give an example of functions <m>f\x A \to B</m> and
+          <m>g\x B \to C</m> that satisfy the stated conditions,
+          or explain why no such example exists.
+          <ol>
+            <li>
+              <p>
+                The function <m>f</m> is a surjection,
+                but the function <m>g \circ f</m> is not a surjection.
+              </p>
+            </li>
+            <li>
+              <p>
+                The function <m>f</m> is an injection,
+                but the function <m>g \circ f</m> is not an injection.
+              </p>
+            </li>
+            <li>
+              <p>
+                The function <m>g</m> is a surjection,
+                but the function <m>g \circ f</m> is not a surjection.
+              </p>
+            </li>
+            <li>
+              <p>
+                The function <m>g</m> is an injection,
+                but the function <m>g \circ f</m> is not an injection.
+              </p>
+            </li>
+            <li>
+              <p>
+                The function <m>f</m> is not a surjection,
+                but the function <m>g \circ f</m> is a surjection.
+              </p>
+            </li>
+            <li>
+              <p>
+                The function <m>f</m> is not an injection,
+                but the function <m>g \circ f</m> is an injection.
+              </p>
+            </li>
+            <li>
+              <p>
+                The function <m>g</m> is not a surjection,
+                but the function <m>g \circ f</m> is a surjection.
+              </p>
+            </li>
+            <li>
+              <p>
+                The function <m>g</m> is not an injection,
+                but the function <m>g \circ f</m> is an injection.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <p>
+          Let <m>A</m> be a nonempty set and let <m>f\x A \to A</m>.
+          For each <m>n \in \N</m>,
+          define a function <m>f^n\x A \to A</m> recursively as follows:
+          <m>f^1 = f</m> and for each <m>n \in \N</m>,
+          <m>f^{n+1} = f \circ f^n</m>.
+          For example,
+          <m>f^2 = f \circ f^1 = f \circ f</m> and <m>f^3 = f \circ f^2 = f \circ ( f \circ f )</m>.
+          <ol>
+            <li>
+              <p>
+                Let <m>f\x \R \to \R</m> by
+                <m>f(x) = x + 1</m> for each <m>x \in \R</m>.
+                For each <m>n \in \N</m> and for each <m>x \in \R</m>,
+                determine a formula for <m>f^n(x)</m> and use induction to prove that your formula is correct.
+              </p>
+            </li>
+            <li>
+              <p>
+                Let <m>a, b \in \R</m> and let <m>f\x \R \to \R</m> by
+                <m>f(x) = ax + b</m> for each <m>x \in \R</m>.
+                For each <m>n \in \N</m> and for each <m>x \in \R</m>,
+                determine a formula for <m>f^n(x)</m> and use induction to prove that your formula is correct.
+              </p>
+            </li>
+            <li>
+              <p>
+                Now let <m>A</m> be a nonempty set and let <m>f\x A \to A</m>.
+                Use induction to prove that for each <m>n \in \N</m>,
+                <m>f^{n+1} = f^n \circ f</m>. (\note You will need to use the result in Exercise<nbsp/><xref ref="exer_sec64-3"/>.)
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+  <subsection>
+    <title>Explorations and Activities</title>
+    <ol>
+      <li xml:id="exer_exploringcomposite">
+        <p>
+          <em>Exploring Composite Functions</em>.
+          Let <m>A</m>, <m>B</m>, and <m>C</m> be nonempty sets and let
+          <m>f\x A \to B</m> and <m>g\x B \to C</m>.
+          For this activity,
+          it may be useful to draw your arrow diagrams in a triangular arrangement as follows:
+          <figure>
+            <image width="73%" source="images/figps-comparrow.png"/>
+          </figure>
+          It might be helpful to consider examples where the sets are small.
+          Try constructing examples where the set <m>A</m> has 2 elements,
+          the set <m>B</m> has 3 elements,
+          and the set <m>C</m> has 2 elements.
+          <ol>
+            <li>
+              <p>
+                Is it possible to construct an example where <m>g \circ f</m> is an injection,
+                <m>f</m> is an injection, but <m>g</m> is not an injection?
+                Either construct such an example or explain why it is not possible.
+              </p>
+            </li>
+            <li>
+              <p>
+                Is it possible to construct an example where <m>g \circ f</m> is an injection,
+                <m>g</m> is an injection, but <m>f</m> is not an injection?
+                Either construct such an example or explain why it is not possible.
+              </p>
+            </li>
+            <li>
+              <p>
+                Is it possible to construct an example where <m>g \circ f</m> is a surjection,
+                <m>f</m> is a surjection, but <m>g</m> is not a surjection?
+                Either construct such an example or explain why it is not possible.
+              </p>
+            </li>
+            <li>
+              <p>
+                Is it possible to construct an example where <m>g \circ f</m> is surjection,
+                <m>g</m> is a surjection, but <m>f</m> is not a surjection?
+                Either construct such an example or explain why it is not possible.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_morecompositefunctions1">
+        <p>
+          <em>The Proof of <xref ref="T_morecompositefunctions">Theorem</xref></em>.
+          Use the ideas from Exercise<nbsp/><xref ref="exer_exploringcomposite"/> to prove <xref ref="T_morecompositefunctions">Theorem</xref>.
+          Let <m>A</m>, <m>B</m>, and <m>C</m> be nonempty sets and let
+          <m>f\x A \to B</m> and <m>g\x B \to C</m>.
+          <ol>
+            <li xml:id="exer_sec64-6">
+              <p>
+                If <m>g \circ f\x A \to C</m> is an injection,
+                then <m>f\x A \to B</m> is an injection.
+              </p>
+            </li>
+            <li xml:id="exer_sec64-7">
+              <p>
+                If <m>g \circ f\x A \to C</m> is a surjection,
+                then <m>g\x B \to C</m> is a surjection.
+              </p>
+            </li>
+          </ol>
+        </p>
+        \hint For part<nbsp/>(a), start by asking,
+        <q>What do we have to do to prove that <m>f</m> is an injection?</q>
+        Start with a similar question for part<nbsp/>(b).
+      </li>
+    </ol>
+  </subsection>
+</section>

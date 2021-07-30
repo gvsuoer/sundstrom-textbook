@@ -1,0 +1,1037 @@
+<section xml:id="S_introfunctions">
+  <title>Introduction to Functions</title>
+  <introduction>
+    <exploration xml:id="PA_previousfunctions">
+      <title><em>Functions from Previous Courses</em></title>
+      <p>
+        One of the most important concepts in modern mathematics is that of a <term>function</term>.
+        In previous mathematics courses,
+        we have often thought of a function as some sort of input-output rule that assigns exactly one output to each input.
+        So in this context, a <term>function</term>
+            <idx><h>function</h></idx>
+        can be thought of as a procedure for associating with each element of some set,
+        called the <term>domain of the function</term>,
+        <idx><h>domain</h><h>of a function</h></idx>
+            <idx><h>function</h><h>domain</h></idx>
+        exactly one element of another set,
+        called the <term>codomain of the function</term>.
+            <idx><h>codomain</h></idx>
+            <idx><h>function</h><h>codomain</h></idx>
+        This procedure can be considered an input-output rule.
+        The function takes the input,
+        which is an element of the domain,
+        and produces an output, which is an element of the codomain.
+        In calculus and precalculus,
+        the inputs and outputs were almost always real numbers.
+        So the notation <m>f( x ) = x^2 \sin x</m> means the following:
+        <ul>
+          <li>
+            <p>
+              <m>f</m> is the name of the function.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f( x )</m>  is a real number.
+              It is the output of the function when the input is the real number  <m>x</m>.
+              For example,
+              <me>
+                \begin{aligned}f\left( {\frac{\pi }{2}} \right) \amp = \left( {\frac{\pi }{2}} \right)^2 \sin \left( {\frac{\pi } {2}} \right) \\ \amp = \frac{{\pi ^2 }}{4} \cdot 1 \\ \amp = \frac{{\pi ^2 }}{4}. \end{aligned}
+              </me>
+            </p>
+          </li>
+        </ul>
+      </p>
+      <p>
+        For this function,
+        it is understood that the domain of the function is the set <m>\R</m> of all real numbers.
+        In this situation,
+        we think of the domain as the set of all possible inputs.
+        That is, the domain is the set of all possible real numbers <m>x</m> for which a real number output can be determined.
+      </p>
+      <p>
+        This is closely related to the equation <m>y = x^2 \sin x</m>.
+        With this equation,
+        we frequently think of <m>x</m> as the input and <m>y</m> as the output.
+        In fact, we sometimes write <m>y = f( x )</m>.
+        The key to remember is that a function must have exactly one output for each input.
+        When we write an equation such as
+        <me>
+          y = \dfrac{1}{2}x^3  - 1
+        </me>,
+        we can use this equation to define <m>y</m> as a function of <m>x</m>.
+        This is because when we substitute a real number for <m>x</m>
+        (the input),
+        the equation produces exactly one real number for <m>y</m>
+        (the output).
+        We can give this function a name,
+        such as <m>g</m>, and write
+        <me>
+          y = g( x ) = \frac{1}{2}x^3  - 1
+        </me>.
+      </p>
+      <p>
+        However, as written, an equation such as
+        <me>
+          y^2  = x + 3
+        </me>
+        cannot be used to define <m>y</m> as a function of <m>x</m> since there are real numbers that can be substituted for <m>x</m> that will produce more than one possible value of <m>y</m>.
+        For example, if <m>x = 1</m>,
+        then <m>y^2  = 4</m>, and <m>y</m> could be <m>-2</m> or 2.
+      </p>
+      <p>
+        Which of the following equations can be used to define a function with
+        <m>x \in \R</m> as the input and <m>y \in \R</m> as the output?
+        <ol>
+          <li>
+            <p>
+              <m>y = x^2 - 2</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>y^2 = x + 3</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>y = \dfrac{1}{2}x^3 - 1</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>y = \dfrac{1}{2} x\sin x</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>x^2 + y^2 = 4</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>y = 2x - 1</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>y = \dfrac{x}{{x - 1}}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </exploration>
+    <exploration xml:id="PA_otherfunctions">
+      <title><em>Some Other Types of Functions</em></title>
+      <p>
+        The domain and codomain of each of the functions in Beginning  <xref ref="PA_previousfunctions">Activity</xref>
+        are the set <m>\R</m> of all real numbers,
+        or some subset of <m>\R</m>.
+        In most of these cases,
+        the way in which the function associates elements of the domain with elements of the codomain is by a rule determined by some mathematical expression.
+        For example,
+        when we say that <m>f</m> is the function such that
+        <me>
+          f( x ) = \dfrac{x}{{x - 1}}
+        </me>,
+        then the algebraic rule that determines the output of the function <m>f</m> when the input is <m>x</m> is <m>\dfrac{x}{{x - 1}}</m>.
+        In this case,
+        we would say that the domain of <m>f</m> is the set of all real numbers not equal to 1 since division by zero is not defined.
+      </p>
+      <p>
+        However, the concept of a function is much more general than this.
+        The domain and codomain of a function can be any set,
+        and the way in which a function associates elements of the domain with elements of the codomain can have many different forms.
+        The input-output rule for a function can be a formula, a graph,
+        a table, a random process, or a verbal description.
+        We will explore two different examples in this activity.
+      </p>
+      <ol>
+        <li>
+          <p>
+            Let <m>b</m> be the function that assigns to each person his or her birthday
+            (month and day).
+            The domain of the function <m>b</m> is the set of all people and the codomain of <m>b</m> is the set of all days in a leap year (i.e., January 1 through December 31, including February 29).
+          </p>
+          <ol>
+            <li>
+              <p>
+                Explain why <m>b</m> really is a function.
+                We will call this the <em>birthday function</em>.
+              <idx><h>birthday function</h></idx>
+          </p>
+            </li>
+            <li>
+              <p>
+                In 1995, Andrew Wiles
+              <idx><h>Wiles, Andrew</h></idx>
+                became famous for publishing a proof of Fermat's Last Theorem.
+                (See A. D. Aczel,
+                <em>Fermat's Last Theorem: Unlocking the Secret of an Ancient Mathematical Problem</em>, Dell Publishing, New York, 1996.)
+                Andrew Wiles's birthday is April 11, 1953.
+                Translate this fact into functional notation using the
+                <q>birthday function</q>
+                <m>b</m>.
+                That is, fill in the spaces for the following question marks:
+                <me>
+                  b( {\,?\,} ) = \,?
+                </me>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Is the following statement true or false?
+                Explain.
+              </p>
+              <ul>
+                \item For each day <m>D</m> of the year, there exists a person <m>x</m> such that <m>b( x ) = D</m>.
+              </ul>
+            </li>
+            <li>
+              <p>
+                Is the following statement true or false?
+                Explain.
+              </p>
+              <ul>
+                \item For any people <m>x</m> and <m>y</m>, if <m>x</m> and <m>y</m> are different people, then <m>b( x ) \ne b( y )</m>.
+              </ul>
+            </li>
+          </ol>
+        </li>
+        <li xml:id="sym_sumdivisors">
+          <p>
+            Let  <m>s</m> be the function that associates with each natural number the sum of its distinct natural number divisors.
+            This is called the <em>sum of the divisors function</em>.
+    <idx><h>sum of divisors function</h></idx>
+For example,
+            the natural number divisors of 6 are 1, 2, 3, and 6, and so
+            <me>
+              \begin{aligned}s( 6 ) \amp = 1 + 2 + 3 + 6 \\ \amp = 12. \end{aligned}
+            </me>
+          </p>
+          <ol>
+            <li>
+              <p>
+                Calculate <m>s( k )</m> for each natural number <m>k</m> from 1 through 15.
+              </p>
+            </li>
+            <li>
+              <p>
+                Does there exist a natural number <m>n</m> such that <m>s( n ) = 5</m>?
+                Justify your conclusion.
+              </p>
+            </li>
+            <li>
+              <p>
+                Is it possible to find two different natural numbers <m>m</m> and <m>n</m> such that <m>s( m ) = s( n )</m>?
+                Explain.
+              </p>
+            </li>
+            <li>
+              <p>
+                Use your responses in (b) and (c) to determine the truth value of each of the following statements.
+              </p>
+              <ol>
+                <li>
+                  <p>
+                    For each <m>m \in \mathbb{N}</m>,
+                    there exists a natural number <m>n</m> such that <m>s( n ) = m</m>.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    For all <m>m, n \in \mathbb{N}</m>,
+                    if <m>m \ne n</m>, then <m>s( m ) \ne s( n )</m>.
+                  </p>
+                </li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+      </ol>
+    </exploration>
+  </introduction>
+  <subsection xml:id="sym_function">
+    <title>The Definition of a Function</title>
+    <p>
+      The concept of a function is much more general than the idea of a function used in calculus or precalculus.
+      In particular,
+      the domain and codomain do not have to be subsets of <m>\mathbb{R}</m>.
+      In addition,
+      the way in which a function associates elements of the domain with elements of the codomain can have many different forms.
+      This input-output rule can be a formula, a graph, a table,
+      a random process, a computer algorithm, or a verbal description.
+      Two such examples were introduced in Beginning <xref ref="PA_otherfunctions">Activity</xref>.
+    </p>
+    <p>
+      For the <em>birthday function</em>,
+          <idx><h>birthday function</h></idx>
+      the domain would be the set of all people and the codomain would be the set of all days in a leap year.
+      For the <em>sum of the divisors function</em>,
+          <idx><h>sum of divisors function</h></idx>
+      the domain is the set <m>\mathbb{N}</m> of natural numbers,
+      and the codomain could also be <m>\mathbb{N}</m>.
+      In both of these cases,
+      the input-output rule was a verbal description of how to assign an element of the codomain to an element of the domain.
+    </p>
+    <p>
+      We formally define the concept of a function as follows:
+    </p>
+    <definition xml:id="function">
+      <statement>
+        <p>
+          A <term>function</term>
+              <idx><h>function</h></idx>
+          from a set <m>A</m> to a set <m>B</m> is a rule that associates with each element <m>x</m> of the set <m>A</m> exactly one element of the set <m>B</m>.
+          A function from <m>A</m> to <m>B</m> is also called a <term>mapping</term>
+              <idx><h>mapping</h></idx>
+          from <m>A</m> to <m>B</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      <em>Function Notation</em>.
+      When we work with a function,
+      we usually give it a name.
+      The name is often a single letter,
+      such as <m>f</m> or <m>g</m>.
+      If <m>f</m> is a function from the set <m>A</m> to the set <m>B</m>,
+      we will write <m>f \colon A \to B</m>.
+      This is simply shorthand notation for the fact that <m>f</m> is a function from the set <m>A</m> to the set <m>B</m>.
+      In this case,
+      we also say that <m>f</m> maps <m>A</m> to <m>B</m>.
+    </p>
+    <definition xml:id="domainfunction">
+      <statement>
+        <p>
+          Let <m>f \colon A \to B</m>. (This is read,
+          <q>Let <m>f</m> be a function from <m>A</m> to <m>B</m>.</q>
+          ) The set <m>A</m> is called the <term>domain</term>
+          <idx><h>domain</h><h>of a function</h></idx>
+              <idx><h>function</h><h>domain</h></idx>
+          of the function <m>f</m>, and we write <m>A = \text{ dom } ( f )</m>.
+          The set <m>B</m> is called the <term>codomain</term>
+              <idx><h>codomain</h></idx>
+              <idx><h>function</h><h>codomain</h></idx>
+          of the function <m>f</m>, and we write <m>B = \text{ codom } ( f )</m>.
+          If <m>a \in A</m>,
+          then the element of <m>B</m> that is associated with <m>a</m> is denoted by <m>f( a )</m> and is called the
+          <term>image of <m>\boldsymbol{a}</m> <idx><h>image</h><h>of an element</h></idx> under <m>\boldsymbol{f}</m></term>.
+          If <m>f( a ) = b</m>, with <m>b \in B</m>,
+          then <m>a</m> is called a <term>preimage of
+          <m>\boldsymbol{b}</m> <idx><h>preimage</h><h>of an element</h></idx> for <m>\boldsymbol{f}</m></term>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      <em>Some Function Terminology with an Example</em>.
+      When we have a function
+    </p>
+    <p>
+      <m>f \colon A \to B</m>, we often write <m>y = f(x)</m>.
+      In this case,
+      we consider <m>x</m> to be an unspecified object that can be chosen from the set <m>A</m>,
+      and we would say that <m>x</m> is the
+      <em>independent variable</em>
+          <idx><h>independent variable</h></idx>
+          <idx><h>variable</h><h>independent</h></idx>
+      of the function <m>f</m> and <m>y</m> is the
+      <em>dependent variable</em>
+          <idx><h>dependent variable</h></idx>
+          <idx><h>variable</h><h>dependent</h></idx>
+      of the function <m>f</m>.
+    </p>
+    <p>
+      For a specific example,
+      consider the function <m>g \x \mathbb{R} \to \mathbb{R}</m>,
+      where <m>g( x )</m> is defined by the formula
+      <men xml:id="example_function">
+        g( x ) = x^2  - 2
+      </men>.
+    </p>
+    <p>
+      Note that this is indeed a function since given any input <m>x</m> in the domain,
+      <m>\R</m>,
+      there is exactly one output <m>g( x )</m> in the codomain,
+      <m>\R</m>.
+      For example,
+      <me>
+        \begin{aligned}g( { - 2} )        \amp = \left( { - 2} \right)^2  - 2 = 2, \\ g( 5 )             \amp = 5^2  - 2 = 23, \\ g( {\sqrt 2 } )    \amp = \left( {\sqrt 2 } \right)^2  - 2 = 0,  \\ g( { - \sqrt 2 } ) \amp = \left( { - \sqrt 2 } \right)^2  - 2 = 0. \end{aligned}
+      </me>
+    </p>
+    <p>
+      So we say that the image of <m>-2</m> under <m>g</m> is 2, the image of 5 under <m>g</m> is 23, and so on.
+    </p>
+    <p>
+      Notice in this case that the number 0 in the codomain has two preimages,
+      <m>- \sqrt 2 \text{ and } \sqrt 2</m>.
+      This does not violate the mathematical definition of a function since the definition only states that each input must produce one and only one output.
+      That is, each element of the domain has exactly one image in the codomain.
+      Nowhere does the definition stipulate that two different inputs must produce different outputs.
+    </p>
+    <p>
+      Finding the preimages of an element in the codomain can sometimes be difficult.
+      In general, if <m>y</m> is in the codomain,
+      to find its preimages, we need to ask,
+      <q>For which values of <m>x</m> in the domain will we have <m>y = g( x )</m>?</q>
+      For example, for the function <m>g</m>,
+      to find the preimages of 5, we need to find all <m>x</m> for which <m>g( x ) = 5</m>.
+      In this case, since <m>g( x ) = x^2  - 2</m>,
+      we can do this by solving the equation
+      <me>
+        x^2  - 2 = 5
+      </me>.
+    </p>
+    <p>
+      The solutions of this equation are <m>- \sqrt 7</m> and <m>\sqrt 7</m>.
+      So for the function <m>g</m>,
+      the preimages of 5 are <m>- \sqrt 7</m> and <m>\sqrt 7</m>.
+      We often use set notation for this and say that the set of preimages of 5 for the function <m>g</m> is <m>\left\{ -\sqrt{7}, \sqrt{7} \right\}</m>.
+    </p>
+    <p>
+      Also notice that for this function,
+      not every element in the codomain has a preimage.
+      For example,
+      there is no input <m>x</m> such that <m>g\left( x \right) = - 3</m>.
+      This is true since for all real numbers <m>x</m>,
+      <m>x^2 \geq 0</m> and hence <m>x^2 - 2 \geq - 2</m>.
+      This means that for all <m>x</m> in <m>\mathbb{R}</m>,
+      <m>g\left( x \right) \geq - 2</m>.
+    </p>
+    <p>
+      Finally, note that we introduced the function <m>g</m> with the sentence,
+      <q>Consider the function <m>g\x \mathbb{R} \to \mathbb{R}</m>,
+      where <m>g( x )</m> is defined by the formula <m>g( x ) = x^2 - 2</m>.</q>
+      This is one correct way to do this,
+      but we will frequently shorten this to,
+      <q>Let <m>g\x \mathbb{R} \to \mathbb{R}</m> be defined by <m>g( x ) = x^2 - 2</m></q>, or
+      <q>Let <m>g\x \mathbb{R} \to \mathbb{R}</m>,
+      where <m>g( x ) = x^2 - 2</m>.</q>
+    </p>
+    <investigation xml:id="pr_images">
+      <title><em>Images and Preimages</em></title>
+      <p>
+        Let <m>f\x \R \to \R</m> be defined by
+        <m>f(x) = x^2 - 5x</m> for all <m>x \in \R</m>,
+        and let <m>g\x \Z \to \Z</m> be defined by
+        <m>g(m) = m^2 - 5m</m> for all <m>m \in \Z</m>.
+        <ol>
+          <li>
+            <p>
+              Determine <m>f ( -3 )</m> and <m>f \left( \sqrt 8 \right)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Determine <m>g ( 2 )</m> and <m>g ( -2 )</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Determine the set of all preimages of 6 for the function <m>f</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Determine the set of all preimages of 6 for the function <m>g</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Determine the set of all preimages of 2 for the function <m>f</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Determine the set of all preimages of 2 for the function <m>g</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </investigation>
+  </subsection>
+  <subsection>
+    <title>The Codomain and Range of a Function</title>
+    <p>
+      Besides the domain and codomain,
+      there is another important set associated with a function.
+      The need for this was illustrated in the example of the function <m>g</m> on <xref ref="example_function">page</xref>.
+      For this function,
+      it was noticed that there are elements in the codomain that have no preimage or,
+      equivalently,
+      there are elements in the codomain that are not the image of any element in the domain.
+      The set we are talking about is the subset of the codomain consisting of all images of the elements of the domain of the function,
+      and it is called the range of the function.
+    </p>
+    <definition xml:id="rangeandimage">
+      <statement>
+        <p>
+          Let <m>f\x A \to B</m>.
+          The set <m>\left\{ {f( x ) \mid x \in A} \right\}</m> is called the
+          <term>range of the function</term>
+              <idx><h>range</h></idx>
+              <idx><h>function</h><h>range</h></idx> <m>\boldsymbol{f}</m> and is denoted by <m>\text{ range } \left( f \right)</m>.
+          The range of <m>f</m> is sometimes called the
+          <term>image of the function</term> <m>\boldsymbol{f}</m>
+          (or the <term>image of</term>
+          <m>\boldsymbol{A}</m> <term>under</term> <m>\boldsymbol{f}</m>).
+        </p>
+      </statement>
+    </definition>
+    <p>
+      The range of <m>f\x A \to B</m> could equivalently be defined as follows:
+      <me>
+        \text{ range } ( f ) = \left\{ { {y \in B} \mid y = f\left( x \right)\text{ for some } x \in A} \right\}\!
+      </me>.
+    </p>
+    <p>
+      Notice that this means that
+      <m>\text{ range } (f) \subseteq \text{ codom } (f)</m> but does not necessarily mean that <m>\text{ range } (f) = \text{ codom } (f)</m>.
+      Whether we have this set equality or not depends on the function <m>f</m>.
+      More about this will be explored in <xref ref="S_typesoffunctions">Section</xref>.
+    </p>
+    <investigation xml:id="pr_codomainandrange">
+      <title><em>Codomain and Range</em></title>
+      <ol>
+        <li>
+          <p>
+            Let <m>b</m> be the function that assigns to each person his or her birthday
+            (month and day).
+            <ol>
+              <li>
+                <p>
+                  What is the domain of this function?
+                </p>
+              </li>
+              <li>
+                <p>
+                  What is a codomain for this function?
+                </p>
+              </li>
+              <li>
+                <p>
+                  In Beginning <xref ref="PA_otherfunctions">Activity</xref>,
+                  we determined that the following statement is true: For each day <m>D</m> of the year,
+                  there exists a person <m>x</m> such that <m>b( x ) = D</m>.
+                  What does this tell us about the range of the function <m>b</m>?
+                  Explain.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </li>
+        <li>
+          <p>
+            Let <m>s</m> be the function that associates with each natural number the sum of its distinct natural number factors.
+            <ol>
+              <li>
+                <p>
+                  What is the domain of this function?
+                </p>
+              </li>
+              <li>
+                <p>
+                  What is a codomain for this function?
+                </p>
+              </li>
+              <li>
+                <p>
+                  In Beginning <xref ref="PA_otherfunctions">Activity</xref>,
+                  we determined that the following statement is false:
+                  <ul>
+                    \item For each <m>m \in \mathbb{N}</m>, there exists a natural number <m>n</m> such that <m>s( n ) = m</m>.
+                  </ul>
+                </p>
+                Give an example of a natural number <m>m</m> that shows this statement is false,
+                and explain what this tells us about the range of the function <m>s</m>.
+              </li>
+            </ol>
+          </p>
+        </li>
+      </ol>
+    </investigation>
+  </subsection>
+  <subsection xml:id="realfunction">
+    <title>The Graph of a Real Function</title>
+    <p>
+      We will finish this section with methods to visually communicate information about two specific types of functions.
+      The first is the familiar method of graphing functions that was a major part of some previous mathematics courses.
+      For example, consider the function
+      <m>g \x \R \to \R</m> defined by <m>g(x) = x^2 - 2x - 1</m>.
+    </p>
+    <figure xml:id="fig_functiongraph1">
+      <caption>Graph of <m>y = g( x )</m>, where  <m>g( x ) = x^2  - 2x - 1</m></caption>
+      <image width="73%" source="images/figps-graphsec6-1.png"/>
+    </figure>
+    <p>
+      Every point on this graph corresponds to an ordered pair <m>\left( {x,\;y} \right)</m> of real numbers,
+      where <m>y = g( x ) = x^2  - 2x - 1</m>.
+      Because we use the Cartesian plane when drawing this type of graph,
+      we can only use this type of graph when both the domain and the codomain of the function are subsets of the real numbers <m>\R</m>.
+      Such a function is sometimes called a <em>real function</em>.
+          <idx><h>real function</h></idx>
+          <idx><h>function</h><h>real</h></idx>
+      The graph of a real function is a visual way to communicate information about the function.
+      For example,
+      the range of <m>g</m> is the set of all <m>y</m>-values that correspond to points on the graph.
+      In this case,
+      the graph of <m>g</m> is a parabola and has a vertex at the point <m>(1, -2)</m>. (\note The <m>x</m>-coordinate of the vertex can be found by using calculus and solving the equation
+      <m>f ' (x) = 0</m>.) Since the graph of the function <m>g</m> is a parabola,
+      we know that the pattern shown on the left end and the right end of the graph continues and we can conclude that the range of <m>g</m> is the set of all
+      <m>y \in \R</m> such that <m>y \geq -2</m>.
+      That is,
+      <me>
+        \text{ range }  (g) = \{ y \in \R \mid y \geq -2 \}
+      </me>.
+    </p>
+    <investigation xml:id="pr_graphreal">
+      <title><em>Using the Graph of a Real Function</em></title>
+      <p>
+        The graph in <xref ref="fig_functiongraph2">Figure</xref> shows the graph of
+        (slightly more than)
+        two complete periods for a function <m>f \x \R \to \R</m>,
+        where <m>f(x) = A \sin (Bx)</m> for some positive real number constants <m>A</m> and <m>B</m>.
+      </p>
+      <figure xml:id="fig_functiongraph2">
+        <caption>Graph of <m>y = f( x )</m></caption>
+        <image width="73%" source="images/figps-graph2sec6-1.png"/>
+      </figure>
+      <ol>
+        <li>
+          <p>
+            We can use the graph to estimate the output for various inputs.
+            This is done by estimating the <m>y</m>-coordinate for the point on the graph with a specified <m>x</m>-coordinate.
+            On the graph,
+            draw vertical lines at <m>x = - 1</m> and <m>x = 2</m> and estimate the values of <m>f( { - 1} )</m> and <m>f( 2 )</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Similarly, we can estimate inputs of the function that produce a specified output.
+            This is done by estimating the <m>x</m>-coordinates of the points on the graph that have a specified <m>y</m>-coordinate.
+            Draw a horizontal line at <m>y = 2</m> and estimate at least two values of <m>x</m> such that <m>f( x ) = 2</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Use the graph in <xref ref="fig_functiongraph2">Figure</xref>
+            to estimate the range of the function <m>f</m>.
+          </p>
+        </li>
+      </ol>
+    </investigation>
+  </subsection>
+  <subsection>
+    <title>Arrow Diagrams</title>
+    <p>
+      Sometimes the domain and codomain of a function are small,
+      finite sets.
+      When this is the case,
+      we can define a function simply by specifying the outputs for each input in the domain.
+      For example,
+      if we let <m>A = \left\{ {1, 2, 3} \right\}</m> and let <m>B = \left\{ {a, b} \right\}</m>,
+      we can define a function <m>F\x A \to B</m> by specifying that
+      <me>
+        F( 1 ) = a, F( 2 ) = a, \text{ and }   F( 3 ) = b
+      </me>.
+    </p>
+    <p>
+      This is a function since each element of the domain is mapped to exactly one element in <m>B</m>.
+      A convenient way to illustrate or visualize this type of function is with a so-called <em>arrow diagram</em>
+          <idx><h>arrow diagram</h></idx>
+      as shown in <xref ref="fig_arrow61-1">Figure</xref>.
+    </p>
+    <figure xml:id="fig_arrow61-1">
+      <caption>Arrow Diagram for a Function</caption>
+      <image width="73%" source="images/figps-arrow61-1x.png"/>
+    </figure>
+    <p>
+      An arrow diagram can be used when the domain and codomain of the function are finite
+      (and small).
+      We represent the elements of each set with points and then use arrows to show how the elements of the domain are associated with elements of the codomain.
+      For example,
+      the arrow from the point 2 in <m>A</m> to the point <m>a</m> in <m>B</m> represents the fact that <m>F( 2 ) = a</m>.
+      In this case,
+      we can use the arrow diagram in <xref ref="fig_arrow61-1">Figure</xref>
+      to conclude that <m>\text{ range } (F) = \{ a, b \}</m>.
+    </p>
+    <investigation xml:id="pr_arrow">
+      <title><em>Working with Arrow Diagrams</em></title>
+      <p>
+        Let <m>A = \left\{ {1, 2, 3, 4} \right\}</m> and let <m>B = \left\{ {a, b, c} \right\}</m>.
+        <ol>
+          <li xml:id="exer_sec61-1">
+            <p>
+              Which of the arrow diagrams in <xref ref="fig_arrow61-2">Figure</xref>
+              can be used to represent a function from <m>A</m> to <m>B</m>?
+              Explain.
+            </p>
+          </li>
+          <li>
+            <p>
+              For those arrow diagrams that can be used to represent a function from <m>A</m> to <m>B</m>,
+              determine the range of the function.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <figure xml:id="fig_arrow61-2">
+        <caption>Arrow Diagrams</caption>
+        <image width="73%" source="images/figps-arrow-exer611abc.png"/>
+      </figure>
+    </investigation>
+    <p>
+      \exercises{Exercises 6.1}
+    </p>
+    <ol>
+      <li>
+        <p>
+          Let <m>f\x \mathbb{R} \to \mathbb{R}</m> be defined by <m>f\left( x \right) = x^2 - 2x</m>.
+        </p>
+        <ol>
+          <li>
+            <p>
+              Evaluate <m>f( { - 3} ), f( { - 1} ), f( 1 ), \text{ and } f( 3 )</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Determine the set of all of the preimages of 0 and the set of all of the preimages of 4.
+            </p>
+          </li>
+          <li>
+            <p>
+              Sketch a graph of the function <m>f</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Determine the range of the function <m>f</m>.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <p>
+          Let <m>\mathbb{R}^* = \left\{ { {x \in \mathbb{R}} \mid x \geq 0} \right\}</m>,
+          and let <m>s\x \mathbb{R} \to \mathbb{R}^*</m> be defined by <m>s( x ) = x^2</m>.
+          <ol>
+            <li>
+              <p>
+                Evaluate <m>s( { - 3} ), s( { - 1} ), s( 1 ), \text{ and } s( 3 )</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Determine the set of all of the preimages of 0 and the set of all preimages of 2.
+              </p>
+            </li>
+            <li>
+              <p>
+                Sketch a graph of the function <m>s</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Determine the range of the function <m>s</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer61_integerfunction">
+        <p>
+          Let <m>f\x \mathbb{Z} \to \mathbb{Z}</m> be defined by <m>f( m ) = 3 - m</m>.
+          <ol>
+            <li>
+              <p>
+                Evaluate <m>f( { - 7} ), f( { - 3} ), f( 3 ), \text{ and } f( 7 )</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Determine the set of all of the preimages of 5 and the set of all of the preimages of 4.
+              </p>
+            </li>
+            <li>
+              <p>
+                Determine the range of the function <m>f</m>.
+              </p>
+            </li>
+            <li xml:id="exer_sec61-real">
+              <p>
+                This function can be considered a real function since <m>\Z \subseteq \R</m>.
+                Sketch a graph of this function. \note The graph will be an infinite set of points that lie on a line.
+                However, it will not be a line since its domain is not <m>\R</m> but is <m>\Z</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec61-5">
+        <p>
+          Let <m>f\x \mathbb{Z} \to \mathbb{Z}</m> be defined by <m>f( m ) = 2m + 1</m>.
+          <ol>
+            <li>
+              <p>
+                Evaluate <m>f( { - 7} ), f( { - 3} ), f( 3 ), \text{ and } f( 7 )</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Determine the set of all of the preimages of 5 and the set of all of the preimages of 4.
+              </p>
+            </li>
+            <li>
+              <p>
+                Determine the range of the function <m>f</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Sketch a graph of the function <m>f</m>.
+                See the comments in Exercise<nbsp/><xref ref="exer_sec61-real"/>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec61-9">
+        <p>
+          Recall that a <em>real function</em>
+    <idx><h>real function</h></idx>
+    <idx><h>function</h><h>real</h></idx>
+          is a function whose domain and codomain are subsets of the real numbers  <m>\R</m>.
+          (See <xref ref="realfunction">page</xref>.)
+          Most of the functions used in calculus are real functions.
+          Quite often,
+          a real function is given by a formula or a graph with no specific reference to the domain or the codomain.
+          In these cases,
+          the usual convention is to assume that the domain of the real function  <m>f</m>  is the set of all real numbers  <m>x</m>  for which  <m>f( x )</m>  is a real number,
+          and that the codomain is <m>\mathbb{R}</m>.
+          For example, if we define the (real) function  <m>f</m>  by
+          <me>
+            f( x ) = \frac{x}{{x - 2}}
+          </me>,
+          we would be assuming that the domain is the set of all real numbers that are not equal to  2 and that the codomain is <m>\R</m>.
+          Determine the domain and range of each of the following real functions.
+          It might help to use a graphing calculator to plot a graph of the function.
+          <ol>
+            <li>
+              <p>
+                The function <m>k</m> defined by <m>k( x ) = \sqrt {x - 3}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                The function <m>F</m> defined by <m>F( x ) = \ln \left( {2x - 1} \right)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                The function <m>f</m> defined by <m>f( x ) = 3\sin( {2x} )</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                The function <m>g</m> defined by <m>g( x ) = \dfrac{4}{{x^2 - 4}}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                The function <m>G</m> defined by <m>G(x) = 4 \cos \left( \pi x \right) + 8</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_numberofdivisors">
+        <p>
+          <em>The number of divisors function</em>.
+    <idx><h>number of divisors function</h></idx>
+Let <m>d</m> be the function that associates with each natural number the number of its natural number divisors.
+          That is, <m>d\x \mathbb{N} \to \mathbb{N}</m> where <m>d( n )</m> is the number of natural number divisors of <m>n</m>.
+          For example,
+          <m>d( 6 ) = 4</m> since 1, 2, 3, and 6 are the natural number divisors of 6.
+          <ol>
+            <li>
+              <p>
+                Calculate <m>d( k )</m> for each natural number <m>k</m> from 1 through 12.
+              </p>
+            </li>
+            <li>
+              <p>
+                Does there exist a natural number <m>n</m> such that <m>d( n ) = 1</m>?
+                What is the set of preimages of the natural number 1?
+              </p>
+            </li>
+            <li>
+              <p>
+                Does there exist a natural number <m>n</m> such that <m>d( n ) = 2</m>?
+                If so, determine the set of all preimages of the natural number 2.
+              </p>
+            </li>
+            <li>
+              <p>
+                Is the following statement true or false?
+                Justify your conclusion.
+                For all <m>m, n \in \mathbb{N}</m>,
+                if <m>m \ne n</m>, then <m>d( m ) \ne d( n )</m>.
+              </p>
+            </li>
+            <li xml:id="exer_numberofdivisorse">
+              <p>
+                Calculate <m>d\!\left( {2^k } \right)</m> for <m>k = 0</m> and for each natural number <m>k</m> from 1 through 6.
+              </p>
+            </li>
+            <li>
+              <p>
+                Based on your work in Exercise<nbsp/><xref ref="exer_numberofdivisorse"/>,
+                make a conjecture for a formula for
+                <m>d\!\left( {2^n } \right)</m> where <m>n</m> is a nonnegative integer.
+                Then explain why your conjecture is correct.
+              </p>
+            </li>
+            <li>
+              <p>
+                Is the following statement is true or false?
+                <ul>
+                  \item For each <m>n \in \mathbb{N}</m>, there exists a natural number <m>m</m> such that <m>d( m ) = n</m>.
+                </ul>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec62-5">
+        <p>
+          In Exercise<nbsp/><xref ref="exer_numberofdivisors"/>,
+          we introduced the <em>number of divisors function</em>
+    <idx><h>number of divisors function</h></idx> <m>d</m>.
+          For this function, <m>d\x \mathbb{N} \to \mathbb{N}</m>,
+          where <m>d( n )</m> is the number of natural number divisors of <m>n</m>.
+          A function that is related to this function is the so-called
+          <em>set of divisors function</em>.
+    <idx><h>set of divisors function</h></idx>
+This can be defined as a function <m>S</m> that associates with each natural number the set of its distinct natural number factors.
+          For example,
+          <m>S( 6 ) = \left\{ {1, 2, 3, 6} \right\}</m> and <m>S(10) = \{1, 2, 5, 10 \}</m>.
+          <ol>
+            <li>
+              <p>
+                Discuss the function <m>S</m> by carefully stating its domain,
+                codomain,
+                and its rule for determining outputs.
+              </p>
+            </li>
+            <li>
+              <p>
+                Determine <m>S( n )</m> for at least five different values of <m>n</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Determine <m>S( n )</m> for at least three different prime number values of <m>n</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Does there exist a natural number <m>n</m> such that <m>\card (S(n)) = 1</m>?
+                Explain. [Recall that <m>\card (S(n))</m> is the number of elements in the set <m>S( n )</m>.]
+              </p>
+            </li>
+            <li>
+              <p>
+                Does there exist a natural number <m>n</m> such that <m>\card (S(n)) = 2</m>?
+                Explain.
+              </p>
+            </li>
+            <li>
+              <p>
+                Write the output for the function <m>d</m> in terms of the output for the function <m>S</m>.
+                That is, write <m>d( n )</m> in terms of <m>S( n )</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Is the following statement true or false?
+                Justify your conclusion.
+                <ul>
+                  \item For all natural numbers <m>m</m> and <m>n</m>, if <m>m \ne n</m>, then <m>S ( m ) \ne S ( n )</m>.
+                </ul>
+              </p>
+            </li>
+            <li>
+              <p>
+                Is the following statement true or false?
+                Justify your conclusion.
+                <ul>
+                  \item For all sets <m>T</m> that are subsets of <m>\mathbb{N}</m>, there exists a natural number <m>n</m> such that <m>S( n ) = T</m>.
+                </ul>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+  <subsection>
+    <title>Explorations and Activities</title>
+    <ol>
+      <li>
+        <p>
+          <em>Creating Functions with Finite Domains</em>.
+          Let <m>A = \left\{ {a,b,c,d} \right\}</m>,
+          <m>B = \left\{ {a,b,c} \right\}</m>,
+          and <m>C = \left\{ {s,t,u,v} \right\}</m>.
+          In each of the following exercises,
+          draw an arrow diagram to represent your function when it is appropriate.
+          <ol>
+            <li>
+              <p>
+                Create a function <m>f\x A \to C</m> whose range is the set <m>C</m> or explain why it is not possible to construct such a function.
+              </p>
+            </li>
+            <li>
+              <p>
+                Create a function <m>f\x A \to C</m> whose range is the set
+                <m>\left\{ {u, v} \right\}</m> or explain why it is not possible to construct such a function.
+              </p>
+            </li>
+            <li>
+              <p>
+                Create a function <m>f\x B \to C</m> whose range is the set <m>C</m> or explain why it is not possible to construct such a function.
+              </p>
+            </li>
+            <li>
+              <p>
+                Create a function <m>f\x A \to C</m> whose range is the set
+                <m>\left\{ u \right\}</m> or explain why it is not possible to construct such a function.
+              </p>
+            </li>
+            <li>
+              <p>
+                If possible, create a function
+                <m>f\x A \to C</m> that satisfies the following condition:
+                <ul>
+                  \item For all <m>x, y \in A</m>, if <m>x \ne y</m>, then <m>f( x ) \ne f( y )</m>.
+                </ul>
+              </p>
+              If it is not possible to create such a function, explain why.
+            </li>
+            <li>
+              <p>
+                If possible, create a function
+                <m>f\x A \to \left\{ {s, t, u} \right\}</m> that satisfies the following condition:
+                <ul>
+                  \item For all <m>x, y \in A</m>, if <m>x \ne y</m>, then <m>f( x ) \ne f( y )</m>.
+                </ul>
+              </p>
+              If it is not possible to create such a function, explain why.
+            </li>
+          </ol>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+</section>

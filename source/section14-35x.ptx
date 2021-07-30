@@ -1,0 +1,83 @@
+<section>
+  <title><xref ref="S_primefactorizations">Section</xref></title>
+  <subsection>
+    <title>Progress <xref ref="prog_relativelyprime">Check</xref></title>
+    <ol>
+      <li>
+        <p>
+          If <m>a, p \in \mathbb{Z}</m>, <m>p</m> is prime,
+          and <m>p</m> divides <m>a</m>,
+          then <m>\gcd ( {a, p} ) = p</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          If <m>a, p \in \mathbb{Z}</m>, <m>p</m> is prime,
+          and <m>p</m> does not divide <m>a</m>,
+          then <m>\gcd ( {a, p} ) = 1</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Three examples are <m>\gcd ( {4, 9} ) = 1</m>,
+          <m>\gcd ( {15, 16} ) = 1</m>,
+          <m>\gcd ( {8, 25} ) = 1</m>.
+        </p>
+      </li>
+    </ol>
+  </subsection>
+  <subsection>
+    <title>Progress <xref ref="prog_relativelyprimeprop">Check</xref></title>
+    <p>
+      <em><xref ref="T_relativelyprimeprop">Theorem</xref></em>.
+      Let <m>a</m>, <m>b</m>, and <m>c</m> be integers.
+      If <m>a</m> and <m>b</m> are relatively prime and
+      <m>a \mid ( {bc} )</m>, then <m>a \mid c</m>.
+    </p>
+    <proof>
+      <p>
+        Let <m>a</m>, <m>b</m>, and <m>c</m> be integers.
+        Assume that <m>a</m> and <m>b</m> are relatively prime and <m>a \mid ( {bc} )</m>.
+        We will prove that <m>a</m> divides <m>c</m>.
+      </p>
+      <p>
+        Since <m>a</m> divides <m>bc</m>,
+        there exists an integer <m>k</m> such that
+        <men xml:id="eq_814a">
+          bc = ak
+        </men>.
+      </p>
+      <p>
+        In addition,
+        we are assuming that <m>a</m> and <m>b</m> are relatively prime and hence <m>\gcd ( {a, b} ) = 1</m>.
+        So by <xref ref="T_gcddivideslincombs">Theorem</xref>,
+        there exist integers <m>m</m> and <m>n</m> such that
+        <men xml:id="eq_814b">
+          am + bn = 1
+        </men>.
+      </p>
+      <p>
+        We now multiply both sides of equation<nbsp/><xref ref="eq_814b"/> by <m>c</m>.
+        This gives
+        <md>
+          <mrow>( {am + bn} )c \amp = 1 \cdot c</mrow>
+          <mrow xml:id="eq_814c">acm + bcn \amp = c</mrow>
+        </md>
+      </p>
+      <p>
+        We can now use equation<nbsp/><xref ref="eq_814a"/> to substitute <m>bc = ak</m> in equation<nbsp/><xref ref="eq_814c"/> and obtain
+        <me>
+          acm + akn = c
+        </me>.
+      </p>
+      <p>
+        If we now factor the left side of this last equation,
+        we see that <m>a( {cm + kn} ) = c</m>.
+        Since <m>( {cm + kn} )</m> is an integer,
+        this proves that <m>a</m> divides <m>c</m>.
+        Hence, we have proven that if <m>a</m> and <m>b</m> are relatively prime and
+        <m>a \mid ( {bc} )</m>, then <m>a \mid c</m>.
+      </p>
+    </proof>
+  </subsection>
+</section>

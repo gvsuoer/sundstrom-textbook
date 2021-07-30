@@ -1,0 +1,1087 @@
+<section xml:id="S_equivrelations">
+  <title>Equivalence Relations</title>
+  <introduction>
+    <exploration xml:id="PA_propsofrelaitons">
+      <title><em>Properties of Relations</em></title>
+      <p>
+        In previous mathematics courses,
+        we have worked with the equality relation.
+        For example,
+        let <m>R</m> be the relation on <m>\Z</m> defined as follows: For all <m>a,
+        b \in \Z</m>,
+        <m>a \mathrel{R} b</m> if and only if <m>a = b</m>.
+        We know this equality relation on <m>\Z</m> has the following properties:
+        <ul>
+          <li>
+            <p>
+              For each <m>a \in \Z</m>, <m>a = a</m> and so <m>a \mathrel{R} a</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              For all <m>a, b \in \Z</m>, if <m>a = b</m>, then <m>b = a</m>.
+              That is, if <m>a \mathrel{R} b</m>,
+              then <m>b \mathrel{R} a</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              For all <m>a, b, c \in \Z</m>,
+              if <m>a = b</m> and <m>b = c</m>, then <m>a = c</m>.
+              That is, if <m>a \mathrel{R} b</m> and <m>b \mathrel{R} c</m>,
+              then <m>a \mathrel{R} c</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+      <p>
+        In mathematics, when something satisfies certain properties,
+        we often ask if other things satisfy the same properties.
+        Before investigating this, we will give names to these properties.
+      </p>
+      <definition xml:id="ref-sym-trans">
+        <statement>
+          <p>
+            Let <m>A</m> be a nonempty set and let <m>R</m> be a relation on <m>A</m>.
+            <ul>
+              <li>
+                <p>
+                  The relation <m>R</m> is <em>reflexive on</em>
+                    <idx><h>reflexive</h></idx>
+                    <idx><h>relation</h><h>reflexive on</h></idx> <m>\boldsymbol{A}</m> provided that for each <m>x \in A</m>, <m>x \mathrel{R} x</m> or, equivalently, <m>\left( {x, x} \right) \in R</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  The relation <m>R</m> is <em>symmetric</em>
+                    <idx><h>symmetric</h></idx>
+                    <idx><h>relation</h><h>symmetric</h></idx>
+                  provided that for every <m>x,
+                  y \in A</m>, if <m>x \mathrel{R} y</m>,
+                  then <m>y \mathrel{R} x</m> or, equivalently,
+                  for every <m>x, y \in A</m>,
+                  if <m>\left( {x, y} \right) \in R</m>,
+                  then <m>\left( {y, x} \right) \in R</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  The relation <m>R</m> is <em>transitive</em>
+                    <idx><h>transitive</h></idx>
+                    <idx><h>relation</h><h>transitive</h></idx>
+                  provided that for every <m>x, y, z \in A</m>,
+                  if <m>x \mathrel{R} y</m> and <m>y \mathrel{R} z</m>,
+                  then <m>x \mathrel{R} z</m> or, equivalently,
+                  for every <m>x, y, z \in A</m>,
+                  if <m>\left( {x, y} \right) \in R</m> and <m>\left( {y, z} \right) \in R</m>,
+                  then <m>\left( {x, z} \right) \in R</m>.
+                </p>
+              </li>
+            </ul>
+          </p>
+        </statement>
+      </definition>
+      <p>
+        Before exploring examples, for each of these properties,
+        it is a good idea to understand what it means to say that a relation does not satisfy the property.
+        So let <m>A</m> be a nonempty set and let <m>R</m> be a relation on <m>A</m>.
+        <ol>
+          <li>
+            <p>
+              Carefully explain what it means to say that the relation <m>R</m> is not reflexive on the set <m>A</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Carefully explain what it means to say that the relation <m>R</m> is not symmetric.
+            </p>
+          </li>
+          <li>
+            <p>
+              Carefully explain what it means to say that the relation <m>R</m> is not transitive.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        To illustrate these properties,
+        we let <m>A = \left\{ {1, 2, 3, 4} \right\}</m> and define the relations <m>R</m> and <m>T</m> on <m>A</m> as follows:
+        <md>
+          <mrow>R \amp = \left\{ {( {1, 1} ), ( {2, 2} ), ( {3, 3} ), ( {4, 4} ), ( {1, 3} ), ( {3, 2} )} \right\}</mrow>
+          <mrow>T \amp = \left\{ {( {1, 1} ), ( {1, 4} ), ( {2, 4} ), ( {4, 1} ), ( {4, 2} )} \right\}</mrow>
+        </md>
+        <ol>
+          <li>
+            <p>
+              Draw a directed graph for the relation <m>R</m>.
+              Then explain why the relation <m>R</m> is reflexive on <m>A</m>,
+              is not symmetric, and is not transitive.
+            </p>
+          </li>
+          <li>
+            <p>
+              Draw a directed graph for the relation <m>T</m>.
+              Is the relation <m>T</m> reflexive on <m>A</m>?
+              Is the relation <m>T</m> symmetric?
+              Is the relation <m>T</m> transitive?
+              Explain.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </exploration>
+    <exploration xml:id="PA_reviewofcongruence">
+      <title><em>Review of Congruence Modulo</em> $\boldsymbol{n}$</title>
+      <ol>
+        <li>
+          <p>
+            Let <m>a, b \in \mathbb{Z}</m> and let <m>n \in \mathbb{N}</m>.
+            On <xref ref="congruence">page</xref>
+            of <xref ref="S_directproof">Section</xref>,
+            we defined what it means to say that <m>a</m> is congruent to <m>b</m> modulo <m>n</m>.
+            Write this definition and state two different conditions that are equivalent to the definition.
+          </p>
+        </li>
+        <li>
+          <p>
+            Explain why congruence modulo <m>n</m> is a relation on <m>\mathbb{Z}</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Carefully review <xref ref="T_modprops">Theorem</xref>
+            and the proofs given on <xref ref="T_modprops">page</xref>
+            of <xref ref="S_divalgo">Section</xref>.
+            In terms of the properties of relations introduced in Beginning <xref ref="PA_propsofrelaitons">Activity</xref>,
+            what does this theorem say about the relation of congruence modulo <m>n</m> on the integers?
+          </p>
+        </li>
+        <li>
+          <p>
+            Write a complete statement of <xref ref="T_congtorem">Theorem</xref>
+            on <xref ref="T_congtorem">page</xref>
+            and <xref ref="C_congtorem">Corollary</xref>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Write a proof of the symmetric property for congruence modulo <m>n</m>.
+            That is, prove the following:
+            <ul>
+              \item Let <m>a, b \in \mathbb{Z}</m> and let <m>n \in \mathbb{N}</m>. If <m>a \equiv b \pmod n</m>, then <m>b \equiv a \pmod n</m>.
+            </ul>
+          </p>
+        </li>
+      </ol>
+    </exploration>
+  </introduction>
+  <subsection>
+    <title>Directed Graphs and Properties of Relations</title>
+    <p>
+      In <xref ref="S_relations">Section</xref>, we used directed graphs,
+      or digraphs, to represent relations on finite sets.
+      Three properties of relations were introduced in Beginning <xref ref="PA_propsofrelaitons">Activity</xref>
+      and will be repeated in the following descriptions of how these properties can be visualized on a directed graph.
+    </p>
+    <p>
+      Let <m>A</m> be a nonempty set and let <m>R</m> be a relation on <m>A</m>.
+      <ul>
+        <li>
+          <p>
+            The relation <m>R</m> is <em>reflexive on</em>
+              <idx><h>reflexive</h></idx>
+              <idx><h>relation</h><h>reflexive on</h></idx> <m>\boldsymbol{A}</m> provided that for each <m>x \in A</m>, <m>x \mathrel{R} x</m> or, equivalently, <m>\left( {x, x} \right) \in R</m>.
+            This means that if a reflexive relation is represented on a digraph,
+            there would have to be a loop at each vertex,
+            as is shown in the following figure.
+            <figure>
+              <image width="73%" source="images/figps-reflexive.png"/>
+            </figure>
+          </p>
+        </li>
+        <li>
+          <p>
+            The relation <m>R</m> is <em>symmetric</em>
+              <idx><h>symmetric</h></idx>
+              <idx><h>relation</h><h>symmetric</h></idx>
+            provided that for every <m>x,
+            y \in A</m>, if <m>x \mathrel{R} y</m>,
+            then <m>y \mathrel{R} x</m> or, equivalently,
+            for every <m>x, y \in A</m>,
+            if <m>\left( {x, y} \right) \in R</m>,
+            then <m>\left( {y, x} \right) \in R</m>.
+            This means that if a symmetric relation is represented on a digraph,
+            then anytime there is a directed edge from one vertex to a second vertex,
+            there would be a directed edge from the second vertex to the first vertex,
+            as is shown in the following figure.
+            <figure>
+              <image width="73%" source="images/figps-symmetric.png"/>
+            </figure>
+          </p>
+        </li>
+        <li>
+          <p>
+            The relation <m>R</m> is <em>transitive</em>
+              <idx><h>transitive</h></idx>
+              <idx><h>relation</h><h>transitive</h></idx>
+            provided that for every <m>x, y, z \in A</m>,
+            if <m>x \mathrel{R} y</m> and <m>y \mathrel{R} z</m>,
+            then <m>x \mathrel{R} z</m> or, equivalently,
+            for every <m>x, y, z \in A</m>,
+            if <m>\left( {x, y} \right) \in R</m> and <m>\left( {y, z} \right) \in R</m>,
+            then <m>\left( {x, z} \right) \in R</m>.
+            So if a transitive relation is represented by a digraph,
+            then anytime there is a directed edge from a vertex <m>x</m> to a vertex <m>y</m> and a directed edge from <m>y</m> to a vertex <m>z</m>,
+            there would be a directed edge from <m>x</m> to <m>z</m>.
+            In addition,
+            if a transitive relation is represented by a digraph,
+            then anytime there is a directed edge from a vertex <m>x</m> to a vertex <m>y</m> and a directed edge from <m>y</m> to the vertex <m>x</m>,
+            there would be loops at <m>x</m> and <m>y</m>.
+            These two situations are illustrated as follows:
+            <figure>
+              <image width="73%" source="images/figps-transitive.png"/>
+            </figure>
+          </p>
+        </li>
+      </ul>
+    </p>
+    <investigation xml:id="prog_proprelations">
+      <title><em>Properties of Relations</em></title>
+      <p>
+        Let <m>A = \{ a, b, c, d \}</m> and let <m>R</m> be the following relation on <m>A</m>:
+        <me>
+          R = \{ (a, a), (b, b), (a, c), (c, a), (b, d), (d, b) \}
+        </me>.
+      </p>
+      <p>
+        Draw a directed graph for the relation <m>R</m> and then determine if the relation <m>R</m> is reflexive on <m>A</m>,
+        if the relation <m>R</m> is symmetric,
+        and if the relation <m>R</m> is transitive.
+      </p>
+    </investigation>
+  </subsection>
+  <subsection>
+    <title>Definition of an Equivalence Relation</title>
+    <p>
+      In mathematics, as in real life,
+      it is often convenient to think of two different things as being essentially the same.
+      For example, when you go to a store to buy a cold soft drink,
+      the cans of soft drinks in the cooler are often sorted by brand and type of soft drink.
+      The Coca Colas are grouped together,
+      the Pepsi Colas are grouped together, the Dr.
+      Peppers are grouped together, and so on.
+      When we choose a particular can of one type of soft drink,
+      we are assuming that all the cans are essentially the same.
+      Even though the specific cans of one type of soft drink are physically different,
+      it makes no difference which can we choose.
+      In doing this,
+      we are saying that the cans of one type of soft drink are equivalent,
+      and we are using the mathematical notion of an equivalence relation.
+    </p>
+    <p>
+      An equivalence relation on a set is a relation with a certain combination of properties that allow us to sort the elements of the set into certain classes.
+      In this section,
+      we will focus on the properties that define an equivalence relation,
+      and in the next section,
+      we will see how these properties allow us to sort or partition the elements of the set into certain classes.
+    </p>
+    <definition xml:id="equivalencerelation">
+      <statement>
+        <p>
+          Let <m>A</m> be a nonempty set.
+          A relation <m>\sim</m> on the set <m>A</m> is an
+          <term>equivalence relation</term>
+              <idx><h>equivalence relation</h></idx>
+              <idx><h>relation</h><h>equivalence</h></idx>
+          provided that <m>\sim</m> is reflexive,
+          symmetric, and transitive.
+          For <m>a, b \in A</m>,
+          if <m>\sim</m> is an equivalence relation on <m>A</m> and <m>a \sim b</m>,
+          we say that <m>\boldsymbol{a}</m>
+          <term>is equivalent to</term> <m>\boldsymbol{b}</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Most of the examples we have studied so far have involved a relation on a small finite set.
+      For these examples,
+      it was convenient to use a directed graph to represent the relation.
+      It is now time to look at some other type of examples,
+      which may prove to be more interesting.
+      In these examples,
+      keep in mind that there is a subtle difference between the reflexive property and the other two properties.
+      The reflexive property states that some ordered pairs actually belong to the relation <m>R</m>,
+      or some elements of <m>A</m> are related.
+      The reflexive property has a universal quantifier and, hence,
+      we must prove that for all <m>x \in A</m>, <m>x \mathrel{R} x</m>.
+      Symmetry and transitivity,
+      on the other hand, are defined by conditional sentences.
+      We often use a direct proof for these properties,
+      and so we start by assuming the hypothesis and then showing that the conclusion must follow from the hypothesis.
+    </p>
+    <example>
+      <title><em>A Relation that Is Not an Equivalence Relation</em></title>
+      <statement>
+        <p>
+          Let <m>M</m> be the relation on <m>\mathbb{Z}</m> defined as follows:
+          <ul>
+            \item For <m>a, b \in \mathbb{Z}</m>, <m>a \mathrel{M} b</m> if and only if <m>a</m> is a multiple of <m>b</m>.
+          </ul>
+        </p>
+        <p>
+          So <m>a \mathrel{M} b</m> if and only if there exists a
+          <m>k \in \mathbb{Z}</m> such that <m>a = b k</m>.
+          <ul>
+            <li>
+              <p>
+                The relation <m>M</m> is reflexive on
+                <m>\mathbb{Z}</m> since for each <m>x \in \mathbb{Z}</m>,
+                <m>x = x \cdot 1</m> and, hence, <m>x \mathrel{M} x</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Notice that <m>4 \mathrel{M} 2</m>,
+                but <m>2 \mathrel{\not \negthickspace M} 4</m>.
+                So there exist integers <m>x</m> and <m>y</m> such that
+                <m>x \mathrel{M} y</m> but <m>y \mathrel{\not \negthickspace M} x</m>.
+                Hence, the relation <m>M</m> is not symmetric.
+              </p>
+            </li>
+            <li>
+              <p>
+                Now assume that  <m>x \mathrel{M} y</m> and  <m>y \mathrel{M} z</m>.
+                Then there exist integers  <m>p</m>  and  <m>q</m>  such that
+                <me>
+                  x = y  p\text{  and  } y = z q
+                </me>.
+                Using the second equation to make a substitution in the first equation,
+                we see that <m>x = z \left( {p q} \right)</m>.
+                Since  <m>p q \in \mathbb{Z}</m>,
+                we have shown that  <m>x</m>  is a multiple of  <m>z</m> and hence  <m>x \mathrel{M} z</m>.
+                Therefore,  <m>M</m>  is a transitive relation.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </example>
+    <p>
+      The relation <m>M</m> is reflexive on <m>\Z</m> and is transitive,
+      but since <m>M</m> is not symmetric,
+      it is not an equivalence relation on <m>\Z</m>.
+    </p>
+    <investigation xml:id="prog_example-equiv">
+      <title><em>A Relation that Is an Equivalence Relation</em></title>
+      <p>
+        Define the relation <m>\sim</m> on <m>\Q</m> as follows: For all <m>a,
+        b \in \Q</m>,
+        <m>a \sim b</m> if and only if <m>a - b \in \Z</m>.
+        For example:
+        <ul>
+          <li>
+            <p>
+              <m>\dfrac{3}{4} \sim \dfrac{7}{4}</m> since
+              <m>\dfrac{3}{4} - \dfrac{7}{4} = -1</m> and <m>-1 \in \Z</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\dfrac{3}{4} \not \sim \dfrac{1}{2}</m> since
+              <m>\dfrac{3}{4} - \dfrac{1}{2} = \dfrac{1}{4}</m> and <m>\dfrac{1}{4} \notin \Z</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+      <p>
+        To prove that <m>\sim</m> is reflexive on <m>\Q</m>,
+        we note that for all <m>a \in \Q</m>, <m>a - a = 0</m>.
+        Since <m>0 \in \Z</m>, we conclude that <m>a \sim a</m>.
+        Now prove that the relation <m>\sim</m> is symmetric and transitive,
+        and hence,
+        that <m>\sim</m> is an equivalence relation on <m>\Q</m>.
+      </p>
+    </investigation>
+  </subsection>
+  <subsection>
+    <title>Congruence Modulo <m>\boldsymbol{n}</m></title>
+    <p>
+      One of the important equivalence relations we will study in detail is that of congruence
+          <idx><h>congruence</h></idx>
+      modulo <m>n</m>.
+      We reviewed this relation in Beginning <xref ref="PA_reviewofcongruence">Activity</xref>.
+    </p>
+    <p>
+      <xref ref="T_modprops">Theorem</xref>
+      on <xref ref="T_modprops">page</xref>
+      tells us that congruence modulo <m>n</m> is an equivalence relation on <m>\mathbb{Z}</m>.
+      Recall that by the Division Algorithm,
+      if <m>a \in \mathbb{Z}</m>,
+      then there exist unique integers <m>q</m> and <m>r</m> such that
+      <me>
+        a = nq + r \text{  and  } 0 \leq r \lt  n
+      </me>.
+    </p>
+    <p>
+      <xref ref="T_congtorem">Theorem</xref>
+      and <xref ref="C_congtorem">Corollary</xref>
+      then tell us that <m>a \equiv r \pmod n</m>.
+      That is, <m>a</m> is congruent modulo <m>n</m> to its remainder <m>r</m> when it is divided by <m>n</m>.
+      When we use the term
+      <q>remainder</q>
+      in this context, we always mean the remainder <m>r</m> with
+      <m>0 \leq r \lt n</m> that is guaranteed by the Division Algorithm.
+      We can use this idea to prove the following theorem.
+    </p>
+    <theorem xml:id="T_congruence-remainder">
+      <statement>
+        <p>
+          Let <m>n \in \mathbb{N}</m> and let <m>a, b \in \mathbb{Z}</m>.
+          Then <m>a \equiv b \pmod n</m> if and only if <m>a</m> and <m>b</m> have the same remainder when divided by <m>n</m>.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Let <m>n \in \mathbb{N}</m> and let <m>a, b \in \mathbb{Z}</m>.
+        We will first prove that if <m>a</m> and <m>b</m> have the same remainder when divided by <m>n</m>,
+        then <m>a \equiv b \pmod n</m>.
+        So assume that <m>a</m> and <m>b</m> have the same remainder when divided by <m>n</m>,
+        and let <m>r</m> be this common remainder.
+        Then, by <xref ref="T_congtorem">Theorem</xref>,
+        <me>
+          a \equiv r \pmod n \text{  and  } b \equiv r \pmod n\!
+        </me>.
+      </p>
+      <p>
+        Since congruence modulo <m>n</m> is an equivalence relation,
+        it is a symmetric relation.
+        Hence, since <m>b \equiv r \pmod n</m>,
+        we can conclude that <m>r \equiv b \pmod n</m>.
+        Combining this with the fact that <m>a \equiv r \pmod n</m>,
+        we now have
+        <me>
+          a \equiv r \pmod n\text{  and  } r \equiv b \pmod n\!
+        </me>.
+      </p>
+      <p>
+        We can now use the transitive property to conclude that <m>a \equiv b \pmod n</m>.
+        This proves that if <m>a</m> and <m>b</m> have the same remainder when divided by <m>n</m>, then
+      </p>
+      <p>
+        <m>a \equiv b \pmod n</m>.
+      </p>
+      <p>
+        We will now prove that if <m>a \equiv b \pmod n</m>,
+        then <m>a</m> and <m>b</m> have the same remainder when divided by <m>n</m>.
+        Assume that <m>a \equiv b \pmod n</m>,
+        and let <m>r</m> be the least nonnegative remainder when <m>b</m> is divided by <m>n</m>.
+        Then <m>0 \leq r \lt  n</m> and,
+        by <xref ref="T_congtorem">Theorem</xref>,
+        <me>
+          b \equiv r \pmod n\!
+        </me>.
+      </p>
+      <p>
+        Now, using the facts that <m>a \equiv b \pmod n</m> and <m>b \equiv r \pmod n</m>,
+        we can use the transitive property to conclude that
+        <me>
+          a \equiv r \pmod n\!
+        </me>.
+      </p>
+      <p>
+        This means that there exists an integer <m>q</m> such that <m>a - r = nq</m> or that
+        <me>
+          a = nq + r
+        </me>.
+      </p>
+      <p>
+        Since we already know that <m>0 \leq r \lt n</m>,
+        the last equation tells us that <m>r</m> is the least nonnegative remainder when <m>a</m> is divided by <m>n</m>.
+        Hence we have proven that if <m>a \equiv b \pmod n</m>,
+        then <m>a</m> and <m>b</m> have the same remainder when divided by <m>n</m>.
+      </p>
+    </proof>
+  </subsection>
+  <subsection>
+    <title>Examples of Other Equivalence Relations</title>
+    <ol>
+      <li>
+        <p>
+          The relation <m>\sim</m> on <m>\Q</m> from Progress <xref ref="prog_example-equiv">Check</xref> is an equivalence relation.
+        </p>
+      </li>
+      <li>
+        <p>
+          Let  <m>A</m>  be a nonempty set.
+          The <em>equality relation on</em>
+            <idx><h>equality relation</h></idx>
+            <idx><h>relation</h><h>equality</h></idx>
+            <idx><h>identity relation</h></idx>
+            <idx><h>relation</h><h>identity</h></idx> <m>\boldsymbol{A}</m>  is an equivalence relation.
+          This relation is also called the
+          <em>identity relation on</em>
+          <m>\boldsymbol{A}</m>    and is denoted by  <m>I_A</m>, where
+          <me>
+            I_A  = \left\{ {\left( {x, x} \right)   \mid x \in A} \right\}\!
+          </me>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Define the relation <m>\sim</m> on <m>\mathbb{R}</m> as follows:
+          <ul>
+            \item For <m>a, b \in \mathbb{R}</m>, <m>a \sim b</m> if and only if there exists an integer <m>k</m> such that <m>a - b = 2k\pi</m>.
+          </ul>
+        </p>
+        \vskip10pt  We will prove that the relation  <m>\sim</m>  is an equivalence relation on  <m>\mathbb{R}</m>.
+        The relation  <m>\sim</m>  is reflexive on
+        <m>\mathbb{R}</m> since for each  <m>a \in \mathbb{R}</m>,
+        <m>a - a = 0 = 2 \cdot 0 \cdot \pi</m>.
+        Now, let  <m>a,
+        b \in \mathbb{R}</m> and assume that  <m>a \sim b</m>.
+        We will prove that  <m>b \sim a</m>.
+        Since  <m>a \sim b</m>, there exists an integer  <m>k</m>  such that
+        <me>
+          a - b = 2k\pi
+        </me>.
+        By multiplying both sides of this equation by <m>-1</m>,
+        we obtain
+        <me>
+          \begin{aligned}( { - 1} )( {a - b} ) \amp = ( { - 1} )( {2k\pi } ) \\ b - a \amp = 2( { - k} )\pi . \end{aligned}
+        </me>
+        Since  <m>- k \in \mathbb{Z}</m>,
+        the last equation proves that  <m>b \sim a</m>.
+        Hence, we have proven that if  <m>a \sim b</m>,
+        then  <m>b \sim a</m> and,
+        therefore, the relation  <m>\sim</m>  is symmetric.
+        To prove transitivity, let
+        <m>a,
+        b, c \in \mathbb{R}</m> and assume that  <m>a \sim b</m> and <m>b \sim c</m>.
+        We will prove that  <m>a \sim c</m>.
+        Now, there exist integers  <m>k</m>  and  <m>n</m>  such that
+        <me>
+          a - b = 2k\pi \text{  and  } b - c = 2n\pi
+        </me>.
+        By adding the corresponding sides of these two equations,
+        we see that
+        <me>
+          \begin{aligned}( {a - b} ) + ( {b - c} ) \amp = 2k\pi  + 2n\pi  \\ a - c \amp = 2( {k + n} )\pi . \end{aligned}
+        </me>
+        By the closure properties of the integers,
+        <m>k + n \in \mathbb{Z}</m>.
+        So this proves that <m>a \sim c</m> and,
+        hence the relation  <m>\sim</m>  is transitive.
+        We have now proven that  <m>\sim</m>  is an equivalence relation on  <m>\mathbb{R}</m>.
+        This equivalence relation is important in trigonometry.
+        If   <m>a \sim b</m>,
+        then there exists an integer  <m>k</m>  such that  <m>a - b = 2k\pi</m> and,
+        hence,  <m>a = b + k( {2\pi } )</m>.
+        Since the sine and cosine functions are periodic with a period of  <m>2\pi</m>,
+        we see that
+        <me>
+          \begin{aligned}\sin a \amp = \sin( {b + k( {2\pi } )} ) = \sin b,\text{ and }  \\ \cos a \amp = \cos( {b + k( {2\pi } )} ) = \cos b. \end{aligned}
+        </me>
+        Therefore, when  <m>a \sim b</m>,
+        each of the trigonometric functions have the same value at  <m>a</m>  and  <m>b</m>.
+      </li>
+      <li>
+        <p>
+          For an example from Euclidean geometry,
+          we define a relation <m>P</m> on the set
+          <m>\mathcal{L}</m> of all lines in the plane as follows:
+          <ul>
+            \item For <m>l_1 , l_2 \in \mathcal{L}</m>, <m>l_1 \mathrel{P}l_2</m> if and only if <m>l_1</m> is parallel to <m>l_2</m> or <m>l_1 = l_2</m>.
+          </ul>
+        </p>
+        We added the second condition to the definition of <m>P</m> to ensure that <m>P</m> is reflexive on <m>\mathcal{L}</m>.
+        Theorems from Euclidean geometry tell us that if <m>l_1</m> is parallel to <m>l_2</m>,
+        then <m>l_2</m> is parallel to <m>l_1</m>,
+        and if <m>l_1</m> is parallel to <m>l_2</m> and <m>l_2</m> is parallel to <m>l_3</m>,
+        then <m>l_1</m> is parallel to <m>l_3</m>.
+        (Drawing pictures will help visualize these properties.)
+        This tells us that the relation <m>P</m> is reflexive,
+        symmetric, and transitive and,
+        hence, an equivalence relation on <m>\mathcal{L}</m>.
+      </li>
+    </ol>
+    <investigation xml:id="prog_anotherequiv">
+      <title><em>Another Equivalence Relation</em></title>
+      <p>
+        Let <m>U</m> be a finite,
+        nonempty set and let <m>\mathcal{P}\left( U \right)</m> be the power set of <m>U</m>.
+        Recall that <m>\mathcal{P}\left( U \right)</m> consists of all subsets of <m>U</m>.
+        (See <xref ref="D_powerset">page</xref>.)
+        Define the relation <m>\approx</m> on <m>\mathcal{P}\left( U \right)</m> as follows:
+      </p>
+      <p>
+        For <m>A, B \in \mathcal{P}\left( U \right)</m>,
+        <m>A \approx B</m> if and only if <m>\card(A) = \card(B)</m>.
+        For the definition of the cardinality of a finite set,
+        see <xref ref="D_cardinality">page</xref>.
+        This relation states that two subsets of <m>U</m> are equivalent provided that they have the same number of elements.
+        Prove that <m>\approx</m> is an equivalence relation on the power set <m>\mathcal{P}\left( U \right)</m>.
+      </p>
+    </investigation>
+    <p>
+      \exercises{Exercises 7.2}
+    </p>
+    <ol>
+      <li xml:id="exer_sec72-1">
+        <p>
+          Let <m>A = \left\{ {a, b} \right\}</m> and let <m>R = \left\{ {\left( {a, b} \right)} \right\}</m>.
+          Is <m>R</m> an equivalence relation on <m>A</m>?
+          If not, is <m>R</m> reflexive, symmetric, or transitive?
+          Justify all conclusions.
+        </p>
+      </li>
+      <li xml:id="exer_sec72examples">
+        <p>
+          Let <m>A = \left\{ {a, b, c} \right\}</m>.
+          For each of the following,
+          draw a directed graph that represents a relation with the specified properties.
+        </p>
+        <ol>
+          <li>
+            <p>
+              A relation on <m>A</m> that is symmetric but not transitive
+            </p>
+          </li>
+          <li>
+            <p>
+              A relation on <m>A</m> that is transitive but not symmetric
+            </p>
+          </li>
+          <li>
+            <p>
+              A relation on <m>A</m> that is symmetric and transitive but not reflexive on <m>A</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              A relation on <m>A</m> that is not reflexive on <m>A</m>,
+              is not symmetric, and is not transitive
+            </p>
+          </li>
+          <li>
+            <p>
+              A relation on <m>A</m>, other than the identity relation,
+              that is an equivalence relation on <m>A</m>
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li xml:id="exer71_notidentity">
+        <p>
+          Let  <m>A = \left\{ {1, 2, 3, 4, 5} \right\}</m>.
+          The identity relation on  <m>A</m>  is
+          <me>
+            I_A  = \left\{ {( {1, 1} ), ( {2, 2} ), ( {3, 3} ), ( {4, 4} ), ( {5, 5} )} \right\}
+          </me>.
+          Determine an equivalence relation on  <m>A</m>  that is different from  <m>I_A</m> or explain why this is not possible.
+        </p>
+      </li>
+      <li xml:id="exer_sec72-2">
+        <p>
+          Let <m>R = \left\{ { {\left( {x, y} \right) \in \mathbb{R} \times \mathbb{R} } \mid \left| x \right| + \left| y \right| = 4} \right\}</m>.
+          Then <m>R</m> is a relation on <m>\mathbb{R}</m>.
+          Is <m>R</m> an equivalence relation on <m>\R</m>?
+          If not, is <m>R</m> reflexive, symmetric, or transitive?
+          Justify all conclusions.
+        </p>
+      </li>
+      <li xml:id="exer_sec72-absvalue">
+        <p>
+          A relation <m>R</m> is defined on <m>\Z</m> as follows: For all <m>a,
+          b \in \Z</m>,
+          <m>a \mathrel{R} b</m> if and only if <m>\left| a - b \right| \leq 3</m>.
+          Is <m>R</m> an equivalence relation on <m>\R</m>?
+          If not, is <m>R</m> reflexive, symmetric, or transitive?
+          Justify all conclusions.
+        </p>
+      </li>
+      <li xml:id="exer_equivrelwithfunction">
+        <p>
+          Let  <m>f\x \mathbb{R} \to \mathbb{R}</m> be defined by
+          <m>f( x ) = x^2  - 4</m> for each  <m>x \in \mathbb{R}</m>.
+          Define a relation  <m>\sim</m>  on  <m>\mathbb{R}</m> as follows:
+          <me>
+            \text{ For }   a, b \in \R,  a \sim b \text{ if and only if } f( a ) = f( b )
+          </me>.
+          <ol>
+            <li xml:id="exer_equivrelwithfunctiona">
+              <p>
+                Is the relation <m>\sim</m> an equivalence relation on <m>\mathbb{R}</m>?
+                Justify your conclusion.
+              </p>
+            </li>
+            <li>
+              <p>
+                Determine all real numbers in the set <m>C = \left\{ { {x \in \R } \mid x \sim 5} \right\}</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_equivrelwithfunction2">
+        <p>
+          Repeat Exercise<nbsp/><xref ref="exer_equivrelwithfunction"/> using the function <m>f\x \mathbb{R} \to \mathbb{R}</m> that is defined by
+          <m>f( x ) = x^2 - 3x - 7</m> for each <m>x \in \mathbb{R}</m>.
+        </p>
+      </li>
+      <li>
+        <ol>
+          <li>
+            <p>
+              Repeat Exercise<nbsp/><xref ref="exer_equivrelwithfunctiona"/> using the function <m>f\x \mathbb{R} \to \mathbb{R}</m> that is defined by
+              <m>f( x ) = \sin x</m> for each <m>x \in \mathbb{R}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Determine all real numbers in the set <m>C = \left\{ { {x \in \R } \mid x \sim \pi } \right\}</m>.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li xml:id="exer_sec72-diffQ">
+        <p>
+          Define the relation <m>\sim</m> on <m>\Q</m> as follows: For <m>a,
+          b \in \Q</m>,
+          <m>a \sim b</m> if and only if <m>a - b \in \Z</m>.
+          In Progress <xref ref="prog_example-equiv">Check</xref>,
+          we showed that the relation <m>\sim</m> is an equivalence relation on <m>\Q</m>.
+          <ol>
+            <li>
+              <p>
+                List four different elements of the set <m>C = \left\{ { {x \in \Q } \mid x \sim \dfrac{5}{7} } \right\}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Use set builder notation
+                (without using the symbol <m>\sim</m>)
+                to specify the set <m>C</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Use the roster method to specify the set <m>C</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_oneequivonenot">
+        <p>
+          Let <m>\sim</m> and <m>\approx</m> be relations on <m>\Z</m> defined as follows:
+          <ul>
+            <li>
+              <p>
+                For <m>a, b \in \Z</m>,
+                <m>a \sim b</m> if and only if 2 divides <m>a + b</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                For <m>a, b \in \Z</m>,
+                <m>a \approx b</m> if and only if 3 divides <m>a + b</m>.
+              </p>
+            </li>
+          </ul>
+          <ol>
+            <li>
+              <p>
+                Is <m>\sim</m> an equivalence relation on <m>\Z</m>?
+                If not, is this relation reflexive, symmetric, or transitive?
+              </p>
+            </li>
+            <li>
+              <p>
+                Is <m>\approx</m> an equivalence relation on <m>\Z</m>?
+                If not, is this relation reflexive, symmetric, or transitive?
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <p>
+          Let <m>U</m> be a finite,
+          nonempty set and let <m>\mathcal{P}( U )</m> be the power set of <m>U</m>.
+          That is, <m>\mathcal{P} ( U )</m> is the set of all subsets of <m>U</m>.
+          Define the relation <m>\sim</m> on
+          <m>\mathcal{P}( U )</m> as follows: For <m>A, B \in \mathcal{P}( U )</m>,
+          <m>A \sim B</m> if and only if <m>A \cap B = \emptyset</m>.
+          That is, the ordered pair <m>\left( {A, B} \right)</m> is in the relation <m>\sim</m> if and only if <m>A</m> and <m>B</m> are disjoint.
+          Is the relation <m>\sim</m> an equivalence relation on <m>\mathcal{P}( U )</m>?
+          If not, is it reflexive, symmetric, or transitive?
+          Justify all conclusions.
+        </p>
+      </li>
+      <li xml:id="exer_sec72-powerset">
+        <p>
+          Let <m>U</m> be a nonempty set and let
+          <m>\mathcal{P} ( U )</m> be the power set of <m>U</m>.
+          That is, <m>\mathcal{P} \left( U \right)</m> is the set of all subsets of <m>U</m>.
+          For <m>A</m> and <m>B</m> in <m>\mathcal{P} ( U )</m>,
+          define <m>A \sim B</m> to mean that there exists a bijection <m>f:A \to B</m>.
+          Prove that <m>\sim</m> is an equivalence relation on
+          <m>\mathcal{P} ( U )</m>. \hint Use results from <xref ref="S_compositionoffunctions">Sections</xref>
+          and <xref ref="S_inversefunctions"></xref>.
+        </p>
+      </li>
+      <li xml:id="exer_modequivrel">
+        <p>
+          Let <m>\sim</m> and <m>\approx</m> be relations on <m>\Z</m> defined as follows:
+          <ul>
+            <li>
+              <p>
+                For <m>a, b \in \Z</m>,
+                <m>a \sim b</m> if and only if <m>2a + 3b \equiv 0 \pmod 5</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                For <m>a, b \in \Z</m>,
+                <m>a \approx b</m> if and only if <m>a + 3b \equiv 0 \pmod 5</m>.
+              </p>
+            </li>
+          </ul>
+          <ol>
+            <li>
+              <p>
+                Is <m>\sim</m> an equivalence relation on <m>\Z</m>?
+                If not, is this relation reflexive, symmetric, or transitive?
+              </p>
+            </li>
+            <li>
+              <p>
+                Is <m>\approx</m> an equivalence relation on <m>\Z</m>?
+                If not, is this relation reflexive, symmetric, or transitive?
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer72-signed">
+        <p>
+          Let <m>\sim</m> and <m>\approx</m> be relations on <m>\R</m> defined as follows:
+          <ul>
+            <li>
+              <p>
+                For <m>x, y \in \R</m>, <m>x \sim y</m> if and only if <m>xy \geq 0</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                For <m>x, y \in \R</m>,
+                <m>x \approx y</m> if and only if <m>xy \leq 0</m>.
+              </p>
+            </li>
+          </ul>
+          <ol>
+            <li>
+              <p>
+                Is <m>\sim</m> an equivalence relation on <m>\R</m>?
+                If not, is this relation reflexive, symmetric, or transitive?
+              </p>
+            </li>
+            <li>
+              <p>
+                Is <m>\approx</m> an equivalence relation on <m>\R</m>?
+                If not, is this relation reflexive, symmetric, or transitive?
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec72-circles">
+        <p>
+          Define the relation  <m>\approx</m> on
+          <m>\mathbb{R} \times \mathbb{R}</m> as follows: For  <m>\left( {a, b} \right), \left( {c, d} \right) \in \mathbb{R} \times \mathbb{R}</m>,
+          <m>\left( {a, b} \right) \approx \left( {c, d} \right)</m> if and only if <m>a^2  + b^2  = c^2  + d^2</m>.
+          <ol>
+            <li>
+              <p>
+                Prove that <m>\approx</m> is an equivalence relation on <m>\mathbb{R} \times \mathbb{R}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                List  four  different elements of the set
+                <me>
+                  C = \left\{ { {\left( {x, y} \right) \in \mathbb{R} \times \mathbb{R} } \mid                 \left( {x, y} \right) \approx \left( {4, 3} \right)} \right\}
+                </me>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Give a geometric description of the set <m>C</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Evaluation of proofs</em>  See the instructions for Exercise<nbsp/><xref ref="exer_proofeval"/> on <xref ref="exer_proofeval">page</xref>
+          from <xref ref="S_directproof">Section</xref>.
+          <ol>
+            <li>
+              <p>
+                <em>Proposition</em>.
+                Let <m>R</m> be a relation on a set <m>A</m>.
+                If <m>R</m> is symmetric and transitive,
+                then <m>R</m> is reflexive.
+                <proof>
+                  <p>
+                    Let <m>x, y \in A</m>.
+                    If <m>x \mathrel{R} y</m>,
+                    then <m>y \mathrel{R} x</m> since <m>R</m> is symmetric.
+                    Now, <m>x \mathrel{R} y</m> and <m>y \mathrel{R} x</m>,
+                    and since <m>R</m> is transitive,
+                    we can conclude that <m>x \mathrel{R} x</m>.
+                    Therefore, <m>R</m> is reflexive.
+                  </p>
+                </proof>
+              </p>
+            </li>
+            <li>
+              <p>
+                <em>Proposition</em>.
+                Let <m>\sim</m> be a relation on <m>\Z</m> where for all <m>a,
+                b \in \Z</m>,
+                <m>a \sim b</m> if and only if <m>\left( a + 2b \right) \equiv 0 \pmod 3</m>.
+                The relation <m>\sim</m> is an equivalence relation on <m>\Z</m>.
+                <proof>
+                  <p>
+                    Assume <m>a \sim a</m>.
+                    Then <m>\left( a + 2a \right) \equiv 0 \pmod 3</m> since
+                  </p>
+                  <p>
+                    <m>\left( 3a \right) \equiv 0 \pmod 3</m>.
+                    Therefore, <m>\sim</m> is reflexive on <m>\Z</m>.
+                    In addition, if <m>a \sim b</m>,
+                    then <m>\left( a + 2b \right) \equiv 0 \pmod 3</m>,
+                    and if we multiply both sides of this congruence by 2, we get
+                    <md>
+                      <mrow>2\left( a + 2b \right) \amp \equiv 2 \cdot 0 \pmod 3</mrow>
+                      <mrow>\left( 2a + 4b \right) \amp \equiv 0 \pmod 3</mrow>
+                      <mrow>\left( 2a + b \right) \amp \equiv 0 \pmod 3</mrow>
+                      <mrow>\left( b + 2a \right) \amp \equiv 0 \pmod 3</mrow>
+                    </md>.
+                  </p>
+                  <p>
+                    This means that <m>b \sim a</m> and hence, <m>\sim</m> is symmetric.
+                  </p>
+                  <p>
+                    We now assume that <m>\left( a + 2b \right) \equiv 0\pmod 3</m> and <m>\left( b + 2c \right) \equiv 0\pmod 3</m>.
+                    By adding the corresponding sides of these two congruences,
+                    we obtain
+                    <md>
+                      <mrow>\left( a + 2b \right) + \left( b + 2c \right) \amp \equiv 0 + 0 \pmod 3</mrow>
+                      <mrow>\left( a + 3b + 2c \right) \amp \equiv 0 \pmod 3</mrow>
+                      <mrow>\left( a + 2c \right) \amp \equiv 0 \pmod 3</mrow>
+                    </md>.
+                  </p>
+                  <p>
+                    Hence, the relation <m>\sim</m> is transitive and we have proved that <m>\sim</m> is an equivalence relation on <m>\Z</m>.
+                  </p>
+                </proof>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+  <subsection>
+    <title>Explorations and Activities</title>
+    <ol>
+      <li>
+        <p>
+          <em>Other Types of Relations</em>.
+          In this section,
+          we focused on the properties of a relation that are part of the definition of an equivalence relation.
+          However, there are other properties of relations that are of importance.
+          We will study two of these properties in this activity.
+          A relation <m>R</m> on a set <m>A</m> is a
+          <em>circular relation</em>
+            <idx><h>circular relation</h></idx>
+            <idx><h>relation</h><h>circular</h></idx>
+          provided that for all <m>x</m>,
+          <m>y</m>, and <m>z</m> in <m>A</m>,
+          if <m>x \mathrel{R} y</m> and <m>y \mathrel{R} z</m>,
+          then <m>z \mathrel{R} x</m>.
+          <ol>
+            <li>
+              <p>
+                Carefully explain what it means to say that a relation <m>R</m> on a set <m>A</m> is not circular.
+              </p>
+            </li>
+            <li>
+              <p>
+                Let <m>A = \{ 1, 2, 3 \}</m>.
+                Draw a directed graph of a relation on <m>A</m> that is circular and draw a directed graph of a relation on <m>A</m> that is not circular.
+              </p>
+            </li>
+            <li>
+              <p>
+                Let <m>A = \{ 1, 2, 3 \}</m>.
+                Draw a directed graph of a relation on <m>A</m> that is circular and not transitive and draw a directed graph of a relation on <m>A</m> that is transitive and not circular.
+              </p>
+            </li>
+            <li>
+              <p>
+                Prove the following proposition:
+                <ul>
+                  \item A relation <m>R</m> on a set <m>A</m> is an equivalence relation if and only if it is reflexive and circular.
+                </ul>
+              </p>
+            </li>
+          </ol>
+        </p>
+        A relation <m>R</m> on a set <m>A</m> is an
+        <em>antisymmetric relation</em>
+            <idx><h>antisymmetric relation</h></idx>
+            <idx><h>relation</h><h>antisymmetric</h></idx>
+        provided that for all <m>x, y \in A</m>,
+        if <m>x \mathrel{R} y</m> and <m>y \mathrel{R} x</m>, then <m>x = y</m>.
+        <ol>
+          <li>
+            <p>
+              Carefully explain what it means to say that a relation on a set <m>A</m> is not antisymmetric.
+            </p>
+          </li>
+          <li>
+            <p>
+              Let <m>A = \{ 1, 2, 3 \}</m>.
+              Draw a directed graph of a relation on <m>A</m> that is antisymmetric and draw a directed graph of a relation on <m>A</m> that is not antisymmetric.
+            </p>
+          </li>
+          <li>
+            <p>
+              Are the following propositions true or false?
+              Justify all conclusions.
+              <ul>
+                <li>
+                  <p>
+                    If a relation <m>\mathrel{R}</m> on a set <m>A</m> is both symmetric and antisymmetric,
+                    then <m>\mathrel{R}</m> is transitive.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    If a relation <m>\mathrel{R}</m> on a set <m>A</m> is both symmetric and antisymmetric,
+                    then <m>\mathrel{R}</m> is reflexive.
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </subsection>
+</section>

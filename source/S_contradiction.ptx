@@ -1,0 +1,1332 @@
+<section xml:id="S_contradiction">
+  <title>Proof by Contradiction</title>
+  <introduction>
+    <exploration xml:id="PA_contradicton">
+      <title><em>Proof by Contradiction</em></title>
+      <p>
+            <idx><h>proof</h><h>by contradiction</h></idx>
+      </p>
+      <p>
+        On <xref ref="D_tautology">page</xref>
+        in <xref ref="S_logop">Section</xref>,
+        we defined a <term>tautology</term>
+            <idx><h>tautology</h></idx>
+        to be a compound statement <m>S</m> that is true for all possible combinations of truth values of the component statements that are part of <m>S</m>.
+        We also defined <term>contradiction</term>
+            <idx><h>contradiction</h></idx>
+        to be a compound statement that is false for all possible combinations of truth values of the component statements that are part of <m>S</m>.
+      </p>
+      <p>
+        That is, a tautology is necessarily true in all circumstances,
+        and a contradiction is necessarily false in all circumstances.
+        <ol>
+          <li>
+            <p>
+              Use truth tables to explain why
+              <m>\left( {P \vee \mynot P} \right)</m> is a tautology and <m>\left( {P \wedge \mynot P} \right)</m> is a contradiction.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        Another method of proof that is frequently used in mathematics is a
+        <term>proof by contradiction.</term>
+        <idx><h>proof</h><h>by contradiction|(</h></idx>
+    This method is based on the fact that a statement <m>X</m> can only be true or false
+        (and not both).
+        The idea is to prove that the statement <m>X</m> is true by showing that it cannot be false.
+        This is done by assuming that <m>X</m> is false and proving that this leads to a contradiction. (The contradiction often has the form <m>\left( {R \wedge \mynot R} \right)</m>,
+        where <m>R</m> is some statement.) When this happens,
+        we can conclude that the assumption that the statement <m>X</m> is false is incorrect and hence <m>X</m> cannot be false.
+        Since it cannot be false, then <m>X</m> must be true.
+      </p>
+      <p>
+        A logical basis for the contradiction method of proof is the tautology
+        <me>
+          \left[ \mynot  X \to C \right] \to X
+        </me>,
+        where <m>X</m> is a statement and <m>C</m> is a contradiction.
+        The following truth table establishes this tautology.
+        <me>
+          <tabular>
+            <row>
+              <cell>_6 | \(X\) | \(C\) \|6 \(\mynot X\) | \(\mynot X \to C\) | \((\mynot X \to C) \to X\) |</cell>
+            </row>
+            <row>
+              <cell>+22 _6 | T   |  F  \|6  F | T | T |</cell>
+            </row>
+            <row>
+              <cell>| F   |  F  \|6  T | F | T |</cell>
+            </row>
+            <row>
+              <cell>_6</cell>
+            </row>
+          </tabular>
+        </me>
+      </p>
+      <p>
+        This tautology shows that if
+        <m>\mynot X</m> leads to a contradiction,
+        then <m>X</m> must be true.
+        The previous truth table also shows that the statement
+        <m>\mynot X \to C</m> is logically equivalent to <m>X</m>.
+        This means that if we have proved that
+        <m>\mynot X</m> leads to a contradiction,
+        then we have proved statement <m>X</m>.
+        So if we want to prove a statement <m>X</m> using a proof by contradiction,
+        we assume that <m>\mynot X</m> is true and show that this leads to a contradiction.
+      </p>
+      <p>
+        When we try to prove the conditional statement, \lq\lq If <m>P</m> then <m>Q</m>\rq\rq<nbsp/>using a proof by contradiction,
+        we must assume that <m>P \to Q</m> is false and show that this leads to a contradiction.
+        <ol>
+          <li>
+            <p>
+              Use a truth table to show that
+              <m>\mynot \left( {P \to Q} \right)</m> is logically equivalent to <m>P \wedge \mynot Q</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        The preceding logical equivalency shows that when we assume that \mbox{<m>P \to Q</m>} is false,
+        we are assuming that <m>P</m> is true and <m>Q</m> is false.
+        If we can prove that this leads to a contradiction,
+        then we have shown that <m>\mynot \left( {P \to Q} \right)</m> is false and hence that <m>P \to Q</m> is true.
+        <ol>
+          <li xml:id="LA_contradiction2-1">
+            <p>
+              Give a counterexample to show that the following statement is false.
+              For each real number <m>x</m>,
+              <m>\dfrac{1}{x(1 - x)} \geq 4</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              When a statement is false,
+              it is sometimes possible to add an assumption that will yield a true statement.
+              This is usually done by using a conditional statement.
+              So instead of working with the statement in<nbsp/><xref ref="LA_contradiction2-1"/>,
+              we will work with a related statement that is obtained by adding an assumption
+              (or assumptions)
+              to the hypothesis.
+              For each real number <m>x</m>,
+              if <m>0 \lt x \lt 1</m>, then <m>\dfrac{1}{x(1 - x)} \geq 4</m>.
+              To begin a proof by contradiction for this statement,
+              we need to assume the negation of the statement.
+              To do this, we need to negate the entire statement, including the quantifier.
+              Recall that the negation of a statement with a universal quantifier is a statement that contains an existential quantifier.
+              (See <xref ref="T_negations">Theorem</xref>
+              on <xref ref="T_negations">page</xref>.)
+              With this in mind,
+              carefully write down all assumptions made at the beginning of a proof by contradiction for this statement.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+            <idx><h>proof</h><h>by contradiction|)</h></idx>
+      </p>
+    </exploration>
+    <exploration xml:id="LA_contradicton2">
+      <title><em>Constructing a Proof by Contradiction</em></title>
+      <p>
+        Consider the following proposition:
+      </p>
+      <p>
+        <term>Proposition</term>.
+        For all real numbers <m>x</m> and <m>y</m>, if <m>x \ne y</m>,
+        <m>x > 0,\text{ and } y > 0</m>,
+        then <m>\dfrac{x}{y} + \dfrac{y}{x} > 2</m>.
+      </p>
+      <p>
+        To start a proof by contradiction,
+        we assume that this statement is false;
+        that is, we assume the negation is true.
+        Because this is a statement with a universal quantifier,
+        we assume that there exist real numbers <m>x</m> and <m>y</m> such that <m>x \ne y</m>,
+        <m>x > 0, y > 0</m> and that <m>\dfrac{x}{y} + \dfrac{y}{x} \leq 2</m>.
+        (Notice that the negation of the conditional sentence is a conjunction.)
+      </p>
+      <p>
+        For this proof by contradiction,
+        we will only work with the know column of a know-show table.
+        This is because we do not have a specific goal.
+        The goal is to obtain some contradiction,
+        but we do not know ahead of time what that contradiction will be.
+        Using our assumptions,
+        we can perform algebraic operations on the inequality
+        <men xml:id="LA_learn33-inequality">
+          \frac{x}{y} + \frac{y}{x} \leq 2
+        </men>
+        until we obtain a contradiction.
+        <ol>
+          <li>
+            <p>
+              Try the following algebraic operations on the inequality in<nbsp/><xref ref="LA_learn33-inequality"/>.
+              First, multiply both sides of the inequality by <m>xy</m>,
+              which is a positive real number since <m>x > 0</m> and <m>y > 0</m>.
+              Then, subtract <m>2xy</m> from both sides of this inequality and finally,
+              factor the left side of the resulting inequality.
+            </p>
+          </li>
+          <li>
+            <p>
+              Explain why the last inequality you obtained leads to a contradiction.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        By obtaining a contradiction,
+        we have proved that the proposition cannot be false, and hence,
+        must be true.
+      </p>
+    </exploration>
+  </introduction>
+  <subsection>
+    <title>Writing Guidelines: Keep the Reader Informed</title>
+    <p>
+          <idx><h>writing guidelines</h></idx>
+    </p>
+    <p>
+      A very important piece of information about a proof is the method of proof to be used.
+      So when we are going to prove a result using the contrapositive or a proof by contradiction,
+      we indicate this at the start of the proof.
+      <ul>
+        <li>
+          <p>
+            We will prove this result by proving the contrapositive of the statement.
+          </p>
+        </li>
+        <li>
+          <p>
+            We will prove this statement using a proof by contradiction.
+          </p>
+        </li>
+        <li>
+          <p>
+            We will use a proof by contradiction.
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      We have discussed the logic behind a proof by contradiction in the beginning activities for this section.
+      The basic idea for a proof by contradiction of a proposition is to assume the proposition is false and show that this leads to a contradiction.
+      We can then conclude that the proposition cannot be false,
+      and hence,
+      must be true.
+      When we assume a proposition is false,
+      we are, in effect, assuming that its negation is true.
+      This is one reason why it is so important to be able to write negations of propositions quickly and correctly.
+      We will illustrate the process with the proposition discussed in Beginning <xref ref="PA_contradicton">Activity</xref>.
+    </p>
+    <proposition>
+      <statement>
+        <p>
+          For each real number <m>x</m>,
+          if <m>0 \lt x \lt 1</m>, then <m>\dfrac{1}{x(1 - x)} \geq 4</m>.
+        </p>
+      </statement>
+    </proposition>
+    <proof>
+      <p>
+        We will use a proof by contradiction.
+        So we assume that the proposition is false,
+        or that there exists a real number <m>x</m> such that <m>0 \lt  x \lt  1</m> and
+        <men xml:id="eq_contradiction1">
+          \dfrac{1}{x(1 - x)} \lt  4
+        </men>.
+      </p>
+      <p>
+        We note that since <m>0 \lt  x \lt  1</m>,
+        we can conclude that <m>x > 0</m> and that <m>(1 - x)>0</m>.
+        Hence, <m>x(1 - x) >0</m> and if we multiply both sides of inequality<nbsp/><xref ref="eq_contradiction1"/> by <m>x(1 - x)</m>,
+        we obtain
+        <me>
+          1 \lt  4x(1 - x)
+        </me>.
+      </p>
+      <p>
+        We can now use algebra to rewrite the last inequality as follows:
+        <md>
+          <mrow>1 \amp \lt  4x - 4x^2</mrow>
+          <mrow>4x^2 - 4x + 1 \amp \lt  0</mrow>
+          <mrow>(2x - 1)^2 \amp \lt  0</mrow>
+        </md>
+      </p>
+      <p>
+        However, <m>(2x - 1)</m> is a real number and the last inequality says that a real number squared is less than zero.
+        This is a contradiction since the square of any real number must be greater than or equal to zero.
+        Hence, the proposition cannot be false,
+        and we have proved that for each real number <m>x</m>,
+        if <m>0 \lt x \lt 1</m>, then <m>\dfrac{1}{x(1 - x)} \geq 4</m>.
+      </p>
+    </proof>
+    <investigation xml:id="pr_start-con">
+      <title><em>Starting a Proof by Contradiction</em></title>
+      <p>
+        One of the most important parts of a proof by contradiction is the very first part,
+        which is to state the assumptions that will be used in the proof by contradiction.
+        This usually involves writing a clear negation of the proposition to be proven.
+        Review De Morgan's Laws and the negation of a conditional statement in <xref ref="S_logequiv">Section</xref>.
+        (See <xref ref="T_logequiv">Theorem</xref>
+        on <xref ref="T_logequiv">page</xref>.)
+        Also, review <xref ref="T_negations">Theorem</xref>
+        (on <xref ref="T_negations">page</xref>)
+        and then write a negation of each of the following statements.
+        (Remember that a real number is
+        <q>not irrational</q>
+        means that the real number is rational.)
+        <ol>
+          <li>
+            <p>
+              For each real number <m>x</m>,
+              if <m>x</m> is irrational, then <m>\sqrt[3]{x}</m> is irrational.
+            </p>
+          </li>
+          <li>
+            <p>
+              For each real number <m>x</m>,
+              <m>\left(x + \sqrt{2} \right)</m> is irrational or <m>\left(-x + \sqrt{2} \right)</m> is irrational.
+            </p>
+          </li>
+          <li>
+            <p>
+              For all integers <m>a</m> and <m>b</m>,
+              if 5 divides <m>ab</m>, then 5 divides <m>a</m> or 5 divides <m>b</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              For all real numbers <m>a</m> and <m>b</m>,
+              if <m>a > 0</m> and <m>b > 0</m>,
+              then <m>\dfrac{2}{a} + \dfrac{2}{b} \ne \dfrac{4}{a + b}</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </investigation>
+  </subsection>
+  <subsection>
+    <title>Important Note</title>
+    <p>
+      A proof by contradiction is often used to prove a conditional statement
+    </p>
+    <p>
+      <m>P \to Q</m> when a direct proof has not been found and it is relatively easy to form the negation of the proposition.
+      The advantage of a proof by contradiction is that we have an additional assumption with which to work
+      (since we assume not only <m>P</m> but also <m>\mynot Q</m>).
+      The disadvantage is that there is no well-defined goal to work toward.
+      The goal is simply to obtain some contradiction.
+      There usually is no way of telling beforehand what that contradiction will be,
+      so we have to stay alert for a possible absurdity.
+      Thus, when we set up a know-show table for a proof by contradiction,
+      we really only work with the know portion of the table.
+    </p>
+    <investigation xml:id="pr_exploreproof">
+      <title><em>Exploration and a Proof by Contradiction</em></title>
+      <p>
+        Consider the following proposition:
+        <ul>
+          \item For each integer <m>n</m>, if <m>n \equiv 2 \pmod 4</m>, then <m>n\not \equiv 3 \pmod 6</m>.
+        </ul>
+        <ol>
+          <li xml:id="pr_exploreproof1">
+            <p>
+              Determine at least five different integers that are congruent to 2 modulo 4, and determine at least five different integers that are congruent to 3 modulo 6.
+              Are there any integers that are in both of these lists?
+            </p>
+          </li>
+          <li>
+            <p>
+              For this proposition,
+              why does it seem reasonable to try a proof by contradiction?
+            </p>
+          </li>
+          <li>
+            <p>
+              For this proposition,
+              state clearly the assumptions that need to be made at the beginning of a proof by contradiction,
+              and then use a proof by contradiction to prove this proposition.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </investigation>
+  </subsection>
+  <subsection>
+    <title>Proving that Something Does Not Exist</title>
+    <p>
+      In mathematics,
+      we sometimes need to prove that something does not exist or that something is not possible.
+      Instead of trying to construct a direct proof,
+      it is sometimes easier to use a proof by contradiction so that we can assume that the something exists.
+      For example,
+      suppose we want to prove the following proposition:
+    </p>
+    <proposition xml:id="prop_persquare">
+      <statement>
+        <p>
+          For all integers <m>x</m> and <m>y</m>,
+          if <m>x</m> and <m>y</m> are odd integers,
+          then there does not exist an integer <m>z</m> such that <m>x^2 + y^2 = z^2</m>.
+        </p>
+      </statement>
+    </proposition>
+    <p>
+      Notice that the conclusion involves trying to prove that an integer with a certain property does not exist.
+      If we use a proof by contradiction,
+      we can assume that such an integer <m>z</m> exists.
+      This gives us more with which to work.
+    </p>
+    <investigation xml:id="prog_persquare">
+      <p>
+        Complete the following proof of <xref ref="prop_persquare">Proposition</xref>:
+      </p>
+      <proof>
+        <p>
+          We will use a proof by contradiction.
+          So we assume that there exist integers <m>x</m> and <m>y</m> such that <m>x</m> and <m>y</m> are odd and there exists an integer <m>z</m> such that <m>x^2 + y^2 = z^2</m>.
+          Since <m>x</m> and <m>y</m> are odd,
+          there exist integers <m>m</m> and <m>n</m> such that
+          <m>x = 2m + 1</m> and <m>y = 2n + 1</m>.
+          <ol>
+            <li>
+              <p>
+                Use the assumptions that <m>x</m> and <m>y</m> are odd to prove that
+                <m>x^2 + y^2</m> is even and hence, <m>z^2</m> is even.
+                (See <xref ref="T_n2odd">Theorem</xref>
+                on <xref ref="T_n2odd">page</xref>.)
+              </p>
+            </li>
+          </ol>
+        </p>
+        <p>
+          We can now conclude that <m>z</m> is even.
+          (See <xref ref="T_n2odd">Theorem</xref>
+          on <xref ref="T_n2odd">page</xref>.)
+          So there exists an integer <m>k</m> such that <m>z = 2k</m>.
+          If we substitute for <m>x</m>, <m>y</m>,
+          and <m>z</m> in the equation <m>x^2 + y^2 = z^2</m>, we obtain
+          <me>
+            (2m + 1)^2 + (2n + 1)^2 = (2k)^2
+          </me>.
+          <ol>
+            <li>
+              <p>
+                Use the previous equation to obtain a contradiction. \hint One way is to use algebra to obtain an equation where the left side is an odd integer and the right side is an even integer. \qedhere
+              </p>
+            </li>
+          </ol>
+        </p>
+      </proof>
+    </investigation>
+  </subsection>
+  <subsection>
+    <title>Rational and Irrational Numbers</title>
+    <p>
+      One of the most important ways to classify real numbers is as a rational number or an irrational number.
+      Following is the definition of rational
+      (and irrational)
+      numbers given in Exercise<nbsp/><xref ref="exer_rational"/> from <xref ref="S_moremethods">Section</xref>.
+    </p>
+    <definition xml:id="D_rational">
+      <statement>
+        <p>
+          A real number <m>x</m> is defined to be a
+          <term>rational number</term>
+              <idx><h>rational numbers</h></idx>
+          provided that there exist integers <m>m</m> and <m>n</m> with <m>n \ne 0</m> such that <m>x = \dfrac{m}{n}</m>.
+          A real number that is not a rational number is called an
+          <term>irrational number.</term>
+              <idx><h>irrational numbers</h></idx>
+        </p>
+      </statement>
+    </definition>
+    <p>
+      This may seem like a strange distinction because most people are quite familiar with the rational numbers (fractions) but the irrational numbers seem a bit unusual.
+      However, there are many irrational numbers such as <m>\sqrt{2}</m>,
+      <m>\sqrt{3}</m>,
+      <m>\sqrt[3]{2}</m>, <m>\pi</m>, and the number <m>e</m>.
+      We are discussing these matters now because we will soon prove that
+      <m>\sqrt{2}</m> is irrational in <xref ref="T_squareroot2">Theorem</xref>.
+    </p>
+    <p>
+      We use the symbol <m>\Q</m> to stand for the set of rational numbers.
+      There is no standard symbol for the set of irrational numbers.
+      Perhaps one reason for this is because of the closure properties of the rational numbers.
+      We introduced closure properties in <xref ref="S_prop">Section</xref>,
+      and the rational numbers <m>\Q</m> are closed under addition,
+      subtraction,
+      multiplication, and division by nonzero rational numbers.
+      This means that if <m>x, y \in \Q</m>, then
+      <ul>
+        <li>
+          <p>
+            <m>x + y</m>, <m>x - y</m>, and <m>xy</m> are in <m>\Q</m>; and
+          </p>
+        </li>
+        <li>
+          <p>
+            If <m>y \ne 0</m>, then <m>\dfrac{x}{y}</m> is in <m>\Q</m>.
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      The basic reasons for these facts are that if we add, subtract,
+      multiply, or divide two fractions, the result is a fraction.
+      One reason we do not have a symbol for the irrational numbers is that the irrational numbers are not closed under these operations.
+      For example, we will prove that
+      <m>\sqrt{2}</m> is irrational in <xref ref="T_squareroot2">Theorem</xref>.
+      We then see that
+      <me>
+        \sqrt{2} \sqrt{2} = 2  \text{ and }   \frac{\sqrt{2}}{\sqrt{2}} = 1
+      </me>,
+      which shows that the product of irrational numbers can be rational and the quotient of irrational numbers can be rational.
+    </p>
+    <p>
+      It is also important to realize that every integer is a rational number since any integer can be written as a fraction.
+      For example, we can write <m>3 = \dfrac{3}{1}</m>.
+      In general, if <m>n \in \Z</m>,
+      then <m>n = \dfrac{n}{1}</m>,
+      and hence, <m>n \in \Q</m>.
+    </p>
+    <p>
+      Because the rational numbers are closed under the standard operations and the definition of an irrational number simply says that the number is not rational,
+      we often use a proof by contradiction to prove that a number is irrational.
+      This is illustrated in the next proposition.
+    </p>
+    <proposition>
+      <statement>
+        <p>
+          For all real numbers <m>x</m> and <m>y</m>,
+          if <m>x</m> is rational and <m>x \ne 0</m> and <m>y</m> is irrational,
+          then <m>x \cdot y</m> is irrational.
+        </p>
+      </statement>
+    </proposition>
+    <proof>
+      <p>
+        We will use a proof by contradiction.
+        So we assume that there exist real numbers <m>x</m> and <m>y</m> such that <m>x</m> is rational,
+        <m>x \ne 0</m>,
+        <m>y</m> is irrational, and <m>x \cdot y</m> is rational.
+        Since <m>x \ne 0</m>, we can divide by <m>x</m>,
+        and since the rational numbers are closed under division by nonzero rational numbers,
+        we know that <m>\dfrac{1}{x} \in \Q</m>.
+        We now know that <m>x \cdot y</m> and
+        <m>\dfrac{1}{x}</m> are rational numbers and since the rational numbers are closed under multiplication,
+        we conclude that
+        <me>
+          \frac{1}{x} \cdot \left( xy \right) \in \Q
+        </me>.
+      </p>
+      <p>
+        However, <m>\dfrac{1}{x} \cdot \left( xy \right) = y</m> and hence,
+        <m>y</m> must be a rational number.
+        Since a real number cannot be both rational and irrational,
+        this is a contradiction to the assumption that <m>y</m> is irrational.
+        We have therefore proved that for all real numbers <m>x</m> and <m>y</m>,
+        if <m>x</m> is rational and <m>x \ne 0</m> and <m>y</m> is irrational,
+        then <m>x \cdot y</m> is irrational.
+      </p>
+    </proof>
+  </subsection>
+  <subsection>
+    <title>The Square Root of 2 Is an Irrational Number</title>
+    <p>
+      The proof that the square root of 2 is an irrational number is one of the classic proofs in mathematics,
+      and every mathematics student should know this proof.
+      This is why we will be doing some preliminary work with rational numbers and integers before completing the proof.
+      The theorem we will be proving can be stated as follows:
+    </p>
+    <theorem xml:id="T_squareroot2">
+      <statement>
+        <p>
+          If <m>r</m> is a real number such that <m>r^2 = 2</m>,
+          then <m>r</m> is an irrational number.
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      This is stated in the form of a conditional statement,
+      but it basically means that <m>\sqrt 2</m> is irrational
+      (and that <m>- \sqrt 2</m> is irrational).
+      That is, <m>\sqrt 2</m> cannot be written as a quotient of integers with the denominator not equal to zero.
+    </p>
+    <p>
+      In order to complete this proof,
+      we need to be able to work with some basic facts that follow about rational numbers and even integers.
+      <ol>
+        <li>
+          <p>
+            Each integer <m>m</m> is a rational number since <m>m</m> can be written as <m>m = \dfrac{m}{1}</m>.
+          </p>
+        </li>
+        <li xml:id="LA_learn33-eq2">
+          <p>
+            Notice that <m>\dfrac{2}{3} = \dfrac{4}{6}</m>, since
+            <md>
+              <mrow>\frac{4}{6} \amp = \frac{2 \cdot 2}{3 \cdot 2} = \frac{2}{2} \cdot \frac{2}{3} = \frac{2}{3}</mrow>
+            </md>
+            We can also show that <m>\dfrac{15}{12} = \dfrac{5}{4}</m>,
+            <m>\dfrac{10}{-8} = \dfrac{-5}{4}</m>,
+            and <m>\dfrac{-30}{-16} = \dfrac{15}{8}</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      Item<nbsp/><xref ref="LA_learn33-eq2"/> was included to illustrate the fact that a rational number can be written as a fraction in
+      <q>lowest terms</q>
+      with a positive denominator.
+      This means that any rational number can be written as a quotient <m>\dfrac{m}{n}</m>,
+      where <m>m</m> and <m>n</m> are integers, <m>n > 0</m>,
+      and <m>m</m> and <m>n</m> have no common factor greater than 1.
+      <ol>
+        <li>
+          <p>
+            If <m>n</m> is an integer and <m>n^2</m> is even,
+            what can be conclude about <m>n</m>.
+            Refer to <xref ref="T_n2odd">Theorem</xref>
+            on <xref ref="T_n2odd">page</xref>.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      In a proof by contradiction of a conditional statement <m>P \to Q</m>,
+      we assume the negation of this statement or <m>P \wedge \mynot Q</m>.
+      So in a proof by contradiction of <xref ref="T_squareroot2">Theorem</xref>,
+      we will assume that <m>r</m> is a real number,
+      <m>r^2 = 2</m>, and <m>r</m> is not irrational
+      (that is, <m>r</m> is rational).
+    </p>
+    <theorem>
+      <statement>
+        <p>
+          If <m>r</m> is a real number such that <m>r^2 = 2</m>,
+          then <m>r</m> is an irrational number.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        We will use a proof by contradiction.
+        So we assume that the statement of the theorem is false.
+        That is, we assume that
+        <ul>
+          \item <m>r</m> is a real number, <m>r^2 = 2</m>, and <m>r</m> is a rational number.
+        </ul>
+      </p>
+      <p>
+        Since <m>r</m> is a rational number,
+        there exist integers <m>m</m> and <m>n</m> with <m>n > 0</m> such that
+        <me>
+          r = \frac{m}{n}
+        </me>
+        and <m>m</m> and <m>n</m> have no common factor greater than 1.
+        We will obtain a contradiction by showing that <m>m</m> and <m>n</m> must both be even.
+        Squaring both sides of the last equation and using the fact that <m>r^2 = 2</m>,
+        we obtain
+        <md>
+          <mrow>2 \amp = \frac{{m^2 }}{{n^2 }}</mrow>
+          <mrow xml:id="eq_3h">m^2  \amp = 2n^2</mrow>
+        </md>.
+      </p>
+      <p>
+        Equation<nbsp/><xref ref="eq_3h"/> implies that <m>m^2</m> is even,
+        and hence,
+        by <xref ref="T_n2odd">Theorem</xref>,
+        <m>m</m> must be an even integer.
+        This means that there exists an integer <m>p</m> such that <m>m = 2p</m>.
+        We can now substitute this into equation<nbsp/><xref ref="eq_3h"/>, which gives
+        <md>
+          <mrow>\left( {2p} \right)^2  \amp = 2n^2</mrow>
+          <mrow xml:id="eq_3i">4p^2  \amp = 2n^2</mrow>
+        </md>.
+      </p>
+      <p>
+        We can divide both sides of equation<nbsp/><xref ref="eq_3i"/> by 2 to obtain <m>n^2 = 2p^2</m>.
+        Consequently,
+        <m>n^2</m> is even and we can once again use <xref ref="T_n2odd">Theorem</xref>
+        to conclude that <m>n</m> is an even integer.
+      </p>
+      <p>
+        We have now established that both <m>m</m> and <m>n</m> are even.
+        This means that 2 is a common factor of <m>m</m> and <m>n</m>,
+        which contradicts the assumption that <m>m</m> and <m>n</m> have no common factor greater than 1.
+        Consequently, the statement of the theorem cannot be false,
+        and we have proved that if <m>r</m> is a real number such that <m>r^2 = 2</m>,
+        then <m>r</m> is an irrational number.
+      </p>
+    </proof>
+    <p>
+      \exercises{Exercises for <xref ref="S_contradiction">Section</xref>}
+    </p>
+    <ol>
+      <li xml:id="exer_sec33-1">
+        <p>
+          This exercise is intended to provide another rationale as to why a proof by contradiction works.
+          Suppose that we are trying to prove that a statement <m>P</m> is true.
+          Instead of proving this statement,
+          assume that we prove that the conditional statement
+          <q>If <m>\mynot P</m>, then <m>C</m></q>
+          is true, where <m>C</m> is some contradiction.
+          Recall that a contradiction is a statement that is always false.
+        </p>
+        <ol>
+          <li xml:id="exer_contradictionproof">
+            <p>
+              In symbols, write a statement that is a disjunction and that is logically equivalent to <m>\mynot P \to C</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Since we have proven that <m>\mynot P \to C</m> is true,
+              then the disjunction in Exercise<nbsp/><xref ref="exer_contradictionproof"/> must also be true.
+              Use this to explain why the statement <m>P</m> must be true.
+            </p>
+          </li>
+          <li>
+            <p>
+              Now explain why <m>P</m> must be true if we prove that the negation of <m>P</m> implies a contradiction.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li xml:id="exer_sec32-truefalse">
+        <p>
+          Are the following statements true or false?
+          Justify each conclusion.
+          <ol>
+            <li>
+              <p>
+                For all integers <m>a</m> and <m>b</m>,
+                if <m>a</m> is even and <m>b</m> is odd,
+                then <m>4</m> does not divide <m>\left( a^2 + b^2 \right)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                For all integers <m>a</m> and <m>b</m>,
+                if <m>a</m> is even and <m>b</m> is odd,
+                then <m>6</m> does not divide <m>\left( a^2 + b^2 \right)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                For all integers <m>a</m> and <m>b</m>,
+                if <m>a</m> is even and <m>b</m> is odd,
+                then <m>4</m> does not divide <m>\left( a^2 + 2b^2 \right)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                For all integers <m>a</m> and <m>b</m>,
+                if <m>a</m> is odd and <m>b</m> is odd,
+                then <m>4</m> divides <m>\left( a^2 + 3b^2 \right)</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec33-2">
+        <p>
+          Consider the following statement:
+          <ul>
+            \item For each positive real number <m>r</m>, if <m>r^2 = 18</m>, then <m>r</m> is irrational.
+          </ul>
+          <ol>
+            <li>
+              <p>
+                If you were setting up a proof by contradiction for this statement,
+                what would you assume?
+                Carefully write down all conditions that you would assume.
+              </p>
+            </li>
+            <li>
+              <p>
+                Complete a proof by contradiction for this statement.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <p>
+          Prove that the cube root of 2 is an irrational number.
+          That is, prove that if <m>r</m> is a real number such that <m>r^3 = 2</m>,
+          then <m>r</m> is an irrational number.
+        </p>
+      </li>
+      <li xml:id="exer_sec33-3">
+        <p>
+          Prove the following propositions:
+          <ol>
+            <li>
+              <p>
+                For all real numbers <m>x</m> and <m>y</m>,
+                if <m>x</m> is rational and <m>y</m> is irrational,
+                then <m>x + y</m> is irrational.
+              </p>
+            </li>
+            <li>
+              <p>
+                For all nonzero real numbers <m>x</m> and <m>y</m>,
+                if <m>x</m> is rational and <m>y</m> is irrational,
+                then <m>xy</m> is irrational.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec33-4">
+        <p>
+          Are the following statements true or false?
+          Justify each conclusion.
+          <ol>
+            <li>
+              <p>
+                For each positive real number <m>x</m>,
+                if <m>x</m> is irrational, then <m>x^2</m> is irrational.
+              </p>
+            </li>
+            <li>
+              <p>
+                For each positive real number <m>x</m>,
+                if <m>x</m> is irrational, then <m>\sqrt x</m> is irrational.
+              </p>
+            </li>
+            <li>
+              <p>
+                For every pair of real numbers <m>x</m> and <m>y</m>,
+                if <m>x + y</m> is irrational,
+                then <m>x</m> is irrational and <m>y</m> is irrational.
+              </p>
+            </li>
+            <li>
+              <p>
+                For every pair of real numbers <m>x</m> and <m>y</m>,
+                if <m>x + y</m> is irrational,
+                then <m>x</m> is irrational or <m>y</m> is irrational.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <ol>
+          <li>
+            <p>
+              Give an example that shows that the sum of two irrational numbers can be a rational number.
+            </p>
+          </li>
+          <li>
+            <p>
+              Now explain why the following proof that
+              <m>\left( \sqrt{2} + \sqrt{5} \right)</m> is an irrational number is not a valid proof: Since <m>\sqrt{2}</m> and
+              <m>\sqrt{5}</m> are both irrational numbers,
+              their sum is an irrational number.
+              Therefore, <m>\left( \sqrt{2} + \sqrt{5} \right)</m> is an irrational number. \note You may even assume that we have proven that
+              <m>\sqrt{5}</m> is an irrational number.
+              (We have not proven this.)
+            </p>
+          </li>
+          <li xml:id="exer_sec33-10">
+            <p>
+              Is the real number <m>\sqrt 2 + \sqrt 5</m> a rational number or an irrational number?
+              Justify your conclusion.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <ol>
+          <li>
+            <p>
+              Prove that for each real number <m>x</m>,
+              <m>\left(x + \sqrt{2} \right)</m> is irrational or <m>\left(-x + \sqrt{2} \right)</m> is irrational.
+            </p>
+          </li>
+          <li>
+            <p>
+              Generalize the proposition in Part<nbsp/>(a) for any irrational number
+              (instead of just <m>\sqrt{2}</m>)
+              and then prove the new proposition.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <p>
+          Is the following statement true or false?
+          <ul>
+            \item For all positive real numbers <m>x</m> and <m>y</m>, <m>\sqrt {x + y} \leq \sqrt x + \sqrt y</m>.
+          </ul>
+        </p>
+      </li>
+      <li>
+        <p>
+          Is the following proposition true or false?
+          Justify your conclusion.
+          <ul>
+            \item For each real number <m>x</m>, <m>x \left( 1 - x \right) \leq \dfrac{1}{4}</m>.
+          </ul>
+        </p>
+      </li>
+      <li xml:id="exer_sec33-9">
+        <ol>
+          <li>
+            <p>
+              Is the base 2 logarithm of 32,
+              <m>\log _2 (32)</m>, a rational number or an irrational number?
+              Justify your conclusion.
+            </p>
+          </li>
+          <li>
+            <p>
+              Is the base 2 logarithm of 3, <m>\log _2 (3)</m>,
+              a rational number or an irrational number?
+              Justify your conclusion.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li xml:id="exer_sec33IVT">
+        <p>
+          In Exercise<nbsp/><xref ref="exer_IVT"/> in <xref ref="S_moremethods">Section</xref>,
+          we proved that there exists a real number solution to the equation <m>x^3 - 4x^2 = 7</m>.
+          Prove that there is no integer <m>x</m> such that <m>x^3 - 4x^2 = 7</m>.
+        </p>
+      </li>
+      <li xml:id="exer_sec33-11">
+        <p>
+          Prove each of the following propositions:
+          <ol>
+            <li>
+              <p>
+                For each real number <m>\theta</m>,
+                if <m>0 \lt \theta \lt \dfrac{\textstyle \pi }{\textstyle 2}</m>,
+                then <m>\left[ {\sin (\theta) + \cos (\theta) } \right] > 1</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                For all real numbers <m>a</m> and <m>b</m>,
+                if <m>a \ne 0</m> and <m>b \ne 0</m>,
+                then <m>\sqrt{a^2 + b^2} \ne a + b</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>n</m> is an integer greater than 2, then for all integers <m>m</m>,
+                <m>n</m> does not divide <m>m</m> or <m>n + m \ne nm</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                For all real numbers <m>a</m> and <m>b</m>,
+                if <m>a > 0</m> and <m>b > 0</m>, then
+                <me>
+                  \frac{2}{a} + \frac{2}{b} \ne \frac{4}{a + b}
+                </me>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec35-10">
+        <p>
+          Prove that there do not exist three consecutive natural numbers such that the cube of the largest is equal to the sum of the cubes of the other two.
+        </p>
+      </li>
+      <li>
+        <p>
+          Three natural numbers <m>a</m>, <m>b</m>,
+          and <m>c</m> with <m>a \lt b \lt c</m> are called a
+          <em>Pythagorean triple</em>
+            <idx><h>Pythagorean triple</h></idx>
+          provided that <m>a^2 + b^2 = c^2</m>.
+          For example, the numbers 3, 4, and 5 form a Pythagorean triple,
+          and the numbers 5, 12, and 13 form a Pythagorean triple.
+          <ol>
+            <li>
+              <p>
+                Verify that if <m>a = 20</m>,
+                <m>b = 21</m>, and <m>c = 29</m>,
+                then <m>a^2 + b^2 = c^2</m>,
+                and hence, 20, 21, and 29 form a Pythagorean triple.
+              </p>
+            </li>
+            <li>
+              <p>
+                Determine two other Pythagorean triples.
+                That is, find integers <m>a,
+                b</m>, and <m>c</m> such that <m>a^2 + b^2 = c^2</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Is the following proposition true or false?
+                Justify your conclusion.
+                For all integers <m>a</m>, <m>b</m>, and <m>c</m>,
+                if <m>a^2 + b^2 = c^2</m>, then <m>a</m> is even or <m>b</m> is even.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <p>
+          Consider the following proposition: There are no integers <m>a</m> and <m>b</m> such that <m>b^2 = 4a + 2</m>.
+          <ol>
+            <li>
+              <p>
+                Rewrite this statement in an equivalent form using a universal quantifier by completing the following: For all integers <m>a</m> and <m>b</m>,
+                <m>\ldots </m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Prove the statement in Part<nbsp/>(a).
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <p>
+          Is the following statement true or false?
+          Justify your conclusion.
+          <ul>
+            \item For each integer <m>n</m> that is greater than 1, if <m>a</m> is the smallest positive factor of <m>n</m> that is greater than 1, then <m>a</m> is prime.
+          </ul>
+        </p>
+        See Exercise<nbsp/><xref ref="exer_prime"/> in <xref ref="S_quantifier">Section</xref>
+        (<xref ref="exer_prime">page</xref>)
+        for the definition of a prime number and the definition of a composite number.
+      </li>
+      <li>
+        <p>
+          A <em>magic square</em>
+            <idx><h>magic square</h></idx>
+          is a square array of natural numbers whose rows, columns,
+          and diagonals all sum to the same number.
+          For example,
+          the following is a 3 by 3 magic square since the sum of the 3 numbers in each row is equal to 15,
+          the sum of the 3 numbers in each column is equal to 15,
+          and the sum of the 3 numbers in each diagonal is equal to 15.
+          <tabular>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell>8</cell>
+              <cell>3</cell>
+              <cell>4</cell>
+            </row>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell>1</cell>
+              <cell>5</cell>
+              <cell>9</cell>
+            </row>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell>6</cell>
+              <cell>7</cell>
+              <cell>2</cell>
+            </row>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+          </tabular>
+          Prove that the following 4 by 4 square cannot be completed to form a magic square.
+          <tabular>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell></cell>
+              <cell>1</cell>
+              <cell></cell>
+              <cell>2</cell>
+            </row>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell>3</cell>
+              <cell>4</cell>
+              <cell>5</cell>
+              <cell></cell>
+            </row>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell>6</cell>
+              <cell>7</cell>
+              <cell></cell>
+              <cell>8</cell>
+            </row>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell>9</cell>
+              <cell></cell>
+              <cell>10</cell>
+              <cell></cell>
+            </row>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+          </tabular>
+        </p>
+      </li>
+      <li>
+        <p>
+          Using only the digits 1 through 9 one time each,
+          is it possible to construct a 3 by 3 magic square with the digit 3 in the center square?
+          That is, is it possible to construct a magic square of the form
+          <tabular>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell><m>a</m></cell>
+              <cell><m>b</m></cell>
+              <cell><m>c</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell><m>d</m></cell>
+              <cell>3</cell>
+              <cell><m>e</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell><m>f</m></cell>
+              <cell><m>g</m></cell>
+              <cell><m>h</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+          </tabular>
+          where <m>a, b, c, d, e, f, g, h</m> are all distinct digits,
+          none of which is equal to 3?
+          Either construct such a magic square or prove that it is not possible.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Evaluation of proofs</em>  See the instructions for Exercise<nbsp/><xref ref="exer_proofeval"/> on <xref ref="exer_proofeval">page</xref>
+          from <xref ref="S_directproof">Section</xref>.
+          <ol>
+            <li>
+              <p>
+                <em>Proposition</em>.
+                For each real number <m>x</m>,
+                if <m>x</m> is irrational and <m>m</m> is an integer,
+                then <m>mx</m> is irrational.
+                <proof>
+                  <p>
+                    We assume that <m>x</m> is a real number and is irrational.
+                    This means that for all integers <m>a</m> and <m>b</m> with <m>b \ne 0</m>,
+                    <m>x \ne \dfrac{a}{b}</m>.
+                    Hence, we may conclude that <m>mx \ne \dfrac{ma}{b}</m> and,
+                    therefore, <m>mx</m> is irrational.
+                  </p>
+                </proof>
+              </p>
+            </li>
+            <li>
+              <p>
+                <em>Proposition</em>.
+                For all real numbers <m>x</m> and <m>y</m>,
+                if <m>x</m> is irrational and <m>y</m> is rational,
+                then <m>x + y</m> is irrational.
+                <proof>
+                  <p>
+                    We will use a proof by contradiction.
+                    So we assume that the proposition is false,
+                    which means that there exist real numbers <m>x</m> and <m>y</m> where <m>x \notin \Q</m>,
+                    <m>y \in \Q</m>, and <m>x + y \in \Q</m>.
+                    Since the rational numbers are closed under subtraction and <m>x+y</m> and <m>y</m> are rational,
+                    we see that
+                    <me>
+                      \left(x + y \right) - y \in \Q
+                    </me>.
+                  </p>
+                  <p>
+                    However, <m>\left( x + y \right) - y = x</m>,
+                    and hence we can conclude that <m>x \in \Q</m>.
+                    This is a contradiction to the assumption that <m>x \notin \Q</m>.
+                    Therefore, the proposition is not false,
+                    and we have proven that for all real numbers <m>x</m> and <m>y</m>,
+                    if <m>x</m> is irrational and <m>y</m> is rational,
+                    then <m>x + y</m> is irrational.
+                  </p>
+                </proof>
+              </p>
+            </li>
+            <li>
+              <p>
+                <em>Proposition</em>.
+                For each real number <m>x</m>,
+                <m>x (1 - x) \leq \dfrac{1}{4}</m>.
+                <proof>
+                  <p>
+                    A proof by contradiction will be used.
+                    So we assume the proposition is false.
+                    This means that there exists a real number <m>x</m> such that <m>x (1 - x) > \dfrac{1}{4}</m>.
+                    If we multiply both sides of this inequality by 4, we obtain <m>4x (1 - x) > 1</m>.
+                    However, if we let <m>x = 3</m>, we then see that
+                    <md>
+                      <mrow>4x (1 - x) \amp > 1</mrow>
+                      <mrow>4 \cdot 3 (1 - 3) \amp > 1</mrow>
+                      <mrow>-12 \amp > 1</mrow>
+                    </md>
+                  </p>
+                  <p>
+                    The last inequality is clearly a contradiction and so we have proved the proposition.
+                  </p>
+                </proof>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+  <subsection>
+    <title>Explorations and Activities</title>
+    <ol>
+      <li>
+        <p>
+          <em>A Proof by Contradiction</em>.
+          Consider the following proposition:
+          <em>Proposition</em>.
+          Let  <m>a</m>, <m>b</m>, and <m>c</m>  be integers.
+          If  3  divides  <m>a</m>,  3  divides  <m>b</m>,
+          and  <m>c \equiv 1 \pmod 3</m>, then the equation
+          <me>
+            ax + by = c
+          </me>
+          has no solution in which both  <m>x</m>  and  <m>y</m>  are integers.
+          Complete the following proof of this proposition:
+          <em><em>Proof.</em></em>  A proof by contradiction will be used.
+          So we assume that the statement is false.
+          That is, we assume that there exist integers <m>a</m>,
+          <m>b</m>,
+          and <m>c</m> such that 3  divides both  <m>a</m>  and  <m>b</m>,
+          that  <m>c \equiv 1 \pmod 3</m>,  and that  the equation
+          <me>
+            ax + by = c
+          </me>
+          has a solution in which both  <m>x</m>  and  <m>y</m>  are integers.
+          So there exist integers  <m>m</m>  and  <m>n</m>  such that
+          <me>
+            am  + bn  = c
+          </me>.
+          \hint  Now use the facts that  3  divides  <m>a</m>, 3  divides  <m>b</m>,
+          and <m>c \equiv 1 \pmod 3</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Exploring a Quadratic Equation</em>.
+          Consider the following proposition:
+          <em>Proposition</em>.
+          For all integers <m>m</m> and <m>n</m>,
+          if <m>n</m> is odd, then the equation
+          <me>
+            x^2+2mx+2n=0
+          </me>
+          has no integer solution for <m>x</m>.
+          <ol>
+            <li>
+              <p>
+                What are the solutions of the equation when <m>m = 1</m> and <m>n = - 1</m>?
+                That is, what are the solutions of the equation <m>x^2 + 2x - 2 = 0</m>?
+              </p>
+            </li>
+            <li>
+              <p>
+                What are the solutions of the equation when <m>m = 2</m> and <m>n = 3</m>?
+                That is, what are the solutions of the equation <m>x^2 + 4x + 6 = 0</m>?
+              </p>
+            </li>
+            <li>
+              <p>
+                Solve the resulting quadratic equation for at least two more examples using values of <m>m</m> and <m>n</m> that satisfy the hypothesis of the proposition.
+              </p>
+            </li>
+            <li>
+              <p>
+                For this proposition,
+                why does it seem reasonable to try a proof by contradiction?
+              </p>
+            </li>
+            <li>
+              <p>
+                For this proposition,
+                state clearly the assumptions that need to be made at the beginning of a proof by contradiction.
+              </p>
+            </li>
+            <li>
+              <p>
+                Use a proof by contradiction to prove this proposition.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+</section>

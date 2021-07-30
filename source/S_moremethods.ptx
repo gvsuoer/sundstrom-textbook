@@ -1,0 +1,1140 @@
+<section xml:id="S_moremethods">
+  <title>More Methods of Proof</title>
+  <introduction>
+    <exploration xml:id="PA_attempt">
+      <title><em>Using the Contrapositive</em></title>
+      <p>
+        The following statement was proven in Exercise <xref ref="exer_x2odd"/> on <xref ref="exer_x2odd">page</xref>
+        in <xref ref="S_direct">Section</xref>.
+        <ul>
+          \item If <m>n</m> is an odd integer, then <m>n^2</m> is an odd integer.
+        </ul>
+      </p>
+      <p>
+        Now consider the following proposition:
+        <ul>
+          \item For each integer <m>n</m>, if <m>n^2</m> is an odd integer, then <m>n</m> is an odd integer.
+        </ul>
+        <ol>
+          <li>
+            <p>
+              After examining several examples,
+              decide whether you think this proposition is true or false.
+            </p>
+          </li>
+          <li>
+            <p>
+              Try completing the following know-show<nbsp/>table for a direct proof of this proposition.
+              The question is,
+              <q>Can we perform algebraic manipulations to get from the <sq>know</sq> portion of the table to the <sq>show</sq> portion of the table?</q>
+              Be careful with this!
+              Remember that we are working with integers and we want to make sure that we can end up with an integer <m>q</m> as stated in Step <m>Q1</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <me>
+        <tabular>
+          <row>
+            <cell>_
+              | <em>Step</em>  |  <em>Know</em>  |  <em>Reason</em>   |</cell>
+          </row>
+          <row>
+            <cell>+02 _
+              | \(P\)   |  \(n^2\) is an odd integer.  |  Hypothesis  |</cell>
+          </row>
+          <row>
+            <cell>_1
+              | \(P1\)  |   \(\left( \exists k \in \Z \right) \left( n^2 = 2k + 1 \right)\)          |  Definition of
+              <q>odd integer</q>
+              |</cell>
+          </row>
+          <row>
+            <cell>_1
+              | \C \(\vdots\)  |  \C \(\vdots\)                         | \C \(\vdots\)     |</cell>
+          </row>
+          <row>
+            <cell>_1
+              | \(Q1\)    |  \(\left( \exists q \in \Z \right) \left( n=2q+1 \right) \)  |       |</cell>
+          </row>
+          <row>
+            <cell>_1
+              | \(Q\)     | \(n\) is an odd  integer.     |  Definition of
+              <q>odd integer</q>
+              |</cell>
+          </row>
+          <row>
+            <cell>_
+              | <em>Step</em>  |  <em>Show</em>  |  <em>Reason</em>    |</cell>
+          </row>
+          <row>
+            <cell>+20 _</cell>
+          </row>
+        </tabular>
+      </me>
+      <p>
+        Recall that the contrapositive of the conditional statement <m>P \to Q</m> is the conditional statement <m>\mynot Q \to \mynot P</m>,
+        which is logically equivalent to the original conditional statement.
+        (It might be a good idea to review Beginning <xref ref="PA_converse">Activity</xref>
+        from <xref ref="S_logequiv">Section</xref>
+        on <xref ref="PA_converse">page</xref>.)
+        Consider the following proposition once again:
+        <ul>
+          \item For each integer <m>n</m>, if <m>n^2</m> is an odd integer, then <m>n</m> is an odd integer.
+        </ul>
+        <ol>
+          <li xml:id="PA_contrapositive2">
+            <p>
+              Write the contrapositive of this conditional statement.
+              Please note that
+              <q>not odd</q>
+              means
+              <q>even.</q>
+              (We have not proved this,
+              but it can be proved using the Division Algorithm in <xref ref="S_divalgo">Section</xref>.)
+            </p>
+          </li>
+          <li xml:id="PA_contrapositive3">
+            <p>
+              Complete a know-show<nbsp/>table for the contrapositive statement from Part<nbsp/><xref ref="PA_contrapositive2"/>.
+            </p>
+          </li>
+          <li>
+            <p>
+              By completing the proof in Part<nbsp/><xref ref="PA_contrapositive3"/>, have you proven the given proposition?
+              That is, have you proven that if <m>n^2</m> is an odd integer,
+              then <m>n</m> is an odd integer?
+              Explain.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </exploration>
+    <exploration xml:id="PA_biconditional">
+      <title><em>A Biconditional Statement</em></title>
+      <p>
+            <idx><h>biconditional statement</h></idx>
+            <idx><h>statement</h><h>biconditional</h></idx>
+        <ol>
+          <li xml:id="PA_biconditional1">
+            <p>
+              In Exercise <xref ref="exer_bicond"/> from <xref ref="S_logequiv">Section</xref>,
+              we constructed a truth table to prove that the biconditional statement,
+              <m>P \leftrightarrow Q</m>,
+              is logically equivalent to <m>\left( {P \to Q} \right) \wedge \left( {Q \to P} \right)</m>.
+              Complete this exercise if you have not already done so.
+            </p>
+          </li>
+          <li>
+            <p>
+              Suppose that we want to prove a biconditional statement of the form \makebox{<m>P \leftrightarrow Q</m>}. Explain a method for completing this proof based on the logical equivalency in part<nbsp/><xref ref="PA_biconditional1"/>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Let <m>n</m> be an integer.
+              Assume that we have completed the proofs of the following two statements:
+              <ul>
+                <li>
+                  <p>
+                    If <m>n</m> is an odd integer,
+                    then <m>n^2</m> is an odd integer.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    If <m>n^2</m> is an odd integer,
+                    then <m>n</m> is an odd integer.
+                  </p>
+                </li>
+              </ul>
+            </p>
+            (See Exercise<nbsp/><xref ref="exer_x2odd"/> from <xref ref="S_direct">Section</xref>
+            and Beginning <xref ref="PA_attempt">Activity</xref>.) Have we completed the proof of the following proposition?
+            <ul>
+              \item For each integer <m>n</m>, <m>n</m> is an odd integer if and only if <m>n^2</m> is an odd integer.
+            </ul>
+            Explain.
+          </li>
+        </ol>
+      </p>
+    </exploration>
+  </introduction>
+  <subsection>
+    <title>Review of Direct Proofs</title>
+    <p>
+      In <xref ref="S_direct">Sections</xref>
+      and <xref ref="S_directproof"></xref>, we studied direct proofs
+          <idx><h>direct proof</h></idx>
+          <idx><h>proof</h><h>direct</h></idx>
+      of mathematical statements.
+      Most of the statements we prove in mathematics are conditional statements that can be written in the form <m>P \to Q</m>.
+      A direct proof of a statement of the form <m>P \to Q</m> is based on the definition that a conditional statement can only be false when the hypothesis,
+      <m>P</m>, is true and the conclusion, <m>Q</m>, is false.
+      Thus, if the conclusion is true whenever the hypothesis is true,
+      then the conditional statement must be true.
+      So, in a direct proof,
+      <ul>
+        <li>
+          <p>
+            We start by assuming that <m>P</m> is true.
+          </p>
+        </li>
+        <li>
+          <p>
+            From this assumption, we logically deduce that <m>Q</m> is true.
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      We have used the so-called forward and backward method to discover how to logically deduce <m>Q</m> from the assumption that <m>P</m> is true.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Proof Using the Contrapositive</title>
+    <p>
+          <idx><h>contrapositive</h></idx>
+          <idx><h>proof</h><h>contrapositive</h></idx>
+    </p>
+    <p>
+      As we saw in Beginning <xref ref="PA_attempt">Activity</xref>,
+      it is sometimes difficult to construct a direct proof of a conditional statement.
+      This is one reason we studied logical equivalencies in <xref ref="S_logequiv">Section</xref>.
+      Knowing that two expressions are logically equivalent tells us that if we prove one,
+      then we have also proven the other.
+      In fact, once we know the truth value of a statement,
+      then we know the truth value of any other statement that is logically equivalent to it.
+    </p>
+    <p>
+      One of the most useful logical equivalencies in this regard is that a conditional statement <m>P \to Q</m> is logically equivalent to its contrapositive,
+      <m>\mynot Q \to \mynot P</m>.
+      This means that if we prove the contrapositive of the conditional statement,
+      then we have proven the conditional statement.
+      The following are some important points to remember.
+      <ul>
+        <li>
+          <p>
+            A conditional statement is logically equivalent to its contrapositive.
+          </p>
+        </li>
+        <li>
+          <p>
+            Use a direct proof to prove that <m>\mynot Q \to \mynot P</m> is true.
+          </p>
+        </li>
+        <li>
+          <p>
+            Caution: One difficulty with this type of proof is in the formation of correct negations.
+            (We need to be very careful doing this.)
+          </p>
+        </li>
+        <li>
+          <p>
+            We might consider using a proof by contrapositive when the statements <m>P</m> and <m>Q</m> are stated as negations.
+          </p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+  <subsection>
+    <title>Writing Guidelines</title>
+    <p>
+          <idx><h>writing guidelines</h></idx>
+      One of the basic rules of writing mathematical proofs is to keep the reader informed.
+      So when we prove a result using the contrapositive,
+      we indicate this within the first few lines of the proof.
+      For example,
+      <ul>
+        <li>
+          <p>
+            We will prove this theorem by proving its contrapositive.
+          </p>
+        </li>
+        <li>
+          <p>
+            We will prove the contrapositive of this statement.
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      In addition,
+      make sure the reader knows the status of every assertion that you make.
+      That is, make sure you state whether an assertion is an assumption of the theorem,
+      a previously proven result, a well-known result,
+      or something from the reader's mathematical background.
+      Following is a completed proof of a statement from Beginning <xref ref="PA_attempt">Activity</xref>.
+    </p>
+    <theorem xml:id="T_n2odd">
+      <statement>
+        <p>
+          For each integer <m>n</m>,
+          if <m>n^2</m> is an even integer,
+          then <m>n</m> is an even integer.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        We will prove this result by proving the contrapositive of the statement, which is
+        <ul>
+          \item For each integer <m>n</m>, if <m>n</m> is an odd integer, then <m>n^2</m> is an odd integer.
+        </ul>
+      </p>
+      <p>
+        However, in <xref ref="T_xyodd">Theorem</xref>
+        on <xref ref="T_xyodd">page</xref>,
+        we have already proven that if <m>x</m> and <m>y</m> are odd integers,
+        then <m>x \cdot y</m> is an odd integer.
+        So using <m>x = y = n</m>,
+        we can conclude that if <m>n</m> is an odd integer,
+        then <m>n \cdot n</m>, or <m>n^2</m>, is an odd integer.
+        We have thus proved the contrapositive of the theorem,
+        and consequently,
+        we have proved that if <m>n^2</m> is an even integer,
+        then <m>n</m> is an even integer.
+      </p>
+    </proof>
+  </subsection>
+  <subsection>
+    <title>Using Other Logical Equivalencies</title>
+    <p>
+      As was noted in <xref ref="S_logequiv">Section</xref>,
+      there are several different logical equivalencies.
+      Fortunately,
+      there are only a small number that we often use when trying to write proofs,
+      and many of these are listed in <xref ref="T_logequiv">Theorem</xref>
+      at the end of <xref ref="S_logequiv">Section</xref>.
+      We will illustrate the use of one of these logical equivalencies with the following proposition:
+      <ul>
+        \item For all real numbers <m>a</m> and <m>b</m>, if <m>a \ne 0</m> and <m>b \ne 0</m>, then <m>ab \ne 0</m>.
+      </ul>
+    </p>
+    <p>
+      First, notice that the hypothesis and the conclusion of the conditional statement are stated in the form of negations.
+      This suggests that we consider the contrapositive.
+      Care must be taken when we negate the hypothesis since it is a conjunction.
+      We use one of De Morgan's Laws as follows:
+      <me>
+        \mynot  \left( {a \ne 0\; \wedge \;b \ne 0} \right) \equiv \left( {a = 0} \right) \vee \left( {b = 0} \right)
+      </me>.
+    </p>
+    <investigation xml:id="pr_contrapositive">
+      <title><em>Using Another Logical Equivalency</em></title>
+      <ol>
+        <li xml:id="pr_contrapositive1">
+          <p>
+            In English, write the contrapositive of,
+            <q>For all real numbers <m>a</m> and <m>b</m>,
+            if <m>a \ne 0</m> and <m>b \ne 0</m>, then <m>ab \ne 0</m>.</q>
+          </p>
+        </li>
+      </ol>
+      <p>
+        The contrapositive is a conditional statement in the form <m>X \to \left( {Y \vee Z} \right)</m>.
+        The difficulty is that there is not much we can do with the hypothesis
+        <m>\left( {ab = 0} \right)</m> since we know nothing else about the real numbers <m>a</m> and <m>b</m>.
+        However, if we knew that <m>a</m> was not equal to zero,
+        then we could multiply both sides of the equation <m>ab = 0</m> by <m>\dfrac{1}{a}</m>.
+        This suggests that we consider using the following logical equivalency based on a result in <xref ref="T_logequiv">Theorem</xref>
+        on <xref ref="T_logequiv">page</xref>:
+        <me>
+          X \to \left( {Y \vee Z} \right) \equiv \left( {X \wedge \mynot  Y} \right) \to Z
+        </me>.
+        <ol>
+          <li xml:id="pr_contrapositive2">
+            <p>
+              In English, use this logical equivalency to write a statement that is logically equivalent to the contrapositive from Part<nbsp/><xref ref="pr_contrapositive1"/>.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        The logical equivalency in Part<nbsp/><xref ref="pr_contrapositive2"/> makes sense because if we are trying to prove <m>Y \vee Z</m>,
+        we only need to prove that at least one of <m>Y</m> or <m>Z</m> is true.
+        So the idea is to prove that if <m>Y</m> is false,
+        then <m>Z</m> must be true.
+        <ol>
+          <li>
+            <p>
+              Use the ideas presented in the progress check to complete the proof of the following proposition.
+              <proposition xml:id="P_abnotzero">
+                <statement>
+                  <p>
+                    For all real numbers <m>a</m> and <m>b</m>,
+                    if <m>a \ne 0</m> and <m>b \ne 0</m>, then <m>ab \ne 0</m>.
+                  </p>
+                </statement>
+              </proposition>
+            </p>
+          </li>
+        </ol>
+      </p>
+      <proof>
+        <p>
+          We will prove the contrapositive of this proposition,
+          which is For all real numbers <m>a</m> and <m>b</m>,
+          if <m>ab = 0</m>, then <m>a = 0\text{ or } b = 0</m>.
+        </p>
+        <p>
+          This contrapositive, however,
+          is logically equivalent to the following: For all real numbers <m>a</m> and <m>b</m>,
+          if <m>ab = 0</m> and <m>a \ne 0</m>, then <m>b = 0</m>.
+          To prove this,
+          we let <m>a</m> and <m>b</m> be real numbers and assume that <m>ab = 0</m> and <m>a \ne 0</m>.
+          We can then multiply both sides of the equation <m>ab = 0</m> by <m>\dfrac{1}{a}</m>.
+          This gives Now complete the proof.
+        </p>
+        <p>
+          <m>\vdots</m> \quarter
+        </p>
+        <p>
+          Therefore, <m>b = 0</m>.
+          This completes the proof of a statement that is logically equivalent to the contrapositive,
+          and hence,
+          we have proven the proposition.
+        </p>
+      </proof>
+    </investigation>
+  </subsection>
+  <subsection>
+    <title>Proofs of Biconditional Statements</title>
+    <p>
+          <idx><h>proof</h><h>biconditional statement</h></idx>
+          <idx><h>biconditional statement</h><h>proof of</h></idx>
+    </p>
+    <p>
+      In Beginning  <xref ref="PA_biconditional">Activity</xref>,
+      we used the following logical equivalency:
+      <me>
+        \left( {P \leftrightarrow Q} \right) \equiv \left( {P \to Q} \right) \wedge \left( {Q \to P} \right)
+      </me>.
+    </p>
+    <p>
+      This logical equivalency suggests one method for proving a biconditional statement written in the form
+      <q><m>P</m> if and only if <m>Q</m>.</q>
+      This method is to construct separate proofs of the two conditional statements <m>P \to Q</m> and <m>Q \to P</m>.
+      For example, since we have now proven each of the following:
+      <ul>
+        <li>
+          <p>
+            For each integer <m>n</m>, if <m>n</m> is an even integer,
+            then <m>n^2</m> is an even integer. (Exercise <xref ref="exer_x2odd"/> on <xref ref="exer_x2odd">page</xref>
+            in <xref ref="S_direct">Section</xref>)
+          </p>
+        </li>
+        <li>
+          <p>
+            For each integer <m>n</m>, if <m>n^2</m> is an even integer,
+            then <m>n</m> is an even integer. (<xref ref="T_n2odd">Theorem</xref>)
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      we can state the following theorem.
+    </p>
+    <theorem xml:id="T_n2isodd">
+      <statement>
+        <p>
+          For each integer <m>n</m>,
+          <m>n</m> is an even integer if and only if <m>n^2</m> is an even integer.
+        </p>
+      </statement>
+    </theorem>
+  </subsection>
+  <subsection>
+    <title>Writing Guidelines</title>
+    <p>
+          <idx><h>writing guidelines</h></idx>
+      When proving a biconditional statement using the logical equivalency
+    </p>
+    <p>
+      <m>\left( {P \leftrightarrow Q} \right) \equiv \left( {P \to Q} \right) \wedge \left( {Q \to P} \right)</m>,
+      we actually need to prove two conditional statements.
+      The proof of each conditional statement can be considered as one of two parts of the proof of the biconditional statement.
+      Make sure that the start and end of each of these parts is indicated clearly.
+      This is illustrated in the proof of the following proposition.
+    </p>
+    <proposition xml:id="P_iffexample">
+      <statement>
+        <p>
+          Let <m>x \in \mathbb{R}</m>.
+          The real number <m>x</m> equals 2 if and only if
+        </p>
+        <p>
+          <m>x^3 - 2x^2 + x = 2</m>.
+        </p>
+      </statement>
+    </proposition>
+    <proof>
+      <p>
+        We will prove this biconditional statement by proving the following two conditional statements:
+        <ul>
+          <li>
+            <p>
+              For each real number <m>x</m>,
+              if <m>x</m> equals 2 , then <m>x^3 - 2x^2 + x = 2</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              For each real number <m>x</m>,
+              if <m>x^3 - 2x^2 + x = 2</m>, then <m>x</m> equals 2.
+            </p>
+          </li>
+        </ul>
+      </p>
+      <p>
+        For the first part,
+        we assume <m>x = 2</m> and prove that <m>x^3  - 2x^2  + x = 2</m>.
+        We can do this by substituting <m>x = 2</m> into the expression <m>x^3  - 2x^2  + x</m>.
+        This gives
+        <me>
+          \begin{aligned}x^3  - 2x^2  + x \amp = 2^3  - 2\left( {2^2 } \right) + 2 \\ \amp = 8 - 8 + 2 \\ \amp = 2. \end{aligned}
+        </me>
+      </p>
+      <p>
+        This completes the first part of the proof.
+      </p>
+      <p>
+        For the second part, we assume that
+        <m>x^3  - 2x^2  + x = 2</m> and from this assumption,
+        we will prove that <m>x = 2</m>.
+        We will do this by solving this equation for <m>x</m>.
+        To do so, we first rewrite the equation
+        <m>x^3  - 2x^2  + x = 2</m> by subtracting 2 from both sides:
+        <me>
+          x^3  - 2x^2  + x - 2 = 0
+        </me>.
+      </p>
+      <p>
+        We can now factor the left side of this equation by factoring an <m>x^2</m> from the first two terms and then factoring
+        <m>\left( {x - 2} \right)</m> from the resulting two terms.
+        This is shown below.
+        <me>
+          \begin{aligned}x^3  - 2x^2  + x - 2 \amp = 0 \\ x^2 \left( {x - 2} \right) + \left( {x - 2} \right) \amp = 0 \\ \left( {x - 2} \right)\left( {x^2  + 1} \right) \amp = 0 \end{aligned}
+        </me>
+      </p>
+      <p>
+        Now, in the real numbers,
+        if a product of two factors is equal to zero,
+        then one of the factors must be zero.
+        So this last equation implies that
+        <me>
+          x - 2 = 0\text{  or  } x^2  + 1 = 0
+        </me>.
+      </p>
+      <p>
+        The equation <m>x^2 + 1 = 0</m> has no real number solution.
+        So since <m>x</m> is a real number,
+        the only possibility is that <m>x - 2 = 0</m>.
+        From this we can conclude that <m>x</m> must be equal to 2.
+      </p>
+      <p>
+        Since we have now proven both conditional statements,
+        we have proven that <m>x = 2</m> if and only if <m>x^3 - 2x^2 + x = 2</m>.
+      </p>
+    </proof>
+  </subsection>
+  <subsection>
+    <title>Constructive Proofs</title>
+    <p>
+          <idx><h>constructive proof|(</h></idx>
+      We all know how to solve an equation such as <m>3x + 8 = 23</m>,
+      where <m>x</m> is a real number.
+      To do so, we first add <m>-8</m> to both sides of the equation and then divide both sides of the resulting equation by 3.
+      Doing so, we obtain the following result:
+    </p>
+    <p>
+      If <m>x</m> is a real number and <m>3x + 8 = 23</m>, then <m>x = 5</m>.
+    </p>
+    <p>
+      Notice that the process of solving the equation actually does not prove that <m>x = 5</m> is a solution of the equation <m>3x + 8 = 23</m>.
+      This process really shows that if there is a solution,
+      then that solution must be <m>x = 5</m>.
+      To show that this is a solution,
+      we use the process of substituting <m>5</m> for <m>x</m> in the left side of the equation as follows: If <m>x = 5</m>, then
+      <me>
+        3x + 8 = 3 \left( 5 \right) + 8 = 15 + 8 = 23
+      </me>.
+    </p>
+    <p>
+      This proves that <m>x = 5</m> is a solution of the equation <m>3x + 8 = 23</m>.
+      Hence, we have proven that <m>x = 5</m> is the only real number solution of <m>3x + 8 = 23</m>.
+    </p>
+    <p>
+      We can use this same process to show that any linear equation has a real number solution.
+      An equation of the form
+      <me>
+        ax + b = c
+      </me>,
+      where <m>a</m>,
+      <m>b</m>, and <m>c</m> are real numbers with <m>a \ne 0</m>,
+      is called a <em>linear equation in one variable</em>.
+    </p>
+    <proposition xml:id="P_linearequation">
+      <statement>
+        <p>
+          If <m>a</m>,
+          <m>b</m>, and <m>c</m> are real numbers with <m>a \ne 0</m>,
+          then the linear equation <m>ax + b = c</m> has exactly one real number solution,
+          which is <m>x = \dfrac{c - b}{a}</m>.
+        </p>
+      </statement>
+    </proposition>
+    <proof>
+      <p>
+        Assume that <m>a</m>, <m>b</m>,
+        and <m>c</m> are real numbers with <m>a \ne 0</m>.
+        We can solve the linear equation
+        <m>ax + b = c</m> by adding <m>-b</m> to both sides of the equation and then dividing both sides of the resulting equation by <m>a</m> <m>\left( \text{ since }  a \ne 0 \right)</m>,
+        to obtain
+        <me>
+          x = \frac{c - b}{a}
+        </me>.
+      </p>
+      <p>
+        This shows that if there is a solution,
+        then it must be <m>x = \dfrac{c - b}{a}</m>.
+        We also see that if <m>x = \dfrac{c - b}{a}</m>, then
+        <me>
+          \begin{aligned}ax + b \amp = a \left( \frac{c - b}{a} \right) + b \\ \amp = \left( c - b \right) + b \\ \amp = c. \end{aligned}
+        </me>
+      </p>
+      <p>
+        Therefore, the linear equation
+        <m>ax + b = c</m> has exactly one real number solution and the solution is <m>x = \dfrac{c - b}{a}</m>.
+      </p>
+    </proof>
+    <p>
+      The proof given for <xref ref="P_linearequation">Proposition</xref>
+      is called a <em>constructive proof.</em>
+          <idx><h>constructive proof</h></idx>
+          <idx><h>proof</h><h>constructive</h></idx>
+      This is a technique that is often used to prove a so-called <em>existence theorem.</em>
+          <idx><h>existence theorem</h></idx>
+      The objective of an existence theorem is to prove that a certain mathematical object exists.
+      That is, the goal is usually to prove a statement of the form There exists an <m>x</m> such that <m>P( x )</m>.
+      For a constructive proof of such a proposition,
+      we actually name, describe,
+      or explain how to construct some object in the universe that makes <m>P( x )</m> true.
+      This is what we did in <xref ref="P_linearequation">Proposition</xref> since in the proof,
+      we actually proved that <m>\dfrac{c - b}{a}</m> is a solution of the equation <m>ax + b = c</m>.
+      In fact, we proved that this is the only solution of this equation.
+          <idx><h>constructive proof|)</h></idx>
+    </p>
+  </subsection>
+  <subsection>
+    <title>Nonconstructive Proofs</title>
+    <p>
+      Another type of proof that is often used to prove an existence theorem is the so-called
+      <em>nonconstructive proof.</em>
+          <idx><h>existence theorem</h></idx>
+          <idx><h>proof</h><h>non-constructive</h></idx>
+      For this type of proof, we make an argument that an object in the universal set that makes <m>P( x )</m> true must exist but we never construct or name the object that makes <m>P( x )</m> true.
+      The advantage of a constructive proof over a nonconstructive proof is that the constructive proof will yield a procedure or algorithm for obtaining the desired object.
+    </p>
+    <p>
+      The proof of the <em>Intermediate Value Theorem</em>
+          <idx><h>Intermediate Value Theorem</h></idx>
+      from calculus is an example of a nonconstructive proof.
+      The Intermediate Value Theorem can be stated as follows:
+      <ul>
+        \item If <m>f</m> is a continuous function on the closed interval <m>\left[ {a,b} \right]</m> and if <m>q</m> is any real number strictly between <m>f( a )</m> and <m>f( b )</m>, then there exists a number <m>c</m> in the interval <m>\left( {a,b} \right)</m> such that <m>f( c ) = q</m>.
+      </ul>
+    </p>
+    <p>
+      The Intermediate Value Theorem can be used to prove that a solution to some equations must exist.
+      This is shown in the next example.
+    </p>
+    <example>
+      <title><em>Using the Intermediate Value Theorem</em></title>
+      <statement>
+        <p>
+          Let <m>x</m> represent a real number.
+          We will use the Intermediate Value Theorem to prove that the equation
+          <m>x^3 - x + 1 = 0</m> has a real number solution.
+        </p>
+        <p>
+          To investigate solutions of the equation
+          <m>x^3  - x + 1 = 0</m>, we will use the function
+          <me>
+            f( x ) = x^3  - x + 1
+          </me>.
+        </p>
+        <p>
+          Notice that <m>f( { - 2} ) =  - 5</m> and that <m>f( 0 ) = 1</m>.
+          Since <m>f ( -2 ) \lt  0</m> and <m>f ( 0 ) > 0</m>,
+          the Intermediate Value Theorem tells us that there is a real number <m>c</m> between <m>-2</m> and <m>0</m> such that <m>f( c ) = 0</m>.
+          This means that there exists a real number <m>c</m> between <m>-2</m> and <m>0</m> such that
+          <me>
+            c^3  - c + 1 = 0
+          </me>,
+          and hence <m>c</m> is a real number solution of the equation <m>x^3  - x + 1 = 0</m>.
+          This proves that the equation
+          <m>x^3  - x + 1 = 0</m> has at least one real number solution.
+        </p>
+        <p>
+          Notice that this proof does not tell us how to find the exact value of <m>c</m>.
+          It does, however,
+          suggest a method for approximating the value of <m>c</m>.
+          This can be done by finding smaller and smaller intervals
+          <m>\left[ {a,\;b} \right]</m> such that <m>f( a )</m> and <m>f( b )</m> have opposite signs.
+        </p>
+      </statement>
+    </example>
+    <p>
+      \exercises{Exercises for <xref ref="S_moremethods">Section</xref>}
+    </p>
+    <ol>
+      <li xml:id="exer_ncubed">
+        <p>
+          Let <m>n</m> be an integer.
+          Prove each of the following:
+        </p>
+        <ol>
+          <li>
+            <p>
+              If <m>n</m> is even, then <m>n^3</m> is even.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>n^3</m> is even, then <m>n</m> is even.
+            </p>
+          </li>
+          <li>
+            <p>
+              The integer <m>n</m> is even if and only if <m>n^3</m> is an even integer.
+            </p>
+          </li>
+          <li>
+            <p>
+              The integer <m>n</m> is odd if and only if <m>n^3</m> is an odd integer.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li xml:id="exer_sec32-2">
+        <p>
+          In <xref ref="S_directproof">Section</xref>,
+          we defined congruence modulo <m>n</m> where <m>n</m> is a natural number.
+          If <m>a</m> and <m>b</m> are integers,
+          we will use the notation <m>a \not\equiv b \pmod n</m> to mean that <m>a</m> is not congruent to <m>b</m> modulo <m>n</m>.
+          <ol>
+            <li>
+              <p>
+                Write the contrapositive of the following conditional statement:
+                <ul>
+                  \item For all integers <m>a</m> and <m>b</m>, if <m>a \not\equiv 0 \pmod 6</m> and <m>b \not\equiv 0 \pmod 6</m>, then <m>ab \not\equiv 0 \pmod 6</m>.
+                </ul>
+              </p>
+            </li>
+            <li>
+              <p>
+                Is this statement true or false?
+                Explain.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <ol>
+          <li>
+            <p>
+              Write the contrapositive of the following statement: For all positive real numbers <m>a</m> and <m>b</m>,
+              if <m>\sqrt {ab} \ne \dfrac{{a + b}}{2}</m>, then <m>a \ne b</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Is this statement true or false?
+              Prove the statement if it is true or provide a counterexample if it is false.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li xml:id="exer_sec32-4">
+        <p>
+          Are the following statements true or false?
+          Justify your conclusions.
+          <ol>
+            <li>
+              <p>
+                For each <m>a \in \Z</m>,
+                if <m>a \equiv 2 \pmod 5</m>,
+                then <m>a^2 \equiv 4 \pmod 5</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                For each <m>a \in \Z</m>,
+                if <m>a^2 \equiv 4 \pmod 5</m>,
+                then <m>a \equiv 2 \pmod 5</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                For each <m>a \in \Z</m>,
+                <m>a \equiv 2 \pmod 5</m> if and only if <m>a^2 \equiv 4 \pmod 5</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec32-abeven">
+        <p>
+          Is the following proposition true or false?
+          <ul>
+            \item For all integers <m>a</m> and <m>b</m>, if <m>ab</m> is even, then <m>a</m> is even or <m>b</m> is even.
+          </ul>
+        </p>
+        Justify your conclusion by writing a proof if the proposition is true or by providing a counterexample if it is false.
+      </li>
+      <li xml:id="exer_sec32-congmod7">
+        <p>
+          Consider the following proposition: For each integer <m>a</m>,
+          <m>a \equiv 3 \pmod 7</m> if and only if <m>\left( a^2 + 5a \right) \equiv 3 \pmod 7</m>.
+          <ol>
+            <li>
+              <p>
+                Write the proposition as the conjunction of two conditional statements.
+              </p>
+            </li>
+            <li>
+              <p>
+                Determine if the two conditional statements in Part<nbsp/>(a) are true or false.
+                If a conditional statement is true,
+                write a proof, and if it is false, provide a counterexample.
+              </p>
+            </li>
+            <li>
+              <p>
+                Is the given proposition true or false?
+                Explain.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec32-congmod8">
+        <p>
+          Consider the following proposition: For each integer <m>a</m>,
+          <m>a \equiv 2 \pmod 8</m> if and only if <m>\left(a^2 + 4a \right) \equiv 4 \pmod 8</m>.
+          <ol>
+            <li>
+              <p>
+                Write the proposition as the conjunction of two conditional statements.
+              </p>
+            </li>
+            <li>
+              <p>
+                Determine if the two conditional statements in Part<nbsp/>(a) are true or false.
+                If a conditional statement is true,
+                write a proof, and if it is false, provide a counterexample.
+              </p>
+            </li>
+            <li>
+              <p>
+                Is the given proposition true or false?
+                Explain.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec32-6">
+        <p>
+          For a right triangle,
+          suppose that the hypotenuse has length <m>c</m> feet and the lengths of the sides are <m>a</m> feet and <m>b</m> feet.
+          <ol>
+            <li>
+              <p>
+                What is a formula for the area of this right triangle?
+                What is an isosceles triangle?
+              </p>
+            </li>
+            <li>
+              <p>
+                State the Pythagorean Theorem for right triangles.
+              </p>
+            </li>
+            <li>
+              <p>
+                Prove that the right triangle described above is an isosceles triangle if and only if the area of the right triangle is <m>\dfrac{1}{4} c^2</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_rational">
+        <p>
+          A real number  <m>x</m> is defined to be a
+          <em>rational number</em>
+    <idx><h>rational numbers</h></idx>
+          provided
+          <me>
+            \text{ there exist integers }  m  \text{ and }   n  \text{ with }   n \ne 0  \text{ such that }   x = \frac{m}{n}
+          </me>.
+          A real number that is not a rational number is called an
+          <em>irrational number.</em>
+    <idx><h>irrational numbers</h></idx>
+          It is known that if  <m>x</m>  is a positive rational number,
+          then there exist positive integers  <m>m</m>  and  <m>n</m> with  <m>n \ne 0</m> such that  <m>x = \dfrac{m}{n}</m>.
+          Is the following proposition true or false?
+          Explain.
+          <ul>
+            \item For each positive real number <m>x</m>,  if  <m>x</m>  is irrational, then  <m>\sqrt x</m> is irrational.
+          </ul>
+        </p>
+      </li>
+      <li xml:id="exer_sec32-8">
+        <p>
+          Is the following proposition true or false?
+          Justify your conclusion.
+          <ul>
+            \item For each integer <m>n</m>, <m>n</m> is even if and only if 4 divides <m>n^2</m>.
+          </ul>
+        </p>
+      </li>
+      <li>
+        <p>
+          Prove that for each integer <m>a</m>,
+          if <m>a^2 - 1</m> is even, then 4 divides <m>a^2 - 1</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Prove that for all integers <m>a</m> and <m>m</m>,
+          if <m>a</m> and <m>m</m> are the lengths of the sides of a right triangle and <m>m + 1</m> is the length of the hypotenuse,
+          then <m>a</m> is an odd integer.
+        </p>
+      </li>
+      <li xml:id="exer_rationalbetween">
+        <p>
+          Prove the following proposition:
+          <ul>
+            \item If <m>p, q \in \mathbb{Q}</m> with <m>p \lt q</m>, then there exists an <m>x \in \mathbb{Q}</m> with <m>p \lt x \lt q</m>.
+          </ul>
+        </p>
+      </li>
+      <li xml:id="exer_existintegers">
+        <p>
+          Are the following propositions true or false?
+          Justify your conclusion.
+          <ol>
+            <li>
+              <p>
+                There exist integers <m>x</m> and <m>y</m> such that <m>4x + 6y = 2</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                There exist integers <m>x</m> and <m>y</m> such that <m>6x + 15y = 2</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                There exist integers <m>x</m> and <m>y</m> such that <m>6x + 15y = 9</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_IVT">
+        <p>
+          Prove that there exists a real number <m>x</m> such that <m>x^3 - 4x^2 = 7</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Let  <m>y_1 , y_2 , y_3 , y_4</m> be  real numbers.
+          The <em>mean</em>, <m>\overline y</m>,
+          of these four numbers is defined to be the sum of the four numbers divided by 4.
+          That is,
+          <me>
+            \overline y  = \frac{{y_1  + y_2  + y_3  + y_4 }}{4}
+          </me>.
+          Prove that there exists a  <m>y_i</m> with  <m>1 \leq i \leq 4</m> such that
+          <m>y_i  \geq \overline y</m>.  \hint  One way is to let
+          <m>y_{\text{ max } }</m> be the largest of <m>y_1 , y_2 , y_3 , y_4</m>.
+        </p>
+      </li>
+      <li xml:id="exer_sec32-16">
+        <p>
+          Let <m>a</m> and <m>b</m> be natural numbers such that <m>a^2 = b^3</m>.
+          Prove each of the propositions in Parts (a) through (d). (The results of Exercise<nbsp/><xref ref="exer_ncubed"/> and <xref ref="T_n2isodd">Theorem</xref> may be helpful.)
+          <ol>
+            <li xml:id="exer_a2equalb3-a">
+              <p>
+                If <m>a</m> is even, then 4 divides <m>a</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If 4 divides <m>a</m>, then 4 divides <m>b</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If 4 divides <m>b</m>, then 8 divides <m>a</m>.
+              </p>
+            </li>
+            <li xml:id="exer_a2equalsb3-d">
+              <p>
+                If <m>a</m> is even, then 8 divides <m>a</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Give an example of natural numbers <m>a</m> and <m>b</m> such that <m>a</m> is even and <m>a^2 = b^3</m>,
+                but <m>b</m> is not divisible by 8.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec32-equation17">
+        <p>
+          Prove the following proposition:
+          <ul>
+            \item Let <m>a</m> and <m>b</m> be integers with <m>a \ne 0</m>. If <m>a</m> does not divide <m>b</m>, then the equation <m>ax^3 + bx + \left( b + a \right) = 0</m> does not have a solution that is a natural number.
+          </ul>
+        </p>
+        \hint It may be necessary to factor a sum  of cubes.  Recall that
+        <me>
+          u^3 + v^3 = \left( u + v \right) \left( u^2 - uv + v^2 \right)
+        </me>.
+      </li>
+      <li>
+        <p>
+          <em>Evaluation of Proofs</em>  See the instructions for Exercise<nbsp/><xref ref="exer_proofeval"/> on <xref ref="exer_proofeval">page</xref>
+          from <xref ref="S_directproof">Section</xref>.
+          <ol>
+            <li>
+              <p>
+                <em>Proposition</em>.
+                If <m>m</m> is an odd integer,
+                then <m>\left(m + 6\right)</m> is an odd integer.
+                <proof>
+                  <p>
+                    For <m>m + 6</m> to be an odd integer,
+                    there must exist an integer <m>n</m> such that
+                    <me>
+                      m + 6 = 2n + 1
+                    </me>.
+                  </p>
+                  <p>
+                    By subtracting 6 from both sides of this equation, we obtain
+                    <me>
+                      \begin{aligned}m \amp = 2n - 6 + 1 \\ \amp = 2 \left(n - 3 \right) + 1. \end{aligned}
+                    </me>
+                  </p>
+                  <p>
+                    By the closure properties of the integers,
+                    <m>\left(n - 3 \right)</m> is an integer, and hence,
+                    the last equation implies that <m>m</m> is an odd integer.
+                    This proves that if <m>m</m> is an odd integer,
+                    then <m>m+6</m> is an odd integer.
+                  </p>
+                </proof>
+              </p>
+            </li>
+            <li>
+              <p>
+                <em>Proposition</em>.
+                For all integers <m>m</m> and <m>n</m>,
+                if <m>mn</m> is an even integer,
+                then <m>m</m> is even or <m>n</m> is even.
+                <proof>
+                  <p>
+                    For either <m>m</m> or <m>n</m> to be even,
+                    there exists an integer <m>k</m> such that <m>m = 2k</m> or <m>n = 2k</m>.
+                    So if we multiply <m>m</m> and <m>n</m>,
+                    the product will contain a factor of 2 and,
+                    hence, <m>mn</m> will be even.
+                  </p>
+                </proof>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+  <subsection>
+    <title>Explorations and Activities</title>
+    <ol>
+      <li>
+        <p>
+          <em>Using a Logical Equivalency</em>.
+          Consider the following proposition:
+          <ul>
+            \item <em>Proposition</em>. For all integers <m>a</m> and <m>b</m>, if 3 does not divide <m>a</m> and 3 does not divide <m>b</m>, then 3 does not divide the product <m>a \cdot b</m>.
+          </ul>
+          <ol>
+            <li>
+              <p>
+                Notice that the hypothesis of the proposition is stated as a conjunction of two negations (
+                <q>3 does not divide <m>a</m> and 3 does not divide <m>b</m></q>).
+                Also, the conclusion is stated as the negation of a sentence (
+                <q>3 does not divide the product <m>a \cdot b</m>.</q>).
+                This often indicates that we should consider using a proof of the contrapositive.
+                If we use the symbolic form
+                <m>\left( {\mynot Q \wedge \mynot R} \right) \to \mynot P</m> as a model for this proposition,
+                what is <m>P</m>, what is <m>Q</m>, and what is <m>R</m>?
+              </p>
+            </li>
+            <li>
+              <p>
+                Write a symbolic form for the contrapositive of <m>\left( {\mynot Q \wedge \mynot R} \right) \to \mynot P</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Write the contrapositive of the proposition as a conditional statement in English.
+              </p>
+            </li>
+          </ol>
+        </p>
+        We do not yet have all the tools needed to prove the proposition or its contrapositive.
+        However, later in the text,
+        we will learn that the following proposition is true.
+        <em>Proposition X.</em> Let <m>a</m> be an integer.
+        If 3 does not divide <m>a</m>,
+        then there exist integers <m>x</m> and <m>y</m> such that <m>3x + ay = 1</m>.
+        <ol>
+          <li>
+            <ol>
+              <li>
+                <p>
+                  Find integers <m>x</m> and <m>y</m> guaranteed by Proposition X when <m>a = 5</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Find integers <m>x</m> and <m>y</m> guaranteed by Proposition X when <m>a = 2</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Find integers <m>x</m> and <m>y</m> guaranteed by Proposition X when <m>a = - 2</m>.
+                </p>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <p>
+              Assume that Proposition X is true and use it to help construct a proof of the contrapositive of the given proposition.
+              In doing so,
+              you will most likely have to use the logical equivalency <m>P \to \left( {Q \vee R} \right) \equiv \left( {P \wedge \mynot Q} \right) \to R</m>.
+            </p>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </subsection>
+</section>

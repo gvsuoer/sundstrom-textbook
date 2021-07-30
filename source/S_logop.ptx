@@ -1,0 +1,1209 @@
+<section xml:id="S_logop">
+  <title>Statements and Logical Operators</title>
+  <introduction>
+    <exploration xml:id="PA_compound">
+      <title><em>Compound Statements</em></title>
+      <p>
+        Mathematicians often develop ways to construct new mathematical objects from existing mathematical objects.
+        It is possible to form new statements from existing statements by connecting the statements with words such as
+        <q>and</q>
+        and
+        <q>or</q>
+        or by negating the statement.
+        A <term>logical operator</term>
+            <idx><h>logical operator</h></idx>
+        (or <term>connective</term>)
+            <idx><h>connective</h></idx>
+        on mathematical statements is a word or combination of words that combines one or more mathematical statements to make a new mathematical statement.
+        A <term>compound statement</term>
+            <idx><h>compound statement</h></idx>
+            <idx><h>statement</h><h>compound</h></idx>
+        is a statement that contains one or more operators.
+        Because some operators are used so frequently in logic and mathematics,
+        we give them names and use special symbols to represent them.
+        <ul>
+          <li xml:id="sym_and">
+            <p>
+              The <em>conjunction</em>
+    <idx><h>conjunction</h></idx>
+              of the statements <m>P</m> and <m>Q</m> is the statement
+              <q><m>P</m> <em>and</em> <m>Q</m></q>
+              and its denoted by <m>P \wedge Q</m> . The statement
+              <m>P \wedge Q</m> is true only when both <m>P</m> and <m>Q</m> are true.
+            </p>
+          </li>
+          <li xml:id="sym_or">
+            <p>
+              The <em>disjunction</em>
+    <idx><h>disjunction</h></idx>
+              of the statements <m>P</m> and <m>Q</m> is the statement
+              <q><m>P</m> <em>or</em> <m>Q</m></q>
+              and its denoted by <m>P \vee Q</m> . The statement
+              <m>P \vee Q</m> is true only when at least one of <m>P</m> or <m>Q</m> is true.
+            </p>
+          </li>
+          <li xml:id="sym_not">
+            <p>
+              The <em>negation</em>
+    <idx><h>negation</h></idx>
+              of the statement <m>P</m> is the statement
+              <q><em>not</em> <m>P</m></q>
+              and is denoted by <m>\mynot P</m> . The negation of <m>P</m> is true only when <m>P</m> is false,
+              and <m>\mynot P</m> is false only when <m>P</m> is true.
+            </p>
+          </li>
+          <li xml:id="sym_cond2">
+            <p>
+              The <em>implication</em>
+    <idx><h>implication</h></idx>
+    <idx><h>conditional</h></idx>
+              or <em>conditional</em> is the statement
+              <q><em>If </em> <m>P</m> <em>then</em> <m>Q</m></q>
+              and is denoted by <m>P \to Q</m> . The statement <m>P \to Q</m> is often read as
+              <q><m>P</m> <em>implies</em> <m>Q</m>,</q>
+              and we have seen in <xref ref="S_prop">Section</xref>
+              that <m>P \to Q</m> is false only when <m>P</m> is true and <m>Q</m> is false.
+            </p>
+          </li>
+        </ul>
+      </p>
+      <p>
+        <term>Some comments about the disjunction</term>.
+        It is important to understand the use of the operator
+        <q>or.</q>
+        In mathematics, we use the <term>
+        <q>inclusive or</q>
+        </term>
+            <idx><h>inclusive or</h></idx>
+        unless stated otherwise.
+        This means that <m>P \vee Q</m> is true when both <m>P</m> and <m>Q</m> are true and also when only one of them is true.
+        That is, <m>P \vee Q</m> is true when at least one of <m>P</m> or <m>Q</m> is true,
+        or <m>P \vee Q</m> is false only when both <m>P</m> and <m>Q</m> are false.
+      </p>
+      <p>
+        A different use of the word
+        <q>or</q>
+        is the <term>
+        <q>exclusive or.</q>
+        </term>
+            <idx><h>exclusive or</h></idx>
+        For the exclusive or,
+        the resulting statement is false when both statements are true.
+        That is,
+        <q><m>P</m> exclusive or <m>Q</m></q>
+        is true only when exactly one of <m>P</m> or <m>Q</m> is true.
+        In everyday life, we often use the exclusive or.
+        When someone says,
+        <q>At the intersection, turn left or go straight,</q>
+        this person is using the exclusive or.
+      </p>
+      <p>
+        <term>Some comments about the negation</term>.
+        Although the statement, <m>\mynot P</m>, can be read as
+        <q>It is not the case that <m>P</m>,</q>
+        there are often better ways to say or write this in English.
+        For example, we would usually say (or write):
+        <ul>
+          <li>
+            <p>
+              The negation of the statement,
+              <q>391 is prime</q>
+              is
+              <q>391 is not prime.</q>
+            </p>
+          </li>
+          <li>
+            <p>
+              The negation of the statement,
+              <q><m>12 \lt 9</m></q>
+              is
+              <q><m>12 \geq 9</m>.</q>
+            </p>
+          </li>
+        </ul>
+      </p>
+      <ol>
+        <li>
+          <p>
+            For the statements <m>P</m>: 15 is odd <m>Q</m>: 15 is prime write each of the following statements as English sentences and determine whether they are true or false.
+            Notice that <m>P</m> is true and <m>Q</m> is false.
+            <ol>
+              <li>
+                <p>
+                  <m>P \wedge Q</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>P \vee Q</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>P \wedge \mynot Q</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>\mynot P \vee \mynot Q</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </li>
+        <li>
+          <p>
+            For the statements <m>P</m>: 15 is odd <m>R</m>:
+            <m>15 \lt 17</m> write each of the following statements in symbolic form using the operators <m>\wedge</m>,
+            <m>\vee</m>, and <m>\mynot</m>.
+            <ol>
+              <li>
+                <p>
+                  <m>15 \geq 17</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  15 is odd or <m>15 \geq 17</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  15 is even or <m>15 \lt 17</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  15 is odd and <m>15 \geq 17</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </li>
+      </ol>
+    </exploration>
+    <exploration xml:id="PA_truth">
+      <title><em>Truth Values of Statements</em></title>
+      <p>
+        We will use the following two statements for all of this activity:
+        <ul>
+          <li>
+            <p>
+              <m>P</m> is the statement
+              <q>It is raining.</q>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>Q</m> is the statement
+              <q>Daisy is playing golf.</q>
+            </p>
+          </li>
+        </ul>
+      </p>
+      <p>
+        In each of the following four parts,
+        a truth value will be assigned to statements <m>P</m> and <m>Q</m>.
+        For example, in Question<nbsp/>(1),
+        we will assume that each statement is true.
+        In Question<nbsp/>(2), we will assume that <m>P</m> is true and <m>Q</m> is false.
+        In each part,
+        determine the truth value of each of the following statements:
+        <ol>
+          <li>
+            <p>
+              \makebox[1.2in][l]{(<m>P \wedge Q</m>)} It is raining and Daisy is playing golf.
+            </p>
+          </li>
+          <li>
+            <p>
+              \makebox[1.2in][l]{(<m>P \vee Q</m>)} It is raining or Daisy is playing golf.
+            </p>
+          </li>
+          <li>
+            <p>
+              \makebox[1.2in][l]{(<m>P \to Q</m>)} If it is raining,
+              then Daisy is playing golf.
+            </p>
+          </li>
+          <li>
+            <p>
+              \makebox[1.2in][l]{(<m>\mynot P</m>)} It is not raining.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        Which of the four statements [(a) through (d)] are true and which are false in each of the following four situations?
+        <ol>
+          <li>
+            <p>
+              When <m>P</m> is true
+              (it is raining)
+              and <m>Q</m> is true (Daisy is playing golf).
+            </p>
+          </li>
+          <li>
+            <p>
+              When <m>P</m> is true
+              (it is raining)
+              and <m>Q</m> is false (Daisy is not playing golf).
+            </p>
+          </li>
+          <li>
+            <p>
+              When <m>P</m> is false
+              (it is not raining)
+              and <m>Q</m> is true (Daisy is playing golf).
+            </p>
+          </li>
+          <li>
+            <p>
+              When <m>P</m> is false
+              (it is not raining)
+              and <m>Q</m> is false (Daisy is not playing golf).
+            </p>
+          </li>
+        </ol>
+      </p>
+    </exploration>
+    <p>
+      In the beginning activities for this section,
+      we learned about compound statements and their truth values.
+      This information can be summarized with the following truth tables:
+    </p>
+    <tabular>
+    <row>
+    <cell><me>
+      <tabular>
+        <row>
+          <cell>_6
+            | \(P\) \|6 \(\mynot P\) |</cell>
+        </row>
+        <row>
+          <cell>+22 _6
+            | T   \|6   F   |</cell>
+        </row>
+        <row>
+          <cell>| F   \|6   T   |</cell>
+        </row>
+        <row>
+          <cell>_6</cell>
+        </row>
+      </tabular>
+    </me></cell>
+    <cell></cell>
+    <cell><me>
+      <tabular>
+        <row>
+          <cell>_6
+            | \(P\) | \(Q\) \|6 \(P \wedge Q\) |</cell>
+        </row>
+        <row>
+          <cell>+22 _6
+            | T   |  T  \|6  T |</cell>
+        </row>
+        <row>
+          <cell>| T   |  F  \|6  F |</cell>
+        </row>
+        <row>
+          <cell>| F   |  T  \|6  F |</cell>
+        </row>
+        <row>
+          <cell>| F   |  F  \|6  F |</cell>
+        </row>
+        <row>
+          <cell>_6</cell>
+        </row>
+      </tabular>
+    </me></cell>
+    </row>
+    </tabular>
+    <tabular>
+    <row>
+    <cell><me>
+      <tabular>
+        <row>
+          <cell>_6
+            | \(P\) | \(Q\) \|6 \(P \vee Q\) |</cell>
+        </row>
+        <row>
+          <cell>+22 _6
+            | T   |  T  \|6  T |</cell>
+        </row>
+        <row>
+          <cell>| T   |  F  \|6  T |</cell>
+        </row>
+        <row>
+          <cell>| F   |  T  \|6  T |</cell>
+        </row>
+        <row>
+          <cell>| F   |  F  \|6  F |</cell>
+        </row>
+        <row>
+          <cell>_6</cell>
+        </row>
+      </tabular>
+    </me></cell>
+    <cell></cell>
+    <cell><me>
+      <tabular>
+        <row>
+          <cell>_6
+            | \(P\) | \(Q\) \|6 \(P \to Q\) |</cell>
+        </row>
+        <row>
+          <cell>+22 _6
+            | T   |  T  \|6  T |</cell>
+        </row>
+        <row>
+          <cell>| T   |  F  \|6  F |</cell>
+        </row>
+        <row>
+          <cell>| F   |  T  \|6  T |</cell>
+        </row>
+        <row>
+          <cell>| F   |  F  \|6  T |</cell>
+        </row>
+        <row>
+          <cell>_6</cell>
+        </row>
+      </tabular>
+    </me></cell>
+    </row>
+    </tabular>
+    <p>
+      Rather than memorizing the truth tables,
+      for many people it is easier to remember the rules summarized in <xref ref="T_truthvalues">Table</xref>.
+    </p>
+    <table xml:id="T_truthvalues">
+      <title>Truth Values for Common Connectives</title>
+      <me>
+        <tabular>
+          <row bottom="minor">
+            <cell></cell>
+            <cell></cell>
+          </row>
+          <row>
+            <cell>| <em>Operator</em>  |   <em>Symbolic Form</em>  |  <em>Summary of Truth Values</em> |</cell>
+          </row>
+          <row>
+            <cell>+22 \hline
+              | Conjunction  |     \(P \wedge Q\)  | True only when both \(P\) and \(Q\) are true   |</cell>
+          </row>
+          <row bottom="minor">
+            <cell></cell>
+            <cell></cell>
+          </row>
+          <row>
+            <cell>| Disjunction  |     \(P \vee Q\)    | False only when both \(P\) and \(Q\) are false |</cell>
+          </row>
+          <row bottom="minor">
+            <cell></cell>
+            <cell></cell>
+          </row>
+          <row>
+            <cell>| Negation     |    \(\neg  P\)      | Opposite truth value of \(P\)                |</cell>
+          </row>
+          <row bottom="minor">
+            <cell></cell>
+            <cell></cell>
+          </row>
+          <row>
+            <cell>| Conditional  |     \(P \to Q\)     | False only when \(P\) is true and \(Q\) is false |</cell>
+          </row>
+          <row bottom="minor">
+            <cell></cell>
+            <cell></cell>
+          </row>
+        </tabular>
+      </me>
+      <idx><h>conjunction</h></idx>
+      <idx><h>disjunction</h></idx>
+      <idx><h>negation</h></idx>
+    </table>
+  </introduction>
+  <subsection>
+    <title>Other Forms of Conditional Statements</title>
+    <p>
+      Conditional statements
+          <idx><h>conditional statement</h></idx>
+          <idx><h>conditional statement</h><h>forms of</h></idx>
+      are extremely important in mathematics because almost all mathematical theorems are
+      (or can be)
+      stated as a conditional statement in the following form: If
+      <q>certain conditions are met,</q>
+      then
+      <q>something happens.</q>
+      It is imperative that all students studying mathematics thoroughly understand the meaning of a conditional statement and the truth table for a conditional statement.
+    </p>
+    <p>
+      We also need to be aware that in the English language,
+      there are other ways for expressing the conditional statement <m>P \to Q</m> other than
+      <q>If <m>P</m>, then <m>Q</m>.</q>
+      Following are some common ways to express the conditional statement <m>P \to Q</m> in the English language:
+      <ul>
+        <li>
+          <p>
+            If <m>P</m>, then <m>Q</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>P</m> implies <m>Q</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>P</m> only if <m>Q</m>.
+              <idx><h>only if</h></idx>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>Q</m> if <m>P</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Whenever <m>P</m> is true, <m>Q</m> is true.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>Q</m> is true whenever <m>P</m> is true.
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <p>
+            <m>Q</m> is necessary
+              <idx><h>necessary condition</h></idx>
+            for <m>P</m>.
+            (This means that if <m>P</m> is true,
+            then <m>Q</m> is necessarily true.)
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>P</m> is sufficient for <m>Q</m>.
+            (This means that if you want <m>Q</m> to be true, it is sufficient
+              <idx><h>sufficient condition</h></idx>
+            to show that <m>P</m> is true.)
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      In all of these cases, <m>P</m> is the <em>hypothesis</em>
+          <idx><h>conditional statement</h><h>hypothesis</h></idx>
+      of the conditional statement and <m>Q</m> is the <em>conclusion</em>
+          <idx><h>conditional statement</h><h>conclusion</h></idx>
+      of the conditional statement.
+    </p>
+    <investigation xml:id="pr_onlyif">
+      <title><em>The
+      <q>Only If</q>
+      Statement</em></title>
+      <p>
+        Recall that a quadrilateral is a four-sided polygon.
+        Let <m>S</m> represent the following true conditional statement: If a quadrilateral is a square,
+        then it is a rectangle.
+      </p>
+      <p>
+        Write this conditional statement in English using
+        <ol>
+          <li>
+            <p>
+              the word
+              <q>whenever</q>
+            </p>
+          </li>
+          <li>
+            <p>
+              the phrase
+              <q>only if</q>
+            </p>
+          </li>
+          <li>
+            <p>
+              the phrase
+              <q>is necessary for</q>
+            </p>
+          </li>
+          <li>
+            <p>
+              the phrase
+              <q>is sufficient for</q>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </investigation>
+  </subsection>
+  <subsection>
+    <title>Constructing Truth Tables</title>
+    <p>
+      Truth tables for compound statements can be constructed by using the truth tables for the basic connectives.
+      To illustrate this,
+      we will construct a truth table for <m>\left( {P \wedge \mynot Q} \right) \to R</m>.
+      The first step is to determine the number of rows needed.
+      <ul>
+        <li>
+          <p>
+            For a truth table with two different simple statements,
+            four rows are needed since there are four different combinations of truth values for the two statements.
+            We should be consistent with how we set up the rows.
+            The way we will do it in this text is to label the rows for the first statement with (T, T, F, F) and the rows for the second statement with (T, F, T, F).
+            All truth tables in the text have this scheme.
+          </p>
+        </li>
+        <li>
+          <p>
+            For a truth table with three different simple statements,
+            eight rows are needed since there are eight different combinations of truth values for the three statements.
+            Our standard scheme for this type of truth table is shown in <xref ref="Ta_compoundtruthtable">Table</xref>.
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      The next step is to determine the columns to be used.
+      One way to do this is to work backward from the form of the given statement.
+      For <m>\left( {P \wedge \mynot Q} \right) \to R</m>,
+      the last step is to deal with the conditional operator <m>\left( \to \right)</m>.
+      To do this, we need to know the truth values of <m>\left( {P \wedge \mynot Q} \right)</m> and <m>R</m>.
+      To determine the truth values for <m>\left( {P \wedge \mynot Q} \right)</m>,
+      we need to apply the rules for the conjunction operator
+      <m>\left( \wedge \right)</m> and we need to know the truth values for <m>P</m> and <m>\mynot Q</m>.
+    </p>
+    <p>
+      <xref ref="Ta_compoundtruthtable">Table</xref>
+      is a completed truth table for
+      <m>\left( {P \wedge \mynot Q} \right) \to R</m> with the step numbers indicated at the bottom of each column.
+      The step numbers correspond to the order in which the columns were completed.
+    </p>
+    <table xml:id="Ta_compoundtruthtable">
+      <title>Truth Table for <m>\left( P \wedge \mynot  Q \right) \to R</m></title>
+      <me>
+        <tabular>
+          <row>
+            <cell>_6
+              | \(P\)  |  \(Q\)  |  \(R\)  \|6  \(\mynot  Q\)  |  \(P \wedge \mynot  Q\)  |  \(\left( P \wedge \mynot  Q \right) \to R\) |</cell>
+          </row>
+          <row>
+            <cell>+22 _6
+              | T | T | T \|6 F | F | T  |</cell>
+          </row>
+          <row>
+            <cell>| T | T | F \|6 F | F | T  |</cell>
+          </row>
+          <row>
+            <cell>| T | F | T \|6 T | T | T  |</cell>
+          </row>
+          <row>
+            <cell>| T | F | F \|6 T | T | F  |</cell>
+          </row>
+          <row>
+            <cell>| F | T | T \|6 F | F | T  |</cell>
+          </row>
+          <row>
+            <cell>| F | T | F \|6 F | F | T  |</cell>
+          </row>
+          <row>
+            <cell>| F | F | T \|6 T | F | T  |</cell>
+          </row>
+          <row>
+            <cell>| F | F | F \|6 T | F | T |</cell>
+          </row>
+          <row>
+            <cell>_6
+              | 1 | 1 | 1 \|6 2 | 3 | 4 |</cell>
+          </row>
+          <row>
+            <cell>_6</cell>
+          </row>
+        </tabular>
+      </me>
+    </table>
+    <ul>
+      <li>
+        <p>
+          When completing the column for <m>P \wedge \mynot Q</m>,
+          remember that the only time the conjunction is true is when both <m>P</m> and <m>\mynot Q</m> are true.
+        </p>
+      </li>
+      <li>
+        <p>
+          When completing the column for <m>\left( {P \wedge \mynot Q} \right) \to R</m>,
+          remember that the only time the conditional statement is false is when the hypothesis
+          <m>\left( {P \wedge \mynot Q} \right)</m> is true and the conclusion,
+          <m>R</m>,
+          is false.
+        </p>
+      </li>
+    </ul>
+    <p>
+      The last column entered is the truth table for the statement
+      <m>\left( {P \wedge \mynot Q} \right) \to R</m> using the setup in the first three columns.
+    </p>
+    <investigation xml:id="pr_truthtables">
+      <title><em>Constructing Truth Tables</em></title>
+      <p>
+        Construct a truth table for each of the following statements:
+        <ol>
+          <li>
+            <p>
+              <m>P \wedge \mynot Q</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\mynot \left( {P \wedge Q} \right)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\mynot P \wedge \mynot Q</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\mynot P \vee \mynot Q</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        Do any of these statements have the same truth table?
+      </p>
+    </investigation>
+  </subsection>
+  <subsection xml:id="sym_bicond">
+    <title>The Biconditional Statement</title>
+    <p>
+          <idx><h>biconditional statement</h></idx>
+      Some mathematical results are stated in the form
+      <q><m>P</m> if and only if <m>Q</m></q>
+      or
+      <q><m>P</m> is necessary and sufficient for <m>Q</m>.</q>
+      An example would be,
+      <q>A triangle is equilateral if and only if its three interior angles are congruent.</q>
+      The symbolic form for the biconditional statement
+      <q><m>P</m> if and only if <m>Q</m></q>
+      is <m>P \leftrightarrow Q</m>.
+      In order to determine a truth table for a biconditional statement,
+      it is instructive to look carefully at the form of the phrase
+      <q><m>P</m> if and only if <m>Q</m>.</q>
+      The word
+      <q>and</q>
+      suggests that this statement is a conjunction.
+      Actually it is a conjunction of the statements
+      <q><m>P</m> if <m>Q</m></q>
+      and
+      <q><m>P</m> only if <m>Q</m>.</q>
+      The symbolic form of this conjunction is <m>\left[ {\left( {Q \to P} \right) \wedge \left( {P \to Q} \right)} \right]</m>.
+    </p>
+    <investigation xml:id="pr_biconditional">
+      <title><em>The Truth Table for the Biconditional Statement</em></title>
+      <p>
+        Complete a truth table for <m>\left[ {\left( {Q \to P} \right) \wedge \left( {P \to Q} \right)} \right]</m>.
+        Use the following columns:
+        <m>P</m>, <m>Q</m>, <m>Q \to P</m>, <m>P \to Q</m>,
+        and <m>\left[ {\left( {Q \to P} \right) \wedge \left( {P \to Q} \right)} \right]</m>.
+        The last column of this table will be the truth table for <m>P \leftrightarrow Q</m>.
+      </p>
+    </investigation>
+  </subsection>
+  <subsection>
+    <title>Other Forms of the Biconditional Statement</title>
+    <p>
+          <idx><h>biconditional statement</h><h>forms of</h></idx>
+      As with the conditional statement,
+      there are some common ways to express the biconditional statement,
+      <m>P \leftrightarrow Q</m>, in the English language.
+      For example,
+      <ul>
+        <li>
+          <p>
+            <m>P</m> if and only if <m>Q</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>P</m> implies <m>Q</m> and <m>Q</m> implies <m>P</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>P</m> is necessary and sufficient for <m>Q</m>.
+          </p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+  <subsection>
+    <title>Tautologies and Contradictions</title>
+    <definition xml:id="D_tautology">
+      <statement>
+        <p>
+          A <term>tautology</term>
+              <idx><h>tautology</h></idx>
+          is a compound statement <m>S</m> that is true for all possible combinations of truth values of the component statements that are part of <m>S</m>.
+          A <term>contradiction</term>
+              <idx><h>contradiction</h></idx>
+          is a compound statement that is false for all possible combinations of truth values of the component statements that are part of <m>S</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      That is, a tautology is necessarily true in all circumstances,
+      and a contradiction is necessarily false in all circumstances.
+    </p>
+    <investigation xml:id="pr_tautology">
+      <title><em>Tautologies and Contradictions</em></title>
+      <p>
+        For statements <m>P</m> and <m>Q</m>:
+        <ol>
+          <li>
+            <p>
+              Use a truth table to show that <m>\left( {P \vee \mynot P} \right)</m> is a tautology.
+            </p>
+          </li>
+          <li>
+            <p>
+              Use a truth table to show that <m>\left( {P \wedge \mynot P} \right)</m> is a contradiction.
+            </p>
+          </li>
+          <li>
+            <p>
+              Use a truth table to determine if <m>P \to (P \vee Q)</m> is a tautology,
+              a contradiction, or neither.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </investigation>
+    <p>
+      \exercises{Exercises for <xref ref="S_logop">Section</xref>}
+    </p>
+    <ol>
+      <li xml:id="exer_sec22-1">
+        <p>
+          Suppose that Daisy says,
+          <q>If it does not rain, then I will play golf.</q>
+          Later in the day you come to know that it did rain but Daisy still played golf.
+          Was Daisy's statement true or false?
+          Support your conclusion.
+        </p>
+      </li>
+      <li xml:id="exer_sec22-2">
+        <p>
+          Suppose that <m>P</m> and <m>Q</m> are statements for which <m>P \to Q</m> is true and for which <m>\mynot Q</m> is true.
+          What conclusion
+          (if any)
+          can be made about the truth value of each of the following statements?
+        </p>
+        <ol>
+          <li>
+            <p>
+              <m>P</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>P \wedge Q</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>P \vee Q</m>
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li xml:id="exer_sec22-3">
+        <p>
+          Suppose that <m>P</m> and <m>Q</m> are statements for which <m>P \to Q</m> is false.
+          What conclusion
+          (if any)
+          can be made about the truth value of each of the following statements?
+          <ol>
+            <li>
+              <p>
+                <m>\mynot P \to Q</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>Q \to P</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>P \vee Q</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_statements4">
+        <p>
+          Suppose that <m>P</m> and <m>Q</m> are statements for which <m>Q</m> is false and <m>\mynot P \to Q</m> is true
+          (and it is not known if <m>R</m> is true or false).
+          What conclusion
+          (if any)
+          can be made about the truth value of each of the following statements?
+          <ol>
+            <li>
+              <p>
+                <m>\mynot Q \to P</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>P</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>P \wedge R</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>R \to \mynot P</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec22-5">
+        <p>
+          Construct a truth table for each of the following statements:
+          <ol>
+            <li>
+              <p>
+                <m>P \to Q</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>Q \to P</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\mynot P \to \mynot Q</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\mynot Q \to \mynot P</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+        Do any of these statements have the same truth table?
+      </li>
+      <li xml:id="exer_sec22-4">
+        <p>
+          Construct a truth table for each of the following statements:
+          <ol>
+            <li>
+              <p>
+                <m>P \vee \mynot Q</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\mynot \left( {P \vee Q} \right)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\mynot P \vee \mynot Q</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\mynot P \wedge \mynot Q</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+        Do any of these statements have the same truth table?
+      </li>
+      <li xml:id="exer_sec22-6">
+        <p>
+          Construct truth tables for
+          <m>P \wedge \left( {Q \vee R} \right)</m> and <m>\left( {P \wedge Q} \right) \vee \left( {P \wedge R} \right)</m>.
+          What do you observe?
+        </p>
+      </li>
+      <li xml:id="exer_sec22-7">
+        <p>
+          Suppose each of the following statements is true.
+          <ul>
+            <li>
+              <p>
+                Laura is in the seventh grade.
+              </p>
+            </li>
+            <li>
+              <p>
+                Laura got an A on the mathematics test or Sarah got an A on the mathematics test.
+              </p>
+            </li>
+            <li>
+              <p>
+                If Sarah got an A on the mathematics test,
+                then Laura is not in the seventh grade.
+              </p>
+            </li>
+          </ul>
+        </p>
+        If possible, determine the truth value of each of the following statements. Carefully explain your reasoning.
+        <ol>
+          <li>
+            <p>
+              Laura got an A on the mathematics test.
+            </p>
+          </li>
+          <li>
+            <p>
+              Sarah got an A on the mathematics test.
+            </p>
+          </li>
+          <li>
+            <p>
+              Either Laura or Sarah did not get an A on the mathematics test.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li xml:id="exer_sec22-8">
+        <p>
+          Let <m>P</m> stand for
+          <q>the integer <m>x</m> is even,</q>
+          and let <m>Q</m> stand for
+          <q><m>x^2</m> is even.</q>
+          Express the conditional statement <m>P \to Q</m> in English using
+          <ol>
+            <li>
+              <p>
+                The
+                <q>if then</q>
+                form of the conditional statement
+              </p>
+            </li>
+            <li>
+              <p>
+                The word
+                <q>implies</q>
+              </p>
+            </li>
+            <li>
+              <p>
+                The
+                <q>only if</q>
+                form of the conditional statement
+              </p>
+            </li>
+            <li>
+              <p>
+                The phrase
+                <q>is necessary for</q>
+              </p>
+            </li>
+            <li>
+              <p>
+                The phrase
+                <q>is sufficient for</q>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec22-9">
+        <p>
+          Repeat Exercise<nbsp/><xref ref="exer_sec22-8"/> for the conditional statement <m>Q \to P</m>.
+        </p>
+      </li>
+      <li xml:id="exer_tautology-contra">
+        <p>
+          For statements <m>P</m> and <m>Q</m>,
+          use truth tables to determine if each of the following statements is a tautology,
+          a contradiction, or neither.
+          <ol>
+            <li>
+              <p>
+                <m>\mynot Q \vee (P \to Q)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>Q \wedge (P \wedge \mynot Q)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>(Q \wedge P) \wedge (P \to \mynot Q)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\mynot Q \to (P \wedge \mynot P)</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <p>
+          For statements <m>P</m>, <m>Q</m>, and <m>R</m>:
+          <ol>
+            <li>
+              <p>
+                Show that <m>\left[ (P \to Q) \wedge P \right] \to Q</m> is a tautology. \note In symbolic logic,
+                this is an important logical argument form called <em>modus ponens</em>.
+            <idx><h>modus ponens</h></idx>
+        </p>
+            </li>
+            <li>
+              <p>
+                Show that <m>\left[ (P \to Q) \wedge (Q \to R) \right] \to (P \to R)</m> is a tautology. \note In symbolic logic,
+                this is an important logical argument form called <em>syllogism</em>.
+            <idx><h>syllogism</h></idx>
+        </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+  <subsection>
+    <title>Explorations and Activities</title>
+    <ol>
+      <li xml:id="exer_working-conditional">
+        <p>
+          <em>Working with Conditional Statements</em>.
+          Complete the following table:
+          <me>
+            <tabular>
+              <row>
+                <cell>_ | <em>English Form</em>  |  <em>Hypothesis</em>  |  <em>Conclusion</em> |  <em>Symbolic Form</em>  |</cell>
+              </row>
+              <row>
+                <cell>+22  _ | If \(P\), then \(Q\).         |  \(P\)  |  \(Q\)  |  \(P \to Q\)  |</cell>
+              </row>
+              <row>
+                <cell>_1 |  \(Q\) only if \(P\).          |  \(Q\)  |  \(P\)  |  \(Q \to P\)  |</cell>
+              </row>
+              <row>
+                <cell>_1 |  \(P\) is necessary for \(Q\). |       |       |             |</cell>
+              </row>
+              <row>
+                <cell>_1 |  \(P\) is sufficient for \(Q\). |      |       |             |</cell>
+              </row>
+              <row>
+                <cell>_1 |  \(Q\) is necessary for \(P\).  |       |       |            |</cell>
+              </row>
+              <row>
+                <cell>_1 |  \(P\) implies \(Q\).           |       |       |            |</cell>
+              </row>
+              <row>
+                <cell>_1 |  \(P\) only if \(Q\).           |       |       |            |</cell>
+              </row>
+              <row>
+                <cell>_1 |  \(P\) if \(Q\).                |       |       |             |</cell>
+              </row>
+              <row>
+                <cell>_1 |  If \(Q\) then \(P\).           |       |       |             |</cell>
+              </row>
+              <row>
+                <cell>_1 |  If  \(\neg  Q\), then \(\neg  P\). |  |   |             |</cell>
+              </row>
+              <row>
+                <cell>_1 |  If \(P\), then \(Q \wedge R\). |       |       |            |</cell>
+              </row>
+              <row>
+                <cell>_1 |  If \(P \vee Q\), then \(R\).   |       |       |            |</cell>
+              </row>
+              <row bottom="minor">
+                <cell></cell>
+                <cell></cell>
+                <cell></cell>
+                <cell></cell>
+              </row>
+            </tabular>
+          </me>
+        </p>
+      </li>
+      <li xml:id="exer_working-truth">
+        <p>
+          <em>Working with Truth Values of Statements</em>.
+          Suppose that <m>P</m> and <m>Q</m> are true statements,
+          that <m>U</m> and <m>V</m> are false statements,
+          and that <m>W</m> is a statement and it is not known if <m>W</m> is true or false.
+          Which of the following statements are true, which are false,
+          and for which statements is it not possible to determine if it is true or false?
+          Justify your conclusions.
+          <ol>
+            <li>
+              <p>
+                <m>(P \vee Q) \vee (U \wedge W)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>P \wedge (Q \to W)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>P \wedge (W \to Q)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>W \to (P \wedge U)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>W \to (P \wedge \mynot U)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>(\mynot P \vee \mynot U) \wedge (Q \vee \mynot V)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>(P \wedge \mynot V) \wedge (U \vee W)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>(P \vee \mynot Q) \to (U \wedge W)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>(P \vee W) \to (U \wedge W)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>(U \wedge \mynot V) \to (P \wedge W)</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+</section>

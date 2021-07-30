@@ -1,0 +1,104 @@
+<section>
+  <title><xref ref="S_mathinduction">Section</xref></title>
+  <ul>
+    {{ <xref ref="exer_sec51-1"></xref>.}}
+    \item The sets in Parts (a) and (b) are inductive.
+  </ul>
+  <ul>
+    {{ <xref ref="exer_sec51-2"></xref>.}}
+    \item A finite nonempty set is not inductive (why?) but the empty set is inductive (why?).
+  </ul>
+  <ul>
+    {{ <xref ref="exer_sec51-3"></xref>.}}
+    \item
+    <ul>
+      {{(a)}}
+      \item For each  <m>n \in \mathbb{N}</m>, let  <m>P( n )</m> be,
+      <m>2 + 5 + 8 +  \cdots  + (3n - 1) = \dfrac{{n( {3n + 1} )}}{2}</m>.  When we use <m>n = 1</m>, the summation on the left side of the equation is 2, and the right side is <m>\dfrac{1(3 \cdot 1 + 1)}{2} = 2</m>.  Therefore, <m>P( 1 )</m>  is true.   For the inductive step, let <m>k \in \mathbb{N}</m> and assume that
+      <m>P \left( k \right)</m> is true.  Then,
+      <me>
+        2 + 5 + 8 + \cdots  + \left( {3k - 1} \right) = \frac{{k \left( {3k + 1} \right)}}{2}
+      </me>.
+      We now add <m>3 \left( k + 1 \right) - 1</m> to both sides of this equation.  This gives
+      <md>
+        <mrow>2 + 5 + 8 + \cdots  + (3k - 1) \amp</mrow>
+        <mrow>+ 3 \left( {k + 1} \right)-1 \amp =
+        \frac{{k \left( {3k + 1} \right)}}{2} + \left( 3 \left( k + 1 \right) - 1 \right)</mrow>
+        <mrow>\amp = \frac{{k \left( {3k + 1} \right)}}{2} + \left( {3k + 2} \right)</mrow>
+      </md>
+      If we now combine the terms on the right side of the equation into a single fraction, we obtain
+      <md>
+        <mrow>2 + 5 +  \cdots  + \left( {3k - 1} \right) + 3 \left( {k + 1} \right)-1  \amp = \frac{k \left( 3k + 1 \right) + 6k+4}{2}</mrow>
+        <mrow>\amp = \frac{ 3k^2 + 7k + 4}{2}</mrow>
+        <mrow>\amp = \frac{ \left( k + 1 \right) \left( 3k + 4 \right)}{2}</mrow>
+        <mrow>\amp = \frac{ \left( k + 1 \right) \left( 3 \left( k + 1 \right) + 1 \right)}{2}</mrow>
+      </md>
+      This proves that if  <m>P\left( k \right)</m> is true, then <m>P\left( {k + 1} \right)</m> is true.
+    </ul>
+  </ul>
+  <ul>
+    {{ <xref ref="exer_sec51-5"></xref>.}}
+    \item The conjecture is that  for each  <m>n \in \mathbb{N}</m>,  <m>1 + 3 + 5 + \cdots + (2n - 1) = n^2</m>.
+    The key to the inductive step is that
+    <md>
+      <mrow>1 + 3 + 5 + \cdots + (2k - 1) \amp</mrow>
+      <mrow>+ (2(k+1) - 1)  \amp = \left[1 + 3 + 5 + \cdots + (2k - 1) \right] + (2(k+1) - 1)</mrow>
+      <mrow>\amp = k^2 + (2k + 1)</mrow>
+      <mrow>\amp = (k + 1)^2</mrow>
+    </md>
+  </ul>
+  <ul>
+    {{ <xref ref="exer_mod3conjecture"></xref>.}}
+    \item
+    <ol>
+      <li>
+        <p>
+          For each natural number <m>n</m>,
+          <m>4^n \equiv 1 \pmod 3</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          For each natural number <m>n</m>, let <m>P(n)</m> be,
+          <q><m>4^n \equiv 1 \pmod 3</m>.</q>
+          Since <m>4^1 \equiv 1 \pmod 3</m>,
+          we see that <m>P(1)</m> is true.
+          Now let <m>k \in \N</m> and assume that <m>P(k)</m> is true.
+          That is, assume that
+          <me>
+            4^k \equiv 1 \pmod 3
+          </me>.
+          Multiplying both sides of this congruence by 4 gives
+          <me>
+            4^{k+1} \equiv 4 \pmod 3
+          </me>.
+          However, <m>4 \equiv 1 \pmod 3</m> and so by using the transitive property of congruence,
+          we see that <m>4^{k+1} \equiv 1 \pmod 3</m>.
+          This proves that if <m>P(k)</m> is true,
+          then <m>P(k+1)</m> is true.
+        </p>
+      </li>
+    </ol>
+  </ul>
+  <ul>
+    {{ <xref ref="exer_sec51-6"></xref>.}}
+    \item
+    <ul>
+      {{(a)}}
+      \item The key to the inductive step is that if <m>4^k = 1 + 3m</m>, then
+      <m>4^k \cdot 4 = 4 ( 1 + 3m )</m>, which implies that
+      <me>
+        4^{k+1} - 1 = 3 (1 + 4m )
+      </me>.
+    </ul>
+  </ul>
+  <ul>
+    {{ <xref ref="exer_sec51-cong"></xref>.}}
+    \item Let <m>k</m> be a natural number.  If <m>a^k \equiv b^k \pmod n</m>, then since we are also assuming that <m>a \equiv b \pmod n</m>, we can use Part<nbsp/>(2) of <xref ref="T_propsofcong">Theorem</xref> to conclude that
+    <m>a \cdot a^k \equiv b \cdot b^k \pmod n</m>.
+  </ul>
+  <ul>
+    {{ <xref ref="exer_sec51-13"></xref>.}}
+    \item  Three consecutive natural numbers may be represent by <m>n</m>, <m>n + 1</m>, and <m>n + 2</m>, where <m>n</m> is a natural number.  For the inductive step, think before you try to do a lot of algebra.    You should be able to complete a proof of the inductive step by expanding the cube of only one expression.
+  </ul>
+</section>

@@ -1,0 +1,1425 @@
+<section xml:id="S_divalgo">
+  <title>The Division Algorithm and Congruence</title>
+  <introduction>
+    <exploration xml:id="PA_quotients">
+      <title><em>Quotients and Remainders</em></title>
+      <ol>
+        <li xml:id="prev35-part1">
+          <p>
+            Let <m>a = 27</m> and <m>b = 4</m>.
+            We will now determine several pairs of integers <m>q</m> and <m>r</m> so that <m>27 = 4q + r</m>.
+            For example, if <m>q = 2</m> and <m>r = 19</m>,
+            we obtain <m>4\cdot 2 + 19 = 27</m>.
+            The following table is set up for various values of <m>q</m>.
+            For each <m>q</m>,
+            determine the value of <m>r</m> so that <m>4q + r = 27</m>.
+            <me>
+              <tabular>
+                <row>
+                  <cell>_ | \(q\) | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |</cell>
+                </row>
+                <row>
+                  <cell>+33 _ | \(r\) |   | 19 |  |   |   |   |   |  \(-5\) |      |      |</cell>
+                </row>
+                <row>
+                  <cell>+33 _ | \(4q + r\) | 27  | 27  | 27 | 27 | 27 | 27 | 27 | 27 | 27 | 27 |</cell>
+                </row>
+                <row>
+                  <cell>+33 _</cell>
+                </row>
+              </tabular>
+            </me>
+          </p>
+        </li>
+        <li xml:id="prev35-part2">
+          <p>
+            What is the smallest positive value for <m>r</m> that you obtained in your examples from Part<nbsp/><xref ref="prev35-part1"/>?
+          </p>
+        </li>
+      </ol>
+      <p>
+        Division is not considered an operation on the set of integers since the quotient of two integers need not be an integer.
+        However, we have all divided one integer by another and obtained a quotient and a remainder.
+        For example,
+        if we divide 113 by 5, we obtain a quotient of 22 and a remainder of 3.
+        We can write this as <m>\dfrac{113}{5} = 22 + \dfrac{3}{5}</m>.
+        If we multiply both sides of this equation by 5 and then use the distributive property to
+        <q>clear the parentheses,</q>
+        we obtain
+        <md>
+          <mrow>5 \cdot \frac{113}{5} \amp = 5 \left( 22 + \frac{3}{5} \right)</mrow>
+          <mrow>113   \amp = 5 \cdot 22 + 3</mrow>
+        </md>
+      </p>
+      <p>
+        This is the equation that we use when working in the integers since it involves only multiplication and addition of integers.
+        <ol>
+          <li>
+            <p>
+              What are the quotient and the remainder when we divide 27 by 4?
+              How is this related to your answer for Part<nbsp/><xref ref="prev35-part2"/>?
+            </p>
+          </li>
+          <li xml:id="PA_quotients4">
+            <p>
+              Repeat part<nbsp/><xref ref="prev35-part1"/> using <m>a = -17</m> and <m>b = 5</m>.
+              So the object is to find integers <m>q</m> and <m>r</m> so that <m>-17 = 5q + r</m>.
+              Do this by completing the following table.
+              <me>
+                <tabular>
+                  <row>
+                    <cell>_ | \(q\) | \(-7\) | \(-6\) | \(-5\) | \(-4\) | \(-3\) | \(-2\) | \(-1\) |</cell>
+                  </row>
+                  <row>
+                    <cell>+33 _ | \(r\) | 18 |  |   |   |   | \(-7\)  |   |</cell>
+                  </row>
+                  <row>
+                    <cell>+33 _ | \(5q + r\) | \(-17\)  | \(-17\) | \(-17\) | \(-17\) | \(-17\) | \(-17\) | \(-17\) |</cell>
+                  </row>
+                  <row>
+                    <cell>+33 _</cell>
+                  </row>
+                </tabular>
+              </me>
+            </p>
+          </li>
+          <li xml:id="PA_quotients5">
+            <p>
+              The convention we will follow is that the remainder will be the smallest positive integer <m>r</m> for which
+              <m>-17 = 5q + r</m> and the quotient will be the corresponding value of <m>q</m>.
+              Using this convention,
+              what is the quotient and what is the remainder when <m>-17</m> is divided by 5?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </exploration>
+    <exploration xml:id="PA_congruencereview">
+      <title><em>Some Work with Congruence Modulo <em>n</em></em></title>
+      <ol>
+        <li>
+          <p>
+            Let <m>n</m> be a natural number and let <m>a</m> and <m>b</m> be integers.
+            <ol>
+              <li>
+                <p>
+                  Write the definition of
+                  <q><m>a</m> is congruent to <m>b</m> modulo <m>n</m>,</q>
+                  which is written <m>a \equiv b \pmod n</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Use the definition of
+                  <q>divides</q>
+                  to complete the following:
+                  <ul>
+                    \item When we write <m>a \equiv b \pmod n</m>, we may conclude that there exists an integer <m>k</m> such that \ldots.
+                  </ul>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </li>
+      </ol>
+      <p>
+        We will now explore what happens when we multiply several pairs of integers where the first one is congruent to 3 modulo 6 and the second is congruent to 5 modulo 6.
+        We can use set builder notation and the roster method to specify the set <m>A</m> of all integers that are congruent to 3 modulo 6 as follows:
+        <me>
+          A = \left\{ a \in \Z \mid \mod{a}{3}{6} \right\} = \{ \ldots, -15, -9, -3, 3, 9, 15, 21, \ldots \}
+        </me>.
+        <ol>
+          <li>
+            <p>
+              Use the roster method to specify the set <m>B</m> of all integers that are congruent to 5 modulo 6.
+              <me>
+                B = \left\{ b \in \Z \mid \mod{b}{5}{6} \right\} = \cdots \hspace{36pt}
+              </me>.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        Notice that <m>15 \in A</m> and
+        <m>11 \in B</m> and that <m>15 + 11 = 26</m>.
+        Also notice that <m>\mod{26}{2}{6}</m> and that 2 is the smallest positive integer that is congruent to 26
+        (mod 6).
+        <ol>
+          <li>
+            <p>
+              Now choose at least four other pairs of integers <m>a</m> and <m>b</m> where <m>a \in A</m> and <m>b \in B</m>.
+              For each pair,
+              calculate <m>(a + b)</m> and then determine the smallest positive integer <m>r</m> for which
+              <m>\mod{(a + b)}{r}{6}</m>. \note The integer <m>r</m> will satisfy the inequalities <m>0 \leq r \lt 6</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Prove that for all integers <m>a</m> and <m>b</m>,
+              if <m>\mod{a}{3}{6}</m> and <m>\mod{b}{5}{6}</m>,
+              then <m>\mod{(a + b)}{2}{6}</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </exploration>
+  </introduction>
+  <subsection xml:id="divalgorithm">
+    <title>The Division Algorithm</title>
+    <p>
+          <idx><h>Division Algorithm|(</h></idx>
+      Beginning  <xref ref="PA_quotients">Activity</xref>
+      was an introduction to a mathematical result known as the Division Algorithm.
+      One of the purposes of this beginning  activity was to illustrate that we have already worked with this result,
+      perhaps without knowing its name.
+      For example, when we divide 337 by 6, we often write
+      <me>
+        \frac{{337}}{6} = 56 + \frac{1}{6}
+      </me>.
+    </p>
+    <p>
+      When we multiply both sides of this equation by 6, we get
+      <me>
+        337 = 6 \cdot 56 + 1
+      </me>.
+    </p>
+    <p>
+      When we are working within the system of integers,
+      the second equation is preferred over the first since the second one uses only integers and the operations of addition and multiplication,
+      and the integers are closed under addition and multiplication.
+      Following is a complete statement of the Division Algorithm.
+    </p>
+    <em>The Division Algorithm</em>
+    For all integers <m>a</m> and <m>b</m> with <m>b>0</m>,  there exist unique integers <m>q</m> and <m>r</m> such that
+    <me>
+      a=bq+r  \text{ and }   0 \leq r \lt  b
+    </me>.
+    <p>
+      <em>Some Comments about the Division Algorithm</em>
+      <ol>
+        <li>
+          <p>
+            The Division Algorithm can be proven,
+            but we have not yet studied the methods that are usually used to do so.
+            In this text,
+            we will treat the Division Algorithm as an axiom of the integers.
+            The work in Beginning <xref ref="PA_quotients">Activity</xref>
+            provides some rationale that this is a reasonable axiom.
+          </p>
+        </li>
+        <li>
+          <p>
+            The statement of the Division Algorithm contains the new phrase,
+            <q>there exist unique integers <m>q</m> and <m>r</m> such that <m>\ldots </m>.</q>
+            This means that there is only one pair of integers <m>q</m> and <m>r</m> that satisfy both the conditions
+            <m>a = bq + r</m> and <m>0 \leq r \lt b</m>.
+            As we saw in Beginning <xref ref="PA_quotients">Activity</xref>,
+            there are several different ways to write the integer <m>a</m> in the form <m>a = bq + r</m>.
+            However, there is only one way to do this and satisfy the additional condition that <m>0 \leq r \lt b</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            In light of the previous comment,
+            when we speak of <em>the quotient</em>
+              <idx><h>quotient</h></idx>
+            and <em>the remainder</em>
+              <idx><h>remainder</h></idx>
+            when we
+            <q>divide an integer <m>a</m> by the positive integer <m>b</m>,</q>
+            we will always mean the quotient <m>\left( q \right)</m> and the remainder
+            <m>\left( r \right)</m> guaranteed by the Division Algorithm.
+            So the remainder <m>r</m> is the least nonnegative integer such that there exists an integer (quotient) <m>q</m> with <m>a = bq + r</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            If  <m>a \lt  0</m>,
+            then we must be careful when writing the result of the Division Algorithm.
+            For example,
+            in parts<nbsp/><xref ref="PA_quotients4"/> and<nbsp/><xref ref="PA_quotients5"/> of Beginning  <xref ref="PA_quotients">Activity</xref>,
+            with <m>a =  - 17</m>  and <m>b = 5</m>,
+            we obtained <m>-17 = 5\cdot(-4) + 3</m>,
+            and so the quotient is <m>-4</m> and the remainder is 3.
+            Notice that this is different than the result from a calculator,
+            which would be <m>\dfrac{{ - 17}}{5} =  - 3.4</m>.
+            But this means
+            <me>
+              \frac{{ - 17}}{5} =  - \left( {3 + \frac{4}{{10}}} \right) =  - 3 - \frac{2}{5}
+            </me>.
+            If we multiply both sides of this equation by 5, we obtain
+            <me>
+              {-17} = 5\left( { - 3} \right) + \left( { - 2} \right)
+            </me>.
+            This is not the result guaranteed by the Division Algorithm since the value of <m>-2</m> does not satisfy the result of being greater than or equal to 0 and less than 5.
+          </p>
+        </li>
+        <li>
+          <p>
+            One way to look at the Division Algorithm is that the integer  <m>a</m>  is either going to be a multiple of  <m>b</m>,
+            or it will lie between two multiples of  <m>b</m>.
+            Suppose that  <m>a</m>  is not a multiple of  <m>b</m> and that it lies between the multiples
+            <m>b \cdot q</m>  and  <m>b\left( {q + 1} \right)</m>,
+            where <m>q</m> is some integer.
+            This is shown on the number line in <xref ref="fig_divalgo">Figure</xref>.
+            <figure xml:id="fig_divalgo">
+              <caption>Remainder for the Division Algorithm</caption>
+              <image width="73%" source="images/figps-divalgo.png"/>
+            </figure>
+            If  <m>r</m>  represents the distance from  <m>b \cdot q</m> to  <m>a</m>, then
+            <me>
+              \begin{aligned}r \amp = a - b \cdot q,\text{ or }  \\ a \amp = b \cdot q + r. \end{aligned}
+            </me>
+            From the diagram,
+            also notice that  <m>r</m>  is less than the distance between
+            <m>b \cdot q</m> and  <m>b\left( {q + 1} \right)</m>.
+            Algebraically, this distance is
+            <me>
+              \begin{aligned}b\left( {q + 1} \right) - b \cdot q \amp = b \cdot q + b - b \cdot q \\ \amp = b. \end{aligned}
+            </me>
+            Thus, in the case where  <m>a</m>  is not a multiple of  <m>b</m>,
+            we get  <m>0 \lt  r \lt  b</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            We have been implicitly using the fact that an integer cannot be both even and odd.
+            There are several ways to understand this fact,
+            but one way is through the Division Algorithm.
+            When we classify an integer as even or odd,
+            we are doing so on the basis of the remainder
+            (according to the Division Algorithm)
+            when the integer is
+            <q>divided</q>
+            by 2.
+            If  <m>a \in \mathbb{Z}</m>,
+            then by the Division Algorithm there exist unique integers  <m>q</m>  and  <m>r</m>  such that
+            <me>
+              a = 2q + r\text{  and  } 0 \leq r \lt  2
+            </me>.
+            This means that the remainder,
+            <m>r</m>,  can only be zero or one
+            (and not both).
+            When  <m>r = 0</m>, the integer is even,
+            and when  <m>r = 1</m>, the integer is odd.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+          <idx><h>Division Algorithm|)</h></idx> <hr style="width:50%;" align="left"/>
+    </p>
+    <investigation xml:id="pr_usingdivalgo">
+      <title><em>Using the Division Algorithm</em></title>
+      <ol>
+        <li>
+          <p>
+            What are the possible remainders
+            (according to the Division Algorithm)
+            when an integer is
+            <ol>
+              <li>
+                <p>
+                  Divided by 4?
+                </p>
+              </li>
+              <li>
+                <p>
+                  Divided by 9?
+                </p>
+              </li>
+            </ol>
+          </p>
+        </li>
+        <li>
+          <p>
+            For each of the following, find the quotient and remainder
+            (guaranteed by the Division Algorithm)
+            and then summarize the results by writing an equation of the form <m>a = bq + r</m>,
+            where <m>0 \leq r \lt b</m>.
+            <ol>
+              <li>
+                <p>
+                  When 17 is divided by 3.
+                </p>
+              </li>
+              <li>
+                <p>
+                  When <m>-17</m> is divided by 3.
+                </p>
+              </li>
+              <li>
+                <p>
+                  When 73 is divided by 7.
+                </p>
+              </li>
+              <li>
+                <p>
+                  When <m>-73</m> is divided by 7.
+                </p>
+              </li>
+              <li>
+                <p>
+                  When 436 is divided by 27.
+                </p>
+              </li>
+              <li>
+                <p>
+                  When 539 is divided by 110.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </li>
+      </ol>
+    </investigation>
+  </subsection>
+  <subsection>
+    <title>Using Cases Determined by the Division Algorithm</title>
+    <p>
+      The Division Algorithm <idx><h>Division Algorithm</h><h>using cases|(</h></idx> can sometimes be used to construct cases that can be used to prove a statement that is true for all integers.
+      We have done this when we divided the integers into the even integers and the odd integers since even integers have a remainder of 0 when divided by 2 and odd integers have a remainder of 1 when divided by 2.
+    </p>
+    <p>
+      Sometimes it is more useful to divide the integer <m>a</m> by an integer other than 2.
+      For example,
+      if <m>a</m> is divided by 3, there are three possible remainders: 0, 1, and 2.
+      If <m>a</m> is divided by 4, there are four possible remainders: 0, 1, 2, and 3.
+      The remainders form the basis for the cases.
+    </p>
+    <p>
+      If the hypothesis of a proposition is that
+      <q><m>n</m> is an integer,</q>
+      then we can use the Division Algorithm to claim that there are unique integers <m>q</m> and <m>r</m> such that
+      <me>
+        n = 3q + r\text{  and  } 0 \leq r \lt  3
+      </me>.
+    </p>
+    <p>
+      We can then divide the proof into the following three cases: (1) <m>r = 0</m>; (2) <m>r = 1</m>;
+      and (3) <m>r = 2</m>.
+      This is done in <xref ref="P_3divides">Proposition</xref>.
+    </p>
+    <proposition xml:id="P_3divides">
+      <statement>
+        <p>
+          If <m>n</m> is an integer, then 3 divides <m>n^3-n</m>.
+        </p>
+      </statement>
+    </proposition>
+    <proof>
+      <p>
+        Let <m>n</m> be an integer.
+        We will show that 3 divides <m>n^3-n</m> by examining the three cases for the remainder when <m>n</m> is divided by 3.
+        By the Division Algorithm,
+        there exist unique integers <m>q</m> and <m>r</m> such that
+        <me>
+          n = 3q + r\text{ , and  } 0 \leq r \lt  3
+        </me>.
+      </p>
+      <p>
+        This means that we can consider the following three cases: (1) <m>r = 0</m>; (2) <m>r = 1</m>;
+        and (3) <m>r = 2</m>.
+      </p>
+      <p>
+        In the case where <m>r = 0</m>, we have <m>n = 3q</m>.
+        By substituting this into the expression <m>n^3  - n</m>, we get
+        <me>
+          \begin{aligned}n^3  - n \amp = \left( {3q} \right)^3  - \left( {3q} \right) \\ \amp = 27q^3  - 3q \\ \amp = 3\left( {9q^3  - q} \right). \end{aligned}
+        </me>
+      </p>
+      <p>
+        Since <m>\left( {9q^3 -q} \right)</m> is an integer,
+        the last equation proves that <m>3 \mid \left( n^3 - n \right)</m>.
+      </p>
+      <p>
+        In the second case, <m>r = 1</m> and <m>n = 3q + 1</m>.
+        When we substitute this into <m>\left( n^3 - n \right)</m>,
+        we obtain
+        <me>
+          \begin{aligned}n^3  - n \amp = \left( {3q + 1} \right)^3  - \left( {3q + 1} \right) \\ \amp = \left( 27q^3 + 27q^2 +9q + 1\right) - \left( 3q + 1 \right) \\ \amp = 27q^3 + 27q^2 + 6q \\ \amp = 3 \left( 9q^3 + 9q^2 + 2q \right). \end{aligned}
+        </me>
+      </p>
+      <p>
+        Since <m>\left( {9q^3 +9q^2 + 2q} \right)</m> is an integer,
+        the last equation proves that <m>3 \mid \left( n^3 - n \right)</m>.
+      </p>
+      <p>
+        The last case is when <m>r = 2</m>.
+        The details for this case are part of Exercise<nbsp/><xref ref="exer_prop3divides"/>.
+        Once this case is completed,
+        we will have proved that 3 divides <m>n^3 - n</m> in all three cases.
+        Hence, we may conclude that if <m>n</m> is an integer,
+        then 3 divides <m>n^3 - n</m>.
+      </p>
+    </proof>
+    <p>
+          <idx><h>Division Algorithm</h><h>using cases|)</h></idx>
+    </p>
+  </subsection>
+  <subsection>
+    <title>Properties of Congruence</title>
+    <p>
+          <idx><h>congruence|(</h></idx>
+      Most of the work we have done so far has involved using definitions to help prove results.
+      We will continue to prove some results but we will now prove some theorems about congruence
+      (<xref ref="T_propsofcong">Theorem</xref>
+      and <xref ref="T_modprops">Theorem</xref>)
+      that we will then use to help prove other results.
+    </p>
+    <p>
+      Let <m>n \in \mathbb{N}</m>.
+      Recall that if <m>a</m> and <m>b</m> are integers,
+      then we say that <m>a</m> is congruent to <m>b</m> modulo <m>n</m> provided that <m>n</m> divides <m>a - b</m>,
+      and we write <m>a \equiv b \pmod n</m>.
+      (See <xref ref="S_directproof">Section</xref>.)
+    </p>
+    <p>
+      We are now going to prove some properties of congruence that are direct consequences of the definition.
+      One of these properties was suggested by the work in Beginning <xref ref="PA_congruencereview">Activity</xref>
+      and is Part<nbsp/><xref ref="T_propsofcong1"/> of the next theorem.
+    </p>
+    <theorem xml:id="T_propsofcong">
+      <title><em>Properties of Congruence Modulo</em> $\boldsymbol{n}$</title>
+      <statement>
+        <p>
+          Let <m>n</m> be a natural number and let <m>a,
+          b, c, \text{ and } d</m> be integers.
+          If <m>a \equiv b \pmod n</m> and <m>c \equiv d \pmod n</m>, then
+          <ol>
+            <li xml:id="T_propsofcong1">
+              <p>
+                <m>\left( {a + c} \right) \equiv \left( {b + d} \right) \pmod n</m>.
+              </p>
+            </li>
+            <li xml:id="T_propsofcong2">
+              <p>
+                <m>ac \equiv bd \pmod n</m>.
+              </p>
+            </li>
+            <li xml:id="T_propsofcong3">
+              <p>
+                For each <m>m \in \mathbb{N}</m>,
+                <m>a^m \equiv b^m \pmod n</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        We will prove Parts<nbsp/><xref ref="T_propsofcong2"/> and<nbsp/><xref ref="T_propsofcong3"/>.
+        The proof of Part<nbsp/><xref ref="T_propsofcong1"/> is Progress <xref ref="pr_propsofcong">Check</xref>.
+        Let <m>n</m> be a natural number and let <m>a,
+        b, c, \text{ and }   d</m> be integers.
+        Assume that <m>a \equiv b \pmod n</m> and that <m>c \equiv d \pmod n</m>.
+        This means that <m>n</m> divides <m>a-b</m> and that <m>n</m> divides <m>c-d</m>.
+        Hence, there exist integers <m>k</m> and <m>q</m> such that <m>a-b=nk</m> and <m>c-d=nq</m>.
+        We can then write <m>a = b + nk</m> and <m>c = d + nq</m> and obtain
+        <me>
+          \begin{aligned}ac \amp = \left( {b + nk} \right)\left( {d + nq} \right) \\ \amp = bd + bnq + dnk + n^2 kq \\ \amp = bd + n\left( {bq + dk + nkq} \right). \end{aligned}
+        </me>
+      </p>
+      <p>
+        By subtracting <m>bd</m> from both sides of the last equation,
+        we see that
+        <me>
+          ac - bd = n\left( {bq + dk + nkq} \right)
+        </me>.
+      </p>
+      <p>
+        Since <m>bq + dk + nkq</m> is an integer,
+        this proves that <m>n \mid \left( {ac - bd} \right)</m>,
+        and hence we can conclude that <m>ac \equiv bd \pmod n</m>.
+        This completes the proof of Part<nbsp/><xref ref="T_propsofcong2"/>.
+      </p>
+      <p>
+        Part<nbsp/>(2) basically means that if we have two congruences,
+        we can multiply the corresponding sides of these congruences to obtain another congruence.
+        We have assumed that <m>\mod{a}{b}{n}</m> and so we write this twice as follows:
+        <md>
+          <mrow>a \amp \equiv b \pmod n,  \text{ and }</mrow>
+          <mrow>a \amp \equiv b \pmod n</mrow>
+        </md>.
+      </p>
+      <p>
+        If we now use the result in Part<nbsp/>(2) and multiply the corresponding sides of these two congruences,
+        we obtain <m>\mod{a^2}{b^2}{n}</m>.
+        We can then use this congruence and the congruence
+        <m>a \equiv b \pmod n</m> and the result in Part<nbsp/>(2) to conclude that
+        <me>
+          a^2 \cdot a \equiv b^2 \cdot b \pmod n
+        </me>,
+        or that <m>a^3 \equiv b^3 \pmod n</m>.
+        We can say that we can continue with this process to prove Part<nbsp/><xref ref="T_propsofcong3"/>,
+        but this is not considered to be a formal proof of this result.
+        To construct a formal proof for this,
+        we could use a proof by mathematical induction.
+        This will be studied in <xref ref="C_induction">Chapter</xref>.
+        See Exercise<nbsp/><xref ref="exer_sec51-cong"/> in <xref ref="S_mathinduction">Section</xref>.
+      </p>
+    </proof>
+    <investigation xml:id="pr_propsofcong">
+      <title><em>Proving Part<nbsp/><xref ref="T_propsofcong1"/> of <xref ref="T_propsofcong">Theorem</xref></em></title>
+      <p>
+        Prove part<nbsp/><xref ref="T_propsofcong1"/> of <xref ref="T_propsofcong">Theorem</xref>.
+      </p>
+    </investigation>
+    <p>
+      Exercise<nbsp/><xref ref="exer_cong-props"/> in <xref ref="S_directproof">Section</xref>
+      gave three important properties of congruence modulo <m>n</m>.
+      Because of their importance,
+      these properties are stated and proved in <xref ref="T_modprops">Theorem</xref>.
+      Please remember that textbook proofs are usually written in final form of
+      <q>reporting the news.</q>
+      Before reading these proofs,
+      it might be instructive to first try to construct a know-show<nbsp/>table for each proof.
+    </p>
+    <theorem xml:id="T_modprops">
+      <title><em>Properties of Congruence Modulo</em> $\boldsymbol{n}$</title>
+      <statement>
+        <p>
+          Let <m>n \in \mathbb{N}</m>,
+          and let <m>a</m>, <m>b</m>, and <m>c</m> be integers.
+          <ol>
+            <li>
+              <p>
+                For every integer <m>a</m>, <m>a \equiv a \pmod n</m>.
+                This is called the <em>reflexive property</em>
+                  <idx><h>congruence</h><h>reflexive property</h></idx>
+                of congruence modulo <m>n</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>a \equiv b \pmod n</m>,
+                then <m>b \equiv a \pmod n</m>.
+                This is called the <em>symmetric property</em>
+                  <idx><h>congruence</h><h>symmetric property</h></idx>
+                of congruence modulo <m>n</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>a \equiv b \pmod n</m> and <m>b \equiv c \pmod n</m>,
+                then <m>a \equiv c \pmod n</m>.
+                This is called the <em>transitive property</em>
+                  <idx><h>congruence</h><h>transitive property</h></idx>
+                of congruence modulo <m>n</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        We will prove the reflexive property and the transitive property.
+        The proof of the symmetric property is Exercise<nbsp/><xref ref="exer_cong-symm"/>.
+      </p>
+      <p>
+        Let <m>n \in \mathbb{N}</m>, and let <m>a \in \mathbb{Z}</m>.
+        We will show that <m>a \equiv a \pmod n</m>.
+        Notice that
+        <me>
+          a - a = 0 = n \cdot 0
+        </me>.
+      </p>
+      <p>
+        This proves that <m>n</m> divides <m>\left( {a - a} \right)</m> and hence,
+        by the definition of congruence modulo <m>n</m>,
+        we have proven that <m>a \equiv a \pmod n</m>.
+      </p>
+      <p>
+        To prove the transitive property,
+        we let <m>n \in \mathbb{N}</m>,
+        and let <m>a</m>, <m>b</m>, and <m>c</m> be integers.
+        We assume that <m>a \equiv b \pmod n</m> and that <m>b \equiv c \pmod n</m>.
+        We will use the definition of congruence modulo <m>n</m> to prove that <m>a \equiv c \pmod n</m>.
+        Since <m>a \equiv b \pmod n</m> and <m>b \equiv c \pmod n</m>,
+        we know that <m>n \mid \left( a-b \right)</m> and <m>n \mid \left( b-c \right)</m>.
+        Hence, there exist integers <m>k</m> and <m>q</m> such that
+        <me>
+          \begin{aligned}a-b \amp = nk \\ b-c \amp = nq. \end{aligned}
+        </me>
+      </p>
+      <p>
+        By adding the corresponding sides of these two equations,
+        we obtain
+        <me>
+          \left( {a - b} \right) + \left( {b - c} \right) = nk + nq
+        </me>.
+      </p>
+      <p>
+        If we simplify the left side of the last equation and factor the right side, we get
+        <me>
+          a - c = n\left( {k + q} \right)
+        </me>.
+      </p>
+      <p>
+        By the closure property of the integers,
+        <m>\left( {k + q} \right) \in \mathbb{Z}</m>,
+        and so this equation proves that
+        <m>n \mid \left(a-c \right)</m> and hence that <m>a \equiv c \pmod n</m>.
+        This completes the proof of the transitive property of congruence modulo <m>n</m>.
+      </p>
+    </proof>
+    <p>
+          <idx><h>congruence|)</h></idx>
+    </p>
+  </subsection>
+  <subsection>
+    <title>Using Cases Based on Congruence Modulo <em>n</em></title>
+    <p>
+          <idx><h>congruence</h><h>Division Algorithm|(</h></idx>
+          <idx><h>Division Algorithm</h><h>congruence|(</h></idx>
+      Notice that the set of all integers that are congruent to 2 modulo 7 is
+      <me>
+        \left\{  n \in \Z \mid n \equiv 2 \pmod7 \right\} = \left\{ \ldots , - 19, - 12, - 5, 2, 9, 16, 23, \ldots \right\}
+      </me>.
+    </p>
+    <p>
+      If we divide any integer in this set by 7 and write the result according to the Division Algorithm,
+      we will get a remainder of 2.
+      For example,
+      <md>
+        <mrow>2 \amp = 7 \cdot 0 + 2 \amp   -5 \amp = 7 \left( -1 \right) + 2</mrow>
+        <mrow>9 \amp = 7 \cdot 1 + 2 \amp   -12 \amp = 7 \left( -2 \right) +2</mrow>
+        <mrow>16 \amp = 7 \cdot 2 + 2 \amp   -19 \amp = 7 \left( -3 \right) +2</mrow>
+        <mrow>23 \amp = 7 \cdot 3 + 2. \amp    \amp</mrow>
+      </md>
+    </p>
+    <p>
+      Is this a coincidence or is this always true?
+      Let's look at the general case.
+      For this, let <m>n</m> be a natural number and let <m>a \in \mathbb{Z}</m>.
+      By the Division Algorithm,
+      there exist unique integers <m>q</m> and <m>r</m> such that
+      <me>
+        a = nq + r\text{  and  } 0 \leq r \lt  n
+      </me>.
+    </p>
+    <p>
+      By subtracting <m>r</m> from both sides of the equation <m>a = nq + r</m>,
+      we obtain
+      <me>
+        a - r = nq
+      </me>.
+    </p>
+    <p>
+      But this implies that <m>n \mid \left( a - r \right)</m> and hence that <m>a \equiv r \pmod n</m>.
+      We have proven the following result.
+    </p>
+    <theorem xml:id="T_congtorem">
+      <statement>
+        <p>
+          Let <m>n \in \mathbb{N}</m> and let <m>a \in \mathbb{Z}</m>.
+          If <m>a = nq + r\text{ and } 0 \leq r \lt n</m> for some integers <m>q</m> and <m>r</m>,
+          then <m>a \equiv r \pmod n</m>.
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      This theorem says that an integer is congruent
+      (mod <m>n</m>)
+      to its remainder when it is divided by <m>n</m>.
+      Since this remainder is unique and since the only possible remainders for division by <m>n</m> are <m>0,1,2, \ldots ,n - 1</m>,
+      we can state the following result.
+    </p>
+    <corollary xml:id="C_congtorem">
+      <statement>
+        <p>
+          If <m>n \in \mathbb{N}</m>, then each integer is congruent,
+          modulo <m>n</m>,
+          to precisely one of the integers <m>0,1,2, \ldots ,n - 1</m>.
+          That is, for each integer <m>a</m>,
+          there exists a unique integer <m>r</m> such that
+          <me>
+            a \equiv r \pmod n  \text{ and }   0 \leq r \lt  n
+          </me>.
+        </p>
+      </statement>
+    </corollary>
+    <p>
+      <xref ref="C_congtorem">Corollary</xref>
+      can be used to set up cases for an integer in a proof.
+      If <m>n \in \mathbb{N}</m> and <m>a \in \mathbb{Z}</m>,
+      then we can consider <m>n</m> cases for <m>a</m>.
+      The integer <m>a</m> could be congruent to <m>0,1,2, \ldots , \text{ or }  n - 1</m> modulo <m>n</m>.
+      For example,
+      if we assume that 5 does not divide an integer <m>a</m>,
+      then we know <m>a</m> is not congruent to 0 modulo 5, and hence,
+      that <m>a</m> must be congruent to 1, 2, 3, or 4 modulo 5.
+      We can use these as 4 cases within a proof.
+      For example,
+      suppose we wish to determine the values of <m>a^2</m> modulo 5 for integers that are not congruent to 0 modulo 5.
+      We begin by squaring some integers that are not congruent to 0 modulo 5.
+      We see that
+      <md>
+        <mrow>1^2 \amp = 1 \amp  \text{ and }  \amp  \amp 1 \amp \equiv 1 \pmod 5.</mrow>
+        <mrow>3^2 \amp = 9 \amp  \text{ and }  \amp  \amp 9 \amp \equiv 4 \pmod 5.</mrow>
+        <mrow>6^2 \amp = 36 \amp  \text{ and }  \amp  \amp 36 \amp \equiv 1 \pmod 5.</mrow>
+        <mrow>8^2 \amp = 64 \amp  \text{ and }  \amp  \amp 64 \amp \equiv 4 \pmod 5.</mrow>
+        <mrow>9^2 \amp = 81 \amp  \text{ and }  \amp  \amp 81 \amp \equiv 1 \pmod 5</mrow>
+      </md>.
+    </p>
+    <p>
+      These explorations indicate that the following proposition is true and we will now outline a method to prove it.
+    </p>
+    <proposition xml:id="prop_congmod5">
+      <statement>
+        <p>
+          For each integer <m>a</m>, if <m>a \not \equiv 0 \pmod 5</m>,
+          then <m>\mod{a^2}{1}{5}</m> or <m>\mod{a^2}{4}{5}</m>.
+        </p>
+      </statement>
+    </proposition>
+    <p>
+      <em><em>Proof</em></em>.
+      We will prove this proposition using cases for <m>a</m> based on congruence modulo 5.
+      In doing so,
+      we will use the results in <xref ref="T_propsofcong">Theorem</xref>
+      and <xref ref="T_modprops">Theorem</xref>.
+      Because the hypothesis is <m>a \not \equiv 0 \pmod 5</m>,
+      we can use four cases,
+      which are: (1) <m>\mod{a}{1}{5}</m>, (2)
+      <m>\mod{a}{2}{5}</m>, (3) <m>\mod{a}{3}{5}</m>,
+      and (4) <m>\mod{a}{4}{5}</m>.
+      Following are proofs for the first and fourth cases.
+    </p>
+    <p>
+      <em>Case 1</em>.
+      <m>\left( \mod{a}{1}{5} \right)</m>.
+      In this case,
+      we use <xref ref="T_propsofcong">Theorem</xref> to conclude that
+      <me>
+        \mod{a^2}{1^2}{5}  \text{ or }   \mod{a^2}{1}{5}
+      </me>.
+    </p>
+    <p>
+      This proves that if <m>\mod{a}{1}{5}</m>,
+      then <m>\mod{a^2}{1}{5}</m>.
+    </p>
+    <p>
+      <em>Case 4</em>.
+      <m>\left( \mod{a}{4}{5} \right)</m>.
+      In this case,
+      we use <xref ref="T_propsofcong">Theorem</xref> to conclude that
+      <me>
+        \mod{a^2}{4^2}{5}  \text{ or }   \mod{a^2}{16}{5}
+      </me>.
+    </p>
+    <p>
+      We also know that <m>\mod{16}{1}{5}</m>.
+      So we have <m>\mod{a^2}{16}{5}</m> and <m>\mod{16}{1}{5}</m>,
+      and we can now use the transitive property of congruence
+      (<xref ref="T_modprops">Theorem</xref>)
+      to conclude that <m>\mod{a^2}{1}{5}</m>.
+      This proves that if <m>\mod{a}{4}{5}</m>,
+      then <m>\mod{a^2}{1}{5}</m>.
+    </p>
+    <investigation xml:id="prog_propertiesofcong">
+      <title><em>Using Properties of Congruence</em></title>
+      <p>
+        Complete a proof of <xref ref="prop_congmod5">Proposition</xref>
+        by completing proofs for the other two cases. \note It is possible to prove <xref ref="prop_congmod5">Proposition</xref>
+        using only the definition of congruence instead of using the properties that we have proved about congruence.
+        However, such a proof would involve a good deal of algebra.
+        One of the advantages of using the properties is that it avoids the use of complicated algebra in which it is easy to make mistakes.
+      </p>
+    </investigation>
+    <p>
+      In the proof of <xref ref="prop_congmod5">Proposition</xref>,
+      we used four cases.
+      Sometimes it may seem a bit overwhelming when confronted with a proof that requires several cases.
+      For example,
+      if we want to prove something about some integers modulo 6, we may have to use six cases.
+      However, there are sometimes additional assumptions
+      (or conclusions)
+      that can help reduce the number of cases that must be considered.
+      This will be illustrated in the next progress check.
+    </p>
+    <investigation xml:id="prog_casesmod6">
+      <title><em>Using Cases Modulo 6</em></title>
+      <p>
+        Suppose we want to determine the possible values for <m>a^2</m> modulo 6 for odd integers that are not multiples of 3.
+        Before beginning to use congruence arithmetic
+        (as in the proof of <xref ref="prop_congmod5">Proposition</xref>)
+        in each of the possible six cases,
+        we can show that some of the cases are not possible under these assumptions.
+        (In some sense,
+        we use a short proof by contradiction for these cases.)
+        So assume that <m>a</m> is an odd integer.
+        Then:
+        <ul>
+          <li>
+            <p>
+              If <m>\mod{a}{0}{6}</m>,
+              then there exists an integer <m>k</m> such that <m>a = 6k</m>.
+              But then <m>a = 2(3k)</m> and hence, <m>a</m> is even.
+              Since we assumed that <m>a</m> is odd,
+              this case is not possible.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>\mod{a}{2}{6}</m>,
+              then there exists an integer <m>k</m> such that <m>a = 6k + 2</m>.
+              But then <m>a = 2(3k + 1)</m> and hence, <m>a</m> is even.
+              Since we assumed that <m>a</m> is odd,
+              this case is not possible.
+            </p>
+          </li>
+        </ul>
+        <ol>
+          <li>
+            <p>
+              Prove that if <m>a</m> is an odd integer,
+              then <m>a</m> cannot be congruent to 4 modulo 6.
+            </p>
+          </li>
+          <li>
+            <p>
+              Prove that if <m>a</m> is an integer and 3 does not divide <m>a</m>,
+              then <m>a</m> cannot be congruent to 3 modulo 6.
+            </p>
+          </li>
+          <li>
+            <p>
+              So if <m>a</m> is an odd integer that is not a multiple of 3, then <m>a</m> must be congruent to 1 or 5 modulo 6.
+              Use these two cases to prove the following proposition:
+            </p>
+          </li>
+        </ol>
+      </p>
+      <proposition xml:id="prop_congmod6">
+        <statement>
+          <p>
+            For each integer <m>a</m>,
+            if <m>a</m> is an odd integer that is not multiple of 3, then <m>\mod{a^2}{1}{6}</m>.
+          </p>
+        </statement>
+      </proposition>
+    </investigation>
+    <p>
+      \exercises{Exercises for <xref ref="S_divalgo">Section</xref>}
+    </p>
+    <ol>
+      <li xml:id="exer_prop3divides">
+        <p>
+          Complete the details for the proof of Case 3 of <xref ref="P_3divides">Proposition</xref>.
+        </p>
+      </li>
+      <li>
+        <ol>
+          <li>
+            <p>
+              Use cases based on congruence modulo 3 and properties of congruence to prove that for each integer <m>n</m>,
+              <m>\mod{n^3}{n}{3}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Explain why the result in Part<nbsp/>(a) proves that for each integer <m>n</m>, 3 divides <m>\left(n^3 - n \right)</m>.
+              Compare this to the proof of the same result in <xref ref="P_3divides">Proposition</xref>.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li xml:id="exer_cong-symm">
+        <p>
+          Prove the symmetric property of congruence stated in <xref ref="T_modprops">Theorem</xref>.
+        </p>
+      </li>
+      <li xml:id="exer_sec35-a2mod3">
+        <p>
+          Consider the following proposition: For each integer <m>a</m>,
+          if 3 divides <m>a^2</m>, then 3 divides <m>a</m>.
+          <ol>
+            <li>
+              <p>
+                Write the contrapositive of this proposition.
+              </p>
+            </li>
+            <li>
+              <p>
+                Prove the proposition by proving its contrapositive. \hint Consider using cases based on the Division Algorithm using the remainder for
+                <q>division by 3.</q>
+                There will be two cases.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec34-4">
+        <ol>
+          <li>
+            <p>
+              Let <m>n \in \mathbb{N}</m> and let <m>a \in \mathbb{Z}</m>.
+              Explain why <m>n</m> divides <m>a</m> if and only if <m>a \equiv 0 \pmod n</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Let <m>a \in \mathbb{Z}</m>.
+              Explain why if <m>a \not \equiv 0 \pmod 3</m>,
+              then <m>a \equiv 1\pmod 3</m> or <m>a \equiv 2 \pmod 3</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Is the following proposition true or false?
+              Justify your conclusion.
+              <ul>
+                \item For each <m>a \in \mathbb{Z}</m>, if <m>a \not \equiv 0 \pmod 3</m>, then <m>a^2 \equiv 1 \pmod 3</m>.
+              </ul>
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li xml:id="exer_congto3">
+        <p>
+          Prove the following proposition by proving its contrapositive. (\hint Use case analysis.
+          There are several cases.)
+          <ul>
+            \item For all integers <m>a</m> and <m>b</m>, if <m>ab \equiv 0 \pmod 3</m>, then <m>a \equiv 0 \pmod 3</m> or <m>b \equiv 0 \pmod 3</m>.
+          </ul>
+        </p>
+      </li>
+      <li xml:id="exer_3divprod">
+        <ol>
+          <li>
+            <p>
+              Explain why the following proposition is equivalent to the proposition in Exercise<nbsp/><xref ref="exer_congto3"/>.
+              <ul>
+                \item For all integers <m>a</m> and <m>b</m>, if <m>3 \mid ab</m> , then <m>3 \mid a</m> or <m>3 \mid b</m>.
+              </ul>
+            </p>
+          </li>
+          <li>
+            <p>
+              Prove that for each integer <m>a</m>,
+              if 3 divides <m>a^2</m>, then 3 divides <m>a</m>.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li xml:id="exer_sqrt3">
+        <ol>
+          <li>
+            <p>
+              Prove that the real number
+              <m>\sqrt{3}</m> is an irrational number.
+              That is, prove that
+              <ul>
+                \item If <m>r</m> is a positive real number such that <m>r^2 = 3</m>, then <m>r</m> is irrational.
+              </ul>
+            </p>
+          </li>
+          <li>
+            <p>
+              Prove that the real number
+              <m>\sqrt{12}</m> is an irrational number.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li xml:id="exer_notperfectsquare">
+        <p>
+          Prove that for each natural number <m>n</m>,
+          <m>\sqrt{3n + 2}</m> is not a natural number.
+        </p>
+      </li>
+      <li xml:id="exer_sec34-2">
+        <p>
+          Extending the idea in Exercise<nbsp/><xref ref="exer_consecutive"/> of <xref ref="S_cases">Section</xref>,
+          we can represent three consecutive integers as <m>m</m>,
+          <m>m + 1</m>, and <m>m + 2</m>,
+          where <m>m</m> is an integer.
+          <ol>
+            <li>
+              <p>
+                Explain why we can also represent three consecutive integers as <m>k - 1</m>,
+                <m>k</m>, and <m>k + 1</m>, where <m>k</m> is an integer.
+              </p>
+            </li>
+            <li>
+              <p>
+                Explain why <xref ref="P_3divides">Proposition</xref>
+                proves that the product of any three consecutive integers is divisible by 3.
+              </p>
+            </li>
+            <li>
+              <p>
+                Prove that the product of three consecutive integers is divisible by 6.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <ol>
+          <li>
+            <p>
+              Use the result in <xref ref="prop_congmod5">Proposition</xref>
+              to help prove that the integer
+              <m>m = 5,344, 580,232,468,953,153</m> is not a perfect square.
+              Recall that an integer <m>n</m> is a perfect square provided that there exists an integer <m>k</m> such that <m>n = k^2</m>. \hint Use a proof by contradiction.
+            </p>
+          </li>
+          <li>
+            <p>
+              Is the integer <m>n = 782,456,231,189,002,288, 438</m> a perfect square?
+              Justify your conclusion.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li xml:id="exer_sqrt5-irrational">
+        <ol>
+          <li>
+            <p>
+              Use the result in <xref ref="prop_congmod5">Proposition</xref>
+              to help prove that for each integer <m>a</m>,
+              if 5 divides <m>a^2</m>, then 5 divides <m>a</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Prove that the real number
+              <m>\sqrt{5}</m> is an irrational number.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <ol>
+          <li>
+            <p>
+              Prove that for each integer <m>a</m>,
+              if <m>a \not \equiv 0 \pmod 7</m>,
+              then <m>a^2 \not \equiv 0 \pmod 7</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Prove that for each integer <m>a</m>,
+              if 7 divides <m>a^2</m>, then 7 divides <m>a</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Prove that the real number
+              <m>\sqrt{7}</m> is an irrational number.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li xml:id="exer_remainderbycong">
+        <ol>
+          <li>
+            <p>
+              If an integer has a remainder of 6 when it is divided by 7, is it possible to determine the remainder of the square of that integer when it is divided by 7?
+              If so, determine the remainder and prove that your answer is correct.
+            </p>
+          </li>
+          <li>
+            <p>
+              If an integer has a remainder of 11 when it is divided by 12,
+              is it possible to determine the remainder of the square of that integer when it is divided by 12?
+              If so, determine the remainder and prove that your answer is correct.
+            </p>
+          </li>
+          <li>
+            <p>
+              Let <m>n</m> be a natural number greater than 2.
+              If an integer has a remainder of <m>n - 1</m> when it is divided by <m>n</m>,
+              is it possible to determine the remainder of the square of that integer when it is divided by <m>n</m>?
+              If so, determine the remainder and prove that your answer is correct.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <p>
+          Let <m>n</m> be a natural number greater than 4 and let <m>a</m> be an integer that has a remainder of <m>n - 2</m> when it is divided by <m>n</m>.
+          Make whatever conclusions you can about the remainder of <m>a^2</m> when it is divided by <m>n</m>.
+          Justify all conclusions.
+        </p>
+      </li>
+      <li>
+        <p>
+          Is the following proposition true or false?
+          Justify your conclusion with a proof or a counterexample.
+          <ul>
+            \item For each natural number <m>n</m>, if 3 does not divide <m>\left( n^2 + 2 \right)</m>, then <m>n</m> is not a prime number or <m>n=3</m>.
+          </ul>
+        </p>
+      </li>
+      <li xml:id="exer_sec34-new9">
+        <ol>
+          <li>
+            <p>
+              Is the following proposition true or false?
+              Justify your conclusion with a counterexample or a proof.
+              <ul>
+                \item For each integer <m>n</m>, if <m>n</m> is odd, then <m>n^2 \equiv 1 \pmod 8</m>.
+              </ul>
+            </p>
+          </li>
+          <li>
+            <p>
+              Compare this proposition to the proposition in Exercise<nbsp/><xref ref="exer_sec34-nsquared"/> from <xref ref="S_cases">Section</xref>.
+              Are these two propositions equivalent?
+              Explain.
+            </p>
+          </li>
+          <li>
+            <p>
+              Is the following proposition true or false?
+              Justify your conclusion with a counterexample or a proof.
+              <ul>
+                \item For each integer <m>n</m>, if <m>n</m> is odd and <m>n</m> is not a multiple of 3, then <m>n^2 \equiv 1 \pmod {24}</m>.
+              </ul>
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <p>
+          Prove the following proposition:
+          <ul>
+            \item For all integers <m>a</m> and <m>b</m>, if 3 divides <m>\left( a^2 + b^2 \right)</m>, then 3 divides <m>a</m> and 3 divides <m>b</m>.
+          </ul>
+        </p>
+      </li>
+      <li xml:id="exer_case-ind">
+        <p>
+          Is the following proposition true or false?
+          Justify your conclusion with a counterexample or a proof.
+          <ul>
+            \item For each integer <m>a</m>, 3 divides <m>a^3 + 23a</m>.
+          </ul>
+        </p>
+      </li>
+      <li xml:id="exer_falsecongruence">
+        <p>
+          Are the following statements true or false?
+          Either prove the statement is true or provide a counterexample to show it is false.
+          <ol>
+            <li>
+              <p>
+                For all integers <m>a</m> and <m>b</m>,
+                if <m>a \cdot b \equiv 0 \pmod{6}</m>,
+                then <m>a \equiv 0 \pmod{6}</m> or <m>b \equiv 0 \pmod{6}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                For all integers <m>a</m> and <m>b</m>,
+                if <m>a \cdot b \equiv 0 \pmod{8}</m>,
+                then <m>a \equiv 0 \pmod{8}</m> or <m>b \equiv 0 \pmod{8}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                For all integers <m>a</m> and <m>b</m>,
+                if <m>a \cdot b \equiv 1 \pmod{6}</m>,
+                then <m>a \equiv 1 \pmod{6}</m> or <m>b \equiv 1 \pmod{6}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                For all integers <m>a</m> and <m>b</m>,
+                if <m>ab \equiv 7 \pmod{12}</m>,
+                then either <m>a \equiv 1 \pmod{12}</m> or <m>a \equiv 7 \pmod{12}</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <ol>
+          <li>
+            <p>
+              Determine several pairs of integers <m>a</m> and <m>b</m> such that <m>a \equiv b \pmod 5</m>.
+              For each such pair, calculate <m>4a + b</m>,
+              <m>3a + 2b</m>, and <m>7a + 3b</m>.
+              Are each of the resulting integers congruent to 0 modulo 5?
+            </p>
+          </li>
+          <li>
+            <p>
+              Prove or disprove the following proposition:
+              <ul>
+                \item Let <m>m</m> and <m>n</m> be integers such that <m>(m + n) \equiv 0 \pmod 5</m> and let <m>a, b \in \Z</m>. If <m>a \equiv b \pmod 5</m>, then <m>(ma +nb) \equiv 0 \pmod 5</m>.
+              </ul>
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <p>
+          <em>Evaluation of proofs</em>  See the instructions for Exercise<nbsp/><xref ref="exer_proofeval"/> on <xref ref="exer_proofeval">page</xref>
+          from <xref ref="S_directproof">Section</xref>.
+          <ol>
+            <li>
+              <p>
+                <em>Proposition</em>.
+                For all integers <m>a</m> and <m>b</m>,
+                if <m>(a + 2b) \equiv 0 \pmod 3</m>,
+                then <m>(2a + b) \equiv 0 \pmod 3</m>.
+                <proof>
+                  <p>
+                    We assume <m>a, b \in \Z</m> and <m>(a + 2b) \equiv 0 \pmod 3</m>.
+                    This means that 3 divides <m>a + 2b</m> and, hence,
+                    there exists an integer <m>m</m> such that <m>a + 2b = 3m</m>.
+                    Hence, <m>a = 3m - 2b</m>.
+                    For <m>(2a + b) \equiv 0 \pmod 3</m>,
+                    there exists an integer <m>x</m> such that <m>2a + b = 3x</m>.
+                    Hence,
+                    <md>
+                      <mrow>2(3m - 2b) + b \amp = 3x</mrow>
+                      <mrow>6m - 3b \amp = 3x</mrow>
+                      <mrow>3(2m - b) \amp = 3x</mrow>
+                      <mrow>2m - b \amp = x</mrow>
+                    </md>.
+                  </p>
+                  <p>
+                    Since <m>(2m - b)</m> is an integer,
+                    this proves that 3 divides <m>(2a + b)</m> and hence,
+                    <m>(2a + b) \equiv 0 \pmod 3</m>.
+                  </p>
+                </proof>
+              </p>
+            </li>
+            <li>
+              <p>
+                <em>Proposition</em>.
+                For each integer <m>m</m>, 5 divides <m>\left(m^5 - m \right)</m>.
+                <proof>
+                  <p>
+                    Let <m>m \in \Z</m>.
+                    We will prove that 5 divides
+                    <m>\left(m^5 - m \right)</m> by proving that <m>\left(m^5 - m \right) \equiv 0 \pmod 5</m>.
+                    We will use cases.
+                  </p>
+                  <p>
+                    For the first case, if <m>m \equiv 0 \pmod 5</m>,
+                    then <m>m^5 \equiv 0 \pmod 5</m> and,
+                    hence, <m>\left(m^5 - m \right) \equiv 0 \pmod 5</m>.
+                  </p>
+                  <p>
+                    For the second case, if <m>m \equiv 1 \pmod 5</m>,
+                    then <m>m^5 \equiv 1 \pmod 5</m> and, hence,
+                    <m>\left(m^5 - m \right) \equiv (1 - 1) \pmod 5</m>,
+                    which means that <m>\left(m^5 - m \right) \equiv 0 \pmod 5</m>.
+                  </p>
+                  <p>
+                    For the third case, if <m>m \equiv 2 \pmod 5</m>,
+                    then <m>m^5 \equiv 32 \pmod 5</m> and, hence,
+                    <m>\left(m^5 - m \right) \equiv (32 - 2) \pmod 5</m>,
+                    which means that <m>\left(m^5 - m \right) \equiv 0 \pmod 5</m>.
+                  </p>
+                </proof>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+  <subsection>
+    <title>Explorations and Activities</title>
+    <ol>
+      <li xml:id="exer_sec34-9">
+        <p>
+          <em>Using a Contradiction to Prove a Case Is Not Possible</em>.
+          Explore the statements in Parts<nbsp/>(a) and<nbsp/>(b) by considering several examples where the hypothesis is true.
+          <ol>
+            <li xml:id="exer_sec35-9a">
+              <p>
+                If an integer <m>a</m> is divisible by both 4 and 6, then it divisible by 24.
+              </p>
+            </li>
+            <li xml:id="exer_sec35-9b">
+              <p>
+                If an integer <m>a</m> is divisible by both 2 and 3, then it divisible by 6.
+              </p>
+            </li>
+            <li>
+              <p>
+                What can you conclude from the examples in Part<nbsp/>(a)?
+              </p>
+            </li>
+            <li>
+              <p>
+                What can you conclude from the examples in Part<nbsp/>(b)?
+              </p>
+            </li>
+          </ol>
+        </p>
+        The proof of the following proposition based on Part<nbsp/>(b) uses cases.  In this proof, however, we use cases and a proof by contradiction to prove that a certain integer cannot be odd.  Hence, it must be even.  Complete the proof of the proposition.  <em>Proposition.</em> Let  <m>a \in \mathbb{Z}</m>.  If  2  divides  <m>a</m>  and  3  divides  <m>a</m>, then  6  divides  <m>a</m>.   <em><em>Proof</em></em>:  Let  <m>a \in \mathbb{Z}</m> and assume that  2  divides  <m>a</m>  and  3  divides  <m>a</m>.  We will prove that  6 divides  <m>a</m>.  Since  3  divides  <m>a</m>, there exists an integer  <m>n</m>  such that
+        <me>
+          a = 3n
+        </me>.
+        The integer  <m>n</m>  is either even or it is odd.  We will show that it must be even by obtaining a contradiction if it assumed to be odd.  So, assume that  <m>n</m>  is odd.  (Now complete the proof.)
+      </li>
+      <li>
+        <p>
+          <em>The Last Two Digits of a Large Integer</em>.
+          Notice that <m>\mod{7,381,272}{72}{100}</m> since <m>7,381,272 - 72 = 7,381,200</m>,
+          which is divisible by 100.
+          In general, if we start with an integer whose decimal representation has more than two digits and subtract the integer formed by the last two digits,
+          the result will be an integer whose last two digits are 00.
+          This result will be divisible by 100.
+          Hence, any integer with more than 2 digits is congruent modulo 100 to the integer formed by its last two digits.
+          <ol>
+            <li xml:id="A_lasttwo1">
+              <p>
+                Start by squaring both sides of the congruence <m>3^4 \equiv 81 \pmod {100}</m> to prove that
+                <m>\mod{3^8}{61}{100}</m> and then prove that <m>3^{16} \equiv 21 \pmod {100}</m>.
+                What does this tell you about the last two digits in the decimal representation of <m>3^{16}</m>?
+              </p>
+            </li>
+            <li>
+              <p>
+                Use the two congruences in Part<nbsp/><xref ref="A_lasttwo1"/> and laws of exponents to determine <m>r</m> where
+                <m>3^{20} \equiv r \pmod {100}</m> and <m>r \in \mathbb{Z}</m> with
+                <m>0 \leq r \lt 100</m> . What does this tell you about the last two digits in the decimal representation of <m>3^{20}</m>?
+              </p>
+            </li>
+            <li>
+              <p>
+                Determine the last two digits in the decimal representation of <m>3^{400}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Determine the last two digits in the decimal representation of <m>4^{804}</m>. \hint One way is to determine the
+                <q>mod 100 values</q>
+                for <m>4^2</m>, <m>4^4</m>, <m>4^8</m>,
+                <m>4^{16}</m>, <m>4^{32}</m>,
+                <m>4^{64}</m>,<nbsp/>and so on.
+                Then use these values and laws of exponents to determine <m>r</m>,
+                where <m>4^{804} \equiv r \pmod {100}</m> and
+                <m>r \in \mathbb{Z}</m> with <m>0 \leq r \lt 100</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Determine the last two digits in the decimal representation of <m>3^{3356}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Determine the last two digits in the decimal representation of <m>7^{403}</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+</section>

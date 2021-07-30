@@ -1,0 +1,1127 @@
+<section xml:id="S_relations">
+  <title>Relations</title>
+  <introduction>
+    <exploration xml:id="PA_USA">
+      <title><em>The United States of America</em></title>
+      <p>
+        Recall from <xref ref="S_cartesian">Section</xref>
+        that the <term>Cartesian product</term>
+            <idx><h>Cartesian product</h></idx>
+        of two sets <m>A</m> and <m>B</m>,
+        written <m>A \times B</m>,
+        is the set of all ordered pairs <m>\left( {a,b} \right)</m>,
+        where <m>a \in A</m> and <m>b \in B</m>.
+        That is, <m>A \times B = \left\{ {\left( {a,b} \right) \mid a \in A\text{ and } b \in B} \right\}</m>.
+      </p>
+      <p>
+        Let <m>A</m> be the set of all states in the United States and let
+        <me>
+          R = \left\{ { {\left( {x, y} \right) \in A \times A } \mid x \text{  and  } y \text{  have a land border in common } } \right\}\!
+        </me>.
+      </p>
+      <p>
+        For example, since California and Oregon have a land border,
+        we can say that <m>(\text{ California, Oregon } ) \in R</m> and <m>(\text{ Oregon, California } ) \in R</m>.
+        Also, since California and Michigan do not share a land border,
+        <m>\text{ (California, Michigan) } \notin R</m> and <m>(\text{ Michigan, California } ) \notin R</m>.
+      </p>
+      <ol>
+        <li>
+          <p>
+            Use the roster method to specify the elements in each of the following sets:
+          </p>
+          <ol>
+            <li>
+              <p>
+                <m>B = \left\{ {y \in A\left| {\left( {\text{ Michigan, } y} \right) \in R} \right.} \right\}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>C = \left\{ {x \in A\left| {\left( {x,\text{ Michigan } } \right) \in R} \right.} \right\}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>D = \left\{ {y \in A\left| {\left( {\text{ Wisconsin, } y} \right) \in R} \right.} \right\}</m>
+              </p>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <p>
+            Find two different examples of two ordered pairs,
+            <m>\left( {x, y} \right)</m> and
+            <m>\left( {y, z} \right)</m> such that <m>\left( {x, y} \right) \in R</m>,
+            <m>\left( {y, z} \right) \in R</m>,
+            but <m>\left( {x, z} \right)\not \in R</m>,
+            or explain why no such example exists.
+            Based on this,
+            is the following conditional statement true or false?
+            For all <m>x, y, z \in A</m>,
+            if <m>(x, y) \in R</m> and
+            <m>(y, z) \in R</m>, then <m>(x, z) \in R</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Is the following conditional statement true or false?
+            Explain.
+            For all <m>x, y \in A</m>, if
+            <m>(x, y) \in R</m>, then <m>(y, x) \in R</m>.
+          </p>
+        </li>
+      </ol>
+    </exploration>
+    <exploration xml:id="PA_eqn2variables">
+      <title><em>The Solution Set of an Equation with Two Variables</em></title>
+      <p>
+        In <xref ref="S_predicates">Section</xref>,
+        we introduced the concept of the
+        <term>truth set of an open sentence with one variable</term>.
+            <idx><h>truth set</h></idx>
+        This was defined to be the set of all elements in the universal set that can be substituted for the variable to make the open sentence a true proposition.
+        Assume that <m>x</m> and <m>y</m> represent real numbers.
+        Then the equation
+        <me>
+          4x^2  + y^2  = 16
+        </me>
+        is an open sentence with two variables.
+        An element of the truth set of this open sentence
+        (also called a solution of the equation)
+        is an ordered pair <m>\left( {a, b} \right)</m> of real numbers so that when <m>a</m> is substituted for <m>x</m> and <m>b</m> is substituted for <m>y</m>,
+        the predicate becomes a true statement (a true equation in this case).
+        We can use set builder notation to describe the truth set <m>S</m> of this equation with two variables as follows:
+        <me>
+          S = \left\{ (x, y) \in \R \times \R \mid 4x^2 + y^2 = 16 \right\}\!
+        </me>.
+      </p>
+      <p>
+        When a set is a truth set of an open sentence that is an equation,
+        we also call the set the <term>solution set</term>
+            <idx><h>solution set</h></idx>
+        of the equation.
+      </p>
+      <ol>
+        <li>
+          <p>
+            List four different elements of the set <m>S</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            The graph of the equation <m>4x^2 + y^2 = 16</m> in the <m>xy</m>-coordinate plane is an ellipse.
+            Draw the graph and explain why this graph is a representation of the truth set
+            (solution set)
+            of the equation <m>4x^2 + y^2 = 16</m>.
+          </p>
+        </li>
+        <li xml:id="PA_eqn2variables3">
+          <p>
+            Describe each of the following sets as an interval of real numbers:
+          </p>
+          <ol>
+            <li>
+              <p>
+                <m>A = \left\{ x \in \R \mid \text{ there exists a } y \in \R \text{ such that } 4x^2 + y^2 = 16 \right\}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>B = \left\{ y \in \R \mid \text{ there exists an } x \in \R \text{ such that } 4x^2 + y^2 = 16 \right\}</m>.
+              </p>
+            </li>
+          </ol>
+        </li>
+      </ol>
+    </exploration>
+  </introduction>
+  <subsection>
+    <title>Introduction to Relations</title>
+    <p>
+      In <xref ref="S_introfunctions">Section</xref>,
+      we introduced the formal definition of a function from one set to another set.
+      The notion of a function can be thought of as one way of relating the elements of one set with those of another set
+      (or the same set).
+      A function is a special type of <em>relation</em>
+      in the sense that each element of the first set, the domain, is
+      <q>related</q>
+      to exactly one element of the second set, the codomain.
+    </p>
+    <p>
+      This idea of relating the elements of one set to those of another set using ordered pairs is not restricted to functions.
+      For example, we may say that one integer, <m>a</m>,
+      is related to another integer, <m>b</m>,
+      provided that <m>a</m> is congruent to <m>b</m> modulo 3.
+      Notice that this relation of congruence modulo 3 provides a way of relating one integer to another integer.
+      However, in this case,
+      an integer <m>a</m> is related to more than one other integer.
+      For example, since
+      <me>
+        5 \equiv 5 \pmod 3\!,  5 \equiv 2 \pmod 3\!,  \text{ and }   5 \equiv -1 \pmod 3\!
+      </me>,
+      we can say that 5 is related to 5, 5 is related to 2, and 5 is related to <m>-1</m>.
+      Notice that, as with functions,
+      each relation of the form <m>a \equiv b \pmod 3</m> involves two integers <m>a</m> and <m>b</m> and hence involves an ordered pair <m>\left( {a, b} \right)</m>,
+      which is an element of <m>\Z \times \Z</m>.
+    </p>
+    <definition xml:id="relation">
+      <statement>
+        <p>
+          Let <m>A</m> and <m>B</m> be sets.
+          A <term>relation <term>R</term> from the set</term>
+              <idx><h>relation</h></idx>
+          <m>\boldsymbol{A}</m> <term>to the set</term>
+          <m>\boldsymbol{B}</m> is a subset of <m>A \times B</m>.
+          That is, <m>R</m> is a collection of ordered pairs where the first coordinate of each ordered pair is an element of <m>A</m>,
+          and the second coordinate of each ordered pair is an element of <m>B</m>.
+        </p>
+        <p>
+          A relation from the set <m>A</m> to the set <m>A</m> is called a
+          <term>relation on the set <term>A</term></term>.
+          So a relation on the set <m>A</m> is a subset of <m>A \times A</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      In <xref ref="S_introfunctions">Section</xref>,
+      we defined the domain and range of a function.
+      We make similar definitions for a relation.
+    </p>
+    <definition xml:id="domrangeofrelation">
+      <statement>
+        <p>
+          If <m>R</m> is a relation from the set <m>A</m> to the set <m>B</m>,
+          then the subset of <m>A</m> consisting of all the first coordinates of the ordered pairs in <m>R</m> is called the <term>domain</term>
+          <idx><h>domain</h><h>of a relation</h></idx>
+              <idx><h>relation</h><h>domain</h></idx>
+          of <m>R</m>.
+          The subset of <m>B</m> consisting of all the second coordinates of the ordered pairs in <m>R</m> is called the <term>range</term>
+          <idx><h>range</h><h>of a relation</h></idx>
+              <idx><h>relation</h><h>range</h></idx>
+          of <m>R</m>.
+        </p>
+        <p>
+          We use the notation <m>\text{ dom } ( R )</m> for the domain of <m>R</m> and
+          <m>\text{ range } ( R )</m> for the range of <m>R</m>.
+          So using set builder notation,
+          <md>
+            <mrow>\text{ dom }  ( R )   \amp = \left\{ { {u \in A } \mid \left( {u, y} \right) \in R\text{ for at least one } y \in B} \right\}</mrow>
+            <mrow xml:id="sym_rangerel">\text{ range }  ( R ) \amp = \left\{ { {v \in B } \mid \left( {x, v} \right) \in R\text{ for at least one } x \in A} \right\}\!</mrow>
+          </md>.
+        </p>
+      </statement>
+    </definition>
+    <example xml:id="exam_relation">
+      <title><em>Domain and Range</em></title>
+      <statement>
+        <p>
+          A relation was studied in each of the beginning  activities for this section.
+          For Beginning  <xref ref="PA_eqn2variables">Activity</xref>,
+          the set <m>S = \left\{ (x, y) \in \R \times \R \mid 4x^2 + y^2 = 16 \right\}\!</m> is a subset of <m>\R \times \R</m> and, hence,
+          <m>S</m> is a relation on <m>\R</m>.
+          In Problem<nbsp/><xref ref="PA_eqn2variables3"/> of Beginning  <xref ref="PA_eqn2variables">Activity</xref>,
+          we actually determined the domain and range of this relation.
+          <md>
+            <mrow>\text{ dom } (S) \amp = A = \left\{ x \in \R \mid \text{ there exists a }  y \in \R \text{ such that }  4x^2 + y^2 = 16 \right\}</mrow>
+            <mrow>\text{ range } (S) \amp = B = \left\{ y \in \R \mid \text{ there exists an }  x \in \R \text{ such that }  4x^2 + y^2 = 16 \right\}</mrow>
+          </md>
+        </p>
+        <p>
+          So from the results in Beginning <xref ref="PA_eqn2variables">Activity</xref>,
+          we can say that the domain of the relation <m>S</m> is the closed interval
+          <m>\left[ -2, 2 \right]</m> and the range of <m>S</m> is the closed interval <m>\left[ -4, 4 \right]</m>.
+        </p>
+      </statement>
+    </example>
+    <investigation xml:id="A_relationexamples">
+      <title><em>Examples of Relations</em></title>
+      <ol>
+        <li>
+          <p>
+            Let <m>T = \left\{ {\left( {x, y} \right) \in \mathbb{R} \times \mathbb{R} \mid x^2 + y^2 = 64} \right\}</m>.
+            <ol>
+              <li>
+                <p>
+                  Explain why <m>T</m> is a relation on <m>\mathbb{R}</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Find all values of <m>x</m> such that <m>\left( {x, 4} \right) \in T</m>.
+                  Find all values of <m>x</m> such that <m>\left( {x, 9} \right) \in T</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  What is the domain of the relation <m>T</m>?
+                  What is the range of <m>T</m>?
+                </p>
+              </li>
+              <li>
+                <p>
+                  Since <m>T</m> is a relation on <m>\mathbb{R}</m>,
+                  its elements can be graphed in the coordinate plane.
+                  Describe the graph of the relation <m>T</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </li>
+        <li>
+          <p>
+            From Beginning  <xref ref="PA_USA">Activity</xref>,
+            <m>A</m>  is the set of all states in the United States, and
+            <me>
+              R = \left\{ { {\left( {x, y} \right) \in A \times A } \mid x\text{  and  } y\text{  have a land border in common } } \right\}\!
+            </me>.
+          </p>
+          <ol>
+            <li>
+              <p>
+                Explain why <m>R</m> is a relation on <m>A</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                What is the domain of the relation <m>R</m>?
+                What is the range of the relation <m>R</m>?
+              </p>
+            </li>
+            <li>
+              <p>
+                Are the following statements true or false?
+                Justify your conclusions.
+              </p>
+              <ol>
+                <li>
+                  <p>
+                    For all <m>x, y \in A</m>, if
+                    <m>(x, y) \in R</m>, then <m>(y, x) \in R</m>.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    For all <m>x, y, z \in A</m>,
+                    if <m>(x, y) \in R</m> and
+                    <m>(y, z) \in R</m>, then <m>(x, z) \in R</m>.
+                  </p>
+                </li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+      </ol>
+    </investigation>
+  </subsection>
+  <subsection>
+    <title>Some Standard Mathematical Relations</title>
+    <p>
+      There are many different relations in mathematics.
+      For example,
+      two real numbers can be considered to be related if one number is less than the other number.
+      We call this the
+      <q>less than</q>
+      relation on <m>\mathbb{R}</m>.
+      If <m>x, y \in \mathbb{R}</m> and <m>x</m> is less than <m>y</m>,
+      we often write <m>x \lt  y</m>.
+      As a set of ordered pairs, this relation is <m>R_{  \lt  }</m>, where
+      <me>
+        R_{  \lt  }  = \left\{ { {\left( {x, y} \right) \in \mathbb{R} \times \mathbb{R} } \mid x \lt  y} \right\}\!
+      </me>.
+    </p>
+    <p>
+      With many mathematical relations,
+      we do not write the relation as a set of ordered pairs even though,
+      technically, it is a set of ordered pairs.
+      <xref ref="Ta_standardrelations">Table</xref>
+      describes some standard mathematical relations.
+    </p>
+    <table xml:id="Ta_standardrelations">
+      <title>Standard Mathematical Relations</title>
+      <tabular>
+        <row bottom="minor">
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell><em>Name</em></cell>
+          <cell><em>Open</em></cell>
+          <cell><em>Relation as a Set of</em></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell><em>Sentence</em></cell>
+          <cell><em>Ordered Pairs</em></cell>
+        </row>
+        <row bottom="minor">
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>The
+            <q>less than</q>
+            relation on  <m>\mathbb{R}</m></cell>
+          <cell><m>x \lt  y</m></cell>
+          <cell><m>\left\{ { {\left( {x, y} \right) \in \mathbb{R} \times \mathbb{R} } \mid x \lt  y} \right\}</m></cell>
+        </row>
+        <row bottom="minor">
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>The
+            <q>equality</q>
+            relation on <m>\mathbb{R}</m></cell>
+          <cell><m>x=y</m></cell>
+          <cell><m>\left\{ { {\left( {x, y} \right) \in \mathbb{R} \times \mathbb{R} } \mid x = y} \right\}</m></cell>
+        </row>
+        <row bottom="minor">
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>The
+            <q>divides</q>
+            relation on  <m>\mathbb{Z}</m></cell>
+          <cell><m>m \mid n</m></cell>
+          <cell><m>\left\{ { {\left( {m, n} \right) \in \mathbb{Z} \times \mathbb{Z} } \mid m\text{  divides  } n} \right\}</m></cell>
+        </row>
+        <row bottom="minor">
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>The
+            <q>subset</q>
+            relation on  <m>\mathcal{P}\left( U \right)</m></cell>
+          <cell><m>S \subseteq T</m></cell>
+          <cell><m>\left\{ { {\left( {S, T} \right) \in \mathcal{P}\left( U \right) \times \mathcal{P}\left( U \right) } \mid S \subseteq T} \right\}</m></cell>
+        </row>
+        <row bottom="minor">
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>The
+            <q>element of</q>
+            relation from  <m>U</m>  to  <m>\mathcal{P}\left( U \right)</m></cell>
+          <cell><m>x \in S</m></cell>
+          <cell><m>\left\{ { {\left( {x, S} \right) \in U \times \mathcal{P}\left( U \right) } \mid x \in S} \right\}</m></cell>
+        </row>
+        <row bottom="minor">
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>The
+            <q>congruence modulo <m>n</m></q>
+            relation on <m>\mathbb{Z}</m></cell>
+          <cell><m>a \equiv b \pmod n</m></cell>
+          <cell><m>\left\{ {\left( {a, b} \right) \in \mathbb{Z} \times \mathbb{Z}   \mid a \equiv b \pmod n} \right\}</m></cell>
+        </row>
+        <row bottom="minor">
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+      </tabular>
+    </table>
+  </subsection>
+  <subsection xml:id="sym_xrelatedy">
+    <title>Notation for Relations</title>
+    <p>
+      The mathematical relations in <xref ref="Ta_standardrelations">Table</xref>
+      all used a relation symbol between the two elements that form the ordered pair in <m>A \times B</m>.
+      For this reason,
+      we often do the same thing for a general relation from the set <m>A</m> to the set <m>B</m>.
+      So if <m>R</m> is a relation from <m>A</m> to <m>B</m>,
+      and <m>x \in A</m> and <m>y \in B</m>, we use the notation
+    </p>
+    <tabular>
+      <row>
+        <cell><m>x \mathrel{R} y</m></cell>
+        <cell>to mean</cell>
+        <cell><m>\left( {x, y} \right) \in R</m>; and</cell>
+      </row>
+      <row>
+        <cell><m>x \mathrel{\not \negthickspace R} y</m></cell>
+        <cell>to mean</cell>
+        <cell><m>\left( {x, y} \right) \notin R</m>.</cell>
+      </row>
+    </tabular>
+    <p>
+      In some cases,
+      we will even use a generic relation symbol for defining a new relation or speaking about relations in a general context.
+      Perhaps the most commonly used symbol is
+      <q><m>\sim</m></q>, read
+      <q>tilde</q>
+      or
+      <q>squiggle</q>
+      or
+      <q>is related to.</q>
+      When we do this, we will write
+    </p>
+    <tabular>
+      <row>
+        <cell><m>x \sim y</m></cell>
+        <cell>means the same thing as</cell>
+        <cell><m>\left( {x, y} \right) \in R</m>; and</cell>
+      </row>
+      <row>
+        <cell><m>x \nsim y</m></cell>
+        <cell>means the same thing as</cell>
+        <cell><m>\left( {x, y} \right) \notin R</m>.</cell>
+      </row>
+    </tabular>
+    <investigation xml:id="prog_dividesrelation">
+      <title><em>The Divides Relation</em></title>
+      <p>
+        Whenever we have spoken about one integer dividing another integer,
+        we have worked with the
+        <q>divides</q>
+            <idx><h>divides</h></idx>
+            <idx><h>relation</h><h>divides</h></idx>
+        relation on <m>\mathbb{Z}</m>.
+        In particular, we can write
+        <me>
+          D = \left\{ { {\left( {m, n} \right) \in \mathbb{Z} \times \mathbb{Z} } \mid m\text{  divides  } n} \right\}\!
+        </me>.
+      </p>
+      <p>
+        In this case, we have a specific notation for
+        <q>divides,</q>
+        and we write <m>m \mid n</m> if and only if <m>\left( {m, n} \right) \in D</m>.
+      </p>
+      <ol>
+        <li>
+          <p>
+            What is the domain of the
+            <q>divides</q>
+            relation?
+            What is the range of the
+            <q>divides</q>
+            relation?
+          </p>
+        </li>
+        <li>
+          <p>
+            Are the following statements true or false?
+            Explain.
+          </p>
+          <ol>
+            <li>
+              <p>
+                For every nonzero integer <m>a</m>, <m>a \mid a</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                For all nonzero integers <m>a</m> and <m>b</m>,
+                if <m>a \mid b</m>, then <m>b \mid a</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                For all nonzero integers <m>a</m>, <m>b</m>, and <m>c</m>,
+                if <m>a \mid b</m> and <m>b \mid c</m>, then <m>a \mid c</m>.
+              </p>
+            </li>
+          </ol>
+        </li>
+      </ol>
+    </investigation>
+  </subsection>
+  <subsection>
+    <title>Functions as Relations</title>
+    <p>
+      If we have a function <m>f\x A \to B</m>,
+      we can generate a set of ordered pairs <m>f</m> that is a subset of <m>A \times B</m> as follows:
+      <me>
+        f = \left\{ { {\left( {a, f( a )} \right) } \mid a \in A} \right\}  \text{ or } f = \left\{ {( {a, b} ) \in A \times B   \mid b = f( a )} \right\}
+      </me>.
+    </p>
+    <p>
+      This means that <m>f</m> is a relation from <m>A</m> to <m>B</m>.
+      Since, <m>\text{ dom } ( f ) = A</m>, we know that
+      <ul>
+        {(1)} \item For every <m>a \in A</m>, there exists a <m>b \in B</m> such that <m>( a, b ) \in f</m>.
+      </ul>
+    </p>
+    <p>
+      When <m>\left( a, b \right) \in f</m>,
+      we write <m>b = f( a )</m>.
+      In addition, to be a function,
+      each input can produce only one output.
+      In terms of ordered pairs,
+      this means that there will never be two ordered pairs <m>( {a, b} )</m> and
+      <m>( {a, c} )</m> in the function <m>f</m>,
+      where <m>a \in A</m>, <m>b, c \in B</m>, and <m>b \ne c</m>.
+      We can formulate this as a conditional statement as follows:
+      <ul>
+        {(2)} \item For every <m>a \in A</m> and every <m>b, c \in B</m>, if <m>( a, b ) \in f</m> and <m>(a, c ) \in f</m>, then <m>b = c</m>.
+      </ul>
+    </p>
+    <p>
+      This means that a function <m>f</m> from <m>A</m> to <m>B</m> is a relation from <m>A</m> to <m>B</m> that satisfies conditions<nbsp/>(1) and<nbsp/>(2). (See <xref ref="T_functionasordered">Theorem</xref>
+      in <xref ref="S_inversefunctions">Section</xref>.) Not every relation,
+      however, will be a function.
+      For example,
+      consider the relation <m>T</m> in Progress <xref ref="A_relationexamples">Check</xref>.
+      <me>
+        T = \left\{ {\left( {x, y} \right) \in \mathbb{R} \times \mathbb{R}   \mid x^2  + y^2  = 64} \right\}
+      </me>
+    </p>
+    <p>
+      This relation fails condition<nbsp/>(2) above since a counterexample comes from the facts that
+      <m>(0, 8) \in T</m> and <m>(0, -8) \in T</m> and <m>8 \ne -8</m>.
+    </p>
+    <investigation xml:id="prog_setofpairs">
+      <title><em>A Set of Ordered Pairs</em></title>
+      <p>
+        Let <m>F = \left\{ (x, y) \in \R \times \R \mid y = x^2 \right\}</m>.
+        The set <m>F</m> can then be considered to be relation on <m>\R</m> since it is a subset of <m>\R \times \R</m>.
+      </p>
+      <ol>
+        <li>
+          <p>
+            List five different ordered pairs that are in the set <m>F</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Use the roster method to specify the elements of each of the following the sets:
+          </p>
+          <ol>
+            <li>
+              <p>
+                <m>A = \left\{ x \in \R \mid (x, 4) \in F \right\}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>B = \left\{ x \in \R \mid (x, 10) \in F \right\}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>C = \left\{ y \in \R \mid (5, y) \in F \right\}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>D = \left\{ y \in \R \mid (-3, y) \in F \right\}</m>
+              </p>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <p>
+            Since each real number <m>x</m> produces only one value of <m>y</m> for which <m>y = x^2</m>,
+            the set <m>F</m> can be used to define a function from the set <m>\R</m> to <m>\R</m>.
+            Draw a graph of this function.
+          </p>
+        </li>
+      </ol>
+    </investigation>
+  </subsection>
+  <subsection xml:id="directedgraph">
+    <title>Visual Representations of Relations</title>
+    <p>
+      In Progress <xref ref="prog_setofpairs">Check</xref>,
+      we were able to draw a graph of a relation as a way to visualize the relation.
+      In this case,
+      the relation was a function from <m>\R</m> to <m>\R</m>.
+      In addition,
+      in Progress <xref ref="A_relationexamples">Check</xref>,
+      we were also able to use a graph to represent a relation.
+      In this case, the graph of the relation
+      <m>T = \left\{ {\left( {x, y} \right) \in \mathbb{R} \times \mathbb{R} \mid x^2 + y^2 = 64} \right\}</m> is a circle of radius 8 whose center is at the origin.
+    </p>
+    <p>
+      When <m>R</m> is a relation from a subset of the real numbers <m>\R</m> to a subset of <m>\R</m>,
+      we can often use a graph to provide a visual representation of the relation.
+      This is especially true if the relation is defined by an equation or even an inequality.
+      For example, if
+      <me>
+        R = \left\{ (x, y) \in \R \times \R \mid y \geq x^2 \right\}
+      </me>,
+      then we can use the following graph as a way to visualize the points in the plane that are also in this relation.
+    </p>
+    <figure xml:id="fig_graph-relation">
+      <caption>Graph of <m>y \geq x^2</m></caption>
+      <image width="73%" source="images/figps-sec71-graph.png"/>
+    </figure>
+    <p>
+      The points <m>(x, y)</m> in the relation <m>R</m> are the points on the graph of <m>y = x^2</m> or are in the shaded region.
+      This because for these points, <m>y \geq x^2</m>.
+      One of the shortcomings of this type of graph is that the graph of the equation and the shaded region are actually unbounded and so we can never show the entire graph of this relation.
+      However, it does allow us to see that the points in this relation are either on the parabola defined by the equation <m>y = x^2</m> or are
+      <q>inside</q>
+      the parabola.
+    </p>
+    <p>
+      When the domain or range of a relation is infinite,
+      we cannot provide a visualization of the entire relation.
+      However, if <m>A</m> is a (small) finite set,
+      a relation <m>R</m> on <m>A</m> can be specified by simply listing all the ordered pairs in <m>R</m>.
+      For example, if <m>A = \left\{ {1, 2, 3, 4} \right\}</m>, then
+      <me>
+        R = \left\{ {( {1, 1} ), ( {4, 4} ), ( {1, 3} ), ( {3, 2} ), ( {1, 2} ), ( {2, 1} )} \right\}
+      </me>
+      is a relation on <m>A</m>.
+      A convenient way to represent such a relation is to draw a point in the plane for each of the elements of <m>A</m> and then for each <m>\left( {x, y} \right) \in R</m>
+      (or <m>x \mathrel{R} y</m>),
+      we draw an arrow starting at the point <m>x</m> and pointing to the point <m>y</m>.
+      If <m>\left( {x, x} \right) \in R</m>
+      (or <m>x \mathrel{R} x</m>),
+      we draw a loop at the point <m>x</m>.
+      The resulting diagram is called a
+      <em>directed graph</em>
+          <idx><h>directed graph</h></idx>
+      or a <em>digraph</em>.
+          <idx><h>digraph</h></idx>
+      The diagram in <xref ref="fig_dirgraph2">Figure</xref>
+      is a digraph for the relation <m>R</m>.
+    </p>
+    <figure xml:id="fig_dirgraph2">
+      <caption>Directed Graph for a Relation</caption>
+      <image width="73%" source="images/figps-prev72digraph.png"/>
+    </figure>
+    <p>
+      In a directed graph, the points are called the <em>vertices</em>.
+      So each element of <m>A</m> corresponds to a <em>vertex</em>.
+          <idx><h>vertex</h></idx>
+          <idx><h>directed graph</h><h>vertex</h></idx>
+      The arrows, including the loops, are called the <em>directed edges</em>
+          <idx><h>directed edge</h></idx>
+          <idx><h>directed graph</h><h>directed edge</h></idx>
+      of the directed graph.
+      We will make use of these directed graphs in the next section when we study equivalence relations.
+    </p>
+    <investigation xml:id="prog_directedgraph">
+      <title><em>The Directed Graph of a Relation</em></title>
+      <p>
+        Let <m>A = \{ 1, 2, 3, 4, 5, 6 \}</m>.
+        Draw a directed graph for the following two relations on the set <m>A</m>.
+        For each relation,
+        it may be helpful to arrange the vertices of <m>A</m> as shown in <xref ref="fig_dirgraph3">Figure</xref>.
+        <me>
+          R = \{ (x, y) \in A \times A \mid x \text{ divides }  y \}, \qquad T = \{ (x, y) \in A \times A \mid x + y \text{ is even }  \}
+        </me>.
+      </p>
+      <figure xml:id="fig_dirgraph3">
+        <caption>Vertices for <m>A</m></caption>
+        <image width="73%" source="images/figps-sec71-dirgraph.png"/>
+      </figure>
+    </investigation>
+    <p>
+      \exercises{Exercises 7.1}
+    </p>
+    <ol>
+      <li xml:id="exer_sec71-1">
+        <p>
+          Let <m>A = \left\{ {a, b, c} \right\}</m>,
+          <m>B = \left\{ {p, q, r} \right\}</m>,
+          and let <m>R</m> be the set of ordered pairs defined by <m>R = \left\{ {\left( {a, p} \right), \left( {b, q} \right), \left( {c, p} \right), \left( {a, q} \right)} \right\}</m>.
+        </p>
+        <ol>
+          <li>
+            <p>
+              Use the roster method to list all the elements of <m>A \times B</m>.
+              Explain why <m>A \times B</m> can be considered to be a relation from <m>A</m> to <m>B</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Explain why <m>R</m> is a relation from <m>A</m> to <m>B</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              What is the domain of <m>R</m>?
+              What is the range of <m>R</m>?
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li xml:id="exer_sec71-2">
+        <p>
+          Let <m>A = \left\{ {a, b, c} \right\}</m> and let <m>R = \left\{ {\left( {a, a} \right), \left( {a, c} \right), \left( {b, b} \right), \left( {b, c} \right), \left( {c, a} \right), \left( {c, b} \right)} \right\}</m>
+          (so <m>R</m> is a relation on <m>A</m>).
+          Are the following statements true or false?
+          Explain.
+          <ol>
+            <li>
+              <p>
+                For each <m>x \in A</m>, <m>x \mathrel{R} x</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                For every <m>x, y \in A</m>,
+                if <m>x \mathrel{R} y</m>, then <m>y \mathrel{R} x</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                For every <m>x, y, z \in A</m>,
+                if <m>x \mathrel{R} y</m> and <m>y \mathrel{R} z</m>,
+                then <m>x \mathrel{R} z</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>R</m> is a function from <m>A</m> to <m>A</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec71-3">
+        <p>
+          Let  <m>A</m>  be the set of all female citizens of the United States.
+          Let  <m>D</m>  be the relation on  <m>A</m>  defined by
+          <me>
+            D = \left\{ { {\left( {x, y} \right) \in A \times A } \mid x\text{  is a daughter of  } y} \right\}\!
+          </me>.
+          That is,  <m>x \mathrel{D} y</m> means that  <m>x</m>  is a daughter of  <m>y</m>.
+          <ol>
+            <li>
+              <p>
+                Describe those elements of <m>A</m> that are in the domain of <m>D</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Describe those elements of <m>A</m> that are in the range of <m>D</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Is the relation <m>D</m> a function from <m>A</m> to <m>A</m>?
+                Explain.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec71-4">
+        <p>
+          Let  <m>U</m>  be a nonempty set, and let  <m>R</m>  be the
+          <q>subset relation</q>
+          on <m>\mathcal{P}( U )</m>.
+          That is,
+          <me>
+            R = \left\{ { {\left( {S, T} \right) \in \mathcal{P}( U ) \times \mathcal{P}( U ) } \mid S \subseteq T} \right\}\!
+          </me>.
+          <ol>
+            <li>
+              <p>
+                Write the open sentence <m>\left( {S, T} \right) \in R</m> using standard subset notation.
+              </p>
+            </li>
+            <li>
+              <p>
+                What is the domain of this subset relation, <m>R</m>?
+              </p>
+            </li>
+            <li>
+              <p>
+                What is the range of this subset relation, <m>R</m>?
+              </p>
+            </li>
+            <li>
+              <p>
+                Is <m>R</m> a function from
+                <m>\mathcal{P}( U )</m> to <m>\mathcal{P}( U )</m>?
+                Explain.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec71-5">
+        <p>
+          Let  <m>U</m>  be a nonempty set, and let  <m>R</m>  be the
+          <q>element of</q>
+          relation from  <m>U</m>  to   <m>\mathcal{P}\left( U \right)</m>.
+          That is,
+          <me>
+            R = \left\{ { {\left( {x, S} \right) \in U \times \mathcal{P}( U ) } \mid x \in S} \right\}\!
+          </me>.
+          <ol>
+            <li>
+              <p>
+                What is the domain of this
+                <q>element of</q>
+                relation, <m>R</m>?
+              </p>
+            </li>
+            <li>
+              <p>
+                What is the range of this
+                <q>element of</q>
+                relation, <m>R</m>?
+              </p>
+            </li>
+            <li>
+              <p>
+                Is <m>R</m> a function from <m>U</m> to <m>\mathcal{P}( U )</m>?
+                Explain.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_circle-mainmain">
+        <p>
+          Let <m>S = \left\{ {\left( {x, y} \right) \in \mathbb{R} \times \mathbb{R} \mid x^2 + y^2 = 100} \right\}</m>.
+          <ol>
+            <li xml:id="exer_circle-a">
+              <p>
+                Determine the set of all values of <m>x</m> such that <m>\left( {x, 6} \right) \in S</m>,
+                and determine the set of all values of <m>x</m> such that <m>\left( {x, 9} \right) \in S</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Determine the domain and range of the relation <m>S</m> and write each set using set builder notation.
+              </p>
+            </li>
+            <li xml:id="exer_circle-e">
+              <p>
+                Is the relation <m>S</m> a function from
+                <m>\mathbb{R}</m> to <m>\mathbb{R}</m>?
+                Explain.
+              </p>
+            </li>
+            <li>
+              <p>
+                Since <m>S</m> is a relation on <m>\mathbb{R}</m>,
+                its elements can be graphed in the coordinate plane.
+                Describe the graph of the relation <m>S</m>.
+                Is the graph consistent with your answers in Exercises<nbsp/><xref ref="exer_circle-a"/> through<nbsp/><xref ref="exer_circle-e"/>?
+                Explain.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_semicircle">
+        <p>
+          Repeat Exercise<nbsp/><xref ref="exer_circle-mainmain"/> using the relation on <m>\R</m> defined by
+          <me>
+            S = \left\{ {\left( {x, y} \right) \in \mathbb{R} \times \mathbb{R}   \mid y = \sqrt {100 - x^2 } } \right\}\!
+          </me>.
+          What is the connection between this relation and the relation in Exercise<nbsp/><xref ref="exer_circle-mainmain"/>?
+        </p>
+      </li>
+      <li>
+        <p>
+          Determine the domain and range of each of the following relations on <m>\R</m> and sketch the graph of each relation.
+          <ol>
+            <li>
+              <p>
+                <m>R = \left\{ {\left( {x, y} \right) \in \mathbb{R} \times \mathbb{R} \mid x^2 + y^2 = 10} \right\}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>S = \left\{ {\left( {x, y} \right) \in \mathbb{R} \times \mathbb{R} \mid y^2 = x+10} \right\}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>T = \left\{ {\left( {x, y} \right) \in \mathbb{R} \times \mathbb{R} \mid |x| + |y| = 10} \right\}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>R = \left\{ {\left( {x, y} \right) \in \mathbb{R} \times \mathbb{R} \mid x^2 =y^2} \right\}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_absvalueless2">
+        <p>
+          Let <m>\mathrel{R}</m> be the relation on <m>\Z</m> where for all <m>a,
+          b \in \Z</m>,
+          <m>a \mathrel{R} b</m> if and only if <m>\left| a - b \right| \leq 2</m>.
+          <ol>
+            <li>
+              <p>
+                Use set builder notation to describe the relation
+                <m>\mathrel{R}</m> as a set of ordered pairs.
+              </p>
+            </li>
+            <li>
+              <p>
+                Determine the domain and range of the relation <m>\mathrel{R}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Use the roster method to specify the set of all integers <m>x</m> such that
+                <m>x \mathrel{R} 5</m> and the set of all integers <m>x</m> such that <m>5 \mathrel{R} x</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If possible,
+                find integers <m>x</m> and <m>y</m> such that <m>x \mathrel{R} 8</m>,
+                <m>8 \mathrel{R} y</m>, but <m>x \mathrel{\not \negthickspace R} y</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>b \in \Z</m>, use the roster method to specify the set of all
+                <m>x \in \Z</m> such that <m>x \mathrel{R} b</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec71-lessthan">
+        <p>
+          Let <m>R_{ \lt } = \left\{ { {\left( {x, y} \right) \in \mathbb{R} \times \mathbb{R} } \mid x \lt y} \right\}</m>.
+          This means that <m>R_{ \lt }</m> is the
+          <q>less than</q>
+          relation on <m>\R</m>.
+          <ol>
+            <li>
+              <p>
+                What is the domain of the relation <m>R_{ \lt }</m>?
+              </p>
+            </li>
+            <li>
+              <p>
+                What is the range of the relation <m>R_{ \lt }</m>?
+              </p>
+            </li>
+            <li>
+              <p>
+                Is the relation <m>R_{ \lt }</m> a function from
+                <m>\mathbb{R}</m> to <m>\mathbb{R}</m>?
+                Explain.
+              </p>
+            </li>
+          </ol>
+        </p>
+        \note Remember that a relation is a set. Consequently, we can talk about one relation being a subset of another relation. Another thing to remember is that the elements of a relation are ordered pairs.
+      </li>
+    </ol>
+  </subsection>
+  <subsection>
+    <title>Explorations and Activities</title>
+    <ol>
+      <li xml:id="exer_provinginverse">
+        <p>
+          <em>The Inverse of a Relation</em>.
+          In <xref ref="S_inversefunctions">Section</xref>,
+          we introduced the <em>inverse of a function</em>.
+    <idx><h>inverse of a function</h></idx>
+    <idx><h>function</h><h>inverse of</h></idx> If  <m>A</m> and <m>B</m> are nonempty sets and if <m>f:A \to B</m> is a function, then the inverse of  <m>f</m>, denoted by  <m>f^{ - 1}</m>, is defined as
+          <md>
+            <mrow>f^{ - 1}  \amp = \left\{ { {\left( {b, a} \right) \in B \times A } \mid f\left( a \right) = b} \right\}</mrow>
+            <mrow>\amp = \left\{ { {\left( {b, a} \right) \in B \times A } \mid \left( {a, b} \right) \in f} \right\}\!</mrow>
+          </md>.
+          Now that we know about relations,
+          we see that  <m>f^{ - 1}</m>  is always a relation from  <m>B</m>  to <m>A</m>.
+          The concept of the inverse of a function is actually a special case of the more general concept of the inverse of a relation,
+          which we now define.
+        </p>
+        <definition xml:id="inverseofrelation">
+          <statement>
+            <p>
+              Let <m>R</m> be a relation from the set <m>A</m> to the set <m>B</m>.
+              The <term>inverse of</term> <m>\boldsymbol{R}</m>,
+    <idx><h>inverse of a relation</h></idx>
+    <idx><h>relation</h><h>inverse of</h></idx>
+              written <m>R^{ - 1}</m> and read
+              <q><m>R</m> inverse,</q>
+              is the relation from <m>B</m> to <m>A</m> defined by
+              <me>
+                \begin{aligned}R^{ - 1}  \amp = \left\{ { {\left( {y, x} \right) \in B \times A } \mid \left( {x, y} \right) \in R} \right\}\text{ , or }   \\ R^{ - 1}  \amp = \left\{ { {\left( {y, x} \right) \in B \times A } \mid x \mathrel{R} y} \right\}\!. \end{aligned}
+              </me>
+            </p>
+            <p>
+              That is, <m>R^{ - 1}</m> is the subset of
+              <m>B \times A</m> consisting of all ordered pairs
+              <m>\left( {y, x} \right)</m> such that <m>x \mathrel{R} y</m>.
+            </p>
+          </statement>
+        </definition>
+        For example, let <m>D</m> be the
+        <q>divides</q>
+        relation on  <m>\mathbb{Z}</m>.  See Progress <xref ref="prog_dividesrelation">Check</xref>.  So
+        <me>
+          D = \left\{ { {\left( {m, n} \right) \in \mathbb{Z} \times \mathbb{Z} } \mid m\text{  divides  } n} \right\}\!
+        </me>.
+        This means that we can write <m>m \mid n</m> if and only if <m>\left( {m, n} \right) \in D</m>. So, in this case,
+        <me>
+          \begin{aligned}D^{ - 1}  \amp = \left\{ { {\left( {n, m} \right) \in \mathbb{Z} \times \mathbb{Z} } \mid \left( {m, n} \right) \in D} \right\} \\ \amp = \left\{ { {\left( {n, m} \right) \in \mathbb{Z} \times \mathbb{Z} } \mid m\text{  divides  } n} \right\}\!. \end{aligned}
+        </me>
+        Now, if we would like to focus on the first coordinate instead of the second coordinate in <m>D^{ - 1}</m>, we know that
+        <q><m>m</m>  divides  <m>n</m></q>
+        means the same thing as
+        <q><m>n</m>  is a multiple of  <m>m</m>.</q>
+        Hence,
+        <me>
+          D^{ - 1}  = \left\{ { {\left( {n, m} \right) \in \mathbb{Z} \times \mathbb{Z} } \mid n\text{  is a multiple of  } m} \right\}\!
+        </me>.
+        We can say that the inverse of the
+        <q>divides</q>
+        relation on  <m>\mathbb{Z}</m>  is the
+        <q>is a multiple of</q>
+        relation on  <m>\mathbb{Z}</m>.  <xref ref="T_inverserelations">Theorem</xref>, which follows, contains some elementary facts about inverse relations.
+        <theorem xml:id="T_inverserelations">
+          <statement>
+            <p>
+              Let <m>R</m> be a relation from the set <m>A</m> to the set <m>B</m>.
+              Then
+              <ul>
+                <li xml:id="T_inverserelations1">
+                  <p>
+                    The domain of <m>R^{ - 1}</m> is the range of <m>R</m>.
+                    That is, <m>\text{ dom } \!\left( {R^{ - 1} } \right) = \text{ range } ( R )</m>.
+                  </p>
+                </li>
+                <li xml:id="T_inverserelations2">
+                  <p>
+                    The range of <m>R^{ - 1}</m> is the domain of <m>R</m>.
+                    That is, <m>\text{ range } \!\left( {R^{ - 1} } \right) = \text{ dom } ( R )</m>.
+                  </p>
+                </li>
+                <li xml:id="T_inverserelations3">
+                  <p>
+                    The inverse of <m>R^{ - 1}</m> is <m>R</m>.
+                    That is, <m>\left( {R^{ - 1} } \right)^{ - 1} = R</m>.
+                  </p>
+                </li>
+              </ul>
+  <!-- </p> -->
+            </p>
+          </statement>
+        </theorem>
+        To prove the first part of <xref ref="T_inverserelations">Theorem</xref>, observe that the goal is to prove that two sets are equal,
+        <me>
+          \text{ dom } \!\left( {R^{ - 1} } \right) = \text{ range } ( R )
+        </me>.
+        One way to do this is to prove that each is a subset of the other. To prove that  <m>\text{ dom } \!\left( {R^{ - 1} } \right) \subseteq \text{ range } ( R )</m>, we can start by choosing an arbitrary element of  <m>\text{ dom } \!\left( {R^{ - 1} } \right)</m>.  So let <m>y \in \text{ dom } \!\left( {R^{ - 1} } \right)</m>.  The goal now is to prove that <m>y~\in~\text{ range } ( R )</m>.  What does it mean to say that <m>y \in \text{ dom } \!\left( {R^{ - 1} } \right)</m>?  It means that there exists an  <m>x \in A</m>  such that
+        <me>
+          \left( {y, x} \right) \in R^{ - 1}
+        </me>.
+        Now what does it mean to say that  <m>( {y, x} ) \in R^{ - 1}</m>?  It means that <m>( {x, y} ) \in R</m>.  What does this tell us about  <m>y</m>?  Complete the proof of the first part of <xref ref="T_inverserelations">Theorem</xref>.  Then, complete the proofs of the other two parts of <xref ref="T_inverserelations">Theorem</xref>.
+      </li>
+    </ol>
+  </subsection>
+</section>

@@ -1,0 +1,85 @@
+<section>
+  <title><xref ref="S_otherinduction">Section</xref></title>
+  <ul>
+    {{ <xref ref="exer_sec52-1"></xref>.}}
+    \item
+    <ul>
+      {{(a)}}
+      \item Let <m>P \left( n \right)</m> be,
+      <q><m>3^n > 1 + 2^n</m>.</q>
+      <m>P \left( 2 \right)</m> is true since <m>3^2 = 9</m>, <m>1 + 2^2 = 5</m>, and <m>9 > 5</m>.
+      For the inductive step, we assume that <m>P \left( k \right)</m> is true and so
+      <men>
+        3^k > 1 + 2^k
+      </men>.
+      To prove that <m>P(k+1)</m> is true, we must prove that <m>3^{k+1} > 1 + 2^{k+1}</m>.  Multiplying both sides inequality<nbsp/>(1) by 3 gives
+      <me>
+        3^{k + 1} > 3 + 3 \cdot 2^k
+      </me>.
+      Now, since <m>3 > 1</m> and <m>3 \cdot 2^k > 2^{k + 1}</m>, we see that <m>3 + 3 \cdot 2^k > 1 + 2^{k+1}</m> and hence, <m>3^{k + 1} > 1 + 2^{k+1}</m>.  Thus, if <m>P \left( k \right)</m> is true, then <m>P \left( k +1  \right)</m> is true.  This proves the inductive step.
+    </ul>
+  </ul>
+  <ul>
+    {{ <xref ref="exer_sec52-6"></xref>.}}
+    \item If <m>n \geq 5</m>, then <m>n^2 \lt  2^n</m>.  To prove this, we let <m>P(n)</m> be <m>n^2 \lt  2^n</m>.  For the basis step, when <m>n = 5</m>, <m>n^2 = 25</m>, <m>2^n = 32</m>, and <m>25 \lt  32</m>.  For the inductive step, we assume that <m>k \geq 5</m>  and that <m>P(k)</m> is true or that <m>k^2 \lt  2^k</m>.  With these assumptions, we need to prove that <m>P(k+1)</m> is true or that <m>(k+1)^2 \lt  2^{k+1}</m>.  We first note that
+    <men>
+      ( k + 1 )^2 = k^2 + 2k + 1 \lt  2^k + 2k + 1
+    </men>.
+    Since <m>k \geq 5</m>, we see that <m>5k \lt  k^2</m> and so <m>2k + 3k \lt  k^2</m>.  However, <m>3k > 1</m> and so <m>2k + 1 \lt  2k + 3k \lt  k^2</m>.  Combinining this with inequality<nbsp/>(1), we obtain <m>(k+1)^2 \lt  2^k+ k^2</m>.  Using the assumption that <m>P(k)</m> is true <m>\left(k^2 \lt  2^k\right)</m>, we obtain
+    <md>
+      <mrow>(k+1)^2 \amp \lt  2^k + 2^k = 2 \cdot 2^k</mrow>
+      <mrow>(k+1)^2 \amp \lt  2^{k+1}</mrow>
+    </md>
+    This proves that if <m>P(k)</m> is true, then <m>P(k+1)</m> is true.
+  </ul>
+  <ul>
+    {{ <xref ref="exer_sec52-3"></xref>.}}
+    \item Let  <m>P( n )</m>  be the predicate,
+    <q><m>8^n \mid ( 4n )!</m>.</q>
+    Verify that
+    <m>P( 0 ), P( 1 ), P( 2 )</m>, and <m>P( 3 )</m> are true.
+    For the inductive step, the following fact about factorials may be useful:
+    <md>
+      <mrow>! \amp = ( 4k + 4 )!</mrow>
+      <mrow>\amp = (4k + 4)(4k + 3)(4k + 2)(4k + 1) ( 4k )!</mrow>
+    </md>.
+  </ul>
+  <ul>
+    {{ <xref ref="exer_sec52-4"></xref>.}}
+    \item Let  <m>P( n )</m>  be,
+    <q>The natural number  <m>n</m>  can be written as a sum of natural numbers, each of which is a 2  or a  3.</q>
+    Verify that
+    <m>P( 4 ), P( 5 ), P( 6 )</m>, and <m>P( 7 )</m> are true.
+    To use the Second Principle of Mathematical Induction, assume that  <m>k \in \mathbb{N}, k \geq 5</m> and that
+    <m>P( 4 ), P( 5 ),  \ldots , P( k )</m> are true.  Then notice that
+    <me>
+      k + 1 = ( {k - 1} ) + 2
+    </me>.
+    Since  <m>k - 1 \geq 4</m>, we have assumed that  <m>P( {k - 1} )</m> is true.  This means that <m>(k-1)</m> can be written as a sum of natural numbers, each of which is a 2 or a 3.  Since <m>k + 1 = (k - 1) + 2</m>, we can conclude that <m>(k+1)</m> can be written as a sum of natural numbers, each of which is a 2 or a 3.  This completes the proof of the inductive step.
+  </ul>
+  <ul>
+    {{ <xref ref="exer_2elementsubsets"></xref>.}}
+    \item Let <m>P ( n )</m> be,
+    <q>Any set with <m>n</m> elements has
+    <m>\dfrac{n ( n - 1 )}{2}</m> 2-element subsets.</q>
+    <m>P ( 1 )</m> is true since any set with only one element has no 2-element subsets.
+    Let <m>k \in \mathbb{N}</m> and assume that <m>P ( k )</m> is true.  This means that any set with <m>k</m> elements has <m>\dfrac{k ( k - 1 )}{2}</m> 2-element subsets.  Let <m>A</m> be a set with <m>k + 1</m> elements, and let <m>x \in A</m>. Now use the inductive hypothesis on the set
+    <m>A - \left\{ x \right\}</m>, and determine how the 2-element subsets of <m>A</m> are related to the set
+    <m>A - \left\{ x \right\}</m>.
+  </ul>
+  <ul>
+    {{ <xref ref="exer_specialFTA"></xref>.}}
+    \item
+    <ul>
+      {{(a)}}
+      \item Use <xref ref="T_primefactors">Theorem</xref>.
+    </ul>
+  </ul>
+  <ul>
+    \item
+    <ul>
+      {{(b)}}
+      \item  Assume <m>k \ne q</m> and consider two cases:  (i) <m>k \lt  q</m>; (ii) <m>k > q</m>.
+    </ul>
+  </ul>
+</section>

@@ -1,0 +1,1415 @@
+<section xml:id="S_quantifier">
+  <title>Quantifiers and Negations</title>
+  <introduction>
+    <exploration xml:id="PA_quantifier">
+      <title><em>An Introduction to Quantifiers</em></title>
+      <p>
+            <idx><h>quantifier</h></idx>
+        We have seen that one way to create a statement from an open sentence is to substitute a specific element from the universal set for each variable in the open sentence.
+        Another way is to make some claim about the truth set of the open sentence.
+        This is often done by using a quantifier.
+        For example, if the universal set is <m>\mathbb{R}</m>,
+        then the following sentence is a statement.
+        For each real number <m>x</m>, <m>x^2 > 0</m>.
+        The phrase
+        <q>For each real number <m>x</m></q>
+        is said to <term>quantify the variable</term>
+        that follows it in the sense that the sentence is claiming that something is true for all real numbers.
+        So this sentence is a statement
+        (which happens to be false).
+      </p>
+      <definition xml:id="D_every">
+        <statement>
+          <p>
+            The phrase
+            <q>for every</q>
+            (or its equivalents) is called a
+            <term>universal quantifier</term>.
+                <idx><h>universal quantifier</h></idx>
+                <idx><h>quantifier</h><h>universal</h></idx>
+            The phrase
+            <q>there exists</q>
+            (or its equivalents) is called an
+            <term>existential quantifier</term>.
+                <idx><h>existential quantifier</h></idx>
+                <idx><h>quantifier</h><h>existential</h></idx>
+            The symbol <m>\forall</m> is used to denote a universal quantifier, and the symbol <m>\exists</m> is used to denote an existential quantifier.
+          </p>
+        </statement>
+      </definition>
+      <p>
+        Using this notation, the statement
+        <q>For each real number <m>x</m>, <m>x^2 > 0</m></q>
+        could be written in symbolic form as:
+        <m>\left( {\forall x \in \mathbb{R}} \right)\left( {x^2 > 0} \right)</m>.
+        The following is an example of a statement involving an existential quantifier.
+        There exists an integer <m>x</m> such that <m>3x - 2 = 0</m>.
+        This could be written in symbolic form as
+        <me>
+          \left( {\exists x \in \Z} \right) \left( 3x - 2 = 0 \right)
+        </me>.
+      </p>
+      <p>
+        This statement is false because there are no integers that are solutions of the linear equation <m>3x - 2 = 0</m>.
+        <xref ref="T_quantifiers">Table</xref>
+        summarizes the facts about the two types of quantifiers.
+      </p>
+      <table xml:id="T_quantifiers">
+        <title>Properties of Quantifiers</title>
+        <me>
+          <tabular>
+            <row>
+              <cell>_
+                | <em>A statement involving </em>  |  <em>Often has the form</em>  |  <em>The statement is true provided that</em> |</cell>
+            </row>
+            <row>
+              <cell>+22 _
+                | A universal quantifier: \(\left( \forall x, P(x) \right)\)  |
+                <q>For every \(x\), \(P(x)\),</q>
+                where \(P(x)\) is a predicate.  |  Every value of \(x\) in the universal set makes \(P(x)\) true. |</cell>
+            </row>
+            <row>
+              <cell>_
+                | An existential quantifier: \(\left( \exists x, P(x) \right)\)     |
+                <q>There exists an \(x\) such that \(P(x)\),</q>
+                where \(P(x)\) is a predicate.                              |   There is at least one value of \(x\) in the universal set that makes \(P(x)\) true.   |</cell>
+            </row>
+            <row>
+              <cell>_</cell>
+            </row>
+          </tabular>
+        </me>
+      </table>
+      <p>
+        In effect, the table indicates that the universally quantified statement is true provided that the truth set of the predicate equals the universal set,
+        and the existentially quantified statement is true provided that the truth set of the predicate contains at least one element. \item Each of the following sentences is a statement or an open sentence.
+        Assume that the universal set for each variable in these sentences is the set of all real numbers.
+        If a sentence is an open sentence (predicate), determine its truth set.
+        If a sentence is a statement,
+        determine whether it is true or false.
+        <ol>
+          <li>
+            <p>
+              <m>\left( \forall a \in \mathbb{R}\right) \left(a + 0 = a\right)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>3x - 5 = 9</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\sqrt x \in \mathbb{R}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\sin( {2x} ) = 2( {\sin x} )( {\cos x})</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\left( \forall x \in \R\right) \left(\sin( {2x} ) = 2( {\sin x})( {\cos x}) \right)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\left( \exists x \in \R \right)\left( x^2 + 1 = 0 \right)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\left( \forall x \in \R \right) \left( x^3 \geq x^2 \right)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>x^2 + 1 = 0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>x^2 \geq 1</m>, then <m>x \geq 1</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\left( \forall x \in \R \right)\left( \text{ If } x^2 \geq 1, \text{ then } x \geq 1 \right)</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </exploration>
+    <exploration xml:id="PA_negatequantifier">
+      <title><em>Attempting to Negate Quantified Statements</em></title>
+      <ol>
+        <li>
+          <p>
+            Consider the following statement written in symbolic form:
+            <m>\left( {\forall x \in \mathbb{Z}} \right)\left( {x\text{ is a multiple of 2 } } \right)</m>.
+            <ol>
+              <li>
+                <p>
+                  Write this statement as an English sentence.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Is the statement true or false?
+                  Why?
+                </p>
+              </li>
+              <li>
+                <p>
+                  How would you write the negation of this statement as an English sentence?
+                </p>
+              </li>
+              <li>
+                <p>
+                  If possible,
+                  write your negation of this statement from part<nbsp/>(2) symbolically
+                  (using a quantifier).
+                </p>
+              </li>
+            </ol>
+          </p>
+        </li>
+        <li>
+          <p>
+            Consider the following statement written in symbolic form:
+            <m>\left( {\exists x \in \mathbb{Z}} \right)\left( {x^3 > 0} \right)</m>.
+            <ol>
+              <li>
+                <p>
+                  Write this statement as an English sentence.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Is the statement true or false?
+                  Why?
+                </p>
+              </li>
+              <li>
+                <p>
+                  How would you write the negation of this statement as an English sentence?
+                </p>
+              </li>
+              <li>
+                <p>
+                  If possible,
+                  write your negation of this statement from part<nbsp/>(2) symbolically
+                  (using a quantifier).
+                </p>
+              </li>
+            </ol>
+          </p>
+        </li>
+      </ol>
+    </exploration>
+    <p>
+      We introduced the concepts of open sentences and quantifiers in <xref ref="S_predicates">Section</xref>.
+      Review the definitions given on <xref ref="D_universal">pages</xref>,
+      <xref ref="D_truthset"></xref>,
+      and <xref ref="D_every"></xref>.
+    </p>
+  </introduction>
+  <subsection>
+    <title>Forms of Quantified Statements in English</title>
+    <p>
+      There are many ways to write statements involving quantifiers in English.
+      In some cases, the quantifiers are not apparent,
+      and this often happens with conditional statements.
+      The following examples illustrate these points.
+      Each example contains a quantified statement written in symbolic form followed by several ways to write the statement in English.
+      <ol>
+        <li xml:id="D_counterexample">
+          <p>
+            <m>\left( {\forall x \in \mathbb{R}} \right)\left( {x^2 > 0} \right)</m>.
+            <ul>
+              <li>
+                <p>
+                  For each real number <m>x</m>, <m>x^2 > 0</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  The square of every real number is greater than 0.
+                </p>
+              </li>
+              <li>
+                <p>
+                  The square of a real number is greater than 0.
+                </p>
+              </li>
+              <li>
+                <p>
+                  If <m>x \in \mathbb{R}</m>, then <m>x^2 > 0</m>.
+                </p>
+              </li>
+            </ul>
+          </p>
+          In the second to the last example, the quantifier is not stated explicitly.  Care must be taken when reading this because it really does say the same thing as the previous examples. The last example illustrates the fact that conditional statements often contain a
+          <q>hidden</q>
+          universal quantifier.  If the universal set is  <m>\R</m>, then the truth set of the open sentence  <m>x^2  > 0</m> is the set of all nonzero real numbers.  That is, the truth set is
+          <me>
+            \left\{ {x \in \mathbb{R}} \mid x \ne 0 \right\}
+          </me>.
+          So the preceding statements are false.  For the conditional statement, the example using <m>x = 0</m> produces a true hypothesis and a false conclusion.  This is a <em>counterexample</em>
+    <idx><h>counterexample</h></idx>
+      that shows that the statement with a universal quantifier is false.
+        </li>
+        <li>
+          <p>
+            <m>\left( {\exists x \in \mathbb{R}} \right)\left( {x^2 = 5} \right)</m>.
+            <ul>
+              <li>
+                <p>
+                  There exists a real number <m>x</m> such that <m>x^2 = 5</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <m>x^2 = 5</m> for some real number <m>x</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  There is a real number whose square equals 5.
+                </p>
+              </li>
+            </ul>
+          </p>
+          The second example is usually not used since it is not considered good writing practice to start a sentence with a mathematical symbol.
+          If the universal set is <m>\R</m>,
+          then the truth set of the predicate
+          <q><m>x^2 = 5</m></q>
+          is <m>\left\{ { - \sqrt 5 ,\;\sqrt 5 } \right\}</m>.
+          So these are all true statements.
+        </li>
+      </ol>
+    </p>
+  </subsection>
+  <subsection>
+    <title>Negations of Quantified Statements</title>
+    <p>
+          <idx><h>negation</h><h>of a quantified statement|(</h></idx>
+      In Beginning <xref ref="PA_quantifier">Activity</xref>,
+      we wrote negations of some quantified statements.
+      This is a very important mathematical activity.
+      As we will see in future sections,
+      it is sometimes just as important to be able to describe when some object does not satisfy a certain property as it is to describe when the object satisfies the property.
+      Our next task is to learn how to write negations of quantified statements in a useful English form.
+    </p>
+    <p>
+      We first look at the negation of a statement involving a universal quantifier.
+      The general form for such a statement can be written as <m>\left( {\forall x} \in U \right)\left( {P( x )} \right)</m>,
+      where <m>P( x )</m> is an open sentence and <m>U</m> is the universal set for the variable <m>x</m>.
+      When we write
+      <me>
+        \mynot  \left( {\forall x} \in U \right)\left[ {P\left( x \right)} \right]
+      </me>,
+      we are asserting that the statement <m>\left( {\forall x} \in U \right)\left[ {P( x )} \right]</m> is false.
+      This is equivalent to saying that the truth set of the open sentence <m>P( x )</m> is not the universal set.
+      That is, there exists an element <m>x</m> in the universal set <m>U</m> such that <m>P( x )</m> is false.
+      This in turn means that there exists an element <m>x</m> in <m>U</m> such that <m>\mynot  P( x )</m> is true,
+      which is equivalent to saying that <m>\left( {\exists x} \in U \right)\left[ {\mynot  P( x )} \right]</m> is true.
+      This explains why the following result is true:
+      <me>
+        \mynot  \left( {\forall x} \in U \right)\left[ {P( x )} \right] \equiv \left( {\exists x} \in U \right)\left[ {\mynot  P( x )} \right]
+      </me>.
+    </p>
+    <p>
+      Similarly, when we write
+      <me>
+        \mynot  \left( {\exists x} \in U \right)\left[ {P( x )} \right]
+      </me>,
+      we are asserting that the statement <m>\left( {\exists x} \in U \right)\left[ {P( x )} \right]</m> is false.
+      This is equivalent to saying that the truth set of the open sentence <m>P( x )</m> is the empty set.
+      That is, there is no element <m>x</m> in the universal set <m>U</m> such that <m>P( x )</m> is true.
+      This in turn means that for each element <m>x</m> in <m>U</m>,
+      <m>\mynot  P( x )</m> is true,
+      and this is equivalent to saying that <m>\left( {\forall x} \in U \right)\left[ {\mynot  P( x )} \right]</m> is true.
+      This explains why the following result is true:
+      <me>
+        \mynot  \left( {\exists x} \in U \right)\left[ {P( x )} \right] \equiv \left( {\forall x} \in U \right)\left[ {\mynot  P( x )} \right]
+      </me>.
+    </p>
+    <p>
+      We summarize these results in the following theorem.
+    </p>
+    <theorem xml:id="T_negations">
+      <statement>
+        <p>
+          For any open sentence <m>P( x )</m>,
+          <me>
+            \begin{aligned}\mynot  \left( {\forall x} \in U \right)\left[ {P( x )} \right] \amp \equiv \left( {\exists x} \in U \right)\left[ {\mynot  P( x )} \right]\text{ , and }  \\ \mynot  \left( {\exists x} \in U \right)\left[ {P( x )} \right] \amp \equiv \left( {\forall x} \in U \right)\left[ {\mynot  P( x )} \right]. \end{aligned}
+          </me>
+        </p>
+      </statement>
+    </theorem>
+    <example xml:id="E_negations">
+      <title><em>Negations of Quantified Statements</em></title>
+      <statement>
+        <p>
+          Consider the following statement:
+          <m>\left( {\forall x \in \mathbb{R}} \right)\left( {x^3 \geq x^2 } \right)</m>.
+        </p>
+        <p>
+          We can write this statement as an English sentence in several ways.
+          Following are two different ways to do so.
+          <ul>
+            <li>
+              <p>
+                For each real number <m>x</m>, <m>x^3 \geq x^2</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>x</m> is a real number,
+                then <m>x^3</m> is greater than or equal to <m>x^2</m>.
+              </p>
+            </li>
+          </ul>
+        </p>
+        <p>
+          The second statement shows that in a conditional statement,
+          there is often a hidden universal quantifier.
+          This statement is false since there are real numbers <m>x</m> for which <m>x^3</m> is not greater than or equal to <m>x^2</m>.
+          For example,
+          we could use <m>x = - 1</m> or <m>x = \frac{1}{2}</m>.
+        </p>
+        <p>
+          This means that the negation must be true.
+          We can form the negation as follows:
+          <me>
+            \mynot  \left( {\forall x \in \mathbb{R}} \right)\left( {x^3  \geq x^2 } \right) \equiv \left( {\exists x \in \mathbb{R}} \right)\mynot  \left( {x^3  \geq x^2 } \right)
+          </me>.
+        </p>
+        <p>
+          In most cases,
+          we want to write this negation in a way that does not use the negation symbol.
+          In this case,
+          we can now write the open sentence <m>\mynot  \left( {x^3  \geq x^2 } \right)</m> as
+          <m>\left( {x^3  \lt  x^2 } \right)</m>. (That is, the negation of
+          <q>is greater than or equal to</q>
+          is
+          <q>is less than.</q>
+          ) So we obtain the following:
+          <me>
+            \mynot  \left( {\forall x \in \mathbb{R}} \right)\left( {x^3  \geq x^2 } \right) \equiv \left( {\exists x \in \mathbb{R}} \right)\left( {x^3  \lt  x^2 } \right)
+          </me>.
+        </p>
+        <p>
+          The statement <m>\left( {\exists x \in \mathbb{R}} \right)\left( {x^3 \lt x^2 } \right)</m> could be written in English as follows:
+          <ul>
+            <li>
+              <p>
+                There exists a real number <m>x</m> such that <m>x^3 \lt x^2</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                There exists an <m>x</m> such that <m>x</m> is a real number and <m>x^3 \lt x^2</m>.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </example>
+    <investigation xml:id="pr_negating">
+      <title><em>Negating Quantified Statements</em></title>
+      <p>
+        For each of the following statements
+        <ul>
+          <li>
+            <p>
+              Write the statement in the form of an English sentence that does not use the symbols for quantifiers.
+            </p>
+          </li>
+          <li>
+            <p>
+              Write the negation of the statement in a symbolic form that does not use the negation symbol.
+            </p>
+          </li>
+          <li>
+            <p>
+              Write the negation of the statement in the form of an English sentence that does not use the symbols for quantifiers.
+            </p>
+          </li>
+        </ul>
+        <ol>
+          <li>
+            <p>
+              <m>\left( \forall a \in \mathbb{R}\right) \left( a + 0 = a \right)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\left( \forall x \in \mathbb{R} \right) \left[ \sin ( {2x} ) = 2 ( {\sin x} )( {\cos x} ) \right]</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\left( \forall x \in \mathbb{R} \right) \left( \tan ^2 x + 1 = \sec ^2 x \right)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\left( \exists x \in \mathbb{Q} \right) \left( x^2 - 3x - 7 = 0 \right)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\left( \exists x \in \mathbb{R} \right) \left( x^2 + 1 = 0 \right)</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </investigation>
+    <p>
+          <idx><h>negation</h><h>of a quantified statement|)</h></idx>
+          <idx><h>counterexample</h></idx>
+    </p>
+  </subsection>
+  <subsection xml:id="D_counterexample2">
+    <title>Counterexamples and Negations of Conditional Statements</title>
+    <p>
+          <idx><h>negation</h><h>of a conditional statement</h></idx>
+      The real number <m>x = - 1</m> in the previous example was used to show that the statement <m>\left( {\forall x \in \mathbb{R}} \right)\left( {x^3 \geq x^2 } \right)</m> is false.
+      This is called a <em>counterexample</em> to the statement.
+      In general, a <em>counterexample</em>
+      to a statement of the form
+      <m>\left( {\forall x} \right)\left[ {P( x )} \right]</m> is an object <m>a</m> in the universal set <m>U</m> for which <m>P( a )</m> is false.
+      It is an example that proves that
+      <m>\left( {\forall x} \right)\left[ {P( x )} \right]</m> is a false statement,
+      and hence its negation,
+      <m>\left( {\exists x} \right)\left[ {\mynot P( x )} \right]</m>,
+      is a true statement.
+    </p>
+    <p>
+      In the preceding example,
+      we also wrote the universally quantified statement as a conditional statement.
+      The number <m>x =  - 1</m> is a counterexample for the statement If <m>x</m> is a real number,
+      then <m>x^3</m> is greater than or equal to <m>x^2</m>.
+      So the number <m>-1</m> is an example that makes the hypothesis of the conditional statement true and the conclusion false.
+      Remember that a conditional statement often contains a
+      <q>hidden</q>
+      universal quantifier.
+      Also, recall that in <xref ref="S_logequiv">Section</xref>
+      we saw that the negation of the conditional statement
+      <q>If <m>P</m> then <m>Q</m></q>
+      is the statement
+      <q><m>P</m> and not <m>Q</m>.</q>
+      Symbolically, this can be written as follows:
+      <me>
+        \mynot  \left( {P \to Q} \right) \equiv \;P \wedge \mynot  Q
+      </me>.
+    </p>
+    <p>
+      So when we specifically include the universal quantifier,
+      the symbolic form of the negation of a conditional statement is
+      <me>
+        \begin{aligned}\mynot  \left( {\forall x} \in U \right)\left[ {P( x ) \to Q( x )} \right] \amp \equiv \left( {\exists x} \in U \right)\mynot  \left[ {P( x ) \to Q( x )} \right] \\ \amp \equiv \left( {\exists x} \in U \right)\left[ {P( x ) \wedge \mynot  Q( x )} \right]. \end{aligned}
+      </me>
+    </p>
+    <p>
+      That is,
+      <me>
+        \mynot  \left( {\forall x} \in U \right)\left[ {P( x ) \to Q( x )} \right] \equiv \left( {\exists x} \in U \right)\left[ {P( x ) \wedge \mynot  Q( x )} \right]
+      </me>.
+    </p>
+    <investigation xml:id="pr_counterexamples">
+      <title><em>Using Counterexamples</em></title>
+      <p>
+        Use counterexamples to explain why each of the following statements is false.
+        <ol>
+          <li>
+            <p>
+              For each integer <m>n</m>,
+              <m>\left( n^2 + n + 1 \right)</m> is a prime number.
+            </p>
+          </li>
+          <li>
+            <p>
+              For each real number <m>x</m>,
+              if <m>x</m> is positive, then <m>2x^2 > x</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </investigation>
+  </subsection>
+  <subsection>
+    <title>Quantifiers in Definitions</title>
+    <p>
+          <idx><h>quantifier</h></idx>
+      Definitions of terms in mathematics often involve quantifiers.
+      These definitions are often given in a form that does not use the symbols for quantifiers.
+      Not only is it important to know a definition,
+      it is also important to be able to write a negation of the definition.
+      This will be illustrated with the definition of what it means to say that a natural number is a perfect square.
+    </p>
+    <definition xml:id="D_square">
+      <statement>
+        <p>
+          A natural number <m>n</m> is a <term>perfect square</term>
+              <idx><h>perfect square</h></idx>
+          provided that there exists a natural number <m>k</m> such that <m>n = k^2</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      This definition can be written in symbolic form using appropriate quantifiers as follows: A natural number <m>n</m> is a <em>perfect square</em>
+      provided <m>\left( {\exists k \in \mathbb{N}} \right) \! \left( {n = k^2 } \right)</m>.
+    </p>
+    <p>
+      We frequently use the following steps to gain a better understanding of a definition.
+      <ol>
+        <li>
+          <p>
+            Examples of natural numbers that are perfect squares are 1, 4, 9, and 81 since <m>1 = 1^2</m>,
+            <m>4 = 2^2</m>, <m>9 = 3^2</m>, and <m>81 = 9^2</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Examples of natural numbers that are not perfect squares are 2, 5, 10, and 50.
+          </p>
+        </li>
+        <li>
+          <p>
+            This definition gives two
+            <q>conditions.</q>
+            One is that the natural number <m>n</m> is a perfect square and the other is that there exists a natural number <m>k</m> such that <m>n = k^2</m>.
+            The definition states that these mean the same thing.
+            So when we say that a natural number <m>n</m> is not a perfect square,
+            we need to negate the condition that  there exists a natural number <m>k</m> such that <m>n = k^2</m>.
+            We can use the symbolic form to do this.
+            <me>
+              \mynot \left( {\exists k \in \mathbb{N}} \right)\left( {n = k^2 } \right) \equiv \left( \forall k \in \N \right) \left( n \ne k^2 \right)
+            </me>
+            Notice that instead of writing <m>\mynot \left(n = k^2 \right)</m>,
+            we used the equivalent form of <m>\left(n \ne k^2 \right)</m>.
+            This will be easier to translate into an English sentence.
+            So we can write,
+            <ul>
+              \item A natural number <m>n</m>  is not a perfect square provided that for every natural number <m>k</m>, <m>n \ne k^2</m>.
+            </ul>
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      The preceding method illustrates a good method for trying to understand a new definition.
+      Most textbooks will simply define a concept and leave it to the reader to do the preceding steps.
+      Frequently, it is not sufficient just to read a definition and expect to understand the new term.
+      We must provide examples that satisfy the definition,
+      as well as examples that do not satisfy the definition,
+      and we must be able to write a coherent negation of the definition.
+    </p>
+    <investigation xml:id="pr_mutliple3">
+      <title><em>Multiples of Three</em></title>
+      <definition xml:id="D_multiple3">
+        <statement>
+          <p>
+            An integer <m>n</m> is a <term>multiple of 3</term>
+            provided that there exists an integer <m>k</m> such that <m>n = 3k</m>.
+          </p>
+        </statement>
+      </definition>
+      <ol>
+        <li>
+          <p>
+            Write this definition in symbolic form using quantifiers by completing the following:
+            <ul>
+              \item An integer <m>n</m> is a multiple of 3 provided that \ldots .
+            </ul>
+          </p>
+        </li>
+        <li>
+          <p>
+            Give several examples of integers
+            (including negative integers)
+            that are multiples of 3.
+          </p>
+        </li>
+        <li>
+          <p>
+            Give several examples of integers
+            (including negative integers)
+            that are not multiples of 3.
+          </p>
+        </li>
+        <li>
+          <p>
+            Use the symbolic form of the definition of a multiple of 3 to complete the following sentence:
+            <q>An integer <m>n</m> is not a multiple of 3 provided that <ellipsis/> .</q>
+          </p>
+        </li>
+        <li>
+          <p>
+            Without using the symbols for quantifiers,
+            complete the following sentence:
+            <q>An integer <m>n</m> is not a multiple of 3 provided that <ellipsis/> .</q>
+          </p>
+        </li>
+      </ol>
+    </investigation>
+  </subsection>
+  <subsection>
+    <title>Statements with More than One Quantifier</title>
+    <p>
+      When a predicate contains more than one variable,
+      each variable must be quantified to create a statement.
+      For example, assume the universal set is the set of integers,
+      <m>\mathbb{Z}</m>,
+      and let <m>P\left( {x, y} \right)</m> be the predicate,
+      <q><m>x + y = 0</m>.</q>
+      We can create a statement from this predicate in several ways.
+      <ol>
+        <li xml:id="twoquantifiers1">
+          <p>
+            <m>\left( {\forall x \in \mathbb{Z}} \right)\left( {\forall y \in \mathbb{Z}} \right)\left( {x + y = 0} \right)</m>.
+            We could read this as,
+            <q>For all integers <m>x</m> and <m>y</m>, <m>x + y = 0</m>.</q>
+            This is a false statement since it is possible to find two integers whose sum is not zero <m>\left( {2 + 3 \ne 0} \right)</m>.
+          </p>
+        </li>
+        <li xml:id="twoquantifiers2">
+          <p>
+            <m>\left( {\forall x \in \mathbb{Z}} \right)\left( {\exists y \in \mathbb{Z}} \right)\left( {x + y = 0} \right)</m>.
+            We could read this as,
+            <q>For every integer <m>x</m>,
+            there exists an integer <m>y</m> such that <m>x + y = 0</m>.</q>
+            This is a true statement.
+          </p>
+        </li>
+        <li xml:id="twoquantifiers3">
+          <p>
+            <m>\left( {\exists x \in \mathbb{Z}} \right)\left( {\forall y \in \mathbb{Z}} \right)\left( {x + y = 0} \right)</m>.
+            We could read this as,
+            <q>There exists an integer <m>x</m> such that for each integer <m>y</m>,
+            <m>x + y = 0</m>.</q>
+            This is a false statement since there is no integer whose sum with each integer is zero.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\left( {\exists x \in \mathbb{Z}} \right)\left( {\exists y \in \mathbb{Z}} \right)\left( {x + y = 0} \right)</m>.
+            We could read this as,
+            <q>There exist integers <m>x</m> and <m>y</m> such that <m>x + y = 0</m>.</q>
+            This is a true statement.
+            For example, <m>2 + \left( { - 2} \right) = 0</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      When we negate a statement with more than one quantifier,
+      we consider each quantifier in turn and apply the appropriate part of <xref ref="T_negations">Theorem</xref>.
+      As an example,
+      we will negate Statement<nbsp/><xref ref="twoquantifiers3"/> from the preceding list.
+      The statement is
+      <me>
+        \left( {\exists x \in \mathbb{Z}} \right)\left( {\forall y \in \mathbb{Z}} \right)\left( {x + y = 0} \right)
+      </me>.
+    </p>
+    <p>
+      We first treat this as a statement in the following form:
+      <m>\left( {\exists x \in \mathbb{Z}} \right)\left( {P( x )} \right)</m> where <m>P( x )</m> is the predicate <m>\left( {\forall y \in \mathbb{Z}} \right)\left( {x + y = 0} \right)</m>.
+      Using <xref ref="T_negations">Theorem</xref>, we have
+      <me>
+        \mynot  \left( {\exists x \in \mathbb{Z}} \right)\left( {P( x )} \right) \equiv \left( {\forall x \in \mathbb{Z}} \right)\left( {\mynot  P( x )} \right)
+      </me>.
+    </p>
+    <p>
+      Using <xref ref="T_negations">Theorem</xref>
+      again, we obtain the following:
+      <me>
+        \begin{aligned}\mynot  P( x ) \amp \equiv \mynot  \left( {\forall y \in \mathbb{Z}} \right)\left( {x + y = 0} \right) \\ \amp \equiv \left( {\exists y \in \mathbb{Z}} \right)\mynot  \left( {x + y = 0} \right) \\ \amp \equiv \left( {\exists y \in \mathbb{Z}} \right)\left( {x + y \ne 0} \right). \end{aligned}
+      </me>
+    </p>
+    <p>
+      Combining these two results, we obtain
+      <me>
+        \mynot  \left( {\exists x \in \mathbb{Z}} \right)\left( {\forall y \in \mathbb{Z}} \right)\left( {x + y = 0} \right) \equiv \left( {\forall x \in \mathbb{Z}} \right)\left( {\exists y \in \mathbb{Z}} \right)\left( {x + y \ne 0} \right)
+      </me>.
+    </p>
+    <p>
+      The results are summarized in the following table.
+      <me>
+        <tabular>
+          <row>
+            <cell>_ |             |  <em>Symbolic Form</em>  |  <em>English Form</em> |</cell>
+          </row>
+          <row>
+            <cell>+22 _ |  \Lower{Statement}  |  \Lower{\(\left( {\exists x \in \mathbb{Z}} \right)\left( {\forall y \in \mathbb{Z}} \right)\left( {x + y = 0} \right)\)}  |  There exists an integer  \(x\)  such that for each integer   \(y\), \(x + y = 0\). |</cell>
+          </row>
+          <row>
+            <cell>_1 |  \Lower{Negation}   |  \Lower{\(\left( {\forall x \in \mathbb{Z}} \right)\left( {\exists y \in \mathbb{Z}} \right)\left( {x + y \ne 0} \right)\)}  |  For each integer  \(x\), there exists an integer  \(y\)  such that  \(x + y \ne 0\). |</cell>
+          </row>
+          <row>
+            <cell>_</cell>
+          </row>
+        </tabular>
+      </me>
+    </p>
+    <p>
+      Since the given statement is false, its negation is true.
+    </p>
+    <p>
+      We can construct a similar table for each of the four statements.
+      The next table shows Statement<nbsp/><xref ref="twoquantifiers2"/>, which is true,
+      and its negation, which is false.
+      <me>
+        <tabular>
+          <row>
+            <cell>_ |            |  <em>Symbolic Form</em>  |  <em>English Form</em>  |</cell>
+          </row>
+          <row>
+            <cell>+22 _ | \Lower{Statement}  |  \Lower{\(\left( {\forall x \in \mathbb{Z}} \right)\left( {\exists y \in \mathbb{Z}} \right)\left( {x + y = 0} \right)\)}  |  For every integer  \(x\), there exists an integer  \(y\)  such that \(x + y = 0\). |</cell>
+          </row>
+          <row>
+            <cell>_1 | \Lower{Negation}   |  \Lower{\(\left( {\exists x \in \mathbb{Z}} \right)\left( {\forall y \in \mathbb{Z}} \right)\left( {x + y \ne 0} \right)\)}  |  There exists an integer  \(x\)  such that for every integer  \(y\),  \(x + y \ne 0\). |</cell>
+          </row>
+          <row>
+            <cell>_</cell>
+          </row>
+        </tabular>
+      </me>
+    </p>
+    <investigation xml:id="pr_twoquant">
+      <title><em>Negating a Statement with Two Quantifiers</em></title>
+      <p>
+        Write the negation of the statement
+        <me>
+          \left( {\forall x \in \mathbb{Z}} \right)\left( {\forall y \in \mathbb{Z}} \right)\left( {x + y = 0} \right)
+        </me>
+        in symbolic form and as a sentence written in English.
+      </p>
+    </investigation>
+  </subsection>
+  <subsection>
+    <title>Writing Guideline</title>
+    <p>
+          <idx><h>writing guidelines</h></idx>
+      Try to use English and minimize the use of cumbersome notation.
+      Do not use the special symbols for quantifiers <m>\forall</m>
+      (for all),
+      <m>\exists</m>
+      (there exists),
+      <m>\mathrel\backepsilon</m>
+      (such that),
+      or <m>\therefore</m> (therefore) in formal mathematical writing.
+      It is often easier to write and usually easier to read,
+      if the English words are used instead of the symbols.
+      For example, why make the reader interpret
+      <me>
+        \left( \forall x \in \R \right) \left( \exists y \in \R \right)\left( x + y = 0 \right)
+      </me>
+      when it is possible to write For each real number <m>x</m>,
+      there exists a real number <m>y</m> such that <m>x + y = 0</m>, or,
+      more succinctly
+      (if appropriate),
+      Every real number has an additive inverse.
+    </p>
+    <p>
+      \exercises{Exercises for <xref ref="S_quantifier">Section</xref>}
+    </p>
+    <ol>
+      <li xml:id="exer_sec24-1">
+        <p>
+          For each of the following,
+          write the statement as an English sentence and then explain why the statement is false.
+        </p>
+        <ol>
+          <li>
+            <p>
+              <m>\left(\exists x \in \mathbb{Q} \right) \left( x^2 - 3x - 7 = 0 \right)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\left( \exists x \in \mathbb{R} \right) \left( x^2 + 1 = 0 \right)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\left( \exists m \in \N \right) \left( m^2 \lt 1 \right)</m>.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li xml:id="exer_sec24-2new">
+        <p>
+          For each of the following,
+          use a counterexample to show that the statement is false.
+          Then write the negation of the statement in English,
+          without using symbols for quantifiers.
+          <ol>
+            <li>
+              <p>
+                <m>\left( {\forall m \in \mathbb{Z}} \right)\left( {m^2 \text{ is even } } \right)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\left( {\forall x \in \mathbb{R}} \right)\left( {x^2 > 0} \right)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                For each real number <m>x</m>, <m>\sqrt{x} \in \R</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\left( \forall m \in \Z \right) \left( \dfrac{m}{3} \in \Z \right)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\left( {\forall a \in \mathbb{Z}} \right)\left( {\sqrt {a^2 } = a} \right)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\left( {\forall x \in \mathbb{R}} \right)\left( {\tan ^2 x + 1 = \sec ^2 x} \right)</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec24-2">
+        <p>
+          For each of the following statements
+          <ul>
+            <li>
+              <p>
+                Write the statement as an English sentence that does not use the symbols for quantifiers.
+              </p>
+            </li>
+            <li>
+              <p>
+                Write the negation of the statement in symbolic form in which the negation symbol is not used.
+              </p>
+            </li>
+            <li>
+              <p>
+                Write a useful negation of the statement in an English sentence that does not use the symbols for quantifiers.
+              </p>
+            </li>
+          </ul>
+          <ol>
+            <li>
+              <p>
+                <m>\left( {\exists x \in \mathbb{Q}} \right)\left( {x > \sqrt 2 } \right)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\left( {\forall x \in \mathbb{Q}} \right)\left( {x^2 - 2 \ne 0} \right)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\left( {\forall x \in \mathbb{Z}} \right)\left( {x\text{ is even or } x\text{ is odd } } \right)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\left( {\exists x \in \mathbb{Q}} \right)\left( {\sqrt 2 \lt x \lt \sqrt 3 } \right)</m>. \note The sentence
+                <q><m>\sqrt 2 \lt x \lt \sqrt 3</m></q>
+                is actually a conjuction.
+                It means <m>\sqrt 2 \lt x</m> and <m>x \lt \sqrt 3</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\left( {\forall x \in \mathbb{Z}} \right)\left( {\text{ If } x^2 \text{ is odd,
+                then } x\text{ is odd } } \right)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\left( {\forall n \in \mathbb{N}} \right)</m> [If <m>n</m> is a perfect square,
+                then <m>\left( {2^n - 1} \right)</m> is not a prime number].
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\left( {\forall n \in \mathbb{N}} \right)\left( {n^2 - n + 41} \text{ is a prime number } \right)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\left( {\exists x \in \mathbb{R}} \right) \left( {\cos ( {2x} ) = 2( {\cos x} )} \right)</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec24-3">
+        <p>
+          Write each of the following statements as an English sentence that does not use the symbols for quantifiers.
+          <ol>
+            <li>
+              <p>
+                <m>\left( {\exists m} \in \Z \right)\left( {\exists n} \in \Z \right)\left( {m > n} \right)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\left( {\exists m} \in \Z \right)\left( {\forall n} \in \Z \right)\left( {m > n} \right)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\left( {\forall m} \in \Z \right)\left( {\exists n} \in \Z \right)\left( {m > n} \right)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\left( {\forall m}\in \Z \right)\left( {\forall n} \in \Z \right)\left( {m > n} \right)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\left( {\exists n} \in \Z \right)\left( {\forall m} \in \Z \right)\left( {m^2 > n} \right)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\left( {\forall n} \in \Z \right)\left( {\exists m} \in \Z \right)\left( {m^2 > n} \right)</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec24-4">
+        <p>
+          Write the negation of each statement in Exercise<nbsp/><xref ref="exer_sec24-3"/> in symbolic form and as an English sentence that does not use the symbols for quantifiers.
+        </p>
+      </li>
+      <li xml:id="Exer_quantifier1">
+        <p>
+          Assume that the universal set is  <m>\mathbb{Z}</m>.
+          Consider the following sentence:
+          <me>
+            \left( {\exists t \in \mathbb{Z}} \right)\left( {t \cdot x = 20} \right)
+          </me>.
+          <ol>
+            <li>
+              <p>
+                Explain why this sentence is an open sentence and not a statement.
+              </p>
+            </li>
+            <li>
+              <p>
+                If 5 is substituted for <m>x</m>,
+                is the resulting sentence a statement?
+                If it is a statement, is the statement true or false?
+              </p>
+            </li>
+            <li>
+              <p>
+                If 8 is substituted for <m>x</m>,
+                is the resulting sentence a statement?
+                If it is a statement, is the statement true or false?
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>-2</m> is substituted for <m>x</m>,
+                is the resulting sentence a statement?
+                If it is a statement, is the statement true or false?
+              </p>
+            </li>
+            <li>
+              <p>
+                What is the truth set of the open sentence <m>\left( {\exists t \in \mathbb{Z}} \right)\left( {t \cdot x = 20} \right)</m>?
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="Exer_quantifier">
+        <p>
+          Assume that the universal set is  <m>\mathbb{R}</m>.
+          Consider the following sentence:
+          <me>
+            \left( {\exists t \in \mathbb{R}} \right)\left( {t \cdot x = 20} \right)
+          </me>.
+          <ol>
+            <li>
+              <p>
+                Explain why this sentence is an open sentence and not a statement.
+              </p>
+            </li>
+            <li>
+              <p>
+                If 5 is substituted for <m>x</m>,
+                is the resulting sentence a statement?
+                If it is a statement, is the statement true or false?
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>\pi</m> is substituted for <m>x</m>,
+                is the resulting sentence a statement?
+                If it is a statement, is the statement true or false?
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>0</m> is substituted for <m>x</m>,
+                is the resulting sentence a statement?
+                If it is a statement, is the statement true or false?
+              </p>
+            </li>
+            <li>
+              <p>
+                What is the truth set of the open sentence <m>\left( {\exists t \in \mathbb{R}} \right)\left( {t \cdot x = 20} \right)</m>?
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <p>
+          Let <m>\Z^*</m> be the set of all nonzero integers.
+          <ol>
+            <li>
+              <p>
+                Use a counterexample to explain why the following statement is false: For each <m>x \in \Z^*</m>,
+                there exists a <m>y \in \Z^*</m> such that <m>xy = 1</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Write the statement in part<nbsp/>(a) in symbolic form using appropriate symbols for quantifiers.
+              </p>
+            </li>
+            <li>
+              <p>
+                Write the negation of the statement in part<nbsp/>(b) in symbolic form using appropriate symbols for quantifiers.
+              </p>
+            </li>
+            <li>
+              <p>
+                Write the negation from part<nbsp/>(c) in English without using the symbols for quantifiers.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <p>
+          An integer <m>m</m> is said to have the
+          <em>divides property</em>
+          provided that for all integers <m>a</m> and <m>b</m>,
+          if <m>m</m> divides <m>ab</m>,
+          then <m>m</m> divides <m>a</m> or <m>m</m> divides <m>b</m>.
+          <ol>
+            <li>
+              <p>
+                Using the symbols for quantifiers,
+                write what it means to say that the integer <m>m</m> has the divides property.
+              </p>
+            </li>
+            <li>
+              <p>
+                Using the symbols for quantifiers,
+                write what it means to say that the integer <m>m</m> does not have the divides property.
+              </p>
+            </li>
+            <li>
+              <p>
+                Write an English sentence stating what it means to say that the integer <m>m</m> does not have the divides property.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_24-increasing">
+        <p>
+          In calculus,
+          we define a function <m>f</m> with domain <m>\mathbb{R}</m> to be
+          <em>strictly increasing</em>
+    <idx><h>increasing, strictly</h></idx>
+          provided that for all real numbers <m>x</m> and <m>y</m>,
+          <m>f\left( x \right) \lt f\left( y \right)</m> whenever <m>x \lt y</m>.
+          Complete each of the following sentences using the appropriate symbols for quantifiers:
+          <ol>
+            <li>
+              <p>
+                A function <m>f</m> with domain
+                <m>\mathbb{R}</m> is strictly increasing provided that <m>\ldots </m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                A function <m>f</m> with domain
+                <m>\mathbb{R}</m> is not strictly increasing provided that <m>\ldots </m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+        Complete the following sentence in English without using symbols for quantifiers:
+        <ol>
+          <li>
+            <p>
+              A function <m>f</m> with domain
+              <m>\mathbb{R}</m> is not strictly increasing provided that <m>\ldots </m>.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li xml:id="exer_24-continuous">
+        <p>
+          In calculus,
+          we define a function <m>f</m> to be <em>continuous</em>
+    <idx><h>continuous</h></idx>
+          at a real number <m>a</m> provided that for every <m>\varepsilon > 0</m>,
+          there exists a <m>\delta > 0</m> such that if <m>\left| {x - a} \right| \lt \delta</m>,
+          then <m>\left| {f\left( x \right) - f\left( a \right)} \right| \lt \varepsilon</m>. \note The symbol
+          <m>\varepsilon</m> is the lowercase Greek letter epsilon,
+          and the symbol <m>\delta</m> is the lowercase Greek letter delta.
+          Complete each of the following sentences using the appropriate symbols for quantifiers:
+          <ol>
+            <li>
+              <p>
+                A function <m>f</m> is continuous at the real number <m>a</m> provided that <m>\ldots </m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                A function <m>f</m> is not continuous at the real number <m>a</m> provided that <m>\ldots </m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+        Complete the following sentence in English without using symbols for quantifiers:
+        <ol>
+          <li>
+            <p>
+              A function <m>f</m> is not continuous at the real number <m>a</m> provided that <m>\ldots </m>.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li xml:id="exer_advanced">
+        <p>
+          The following exercises contain definitions or results from more advanced mathematics courses.
+          Even though we may not understand all of the terms involved,
+          it is still possible to recognize the structure of the given statements and write a meaningful negation of that statement.
+          <ol>
+            <li>
+              <p>
+                In abstract algebra,
+                an operation <m>*</m> on a set <m>A</m> is called a
+                <em>commutative operation</em>
+    <idx><h>commutative operation</h></idx>
+                provided that for all <m>x, y \in A</m>, <m>x * y = y * x</m>.
+                Carefully explain what it means to say that an operation <m>*</m> on a set <m>A</m> is not a commutative operation.
+              </p>
+            </li>
+            <li>
+              <p>
+                In abstract algebra, a <em>ring</em>
+    <idx><h>ring</h></idx>
+                consists of a nonempty set <m>R</m> and two operations called addition and multiplication.
+                A nonzero element <m>a</m> in a ring <m>R</m> is called a <em>zero divisor</em>
+    <idx><h>zero divisor</h></idx>
+                provided that there exists a nonzero element <m>b</m> in <m>R</m> such that <m>ab = 0</m> or <m>ba = 0</m>.
+                Carefully explain what it means to say that a nonzero element <m>a</m> in a ring <m>R</m> is not a zero divisor.
+              </p>
+            </li>
+            <li>
+              <p>
+                A set <m>M</m> of real numbers is called a <em>neighborhood</em>
+    <idx><h>neighborhood</h></idx>
+                of a real number <m>a</m> provided that there exists a positive real number
+                <m>\varepsilon</m> such that the open interval
+                <m>(a - \varepsilon,
+                a + \varepsilon)</m> is contained in <m>M</m>.
+                Carefully explain what it means to say that a set <m>M</m> is not a neighborhood of a real number <m>a</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                In advanced calculus,
+                a sequence of real numbers <m>\left(x_1, x_2, \ldots,
+                x_k, \ldots \right)</m> is called a
+                <em>Cauchy sequence</em>
+    <idx><h>Cauchy sequence</h></idx>
+                provided that for each positive real number <m>\varepsilon</m>,
+                there exists a natural number <m>N</m> such that for all <m>m,
+                n \in \N</m>,
+                if <m>m > N</m> and <m>n > N</m>,
+                then <m>\left| x_n - x_m \right| \lt \varepsilon</m>.
+                Carefully explain what it means to say that the sequence of real numbers
+                <m>\left(x_1, x_2, \ldots,
+                x_k, \ldots \right)</m> is not a Cauchy sequence.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+  <subsection>
+    <title>Explorations and Activities</title>
+    <ol>
+      <li xml:id="exer_prime">
+        <p>
+          <em>Prime Numbers</em>.
+          The following definition of a prime number is very important in many areas of mathematics.
+          We will use this definition at various places in the text.
+          It is introduced now as an example of how to work with a definition in mathematics.
+          <definition xml:id="D_prime">
+            <statement>
+              <p>
+                A natural number <m>p</m> is a <term>prime number</term>
+    <idx><h>prime number</h></idx>
+                provided that it is greater than 1 and the only natural numbers that are factors of <m>p</m> are 1 and <m>p</m>.
+                A natural number other than 1 that is not a prime number is a
+                <term>composite number</term>.
+    <idx><h>composite number</h></idx>
+The number 1 is neither prime nor composite.
+              </p>
+            </statement>
+          </definition>
+          Using the definition of a prime number,
+          we see that 2, 3, 5, and 7 are prime numbers.
+          Also, 4 is a composite number since
+          <m>4 = 2 \cdot 2</m>; 10 is a composite number since <m>10 = 2 \cdot 5</m>;
+          and 60 is a composite number since <m>60 = 4 \cdot 15</m>.
+          <ol>
+            <li>
+              <p>
+                Give examples of four natural numbers other than 2, 3, 5, and 7 that are prime numbers.
+              </p>
+            </li>
+            <li>
+              <p>
+                Explain why a natural number <m>p</m> that is greater than 1 is a prime number provided that For all <m>d \in \mathbb{N}</m>,
+                if <m>d</m> is a factor of <m>p</m>,
+                then <m>d = 1</m> or <m>d = p</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Give examples of four natural numbers that are composite numbers and explain why they are composite numbers.
+              </p>
+            </li>
+            <li>
+              <p>
+                Write a useful description of what it means to say that a natural number is a composite number
+                (other than saying that it is not prime).
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="A_upper">
+        <p>
+          <em>Upper Bounds for Subsets of <m>\mathbb{R}</m></em>.
+          Let <m>A</m> be a subset of the real numbers.
+          A number <m>b</m> is called an <em>upper bound</em>
+    <idx><h>upper bound</h></idx>
+          for the set <m>A</m> provided that for each element <m>x</m> in <m>A</m>,
+          <m>x \leq b</m>.
+          <ol>
+            <li>
+              <p>
+                Write this definition in symbolic form by completing the following: Let <m>A</m> be a subset of the real numbers.
+                A number <m>b</m> is called an upper bound for the set <m>A</m> provided that <m>\ldots </m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Give examples of three different upper bounds for the set <m>A = \left\{ x \in \mathbb{R} \mid 1 \leq x \leq 3 \right\}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Does the set <m>B = \left\{ x \in \mathbb{R} \mid x > 0 \right\}</m> have an upper bound?
+                Explain.
+              </p>
+            </li>
+            <li xml:id="A_upper4">
+              <p>
+                Give examples of three different real numbers that are not upper bounds for the set <m>A = \left\{ x \in \mathbb{R} \mid 1 \leq x \leq 3 \right\}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Complete the following in symbolic form:
+                <q>Let <m>A</m> be a subset of <m>\R</m>.
+                A number <m>b</m> is not an upper bound for the set <m>A</m> provided that <m>\ldots </m>.</q>
+              </p>
+            </li>
+            <li xml:id="A_upper6">
+              <p>
+                Without using the symbols for quantifiers,
+                complete the following sentence:
+                <q>Let <m>A</m> be a subset of <m>\R</m>.
+                A number <m>b</m> is not an upper bound for the set <m>A</m> provided that <m>\ldots </m>.</q>
+              </p>
+            </li>
+            <li>
+              <p>
+                Are your examples in Part<nbsp/><xref ref="A_upper4"/> consistent with your work in Part<nbsp/><xref ref="A_upper6"/>?
+                Explain.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_leastupper">
+        <p>
+          <em>Least Upper Bound for a Subset of <m>\R</m></em>.
+          In <xref ref="A_upper">Exercise</xref>,
+          we introduced the definition of an upper bound for a subset of the real numbers.
+          Assume that we know this definition and that we know what it means to say that a number is not an upper bound for a subset of the real numbers.
+          Let <m>A</m> be a subset of <m>\mathbb{R}</m>.
+          A real number <m>\alpha</m> is the
+          <em>least upper bound</em>
+    <idx><h>least upper bound</h></idx>
+          for <m>A</m> provided that <m>\alpha</m> is an upper bound for <m>A</m>,
+          and if <m>\beta</m> is an upper bound for <m>A</m>,
+          then <m>\alpha \leq \beta</m>.
+          <em>Note:</em> The symbol <m>\alpha</m> is the lowercase Greek letter alpha,
+          and the symbol <m>\beta</m> is the lowercase Greek letter beta.
+          If we define <m>P\left( x \right)</m> to be
+          <q><m>x</m> is an upper bound for <m>A</m>,</q>
+          then we can write the definition for least upper bound as follows: A real number <m>\alpha</m> is the
+          <em>least upper bound</em>
+          for <m>A</m> provided that <m>P\left( \alpha \right) \wedge \left[ {\left( {\forall \beta \in \mathbb{R}} \right)\left( {P\left( \beta \right) \to \left( {\alpha \leq \beta } \right)} \right)} \right]</m>.
+          <ol>
+            <li>
+              <p>
+                Why is a universal quantifier used for the real number <m>\beta</m>?
+              </p>
+            </li>
+            <li>
+              <p>
+                Complete the following sentence in symbolic form:
+                <q>A real number <m>\alpha</m> is not the least upper bound for <m>A</m> provided that <m>\ldots </m>.</q>
+              </p>
+            </li>
+            <li>
+              <p>
+                Complete the following sentence as an English sentence:
+                <q>A real number <m>\alpha</m> is not the least upper bound for <m>A</m> provided that <m>\ldots </m>.</q>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+</section>

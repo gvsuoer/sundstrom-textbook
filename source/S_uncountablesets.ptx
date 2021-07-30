@@ -1,0 +1,1023 @@
+<section xml:id="S_uncountablesets">
+  <title>Uncountable Sets</title>
+  <introduction>
+    <exploration xml:id="PA_dodgeball">
+      <title><em>The Game of Dodge Ball</em></title>
+      <p>
+            <idx><h>Dodge Ball</h></idx>(From <term>The Heart of Mathematics: An Invitation to Effective Thinking</term> by Edward B. Burger and Michael Starbird, Key Publishing Company, <copyright/> 2000 by Edward B. Burger and Michael Starbird.)
+      </p>
+      <p>
+        Dodge Ball is a game for two players.
+        It is played on a game board such as the one shown in <xref ref="fig_dodgeball">Figure</xref>.
+      </p>
+      <figure xml:id="fig_dodgeball">
+        <caption>Game Board for Dodge Ball</caption>
+        <image source="images/7536aeedb9b0b30a6cff9a8ffe8167c2cb2a9302.png"/>
+      </figure>
+      <p>
+        Player One has a 6 by 6 array to complete and Player Two has a 1 by 6 row to complete.
+        Each player has six turns as described next.
+        <ul>
+          <li>
+            <p>
+              Player One begins by filling in the first horizontal row of his or her table with a sequence of six X's and O's, one in each square in the first row.
+            </p>
+          </li>
+          <li>
+            <p>
+              Then Player Two places either an X or an O in the first box of his or her row.
+              At this point, Player One has completed the first row and Player Two has filled in the first box of his or her row with one letter.
+            </p>
+          </li>
+          <li>
+            <p>
+              The game continues with Player One completing a row with six letters (X's and O's),
+              one in each box of the next row followed by Player Two writing one letter
+              (an X or an O)
+              in the next box of his or her row.
+              The game is completed when Player One has completed all six rows and Player Two has completed all six boxes in his or her row.
+            </p>
+          </li>
+        </ul>
+      </p>
+      <p>
+        <term>Winning the Game</term>
+        <ul>
+          <li>
+            <p>
+              Player One wins if any horizontal row in the 6 by 6 array is identical to the row that Player Two created.
+              (Player One matches Player Two.)
+            </p>
+          </li>
+          <li>
+            <p>
+              Player Two wins if Player Two's row of six letters is different than each of the six rows produced by Player One.
+              (Player Two
+              <q>dodges</q>
+              Player One.)
+            </p>
+          </li>
+        </ul>
+      </p>
+      <p>
+        There is a winning strategy for one of the two players.
+        This means that there is plan by which one of the two players will always win.
+        Which player has a winning strategy?
+        Carefully describe this winning strategy.
+      </p>
+      <p>
+        <term>Applying the Winning Strategy to Lists of Real Numbers</term>
+      </p>
+      <p>
+        Following is a list of real numbers between 0 and 1.
+        Each real number is written as a decimal number.
+        <md>
+          <mrow>a_1 \amp = 0.1234567890   \amp   a_6 \amp = 0.0103492222</mrow>
+          <mrow>a_2 \amp = 0.3216400000   \amp   a_7 \amp = 0.0011223344</mrow>
+          <mrow>a_3 \amp = 0.4321593333   \amp   a_8 \amp = 0.7077700022</mrow>
+          <mrow>a_4 \amp = 0.9120930092   \amp   a_9 \amp = 0.2100000000</mrow>
+          <mrow>a_5 \amp = 0.0000234102   \amp  a_{10} \amp = 0.9870008943</mrow>
+        </md>
+      </p>
+      <p>
+        Use a method similar to the winning strategy in the game of Dodge Ball to write a real number
+        (in decimal form)
+        between 0 and 1 that is not in this list of 10 numbers.
+        <ol>
+          <li>
+            <p>
+              Do you think your method could be used for any list of 10 real numbers between 0 and 1 if the goal is to write a real number between 0 and 1 that is not in the list?
+            </p>
+          </li>
+          <li>
+            <p>
+              Do you think this method could be extended to a list of 20 different real numbers?
+              To a list of 50 different real numbers?
+            </p>
+          </li>
+          <li>
+            <p>
+              Do you think this method could be extended to a countably infinite list of real numbers?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </exploration>
+    <exploration xml:id="PA_powerset">
+      <title><em>Functions from a Set to Its Power Set</em></title>
+      <p>
+        Let <m>A</m> be a set.
+        In <xref ref="S_setoperations">Section</xref>,
+        we defined the <term>power set</term>
+            <idx><h>power set</h></idx>
+        <m>\mathcal{P} ( A )</m> of <m>A</m> to be the set of all subsets of <m>A</m>.
+        This means that <m>X \in \mathcal{P} ( A )</m> if and only if <m>X \subseteq A</m>.
+        <xref ref="T_powerset">Theorem</xref>
+        in <xref ref="S_setoperations">Section</xref>
+        states that if a set <m>A</m> has <m>n</m> elements,
+        then <m>A</m> has <m>2^n</m> subsets or that
+        <m>\mathcal{P} ( A )</m> has <m>2^n</m> elements.
+        Using our current notation for cardinality,
+        this means that if <m>\text{ card } ( A ) = n</m>,
+        then <m>\text{ card } ( \mathcal{P} ( A ) ) = 2^n</m>.
+        (The proof of this theorem was Exercise<nbsp/><xref ref="exer_powerset"/> on <xref ref="exer_powerset">page</xref>.)
+      </p>
+      <p>
+        We are now going to define and explore some functions from a set <m>A</m> to its power set <m>\mathcal{P} ( A )</m>.
+        This means that the input of the function will be an element of <m>A</m> and the output of the function will be a subset of <m>A</m>.
+      </p>
+      <ol>
+        <li>
+          <p>
+            Let <m>A = \left\{1, 2, 3, 4 \right\}</m>.
+            Define <m>f\x A \to \mathcal{P} ( A )</m> by
+            <m>f ( 1 ) = \left\{ 1, 2, 3 \right\}</m> <m>f ( 2 ) = \left\{ 1, 3, 4 \right\}</m>
+            <m>f ( 3 ) = \left\{ 1, 4 \right\}</m> <m>f ( 4 ) = \left\{ 2, 4 \right\}</m>.
+          </p>
+          <ol>
+            <li>
+              <p>
+                Is <m>1 \in f ( 1 )</m>?
+                Is <m>2 \in f ( 2 )</m>?
+                Is <m>3 \in f ( 3 )</m>?
+                Is <m>4 \in f ( 4 )</m>?
+              </p>
+            </li>
+            <li>
+              <p>
+                Determine <m>S = \left\{ x \in A \mid x \notin f ( x ) \right\}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Notice that <m>S \in \mathcal{P} ( A )</m>.
+                Does there exist an element <m>t</m> in <m>A</m> such that <m>f ( t ) = S</m>?
+                That is, is <m>S \in \text{ range } ( f )</m>?
+              </p>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <p>
+            Let <m>A = \left\{1, 2, 3, 4 \right\}</m>.
+            Define <m>f\x A \to \mathcal{P} ( A )</m> by
+            <m>f ( x ) = A - \left\{ x \right\}</m> for each <m>x \in A</m>.
+            <ol cols="2">
+              <li>
+                <p>
+                  Determine <m>f ( 1 )</m>.
+                  Is <m>1 \in f ( 1 )</m>?
+                </p>
+              </li>
+              <li>
+                <p>
+                  Determine <m>f ( 2 )</m>.
+                  Is <m>2 \in f ( 2 )</m>?
+                </p>
+              </li>
+              <li>
+                <p>
+                  Determine <m>f ( 3 )</m>.
+                  Is <m>3 \in f ( 3 )</m>?
+                </p>
+              </li>
+              <li>
+                <p>
+                  Determine <m>f ( 4 )</m>.
+                  Is <m>4 \in f ( 4 )</m>?
+                </p>
+              </li>
+              <li>
+                <p>
+                  Determine <m>S = \left\{ x \in A \mid x \notin f ( x ) \right\}</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Notice that <m>S \in \mathcal{P} ( A )</m>.
+                  Does there exist an element <m>t</m> in <m>A</m> such that <m>f ( t ) = S</m>?
+                  That is, is <m>S \in \text{ range } ( f )</m>?
+                </p>
+              </li>
+            </ol>
+          </p>
+        </li>
+        <li>
+          <p>
+            Define <m>f\x \mathbb{N} \to \mathcal{P} ( \mathbb{N} )</m> by <m>f ( n ) = \mathbb{N} - \left\{n^2, n^2-2n \right\}</m>,
+            for each <m>n \in \mathbb{N}</m>.
+            <ol>
+              <li>
+                <p>
+                  Determine <m>f ( 1 )</m>,
+                  <m>f ( 2 )</m>, <m>f ( 3 )</m>, and <m>f ( 4 )</m>.
+                  In each of these cases, determine if <m>k \in f ( k )</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Prove that if <m>n > 3</m>,
+                  then <m>n \in f ( n )</m>. \hint Prove that if <m>n >3</m>,
+                  then <m>n^2 > n</m> and <m>n^2 - 2n >n</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Determine <m>S = \left\{ x \in \mathbb{N} \mid x \notin f ( x ) \right\}</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Notice that <m>S \in \mathcal{P} ( \mathbb{N} )</m>.
+                  Does there exist an element <m>t</m> in
+                  <m>\mathbb{N}</m> such that <m>f ( t ) = S</m>?
+                  That is, is <m>S \in \text{ range } ( f )</m>?
+                </p>
+              </li>
+            </ol>
+          </p>
+        </li>
+      </ol>
+    </exploration>
+    <p>
+      We have seen examples of sets that are countably infinite,
+      but we have not yet seen an example of an infinite set that is uncountable.
+      We will do so in this section.
+      The first example of an uncountable set will be the open interval of real numbers <m>( 0, 1 )</m>.
+      The proof that this interval is uncountable uses a method similar to the winning strategy for Player Two in the game of Dodge Ball from Beginning <xref ref="PA_dodgeball">Activity</xref>.
+      Before considering the proof,
+      we need to state an important result about decimal expressions for real numbers.
+    </p>
+  </introduction>
+  <subsection>
+    <title>Decimal Expressions for Real Numbers</title>
+    <p>
+          <idx><h>decimal expression</h><h>for a real number</h></idx>
+    </p>
+    <p>
+      In its decimal form, any real number <m>a</m> in the interval
+      <m>( 0, 1 )</m> can be written as <m>a = 0.a_1 a_2 a_3 a_4 \ldots </m>,
+      where each <m>a_i</m> is an integer with <m>0 \leq a_i \leq 9</m>.
+      For example,
+      <me>
+        \frac{5}{12} = 0.416666 \ldots
+      </me>.
+    </p>
+    <p>
+      We often abbreviate this as
+      <m>\dfrac{5}{12} = 0.41 \overline{6}</m> to indicate that the <m>6</m> is repeated.
+      We can also repeat a block of digits.
+      For example,
+      <m>\dfrac{5}{26} = 0.19 \overline{230769}</m> to indicate that the block 230769 repeats.
+      That is,
+      <me>
+        \frac{5}{26} = 0.19230769230769230769 \ldots
+      </me>.
+    </p>
+    <p>
+      There is only one situation in which a real number can be represented as a decimal in more than one way.
+      A decimal that ends with an infinite string of 9's is equal to one that ends with an infinite string of 0's.
+      For example,
+      <m>0.3199999 \ldots</m> represents the same real number as <m>0.3200000 \ldots </m>.
+      Geometric series can be used to prove that a decimal that ends with an infinite string of 9's is equal to one that ends with an infinite string of 0's, but we will not do so here.
+    </p>
+    <definition xml:id="normalized">
+      <statement>
+        <p>
+          A decimal representation of a real number <m>a</m> is in
+          <term>normalized form</term>
+          <idx><h>decimal expression</h><h>normalized form</h></idx>
+              <idx><h>normalized form</h><h>of a decimal expression</h></idx>
+          provided that there is no natural number <m>k</m> such that for all natural numbers <m>n</m> with <m>n > k</m>,
+          <m>a_n = 9</m>.
+          That is, the decimal representation of <m>a</m> is in normalized form if and only if it does not end with an infinite string of 9's.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      One reason the normalized form is important is the following theorem
+      (which will not be proved here).
+    </p>
+    <theorem xml:id="T_normalized">
+      <statement>
+        <p>
+          Two decimal numbers in normalized form are equal if and only if they have identical digits in each decimal position.
+        </p>
+      </statement>
+    </theorem>
+  </subsection>
+  <subsection xml:id="sym_continuum">
+    <title>Uncountable Subsets of <m>\boldsymbol{\mathbb{R}}</m></title>
+    <p>
+      In the proof that follows,
+      we will use only the normalized form for the decimal representation of a real number in the interval <m>( 0, 1 )</m>.
+    </p>
+    <theorem xml:id="T_uncountableinterval">
+      <statement>
+        <p>
+          The open interval <m>( 0, 1 )</m> is an uncountable set.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Since the interval <m>( 0, 1 )</m> contains the infinite subset <m>\left\{\dfrac{1}{2}, \dfrac{1}{3}, \dfrac{1}{4}, \ldots \,\right\}</m>,
+        we can use <xref ref="T_subsetisinfinite">Theorem</xref>,
+        to conclude that <m>( 0, 1 )</m> is an infinite set.
+        So <m>( 0, 1 )</m> is either countably infinite or uncountable.
+        We will prove that <m>( 0, 1 )</m> is uncountable by proving that any function from <m>\N</m> to <m>(0, 1)</m> is not a surjection,
+        and hence,
+        there is no bijection from <m>\N</m> to <m>(0, 1)</m>.
+      </p>
+      <p>
+        So suppose that <m>f\x \mathbb{N} \to ( 0, 1 )</m> is a function.
+        We will show that <m>f</m> is not a surjection by showing that there exists an element in
+        <m>( 0, 1 )</m> that cannot be in the range of <m>f</m>.
+        Writing the images of the elements of
+        <m>\mathbb{N}</m> in normalized form, we can write
+        <me>
+          \begin{aligned}f ( 1 ) \amp = 0.a_{1 1} a_{1 2} a_{1 3} a_{1 4} a_{1 5} \ldots \\ f ( 2 ) \amp = 0.a_{2 1} a_{2 2} a_{2 3} a_{2 4} a_{2 5} \ldots \\ f ( 3 ) \amp = 0.a_{3 1} a_{3 2} a_{3 3} a_{3 4} a_{3 5} \ldots \\ f ( 4 ) \amp = 0.a_{4 1} a_{4 2} a_{4 3} a_{4 4} a_{4 5} \ldots \\ f ( 5 ) \amp = 0.a_{5 1} a_{5 2} a_{5 3} a_{5 4} a_{5 5} \ldots \\ \amp  \vdots \\ f ( n ) \amp = 0.a_{n 1} a_{n 2} a_{n 3} a_{n 4} a_{n 5} \ldots \\ \amp  \vdots \end{aligned}
+        </me>
+      </p>
+      <p>
+        Notice the use of the double subscripts.
+        The number <m>a_{i j}</m> is the
+        <m>j^\text{ th }</m> digit to the right of the decimal point in the normalized decimal representation of <m>f ( i )</m>.
+      </p>
+      <p>
+        We will now construct a real number <m>b = 0.b_1 b_2 b_3 b_4 b_5 \ldots</m> in
+        <m>( 0, 1 )</m> and in normalized form that is not in this list.
+      </p>
+      <p>
+        \note The idea is to start in the upper left corner and move down the diagonal in a manner similar to the winning strategy for Player Two in the game in Beginning <xref ref="PA_dodgeball">Activity</xref>.
+        At each step,
+        we choose a digit that is not equal to the diagonal digit.
+      </p>
+      <p>
+        Start with <m>a_{1 1}</m> in <m>f ( 1 )</m>.
+        We want to choose <m>b_1</m> so that <m>b_1 \ne 0</m>,
+        <m>b_1 \ne a_{1 1}</m>, and <m>b_1 \ne 9</m>.
+        (To ensure that we end up with a decimal that is in normalized form,
+        we make sure that each digit is not equal to 9.)
+        We then repeat this process with <m>a_{2 2}</m>,
+        <m>a_{3 3}</m>, <m>a_{4 4}</m>,
+        <m>a_{5 5}</m>, and so on.
+        So we let <m>b</m> be the real number <m>b = 0.b_1 b_2 b_3 b_4 b_5 \ldots </m>,
+        where for each <m>k \in \mathbb{N}</m>
+        <men>
+          b_k = \begin{cases}3         \amp \text{if \(a_{k k} \ne 3\)}  \\ 5         \amp \text{if \(a_{k k} = 3\).} \end{cases}
+        </men>
+      </p>
+      <p>
+        (The choice of 3 and 5 is arbitrary.
+        Other choices of distinct digits will also work.)
+      </p>
+      <p>
+        Now for each <m>n \in \mathbb{N}</m>,
+        <m>b \ne f ( n )</m> since <m>b</m> and <m>f ( n )</m> are in normalized form and <m>b</m> and <m>f ( n )</m> differ in the <m>n</m>{th} decimal place.
+        Therefore, <m>f</m> is not a surjection.
+        This proves that any function from <m>\mathbb{N}</m> to
+        <m>( 0, 1 )</m> is not a surjection and hence,
+        there is no bijection from <m>\mathbb{N}</m> to <m>( 0, 1 )</m>.
+        Therefore, <m>( 0, 1 )</m> is not countably infinite and hence must be an uncountable set.
+      </p>
+    </proof>
+    <investigation xml:id="prog_diagonal">
+      <title><em>Dodge Ball and Cantor's Diagonal Argument</em></title>
+      <p>
+        The proof of <xref ref="T_uncountableinterval">Theorem</xref>
+        is often referred to as <em>Cantor's diagonal argument</em>.
+            <idx><h>Cantor's diagonal argument</h></idx>
+        It is named after the mathematician Georg Cantor,
+        who first published the proof in 1874.
+        Explain the connection between the winning strategy for Player Two in Dodge Ball
+            <idx><h>Dodge Ball</h></idx>
+        (see Beginning <xref ref="PA_dodgeball">Activity</xref>) and the proof of <xref ref="T_uncountableinterval">Theorem</xref>
+        using Cantor's diagonal argument.
+      </p>
+    </investigation>
+    <p>
+      The open interval <m>( 0, 1 )</m> is our first example of an uncountable set.
+      The cardinal number of <m>( 0, 1 )</m> is defined to be <m>\boldsymbol{c}</m>,
+      which stands for <em>the cardinal number of the continuum</em>.
+          <idx><h>continuum</h></idx>
+      So the two infinite cardinal numbers we have seen are
+      <m>\aleph_0</m> for countably infinite sets and <m>\boldsymbol{c}</m>.
+    </p>
+    <definition xml:id="cardinalityc">
+      <statement>
+        <p>
+          A set <m>A</m> is said to have <term>cardinality</term>
+              <idx><h>cardinality</h></idx>
+              <idx><h>cardinality</h><h><m>\boldsymbol{c}</m></h></idx> <m>\boldsymbol{c}</m> provided that <m>A</m> is equivalent to <m>( 0, 1 )</m>.
+          In this case,
+          we write <m>\text{ card } ( A ) = \boldsymbol{c}</m> and say that the cardinal number of <m>A</m> is <m>\boldsymbol{c}</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      The proof of <xref ref="T_openintervals">Theorem</xref>
+      is included in Progress <xref ref="prog_openintervals">Check</xref>.
+    </p>
+    <theorem xml:id="T_openintervals">
+      <statement>
+        <p>
+          Let <m>a</m> and <m>b</m> be real numbers with <m>a \lt b</m>.
+          The open interval <m>( a, b )</m> is uncountable and has cardinality <m>\boldsymbol{c}</m>.
+        </p>
+      </statement>
+    </theorem>
+    <investigation xml:id="prog_openintervals">
+      <title><em>Proof of <xref ref="T_openintervals">Theorem</xref></em></title>
+      <ol>
+        <li>
+          <p>
+            In Part<nbsp/><xref ref="A_equivsets4"/> of Progress <xref ref="prog_equivsets">Check</xref>,
+            we proved that if <m>b \in \R</m> and <m>b > 0</m>,
+            then the open interval <m>( 0, 1 )</m> is equivalent to the open interval <m>( 0, b )</m>.
+            Now let <m>a</m> and <m>b</m> be real numbers with <m>a \lt  b</m>.
+            Find a function
+            <me>
+              f\x  ( 0, 1 ) \to ( a, b )
+            </me>
+            that is a bijection and conclude that the open interval
+            <m>( 0, 1) \approx ( a, b )</m>.  \hint Find a linear function that passes through the points <m>( 0, a )</m> and <m>( 1, b )</m>.
+            Use this to define the function <m>f</m>.
+            Make sure you prove that this function <m>f</m> is a bijection.
+          </p>
+        </li>
+        <li>
+          <p>
+            Let <m>a, b, c, d</m> be real numbers with <m>a \lt b</m> and <m>c \lt d</m>.
+            Prove that the open interaval
+            <m>( a, b )</m> is equivalent to the open interval <m>( c, d )</m>.
+          </p>
+        </li>
+      </ol>
+    </investigation>
+    <theorem xml:id="T_realsuncount">
+      <statement>
+        <p>
+          The set of real numbers <m>\mathbb{R}</m> is uncountable and has cardinality <m>\boldsymbol{c}</m>.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Let <m>f\x \left( -\dfrac{\pi}{2}, \dfrac{\pi}{2} \right) \to \mathbb{R}</m> be defined by <m>f ( x ) = \tan x</m>,
+        for each <m>x \in \mathbb{R}</m>.
+        The function <m>f</m> is a bijection and, hence,
+        <m>\left(-\dfrac{\pi}{2}, \dfrac{\pi}{2} \right) \approx \mathbb{R}</m>.
+        So by <xref ref="T_openintervals">Theorem</xref>,
+        <m>\mathbb{R}</m> is uncountable and has cardinality <m>\boldsymbol{c}</m>.
+      </p>
+    </proof>
+  </subsection>
+  <subsection>
+    <title>Cantor's Theorem</title>
+    <p>
+          <idx><h>Cantor's Theorem</h></idx>
+    </p>
+    <p>
+      We have now seen two different infinite cardinal numbers,
+      <m>\aleph_0</m> and <m>\boldsymbol{c}</m>.
+      It can seem surprising that there is more than one infinite cardinal number.
+      A reasonable question at this point is,
+      <q>Are there any other infinite cardinal numbers?</q>
+      The astonishing answer is that there are, and in fact,
+      there are infinitely many different infinite cardinal numbers.
+      The basis for this fact is the following theorem,
+      which states that a set is not equivalent to its power set.
+      The proof is due to Georg Cantor (1845<ndash/>1918),
+          <idx><h>Cantor, Georg</h></idx>
+      and the idea for this proof was explored in Beginning <xref ref="PA_powerset">Activity</xref>.
+      The basic idea of the proof is to prove that any function from a set <m>A</m> to its power set cannot be a surjection.
+    </p>
+    <theorem xml:id="T_cantor">
+      <title><em>Cantor's Theorem</em></title>
+      <statement>
+        <p>
+          For every set <m>A</m>, <m>A</m> and
+          <m>\mathcal{P} ( A )</m> do not have the same cardinality.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Let <m>A</m> be a set.
+        If <m>A = \emptyset</m>,
+        then <m>\mathcal{P} ( A ) = \left\{ \emptyset \right\}</m>,
+        which has cardinality 1.
+        Therefore, <m>\emptyset</m> and
+        <m>\mathcal{P} ( \emptyset )</m> do not have the same cardinality.
+      </p>
+      <p>
+        Now suppose that <m>A \ne \emptyset</m>,
+        and let <m>f\x  A \to \mathcal{P} ( A )</m>.
+        We will show that <m>f</m> cannot be a surjection,
+        and hence there is no bijection from <m>A</m> to <m>\mathcal{P} ( A )</m>.
+        This will prove that <m>A</m> is not equivalent to <m>\mathcal{P} ( A )</m>.
+        Define
+        <me>
+          S = \left\{ x \in A \mid x \notin f ( x ) \right\}
+        </me>.
+      </p>
+      <p>
+        Assume that there exists a <m>t</m> in <m>A</m> such that <m>f ( t ) = S</m>.
+        Now, either <m>t \in S</m> or <m>t \notin S</m>.
+        <ul>
+          <li>
+            <p>
+              If <m>t \in S</m>,
+              then <m>t \in \left\{ x \in A \mid x \notin f ( x ) \right\}</m>.
+              By the definition of <m>S</m>,
+              this means that <m>t \notin f ( t )</m>.
+              However, <m>f ( t ) = S</m> and so we conclude that <m>t \notin S</m>.
+              But now we have <m>t \in S</m> and <m>t \notin S</m>.
+              This is a contradiction.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>t \notin S</m>,
+              then <m>t \notin \left\{ x \in A \mid x \notin f ( x ) \right\}</m>.
+              By the definition of <m>S</m>,
+              this means that <m>t \in f ( t )</m>.
+              However, <m>f ( t ) = S</m> and so we conclude that <m>t \in S</m>.
+              But now we have <m>t \notin S</m> and <m>t \in S</m>.
+              This is a contradiction.
+            </p>
+          </li>
+        </ul>
+      </p>
+      <p>
+        So in both cases we have arrived at a contradiction.
+        This means that there does not exist a <m>t</m> in <m>A</m> such that <m>f ( t ) = S</m>.
+        Therefore, any function from <m>A</m> to
+        <m>\mathcal{P} ( A )</m> is not a surjection and hence not a bijection.
+        Hence, <m>A</m> and <m>\mathcal{P} ( A )</m> do not have the same cardinality.
+      </p>
+    </proof>
+    <corollary xml:id="C_cantor">
+      <statement>
+        <p>
+          <m>\mathcal{P} ( \mathbb{N} )</m> is an infinite set that is not countably infinite.
+        </p>
+      </statement>
+    </corollary>
+    <proof>
+      <p>
+        Since <m>\mathcal{P} ( \mathbb{N} )</m> contains the infinite subset <m>\left\{ \left\{ 1 \right\}, \left\{ 2 \right\}, \left\{ 3 \right\} \ldots \,\right\}</m>,
+        we can use <xref ref="T_subsetisinfinite">Theorem</xref>,
+        to conclude that <m>\mathcal{P} ( \mathbb{N} )</m> is an infinite set.
+        By Cantor's Theorem
+        (<xref ref="T_cantor">Theorem</xref>),
+        <m>\mathbb{N}</m> and <m>\mathcal{P} ( \mathbb{N} )</m> do not have the same cardinality.
+        Therefore, <m>\mathcal{P} ( \mathbb{N} )</m> is not countable and hence is an uncountable set.
+      </p>
+    </proof>
+  </subsection>
+  <subsection>
+    <title>Some Final Comments about Uncountable Sets</title>
+    <ol>
+      <li xml:id="sec94_comment1">
+        <p>
+          We have now seen that any open interval of real numbers is uncountable and has cardinality <m>\boldsymbol{c}</m>.
+          In addition,
+          <m>\mathbb{R}</m> is uncountable and has cardinality <m>\boldsymbol{c}</m>.
+          Now, <xref ref="C_cantor">Corollary</xref>
+          tells us that <m>\mathcal{P} ( \mathbb{N} )</m> is uncountable.
+          A question that can be asked is,
+          <q>Does <m>\mathcal{P} ( \mathbb{N} )</m> have the same cardinality as <m>\mathbb{R}</m>?</q>
+          The answer is yes, although we are not in a position to prove it yet.
+          A proof of this fact uses the following theorem,
+          which is known as the Cantor-Schr&#xf6;der-Bernstein Theorem.
+        </p>
+      </li>
+    </ol>
+    <theorem xml:id="T_bernstein">
+      <title><em>Cantor-Schr&#xf6;der-Bernstein</em></title>
+      <statement>
+        <p>
+          Let <m>A</m> and <m>B</m> be sets.
+          If there exist injections <m>f\x A \to B</m> and
+          <m>g\x B \to A</m>, then <m>A \approx B</m>.
+        </p>
+      </statement>
+    </theorem>
+    <p>
+          <idx><h>Cantor-Schr&#xf6;der-Bernstein Theorem</h></idx>
+    </p>
+    <p>
+      In the statement of this theorem,
+      notice that it is not required that the function <m>g</m> be the inverse of the function <m>f</m>.
+      We will not prove the Cantor-Schr&#xf6;der-Bernstein Theorem here.
+      The following items will show some uses of this important theorem.
+      <ol>
+        <li>
+          <p>
+            The Cantor-Schr&#xf6;der-Bernstein Theorem can also be used to prove that the closed interval
+            <m>[ 0, 1 ]</m> is equivalent to the open interval <m>( 0, 1 )</m>.
+            See Exercise<nbsp/><xref ref="exer_closedinterval"/> on <xref ref="exer_closedinterval">page</xref>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Another question that was posed earlier is,
+            <q>Are there other infinite cardinal numbers other than
+            <m>\aleph_0</m> and <m>\boldsymbol{c}</m>?</q>
+            Again, the answer is yes, and the basis for this is Cantor's Theorem
+            (<xref ref="T_cantor">Theorem</xref>).
+            We can start with <m>\text{ card } ( \mathbb{N} ) = \aleph_0</m>.
+            We then define the following infinite cardinal numbers:
+            <ul>
+              \item <m>\text{ card } ( \mathcal{P} ( \mathbb{N} ) ) = \alpha_1</m>. \item <m>\text{ card } ( \mathcal{P} ( \mathcal{P} ( \mathbb{N} ) ) ) = \alpha_2</m>. \item <m>\text{ card } ( \mathcal{P} ( \mathcal{P} ( \mathcal{P} ( \mathbb{N} ) ) ) ) = \alpha_3</m>. \item <m>\vdots</m>
+            </ul>
+          </p>
+          Cantor's Theorem tells us that these are all different cardinal numbers,
+          and so we are just using the lowercase Greek letter <m>\alpha</m> (alpha) to help give names to these cardinal numbers.
+          In fact, although we will not define it here, there is a way to
+          <q>order</q>
+          these cardinal numbers in such a way that
+          <me>
+            \aleph_0 \lt  \alpha_1 \lt  \alpha_2 \lt  \alpha_3 \lt  \cdots
+          </me>.
+          Keep in mind, however,
+          that even though these are different cardinal numbers, Cantor's Theorem does not tell us that these are the only cardinal numbers.
+        </li>
+        <li>
+          <p>
+            In Comment<nbsp/><xref ref="sec94_comment1"/>,
+            we indicated that <m>\mathcal{P} ( \mathbb{N} )</m> and
+            <m>\mathbb{R}</m> have the same cardinality.
+            Combining this with the notation in Comment<nbsp/><xref ref="sec94_comment3"/>, this means that
+            <me>
+              \alpha_1 = \boldsymbol{c}
+            </me>.
+            However, this does not necessarily mean that <m>\boldsymbol{c}</m> is the
+            <q>next largest</q>
+            cardinal number after <m>\aleph_0</m>.
+            A reasonable question is,
+            <q>Is there an infinite set with cardinality between
+            <m>\aleph_0</m> and <m>\boldsymbol{c}</m>?</q>
+            Rewording this in terms of the real number line, the question is,
+            <q>On the real number line,
+            is there an infinite set of points that is not equivalent to the entire line and also not equivalent to the set of natural numbers?</q>
+            This question was asked by Cantor,
+            but he was unable to find any such set.
+            He conjectured that no such set exists.
+            That is, he conjectured that
+            <m>\boldsymbol{c}</m> is really the next cardinal number after <m>\aleph_0</m>.
+            This conjecture has come to be known as the
+            <em>Continuum Hypothesis</em>.
+              <idx><h>Continuum Hypothesis</h></idx>
+          Stated somewhat more formally,
+            the Continuum Hypothesis is There is no set <m>X</m> such that <m>\aleph_0 \lt  \text{ card }  ( X ) \lt  \boldsymbol{c}</m>.
+            The question of whether the Continuum Hypothesis is true or false is one of the most famous problems in modern mathematics.
+            Through the combined work of Kurt G&#xf6;del
+              <idx><h>G&#xf6;del, Kurt</h></idx>
+            in the 1930s and Paul Cohen
+              <idx><h>Cohen, Paul</h></idx>
+            in 1963, it has been proved that the Continuum Hypothesis cannot be proved or disproved from the standard axioms of set theory.
+            This means that either the Continuum Hypothesis or its negation can be added to the standard axioms of set theory without creating a contradiction.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      \exercises{<xref ref="S_uncountablesets">Exercises</xref>}
+    </p>
+    <ol>
+      <li xml:id="exer_sec94-1">
+        <p>
+          Use an appropriate bijection to prove that each of the following sets has cardinality <m>\boldsymbol{c}</m>.
+        </p>
+        <ol>
+          <li>
+            <p>
+              <m>( 0, \infty )</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>( a, \infty )</m>, for any <m>a \in \mathbb{R}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\mathbb{R} - \left\{ 0 \right\}</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\mathbb{R} - \left\{ a \right\}</m>,
+              for any <m>a \in \mathbb{R}</m>
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li xml:id="exer_irrationaluncount">
+        <p>
+          Is the set of irrational numbers countable or uncountable?
+          Prove that your answer is correct.
+        </p>
+      </li>
+      <li xml:id="exer_supersetofuncount">
+        <p>
+          Prove that if <m>A</m> is uncountable and <m>A \subseteq B</m>,
+          then <m>B</m> is uncountable.
+        </p>
+      </li>
+      <li xml:id="exer93_uncountablesets">
+        <p>
+          Do two uncountable sets always have the same cardinality?
+          Justify your conclusion.
+        </p>
+      </li>
+      <li>
+        <p>
+          Let  <m>C</m>  be the set of all infinite sequences,
+          each of whose entries is the digit 0 or the digit 1.
+          For example,
+          <me>
+            \begin{aligned}\left( 1, 0, 1, 0, 1, 0, 1, 0, \ldots \right) \amp \in C; \\ \left( 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, \ldots \right) \amp \in C; \\ \left( 2, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, \ldots \right) \amp \notin C. \end{aligned}
+          </me>
+          Is the set  <m>C</m>  a countable set or an uncountable set?
+          Justify your conclusion.
+        </p>
+      </li>
+      <li xml:id="exer_closedinterval">
+        <p>
+          The goal of this exercise is to use the Cantor-Schr&#xf6;der-Bernstein Theorem to prove that the cardinality of the closed interval
+          <m>[ 0, 1 ]</m> is <m>\boldsymbol{c}</m>.
+          <ol>
+            <li>
+              <p>
+                Find an injection <m>f\x ( 0, 1 ) \to [ 0, 1 ]</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Find an injection <m>h\x [ 0, 1 ] \to ( -1, 2 )</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Use the fact that <m>( -1, 2 ) \approx ( 0, 1 )</m> to prove that there exists an injection
+                <m>g\x [ 0, 1 ] \to ( 0, 1 )</m>. (It is only necessary to prove that the injection <m>g</m> exists.
+                It is not necessary to determine a specific formula for <m>g ( x )</m>.) \note Instead of doing Part<nbsp/>(b) as stated,
+                another approach is to find an injection <m>k \x [0, 1] \to (0, 1)</m>.
+                Then, it is possible to skip Part<nbsp/>(c) and go directly to Part<nbsp/>(d).
+              </p>
+            </li>
+            <li>
+              <p>
+                Use the Cantor-Schr&#xf6;der-Bernstein Theorem to conclude that
+                <m>[ 0, 1 ] \approx ( 0, 1 )</m> and hence that the cardinality of
+                <m>[ 0, 1 ]</m> is <m>\boldsymbol{c}</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li>
+        <p>
+          In Exercise<nbsp/><xref ref="exer_closedinterval"/>,
+          we proved that the closed interval
+          <m>[ 0, 1 ]</m> is uncountable and has cardinality <m>\boldsymbol{c}</m>.
+          Now let <m>a, b \in \mathbb{R}</m> with <m>a \lt b</m>.
+          Prove that <m>[ a, b ] \approx [ 0, 1 ]</m> and hence that
+          <m>[ a, b ]</m> is uncountable and has cardinality <m>\boldsymbol{c}</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Is the set of all finite subsets of <m>\N</m> countable or uncountable?
+          Let <m>F</m> be the set of all finite subsets of <m>\N</m>.
+          Determine the cardinality of the set <m>F</m>. \eighth Consider defining a function
+          <m>f:F \to \N</m> that produces the following.
+          <ul>
+            <li>
+              <p>
+                If <m>A = \{1, 2, 6 \}</m>, then <m>f(A) = 2^1 3^2 5^6</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>B = \{3, 6 \}</m>, then <m>f(B) = 2^3 3^6</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>C = \left\{ m_1, m_2, m_3, m_4 \right\}</m> with <m>m_1 \lt m_2 \lt m_3 \lt m_4</m>,
+                then <m>f(C) = 2^{m_1} 3^{m_2} 5^{m_3} 7^{m_4}</m>.
+              </p>
+            </li>
+          </ul>
+        </p>
+        It might be helpful to use the Fundamental Theorem of Arithmetic on <xref ref="T_fundtheorem">page</xref>
+        and to denote the set of all primes as
+        <m>P = \left\{ p_1, p_2, p_3, p_4, \ldots \right\}</m> with <m>p_1 \lt  p_2 \lt  p_3 \lt  p_4 \cdots</m>.
+        Using the sets <m>A</m>,
+        <m>B</m>, and <m>C</m> defined above, we would then write
+        <me>
+          f(A) = p_1^1 p_2^2 p_3^6,  f(B) = p_1^3 p_2^6,  \text{ and }   f(C) = p_1^{m_1} p_2^{m_2} p_3^{m_3} p_4^{m_4}
+        </me>.
+      </li>
+      <li>
+        <p>
+          In Exercise<nbsp/><xref ref="exer_irrationaluncount"/>,
+          we showed that the set of irrational numbers is uncountable.
+          However, we still do not know the cardinality of the set of irrational numbers.
+          Notice that we can use <m>\Q^c</m> to stand for the set of irrational numbers.
+          <ol>
+            <li>
+              <p>
+                Construct a function <m>f\x \Q^c \to \R</m> that is an injection.
+              </p>
+            </li>
+          </ol>
+        </p>
+        We know that any real number <m>a</m> can be represented in decimal form as follows:
+        <me>
+          a = A.a_1 a_2 a_3 a_4 \cdots a_n \cdots
+        </me>,
+        where <m>A</m> is an integer and the decimal part
+        <m>( 0.a_1 a_2 a_3 a_4 \cdots )</m> is in normalized form.
+        (See <xref ref="normalizedform">page</xref>.)
+        We also know that the real number <m>a</m> is an irrational number if and only <m>a</m> has an infinite non-repeating decimal expansion.
+        We now associate with <m>a</m> the real number
+        <men xml:id="exer_irrationalsuncount">
+          A.a_1 0 a_2 1 1 a_3 0 0 0 a_4 1 1 1 1 a_5 0 0 0 0 0 a_6 1 1 1 1 1 1 \cdots
+        </men>.
+        Notice that to construct the real number in <xref ref="exer_irrationalsuncount"/>,
+        we started with the decimal expansion of <m>a</m>,
+        inserted a 0 to the right of the first digit after the decimal point,
+        inserted two 1's to the right of the second digit to the right of the decimal point,
+        inserted three 0's to the right of the third digit to the right of the decimal point,
+        and so on.
+        <ol>
+          <li>
+            <p>
+              Explain why the real number in <xref ref="exer_irrationalsuncount"/> is an irrational number.
+            </p>
+          </li>
+          <li>
+            <p>
+              Use these ideas to construct a function
+              <m>g\x \R \to \Q^c</m> that is an injection.
+            </p>
+          </li>
+          <li>
+            <p>
+              What can we now conclude by using the Cantor-Schr&#xf6;der-Bernstein Theorem?
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <p>
+          Let <m>J</m> be the unit open interval.
+          That is, <m>J = \left\{ x \in \R \mid 0 \lt  x \lt  1 \right\}</m> and let <m>S = \left\{ (x, y) \in \R \times \R \mid 0 \lt  x \lt  1 \text{ and }  0 \lt  y \lt  1 \right\}</m>.
+          We call <m>S</m> the unit open square.
+          We will now define a function <m>f</m> from <m>S</m> to <m>J</m>.
+          Let <m>(a, b) \in S</m> and write the decimal expansions of <m>a</m> and <m>b</m> in normalized form as
+          <md>
+            <mrow>a \amp = 0.a_1 a_2 a_3 a_4 \cdots a_n \cdots</mrow>
+            <mrow>b \amp = 0.b_1 b_2 b_3 b_4 \cdots b_n \cdots </mrow>
+          </md>.
+          We then define <m>f(a, b) = 0.a_1 b_1 a_2 b_2 a_3 b_3 a_4 b_4 \cdots a_n b_n \cdots</m>.
+          <ol>
+            <li>
+              <p>
+                Determine the values of <m>f ( 0.3, 0.625 )</m>,
+                <m>f \!\left( \dfrac{1}{3}, \dfrac{1}{4} \right)</m>,
+                and <m>f \!\left( \dfrac{1}{6}, \dfrac{5}{6} \right)</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If possible,
+                find <m>(x, y) \in S</m> such that <m>f ( x, y ) = 0.2345</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If possible,
+                find <m>(x, y) \in S</m> such that <m>f ( x, y ) = \dfrac{1}{3}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If possible,
+                find <m>(x, y) \in S</m> such that <m>f ( x, y ) = \dfrac{1}{2}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Explain why the function <m>f\x S \to J</m> is an injection but is not a surjection.
+              </p>
+            </li>
+            <li>
+              <p>
+                Use the Cantor-Schr&#xf6;der-Bernstein Theorem to prove that the cardinality of the unit open square <m>S</m> is equal to <m>\boldsymbol{c}</m>.
+                If this result seems surprising, you are in good company.
+                In a letter written in 1877 to the mathematician Richard Dedekind describing this result that he had discovered, Georg Cantor wrote,
+                <q>I see it but I do not believe it.</q>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+  <subsection>
+    <title>Explorations and Activities</title>
+    <ol>
+      <li xml:id="A_closedinterval">
+        <p>
+          <em>The Closed Interval <m>\boldsymbol{ [ 0, 1 ]}</m></em>.
+          In Exercise<nbsp/><xref ref="exer_closedinterval"/>,
+          the Cantor-Schr&#xf6;der-Bernstein Theorem was used to prove that the closed interval <m>[0, 1]</m> has cardinality <m>\boldsymbol{c}</m>.
+          This may seem a bit unsatisfactory since we have not proved the Cantor-Schr&#xf6;der-Bernstein Theorem.
+          In this activity, we will prove that
+          <m>\text{ card } \!\left( [ 0, 1 ] \right) = \boldsymbol{c}</m> by using appropriate bijections.
+        </p>
+        <ol>
+          <li xml:id="A_closedinterval1">
+            <p>
+              Let <m>f\x  [ 0, 1 ] \to [ 0, 1 )</m> by
+              <men>
+                f ( x ) = \begin{cases}\dfrac{1}{n+1}         \amp \text{if \(x=\dfrac{1}{n}\) for some \(n \in \mathbb{N}\)}  \\ x        \amp \text{ otherwise } . \end{cases}
+              </men>
+            </p>
+            <ol>
+              <li xml:id="A_closedinterval1a">
+                <p>
+                  Determine <m>f ( 0 )</m>, <m>f ( 1 )</m>,
+                  <m>f \!\left( \dfrac{1}{2} \right)</m>,
+                  <m>f \!\left( \dfrac{1}{3} \right)</m>,
+                  <m>f \!\left( \dfrac{1}{4} \right)</m>,
+                  and <m>f \!\left( \dfrac{1}{5} \right)</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Sketch a graph of the function <m>f</m>. \hint Start with the graph of <m>y = x</m> for <m>0 \leq x \leq 1</m>.
+                  Remove the point <m>( 1, 1 )</m> and replace it with the point <m>\!\left( 1, \dfrac{1}{2} \right)</m>.
+                  Next, remove the point <m>\!\left( \dfrac{1}{2}, \dfrac{1}{2} \right)</m> and replace it with the point <m>\!\left( \dfrac{1}{2}, \dfrac{1}{3} \right)</m>.
+                  Continue this process of removing points on the graph of <m>y = x</m> and replacing them with the points determined from the information in Part<nbsp/><xref ref="A_closedinterval1a"/>.
+                  Stop after repeating this four or five times so that pattern of this process becomes apparent.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Explain why the function <m>f</m> is a bijection.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Prove that <m>[ 0, 1 ] \approx [ 0, 1 )</m>.
+                </p>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <p>
+              Let <m>g\x  [ 0, 1 ) \to ( 0, 1 )</m> by
+              <men>
+                g ( x ) = \begin{cases}\dfrac{1}{2}           \amp \text{ if \(x=0\) }  \\ \dfrac{1}{n+1}         \amp \text{if \(x=\dfrac{1}{n}\) for some \(n \in \mathbb{N}\)}  \\ x        \amp \text{ otherwise } . \end{cases}
+              </men>
+              <ol>
+                <li>
+                  <p>
+                    Follow the procedure suggested in Part<nbsp/><xref ref="A_closedinterval1"/> to sketch a graph of <m>g</m>.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Explain why the function <m>g</m> is a bijection.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Prove that <m>[ 0, 1 ) \approx ( 0, 1 )</m>.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </li>
+          <li>
+            <p>
+              Prove that <m>[ 0, 1 ]</m> and
+              <m>[ 0, 1 )</m> are both uncountable and have cardinality <m>\boldsymbol{c}</m>.
+            </p>
+          </li>
+        </ol>
+      </li>
+    </ol>
+    <p>
+      \appendix
+    </p>
+  </subsection>
+</section>

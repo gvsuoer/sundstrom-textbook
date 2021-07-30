@@ -1,0 +1,1250 @@
+<section xml:id="S_inversefunctions">
+  <title>Inverse Functions</title>
+  <introduction>
+    <p>
+      For this section,
+      we will use the concept of Cartesian product of two sets <m>A</m> and <m>B</m>,
+      denoted by <m>A \times B</m>,
+      which is the set of all ordered pairs <m>(x, y)</m> where <m>x \in A</m> and <m>y \in B</m>.
+      That is, <m>A \times B = \left\{ { {\left( {x,y} \right)} \mid x \in A\text{ and } y \in B} \right\}</m>.
+      See Beginning <xref ref="PA_cartesianproduct">Activity</xref>
+      in <xref ref="S_cartesian">Section</xref>
+      for a more thorough discussion of this concept.
+    </p>
+    <exploration xml:id="PA_functionasordered">
+      <title><em>Functions and Sets of Ordered Pairs</em></title>
+      <p>
+        When we graph a real function,
+        we plot ordered pairs in the Cartesian plane where the first coordinate is the input of the function and the second coordinate is the output of the function.
+        For example, if <m>g\x \mathbb{R} \to \mathbb{R}</m>,
+        then every point on the graph of <m>g</m> is an ordered pair
+        <m>( {x, y} )</m> of real numbers where <m>y = g( x )</m>.
+        This shows how we can generate ordered pairs from a function.
+        It happens that we can do this with any function.
+        For example, let
+        <me>
+          A = \left\{ {1, 2, 3} \right\} \text{ and }  B = \left\{ {a, b} \right\}
+        </me>.
+      </p>
+      <p>
+        Define the function <m>F\x A \to B</m> by
+        <me>
+          F( 1 ) = a, F( 2 ) = b,  \text{ and } F( 3 ) = b
+        </me>.
+      </p>
+      <p>
+        We can convert each of these to an ordered pair in
+        <m>A \times B</m> by using the input as the first coordinate and the output as the second coordinate.
+        For example, <m>F( 1 ) = a</m> is converted to <m>( 1, a )</m>,
+        <m>F( 2 ) = b</m> is converted to <m>( 2, b )</m>,
+        and <m>F( 3 ) = b</m> is converted to <m>( 3, b )</m>.
+        So we can think of this function as a set of ordered pairs,
+        which is a subset of <m>A \times B</m>, and write
+        <me>
+          F = \left\{ {( {1, a} ), ( {2, b} ), ( {3, b} )} \right\}\!
+        </me>.
+      </p>
+      <p>
+        \note Since <m>F</m> is the name of the function,
+        it is customary to use <m>F</m> as the name for the set of ordered pairs.
+        <ol>
+          <li>
+            <p>
+              Let <m>A = \left\{ {1, 2, 3} \right\}</m> and let <m>C = \left\{ {a, b, c, d} \right\}</m>.
+              Define the function <m>g\x A \to C</m> by <m>g( 1 ) = a</m>,
+              <m>g( 2 ) = b</m>, and <m>g( 3 ) = d</m>.
+              Write the function <m>g</m> as a set of ordered pairs in <m>A \times C</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        For another example, if we have a real function,
+        such as <m>g\x \mathbb{R} \to \mathbb{R}</m> by <m>g( x ) = x^2  - 2</m>,
+        then we can think of <m>g</m> as the following infinite subset of <m>\mathbb{R} \times \mathbb{R}</m>:
+        <me>
+          g = \left\{ { {( {x, y} ) \in \mathbb{R} \times \mathbb{R}} \mid y = x^2  - 2} \right\}\!
+        </me>.
+      </p>
+      <p>
+        We can also write this as <m>g = \left\{ {( {x, x^2 - 2} )} \mid x \in \mathbb{R} \right\}</m>.
+        <ol>
+          <li>
+            <p>
+              Let <m>f\x \Z \to \Z</m> be defined by
+              <m>f(m) = 3m +5</m>, for all <m>m \in \Z</m>.
+              Use set builder notation to write the function <m>f</m> as a set of ordered pairs,
+              and then use the roster method to write the function <m>f</m> as a set of ordered pairs.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        So any function <m>f\x A \to B</m> can be thought of as a set of ordered pairs that is a subset of <m>A \times B</m>.
+        This subset is
+        <me>
+          f = \left\{ { {( {a, f( a )} ) } \mid a \in A} \right\}  \text{ or } f = \left\{ {( {a, b} ) \in A \times B   \mid b = f( a )} \right\}\!
+        </me>.
+      </p>
+      <p>
+        On the other hand,
+        if we started with <m>A = \left\{ {1, 2, 3} \right\}</m>,
+        <m>B = \left\{ {a, b} \right\}</m>, and
+        <me>
+          G = \left\{ {( {1, a} ), ( {2, a} ), ( {3, b} )} \right\} \subseteq A \times B
+        </me>,
+        then we could think of <m>G</m> as a function from <m>A</m> to <m>B</m> with <m>G( 1 ) = a</m>,
+        <m>G( 2 ) = a</m>, and <m>G( 3 ) = b</m>.
+        The idea is to use the first coordinate of each ordered pair as the input,
+        and the second coordinate as the output.
+        However, not every subset of
+        <m>A \times B</m> can be used to define a function from <m>A</m> to <m>B</m>.
+        This is explored in the following questions.
+        <ol>
+          <li>
+            <p>
+              Let <m>f = \left\{ {( {1, a} ), ( {2, a} ), ( {3, a} ), ( {1, b} )} \right\}</m>.
+              Could this set of ordered pairs be used to define a function from <m>A</m> to <m>B</m>?
+              Explain.
+            </p>
+          </li>
+          <li>
+            <p>
+              Let <m>g = \left\{ {( {1, a} ), ( {2, b} ), ( {3, a} )} \right\}</m>.
+              Could this set of ordered pairs be used to define a function from <m>A</m> to <m>B</m>?
+              Explain.
+            </p>
+          </li>
+          <li>
+            <p>
+              Let <m>h = \left\{ {( {1, a} ), ( {2, b} )} \right\}</m>.
+              Could this set of ordered pairs be used to define a function from <m>A</m> to <m>B</m>?
+              Explain.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </exploration>
+    <exploration xml:id="PA_compositionoftwo">
+      <title><em>A Composition of Two Specific Functions</em></title>
+      <p>
+        Let <m>A = \left\{ {a, b, c, d} \right\}</m> and let <m>B = \left\{ {p, q, r, s} \right\}</m>.
+        <ol>
+          <li>
+            <p>
+              Construct an example of a function <m>f\x A \to B</m> that is a bijection.
+              Draw an arrow diagram for this function.
+            </p>
+          </li>
+          <li xml:id="PA_compositionoftwo2">
+            <p>
+              On your arrow diagram,
+              draw an arrow from each element of <m>B</m> back to its corresponding element in <m>A</m>.
+              Explain why this defines a function from <m>B</m> to <m>A</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              If the name of the function in Part<nbsp/><xref ref="PA_compositionoftwo2"/> is <m>g</m>,
+              so that <m>g\x B \to A</m>,
+              what are <m>g( p )</m>, <m>g( q )</m>,
+              <m>g( r )</m>, and <m>g( s )</m>?
+            </p>
+          </li>
+          <li xml:id="PA_compositionoftwo4">
+            <p>
+              Construct a table of values for each of the functions
+              <m>g \circ f\x A \to A</m> and <m>f \circ g\x B \to B</m>.
+              What do you observe about these tables of values?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </exploration>
+  </introduction>
+  <subsection>
+    <title>The Ordered Pair Representation of a Function</title>
+    <p>
+          <idx><h>function</h><h>as set of ordered pairs</h></idx>
+      In Beginning  <xref ref="PA_functionasordered">Activity</xref>,
+      we observed that if we have a function <m>f\x A \to B</m>,
+      we can generate a set of ordered pairs <m>f</m> that is a subset of <m>A \times B</m> as follows:
+      <me>
+        f = \left\{ { {\left( {a, f( a )} \right)} \mid a \in A} \right\}  \text{ or } f = \left\{ {( {a, b} ) \in A \times B \mid b = f( a )} \right\}\!
+      </me>.
+    </p>
+    <p>
+      However, we also learned that some sets of ordered pairs cannot be used to define a function.
+      We now wish to explore under what conditions a set of ordered pairs can be used to define a function.
+      Starting with a function <m>f\x  A \to B</m>,
+      since <m>\text{ dom } ( f ) = A</m>, we know that
+      <men xml:id="eq_65a">
+        \text{ For every }   a \in A, \text{ there exists a }   b \in B  \text{ such that } ( {a, b} ) \in f
+      </men>.
+    </p>
+    <p>
+      Specifically, we use <m>b = f( a )</m>.
+      This says that every element of <m>A</m> can be used as an input.
+      In addition, to be a function,
+      each input can produce only one output.
+      In terms of ordered pairs,
+      this means that there will never be two ordered pairs <m>( {a, b} )</m> and
+      <m>( {a, c} )</m> in the function <m>f</m> where <m>a \in A</m>, <m>b,
+      c \in B</m>, and <m>b \ne c</m>.
+      We can formulate this as a conditional statement as follows:
+      <md>
+        <mrow>\amp \text{ For every }  a \in A \text{ and every }  b, c \in B,</mrow>
+        <mrow xml:id="eq_65b">\amp \text{ if }  ( {a, b} ) \in f  \text{ and }  ( {a, c} ) \in f, \text{ then }  b = c</mrow>
+      </md>.
+    </p>
+    <p>
+      This also means that if we start with a subset <m>f</m> of
+      <m>A \times B</m> that satisfies conditions<nbsp/><xref ref="eq_65a"/> and<nbsp/><xref ref="eq_65b"/>,
+      then we can consider <m>f</m> to be a function from <m>A</m> to <m>B</m> by using
+    </p>
+    <p>
+      <m>b = f( a )</m> whenever <m>( {a, b} )</m> is in <m>f</m>.
+      This proves the following theorem.
+    </p>
+    <theorem xml:id="T_functionasordered">
+      <statement>
+        <p>
+          Let <m>A</m> and <m>B</m> be nonempty sets and let <m>f</m> be a subset of
+          <m>A \times B</m> that satisfies the following two properties:
+          <ul>
+            <li>
+              <p>
+                For every <m>a \in A</m>,
+                there exists <m>b \in B</m> such that <m>( {a, b} ) \in f</m>; and
+              </p>
+            </li>
+            <li>
+              <p>
+                For every <m>a \in A</m> and every <m>b, c \in B</m>,
+                if <m>( {a,\;b} ) \in f</m> and <m>( {a, c} ) \in f</m>,
+                then <m>b = c</m>.
+              </p>
+            </li>
+          </ul>
+        </p>
+        <p>
+          If we use <m>f( a ) = b</m> whenever <m>( {a, b} ) \in f</m>,
+          then <m>f</m> is a function from <m>A</m> to <m>B</m>.
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      <em>A Note about <xref ref="T_functionasordered">Theorem</xref></em>.
+      The first condition in <xref ref="T_functionasordered">Theorem</xref>
+      means that every element of <m>A</m> is an input,
+      and the second condition ensures that every input has exactly one output.
+      Many texts will use <xref ref="T_functionasordered">Theorem</xref>
+      as the definition of a function.
+      Many mathematicians believe that this ordered pair representation of a function is the most rigorous definition of a function.
+      It allows us to use set theory to work with and compare functions.
+      For example,
+      equality of functions becomes a question of equality of sets.
+      Therefore, many textbooks will use the ordered pair representation of a function as the definition of a function.
+    </p>
+    <investigation xml:id="prog_ordered">
+      <title><em>Sets of Ordered Pairs that Are Not Functions</em></title>
+      <p>
+        Let <m>A = \left\{ {1, 2, 3} \right\}</m> and let <m>B = \left\{ {a, b} \right\}</m>.
+        Explain why each of the following subsets of
+        <m>A \times B</m> cannot be used to define a function from <m>A</m> to <m>B</m>.
+        <ol>
+          <li>
+            <p>
+              <m>F = \left\{ {( {1, a} ), ( {2, a} )} \right\}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>G = \left\{ {( {1, a} ), ( {2, b} ), ( {3, c} ), ( {2, c} )} \right\}</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </investigation>
+  </subsection>
+  <subsection>
+    <title>The Inverse of a Function</title>
+    <p>
+      In previous mathematics courses,
+      we learned that the exponential function
+      (with base <m>e</m>)
+      and the natural logarithm function are inverses of each other.
+      This was often expressed as follows:
+      <md>
+        <mrow>\amp \text{ For each }  x \in \R \text{ with }  x > 0 \text{ and for each }  y \in \R,</mrow>
+        <mrow>\amp y = \ln x \text{ if and only if }  x = e^y</mrow>
+      </md>.
+    </p>
+    <p>
+      Notice that this means that <m>x</m> is the input and <m>y</m> is the output for the natural logarithm function if and only if <m>y</m> is the input and <m>x</m> is the output for the exponential function.
+      In essence, the inverse function
+      (in this case, the exponential function)
+      reverses the action of the original function
+      (in this case, the natural logarithm function).
+      In terms of ordered pairs (input-output pairs),
+      this means that if <m>( {x, y} )</m> is an ordered pair for a function,
+      then <m>( {y, x} )</m> is an ordered pair for its inverse.
+      This idea of reversing the roles of the first and second coordinates is the basis for our definition of the inverse of a function.
+    </p>
+    <definition xml:id="inversefunction">
+      <statement>
+        <p>
+          Let <m>f\x A \to B</m> be a function.
+          The <term>inverse of</term>
+              <idx><h>inverse of a function</h></idx>
+              <idx><h>function</h><h>inverse of</h></idx> <m>\boldsymbol{f}</m>, denoted by <m>f^{ - 1}</m>, is the set of ordered pairs <m>\left\{ { {( {b, a} ) \in B \times A} \mid f( a ) = b} \right\}</m>.
+          That is,
+          <me>
+            f^{ - 1}  = \left\{ { {( {b, a} ) \in B \times A} \mid f( a ) = b} \right\}\!
+          </me>.
+        </p>
+        <p>
+          If we use the ordered pair representation for <m>f</m>,
+          we could also write
+          <me>
+            f^{ - 1}  = \left\{ { {( {b, a} ) \in B \times A} \mid ( {a, b} ) \in f} \right\}\!
+          </me>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Notice that this definition does not state that <m>f^{ - 1}</m> is a function.
+      It is simply a subset of <m>B \times A</m>.
+      After we study the material in <xref ref="C_equivrelations">Chapter</xref>,
+      we will say that this means that
+      <m>f^{ - 1}</m> is a <em>relation</em>
+      from <m>B</m> to <m>A</m>.
+      This fact, however, is not important to us now.
+      We are mainly interested in the following question:
+    </p>
+    <p>
+      {<em>Under what conditions will the inverse of the function
+      <m>\boldsymbol{f\x A \to B}</m> be a function from <m>B</m> to <m>A</m>?</em>}
+    </p>
+    <investigation xml:id="prog_exploringinverse">
+      <title><em>Exploring the Inverse of a Function</em></title>
+      <p>
+        Let <m>A = \left\{ {a, b, c} \right\}</m>,
+        <m>B = \left\{ {a,b,c,d} \right\}</m>,
+        and <m>C = \left\{ {p, q, r} \right\}</m>.
+        Define
+      </p>
+      <tabular>
+        <row>
+          <cell><m>f\x A \to C</m> by</cell>
+          <cell><m>g\x A \to C</m> by</cell>
+          <cell><m>h\x B \to C</m> by</cell>
+        </row>
+        <row>
+          <cell><m>f( a ) = r</m></cell>
+          <cell><m>g( a ) = p</m></cell>
+          <cell><m>h( a ) = p</m></cell>
+        </row>
+        <row>
+          <cell><m>f( b ) = p</m></cell>
+          <cell><m>g( b ) = q</m></cell>
+          <cell><m>h( b ) = q</m></cell>
+        </row>
+        <row>
+          <cell><m>f( c ) = q</m></cell>
+          <cell><m>g( c ) = p</m></cell>
+          <cell><m>h( c ) = r</m></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell></cell>
+          <cell><m>h( d ) = q</m></cell>
+        </row>
+      </tabular>
+      <ol>
+        <li xml:id="A_exploringinverse1">
+          <p>
+            Draw an arrow diagram for each function.
+          </p>
+        </li>
+        <li>
+          <p>
+            Determine the inverse of each function as a set of ordered pairs.
+          </p>
+        </li>
+        <li xml:id="A_exploringinverse3">
+          <ol>
+            <li>
+              <p>
+                Is <m>f^{ - 1}</m> a function from <m>C</m> to <m>A</m>?
+                Explain.
+              </p>
+            </li>
+            <li>
+              <p>
+                Is <m>g^{ - 1}</m> a function from <m>C</m> to <m>A</m>?
+                Explain.
+              </p>
+            </li>
+            <li>
+              <p>
+                Is <m>h^{ - 1}</m> a function from <m>C</m> to <m>B</m>?
+                Explain.
+              </p>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <p>
+            Draw an arrow diagram for each inverse from Part<nbsp/><xref ref="A_exploringinverse3"/> that is a function.
+            Use your existing arrow diagram from Part<nbsp/><xref ref="A_exploringinverse1"/> to draw this arrow diagram.
+          </p>
+        </li>
+        <li>
+          <p>
+            Make a conjecture about what conditions on a function
+            <m>F\x S \to T</m> will ensure that its inverse is a function from <m>T</m> to <m>S</m>.
+          </p>
+        </li>
+      </ol>
+    </investigation>
+    <p>
+      We will now consider a general argument suggested by the explorations in Progress <xref ref="prog_exploringinverse">Check</xref>.
+      By definition, if <m>f\x A \to B</m> is a function,
+      then <m>f^{ - 1}</m> is a subset of <m>B \times A</m>.
+      However, <m>f^{ - 1}</m> may or may not be a function from <m>B</m> to <m>A</m>.
+      For example, suppose that <m>s,
+      t \in A</m> with <m>s \ne t</m> and <m>f( s ) = f( t )</m>.
+      This is represented in <xref ref="fig_inversenotfunction">Figure</xref>.
+    </p>
+    <figure xml:id="fig_inversenotfunction">
+      <caption>The Inverse Is Not a Function</caption>
+      <image width="73%" source="images/figps-noinverse.png"/>
+    </figure>
+    <p>
+      In this case, if we try to reverse the arrows,
+      we will not get a function from <m>B</m> to <m>A</m>.
+      This is because <m>( {y, s} ) \in f^{ - 1}</m> and <m>( {y, t} ) \in f^{ - 1}</m> with <m>s \ne t</m>.
+      Consequently, <m>f^{ - 1}</m> is not a function.
+      This suggests that when <m>f</m> is not an injection,
+      then <m>f^{ - 1}</m> is not a function.
+    </p>
+    <p>
+      Also, if <m>f</m> is not a surjection,
+      then there exists a <m>z \in B</m> such that
+      <m>f( a ) \ne z</m> for all <m>a \in A</m>,
+      as in the diagram in <xref ref="fig_inversenotfunction">Figure</xref>.
+      In other words,
+      there is no ordered pair in <m>f</m> with <m>z</m> as the second coordinate.
+      This means that there would be no ordered pair in
+      <m>f^{ - 1}</m> with <m>z</m> as a first coordinate.
+      Consequently,
+      <m>f^{ - 1}</m> cannot be a function from <m>B</m> to <m>A</m>.
+    </p>
+    <p>
+      This motivates the statement in <xref ref="T_inverseandbijection">Theorem</xref>.
+      In the proof of this theorem,
+      we will frequently change back and forth from the input-output representation of a function and the ordered pair representation of a function.
+      The idea is that if <m>G\x S \to T</m> is a function,
+      then for <m>s \in S</m> and <m>t \in T</m>,
+      <me>
+        G( s ) = t  \text{ if and only if }   ( {s, t} ) \in G
+      </me>.
+    </p>
+    <p>
+      When we use the ordered pair representation of a function,
+      we will also use the ordered pair representation of its inverse.
+      In this case, we know that
+      <me>
+        ( {s, t} ) \in G\text{ if and only if } ( {t, s} ) \in G^{ - 1}
+      </me>.
+    </p>
+    <theorem xml:id="T_inverseandbijection">
+      <statement>
+        <p>
+          Let <m>A</m> and <m>B</m> be nonempty sets and let <m>f\x A \to B</m>.
+          The inverse of <m>f</m> is a function from <m>B</m> to <m>A</m> if and only if <m>f</m> is a bijection.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Let <m>A</m> and <m>B</m> be nonempty sets and let <m>f\x A \to B</m>.
+        We will first assume that <m>f</m> is a bijection and prove that
+        <m>f^{ - 1}</m> is a function from <m>B</m> to <m>A</m>.
+        To do this, we will show that
+        <m>f^{ - 1}</m> satisfies the two conditions of <xref ref="T_functionasordered">Theorem</xref>.
+      </p>
+      <p>
+        We first choose <m>b \in B</m>.
+        Since the function <m>f</m> is a surjection,
+        there exists an <m>a \in A</m> such that <m>f( a ) = b</m>.
+        This implies that <m>( {a, b} ) \in f</m> and hence that <m>( {b, a} ) \in f^{ - 1}</m>.
+        Thus, each element of <m>B</m> is the first coordinate of an ordered pair in <m>f^{ - 1}</m>,
+        and hence <m>f^{ - 1}</m> satisfies the first condition of <xref ref="T_functionasordered">Theorem</xref>.
+      </p>
+      <p>
+        To prove that <m>f^{ - 1}</m> satisfies the second condition of <xref ref="T_functionasordered">Theorem</xref>,
+        we must show that each element of <m>B</m> is the first coordinate of exactly one ordered pair in <m>f^{ - 1}</m>.
+        So let <m>b \in B</m>, <m>a_1 , a_2  \in A</m> and assume that
+        <me>
+          ( {b, a_1 } ) \in f^{ - 1} \text{ and }  ( {b, a_2 } ) \in f^{ - 1}
+        </me>.
+      </p>
+      <p>
+        This means that <m>( {a_1 , b} ) \in f</m> and <m>( {a_2 , b} ) \in f</m>.
+        We can then conclude that
+        <me>
+          f( {a_1 } ) = b\text{ and } f( {a_2 } ) = b
+        </me>.
+      </p>
+      <p>
+        But this means that <m>f( {a_1 } ) = f( {a_2 } )</m>.
+        Since <m>f</m> is a bijection,
+        it is an injection, and we can conclude that <m>a_1 = a_2</m>.
+        This proves that <m>b</m> is the first element of only one ordered pair in <m>f^{ - 1}</m>.
+        Consequently, we have proved that
+        <m>f^{ - 1}</m> satisfies both conditions of <xref ref="T_functionasordered">Theorem</xref>
+        and hence that <m>f^{ - 1}</m> is a function from <m>B</m> to <m>A</m>.
+      </p>
+      <p>
+        We now assume that <m>f^{ - 1}</m> is a function from <m>B</m> to <m>A</m> and prove that <m>f</m> is a bijection.
+        First, to prove that <m>f</m> is an injection,
+        we assume that <m>a_1 , a_2  \in A</m> and that <m>f( {a_1 } ) = f( {a_2 } )</m>.
+        We wish to show that <m>a_1  = a_2</m>.
+        If we let <m>b = f( {a_1 } ) = f( {a_2 } )</m>, we can conclude that
+        <me>
+          ( {a_1 , b} ) \in f \text{ and } ( {a_2 , b} ) \in f
+        </me>.
+      </p>
+      <p>
+        But this means that
+        <me>
+          ( {b, a_1 } ) \in f^{ - 1} \text{ and } ( {b, a_2 } ) \in f^{ - 1}
+        </me>.
+      </p>
+      <p>
+        Since we have assumed that <m>f^{ - 1}</m> is a function,
+        we can conclude that <m>a_1 = a_2</m>.
+        Hence, <m>f</m> is an injection.
+      </p>
+      <p>
+        Now to prove that <m>f</m> is a surjection,
+        we choose <m>b \in B</m> and will show that there exists an <m>a \in A</m> such that <m>f( a ) = b</m>.
+        Since <m>f^{ - 1}</m> is a function,
+        <m>b</m> must be the first coordinate of some ordered pair in <m>f^{ - 1}</m>.
+        Consequently, there exists an <m>a \in A</m> such that
+        <me>
+          ( {b, a} ) \in f^{ - 1}
+        </me>.
+      </p>
+      <p>
+        Now this implies that <m>( {a, b} ) \in f</m> and hence that <m>f( a ) = b</m>.
+        This proves that <m>f</m> is a surjection.
+        Since we have also proved that <m>f</m> is an injection,
+        we conclude that <m>f</m> is a bijection.
+      </p>
+    </proof>
+  </subsection>
+  <subsection>
+    <title>Inverse Function Notation</title>
+    <p>
+      In the situation where <m>f\x A \to B</m> is a bijection and
+      <m>f^{ - 1}</m> is a function from <m>B</m> to <m>A</m>,
+      we can write <m>f^{ - 1} \x B \to A</m>.
+      In this case, we frequently say that <m>f</m> is an
+      <em>invertible function</em>,
+          <idx><h>invertible function</h></idx>
+          <idx><h>function</h><h>invertible</h></idx>
+      and we usually do not use the ordered pair representation for either <m>f</m> or <m>f^{ - 1}</m>.
+      Instead of writing <m>( {a, b} ) \in f</m>,
+      we write <m>f( a ) = b</m>,
+      and instead of writing <m>( {b, a} ) \in f^{ - 1}</m>,
+      we write <m>f^{ - 1} ( b ) = a</m>.
+      Using the fact that <m>( {a, b} ) \in f</m> if and only if <m>( {b, a} ) \in f^{ - 1}</m>,
+      we can now write <m>f( a ) = b</m> if and only if <m>f^{ - 1} ( b ) = a</m>.
+      We summarize this in <xref ref="T_inversenotation">Theorem</xref>.
+    </p>
+    <theorem xml:id="T_inversenotation">
+      <statement>
+        <p>
+          Let <m>A</m> and <m>B</m> be nonempty sets and let <m>f\x A \to B</m> be a bijection.
+          Then <m>f^{ - 1} \x B \to A</m> is a function,
+          and for every <m>a \in A</m> and <m>b \in B</m>,
+          <me>
+            f( a ) = b  \text{ if and only if }  f^{ - 1} ( b ) = a
+          </me>.
+        </p>
+      </statement>
+    </theorem>
+    <example xml:id="exam_inversenotation">
+      <title><em>Inverse Function Notation</em></title>
+      <statement>
+        <p>
+          For an example of the use of the notation in <xref ref="T_inversenotation">Theorem</xref>,
+          let <m>\R^ + = \left\{ { {x \in \R} \mid x > 0} \right\}</m>.
+          Define
+        </p>
+        <p>
+          <m>f\x \R \to \R</m> by <m>f( x ) = x^3</m>;
+          and <m>g\x \R \to \R^ +</m> by <m>g( x ) = e^x</m>.
+        </p>
+        <p>
+          Notice that <m>\R^+</m> is the codomain of <m>g</m>.
+          We can then say that both <m>f</m> and <m>g</m> are bijections.
+          Consequently,
+          the inverses of these functions are also functions.
+          In fact, <m>f^{ - 1} \x \R \to \R</m> by <m>f^{ - 1} ( y ) = \sqrt[3]{y}</m>;
+          and <m>g^{ - 1} \x \R^ + \to \R</m> by <m>g^{ - 1} ( y ) = \ln y</m>.
+        </p>
+        <p>
+          For each function
+          (and its inverse),
+          we can write the result of <xref ref="T_inversenotation">Theorem</xref> as follows:
+        </p>
+        <tabular>
+          <row>
+            <cell><em>Theorem<nbsp/> <xref ref="T_inversenotation"></xref></em></cell>
+            <cell><em>Translates to:</em></cell>
+          </row>
+          <row bottom="minor">
+            <cell></cell>
+            <cell></cell>
+          </row>
+          <row>
+            <cell>For  <m>x, y \in \R</m>,  <m>f( x ) = y</m></cell>
+            <cell>For  <m>x, y \in \R</m>,  <m>x^3  = y</m></cell>
+          </row>
+          <row>
+            <cell>if and only if  <m>f^{ - 1} ( y ) = x</m>.</cell>
+            <cell>if and only if <m>\sqrt[3]{y} = x</m>.</cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell></cell>
+          </row>
+          <row>
+            <cell>For  <m>x \in \R, y \in \R^ +</m>,  <m>g( x ) = y</m></cell>
+            <cell>For
+              <m>x \in \R, y \in \R^ +</m>,  <m>e^x  = y</m></cell>
+          </row>
+          <row>
+            <cell>if and only if  <m>g^{ - 1} ( y ) = x</m>.</cell>
+            <cell>if and only if  <m>\ln y = x</m>.</cell>
+          </row>
+        </tabular>
+      </statement>
+    </example>
+  </subsection>
+  <subsection>
+    <title>Theorems about Inverse Functions</title>
+    <p>
+      The next two results in this section are two important theorems about inverse functions.
+      The first is actually a corollary of <xref ref="T_inversenotation">Theorem</xref>.
+    </p>
+    <corollary xml:id="C_inversecomposition">
+      <statement>
+        <p>
+          Let <m>A</m> and <m>B</m> be nonempty sets and let <m>f\x A \to B</m> be a bijection.
+          Then
+          <ol>
+            <li xml:id="C_inversecomposition1">
+              <p>
+                For every <m>x</m> in <m>A</m>,
+                <m>\left( f^{ - 1} \circ f \right)(x) = x</m>.
+              </p>
+            </li>
+            <li xml:id="C_inversecomposition2">
+              <p>
+                For every <m>y</m> in <m>B</m>,
+                <m>\left( f \circ f^{ - 1}\right)(y) = y</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </corollary>
+    <proof>
+      <p>
+        Let <m>A</m> and <m>B</m> be nonempty sets and assume that <m>f\x A \to B</m> is a bijection.
+        So let <m>x \in A</m> and let <m>f( x ) = y</m>.
+        By <xref ref="T_inversenotation">Theorem</xref>,
+        we can conclude that <m>f^{ - 1} ( y ) = x</m>.
+        Therefore,
+        <me>
+          \begin{aligned}\left( {f^{ - 1}  \circ f} \right)( x ) \amp = f^{ - 1} \! \left( {f( x )} \right) \\ \amp = f^{-1}( y ) \\ \amp = x. \end{aligned}
+        </me>
+      </p>
+      <p>
+        Hence, for each <m>x \in A</m>,
+        <m>\left( {f^{ - 1} \circ f} \right)( x ) = x</m>.
+      </p>
+      <p>
+        The proof that for each <m>y</m> in <m>B</m>,
+        <m>\left( f \circ f^{ - 1}\right)(y) = y</m> is Exercise<nbsp/><xref ref="exer_inversecomposition"/>.
+      </p>
+    </proof>
+    <example>
+      <title><em>continued</em></title>
+      <statement>
+        <p>
+          For the cubing function and the cube root function,
+          we have seen that For <m>x, y \in \R</m>,
+          <m>x^3 = y</m> if and only if <m>\sqrt[3]{y} = x</m>.
+          Notice that
+          <ul>
+            <li>
+              <p>
+                If we substitute <m>x^3 = y</m> into the equation <m>\sqrt[3]{y} = x</m>,
+                we obtain <m>\sqrt[3]{{x^3 }} = x</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If we substitute <m>\sqrt[3]{y} = x</m> into the equation <m>x^3 = y</m>,
+                we obtain <m>\left( {\sqrt[3]{y}} \right)^3 = y</m>.
+              </p>
+            </li>
+          </ul>
+        </p>
+        <p>
+          This is an illustration of <xref ref="C_inversecomposition">Corollary</xref>.
+          We can see this by using <m>f\x \R \to \R</m> defined by <m>f( x ) = x^3</m> and
+          <m>f^{ - 1} \x \R \to \R</m> defined by <m>f^{ - 1} ( y ) = \sqrt[3]{y}</m>.
+          Then <m>f^{ - 1}  \circ f\x \R \to \R</m> and <m>f^{ - 1}  \circ f = I_\R</m>.
+          So for each <m>x \in \R</m>,
+          <me>
+            \begin{aligned}\left( {f^{ - 1}  \circ f} \right)( x ) \amp = x \\ f^{ - 1} \! \left( {f( x )} \right) \amp = x \\ f^{ - 1} \!\left( {x^3 } \right) \amp = x \\ \sqrt[3]{{x^3 }} \amp = x. \end{aligned}
+          </me>
+        </p>
+        <p>
+          Similarly, the equation <m>\left( {\sqrt[3]{y}} \right)^3 = y</m> for each
+          <m>y \in \R</m> can be obtained from the fact that for each <m>y \in \R</m>,
+          <m>(f \circ f^{ - 1})(y) = y</m>.
+        </p>
+      </statement>
+    </example>
+    <p>
+      We will now consider the case where
+      <m>f\x A \to B</m> and <m>g\x B \to C</m> are both bijections.
+      In this case,
+      <m>f^{ - 1} \x B \to A</m> and <m>g^{ - 1} \x C \to B</m>.
+      <xref ref="fig_bijectioncomposition">Figure</xref>
+      can be used to illustrate this situation.
+    </p>
+    <figure xml:id="fig_bijectioncomposition">
+      <caption>Composition of Two Bijections</caption>
+      <image width="73%" source="images/figps-compinverse.png"/>
+    </figure>
+    <p>
+      By <xref ref="T_compositefunctions">Theorem</xref>,
+      <m>g \circ f\x A \to C</m> is also a bijection.
+      Hence, by <xref ref="T_inverseandbijection">Theorem</xref>,
+      <m>( {g \circ f} )^{ - 1}</m> is a function and, in fact,
+      <m>( {g \circ f} )^{ - 1} \x C \to A</m>.
+      Notice that we can also form the composition of <m>g^{ - 1}</m> followed by
+      <m>f^{ - 1}</m> to get <m>f^{ - 1} \circ g^{ - 1} \x C \to A</m>.
+      <xref ref="fig_bijectioncomposition">Figure</xref>
+      helps illustrate the result of the next theorem.
+    </p>
+    <theorem xml:id="compositionofbijections">
+      <statement>
+        <p>
+          Let <m>f\x A \to B</m> and <m>g\x B \to C</m> be bijections.
+          Then <m>g \circ f</m> is a bijection and <m>( {g \circ f} )^{ - 1} = f^{ - 1} \circ g^{ - 1}</m>.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Let <m>f\x A \to B</m> and <m>g\x B \to C</m> be bijections.
+        Then <m>f^{ - 1} \x B \to A</m> and <m>g^{ - 1} \x C \to B</m>.
+        Hence, <m>f^{ - 1} \circ g^{ - 1} \x C \to A</m>.
+        Also, by <xref ref="T_compositefunctions">Theorem</xref>,
+        <m>g \circ f\x A \to C</m> is a bijection,
+        and hence <m>( {g \circ f} )^{ - 1} \x C \to A</m>.
+        We will now prove that for each <m>z \in C</m>,
+        <m>( {g \circ f} )^{ - 1} ( z ) = ( {f^{ - 1} \circ g^{ - 1} } )( z )</m>.
+      </p>
+      <p>
+        Let <m>z \in C</m>.
+        Since the function <m>g</m> is a surjection,
+        there exists a <m>y \in B</m> such that
+        <men xml:id="eq_compofbij1">
+          g( y ) = z
+        </men>.
+      </p>
+      <p>
+        Also, since <m>f</m> is a surjection,
+        there exists an <m>x \in A</m> such that
+        <men xml:id="eq_compofbij2">
+          f( x ) = y
+        </men>.
+      </p>
+      <p>
+        Now these two equations can be written in terms of the respective inverse functions as
+        <md>
+          <mrow xml:id="eq_compofbij3">g^{ - 1} ( z ) \amp = y; \text{ and }</mrow>
+          <mrow xml:id="eq_compofbij4">f^{ - 1} ( y ) \amp = x</mrow>
+        </md>.
+      </p>
+      <p>
+        Using equations<nbsp/><xref ref="eq_compofbij3"/> and<nbsp/><xref ref="eq_compofbij4"/>, we see that
+        <md>
+          <mrow>\left( {f^{ - 1}  \circ g^{ - 1} } \right)( z ) \amp = f^{ - 1} \left( {g^{ - 1} ( z )} \right)</mrow>
+          <mrow>\amp = f^{ - 1} ( y )</mrow>
+          <mrow xml:id="eq_compofbij5">\amp = x</mrow>
+        </md>.
+      </p>
+      <p>
+        Using equations<nbsp/><xref ref="eq_compofbij1"/> and<nbsp/><xref ref="eq_compofbij2"/> again,
+        we see that <m>( {g \circ f} )( x ) = z</m>.
+        However, in terms of the inverse function, this means that
+        <men xml:id="eq_compofbij6">
+          ( {g \circ f} )^{ - 1} ( z ) = x
+        </men>.
+      </p>
+      <p>
+        Comparing equations<nbsp/><xref ref="eq_compofbij5"/> and<nbsp/><xref ref="eq_compofbij6"/>, we have shown that for all <m>z \in C</m>,
+      </p>
+      <p>
+        <m>( {g \circ f} )^{ - 1} ( z ) = ( {f^{ - 1} \circ g^{ - 1} } )( z )</m>.
+        This proves that <m>( {g \circ f} )^{ - 1} = f^{ - 1} \circ g^{ - 1}</m>.
+      </p>
+    </proof>
+    <p>
+      \exercises{Exercises 6.5}
+    </p>
+    <ol>
+      <li xml:id="exer_sec65-1">
+        <p>
+          Let <m>A = \left\{ {1, 2, 3} \right\}</m> and <m>B = \left\{ {a, b, c} \right\}</m>.
+        </p>
+        <ol>
+          <li>
+            <p>
+              Construct an example of a function
+              <m>f\x A \to B</m> that is not a bijection.
+              Write the inverse of this function as a set of ordered pairs.
+              Is the inverse of <m>f</m> a function?
+              Explain.
+              If so, draw an arrow diagram for <m>f</m> and <m>f^{ - 1}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Construct an example of a function <m>g\x A \to B</m> that is a bijection.
+              Write the inverse of this function as a set of ordered pairs.
+              Is the inverse of <m>g</m> a function?
+              Explain.
+              If so, draw an arrow diagram for <m>g</m> and <m>g^{ - 1}</m>.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li xml:id="exer_sec65-2">
+        <p>
+          Let  <m>S = \left\{ {a, b, c, d} \right\}</m>.
+          Define  <m>f\x S \to S</m> by defining  <m>f</m>  to be the following set of ordered pairs.
+          <me>
+            f = \left\{ {( {a, c} ), ( {b, b} ), ( {c, d} ), ( {d, a} )} \right\}
+          </me>
+          <ol>
+            <li xml:id="exer_bijectiona">
+              <p>
+                Draw an arrow diagram to represent the function <m>f</m>.
+                Is the function <m>f</m> a bijection?
+              </p>
+            </li>
+            <li>
+              <p>
+                Write the inverse of <m>f</m> as a set of ordered pairs.
+                Is <m>f^{ - 1}</m> a function?
+                Explain.
+              </p>
+            </li>
+            <li>
+              <p>
+                Draw an arrow diagram for <m>f^{ - 1}</m> using the arrow diagram from Exercise<nbsp/><xref ref="exer_bijectiona"/>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Compute <m>\left( {f^{ - 1} \circ f} \right)( x )</m> and
+                <m>\left( {f \circ f^{ - 1} } \right)( x )</m> for each <m>x</m> in <m>S</m>.
+                What theorem does this illustrate?
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_solveequation">
+        <p>
+          Inverse functions can be used to help solve certain equations.
+          The idea is to use an inverse function to undo the function.
+          <ol>
+            <li xml:id="exer_solveequationa">
+              <p>
+                Since the cube root function and the cubing function are inverses of each other,
+                we can often use the cube root function to help solve an equation involving a cube.
+                For example, the main step in solving the equation
+                <me>
+                  ( {2t - 1} )^3  = 20
+                </me>
+                is to take the cube root of each side of the equation.
+                This gives
+                <me>
+                  \begin{aligned}\sqrt[3]{{( {2t - 1} )^3 }} \amp = \sqrt[3]{{20}} \\ 2t - 1 \amp = \sqrt[3]{{20}}. \end{aligned}
+                </me>
+                Explain how this step in solving the equation is a use of <xref ref="C_inversecomposition">Corollary</xref>.
+              </p>
+            </li>
+            <li xml:id="exer_solveequationb">
+              <p>
+                A main step in solving the equation
+                <m>e^{2t - 1} = 20</m> is to take the natural logarithm of both sides of this equation.
+                Explain how this step is a use of <xref ref="C_inversecomposition">Corollary</xref>,
+                and then solve the resulting equation to obtain a solution for <m>t</m> in terms of the natural logarithm function.
+              </p>
+            </li>
+            <li>
+              <p>
+                How are the methods of solving the equations in Exercise<nbsp/><xref ref="exer_solveequationa"/> and Exercise<nbsp/><xref ref="exer_solveequationb"/> similar?
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_inversecomposition">
+        <p>
+          Prove Part<nbsp/><xref ref="C_inversecomposition2"/> of <xref ref="C_inversecomposition">Corollary</xref>.
+          Let <m>A</m> and <m>B</m> be nonempty sets and let <m>f\x A \to B</m> be a bijection.
+          Then for every <m>y</m> in <m>B</m>,
+          <m>\left( f \circ f^{ - 1}\right)(y) = y</m>.
+        </p>
+      </li>
+      <li xml:id="sym_idfunc1">
+        <p>
+          In Progress <xref ref="pr_equalfunc">Check</xref>
+          on <xref ref="pr_equalfunc">page</xref>,
+          we defined the identity function on a set.
+          The <em>identity function on the set</em>
+    <idx><h>identity function</h></idx>
+          <m>\boldsymbol{T}</m>,
+          denoted by <m>I_T</m> , is the function <m>I_T \x T \to T</m> defined by
+          <m>I_T ( t ) = t</m> for every <m>t</m> in <m>T</m>.
+          Explain how <xref ref="C_inversecomposition">Corollary</xref>
+          can be stated using the concept of equality of functions and the identity functions on the sets <m>A</m> and <m>B</m>.
+        </p>
+      </li>
+      <li xml:id="exer_compequalidentity">
+        <p>
+          Let <m>f\x A \to B</m> and <m>g\x B \to A</m>.
+          Let <m>I_A</m> and <m>I_B</m> be the identity functions on the sets <m>A</m> and <m>B</m>,
+          respectively.
+          Prove each of the following:
+          <ol>
+            <li>
+              <p>
+                If <m>g \circ f = I_A</m>, then <m>f</m> is an injection.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>f \circ g = I_B</m>, then <m>f</m> is a surjection.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>g \circ f = I_A</m> and <m>f \circ g = I_B</m>,
+                then <m>f</m> and <m>g</m> are bijections and <m>g = f^{ - 1}</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec65-6">
+        <ol>
+          <li>
+            <p>
+              Define <m>f\x \mathbb{R} \to \mathbb{R}</m> by <m>f( x ) = e^{ - x^2 }</m>.
+              Is the inverse of <m>f</m> a function?
+              Justify your conclusion.
+            </p>
+          </li>
+          <li>
+            <p>
+              Let <m>\mathbb{R}^* = \left\{ { {x \in \mathbb{R} } \mid x \geq 0} \right\}</m>.
+              Define <m>g\x \mathbb{R}^* \to ( {0, 1} ]</m> by <m>g( x ) = e^{ - x^2 }</m>.
+              Is the inverse of <m>g</m> a function?
+              Justify your conclusion.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <ol>
+          <li xml:id="exer_restrictdoma">
+            <p>
+              Let <m>f\x \mathbb{R} \to \mathbb{R}</m> be defined by <m>f( x ) = x^2</m>.
+              Explain why the inverse of <m>f</m> is not a function.
+            </p>
+          </li>
+          <li xml:id="exer_restrictdomb">
+            <p>
+              Let <m>\R^* = \left \{ t \in \R \mid t \geq 0 \right\}</m>.
+              Define <m>g \x \R^* \to \R^*</m> by <m>g(x) = x^2</m>.
+              Explain why this squaring function
+              (with a restricted domain and codomain)
+              is a bijection.
+            </p>
+          </li>
+          <li>
+            <p>
+              Explain how to define the square root function as the inverse of the function in Exercise<nbsp/><xref ref="exer_restrictdomb"/>.
+            </p>
+          </li>
+          <li>
+            <p>
+              True or false: <m>\left( \sqrt{x} \right)^2 = x</m> for all
+              <m>x \in \mathbb{R}</m> such that <m>x \geq 0</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              True or false:
+              <m>\sqrt{x^2} = x</m> for all <m>x \in \mathbb{R}</m>.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li xml:id="exer_finversebijection">
+        <p>
+          Prove the following:
+          <ul>
+            \item If <m>f\x A \to B</m> is a bijection, then <m>f^{ - 1} \x B \to A</m> is also a bijection.
+          </ul>
+        </p>
+      </li>
+      <li xml:id="exer_sec65-9">
+        <p>
+          For each natural number  <m>k</m>, let  <m>A_k</m> be a set,
+          and for each natural number  <m>n</m>,
+          let  <m>f_n \x A_n  \to A_{n + 1}</m>.
+          For example,  <m>f_1 \x A_1  \to A_2</m>,
+          <m>f_2 \x A_2  \to A_3</m>, <m>f_3 \x A_3  \to A_4</m>,
+          and so on.
+          Use mathematical induction to prove that for each natural number  <m>n</m>  with  <m>n \geq 2</m>,
+          if  <m>f_1 , f_2 ,  \ldots , f_n</m> are all bijections,
+          then <m>f_n  \circ f_{n - 1}  \circ  \cdots  \circ f_2  \circ f_1</m> is a bijection and
+          <me>
+            ( {f_n  \circ f_{n - 1}  \circ  \cdots  \circ f_2  \circ f_1 } )^{ - 1}  = f_1^{ - 1}  \circ f_2^{ - 1}  \circ  \cdots  \circ f_{n - 1}^{ - 1}  \circ f_n^{ - 1}
+          </me>.
+          \note  This is an extension of <xref ref="compositionofbijections">Theorem</xref>.
+          In fact, <xref ref="compositionofbijections">Theorem</xref>
+          is the basis step of this proof for  <m>n = 2</m>.
+        </p>
+      </li>
+      <li>
+        <ol>
+          <li>
+            <p>
+              Define <m>f\x \R \to \R</m> by
+              <m>f(x) = x^2 - 4</m> for all <m>x \in \R</m>.
+              Explain why the inverse of the function <m>f</m> is not a function.
+            </p>
+          </li>
+          <li>
+            <p>
+              Let <m>\R^* = \left\{ x \in \R \mid x \geq 0 \right\}</m> and let <m>T = \left\{ y \in \R \mid y \geq -4 \right\}</m>.
+              Define <m>F\x \R^* \to T</m> by
+              <m>F(x) = x^2 - 4</m> for all <m>x \in \R^*</m>.
+              Explain why the inverse of the function <m>F</m> is a function and find a formula for
+              <m>F^{-1}(y)</m>, where <m>y \in T</m>.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <p>
+          Let <m>R_5 = \left\{ 0, 1, 2, 3, 4 \right\}</m>.
+          <ol>
+            <li>
+              <p>
+                Define <m>f\x R_5 \to R_5</m> by
+                <m>f(x) = x^2 + 4 \pmod 5</m> for all <m>x \in R_5</m>.
+                Write the inverse of <m>f</m> as a set of ordered pairs and explain why <m>f^{-1}</m> is not a function.
+              </p>
+            </li>
+            <li>
+              <p>
+                Define <m>g\x R_5 \to R_5</m> by
+                <m>g(x) = x^3 + 4 \pmod 5</m> for all <m>x \in R_5</m>.
+                Write the inverse of <m>g</m> as a set of ordered pairs and explain why <m>g^{-1}</m> is a function.
+              </p>
+            </li>
+            <li>
+              <p>
+                Is it possible to write a formula for
+                <m>g^{-1}(y)</m>, where <m>y \in R_5</m>?
+                The answer to this question depends on whether or not it is possible to define a cube root of elements of <m>R_5</m>.
+                Recall that for a real number <m>x</m>,
+                we define the cube root of <m>x</m> to be the real number <m>y</m> such that <m>y^3 = x</m>.
+                That is, <m>y = \sqrt[3]{x}</m> if and only if <m>y^3 = x</m>.
+                Using this idea,
+                is it possible to define the cube root of each number in <m>R_5</m>?
+                If so, what are <m>\sqrt[3]{0}</m>, <m>\sqrt[3]{1}</m>,
+                <m>\sqrt[3]{2}</m>, <m>\sqrt[3]{3}</m>, and <m>\sqrt[3]{4}</m>?
+              </p>
+            </li>
+            <li>
+              <p>
+                Now answer the question posed at the beginning of Part<nbsp/>(c).
+                If possible, determine a formula for
+                <m>g^{-1}(y)</m> where <m>g^{-1}\x R_5 \to R_5</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+  <subsection>
+    <title>Explorations and Activities</title>
+    <ol>
+      <li>
+        <p>
+          <em>Constructing an Inverse Function</em>.
+          If <m>f\x A \to B</m> is a bijection,
+          then we know that its inverse is a function.
+          If we are given a formula for the function <m>f</m>,
+          it may be desirable to determine a formula for the function <m>f^{ - 1}</m>.
+          This can sometimes be done,
+          while at other times it is very difficult or even impossible.
+          Let <m>f\x \R \to \R</m> be defined by <m>f( x ) = 2x^3 - 7</m>.
+          A graph of this function would suggest that this function is a bijection.
+          <ol>
+            <li>
+              <p>
+                Prove that the function <m>f</m> is an injection and a surjection.
+              </p>
+            </li>
+          </ol>
+        </p>
+        Let <m>y \in \R</m>.
+        One way to prove that <m>f</m> is a surjection is to set
+        <m>y = f( x )</m> and solve for <m>x</m>.
+        If this can be done, then we would know that there exists an
+        <m>x \in \R</m> such that <m>f(x) = y</m>.
+        For the function <m>f</m>,
+        we are using <m>x</m> for the input and <m>y</m> for the output.
+        By solving for <m>x</m> in terms of <m>y</m>,
+        we are attempting to write a formula where <m>y</m> is the input and <m>x</m> is the output.
+        This formula represents the inverse function.
+        <ol>
+          <li xml:id="A_constructinverse2">
+            <p>
+              Solve the equation <m>y = 2x^3 - 7</m> for <m>x</m>.
+              Use this to write a formula for <m>f^{ - 1} ( y )</m>,
+              where <m>f^{ - 1} \x \R \to \R</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Use the result of Part<nbsp/><xref ref="A_constructinverse2"/> to verify that for each <m>x \in \R</m>,
+              <m>f^{ - 1} \!\left( {f( x )} \right) = x</m> and for each <m>y \in \R</m>,
+              <m>f \!\left( {f^{ - 1} ( y )} \right) = y</m>.
+            </p>
+          </li>
+        </ol>
+        Now let <m>\R^+ = \left\{ { {y \in \mathbb{R}} \mid y > 0} \right\}</m>.
+        Define <m>g \x \mathbb{R} \to \R^+</m> by <m>g( x ) = e^{2x - 1}</m>.
+        <ol>
+          <li xml:id="exer_constructinversea">
+            <p>
+              Set <m>y = e^{2x - 1}</m> and solve for <m>x</m> in terms of <m>y</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Use your work in Exercise<nbsp/><xref ref="exer_constructinversea"/> to define a function <m>h\x \mathbb{R}^ + \to \mathbb{R}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              For each <m>x \in \mathbb{R}</m>,
+              determine <m>( {h \circ g} )( x )</m> and for each <m>y \in \mathbb{R}^ +</m>,
+              determine <m>( {g \circ h} )( y )</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Use Exercise<nbsp/><xref ref="exer_compequalidentity"/> to explain why <m>h = g^{ - 1}</m>.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li xml:id="A_inversesine">
+        <p>
+          <em>The Inverse Sine Function</em>.
+          We have seen that in order to obtain an inverse function,
+          it is sometimes necessary to restrict the domain
+          (or the codomain)
+          of a function.
+          <ol>
+            <li xml:id="A_inversesine1">
+              <p>
+                Let <m>f\x \R \to \R</m> be defined by <m>f( x ) = \sin x</m>.
+                Explain why the inverse of the function <m>f</m> is not a function. (A graph may be helpful.)
+              </p>
+            </li>
+          </ol>
+        </p>
+        Notice that if we use the ordered pair representation, then the sine function can be represented as
+        <me>
+          f  = \left\{ { {( {x, y} ) \in \R \times \R } \mid y = \sin x} \right\}\!
+        </me>.
+        If we denote the inverse of the sine function by  <m>\sin ^{ - 1}</m>, then
+        <me>
+          f^{ - 1}  = \left\{ { {( {y, x} ) \in \R \times \R } \mid y = \sin x} \right\}\!
+        </me>.
+        Part<nbsp/><xref ref="A_inversesine1"/> proves that  <m>f^{ - 1}</m>  is not a function.  However, in previous mathematics courses, we frequently used the
+        <q>inverse sine function.</q>
+        This is not really the inverse of the sine function as defined in Part<nbsp/><xref ref="A_inversesine1"/> but, rather, it is the inverse of the sine function <em>restricted to the domain</em> <m>\left[ {-\dfrac{{\pi }}{2}, \dfrac{\pi }{2}} \right]</m>.
+        <ol>
+          <li xml:id="A_inversesine2">
+            <p>
+              Explain why the function <m>F\x \left[ {- \dfrac{{\pi }}{2}, \dfrac{\pi }{2}} \right] \to \left[ { - 1, 1} \right]</m> defined by <m>F( x ) = \sin x</m> is a bijection.
+            </p>
+          </li>
+        </ol>
+        The inverse of the function in Part<nbsp/><xref ref="A_inversesine2"/> is itself a function and is called the <em>inverse sine function</em>
+    <idx><h>inverse sine function</h></idx>
+(or sometimes the <em>arcsine function</em>).
+    <idx><h>arcsine function</h></idx>
+<ol>
+          <li>
+            <p>
+              What is the domain of the inverse sine function?
+              What are the range and codomain of the inverse sine function?
+            </p>
+          </li>
+        </ol>
+        Let us now use  <m>F ( x ) = \text{ Sin }  ( x )</m> to represent the restricted sine function in Part<nbsp/><xref ref="A_inversesine2"/>.  Therefore, <m>F^{-1} ( x ) = \text{ Sin } ^{ - 1} ( x )</m> can be used to represent the inverse sine function.  Observe that
+        <me>
+          F\x \left[ -{\frac{{\pi }}{2}, \frac{\pi }{2}} \right] \to \left[ { - 1, 1} \right] \text{ and } F^{ - 1} \x \left[ { - 1, 1} \right] \to \left[ -{\frac{{\pi }}{2}, \frac{\pi } {2}} \right]
+        </me>.
+        <ol>
+          <li>
+            <p>
+              Using this notation, explain why
+              <ul>
+                \item <m>\text{ Sin } ^{ - 1} y = x \text{ if and only if } \left[ {y = \sin x\text{ and } -\dfrac{{\pi }}{2} \leq x \leq \dfrac{\pi } {2}} \right]</m>; \item <m>\text{ Sin } \!\left( \text{ Sin } ^{-1} ( y ) \right) = y</m> for all <m>y \in \left[ -1, 1 \right]</m>; and \item <m>\text{ Sin } ^{-1} \!\left( \text{ Sin } ( x ) \right) = x</m> for all <m>x \in \left[ - \dfrac{\pi}{2}, \dfrac{\pi}{2} \right]</m>.
+              </ul>
+            </p>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </subsection>
+</section>

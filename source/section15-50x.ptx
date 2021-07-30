@@ -1,0 +1,161 @@
+<section>
+  <title><xref ref="S_divalgo">Section</xref></title>
+  <ul>
+    {{ <xref ref="exer_sec35-2"></xref>.}}
+    \item
+    <ol>
+      <li>
+        <p>
+          The first case is when <m>\mod{n}{0}{3}</m>.
+          We can then use <xref ref="T_propsofcong">Theorem</xref>
+          to conclude that <m>\mod{n^3}{0^3}{3}</m> or that <m>\mod{n^3}{0}{3}</m>.
+          So in this case, <m>\mod{n^3}{n}{3}</m>.
+          For the second case, <m>\mod{n}{1}{3}</m>.
+          We can then use <xref ref="T_propsofcong">Theorem</xref>
+          to conclude that <m>\mod{n^3}{1^3}{3}</m> or that <m>\mod{n^3}{1}{3}</m>.
+          So in this case, <m>\mod{n^3}{n}{3}</m>.
+          The last case is when <m>\mod{n}{2}{3}</m>.
+          We then get <m>\mod{n^3}{2^3}{3}</m> or <m>\mod{n^3}{8}{3}</m>.
+          Since <m>\mod{8}{2}{3}</m>,
+          we can use the transitive property to conclude that <m>\mod{n^3}{2}{3}</m>,
+          and so <m>\mod{n^3}{n}{3}</m>.
+          Since we have proved it in all three cases,
+          we conclude that for each integer <m>n</m>, <m>\mod{n^3}{n}{3}</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Since <m>\mod{n^3}{n}{3}</m>,
+          we use the definition of congruence to conclude that 3 divides <m>\left( n^3 - n \right)</m>.
+        </p>
+      </li>
+    </ol>
+  </ul>
+  <ul>
+    {{ <xref ref="exer_cong-symm"></xref>.}}
+    \item Let  <m>n \in \mathbb{N}</m>.  For  <m>a, b \in \mathbb{Z}</m>, you need to prove that if
+    <m>a \equiv b \pmod n</m>,  then  <m>b \equiv a \pmod n</m>.  So let  <m>a, b \in \mathbb{Z}</m> and assume that
+    <m>a \equiv b \pmod n</m>.  So <m>n \mid \left( a - b \right)</m> and there exists an integer <m>k</m> such that
+    <m>a - b = nk</m>.  Then, <m>b - a = n ( -k )</m> and <m>b \equiv a \pmod n</m>.
+  </ul>
+  <ul>
+    {{ <xref ref="exer_sec35-a2mod3"></xref>.}}
+    \item
+    <ol>
+      <li>
+        <p>
+          The contrapositive is: For each integer <m>a</m>,
+          if 3 does not divide <m>a</m>,
+          then 3 divides <m>a^2</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          To prove the contrapositive,
+          let <m>a \in \Z</m> and assume that 3 does not divide <m>a</m>.
+          So using the Division Algorithm,
+          we can consider two cases: (1) There exists a unique integer <m>q</m> such that
+          <m>a = 3q + 1</m>. (2) There exists a unique integer <m>q</m> such that <m>a = 3q + 2</m>.
+          For the first case,
+          show that <m>a^2 = 3 \left( 3q^2 + 2q \right) + 1</m>.
+          For the second case,
+          show that <m>a^2 = 3 \left( 3q^2 + 4q + 1 \right) + 1</m>.
+          Since the Division Algorithm states that the remainder is unique,
+          this shows that in both cases,
+          the remainder is 1 and so 3 does not divide <m>a^2</m>.
+        </p>
+      </li>
+    </ol>
+  </ul>
+  <ul>
+    {{ <xref ref="exer_sec34-4"></xref>.}}
+    \item
+    <ol>
+      <li>
+        <p>
+          <m>a \equiv 0 \pmod n</m> if and only if <m>n \mid \left( a - 0 \right)</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Let <m>a \in \mathbb{Z}</m>.
+          <xref ref="C_congtorem">Corollary</xref>
+          tell us that if <m>\notmod{a}{0}{3}</m>,
+          then <m>a \equiv 1 \pmod 3</m> or <m>a \equiv 2 \pmod 3</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Part (b) tells us we can use a proof by cases using the following two cases: (1)
+          <m>a \equiv 1 \pmod 3</m>; (2) <m>a \equiv 2 \pmod 3</m>.
+          So, if <m>a \equiv 1 \pmod 3</m>,
+          then by <xref ref="T_propsofcong">Theorem</xref>,
+          <m>a \cdot a \equiv 1 \cdot 1 \pmod 3</m>, and hence,
+          <m>a^2 \equiv 1 \pmod 3</m>.
+          If <m>a \equiv 2 \pmod 3</m>,
+          then by <xref ref="T_propsofcong">Theorem</xref>,
+          <m>a \cdot a \equiv 2 \cdot 2 \pmod 3</m>, and hence,
+          <m>a^2 \equiv 4 \pmod 3</m>.
+          Since <m>4 \equiv 1 \pmod 3</m>,
+          this implies that <m>a^2 \equiv 1 \pmod 3</m>.
+        </p>
+      </li>
+    </ol>
+  </ul>
+  <ul>
+    {{ <xref ref="exer_congto3"></xref>.}}
+    \item The contrapositive is:  Let <m>a</m> and <m>b</m> be integers.  If <m>a \not\equiv 0 \pmod3</m> and
+    <m>b \not\equiv 0 \pmod 3</m>, then <m>ab \not\equiv 0 \pmod 3</m>.
+    Using <xref ref="exer_sec34-4">Exercise</xref>(b), we can use the following four cases:
+    (1) <m>a \equiv 1 \pmod 3</m> and <m>b \equiv 1 \pmod 3</m>;
+    (2) <m>a \equiv 1 \pmod 3</m> and <m>b \equiv 2 \pmod 3</m>;
+    (3) <m>a \equiv 2 \pmod 3</m> and <m>b \equiv 1 \pmod 3</m>;
+    (4) <m>a \equiv 2 \pmod 3</m> and <m>b \equiv 2 \pmod 3</m>.
+    In all four cases, we use <xref ref="T_propsofcong">Theorem</xref> to conclude that
+    <m>ab \not\equiv 0 \pmod 3</m>.  For example, for the third case, we see that <m>\mod{ab}{2 \cdot 1}{3}</m>.  That is, <m>\mod{ab}{2}{3}</m>.
+  </ul>
+  <ul>
+    {{ <xref ref="exer_3divprod"></xref>.}}
+    \item
+    <ol>
+      <li>
+        <p>
+          This follows from Exercise<nbsp/>(5) and the fact that
+          <m>3 \mid k</m> if and only if <m>k \equiv 0 \pmod 3</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          This follows directly from Part<nbsp/>(a) using <m>a = b</m>.
+        </p>
+      </li>
+    </ol>
+  </ul>
+  <ul>
+    {{ <xref ref="exer_sqrt3"></xref>.}}
+    \item
+    <ul>
+      {{(a)}}
+      \item Use a proof similar to the proof of <xref ref="T_squareroot2">Theorem</xref>.  The result of Exercise<nbsp/><xref ref="exer_3divprod"/> may be helpful.
+    </ul>
+  </ul>
+  <ul>
+    {{ <xref ref="exer_notperfectsquare"></xref>.}}
+    \item The result in Part (c) of Exercise<nbsp/><xref ref="exer_sec34-4"/> may be helpful in a proof by contradiction.
+  </ul>
+  <ul>
+    {{ <xref ref="exer_sec34-2"></xref>.}}
+    \item
+    <ul>
+      {{(b)}}
+      \item Factor <m>n^3 - n</m>.
+    </ul>
+  </ul>
+  <ul>
+    \item
+    <ul>
+      {{(c)}}
+      \item Consider using cases based on congruence modulo 6.
+    </ul>
+  </ul>
+</section>

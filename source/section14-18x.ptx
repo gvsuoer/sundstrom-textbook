@@ -1,0 +1,61 @@
+<section>
+  <title><xref ref="S_recursion">Section</xref></title>
+  <subsection>
+    <title>Progress <xref ref="prog_thirdfibonacci">Check</xref></title>
+    <proof>
+      <p>
+        We will use a proof by induction.
+        For each natural number <m>n</m>,
+        we let <m>P( n )</m> be, <m>f_{3n}</m> is an even natural number.
+      </p>
+      <p>
+        Since <m>f_3 = 2</m>,
+        we see that <m>P( 1 )</m> is true and this proves the basis step.
+      </p>
+      <p>
+        For the inductive step,
+        we let <m>k</m> be a natural number and assume that <m>P( k )</m> is true.
+        That is, assume that <m>f_{3k}</m> is an even natural number.
+        This means that there exists an integer <m>m</m> such that
+        <men xml:id="eq_progfiba">
+          f_{3k}  = 2m
+        </men>.
+      </p>
+      <p>
+        We need to prove that <m>P( {k + 1} )</m> is true or that <m>f_{3\left( {k + 1} \right)}</m> is even.
+        Notice that <m>3( {k + 1} ) = 3k + 3</m> and,
+        hence, <m>f_{3\left( {k + 1} \right)}  = f_{3k + 3}</m>.
+        We can now use the recursion formula for the Fibonacci numbers to conclude that
+        <me>
+          f_{3k + 3}  = f_{3k + 2}  + f_{3k + 1}
+        </me>.
+      </p>
+      <p>
+        Using the recursion formula again,
+        we get <m>f_{3k + 2}  = f_{3k + 1}  + f_{3k}</m>.
+        Putting this all together, we see that
+        <md>
+          <mrow>f_{3\left( {k + 1} \right)}  \amp = f_{3k + 3}</mrow>
+          <mrow>\amp = f_{3k + 2}  + f_{3k + 1}</mrow>
+          <mrow>\amp = \left( {f_{3k + 1}  + f_{3k} } \right) + f_{3k + 1}</mrow>
+          <mrow xml:id="eq_progfibb">\amp = 2f_{3k + 1}  + f_{3k}</mrow>
+        </md>.
+      </p>
+      <p>
+        We now substitute the expression for <m>f_{3k}</m> in equation<nbsp/><xref ref="eq_progfiba"/> into equation<nbsp/><xref ref="eq_progfibb"/>.
+        This gives
+        <me>
+          \begin{aligned}f_{3\left( {k + 1} \right)}  \amp = 2f_{3k + 1}  + 2m \\ f_{3\left( {k + 1} \right)}  \amp = 2\left( {f_{3k + 1}  + m} \right) \end{aligned}
+        </me>
+      </p>
+      <p>
+        This preceding equation shows that <m>f_{3\left( {k + 1} \right)}</m> is even.
+        Hence it has been proved that if <m>P\left( k \right)</m> is true,
+        then <m>P\left( {k + 1} \right)</m> is true and the inductive step has been established.
+        By the Principle of Mathematical Induction,
+        this proves that for each natural number <m>n</m>,
+        the Fibonacci number <m>f_{3n}</m> is an even natural number.
+      </p>
+    </proof>
+  </subsection>
+</section>

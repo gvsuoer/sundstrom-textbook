@@ -1,0 +1,188 @@
+<section>
+  <title><xref ref="S_otherinduction">Section</xref></title>
+  <subsection>
+    <title>Progress <xref ref="prog_extendedind">Check</xref></title>
+    <ol>
+      <li>
+        <p>
+          For each natural number <m>n</m>,
+          if <m>n \geq 2</m>, then <m>3^n > 1 + 2^n</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          For each natural number <m>n</m>,
+          if <m>n \geq 6</m>, then <m>2^n > (n + 1 )^2</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          For each natural number <m>n</m>, if <m>n \geq 6</m>,
+          then <m>\left( 1 + \dfrac{1}{n} \right)^n > 2.5</m>.
+        </p>
+      </li>
+    </ol>
+  </subsection>
+  <subsection>
+    <title>Progress <xref ref="A_lincomb3and5">Check</xref></title>
+    <p>
+      Construct the following table and use it to answer the first two questions.
+      The table shows that <m>P\left( 3 \right)</m>,
+      <m>P\left( 5 \right)</m>, and <m>P\left( 6 \right)</m> are true.
+      We can also see that <m>P(2)</m>,
+      <m>P(4)</m>, and <m>P(7)</m> are false.
+      It also appears that if <m>n \in \mathbb{N}</m> and <m>n \geq 8</m>,
+      then <m>P\left( n \right)</m> is true.
+    </p>
+    <tabular>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>x</m></cell>
+        <cell>0</cell>
+        <cell>1</cell>
+        <cell>2</cell>
+        <cell>3</cell>
+        <cell>4</cell>
+        <cell>0</cell>
+        <cell>1</cell>
+        <cell>2</cell>
+        <cell>0</cell>
+        <cell>1</cell>
+        <cell>1</cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>y</m></cell>
+        <cell>0</cell>
+        <cell>0</cell>
+        <cell>0</cell>
+        <cell>0</cell>
+        <cell>0</cell>
+        <cell>1</cell>
+        <cell>1</cell>
+        <cell>1</cell>
+        <cell>2</cell>
+        <cell>2</cell>
+        <cell>3</cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>3x + 5y</m></cell>
+        <cell>0</cell>
+        <cell>3</cell>
+        <cell>6</cell>
+        <cell>9</cell>
+        <cell>12</cell>
+        <cell>5</cell>
+        <cell>8</cell>
+        <cell>11</cell>
+        <cell>10</cell>
+        <cell>13</cell>
+        <cell>18</cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+    </tabular>
+    <p>
+      The following proposition provides answers for Problems (3) and (4).
+    </p>
+    <p>
+      <em><xref ref="prop_lincomb">Proposition</xref></em>.
+      For all natural numbers <m>n</m> with <m>n \geq 8</m>,
+      there exist non-negative integers <m>x</m> and <m>y</m> such that <m>n = 3x + 5y</m>.
+    </p>
+    <proof>
+      <p>
+        (by mathematical induction) Let <m>\mathbb{Z}^* = \left\{ {x \in \mathbb{Z}\left. \right| x \geq 0} \right\}</m>,
+        and for each natural number <m>n</m>,
+        let <m>P\left( n \right)</m> be,
+        <q>there exist <m>x,
+        y \in \mathbb{Z}^*</m> such that <m>n = 3x + 5y</m>.</q>
+      </p>
+      <p>
+        <em>Basis Step</em>: Using the table above,
+        we see that <m>P\left( 8 \right)</m>,
+        <m>P\left( 9 \right)</m>, and <m>P\left( {10} \right)</m> are true.
+      </p>
+      <p>
+        <em>Inductive Step</em>: Let
+        <m>k \in \mathbb{N}</m> with <m>k \geq 10</m>.
+        Assume that <m>P\left( 8 \right)</m>,
+        <m>P\left( 9 \right)</m>, <ellipsis/> , <m>P\left( k \right)</m> are true.
+        Now, notice that
+        <me>
+          k + 1 = 3 + \left( {k - 2} \right)
+        </me>.
+      </p>
+      <p>
+        Since <m>k \geq 10</m>, we can conclude that
+        <m>k - 2 \geq 8</m> and hence <m>P\left( {k - 2} \right)</m> is true.
+        Therefore, there exist non-negative integers <m>u</m> and <m>v</m> such that <m>k - 2 = \left( {3u + 5v} \right)</m>.
+        Using this equation, we see that
+        <me>
+          \begin{aligned}k + 1 \amp = 3  + \left( {3u + 5v} \right) \\ \amp = 3\left( {1 + u} \right) + 5v. \end{aligned}
+        </me>
+      </p>
+      <p>
+        Hence, we can conclude that <m>P\left( {k + 1} \right)</m> is true.
+        This proves that if <m>P\left( 8 \right)</m>, <m>P\left( 9 \right)</m>,
+        <ellipsis/> , <m>P\left( k \right)</m> are true,
+        then <m>P\left( {k + 1} \right)</m> is true.
+        Hence, by the Second Principle of Mathematical Induction,
+        for all natural numbers <m>n</m> with <m>n \geq 8</m>,
+        there exist nonnegative integers <m>x</m> and <m>y</m> such that <m>n = 3x + 5y</m>.
+      </p>
+    </proof>
+  </subsection>
+</section>

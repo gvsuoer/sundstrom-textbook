@@ -1,0 +1,156 @@
+<section>
+  <title><xref ref="S_contradiction">Section</xref></title>
+  <ul>
+    {{ <xref ref="exer_sec33-1"></xref>.}}
+    \item
+    <ul>
+      {{(a)}}
+      \item <m>P \vee C</m>
+    </ul>
+  </ul>
+  <ul>
+    {{ <xref ref="exer_sec32-truefalse"></xref>.}}
+    \item
+    <ol>
+      <li>
+        <p>
+          This statement is true.
+          Use a proof by contradiction.
+          So assume that there exist integers  <m>a</m> and <m>b</m> such that <m>a</m> is even,
+          <m>b</m> is odd,
+          and 4 divides <m>a^2 + b^2</m>.
+          So there exist integers <m>m</m> and <m>n</m> such that
+          <me>
+            a = 2m \qquad \text{ and }  \qquad a^2 + b^2 = 4n
+          </me>.
+          Substitute <m>a = 2m</m> into the second equation and use algebra to rewrite in the form <m>b^2 = 4(n - m^2)</m>.
+          This means that <m>b^2</m> is even and hence, that <m>b</m> is even.
+          This is a contradiction to the assumption that <m>b</m> is odd.
+        </p>
+      </li>
+      <li>
+        <p>
+          This statement is true.
+          Use a proof by contradiction.
+          So assume that there exist integers <m>a</m> and <m>b</m> such that  <m>a</m> is even,
+          <m>b</m> is odd,
+          and 6 divides <m>a^2 + b^2</m>.
+          So there exist integers <m>m</m> and <m>n</m> such that
+          <me>
+            a = 2m \qquad \text{ and }  \qquad a^2 + b^2 = 6n
+          </me>.
+          Substitute <m>a = 2m</m> into the second equation and use algebra to rewrite in the form <m>b^2 = 2(3n - 2m^2)</m>.
+          This means that <m>b^2</m> is even and hence, that <m>b</m> is even.
+          This is a contradiction.
+        </p>
+      </li>
+      <li>
+        <p>
+          This statement is true.
+          Use a direct proof.
+          Let <m>a</m> and <m>b</m> be integers and assume they are odd.
+          So there exist integers <m>m</m> and <m>n</m> such that
+          <me>
+            a = 2m + 1 \qquad \text{ and }  \qquad b = 2n + 1
+          </me>.
+          We then see that
+          <md>
+            <mrow>a^2 + 3b^2 \amp = 4m^2 + 4m + 1 + 12n^2 + 12n + 3</mrow>
+            <mrow>\amp = 4\left( m^2 + m + 3n^2 + 3n + 1 \right)</mrow>
+          </md>.
+          This shows that 4 divides <m>a^2 + 3b^2</m>.
+        </p>
+      </li>
+    </ol>
+  </ul>
+  <ul>
+    {{ <xref ref="exer_sec33-2"></xref>.}}
+    \item
+    <ul>
+      {{(a)}}
+      \item We would assume that there exists a positive real number <m>r</m>  such that <m>r^2 = 18</m> and <m>r</m> is a rational number.
+    </ul>
+  </ul>
+  <ul>
+    \item
+    <ul>
+      {{(b)}}
+      \item Do not attempt to mimic the proof that the square root of 2 is irrational
+      (<xref ref="T_squareroot2">Theorem</xref>).  You should still use the definition of a rational number but then use the fact that  <m>\sqrt {18}  = \sqrt {9 \cdot 2}  = \sqrt 9 \sqrt 2  = 3\sqrt 2</m>.  So, if we assume that <m>r = \sqrt{18} = 3 \sqrt{2}</m> is rational, then <m>\dfrac{r}{3} = \dfrac{\sqrt{18}}{3}</m> is rational since the rational numbers are closed under division.  Hence, <m>\sqrt{2}</m> is rational and this is a contradiction to <xref ref="T_squareroot2">Theorem</xref>.
+    </ul>
+  </ul>
+  <ul>
+    {{ <xref ref="exer_sec33-3"></xref>.}}
+    \item
+    <ol>
+      <li>
+        <p>
+          Use a proof by contradiction.
+          So, we assume that there exist real numbers <m>x</m> and <m>y</m> such that <m>x</m> is rational,
+          <m>y</m> is irrational, and <m>x + y</m> is rational.
+          Since the rational numbers are closed under addition,
+          this implies that <m>\left( x + y \right) - x</m> is a rational number.
+          Since <m>\left( x + y \right) - x = y</m>,
+          we conclude that <m>y</m> is a rational number and this contradicts the assumption that <m>y</m> is irrational.
+        </p>
+      </li>
+      <li>
+        <p>
+          Use a proof by contradiction.
+          So, we assume that there exist nonzero real numbers <m>x</m> and <m>y</m> such that <m>x</m> is rational,
+          <m>y</m> is irrational, and <m>xy</m> is rational.
+          Since the rational numbers are closed under division by nonzero rational numbers,
+          this implies that <m>\dfrac{xy}{x}</m> is a rational number.
+          Since <m>\dfrac{xy}{x} = y</m>,
+          we conclude that <m>y</m> is a rational number and this contradicts the assumption that <m>y</m> is irrational.
+        </p>
+      </li>
+    </ol>
+  </ul>
+  <ul>
+    {{ <xref ref="exer_sec33-4"></xref>.}}
+    \item
+    <ol>
+      <li>
+        <p>
+          This statement is false.
+          A counterexample is <m>x = \sqrt{2}</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          This statement is true since the contrapositive is true.
+          The contrapositive is:
+          <ul>
+            \item For any real number <m>x</m>, if <m>\sqrt{x}</m> is rational, then <m>x</m> is rational.
+          </ul>
+        </p>
+        If there exist integers <m>a</m> and <m>b</m> with <m>b \ne 0</m> such that <m>\sqrt{x} = \dfrac{a}{b}</m>,
+        then <m>x^2 = \dfrac{a^2}{b^2}</m> and hence, <m>x^2</m> is rational.
+      </li>
+    </ol>
+  </ul>
+  <ul>
+    {{ <xref ref="exer_sec33-9"></xref>.}}
+    \item Recall that <m>\log _2 (32)</m>  is the real number  <m>a</m>  such that  <m>2^a  = 32</m>.  That is,
+    <m>a = \log _2 (32)</m>  means that  <m>2^a  = 32</m>.  If we assume that  <m>a</m> is rational, then there exist integers <m>m</m> and <m>n</m>, with <m>n \ne 0</m>, such that <m>a = \dfrac{m}{n}</m>.
+  </ul>
+  <ul>
+    {{ <xref ref="exer_sec33IVT"></xref>.}}
+    \item \hint  The only factors of 7 are <m>-1, 1, -7</m>, and <m>7</m>.
+  </ul>
+  <ul>
+    {{ <xref ref="exer_sec33-11"></xref>.}}
+    \item
+    <ul>
+      {{(a)}}
+      \item What happens if you expand  <m>[ {\sin (\theta)  + \cos (\theta) } ]^2</m>?  Don't forget your trigonometric identities.
+    </ul>
+  </ul>
+  <ul>
+    {{ <xref ref="exer_sec35-10"></xref>.}}
+    \item \hint Three consecutive natural numbers can be represented by <m>n</m>, <m>n + 1</m>, and
+    <m>n + 2</m>, where <m>n \in \mathbb{N}</m>, or three consecutive natural numbers can be represented by
+    <m>m - 1</m>, <m>m</m>, and <m>m + 1</m>, where <m>m \in \mathbb{N}</m>.
+  </ul>
+</section>

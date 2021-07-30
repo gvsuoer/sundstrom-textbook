@@ -1,0 +1,131 @@
+<section>
+  <title><xref ref="S_provingset">Section</xref></title>
+  <subsection>
+    <title>Progress <xref ref="prog_setequality">Check</xref></title>
+    <p>
+      <m>A = \left\{ x \in \mathbb{Z} \mid x \text{  is a multiple of  9 }  \right\}</m> and <m>B = \left\{ x \in \mathbb{Z} \mid  x \text{  is a multiple of  3 }  \right\}</m>.
+      <ol>
+        <li>
+          <p>
+            The set <m>A</m> is a subset of <m>B</m>.
+            To prove this, we let <m>x \in A</m>.
+            Then there exists an integer <m>m</m> such that <m>x = 9m</m>,
+            which can be written as
+            <me>
+              x = 3 \left( 3m \right)\!
+            </me>.
+            Since <m>3m \in \Z</m>,
+            the last equation proves that <m>x</m> is a multiple of 3 and so <m>x \in B</m>.
+            Therefore, <m>A \subseteq B</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            The set <m>A</m> is not equal to the set <m>B</m>.
+            We note that <m>3 \in B</m> but <m>3 \notin A</m>.
+            Therefore, <m>B \not \subseteq A</m> and, hence, <m>A \ne B</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </subsection>
+  <subsection>
+    <title>Progress <xref ref="prog_usingchoose">Check</xref></title>
+    <me>
+      <tabular>
+        <row>
+          <cell>_
+            | <em>Step</em>  |  <em>Know</em>  |  <em>Reason</em>  |</cell>
+        </row>
+        <row>
+          <cell>+02 _
+            | \(P\)     |  \(A \subseteq B\)    |  Hypothesis |</cell>
+        </row>
+        <row>
+          <cell>_1
+            | \(P1\)    |   Let  \(x \in B^c \).  |  Choose an arbitrary element of  \(B^c\). |</cell>
+        </row>
+        <row>
+          <cell>_1
+            | \(P2\)  |  If  \(x \in A\), then  \(x \in B\).  |  Definition of
+            <q>subset</q>
+            |</cell>
+        </row>
+        <row>
+          <cell>_1
+            | \(P3\)  |  If \(x \notin B\), then \(x \notin A\).  |  Contrapositive |</cell>
+        </row>
+        <row>
+          <cell>_1
+            | \(P4\)  |  If \(x \in B^c\), then \(x \in A^c\).  |  Step \(P3\) and definition of
+            <q>complement</q>
+            |</cell>
+        </row>
+        <row>
+          <cell>_1
+            | \(Q2\)  |  The element \(x\) is in \(A^c\).  | Steps \(P1\) and \(P4\) |</cell>
+        </row>
+        <row>
+          <cell>_1
+            | \(Q1\)    |   Every element of  \(B^c \)  is an element of  \(A^c \).   |  The choose-an-element method with Steps \(P1\) and \(Q2\).  |</cell>
+        </row>
+        <row>
+          <cell>_1
+            | \(Q\)     |  \(B^c \subseteq A^c\)                     |  Definition of
+            <q>subset</q>
+            |</cell>
+        </row>
+        <row>
+          <cell>_</cell>
+        </row>
+      </tabular>
+    </me>
+  </subsection>
+  <subsection>
+    <title>Progress <xref ref="prog_setequality2">Check</xref></title>
+    <proof>
+      <p>
+        Let <m>A</m> and <m>B</m> be subsets of some universal set.
+        We will prove that <m>A - B = A \cap B^c</m> by proving that each set is a subset of the other set.
+        We will first prove that <m>A - B \subseteq A \cap B^c</m>.
+        Let <m>x \in A - B</m>.
+        We then know that <m>x \in A</m> and <m>x \notin B</m>.
+        However, <m>x \notin B</m> implies that <m>x \in B^c</m>.
+        Hence, <m>x \in A</m> and <m>x \in B^c</m>,
+        which means that <m>x \in A \cap B^c</m>.
+        This proves that <m>A - B \subseteq A \cap B^c</m>.
+      </p>
+      <p>
+        To prove that <m>A \cap B^c \subseteq A - B</m>,
+        we let <m>y \in A \cap B^c</m>.
+        This means that <m>y \in A</m> and <m>y \in B^c</m>, and hence,
+        <m>y \in A</m> and <m>y \notin B</m>.
+        Therefore, <m>y \in A - B</m> and this proves that <m>A \cap B^c \subseteq A - B</m>.
+        Since we have proved that each set is a subset of the other set,
+        we have proved that <m>A - B = A \cap B^c</m>.
+      </p>
+    </proof>
+  </subsection>
+  <subsection>
+    <title>Progress <xref ref="prog_disjointsets">Check</xref></title>
+    <proof>
+      <p>
+        Let <m>A = \{ x \in \Z \mid \mod{x}{3}{12} \}</m> and <m>B = \{ y \in \Z \mid \mod{y}{2}{8} \}</m>.
+        We will use a proof by contradiction to prove that <m>A \cap B = \emptyset</m>.
+        So we assume that <m>A \cap B \ne \emptyset</m> and let <m>x \in A \cap B</m>.
+        We can then conclude that <m>\mod{x}{3}{12}</m> and that <m>\mod{x}{2}{8}</m>.
+        This means that there exist integers <m>m</m> and <m>n</m> such that
+        <me>
+          x = 3 + 12m  \text{ and }   x = 2 + 8n
+        </me>.
+      </p>
+      <p>
+        By equating these two expressions for <m>x</m>,
+        we obtain <m>3 + 12m = 2 + 8n</m>,
+        and this equation can be rewritten as <m>1 = 8n - 12m</m>.
+        This is a contradiction since 1 is an odd integer and <m>8n - 12m</m> is an even integer.
+        We have therefore proved that <m>A \cap B = \emptyset</m>.
+      </p>
+    </proof>
+  </subsection>
+</section>

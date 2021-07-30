@@ -1,0 +1,853 @@
+<section xml:id="S_finitesets">
+  <title>Finite Sets</title>
+  <introduction>
+    <exploration xml:id="PA_equivalentsets">
+      <title><em>Equivalent Sets, Part 1</em></title>
+      <ol>
+        <li>
+          <p>
+            Let <m>A</m> and <m>B</m> be sets and let <m>f</m> be a function from <m>A</m> to <m>B</m>.
+            <m>\left(f:A \to B \right)</m>.
+            Carefully complete each of the following using appropriate quantifiers: (If necessary,
+            review the material in <xref ref="S_typesoffunctions">Section</xref>.)
+            <ol>
+              <li>
+                <p>
+                  The function <m>f</m> is an injection provided that <m>\ldots </m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  The function <m>f</m> is not an injection provided that <m>\ldots </m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  The function <m>f</m> is a surjection provided that <m>\ldots </m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  The function <m>f</m> is not a surjection provided that <m>\ldots </m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  The function <m>f</m> is a bijection provided that <m>\ldots </m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </li>
+      </ol>
+      <definition xml:id="equivsets">
+        <statement>
+          <p>
+            Let <m>A</m> and <m>B</m> be sets.
+            The set <m>A</m> is <term>equivalent</term> to the set <m>B</m>
+                <idx><h>equivalent sets</h></idx>
+            provided that there exists a bijection from the set <m>A</m> onto the set <m>B</m>.
+            In this case, we write <m>A \approx B</m>.
+            When <m>A \approx B</m>,
+            we also say that the set <m>A</m> is in
+            <term>one-to-one correspondence</term>
+            <idx><h>one-to-one correspondence</h></idx>
+            with the set <m>B</m> and that the set <m>A</m> has the same <term>cardinality</term>
+                <idx><h>cardinality</h></idx>
+            as the set <m>B</m>.
+          </p>
+        </statement>
+      </definition>
+      <p>
+        \note When <m>A</m> is not equivalent to <m>B</m>,
+        we write <m>A \not \approx B</m>.
+      </p>
+      <ol>
+        <li>
+          <p>
+            For each of the following,
+            use the definition of equivalent sets to determine if the first set is equivalent to the second set.
+          </p>
+          <ol>
+            <li>
+              <p>
+                <m>A = \left\{ 1, 2, 3 \right\}</m> and <m>B = \left\{ a, b, c \right\}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>C = \left\{ 1, 2 \right\}</m> and <m>B = \left\{ a, b, c \right\}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>X = \left\{ 1, 2, 3, \ldots, 10 \right\}</m> and <m>Y = \left\{ 57, 58, 59, \ldots, 66 \right\}</m>
+              </p>
+            </li>
+          </ol>
+        </li>
+        <li xml:id="PA_equivalentsets5">
+          <p>
+            Let <m>D^+</m> be the set of all odd natural numbers.
+            Prove that the function <m>f\x \mathbb{N} \to D^+</m> defined by <m>f \left( x \right) = 2x - 1</m>,
+            for all <m>x \in \mathbb{N}</m>,
+            is a bijection and hence that <m>\mathbb{N} \approx D^+</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Let <m>\R^+</m> be the set of all positive real numbers.
+            Prove that the function <m>g\x \R \to \R^+</m> defined by <m>g (x ) = e^x</m>,
+            for all <m>x \in \R</m> is a bijection and hence,
+            that <m>\R \approx \R^+</m>.
+          </p>
+        </li>
+      </ol>
+    </exploration>
+    <exploration xml:id="PA_equivsets2">
+      <title><em>Equivalent Sets, Part 2</em></title>
+      <ol>
+        <li>
+          <p>
+            Review <xref ref="T_compositefunctions">Theorem</xref>
+            in <xref ref="S_compositionoffunctions">Section</xref>,
+            <xref ref="T_inversenotation">Theorem</xref>
+            in <xref ref="S_inversefunctions">Section</xref>,
+            and Exercise<nbsp/><xref ref="exer_finversebijection"/> in <xref ref="S_inversefunctions">Section</xref>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Prove each part of the following theorem.
+            <theorem xml:id="T_equivsets">
+              <statement>
+                <p>
+                  Let <m>A</m>, <m>B</m>, and <m>C</m> be sets.
+                  <ol>
+                    <li xml:id="T_equivsets1">
+                      <p>
+                        For each set <m>A</m>, <m>A \approx A</m>.
+                      </p>
+                    </li>
+                    <li xml:id="T_equivsets2">
+                      <p>
+                        For all sets <m>A</m> and <m>B</m>,
+                        if <m>A \approx B</m>, then <m>B \approx A</m>.
+                      </p>
+                    </li>
+                    <li xml:id="T_equivsets3">
+                      <p>
+                        For all sets <m>A</m>, <m>B</m>, and <m>C</m>,
+                        if <m>A \approx B</m> and <m>B \approx C</m>, then <m>A \approx C</m>.
+                      </p>
+                    </li>
+                  </ol>
+                </p>
+  <!-- </p> -->
+              </statement>
+            </theorem>
+          </p>
+        </li>
+      </ol>
+    </exploration>
+  </introduction>
+  <subsection>
+    <title>Equivalent Sets</title>
+    <p>
+      In Beginning <xref ref="PA_equivalentsets">Activity</xref>,
+      we introduced the concept of equivalent sets.
+      The motivation for this definition was to have a formal method for determining whether or not two sets
+      <q>have the same number of elements.</q>
+      This idea was described in terms of a one-to-one correspondence (a bijection) from one set onto the other set.
+      This idea may seem simple for finite sets, but as we will see,
+      this idea has surprising consequences when we deal with infinite sets.
+      (We will soon provide precise definitions for finite and infinite sets.)
+    </p>
+    <p>
+      <em>Technical Note</em>: The three properties we proved in <xref ref="T_equivsets">Theorem</xref>
+      in Beginning <xref ref="PA_equivsets2">Activity</xref>
+      are very similar to the concepts of reflexive,
+      symmetric, and transitive relations.
+      However, we do not consider equivalence of sets to be an equivalence relation on a set <m>U</m> since an equivalence relation requires an underlying (universal) set <m>U</m>.
+      In this case,
+      our elements would be the sets <m>A</m>, <m>B</m>, and <m>C</m>,
+      and these would then have to be subsets of some universal set <m>W</m>
+      (elements of the power set of <m>W</m>).
+      For equivalence of sets, we are not requiring that the sets <m>A</m>,
+      <m>B</m>, and <m>C</m> be subsets of the same universal set.
+      So we do not use the term relation in regards to the equivalence of sets.
+      However, if <m>A</m> and <m>B</m> are sets and <m>A \approx B</m>,
+      then we often say that <m>A</m> and <m>B</m> are
+      <em>equivalent sets</em>.
+    </p>
+    <investigation xml:id="prog_equivsets">
+      <title><em>Examples of Equivalent Sets</em></title>
+      <p>
+        We will use the definition of equivalent sets from Beginning <xref ref="PA_equivalentsets">Activity</xref>
+        in all parts of this progress check.
+        It is no longer sufficient to say that two sets are equivalent by simply saying that the two sets have the same number of elements.
+        <ol>
+          <li>
+            <p>
+              Let <m>A = \left\{ 1, 2, 3, \ldots, 99, 100 \right\}</m> and let <m>B = \left\{ 351, 352, 353, \ldots, 449, 450 \right\}</m>.
+              Define <m>f\x A \to B</m> by <m>f(x) = x + 350</m>,
+              for each <m>x</m> in <m>A</m>.
+              Prove that <m>f</m> is a bijection from the set <m>A</m> to the set <m>B</m> and hence,
+              <m>A \approx B</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Let <m>E</m> be the set of all even integers and let <m>D</m> be the set of all odd integers.
+              Prove that <m>E \approx D</m> by proving that <m>F\x E \to D</m>,
+              where <m>F \left( x \right) = x + 1</m>,
+              for all <m>x \in E</m>, is a bijection.
+            </p>
+          </li>
+          <li xml:id="A_equivsets4">
+            <p>
+              Let <m>\left( 0, 1 \right)</m> be the open interval of real numbers between 0 and 1.
+              Similarly, if <m>b \in \mathbb{R}</m> with <m>b > 0</m>,
+              let <m>\left( 0, b \right)</m> be the open interval of real numbers between 0 and <m>b</m>.
+              Prove that the function <m>f\x \left( 0, 1 \right) \to \left( 0, b \right)</m> by <m>f \left( x \right) = bx</m>,
+              for all <m>x \in \left( 0, 1 \right)</m>,
+              is a bijection and hence <m>\left( 0, 1 \right) \approx \left( 0, b \right)</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </investigation>
+    <p>
+      In Part<nbsp/><xref ref="A_equivsets4"/> of Progress <xref ref="prog_equivsets">Check</xref>,
+      notice that if <m>b > 1</m>,
+      then <m>\left( 0, 1 \right)</m> is a proper subset of
+      <m>\left( 0, b \right)</m> and <m>\left( 0, 1 \right) \approx \left( 0, b \right)</m>.
+    </p>
+    <p>
+      Also, in Part<nbsp/><xref ref="PA_equivalentsets5"/> of Beginning <xref ref="PA_equivalentsets">Activity</xref>,
+      we proved that the set <m>D</m> of all odd natural numbers is equivalent to <m>\mathbb{N}</m>,
+      and we know that <m>D</m> is a proper subset of <m>\mathbb{N}</m>.
+    </p>
+    <p>
+      These results may seem a bit strange,
+      but they are logical consequences of the definition of equivalent sets.
+      Although we have not defined the terms yet,
+      we will see that one thing that will distinguish an infinite set from a finite set is that an infinite set can be equivalent to one of its proper subsets,
+      whereas a finite set cannot be equivalent to one of its proper subsets.
+    </p>
+  </subsection>
+  <subsection xml:id="sym_firstk">
+    <title>Finite Sets</title>
+    <p>
+      In <xref ref="S_setoperations">Section</xref>,
+      we defined the <em>cardinality</em>
+          <idx><h>cardinality</h><h>finite set</h></idx>
+      of a finite set <m>A</m>,
+      denoted by <m>\card (A)</m>, to be the number of elements in the set <m>A</m>.
+      Now that we know about functions and bijections,
+      we can define this concept more formally and more rigorously.
+      First, for each <m>k \in \mathbb{N}</m>,
+      we define <m>\mathbb{N}_k</m> to be the set of all natural numbers between 1 and <m>k</m>,
+      inclusive.
+      That is,
+      <me>
+        \mathbb{N}_k = \left\{ 1, 2, \ldots, k \right\}\!
+      </me>.
+    </p>
+    <p>
+      We will use the concept of <em>equivalent sets</em>
+          <idx><h>equivalent sets</h></idx>
+      introduced in Beginning <xref ref="PA_equivalentsets">Activity</xref> to define a finite set.
+    </p>
+    <definition xml:id="cardinalityfinite">
+      <statement>
+        <p>
+          A set <m>A</m> is a <term>finite set</term>
+              <idx><h>finite set</h></idx>
+              <idx><h>finite set</h><h>properties of|(</h></idx>
+          provided that <m>A = \emptyset</m> or there exists a natural number <m>k</m> such that <m>A \approx \mathbb{N}_k</m>.
+          A set is an <term>infinite set</term>
+              <idx><h>infinite set</h></idx>
+          provided that it is not a finite set.
+        </p>
+        <p>
+          If <m>A \approx \mathbb{N}_k</m>,
+          we say that the set <m>A</m> has <term>cardinality</term>
+              <idx><h>cardinality</h></idx>
+          <m>\boldsymbol{k}</m>
+          (or <term>cardinal number</term>
+              <idx><h>cardinal number</h></idx>
+          <m>\boldsymbol{k}</m>),
+          and we write <m>\text{ card } \left( A \right) = k</m>.
+          In addition, we say that the empty set has
+          <term>cardinality 0</term>
+          (or <term>cardinal number 0</term>),
+          and we write <m>\text{ card } \left( \emptyset \right) = 0</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Notice that by this definition,
+      the empty set is a finite set.
+      In addition, for each <m>k \in \mathbb{N}</m>,
+      the identity function on <m>\mathbb{N}_k</m> is a bijection and hence,
+      by definition,
+      the set <m>\mathbb{N}_k</m> is a finite set with cardinality <m>k</m>.
+    </p>
+    <theorem xml:id="T_equivfinitesets">
+      <statement>
+        <p>
+          Any set equivalent to a finite nonempty set <m>A</m> is a finite set and has the same cardinality as <m>A</m>.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Suppose that <m>A</m> is a finite nonempty set,
+        <m>B</m> is a set, and <m>A \approx B</m>.
+        Since <m>A</m> is a finite set,
+        there exists a <m>k \in \mathbb{N}</m> such that <m>A \approx \mathbb{N}_k</m>.
+        We also have assumed that <m>A \approx B</m> and so by part<nbsp/>(b) of <xref ref="T_equivsets">Theorem</xref>
+        (in Beginning <xref ref="PA_equivsets2">Activity</xref>),
+        we can conclude that <m>B \approx A</m>.
+        Since <m>A \approx \mathbb{N}_k</m>,
+        we can use part<nbsp/>(c) of <xref ref="T_equivsets">Theorem</xref>
+        to conclude that <m>B \approx \mathbb{N}_k</m>.
+        Thus, <m>B</m> is finite and has the same cardinality as <m>A</m>.
+      </p>
+    </proof>
+    <p>
+      It may seem that we have done a lot of work to prove an
+      <q>obvious</q>
+      result in <xref ref="T_equivfinitesets">Theorem</xref>.
+      The same may be true of the remaining results in this section,
+      which give further results about finite sets.
+      One of the goals is to make sure that the concept of cardinality for a finite set corresponds to our intuitive notion of the number of elements in the set.
+      Another important goal is to lay the groundwork for a more rigorous and mathematical treatment of infinite sets than we have encountered before.
+      Along the way,
+      we will see the mathematical distinction between finite and infinite sets.
+    </p>
+    <p>
+      The following two lemmas will be used to prove the theorem that states that every subset of a finite set is finite.
+    </p>
+    <lemma xml:id="L_addone">
+      <statement>
+        <p>
+          If <m>A</m> is a finite set and <m>x \notin A</m>,
+          then <m>A \cup \left\{ x \right\}</m> is a finite set and <m>\text{ card } \!\left( A \cup \left\{ x \right\} \right) = \text{ card } ( A ) + 1</m>.
+        </p>
+      </statement>
+    </lemma>
+    <proof>
+      <p>
+        Let <m>A</m> be a finite set and assume <m>\text{ card } ( A ) = k</m>,
+        where <m>k = 0</m> or <m>k \in \mathbb{N}</m>.
+        Assume <m>x \notin A</m>.
+      </p>
+      <p>
+        If <m>A = \emptyset</m>,
+        then <m>\text{ card } ( A ) = 0</m> and <m>A \cup \left\{ x \right\} = \left\{ x \right\}</m>,
+        which is equivalent to <m>\mathbb{N}_1</m>.
+        Thus, <m>A \cup \left\{ x \right\}</m> is finite with cardinality 1, which equals <m>\text{ card } ( A ) + 1</m>.
+      </p>
+      <p>
+        If <m>A \ne \emptyset</m>,
+        then <m>A \approx \mathbb{N}_k</m>,
+        for some <m>k \in \mathbb{N}</m>.
+        This means that <m>\text{ card } ( A ) = k</m>,
+        and there exists a bijection <m>f\x A \to \mathbb{N}_k</m>.
+        We will now use this bijection to define a function
+        <m>g\x A \cup \left\{ x \right\} \to \mathbb{N}_{k+1}</m> and then prove that the function <m>g</m> is a bijection.
+        We define <m>g\x A \cup \left\{ x \right\} \to \mathbb{N}_{k+1}</m> as follows: For each <m>t \in A \cup \left\{ x \right\}</m>,
+        <me>
+          g \left( t \right) = \left\{ \begin{gathered} f \left( t \right) \text{  if  } t \in A  \\ k + 1 \text{  if  } t = x. \end{gathered}  \right.
+        </me>
+      </p>
+      <p>
+        To prove that <m>g</m> is an injection,
+        we let <m>x_1, x_2 \in A \cup \left\{ x \right\}</m> and assume <m>x_1 \ne x_2</m>.
+        <ul>
+          <li>
+            <p>
+              If <m>x_1, x_2 \in A</m>,
+              then since <m>f</m> is a bijection,
+              <m>f( x_1 ) \ne f ( x_2 )</m>,
+              and this implies that <m>g( x_1 ) \ne g( x_2 )</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>x_1 = x</m>, then since <m>x_2 \ne x_1</m>,
+              we conclude that <m>x_2 \ne x</m> and hence <m>x_2 \in A</m>.
+              So <m>g( x_1 ) = k + 1</m>,
+              and since <m>f( x_2 ) \in \mathbb{N}_k</m> and <m>g( x_2 ) = f ( x_2 )</m>,
+              we can conclude that <m>g( x_1 ) \ne g( x_2 )</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              The case where <m>x_2 = x</m> is handled similarly to the previous case.
+            </p>
+          </li>
+        </ul>
+      </p>
+      <p>
+        This proves that the function <m>g</m> is an injection.
+        The proof that <m>g</m> is a surjection is Exercise<nbsp/><xref ref="exer_addonesurjection"/>.
+        Since <m>g</m> is a bijection,
+        we conclude that <m>A \cup \left\{ x \right\} \approx \mathbb{N}_{k+1}</m>, and
+        <me>
+          \text{ card }  \!\left(A \cup \left\{ x \right\} \right) = k + 1
+        </me>.
+      </p>
+      <p>
+        Since <m>\text{ card } \left(A \right) = k</m>,
+        we have proved that <m>\text{ card } \!\left(A \cup \left\{ x \right\} \right) = \text{ card } ( A ) + 1</m>.
+      </p>
+    </proof>
+    <lemma xml:id="L_subsetsofNk">
+      <statement>
+        <p>
+          For each natural number <m>m</m>,
+          if <m>A \subseteq \mathbb{N}_m</m>,
+          then <m>A</m> is a finite set and <m>\text{ card } \left( A \right) \leq m</m>.
+        </p>
+      </statement>
+    </lemma>
+    <proof>
+      <p>
+        We will use a proof using induction on <m>m</m>.
+        For each <m>m \in \mathbb{N}</m>, let <m>P( m )</m> be,
+        <q>If <m>A \subseteq \mathbb{N}_m</m>,
+        then <m>A</m> is finite and <m>\text{ card } ( A ) \leq m</m>.</q>
+      </p>
+      <p>
+        We first prove that <m>P( 1 )</m> is true.
+        If <m>A \subseteq \mathbb{N}_1</m>,
+        then <m>A = \emptyset</m> or <m>A = \left\{ 1 \right\}</m>,
+        both of which are finite and have cardinality less than or equal to the cardinality of <m>\mathbb{N}_1</m>.
+        This proves that <m>P( 1 )</m> is true.
+      </p>
+      <p>
+        For the inductive step, let
+        <m>k \in \mathbb{N}</m> and assume that <m>P( k )</m> is true.
+        That is, assume that if <m>B \subseteq \mathbb{N}_k</m>,
+        then <m>B</m> is a finite set and <m>\text{ card } ( B ) \leq k</m>.
+        We need to prove that <m>P( k+1 )</m> is true.
+      </p>
+      <p>
+        So assume that <m>A</m> is a subset of <m>\mathbb{N}_{k+1}</m>.
+        Then <m>A - \left\{ k+1 \right\}</m> is a subset of <m>\mathbb{N}_k</m>.
+        Since <m>P( k )</m> is true,
+        <m>A - \left\{ k+1 \right\}</m> is a finite set and
+        <me>
+          \text{ card }  \!\left( A - \left\{ k+1 \right\} \right) \leq k
+        </me>.
+      </p>
+      <p>
+        There are two cases to consider: Either
+        <m>k+1 \in A</m> or <m>k+1 \not \in A</m>.
+      </p>
+      <p>
+        If <m>k+1 \not \in A</m>, then <m>A = A - \left\{ k+1 \right\}</m>.
+        Hence, <m>A</m> is finite and
+        <me>
+          \text{ card }  ( A ) \leq k \lt  k+1
+        </me>.
+      </p>
+      <p>
+        If <m>k+1 \in A</m>,
+        then <m>A = ( A - \left\{ k+1 \right\} ) \cup \left\{ k+1 \right\}</m>.
+        Hence, by <xref ref="L_addone">Lemma</xref>,
+        <m>A</m> is a finite set and
+        <me>
+          \text{ card }  ( A ) = \text{ card }  \!\left(  A - \left\{ k+1 \right\}  \right) + 1
+        </me>.
+      </p>
+      <p>
+        Since <m>\text{ card } \!\left( A - \left\{ k+1 \right\} \right) \leq k</m>,
+        we can conclude that <m>\text{ card } ( A ) \leq k + 1</m>.
+      </p>
+      <p>
+        This means that we have proved the inductive step.
+        Hence, by mathematical induction,
+        for each <m>m \in \mathbb{N}</m>,
+        if <m>A \subseteq \mathbb{N}_m</m>,
+        then <m>A</m> is finite and <m>\text{ card } ( A ) \leq m</m>.
+      </p>
+    </proof>
+    <p>
+      The preceding two lemmas were proved to aid in the proof of the following theorem.
+    </p>
+    <theorem xml:id="T_finitesubsets">
+      <statement>
+        <p>
+          If <m>S</m> is a finite set and <m>A</m> is a subset of <m>S</m>,
+          then <m>A</m> is a finite set and <m>\text{ card } ( A ) \leq \text{ card } ( S )</m>.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Let <m>S</m> be a finite set and assume that <m>A</m> is a subset of <m>S</m>.
+        If <m>A = \emptyset</m>,
+        then <m>A</m> is a finite set and <m>\text{ card } ( A ) \leq \text{ card } ( S )</m>.
+        So we assume that <m>A \ne \emptyset</m>.
+      </p>
+      <p>
+        Since <m>S</m> is finite,
+        there exists a bijection <m>f\x S \to \mathbb{N}_k</m> for some <m>k \in \mathbb{N}</m>.
+        In this case, <m>\text{ card } ( S ) = k</m>.
+        We need to show that <m>A</m> is equivalent to a finite set.
+        To do this, we define <m>g\x A \to f ( A )</m> by
+        <m>g ( x ) = f ( x )</m> for each <m>x \in A</m>.
+        Since <m>f</m> is an injection,
+        we conclude that <m>g</m> is an injection.
+        Now let <m>y \in f ( A )</m>.
+        Then there exists an <m>a \in A</m> such that <m>f ( a ) = y</m>.
+        But by the definition of <m>g</m>,
+        this means that <m>g ( a ) = y</m>,
+        and hence <m>g</m> is a surjection.
+        This proves that <m>g</m> is a bijection.
+      </p>
+      <p>
+        Hence, we have proved that <m>A \approx f ( A )</m>.
+        Since <m>f ( A )</m> is a subset of <m>\mathbb{N}_k</m>,
+        we use <xref ref="L_subsetsofNk">Lemma</xref>
+        to conclude that <m>f ( A )</m> is finite and <m>\text{ card } ( f ( A ) ) \leq k</m>.
+        In addition, by <xref ref="T_equivfinitesets">Theorem</xref>,
+        <m>A</m> is a finite set and <m>\text{ card } ( A ) = \text{ card } ( f ( A ) )</m>.
+        This proves that <m>A</m> is a finite set and <m>\text{ card } ( A ) \leq \text{ card } ( S )</m>.
+      </p>
+    </proof>
+    <p>
+      <xref ref="L_addone">Lemma</xref>
+      implies that adding one element to a finite set increases its cardinality by 1.
+      It is also true that removing one element from a finite nonempty set reduces the cardinality by 1.
+      The proof of <xref ref="C_removeone">Corollary</xref>
+      is Exercise<nbsp/><xref ref="exer_sec92corollary"/>.
+    </p>
+    <corollary xml:id="C_removeone">
+      <statement>
+        <p>
+          If <m>A</m> is a finite set and <m>x \in A</m>,
+          then <m>A - \left\{ x \right\}</m> is a finite set and <m>\text{ card } \!\left( A - \left\{ x \right\} \right) = \text{ card } ( A ) - 1</m>.
+        </p>
+      </statement>
+    </corollary>
+    <p>
+      The next corollary will be used in the next section to provide a mathematical distinction between finite and infinite sets.
+    </p>
+    <corollary xml:id="C_propersubsets">
+      <statement>
+        <p>
+          A finite set is not equivalent to any of its proper subsets.
+        </p>
+      </statement>
+    </corollary>
+    <proof>
+      <p>
+        Let <m>B</m> be a finite set and assume that <m>A</m> is a proper subset of <m>B</m>.
+        Since <m>A</m> is a proper subset of <m>B</m>,
+        there exists an element <m>x</m> in <m>B - A</m>.
+        This means that <m>A</m> is a subset of <m>B - \left\{ x \right\}</m>.
+        Hence, by <xref ref="T_finitesubsets">Theorem</xref>,
+        <me>
+          \text{ card }  ( A ) \leq \text{ card }  \!\left( B - \left\{ x \right\} \right)
+        </me>.
+      </p>
+      <p>
+        Also, by <xref ref="C_removeone">Corollary</xref>
+        <me>
+          \text{ card }  \!\left( B - \left\{ x \right\} \right) = \text{ card }  ( B ) - 1
+        </me>.
+      </p>
+      <p>
+        Hence, we may conclude that <m>\text{ card }  ( A ) \leq \text{ card }  ( B ) - 1</m> and that
+        <me>
+          \text{ card }  ( A ) \lt  \text{ card }  ( B )
+        </me>.
+      </p>
+      <p>
+        <xref ref="T_equivfinitesets">Theorem</xref>
+        implies that <m>B \not \approx A</m>.
+        This proves that a finite set is not equivalent to any of its proper subsets.
+      </p>
+    </proof>
+  </subsection>
+  <subsection>
+    <title>The Pigeonhole Principle</title>
+    <p>
+      The last property of finite sets that we will consider in this section is often called the
+      <em>Pigeonhole Principle</em>.
+          <idx><h>Pigeonhole Principle</h></idx>
+      The
+      <q>pigeonhole</q>
+      version of this property says,
+      <q>If <m>m</m> pigeons go into <m>r</m> pigeonholes and <m>m > r</m>,
+      then at least one pigeonhole has more than one pigeon.</q>
+    </p>
+    <p>
+      In this situation,
+      we can think of the set of pigeons as being equivalent to a set <m>P</m> with cardinality <m>m</m> and the set of pigeonholes as being equivalent to a set <m>H</m> with cardinality <m>r</m>.
+      We can then define a function
+      <m>f\x P \to H</m> that maps each pigeon to its pigeonhole.
+      The Pigeonhole Principle states that this function is not an injection.
+      (It is not one-to-one since there are at least two pigeons
+      <q>mapped</q>
+      to the same pigeonhole.)
+    </p>
+    <theorem xml:id="T_pigeonhole">
+      <title><em>The Pigeonhole Principle</em></title>
+      <statement>
+        <p>
+          Let <m>A</m> and <m>B</m> be finite sets.
+          If <m>\text{ card } ( A ) > \text{ card } ( B )</m>,
+          then any function <m>f\x A \to B</m> is not an injection.
+        </p>
+      </statement>
+    </theorem>
+    <proof>
+      <p>
+        Let <m>A</m> and <m>B</m> be finite sets.
+        We will prove the contrapositive of the theorem, which is,
+        if there exists a function
+        <m>f\x A \to B</m> that is an injection,
+        then <m>\text{ card } ( A ) \leq \text{ card } ( B )</m>.
+      </p>
+      <p>
+        So assume that <m>f\x A \to B</m> is an injection.
+        As in <xref ref="T_finitesubsets">Theorem</xref>,
+        we define a function <m>g\x A \to f ( A )</m> by
+        <m>g ( x ) = f ( x )</m> for each <m>x \in A</m>.
+        As we saw in <xref ref="T_finitesubsets">Theorem</xref>,
+        the function <m>g</m> is a bijection.
+        But then <m>A \approx f ( A )</m> and <m>f ( A ) \subseteq B</m>.
+        Hence, <m>\text{ card } ( A ) = \text{ card } \!\left( f ( A ) \right)</m> and <m>\text{ card } \!\left( f ( A ) \right) \leq \text{ card } ( B )</m>.
+        Hence, <m>\text{ card } ( A ) \leq \text{ card } ( B )</m>,
+        and this proves the contrapositive.
+        Hence, if <m>\text{ card } ( A ) > \text{ card } ( B )</m>,
+        then any function <m>f\x A \to B</m> is not an injection.
+      </p>
+    </proof>
+    <p>
+      The Pigeonhole Principle has many applications in the branch of mathematics called
+      <q>combinatorics.</q>
+      Some of these will be explored in the exercises.
+    </p>
+    <p>
+          <idx><h>finite set</h><h>properties of|)</h></idx> \exercises{<xref ref="S_finitesets">Exercises</xref>}
+    </p>
+    <ol>
+      <li xml:id="exer_addonesurjection">
+        <p>
+          Prove that the function <m>g: A \cup \left\{ x \right\} \to \N_{k+1}</m> in <xref ref="L_addone">Lemma</xref> is a surjection.
+        </p>
+      </li>
+      <li xml:id="exer_sec92-1">
+        <p>
+          Let <m>A</m> be a subset of some universal set <m>U</m>.
+          Prove that if <m>x \in U</m>,
+          then <m>A \times \left\{ x \right\} \approx A</m>.
+        </p>
+      </li>
+      <li xml:id="exer91_evennaturals">
+        <p>
+          Let <m>E^+</m> be the set of all even natural numbers.
+          Prove that <m>\mathbb{N} \approx E^+</m>.
+        </p>
+      </li>
+      <li xml:id="exer_sec92corollary">
+        <p>
+          Prove <xref ref="C_removeone">Corollary</xref>.
+          If <m>A</m> is a finite set and <m>x \in A</m>,
+          then <m>A - \left\{ x \right\}</m> is a finite set and
+          <m>\text{ card } ( A - \left\{ x \right\} ) = \text{ card } ( A ) - 1</m>. \hint One approach is to use the fact that <m>A = \left( A - \left\{ x \right\} \right) \cup \left\{x \right\}</m>.
+        </p>
+      </li>
+      <li xml:id="exer_sec92-finitesets">
+        <p>
+          Let <m>A</m> and <m>B</m> be sets.
+          Prove that
+        </p>
+        <ol>
+          <li>
+            <p>
+              If <m>A</m> is a finite set, then <m>A \cap B</m> is a finite set.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>A \cup B</m> is a finite set,
+              then <m>A</m> and <m>B</m> are finite sets.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>A \cap B</m> is an infinite set,
+              then <m>A</m> is an infinite set.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>A</m> is an infinite set or <m>B</m> is an infinite set,
+              then <m>A \cup B</m> is an infinite set.
+            </p>
+          </li>
+        </ol>
+      </li>
+      <li xml:id="exer_sec92-pigeon">
+        <p>
+          There are over 7 million people living in New York City.
+          It is also known that the maximum number of hairs on a human head is less than 200,000.
+          Use the Pigeonhole Principle to prove that there are at least two people in the city of New York with the same number of hairs on their heads.
+        </p>
+      </li>
+      <li xml:id="exer_sec92-7">
+        <p>
+          Prove the following propositions:
+          <ol>
+            <li xml:id="exer_equivcartesian">
+              <p>
+                If <m>A</m>, <m>B</m>, <m>C</m>,
+                and <m>D</m> are sets with
+                <m>A \approx B</m> and <m>C \approx D</m>,
+                then <m>A \times C \approx B \times D</m>.
+              </p>
+            </li>
+            <li xml:id="exer_equivunion">
+              <p>
+                If <m>A</m>, <m>B</m>, <m>C</m>,
+                and <m>D</m> are sets with <m>A \approx B</m> and
+                <m>C \approx D</m> and if <m>A</m> and <m>C</m> are disjoint and <m>B</m> and <m>D</m> are disjoint,
+                then <m>A \cup C \approx B \cup D</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+        \hint Since <m>A \approx B</m> and <m>C \approx D</m>, there exist bijections <m>f:A \to B</m> and <m>g:C \to D</m>. To prove that <m>A \times C \approx B \times D</m>, prove that <m>h:A \times C \to B \times D</m> is a bijection, where <m>h ( a, c ) = \left( f ( a ), g ( c ) \right)</m>, for all <m>( a, c ) \in A \times C</m>.
+      </li>
+      <li xml:id="exer_sec927">
+        <p>
+          Let <m>A = \left\{ a, b, c \right\}</m>.
+          <ol>
+            <li>
+              <p>
+                Construct a function <m>f:\mathbb{N}_5 \to A</m> such that <m>f</m> is a surjection.
+              </p>
+            </li>
+            <li>
+              <p>
+                Use the function <m>f</m> to construct a function
+                <m>g:A \to \mathbb{N}_5</m> so that <m>f \circ g = I_A</m>,
+                where <m>I_A</m> is the identity function on the set <m>A</m>.
+                Is the function <m>g</m> an injection?
+                Explain.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      <li xml:id="exer_sec928">
+        <p>
+          This exercise is a generalization of Exercise<nbsp/><xref ref="exer_sec927"/>.
+          Let <m>m</m> be a natural number, let <m>A</m> be a set,
+          and assume that <m>f:\mathbb{N}_m \to A</m> is a surjection.
+          Define <m>g:A \to \mathbb{N}_m</m> as follows:
+          <ul>
+            \item For each <m>x \in A</m>, <m>g ( x ) = j</m>, where <m>j</m> is the least natural number in <m>f^{-1} ( \left\{ x \right\} )</m>.
+          </ul>
+        </p>
+        Prove that <m>f \circ g = I_A</m>, where <m>I_A</m> is the identity function on the set <m>A</m>, and prove that <m>g</m> is an injection.
+      </li>
+      <li>
+        <p>
+          Let <m>B</m> be a finite,
+          nonempty set and assume that <m>f:B \to A</m> is a surjection.
+          Prove that there exists a function <m>h:A \to B</m> such that
+          <m>f \circ h = I_A</m> and <m>h</m> is an injection. \hint Since <m>B</m> is finite,
+          there exists a natural number <m>m</m> such that <m>\mathbb{N}_m \approx B</m>.
+          This means there exists a bijection <m>k:\mathbb{N}_m \to B</m>.
+          Now let <m>h = k \circ g</m>,
+          where <m>g</m> is the function constructed in Exercise<nbsp/><xref ref="exer_sec928"/>.
+        </p>
+      </li>
+    </ol>
+  </subsection>
+  <subsection>
+    <title>Explorations and Activities</title>
+    <ol>
+      <li xml:id="A_usingpigeon">
+        <p>
+          <em>Using the Pigeonhole Principle</em>.
+    <idx><h>Pigeonhole Principle</h></idx>
+For this activity, we will consider subsets of
+          <m>\mathbb{N}_{30}</m> that contain eight elements.
+        </p>
+        <ol>
+          <li xml:id="A_usingpigeon1">
+            <p>
+              One such set is <m>A = \left\{ 3, 5, 11, 17, 21, 24, 26, 29 \right\}</m>.
+              Notice that
+              <md>
+                <mrow>\left\{3, 21, 24, 26 \right\} \amp \subseteq A  \text{ and }    \amp 3 + 21 + 24 + 26 \amp = 74</mrow>
+                <mrow>\left\{3, 5, 11, 26, 29 \right\} \amp \subseteq A  \text{ and }    \amp 3 + 5 + 11 + 26 + 29 \amp = 74</mrow>
+              </md>.
+              Use this information to find two disjoint subsets of <m>A</m> whose elements have the same sum.
+            </p>
+          </li>
+          <li>
+            <p>
+              Let <m>B = \left\{ 3, 6, 9, 12, 15, 18, 21, 24 \right\}</m>.
+              Find two disjoint subsets of <m>B</m> whose elements have the same sum. \note By convention,
+              if <m>T = \left\{ a \right\}</m>,
+              where <m>a \in \mathbb{N}</m>,
+              then the sum of the elements in <m>T</m> is equal to <m>a</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Now let <m>C</m> be any subset of
+              <m>\mathbb{N}_{30}</m> that contains eight elements.
+            </p>
+            <ol>
+              <li>
+                <p>
+                  How many subsets does <m>C</m> have?
+                </p>
+              </li>
+              <li>
+                <p>
+                  The sum of the elements of the empty set is 0.
+                  What is the maximum sum for any subset of
+                  <m>\mathbb{N}_{30}</m> that contains eight elements?
+                  Let <m>M</m> be this maximum sum.
+                </p>
+              </li>
+              <li xml:id="A_usingpigeon3c">
+                <p>
+                  Now define a function <m>f\x \mathcal{P} ( C ) \to \mathbb{N}_M</m> so that for each <m>X \in \mathcal{P} ( C )</m>,
+                  <m>f ( X )</m> is equal to the sum of the elements in <m>X</m>.
+                  Use the Pigeonhole Principle to prove that there exist two subsets of <m>C</m> whose elements have the same sum.
+                </p>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <p>
+              If the two subsets in part<nbsp/><xref ref="A_usingpigeon3c"/> are not disjoint,
+              use the idea presented in part<nbsp/><xref ref="A_usingpigeon1"/> to prove that there exist two disjoint subsets of <m>C</m> whose elements have the same sum.
+            </p>
+          </li>
+          <li xml:id="exer_sec92-pigeon2">
+            <p>
+              Let <m>S</m> be a subset of
+              <m>\mathbb{N}_{99}</m> that contains 10 elements.
+              Use the Pigeonhole Principle to prove that there exist two disjoint subsets of <m>S</m> whose elements have the same sum.
+            </p>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </subsection>
+</section>

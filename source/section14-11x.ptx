@@ -1,0 +1,213 @@
+<section>
+  <title><xref ref="S_directproof">Section</xref></title>
+  <subsection>
+    <title>Progress <xref ref="pr_divisors">Check</xref></title>
+    <ol>
+      <li>
+        <p>
+          For each example in Part (1),
+          the integer <m>a</m> divides the sum <m>b + c</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Conjecture: For all integers <m>a</m>, <m>b</m>,
+          and <m>c</m> with <m>a \ne 0</m>,
+          if <m>a</m> divides <m>b</m> and <m>a</m> divides <m>c</m>,
+          then <m>a</m> divides <m>b + c</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          A Know-show table for a proof of the conjecture in Part (3).
+          <tabular>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell><em>Step</em></cell>
+              <cell><em>Know</em></cell>
+              <cell><em>Reason</em></cell>
+            </row>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell><m>P</m></cell>
+              <cell><m>a \mid b</m> and <m>a \mid c</m></cell>
+              <cell>Hypothesis</cell>
+            </row>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell><m>P1</m></cell>
+              <cell><m>\left( {\exists s \in \mathbb{Z}} \right)\left( {b = a \cdot s} \right)</m> <m>\left( {\exists t \in \mathbb{Z}} \right)\left( {c = a \cdot t} \right)</m></cell>
+              <cell>Definition of
+                <q>divides</q>
+              </cell>
+            </row>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell><m>P2</m></cell>
+              <cell><m>b + c = as + at</m></cell>
+              <cell>Substituting for <m>b</m> and <m>c</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell><m>P3</m></cell>
+              <cell><m>b + c = a\left( {s + t} \right)</m></cell>
+              <cell>Distributive property</cell>
+            </row>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell><m>Q1</m></cell>
+              <cell><m>s + t</m> is an integer</cell>
+              <cell><m>\mathbb{Z}</m> is closed under addition</cell>
+            </row>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell><m>Q</m></cell>
+              <cell><m>\left. {a } \right| \left( {b + c} \right)</m></cell>
+              <cell>Definition of
+                <q>divides</q>
+              </cell>
+            </row>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+            <row>
+              <cell><em>Step</em></cell>
+              <cell><em>Show</em></cell>
+              <cell><em>Reason</em></cell>
+            </row>
+            <row bottom="minor">
+              <cell></cell>
+              <cell></cell>
+              <cell></cell>
+            </row>
+          </tabular>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+  <subsection>
+    <title>Progress <xref ref="pr_counterexample">Check</xref></title>
+    <p>
+      A counterexample for this statement will be values of <m>a</m> and <m>b</m> for which 5 divides <m>a</m> or 5 divides <m>b</m>,
+      and 5 does not divide <m>5a + b</m>.
+      One counterexample for the statement is <m>a = 5</m> and <m>b = 1</m>.
+      For these values,
+      the hyothesis is true since 5 divides <m>a</m> and the conclusion is false since
+      <m>5a + b = 26</m> and 5 does not divide 26.
+    </p>
+  </subsection>
+  <subsection>
+    <title>Progress <xref ref="pr_congruence">Check</xref></title>
+    <ol>
+      <li>
+        <p>
+          Some integers that are congruent to 5 modulo 8 are <m>-11, -3, 5, 13</m>, and 21.
+        </p>
+      </li>
+      <li>
+        <p>
+          <m>\left\{ \left. x \in \Z \right| x \equiv 5 \pmod 8 \right\} = \left\{ \ldots, -19, -11, -3, 5, 13, 21, 29, \ldots \right\}</m>.
+        </p>
+      </li>
+      <li xml:id="pr_congans3">
+        <p>
+          For example, <m>-3 + 5 = 2</m>,
+          <m>-11 + 29 = 18</m>, <m>13 + 21 = 34</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          If we subtract 2 from any of the sums obtained in Part<nbsp/><xref ref="pr_congans3"/>, the result will be a multiple of 8.
+          This means that the sum is congruent to 2 modulo 8.
+          For example, <m>2 - 2 = 0</m>,
+          <m>18 - 2 = 16</m>, <m>34 - 2 = 32</m>.
+        </p>
+      </li>
+    </ol>
+  </subsection>
+  <subsection>
+    <title>Progress <xref ref="pr_congruence2">Check</xref></title>
+    <ol>
+      <li>
+        <p>
+          To prove that 8 divides <m>(a + b - 2)</m>,
+          we can prove that there exists an integer <m>q</m> such that <m>(a + b - 2) = 8q</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Since 8 divides <m>(a - 5)</m> and <m>(b - 5)</m>,
+          there exist integers <m>k</m> and <m>m</m> such that
+          <m>a - 5 = 8k</m> and <m>b - 5 = 8m</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <m>a = 5 + 8k</m> and <m>b = 5 + 8m</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <m>a + b - 2 = (5 + 8k) + (5 + 8m) - 2 = 8 + 8k + 8m = 8(1 + k + m)</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <proof>
+            <p>
+              Let <m>a</m> and <m>b</m> be integers and assume that
+              <m>\mod{a}{5}{8}</m> and <m>\mod{b}{5}{8}</m>.
+              We will prove that <m>\mod{(a + b)}{2}{8}</m>.
+              Since 8 divides <m>(a - 5)</m> and <m>(b - 5)</m>,
+              there exist integers <m>k</m> and <m>m</m> such that
+              <m>a - 5 = 8k</m> and <m>b - 5 = 8m</m>.
+              We then see that
+              <md>
+                <mrow>a + b - 2 \amp = (5 + 8k) + (5 + 8m) - 2</mrow>
+                <mrow>\amp = 8 + 8k + 8m</mrow>
+                <mrow>\amp = 8(1 + k + m)</mrow>
+              </md>
+            </p>
+            <p>
+              By the closure properties of the integers,
+              <m>(1 + k + m)</m> is an integer and so the last equation proves that 8 divides <m>(a + b - 2)</m> and hence,
+              <m>\mod{(a + b)}{2}{8}</m>.
+              This proves that if <m>\mod{a}{5}{8}</m> and <m>\mod{b}{5}{8}</m>,
+              then <m>\mod{(a + b)}{2}{8}</m>.
+            </p>
+          </proof>
+        </p>
+      </li>
+    </ol>
+  </subsection>
+</section>

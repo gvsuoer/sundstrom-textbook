@@ -40,13 +40,13 @@
               we need to prove that for each integer <m>x</m>,
               if <m>x \in S</m>, then <m>x \in T</m>.
               Complete the know-show<nbsp/>table in <xref ref="table_preview42">Table</xref>
-              for the proposition that  <m>S</m>  is a subset of   <m>T</m>.
+              for the proposition that <m>S</m> is a subset of <m>T</m>.
               This table is in the form of a proof method called the
               <em>choose-an-element method.</em>
                 <idx><h>choose-an-element method</h></idx>
             This method is frequently used when we encounter a universal quantifier in a statement in the backward process.
               (In this case, this is Step <m>Q1</m>.)
-              The key is that we have to prove something about all elements in  <m>\Z</m>.
+              The key is that we have to prove something about all elements in <m>\Z</m>.
               We can then add something to the forward process by choosing an arbitrary element from the set <m>S</m>.
               (This is done in Step <m>P1</m>.)
               This does not mean that we can choose a specific element of <m>S</m>.
@@ -54,44 +54,75 @@
               In this case, the element is a multiple of 6.
               <table xml:id="table_preview42">
                 <title>Know-show table for \typeu <xref ref="PA_working2sets">Activity</xref></title>
-                <me>
-                  <tabular>
-                    <row>
-                      <cell>_ | <em>Step</em>  |  <em>Know</em>  |  <em>Reason</em>  |</cell>
-                    </row>
-                    <row>
-                      <cell>+02 _ |  \(P\)     |  \(S\)  is the set of all integers that are multiples of 6. \(T\) is the set of all even integers.  |  Hypothesis |</cell>
-                    </row>
-                    <row>
-                      <cell>_1 |  \(P1\)    |  Let  \(x \in S\).         | Choose an arbitrary element of  \(S\).  |</cell>
-                    </row>
-                    <row>
-                      <cell>_1 |  \(P2\)    | \(\left( {\exists m \in \mathbb{Z}} \right)\left( {x = 6m} \right)\) | Definition of
-                        <q>multiple</q>
-                        |</cell>
-                    </row>
-                    <row>
-                      <cell>_1 |  \vdots  |  \vdots  |  \vdots |</cell>
-                    </row>
-                    <row>
-                      <cell>_1 |  \(Q2\)    |  \(x\)   is an element of  \(T\). |  \(x\) is even |</cell>
-                    </row>
-                    <row>
-                      <cell>_1 |  \(Q1\)    |  \(\left( \forall x \in \Z \right) \left[ \left( x \in S \right) \to \left( x \in T \right) \right]\) |  Step  \(P1\)  and Step \(Q2\)            |</cell>
-                    </row>
-                    <row>
-                      <cell>_1 |  \(Q\)     |  \(S \subseteq T\). |  Definition of
-                        <q>subset</q>
-                        |</cell>
-                    </row>
-                    <row>
-                      <cell>_ |  <em>Step</em>  |  <em>Show</em>  |  <em>Reason</em>     |</cell>
-                    </row>
-                    <row>
-                      <cell>+20 _</cell>
-                    </row>
-                  </tabular>
-                </me>
+                <tabular>
+                  <row>
+                    <cell></cell>
+                    <cell><em>Step</em></cell>
+                    <cell><em>Know</em></cell>
+                    <cell><em>Reason</em></cell>
+                    <cell></cell>
+                  </row>
+                  <row>
+                    <cell></cell>
+                    <cell><m>P</m></cell>
+                    <cell><m>S</m> is the set of all integers that are multiples of 6. <m>T</m> is the set of all even integers.</cell>
+                    <cell>Hypothesis</cell>
+                    <cell></cell>
+                  </row>
+                  <row>
+                    <cell></cell>
+                    <cell><m>P1</m></cell>
+                    <cell>Let <m>x \in S</m>.</cell>
+                    <cell>Choose an arbitrary element of <m>S</m>.</cell>
+                    <cell></cell>
+                  </row>
+                  <row>
+                    <cell></cell>
+                    <cell><m>P2</m></cell>
+                    <cell><m>\left( {\exists m \in \mathbb{Z}} \right)\left( {x = 6m} \right)</m></cell>
+                    <cell>Definition of
+                      <q>multiple</q>
+                    </cell>
+                    <cell></cell>
+                  </row>
+                  <row>
+                    <cell></cell>
+                    <cell>\vdots</cell>
+                    <cell>\vdots</cell>
+                    <cell>\vdots</cell>
+                    <cell></cell>
+                  </row>
+                  <row>
+                    <cell></cell>
+                    <cell><m>Q2</m></cell>
+                    <cell><m>x</m> is an element of <m>T</m>.</cell>
+                    <cell><m>x</m> is even</cell>
+                    <cell></cell>
+                  </row>
+                  <row>
+                    <cell></cell>
+                    <cell><m>Q1</m></cell>
+                    <cell><m>\left( \forall x \in \Z \right) \left[ \left( x \in S \right) \to \left( x \in T \right) \right]</m></cell>
+                    <cell>Step <m>P1</m> and Step <m>Q2</m></cell>
+                    <cell></cell>
+                  </row>
+                  <row>
+                    <cell></cell>
+                    <cell><m>Q</m></cell>
+                    <cell><m>S \subseteq T</m>.</cell>
+                    <cell>Definition of
+                      <q>subset</q>
+                    </cell>
+                    <cell></cell>
+                  </row>
+                  <row>
+                    <cell></cell>
+                    <cell><em>Step</em></cell>
+                    <cell><em>Show</em></cell>
+                    <cell><em>Reason</em></cell>
+                    <cell></cell>
+                  </row>
+                </tabular>
               </table>
             </p>
           </li>
@@ -306,41 +337,68 @@
         <li>
           <p>
             Complete the following know-show table for this proposition and explain exactly where the choose-an-element method is used.
-            <me>
-              <tabular>
-                <row>
-                  <cell>_ | <em>Step</em>  |  <em>Know</em>  |  <em>Reason</em>   |</cell>
-                </row>
-                <row>
-                  <cell>+02 _ | \(P\)     |  \(A \subseteq B\)    |  Hypothesis  |</cell>
-                </row>
-                <row>
-                  <cell>_1 | \(P1\)    |   Let  \(x \in B^c \).        |  Choose an arbitrary element of  \(B^c\). |</cell>
-                </row>
-                <row>
-                  <cell>_1 | \(P2\)  |  If  \(x \in A\), then  \(x \in B\).  |  Definition of
-                    <q>subset</q>
-                    |</cell>
-                </row>
-                <row>
-                  <cell>_1 | \C \(\vdots\)  |  \C \(\vdots\)                         | \C \(\vdots\)     |</cell>
-                </row>
-                <row>
-                  <cell>_1 | \(Q1\)    |   If \(x \in B^c\), then \(x \in A^c \).   |     |</cell>
-                </row>
-                <row>
-                  <cell>_1 | \(Q\)     |  \(B^c \subseteq A^c\)                     |  Definition of
-                    <q>subset</q>
-                    |</cell>
-                </row>
-                <row>
-                  <cell>_ | <em>Step</em>  |  <em>Show</em>  |  <em>Reason</em> |</cell>
-                </row>
-                <row>
-                  <cell>_</cell>
-                </row>
-              </tabular>
-            </me>
+            <tabular>
+              <row>
+                <cell></cell>
+                <cell><em>Step</em></cell>
+                <cell><em>Know</em></cell>
+                <cell><em>Reason</em></cell>
+                <cell></cell>
+              </row>
+              <row>
+                <cell></cell>
+                <cell><m>P</m></cell>
+                <cell><m>A \subseteq B</m></cell>
+                <cell>Hypothesis</cell>
+                <cell></cell>
+              </row>
+              <row>
+                <cell></cell>
+                <cell><m>P1</m></cell>
+                <cell>Let <m>x \in B^c</m>.</cell>
+                <cell>Choose an arbitrary element of <m>B^c</m>.</cell>
+                <cell></cell>
+              </row>
+              <row>
+                <cell></cell>
+                <cell><m>P2</m></cell>
+                <cell>If <m>x \in A</m>, then <m>x \in B</m>.</cell>
+                <cell>Definition of
+                  <q>subset</q>
+                </cell>
+                <cell></cell>
+              </row>
+              <row>
+                <cell></cell>
+                <cell>\C <m>\vdots</m></cell>
+                <cell>\C <m>\vdots</m></cell>
+                <cell>\C <m>\vdots</m></cell>
+                <cell></cell>
+              </row>
+              <row>
+                <cell></cell>
+                <cell><m>Q1</m></cell>
+                <cell>If <m>x \in B^c</m>, then <m>x \in A^c</m>.</cell>
+                <cell></cell>
+                <cell></cell>
+              </row>
+              <row>
+                <cell></cell>
+                <cell><m>Q</m></cell>
+                <cell><m>B^c \subseteq A^c</m></cell>
+                <cell>Definition of
+                  <q>subset</q>
+                </cell>
+                <cell></cell>
+              </row>
+              <row>
+                <cell></cell>
+                <cell><em>Step</em></cell>
+                <cell><em>Show</em></cell>
+                <cell><em>Reason</em></cell>
+                <cell></cell>
+              </row>
+            </tabular>
           </p>
         </li>
       </ol>

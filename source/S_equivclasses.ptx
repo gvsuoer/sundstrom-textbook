@@ -260,20 +260,19 @@
       we can divide that rectangle into three smaller rectangles,
       corresponding to <m>C[ 0 ]</m>, <m>C[ 1 ]</m>,
       and <m>C[ 2 ]</m>, and we might picture this situation as follows:
-      <me>
-        <tabular>
-          <row>
-            <cell>" \use3 \JustCenter <em>The Integers</em> "</cell>
-          </row>
-          <row>
-            <cell>+02 _ |\(C[ 0 ]\) consisting of all integers with a remainder of 0 when divided by 3 | \(C[ 1 ]\) consisting of all integers with a remainder of 1 when divided by 3 | \(C[ 2 ]\) consisting of all integers with a remainder of 2 when divided by 3 |</cell>
-          </row>
-          <row>
-            <cell>+33 _</cell>
-          </row>
-        </tabular>
-      </me>
     </p>
+    <tabular>
+      <row>
+        <cell>" \use3 \JustCenter <em>The Integers</em> "</cell>
+      </row>
+      <row>
+        <cell></cell>
+        <cell><m>C[ 0 ]</m> consisting of all integers with a remainder of 0 when divided by 3</cell>
+        <cell><m>C[ 1 ]</m> consisting of all integers with a remainder of 1 when divided by 3</cell>
+        <cell><m>C[ 2 ]</m> consisting of all integers with a remainder of 2 when divided by 3</cell>
+        <cell></cell>
+      </row>
+    </tabular>
     <p>
       Each integer is in exactly one of the three sets <m>C[ 0 ]</m>,
       <m>C[ 1 ]</m>, or <m>C[ 2 ]</m>,
@@ -530,29 +529,37 @@
       Consequences of these properties will be explored in the exercises.
       The following table restates the properties in <xref ref="T_propsofequivclasses">Theorem</xref>
       and gives a verbal description of each one.
-      <me>
-        <tabular>
-          <row>
-            <cell>_ | Formal Statement from</cell>
-          </row>
-          <row>
-            <cell>Theorem\  <xref ref="T_propsofequivclasses"></xref> | <em>Verbal Description</em> |</cell>
-          </row>
-          <row>
-            <cell>+22 _ | For each  \(a \in A\), \(a \in [a]\).  | Every element of \(A\) is in its own equivalence class. |</cell>
-          </row>
-          <row>
-            <cell>+24 _ | For each  \(a, b \in A\), \(a \sim b\)  if and only if \([ a ] = [ b ]\). | Two elements of \(A\) are equivalent if and only if their equivalence classes are equal. |</cell>
-          </row>
-          <row>
-            <cell>+24 _ | For each  \(a, b \in A\),   \([ a ] = [ b ]\)  or \([ a ] \cap [ b ] = \emptyset \). | Any two equivalence classes are either equal or they are disjoint.  This means that if two equivalence classes are not disjoint then they must be equal. |</cell>
-          </row>
-          <row>
-            <cell>+24 _</cell>
-          </row>
-        </tabular>
-      </me>
     </p>
+    <tabular>
+      <row>
+        <cell></cell>
+        <cell>Formal Statement from</cell>
+      </row>
+      <row>
+        <cell>Theorem<nbsp/> <xref ref="T_propsofequivclasses"></xref></cell>
+        <cell><em>Verbal Description</em></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell></cell>
+        <cell>For each  <m>a \in A</m>, <m>a \in [a]</m>.</cell>
+        <cell>Every element of <m>A</m> is in its own equivalence class.</cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell></cell>
+        <cell>For each  <m>a, b \in A</m>, <m>a \sim b</m>  if and only if
+          <m>[ a ] = [ b ]</m>.</cell>
+        <cell>Two elements of <m>A</m> are equivalent if and only if their equivalence classes are equal.</cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell></cell>
+        <cell>For each  <m>a, b \in A</m>,   <m>[ a ] = [ b ]</m>  or <m>[ a ] \cap [ b ] = \emptyset</m>.</cell>
+        <cell>Any two equivalence classes are either equal or they are disjoint.  This means that if two equivalence classes are not disjoint then they must be equal.</cell>
+        <cell></cell>
+      </row>
+    </tabular>
     <investigation xml:id="prog_equivclass">
       <title><em>Equivalence Classes</em></title>
       <p>
@@ -780,17 +787,15 @@
           Let <m>A = \left\{ a, b, c, d, e, f \right\}</m>,
           and assume that <m>\sim</m> is an equivalence relation on <m>A</m>.
           Also assume that it is known that
-          <me>
-            <tabular>
-              <row>
-                <cell>" \(a \sim b\)  "  \(a \not \sim c\)  "  \(e \sim f\) "</cell>
-              </row>
-              <row>
-                <cell>" \(a \sim d\)  "  \(a \not \sim f\)  "  \(e \not \sim c\). "</cell>
-              </row>
-            </tabular>
-          </me>
-          Draw a complete directed graph for the equivalence relation  <m>\sim</m>  on the set <m>A</m>,
+          <tabular>
+            <row>
+              <cell>" <m>a \sim b</m> " <m>a \not \sim c</m> " <m>e \sim f</m> "</cell>
+            </row>
+            <row>
+              <cell>" <m>a \sim d</m> " <m>a \not \sim f</m> " <m>e \not \sim c</m>. "</cell>
+            </row>
+          </tabular>
+          Draw a complete directed graph for the equivalence relation <m>\sim</m> on the set <m>A</m>,
           and then determine all of the equivalence classes for this equivalence relation.
         </p>
       </li>

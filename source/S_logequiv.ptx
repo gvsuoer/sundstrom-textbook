@@ -173,6 +173,7 @@
               </li>
             </ul>
           </p>
+          \end{tabular}
         </li>
       </ol>
     </exploration>
@@ -213,30 +214,63 @@
     </p>
     <table xml:id="Ta_Demorgan">
       <title>Truth Table for One of De Morgan's Laws</title>
-      <me>
-        <tabular>
-          <row>
-            <cell>_6
-              |   \(P\) | \(Q\) \|6 \(P \vee Q\)  |  \(\mynot  \left( {P \vee Q} \right)\)  |  \(\mynot  P\)  |  \(\mynot  Q   \)  |  \(\mynot  P \wedge \mynot  Q\) |</cell>
-          </row>
-          <row>
-            <cell>+22 _6
-              |    T  |  T  \|6 T  |  F  |  F  |  F  |  F |</cell>
-          </row>
-          <row>
-            <cell>|    T  |  F  \|6 T  |  F  |  F  |  T  |  F |</cell>
-          </row>
-          <row>
-            <cell>|    F  |  T  \|6 T  |  F  |  T  |  F  |  F |</cell>
-          </row>
-          <row>
-            <cell>|    F  |  F  \|6 F  |  T  |  T  |  T  |  T |</cell>
-          </row>
-          <row>
-            <cell>_6</cell>
-          </row>
-        </tabular>
-      </me>
+      <tabular>
+        <row>
+          <cell></cell>
+          <cell><m>P</m></cell>
+          <cell><m>Q</m></cell>
+          <cell><m>P \vee Q</m></cell>
+          <cell><m>\mynot  \left( {P \vee Q} \right)</m></cell>
+          <cell><m>\mynot  P</m></cell>
+          <cell><m>\mynot  Q</m></cell>
+          <cell><m>\mynot  P \wedge \mynot  Q</m></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell>T</cell>
+          <cell>T</cell>
+          <cell>T</cell>
+          <cell>F</cell>
+          <cell>F</cell>
+          <cell>F</cell>
+          <cell>F</cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell>T</cell>
+          <cell>F</cell>
+          <cell>T</cell>
+          <cell>F</cell>
+          <cell>F</cell>
+          <cell>T</cell>
+          <cell>F</cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell>F</cell>
+          <cell>T</cell>
+          <cell>T</cell>
+          <cell>F</cell>
+          <cell>T</cell>
+          <cell>F</cell>
+          <cell>F</cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell>F</cell>
+          <cell>F</cell>
+          <cell>F</cell>
+          <cell>T</cell>
+          <cell>T</cell>
+          <cell>T</cell>
+          <cell>T</cell>
+          <cell></cell>
+        </row>
+      </tabular>
     </table>
     <p>
       It is possible to develop and state several different logical equivalencies at this time.
@@ -275,6 +309,9 @@
         </p>
       </statement>
     </theorem>
+    <p>
+      \end{tabular}
+    </p>
   </subsection>
   <subsection>
     <title>The Negation of a Conditional Statement</title>
@@ -361,7 +398,7 @@
       <p>
         In <xref ref="S_logop">Section</xref>,
         we constructed a truth table for <m>\left( {P \wedge \mynot  Q} \right) \to R</m>.
-        See <xref ref="Ta_compoundtruthtable">page</xref>.
+        See <xref ref="Ta_compoundtruthtable">page</xref>. \end{tabular}
         <ol>
           <li>
             <p>
@@ -427,44 +464,45 @@
     </p>
     <p>
       For statements <m>P</m>, <m>Q</m>, and <m>R</m>,
-      <me>
-        <tabular>
-          <row>
-            <cell>" <em>De Morgan's Laws</em>   "  \(\mynot  \left( {P \wedge Q} \right) \equiv \;\mynot  P \vee \mynot  Q\) "</cell>
-          </row>
-          <row>
-            <cell>"                       " \(\mynot  \left( {P \vee Q} \right) \equiv \;\mynot  P \wedge \mynot  Q\) "</cell>
-          </row>
-          <row>
-            <cell>+02 <idx><h>De Morgan's Laws</h><h>for statements</h></idx>  " <em>Conditional Statements</em> "  \(P \to Q \equiv \;\mynot  Q \to \mynot  P\)  (contrapositive) "</cell>
-          </row>
-          <row>
-            <cell>"   "  \(P \to Q \equiv \;\mynot  P \vee Q\) "</cell>
-          </row>
-          <row>
-            <cell>"   "  \(\mynot  \left( {P \to Q} \right) \equiv P \wedge \mynot  Q\) "</cell>
-          </row>
-          <row>
-            <cell>+02  " <em>Biconditional Statement</em> " \(\left( {P \leftrightarrow Q} \right) \equiv \left( {P \to Q} \right) \wedge \left( {Q \to P} \right)\) "</cell>
-          </row>
-          <row>
-            <cell>+02  " <em>Double Negation</em> "  \(\mynot  \left( {\mynot  P} \right) \equiv P\)</cell>
-          </row>
-          <row>
-            <cell>+02  " <em>Distributive Laws</em> " \(P \vee \left( {Q \wedge R} \right) \equiv \left( {P \vee Q} \right) \wedge \left( {P \vee R} \right)\)  "</cell>
-          </row>
-          <row>
-            <cell>"   "  \(P \wedge \left( {Q \vee R} \right) \equiv \left( {P \wedge Q} \right) \vee \left( {P \wedge R} \right)\) "</cell>
-          </row>
-          <row>
-            <cell>+02  " <em>Conditionals with</em>  " \(P \to \left( {Q \vee R} \right) \equiv \left( {P \wedge \mynot  Q} \right) \to R\) "</cell>
-          </row>
-          <row>
-            <cell>" <em>Disjunctions</em>    "  \(\left( {P \vee Q} \right) \to R\; \equiv \;\left( {P \to R} \right) \wedge \left( {Q \to R} \right)\) "</cell>
-          </row>
-        </tabular>
-      </me>
     </p>
+    <tabular>
+      <row>
+        <cell>" <em>De Morgan's Laws</em>   "  <m>\mynot  \left( {P \wedge Q} \right) \equiv \;\mynot  P \vee \mynot  Q</m> "</cell>
+      </row>
+      <row>
+        <cell>"                       " <m>\mynot  \left( {P \vee Q} \right) \equiv \;\mynot  P \wedge \mynot  Q</m> "</cell>
+      </row>
+      <row>
+        <cell><idx><h>De Morgan's Laws</h><h>for statements</h></idx>
+          " <em>Conditional Statements</em> "  <m>P \to Q \equiv \;\mynot  Q \to \mynot  P</m>  (contrapositive) "</cell>
+      </row>
+      <row>
+        <cell>"   "  <m>P \to Q \equiv \;\mynot  P \vee Q</m> "</cell>
+      </row>
+      <row>
+        <cell>"   "  <m>\mynot  \left( {P \to Q} \right) \equiv P \wedge \mynot  Q</m> "</cell>
+      </row>
+      <row>
+        <cell>" <em>Biconditional Statement</em> "
+          <m>\left( {P \leftrightarrow Q} \right) \equiv \left( {P \to Q} \right) \wedge \left( {Q \to P} \right)</m> "</cell>
+      </row>
+      <row>
+        <cell>" <em>Double Negation</em> "  <m>\mynot  \left( {\mynot  P} \right) \equiv P</m></cell>
+      </row>
+      <row>
+        <cell>" <em>Distributive Laws</em> "
+          <m>P \vee \left( {Q \wedge R} \right) \equiv \left( {P \vee Q} \right) \wedge \left( {P \vee R} \right)</m>  "</cell>
+      </row>
+      <row>
+        <cell>"   "  <m>P \wedge \left( {Q \vee R} \right) \equiv \left( {P \wedge Q} \right) \vee \left( {P \wedge R} \right)</m> "</cell>
+      </row>
+      <row>
+        <cell>" <em>Conditionals with</em>  " <m>P \to \left( {Q \vee R} \right) \equiv \left( {P \wedge \mynot  Q} \right) \to R</m> "</cell>
+      </row>
+      <row>
+        <cell>" <em>Disjunctions</em>    "  <m>\left( {P \vee Q} \right) \to R\; \equiv \;\left( {P \to R} \right) \wedge \left( {Q \to R} \right)</m> "</cell>
+      </row>
+    </tabular>
     <p>
           <idx><h>distributive laws</h><h>for statements</h></idx>\end{nametheorem}
     </p>

@@ -56,29 +56,33 @@
       </p>
       <table xml:id="T_quantifiers">
         <title>Properties of Quantifiers</title>
-        <me>
-          <tabular>
-            <row>
-              <cell>_
-                | <em>A statement involving </em>  |  <em>Often has the form</em>  |  <em>The statement is true provided that</em> |</cell>
-            </row>
-            <row>
-              <cell>+22 _
-                | A universal quantifier: \(\left( \forall x, P(x) \right)\)  |
-                <q>For every \(x\), \(P(x)\),</q>
-                where \(P(x)\) is a predicate.  |  Every value of \(x\) in the universal set makes \(P(x)\) true. |</cell>
-            </row>
-            <row>
-              <cell>_
-                | An existential quantifier: \(\left( \exists x, P(x) \right)\)     |
-                <q>There exists an \(x\) such that \(P(x)\),</q>
-                where \(P(x)\) is a predicate.                              |   There is at least one value of \(x\) in the universal set that makes \(P(x)\) true.   |</cell>
-            </row>
-            <row>
-              <cell>_</cell>
-            </row>
-          </tabular>
-        </me>
+        <tabular>
+          <row>
+            <cell></cell>
+            <cell><em>A statement involving </em></cell>
+            <cell><em>Often has the form</em></cell>
+            <cell><em>The statement is true provided that</em></cell>
+            <cell></cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell>A universal quantifier: <m>\left( \forall x, P(x) \right)</m></cell>
+            <cell>
+              <q>For every <m>x</m>, <m>P(x)</m>,</q>
+              where <m>P(x)</m> is a predicate.</cell>
+            <cell>Every value of <m>x</m> in the universal set makes <m>P(x)</m> true.</cell>
+            <cell></cell>
+          </row>
+          <row>
+            <cell></cell>
+            <cell>An existential quantifier: <m>\left( \exists x, P(x) \right)</m></cell>
+            <cell>
+              <q>There exists an <m>x</m> such that <m>P(x)</m>,</q>
+              where <m>P(x)</m> is a predicate.</cell>
+            <cell>There is at least one value of <m>x</m> in the universal set that makes <m>P(x)</m> true.</cell>
+            <cell></cell>
+          </row>
+        </tabular>
       </table>
       <p>
         In effect, the table indicates that the universally quantified statement is true provided that the truth set of the predicate equals the universal set,
@@ -739,23 +743,30 @@
     </p>
     <p>
       The results are summarized in the following table.
-      <me>
-        <tabular>
-          <row>
-            <cell>_ |             |  <em>Symbolic Form</em>  |  <em>English Form</em> |</cell>
-          </row>
-          <row>
-            <cell>+22 _ |  \Lower{Statement}  |  \Lower{\(\left( {\exists x \in \mathbb{Z}} \right)\left( {\forall y \in \mathbb{Z}} \right)\left( {x + y = 0} \right)\)}  |  There exists an integer  \(x\)  such that for each integer   \(y\), \(x + y = 0\). |</cell>
-          </row>
-          <row>
-            <cell>_1 |  \Lower{Negation}   |  \Lower{\(\left( {\forall x \in \mathbb{Z}} \right)\left( {\exists y \in \mathbb{Z}} \right)\left( {x + y \ne 0} \right)\)}  |  For each integer  \(x\), there exists an integer  \(y\)  such that  \(x + y \ne 0\). |</cell>
-          </row>
-          <row>
-            <cell>_</cell>
-          </row>
-        </tabular>
-      </me>
     </p>
+    <tabular>
+      <row>
+        <cell></cell>
+        <cell></cell>
+        <cell><em>Symbolic Form</em></cell>
+        <cell><em>English Form</em></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell></cell>
+        <cell>\Lower{Statement}</cell>
+        <cell>\Lower{<m>\left( {\exists x \in \mathbb{Z}} \right)\left( {\forall y \in \mathbb{Z}} \right)\left( {x + y = 0} \right)</m>}</cell>
+        <cell>There exists an integer  <m>x</m>  such that for each integer   <m>y</m>, <m>x + y = 0</m>.</cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell></cell>
+        <cell>\Lower{Negation}</cell>
+        <cell>\Lower{<m>\left( {\forall x \in \mathbb{Z}} \right)\left( {\exists y \in \mathbb{Z}} \right)\left( {x + y \ne 0} \right)</m>}</cell>
+        <cell>For each integer  <m>x</m>, there exists an integer  <m>y</m>  such that  <m>x + y \ne 0</m>.</cell>
+        <cell></cell>
+      </row>
+    </tabular>
     <p>
       Since the given statement is false, its negation is true.
     </p>
@@ -763,23 +774,30 @@
       We can construct a similar table for each of the four statements.
       The next table shows Statement<nbsp/><xref ref="twoquantifiers2"/>, which is true,
       and its negation, which is false.
-      <me>
-        <tabular>
-          <row>
-            <cell>_ |            |  <em>Symbolic Form</em>  |  <em>English Form</em>  |</cell>
-          </row>
-          <row>
-            <cell>+22 _ | \Lower{Statement}  |  \Lower{\(\left( {\forall x \in \mathbb{Z}} \right)\left( {\exists y \in \mathbb{Z}} \right)\left( {x + y = 0} \right)\)}  |  For every integer  \(x\), there exists an integer  \(y\)  such that \(x + y = 0\). |</cell>
-          </row>
-          <row>
-            <cell>_1 | \Lower{Negation}   |  \Lower{\(\left( {\exists x \in \mathbb{Z}} \right)\left( {\forall y \in \mathbb{Z}} \right)\left( {x + y \ne 0} \right)\)}  |  There exists an integer  \(x\)  such that for every integer  \(y\),  \(x + y \ne 0\). |</cell>
-          </row>
-          <row>
-            <cell>_</cell>
-          </row>
-        </tabular>
-      </me>
     </p>
+    <tabular>
+      <row>
+        <cell></cell>
+        <cell></cell>
+        <cell><em>Symbolic Form</em></cell>
+        <cell><em>English Form</em></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell></cell>
+        <cell>\Lower{Statement}</cell>
+        <cell>\Lower{<m>\left( {\forall x \in \mathbb{Z}} \right)\left( {\exists y \in \mathbb{Z}} \right)\left( {x + y = 0} \right)</m>}</cell>
+        <cell>For every integer  <m>x</m>, there exists an integer  <m>y</m>  such that <m>x + y = 0</m>.</cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell></cell>
+        <cell>\Lower{Negation}</cell>
+        <cell>\Lower{<m>\left( {\exists x \in \mathbb{Z}} \right)\left( {\forall y \in \mathbb{Z}} \right)\left( {x + y \ne 0} \right)</m>}</cell>
+        <cell>There exists an integer  <m>x</m>  such that for every integer  <m>y</m>,  <m>x + y \ne 0</m>.</cell>
+        <cell></cell>
+      </row>
+    </tabular>
     <investigation xml:id="pr_twoquant">
       <title><em>Negating a Statement with Two Quantifiers</em></title>
       <p>

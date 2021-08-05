@@ -240,29 +240,68 @@
     </p>
     <table xml:id="T_fibonacci">
       <title>Fibonacci Numbers</title>
-      <me>
-        <tabular>
-          <row>
-            <cell>_
-              | Months | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |</cell>
-          </row>
-          <row>
-            <cell>_
-              | Adult Pairs | 1 | 1 | 2 | 3 | 5 | 8 | 13 | 21 | 34 | 55 |</cell>
-          </row>
-          <row>
-            <cell>_1
-              | Newborn Pairs | 1 | 1 | 2 | 3 | 5 | 8 | 13 | 21 | 34 | 55 |</cell>
-          </row>
-          <row>
-            <cell>_1
-              | Month-Old Pairs | 0 | 1 | 1 | 2 | 3 | 5 | 8 | 13 | 21 | 34 |</cell>
-          </row>
-          <row>
-            <cell>_</cell>
-          </row>
-        </tabular>
-      </me>
+      <tabular>
+        <row>
+          <cell></cell>
+          <cell>Months</cell>
+          <cell>1</cell>
+          <cell>2</cell>
+          <cell>3</cell>
+          <cell>4</cell>
+          <cell>5</cell>
+          <cell>6</cell>
+          <cell>7</cell>
+          <cell>8</cell>
+          <cell>9</cell>
+          <cell>10</cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell>Adult Pairs</cell>
+          <cell>1</cell>
+          <cell>1</cell>
+          <cell>2</cell>
+          <cell>3</cell>
+          <cell>5</cell>
+          <cell>8</cell>
+          <cell>13</cell>
+          <cell>21</cell>
+          <cell>34</cell>
+          <cell>55</cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell>Newborn Pairs</cell>
+          <cell>1</cell>
+          <cell>1</cell>
+          <cell>2</cell>
+          <cell>3</cell>
+          <cell>5</cell>
+          <cell>8</cell>
+          <cell>13</cell>
+          <cell>21</cell>
+          <cell>34</cell>
+          <cell>55</cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell>Month-Old Pairs</cell>
+          <cell>0</cell>
+          <cell>1</cell>
+          <cell>1</cell>
+          <cell>2</cell>
+          <cell>3</cell>
+          <cell>5</cell>
+          <cell>8</cell>
+          <cell>13</cell>
+          <cell>21</cell>
+          <cell>34</cell>
+          <cell></cell>
+        </row>
+      </tabular>
     </table>
     <p>
       Historically,
@@ -341,39 +380,62 @@
     </p>
     <p>
       So let's analyze this conditional statement using a know-show table.
-      <me>
-        <tabular>
-          <row>
-            <cell>_ | <em>Step</em>  |  <em>Know</em>  |  <em>Reason</em>   |</cell>
-          </row>
-          <row>
-            <cell>+02 _ | \(P\)     |  \(f_{3k} \)  is even.     |  Inductive hypothesis |</cell>
-          </row>
-          <row>
-            <cell>_1 | \(P1\)    |   \(\left( {\exists m \in \mathbb{N}} \right)\left( {f_{3k}  = 2m} \right)\)                              |  Definition of
-              <q>even integer</q>
-              |</cell>
-          </row>
-          <row>
-            <cell>_1 | \C \(\vdots\)  |  \C \(\vdots\)                         | \C \(\vdots\)     |</cell>
-          </row>
-          <row>
-            <cell>_1 | \(Q1\)    |  \(\left( {\exists q \in \mathbb{N}} \right)\left( {f_{3\left( {k + 1} \right)}  = 2q} \right)\)                                 |           |</cell>
-          </row>
-          <row>
-            <cell>_1 | \(Q\)     |  \(f_{3\left( {k + 1} \right)} \) is even.   |   Definition of
-              <q>even integer</q>
-              |</cell>
-          </row>
-          <row>
-            <cell>_ | <em>Step</em>  |  <em>Show</em>  |  <em>Reason</em>    |</cell>
-          </row>
-          <row>
-            <cell>+20 _</cell>
-          </row>
-        </tabular>
-      </me>
     </p>
+    <tabular>
+      <row>
+        <cell></cell>
+        <cell><em>Step</em></cell>
+        <cell><em>Know</em></cell>
+        <cell><em>Reason</em></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell></cell>
+        <cell><m>P</m></cell>
+        <cell><m>f_{3k}</m>  is even.</cell>
+        <cell>Inductive hypothesis</cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell></cell>
+        <cell><m>P1</m></cell>
+        <cell><m>\left( {\exists m \in \mathbb{N}} \right)\left( {f_{3k}  = 2m} \right)</m></cell>
+        <cell>Definition of
+          <q>even integer</q>
+        </cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell></cell>
+        <cell>\C <m>\vdots</m></cell>
+        <cell>\C <m>\vdots</m></cell>
+        <cell>\C <m>\vdots</m></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell></cell>
+        <cell><m>Q1</m></cell>
+        <cell><m>\left( {\exists q \in \mathbb{N}} \right)\left( {f_{3\left( {k + 1} \right)}  = 2q} \right)</m></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell></cell>
+        <cell><m>Q</m></cell>
+        <cell><m>f_{3\left( {k + 1} \right)}</m> is even.</cell>
+        <cell>Definition of
+          <q>even integer</q>
+        </cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell></cell>
+        <cell><em>Step</em></cell>
+        <cell><em>Show</em></cell>
+        <cell><em>Reason</em></cell>
+        <cell></cell>
+      </row>
+    </tabular>
     <p>
       The key question now is,
       <q>Is there any relation between

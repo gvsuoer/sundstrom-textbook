@@ -118,10 +118,10 @@
         \eighth
       </p>
       <p>
-        <term>Conjecture:</term> <term>Let <m>a</m>, <m>b</m>,
+        <em>Conjecture:</em> <em>Let <m>a</m>, <m>b</m>,
         and <m>c</m> be integers with <m>a \ne 0</m> and <m>b \ne 0</m>.
         If <m>a</m> divides <m>b</m> and <m>b</m> divides <m>c</m>,
-        then <m>a</m> divides <m>c</m>.</term>
+        then <m>a</m> divides <m>c</m>.</em>
         <ol>
           <li>
             <p>
@@ -433,10 +433,10 @@
       when we used examples to provide evidence that the following conjecture is true:
     </p>
     <p>
-      <term>Conjecture:</term> <term>Let <m>a</m>, <m>b</m>,
+      <em>Conjecture:</em> <em>Let <m>a</m>, <m>b</m>,
       and <m>c</m> be integers with <m>a \ne 0</m> and <m>b \ne 0</m>.
       If <m>a</m> divides <m>b</m> and <m>b</m> divides <m>c</m>,
-      then <m>a</m> divides <m>c</m>.</term>
+      then <m>a</m> divides <m>c</m>.</em>
     </p>
     <p>
       Before we try to prove a conjecture,
@@ -448,35 +448,58 @@
     </p>
     <p>
       We will now start a know-show<nbsp/>table for this conjecture.
-      <me>
-        <tabular>
-          <row>
-            <cell>_ | <em>Step</em>  |  <em>Know</em>  |  <em>Reason</em> |</cell>
-          </row>
-          <row>
-            <cell>+02 _ | \(P\)     |  \(a, b, c \in \Z\), \(a \ne 0\), \(b \ne 0\), \(a \mid b\) and  \(b \mid c\)     |  Hypothesis |</cell>
-          </row>
-          <row>
-            <cell>_1 | \(P1\)    |                                 |           |</cell>
-          </row>
-          <row>
-            <cell>_1 | \C \(\vdots\)  |  \C \(\vdots\)                         | \C \(\vdots\)   |</cell>
-          </row>
-          <row>
-            <cell>_1 | \(Q1\)    |                                 |            |</cell>
-          </row>
-          <row>
-            <cell>_1 | \(Q\)     |  \(a \mid c\)                     |            |</cell>
-          </row>
-          <row>
-            <cell>_ | <em>Step</em>  |  <em>Show</em>  |  <em>Reason</em>    |</cell>
-          </row>
-          <row>
-            <cell>+20  _</cell>
-          </row>
-        </tabular>
-      </me>
     </p>
+    <tabular>
+      <row>
+        <cell></cell>
+        <cell><em>Step</em></cell>
+        <cell><em>Know</em></cell>
+        <cell><em>Reason</em></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell></cell>
+        <cell><m>P</m></cell>
+        <cell><m>a, b, c \in \Z</m>, <m>a \ne 0</m>, <m>b \ne 0</m>, <m>a \mid b</m> and  <m>b \mid c</m></cell>
+        <cell>Hypothesis</cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell></cell>
+        <cell><m>P1</m></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell></cell>
+        <cell>\C <m>\vdots</m></cell>
+        <cell>\C <m>\vdots</m></cell>
+        <cell>\C <m>\vdots</m></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell></cell>
+        <cell><m>Q1</m></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell></cell>
+        <cell><m>Q</m></cell>
+        <cell><m>a \mid c</m></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell></cell>
+        <cell><em>Step</em></cell>
+        <cell><em>Show</em></cell>
+        <cell><em>Reason</em></cell>
+        <cell></cell>
+      </row>
+    </tabular>
     <p>
       The backward question we ask is,
       <q>How can we prove that <m>a</m> divides <m>c</m>?</q>
@@ -525,42 +548,65 @@
       (This is because <m>s \cdot t</m> is an integer by the closure property for integers.) So although we did not use the letter <m>q</m>,
       we have arrived at step <m>Q1</m>.
       The completed know-show<nbsp/>table follows.
-      <me>
-        <tabular>
-          <row>
-            <cell>_ | <em>Step</em>  |  <em>Know</em>  |  <em>Reason</em> |</cell>
-          </row>
-          <row>
-            <cell>+02 _ | \(P\)     |  \(a, b, c \in \Z\), \(a \ne 0\), \(b \ne 0\), \(a \mid b\) and  \(b \mid c\)     |  Hypothesis |</cell>
-          </row>
-          <row>
-            <cell>_1 | \(P1\)    | \(\left( {\exists s \in \mathbb{Z}} \right)\left( {b = a \cdot s} \right)\)</cell>
-          </row>
-          <row>
-            <cell>\(\left( {\exists t \in \mathbb{Z}} \right)\left( {c = b \cdot t} \right)\)   | Definition of
-              <q>divides</q>
-              |</cell>
-          </row>
-          <row>
-            <cell>_1 | \(P2\)  |  \(c = \left( {a \cdot s} \right) \cdot t\)                         | Substitution for \(b\)   |</cell>
-          </row>
-          <row>
-            <cell>_1 | \(P3\)  | \(c = a \cdot \left( {s \cdot t} \right)\) | Associative property of multiplication |</cell>
-          </row>
-          <row>
-            <cell>_1 | \(Q1\)    |  \(\left( {\exists q \in \mathbb{Z}} \right)\left( {c = a \cdot q} \right)\)                               | Step \(P3\) and the closure properties of the integers            |</cell>
-          </row>
-          <row>
-            <cell>_1 | \(Q\)     |  \(a \mid c\)                     | Definition of
-              <q>divides</q>
-              |</cell>
-          </row>
-          <row>
-            <cell>_</cell>
-          </row>
-        </tabular>
-      </me>
     </p>
+    <tabular>
+      <row>
+        <cell></cell>
+        <cell><em>Step</em></cell>
+        <cell><em>Know</em></cell>
+        <cell><em>Reason</em></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell></cell>
+        <cell><m>P</m></cell>
+        <cell><m>a, b, c \in \Z</m>, <m>a \ne 0</m>, <m>b \ne 0</m>, <m>a \mid b</m> and  <m>b \mid c</m></cell>
+        <cell>Hypothesis</cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell></cell>
+        <cell><m>P1</m></cell>
+        <cell><m>\left( {\exists s \in \mathbb{Z}} \right)\left( {b = a \cdot s} \right)</m></cell>
+      </row>
+      <row>
+        <cell><m>\left( {\exists t \in \mathbb{Z}} \right)\left( {c = b \cdot t} \right)</m></cell>
+        <cell>Definition of
+          <q>divides</q>
+        </cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell></cell>
+        <cell><m>P2</m></cell>
+        <cell><m>c = \left( {a \cdot s} \right) \cdot t</m></cell>
+        <cell>Substitution for <m>b</m></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell></cell>
+        <cell><m>P3</m></cell>
+        <cell><m>c = a \cdot \left( {s \cdot t} \right)</m></cell>
+        <cell>Associative property of multiplication</cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell></cell>
+        <cell><m>Q1</m></cell>
+        <cell><m>\left( {\exists q \in \mathbb{Z}} \right)\left( {c = a \cdot q} \right)</m></cell>
+        <cell>Step <m>P3</m> and the closure properties of the integers</cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell></cell>
+        <cell><m>Q</m></cell>
+        <cell><m>a \mid c</m></cell>
+        <cell>Definition of
+          <q>divides</q>
+        </cell>
+        <cell></cell>
+      </row>
+    </tabular>
     <p>
       Notice the similarities between what we did for this proof and many of the proofs about even and odd integers we constructed in <xref ref="S_direct">Section</xref>.
       When we try to prove that a certain object exists,
@@ -725,29 +771,44 @@
       it would be a good idea to try some examples for <m>n</m> and try to find situations in which the hypothesis of the proposition is true.
       (In fact, this should have been done before we started trying to prove the proposition.)
       The following table summarizes the results of some of these explorations with values for <m>n</m>.
-      <me>
-        <tabular>
-          <row>
-            <cell>" \(n\) | \(n^2 - 1\) | Does 5 divide \(\left( n^2 - 1 \right)\) | \(n - 1\) | Does 5 divide \((n - 1)\) "</cell>
-          </row>
-          <row>
-            <cell>_ " 1   |   0  |  yes  |  0  |  yes "</cell>
-          </row>
-          <row>
-            <cell>_ " 2   |   3  |  no   |  1  | no "</cell>
-          </row>
-          <row>
-            <cell>_ " 3   |  8  |  no  |  2 | no "</cell>
-          </row>
-          <row>
-            <cell>_ " 4  |  15  | yes |  3  | no "</cell>
-          </row>
-          <row>
-            <cell>_</cell>
-          </row>
-        </tabular>
-      </me>
     </p>
+    <tabular>
+      <row>
+        <cell>" <m>n</m></cell>
+        <cell><m>n^2 - 1</m></cell>
+        <cell>Does 5 divide <m>\left( n^2 - 1 \right)</m></cell>
+        <cell><m>n - 1</m></cell>
+        <cell>Does 5 divide <m>(n - 1)</m> "</cell>
+      </row>
+      <row>
+        <cell>" 1</cell>
+        <cell>0</cell>
+        <cell>yes</cell>
+        <cell>0</cell>
+        <cell>yes "</cell>
+      </row>
+      <row>
+        <cell>" 2</cell>
+        <cell>3</cell>
+        <cell>no</cell>
+        <cell>1</cell>
+        <cell>no "</cell>
+      </row>
+      <row>
+        <cell>" 3</cell>
+        <cell>8</cell>
+        <cell>no</cell>
+        <cell>2</cell>
+        <cell>no "</cell>
+      </row>
+      <row>
+        <cell>" 4</cell>
+        <cell>15</cell>
+        <cell>yes</cell>
+        <cell>3</cell>
+        <cell>no "</cell>
+      </row>
+    </tabular>
     <p>
       We can stop exploring examples now since the last row in the table provides an example where the hypothesis is true and the conclusion is false.
       Recall from <xref ref="S_quantifier">Section</xref>

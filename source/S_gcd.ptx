@@ -81,31 +81,50 @@
         <ol>
           <li xml:id="PA_gcdanddivalgo2">
             <p>
-              Each row in the following table contains values for the integers  <m>a</m>  and  <m>b</m>.
-              In this table, the value of  <m>r</m>  is the remainder
+              Each row in the following table contains values for the integers <m>a</m> and <m>b</m>.
+              In this table, the value of <m>r</m> is the remainder
               (from the Division Algorithm)
-              when  <m>a</m>  is divided by  <m>b</m>.
-              Complete each row in this table by determining  <m>\gcd( {a, b} )</m>,
+              when <m>a</m> is divided by <m>b</m>.
+              Complete each row in this table by determining <m>\gcd( {a, b} )</m>,
               <m>r</m>, and <m>\gcd( {b, r} )</m>.
-              <me>
-                <tabular>
-                  <row>
-                    <cell>_ |  \(a\)  |  \(b\)  |  \(\gcd(a, b)\)  |  Remainder \(r\)  |  \(\gcd(b,r)\) |</cell>
-                  </row>
-                  <row>
-                    <cell>+22 _ |  44   |  12   |                |                 |              |</cell>
-                  </row>
-                  <row>
-                    <cell>+22 _ |  75   |  21   |                |                 |              |</cell>
-                  </row>
-                  <row>
-                    <cell>+22 _ |  50   |  33   |                |                 |              |</cell>
-                  </row>
-                  <row>
-                    <cell>+22 _</cell>
-                  </row>
-                </tabular>
-              </me>
+              <tabular>
+                <row>
+                  <cell></cell>
+                  <cell><m>a</m></cell>
+                  <cell><m>b</m></cell>
+                  <cell><m>\gcd(a, b)</m></cell>
+                  <cell>Remainder <m>r</m></cell>
+                  <cell><m>\gcd(b,r)</m></cell>
+                  <cell></cell>
+                </row>
+                <row>
+                  <cell></cell>
+                  <cell>44</cell>
+                  <cell>12</cell>
+                  <cell></cell>
+                  <cell></cell>
+                  <cell></cell>
+                  <cell></cell>
+                </row>
+                <row>
+                  <cell></cell>
+                  <cell>75</cell>
+                  <cell>21</cell>
+                  <cell></cell>
+                  <cell></cell>
+                  <cell></cell>
+                  <cell></cell>
+                </row>
+                <row>
+                  <cell></cell>
+                  <cell>50</cell>
+                  <cell>33</cell>
+                  <cell></cell>
+                  <cell></cell>
+                  <cell></cell>
+                  <cell></cell>
+                </row>
+              </tabular>
             </p>
           </li>
           <li>
@@ -510,78 +529,128 @@
         and <xref ref="T_euclidalgo2"></xref>.
       </p>
       <p>
-        If <m>r_2  > 0</m>, then by <xref ref="L_gcdanddivalgo">Lemma</xref>,
+        If <m>r_2 > 0</m>, then by <xref ref="L_gcdanddivalgo">Lemma</xref>,
         <m>\gcd( {b, r_1 } ) = \gcd( {r_1 , r_2 } )</m>.
         But we have already seen that <m>\gcd( {a, b} ) = \gcd( {b, r_1 } )</m>.
         Hence, <m>\gcd( {a, b} ) = \gcd( {r_1 , r_2 } )</m>.
         We now continue to apply the Division Algorithm to produce a sequence of pairs of integers
         (all of which have the same greatest common divisor).
         This is summarized in the following table:
-        <me>
-          <tabular>
-            <row>
-              <cell>_ | <em>Original</em>  |  <em>Equation from</em>  |  <em>Inequality from</em>  |  <em>New</em> |</cell>
-            </row>
-            <row>
-              <cell>+20 | <em>Pair</em>     |  <em>Division Algorithm</em>  |  <em>Division Algorithm</em>  |  <em>Pair</em> |</cell>
-            </row>
-            <row>
-              <cell>+02 _ | \(\left( {a, b} \right)\)  |    \(a = b \cdot q_1  + r_1 \)  |  \(0 \leq r_1  \lt  b\)  |    \(\left( {b, r_1 } \right)\) |</cell>
-            </row>
-            <row bottom="minor">
-              <cell></cell>
-              <cell></cell>
-              <cell></cell>
-              <cell></cell>
-            </row>
-            <row>
-              <cell>| \(\left( {b, r_1 } \right)\)  |  \(b = r_1  \cdot q_2  + r_2 \)  |  \(0 \leq r_2  \lt  r_1 \)  | \(\left( {r_1 , r_2 } \right)\) |</cell>
-            </row>
-            <row>
-              <cell>_ | \(\left( {r_1 , r_2 } \right)\)  |  \(r_1  = r_2  \cdot q_3  + r_3 \)  |  \(0 \leq r_3  \lt  r_2 \) |  \(\left( {r_2 , r_3 } \right)\) |</cell>
-            </row>
-            <row>
-              <cell>_ | \(\left( {r_2 , r_3 } \right)\)  |  \(r_2  = r_3  \cdot q_4  + r_4 \)  |  \(0 \leq r_4  \lt  r_3 \) |  \(\left( {r_3 , r_4 } \right)\) |</cell>
-            </row>
-            <row>
-              <cell>_ | \(\left( {r_3 , r_4 } \right)\)  |  \(r_3  = r_4  \cdot q_5  + r_5 \)  |  \(0 \leq r_5  \lt  r_4 \) |  \(\left( {r_4 , r_5 } \right)\) |</cell>
-            </row>
-            <row>
-              <cell>_ | \( \vdots \)  |  \( \vdots \)  |  \( \vdots \)  |  \( \vdots \) |</cell>
-            </row>
-            <row>
-              <cell>_</cell>
-            </row>
-          </tabular>
-        </me>
       </p>
+      <tabular>
+        <row>
+          <cell></cell>
+          <cell><em>Original</em></cell>
+          <cell><em>Equation from</em></cell>
+          <cell><em>Inequality from</em></cell>
+          <cell><em>New</em></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell><em>Pair</em></cell>
+          <cell><em>Division Algorithm</em></cell>
+          <cell><em>Division Algorithm</em></cell>
+          <cell><em>Pair</em></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell><m>\left( {a, b} \right)</m></cell>
+          <cell><m>a = b \cdot q_1  + r_1</m></cell>
+          <cell><m>0 \leq r_1  \lt  b</m></cell>
+          <cell><m>\left( {b, r_1 } \right)</m></cell>
+          <cell></cell>
+        </row>
+        <row bottom="minor">
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell><m>\left( {b, r_1 } \right)</m></cell>
+          <cell><m>b = r_1  \cdot q_2  + r_2</m></cell>
+          <cell><m>0 \leq r_2  \lt  r_1</m></cell>
+          <cell><m>\left( {r_1 , r_2 } \right)</m></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell><m>\left( {r_1 , r_2 } \right)</m></cell>
+          <cell><m>r_1  = r_2  \cdot q_3  + r_3</m></cell>
+          <cell><m>0 \leq r_3  \lt  r_2</m></cell>
+          <cell><m>\left( {r_2 , r_3 } \right)</m></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell><m>\left( {r_2 , r_3 } \right)</m></cell>
+          <cell><m>r_2  = r_3  \cdot q_4  + r_4</m></cell>
+          <cell><m>0 \leq r_4  \lt  r_3</m></cell>
+          <cell><m>\left( {r_3 , r_4 } \right)</m></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell><m>\left( {r_3 , r_4 } \right)</m></cell>
+          <cell><m>r_3  = r_4  \cdot q_5  + r_5</m></cell>
+          <cell><m>0 \leq r_5  \lt  r_4</m></cell>
+          <cell><m>\left( {r_4 , r_5 } \right)</m></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell><m>\vdots</m></cell>
+          <cell><m>\vdots</m></cell>
+          <cell><m>\vdots</m></cell>
+          <cell><m>\vdots</m></cell>
+          <cell></cell>
+        </row>
+      </tabular>
       <p>
         From the inequalities in the third column of this table,
-        we have a strictly decreasing sequence of nonnegative integers <m>\left( {b > r_1  > r_2  > r_3  > r_4  \cdots } \right)</m>.
+        we have a strictly decreasing sequence of nonnegative integers <m>\left( {b > r_1 > r_2 > r_3 > r_4 \cdots } \right)</m>.
         Consequently,
         a term in this sequence must eventually be equal to zero.
-        Let <m>p</m> be the smallest natural number such that <m>r_{p + 1}  = 0</m>.
+        Let <m>p</m> be the smallest natural number such that <m>r_{p + 1} = 0</m>.
         This means that the last two rows in the preceding table will be
-        <me>
-          <tabular>
-            <row>
-              <cell>_ | <em>Original</em>  |  <em>Equation from</em>  |  <em>Inequality from</em>  |  <em>New</em> |</cell>
-            </row>
-            <row>
-              <cell>+20 | <em>Pair</em>     |  <em>Division Algorithm</em>  |  <em>Division Algorithm</em>  |  <em>Pair</em> |</cell>
-            </row>
-            <row>
-              <cell>+02 _ | \(\left( {r_{p - 2} , r_{p - 1} } \right)\)  |  \(r_{p - 2}  = r_{p - 1}  \cdot q_p  + r_p \)  | \(0 \leq r_p  \lt  r_{p - 1} \)  |  \(\left( {r_{p - 1} , r_p } \right)\) |</cell>
-            </row>
-            <row>
-              <cell>+22 _ | \(\left( {r_{p - 1} , r_p } \right)\)  |  \(r_{p - 1}  = r_p  \cdot q_{p + 1}  + 0\)  |  | |</cell>
-            </row>
-            <row>
-              <cell>+22 _</cell>
-            </row>
-          </tabular>
-        </me>
       </p>
+      <tabular>
+        <row>
+          <cell></cell>
+          <cell><em>Original</em></cell>
+          <cell><em>Equation from</em></cell>
+          <cell><em>Inequality from</em></cell>
+          <cell><em>New</em></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell><em>Pair</em></cell>
+          <cell><em>Division Algorithm</em></cell>
+          <cell><em>Division Algorithm</em></cell>
+          <cell><em>Pair</em></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell><m>\left( {r_{p - 2} , r_{p - 1} } \right)</m></cell>
+          <cell><m>r_{p - 2}  = r_{p - 1}  \cdot q_p  + r_p</m></cell>
+          <cell><m>0 \leq r_p  \lt  r_{p - 1}</m></cell>
+          <cell><m>\left( {r_{p - 1} , r_p } \right)</m></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell></cell>
+          <cell><m>\left( {r_{p - 1} , r_p } \right)</m></cell>
+          <cell><m>r_{p - 1}  = r_p  \cdot q_{p + 1}  + 0</m></cell>
+          <cell></cell>
+          <cell></cell>
+          <cell></cell>
+        </row>
+      </tabular>
       <p>
         Remember that this table was constructed by repeated use of <xref ref="L_gcdanddivalgo">Lemma</xref>
         and that the greatest common divisor of each pair of integers produced equals <m>\gcd( {a, b} )</m>.

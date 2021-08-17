@@ -24,256 +24,303 @@
           </p>
         </statement>
       </definition>
+      
+      <exercises>
+        <exercise>
+          <statement>
+            <p>
+              Complete truth tables for <m>\mynot \left( {P \wedge Q} \right)</m> and 
+              <m>\mynot P \vee \mynot Q</m>.
+            </p>
+          </statement>
+        </exercise>
+        <exercise>
+          <statement>
+            <p>
+              Are the expressions <m>\mynot \left( {P \wedge Q} \right)</m> and
+              <m>\mynot P \vee \mynot Q</m> logically equivalent?
+            </p>
+          </statement>
+        </exercise>
+        <exercise>
+          <statement>
+            <p>
+              Suppose that the statement
+              <q>I will play golf and I will mow the lawn</q>
+              is false.
+              Then its negation is true.
+              Write the negation of this statement in the form of a disjunction.
+              Does this make sense?
+            </p>
+          </statement>
+        </exercise>
 
-      <ol>
-        <li>
-          <p>
-            Complete truth tables for <m>\mynot \left( {P \wedge Q} \right)</m> and <m>\mynot P \vee \mynot Q</m>.
-          </p>
-        </li>
-        <li>
-          <p>
-            Are the expressions <m>\mynot \left( {P \wedge Q} \right)</m> and
-            <m>\mynot P \vee \mynot Q</m> logically equivalent?
-          </p>
-        </li>
-        <li>
-          <p>
-            Suppose that the statement
-            <q>I will play golf and I will mow the lawn</q>
-            is false.
-            Then its negation is true.
-            Write the negation of this statement in the form of a disjunction.
-            Does this make sense?
-          </p>
-        </li>
-      </ol>
+        <exercisegroup>
+        <introduction>
+        <p>
+          Sometimes we actually use logical reasoning in our everyday living!
+          Perhaps you can imagine a parent making the following two statements.
+
+          <blockquote>
+            Statement 1: If you do not clean your room, then you cannot watch TV.
+          </blockquote>
+          <blockquote>
+            Statement 2: You clean your room or you cannot watch TV.
+          </blockquote>
+        </p>
+        </introduction>
+
+        <exercise xml:id="PA_conditional2-2">
+          <statement>
+            <p>
+              Let <m>P</m> be
+              <q>you do not clean your room,</q>
+              and let <m>Q</m> be
+              <q>you cannot watch TV.</q>
+              Use these to translate Statement<nbsp/>1 and Statement<nbsp/>2 into symbolic forms.
+            </p>
+          </statement>
+        </exercise>
+        <exercise xml:id="PA_logequiv6">
+          <statement>
+            <p>
+              Construct a truth table for each of the expressions you determined in 
+              <xref ref="PA_conditional2-2"/>.
+              Are the expressions logically equivalent?
+            </p>
+          </statement>
+        </exercise>
+        <exercise xml:id="PA_conditional2-4">
+          <statement>
+            <p>
+              Assume that Statement<nbsp/>1 and Statement<nbsp/>2 are false.
+              In this case,
+              what is the truth value of <m>P</m> and what is the truth value of <m>Q</m>?
+              Now, write a true statement in symbolic form that is a conjunction and involves 
+              <m>P</m> and <m>Q</m>.
+            </p>
+          </statement>
+        </exercise>
+        <exercise>
+          <statement>
+            <p>
+              Write a truth table for the (conjunction) statement in 
+              <xref ref="PA_conditional2-4"/> and compare it to a truth table for 
+              <m>\mynot \left( {P \to Q} \right)</m>.
+              What do you observe?
+            </p>
+          </statement>
+        </exercise>
+        </exercisegroup>
+      </exercises>
+
     </exploration>
-    <p>
-      Sometimes we actually use logical reasoning in our everyday living!
-      Perhaps you can imagine a parent making the following two statements.
-    </p>
-    <tabular>
-      <row>
-        <cell>Statement 1</cell>
-        <cell>If you do not clean your room, then you cannot watch TV.</cell>
-      </row>
-      <row>
-        <cell>Statement 2</cell>
-        <cell>You clean your room or you cannot watch TV.</cell>
-      </row>
-    </tabular>
-    <ol>
-      <li xml:id="PA_conditional2-2">
-        <p>
-          Let <m>P</m> be
-          <q>you do not clean your room,</q>
-          and let <m>Q</m> be
-          <q>you cannot watch TV.</q>
-          Use these to translate Statement<nbsp/>1 and Statement<nbsp/>2 into symbolic forms.
-        </p>
-      </li>
-      <li xml:id="PA_logequiv6">
-        <p>
-          Construct a truth table for each of the expressions you determined in Part<nbsp/><xref ref="PA_conditional2-2"/>.
-          Are the expressions logically equivalent?
-        </p>
-      </li>
-      <li xml:id="PA_conditional2-4">
-        <p>
-          Assume that Statement<nbsp/>1 and Statement<nbsp/>2 are false.
-          In this case,
-          what is the truth value of <m>P</m> and what is the truth value of <m>Q</m>?
-          Now, write a true statement in symbolic form that is a conjunction and involves <m>P</m> and <m>Q</m>.
-        </p>
-      </li>
-      <li>
-        <p>
-          Write a truth table for the (conjunction) statement in Part<nbsp/><xref ref="PA_conditional2-4"/> and compare it to a truth table for <m>\mynot \left( {P \to Q} \right)</m>.
-          What do you observe?
-        </p>
-      </li>
-    </ol>
-    <p>
-      <hr style="width:50%;" align="left"/>
-    </p>
+
     <exploration xml:id="PA_converse">
       <title>Converse and Contrapositive</title>
       <p>
-        We now define two important conditional statements that are associated with a given conditional statement.
+        We now define two important conditional statements that are associated with a 
+        given conditional statement.
       </p>
       <definition xml:id="D_converse">
         <statement>
           <p>
             If <m>P</m> and <m>Q</m> are statements, then
-            <ul>
-              <li>
-                <p>
-                  The <em>converse</em>
+            <blockquote>
+                  The <term>converse</term>
                     <idx><h>converse</h></idx>
                     <idx><h>conditional statement</h><h>converse of</h></idx>
-                  of the conditional statement <m>P \to Q</m> is the conditional statement <m>Q \to P</m>.
-                </p>
-              </li>
-              <li xml:id="D_contrapositive">
-                <p>
-                  The <em>contrapositive</em>
-    <idx><h>contrapositive</h></idx>
-    <idx><h>conditional statement</h><h>contrapositive of</h></idx>
-                  of the conditional statement <m>P \to Q</m> is the conditional statement <m>\mynot Q \to \mynot P</m>.
-                </p>
-              </li>
-            </ul>
+                  of the conditional statement <m>P \to Q</m> is the conditional statement 
+                  <m>Q \to P</m>.
+            </blockquote>
+            <blockquote>
+              <!--xml:id="D_contrapositive"-->
+                  The <term>contrapositive</term>
+                    <idx><h>contrapositive</h></idx>
+                    <idx><h>conditional statement</h><h>contrapositive of</h></idx>
+                  of the conditional statement <m>P \to Q</m> is the conditional statement 
+                  <m>\mynot Q \to \mynot P</m>.
+            </blockquote>
           </p>
         </statement>
       </definition>
-      <ol>
-        <li xml:id="PA_converse1">
-          <p>
-            For the following, the variable <m>x</m> represents a real number.
-            Label each of the following statements as true or false.
-            <ol>
-              <li xml:id="PA_converse1a">
-                <p>
-                  If <m>x = 3</m>, then <m>x^2 = 9</m>.
-                </p>
-              </li>
-              <li>
-                <p>
-                  If <m>x^2 = 9</m>, then <m>x = 3</m>.
-                </p>
-              </li>
-              <li>
-                <p>
-                  If <m>x^2 \ne 9</m>, then <m>x \ne 3</m>.
-                </p>
-              </li>
-              <li>
-                <p>
-                  If <m>x \ne 3</m>, then <m>x^2 \ne 9</m>.
-                </p>
-              </li>
-            </ol>
-          </p>
-        </li>
-        <li>
-          <p>
-            Which statement in the list of conditional statements in Part<nbsp/><xref ref="PA_converse1"/> is the converse of Statement<nbsp/><xref ref="PA_converse1a"/>?
-            Which is the contrapositive of Statement<nbsp/><xref ref="PA_converse1a"/>?
-          </p>
-        </li>
-        <li>
-          <p>
-            Complete appropriate truth tables to show that
-            <ul>
-              <li>
-                <p>
-                  <m>P \to Q</m> is logically equivalent to its contrapositive <m>\mynot Q \to \mynot P</m>.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <m>P \to Q</m> is not logically equivalent to its converse <m>Q \to P</m>.
-                </p>
-              </li>
-            </ul>
-          </p>
-          \end{tabular}
-        </li>
-      </ol>
+
+      <exercises>
+
+        <exercisegroup xml:id="PA_converse1">
+        
+          <introduction>
+            <p>
+              For the following, the variable <m>x</m> represents a real number.
+              Label each of the following statements as true or false.
+            </p>
+          </introduction>
+        
+          <exercise xml:id="PA_converse1a">
+            <statement>
+              <p>
+                If <m>x = 3</m>, then <m>x^2 = 9</m>.
+              </p>
+            </statement>
+          </exercise>
+          <exercise>
+            <statement>
+              <p>
+                If <m>x^2 = 9</m>, then <m>x = 3</m>.
+              </p>
+            </statement>
+          </exercise>
+          <exercise>
+            <statement>
+              <p>
+                If <m>x^2 \ne 9</m>, then <m>x \ne 3</m>.
+              </p>
+            </statement>
+          </exercise>
+          <exercise>
+            <statement>
+              <p>
+                If <m>x \ne 3</m>, then <m>x^2 \ne 9</m>.
+              </p>
+            </statement>
+          </exercise>
+        
+        </exercisegroup>
+
+        <exercise>
+          <statement>
+            <p>
+              Which statement in the list of conditional statements in 
+              <xref ref="PA_converse1"/> is the converse of 
+              <xref ref="PA_converse1a"/>?
+              Which is the contrapositive of <xref ref="PA_converse1a"/>?
+            </p>
+          </statement>
+        </exercise>
+
+        <exercisegroup>
+        
+          <introduction>
+            <p>
+              Complete appropriate truth tables to show that
+            </p>
+          </introduction>
+        
+          <exercise>
+            <statement>
+              <p>
+                <m>P \to Q</m> is logically equivalent to its contrapositive <m>\mynot Q \to \mynot P</m>.
+              </p>
+            </statement>
+          </exercise>
+          <exercise>
+            <statement>
+              <p>
+                <m>P \to Q</m> is not logically equivalent to its converse <m>Q \to P</m>.
+              </p>
+            </statement>
+          </exercise>
+        
+        </exercisegroup>
+        
+      </exercises>
+
     </exploration>
+
     <p>
       In <xref ref="PA_logequiv"></xref>,
       we introduced the concept of logically equivalent expressions and the notation
       <m>X \equiv Y</m> to indicate that statements <m>X</m> and <m>Y</m> are logically equivalent.
       The following theorem gives two important logical equivalencies.
       They are sometimes referred to as
-      <em>De Morgan's Laws</em>.
+      <term>De Morgan's Laws</term>.
           <idx><h>De Morgan's Laws</h><h>for statements</h></idx>
     </p>
+    
+    <theorem xml:id="T_demorgan">
+      <title>De Morgan's Laws</title>
+      <statement>
+        <p>
+          For statements <m>P</m> and <m>Q</m>,
+          <blockquote>
+            The statement <m>\mynot \left( {P \wedge Q} \right)</m> is logically equivalent to 
+            <m>\mynot P \vee \mynot Q</m>.
+            This can be written as 
+            <m>\mynot \left( {P \wedge Q} \right) \equiv \;\mynot P \vee \mynot Q</m>.
+          </blockquote>
+          <blockquote>
+            The statement <m>\mynot \left( {P \vee Q} \right)</m> is logically equivalent to 
+            <m>\mynot P \wedge \mynot Q</m>.
+            This can be written as 
+            <m>\mynot \left( {P \vee Q} \right) \equiv \;\mynot P \wedge \mynot Q</m>.
+          </blockquote>
+        </p>
+      </statement>
+    </theorem>
+
     <p>
-      \begin{nametheorem}[<em>De Morgan's Laws</em>]
-    </p>
-    <p>
-      For statements <m>P</m> and <m>Q</m>,
-      <ul>
-        <li>
-          <p>
-            The statement <m>\mynot \left( {P \wedge Q} \right)</m> is logically equivalent to <m>\mynot P \vee \mynot Q</m>.
-            This can be written as <m>\mynot \left( {P \wedge Q} \right) \equiv \;\mynot P \vee \mynot Q</m>.
-          </p>
-        </li>
-        <li>
-          <p>
-            The statement <m>\mynot \left( {P \vee Q} \right)</m> is logically equivalent to <m>\mynot P \wedge \mynot Q</m>.
-            This can be written as <m>\mynot \left( {P \vee Q} \right) \equiv \;\mynot P \wedge \mynot Q</m>.
-          </p>
-        </li>
-      </ul>
-    </p>
-    <p>
-      \end{nametheorem} The first equivalency in <xref ref="T_demorgan"></xref>
+      The first equivalency in <xref ref="T_demorgan"></xref>
       was established in <xref ref="PA_logequiv"></xref>.
       <xref ref="Ta_Demorgan"></xref>
       establishes the second equivalency.
     </p>
     <table xml:id="Ta_Demorgan">
       <title>Truth Table for One of De Morgan's Laws</title>
-      <tabular>
-        <row>
-          <cell></cell>
-          <cell><m>P</m></cell>
-          <cell><m>Q</m></cell>
-          <cell><m>P \vee Q</m></cell>
-          <cell><m>\mynot  \left( {P \vee Q} \right)</m></cell>
-          <cell><m>\mynot  P</m></cell>
-          <cell><m>\mynot  Q</m></cell>
+      <tabular halign="center">
+        <row header="yes" bottom="major">
+          
+          <cell right="medium"><m>P</m></cell>
+          <cell right="major"><m>Q</m></cell>
+          <cell right="medium"><m>P \vee Q</m></cell>
+          <cell right="medium"><m>\mynot  \left( {P \vee Q} \right)</m></cell>
+          <cell right="minor"><m>\mynot  P</m></cell>
+          <cell right="medium"><m>\mynot  Q</m></cell>
           <cell><m>\mynot  P \wedge \mynot  Q</m></cell>
-          <cell></cell>
+          
         </row>
         <row>
-          <cell></cell>
-          <cell>T</cell>
-          <cell>T</cell>
-          <cell>T</cell>
+          
+          <cell right="medium">T</cell>
+          <cell right="major">T</cell>
+          <cell right="medium">T</cell>
+          <cell right="medium">F</cell>
+          <cell right="minor">F</cell>
+          <cell right="medium">F</cell>
           <cell>F</cell>
-          <cell>F</cell>
-          <cell>F</cell>
-          <cell>F</cell>
-          <cell></cell>
+          
         </row>
         <row>
-          <cell></cell>
-          <cell>T</cell>
+          
+          <cell right="medium">T</cell>
+          <cell right="major">F</cell>
+          <cell right="medium">T</cell>
+          <cell right="medium">F</cell>
+          <cell right="minor">F</cell>
+          <cell right="medium">T</cell>
           <cell>F</cell>
-          <cell>T</cell>
-          <cell>F</cell>
-          <cell>F</cell>
-          <cell>T</cell>
-          <cell>F</cell>
-          <cell></cell>
+          
         </row>
         <row>
-          <cell></cell>
+          
+          <cell right="medium">F</cell>
+          <cell right="major">T</cell>
+          <cell right="medium">T</cell>
+          <cell right="medium">F</cell>
+          <cell right="minor">T</cell>
+          <cell right="medium">F</cell>
           <cell>F</cell>
-          <cell>T</cell>
-          <cell>T</cell>
-          <cell>F</cell>
-          <cell>T</cell>
-          <cell>F</cell>
-          <cell>F</cell>
-          <cell></cell>
+          
         </row>
         <row>
-          <cell></cell>
-          <cell>F</cell>
-          <cell>F</cell>
-          <cell>F</cell>
+          
+          <cell right="medium">F</cell>
+          <cell right="major">F</cell>
+          <cell right="medium">F</cell>
+          <cell right="medium">T</cell>
+          <cell right="minor">T</cell>
+          <cell right="medium">T</cell>
           <cell>T</cell>
-          <cell>T</cell>
-          <cell>T</cell>
-          <cell>T</cell>
-          <cell></cell>
+          
         </row>
       </tabular>
     </table>
@@ -284,73 +331,81 @@
       logical equivalencies related to conditional statements are quite important.
     </p>
   </introduction>
+
   <subsection>
     <title>Logical Equivalencies Related to Conditional Statements</title>
+    <idx><h>conditional statement</h><h>logical equivalencies</h></idx>
     <p>
-          <idx><h>conditional statement</h><h>logical equivalencies</h></idx>
-      The first two logical equivalencies in the following theorem were established in <xref ref="PA_logequiv"></xref>, and the third logical equivalency was established in <xref ref="PA_converse"></xref>.
+      The first two logical equivalencies in <xref ref="T_logical-condition"></xref> were 
+      established in <xref ref="PA_logequiv"></xref>, and the third logical equivalency was 
+      established in <xref ref="PA_converse"></xref>.
     </p>
     <theorem xml:id="T_logical-condition">
       <statement>
         <p>
           For statements <m>P</m> and <m>Q</m>,
-          <ol>
-            <li>
-              <p>
-                The conditional statement <m>P \to Q</m> is logically equivalent to <m>\mynot P \vee Q</m>.
-              </p>
-            </li>
-            <li>
-              <p>
-                The statement <m>\mynot \left( {P \to Q} \right)</m> is logically equivalent to <m>P \wedge \mynot Q</m>.
-              </p>
-            </li>
-            <li>
-              <p>
-                The conditional statement <m>P \to Q</m> is logically equivalent to its contrapositive <m>\mynot Q \to \mynot P</m>.
-              </p>
-            </li>
-          </ol>
+          <blockquote>
+                The conditional statement <m>P \to Q</m> is logically equivalent to 
+                <m>\mynot P \vee Q</m>.
+          </blockquote>
+          <blockquote>
+                The statement <m>\mynot \left( {P \to Q} \right)</m> is logically equivalent to 
+                <m>P \wedge \mynot Q</m>.
+          </blockquote>
+          <blockquote>
+                The conditional statement <m>P \to Q</m> is logically equivalent to its 
+                contrapositive <m>\mynot Q \to \mynot P</m>.
+          </blockquote>
         </p>
       </statement>
     </theorem>
-    <p>
-      \end{tabular}
-    </p>
   </subsection>
+
   <subsection>
     <title>The Negation of a Conditional Statement</title>
     <p>
           <idx><h>negation</h><h>of a conditional statement</h></idx>
-      The logical equivalency <m>\mynot \left( {P \to Q} \right) \equiv P \wedge \mynot Q</m> is interesting because it shows us that
+      The logical equivalency <m>\mynot \left( {P \to Q} \right) \equiv P \wedge \mynot Q</m> 
+      is interesting because it shows us that
       <em>the negation of a conditional statement is not another conditional statement.</em>
       <idx><h>conditional statement</h><h>negation</h></idx>
-  The negation of a conditional statement can be written in the form of a conjunction.
-      So what does it mean to say that the conditional statement If you do not clean your room,
-      then you cannot watch TV, is false?
+      The negation of a conditional statement can be written in the form of a conjunction.
+      So what does it mean to say that the conditional statement 
+      <blockquote>
+        If you do not clean your room,
+        then you cannot watch TV, 
+      </blockquote>
+      is false?
       To answer this,
       we can use the logical equivalency <m>\mynot \left( {P \to Q} \right) \equiv P \wedge \mynot Q</m>.
       The idea is that if <m>P \to Q</m> is false,
       then its negation must be true.
-      So the negation of this can be written as You do not clean your room and you can watch TV. For another example,
-      consider the following conditional statement: If <m>-5 \lt -3</m>,
-      then <m>\left( -5 \right)^2 \lt \left( -3 \right)^2</m>.
+      So the negation of this can be written as 
+      <blockquote>
+        You do not clean your room and you can watch TV. 
+      </blockquote>
+      For another example,
+      consider the following conditional statement: 
+      <me>\text{If } -5 \lt -3, \text{then } \left( -5 \right)^2 \lt \left( -3 \right)^2.</me>
+
       This conditional statement is false since its hypothesis is true and its conclusion is false.
       Consequently, its negation must be true.
       Its negation is not a conditional statement.
-      The negation can be written in the form of a conjunction by using the logical equivalency <m>\mynot \left( {P \to Q} \right) \equiv P \wedge \mynot Q</m>.
+      The negation can be written in the form of a conjunction by using the logical equivalency 
+      <m>\mynot \left( {P \to Q} \right) \equiv P \wedge \mynot Q</m>.
       So, the negation can be written as follows:
-      <m>-5 \lt -3</m> and <m>\mynot \left( {\left( -5 \right)^2 \lt \left( -3 \right)^2} \right)</m>.
+      <me>-5 \lt -3 \text{ and } \mynot \left( {\left( -5 \right)^2 \lt \left( -3 \right)^2} \right)</me>.
       However, the second part of this conjunction can be written in a simpler manner by noting that
       <q>not less than</q>
       means the same thing as
       <q>greater than or equal to.</q>
       So we use this to write the negation of the original conditional statement as follows:
-      <m>-5 \lt -3</m> and <m>\left( -5 \right)^2 \geqslant \left( -3 \right)^2</m>.
+      <me>-5 \lt -3 \text{ and } \left( -5 \right)^2 \geqslant \left( -3 \right)^2</me>.
       This conjunction is true since each of the individual statements in the conjunction is true.
     </p>
   </subsection>
-  <subsection xml:id="T_logequiv">
+
+  <subsection xml:id="Ss_logequiv">
     <title>Another Method of Establishing Logical Equivalencies</title>
     <p>
       We have seen that it is often possible to use a truth table to establish a logical equivalency.
@@ -365,19 +420,21 @@
         </li>
         <li>
           <p>
-            <m>\mynot \left( {P \to Q} \right)</m> is logically equivalent to <m>\mynot \left( {\mynot P \vee Q} \right)</m>.
+            <m>\mynot \left( {P \to Q} \right)</m> is logically equivalent to 
+            <m>\mynot \left( {\mynot P \vee Q} \right)</m>.
           </p>
         </li>
         <li>
           <p>
-            Hence, by one of De Morgan's Laws
-            (<xref ref="T_demorgan"></xref>),
-            <m>\mynot \left( {P \to Q} \right)</m> is logically equivalent to <m>\mynot \left( {\mynot P} \right) \wedge \mynot Q</m>.
+            Hence, by <xref ref="T_demorgan"></xref> (one of DeMorgan's Laws),
+            <m>\mynot \left( {P \to Q} \right)</m> is logically equivalent to 
+            <m>\mynot \left( {\mynot P} \right) \wedge \mynot Q</m>.
           </p>
         </li>
         <li>
           <p>
-            This means that <m>\mynot \left( {P \to Q} \right)</m> is logically equivalent to <m>P \wedge \mynot Q</m>.
+            This means that <m>\mynot \left( {P \to Q} \right)</m> is logically equivalent to 
+            <m>P \wedge \mynot Q</m>.
           </p>
         </li>
       </ul>
@@ -398,17 +455,21 @@
       then we know the truth value of any other logically equivalent statement.
       This is illustrated in <xref ref="pr_workingeq2"></xref>.
     </p>
+
     <investigation xml:id="pr_workingeq2">
       <title>Working with a Logical Equivalency</title>
-      <p>
-        In <xref ref="S_2logop"></xref>,
-        we constructed a truth table for <m>\left( {P \wedge \mynot  Q} \right) \to R</m>.
-        See <xref ref="Ta_compoundtruthtable"></xref>. \end{tabular}
-        <ol>
-          <li>
-            <p>
-              Although it is possible to use truth tables to show that
-              <m>P \to \left( {Q \vee R} \right)</m> is logically equivalent to <m>\left( {P \wedge \mynot  Q} \right) \to R</m>,
+      <introduction>
+        <p>
+          In <xref ref="S_2logop"></xref>,
+          we constructed a truth table for <m>\left( {P \wedge \mynot  Q} \right) \to R</m>.
+          See <xref ref="Ta_compoundtruthtable"></xref>.
+        </p>
+      </introduction>
+      <task>
+        <p>
+          Although it is possible to use truth tables to show that
+              <m>P \to \left( {Q \vee R} \right)</m> is logically equivalent to 
+              <m>\left( {P \wedge \mynot  Q} \right) \to R</m>,
               we instead use previously proven logical equivalencies to prove this logical equivalency.
               In this case,
               it may be easier to start working with <m>\left( {P \wedge \mynot  Q} \right) \to R</m>.
@@ -416,43 +477,33 @@
               <me>
                 \left( {P \wedge \mynot  Q} \right) \to R \equiv \mynot \left( P \wedge \mynot Q \right) \vee R
               </me>,
-              which is justified by the logical equivalency established in Part<nbsp/><xref ref="PA_logequiv6"/> of Beginning  <xref ref="PA_logequiv"></xref>.
+              which is justified by the logical equivalency established in <xref ref="PA_logequiv6"/> 
               Continue by using one of De Morgan's Laws on <m>\mynot \left( P \wedge \mynot Q \right)</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              Let <m>a</m> and <m>b</m> be integers.
-              Suppose we are trying to prove the following:
-              <ul>
-                <li>
-                  <p>
-                    If 3 is a factor of <m>a \cdot b</m>,
-                    then 3 is a factor of <m>a</m> or 3 is a factor of <m>b</m>.
-                  </p>
-                </li>
-              </ul>
-            </p>
-            Explain why we will have proven this statement if we prove the following:
-            <ul>
-              <li>
-                <p>
-                  If 3 is a factor of <m>a \cdot b</m> and 3 is not a factor of <m>a</m>,
-                  then 3 is a factor of <m>b</m>.
-                </p>
-              </li>
-            </ul>
-          </li>
-        </ol>
-      </p>
+        </p>
+      </task>
+      <task>
+        <p>
+          Let <m>a</m> and <m>b</m> be integers.
+          Suppose we are trying to prove the following:
+          <blockquote>
+            If 3 is a factor of <m>a \cdot b</m>,
+            then 3 is a factor of <m>a</m> or 3 is a factor of <m>b</m>.
+          </blockquote>
+          Explain why we will have proven this statement if we prove the following:
+          <blockquote>
+            If 3 is a factor of <m>a \cdot b</m> and 3 is not a factor of <m>a</m>,
+            then 3 is a factor of <m>b</m>.
+          </blockquote>
+        </p>
+      </task>
     </investigation>
+
     <p>
       As we will see,
-      it is often difficult to construct a direct proof for a conditional statement of the form <m>P \to \left( {Q \vee R} \right)</m>.
+      it is often difficult to construct a direct proof for a conditional statement of the form 
+      <m>P \to \left( {Q \vee R} \right)</m>.
       The logical equivalency in <xref ref="pr_workingeq2"></xref>
       gives us another way to attempt to prove a statement of the form
-    </p>
-    <p>
       <m>P \to \left( {Q \vee R} \right)</m>.
       The advantage of the equivalent form,
       <m>\left( {P \wedge \mynot Q} \right) \to R</m>,
@@ -464,96 +515,133 @@
       <xref ref="T_logequiv"></xref>
       states some of the most frequently used logical equivalencies used when writing mathematical proofs.
     </p>
-    <p>
-      \begin{nametheorem}[<em>Important Logical Equivalencies</em>]
-    </p>
-    <p>
-      For statements <m>P</m>, <m>Q</m>, and <m>R</m>,
-    </p>
-    <tabular>
-      <row>
-        <cell>" <em>De Morgan's Laws</em>   "  <m>\mynot  \left( {P \wedge Q} \right) \equiv \;\mynot  P \vee \mynot  Q</m> "</cell>
-      </row>
-      <row>
-        <cell>"                       " <m>\mynot  \left( {P \vee Q} \right) \equiv \;\mynot  P \wedge \mynot  Q</m> "</cell>
-      </row>
-      <row>
-        <cell><idx><h>De Morgan's Laws</h><h>for statements</h></idx>
-          " <em>Conditional Statements</em> "  <m>P \to Q \equiv \;\mynot  Q \to \mynot  P</m>  (contrapositive) "</cell>
-      </row>
-      <row>
-        <cell>"   "  <m>P \to Q \equiv \;\mynot  P \vee Q</m> "</cell>
-      </row>
-      <row>
-        <cell>"   "  <m>\mynot  \left( {P \to Q} \right) \equiv P \wedge \mynot  Q</m> "</cell>
-      </row>
-      <row>
-        <cell>" <em>Biconditional Statement</em> "
-          <m>\left( {P \leftrightarrow Q} \right) \equiv \left( {P \to Q} \right) \wedge \left( {Q \to P} \right)</m> "</cell>
-      </row>
-      <row>
-        <cell>" <em>Double Negation</em> "  <m>\mynot  \left( {\mynot  P} \right) \equiv P</m></cell>
-      </row>
-      <row>
-        <cell>" <em>Distributive Laws</em> "
-          <m>P \vee \left( {Q \wedge R} \right) \equiv \left( {P \vee Q} \right) \wedge \left( {P \vee R} \right)</m>  "</cell>
-      </row>
-      <row>
-        <cell>"   "  <m>P \wedge \left( {Q \vee R} \right) \equiv \left( {P \wedge Q} \right) \vee \left( {P \wedge R} \right)</m> "</cell>
-      </row>
-      <row>
-        <cell>" <em>Conditionals with</em>  " <m>P \to \left( {Q \vee R} \right) \equiv \left( {P \wedge \mynot  Q} \right) \to R</m> "</cell>
-      </row>
-      <row>
-        <cell>" <em>Disjunctions</em>    "  <m>\left( {P \vee Q} \right) \to R\; \equiv \;\left( {P \to R} \right) \wedge \left( {Q \to R} \right)</m> "</cell>
-      </row>
-    </tabular>
-    <p>
-          <idx><h>distributive laws</h><h>for statements</h></idx>\end{nametheorem}
-    </p>
+
+    <theorem xml:id="T_logequiv">
+    <!-- Not the best display here. What could work better? -->
+      <title>Important Logical Equivalencies</title>
+      <idx><h>distributive laws</h><h>for statements</h></idx>
+
+      <statement>
+        <p>
+          For statements <m>P</m>, <m>Q</m>, and <m>R</m>,
+        </p>
+        <paragraphs>
+        <title>De Morgan's Laws</title>
+          <me>
+            \mynot  \left( {P \wedge Q} \right) \equiv \;\mynot  P \vee \mynot  Q
+          </me>
+          <me>
+            \mynot  \left( {P \vee Q} \right) \equiv \;\mynot  P \wedge \mynot  Q
+          </me>
+        </paragraphs>
+        <paragraphs>
+          <title>Conditional Statements</title>
+            <me>
+              P \to Q \equiv \;\mynot  Q \to \mynot  P \text{(<term>contrapositive</term>)}
+            </me>
+            <me>
+              <m>P \to Q \equiv \;\mynot  P \vee Q</m>
+            </me>
+            <me>
+              \mynot  \left( {P \to Q} \right) \equiv P \wedge \mynot  Q
+            </me>
+        </paragraphs>
+        <paragraphs>
+          <title>Biconditional Statement</title>
+            <me>
+              \left( {P \leftrightarrow Q} \right) \equiv \left( {P \to Q} \right) \wedge 
+              \left( {Q \to P} \right)
+            </me>
+        </paragraphs>
+        <paragraphs>
+          <title>Double Negation</title>
+            <me>
+              \mynot  \left( {\mynot  P} \right) \equiv P
+            </me>
+        </paragraphs>
+        <paragraphs>
+          <title>Distributive Laws</title>
+            <me>
+              P \vee \left( {Q \wedge R} \right) \equiv \left( {P \vee Q} \right) \wedge 
+              \left( {P \vee R} \right)
+            </me>
+            <me>
+              P \wedge \left( {Q \vee R} \right) \equiv \left( {P \wedge Q} \right) \vee 
+              \left( {P \wedge R} \right)
+            </me>
+        </paragraphs>
+        <paragraphs>
+          <title>Conditionals with Disjunctions</title>
+          <me>
+            P \to \left( {Q \vee R} \right) \equiv \left( {P \wedge \mynot  Q} \right) \to R
+          </me>
+          <me>
+            \left( {P \vee Q} \right) \to R\; \equiv \;\left( {P \to R} \right) \wedge 
+            \left( {Q \to R} \right)
+          </me> 
+        </paragraphs>
+      </statement>
+    </theorem>
+
     <p>
       We have already established many of these equivalencies.
       Others will be established in the exercises.
     </p>
-    <p>
-      \exercises{Exercises for <xref ref="S_logequiv"></xref>}
-    </p>
-    <ol>
-      <li xml:id="exer_sec23-1">
+  </subsection>
+  <exercises xml:id="exercises-2_2">
+    <exercisegroup xml:id="exer_sec23-1">
+    
+      <introduction>
         <p>
           Write the converse and contrapositive of each of the following conditional statements.
         </p>
-        <ol>
-          <li>
-            <p>
-              If <m>a = 5</m>, then <m>a^2 = 25</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              If it is not raining, then Laura is playing golf.
-            </p>
-          </li>
-          <li>
-            <p>
-              If <m>a \ne b</m>, then <m>a^4 \ne b^4</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              If <m>a</m> is an odd integer,
-              then <m>3a</m> is an odd integer.
-            </p>
-          </li>
-        </ol>
-      </li>
-      <li xml:id="exer_sec23-2">
+      </introduction>
+    
+      <exercise>
+        <statement>
+          <p>
+            If <m>a = 5</m>, then <m>a^2 = 25</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            If it is not raining, then Laura is playing golf.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            If <m>a \ne b</m>, then <m>a^4 \ne b^4</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            If <m>a</m> is an odd integer,
+            then <m>3a</m> is an odd integer.
+          </p>
+        </statement>
+      </exercise>
+    
+    </exercisegroup>
+    <exercise xml:id="exer_sec23-2">
+      <statement>
         <p>
-          Write each of the conditional statements in <xref ref="exer_sec23-1"/> as a logically equivalent disjunction,
-          and write the negation of each of the conditional statements in <xref ref="exer_sec23-1"/> as a conjunction.
+          Write each of the conditional statements in <xref ref="exer_sec23-1"/> as a logically 
+          equivalent disjunction,
+          and write the negation of each of the conditional statements in 
+          <xref ref="exer_sec23-1"/> as a conjunction.
         </p>
-      </li>
-      <li xml:id="exer_sec23-3">
+      </statement>
+    </exercise>
+
+    <exercisegroup xml:id="exer_sec23-3">
+    
+      <introduction>
         <p>
           Write a useful negation of each of the following statements.
           Do not leave a negation as a prefix of a statement.
@@ -561,347 +649,512 @@
           <q>I will play golf and I will mow the lawn</q>
           as
           <q>I will not play golf or I will not mow the lawn.</q>
-          <ol>
-            <li>
-              <p>
-                We will win the first game and we will win the second game.
-              </p>
-            </li>
-            <li>
-              <p>
-                They will lose the first game or they will lose the second game.
-              </p>
-            </li>
-            <li>
-              <p>
-                If you mow the lawn, then I will pay you $20.
-              </p>
-            </li>
-            <li>
-              <p>
-                If we do not win the first game,
-                then we will not play a second game.
-              </p>
-            </li>
-            <li>
-              <p>
-                I will wash the car or I will mow the lawn.
-              </p>
-            </li>
-            <li>
-              <p>
-                If you graduate from college,
-                then you will get a job or you will go to graduate school.
-              </p>
-            </li>
-            <li>
-              <p>
-                If I play tennis, then I will wash the car or I will do the dishes.
-              </p>
-            </li>
-            <li>
-              <p>
-                If you clean your room or do the dishes,
-                then you can go to see a movie.
-              </p>
-            </li>
-            <li>
-              <p>
-                It is warm outside and if it does not rain, then I will play golf.
-              </p>
-            </li>
-          </ol>
         </p>
-      </li>
-      <li xml:id="exer_sec23-bicond">
+      </introduction>
+    
+      <exercise>
+        <statement>
+          <p>
+            We will win the first game and we will win the second game.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            They will lose the first game or they will lose the second game.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            If you mow the lawn, then I will pay you $20.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            If we do not win the first game,
+            then we will not play a second game.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            I will wash the car or I will mow the lawn.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            If you graduate from college,
+            then you will get a job or you will go to graduate school.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            If I play tennis, then I will wash the car or I will do the dishes.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            If you clean your room or do the dishes,
+            then you can go to see a movie.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            It is warm outside and if it does not rain, then I will play golf.
+          </p>
+        </statement>
+      </exercise>
+    
+    </exercisegroup>
+
+    <exercisegroup xml:id="exer_sec23-bicond">
+    
+      <introduction>
         <p>
-          Use truth tables to establish each of the following logical equivalencies dealing with biconditional statements:
-          <ol>
-            <li xml:id="exer_bicond">
-              <p>
-                <m>\left( {P \leftrightarrow Q} \right) \equiv \left( {P \to Q} \right) \wedge \left( {Q \to P} \right)</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\left( {P \leftrightarrow Q} \right) \equiv \left( {Q \leftrightarrow P} \right)</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\left( {P \leftrightarrow Q} \right) \equiv \left( {\mynot P \leftrightarrow \mynot Q} \right)</m>
-              </p>
-            </li>
-          </ol>
+          Use truth tables to establish each of the following logical equivalencies dealing 
+          with biconditional statements:
         </p>
-      </li>
-      <li xml:id="exer_sec22-distrib">
+      </introduction>
+    
+      <exercise xml:id="exer_bicond">
+        <statement>
+          <p>
+            <m>\left( {P \leftrightarrow Q} \right) \equiv \left( {P \to Q} \right) \wedge 
+            \left( {Q \to P} \right)</m>
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            <m>\left( {P \leftrightarrow Q} \right) \equiv \left( {Q \leftrightarrow P} \right)</m>
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            <m>\left( {P \leftrightarrow Q} \right) \equiv \left( {\mynot P \leftrightarrow \mynot Q} 
+            \right)</m>
+          </p>
+        </statement>
+      </exercise>
+    
+    </exercisegroup>
+
+    <exercisegroup xml:id="exer_sec22-distrib">
+    
+      <introduction>
         <p>
           Use truth tables to prove each of the
-          <em>distributive laws</em>
+          <term>distributive laws</term>
           from <xref ref="T_logequiv"></xref>.
-    <idx><h>distributive laws</h><h>for statements</h></idx>
-<ol>
-            <li>
-              <p>
-                <m>P \vee \left( {Q \wedge R} \right) \equiv \left( {P \vee Q} \right) \wedge \left( {P \vee R} \right)</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>P \wedge \left( {Q \vee R} \right) \equiv \left( {P \wedge Q} \right) \vee \left( {P \wedge R} \right)</m>
-              </p>
-            </li>
-          </ol>
+          <idx><h>distributive laws</h><h>for statements</h></idx>
         </p>
-      </li>
-      <li>
+      </introduction>
+    
+      <exercise>
+        <statement>
+          <p>
+            <m>P \vee \left( {Q \wedge R} \right) \equiv \left( {P \vee Q} \right) \wedge 
+            \left( {P \vee R} \right)</m>
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            <m>P \wedge \left( {Q \vee R} \right) \equiv \left( {P \wedge Q} \right) \vee 
+            \left( {P \wedge R} \right)</m>
+          </p>
+        </statement>
+      </exercise>
+    
+    </exercisegroup>
+
+    <exercise xml:id="exer_sec23-6">
+      <statement>
         <p>
-          Use truth tables to prove the following logical equivalency from <xref ref="T_logequiv"></xref>:
-          <men xml:id="exer_sec23-6">
-            \left[ {\left( {P \vee Q} \right) \to R} \right] \equiv \left( {P \to R} \right) \wedge \left( {Q \to R} \right)
-          </men>.
+          Use truth tables to prove the following logical equivalency from 
+          <xref ref="T_logequiv"></xref>:
+          <me>
+            \left[ {\left( {P \vee Q} \right) \to R} \right] \equiv \left( {P \to R} \right) \wedge 
+            \left( {Q \to R} \right)
+          </me>.
         </p>
-      </li>
-      <li xml:id="exer_sec23-7">
+      </statement>
+    </exercise>
+
+    <exercisegroup xml:id="exer_sec23-7">
+    
+      <introduction>
         <p>
-          Use previously proven logical equivalencies to prove each of the following logical equivalencies about
-          <em>conditionals with conjunctions:</em>
-          <ol>
-            <li>
-              <p>
-                <m>\left[ {\left( {P \wedge Q} \right) \to R} \right] \equiv \left( {P \to R} \right) \vee \left( {Q \to R} \right)</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\left[ {P \to \left( {Q \wedge R} \right)} \right] \equiv \left( {P \to Q} \right) \wedge \left( {P \to R} \right)</m>
-              </p>
-            </li>
-          </ol>
+          Use previously proven logical equivalencies to prove each of the following logical 
+          equivalencies about
+          <term>conditionals with conjunctions:</term>
         </p>
-      </li>
-      <li xml:id="exer_sec23-9">
+      </introduction>
+    
+      <exercise>
+        <statement>
+          <p>
+            <m>\left[ {\left( {P \wedge Q} \right) \to R} \right] \equiv \left( {P \to R} \right) 
+            \vee \left( {Q \to R} \right)</m>
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            <m>\left[ {P \to \left( {Q \wedge R} \right)} \right] \equiv \left( {P \to Q} \right) 
+            \wedge \left( {P \to R} \right)</m>
+          </p>
+        </statement>
+      </exercise>
+    
+    </exercisegroup>
+
+    <exercise xml:id="exer_sec23-9">
+      <statement>
         <p>
           If <m>P</m> and <m>Q</m> are statements,
-          is the statement <m>\left( P \vee Q \right) \wedge \mynot \left( P \wedge Q \right)</m> logically equivalent to the statement <m>\left( P \wedge \mynot Q \right) \vee \left( Q \wedge \mynot P \right)</m>?
+          is the statement <m>\left( P \vee Q \right) \wedge \mynot \left( P \wedge Q \right)</m> 
+          logically equivalent to the statement <m>\left( P \wedge \mynot Q \right) \vee \left( Q 
+          \wedge \mynot P \right)</m>?
           Justify your conclusion.
         </p>
-      </li>
-      <li xml:id="exer_sec23-8">
+      </statement>
+    </exercise>
+
+    <exercisegroup xml:id="exer_sec23-8">
+    
+      <introduction>
         <p>
-          Use previously proven logical equivalencies to prove each of the following logical equivalencies:
-          <ol>
-            <li>
-              <p>
-                <m>\left[ {\mynot P \to \left( {Q \wedge \mynot Q} \right)} \right] \equiv P</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\left( P \leftrightarrow Q \right) \equiv \left( \mynot P \vee Q \right) \wedge \left( \mynot Q \vee P \right)</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\mynot \left( P \leftrightarrow Q \right) \equiv \left( P \wedge \mynot Q \right) \vee \left( Q \wedge \mynot P \right)</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\left( P \to Q \right) \to R \equiv \left( P \wedge \mynot Q \right) \vee R</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\left( P \to Q \right) \to R \equiv \left( \mynot P \to R \right) \wedge \left( Q \to R \right)</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\left[ \left( P \wedge Q \right) \to \left( R \vee S \right) \right] \equiv \left[ \left( \mynot R \wedge \mynot S \right) \to \left( \mynot P \vee \mynot Q \right) \right]</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\left[ \left( P \wedge Q \right) \to \left( R \vee S \right) \right] \equiv \left[ \left( P \wedge Q \wedge \mynot R \right) \to S \right]</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\left[ \left( P \wedge Q \right) \to \left( R \vee S \right) \right] \equiv \left( \mynot P \vee \mynot Q \vee R \vee S \right)</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\mynot \left[ \left( P \wedge Q \right) \to \left( R \vee S \right) \right] \equiv \left( P \wedge Q \wedge \mynot R \wedge \mynot S \right)</m>
-              </p>
-            </li>
-          </ol>
+          Use previously proven logical equivalencies to prove each of the following logical 
+          equivalencies:
         </p>
-      </li>
-      <li xml:id="exer_diffimpliescont">
+      </introduction>
+    
+      <exercise>
+        <statement>
+          <p>
+            <m>\left[ {\mynot P \to \left( {Q \wedge \mynot Q} \right)} \right] \equiv P</m>
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            <m>\left( P \leftrightarrow Q \right) \equiv \left( \mynot P \vee Q \right) \wedge 
+            \left( \mynot Q \vee P \right)</m>
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+             <m>\mynot \left( P \leftrightarrow Q \right) \equiv \left( P \wedge \mynot Q \right) 
+             \vee \left( Q \wedge \mynot P \right)</m>
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            <m>\left( P \to Q \right) \to R \equiv \left( P \wedge \mynot Q \right) \vee R</m>
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            <m>\left( P \to Q \right) \to R \equiv \left( \mynot P \to R \right) \wedge 
+            \left( Q \to R \right)</m>
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            <m>\left[ \left( P \wedge Q \right) \to \left( R \vee S \right) \right] \equiv 
+            \left[ \left( \mynot R \wedge \mynot S \right) \to \left( \mynot P \vee \mynot Q \right) \right]</m>
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            <m>\left[ \left( P \wedge Q \right) \to \left( R \vee S \right) \right] \equiv 
+            \left[ \left( P \wedge Q \wedge \mynot R \right) \to S \right]</m>
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            <m>\left[ \left( P \wedge Q \right) \to \left( R \vee S \right) \right] \equiv 
+            \left( \mynot P \vee \mynot Q \vee R \vee S \right)</m>
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            <m>\mynot \left[ \left( P \wedge Q \right) \to \left( R \vee S \right) \right] \equiv 
+            \left( P \wedge Q \wedge \mynot R \wedge \mynot S \right)</m>
+          </p>
+        </statement>
+      </exercise>
+    
+    </exercisegroup>
+
+    <exercisegroup xml:id="exer_diffimpliescont">
+    
+      <introduction>
         <p>
-          Let <m>a</m> be a real number and let <m>f</m> be a real-valued function defined on an interval containing <m>x = a</m>.
+          Let <m>a</m> be a real number and let <m>f</m> be a real-valued function defined on an 
+          interval containing <m>x = a</m>.
           Consider the following conditional statement:
-          <ul>
-            \item If <m>f</m> is differentiable at <m>x = a</m>, then <m>f</m> is continuous at <m>x = a</m>.
-          </ul>
-        </p>
-        Which of the following statements have the same meaning as this conditional statement and which ones are negations of this conditional statement? \note This is not asking which statements are true and which are false. It is asking which statements are logically equivalent to the given statement. It might be helpful to let <m>P</m> represent the hypothesis of the given statement, <m>Q</m> represent the conclusion, and then determine a symbolic representation for each statement. Instead of using truth tables, try to use already established logical equivalencies to justify your conclusions.
-        <ol>
-          <li xml:id="exer_diffa">
-            <p>
-              If <m>f</m> is continuous at <m>x = a</m>,
-              then <m>f</m> is differentiable at <m>x = a</m>.
-            </p>
-          </li>
-          <li xml:id="exer_diffb">
-            <p>
-              If <m>f</m> is not differentiable at <m>x = a</m>,
-              then <m>f</m> is not continuous at <m>x = a</m>.
-            </p>
-          </li>
-          <li xml:id="exer_diffc">
-            <p>
-              If <m>f</m> is not continuous at <m>x = a</m>,
-              then <m>f</m> is not differentiable at <m>x = a</m>.
-            </p>
-          </li>
-          <li xml:id="exer_diffd">
-            <p>
-              <m>f</m> is not differentiable at <m>x = a</m> or <m>f</m> is continuous at <m>x = a</m>.
-            </p>
-          </li>
-          <li xml:id="exer_diffe">
-            <p>
-              <m>f</m> is not continuous at <m>x = a</m> or <m>f</m> is differentiable at <m>x = a</m>.
-            </p>
-          </li>
-          <li xml:id="exer_difff">
-            <p>
-              <m>f</m> is differentiable at <m>x = a</m> and <m>f</m> is not continuous at <m>x = a</m>.
-            </p>
-          </li>
-        </ol>
-      </li>
-      <li xml:id="exer_sec23-10">
+          <blockquote>
+            If <m>f</m> is differentiable at <m>x = a</m>, then <m>f</m> is continuous at <m>x = a</m>.
+          </blockquote>
+          Which of the following statements have the same meaning as this conditional statement and 
+          which ones are negations of this conditional statement? 
+          </p>
+          <note xml:id="note_diffimpliescont">
+          <p>
+          This is not asking which 
+          statements are true and which are false. It is asking which statements are logically 
+          equivalent to the given statement. It might be helpful to let <m>P</m> represent the 
+          hypothesis of the given statement, <m>Q</m> represent the conclusion, and then determine 
+          a symbolic representation for each statement. Instead of using truth tables, try to use 
+          already established logical equivalencies to justify your conclusions.
+          </p>
+          </note>
+      </introduction>
+    
+      <exercise xml:id="exer_diffa">
+        <statement>
+          <p>
+            If <m>f</m> is continuous at <m>x = a</m>,
+            then <m>f</m> is differentiable at <m>x = a</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise xml:id="exer_diffb">
+        <statement>
+          <p>
+            If <m>f</m> is not differentiable at <m>x = a</m>,
+            then <m>f</m> is not continuous at <m>x = a</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise xml:id="exer_diffc">
+        <statement>
+          <p>
+            If <m>f</m> is not continuous at <m>x = a</m>,
+            then <m>f</m> is not differentiable at <m>x = a</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise xml:id="exer_diffd">
+        <statement>
+          <p>
+            <m>f</m> is not differentiable at <m>x = a</m> or <m>f</m> is continuous at <m>x = a</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise xml:id="exer_diffe">
+        <statement>
+          <p>
+            <m>f</m> is not continuous at <m>x = a</m> or <m>f</m> is differentiable at <m>x = a</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise xml:id="exer_difff">
+        <statement>
+          <p>
+            <m>f</m> is differentiable at <m>x = a</m> and <m>f</m> is not continuous at <m>x = a</m>.
+          </p>
+        </statement>
+      </exercise>
+    
+    </exercisegroup>
+
+    <exercisegroup xml:id="exer_sec23-10">
+    
+      <introduction>
         <p>
           Let <m>a, b</m>, and <m>c</m> be integers.
           Consider the following conditional statement:
-          <ul>
-            \item If <m>a</m> divides <m>bc</m>, then <m>a</m> divides <m>b</m> or <m>a</m> divides <m>c</m>.
-          </ul>
+          <blockquote>
+            If <m>a</m> divides <m>bc</m>, then <m>a</m> divides <m>b</m> or <m>a</m> divides <m>c</m>.
+          </blockquote>
+          Which of the following statements have the same meaning as this conditional statement and 
+          which ones are negations of this conditional statement? 
+          <xref ref="note_diffimpliescont"/> also applies to this exercise.
         </p>
-        Which of the following statements have the same meaning as this conditional statement and which ones are negations of this conditional statement? The note for <xref ref="exer_diffimpliescont"/> also applies to this exercise.
-        <ol>
-          <li>
-            <p>
-              If <m>a</m> divides <m>b</m> or <m>a</m> divides <m>c</m>,
-              then <m>a</m> divides <m>bc</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              If <m>a</m> does not divide <m>b</m> or <m>a</m> does not divide <m>c</m>,
-              then <m>a</m> does not divide <m>bc</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>a</m> divides <m>bc</m>,
-              <m>a</m> does not divide <m>b</m>,
-              and <m>a</m> does not divide <m>c</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              If <m>a</m> does not divide <m>b</m> and <m>a</m> does not divide <m>c</m>,
-              then <m>a</m> does not divide <m>bc</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              <m>a</m> does not divide <m>bc</m> or <m>a</m> divides <m>b</m> or <m>a</m> divides <m>c</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              If <m>a</m> divides <m>bc</m> and <m>a</m> does not divide <m>c</m>,
-              then <m>a</m> divides <m>b</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              If <m>a</m> divides <m>bc</m> or <m>a</m> does not divide <m>b</m>,
-              then <m>a</m> divides <m>c</m>.
-            </p>
-          </li>
-        </ol>
-      </li>
-      <li>
+      </introduction>
+    
+      <exercise>
+        <statement>
+          <p>
+            If <m>a</m> divides <m>b</m> or <m>a</m> divides <m>c</m>,
+            then <m>a</m> divides <m>bc</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            If <m>a</m> does not divide <m>b</m> or <m>a</m> does not divide <m>c</m>,
+            then <m>a</m> does not divide <m>bc</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            <m>a</m> divides <m>bc</m>,
+            <m>a</m> does not divide <m>b</m>,
+            and <m>a</m> does not divide <m>c</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            If <m>a</m> does not divide <m>b</m> and <m>a</m> does not divide <m>c</m>,
+            then <m>a</m> does not divide <m>bc</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            <m>a</m> does not divide <m>bc</m> or <m>a</m> divides <m>b</m> or 
+            <m>a</m> divides <m>c</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            If <m>a</m> divides <m>bc</m> and <m>a</m> does not divide <m>c</m>,
+            then <m>a</m> divides <m>b</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            If <m>a</m> divides <m>bc</m> or <m>a</m> does not divide <m>b</m>,
+            then <m>a</m> divides <m>c</m>.
+          </p>
+        </statement>
+      </exercise>
+    
+    </exercisegroup>
+
+    <exercisegroup xml:id="exer_sec23-11">
+    
+      <introduction>
         <p>
           Let <m>x</m> be a real number.
-          Consider the following conditional statement: If <m>x^3 - x = 2x^2 + 6</m>,
-          then <m>x = - 2</m> or <m>x = 3</m>.
-          Which of the following statements have the same meaning as this conditional statement and which ones are negations of this conditional statement?
+          Consider the following conditional statement: 
+          <blockquote>
+            If <m>x^3 - x = 2x^2 + 6</m>,
+            then <m>x = - 2</m> or <m>x = 3</m>.
+          </blockquote>
+          Which of the following statements have the same meaning as this conditional statement 
+          and which ones are negations of this conditional statement?
           Explain each conclusion.
-          (See the note in the instructions for <xref ref="exer_diffimpliescont"/>.)
-          <ol>
-            <li>
-              <p>
-                If <m>x \ne - 2</m> and <m>x \ne 3</m>,
-                then <m>x^3 - x \ne 2x^2 + 6</m>.
-              </p>
-            </li>
-            <li>
-              <p>
-                If <m>x = - 2</m> or <m>x = 3</m>,
-                then <m>x^3 - x = 2x^2 + 6</m>.
-              </p>
-            </li>
-            <li>
-              <p>
-                If <m>x \ne - 2</m> or <m>x \ne 3</m>,
-                then <m>x^3 - x \ne 2x^2 + 6</m>.
-              </p>
-            </li>
-            <li>
-              <p>
-                If <m>x^3 - x = 2x^2 + 6</m> and <m>x \ne - 2</m>, then <m>x = 3</m>.
-              </p>
-            </li>
-            <li>
-              <p>
-                If <m>x^3 - x = 2x^2 + 6</m> or <m>x \ne - 2</m>, then <m>x = 3</m>.
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>x^3 - x = 2x^2 + 6</m>, <m>x \ne - 2</m>, and <m>x \ne 3</m>.
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>x^3 - x \ne 2x^2 + 6</m> or <m>x = - 2</m> or <m>x = 3</m>.
-              </p>
-            </li>
-          </ol>
+          (See <xref ref="note_diffimpliescont"/>.)
         </p>
-      </li>
-    </ol>
-  </subsection>
-  <subsection>
-    <title>Explorations and Activities</title>
-    <ol>
-      <li xml:id="A_workingeq">
+      </introduction>
+    
+      <exercise>
+        <statement>
+          <p>
+            If <m>x \ne - 2</m> and <m>x \ne 3</m>,
+            then <m>x^3 - x \ne 2x^2 + 6</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            If <m>x = - 2</m> or <m>x = 3</m>,
+            then <m>x^3 - x = 2x^2 + 6</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            If <m>x \ne - 2</m> or <m>x \ne 3</m>,
+            then <m>x^3 - x \ne 2x^2 + 6</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            If <m>x^3 - x = 2x^2 + 6</m> and <m>x \ne - 2</m>, then <m>x = 3</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            If <m>x^3 - x = 2x^2 + 6</m> or <m>x \ne - 2</m>, then <m>x = 3</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            <m>x^3 - x = 2x^2 + 6</m>, <m>x \ne - 2</m>, and <m>x \ne 3</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            <m>x^3 - x \ne 2x^2 + 6</m> or <m>x = - 2</m> or <m>x = 3</m>.
+          </p>
+        </statement>
+      </exercise>
+    
+    </exercisegroup>
+    
+    <activity xml:id="A_workingeq">
+      <title>Working with a Logical Equivalency</title>
+
+      <introduction>
         <p>
-          <em>Working with a Logical Equivalency</em>.
-          Suppose we are trying to prove the following for integers  <m>x</m>  and  <m>y</m>:  If  <m>x \cdot y</m> is even,
+          Suppose we are trying to prove the following for integers  <m>x</m>  and  <m>y</m>:  
+          <blockquote>
+          If  <m>x \cdot y</m> is even,
           then  <m>x</m>  is  even  or  <m>y</m>  is even.
+          </blockquote>
           We notice that we can write this statement in the following symbolic form:
           <me>
-            P \to \left( {Q \vee R} \right)
+          P \to \left( {Q \vee R} \right)
           </me>,
           where <m>P</m> is
           <q><m>x \cdot y</m> is even,</q>
@@ -909,25 +1162,40 @@
           <q><m>x</m> is even,</q>
           and <m>R</m> is
           <q><m>y</m> is even.</q>
-          <ol>
-            <li xml:id="pr_workingeq2part2">
-              <p>
-                Write the symbolic form of the contrapositive of <m>P \to \left( {Q \vee R} \right)</m>.
-                Then use one of De Morgan's Laws
-                (<xref ref="T_demorgan"></xref>)
-                to rewrite the hypothesis of this conditional statement.
-              </p>
-            </li>
-            <li>
-              <p>
-                Use the result from Part<nbsp/><xref ref="pr_workingeq2part2"/> to explain why the given statement is logically equivalent to the following statement: If <m>x</m> is odd and <m>y</m> is odd,
-                then <m>x \cdot y</m> is odd.
-              </p>
-            </li>
-          </ol>
         </p>
-        The two statements in this activity are logically equivalent.  We now have the choice of proving either of these statements.  If we prove one, we prove the other, or if we show one is false, the other is also false.  The second statement is <xref ref="T_xyodd"></xref>, which was proven in <xref ref="S_direct"></xref>.
-      </li>
-    </ol>
-  </subsection>
+      </introduction>
+
+      <task xml:id="pr_workingeq2part2">
+        <p>
+           Write the symbolic form of the contrapositive of <m>P \to \left( {Q \vee R} \right)</m>.
+          Then use one of De Morgan's Laws
+          (<xref ref="T_demorgan"></xref>)
+          to rewrite the hypothesis of this conditional statement.
+        </p>
+      </task>
+      <task>
+        <p>
+          Use the result from <xref ref="pr_workingeq2part2"/> to explain why the given 
+          statement is logically equivalent to the following statement: 
+          <blockquote>
+          If <m>x</m> is odd and 
+          <m>y</m> is odd,
+          then <m>x \cdot y</m> is odd.
+          </blockquote>
+        </p>
+      </task>
+
+      <conclusion>
+        <p>
+          The two statements in this activity are logically equivalent.  We now have the choice of 
+          proving either of these statements.  If we prove one, we prove the other, or if we show 
+          one is false, the other is also false.  The second statement is <xref ref="T_xyodd"></xref>, 
+          which was proven in <xref ref="S_direct"></xref>.
+        </p>
+      </conclusion>
+      
+    </activity>
+
+  </exercises>
+
 </section>

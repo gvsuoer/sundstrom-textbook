@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<section xml:id="S_3directproof">
+<section xml:id="S_directproof">
   <title>Direct Proofs</title>
 
-  <introduction>
-    <exploration xml:id="PA_divisor">
-      <title>Definition of Divides, Divisor, Multiple</title>
-      <introduction>
+  <worksheet xml:id="PA_divisor">
+    <title>Beginning Activity 1: Definition of Divides, Divisor, Multiple</title>
+
       <p>
         In <xref ref="S_1direct"></xref>,
         we studied the concepts of even integers
@@ -48,8 +47,9 @@
         </statement>
       </definition>
 
-      <note>
-      <title>Notation</title>
+      
+      <paragraphs>
+        <title>A Note about Notation</title>
       <p>
         Be careful with the notation <m>a \mid b</m>.
         This does not represent the rational number <m>\dfrac{a}{b}</m>.
@@ -57,10 +57,10 @@
         <m>b</m> and is simply a shorthand for
         <q><m>a</m> divides <m>b</m>.</q>
       </p>
-      </note>
+      </paragraphs>
 
-      <note>
-      <title>Definitions</title>
+      <paragraphs>
+      <title>A Note about Definitions</title>
       <p>
         Technically,
         a definition in mathematics should almost always be written using
@@ -78,12 +78,8 @@
         <q>provided that</q>
         instead.
       </p>
-      </note>
-      </introduction>
+      </paragraphs>
 
-      <exercises>
-      <exercisegroup>
-      <introduction>
       <p>
         The definition for
         <q>divides</q>
@@ -92,7 +88,7 @@
         an integer <m>n</m> provided that 
         <m>\left( {\exists q \in \mathbb{Z}} \right)\left( {n = m \cdot q} \right)</m>.
       </p>
-      </introduction>
+
       <exercise>
         <p>
           Use the definition of divides to explain why 4 divides 32 and to explain why 8 divides 
@@ -137,9 +133,11 @@
           second integer and the second integer divides the third integer.
         </p>
       </exercise>
-      </exercisegroup>
       
-      <conjecture xml:id="conj-divides">
+      <p>
+        As we have seen in <xref ref="S_1direct"/>, a definition is frequently used when 
+        constructing and writing mathematical proofs. Consider the following conjecture:
+        <conjecture xml:id="conj-divides">
         <statement>
           <p>
             Let <m>a</m>, <m>b</m>,
@@ -149,28 +147,16 @@
           </p>
         </statement>
       </conjecture>
-
-      <exercisegroup>
-      <introduction>
-      <p>
-        As we have seen in <xref ref="S_1direct"></xref>,
-        a definition is frequently used when constructing and writing mathematical proofs.
-        Consider the following conjecture:
       </p>
-      </introduction>
-      
-      
-      
+
       <exercise>
         <p>
-          Explain why the examples you generated in <xref ref="PA_divisor1"/> provide evidence that 
+          Explain why the examples you generated in <xref ref="PA_divisor1">Exercise</xref>
+           provide evidence that 
           this conjecture is true.
         </p>
       </exercise>
-      </exercisegroup>
 
-      <exercisegroup>
-      <introduction>
       <p>
         In <xref ref="S_1direct"></xref>,
         we also learned how to use a <term>know-show table</term>
@@ -178,7 +164,6 @@
         If necessary,
         review the appropriate material in <xref ref="S_1direct"></xref>.
       </p>
-      </introduction>
 
       <exercise xml:id="PA_divisor2">
         <p>
@@ -190,7 +175,7 @@
         <p>
           Use the definition of
           <q>divides</q>
-          to make some conclusions based on your assumptions in <xref ref="PA_divisor2"/>.
+          to make some conclusions based on your assumptions in <xref ref="PA_divisor2">Exercise</xref>.
         </p>
       </exercise>
       <exercise xml:id="PA_divisor3">
@@ -202,196 +187,148 @@
       <exercise>
         <p>
           Use the definition of divides to write an answer to the question, 
-          <q>How can we prove what we stated in<xref ref="PA_divisor3"/>?</q>
+          <q>How can we prove what we stated in<xref ref="PA_divisor3">Exercise</xref>?</q>
         </p>
       </exercise>
-      </exercisegroup>
-      </exercises>
-    </exploration>
 
-    <exploration xml:id="PA_calender">
-      <title>Calendars and Clocks</title>
-      <introduction>
-      <p>
+  </worksheet>
+
+  <worksheet xml:id="PA_calender">
+    <title>Beginning Activity 2: Calendars and Clocks</title>
+
+    <p>
         This activity is intended to help with understanding the concept of congruence,
         which will be studied at the end of this section.
-      </p>
-      </introduction>
+    </p>
 
-      <exercises xml:id="exercises-">
-        <exercisegroup xml:id="PA_calender1">
-        
-          <introduction>
+    <exercise xml:id="PA_calender1">
+      <statement>
+        <p>
+          Suppose that it is currently Tuesday.
+          <task>
             <p>
-              Suppose that it is currently Tuesday.
+              What day will it be 3 days from now?
             </p>
-          </introduction>
-        
-          <exercise>
-            <statement>
-              <p>
-                What day will it be 3 days from now?
-              </p>
-            </statement>
-          </exercise>
-          <exercise>
-            <statement>
-              <p>
-                What day will it be 10 days from now?
-              </p>
-            </statement>
-          </exercise>
-          <exercise>
-            <statement>
-              <p>
-                What day will it be 17 days from now?
-                What day will it be 24 days from now?
-              </p>
-            </statement>
-          </exercise>
-          <exercise xml:id="PA_calender1d">
-            <statement>
-              <p>
-                Find several other natural numbers <m>x</m> such that it will be Friday 
-                <m>x</m> days from now.
-              </p>
-            </statement>
-          </exercise>
-          <exercise xml:id="PA_calender1e">
-            <statement>
-              <p>
-                Create a list
-                (in increasing order)
-                of the numbers <m>3, 10, 17, 24</m>,
-                and the numbers you generated in <xref ref="PA_calender1d"/>.
-                Pick any two numbers from this list and subtract one from the other.
-                Repeat this several times.
-              </p>
-            </statement>
-          </exercise>
-          <exercise>
-            <statement>
-              <p>
-                 What do the numbers you obtained in <xref ref="PA_calender1e"/> 
-                 have in common?
-              </p>
-            </statement>
-          </exercise>
-        
-        </exercisegroup>
-
-        <exercisegroup>
-        
-          <introduction>
+          </task>
+          <task>
             <p>
-              Suppose that we are using a twelve-hour clock with no distinction between 
+              What day will it be 10 days from now?
+            </p>
+          </task>
+          <task>
+            <p>
+              What day will it be 17 days from now? What day will it be 24 days from now?
+            </p>
+          </task>
+          <task xml:id="PA_calender1d">
+            <p>
+              Find several other natural numbers <m>x</m> such that it will be Friday <m>x</m>
+              days from now.
+            </p>
+          </task>
+          <task xml:id="PA_calender1e">
+            <p>
+              Create a list (increasing order) of the numbers 3, 10, 17, 24, and the numbers you 
+              generated in <xref ref="PA_calender1d"/>. Pick any two numbers from this list and 
+              subtract one from the other. Repeat this several times.
+            </p>
+          </task>
+          <task>
+            <p>
+              What do the numbers you obtained in <xref ref="PA_calender1e"/> have in common?
+            </p>
+          </task>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Suppose that we are using a twelve-hour clock with no distinction between 
               A.M. and P.M. Also,
               suppose that the current time is 5:00.
+          <task>
+            <p>
+              What time will it be 4 hours from now?
             </p>
-          </introduction>
-        
-          <exercise>
-            <statement>
-              <p>
-                What time will it be 4 hours from now?
-              </p>
-            </statement>
-          </exercise>
-          <exercise>
-            <statement>
-              <p>
-                What time will it be 16 hours from now?
-                What time will it be 28 hours from now?
-              </p>
-            </statement>
-          </exercise>
-          <exercise xml:id="PA_calender2c">
-            <statement>
-              <p>
-                Find several other natural numbers <m>x</m> such that it will be 9:00 
+          </task>
+          <task>
+            <p>
+              What time will it be 16 hours from now?
+              What time will it be 28 hours from now?
+            </p>
+          </task>
+          <task xml:id="PA_calender2c">
+            <p>
+              Find several other natural numbers <m>x</m> such that it will be 9:00 
                 <m>x</m> hours from now.
-              </p>
-            </statement>
-          </exercise>
-          <exercise xml:id="PA_calender2e">
-            <statement>
-              <p>
-                Create a list
+            </p>
+          </task>
+          <task xml:id="PA_calender2e">
+            <p>
+              Create a list
                 (in increasing order)
                 of the numbers <m>4, 16, 28</m>,
-                and the numbers you generated in Part<nbsp/><xref ref="PA_calender2c"/>.
+                and the numbers you generated in <xref ref="PA_calender2c"/>.
                 Pick any two numbers from this list and subtract one from the other.
                 Repeat this several times.
-              </p>
-            </statement>
-          </exercise>
-          <exercise>
-            <statement>
-              <p>
-                What do the numbers you obtained in Part<nbsp/><xref ref="PA_calender2e"/> have in common?
-              </p>
-            </statement>
-          </exercise>
-        
-        </exercisegroup>
-
-        <exercisegroup>
-        
-          <introduction>
-            <p>
-              This is a continuation of <xref ref="PA_calender1"/>.
-              Suppose that it is currently Tuesday.
             </p>
-          </introduction>
-        
-          <exercise>
-            <statement>
-              <p>
-                What day was it 4 days ago?
-              </p>
-            </statement>
-          </exercise>
-          <exercise>
-            <statement>
-              <p>
-                What day was it 11 days ago?
-                What day was it 18 days ago?
-              </p>
-            </statement>
-          </exercise>
-          <exercise xml:id="PA_calender3c">
-            <statement>
-              <p>
-                Find several other natural numbers <m>x</m> such that it was Friday <m>x</m> days ago.
-              </p>
-            </statement>
-          </exercise>
-          <exercise xml:id="PA_calender3d">
-            <statement>
-              <p>
-                Create a list
+          </task>
+          <task>
+            <p>
+              What do the numbers you obtained in Part<nbsp/><xref ref="PA_calender2e"/> 
+              have in common?
+            </p>
+          </task>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          This is a continuation of <xref ref="PA_calender1">Exercise</xref>.
+          Suppose that it is currently Tuesday.
+          <task>
+            <p>
+              What day was it 4 days ago?
+            </p>
+          </task>
+          <task>
+            <p>
+              What day was it 11 days ago?
+              What day was it 18 days ago?
+            </p>
+          </task>
+          <task xml:id="PA_calender3c">
+            <p>
+              Find several other natural numbers <m>x</m> such that it was Friday <m>x</m> days ago.
+            </p>
+          </task>
+          <task xml:id="PA_calender3d">
+            <p>
+              Create a list
                 (in increasing order)
                 consisting of the numbers <m>-18, -11, -4</m>,
-                the opposites of the numbers you generated in <xref ref="PA_calender3c"/>
-                and the positive numbers in the list from <xref ref="PA_calender1e"/>.
+                the opposites of the numbers you generated in 
+                <xref text="custom" ref="PA_calender3c">Exercise 3.c</xref>
+                and the positive numbers in the list from 
+                <xref text="custom" ref="PA_calender1e">Exercise 1.e</xref>.
                 Pick any two numbers from this list and subtract one from the other.
                 Repeat this several times.
-              </p>
-            </statement>
-          </exercise>
-          <exercise>
-            <statement>
-              <p>
-                What do the numbers you obtained in <xref ref="PA_calender3d"/> have in common?
-              </p>
-            </statement>
-          </exercise>
-        
-        </exercisegroup>
-      </exercises>
-
-    </exploration>
-  </introduction>
+            </p>
+          </task>
+          <task>
+            <p>
+              What do the numbers you obtained in 
+              <xref text="custom" ref="PA_calender3d">Exercise 3.d</xref> have in common?
+            </p>
+          </task>
+        </p>
+      </statement>
+    </exercise>
+  </worksheet>
 
   <subsection xml:id="proof">
     <title>Some Mathematical Terminology</title>
@@ -540,7 +477,7 @@
     <p>
       Quite often, the first step is to develop a conjecture.
       This is often done after working within certain objects for some time.
-      This is what we did in <xref ref="PA_divisor"></xref>
+      This is what we did in <xref ref="PA_divisor">Beginning Activity 1</xref>
       when we used examples to provide evidence that <xref ref="conj-divides"/> is true.
     </p>
 
@@ -549,8 +486,9 @@
       we should make sure we have explored some examples.
       This simply means to construct some specific examples where the integers <m>a</m>,
       <m>b</m>,
-      and <m>c</m> satisfy the hypothesis of the conjecture in order to see if they also satisfy the conclusion.
-      We did this for this conjecture in <xref ref="PA_divisor"></xref>.
+      and <m>c</m> satisfy the hypothesis of the conjecture in order to see if they also satisfy the 
+      conclusion.
+      We did this for this conjecture in <xref ref="PA_divisor">Beginning Activity 1</xref>.
     </p>
     <p>
       We will now start a know-show<nbsp/>table for this conjecture.
@@ -640,7 +578,8 @@
     </p>
     <p>
       The key now is to determine how to get from <m>P1</m> to <m>Q1</m>.
-      That is, can we use the conclusions that the integers <m>s</m> and <m>t</m> exist in order to prove that the integer <m>q</m>
+      That is, can we use the conclusions that the integers <m>s</m> and <m>t</m> exist in order to 
+      prove that the integer <m>q</m>
       (from the backward process)
       exists.
       Using the equation <m>b = a \cdot s</m>,
@@ -710,7 +649,7 @@
         <line>properties of the integers</line></cell>
         
       </row>
-      <row bottom="minor">
+      <row>
         
         <cell right="medium"><m>Q</m></cell>
         <cell right="minor"><m>a \mid c</m></cell>
@@ -784,7 +723,7 @@
         Consequently, we have proven that whenever <m>a</m>, <m>b</m>,
         and <m>c</m> are integers with <m>a \ne 0</m> and <m>b \ne 0</m> such that <m>a</m> divides 
         <m>b</m> and <m>b</m> divides <m>c</m>,
-        then <m>a</m> divides <m>c</m>.
+        then <m>a</m> divides <m>c</m>. <m>\blacksquare</m>
       </p>
     </proof>
   </subsection>
@@ -816,7 +755,7 @@
 
     Later in the proof, there may be a line such as
     <blockquote>
-    Then, using the result in <xref ref="eq_3e"/>, we obtain <ellipsis/>.
+    Then, using the result in equation <xref ref="eq_3e"/>, we obtain <ellipsis/>.
     </blockquote>
 
     Notice that we did not number every equation in <xref ref="T_transdivide"></xref>. 
@@ -946,7 +885,7 @@
       We can stop exploring examples now since the last row in the table provides an example where the 
       hypothesis is true and the conclusion is false.
       Recall from <xref ref="S_2quantifier"></xref>
-      (see <xref ref="D_counterexample2"></xref>)
+      (see <xref ref="D_counterexample2">Counterexamples and Negations of Conditional Statements</xref>)
       that a <term>counterexample</term> for a statement of the form
       <m>\left( \forall x \in U \right) \left( P(x) \right)</m> is an element <m>a</m> in the 
       universal set for which <m>P(a)</m> is false.
@@ -958,7 +897,7 @@
       <q>proof</q>
       since we reserve a proof for proving a proposition is true.
       We could summarize our work as follows:
-    </p>
+    
 
     <conjecture xml:id="conj-divides2">
       <statement>
@@ -981,7 +920,7 @@
       </statement>
     </conjecture>
 
-    <p>
+
       As a general rule of thumb,
       anytime we are trying to decide if a proposition is true or false,
       it is a good idea to try some examples first.
@@ -995,7 +934,7 @@
     <investigation xml:id="pr_counterexample">
       <title>Using a Counterexample</title>
       <idx><h>counterexample</h></idx>
-      <task>
+      <introduction>
       <p>
         Use a counterexample to prove the following statement is false.
         <blockquote>
@@ -1003,7 +942,7 @@
           then 5 divides <m>(5a + b)</m>.
         </blockquote>
       </p>
-      </task>
+      </introduction>
     </investigation>
 
   </subsection>
@@ -1018,10 +957,10 @@
       the day of the week is a cyclic phenomenon in that the day of the week repeats every seven days.
       The time of the day is a cyclic phenomenon because it repeats every 12 hours if we use a 
       12-hour clock or every 24 hours if we use a 24-hour clock.
-      We explored these two cyclic phenomena in <xref ref="PA_calender"></xref>.
+      We explored these two cyclic phenomena in <xref ref="PA_calender">Beginning Activity 2</xref>.
     </p>
     <p>
-      Similar to what we saw in <xref ref="PA_calender"></xref>,
+      Similar to what we saw in <xref ref="PA_calender">Beginning Activity 2</xref>,
       if it is currently Monday,
       then it will be Wednesday 2 days from now, 9 days from now, 16 days from now, 23 days from now,
       and so on.
@@ -1048,7 +987,7 @@
       Using the concept of congruence,
       we would say that all the numbers in this list are congruent modulo 7, but we first have to 
       define when two numbers are congruent modulo some natural number <m>n</m>.
-    </p>
+    
 
     <definition xml:id="congruence">
       <statement>
@@ -1068,7 +1007,7 @@
       </statement>
     </definition>
 
-    <p>
+  
       Notice that we can use the definition of divides to say that <m>n</m> divides 
       <m>(a - b)</m> if and only if there exists an integer <m>k</m> such that <m>a - b = nk</m>.
       So we can write
@@ -1215,11 +1154,11 @@
       and the last three can be considered as technical guidelines specific to writing in mathematics.
     </p>
 
-    <insight xml:id="writing_know">
-      <title>Know your audience</title>
-
-      <p>
-        Every writer should have a clear idea of the intended audience for a piece of writing.
+    <dl>
+      <li xml:id="writing_know">
+        <title>Know Your Audience</title>
+        <p>
+          Every writer should have a clear idea of the intended audience for a piece of writing.
         In that way,
         the writer can give the right amount of information at the proper level of sophistication to 
         communicate effectively.
@@ -1230,39 +1169,33 @@
         the writing would be brief with many details omitted.
         However, if the writing was for a students' solution manual,
         more details would be included.
-      </p>
-    </insight>
-
-    <insight>
-      <title>Use complete sentences and proper paragraph structure</title>
-
-      <p>
-        Good grammar is an important part of any writing.
+        </p>
+      </li>
+      <li>
+        <title>Use complete sentences and proper paragraph structure</title>
+        <p>
+          Good grammar is an important part of any writing.
         Therefore, conform to the accepted rules of grammar.
         Pay careful attention to the structure of sentences.
         Write proofs using <em>complete sentences</em>
         but avoid run-on sentences.
         Also, do not forget punctuation,
         and always use a spell checker when using a word processor.
-      </p>
-    </insight>
-
-    <insight>
-      <title>Keep it simple</title>
-
-      <p>
-        It is often difficult to understand a mathematical argument no matter how well it is written.
+        </p>
+      </li>
+      <li>
+        <title>Keep it simple</title>
+        <p>
+          It is often difficult to understand a mathematical argument no matter how well it is written.
         Do not let your writing help make it more difficult for the reader.
         Use simple, declarative sentences and short paragraphs,
         each with a simple point.
-      </p>
-    </insight>
-
-    <insight>
-      <title>Write a first draft of your proof and then revise it</title>
-
-      <p>
-        Remember that a proof is written so that readers are able to read and understand the 
+        </p>
+      </li>
+      <li>
+        <title>Write a first draft of your proof and then revise it</title>
+        <p>
+          Remember that a proof is written so that readers are able to read and understand the 
         reasoning in the proof.
         Be clear and concise.
         Include details but do not ramble.
@@ -1274,13 +1207,11 @@
         Everyone can be sure that there will be some proofs that are difficult to construct,
         but remember that proofs are a very important part of mathematics.
         So work hard and have fun.
-      </p>
-    </insight>
-
-    <insight>
-      <title>Do not use <m>*</m> for multiplication or ^ for exponents</title>
-
-      <p>
+        </p>
+      </li>
+      <li>
+        <title>Do not use <m>*</m> for multiplication or ^ for exponents</title>
+        <p>
         Leave this type of notation for writing computer code.
         The use of this notation makes it difficult for humans to read.
         In addition,
@@ -1295,26 +1226,22 @@
           </me>
           is much easier to read.
       </p>
-    </insight>
-
-    <insight>
-      <title>Do not use a mathematical symbol at the beginning of a sentence.</title>
-
-      <p>
-        For example, we should not write,
+      </li>
+      <li>
+        <title>Do not use a mathematical symbol at the beginning of a sentence.</title>
+        <p>
+          For example, we should not write,
         <q>Let <m>n</m> be an integer.
         <m>n</m> is an odd integer provided that <ellipsis/> .</q>
         Many people find this hard to read and often have to re-read it to understand it.
         It would be better to write,
         <q>An integer <m>n</m> is an odd integer provided that <ellipsis/> .</q>
-      </p>
-    </insight>
-
-    <insight>
-      <title>Use English and minimize the use of cumbersome notation</title>
-
-      <p>
-        Do not use the special symbols for quantifiers <m>\forall</m>
+        </p>
+      </li>
+      <li>
+        <title>Use English and minimize the use of cumbersome notation</title>
+        <p>
+          Do not use the special symbols for quantifiers <m>\forall</m>
         (for all),
         <m>\exists</m>
         (there exists),
@@ -1336,208 +1263,160 @@
         <blockquote>
           Every real number has an additive inverse.
         </blockquote>
-      </p>
-    </insight>
+        </p>
+      </li>
+    </dl>
+
   </subsection>
 
   <exercises>
-    <exercisegroup xml:id="exer_sec31-prove">
-    
-      <introduction>
+
+    <exercise xml:id="exer_sec31-prove">
+      <statement>
         <p>
           Prove each of the following statements:
-        </p>
-      </introduction>
-    
-      <exercise xml:id="exer_sec31-provea">
-        <statement>
-          <p>
-            For all integers <m>a</m>, <m>b</m>,
+          <task xml:id="exer_sec31-provea">
+            <p>
+              For all integers <m>a</m>, <m>b</m>,
             and <m>c</m> with <m>a \ne 0</m>,
             if <m>a \mid b</m> and <m>a \mid c</m>,
             then <m>a \mid \left(b-c \right)</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            For each <m>n \in \Z</m>,
-            if <m>n</m> is an odd integer,
-            then <m>n^3</m> is an odd integer.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            For each integer <m>a</m>,
-            if 4 divides <m>(a - 1)</m>, then 4 divides <m>\left( a^2 - 1 \right)</m>.
-          </p>
-        </statement>
-      </exercise>
-    
-    </exercisegroup>
+            </p>
+          </task>
+          <task>
+            <p>
+              For each <m>n \in \Z</m>,
+              if <m>n</m> is an odd integer,
+              then <m>n^3</m> is an odd integer.
+            </p>
+          </task>
+          <task>
+            <p>
+              For each integer <m>a</m>,
+              if 4 divides <m>(a - 1)</m>, then 4 divides <m>\left( a^2 - 1 \right)</m>.
+            </p>
+          </task>
+        </p>
+      </statement>
+    </exercise>
 
-    <exercisegroup>
-    
-      <introduction>
+    <exercise>
+      <statement>
         <p>
           For each of the following,
           use a counterexample to prove the statement is false.
+          <task>
+            <p>
+              For each odd natural number <m>n</m>,
+              if <m>n > 3</m>, then 3 divides <m>\left( n^2 - 1 \right)</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              For each natural number <m>n</m>,
+              <m>\left( 3 \cdot 2^n + 2 \cdot 3^n + 1 \right)</m> is a prime number.
+            </p>
+          </task>
+          <task>
+            <p>
+              For all real numbers <m>x</m> and <m>y</m>,
+              <m>\sqrt{x^2 + y^2} > 2xy</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              For each integer <m>a</m>,
+              if 4 divides <m>\left( a^2 - 1 \right)</m>,
+              then 4 divides <m>(a - 1)</m>.
+            </p>
+          </task>
         </p>
-      </introduction>
+      </statement>
+    </exercise>
     
-      <exercise>
-        <statement>
-          <p>
-            For each odd natural number <m>n</m>,
-            if <m>n > 3</m>, then 3 divides <m>\left( n^2 - 1 \right)</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            For each natural number <m>n</m>,
-            <m>\left( 3 \cdot 2^n + 2 \cdot 3^n + 1 \right)</m> is a prime number.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            For all real numbers <m>x</m> and <m>y</m>,
-            <m>\sqrt{x^2 + y^2} > 2xy</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            For each integer <m>a</m>,
-            if 4 divides <m>\left( a^2 - 1 \right)</m>,
-            then 4 divides <m>(a - 1)</m>.
-          </p>
-        </statement>
-      </exercise>
-    
-    </exercisegroup>
-
-    <exercisegroup xml:id="exer_3truefalse">
-    
-      <introduction>
+    <exercise xml:id="exer_3truefalse">
+      <statement>
         <p>
           Determine if each of the following statements is true or false.
           If a statement is true,
           then write a formal proof of that statement, and if it is false,
           then provide a counterexample that shows it is false.
+          <task xml:id="exer_divprod">
+            <p>
+              For all integers <m>a</m>, <m>b</m>,
+            and <m>c</m> with <m>a \ne 0</m>,
+              if <m>a \mid b</m>, then <m>a \mid \left(bc \right)</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              For all integers <m>a</m> and <m>b</m> with <m>a \ne 0</m>,
+              if <m>6 \mid \left(ab \right)</m>,
+              then <m>6 \mid a</m> or <m>6 \mid b</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              For all integers <m>a</m>, <m>b</m>,
+              and <m>c</m> with <m>a \ne 0</m>,
+              if <m>a</m> divides <m>(b - 1)</m> and <m>a</m> divides <m>(c - 1)</m>,
+              then <m>a</m> divides <m>(bc - 1)</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              For each integer <m>n</m>,
+              if 7 divides <m>\left( n^2 - 4 \right)</m>,
+              then 7 divides <m>(n - 2)</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              For every integer <m>n</m>, <m>4n^2 + 7n + 6</m> is an odd integer.
+            </p>
+          </task>
+          <task>
+            <p>
+              For every odd integer <m>n</m>,
+              <m>4n^2 + 7n + 6</m> is an odd integer.
+            </p>
+          </task>
+          <task>
+            <p>
+              For all integers <m>a</m>, <m>b</m>,
+              and <m>d</m> with <m>d \ne 0</m>,
+              if <m>d</m> divides both <m>a-b</m> and <m>a+b</m>,
+              then <m>d</m> divides <m>a</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              For all integers <m>a</m>, <m>b</m>,
+              and <m>c</m> with <m>a \ne 0</m>,
+              if <m>a \mid (bc)</m>, then <m>a \mid b</m> or <m>a \mid c</m>.
+            </p>
+          </task>
         </p>
-      </introduction>
-    
-      <exercise xml:id="exer_divprod">
-        <statement>
-          <p>
-            For all integers <m>a</m>, <m>b</m>,
-            and <m>c</m> with <m>a \ne 0</m>,
-            if <m>a \mid b</m>, then <m>a \mid \left(bc \right)</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            For all integers <m>a</m> and <m>b</m> with <m>a \ne 0</m>,
-            if <m>6 \mid \left(ab \right)</m>,
-            then <m>6 \mid a</m> or <m>6 \mid b</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            For all integers <m>a</m>, <m>b</m>,
-            and <m>c</m> with <m>a \ne 0</m>,
-            if <m>a</m> divides <m>(b - 1)</m> and <m>a</m> divides <m>(c - 1)</m>,
-            then <m>a</m> divides <m>(bc - 1)</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            For each integer <m>n</m>,
-            if 7 divides <m>\left( n^2 - 4 \right)</m>,
-            then 7 divides <m>(n - 2)</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            For every integer <m>n</m>, <m>4n^2 + 7n + 6</m> is an odd integer.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            For every odd integer <m>n</m>,
-            <m>4n^2 + 7n + 6</m> is an odd integer.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            For all integers <m>a</m>, <m>b</m>,
-            and <m>d</m> with <m>d \ne 0</m>,
-            if <m>d</m> divides both <m>a-b</m> and <m>a+b</m>,
-            then <m>d</m> divides <m>a</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            For all integers <m>a</m>, <m>b</m>,
-            and <m>c</m> with <m>a \ne 0</m>,
-            if <m>a \mid (bc)</m>, then <m>a \mid b</m> or <m>a \mid c</m>.
-          </p>
-        </statement>
-      </exercise>
-    
-    </exercisegroup>
+      </statement>
+    </exercise>
 
-    <exercisegroup xml:id="exer_diveach">
-    
-      <introduction>
+    <exercise xml:id="exer_diveach">
+      <task>
         <p>
-          Complete the following exercises.
-        </p>
-      </introduction>
-    
-      <exercise>
-        <statement>
-          <p>
-            If <m>x</m> and <m>y</m> are integers and <m>xy=1</m>,
+          If <m>x</m> and <m>y</m> are integers and <m>xy=1</m>,
             explain why <m>x=1</m> or <m>x=-1</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Is the following proposition true or false?
+        </p>
+      </task>
+      <task>
+        <p>
+          Is the following proposition true or false?
             <blockquote>
               For all nonzero integers <m>a</m> and <m>b</m>, if <m>a \mid b</m> and <m>b \mid a</m>, 
               then <m>a = \pm b</m>.
             </blockquote>
-          </p>
-        </statement>
-      </exercise>
-    
-    </exercisegroup>
+        </p>
+      </task>
+    </exercise>
 
     <exercise xml:id="exer_sec31-10">
       <statement>
@@ -1557,298 +1436,236 @@
       </hint>
     </exercise>
 
-    <exercisegroup>
-    
-      <introduction>
+    <exercise>
+      <statement>
         <p>
           Determine if each of the following statements is true or false.
           If a statement is true,
           then write a formal proof of that statement, and if it is false,
           then provide a counterexample that shows it is false.
+          <task>
+            <p>
+              For each integer <m>a</m>,
+              if there exists an integer <m>n</m> such that <m>a</m> divides <m>(8n + 7)</m> and 
+              <m>a</m> divides
+              <m>(4n + 1)</m>, then <m>a</m> divides 5.
+            </p>
+          </task>
+          <task>
+            <p>
+              For each integer <m>a</m>,
+              if there exists an integer <m>n</m> such that <m>a</m> divides <m>(9n + 5)</m> and
+              <m>a</m> divides
+              <m>(6n + 1)</m>, then <m>a</m> divides 7.
+            </p>
+          </task>
+          <task>
+            <p>
+              For each integer <m>n</m>, if <m>n</m> is odd,
+              then 8 divides <m>\left( n^4 + 4n^2 + 11 \right)</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              For each integer <m>n</m>, if <m>n</m> is odd,
+              then 8 divides <m>\left( n^4 + n^2 + 2n \right)</m>.
+            </p>
+          </task>
         </p>
-      </introduction>
-    
-      <exercise>
-        <statement>
-          <p>
-            For each integer <m>a</m>,
-            if there exists an integer <m>n</m> such that <m>a</m> divides <m>(8n + 7)</m> and 
-            <m>a</m> divides
-            <m>(4n + 1)</m>, then <m>a</m> divides 5.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            For each integer <m>a</m>,
-            if there exists an integer <m>n</m> such that <m>a</m> divides <m>(9n + 5)</m> and
-            <m>a</m> divides
-            <m>(6n + 1)</m>, then <m>a</m> divides 7.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            For each integer <m>n</m>, if <m>n</m> is odd,
-            then 8 divides <m>\left( n^4 + 4n^2 + 11 \right)</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            For each integer <m>n</m>, if <m>n</m> is odd,
-            then 8 divides <m>\left( n^4 + n^2 + 2n \right)</m>.
-          </p>
-        </statement>
-      </exercise>
-    
-    </exercisegroup>
+      </statement>
+    </exercise>
 
-    <exercisegroup>
-    
-      <introduction>
+    <exercise>
+      <statement>
         <p>
           Let <m>a</m> be an integer and let <m>n \in \mathbb{N}</m>.
+          <task>
+            <p>
+              Prove that if <m>a \equiv 0 \pmod n</m>, then <m>n \mid a</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              Prove that if <m>n \mid a</m>,
+              then <m>a \equiv 0 \pmod n</m>.
+            </p>
+          </task>
         </p>
-      </introduction>
-    
-      <exercise>
-        <statement>
-          <p>
-            Prove that if <m>a \equiv 0 \pmod n</m>, then <m>n \mid a</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Prove that if <m>n \mid a</m>,
-            then <m>a \equiv 0 \pmod n</m>.
-          </p>
-        </statement>
-      </exercise>
-    
-    </exercisegroup>
+      </statement>
+    </exercise>
 
-    <exercisegroup xml:id="exer_congmod3">
-    
-      <introduction>
+    <exercise xml:id="exer_congmod3">
+      <statement>
         <p>
           Let <m>a</m> and <m>b</m> be integers.
           Prove that if <m>a \equiv 2 \pmod 3</m> and <m>b \equiv 2 \pmod 3</m>, then
+          <task>
+            <p>
+              <m>a + b \equiv 1 \pmod 3</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>a \cdot b \equiv 1 \pmod 3</m>.
+            </p>
+          </task>
         </p>
-      </introduction>
-    
-      <exercise>
-        <statement>
-          <p>
-            <m>a + b \equiv 1 \pmod 3</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            <m>a \cdot b \equiv 1 \pmod 3</m>.
-          </p>
-        </statement>
-      </exercise>
-    
-    </exercisegroup>
+      </statement>
+    </exercise>
 
-    <exercisegroup>
-    
-      <introduction>
+    <exercise>
+      <statement>
         <p>
           Let <m>a</m> and <m>b</m> be integers.
           Prove that if <m>a \equiv 7 \pmod 8</m> and <m>b \equiv 3 \pmod 8</m>, then:
+          <task>
+            <p>
+              <m>a + b \equiv 2 \pmod 8</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>a \cdot b \equiv 5 \pmod 8</m>.
+            </p>
+          </task>
         </p>
-      </introduction>
-    
-      <exercise>
-        <statement>
-          <p>
-            <m>a + b \equiv 2 \pmod 8</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            <m>a \cdot b \equiv 5 \pmod 8</m>.
-          </p>
-        </statement>
-      </exercise>
-    
-    </exercisegroup>
+      </statement>
+    </exercise>
 
-    <exercisegroup>
-    
-      <introduction>
+    <exercise>
+      <statement>
         <p>
           Determine if each of the following propositions is true or false.
           Justify each conclusion.
+          <task>
+            <p>
+              For all integers <m>a</m> and <m>b</m>,
+              if <m>ab \equiv 0 \pmod 6</m>,
+              then <m>a \equiv 0 \pmod 6</m> or <m>b \equiv 0 \pmod 6</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              For each integer <m>a</m>,
+              if <m>a \equiv 2 \pmod 8</m>,
+              then <m>a^2 \equiv 4 \pmod 8</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              For each integer <m>a</m>,
+              if <m>a^2 \equiv 4 \pmod 8</m>,
+              then <m>a \equiv 2 \pmod 8</m>.
+            </p>
+          </task>
         </p>
-      </introduction>
-    
-      <exercise>
-        <statement>
-          <p>
-            For all integers <m>a</m> and <m>b</m>,
-            if <m>ab \equiv 0 \pmod 6</m>,
-            then <m>a \equiv 0 \pmod 6</m> or <m>b \equiv 0 \pmod 6</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            For each integer <m>a</m>,
-            if <m>a \equiv 2 \pmod 8</m>,
-            then <m>a^2 \equiv 4 \pmod 8</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            For each integer <m>a</m>,
-            if <m>a^2 \equiv 4 \pmod 8</m>,
-            then <m>a \equiv 2 \pmod 8</m>.
-          </p>
-        </statement>
-      </exercise>
-    
-    </exercisegroup>
+      </statement>
+    </exercise>
 
-    <exercisegroup xml:id="exer_cong-props">
-    
-      <introduction>
+    <exercise xml:id="exer_cong-props">
+      <statement>
         <p>
           Let <m>n</m> be a natural number.
           Prove each of the following:
+          <task xml:id="exer_cong-reflexive">
+            <p>
+              For every integer <m>a</m>, <m>a \equiv a \pmod n</m>.
+            </p>
+            <p>
+              This is called the <term>reflexive property</term>
+              <idx><h>congruence</h><h>reflexive property</h></idx>
+              of congruence modulo <m>n</m>.
+            </p>
+          </task>
+          <task xml:id="exer_cong-symmetry">
+            <p>
+              For all integers <m>a</m> and <m>b</m>,
+              if <m>a \equiv b \pmod n</m>,
+              then <m>b \equiv a \pmod n</m>.
+            </p>
+            <p>
+              This is called the <term>symmetric property</term>
+              <idx><h>congruence</h><h>symmetric property</h></idx>
+              of congruence modulo <m>n</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              For all integers <m>a</m>, <m>b</m>, and <m>c</m>,
+              if <m>a \equiv b \pmod n</m> and <m>b \equiv c \pmod n</m>,
+              then <m>a \equiv c \pmod n</m>.
+            </p>
+            <p>
+              This is called the <term>transitive property</term>
+              <idx><h>congruence</h><h>transitive property</h></idx>
+              of congruence modulo <m>n</m>.
+            </p>
+          </task>
         </p>
-      </introduction>
-    
-      <exercise xml:id="exer_cong-reflexive">
-        <statement>
-          <p>
-            For every integer <m>a</m>, <m>a \equiv a \pmod n</m>.
-            This is called the <term>reflexive property</term>
-            <idx><h>congruence</h><h>reflexive property</h></idx>
-            of congruence modulo <m>n</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise xml:id="exer_cong-symmetry">
-        <statement>
-          <p>
-            For all integers <m>a</m> and <m>b</m>,
-            if <m>a \equiv b \pmod n</m>,
-            then <m>b \equiv a \pmod n</m>.
-            This is called the <term>symmetric property</term>
-            <idx><h>congruence</h><h>symmetric property</h></idx>
-            of congruence modulo <m>n</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            For all integers <m>a</m>, <m>b</m>, and <m>c</m>,
-            if <m>a \equiv b \pmod n</m> and <m>b \equiv c \pmod n</m>,
-            then <m>a \equiv c \pmod n</m>.
-            This is called the <term>transitive property</term>
-            <idx><h>congruence</h><h>transitive property</h></idx>
-            of congruence modulo <m>n</m>.
-          </p>
-        </statement>
-      </exercise>
-    
-    </exercisegroup>
+      </statement>
+    </exercise>
 
-    <exercisegroup xml:id="exer_sec31-11">
-    
-      <introduction>
+    <exercise xml:id="exer_sec31-11">
+      <statement>
         <p>
           Let <m>n</m> be a natural number and let <m>a</m>, <m>b</m>,
           <m>c</m>, and <m>d</m> be integers.
           Prove each of the following.
+          <task>
+            <p>
+              If <m>a \equiv b \pmod n</m> and <m>c \equiv d \pmod n</m>,
+              then <m>\left( {a + c} \right) \equiv \left( {b + d} \right) \pmod n</m>.
+            </p>
+          </task>
+          <task xml:id="exer_congprops">
+            <p>
+              If <m>a \equiv b \pmod n</m> and <m>c \equiv d \pmod n</m>,
+              then <m>ac \equiv bd \pmod n</m>.
+            </p>
+          </task>
         </p>
-      </introduction>
-    
-      <exercise>
-        <statement>
-          <p>
-            If <m>a \equiv b \pmod n</m> and <m>c \equiv d \pmod n</m>,
-            then <m>\left( {a + c} \right) \equiv \left( {b + d} \right) \pmod n</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise xml:id="exer_congprops">
-        <statement>
-          <p>
-            If <m>a \equiv b \pmod n</m> and <m>c \equiv d \pmod n</m>,
-            then <m>ac \equiv bd \pmod n</m>.
-          </p>
-        </statement>
-      </exercise>
-    
-    </exercisegroup>
+      </statement>
+    </exercise>
 
-    <exercisegroup xml:id="exer_quadformula2">
-    
-      <introduction>
+    <exercise xml:id="exer_quadformula2">
+      <statement>
         <p>
-          Complete the following exercises.
+          <task>
+            <p>
+              Let <m>a</m>,
+              <m>b</m>, and <m>c</m> be real numbers with <m>a \ne 0</m>.
+              Explain how to use a part of the quadratic formula
+              (called the discriminant)
+              to determine if the quadratic equation
+              <idx><h>quadratic equation</h></idx>
+              <m>ax^2 + bx + c = 0</m> has two real number solutions,
+              one real number solution, or no real number solutions.
+              (See <xref ref="exer_sec12-11"/>
+              for a statement of the quadratic formula.)
+            </p>
+          </task>
+          <task>
+            <p>
+              Prove that if <m>a</m>, <m>b</m>,
+              and <m>c</m> are real numbers for which <m>a>0</m> and <m>c\lt 0</m>, 
+              then one solution of the quadratic equation <m>ax^2+bx+c=0</m> is a positive 
+              real number.
+            </p>
+          </task>
+          <task>
+            <p>
+              Prove that if <m>a</m>, <m>b</m>,
+              and <m>c</m> are real numbers, if <m>a \ne 0</m>,
+              <m>b > 0</m> and <m>\dfrac{b}{2} \lt \sqrt {ac}</m>, then the quadratic equation
+              <m>ax^2 + bx + c = 0</m> has no real number solution.
+            </p>
+          </task>
         </p>
-      </introduction>
-    
-      <exercise>
-        <statement>
-          <p>
-            Let <m>a</m>,
-            <m>b</m>, and <m>c</m> be real numbers with <m>a \ne 0</m>.
-            Explain how to use a part of the quadratic formula
-            (called the discriminant)
-            to determine if the quadratic equation
-            <idx><h>quadratic equation</h></idx>
-            <m>ax^2 + bx + c = 0</m> has two real number solutions,
-            one real number solution, or no real number solutions.
-            (See <xref ref="exer_sec12-11"/>
-            for a statement of the quadratic formula.)
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Prove that if <m>a</m>, <m>b</m>,
-            and <m>c</m> are real numbers for which <m>a>0</m> and <m>c\lt 0</m>, 
-            then one solution of the quadratic equation <m>ax^2+bx+c=0</m> is a positive 
-            real number.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Prove that if <m>a</m>, <m>b</m>,
-            and <m>c</m> are real numbers, if <m>a \ne 0</m>,
-            <m>b > 0</m> and <m>\dfrac{b}{2} \lt \sqrt {ac}</m>, then the quadratic equation
-            <m>ax^2 + bx + c = 0</m> has no real number solution.
-          </p>
-        </statement>
-      </exercise>
-    
-    </exercisegroup>
+      </statement>
+    </exercise>
 
-    <exercisegroup xml:id="exer_circle-31">
-    
-      <introduction>
+    <exercise xml:id="exer_circle-31">
+      <statement>
         <p>
           Let <m>h</m> and <m>k</m> be real numbers and let <m>r</m> be a positive number.
           The equation for a circle whose center is at the point
@@ -1878,102 +1695,77 @@
               </p>
             </li>
           </ul>
-        </p>
-      </introduction>
-    
-      <exercise>
-        <statement>
-          <p>
-            Prove that all points on or inside the circle whose equation is 
-            <m>\left( x - 1 \right)^2 + \left( y - 2 \right)^2 = 4</m> are inside the 
-            circle whose equation is <m>x^2 + y^2 = 26</m>.
-          </p>
-        </statement>
-      </exercise>
-    
-    </exercisegroup>
+              Prove that all points on or inside the circle whose equation is 
+              <m>\left( x - 1 \right)^2 + \left( y - 2 \right)^2 = 4</m> are inside the 
+              circle whose equation is <m>x^2 + y^2 = 26</m>.
 
-    <exercisegroup xml:id="exer_insidecircle">
-    
-      <introduction>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_insidecircle">
+      <statement>
         <p>
           Let <m>r</m> be a positive real number.
           The equation for a circle of radius <m>r</m> whose center is the origin is 
           <m>x^2 + y^2 = r^2</m>.
+          <task>
+            <p>
+              Use implicit differentiation to determine <m>\dfrac{dy}{dx}</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              Let <m>\left(a, b \right)</m> be a point on the circle with <m>a \ne 0</m> and 
+              <m>b \ne 0</m>.
+              Determine the slope of the line tangent to the circle at the point 
+              <m>\left(a, b \right)</m>.
+            </p>
+          </task>
+          <task>
+            <statement>
+            <p>
+              Prove that the radius of the circle to the point
+              <m>\left(a, b \right)</m> is perpendicular to the line tangent to the circle at the 
+              point <m>\left(a, b \right)</m>.
+            </p>
+            </statement>
+            <hint>
+              Two lines (neither of which is horizontal)
+              are perpendicular if and only if the products of their slopes is equal to <m>-1</m>.
+            </hint>
+          </task>
         </p>
-      </introduction>
-    
-      <exercise>
-        <statement>
-          <p>
-            Use implicit differentiation to determine <m>\dfrac{dy}{dx}</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Let <m>\left(a, b \right)</m> be a point on the circle with <m>a \ne 0</m> and 
-            <m>b \ne 0</m>.
-            Determine the slope of the line tangent to the circle at the point 
-            <m>\left(a, b \right)</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Prove that the radius of the circle to the point
-            <m>\left(a, b \right)</m> is perpendicular to the line tangent to the circle at the 
-            point <m>\left(a, b \right)</m>.
-          </p>
-        </statement>
-        <hint>
-          <p>
-            Two lines (neither of which is horizontal)
-            are perpendicular if and only if the products of their slopes is equal to <m>-1</m>.
-          </p>
-        </hint>
-      </exercise>
-    
-    </exercisegroup>
+      </statement>
+    </exercise>
 
-    <exercisegroup xml:id="exer_AGM">
-    
-      <introduction>
+    <exercise xml:id="exer_AGM">
+      <statement>
         <p>
           Determine if each of the following statements is true or false.
           Provide a counterexample for statements that are false and provide a complete 
           proof for those that are true.
+          <task>
+            <p>
+              For all real numbers <m>x</m> and <m>y</m>,
+              <m>\sqrt{xy} \leq \dfrac{x + y}{2}</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              For all real numbers <m>x</m> and <m>y</m>,
+              <m>xy \leq \left( \dfrac{x + y}{2} \right)^2</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              For all nonnegative real numbers <m>x</m> and <m>y</m>,
+              <m>\sqrt{xy} \leq \dfrac{x + y}{2}</m>.
+            </p>
+          </task>
         </p>
-      </introduction>
-    
-      <exercise>
-        <statement>
-          <p>
-            For all real numbers <m>x</m> and <m>y</m>,
-            <m>\sqrt{xy} \leq \dfrac{x + y}{2}</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            For all real numbers <m>x</m> and <m>y</m>,
-            <m>xy \leq \left( \dfrac{x + y}{2} \right)^2</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            For all nonnegative real numbers <m>x</m> and <m>y</m>,
-            <m>\sqrt{xy} \leq \dfrac{x + y}{2}</m>.
-          </p>
-        </statement>
-      </exercise>
-    
-    </exercisegroup>
+      </statement>
+    </exercise>
 
     <exercise>
       <statement>
@@ -1987,123 +1779,91 @@
       </statement>
     </exercise>
 
-    <exercisegroup xml:id="exer_sec31-pythag">
-    
-      <introduction>
+    <exercise xml:id="exer_sec31-pythag">
+      <statement>
         <p>
-          Complete the following exercises. <xref ref="fig_for-exer-pythag1"/> and 
-          <xref ref="fig_for-exer-pythag2"/> will be used 
-          for the problems in these exercises.
+          <figure xml:id="fig_for-exer-pythag">
+            <caption>Diagrams for <xref ref="exer_sec31-pythag"/></caption>
+              <image source="figps-pythag-triangle.svg" xml:id="eq-triangles">
+                <description><!--todo make description--></description>
+          </image>
+          </figure>
+
+          <task xml:id="exer-31-pythag-a">
+            <p>
+              State the Pythagorean Theorem for right triangles.
+            </p>
+            <p>
+              The diagrams in <xref ref="fig_for-exer-pythag"/> will be used for the problems in this exercise.
+            </p>
+          </task>
+          <task xml:id="exer-31-pythag-b">
+            <p>
+              In the diagram on the left of <xref ref="fig_for-exer-pythag"/>,
+              <m>x</m> is the length of a side of the equilateral triangle and <m>h</m> is the 
+              length of an altitude of the equilateral triangle.
+              The labeling in the diagram shows the fact that the altitude intersects the base of the 
+              equilateral triangle at the midpoint of the base.
+              Use the Pythagorean Theorem to prove that the area of this equilateral triangle is 
+              <m>\dfrac{\sqrt{3}}{4}x^2</m>.
+            </p>
+          </task>
+          <task xml:id="exer-31-pythag-c">
+            <p>
+              In the diagram on the right of <xref ref="fig_for-exer-pythag"/>, <m>\triangle ABC</m> 
+              is a right triangle.
+              In addition,
+              there has been an equilateral triangle constructed on each side of this right triangle.
+              Prove that the area of the equilateral triangle on the hypotenuse is equal to the sum 
+              of the areas of the equilateral triangles constructed on the other two sides of the 
+              right triangle.
+            </p>
+          </task>
         </p>
-        
-          <!--<figure xml:id="fig_for-exer-pythag1">
-            <caption>Diagram for <xref ref="exer-31-pythag-a"/></caption>
-            <image xml:id="im-eq-tri-pythag">
-              <description>Equilateral triangle. Two sides have length <m>x</m> and the half of the base 
-              has length <m>x/2</m>. The height is <m>h</m>.</description>
-              <latex-image>
-              \begin{tikzpicture}
+      </statement>
+    </exercise>
 
-              \coordinate (A) at (0,0);
-              \coordinate (B) at (2,0);
-              \coordinate (C) at (4,0);
-              \coordinate (D) at (2,3.464102);
-    
-              \coordinate [label={below :$x/2$}] (a) at (1, 0);
-              \coordinate [label={below :$x/2$}] (b) at (3, 0);
-              \coordinate [label={left :$h$}] (c) at (2, 1.2);
-              \coordinate [label={left :$x$}] (d) at (1, 1.8);
-              \coordinate [label={right :$x$}] (e) at (3, 1.8);
-
-              \draw (A) - (B) - (C) - (D) - cycle;
-              \draw (B) - (D);
-    
-              \end{tikzpicture}
-              </latex-image>
-            </image>
-          </figure>
-          
-          <figure xml:id="fig_for-exer-pythag2">
-            <caption>Diagram for <xref ref="exer-31-pythag-c"/></caption>
-            <image xml:id="">
-              <description></description>
-              
-            </image>
-          </figure>
-        -->
-      </introduction>
-    
-      <exercise xml:id="exer-31-pythag-a">
-        <statement>
-          <p>
-            State the Pythagorean Theorem for right triangles.
-          </p>
-        </statement>
-      </exercise>
-      <exercise xml:id="exer-31-pythag-b">
-        <statement>
-          <p>
-            In the <xref ref="fig_for-exer-pythag1"/>,
-            <m>x</m> is the length of a side of the equilateral triangle and <m>h</m> is the 
-            length of an altitude of the equilateral triangle.
-            The labeling in the diagram shows the fact that the altitude intersects the base of the 
-            equilateral triangle at the midpoint of the base.
-            Use the Pythagorean Theorem to prove that the area of this equilateral triangle is 
-            <m>\dfrac{\sqrt{3}}{4}x^2</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise xml:id="exer-31-pythag-c">
-        <statement>
-          <p>
-            In <xref ref="fig_for-exer-pythag2"/>, <m>\triangle ABC</m> is a right triangle.
-            In addition,
-            there has been an equilateral triangle constructed on each side of this right triangle.
-            Prove that the area of the equilateral triangle on the hypotenuse is equal to the sum 
-            of the areas of the equilateral triangles constructed on the other two sides of the 
-            right triangle.
-          </p>
-        </statement>
-      </exercise>
-    
-    </exercisegroup>
-
-    <exercisegroup xml:id="exer_proofeval">
-    <title>Evaluation of Proofs</title>
-    
-      <introduction>
+    <exercise xml:id="exer_proofeval">
+      <title>Evalutaion of Proofs</title>
+      <statement>
         <p>
           This type of exercise will appear frequently in the book.
           In each case, there is a proposed proof of a proposition.
           However, the proposition may be true or may be false.
-        </p>
-        <p>
-          If a proposition is false, the proposed proof is, of course,
-          incorrect.
-          In this situation,
-          you are to find the error in the proof and then provide a counterexample 
-          showing that the proposition is false.
-        </p>
-        <p>
-            If a proposition is true, the proposed proof may still be incorrect.
-            In this case,
-            you are to determine why the proof is incorrect and then write a correct proof 
-            using the writing guidelines that have been presented in this book.
-        </p>
-        <p>
-            If a proposition is true and the proof is correct,
-            you are to decide if the proof is well written or not.
-            If it is well written,
-            then you simply must indicate that this is an excellent proof and needs no revision.
-            On the other hand, if the proof is not well written,
-            then you must then revise the proof by writing it according to the guidelines 
-            presented in this text.
-        </p>
-      </introduction>
-    
-      <exercise>
-        
-          <proposition xml:id="prop-exer-even">
+          <ul>
+            <li>
+              <p>
+                If a proposition is false, the proposed proof is, of course,
+                incorrect.
+                In this situation,
+                you are to find the error in the proof and then provide a counterexample 
+                showing that the proposition is false.
+              </p>
+            </li>
+            <li>
+              <p>
+                If a proposition is true, the proposed proof may still be incorrect.
+                In this case,
+                you are to determine why the proof is incorrect and then write a correct proof 
+                using the writing guidelines that have been presented in this book.
+              </p>
+            </li>
+            <li>
+              <p>
+                If a proposition is true and the proof is correct,
+                you are to decide if the proof is well written or not.
+                If it is well written,
+                then you simply must indicate that this is an excellent proof and needs no revision.
+                On the other hand, if the proof is not well written,
+                then you must then revise the proof by writing it according to the guidelines 
+                presented in this text.
+              </p>
+            </li>
+          </ul>
+
+          <task>
+            <p>
+            <proposition xml:id="prop-exer-even">
             <statement>
               <p>
                 If <m>m</m> is an even integer,
@@ -2117,97 +1877,106 @@
               Therefore, <m>\left(5m + 4 \right)</m> is an even integer. <m>\blacksquare</m>
             </p>
           </proof>
-        
-      </exercise>
-      <exercise>
-        <proposition xml:id="prop-exer-recipadd">
-          <statement>
-            <p>
-              For all real numbers <m>x</m> and <m>y</m>,
-              if <m>x \ne y</m>, <m>x > 0</m>,
-              and <m>y >0</m>, then <m>\dfrac{x}{y} + \dfrac{y}{x} > 2</m>.
             </p>
-          </statement>
-          <proof>
-            <p>
-              Since <m>x</m> and <m>y</m> are positive real numbers,
-              <m>xy</m> is positive and we can multiply both sides of the inequality by <m>xy</m> to 
-              obtain
-              <md>
-                <mrow>\left( \frac{x}{y} + \frac{y}{x} \right) \cdot xy \amp > 2 \cdot xy</mrow>
-                <mrow>x^2 + y^2 \amp > 2xy</mrow>
-              </md>.
-            </p>
-            <p>
-              By combining all terms on the left side of the inequality,
-              we see that <m>x^2 - 2xy + y^2 > 0</m> and then by factoring the left side,
-              we obtain <m>\left( x - y \right)^2 > 0</m>.
-              Since <m>x \ne y</m>,
-              <m>\left(x - y \right) \ne 0</m> and so <m>\left( x - y \right)^2 > 0</m>.
-              This proves that if <m>x \ne y</m>, <m>x > 0</m>,
-              and <m>y >0</m>, then <m>\dfrac{x}{y} + \dfrac{y}{x} > 2</m>. <m>\blacksquare</m>
-            </p>
-          </proof>
-        </proposition>
-      </exercise>
+          </task>
 
-      <exercise>
-        <proposition xml:id="prop-exer-divides">
-          <statement>
+          <task>
             <p>
-              For all integers <m>a</m>, <m>b</m>, and <m>c</m>,
-              if <m>a \mid \left( bc \right)</m>,
-              then <m>a \mid b</m> or <m>a \mid c</m>.
+              <proposition xml:id="prop-exer-recipadd">
+              <statement>
+              <p>
+                For all real numbers <m>x</m> and <m>y</m>,
+                if <m>x \ne y</m>, <m>x > 0</m>,
+                and <m>y >0</m>, then <m>\dfrac{x}{y} + \dfrac{y}{x} > 2</m>.
+              </p>
+              </statement>
+              <proof>
+              <p>
+                Since <m>x</m> and <m>y</m> are positive real numbers,
+                <m>xy</m> is positive and we can multiply both sides of the inequality by <m>xy</m> to 
+                obtain
+                <md>
+                  <mrow>\left( \frac{x}{y} + \frac{y}{x} \right) \cdot xy \amp > 2 \cdot xy</mrow>
+                  <mrow>x^2 + y^2 \amp > 2xy</mrow>
+                </md>.
+              </p>
+              <p>
+                By combining all terms on the left side of the inequality,
+                we see that <m>x^2 - 2xy + y^2 > 0</m> and then by factoring the left side,
+                we obtain <m>\left( x - y \right)^2 > 0</m>.
+                Since <m>x \ne y</m>,
+                <m>\left(x - y \right) \ne 0</m> and so <m>\left( x - y \right)^2 > 0</m>.
+                This proves that if <m>x \ne y</m>, <m>x > 0</m>,
+                and <m>y >0</m>, then <m>\dfrac{x}{y} + \dfrac{y}{x} > 2</m>. <m>\blacksquare</m>
+              </p>
+            </proof>
+            </proposition>
             </p>
-          </statement>
-          <proof>
-            <p>
-              We assume that <m>a</m>, <m>b</m>,
-              and <m>c</m> are integers and that <m>a</m> divides <m>bc</m>.
-              So, there exists an integer <m>k</m> such that <m>bc = ka</m>.
-            </p>
-            <p>
-              We now factor <m>k</m> as <m>k = mn</m>,
-              where <m>m</m> and <m>n</m> are integers.
-              We then see that
-              <me>
-                bc = mna
-              </me>.
-            </p>
-            <p>
-              This means that <m>b = ma</m> or <m>c = na</m> and hence,
-              <m>a \mid b</m> or <m>a \mid c</m>. <m>\blacksquare</m>
-            </p>
-          </proof>
-        </proposition>
-      </exercise>
+          </task>
 
-      <exercise>
-        <proposition xml:id="prop-exer-expo">
-          <statement>
+          <task>
             <p>
-              For all positive integers <m>a</m>, <m>b</m>, and <m>c</m>,
+              <proposition xml:id="prop-exer-divides">
+              <statement>
+              <p>
+                For all integers <m>a</m>, <m>b</m>, and <m>c</m>,
+                if <m>a \mid \left( bc \right)</m>,
+                then <m>a \mid b</m> or <m>a \mid c</m>.
+              </p>
+              </statement>
+              <proof>
+              <p>
+                We assume that <m>a</m>, <m>b</m>,
+                and <m>c</m> are integers and that <m>a</m> divides <m>bc</m>.
+                So, there exists an integer <m>k</m> such that <m>bc = ka</m>.
+              </p>
+              <p>
+                We now factor <m>k</m> as <m>k = mn</m>,
+                where <m>m</m> and <m>n</m> are integers.
+                We then see that
+                <me>
+                  bc = mna
+                </me>.
+              </p>
+              <p>
+                This means that <m>b = ma</m> or <m>c = na</m> and hence,
+                <m>a \mid b</m> or <m>a \mid c</m>. <m>\blacksquare</m>
+              </p>
+              </proof>
+            </proposition>
+            </p>
+          </task>
+
+          <task>
+            <p>
+              <proposition xml:id="prop-exer-expo">
+              <statement>
+              <p>
+                For all positive integers <m>a</m>, <m>b</m>, and <m>c</m>,
                 <m>\left( a^b \right)^c = a^{\left( b^c \right)}</m>.
-            </p>
-          </statement>
-          <proof>
-            <p>
-              This proposition is false as is shown by the following counterexample:  
-              If we let <m>a = 2</m>,
-              <m>b = 3</m>, and <m>c = 2</m>, then
-              <md>
-                <mrow>\left( a^b \right)^c \amp = a^{\left( b^c \right)}</mrow>
-                <mrow>\left( 2^3 \right)^2 \amp = 2^{\left( 3^2 \right)}</mrow>
-                <mrow>8^2 \amp = 2^9</mrow>
-                <mrow>64 \amp \ne 512</mrow>
-              </md>
-            </p>
-          </proof>
+              </p>
+              </statement>
+              <proof>
+              <p>
+                This proposition is false as is shown by the following counterexample:  
+                If we let <m>a = 2</m>,
+                <m>b = 3</m>, and <m>c = 2</m>, then
+                <md>
+                  <mrow>\left( a^b \right)^c \amp = a^{\left( b^c \right)}</mrow>
+                  <mrow>\left( 2^3 \right)^2 \amp = 2^{\left( 3^2 \right)}</mrow>
+                  <mrow>8^2 \amp = 2^9</mrow>
+                  <mrow>64 \amp \ne 512</mrow>
+                </md>
+              </p>
+              </proof>
           
-        </proposition>
-      </exercise>
-    
-    </exercisegroup>
+            </proposition>
+            </p>
+          </task>
+
+        </p>
+      </statement>
+    </exercise>
 
     <activity>
       <title>Congruence Modulo 6</title>

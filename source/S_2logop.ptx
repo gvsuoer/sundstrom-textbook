@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <section xml:id="S_2logop">
   <title>Statements and Logical Operators</title>
-  <introduction>
-    <exploration xml:id="PA_compound">
-      <title>Compound Statements</title>
-      <introduction>
-      <paragraphs>
+
+    <worksheet xml:id="PA_compound">
+      <title>Beginning Activity 1: Compound Statements</title>
+
       <p>
         Mathematicians often develop ways to construct new mathematical objects from existing 
         mathematical objects.
@@ -28,55 +27,55 @@
         Because some operators are used so frequently in logic and mathematics,
         we give them names and use special symbols to represent them.
       </p>
-      </paragraphs>
-      
       <p>
-      <convention xml:id="sym_and">
-        <p>
-          The <term>conjunction</term>
-          <idx><h>conjunction</h></idx>
-          of the statements <m>P</m> and <m>Q</m> is the statement
-          <q><m>P</m> <em>and</em> <m>Q</m></q>
-          and its denoted by <m>P \wedge Q</m> . The statement
-          <m>P \wedge Q</m> is true only when both <m>P</m> and <m>Q</m> are true.
-        </p>
-      </convention>
-      <convention xml:id="sym_or">
-        <p>
-          The <term>disjunction</term>
-          <idx><h>disjunction</h></idx>
-          of the statements <m>P</m> and <m>Q</m> is the statement
-          <q><m>P</m> <em>or</em> <m>Q</m></q>
-          and its denoted by <m>P \vee Q</m>. The statement
-          <m>P \vee Q</m> is true only when at least one of <m>P</m> or <m>Q</m> is true.
-        </p>
-      </convention>
-      <convention xml:id="sym_not">
-        <p>
-          The <term>negation</term>
-          <idx><h>negation</h></idx>
-          of the statement <m>P</m> is the statement
-          <q><em>not</em> <m>P</m></q>
-          and is denoted by <m>\mynot P</m> . The negation of <m>P</m> is true only when 
-          <m>P</m> is false,
-          and <m>\mynot P</m> is false only when <m>P</m> is true.
-        </p>
-      </convention>
-      <convention xml:id="sym_cond2">
-        <p>
-          The <term>implication</term>
-          <idx><h>implication</h></idx>
-          <idx><h>conditional</h></idx>
-          or <term>conditional</term> is the statement
-          <q><em>If </em> <m>P</m> <em>then</em> <m>Q</m></q>
-          and is denoted by <m>P \to Q</m> . The statement <m>P \to Q</m> is often read as
-          <q><m>P</m> <em>implies</em> <m>Q</m>,</q>
-          and we have seen in <xref ref="S_1prop"></xref>
-          that <m>P \to Q</m> is false only when <m>P</m> is true and <m>Q</m> is false.
-        </p>
-      </convention>
+      <ul>
+        <li xml:id="sym_and">
+          <p>
+            The <term>conjunction</term>
+            <idx><h>conjunction</h></idx>
+            of the statements <m>P</m> and <m>Q</m> is the statement
+            <q><m>P</m> <em>and</em> <m>Q</m></q>
+            and its denoted by <m>P \wedge Q</m> . The statement
+            <m>P \wedge Q</m> is true only when both <m>P</m> and <m>Q</m> are true.
+          </p>
+        </li>
+        <li xml:id="sym_or">
+          <p>
+            The <term>disjunction</term>
+            <idx><h>disjunction</h></idx>
+            of the statements <m>P</m> and <m>Q</m> is the statement
+            <q><m>P</m> <em>or</em> <m>Q</m></q>
+            and its denoted by <m>P \vee Q</m>. The statement
+            <m>P \vee Q</m> is true only when at least one of <m>P</m> or <m>Q</m> is true.
+          </p>
+        </li>
+        <li xml:id="sym_not">
+          <p>
+            The <term>negation</term>
+            <idx><h>negation</h></idx>
+            of the statement <m>P</m> is the statement
+            <q><em>not</em> <m>P</m></q>
+            and is denoted by <m>\mynot P</m> . The negation of <m>P</m> is true only when 
+            <m>P</m> is false,
+            and <m>\mynot P</m> is false only when <m>P</m> is true.
+          </p>
+        </li>
+        <li xml:id="sym_cond2">
+          <p>
+            The <term>implication</term>
+            <idx><h>implication</h></idx>
+            <idx><h>conditional</h></idx>
+            or <term>conditional</term> is the statement
+            <q><em>If </em> <m>P</m> <em>then</em> <m>Q</m></q>
+            and is denoted by <m>P \to Q</m> . The statement <m>P \to Q</m> is often read as
+            <q><m>P</m> <em>implies</em> <m>Q</m>,</q>
+            and we have seen in <xref ref="S_1prop"></xref>
+            that <m>P \to Q</m> is false only when <m>P</m> is true and <m>Q</m> is false.
+          </p>
+        </li>
+      </ul>
       </p>
-
+      
       <paragraphs>
         <title>Some comments about the disjunction.</title>
         <p>
@@ -125,113 +124,91 @@
           </blockquote>
         </p>
       </paragraphs>
-      </introduction>
 
-      <exercises xml:id="exercises_ba2-1-1">
-        <exercisegroup>
-        
-          <introduction>
-            <p>
-              For the statements
-              
+      <exercise>
+        <statement>
+          <p>
+            For the statements
+              <sidebyside>
               <blockquote>
                 <m>P</m>: 15 is odd
               </blockquote>
               <blockquote><m>Q</m>: 15 is prime 
               </blockquote>
+              </sidebyside>
               
               write each of the following statements as English sentences and determine 
               whether they are true or false.
               Notice that <m>P</m> is true and <m>Q</m> is false.
-            </p>
-          </introduction>
-        
-          <exercise>
-            <statement>
-              <p>
-                <m>P \wedge Q</m>.
-              </p>
-            </statement>
-          </exercise>
-          <exercise>
-            <statement>
-              <p>
-                <m>P \vee Q</m>.
-              </p>
-            </statement>
-          </exercise>
-          <exercise>
-            <statement>
-              <p>
-                <m>P \wedge \mynot Q</m>.
-              </p>
-            </statement>
-          </exercise>
-          <exercise>
-            <statement>
-              <p>
-                <m>\mynot P \vee \mynot Q</m>.
-              </p>
-            </statement>
-          </exercise>
+              <task>
+                <p>
+                  <m>P \wedge Q</m>.
+                </p>
+              </task>
+              <task>
+                <p>
+                  <m>P \vee Q</m>
+                </p>
+              </task>
+              <task>
+                <p>
+                  <m>P \wedge \mynot Q</m>
+                </p>
+              </task>
+              <task>
+                <p>
+                  <m>\mynot P \vee \mynot Q</m>
+                </p>
+              </task>
+          </p>
+        </statement>
+      </exercise>
 
-        </exercisegroup>
-
-        <exercisegroup>
-        
-          <introduction>
-            <p>
+      <exercise>
+        <statement>
+          <p>
               For the statements 
+              <sidebyside>
               <blockquote>
                 <m>P</m>: 15 is odd
               </blockquote>
               <blockquote>
                 <m>R</m>: <m>15 \lt 17</m>
               </blockquote>
+              </sidebyside>
               write each of the following statements in symbolic form using 
               the operators <m>\wedge</m>,
               <m>\vee</m>, and <m>\mynot</m>.
-            </p>
-          </introduction>
-        
-          <exercise>
-            <statement>
+            <task>
               <p>
                 <m>15 \geq 17</m>.
               </p>
-            </statement>
-          </exercise>
-          <exercise>
-            <statement>
+            </task>
+            <task>
               <p>
                 15 is odd or <m>15 \geq 17</m>.
               </p>
-            </statement>
-          </exercise>
-          <exercise>
-            <statement>
+            </task>
+            <task>
               <p>
-                15 is even or <m>15 \lt 17</m>.
+                15 is even or <m>15 \lt 7</m>
               </p>
-            </statement>
-          </exercise>
-          <exercise>
-            <statement>
+            </task>
+            <task>
               <p>
                 15 is odd and <m>15 \geq 17</m>.
               </p>
-            </statement>
-          </exercise>
-        
-        </exercisegroup>
-      </exercises>
-    </exploration>
+            </task>
+          </p>
+        </statement>
+      </exercise>
 
-    <exploration xml:id="PA_truth">
-      <title>Truth Values of Statements</title>
-      <introduction>
-        <paragraphs>
-        <p>
+    </worksheet>
+
+    <worksheet xml:id="PA_truth">
+      <title>Beginning Activity 2: Truth Values of Statements</title>
+
+      <p>
           We will use the following two statements for all of this activity:
           <blockquote>
             <m>P</m> is the statement
@@ -248,70 +225,50 @@
           For example, in Question<nbsp/>(1),
           we will assume that each statement is true.
           In Question<nbsp/>(2), we will assume that <m>P</m> is true and <m>Q</m> is false.
+          In each part, determine the truth value of each of the following statements:
         </p>
-        </paragraphs>
-      </introduction>
 
-      <exercises xml:id="exercises-ba-2-1-2">
-        <exercisegroup xml:id="ba2-logop-stmnt">
-        
-          <introduction>
+        <p>
+        <ol label="(a)">
+          <li>
             <p>
-              In each part, determine the truth value of each of the following statements:
+              <m>\left( P \wedge Q \right)</m> It is raining and Daisy is playing golf.
             </p>
-          </introduction>
-        
-          <exercise>
-            <statement>
-              <p>
-                <m>P \wedge Q</m> (It is raining and Daisy is playing golf.)
-              </p>
-            </statement>
-          </exercise>
-          <exercise>
-            <statement>
-              <p>
-                <m>P \vee Q</m> (It is raining or Daisy is playing golf.)
-              </p>
-            </statement>
-          </exercise>
-          <exercise>
-            <statement>
-              <p>
-                <m>P \to Q</m> (If it is raining,
-                then Daisy is playing golf.)
-              </p>
-            </statement>
-          </exercise>
-          <exercise>
-            <statement>
-              <p>
-                <m>\mynot P</m> (It is not raining.)
-              </p>
-            </statement>
-          </exercise>
-        
-        </exercisegroup>
+          </li>
+          <li>
+            <p>
+              <m>\left( P \vee Q \right)</m> It is raining or Daisy is playing golf.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\left( P \to Q \right)</m> If it is raining,
+                then Daisy is playing golf.
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\left( \mynot P \right)</m> It is not raining.
+            </p>
+          </li>
+        </ol>
+        </p>
 
-        <exercisegroup xml:id="ba2-logop-situ">
-        
-          <introduction>
+        <p>
+          Which of the four statements [(a) through (d)] are true and which are 
+          false in each of the following four situations?
+        </p>
+
+        <exercise>
+          <statement>
             <p>
-              Which of the four statements in <xref ref="ba2-logop-stmnt"/> are true and which are 
-              false in each of the following four situations?
+              When <m>P</m> is true
+              (it is raining)
+              and <m>Q</m> is true (Daisy is playing golf).
             </p>
-          </introduction>
-        
-          <exercise>
-            <statement>
-              <p>
-                When <m>P</m> is true
-                (it is raining)
-                and <m>Q</m> is true (Daisy is playing golf).
-              </p>
-            </statement>
-          </exercise>
-          <exercise>
+          </statement>
+        </exercise>
+        <exercise>
             <statement>
               <p>
                 When <m>P</m> is true
@@ -338,12 +295,10 @@
               </p>
             </statement>
           </exercise>
-        
-        </exercisegroup>
-        
-      </exercises>
-    </exploration>
 
+    </worksheet>
+
+  <introduction>
     <p>
       In the beginning activities for this section,
       we learned about compound statements and their truth values.
@@ -351,7 +306,7 @@
     </p>
 
     <sidebyside>
-      <table>
+      
         <tabular halign="center">
           <row bottom="medium">
             <cell right="medium">
@@ -378,9 +333,9 @@
             </cell>
           </row>
         </tabular>
-      </table>
+      
 
-      <table>
+      
         <tabular halign="center">
           <row bottom="medium">
             <cell right="minor"><m>P</m></cell>
@@ -408,11 +363,11 @@
             <cell>F</cell>
           </row>
         </tabular>
-      </table>
+      
     </sidebyside>
 
     <sidebyside>
-      <table>
+      
         <tabular halign="center">
           <row bottom="medium">
             <cell right="minor"><m>P</m></cell>
@@ -440,9 +395,9 @@
             <cell>F</cell>
           </row>
         </tabular>
-      </table>
+     
 
-      <table>
+      
         <tabular halign="center">
           <row bottom="medium">
             <cell right="minor"><m>P</m></cell>
@@ -470,7 +425,7 @@
             <cell>T</cell>
           </row>
         </tabular>
-      </table>
+      
     </sidebyside>
 
     <p>
@@ -533,44 +488,57 @@
       <q>If <m>P</m>, then <m>Q</m>.</q>
       Following are some common ways to express the conditional statement 
       <m>P \to Q</m> in the English language:
-    </p>
-    <sidebyside>
-      <p>
-        If <m>P</m>, then <m>Q</m>.
-      </p>
-      <p>
-        <m>P</m> implies <m>Q</m>.
-      </p>
-    </sidebyside>
-    <sidebyside>
-      <p>
-        <m>P</m> only if <m>Q</m>.
-        <idx><h>only if</h></idx>
-      </p>
-      <p>
-        <m>Q</m> if <m>P</m>.
-      </p>
-    </sidebyside>
-    <sidebyside>
-      <p>
-        Whenever <m>P</m> is true, <m>Q</m> is true.
-      </p>
-      <p>
-        <m>Q</m> is true whenever <m>P</m> is true.
-      </p>
-    </sidebyside>
-    <p>
-      <m>Q</m> is <term>necessary</term>
-      <idx><h>necessary condition</h></idx>
-      for <m>P</m>.
-      (This means that if <m>P</m> is true,
-      then <m>Q</m> is necessarily true.)
-    </p>
-    <p>
-      <m>P</m> is <term>sufficient</term> for <m>Q</m>.
-      (This means that if you want <m>Q</m> to be true, it is sufficient
-      <idx><h>sufficient condition</h></idx>
-      to show that <m>P</m> is true.)
+
+      <ul cols="2">
+        <li>
+          <p>
+            If <m>P</m>, then <m>Q</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>P</m> implies <m>Q</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>P</m> only if <m>Q</m>.
+            <idx><h>only if</h></idx>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>Q</m> if <m>P</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Whenever <m>P</m> is true, <m>Q</m> is true.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>Q</m> is true whenever <m>P</m> is true.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>Q</m> is <term>necessary</term>
+            <idx><h>necessary condition</h></idx>
+            for <m>P</m>.
+            (This means that if <m>P</m> is true,
+            then <m>Q</m> is necessarily true.)
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>P</m> is <term>sufficient</term> for <m>Q</m>.
+            (This means that if you want <m>Q</m> to be true, it is sufficient
+            <idx><h>sufficient condition</h></idx>
+            to show that <m>P</m> is true.)
+          </p>
+        </li>
+      </ul>
     </p>
 
     <p>
@@ -771,14 +739,17 @@
         </row>
       </tabular>
     </table>
-    <note>
+    
+    <p>
+    <ul>
+    <li>
       <p>
         When completing the column for <m>P \wedge \mynot Q</m>,
             remember that the only time the conjunction is true is when both <m>P</m> and 
             <m>\mynot Q</m> are true.
       </p>
-    </note>
-    <note>
+    </li>
+    <li>
       <p>
         When completing the column for <m>\left( {P \wedge \mynot Q} \right) \to R</m>,
         remember that the only time the conditional statement is false is when the hypothesis
@@ -786,7 +757,9 @@
         <m>R</m>,
         is false.
       </p>
-    </note>
+    </li>
+    </ul>
+    </p>
 
     <p>
       The last column entered is the truth table for the statement
@@ -861,7 +834,7 @@
 
     <investigation xml:id="pr_biconditional">
       <title>The Truth Table for the Biconditional Statement</title>
-      <task>
+      <introduction>
       <p>
         Complete a truth table for 
         <m>\left[ {\left( {Q \to P} \right) \wedge \left( {P \to Q} \right)} \right]</m>.
@@ -870,7 +843,7 @@
         and <m>\left[ {\left( {Q \to P} \right) \wedge \left( {P \to Q} \right)} \right]</m>.
         The last column of this table will be the truth table for <m>P \leftrightarrow Q</m>.
       </p>
-      </task>
+      </introduction>
     </investigation>
 
   </subsection>
@@ -956,78 +929,61 @@
       </statement>
     </exercise>
 
-    <exercisegroup xml:id="exer_sec22-2">
-    
-      <introduction>
+    <exercise xml:id="exer_sec22-2">
+      <statement>
         <p>
           Suppose that <m>P</m> and <m>Q</m> are statements for which <m>P \to Q</m> is true 
           and for which <m>\mynot Q</m> is true.
           What conclusion
           (if any)
           can be made about the truth value of each of the following statements?
+          <task>
+            <p>
+              <m>P</m>
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>P \wedge Q</m>
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>P \vee Q</m>
+            </p>
+          </task>
         </p>
-      </introduction>
-    
-      <exercise>
-        <statement>
-          <p>
-            <m>P</m>
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            <m>P \wedge Q</m>
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            <m>P \vee Q</m>
-          </p>
-        </statement>
-      </exercise>
-    </exercisegroup>
+      </statement>
+    </exercise>
 
-    <exercisegroup xml:id="exer_sec22-3">
-    
-      <introduction>
+    <exercise xml:id="exer_sec22-3">
+      <statement>
         <p>
           Suppose that <m>P</m> and <m>Q</m> are statements for which <m>P \to Q</m> is false.
           What conclusion
           (if any)
           can be made about the truth value of each of the following statements?
+          <task>
+            <p>
+              <m>\mynot P \to Q</m>
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>Q \to P</m>
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>P \vee Q</m>
+            </p>
+          </task>
         </p>
-      </introduction>
-    
-      <exercise>
-        <statement>
-          <p>
-            <m>\mynot P \to Q</m>
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            <m>Q \to P</m>
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            <m>P \vee Q</m>
-          </p>
-        </statement>
-      </exercise>
-    </exercisegroup>
+      </statement>
+    </exercise>
 
-    <exercisegroup xml:id="exer_statements4">
-    
-      <introduction>
+    <exercise xml:id="exer_statements4">
+      <statement>
         <p>
           Suppose that <m>P</m> and <m>Q</m> are statements for which <m>Q</m> is false and 
           <m>\mynot P \to Q</m> is true
@@ -1035,128 +991,87 @@
           What conclusion
           (if any)
           can be made about the truth value of each of the following statements?
+          <task>
+            <p>
+              <m>\mynot Q \to P</m>
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>P</m>
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>P \wedge R</m>
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>R \to \mynot P</m>
+            </p>
+          </task>
         </p>
-      </introduction>
-    
-      <exercise>
-        <statement>
-          <p>
-            <m>\mynot Q \to P</m>
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            <m>P</m>
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            <m>P \wedge R</m>
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            <m>R \to \mynot P</m>
-          </p>
-        </statement>
-      </exercise>
-    </exercisegroup>
+      </statement>
+    </exercise>
 
-    <exercisegroup xml:id="exer_sec22-5">
-    
-      <introduction>
+    <exercise xml:id="exer_sec22-5">
+      <statement>
         <p>
           Construct a truth table for each of the following statements:
-        </p>
-      </introduction>
-    
-      <exercise>
-        <statement>
-          <p>
-            <m>P \to Q</m>
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            <m>Q \to P</m>
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            <m>\mynot P \to \mynot Q</m>
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            <m>\mynot Q \to \mynot P</m>
-          </p>
-        </statement>
-      </exercise>
-
-      <conclusion>
-        <p>
+          <task>
+            <p>
+              <m>P \to Q</m>
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>Q \to P</m>
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>\mynot P \to \mynot Q</m>
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>\mynot Q \to \mynot P</m>
+            </p>
+          </task>
           Do any of these statements have the same truth table?
         </p>
-      </conclusion>
-    
-    </exercisegroup>
+      </statement>
+    </exercise>
 
-    <exercisegroup xml:id="exer_sec22-4">
-    
-      <introduction>
+    <exercise xml:id="exer_sec22-4">
+      <statement>
         <p>
           Construct a truth table for each of the following statements:
-        </p>
-      </introduction>
-    
-      <exercise>
-        <statement>
-          <p>
-            <m>P \vee \mynot Q</m>
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            <m>\mynot (P \vee Q)</m>
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            <m>\mynot P \vee \mynot Q</m>
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            <m>\mynot P \wedge \mynot Q</m>
-          </p>
-        </statement>
-      </exercise>
-
-      <conclusion>
-        <p>
+          <task>
+            <p>
+              <m>P \vee \mynot Q</m>
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>\mynot (P \vee Q)</m>
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>\mynot P \vee \mynot Q</m>
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>\mynot P \wedge \mynot Q</m>
+            </p>
+          </task>
           Do any of these statements have the same truth table?
         </p>
-      </conclusion>
-    
-    </exercisegroup>
+      </statement>
+    </exercise>
 
     <exercise xml:id="exer_sec22-6">
       <statement>
@@ -1169,105 +1084,88 @@
       </statement>
     </exercise>
 
-    <exercisegroup xml:id="exer_sec22-7">
-    
-      <introduction>
+    <exercise xml:id="exer_sec22-7">
+      <statement>
         <p>
           Suppose each of the following statements is true.
-        </p>
-        <blockquote>
-          Laura is in the seventh grade.
-        </blockquote>
-        <blockquote>
-          Laura got an A on the mathematics test or Sarah got an A on the mathematics test.
-        </blockquote>
-        <blockquote>
-          If Sarah got an A on the mathematics test,
-          then Laura is not in the seventh grade.
-        </blockquote>
-        <p>
+          <ul>
+            <li>
+              <p>
+                Laura is in the seventh grade.
+              </p>
+            </li>
+            <li>
+              <p>
+                Laura got an A on the mathematics test or Sarah got an A on the mathematics test.
+              </p>
+            </li>
+            <li>
+              <p>
+                If Sarah got an A on the mathematics test,
+                then Laura is not in the seventh grade.
+              </p>
+            </li>
+          </ul>
           If possible, determine the truth value of each of the following statements. 
           Carefully explain your reasoning.
+          <task>
+            <p>
+              Laura got an A on the mathematics test.
+            </p>
+          </task>
+          <task>
+            <p>
+              Sarah got an A on the mathematics test.
+            </p>
+          </task>
+          <task>
+            <p>
+              Either Laura or Sarah did not get an A on the mathematics test.
+            </p>
+          </task>
         </p>
-      </introduction>
-    
-      <exercise>
-        <statement>
-          <p>
-            Laura got an A on the mathematics test.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Sarah got an A on the mathematics test.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Either Laura or Sarah did not get an A on the mathematics test.
-          </p>
-        </statement>
-      </exercise>
-    
-    </exercisegroup>
+      </statement>
+    </exercise>
 
-    <exercisegroup xml:id="exer_sec22-8">
-    
-      <introduction>
+    <exercise xml:id="exer_sec22-8">
+      <statement>
         <p>
           Let <m>P</m> stand for
           <q>the integer <m>x</m> is even,</q>
           and let <m>Q</m> stand for
           <q><m>x^2</m> is even.</q>
           Express the conditional statement <m>P \to Q</m> in English using
-        </p>
-      </introduction>
-    
-      <exercise>
-        <statement>
-          <p>
-            The <q>if then</q>
-            form of the conditional statement
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            The word
-            <q>implies</q>
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            The
+          <task>
+            <p>
+              The <q>if then</q>
+              form of the conditional statement
+            </p>
+          </task>
+          <task>
+            <p>
+              The word <q>implies</q>
+            </p>
+          </task>
+          <task>
+            <p>
+              The
             <q>only if</q>
             form of the conditional statement
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            The phrase <q>is necessary for</q>
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            The phrase <q>is sufficient for</q>
-          </p>
-        </statement>
-      </exercise>
-    
-    </exercisegroup>
+            </p>
+          </task>
+          <task>
+            <p>
+              The phrase <q>is necessary for</q>
+            </p>
+          </task>
+          <task>
+            <p>
+              The phrase <q>is sufficient for</q>
+            </p>
+          </task>
+        </p>
+      </statement>
+    </exercise>
 
     <exercise xml:id="exer_sec22-9">
       <statement>
@@ -1277,87 +1175,63 @@
       </statement>
     </exercise>
 
-    <exercisegroup xml:id="exer_tautology-contra">
-    
-      <introduction>
+    <exercise xml:id="exer_tautology-contra">
+      <statement>
         <p>
           For statements <m>P</m> and <m>Q</m>,
           use truth tables to determine if each of the following statements is a tautology,
           a contradiction, or neither.
+          <task>
+            <p>
+              <m>\mynot Q \vee (P \to Q)</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>Q \wedge (P \wedge \mynot Q)</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>(Q \wedge P) \wedge (P \to \mynot Q)</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>\mynot Q \to (P \wedge \mynot P)</m>.
+            </p>
+          </task>
         </p>
-      </introduction>
-    
-      <exercise>
-        <statement>
-          <p>
-            <m>\mynot Q \vee (P \to Q)</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            <m>Q \wedge (P \wedge \mynot Q)</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            <m>(Q \wedge P) \wedge (P \to \mynot Q)</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            <m>\mynot Q \to (P \wedge \mynot P)</m>.
-          </p>
-        </statement>
-      </exercise>
-    
-    </exercisegroup>
+      </statement>
+    </exercise>
 
-    <exercisegroup xml:id="exer_sec22-10">
-    
-      <introduction>
+    <exercise xml:id="exer_sec22-10">
+      <statement>
         <p>
           For statements <m>P</m>, <m>Q</m>, and <m>R</m>:
-        </p>
-      </introduction>
-    
-      <exercise>
-        <statement>
-          <p>
-            Show that <m>\left[ (P \to Q) \wedge P \right] \to Q</m> is a tautology.
-          </p>
-          <note>
-            <p>  
-            In symbolic logic,
-            this is an important logical argument form called <term>modus ponens</term>.
-            <idx><h>modus ponens</h></idx>
-            </p>
-          </note>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Show that <m>\left[ (P \to Q) \wedge (Q \to R) \right] \to (P \to R)</m> is a tautology. 
-          </p>
-          <note>
+          <task>
             <p>
-            In symbolic logic,
+              Show that <m>\left[ (P \to Q) \wedge P \right] \to Q</m> is a tautology.
+            </p>
+            <p>
+              Note: In symbolic logic,
+              this is an important logical argument form called <term>modus ponens</term>.
+              <idx><h>modus ponens</h></idx>
+            </p>
+          </task>
+          <task>
+            <p>
+            Show that <m>\left[ (P \to Q) \wedge (Q \to R) \right] \to (P \to R)</m> is a tautology. 
+            </p>
+            <p>
+            Note: In symbolic logic,
             this is an important logical argument form called <term>syllogism</term>.
             <idx><h>syllogism</h></idx>
             </p>
-          </note>
-        </statement>
-      </exercise>
-    
-    </exercisegroup>
-    
-  
+          </task>
+        </p>
+      </statement>
+    </exercise>
 
   <activity xml:id="exer_working-conditional">
     <title>Working with Conditional Statements</title>

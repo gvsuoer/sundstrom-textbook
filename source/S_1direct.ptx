@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <section xml:id="S_1direct">
   <title>Constructing Direct Proofs</title>
-  <introduction>
-    <exploration xml:id="PA_even">
-      <title>Definition of Even and Odd Integers</title>
-      <introduction>
+
+    <worksheet xml:id="PA_even">
+    <title>Definition of Even and Odd Integers</title>
       <p>
         Definitions play a very important role in mathematics.
         A direct proof of a proposition in mathematics is often a demonstration that the proposition 
@@ -45,29 +44,24 @@
         Constructing and answering such questions is a way in which many mathematicians will try to 
         gain a better understanding of a definition.
       </p>
-      </introduction>
-      <exercises>
-      <exercisegroup xml:id="PA_1-2">
-        <introduction>
+
+      <exercise xml:id="PA_1-2">
+        <statement>
           <p>
-            Use the definitions given above to
+            Use the definitions given above to 
+            <task>
+              <p>
+                Explain why 28, <m>-42</m>, 24, and 0 are even integers.
+              </p>
+            </task>
+            <task>
+              <p>
+                Explain why 51, <m>-11</m>, 1, and <m>-1</m> are odd integers.
+              </p>
+            </task>
           </p>
-        </introduction>
-        <exercise>
-          <statement>
-            <p>
-              Explain why 28, <m>-42</m>, 24, and 0 are even integers.
-            </p>
-          </statement>
-        </exercise>
-        <exercise>
-          <statement>
-            <p>
-              Explain why 51, <m>-11</m>, 1, and <m>-1</m> are odd integers.
-            </p>
-          </statement>
-        </exercise>
-      </exercisegroup>
+        </statement>
+      </exercise>
       <p>
         It is important to realize that mathematical definitions are not made randomly.
         In most cases,
@@ -81,12 +75,10 @@
           </p>
         </statement>
       </exercise>
-    </exercises>
-    </exploration>
+    </worksheet>
 
-    <exploration xml:id="PA_thinking">
+    <worksheet xml:id="PA_thinking">
       <title>Thinking about a Proof</title>
-      <introduction>
       <p>
         Consider the following proposition:
       </p>
@@ -107,9 +99,8 @@
         To help get started in proving this proposition,
         answer the following questions:
       </p>
-      </introduction>
-      <exercises>
-        <exercise>
+
+      <exercise>
           <statement>
             <p>
               The proposition is a conditional statement.
@@ -138,15 +129,14 @@
             </p>
           </statement>
         </exercise>
-      
-      <p>
-        In order to prove this proposition,
-        we need to prove that whenever both <m>x</m> and <m>y</m> are odd integers,
-        <m>x \cdot y</m> is an odd integer.
-        Since we cannot explore all possible pairs of integer values for <m>x</m> and <m>y</m>,
-        we will use the definition of an odd integer to help us construct a proof.
-      </p>
-      <exercise xml:id="PA_prev12-Q4">
+        <p>
+          In order to prove this proposition,
+          we need to prove that whenever both <m>x</m> and <m>y</m> are odd integers,
+          <m>x \cdot y</m> is an odd integer.
+          Since we cannot explore all possible pairs of integer values for <m>x</m> and <m>y</m>,
+          we will use the definition of an odd integer to help us construct a proof.
+        </p>
+        <exercise xml:id="PA_prev12-Q4">
         <statement>
           <p>
             To start a proof of this proposition, we will assume that the hypothesis of the 
@@ -181,10 +171,8 @@
           </p>
         </statement>
       </exercise>
-      </exercises>
-    </exploration>
-  </introduction>
-
+    </worksheet>
+  
   <subsection xml:id="SS_properties">
     <title>Properties of Number Systems</title>
     <p>
@@ -200,39 +188,39 @@
     <table xml:id="Ta_propertiesofreals">
       <title>Properties of the Real Numbers</title>
   <tabular>
-    <row>
-      <cell>
+    <row bottom="minor">
+      <cell right="medium">
       </cell>
       <cell>
         For all real numbers<nbsp /><m>x</m>, <m>y</m>, and <m>z</m>
       </cell>
     </row>
-    <row>
-      <cell>
+    <row bottom="minor">
+      <cell right="medium">
         Identity Properties
       </cell>
       <cell>
         <m>x + 0 = x</m> and <m>x \cdot 1 = x</m>
       </cell>
     </row>
-    <row>
-      <cell>
+    <row bottom="medium">
+      <cell right="medium">
         Inverse Properties
       </cell>
       <cell>
         <m>x + ( - x) = 0</m> and if <m>x \ne 0</m>, then <m>x \cdot \frac{1}{x} = 1</m>
       </cell>
     </row>
-    <row>
-      <cell>
+    <row bottom="minor">
+      <cell right="medium">
         Commutative Properties
       </cell>
       <cell>
         <m>x + y = y + x</m> and <m>xy = yx</m>
       </cell>
     </row>
-    <row>
-      <cell>
+    <row bottom="minor">
+      <cell right="medium">
         Associative Properties
       </cell>
       <cell>
@@ -240,7 +228,7 @@
       </cell>
     </row>
     <row>
-      <cell>
+      <cell right="medium">
         Distributive Properties
       </cell>
       <cell>
@@ -250,6 +238,7 @@
   </tabular>
 </table>
   </subsection>
+
   <subsection>
     <title>Constructing a Proof of a Conditional Statement</title>
     <p>
@@ -272,7 +261,8 @@
       </term>
           <idx><h>know-show table</h></idx>
       to help organize our thoughts and the steps of the proof.
-      This will be illustrated with the proposition from <xref ref="PA_thinking"></xref>.
+      This will be illustrated with the proposition from <xref ref="PA_thinking">Beginning 
+      Activty 2</xref>.
     </p>
     <proposition xml:id="prop-odd">
       <statement>
@@ -292,68 +282,70 @@
       (we have assumed it to be true)
       and treat <m>Q</m> as what we want to show
       (that is, the goal).
-      So we organize this by using <m>P</m> as the first step in the know portion of the table and <m>Q</m> as the last step in the show portion of the table.
-      We will put the know portion of the table at the top and the show portion of the table at the bottom.
+      So we organize this by using <m>P</m> as the first step in the know portion of the table 
+      and <m>Q</m> as the last step in the show portion of the table.
+      We will put the know portion of the table at the top and the show portion of the table at the 
+      bottom.
     </p>
 
-    <table>
+
   <tabular>
-    <row>
-      <cell>
+    <row bottom="medium">
+      <cell right="medium">
         Step
       </cell>
-      <cell>
+      <cell right="medium">
         Know
       </cell>
       <cell>
         Reason
       </cell>
     </row>
-    <row>
-      <cell>
+    <row bottom="minor">
+      <cell right="medium">
         <m>P</m>
       </cell>
-      <cell>
+      <cell right="medium">
         <m>x</m> and <m>y</m> are odd integers.
       </cell>
       <cell>
         Hypothesis
       </cell>
     </row>
-    <row>
-      <cell>
+    <row bottom="minor">
+      <cell right="medium">
         <m>P1</m>
       </cell>
-      <cell>
+      <cell right="medium">
       </cell>
       <cell>
       </cell>
     </row>
-    <row>
-      <cell halign="center">
+    <row bottom="minor">
+      <cell right="medium" halign="center">
         <m>\vdots</m>
       </cell>
-      <cell halign="center">
+      <cell right="medium" halign="center">
         <m>\vdots</m>
       </cell>
       <cell halign="center">
         <m>\vdots</m>
       </cell>
     </row>
-    <row>
-      <cell>
+    <row bottom="minor">
+      <cell right="medium">
         <m>Q1</m>
       </cell>
-      <cell>
+      <cell right="medium">
       </cell>
       <cell>
       </cell>
     </row>
-    <row>
-      <cell>
+    <row bottom="minor">
+      <cell right="medium">
         <m>Q</m>
       </cell>
-      <cell>
+      <cell right="medium">
         <m>x \cdot y</m> is an odd integer.
       </cell>
       <cell>
@@ -361,10 +353,10 @@
       </cell>
     </row>
     <row>
-      <cell>
+      <cell right="medium">
         Step
       </cell>
-      <cell>
+      <cell right="medium">
         Show
       </cell>
       <cell>
@@ -372,9 +364,10 @@
       </cell>
     </row>
   </tabular>
-</table>
+
     <p>
-      We have not yet filled in the reason for the last step because we do not yet know how we will reach the goal.
+      We have not yet filled in the reason for the last step because we do not yet know how we will 
+      reach the goal.
       The idea now is to ask ourselves questions about what we know and what we are trying to prove.
       We usually start with the conclusion that we are trying to prove by asking a so-called
       <term>backward question.</term>
@@ -399,65 +392,65 @@
       know-show table.
     </p>
 
-    <table>
+  
   <tabular>
-    <row>
-      <cell>
+    <row bottom="medium">
+      <cell right="medium">
         Step
       </cell>
-      <cell>
+      <cell right="medium">
         Know
       </cell>
       <cell>
        Reason
       </cell>
     </row>
-    <row>
-      <cell>
+    <row bottom="minor">
+      <cell right="medium">
         <m>P</m>
       </cell>
-      <cell>
+      <cell right="medium">
         <m>x</m> and <m>y</m> are odd integers.
       </cell>
       <cell>
         Hypothesis
       </cell>
     </row>
-    <row>
-      <cell>
+    <row bottom="medium">
+      <cell right="medium">
         <m>P1</m>
       </cell>
-      <cell>
+      <cell right="medium">
       </cell>
       <cell>
       </cell>
     </row>
-    <row>
-      <cell halign="center">
+    <row bottom="minor">
+      <cell right="medium" halign="center">
         <m>\vdots</m>
       </cell>
-      <cell halign="center">
+      <cell right="medium" halign="center">
         <m>\vdots</m>
       </cell>
       <cell halign="center">
         <m>\vdots</m>
       </cell>
     </row>
-    <row>
-      <cell>
+    <row bottom="minor">
+      <cell right="medium">
         <m>Q1</m>
       </cell>
-      <cell>
+      <cell right="medium">
         There exists an integer <m>q</m> such that <m>xy = 2q + 1</m>
       </cell>
       <cell>
       </cell>
     </row>
-    <row>
-      <cell>
+    <row bottom="medium">
+      <cell right="medium">
         <m>Q</m>
       </cell>
-      <cell>
+      <cell right="medium">
         <m>x \cdot y</m> is an odd integer.
       </cell>
       <cell>
@@ -465,10 +458,10 @@
       </cell>
     </row>
     <row>
-      <cell>
+      <cell right="medium">
         Step
       </cell>
-      <cell>
+      <cell right="medium">
         Show
       </cell>
       <cell>
@@ -476,7 +469,7 @@
       </cell>
     </row>
   </tabular>
-</table>
+
     
     <p>
       We now focus our effort on proving statement <m>Q1</m> since we know that if we can prove 
@@ -491,14 +484,16 @@
       The basic form of this type of question is,
       <q>What can we conclude from the fact that <m>P</m> is true?</q>
       In this case,
-      we can use the definition of an odd integer to conclude that there exist integers <m>m</m> and <m>n</m> such that
+      we can use the definition of an odd integer to conclude that there exist integers <m>m</m> 
+      and <m>n</m> such that
       <m>x = 2m + 1</m> and <m>y = 2n + 1</m>.
       We will call this Step <m>P1</m> in the know-show table.
       It is important to notice that we were careful not to use the letter <m>q</m> to denote these integers.
       If we had used <m>q</m> again,
       we would be claiming that the same integer that gives
       <m>x \cdot y = 2q + 1</m> also gives <m>x = 2q + 1</m>.
-      This is why we used <m>m</m> and <m>n</m> for the integers <m>x</m> and <m>y</m> since there is no guarantee that <m>x</m> equals <m>y</m>.
+      This is why we used <m>m</m> and <m>n</m> for the integers <m>x</m> and <m>y</m> since there 
+      is no guarantee that <m>x</m> equals <m>y</m>.
       The basic rule of thumb is to use a different symbol for each new object we introduce in a proof.
       So at this point, we have:
       <blockquote>
@@ -550,35 +545,35 @@
     <p>
       We can now complete the table showing the outline of the proof as follows:
     </p>
-    <table>
+
   <tabular>
-    <row>
-      <cell>
+    <row bottom="medium">
+      <cell right="medium">
         Step
       </cell>
-      <cell>
+      <cell right="medium">
         Know
       </cell>
       <cell>
         Reason
       </cell>
     </row>
-    <row>
-      <cell>
+    <row bottom="minor">
+      <cell right="medium">
         <m>P</m>
       </cell>
-      <cell>
+      <cell right="medium">
         <m>x</m> and <m>y</m> are odd integers.
       </cell>
       <cell>
         Hypothesis
       </cell>
     </row>
-    <row>
-      <cell>
+    <row bottom="minor">
+      <cell right="medium">
         <m>P1</m>
       </cell>
-      <cell>
+      <cell right="medium">
         <line>  
           There exist integers <m>m</m> and <m>n</m> 
         </line>  
@@ -591,55 +586,55 @@
         Definition of an odd integer.
       </cell>
     </row>
-    <row>
-      <cell>
+    <row bottom="minor">
+      <cell right="medium">
         <m>P2</m>
       </cell>
-      <cell>
+      <cell right="medium">
         <m>xy = (2m + 1)(2n + 1)</m>
       </cell>
       <cell>
         Substitution
       </cell>
     </row>
-    <row>
-      <cell>
+    <row bottom="minor">
+      <cell right="medium">
         <m>P3</m>
       </cell>
-      <cell>
+      <cell right="medium">
         <m>xy = 4mn + 2m + 2n + 1</m>
       </cell>
       <cell>
         Algebra
       </cell>
     </row>
-    <row>
-      <cell>
+    <row bottom="minor">
+      <cell right="medium">
         <m>P4</m>
       </cell>
-      <cell>
+      <cell right="medium">
         <m>xy = 2(2mn + m + n) + 1</m>
       </cell>
       <cell>
         Algebra
       </cell>
     </row>
-    <row>
-      <cell>
+    <row bottom="minor">
+      <cell right="medium">
         <m>P5</m>
       </cell>
-      <cell>
+      <cell right="medium">
         <m>(2mn + m +n)</m> is an integer.
       </cell>
       <cell>
         Closure properties of the integers
       </cell>
     </row>
-    <row>
-      <cell>
+    <row bottom="minor">
+      <cell right="medium">
         <m>Q1</m>
       </cell>
-      <cell>
+      <cell right="medium">
         There exists an integer <m>q</m> such that <m>xy = 2q + 1</m>.
       </cell>
       <cell>
@@ -647,10 +642,10 @@
       </cell>
     </row>
     <row>
-      <cell>
+      <cell right="medium">
         <m>Q</m>
       </cell>
-      <cell>
+      <cell right="medium">
         <m>x \cdot y</m> is an odd integer.
       </cell>
       <cell>
@@ -658,7 +653,7 @@
       </cell>
     </row>
   </tabular>
-</table>
+
     <p>
       It is very important to realize that we have only constructed an outline of a proof.
       Mathematical proofs are not written in table form.
@@ -672,6 +667,7 @@
           <idx><h>know-show table</h></idx>
       A completed proof follows.
     </p>
+
     <theorem xml:id="T_xyodd">
       <statement>
         <p>
@@ -829,7 +825,7 @@
           <mrow>\amp = 4mn + 2m + 2n + 1</mrow>
           <mrow>\amp = 2\left( {2mn + m + n} \right) + 1</mrow>
         </md>.
-        Since  <m>m</m>  and  <m>n</m>  are integers,
+        Since <m>m</m> and <m>n</m> are integers,
         we conclude that <m>\ldots</m> .
       </p>
     </paragraphs>
@@ -844,7 +840,6 @@
         In any case, it is usually good practice to use some
         <q>end of proof symbol</q>
         such as <m>\blacksquare</m>.
-          <idx><h>writing guidelines</h></idx>
       </p>
     </paragraphs>
 
@@ -879,8 +874,8 @@
 
   <subsection xml:id="subsec-proof-comments">
     <title>Some Comments about Constructing Direct Proofs</title>
-
-    <remark xml:id="proofcomment1">
+    <ol>
+    <li xml:id="proofcomment1">
       <p>
         <idx><h>direct proof</h></idx>
         <idx><h>proof</h><h>direct</h></idx>
@@ -904,8 +899,8 @@
         process and the backward process. Other times,
         we may have to work with more than one possible answer.
       </p>
-    </remark>
-    <remark>
+    </li>
+    <li>
       <p>
         Sometimes we can use previously proven results to answer a forward question or 
         a backward question.
@@ -913,8 +908,8 @@
         where <xref ref="T_xyodd"></xref>
         was used to answer a backward question.
       </p>
-    </remark>
-    <remark>
+    </li>
+    <li>
       <p>
         Although we start with two separate processes
         (forward and backward),
@@ -924,8 +919,8 @@
         backward questions and to use the show portion of the table to motivate answers to 
         forward questions.
       </p>
-    </remark>
-    <remark>
+    </li>
+    <li>
       <p>
         Answering a backward question can sometimes be tricky.
         If the goal is the statement  <m>Q</m>,
@@ -957,8 +952,8 @@
         This is because if <m>y^2=4</m>,
         then it is not necessarily true that <m>y=2</m>.
       </p>
-    </remark>
-    <remark>
+    </li>
+    <li>
       <p>
         Finally, it is very important to realize that not every proof can be constructed by 
         the use of a simple know-show table.
@@ -997,11 +992,12 @@
         <idx><h>direct proof</h></idx>
         <idx><h>proof</h><h>direct</h></idx>
       </p>
-    </remark>
+    </li>
+    </ol>
 
     <investigation xml:id="A_kstable2">
       <title>Exploring a Proposition</title>
-      <task>
+      
       <p>
         Construct a table of values for
         <m>\left( {3m^2 + 4m + 6} \right)</m> using at least six different integers for <m>m</m>.
@@ -1010,8 +1006,7 @@
         <blockquote>If <m>m</m> is an odd integer,
         then <m>\left(3m^2 + 4m + 6 \right)</m> is an odd integer.</blockquote>
       </p>
-      </task>
-      <task>
+
       <p>
         Justify your conclusion.
         This means that if the proposition is true,
@@ -1020,7 +1015,7 @@
         you need to provide an example of an odd integer for which 
         <m>\left(3m^2 + 4m + 6 \right)</m> is an even integer.
       </p>
-      </task>
+
     </investigation>
 
     <investigation xml:id="pr_pythag">
@@ -1046,8 +1041,7 @@
           Since <m>c</m> is a length and must be positive,
           we conclude that <m>c = 13</m>.
         </p>
-      </introduction>
-      <task>
+      
       <p>
         Construct and provide a well-written proof for the following proposition.
       </p>
@@ -1060,8 +1054,6 @@
           </p>
         </statement>
       </proposition>
-      </task>
-      <conclusion>
       <p>
         Although this proposition uses different mathematical concepts than the one used in this section,
         the process of constructing a proof for this proposition is the same forward-backward method 
@@ -1072,242 +1064,191 @@
         The basic idea is to develop an equation from the forward process and show that <m>m = 3</m> 
         is a solution of that equation.
       </p>
-      </conclusion>
+      </introduction>
     </investigation>
   </subsection>
 
   <exercises xml:id="exercises-1_2">
-    <exercisegroup xml:id="exer_evenodd">
-    
-      <introduction>
+
+    <exercise xml:id="exer_evenodd">
+      <statement>
         <p>
           Construct a know-show table for each of the following statements and then write a formal 
           proof for one of the statements.
+          <task>
+            <p>
+              If <m>m</m> is an even integer,
+              then <m>m + 1</m> is an odd integer.
+            </p>
+          </task>
+          <task>
+            <p>
+              If <m>m</m> is an odd integer,
+              then <m>m + 1</m> is an even integer.
+            </p>
+          </task>
         </p>
-      </introduction>
-    
-      <exercise>
-        <statement>
-          <p>
-            If <m>m</m> is an even integer,
-            then <m>m + 1</m> is an odd integer.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            If <m>m</m> is an odd integer,
-            then <m>m + 1</m> is an even integer.
-          </p>
-        </statement>
-      </exercise>
-    </exercisegroup>
+      </statement>
+    </exercise>
 
-    <exercisegroup xml:id="exer_evenoddadd">
-    
-      <introduction>
+    <exercise xml:id="exer_evenoddadd">
+      <statement>
         <p>
           Construct a know-show table for each of the following statements and then write a 
           formal proof for one of the statements.
+          <task>
+            <p>
+              If <m>x</m> is an even integer and <m>y</m> is an even integer,
+              then <m>x + y</m> is an even integer.
+            </p>
+          </task>
+          <task>
+            <p>
+              If <m>x</m> is an even integer and <m>y</m> is an odd integer,
+              then <m>x + y</m> is an odd integer.
+            </p>
+          </task>
+          <task>
+            <p>
+              If <m>x</m> is an odd integer and <m>y</m> is an odd integer,
+              then <m>x + y</m> is an even integer.
+            </p>
+          </task>
         </p>
-      </introduction>
-    
-      <exercise>
-        <statement>
-          <p>
-            If <m>x</m> is an even integer and <m>y</m> is an even integer,
-            then <m>x + y</m> is an even integer.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            If <m>x</m> is an even integer and <m>y</m> is an odd integer,
-            then <m>x + y</m> is an odd integer.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            If <m>x</m> is an odd integer and <m>y</m> is an odd integer,
-            then <m>x + y</m> is an even integer.
-          </p>
-        </statement>
-      </exercise>
-    </exercisegroup>
+      </statement>
+    </exercise>
 
-    <exercisegroup xml:id="exer_evenoddmult">
-    
-      <introduction>
+    <exercise xml:id="exer_evenoddmult">
+      <statement>
         <p>
           Construct a know-show table for each of the following statements and then write a 
           formal proof for one of the statements.
+          <task>
+            <p>
+              If <m>m</m> is an even integer and <m>n</m> is an integer,
+              then <m>m \cdot n</m> is an even integer.
+            </p>
+          </task>
+          <task>
+            <p>
+              If <m>n</m> is an even integer,
+              then <m>n^2</m> is an even integer.
+            </p>
+          </task>
+          <task xml:id="exer_x2odd">
+            <p>
+              If <m>n</m> is an odd integer,
+              then <m>n^2</m> is an odd integer.
+            </p>
+          </task>
         </p>
-      </introduction>
-    
-      <exercise>
-        <statement>
-          <p>
-            If <m>m</m> is an even integer and <m>n</m> is an integer,
-            then <m>m \cdot n</m> is an even integer.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            If <m>n</m> is an even integer,
-            then <m>n^2</m> is an even integer.
-          </p>
-        </statement>
-      </exercise>
-      <exercise xml:id="exer_x2odd">
-        <statement>
-          <p>
-            If <m>n</m> is an odd integer,
-            then <m>n^2</m> is an odd integer.
-          </p>
-        </statement>
-      </exercise>
-    </exercisegroup>
+      </statement>
+    </exercise>
 
-    <exercisegroup xml:id="exer_5m_7">
-    
-      <introduction>
+    <exercise xml:id="exer_5m_7">
+      <statement>
         <p>
           Construct a know-show table and write a complete proof for each of the following statements:
+          <task>
+            <p>
+              If <m>m</m> is an even integer,
+              then <m>5m + 7</m> is an odd integer.
+            </p>
+          </task>
+          <task>
+            <p>
+              If <m>m</m> is an odd integer,
+              then <m>5m + 7</m> is an even integer.
+            </p>
+          </task>
+          <task>
+            <p>
+              If <m>m</m> and <m>n</m> are odd integers,
+              then <m>mn + 7</m> is an even integer.
+            </p>
+          </task>
         </p>
-      </introduction>
-    
-      <exercise>
-        <statement>
-          <p>
-            If <m>m</m> is an even integer,
-            then <m>5m + 7</m> is an odd integer.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            If <m>m</m> is an odd integer,
-            then <m>5m + 7</m> is an even integer.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            If <m>m</m> and <m>n</m> are odd integers,
-            then <m>mn + 7</m> is an even integer.
-          </p>
-        </statement>
-      </exercise>
-    </exercisegroup>
+      </statement>
+    </exercise>
 
-    <exercisegroup xml:id="exer_3m2">
-    
-      <introduction>
+    <exercise xml:id="exer_3m2">
+      <statement>
         <p>
           Construct a know-show table and write a complete proof for each of the following statements:
+          <task>
+            <p>
+              If <m>m</m> is an even integer,
+              then <m>3m^2 + 2m + 3</m> is an odd integer.
+            </p>
+          </task>
+          <task>
+            <p>
+              If <m>m</m> is an odd integer,
+              then <m>3m^2 + 7m + 12</m> is an even integer.
+            </p>
+          </task>
         </p>
-      </introduction>
-    
-      <exercise>
-        <statement>
-          <p>
-            If <m>m</m> is an even integer,
-            then <m>3m^2 + 2m + 3</m> is an odd integer.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            If <m>m</m> is an odd integer,
-            then <m>3m^2 + 7m + 12</m> is an even integer.
-          </p>
-        </statement>
-      </exercise>
-    </exercisegroup>
+      </statement>
+    </exercise>
 
-    <exercisegroup xml:id="exer_sec12-7">
-    
-      <introduction>
+    <exercise xml:id="exer_sec12-7">
+      <statement>
         <p>
-           In this section,
+          In this section,
           it was noted that there is often more than one way to answer a backward question.
           For example, if the backward question is,
           <q>How can we prove that two real numbers are equal?</q>, one possible answer is to prove 
           that their difference equals 0.
           Another possible answer is to prove that the first is less than or equal to the second and 
           that the second is less than or equal to the first.
+          <task>
+            <p>
+              Give at least one more answer to the backward question,
+              <q>How can we prove that two real numbers are equal?</q>
+            </p>
+          </task>
+          <task>
+            <p>
+              List as many answers as you can for the backward question,
+              <q>How can we prove that a real number is equal to zero?</q>
+            </p>
+          </task>
+          <task>
+            <p>
+              List as many answers as you can for the backward question,
+              <q>How can we prove that two lines are parallel?</q>
+            </p>
+          </task>
+          <task>
+            <p>
+              List as many answers as you can for the backward question,
+              <q>How can we prove that a triangle is isosceles?</q>
+            </p>
+          </task>
         </p>
-      </introduction>
-    
-      <exercise>
-        <statement>
-          <p>
-            Give at least one more answer to the backward question,
-            <q>How can we prove that two real numbers are equal?</q>
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            List as many answers as you can for the backward question,
-            <q>How can we prove that a real number is equal to zero?</q>
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            List as many answers as you can for the backward question,
-            <q>How can we prove that two lines are parallel?</q>
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            List as many answers as you can for the backward question,
-            <q>How can we prove that a triangle is isosceles?</q>
-          </p>
-        </statement>
-      </exercise>
-    </exercisegroup>
+      </statement>
+    </exercise>
 
-    <exercisegroup xml:id="exer_sec12-new7">
-    
-      <introduction>
+    <exercise xml:id="exer_sec12-new7">
+      <statement>
         <p>
           Are the following statements true or false?
           Justify your conclusions.
+          <task>
+            <p>
+              If <m>a</m>, <m>b</m>, and <m>c</m> are integers,
+              then <m>ab + ac</m> is an even integer.
+            </p>
+          </task>
+          <task>
+            <p>
+              If <m>b</m> and <m>c</m> are odd integers and <m>a</m> is an integer,
+              then <m>ab + ac</m> is an even integer.
+            </p>
+          </task>
         </p>
-      </introduction>
-    
-      <exercise>
-        <statement>
-          <p>
-            If <m>a</m>, <m>b</m>, and <m>c</m> are integers,
-            then <m>ab + ac</m> is an even integer.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            If <m>b</m> and <m>c</m> are odd integers and <m>a</m> is an integer,
-            then <m>ab + ac</m> is an even integer.
-          </p>
-        </statement>
-      </exercise>
-    </exercisegroup>
+      </statement>
+    </exercise>
 
     <exercise xml:id="exer_sec12-8">
       <statement>
@@ -1326,9 +1267,8 @@
       </statement>
     </exercise>
 
-    <exercisegroup xml:id="exer_sec12-type">
-    
-      <introduction>
+    <exercise xml:id="exer_sec12-type">
+      <statement>
         <p>
           An integer <m>a</m> is said to be a <term>type 0 integer</term>
           if there exists an integer <m>n</m> such that <m>a=3n</m>.
@@ -1339,83 +1279,65 @@
           <idx><h>type 0 integer</h></idx>
           <idx><h>type 1 integer</h></idx>
           <idx><h>type 2 integer</h></idx>
-        </p>
-      </introduction>
-    
-      <exercise xml:id="exer_mod3a">
-        <statement>
-          <p>
-            Give examples of at least four different integers that are type 1 integers.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Give examples of at least four different integers that are type 2 integers.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            By multiplying pairs of integers from the list in <xref ref="exer_mod3a"></xref>,
+          <task xml:id="exer_mod3a">
+            <p>
+              Give examples of at least four different integers that are type 1 integers.
+            </p>
+          </task>
+          <task>
+            <p>
+              Give examples of at least four different integers that are type 2 integers.
+            </p>
+          </task>
+          <task>
+            <p>
+              By multiplying pairs of integers from the list in <xref ref="exer_mod3a"></xref>,
             does it appear that the following statement is true or false?
             <blockquote>
               If <m>a</m> and <m>b</m> are both type 1 integers, then <m>a \cdot b</m> is a 
               type 1 integer.
             </blockquote>
-          </p>
-        </statement>
-      </exercise>
-    </exercisegroup>
+            </p>
+          </task>
+        </p>
+      </statement>
+    </exercise>
 
-    <exercisegroup xml:id="exer_sec12-typeproof">
-    
-      <introduction>
+    <exercise xml:id="exer_sec12-typeproof">
+      <statement>
         <p>
           Use the definitions in <xref ref="exer_sec12-type"></xref> to help write a 
           proof for each of the following statements:
+          <task>
+            <p>
+              If <m>a</m> and <m>b</m> are both type 1 integers,
+              then <m>a + b</m> is a type 2 integer.
+            </p>
+          </task>
+          <task>
+            <p>
+              If <m>a</m> and <m>b</m> are both type 2 integers,
+              then <m>a + b</m> is a type 1 integer.
+            </p>
+          </task>
+          <task>
+            <p>
+              If <m>a</m> is a type 1 integer and <m>b</m> is a type 2 integer,
+              then <m>a \cdot b</m> is a type 2 integer.
+            </p>
+          </task>
+          <task>
+            <p>
+              If <m>a</m> and <m>b</m> are both type 2 integers,
+              then <m>a \cdot b</m> is type 1 integer.
+            </p>
+          </task>
         </p>
-      </introduction>
-    
-      <exercise>
-        <statement>
-          <p>
-            If <m>a</m> and <m>b</m> are both type 1 integers,
-            then <m>a + b</m> is a type 2 integer.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            If <m>a</m> and <m>b</m> are both type 2 integers,
-            then <m>a + b</m> is a type 1 integer.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            If <m>a</m> is a type 1 integer and <m>b</m> is a type 2 integer,
-            then <m>a \cdot b</m> is a type 2 integer.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            If <m>a</m> and <m>b</m> are both type 2 integers,
-            then <m>a \cdot b</m> is type 1 integer.
-          </p>
-        </statement>
-      </exercise>
-    </exercisegroup>
+      </statement>
+    </exercise>
 
-    <exercisegroup xml:id="exer_sec12-11">
-    
-      <introduction>
+    <exercise xml:id="exer_sec12-11">
+      <statement>
         <p>
           Let <m>a</m>,
           <m>b</m>, and <m>c</m> be real numbers with <m>a \ne 0</m>.
@@ -1428,71 +1350,58 @@
           <me>
           x_1 = \frac{-b + \sqrt{b^2 - 4ac}}{2a}  \text{ and }   x_2 = \frac{-b - \sqrt{b^2 - 4ac}}{2a}
           </me>.
+          <task>
+            <p>
+              Prove that the sum of the two solutions of the quadratic equation
+              <m>ax^2 + bx + c = 0</m> is equal to <m>- \dfrac{b}{a}</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              Prove that the product of the two solutions of the quadratic equation
+              <m>ax^2 + bx + c = 0</m> is equal to <m>\dfrac{c}{a}</m>.
+            </p>
+          </task>
         </p>
-      </introduction>
-    
-      <exercise>
-        <statement>
-          <p>
-            Prove that the sum of the two solutions of the quadratic equation
-            <m>ax^2 + bx + c = 0</m> is equal to <m>- \dfrac{b}{a}</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Prove that the product of the two solutions of the quadratic equation
-            <m>ax^2 + bx + c = 0</m> is equal to <m>\dfrac{c}{a}</m>.
-          </p>
-        </statement>
-      </exercise>
-    </exercisegroup>
+      </statement>
+    </exercise>
 
-    <exercisegroup xml:id="exer_sec12-quadratic2">
-    
-      <introduction>
+    <exercise xml:id="exer_sec12-quadratic2">
+      <statement>
         <p>
-           See <xref ref="exer_sec12-11"></xref> for the quadratic formula,
-          which gives the solutions to a quadratic equation.
+          <task>
+            <p>
+              See <xref ref="exer_sec12-11"></xref> for the quadratic formula,
+              which gives the solutions to a quadratic equation.
+              Let <m>a</m>,
+              <m>b</m>, and <m>c</m> be real numbers with <m>a \ne 0</m>.
+              The discriminant of the quadratic equation
+              <m>ax^2 + bx + c = 0</m> is defined to be <m>b^2 - 4ac</m>.
+              Explain how to use this discriminant to determine if the quadratic equation has two 
+              real number solutions,
+              one real number solution, or no real number solutions.
+            </p>
+          </task>
+          <task>
+            <p>
+              Prove that if <m>a</m>, <m>b</m>,
+              and <m>c</m> are real numbers with <m>a > 0</m> and <m>c \lt 0</m>,
+              then one solutions of the quadratic equation
+              <m>ax^2 + bx + c = 0</m> is a positive real number.
+            </p>
+          </task>
+          <task>
+            <p>
+              Prove that if <m>a</m>, <m>b</m>,
+              and <m>c</m> are real numbers with <m>a \ne 0</m>,
+              <m>b > 0</m>, and <m>b \lt 2 \sqrt{ac}</m>,
+              then the quadratic equation
+              <m>ax^2 + bx + c = 0</m> has no real number solutions.
+            </p>
+          </task>
         </p>
-      </introduction>
-    
-      <exercise>
-        <statement>
-          <p>
-            Let <m>a</m>,
-            <m>b</m>, and <m>c</m> be real numbers with <m>a \ne 0</m>.
-            The discriminant of the quadratic equation
-            <m>ax^2 + bx + c = 0</m> is defined to be <m>b^2 - 4ac</m>.
-            Explain how to use this discriminant to determine if the quadratic equation has two 
-            real number solutions,
-            one real number solution, or no real number solutions.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Prove that if <m>a</m>, <m>b</m>,
-            and <m>c</m> are real numbers with <m>a > 0</m> and <m>c \lt 0</m>,
-            then one solutions of the quadratic equation
-            <m>ax^2 + bx + c = 0</m> is a positive real number.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Prove that if <m>a</m>, <m>b</m>,
-            and <m>c</m> are real numbers with <m>a \ne 0</m>,
-            <m>b > 0</m>, and <m>b \lt 2 \sqrt{ac}</m>,
-            then the quadratic equation
-            <m>ax^2 + bx + c = 0</m> has no real number solutions.
-          </p>
-        </statement>
-      </exercise>
-    </exercisegroup>
+      </statement>
+    </exercise>
 
     <activity xml:id="exer_pythag">
       <title>Pythagorean Triples</title>

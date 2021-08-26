@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <section xml:id="S_1prop">
   <title>Statements and Conditional Statements</title>
-  <introduction>
-    <exploration xml:id="PA_prop">
-      <title>Statements</title>
+    
+    <worksheet xml:id="PA_prop">
+      <title>Beginning Activity 1: Statements</title>
+      
       <p>
         Much of our work in mathematics deals with statements.
       </p>
@@ -41,14 +42,11 @@
         then the resulting equation, <m>2 \cdot 3 + 5 = 10</m> is a statement
         (which is a false statement).
       </p>
-      <exercises xml:id="exercises-BA-statements">
-        <statement>
-          <p>
-            Which of the following sentences are statements?
+      <p>
+        Which of the following sentences are statements?
         Do not worry about determining the truth value of those that are statements;
         just determine whether each sentence is a statement or not.
-          </p>
-        </statement>
+      </p>
         <exercise>
           <statement>
             <p>
@@ -91,11 +89,12 @@
             </p>
           </statement>
         </exercise>
-      </exercises>
-    </exploration>
+    </worksheet>
 
-    <exploration xml:id="PA_conditional">
-      <title>Conditional Statements</title>
+    <worksheet xml:id="PA_conditional">
+      <title>Beginning Activity 2: Conditional Statements</title>
+      
+      <introduction>
       <definition xml:id="D_cond_state">
         <statement>
           <p>
@@ -123,8 +122,9 @@
       <p>  
         We will now explore some examples.
       </p>
-      <exercises xml:id="exercises-BA-cond-state">
-        <exercise>
+      </introduction>
+
+      <exercise>
         <introduction>
           <p>
             <q>If it is raining, then Laura is at the theater.</q>
@@ -187,14 +187,13 @@
           </p>
         </task>
       </exercise>
-    </exercises>
-    </exploration>
-  </introduction>
+    </worksheet>
+    
 
   <subsection xml:id="subsec-statements">
     <title>Statements</title>
     <p>
-      As we saw in <xref ref="PA_prop"></xref>,
+      As we saw in <xref ref="PA_prop">Beginning Activity 1</xref>,
       some sentences that are mathematical in nature often are not statements because we may not know 
       precisely what a variable represents.
       Following are some more examples
@@ -384,6 +383,7 @@
           <idx><h>statement</h></idx>
     </p>
   </subsection>
+
   <subsubsection xml:id="subsubsec-tech-explore">
     <title>Techniques of Exploration</title>
       <paragraphs>
@@ -439,6 +439,7 @@
           (We will prove that this statement is true in the next section.)
         </p>
       </paragraphs>
+
       <paragraphs>
         <title>Use of prior knowledge</title>
         <p>
@@ -464,6 +465,7 @@
           it is still a good idea to give a specific counterexample as we did before.
         </p>
       </paragraphs>
+
       <paragraphs>
         <title>Cooperation and brainstorming</title>
         <p>
@@ -506,10 +508,12 @@
       </task>    
     </investigation>
   </subsubsection>
+
   <subsection xml:id="SS_conditional">
     <title>Conditional Statements</title>
     <p>
-      We had our first encounter with conditional statements in <xref ref="PA_conditional"></xref>.
+      We had our first encounter with conditional statements in <xref ref="PA_conditional">
+      Beginning Activity 2</xref>.
       Since conditional statements are the most important type of statement in mathematics,
       we give a more formal definition.
     </p>
@@ -587,11 +591,11 @@
     <table xml:id="Ta_first">
       <title>Truth Table for <m>P \to Q</m></title>
   <tabular halign="center">
-    <row>
-      <cell>
+    <row bottom="major">
+      <cell right="medium">
         <m>P</m>
       </cell>
-      <cell>
+      <cell right="major">
         <m>Q</m>
       </cell>
       <cell>
@@ -599,32 +603,10 @@
       </cell>
     </row>
     <row>
-      <cell>
+      <cell right="medium">
         T
       </cell>
-      <cell>
-        T
-      </cell>
-      <cell>
-        T
-      </cell>
-    </row>
-    <row>
-      <cell>
-        T
-      </cell>
-      <cell>
-        F
-      </cell>
-      <cell>
-        F
-      </cell>
-    </row>
-    <row>
-      <cell>
-        F
-      </cell>
-      <cell>
+      <cell right="major">
         T
       </cell>
       <cell>
@@ -632,10 +614,32 @@
       </cell>
     </row>
     <row>
-      <cell>
+      <cell right="medium">
+        T
+      </cell>
+      <cell right="major">
         F
       </cell>
       <cell>
+        F
+      </cell>
+    </row>
+    <row>
+      <cell right="medium">
+        F
+      </cell>
+      <cell right="major">
+        T
+      </cell>
+      <cell>
+        T
+      </cell>
+    </row>
+    <row>
+      <cell right="medium">
+        F
+      </cell>
+      <cell right="major">
         F
       </cell>
       <cell>
@@ -645,13 +649,16 @@
   </tabular>
 </table>
     <p>
-      The important thing to remember is that the conditional statement <m>P~\to~Q</m> has its own truth value.
+      The important thing to remember is that the conditional statement <m>P~\to~Q</m> has its 
+      own truth value.
       It is either true or false
       (and not both).
       Its truth value depends on the truth values for <m>P</m> and <m>Q</m>,
-      but some find it a bit puzzling that the conditional statement is considered to be true when the hypothesis <m>P</m> is false.
+      but some find it a bit puzzling that the conditional statement is considered to be true when 
+      the hypothesis <m>P</m> is false.
       We will provide a justification for this through the use of an example.
     </p>
+
     <example>
       <statement>
         <p>
@@ -680,7 +687,8 @@
             </li>
             <li>
               <p>
-                Suppose that <m>P</m> is true and <m>Q</m> is false or that it is not raining and Daisy is not riding her bike.
+                Suppose that <m>P</m> is true and <m>Q</m> is false or that it is not raining and 
+                Daisy is not riding her bike.
                 It would appear that by making the statement,
                 <q>If it is not raining, then Daisy is riding her bike,</q>
                 I have not told the truth.
@@ -689,7 +697,8 @@
             </li>
             <li>
               <p>
-                Now suppose that <m>P</m> is false and <m>Q</m> is true or that it is raining and Daisy is riding her bike.
+                Now suppose that <m>P</m> is false and <m>Q</m> is true or that it is raining and 
+                Daisy is riding her bike.
                 Did I make a false statement by stating that if it is not raining,
                 then Daisy is riding her bike?
                 The key is that I did not make any statement about what would happen if it was raining,
@@ -704,15 +713,18 @@
                 Finally, suppose that both <m>P</m> and <m>Q</m> are false.
                 That is, it is raining and Daisy is not riding her bike.
                 As in the previous situation,
-                since my statement was <m>P \to Q</m>, I made no claim about what would happen if it was raining,
+                since my statement was <m>P \to Q</m>, I made no claim about what would happen 
+                if it was raining,
                 and so I did not tell a lie.
-                So the statement <m>P \to Q</m> cannot be false in this case and so we consider it to be true.
+                So the statement <m>P \to Q</m> cannot be false in this case and so we consider 
+                it to be true.
               </p>
             </li>
           </ol>
         </p>
       </statement>
     </example>
+    
     <investigation xml:id="prog_condition">
       <title>Explorations with Conditional Statements</title>
       <task>
@@ -730,8 +742,7 @@
             (In <xref ref="C_logic"></xref>,
             we will learn how to be more careful and precise with these types of conditional statements.)
           </p>
-          <!-- Should I put these back in a list? It does seem to make sense since I don't think you 
-          can nest <task>s. -->
+          
           <p>
             Notice that if <m>x = -3</m>,
             then <m>x^2 + 8x = -15</m>, which is negative.
@@ -770,8 +781,9 @@
     <title>Further Remarks about Conditional Statements</title>
     <idx><h>conditional statement</h></idx>
     <idx><h>statement</h><h>conditional</h></idx>
-      <remark xml:id="rem-cond-state1">
-      
+
+    <ol>
+      <li xml:id="rem-cond-state1">
         <p>
           The conventions for the truth value of conditional statements may seem a bit strange,
           especially the fact that the conditional statement is true when the hypothesis of the 
@@ -820,14 +832,17 @@
           </ul>
         </p>
         <p>
-          This is admittedly a contrived example but it does illustrate that the conventions for the 
-          truth value of a conditional statement make sense.
-          The message is that in order to be complete in mathematics,
-          we need to have conventions about when a conditional statement is true and when it is false.
+          <p>
+            This is admittedly a contrived example but it does illustrate that the conventions 
+            for the 
+            truth value of a conditional statement make sense.
+            The message is that in order to be complete in mathematics,
+            we need to have conventions about when a conditional statement is true and when it 
+            is false.
+          </p>
         </p>
-      </remark>
-      <remark xml:id="rem-cond-state2">
-      
+      </li>
+      <li xml:id="rem-cond-state2">
         <p>
           The fact that there is only one case when a conditional statement is false often provides a 
           method to show that a given conditional statement is false.
@@ -850,9 +865,8 @@
           (such as <m>n = 42</m>, <m>n = 45</m>, and  <m>n = 50</m>),
           but only one counterexample is needed to prove that the statement is false.
         </p>
-      </remark>
-      <remark xml:id="rem-cond-state3">
-      
+      </li>
+      <li xml:id="rem-cond-state3">
         <p>
           Although one example can be used to prove that a conditional statement is false,
           in most cases,
@@ -871,7 +885,8 @@
           Methods of proof will be discussed in <xref ref="S_1direct"></xref>
           and <xref ref="C_proofs"></xref>.
         </p>
-      </remark>
+      </li>
+    </ol>
 
     <investigation xml:id="pr_conditional">
       <title>Working with a Conditional Statement</title>
@@ -972,7 +987,7 @@
       and the set of integers is <term>closed under subtraction</term>.
           <idx><h>closed under subtraction</h></idx>
       This means that
-      <!-- List or blockquotes? Semicolons?-->
+      
       <ul>
         <li>
           <p>
@@ -1060,265 +1075,215 @@
   </subsection>
 
   <exercises xml:id="exercises-1_1">
-    <exercisegroup xml:id="exer_sec11-1">
-      <introduction>
+    <exercise xml:id="exer_sec11-1">
+      <statement>
         <p>
           Which of the following sentences are statements?
-        </p>
-      </introduction>
 
-      <exercise>
-        <statement>
-          <p>
-            <m>3^2 + 4^2 = 5^2</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            <m>a^2 + b^2 = c^2</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            There exist integers <m>a</m>,
-            <m>b</m>, and <m>c</m> such that <m>a^2 = b^2 + c^2</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            If <m>x^2 = 4</m>, then <m>x = 2</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            For each real number <m>x</m>,
-            if <m>x^2 = 4</m>, then <m>x = 2</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            For each real number <m>t</m>,
+          <task>
+            <p>
+              <m>3^2 + 4^2 = 5^2</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>a^2 + b^2 = c^2</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              There exist integers <m>a</m>,
+              <m>b</m>, and <m>c</m> such that <m>a^2 = b^2 + c^2</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              If <m>x^2 = 4</m>, then <m>x = 2</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              For each real number <m>x</m>,
+              if <m>x^2 = 4</m>, then <m>x = 2</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              For each real number <m>t</m>,
               <m>\sin ^2 t + \cos ^2 t = 1</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            <m>\sin x \lt \sin \! \left( {\dfrac{\pi }{4}} \right)</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            If <m>n</m> is a prime number,
-            then <m>n^2</m> has three positive factors.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            <m>1 + \tan ^2 \theta = \sec ^2 \theta</m>.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Every rectangle is a parallelogram.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Every even natural number greater than or equal to 4 is the sum of two prime numbers.
-          </p>
-        </statement>
-      </exercise>
-    </exercisegroup>
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>\sin x \lt \sin \! \left( {\dfrac{\pi }{4}} \right)</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              If <m>n</m> is a prime number,
+              then <m>n^2</m> has three positive factors.
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>1 + \tan ^2 \theta = \sec ^2 \theta</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              Every rectangle is a parallelogram.
+            </p>
+          </task>
+          <task>
+            <p>
+              Every even natural number greater than or equal to 4 is the sum of two prime numbers.
+            </p>
+          </task>
+        </p>
+      </statement>
+    </exercise>
 
-    <exercisegroup>
-      <introduction>
+    <exercise>
+      <statement>
         <p>
           Identify the hypothesis and the conclusion for each of the following conditional statements.
+          <task>
+            <p>
+              If <m>n</m> is a prime number,
+              then <m>n^2</m> has three positive factors.
+            </p>
+          </task>
+          <task>
+            <p>
+              If <m>a</m> is an irrational number and <m>b</m> is an irrational number,
+              then <m>a \cdot b</m> is an irrational number.
+            </p>
+          </task>
+          <task>
+            <p>
+              If <m>p</m> is a prime number,
+              then <m>p = 2</m> or <m>p</m> is an odd number.
+            </p>
+          </task>
+          <task>
+            <p>
+              If <m>p</m> is a prime number and <m>p \ne 2</m>,
+              then <m>p</m> is an odd number.
+            </p>
+          </task>
+          <task>
+            <p>
+              If <m>p \ne 2</m> and <m>p</m> is an even number,
+              then <m>p</m> is not prime.
+            </p>
+          </task>
         </p>
-      </introduction>
+      </statement>
+    </exercise>
 
-      <exercise>
-        <statement>
-          <p>
-            If <m>n</m> is a prime number,
-            then <m>n^2</m> has three positive factors.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            If <m>a</m> is an irrational number and <m>b</m> is an irrational number,
-            then <m>a \cdot b</m> is an irrational number.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            If <m>p</m> is a prime number,
-            then <m>p = 2</m> or <m>p</m> is an odd number.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            If <m>p</m> is a prime number and <m>p \ne 2</m>,
-            then <m>p</m> is an odd number.
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            If <m>p \ne 2</m> and <m>p</m> is an even number,
-            then <m>p</m> is not prime.
-          </p>
-        </statement>
-      </exercise>
-    </exercisegroup>
+    <exercise xml:id="exer_sec11-3">
+      <statement>
+        <p>
+          Determine whether each of the following conditional statements is true or false.
+          <task>
+            <p>
+              If <m>10 \lt 7</m>, then <m>3 = 4</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              If <m>7 \lt 10</m>, then <m>3 = 4</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              If <m>10 \lt 7</m>, then <m>3 + 5 = 8</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              If <m>7 \lt 10</m>, then <m>3 + 5 =8</m>.
+            </p>
+          </task>
+        </p>
+      </statement>
+    </exercise>
 
-    <exercisegroup xml:id="exer_sec11-3">
-    <introduction>
-      <p>
-        Determine whether each of the following conditional statements is true or false.
-      </p>
-    </introduction>
-    <exercise>
+    <exercise xml:id="exer_sec11-4">
       <statement>
         <p>
-          If <m>10 \lt 7</m>, then <m>3 = 4</m>.
+          Determine the conditions under which each of the following conditional sentences will be a 
+          true statement.
+          <task>
+            <p>
+              If <m>a+2=5</m>, then <m>8\lt 5</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              If <m>5\lt 8</m>, then <m>a+2=5</m>.
+            </p>
+          </task>
         </p>
       </statement>
     </exercise>
-    <exercise>
-      <statement>
-        <p>
-          If <m>7 \lt 10</m>, then <m>3 = 4</m>.
-        </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          If <m>10 \lt 7</m>, then <m>3 + 5 = 8</m>.
-        </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          If <m>7 \lt 10</m>, then <m>3 + 5 =8</m>.
-        </p>
-      </statement>
-    </exercise>
-    </exercisegroup>
 
-    <exercisegroup xml:id="exer_sec11-4">
-    <introduction>
-      <p>
-        Determine the conditions under which each of the following conditional sentences will be a 
-        true statement.
-      </p>
-    </introduction>
-    <exercise>
+    <exercise xml:id="exer_sec11-5">
       <statement>
         <p>
-          If <m>a+2=5</m>, then <m>8\lt 5</m>.
+          Let <m>P</m> be the statement
+          <q>Student X passed every assignment in Calculus I,</q>
+          and let <m>Q</m> be the statement
+          <q>Student X received a grade of C or better in Calculus I.</q>
+          <task xml:id="exer_conditionala">
+            <p>
+              What does it mean for <m>P</m> to be true?
+              What does it mean for <m>Q</m> to be true?
+            </p>
+          </task>
+          <task xml:id="exer_conditionalb">
+            <p>
+              Suppose that Student X passed every assignment in Calculus I and received a grade 
+              of B<m>-</m>,
+              and that the instructor made the statement <m>P \to Q</m>.
+              Would you say that the instructor lied or told the truth?
+            </p>
+          </task>
+          <task xml:id="exer_conditionalc">
+            <p>
+              Suppose that Student X passed every assignment in Calculus I and received a grade 
+              of C<m>-</m>,
+              and that the instructor made the statement <m>P \to Q</m>.
+              Would you say that the instructor lied or told the truth?
+            </p>
+          </task>
+          <task xml:id="exer_conditionald">
+            <p>
+              Now suppose that Student X did not pass two assignments in Calculus I and received 
+              a grade of D, and that the instructor made the statement <m>P \to Q</m>.
+              Would you say that the instructor lied or told the truth?
+            </p>
+          </task>
+          <task xml:id="exer_conditionale">
+            <p>
+               How is <xref ref="exer_conditionalb"/>, <xref ref="exer_conditionalc"/>,
+              and<nbsp/><xref ref="exer_conditionald"/> related to <xref ref="Ta_first"/> (for 
+              <m>P \to Q</m>)?
+            </p>
+          </task>
         </p>
       </statement>
     </exercise>
-    <exercise>
+
+    <exercise xml:id="exer_sec11-6">
       <statement>
-        <p>
-          If <m>5\lt 8</m>, then <m>a+2=5</m>.
-        </p>
-      </statement>
-    </exercise>
-    </exercisegroup>
-    <exercisegroup xml:id="exer_sec11-5">
-    <introduction>
-      <p>
-        Let <m>P</m> be the statement
-        <q>Student X passed every assignment in Calculus I,</q>
-        and let <m>Q</m> be the statement
-        <q>Student X received a grade of C or better in Calculus I.</q>
-      </p>
-    </introduction>
-    <exercise xml:id="exer_conditionala">
-      <statement>
-        <p>
-          What does it mean for <m>P</m> to be true?
-          What does it mean for <m>Q</m> to be true?
-        </p>
-      </statement>
-    </exercise>
-    <exercise xml:id="exer_conditionalb">
-      <statement>
-        <p>
-          Suppose that Student X passed every assignment in Calculus I and received a grade of B<m>-</m>,
-          and that the instructor made the statement <m>P \to Q</m>.
-          Would you say that the instructor lied or told the truth?
-        </p>
-      </statement>
-    </exercise>
-    <exercise xml:id="exer_conditionalc">
-      <statement>
-        <p>
-          Suppose that Student X passed every assignment in Calculus I and received a grade of C<m>-</m>,
-          and that the instructor made the statement <m>P \to Q</m>.
-          Would you say that the instructor lied or told the truth?
-        </p>
-      </statement>
-    </exercise>
-    <exercise xml:id="exer_conditionald">
-      <statement>
-        <p>
-           Now suppose that Student X did not pass two assignments in Calculus I and received a grade of D, and that the instructor made the statement <m>P \to Q</m>.
-          Would you say that the instructor lied or told the truth?
-        </p>
-      </statement>
-    </exercise>
-    <exercise xml:id="exer_conditionale">
-      <statement>
-        <p>
-          How is <xref ref="exer_conditionalb"/>, <xref ref="exer_conditionalc"/>,
-          and<nbsp/><xref ref="exer_conditionald"/> related to <xref ref="Ta_first"/> (for 
-          <m>P \to Q</m>)?
-        </p>
-      </statement>
-    </exercise>
-    </exercisegroup>
-    <exercisegroup xml:id="exer_sec11-6">
-      <introduction>
         <p>
           Following is a statement of a theorem which can be proven using calculus or precalculus 
           mathematics.
           For this theorem, <m>a</m>, <m>b</m>,
           and <m>c</m> are real numbers.
         </p>
-          <theorem xml:id="thm-quad-max">
+        <theorem xml:id="thm-quad-max">
             <statement>
               <p>
                 If <m>f</m> is a quadratic function of the form 
@@ -1330,53 +1295,42 @@
         <p>
           Using <em>only</em> this theorem, what can be concluded about the functions given by the 
           following formulas?
+          <task>
+            <p>
+              <m>g\left( x \right) = - 8x^2 + 5x - 2</m>
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>h\left( x \right) = - \dfrac{1}{3}x^2 + 3x</m>
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>k\left( x \right) = 8x^2 - 5x - 7</m>
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>j\left( x \right) = - \dfrac{{71}}{{99}}x^2 + 210</m>
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>f\left( x \right) = - 4x^2 - 3x + 7</m>
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>F\left( x \right) = - x^4 + x^3 + 9</m>
+            </p>
+          </task>
         </p>
-      </introduction>
-      <exercise>
-        <statement>
-          <p>
-            <m>g\left( x \right) = - 8x^2 + 5x - 2</m>
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            <m>h\left( x \right) = - \dfrac{1}{3}x^2 + 3x</m>
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            <m>k\left( x \right) = 8x^2 - 5x - 7</m>
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            <m>j\left( x \right) = - \dfrac{{71}}{{99}}x^2 + 210</m>
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            <m>f\left( x \right) = - 4x^2 - 3x + 7</m>
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            <m>F\left( x \right) = - x^4 + x^3 + 9</m>
-          </p>
-        </statement>
-      </exercise>
-    </exercisegroup>
-    <exercisegroup xml:id="exer_sec11-7">
-      <introduction>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_sec11-7">
+      <statement>
         <p>
           Following is a statement of a theorem which can be proven using the quadratic formula.
           For this theorem, <m>a</m>, <m>b</m>,
@@ -1393,58 +1347,47 @@
         <p>
           Using <em>only</em> this theorem, what can be concluded about the functions given by the 
           following formulas?
+          <task>
+            <p>
+              <m>g\left( x \right) = - 8x^2 + 5x - 2</m>
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>h\left( x \right) = - \dfrac{1}{3}x^2 + 3x</m>
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>k\left( x \right) = 8x^2 - 5x - 7</m>
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>j\left( x \right) = - \dfrac{{71}}{{99}}x^2 + 210</m>
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>f\left( x \right) = - 4x^2 - 3x + 7</m>
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>F\left( x \right) = - x^4 + x^3 + 9</m>
+            </p>
+          </task>
         </p>
-      </introduction>
-      <exercise>
-        <statement>
-          <p>
-            <m>g\left( x \right) = - 8x^2 + 5x - 2</m>
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            <m>h\left( x \right) = - \dfrac{1}{3}x^2 + 3x</m>
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            <m>k\left( x \right) = 8x^2 - 5x - 7</m>
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            <m>j\left( x \right) = - \dfrac{{71}}{{99}}x^2 + 210</m>
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            <m>f\left( x \right) = - 4x^2 - 3x + 7</m>
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            <m>F\left( x \right) = - x^4 + x^3 + 9</m>
-          </p>
-        </statement>
-      </exercise>
-    </exercisegroup>
-    <exercisegroup xml:id="exer_sec1-1-8">
-    <introduction>
-      <p>
-        Following is a statement of a theorem about certain cubic equations.
-        For this theorem, <m>b</m> represents a real number.
-      </p>
-      <theorem xml:id="thm-cubic-x-int">
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_sec1-1-8">
+      <statement>
+        <p>
+          Following is a statement of a theorem about certain cubic equations.
+          For this theorem, <m>b</m> represents a real number.
+        </p>
+        <theorem xml:id="thm-cubic-x-int">
         <title>Theorem A</title>
         <statement>
           <p>
@@ -1457,6 +1400,7 @@
         Following is another theorem about <m>x</m>-intercepts of functions:
       </p>
       <theorem xml:id="thm-func-x-int">
+      <title>Theorem B</title>
         <statement>
           <p>
             If <m>f</m> and <m>g</m> are functions with <m>g(x) = k \cdot f(x)</m>,
@@ -1468,109 +1412,81 @@
       <p>
         Using only these two theorems and some simple algebraic manipulations,
         what can be concluded about the functions given by the following formulas?
+        <task>
+          <p>
+            <m>f(x) = x^3 - x + 7</m>
+          </p>
+        </task>
+        <task>
+          <p>
+            <m>g(x) = x^3 + x + 7</m>
+          </p>
+        </task>
+        <task>
+          <p>
+            <m>h(x) = -x^3 + x - 5</m>
+          </p>
+        </task>
+        <task>
+          <p>
+            <m>k(x) = 2x^3 + 2x + 3</m>
+          </p>
+        </task>
+        <task>
+          <p>
+            <m>r(x) = x^4 - x + 11</m>
+          </p>
+        </task>
+        <task>
+          <p>
+            <m>F(x) = 2x^3 - 2x + 7</m>
+          </p>
+        </task>
       </p>
-    </introduction>
-    <exercise>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_sec11_8">
       <statement>
         <p>
-          <m>f(x) = x^3 - x + 7</m>
+          <task>
+            <p>
+              Is the set of natural numbers closed under division?
+            </p>
+          </task>
+          <task>
+            <p>
+              Is the set of rational numbers closed under division?
+            </p>
+          </task>
+          <task>
+            <p>
+              Is the set of nonzero rational numbers closed under division?
+            </p>
+          </task>
+          <task>
+            <p>
+              Is the set of positive rational numbers closed under division?
+            </p>
+          </task>
+          <task>
+            <p>
+              Is the set of positive real numbers closed under subtraction?
+            </p>
+          </task>
+          <task>
+            <p>
+              Is the set of negative rational numbers closed under division?
+            </p>
+          </task>
+          <task>
+            <p>
+              Is the set of negative integers closed under addition?
+            </p>
+          </task>
         </p>
       </statement>
     </exercise>
-    <exercise>
-      <statement>
-        <p>
-          <m>g(x) = x^3 + x + 7</m>
-        </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          <m>h(x) = -x^3 + x - 5</m>
-        </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          <m>k(x) = 2x^3 + 2x + 3</m>
-        </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          <m>r(x) = x^4 - x + 11</m>
-        </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
-        <p>
-          <m>F(x) = 2x^3 - 2x + 7</m>
-        </p>
-      </statement>
-    </exercise>
-    </exercisegroup>
-    <exercisegroup xml:id="exer_sec11_8">
-    <introduction>
-      <p>
-      <!-- Added myself! -->
-        Answer the following questions:
-      </p>
-    </introduction>
-      <exercise>
-        <statement>
-          <p>
-            Is the set of natural numbers closed under division?
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Is the set of rational numbers closed under division?
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Is the set of nonzero rational numbers closed under division?
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Is the set of positive rational numbers closed under division?
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Is the set of positive real numbers closed under subtraction?
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Is the set of negative rational numbers closed under division?
-          </p>
-        </statement>
-      </exercise>
-      <exercise>
-        <statement>
-          <p>
-            Is the set of negative integers closed under addition?
-          </p>
-        </statement>
-      </exercise>
-    </exercisegroup>
-  
 
   <activity xml:id="exer11_explore">
   <title>Exploring Propositions</title>
@@ -1584,14 +1500,20 @@
         <m>\left( 2^1, 2^2, 2^3, 2^4, 2^5, \ldots \: \right)</m> and examine the units digits of 
         these numbers,
         we could make the following conjectures (among others):
-        <blockquote>
+        <ul>
+        <li>
+        <p>
           If <m>n</m> is a natural number,
           then the units digit of <m>2^n</m> must be 2, 4, 6, or 8.
-        </blockquote>
-        <blockquote>
+        </p>
+        </li>
+        <li>
+        <p>
           The units digits of the successive powers of 2 repeat according to the pattern
           <q>2, 4, 8, 6.</q>
-        </blockquote>
+        </p>
+        </li>
+        </ul>
       </p>
     </introduction>
 

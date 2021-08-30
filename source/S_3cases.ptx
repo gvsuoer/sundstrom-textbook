@@ -1,0 +1,1005 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<section xml:id="S_cases">
+  <title>Using Cases in Proofs</title>
+
+    <worksheet xml:id="PA_logicalequiv">
+      <title>Beginning Activity 1: Using a Logical Equivalency</title>
+      <exercise>
+        <statement>
+          <p>
+            Complete a truth table to show that
+            <m>\left( {P \vee Q} \right) \to R</m> is logically equivalent to 
+            <m>\left( {P \to R} \right) \wedge \left( {Q \to R} \right)</m>.
+          </p>
+        </statement>
+      </exercise>
+        <exercise xml:id="PA_logicalequiv2">
+          <statement>
+          <p>
+            Suppose that you are trying to prove a statement that is written in the form 
+            <m>\left( {P \vee Q} \right) \to R</m>.
+            Explain why you can complete this proof by writing separate and independent proofs of 
+            <m>P \to R</m> and <m>Q \to R</m>.
+          </p>
+          </statement>
+        </exercise>
+        <exercise xml:id="PA_logicalequiv3">
+          <statement>
+          <p>
+            Now consider the following proposition:
+            <proposition>
+              <statement>
+                <p>
+                  For all integers <m>x</m> and <m>y</m>,
+                  if <m>xy</m> is odd, then <m>x</m> is odd and <m>y</m> is odd.
+                  
+                </p>
+              </statement>
+            </proposition>
+            Write the contrapositive of this proposition.
+          </p>
+          </statement>
+        </exercise>
+        <exercise xml:id="PA_logicalequiv4">
+          <statement>
+          <p>
+            Now prove that if <m>x</m> is an even integer,
+            then <m>xy</m> is an even integer.
+            Also, prove that if <m>y</m> is an even integer,
+            then <m>xy</m> is an even integer.
+          </p>
+          </statement>
+        </exercise>
+        <exercise>
+          <statement>
+          <p>
+            Use the results proved in <xref ref="PA_logicalequiv4">Exercise</xref> and the 
+            explanation in <xref ref="PA_logicalequiv2">Exercise</xref> to explain why we have 
+            proved the contrapositive of the proposition in <xref ref="PA_logicalequiv3">Exercise</xref>.
+          </p>
+          </statement>
+        </exercise>
+    </worksheet>
+
+    <worksheet xml:id="PA_cases">
+      <title>Beginning Activity 2: Using Cases in a Proof</title>
+      <idx><h>cases, proof using</h></idx>
+            <idx><h>proof</h><h>using cases</h></idx>
+      <p>
+        The work in <xref ref="PA_logicalequiv">Beginning Activity 1</xref>
+        was meant to introduce the idea of using cases in a proof.
+        The method of using cases is often used when the hypothesis of the proposition is a disjunction.
+        This is justified by the logical equivalency
+        <me>
+          \left[ \left( {P \vee Q} \right) \to R \right] \equiv \left[ \left( {P \to R} \right) 
+          \wedge \left( {Q \to R} \right) \right]
+        </me>.
+        See <xref ref="T_logequiv"></xref>
+        and <xref ref="exer_sec23-6"/>.
+      </p>
+      <p> 
+        In some other situations when we are trying to prove a proposition or a theorem about an 
+        element <m>x</m> in some set <m>U</m>,
+        we often run into the problem that there does not seem to be enough information about 
+        <m>x</m> to proceed.
+        For example, consider the following proposition:
+
+        <proposition xml:id="prop-ba34-2-even">
+          <statement>
+            <p>
+              If <m>n</m> is an integer,
+              then <m>\left( n^2 + n \right)</m> is an even integer.
+            </p>
+          </statement>
+        </proposition>
+        If we were trying to write a direct proof of this proposition,
+        the only thing we could assume is that <m>n</m> is an integer.
+        This is not much help.
+        In a situation such as this,
+        we will sometimes use cases to provide additional assumptions for the forward process of 
+        the proof.
+        Cases are usually based on some common properties that the element <m>x</m> may or may not 
+        possess.
+        The cases must be chosen so that they exhaust all possibilities for the object <m>x</m> in the 
+        hypothesis of the original proposition.
+        For <xref ref="prop-ba34-2-even"/>,
+        we know that an integer must be even or it must be odd.
+        We can thus use the following two cases for the integer <m>n</m>:
+        <ul>
+          <li>
+            <p>
+              The integer <m>n</m> is an even integer;
+            </p>
+          </li>
+          <li>
+            <p>
+              The integer <m>n</m> is an odd integer.
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <exercise>
+        <statement>
+          <p>
+            Complete the proof for the following proposition:
+              <proposition xml:id="prop-ba34-2-even2">
+                <statement>
+                  <p>
+                    If <m>n</m> is an even integer,
+                    then <m>n^2 + n</m> is an even integer.
+                  </p>
+                </statement>
+                <proof>
+                  <p>
+                    Let <m>n</m> be an even integer.
+                    Then there exists an integer <m>m</m> such that <m>n = 2m</m>.
+                    Substituting this into the expression <m>n^2 + n</m> yields <ellipsis/> .
+                  </p>
+                </proof>
+              </proposition>   
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Construct a proof for the following proposition:
+            <proposition xml:id="prop-ba34-2-odd">
+              <statement>
+                <p>
+                  If <m>n</m> is an odd integer,
+              then <m>n^2 + n</m> is an even integer.
+                </p>
+              </statement>
+            </proposition>
+          </p>
+        </statement>
+      </exercise>
+      
+      <exercise>
+        <statement>
+          <p>
+            Explain why the proofs of <xref ref="prop-ba34-2-even2"/> and 
+            <xref ref="prop-ba34-2-odd"/> can be used to construct a proof of 
+            <xref ref="prop-ba34-2-even"/>.
+          </p>
+        </statement>
+      </exercise>
+       
+    </worksheet>
+  
+  <subsection>
+    <title>Some Common Situations to Use Cases</title>
+    <p>
+      When using cases in a proof,
+      the main rule is that the cases must be chosen so that they exhaust all possibilities for an 
+      object <m>x</m> in the hypothesis of the original proposition.
+      Following are some common uses of cases in proofs.
+
+      <dl>
+        <li>
+          <title>When the hypothesis is, <q><m>n</m> is an integer.</q></title>
+          <p>
+            Case 1: <m>n</m> is an even integer.
+          </p>
+          <p>
+            Case 2: <m>n</m> is an odd integer.
+          </p>
+        </li>
+        <li>
+          <title>When the hypothesis is, <q><m>m</m> and <m>n</m> are integers.</q></title>
+          <p>
+            Case 1: <m>m</m> and <m>n</m> are even.
+          </p>
+          <p>
+            Case 2: <m>m</m> is even and <m>n</m> is odd.
+          </p>
+          <p>
+            Case 3: <m>m</m> is odd and <m>n</m> is even.
+          </p>
+          <p>
+            Case 4: <m>m</m> and <m>n</m> are both odd. 
+          </p>
+        </li>
+        <li>
+          <title>When the hypothesis is, <q><m>x</m> is a real number.</q></title>
+          <p>
+            Case 1: <m>x</m> is irrational.
+          </p>
+          <p>
+            Case 2: <m>x</m> is irrational.
+          </p>
+        </li>
+        <li>
+          <title>When the hypothesis is, <q><m>x</m> is a real number.</q></title>
+          <p>
+            <sidebyside>
+              <p>
+                Case 1: <m>x = 0</m>. Case 2: <m>x \ne 0</m>.
+              </p>
+              <p>
+                OR
+              </p>
+              <p>
+                Case 1: <m>x \gt 0</m>.
+                Case 2: <m>x = 0</m>.
+                Case 3: <m>x \lt 0</m>.
+              </p>
+            </sidebyside>
+          </p>
+        </li>
+        <li>
+          <title>When the hypothesis is, <q><m>a</m> and <m>b</m> are real numbers.</q></title>
+          <p>
+            <sidebyside>
+              <p>
+                Case 1: <m>a = b</m>.
+                Case 2: <m>a \ne b</m>. 
+              </p>
+              <p>
+                OR
+              </p>
+              <p>
+                Case 1: <m>a \gt b</m>. 
+                Case 2: <m>a = b</m>. 
+                Case 3: <m>a \lt b</m>. 
+              </p>
+            </sidebyside>
+          </p>
+        </li>
+      </dl>
+    </p>
+  
+  </subsection>
+
+  <subsection>
+    <title>Writing Guidelines for a Proof Using Cases</title>
+    <p>
+      When writing a proof that uses cases,
+      we use all the other writing guidelines.
+      In addition,
+      we make sure that it is clear where each case begins.
+      This can be done by using a new paragraph with a label such as
+      <q>Case 1,</q>
+      or it can be done by starting a paragraph with a phrase such as,
+      <q>In the case where <ellipsis/>.</q>
+    </p>
+
+    <investigation xml:id="pr_n-even-odd">
+      <title>Using Cases: <m>n</m> Is Even or <m>n</m> Is Odd</title>
+      <p>
+        Complete the proof of the following proposition:
+        <proposition>
+          <statement>
+            <p>
+              For each integer <m>n</m>,
+              <m>n^2 - 5n + 7</m> is an odd integer.
+            </p>
+          </statement>
+          <proof>
+            <p>
+              Let <m>n</m> be an integer.
+              We will prove that <m>n^2 - 5n + 7</m> is an odd integer by examining the case where 
+              <m>n</m> is even and the case where <m>n</m> is odd.
+            </p>
+            <p>
+              Case 1: The integer <m>n</m> is even.
+              In this case,
+              there exists an integer <m>m</m> such that <m>n = 2m</m>.
+              Therefore, <ellipsis/> .
+            </p>
+          </proof>
+        </proposition>
+      </p>
+    </investigation>
+
+    <p>
+      As another example of using cases,
+      consider a situation where we know that <m>a</m> and <m>b</m> are real numbers and <m>ab = 0</m>.
+      If we want to make a conclusion about <m>b</m>,
+      the temptation might be to divide both sides of the equation by <m>a</m>.
+      However, we can only do this if <m>a \ne 0</m>.
+      So, we consider two cases:
+      one when <m>a = 0</m> and the other when <m>a \ne 0</m>.
+    </p>
+    <proposition xml:id="prop_zeroproperty">
+      <statement>
+        <p>
+          For all real numbers <m>a</m> and <m>b</m>,
+          if <m>ab = 0</m>, then <m>a = 0</m> or <m>b = 0</m>.
+        </p>
+      </statement>
+    
+    <proof>
+      <p>
+        We let <m>a</m> and <m>b</m> be real numbers and assume that <m>ab = 0</m>.
+        We will prove that <m>a = 0</m> or <m>b = 0</m> by considering two cases: (1) <m>a = 0</m>,
+        and (2) <m>a \ne 0</m>.
+      </p>
+      <p>
+        In the case where <m>a = 0</m>,
+        the conclusion of the proposition is true and so there is nothing to prove.
+      </p>
+      <p>
+        In the case where <m>a \ne 0</m>,
+        we can multiply both sides of the equation <m>ab = 0</m> by <m>\dfrac{1}{a}</m> and obtain
+        <md>
+          <mrow>\frac{1}{a} \cdot ab \amp = \frac{1}{a} \cdot 0</mrow>
+          <mrow>b \amp = 0</mrow>
+        </md>.
+
+        So in both cases, <m>a = 0</m> or <m>b = 0</m>,
+        and this proves that for all real numbers <m>a</m> and <m>b</m>,
+        if <m>ab = 0</m>, then <m>a = 0</m> or <m>b = 0</m>.
+      </p>
+    </proof>
+    </proposition>
+  </subsection>
+
+  <subsection>
+    <title>Absolute Value</title>
+    <p>
+      Most students by now have studied the concept of the absolute value of a real number.
+      We use the notation <m>\left| x \right|</m> to stand for the absolute value of the real number 
+      <m>x</m>.
+      One way to think of the absolute value of <m>x</m> is as the
+      <q>distance</q>
+      between <m>x</m> and 0 on the number line.
+      For example,
+      <me>
+        \left| 5 \right| = 5  \text{ and }   \left| -7 \right| = 7
+      </me>.
+    </p>
+    <p>
+      Although this notion of absolute value is convenient for determining the absolute value of a 
+      specific number,
+      if we want to prove properties about absolute value,
+      we need a more careful and precise definition.
+    </p>
+    <definition xml:id="D_absvalue">
+      <statement>
+        <p>
+          For <m>x \in \R</m>, we define <m>\left| x \right|</m>,
+          called the <term>absolute value of x</term>,
+              <idx><h>absolute value</h></idx>
+          by
+          <me>
+            \left| x \right| = \begin{cases}x,    \amp   \text{ if \(x \geq 0\); }  \\ -x    \amp   
+            \text{ if \(x \lt  0\). } \end{cases}
+          </me>
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Let's first see if this definition is consistent with our intuitive notion of absolute value by 
+      looking at two specific examples.
+      <ul>
+        <li>
+          <p>
+            Since <m>5 > 0</m>, we see that <m>\left| 5 \right| = 5</m>,
+            which should be no surprise.
+          </p>
+        </li>
+        <li>
+          <p>
+            Since <m>-7 \lt 0</m>,
+            we see that <m>\left| -7 \right| = - \left( -7 \right) = 7</m>.
+          </p>
+        </li>
+      </ul>
+    </p>
+    <p>
+      Notice that the definition of the absolute value of <m>x</m> is given in two parts,
+      one for when <m>x \geq 0</m> and the other for when <m>x \lt 0</m>.
+      This means that when attempting to prove something about absolute value,
+      we often uses cases.
+      This will be illustrated in <xref ref="P_absvalue"></xref>.
+    </p>
+    <theorem xml:id="P_absvalue">
+      <statement>
+        <p>
+          Let <m>a</m> be a positive real number.
+          For each real number <m>x</m>,
+          <ol>
+            <li xml:id="P_absvalue-1">
+              <p>
+                <m>\left| x \right| = a</m> if and only if <m>x = a</m> or <m>x = -a</m>.
+              </p>
+            </li>
+            <li xml:id="P_absvalue-2">
+              <p>
+                <m>\left| -x \right| = \left| x \right|</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    
+    <proof>
+      <p>
+        The proof of <xref ref="P_absvalue-2"/> is part of <xref ref="exer_absvalue"/>.
+        We will prove <xref ref="P_absvalue-1"/>.
+      </p>
+      <p>
+        We let <m>a</m> be a positive real number and let <m>x \in \R</m>.
+        We will first prove that if <m>|x| = a</m>,
+        then <m>x = a</m> or <m>x = -a</m>.
+        So we assume that <m>\left| x \right| = a</m>.
+        In the case where <m>x \geq 0</m>,
+        we see that <m>\left| x \right| = x</m>,
+        and since <m>\left| x \right| = a</m>,
+        we can conclude that <m>x = a</m>.
+      </p>
+      <p>
+        In the case where <m>x \lt 0</m>,
+        we see that <m>\left| x \right| = -x</m>.
+        Since <m>\left| x \right| = a</m>,
+        we can conclude that <m>-x = a</m> and hence that <m>x = -a</m>.
+        These two cases prove that if <m>\left| x \right| = a</m>,
+        then <m>x = a</m> or <m>x = -a</m>.
+      </p>
+      <p>
+        We will now prove that if <m>x = a</m> or <m>x = -a</m>,
+        then <m>|x| = a</m>.
+        We start by assuming that <m>x = a</m> or <m>x = -a</m>.
+        Since the hypothesis of this conditional statement is a disjunction,
+        we use two cases.
+        When <m>x = a</m>, we see that
+        <me>
+          \left| x \right| = \left| a \right| = a  \text{ since }  a > 0
+        </me>.
+
+        When <m>x = -a</m>, we conclude that
+        <me>
+          \left| x \right| = \left| -a \right| = - \left( -a  \right)  \text{ since }  -a \lt  0
+        </me>,
+        and hence, <m>\left| x \right| = a</m>.
+        This proves that if <m>x = a</m> or <m>x = -a</m>,
+        then <m>\left| x \right| = a</m>.
+        Because we have proven both conditional statements,
+        we have proven that <m>\left| x \right| = a</m> if and only if <m>x = a</m> or <m>x = -a</m>.
+        <m>\blacksquare</m>
+      </p>
+    </proof>
+    </theorem>
+
+    <investigation xml:id="pr_absvalue">
+      <title>Equations Involving Absolute Values</title>
+
+      <task>
+        <p>
+          What is <m>\left| 4.3 \right|</m> and what is <m>\left| - \pi \right|</m>?
+        </p>
+      </task>
+      <task>
+        <p>
+          Use the properties of absolute value in <xref ref="P_absvalue"></xref>
+          to help solve the following equations for <m>t</m>,
+          where <m>t</m> is a real number.
+          <task>
+            <p>
+              <m>\left| t \right| = 12</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>\left| t + 3 \right| = 5</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>\left| t -4 \right| = \dfrac{1}{5}</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>\left| 3t - 4 \right| = 8</m>.
+            </p>
+          </task>
+        </p>
+      </task>
+    </investigation>
+    <p>
+      Although solving equations involving absolute values may not seem to have anything to do 
+      with writing proofs,
+      the point of <xref ref="pr_absvalue"></xref>
+      is to emphasize the importance of using cases when dealing with absolute value.
+      The following theorem provides some important properties of absolute value.
+    </p>
+    <theorem xml:id="T_absvalue">
+      <statement>
+        <p>
+          Let <m>a</m> be a positive real number.
+          For all real numbers <m>x</m> and <m>y</m>,
+          <ol>
+            <li xml:id="T_absvalue-1">
+              <p>
+                <m>\left| x \right| \lt a</m> if and only if <m>-a \lt x \lt a</m>.
+              </p>
+            </li>
+            <li xml:id="T_absvalue-2">
+              <p>
+                <m>\left| xy \right| = \left| x \right| \left| y \right|</m>.
+              </p>
+            </li>
+            <li xml:id="T_absvalue-3">
+              <p>
+                <m>\left| x + y \right| \leq \left| x \right| + \left| y \right|</m>.
+                This is known as the <term>Triangle Inequality</term>.
+               <idx><h>Triangle Inequality</h></idx>
+          </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    
+    <proof>
+      <p>
+        We will prove <xref ref="T_absvalue-1"/>.
+        The proof of <xref ref="T_absvalue-2"/> is included in <xref ref="exer_absvalue"/>,
+        and the proof of <xref ref="T_absvalue-3"/> is <xref ref="exer_triangleineq"/>.
+        For <xref ref="T_absvalue-1"/>,
+        we will prove the biconditional proposition by proving the two associated conditional 
+        propositions.
+      </p>
+      <p>
+        So we let <m>a</m> be a positive real number and let
+        <m>x \in \R</m> and first assume that <m>\left| x \right| \lt a</m>.
+        We will use two cases: either <m>x \geq 0</m> or <m>x \lt 0</m>.
+        <ul>
+          <li>
+            <p>
+              In the case where <m>x \geq 0</m>,
+              we know that <m>\left| x \right| = x</m> and so the inequality
+              <m>\left| x \right| \lt a</m> implies that <m>x \lt a</m>.
+              However, we also know that
+              <m>-a \lt 0</m> and that <m>x > 0</m>.
+              Therefore, we conclude that <m>-a \lt x</m> and,
+              hence, <m>-a \lt x \lt a</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              When <m>x \lt 0</m>, we see that <m>\left| x \right| = -x</m>.
+              Therefore, the inequality <m>\left| x \right| \lt a</m> implies that <m>-x \lt a</m>,
+              which in turn implies that <m>-a \lt x</m>.
+              In this case,
+              we also know that <m>x \lt a</m> since <m>x</m> is negative and <m>a</m> is positive.
+              Hence, <m>-a \lt x \lt a</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+      <p>
+        So in both cases, we have proven that
+        <m>-a \lt x \lt a</m> and this proves that if <m>\left| x \right| \lt a</m>,
+        then <m>-a \lt x \lt a</m>.
+        We now assume that <m>-a \lt x \lt a</m>.
+        <ul>
+          <li>
+            <p>
+              If <m>x \geq 0</m>, then <m>\left| x \right| = x</m> and hence,
+              <m>\left| x \right| \lt a</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>x \lt 0</m>,
+              then <m>\left| x \right| = -x</m> and so <m>x = -\left| x \right|</m>.
+              Thus, <m>-a \lt - \left| x \right|</m>.
+              By multiplying both sides of the last inequality by <m>-1</m>,
+              we conclude that <m>\left| x \right| \lt a</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+      <p>
+        These two cases prove that if <m>-a \lt x \lt a</m>,
+        then <m>\left| x \right| \lt a</m>.
+        Hence, we have proven that
+        <m>\left| x \right| \lt a</m> if and only if <m>-a \lt x \lt a</m>.
+      </p>
+    </proof>
+    </theorem>
+  </subsection>
+
+  <exercises>
+    <exercise xml:id="exer_consecutive">
+      <statement>
+        <p>
+          In <xref ref="PA_cases">Beginning Activity 2</xref>,
+          we proved that if <m>n</m> is an integer,
+          then <m>n^2 + n</m> is an even integer.
+          We define two integers to be <term>consecutive integers</term>
+           <idx><h>consecutive integers</h></idx>
+           <idx><h>integers</h><h>consecutive</h></idx>
+          if one of the integers is one more than the other integer.
+          This means that we can represent consecutive integers as <m>m</m> and <m>m+1</m>,
+          where <m>m</m> is some integer.
+          Explain why the result proven in <xref ref="PA_cases">Beginning Activity 2</xref>
+          can be used to prove that the product of any two consecutive integers is divisible by 2.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_sec33-6">
+      <statement>
+        <p>
+          Prove that if <m>u</m> is an odd integer,
+          then the equation <m>x^2 + x - u = 0</m> has no solution that is an integer.
+        </p>
+      </statement>
+    </exercise>
+    <exercise xml:id="exer_sec35-5">
+      <statement>
+        <p>
+          Prove that if <m>n</m> is an odd integer,
+          then <m>n = 4k +1</m> for some integer <m>k</m> or
+          <m>n = 4k + 3</m> for some integer <m>k</m>.
+        </p>
+      </statement>
+    </exercise>
+    <exercise xml:id="exer_sec34-quadratic">
+      <statement>
+        <p>
+          Prove the following proposition:
+          <blockquote>
+            For each integer <m>a</m>, if <m>a^2 = a</m>, then <m>a = 0</m> or <m>a = 1</m>.
+          </blockquote>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_dividesproduct">
+      <statement>
+        <p>
+          <task xml:id="exer_dividesproducta">
+            <statement>
+            <p>
+              Prove the following proposition:
+              <blockquote>
+                For all integers <m>a</m>, <m>b</m>, and <m>d</m> with <m>d \ne 0</m>, if 
+                <m>d</m> divides <m>a</m> or <m>d</m> divides <m>b</m>, then <m>d</m> divides 
+                the product <m>ab</m>.
+              </blockquote>
+            </p>
+            </statement>
+            <hint>
+              <p>
+                Notice that the hypothesis is a disjunction. So use two cases.
+              </p>
+            </hint>
+          </task>
+          <task>
+            <p>
+              Write the contrapositive of the proposition in <xref ref="exer_dividesproducta"/>.
+            </p>
+          </task>
+          <task xml:id="exer_dividesproductc">
+            <p>
+              Write the converse of the proposition in <xref ref="exer_dividesproducta"/>.
+              Is the converse true or false?
+              Justify your conclusion.
+            </p>
+          </task>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_sec34-6">
+      <statement>
+        <p>
+          Are the following propositions true or false?
+          Justify all your conclusions.
+          If a biconditional statement is found to be false,
+          you should clearly determine if one of the conditional statements within it is true.
+          In that case,
+          you should state an appropriate theorem for this conditional statement and prove it.
+          <task>
+            <p>
+              For all integers <m>m</m> and <m>n</m>,
+                <m>m</m> and <m>n</m> are consecutive integers if and only if 4 divides 
+                <m>\left( {m^2 + n^2 - 1} \right)</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              For all integers <m>m</m> and <m>n</m>, 4 divides
+                <m>\left( m^2 - n^2 \right)</m> if and only if <m>m</m> and <m>n</m> are both even or 
+                <m>m</m> and <m>n</m> are both odd.
+            </p>
+          </task>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_sec34-nsquared">
+      <statement>
+        <p>
+          Is the following proposition true or false?
+          Justify your conclusion with a counterexample or a proof.
+          <blockquote>
+            For each integer <m>n</m>, if <m>n</m> is odd, then <m>8 \mid \left( n^2 - 1 \right)</m>.
+          </blockquote>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_a2plus1not2n">
+      <statement>
+        <p>
+          Prove that there are no natural numbers <m>a</m> and <m>n</m> with
+          <m>n \geq 2</m> and <m>a^2 + 1 = 2^n</m>.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Are the following propositions true or false?
+          Justify each conclusion with a counterexample or a proof.
+          <task>
+            <p>
+              For all integers <m>a</m> and <m>b</m> with <m>a \ne 0</m>,
+              the equation <m>ax + b = 0</m> has a rational number solution.
+            </p>
+          </task>
+          <task>
+            <statement>
+            <p>
+              For all integers <m>a</m>,
+              <m>b</m>, and <m>c</m>, if <m>a</m>,
+              <m>b</m>, and <m>c</m> are odd,
+              then the equation <m>ax^2 + bx + c = 0</m> has no solution that is a rational number.
+            </p>
+            </statement>
+            <hint>
+              <p>
+                Do not use the quadratic formula.
+                Use a proof by contradiction and recall that any rational number can be written in the form <m>\dfrac{p}{q}</m>,
+                where <m>p</m> and <m>q</m> are integers, <m>q > 0</m>,
+                and <m>p</m> and <m>q</m> have no common factor greater than 1.
+              </p>
+            </hint>
+          </task>
+          <task>
+            <p>
+              For all integers <m>a</m>, <m>b</m>, <m>c</m>,
+              and <m>d</m>, if <m>a</m>, <m>b</m>,
+              <m>c</m>, and <m>d</m> are odd,
+              then the equation <m>ax^3 + bx^2 + cx + d = 0</m> has no solution that is a rational number.
+            </p>
+          </task>
+
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_absvalue">
+      <statement>
+        <p>
+          <task>
+            <p>
+              Prove <xref ref="P_absvalue-2"/> of <xref ref="P_absvalue"></xref>.
+              <blockquote>
+                For each <m>x \in \R</m>, <m>\left| -x \right| = \left| x \right|</m>.
+              </blockquote>
+            </p>
+          </task>
+          <task>
+            <p>
+              Prove <xref ref="T_absvalue-2"/> of <xref ref="T_absvalue"></xref>.
+              <blockquote>
+                For all real numbers <m>x</m> and <m>y</m>, 
+                <m>\left| xy \right| = \left| x \right| \left| y \right|</m>.
+              </blockquote>
+            </p>
+          </task>
+        </p>
+      </statement>
+    </exercise>
+    <exercise xml:id="exer_absvaluex">
+      <statement>
+        <p>
+          Let <m>a</m> be a positive real number.
+          In <xref ref="T_absvalue-1"/> of <xref ref="T_absvalue"></xref>,
+          we proved that for each real number <m>x</m>,
+          <m>\left| x \right| \lt a</m> if and only if <m>-a \lt x \lt a</m>.
+          It is important to realize that the sentence
+          <m>-a \lt x \lt a</m> is actually the conjunction of two inequalities.
+          That is, <m>-a \lt x \lt a</m> means that <m>-a \lt x</m> and <m>x \lt a</m>.
+          <task>
+            <p>
+              Complete the following statement: For each real number <m>x</m>,
+              <m>\left| x \right| \geq a</m> if and only if <ellipsis/>.
+            </p>
+          </task>
+          <task>
+            <p>
+              Prove that for each real number <m>x</m>,
+              <m>\left| x \right| \leq a</m> if and only if <m>-a \leq x \leq a</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              Complete the following statement: For each real number <m>x</m>,
+              <m>\left| x \right| > a</m> if and only if <ellipsis/>.
+            </p>
+          </task>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_moreabsvalue">
+      <statement>
+        <p>
+          Prove each of the following:
+          <task>
+            <p>
+              For each nonzero real number <m>x</m>, 
+              <m>\left| x^{-1} \right| = \dfrac{1}{\left| x \right|}</m>.
+            </p>
+          </task>
+          <task>
+            <statement>
+            <p>
+              For all real numbers <m>x</m> and <m>y</m>,
+              <m>\left| {x - y} \right| \geq \left| x \right| - \left| y \right|</m>.
+            </p>
+            </statement>
+            <hint>
+              <p>
+                An idea that is often used by mathematicians is to add 0 to an expression
+                <q>intelligently</q>. In this case, we know that <m>\left(-y \right) + y = 0</m>.
+                Start by adding this
+                <q>version</q>
+                of 0 inside the absolute value sign of <m>\left| x \right|</m>.
+              </p>
+            </hint>
+          </task>
+          <task>
+            <p>
+              For all real numbers <m>x</m> and <m>y</m>,
+              <m>\left| \left| x \right| - \left| y \right| \right| \leq \left| x - y \right|</m>.
+            </p>
+          </task>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+    <title>Evaluation of Proofs</title>
+      <statement>
+        <p>
+          See the instructions for <xref ref="exer_proofeval"/>
+          from <xref ref="S_directproof"></xref>.
+
+          <task>
+            <p>
+              <proposition>
+                <statement>
+                  <p>
+                    For all nonzero integers <m>a</m> and <m>b</m>,
+                    if <m>a + 2b \ne 3</m> and <m>9a + 2b \ne 1</m>,
+                    then the equation <m>ax^3 + 2bx = 3</m> does not have a solution that is a 
+                    natural number.
+                  </p>
+                </statement>
+                <proof>
+                  <p>
+                    We will prove the contrapositive,
+                    which is: For all nonzero integers <m>a</m> and <m>b</m>,
+                    if the equation <m>ax^3 + 2bx = 3</m> has a solution that is a natural number,
+                    then <m>a + 2b = 3</m> or <m>9a + 2b = 1</m>.
+                  </p>
+                  <p>
+                    So we let <m>a</m> and <m>b</m> be nonzero integers and assume that the 
+                    natural number <m>n</m> is a solution of the equation <m>ax^3 + 2bx = 3</m>.
+                    So we have
+                    <md>
+                      <mrow>an^3 + 2bn \amp = 3 \qquad \text{ or }</mrow>
+                      <mrow>n \left( an^2 + 2b \right) \amp = 3</mrow>
+                    </md>.
+                  </p>
+                  <p>
+                    So we can conclude that <m>n = 3</m> and <m>an^2 + 2b = 1</m>.
+                    Since we now have the value of <m>n</m>,
+                    we can substitute it in the equation
+                    <m>an^3 + 2bn = 3</m> and obtain <m>27a + 6b = 3</m>.
+                    Dividing both sides of this equation by 3 shows that <m>9a + 2b = 1</m>.
+                    So there is no need for us to go any further,
+                    and this concludes the proof of the contrapositive of the proposition. <m>\blacksquare</m>
+                  </p>
+                </proof>
+              </proposition>
+            </p>
+          </task>
+          <task>
+            <p>
+              <proposition>
+                <statement>
+                  <p>
+                    For all nonzero integers <m>a</m> and <m>b</m>,
+                    if <m>a + 2b \ne 3</m> and <m>9a + 2b \ne 1</m>,
+                    then the equation <m>ax^3 + 2bx = 3</m> does not have a solution that is a 
+                    natural number.
+                  </p>
+                </statement>
+                <proof>
+                  <p>
+                    We will use a proof by contradiction.
+                    Let us assume that there exist nonzero integers <m>a</m> and <m>b</m> such that 
+                    <m>a + 2b = 3</m> and
+                    <m>9a + 2b = 1</m> and <m>an^3 + 2bn = 3</m>,
+                    where <m>n</m> is a natural number.
+                    First, we will solve one equation for <m>2b</m>;
+                    doing this, we obtain
+                    <mdn>
+                      <mrow number="no">a + 2b \amp = 3</mrow>
+                      <mrow>2b \amp = 3 - a</mrow>
+                    </mdn>.
+                  </p>
+                  <p>
+                    We can now substitute for <m>2b</m> in <m>an^3 + 2bn = 3</m>.
+                    This gives
+                    <md>
+                      <mrow number="no">an^3 + (3 - a)n \amp = 3</mrow>
+                      <mrow number="no">an^3 + 3n - an  \amp = 3</mrow>
+                      <mrow>n \left( an^2 + 3 - a \right) \amp = 3</mrow>
+                    </md>.
+                  </p>
+                  <p>
+                    By the closure properties of the integers,
+                    <m>\left( an^2 + 3 - a \right)</m> is an integer and, hence,
+                    equation<nbsp/>(2) implies that <m>n</m> divides 3.
+                    So <m>n = 1</m> or <m>n = 3</m>.
+                    When we substitute <m>n = 1</m> into the equation <m>an^3 + 2bn = 3</m>,
+                    we obtain <m>a + 2b = 3</m>.
+                    This is a contradiction since we are told in the proposition that 
+                    <m>a + 2b \ne 3</m>.
+                    This proves that the negation of the proposition is false and,
+                    hence, the proposition is true. <m>\blacksquare</m>
+                  </p>
+                </proof>
+              </proposition>
+            </p>
+          </task>
+        </p>
+
+      </statement>
+    </exercise>
+
+    <activity xml:id="exer_triangleineq">
+      <title>Proof of the Triangle Inequality</title>
+
+      <task>
+        <p>
+          Verify that the triangle inequality is true for several different real numbers
+          <m>x</m> and <m>y</m>.
+          Be sure to have some examples where the real numbers are negative.
+        </p>
+      </task>
+      <task xml:id="A_triangleinequality-2">
+        <p>
+          Explain why the following proposition is true: For each real number <m>r</m>,
+          <m>- \left| r \right| \leq r \leq \left| r \right|</m>.
+        </p>
+      </task>
+      <task>
+        <p>
+          Now let <m>x</m> and <m>y</m> be real numbers.
+            Apply the result in <xref ref="A_triangleinequality-2"/> to both <m>x</m> and <m>y</m>.
+            Then add the corresponding parts of the two inequalities to obtain another inequality.
+            Use this to prove that <m>\left| x + y \right| \leq \left| x \right| + \left| y \right|</m>.
+        </p>
+      </task>
+      <idx><h>absolute value</h></idx>
+    </activity>
+    
+  </exercises>
+
+</section>

@@ -1,0 +1,1339 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<section xml:id="S_recursion">
+  <title>Induction and Recursion</title>
+  
+    <worksheet xml:id="PA_recursivesequences">
+      <title>Beginning Activity 1: Recursively Defined Sequences</title>
+      <p>
+        In a proof by mathematical induction, we
+        <q>start with a first step</q>
+        and then prove that we can always go from one step to the next step.
+        We can use this same idea to define a sequence as well.
+        We can think of a <term>sequence</term>
+            <idx><h>sequence</h></idx>
+        as an infinite list of numbers that are indexed by the natural numbers
+        (or some infinite subset of <m>\mathbb{N} \cup \left\{ 0 \right\}</m>).
+        We often write a sequence in the following form:
+        <me>
+          a_1, a_2, \ldots,a_n, \ldots
+        </me>.
+      </p>
+      <p>
+        The number <m>a_n</m> is called the
+        <m>n^\text{ th }</m> term of the sequence.
+        One way to define a sequence is to give a specific formula for the
+        <m>n^\text{ th }</m> term of the sequence such as <m>a_n = \dfrac{1}{n}</m>.
+      </p>
+      <p>
+        Another way to define a sequence is to give a specific definition of the first term
+        (or the first few terms)
+        and then state, in general terms,
+        how to determine <m>a_{n + 1}</m> in terms of <m>n</m> and the first <m>n</m> 
+        terms <m>a_1 ,a_2 , \ldots ,a_n</m>.
+        This process is known as <term>definition by recursion</term>
+        and is <idx><h>definition</h><h>by recursion</h></idx> also called a
+        <term>recursive definition</term>.
+            <idx><h>recursive definition</h></idx>
+        The specific definition of the first term is called the
+        <term>initial condition</term>,
+            <idx><h>initial condition</h></idx>
+        and the general definition of
+        <m>a_{n + 1}</m> in terms of <m>n</m> and the first <m>n</m> terms 
+        <m>a_1 ,a_2 , \ldots ,a_n</m> is called the
+        <term>recurrence relation</term>.
+            <idx><h>recurrence relation</h></idx>
+        (When more than one term is defined explicitly,
+        we say that these are the initial conditions.) For example,
+        we can define a sequence recursively as follows:
+        <blockquote>
+          <m>b_1 = 16</m>, and for each <m>n \in \mathbb{N}</m>, <m>b_{n + 1} = \dfrac{1}{2}b_n</m>.
+        </blockquote>
+      </p>
+      <p>
+        Using <m>n = 1</m> and then <m>n = 2</m>, we then see that
+        <md>
+          <mrow>b_2 \amp = \frac{1}{2} b_1 \amp     b_3 \amp = \frac{1}{2} b_2</mrow>
+          <mrow>\amp = \frac{1}{2} \cdot 16 \amp     \amp = \frac{1}{2} \cdot 8</mrow>
+          <mrow>\amp = 8                    \amp     \amp = 4</mrow>
+        </md>
+      </p>
+
+        <exercise xml:id="PA_recursivesequences1">
+          <statement>
+            <p>
+              Calculate <m>b_4</m> through <m>b_{10}</m>.
+              What seems to be happening to the values of <m>b_n</m> as <m>n</m> gets larger?
+            </p>
+          </statement>
+        </exercise>
+
+        <exercise xml:id="PA_recursivesequences2">
+          <statement>
+            <p>
+              Define a sequence recursively as follows:
+              <blockquote>
+                <m>T_1 = 16</m>, and for each <m>n \in \mathbb{N}</m>, 
+                <m>T_{n + 1} = 16 + \dfrac{1}{2}T_n</m>.
+              </blockquote>
+              Then <m>T_2 = 16 + \dfrac{1}{2} T_1 = 16 + 8 = 24</m>. Calculate <m>T_3</m> 
+              through <m>T_{10}</m>. What seems to be happening to the values of <m>T_n</m> 
+              as <m>n</m> gets larger?
+            </p>
+          </statement>
+        </exercise>
+
+        <p>
+          The sequences in <xref ref="PA_recursivesequences1">Exercise</xref> and 
+          <xref ref="PA_recursivesequences2">Exercise</xref> can be generalized as follows: 
+          Let <m>a</m> and <m>r</m> be real numbers.
+          Define two sequences recursively as follows:
+          <blockquote>
+            <m>a_1 = a</m>, and for each <m>n \in \mathbb{N}</m>, <m>a_{n + 1} = r \cdot a_n</m>. 
+          </blockquote>
+          <blockquote>
+            <m>S_1 = a</m>, and for each <m>n \in \mathbb{N}</m>, <m>S_{n + 1} = a + r \cdot S_n</m>.
+          </blockquote>
+        </p>
+
+        <exercise>
+          <statement>
+            <p>
+              Determine formulas
+              (in terms of <m>a</m> and <m>r</m>)
+              for <m>a_2</m> through <m>a_6</m>.
+              What do you think <m>a_n</m> is equal to (in terms of <m>a</m>,
+              <m>r</m>,
+              and <m>n</m>)?
+            </p>
+          </statement>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              Determine formulas
+              (in terms of <m>a</m> and <m>r</m>)
+              for <m>S_2</m> through <m>S_6</m>.
+              What do you think <m>S_n</m> is equal to (in terms of <m>a</m>,
+              <m>r</m>,
+              and <m>n</m>)?
+            </p>
+          </statement>
+        </exercise>
+ 
+    
+      <p>
+        In <xref ref="PA_factorials">Beginning Activity 1</xref>
+        in <xref ref="S_otherinduction"></xref>,
+        for each natural number <m>n</m>,
+        we defined <m>n!</m>, read <term><m>n</m> factorial</term>,
+            <idx><h>factorial</h></idx>
+        as the product of the first <m>n</m> natural numbers.
+        We also defined <m>0!</m> to be equal to 1.
+        Now recursively define a sequence of numbers <m>a_0 ,a_1 ,a_2 , \ldots</m> as follows:
+        <blockquote>
+          <m>a_0 = 1</m>, and 
+        </blockquote>
+        <blockquote>
+          for each nonnegative integer <m>n</m>, 
+          <m>a_{n + 1} = \left( {n + 1} \right) \cdot a_n</m>.
+        </blockquote>
+      </p>
+      <p>
+        Using <m>n=0</m>,
+        we see that this implies that <m>a_1 =1 \cdot a_0 = 1 \cdot 1 = 1</m>.
+        Then using <m>n = 1</m>, we see that
+        <me>
+          a_2 = 2 a_1 = 2 \cdot 1 = 2
+        </me>.
+      </p>
+        <exercise>
+          <statement>
+            <p>
+              Calculate <m>a_3, a_4, a_5</m>, and <m>a_6</m>.
+            </p>
+          </statement>
+        </exercise>
+        <exercise>
+          <statement>
+            <p>
+              Do you think that it is possible to calculate <m>a_{20}</m> and <m>a_{100}</m>?
+              Explain.
+            </p>
+          </statement>
+        </exercise>
+        <exercise>
+          <statement>
+            <p>
+              Do you think it is possible to calculate <m>a_n</m> for any natural number <m>n</m>?
+              Explain.
+            </p>
+          </statement>
+        </exercise>
+        <exercise>
+          <statement>
+            <p>
+              Compare the values of <m>a_0 ,a_1 ,a_2 ,a_3 ,a_4 ,a_5</m>,
+              and <m>a_6</m> with those of <m>0!,1!,2!,3!,4!,5!</m>,
+              and <m>6!</m>.
+              What do you observe?
+              We will use mathematical induction to prove a result about this 
+              sequence in <xref ref="exer_sec51-factorial"/>.
+            </p>
+          </statement>
+        </exercise>
+
+    </worksheet>
+
+    <worksheet xml:id="PA_fibonaccinumbers">
+      <title>Beginning Activity 2: The Fibonacci Numbers</title>
+      <p>
+        The <term>Fibonacci numbers</term>
+            <idx><h>Fibonacci numbers</h></idx>
+        are a sequence of natural numbers
+        <m>f_1 ,f_2 ,f_3 , \ldots ,f_n , \ldots</m> defined recursively as follows:
+        <ul>
+          <li>
+            <p>
+              <m>f_1 = 1</m> and <m>f_2 = 1</m>, and
+            </p>
+          </li>
+          <li>
+            <p>
+              For each natural number <m>n</m>,
+              <m>f_{n + 2} = f_{n + 1} + f_n</m>.
+            </p>
+          </li>
+        </ul>
+
+        In words, the recursion formula states that for any natural number <m>n</m> with 
+        <m>n \geq 3</m>,
+        the <m>n^{th}</m> Fibonacci number is the sum of the two previous Fibonacci numbers.
+        So we see that
+        <md>
+          <mrow>f_3  \amp = f_2  + f_1  = 1 + 1 = 2,</mrow>
+          <mrow>f_4  \amp = f_3  + f_2  = 2 + 1 = 3, \text{ and }</mrow>
+          <mrow>f_5  \amp = f_4  + f_3 = 3 + 2 = 5</mrow>
+        </md>.
+      </p>
+      <exercise>
+        <statement>
+          <p>
+            Calculate <m>f_6</m> through <m>f_{20}</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Which of the Fibonacci numbers <m>f_1</m> through <m>f_{20}</m> are even?
+            Which are multiples of 3?
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            For <m>n = 2</m>, <m>n = 3</m>,
+            <m>n = 4</m>, and <m>n = 5</m>,
+            how is the sum of the first <m>(n - 1)</m> Fibonacci numbers related to the 
+            <m>(n + 1)^{st}</m> Fibonacci number?
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Record any other observations about the values of the Fibonacci numbers or any 
+            patterns that you observe in the sequence of Fibonacci numbers.
+            If necessary, compute more Fibonacci numbers.
+          </p>
+        </statement>
+      </exercise>
+  
+    </worksheet>
+  
+  <subsection>
+    <title>The Fibonacci Numbers</title>
+    <p>
+      The Fibonacci numbers form a famous sequence in mathematics that was investigated by 
+      Leonardo of Pisa
+          <idx><h>Leonardo of Pisa</h></idx>
+      (1170 <mdash/> 1250), who is better known as Fibonacci.
+      Fibonacci introduced this sequence to the Western world as a solution of the following 
+      problem:
+      <blockquote>
+        Suppose that a pair of adult rabbits (one male, one female) produces a pair of rabbits 
+        (one male, one female) each month.  Also, suppose that newborn rabbits become adults 
+        in two months and produce another pair of rabbits.  Starting with one adult pair of 
+        rabbits, how many pairs of rabbits will be produced each month for one year?
+      </blockquote>
+    </p>
+    <p>
+      Since we start with one adult pair,
+      there will be one pair produced the first month,
+      and since there is still only one adult pair,
+      one pair will also be produced in the second month
+      (since the new pair produced in the first month is not yet mature).
+      In the third month, two pairs will be produced,
+      one by the original pair and one by the pair which was produced in the first month.
+      In the fourth month, three pairs will be produced,
+      and in the fifth month, five pairs will be produced.
+    </p>
+    <p>
+      The basic rule is that in a given month after the first two months,
+      the number of adult pairs is the number of adult pairs one month ago plus the number of 
+      pairs born two months ago.
+      This is summarized in <xref ref="T_fibonacci"></xref>,
+      where the number of pairs produced is equal to the number of adult pairs,
+      and the number of adult pairs follows the Fibonacci sequence of numbers that we 
+      developed in <xref ref="PA_fibonaccinumbers">Beginning Activity 2</xref>.
+    </p>
+
+    <table xml:id="T_fibonacci">
+      <title>Fibonacci Numbers</title>
+      <tabular halign="center">
+        <row bottom="major">
+          
+          <cell right="medium">Months</cell>
+          <cell right="medium">1</cell>
+          <cell right="medium">2</cell>
+          <cell right="medium">3</cell>
+          <cell right="medium">4</cell>
+          <cell right="medium">5</cell>
+          <cell right="medium">6</cell>
+          <cell right="medium">7</cell>
+          <cell right="medium">8</cell>
+          <cell right="medium">9</cell>
+          <cell>10</cell>
+          
+        </row>
+        <row bottom="minor">
+          
+          <cell right="medium">Adult Pairs</cell>
+          <cell right="medium">1</cell>
+          <cell right="medium">1</cell>
+          <cell right="medium">2</cell>
+          <cell right="medium">3</cell>
+          <cell right="medium">5</cell>
+          <cell right="medium">8</cell>
+          <cell right="medium">13</cell>
+          <cell right="medium">21</cell>
+          <cell right="medium">34</cell>
+          <cell>55</cell>
+          
+        </row>
+        <row bottom="minor">
+          
+          <cell right="medium">Newborn Pairs</cell>
+          <cell right="medium">1</cell>
+          <cell right="medium">1</cell>
+          <cell right="medium">2</cell>
+          <cell right="medium">3</cell>
+          <cell right="medium">5</cell>
+          <cell right="medium">8</cell>
+          <cell right="medium">13</cell>
+          <cell right="medium">21</cell>
+          <cell right="medium">34</cell>
+          <cell>55</cell>
+          
+        </row>
+        <row>
+          
+          <cell right="medium">Month-Old Pairs</cell>
+          <cell right="medium">0</cell>
+          <cell right="medium">1</cell>
+          <cell right="medium">1</cell>
+          <cell right="medium">2</cell>
+          <cell right="medium">3</cell>
+          <cell right="medium">5</cell>
+          <cell right="medium">8</cell>
+          <cell right="medium">13</cell>
+          <cell right="medium">21</cell>
+          <cell>34</cell>
+          
+        </row>
+      </tabular>
+    </table>
+
+    <p>
+      Historically,
+      it is interesting to note that Indian mathematicians were studying these types of 
+      numerical sequences well before Fibonacci.
+      In particular,
+      about fifty years before Fibonacci introduced his sequence, Acharya Hemachandra
+      (sometimes spelled Hemchandra)
+          <idx><h>Hemachandra, Acharya</h></idx>
+      (1089 <mdash/> 1173) considered the following problem,
+      which is from the biography of Hemachandra in the
+      <pubtitle>MacTutor History of Mathematics Archive</pubtitle>
+      at <url href="https://mathshistory.st-andrews.ac.uk/Biographies/Hemchandra/">
+        <c>mathshistory.st-andrews.ac.uk/Biographies/Hemchandra</c></url>.
+      <blockquote>
+        Suppose we assume that lines are composed of syllables which are either short or long. 
+        Suppose also that each long syllable takes twice as long to articulate as a short syllable. 
+        A line of length <m>n</m> contains <m>n</m> units where each short syllable is one 
+        unit and each long syllable is two units. Clearly a line of length <m>n</m> units 
+        takes the same time to articulate regardless of how it is composed. Hemchandra asks: 
+        How many different combinations of short and long syllables are possible in a line of 
+        length <m>n</m>?
+      </blockquote>
+    </p>
+    <p>
+      This is an important problem in the Sanskrit language since Sanskrit meters are based 
+      on duration rather than on accent as in the English Language.
+      The answer to this question generates a sequence similar to the Fibonacci sequence.
+      Suppose that <m>h_n</m> is the number of patterns of syllables of length <m>n</m>.
+      We then see that <m>h_1 = 1</m> and <m>h_2 = 2</m>.
+      Now let <m>n</m> be a natural number and consider pattern of length <m>n + 2</m>.
+      This pattern either ends in a short syllable or a long syllable.
+      If it ends in a short syllable and this syllable is removed,
+      then there is a pattern of length <m>n+1</m>,
+      and there are <m>h_{n+1}</m> such patterns.
+      Similarly, if it ends in a long syllable and this syllable is removed,
+      then there is a pattern of length <m>n</m>,
+      and there are <m>h_n</m> such patterns.
+      From this, we conclude that
+      <me>
+        h_{n+2} = h_{n+1} + h_n
+      </me>.
+
+      This actually generates the sequence 1, 2, 3, 5, 8, 13, 21, <ellipsis/>.
+      For more information about Hemachandra,
+      see the article <pubtitle>Math for Poets and Drummers</pubtitle>
+      by Rachel Wells Hall in the February 2008 issue of <pubtitle>Math Horizons</pubtitle>.
+    </p>
+    <p>
+      We will continue to use the Fibonacci sequence in this book.
+      This sequence may not seem all that important or interesting.
+      However, it turns out that this sequence occurs in nature frequently and has applications 
+      in computer science.
+      There is even a scholarly journal,
+      <pubtitle>The Fibonacci Quarterly</pubtitle>,
+          <idx><h>Fibonacci Quarterly</h></idx>
+      devoted to the Fibonacci numbers.
+    </p>
+    <p>
+      The sequence of Fibonacci numbers is one of the most studied sequences in mathematics,
+      due mainly to the many beautiful patterns it contains.
+      Perhaps one observation you made in <xref ref="PA_fibonaccinumbers">Beginning Activity 2</xref>
+      is that every third Fibonacci number is even.
+      This can be written as a proposition as follows:
+      <me>
+        \text{ For each natural number }  n, f_{3n} \text{ is an even natural number }
+      </me>.
+
+      As with many propositions associated with definitions by recursion,
+      we can prove this using mathematical induction.
+      The first step is to define the appropriate open sentence.
+      For this, we can let <m>P(n)</m> be,
+      <q><m>f_{3n}</m> is an even natural number.</q>
+    </p>
+    <p>
+      Notice that <m>P( 1 )</m> is true since <m>f_3 = 2</m>.
+      We now need to prove the inductive step.
+      To do this, we need to prove that for each <m>k \in \mathbb{N}</m>,
+      <blockquote>
+        if <m>P( k )</m> is true, then <m>P( {k + 1} )</m> is true.
+      </blockquote>
+      That is, we need to prove that for each <m>k \in \mathbb{N}</m>,
+      if <m>f_{3k}</m> is even, then <m>f_{3\left( {k + 1} \right)}</m> is even.
+    </p>
+    <p>
+      So let's analyze this conditional statement using a know-show table.
+    </p>
+    <tabular>
+      <row bottom="medium" header="yes">
+        
+        <cell right="major">Step</cell>
+        <cell right="medium">Know</cell>
+        <cell>Reason</cell>
+        
+      </row>
+      <row bottom="medium">
+        
+        <cell right="major"><m>P</m></cell>
+        <cell right="medium"><m>f_{3k}</m>  is even.</cell>
+        <cell>Inductive hypothesis</cell>
+        
+      </row>
+      <row bottom="medium">
+        
+        <cell right="major"><m>P1</m></cell>
+        <cell right="medium"><m>\left( {\exists m \in \mathbb{N}} \right)\left( {f_{3k}  = 2m} \right)</m></cell>
+        <cell>Definition of
+          <q>even integer</q>
+        </cell>
+        
+      </row>
+      <row bottom="medium">
+        
+        <cell right="major"><m>\vdots</m></cell>
+        <cell right="medium"><m>\vdots</m></cell>
+        <cell><m>\vdots</m></cell>
+        
+      </row>
+      <row bottom="minor">
+        
+        <cell right="major"><m>Q1</m></cell>
+        <cell right="medium"><m>\left( {\exists q \in \mathbb{N}} \right)
+        \left( {f_{3\left( {k + 1} \right)}  = 2q} \right)</m></cell>
+        <cell></cell>
+        
+      </row>
+      <row bottom="medium">
+        
+        <cell right="major"><m>Q</m></cell>
+        <cell right="medium"><m>f_{3\left( {k + 1} \right)}</m> is even.</cell>
+        <cell>Definition of
+          <q>even integer</q>
+        </cell>
+        
+      </row>
+      <row>
+        
+        <cell right="major">Step</cell>
+        <cell right="medium">Show</cell>
+        <cell>Reason</cell>
+        
+      </row>
+    </tabular>
+    <p>
+      The key question now is,
+      <q>Is there any relation between
+      <m>f_{3\left( {k + 1} \right)}</m> and <m>f_{3k}</m>?</q>
+      We can use the recursion formula that defines the Fibonacci sequence to find such a relation.
+    </p>
+    <p>
+      The recurrence relation for the Fibonacci sequence states that a Fibonacci number
+      (except for the first two)
+      is equal to the sum of the two previous Fibonacci numbers.
+      If we write <m>3\left( {k + 1} \right) = 3k + 3</m>,
+      then we get <m>f_{3\left( {k + 1} \right)}  = f_{3k + 3}</m>.
+      For <m>f_{3k + 3}</m>, the two previous Fibonacci numbers are
+      <m>f_{3k + 2}</m> and <m>f_{3k + 1}</m>.
+      This means that
+      <me>
+        f_{3k + 3}  = f_{3k + 2}  + f_{3k + 1}\!
+      </me>.
+
+      Using this and continuing to use the Fibonacci relation,
+      we obtain the following:
+      <md>
+        <mrow>f_{3\left( {k + 1} \right)} \amp = f_{3k + 3}</mrow>
+        <mrow> \amp = f_{3k + 2}  + f_{3k + 1}</mrow>
+        <mrow> \amp = \left( {f_{3k + 1}  + f_{3k} } \right) + f_{3k + 1}</mrow>
+      </md>.
+
+      The preceding equation states that <m>f_{3\left( {k + 1} \right)} = 2f_{3k + 1} + f_{3k}</m>.
+      This equation can be used to complete the proof of the induction step.
+    </p>
+
+    <exercise xml:id="prog_thirdfibonacci">
+      <title>Every Third Fibonacci Number Is Even</title>
+      <statement>
+        <p>
+          Complete the proof of <xref ref="P_thirdfibonacci"></xref>.
+
+          <proposition xml:id="P_thirdfibonacci">
+            <statement>
+              <p>
+                For each natural number <m>n</m>,
+                the Fibonacci number <m>f_{3n}</m> is an even natural number.
+              </p>
+            </statement>
+          </proposition>
+        </p>
+      </statement>
+      <hint>
+        <p>
+          We have already defined the predicate
+          <m>P\left( n \right)</m> to be used in an induction proof and have proved the basis step.
+          Use the information in and after the preceding know-show table to help prove that if 
+          <m>f_{3k}</m> is even,
+          then <m>f_{3\left( {k + 1} \right)}</m> is even.
+        </p>
+      </hint>
+    </exercise>
+
+  </subsection>
+
+  <subsection xml:id="geomseq">
+    <title>Geometric Sequences and Geometric Series</title>
+    <p>
+      Let <m>a,r \in \mathbb{R}</m>.
+      The following sequence was introduced in 
+      <xref ref="PA_recursivesequences">Beginning Activity 1</xref>.
+    </p>
+    <md>
+      <mrow>\text{Initial condition:  } \amp a_1 = a</mrow>
+      <mrow>\text{Recurrence relation:  } \amp \text{For each } n \in \N, a_{n + 1} = 
+      r \cdot a_n</mrow>
+    </md>.
+  
+    <p>
+      This is a recursive definition for a
+      <term>geometric sequence</term>
+          <idx><h>geometric sequence</h></idx>
+          <idx><h>sequence</h><h>geometric</h></idx>
+      with <term>initial term</term> <m>a</m> and (common)
+      <term>ratio</term> <m>r</m>.
+      The basic idea is that the next term in the sequence is obtained by multiplying 
+      the previous term by the ratio <m>r</m>.
+      The work in <xref ref="PA_recursivesequences">Beginning Activity 1</xref>
+      suggests that the following proposition is true.
+
+    <theorem xml:id="P_geometricsequence">
+      <statement>
+        <p>
+          Let <m>a, r \in \mathbb{R}</m>.
+          If a geometric sequence is defined by <m>a_1 = a</m> and for each <m>n \in \mathbb{N}</m>,
+          <m>a_{n + 1} = r \cdot a_n</m>,
+          then for each <m>n \in \mathbb{N}</m>,
+          <m>a_n = a \cdot r^{n - 1}</m>.
+        </p>
+      </statement>
+    </theorem>
+
+      The proof of this proposition is <xref ref="exer_geomseq"/>.
+    </p>
+    <p>
+      Another sequence that was introduced in <xref ref="PA_recursivesequences">Beginning Activity 1</xref>
+      is related to geometric series and is defined as follows:
+    <md>
+      <mrow>\text{Initial condition:  } \amp S_1 = a</mrow>
+      <mrow>\text{Recurrence relation:  } \amp \text{For each } n \in \N, S_{n + 1} = 
+      a + r \cdot S_n</mrow>
+    </md>.
+
+  
+      For each <m>n \in \mathbb{N}</m>,
+      the term <m>S_n</m> is a (finite)
+      <term>geometric series</term>
+          <idx><h>geometric series</h></idx>
+      with <term>initial term</term> <m>a</m> and (common)
+      <term>ratio</term> <m>r</m>.
+      The work in <xref ref="PA_recursivesequences">Beginning Activity 1</xref>
+      suggests that the following proposition is true.
+    </p>
+    <theorem xml:id="P_geometricseries">
+      <statement>
+        <p>
+          Let <m>a, r \in \mathbb{R}</m>.
+          If the sequence <m>S_1 ,S_2 , \ldots ,S_n , \ldots</m> is defined by <m>S_1 = a</m> 
+          and for each <m>n \in \mathbb{N}</m>,
+          <m>S_{n + 1} = a + r \cdot S_n</m>,
+          then for each <m>n \in \mathbb{N}</m>,
+          <m>S_n = a + a \cdot r + a \cdot r^2 + \cdots + a \cdot r^{n - 1}</m>.
+          That is, the geometric series <m>S_n</m> is the sum of the first <m>n</m> terms of 
+          the corresponding geometric sequence.
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      The proof of <xref ref="P_geometricseries"></xref>
+      is <xref ref="exer_geomser"/>.
+      The recursive definition of a geometric series and <xref ref="P_geometricseries"></xref>
+      give two different ways to look at geometric series.
+      <xref ref="P_geometricseries"></xref>
+      represents a geometric series as the sum of the first <m>n</m> terms of the 
+      corresponding geometric sequence.
+      Another way to determine the sum of a geometric series is given in 
+      <xref ref="P_geometricseries2"></xref>,
+      which gives a formula for the sum of a geometric series that does not use a summation.
+
+    <theorem xml:id="P_geometricseries2">
+      <statement>
+        <p>
+          Let <m>a, r \in \mathbb{R}</m> and <m>r \ne 1</m>.
+          If the sequence <m>S_1 ,S_2 , \ldots ,S_n , \ldots</m> is defined by <m>S_1 = a</m> 
+          and for each <m>n \in \mathbb{N}</m>,
+          <m>S_{n + 1} = a + r \cdot S_n</m>,
+          then for each <m>n \in \mathbb{N}</m>,
+          <m>S_n = a\left( {\dfrac{{1 - r^n }}{{1 - r}}} \right)</m>.
+        </p>
+      </statement>
+    </theorem>
+    </p>
+    <p>
+      The proof of <xref ref="P_geometricseries2"></xref>
+      is <xref ref="exer_geometricseries2"/>.
+    </p>
+
+  </subsection>
+
+  <exercises>
+    <exercise xml:id="exer_sec51-factorial">
+      <statement>
+        <p>
+          For the sequence <m>a_{0}, a_1 ,a_2 , \ldots , a_n , \ldots</m> , assume that 
+          <m>a_0 = 1</m> and that for each <m>n \in \mathbb{N} \cup \left\{ 0 \right\}</m>,
+          <m>a_{n + 1} = \left( {n + 1} \right)a_n</m>.
+          Use mathematical induction to prove that for each 
+          <m>n \in \mathbb{N} \cup \left\{ 0 \right\}</m>,
+          <m>a_n = n!</m>.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_sec53-fib">
+      <statement>
+        <p>
+          Assume that <m>f_1 ,f_2 , \ldots ,f_n , \ldots</m> are the Fibonacci numbers.
+          Prove each of the following:
+          <task>
+            <p>
+              For each <m>n \in \mathbb{N}</m>,
+              <m>f_{4n}</m> is a multiple of 3.
+            </p>
+          </task>
+          <task>
+            <p>
+              For each <m>n \in \mathbb{N}</m>,
+              <m>f_{5n}</m> is a multiple of 5.
+            </p>
+          </task>
+          <task>
+            <p>
+              For each <m>n \in \mathbb{N}</m> with <m>n \geq 2</m>,
+              <m>f_1 + f_2 + \cdots + f_{n - 1} = f_{n + 1} - 1</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              For each <m>n \in \mathbb{N}</m>,
+              <m>f_1 + f_3 + \cdots + f_{2n - 1} = f_{2n}</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              For each <m>n \in \mathbb{N}</m>,
+              <m>f_2 + f_4 + \cdots + f_{2n} = f_{2n + 1} - 1</m>.
+            </p>
+          </task>
+          <task xml:id="exer_sec53-fibf">
+            <p>
+              For each <m>n \in \mathbb{N}</m>,
+              <m>f_1^2 + f_2^2 + \cdots + f_n^2 = f_n f_{n + 1}</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              For each <m>n \in \mathbb{N}</m> such that <m>n\not \equiv 0 \pmod 3</m>,
+              <m>f_n</m> is an odd integer.
+            </p>
+          </task>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Use the result in <xref ref="exer_sec53-fibf"/> of <xref ref="exer_sec53-fib"/> 
+          to prove that
+          <me>
+            \frac{f_1^2  + f_2^2  +  \cdots  + f_n^2 + f_{n+1}^2}{f_1^2  + f_2^2  +  \cdots  
+            + f_n^2} = 1 + \frac{f_{n+1}}{f_n}
+          </me>.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_binet">
+      <statement>
+        <p>
+          The quadratic formula can be used to show that
+          <m>\alpha = \dfrac{1 + \sqrt{5}}{2}</m> and <m>\beta = \dfrac{1 - \sqrt{5}}{2}</m> 
+          are the two real number solutions of the quadratic equation <m>x^2 - x - 1 = 0</m>.
+          Notice that this implies that
+          <md>
+            <mrow>\alpha^2 \amp = \alpha + 1, \text{ and }</mrow>
+            <mrow>\beta^2 \amp = \beta + 1</mrow>
+          </md>.
+          It may be surprising to find out that these two irrational numbers are closely 
+          related to the Fibonacci numbers.
+          <task xml:id="exer_bineta">
+            <p>
+              Verify that <m>f_1 = \dfrac{\alpha^1 - \beta^1}{\alpha - \beta}</m> and that 
+              <m>f_2 = \dfrac{\alpha^2 - \beta^2}{\alpha - \beta}</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              (This part is optional,
+              but it may help with the induction proof in <xref ref="exer_binetc"/>.) 
+              Work with the relation
+              <m>f_3 = f_2 + f_1</m> and substitute the expressions for <m>f_1</m> and 
+              <m>f_2</m> from <xref ref="exer_bineta"/>
+              Rewrite the expression as a single fraction and then in the numerator use
+              <m>\alpha^2 + \alpha = \alpha ( \alpha + 1 )</m> and a similar equation 
+              involving <m>\beta</m>.
+              Now prove that <m>f_3 = \dfrac{\alpha^3 - \beta^3}{\alpha - \beta}</m>.
+            </p>
+          </task>
+          <task xml:id="exer_binetc">
+            <p>
+              Use induction to prove that for each natural number <m>n</m>,
+              if <m>\alpha = \dfrac{1 + \sqrt{5}}{2}</m> and <m>\beta = \dfrac{1 - \sqrt{5}}{2}</m>,
+              then <m>f_n = \dfrac{\alpha^n - \beta^n}{\alpha - \beta}</m>.  
+            </p>
+            <p>
+              This formula for the <m>n^{th}</m> Fibonacci number is known as Binet's formula,
+                <idx><h>Binet's formula</h></idx>
+              named after the French mathematician Jacques Binet (1786 <mdash/> 1856).
+            </p>
+          </task>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Is the following conjecture true or false?
+          <conjecture>
+            <statement>
+              <p>
+                Let <m>f_1, f_2, \ldots,
+                f_m, \ldots</m> be the sequence of the Fibonacci numbers.
+                For each natural number <m>n</m>,
+                the numbers <m>f_nf_{n+3}</m>, <m>2f_{n+1}f_{n+2}</m>,
+                and <m>\left( f_{n+1}^2 + f_{n+2}^2 \right)</m> form a Pythagorean triple.
+              </p>
+            </statement>
+          </conjecture>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_geomseq">
+      <statement>
+        <p>
+          Prove <xref ref="P_geometricsequence"></xref>.
+ 
+                Let <m>a,r \in \mathbb{R}</m>.
+                If a geometric sequence is defined by <m>a_1 = a</m> and for each 
+                <m>n \in \mathbb{N}</m>,
+                <m>a_{n + 1} = r \cdot a_n</m>,
+                then for each <m>n \in \mathbb{N}</m>,
+                <m>a_n = a \cdot r^{n - 1}</m>.
+
+          
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_geomser">
+      <statement>
+        <p>
+          Prove <xref ref="P_geometricseries"></xref>.
+
+                Let <m>a,r \in \mathbb{R}</m>.
+                If the sequence <m>S_1 ,S_2 , \ldots ,S_n , \ldots</m> is defined by 
+                <m>S_1 = a</m> and for each <m>n \in \mathbb{N}</m>,
+                <m>S_{n + 1} = a + r \cdot S_n</m>,
+                then for each <m>n \in \mathbb{N}</m>,
+                <m>S_n = a + a \cdot r + a \cdot r^2 + \cdots + a \cdot r^{n - 1}</m>.
+                That is, the geometric series <m>S_n</m> is the sum of the first <m>n</m> terms of 
+                the corresponding geometric sequence.
+
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_geometricseries2">
+      <statement>
+        <p>
+          Prove <xref ref="P_geometricseries2"></xref>.
+          Let <m>a, r \in \mathbb{R}</m> and <m>r \ne 1</m>.
+          If the sequence <m>S_1 ,S_2 , \ldots ,S_n , \ldots</m> is defined by <m>S_1 = a</m> 
+          and for each <m>n \in \mathbb{N}</m>,
+          <m>S_{n + 1} = a + r \cdot S_n</m>,
+          then for each <m>n \in \mathbb{N}</m>,
+          <m>S_n = a\left( {\dfrac{{1 - r^n }}{{1 - r}}} \right)</m>.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_sec53-arithexample">
+      <statement>
+        <p>
+          For the sequence <m>a_1 ,a_2 , \ldots ,a_n , \ldots</m> , assume that <m>a_1 = 2</m> 
+          and that for each <m>n \in \mathbb{N}</m>,
+          <m>a_{n + 1} = a_n + 5</m>.
+          <task>
+            <p>
+              Calculate <m>a_2</m> through <m>a_6</m>.
+            </p>
+          </task>
+          <task xml:id="exer_sec53-arithexampleb">
+            <p>
+              Make a conjecture for a formula for <m>a_n</m> for each <m>n \in \mathbb{N}</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              Prove that your conjecture in <xref ref="exer_sec53-arithexampleb"/> is correct.
+            </p>
+          </task>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_sec53-arith">
+      <statement>
+        <p>
+          The sequence in <xref ref="exer_sec53-arithexample"/> is an example of an
+          <term>arithmetic sequence</term>.
+            <idx><h>arithmetic sequence</h></idx>
+            <idx><h>sequence</h><h>arithmetic</h></idx>
+          An arithmetic sequence is defined recursively as follows: 
+          <blockquote>
+            Let <m>c</m> and <m>d</m> 
+            be real numbers.
+            Define the sequence <m>a_1 ,a_2 , \ldots ,a_n , \ldots</m> by <m>a_1 = c</m> 
+            and for each <m>n \in \mathbb{N}</m>,
+            <m>a_{n + 1} = a_n + d</m>.
+          </blockquote>
+          <task>
+            <p>
+              Determine formulas for <m>a_3</m> through <m>a_8</m>.
+            </p>
+          </task>
+          <task xml:id="exer_sec53-arithb">
+            <p>
+              Make a conjecture for a formula for <m>a_n</m> for each <m>n \in \mathbb{N}</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              Prove that your conjecture in <xref ref="exer_sec53-arithb"/> is correct.
+            </p>
+          </task>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          For the sequence <m>a_1 ,a_2 , \ldots ,a_n , \ldots</m> , assume that <m>a_1 = 1</m>,
+          <m>a_2 = 5</m>,
+          and that for each <m>n \in \mathbb{N}</m> with <m>n\geq 2</m>,
+          <m>a_{n + 1} = a_n + 2a_{n-1}</m>.
+          Prove that for each natural number <m>n</m>,
+          <m>a_n = 2^n + (-1)^n</m>.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_sec53-5">
+      <statement>
+        <p>
+          For the sequence <m>a_1 ,a_2 , \ldots ,a_n , \ldots</m> , assume that 
+          <m>a_1 = 1</m> and that for each <m>n \in \mathbb{N}</m>,
+          <m>a_{n + 1} = \sqrt {5 + a_n }</m>.
+          <task>
+            <p>
+              Calculate, or approximate, <m>a_2</m> through <m>a_6</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              Prove that for each <m>n \in \mathbb{N}</m>, <m>a_n \lt 3</m>.
+            </p>
+          </task>
+        </p>
+      </statement>
+    </exercise>
+    <exercise xml:id="exer_sec53-6">
+      <statement>
+        <p>
+          For the sequence <m>a_1 ,a_2 , \ldots ,a_n , \ldots</m> , assume that <m>a_1 = 1</m>,
+          <m>a_2 = 3</m>,
+          and that for each <m>n \in \mathbb{N}</m>,
+          <m>a_{n + 2} = 3a_{n + 1} - 2a_n</m>.
+          <task>
+            <p>
+              Calculate <m>a_3</m> through <m>a_6</m>.
+            </p>
+          </task>
+          <task xml:id="exer_536b">
+            <p>
+              Make a conjecture for a formula for <m>a_n</m> for each <m>n \in \mathbb{N}</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              Prove that your conjecture in <xref ref="exer_536b"/> is correct.
+            </p>
+          </task>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_sec53-7">
+      <statement>
+        <p>
+          For the sequence <m>a_1 ,a_2 , \ldots ,a_n , \ldots</m> , assume that <m>a_1 = 1</m>,
+          <m>a_2 = 1</m>, and that for each <m>n \in \mathbb{N}</m>,
+          <m>a_{n + 2} = \dfrac{1}{2}\left( {a_{n + 1} + \dfrac{2}{{a_n }}} \right)</m>.
+          <task>
+            <p>
+              Calculate <m>a_3</m> through <m>a_6</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              Prove that for each <m>n \in \mathbb{N}</m>, <m>1 \leq a_n \leq 2</m>.
+            </p>
+          </task>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_sec53-8">
+      <statement>
+        <p>
+          For the sequence   <m>a_1 ,a_2 , \ldots ,a_n , \ldots</m>,
+          assume that <m>a_1=1</m>, <m>a_2=1</m>,
+          <m>a_3=1</m>, and for that each natural number <m>n</m>,
+          <me>
+            a_{n+3} = a_{n+2} + a_{n+1} + a_n
+          </me>.
+          <task>
+            <p>
+              Compute <m>a_4</m>, <m>a_5</m>,
+              <m>a_6</m>, and <m>a_7</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              Prove that for each natural number <m>n</m> with <m>n>1</m>,
+              <m>a_n \leq 2^{n-2}</m>.
+              
+            </p>
+          </task>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_factorial">
+      <statement>
+        <p>
+          For the sequence <m>a_1, a_2, \ldots, a_n, \ldots</m>,
+          assume that <m>a_1 = 1</m>, and that for each natural number <m>n</m>,
+          <me>
+            a_{n + 1} = a_n + n \cdot n!
+          </me>.
+          <task>
+            <p>
+              Compute <m>n!</m> for the first 10 natural numbers.
+            </p>
+          </task>
+          <task>
+            <p>
+              Compute <m>a_n</m> for the first 10 natural numbers.
+            </p>
+          </task>
+          <task xml:id="exer_factorialc">
+            <p>
+              Make a conjecture about a formula for <m>a_n</m> in terms of <m>n</m> that 
+              does not involve a summation or a recursion.
+            </p>
+          </task>
+          <task>
+            <p>
+              Prove your conjecture in <xref ref="exer_factorialc"/>.
+            </p>
+          </task>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          For the sequence <m>a_1, a_2, \ldots,
+          a_n, \ldots</m> , assume that <m>a_1 = 1</m>, <m>a_2 = 1</m>,
+          and for each <m>n \in \N</m>,
+          <m>a_{n+2} = a_{n+1} + 3a_n</m>.
+          Determine which terms in this sequence are divisible by 4 and prove that your 
+          answer is correct.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_lucasnumbers">
+      <statement>
+        <p>
+          The <term>Lucas numbers</term>
+            <idx><h>Lucas numbers</h></idx>
+          are a sequence of natural numbers <m>L_1, L_2, L_3, \ldots, L_n, \ldots </m>,
+          which are defined recursively as follows:
+          <ul>
+            <li>
+              <p>
+                <m>L_1 = 1</m> and <m>L_2 = 3</m>, and
+              </p>
+            </li>
+            <li>
+              <p>
+                For each natural number <m>n</m>,
+                <m>L_{n+2} = L_{n+1} + L_n</m>.
+              </p>
+            </li>
+          </ul>
+          List the first 10 Lucas numbers and the first ten Fibonacci numbers and then prove 
+          each of the following propositions. The Second Principle of Mathematical Induction 
+          may be needed to prove some of these propositions.
+          <task>
+            <p>
+              For each natural number <m>n</m>,
+              <m>L_n = 2f_{n+1} - f_n</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              For each <m>n \in \mathbb{N}</m> with <m>n \geq 2</m>,
+              <m>5f_n = L_{n - 1} + L_{n + 1}</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              For each <m>n \in \mathbb{N}</m> with <m>n \geq 3</m>,
+              <m>L_n = f_{n + 2} - f_{n - 2}</m>.
+            </p>
+          </task>
+        </p>
+      </statement>
+    </exercise>
+    
+    <exercise xml:id="exer_lucasnumbers2">
+      <statement>
+        <p>
+          There is a formula for the Lucas numbers similar to the formula for the Fibonacci 
+          numbers in <xref ref="exer_binet"/>.
+          Let <m>\alpha = \dfrac{1 + \sqrt{5}}{2}</m> and <m>\beta = \dfrac{1 - \sqrt{5}}{2}</m>. 
+          Prove that for each <m>n \in \N</m>,
+          <m>L_n = \alpha^n + \beta^n</m>.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Use the result in <xref ref="exer_lucasnumbers2"/>,
+          previously proven results from <xref ref="exer_lucasnumbers"/>,
+          or mathematical induction to prove each of the following results about Lucas numbers 
+          and Fibonacci numbers.
+          <task>
+            <p>
+              For each <m>n \in \mathbb{N}</m>,
+              <m>L_n = \dfrac{{f_{2n} }}{{f_n }}</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              For each <m>n \in \mathbb{N}</m>,
+              <m>f_{n+1} = \dfrac{f_n + L_n}{2}</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              For each <m>n \in \mathbb{N}</m>,
+              <m>L_{n+1} = \dfrac{L_n +5f_n}{2}</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              For each <m>n \in \mathbb{N}</m> with <m>n \geq 2</m>,
+              <m>L_n = f_{n+1} + f_{n-1}</m>.
+            </p>
+          </task>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <title>Evaluation of Proofs</title>
+      <statement>
+        <p>
+          See the instructions for <xref ref="exer_proofeval"/>
+          from <xref ref="S_directproof"></xref>.
+          <task>
+            <p>
+              <proposition>
+                <statement>
+                  <p>
+                    Let <m>f_n</m> be the <m>n^\text{ th }</m> Fibonacci number,
+                    and let <m>\alpha</m> be the positive solution of the equation 
+                    <m>x^2 = x + 1</m>.
+                    So <m>\alpha = \dfrac{1 + \sqrt{5}}{2}</m>.
+                    For each natural number <m>n</m>,
+                    <m>f_n \leq \alpha^{n-1}</m>.
+                  </p>
+                </statement>
+                <proof>
+            <p>
+              We will use a proof by mathematical induction.
+              For each natural number <m>n</m>, we let <m>P( n )</m> be,
+              <q><m>f_n \leq \alpha^{n-1}</m>.</q>
+            </p>
+            <p>
+              We first note that <m>P( 1 )</m> is true since <m>f_1 = 1</m> and <m>\alpha^0 = 1</m>.
+              We also notice that <m>P( 2 )</m> is true since <m>f_2 = 1</m> and,
+              hence, <m>f_2 \leq \alpha^1</m>.
+            </p>
+            <p>
+              We now let <m>k</m> be a natural number with
+              <m>k \geq 2</m> and assume that <m>P ( 1 )</m>,
+              <m>P( 2 )</m>, <ellipsis/> , <m>P( k )</m> are all true.
+              We now need to prove that <m>P \left( k + 1 \right)</m> is true or that 
+              <m>f_{k+1} \leq \alpha^k</m>.
+            </p>
+            <p>
+              Since <m>P( k -1 )</m> and <m>P ( k )</m> are true,
+              we know that <m>f_{k-1} \leq \alpha^{k-2}</m> and <m>f_k \leq \alpha^{k-1}</m>.
+              Therefore,
+              <md>
+                <mrow>f_{k + 1} \amp = f_k + f_{k-1}</mrow>
+                <mrow>f_{k + 1} \amp \leq \alpha^{k-1} + \alpha^{k-2}</mrow>
+                <mrow>f_{k + 1} \amp \leq \alpha^{k-2} \left(\alpha + 1 \right)\!</mrow>
+              </md>.
+              We now use the fact that <m>\alpha + 1 = \alpha^2</m> and the preceding 
+              inequality to obtain
+              <md>
+                <mrow>f_{k+1} \amp \leq \alpha^{k-2} \alpha^2</mrow>
+                <mrow>f_{k+1} \amp \leq \alpha^k</mrow>
+              </md>
+
+              This proves that if <m>P( 1 )</m>, <m>P( 2 )</m>,
+              <ellipsis/> , <m>P( k )</m> are true,
+              then <m>P(k + 1 )</m> is true.
+              Hence, by the Second Principle of Mathematical Induction,
+              we conclude that for each natural number <m>n</m>,
+              <m>f_n \leq \alpha^{n-1}</m>. <m>\blacksquare</m>
+            </p>
+          </proof>
+              </proposition>
+            </p>
+          </task>
+        </p>
+      </statement>
+    </exercise>
+
+    <activity xml:id="exer_compoundinterest">
+      <title>Compound Interest</title>
+          <idx><h>compound interest</h></idx>
+        <introduction>
+          <p>
+            Assume that  <m>R</m>  dollars is deposited in an account that has an interest 
+            rate of  <m>i</m>  for each compounding period.
+            A compounding period is some specified time period such as a month or a year.
+            For each integer  <m>n</m>  with  <m>n \geq 0</m>,
+            let  <m>V_n</m> be the amount of money in an account at the end of the  
+            <m>n</m>th compounding period.
+            Then
+            <md>
+              <mrow>V_1 \amp = R + i \cdot R \amp V_2 \amp = V_1 + i \cdot V_1</mrow>
+              <mrow> \amp = R \left( 1 + i \right) \amp \amp = \left( {1 + i} \right) V_1</mrow>
+              <mrow> \amp \amp \amp = \left( {1 + i} \right)^2 R</mrow>
+            </md>.
+          </p>
+        </introduction>
+
+        <task>
+          <p>
+            Explain why <m>V_3 = V_2 + i \cdot V_2</m>.
+            Then use the formula for <m>V_2</m> to determine a formula for <m>V_3</m> in 
+            terms of <m>i</m> and <m>R</m>.
+          </p>
+        </task>
+        <task xml:id="A_compoundinterest2">
+          <p>
+            Determine a recurrence relation for
+            <m>V_{n + 1}</m> in terms of <m>i</m> and <m>V_n</m>.
+          </p>
+        </task>
+        <task>
+          <p>
+            Write the recurrence relation in <xref ref="A_compoundinterest2"/> so that it is 
+            in the form of a recurrence relation for a geometric sequence.
+            What is the initial term of the geometric sequence and what is the common ratio?
+          </p>
+        </task>
+        <task>
+          <p>
+            Use <xref ref="P_geometricsequence"></xref>
+            to determine a formula for <m>V_n</m> in terms of <m>I</m>,
+            <m>R</m>,
+            and <m>n</m>.
+          </p>
+        </task>
+    </activity>
+
+    <activity xml:id="exer_annuity">
+      <title>The Future Value of an Ordinary Annuity</title>
+
+        <introduction>
+          <p>
+            For an <term>ordinary annuity</term>,
+              <idx><h>ordinary annuity</h></idx>
+            <m>R</m> dollars is deposited in an account at the end of each compounding period.
+            It is assumed that the interest rate, <m>i</m>,
+            per compounding period for the account remains constant.
+            Let <m>S_t</m> represent the amount in the account at the end of the 
+            <m>t</m>th compounding period.
+            <m>S_t</m> is frequently called the <term>future value</term>
+              <idx><h>future value</h></idx>
+            of the ordinary annuity.
+            So  <m>S_1  = R</m>.
+            To determine the amount after two months,
+            we first note that the amount after one month will gain interest and grow to 
+            <m>( {1 + i} )S_1</m>.
+            In addition,
+            a new deposit of  <m>R</m>  dollars will be made at the end of the second month.
+            So
+            <me>
+              S_2  = R + ( {1 + i} )S_1
+            </me>.
+          </p>
+        </introduction>
+
+        <task>
+          <p>
+            For each <m>n \in \mathbb{N}</m>,
+            use a similar argument to determine a recurrence relation for
+            <m>S_{n + 1}</m> in terms of <m>R</m>, <m>i</m>, and <m>S_n</m>.
+          </p>
+        </task>
+        <task>
+          <p>
+            By recognizing this as a recursion formula for a geometric series,
+            use <xref ref="P_geometricseries2"></xref>
+            to determine a formula for  <m>S_n</m> in terms of  <m>R</m>,
+            <m>i</m>, and  <m>n</m>  that does not use a summation.
+            Then show that this formula can be written as
+            <me>
+              S_n  = R\left( {\frac{{\left( {1 + i} \right)^n  - 1}}{i}} \right)
+            </me>.
+          </p>
+        </task>
+        <task>
+          <p>
+            What is the future value of an ordinary annuity in 20 years if $200 dollars is 
+            deposited in an account at the end of each month where the interest rate for the 
+            account is 6% per year compounded monthly?
+            What is the amount of interest that has accumulated in this account during the 
+            20 years?
+          </p>
+        </task>
+    </activity>
+
+  </exercises>
+
+</section>

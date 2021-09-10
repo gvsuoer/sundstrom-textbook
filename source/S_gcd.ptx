@@ -1,7 +1,7 @@
 <section xml:id="S_gcd">
   <title>The Greatest Common Divisor</title>
   <introduction>
-    <exploration xml:id="PA_gcd">
+    <worksheet xml:id="PA_gcd">
       <title>The Greatest Common Divisor</title>
       <ol>
         <li>
@@ -69,8 +69,8 @@
           </p>
         </li>
       </ol>
-    </exploration>
-    <exploration xml:id="PA_gcdanddivalgo">
+    </worksheet>
+    <worksheet xml:id="PA_gcdanddivalgo">
       <title>The GCD and the Division Algorithm</title>
       <p>
         When we speak of the quotient and the remainder when we
@@ -134,7 +134,7 @@
           </li>
         </ol>
       </p>
-    </exploration>
+    </worksheet>
   </introduction>
   <subsection>
     <title>The System of Integers</title>
@@ -369,7 +369,7 @@
       <m>\left( {a, b} \right)</m> with another pair of integers <m>\left( {b, r} \right)</m>,
       where <m>0 \leq r \lt b</m> and <m>\gcd ( {b, r} ) = \gcd ( {a, b} )</m>.
       This idea was explored in <xref ref="PA_gcdanddivalgo"></xref>.
-      <xref ref="L_gcdanddivalgo">Lemma</xref>
+      <xref ref="L_gcdanddivalgo"></xref>
       is a conjecture that could have been formulated in <xref ref="PA_gcdanddivalgo"></xref>.
     </p>
     <lemma xml:id="L_gcdanddivalgo">
@@ -419,10 +419,10 @@
     <p>
       <hr style="width:50%;" align="left"/>
     </p>
-    <investigation xml:id="prog_lemma81">
-      <title>Illustrations of <xref ref="L_gcdanddivalgo">Lemma</xref></title>
+    <exercise xml:id="prog_lemma81">
+      <title>Illustrations of <xref ref="L_gcdanddivalgo"></xref></title>
       <p>
-        We completed several examples illustrating <xref ref="L_gcdanddivalgo">Lemma</xref>
+        We completed several examples illustrating <xref ref="L_gcdanddivalgo"></xref>
         in <xref ref="PA_gcdanddivalgo"></xref>.
         For another example, let <m>c = 56</m> and <m>d = 12</m>.
         The greatest common divisor of 56 and 12 is 4.
@@ -457,7 +457,7 @@
           </li>
         </ol>
       </p>
-    </investigation>
+    </exercise>
   </subsection>
   <subsection>
     <title>The Euclidean Algorithm</title>
@@ -507,7 +507,7 @@
         and <xref ref="T_euclidalgo2"></xref>.
       </p>
       <p>
-        If <m>r_1  > 0</m>, then by <xref ref="L_gcdanddivalgo">Lemma</xref>,
+        If <m>r_1  > 0</m>, then by <xref ref="L_gcdanddivalgo"></xref>,
         <m>\gcd( {a, b} ) = \gcd( {b, r_1 } )</m>.
         We use the Division Algorithm again to obtain integers <m>q_2</m> and <m>r_2</m> such that
         <men xml:id="eq_euclidalgo2">
@@ -529,7 +529,7 @@
         and <xref ref="T_euclidalgo2"></xref>.
       </p>
       <p>
-        If <m>r_2 > 0</m>, then by <xref ref="L_gcdanddivalgo">Lemma</xref>,
+        If <m>r_2 > 0</m>, then by <xref ref="L_gcdanddivalgo"></xref>,
         <m>\gcd( {b, r_1 } ) = \gcd( {r_1 , r_2 } )</m>.
         But we have already seen that <m>\gcd( {a, b} ) = \gcd( {b, r_1 } )</m>.
         Hence, <m>\gcd( {a, b} ) = \gcd( {r_1 , r_2 } )</m>.
@@ -652,7 +652,7 @@
         </row>
       </tabular>
       <p>
-        Remember that this table was constructed by repeated use of <xref ref="L_gcdanddivalgo">Lemma</xref>
+        Remember that this table was constructed by repeated use of <xref ref="L_gcdanddivalgo"></xref>
         and that the greatest common divisor of each pair of integers produced equals <m>\gcd( {a, b} )</m>.
         Also, the last row in the table indicates that <m>r_p</m> divides <m>r_{p - 1}</m>.
         This means that <m>\gcd( {r_{p - 1} , r_p } ) = r_p</m> and hence <m>r_p = \gcd( {a, b} )</m>.
@@ -676,7 +676,7 @@
     <p>
       <hr style="width:50%;" align="left"/>
     </p>
-    <investigation xml:id="prog_usingeuclid">
+    <exercise xml:id="prog_usingeuclid">
       <title>Using the Euclidean Algorithm</title>
       <ol>
         <li>
@@ -799,7 +799,7 @@
           </p>
         </li>
       </ol>
-    </investigation>
+    </exercise>
   </subsection>
   <subsection>
     <title>Some Remarks about <xref ref="T_euclidalgo"></xref></title>
@@ -1026,7 +1026,7 @@
         </p>
       </statement>
     </definition>
-    <investigation xml:id="prog_gcdaslincomb">
+    <exercise xml:id="prog_gcdaslincomb">
       <title>Writing the gcd as a Linear Combination</title>
       <p>
         Use the results from <xref ref="prog_usingeuclid"></xref> to
@@ -1043,7 +1043,7 @@
           </li>
         </ol>
       </p>
-    </investigation>
+    </exercise>
     <p>
       The previous example and progress check illustrate the following important result in number theory,
       which will be used in the next section to help prove some other significant results.

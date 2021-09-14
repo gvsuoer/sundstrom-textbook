@@ -1,0 +1,1104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<section xml:id="S_setproperties">
+  <title>Properties of Set Operations</title>
+  
+    <worksheet xml:id="PA_workingwithvenn2">
+      <title>Beginning Activity 1: Exploring a Relationship between Two Sets</title>
+      <p>
+        Let <m>A</m> and <m>B</m> be subsets of some universal set <m>U</m>.
+      </p>
+        <exercise xml:id="PA_workingwithvenn2-1">
+          <statement>
+            <p>
+              Draw two general Venn diagrams for the sets <m>A</m> and <m>B</m>.
+              On one, shade the region that represents <m>\left( {A \cup B} \right)^c</m>,
+              and on the other,
+              shade the region that represents <m>A^c \cap B^c</m>.
+              Explain carefully how you determined these regions.
+            </p>
+          </statement>
+        </exercise>
+        <exercise>
+          <statement>
+            <p>
+              Based on the Venn diagrams in <xref ref="PA_workingwithvenn2-1">Exercise</xref>,
+              what appears to be the relationship between the sets
+              <m>\left( {A \cup B} \right)^c</m> and <m>A^c \cap B^c</m>?
+            </p>
+          </statement>
+        </exercise>
+
+      <p>
+        Some of the properties of set operations are closely related to some of the logical 
+        operators we studied in <xref ref="S_2logop"></xref>.
+        This is due to the fact that set intersection is defined using a conjunction (and),
+        and set union is defined using a disjunction
+        (or).
+        For example,
+        if <m>A</m> and <m>B</m> are subsets of some universal set <m>U</m>,
+        then an element <m>x</m> is in
+        <m>A \cup B</m> if and only if <m>x \in A</m> or <m>x \in B</m>.
+      </p>
+        
+          <exercise xml:id="part1PA1">
+            <statement>
+            <p>
+              Use one of De Morgan's Laws
+              (<xref ref="T_logequiv"></xref>
+              to explain carefully what it means to say that an element <m>x</m> is not in 
+              <m>A \cup B</m>.
+            </p>
+            </statement>
+          </exercise>
+          <exercise>
+            <statement>
+            <p>
+              What does it mean to say that an element <m>x</m> is in <m>A^c</m>?
+              What does it mean to say that an element <m>x</m> is in <m>B^c</m>?
+            </p>
+            </statement>
+          </exercise>
+          <exercise xml:id="part3PA1">
+            <statement>
+            <p>
+              Explain carefully what it means to say that an element <m>x</m> is in 
+              <m>A^c \cap B^c</m>.
+            </p>
+            </statement>
+          </exercise>
+          <exercise>
+            <statement>
+            <p>
+              Compare your response in <xref ref="part1PA1">Exercise</xref> 
+              to your response in <xref ref="part3PA1">Exercise</xref>.
+              Are they equivalent?
+              Explain.
+            </p>
+            </statement>
+          </exercise>
+          <exercise>
+            <statement>
+            <p>
+              How do you think the sets <m>\left( {A \cup B} \right)^c</m> and <m>A^c \cap B^c</m> are related?
+              Is this consistent with the Venn diagrams from <xref ref="PA_workingwithvenn2-1">Exercise</xref>?
+            </p>
+            </statement>
+          </exercise>
+      
+    </worksheet>
+
+    <worksheet xml:id="PA_provingequiv">
+      <title>Beginning Activity 2: Proving that Statements Are Equivalent</title>
+      <exercise>
+        <statement>
+          <p>
+            Let <m>X</m>, <m>Y</m>, and <m>Z</m> be statements.
+            Complete a truth table for 
+            <m>\left[ {\left( {X \to Y} \right) \wedge \left( {Y \to Z} \right)} \right] \to 
+            \left( {X \to Z} \right)</m>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <introduction>
+          <p>
+            Assume that <m>P</m>, <m>Q</m>,
+            and <m>R</m> are statements and that we have proven that the following 
+            conditional statements are true:
+            <ul cols="2">
+              <li>
+                <p>
+                  If <m>P</m> then <m>Q</m> <m>\left( {P \to Q} \right)</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  If <m>Q</m> then <m>R</m> <m>\left( {Q \to R} \right)</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  If <m>R</m> then <m>P</m> <m>\left( {R \to P} \right)</m>.
+                </p>
+              </li>
+            </ul>
+            Explain why each of the following statements is true.
+          </p>
+        </introduction>
+        <task>
+          <p>
+            <m>P</m> if and only if <m>Q</m> <m>\left( {P \leftrightarrow Q} \right)</m>.
+          </p>
+        </task>
+        <task>
+          <p>
+            <m>Q</m> if and only if <m>R</m> <m>\left( {Q \leftrightarrow R} \right)</m>.
+          </p>
+        </task>
+        <task>
+          <p>
+            <m>R</m> if and only if <m>P</m> <m>\left( {R \leftrightarrow P} \right)</m>.
+          </p>
+        </task>
+
+        <conclusion>
+          <p>
+            Remember that <m>X \leftrightarrow Y</m> is logically equivalent to 
+            <m>\left( {X \to Y} \right) \wedge \left( {Y \to X} \right)</m>.
+          </p>
+        </conclusion>
+      </exercise>
+      
+    </worksheet>
+  
+  <subsection>
+    <title>Algebra of Sets <mdash/> Part 1</title>
+    <p>
+      This section contains many results concerning the properties of the set operations.
+      We have already proved some of the results.
+      Others will be proved in this section or in the exercises.
+      The primary purpose of this section is to have in one place many of the properties of 
+      set operations that we may use in later proofs.
+      These results are part of what is known as the
+      <term>algebra of sets</term>
+          <idx><h>algebra of sets</h></idx>
+      or as <term>set theory</term>.
+        <idx><h>set theory</h></idx>
+    </p>
+    <theorem xml:id="T_intersectandunion">
+      <statement>
+        <p>
+          Let <m>A</m>, <m>B</m>,
+          and <m>C</m> be subsets of some universal set <m>U</m>.
+          Then
+          <ul>
+            <li>
+              <p>
+                <m>A \cap B \subseteq A\text{ and } A \subseteq A \cup B</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>A \subseteq B</m>,
+                then <m>A \cap C \subseteq B \cap C</m> and <m>A \cup C \subseteq B \cup C</m>.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    
+    <proof>
+      <p>
+        The first part of this theorem was included in <xref ref="exer_intersectandunion"/> 
+        from <xref ref="S_provingset"></xref>.
+        The second part of the theorem was <xref ref="exer_unionandintersect"/> from 
+        <xref ref="S_provingset"></xref>. <m>\blacksquare</m>
+      </p>
+    </proof>
+    </theorem>
+    <p>
+      The next theorem provides many of the properties of set operations dealing with 
+      intersection and union.
+      Many of these results may be intuitively obvious,
+      but to be complete in the development of set theory,
+      we should prove all of them.
+      We choose to prove only some of them and leave some as exercises.
+    </p>
+    <theorem xml:id="T_algebraofsets">
+      <title>Algebra of Set Operations</title>
+      <statement>
+        <p>
+          Let <m>A</m>, <m>B</m>,
+          and <m>C</m> be subsets of some universal set <m>U</m>.
+          Then all of the following equalities hold.
+          <dl>
+            <li>
+              <title>Properties of the Empty Set and the Universal Set</title>
+              <idx><h>empty set</h><h>properties</h></idx>
+              <idx><h>universal set</h><h>properties</h></idx>
+              <p>
+                <md>
+                  <mrow>A \cap \emptyset \amp = \emptyset \amp A \cap U \amp = A</mrow>
+                  <mrow>A \cup \emptyset \amp = A \amp A \cup U \amp = U</mrow>
+                </md>
+              </p>
+            </li>
+            <li>
+              <title>Idempotent Laws</title>
+              <idx><h>idempotent laws for sets</h></idx>
+              <p>
+                <md>
+                  <mrow>A \cap A \amp = A \amp A \cup A \amp = A</mrow>
+                </md>
+              </p>
+            </li>
+            <li>
+              <title>Commutative Laws</title>
+              <idx><h>commutative laws</h><h>for sets</h></idx>
+              <p>
+                <md>
+                  <mrow>A \cap B \amp = B \cap A \amp A \cup B \amp = B \cup A</mrow>
+                </md>
+              </p>
+            </li>
+            <li>
+              <title>Associative Laws</title>
+              <idx><h>associative laws</h><h>for sets</h></idx>
+              <p>
+                <md>
+                  <mrow>\left( A \cap B \right) \cap C \amp = A \cap \left(B \cap C \right)</mrow>
+                  <mrow>\left( A \cup B \right) \cup C \amp = A \cup \left(B \cup C \right)</mrow>
+                </md>
+              </p>
+            </li>
+            <li>
+              <title>Distributive Laws</title>
+              <idx><h>distributive laws</h><h>for sets</h></idx>
+              <p>
+                <md>
+                  <mrow>A \cap \left( B \cup C \right) \amp = \left( A \cap B \right) \cup 
+                  \left( A \cap C \right)</mrow>
+                  <mrow>A \cup \left( B \cap C \right) \amp = \left( A \cup B \right) \cap 
+                  \left( A \cup C \right)</mrow>
+                </md>
+              </p>
+            </li>
+          </dl>
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      Before proving some of these properties,
+      we note that in <xref ref="S_provingset"></xref>,
+      we learned that we can prove that two sets are equal by proving that each one is a 
+      subset of the other one.
+      However, we also know that if <m>S</m> and <m>T</m> are both subsets of a universal 
+      set <m>U</m>, then
+      <blockquote>
+        <m>S = T</m> if and only if for each <m>x \in U</m>, 
+        <m>{x \in S\text{ if and only if } x \in T}</m>.
+      </blockquote>
+    </p>
+    <p>
+      We can use this to prove that two sets are equal by choosing an element from one set and 
+      chasing the element to the other set through a sequence of
+      <q>if and only if</q>
+      statements.
+      We now use this idea to prove one of the commutative laws.
+    </p>
+  </subsection>
+
+  <subsection>
+    <title>Proof of One of the Commutative Laws in <xref ref="T_algebraofsets"></xref></title>
+    <proof>
+      <p>
+        We will prove that <m>A \cap B = B \cap A</m>.
+        Let <m>x \in U</m>.
+        Then
+        <men xml:id="eq_4a">
+          x \in A \cap B\text{  if and only if  } x \in A\text{  and  } x \in B
+        </men>.
+
+        However, we know that if <m>P</m> and <m>Q</m> are statements,
+        then <m>P \wedge Q</m> is logically equivalent to <m>Q \wedge P</m>.
+        Consequently, we can conclude that
+        <men xml:id="eq_4b">
+          x \in A\text{ and } x \in B\text{  if and only if } \;x \in B\text{ and } x \in A
+        </men>.
+
+        Now we know that
+        <men xml:id="eq_4c">
+          x \in B\text{ and } x \in A\text{  if and only if  } x \in B \cap A
+        </men>.
+
+        This means that we can use <xref ref="eq_4a"/>,
+        <xref ref="eq_4b"/>, and <xref ref="eq_4c"/> to conclude that
+        <me>
+          x \in A \cap B\text{  if and only if  } x \in B \cap A
+        </me>,
+        and, hence, we have proved that <m>A \cap B = B \cap A</m>. <m>\blacksquare</m>
+      </p>
+    </proof>
+
+    <exercise xml:id="prog_workingvenn3">
+      <title>Exploring a Distributive Property</title>
+      <introduction>
+      <p>
+        We can use Venn diagrams to explore the more complicated properties in 
+        <xref ref="T_algebraofsets"></xref>,
+        such as the associative and distributive laws.
+        To that end, let <m>A</m>, <m>B</m>,
+        and <m>C</m> be subsets of some universal set <m>U</m>.
+      </p>
+      </introduction>
+        
+          <task xml:id="A_workingvenn3-1">
+            <p>
+              Draw two general Venn diagrams for the sets <m>A</m>, <m>B</m>,
+              and <m>C</m>.
+              On one, shade the region that represents <m>A \cup \left( {B \cap C} \right)</m>,
+              and on the other,
+              shade the region that represents 
+              <m>\left( {A \cup B} \right) \cap \left( {A \cup C} \right)</m>.
+              Explain carefully how you determined these regions.
+            </p>
+          </task>
+          <task>
+            <p>
+              Based on the Venn diagrams in <xref ref="A_workingvenn3-1"/>,
+              what appears to be the relationship between the sets
+              <m>A \cup \left( {B \cap C} \right)</m> and 
+              <m>\left( {A \cup B} \right) \cap \left( {A \cup C} \right)</m>?
+            </p>
+          </task>
+
+    </exercise>
+  </subsection>
+
+  <subsection>
+    <title>Proof of One of the Distributive Laws in <xref ref="T_algebraofsets"></xref></title>
+    <p>
+      We will now prove the distributive law explored in <xref ref="prog_workingvenn3"></xref>.
+      Notice that we will prove two subset relations,
+      and that for each subset relation,
+      we will begin by choosing an arbitrary element from a set.
+      Also notice how nicely a proof dealing with the union of two sets can be broken into cases.
+    </p>
+    <proof>
+      <p>
+        Let <m>A</m>, <m>B</m>,
+        and <m>C</m> be subsets of some universal set <m>U</m>.
+        We will prove that <m>A \cup \left( {B \cap C} \right) = \left( {A \cup B} \right) 
+        \cap \left( {A \cup C} \right)</m> by proving that each set is a subset of the other set.
+      </p>
+      <p>
+        We will first prove that <m>A \cup \left( {B \cap C} \right) \subseteq \left( {A \cup B} 
+        \right) \cap \left( {A \cup C} \right)</m>.
+        We let
+        <m>x \in A \cup \left( {B \cap C} \right)</m>.
+        Then <m>x \in A\text{ or } x \in B \cap C</m>.
+      </p>
+      <p>
+        So in one case, if <m>x \in A</m>,
+        then <m>x \in A \cup B</m> and <m>x \in A \cup C</m>.
+        This means that <m>x \in \left( {A \cup B} \right) \cap \left( {A \cup C} \right)</m>.
+      </p>
+      <p>
+        On the other hand, if <m>x \in B \cap C</m>,
+        then <m>x \in B</m> and <m>x \in C</m>.
+        But <m>x \in B</m> implies that <m>x \in A \cup B</m>,
+        and <m>x \in C</m> implies that <m>x \in A \cup C</m>.
+        Since <m>x</m> is in both sets,
+        we conclude that <m>x \in \left( {A \cup B} \right) \cap \left( {A \cup C} \right)</m>.
+        So in both cases,
+        we see that <m>x \in \left( {A \cup B} \right) \cap \left( {A \cup C} \right)</m>,
+        and this proves that <m>A \cup \left( {B \cap C} \right) \subseteq \left( {A \cup B} \right) 
+        \cap \left( {A \cup C} \right)</m>.
+      </p>
+      <p>
+        We next prove that <m>\left( {A \cup B} \right) \cap \left( {A \cup C} \right) 
+        \subseteq A \cup \left( {B \cap C} \right)</m>.
+        So let
+        <m>y \in \left( {A \cup B} \right) \cap \left( {A \cup C} \right)</m>.
+        Then, <m>y \in A \cup B\text{ and } y \in A \cup C</m>.
+        We must prove that <m>y \in A \cup \left( {B \cap C} \right)</m>.
+        We will consider the two cases where <m>y \in A</m> or <m>y \notin A</m>.
+        In the case where <m>y \in A</m>,
+        we see that <m>y \in A \cup \left( {B \cap C} \right)</m>.
+      </p>
+      <p>
+        So we consider the case that <m>y \notin A</m>.
+        It has been established that
+        <m>y \in A \cup B</m> and <m>y \in A \cup C</m>.
+        Since <m>y \notin A</m> and <m>y \in A \cup B</m>,
+        <m>y</m> must be an element of <m>B</m>.
+        Similarly, since <m>y \notin A</m> and <m>y \in A \cup C</m>,
+        <m>y</m> must be an element of <m>C</m>.
+        Thus, <m>y \in B \cap C</m> and,
+        hence, <m>y \in A \cup \left( {B \cap C} \right)</m>.
+      </p>
+      <p>
+        In both cases,
+        we have proved that <m>y \in A \cup \left( {B \cap C} \right)</m>.
+        This proves that <m>\left( {A \cup B} \right) \cap \left( {A \cup C} \right) 
+        \subseteq A \cup \left( {B \cap C} \right)</m>.
+        The two subset relations establish the equality of the two sets.
+        Thus, <m>A \cup \left( {B \cap C} \right) = \left( {A \cup B} \right) 
+        \cap \left( {A \cup C} \right)</m>. <m>\blacksquare</m>
+      </p>
+    </proof>
+  </subsection>
+
+  <subsection>
+    <title>Important Properties of Set Complements</title>
+    <p>
+      The three main set operations are union,
+      intersection, and complementation.
+      <xref ref="T_algebraofsets">Theorems</xref>
+      and <xref ref="T_intersectandunion"></xref>
+      deal with properties of unions and intersections.
+      The next theorem states some basic properties of complements and the important relations 
+      dealing with complements of unions and complements of intersections.
+      Two relationships in the next theorem are known as
+      <term>De Morgan's Laws</term>
+      for sets and are closely related to De Morgan's Laws for statements.
+    </p>
+    <theorem xml:id="T_propsofcomplements">
+      <statement>
+        <p>
+          Let <m>A</m> and <m>B</m> be subsets of some universal set <m>U</m>.
+          Then the following are true:
+          <dl>
+            <li>
+              <title>Basic Properties</title>
+              <p>
+                <m>\left( A^c \right)^c = A</m>
+              </p>
+              <p>
+                <m>A - B = A \cap B^c</m>
+              </p>
+            </li>
+            <li>
+              <title>Empty Set and Universal Set</title>
+              <p>
+                <m>A - \emptyset = A</m> and <m>A - U = \emptyset</m>
+              </p>
+              <p>
+                <m>{\emptyset}^c = U</m> and <m>U^c = \emptyset</m>
+              </p>
+            </li>
+            <li>
+              <title>De Morgan's Laws</title>
+              <idx><h>De Morgan's Laws</h><h>for sets</h></idx>
+              <p>
+                <m>\left ({A \cap B} \right)^c = A^c \cup B^c</m>
+              </p>
+              <p>
+                <m>\left ({A \cup B} \right)^c = A^c \cap B^c</m>
+              </p>
+            </li>
+            <li>
+              <title>Subsets and Complements</title>
+              <p>
+                <m>A \subseteq B \text{ if and only if } B^c \subseteq A^c</m>
+              </p>
+            </li>
+          </dl>
+        </p>
+      </statement>
+    
+    <proof>
+      <p>
+        We will only prove one of De Morgan's Laws, namely,
+        the one that was explored in <xref ref="PA_workingwithvenn2">Beginning Activty 1</xref>.
+        The proofs of the other parts are left as exercises.
+        Let <m>A</m> and <m>B</m> be subsets of some universal set <m>U</m>.
+        We will prove that <m>\left( {A \cup B} \right)^c  = A^c  \cap B^c</m> by proving 
+        that an element is in
+        <m>\left( {A \cup B} \right)^c</m> if and only if it is in <m>A^c  \cap B^c</m>.
+        So let <m>x</m> be in the universal set <m>U</m>.
+        Then
+        <men xml:id="eq_4d">
+          x \in \left( {A \cup B} \right)^c \text{  if and only if  }  x \notin A \cup B
+        </men>,
+        and
+        <men xml:id="eq_4e">
+          x \notin A \cup B\text{  if and only if  } x \notin A\text{  and  } x \notin B
+        </men>.
+
+        Combining<nbsp/><xref ref="eq_4d"/> and<nbsp/><xref ref="eq_4e"/>, we see that
+        <men xml:id="eq_4f">
+          x \in \left( {A \cup B} \right)^c \text{  if and only if  } x \notin A\text{  and  } x \notin B
+        </men>.
+
+        In addition, we know that
+        <men xml:id="eq_4g">
+          x \notin A \text{  and  }  x \notin B \text{  if and only if  }  x \in A^c \text{  and  }  x \in B^c
+        </men>,
+        and this is true if and only if <m>x \in A^c  \cap B^c</m>.
+        So we can use<nbsp/><xref ref="eq_4f"/> and<nbsp/><xref ref="eq_4g"/> to conclude that
+        <me>
+          x \in \left( {A \cup B} \right)^c \text{  if and only if  } x \in A^c  \cap B^c
+        </me>,
+        and, hence, that <m>\left( {A \cup B} \right)^c  = A^c  \cap B^c</m>. <m>\blacksquare</m>
+      </p>
+    </proof>
+    </theorem>
+
+
+
+      <exercise xml:id="A_usingalgebrasets1">
+        <statement>
+          <p>
+            Draw two general Venn diagrams for the sets <m>A</m>, <m>B</m>,
+            and <m>C</m>.
+            On one, shade the region that represents <m>\left( {A \cup B} \right) - C</m>,
+            and on the other,
+            shade the region that represents <m>\left( {A - C} \right) \cup \left( {B - C} \right)</m>.
+            Explain carefully how you determined these regions and why they indicate that <m>\left( {A \cup B} \right) - C = \left( {A - C} \right) \cup \left( {B - C} \right)</m>.
+          </p>
+        </statement>
+      </exercise>
+      <p>
+        It is possible to prove the relationship suggested in <xref ref="A_usingalgebrasets1"/> 
+        by proving that each set is a subset of the other set.
+        However, the results in <xref ref="T_algebraofsets">Theorems</xref>
+        and <xref ref="T_propsofcomplements"></xref>
+        can be used to prove other results about set operations.
+        When we do this,
+        we say that we are using the algebra of sets to prove the result.
+        For example,
+        we can start by using one of the basic properties in 
+        <xref ref="T_propsofcomplements"></xref> to write
+        <me>
+          \left( {A \cup B} \right) - C = \left( {A \cup B} \right) \cap C^c
+        </me>.
+      </p>
+      <p>
+        We can then use one of the commutative properties to write
+        <md>
+          <mrow>\left( {A \cup B} \right) - C \amp = \left( {A \cup B} \right) \cap C^c</mrow>
+          <mrow>\amp = C^c  \cap \left( {A \cup B} \right)</mrow>
+        </md>.
+      </p>
+        <exercise xml:id="A_usingalgebrasets2">
+          <statement>
+            <p>
+              Determine which properties from <xref ref="T_algebraofsets"></xref>
+              and <xref ref="T_propsofcomplements"></xref>
+              justify each of the last three steps in the following outline of the proof 
+              that <m>\left( {A \cup B} \right) - C = \left( {A - C} \right) \cup \left( {B - C} 
+              \right)</m>.
+              <md>
+                <mrow>\left( {A \cup B} \right) - C \amp = \left( {A \cup B} \right) \cap C^c \amp  \text{ (<xref ref="T_propsofcomplements"></xref>) }</mrow>
+                <mrow>\amp = C^c  \cap \left( {A \cup B} \right) \amp \text{ (Commutative Property) }</mrow>
+                <mrow>\amp = \left( C^c \cap A \right) \cup \left( C^c \cap B \right)</mrow>
+                <mrow>\amp = \left( A \cap C^c \right) \cup \left( B \cap C^c \right)</mrow>
+                <mrow>\amp = \left( A - C \right) \cup \left( B - C \right)</mrow>
+              </md>
+            </p>
+            <p>
+              Note: It is sometimes difficult to use the properties in the theorems when 
+              the theorems use the same letters to represent the sets as those being used in 
+              the current problem.
+              For example,
+              one of the distributive properties from <xref ref="T_algebraofsets"></xref>
+              can be written as follows: For all sets <m>X</m>, <m>Y</m>,
+              and <m>Z</m> that are subsets of a universal set <m>U</m>,
+              <me>
+                X \cap \left( Y \cup Z \right) = \left( X \cap Y \right) \cup \left( X \cap Z \right)
+              </me>.
+            </p>
+          </statement>
+        </exercise>
+
+  </subsection>
+
+  <subsection>
+    <title>Proving that Statements Are Equivalent</title>
+    <p>
+      When we have a list of three statements <m>P</m>, <m>Q</m>,
+      and <m>R</m> such that each statement in the list is equivalent to the other two statements 
+      in the list,
+      we say that the three statements are equivalent.
+      This means that each of the statements in the list implies each of the other statements 
+      in the list.
+    </p>
+    <p>
+      The purpose of <xref ref="PA_provingequiv">Beginning Activity 2</xref>
+      was to provide one way to prove that three
+      (or more)
+      statements are equivalent.
+      The basic idea is to prove a sequence of conditional statements so that there is an 
+      unbroken chain of conditional statements from each statement to every other statement.
+      This method of proof will be used in <xref ref="T_subsetequivs"></xref>.
+    </p>
+    <theorem xml:id="T_subsetequivs">
+      <statement>
+        <p>
+          Let <m>A</m> and <m>B</m> be subsets of some universal set <m>U</m>.
+          The following are equivalent:
+          <ol cols="3">
+            <li xml:id="T_subsetitem1">
+              <p>
+                <m>A \subseteq B</m>
+              </p>
+            </li>
+            <li xml:id="T_subsetitem2">
+              <p>
+                <m>A \cap B^c = \emptyset</m>
+              </p>
+            </li>
+            <li xml:id="T_subsetitem3">
+              <p>
+                <m>A^c \cup B = U</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+   
+    <proof>
+      <p>
+        To prove that these are equivalent conditions,
+        we will prove that <xref ref="T_subsetitem1"/> implies <xref ref="T_subsetitem2"/>,
+        that <xref ref="T_subsetitem2"/> implies <xref ref="T_subsetitem3"/>,
+        and that <xref ref="T_subsetitem3"/> implies <xref ref="T_subsetitem1"/>.
+      </p>
+      <p>
+        Let <m>A</m> and <m>B</m> be subsets of some universal set <m>U</m>.
+        We have proved that <xref ref="T_subsetitem1"/> implies <xref ref="T_subsetitem2"/> 
+        in <xref ref="P_subsetprop"></xref>.
+      </p>
+      <p>
+        To prove that <xref ref="T_subsetitem2"/> implies <xref ref="T_subsetitem3"/>,
+        we will assume that <m>A \cap B^c  = \emptyset</m> and use the fact that 
+        <m>\emptyset^c = U</m>.
+        We then see that
+        <me>
+          \left( {A \cap B^c} \right)^c  = \emptyset^c
+        </me>.
+
+        Then, using one of De Morgan's Laws, we obtain
+        <md>
+          <mrow>A^c \cup \left(B^c \right)^c \amp = U</mrow>
+          <mrow>A^c \cup B \amp  = U</mrow>
+        </md>
+      </p>
+      <p>
+        This completes the proof that <xref ref="T_subsetitem2"/> implies 
+        <xref ref="T_subsetitem3"/>.
+      </p>
+      <p>
+        We now need to prove that <xref ref="T_subsetitem3"/> implies <xref ref="T_subsetitem1"/>.
+        We assume that <m>A^c \cup B = U</m> and will prove that
+        <m>A \subseteq B</m> by proving that every element of <m>A</m> must be in <m>B</m>.
+      </p>
+      <p>
+        So let <m>x \in A</m>.
+        Then we know that <m>x \notin A^c</m>.
+        However, <m>x \in U</m> and since <m>A^c \cup B = U</m>,
+        we can conclude that <m>x \in A^c \cup B</m>.
+        Since <m>x \notin A^c</m>, we conclude that <m>x \in B</m>.
+        This proves that <m>A \subseteq B</m> and hence that 
+        <xref ref="T_subsetitem3"/> implies <xref ref="T_subsetitem1"/>.
+      </p>
+      <p>
+        Since we have now proved that <xref ref="T_subsetitem1"/> implies <xref ref="T_subsetitem2"/>,
+        that <xref ref="T_subsetitem2"/> implies <xref ref="T_subsetitem3"/>,
+        and that <xref ref="T_subsetitem3"/> implies <xref ref="T_subsetitem1"/>,
+        we have proved that the three conditions are equivalent. <m>\blacksquare</m>
+      </p>
+    </proof>
+    </theorem>
+  </subsection>
+
+  <exercises>
+
+    <exercise xml:id="exer_sec43-1">
+      <introduction>
+        <p>
+          Let <m>A</m> be a subset of some universal set <m>U</m>.
+          Prove each of the following (from <xref ref="T_propsofcomplements"></xref>):
+        </p>
+      </introduction>
+      
+      <task>
+        <p>
+          <m>\left( A^c \right)^c = A</m>
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>A - \emptyset = A</m>
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>\emptyset^c = U</m>
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>U^c = \emptyset</m>
+        </p>
+      </task>
+    </exercise>
+
+    <exercise xml:id="exer_distributive">
+      <statement>
+        <p>
+          Let  <m>A</m>, <m>B</m>,
+          and  <m>C</m>  be subsets of some universal set  <m>U</m>.
+          As part of <xref ref="T_algebraofsets"></xref>,
+          we proved one of the distributive laws.
+          Prove the other one.
+          That is, prove that
+          <me>
+            A \cap \left( {B \cup C} \right) = \left( {A \cap B} \right) \cup 
+            \left( {A \cap C} \right)\!
+          </me>.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_demorgan">
+      <statement>
+        <p>
+          Let <m>A</m>, <m>B</m>,
+          and <m>C</m>  be subsets of some universal set  <m>U</m>.
+          As part of <xref ref="T_propsofcomplements"></xref>,
+          we proved one of De Morgan's Laws.
+          Prove the other one.
+          That is, prove that
+          <me>
+            \left( {A \cap B} \right)^c  = A^c  \cup B^c
+          </me>.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_sec43-5">
+      <introduction>
+        <p>
+          Let <m>A</m>, <m>B</m>,
+          and <m>C</m> be subsets of some universal set <m>U</m>.
+        </p>
+      </introduction>
+
+      <task xml:id="exer_sec43-setdiff">
+        <p>
+          Draw two general Venn diagrams for the sets <m>A</m>, <m>B</m>,
+          and <m>C</m>.
+          On one, shade the region that represents <m>A - \left( {B \cup C} \right)</m>,
+          and on the other,
+          shade the region that represents <m>\left( {A - B} \right) \cap \left( {A - C} \right)</m>.
+          Based on the Venn diagrams,
+          make a conjecture about the relationship between the sets
+          <m>A - \left( {B \cup C} \right)</m> and 
+          <m>\left( {A - B} \right) \cap \left( {A - C} \right)</m>.
+        </p>
+      </task>
+      <task>
+        <p>
+          Use the choose-an-element method to prove the conjecture from 
+          <xref ref="exer_sec43-setdiff"/>.
+        </p>
+      </task>
+      <task>
+        <p>
+          Use the algebra of sets to prove the conjecture from <xref ref="exer_sec43-setdiff"/>.
+        </p>
+      </task>
+    </exercise>
+
+    <exercise xml:id="exer_sec43-6">
+      <introduction>
+        <p>
+          Let <m>A</m>, <m>B</m>,
+          and <m>C</m> be subsets of some universal set <m>U</m>.
+        </p>
+      </introduction>
+
+      <task xml:id="exer_sec43-setdiff2">
+        <p>
+          Draw two general Venn diagrams for the sets <m>A</m>, <m>B</m>,
+          and <m>C</m>.
+          On one, shade the region that represents <m>A - \left( {B \cap C} \right)</m>,
+          and on the other,
+          shade the region that represents <m>\left( {A - B} \right) \cup \left( {A - C} \right)</m>.
+          Based on the Venn diagrams,
+          make a conjecture about the relationship between the sets
+          <m>A - \left( {B \cap C} \right)</m> and 
+          <m>\left( {A - B} \right) \cup \left( {A - C} \right)</m>.
+        </p>
+      </task>
+      <task>
+        <p>
+          Use the choose-an-element method to prove the conjecture from 
+          <xref ref="exer_sec43-setdiff2"/>.
+        </p>
+      </task>
+      <task>
+        <p>
+          Use the algebra of sets to prove the conjecture from <xref ref="exer_sec43-setdiff2"/>.
+        </p>
+      </task>
+    </exercise>
+
+    <exercise xml:id="exer53_exer6">
+      <introduction>
+        <p>
+          Let <m>A</m>, <m>B</m>,
+          and <m>C</m> be subsets of some universal set <m>U</m>.
+          Prove or disprove each of the following:
+        </p>
+      </introduction>
+
+      <task>
+        <p>
+          <m>\left( A \cap B \right) - C = \left( A - C \right) \cap \left( B - C \right)</m>
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>\left( A \cup B \right) - \left( A \cap B \right) = \left( A - B \right) \cup 
+          \left(B - A \right)</m>
+        </p>
+      </task>
+    </exercise>
+
+    <exercise xml:id="exer_sec43-setdiff3x">
+      <introduction>
+        <p>
+          Let <m>A</m>, <m>B</m>,
+          and <m>C</m> be subsets of some universal set <m>U</m>.
+        </p>
+      </introduction>
+
+      <task xml:id="exer_sec43-setdiff3">
+        <p>
+          Draw two general Venn diagrams for the sets <m>A</m>, <m>B</m>,
+          and <m>C</m>.
+          On one, shade the region that represents <m>A - \left( {B - C} \right)</m>,
+          and on the other,
+          shade the region that represents <m>\left( {A - B} \right) - C</m>.
+          Based on the Venn diagrams,
+          make a conjecture about the relationship between the sets 
+          <m>A - \left( {B - C} \right)</m> and
+          <m>\left( {A - B} \right) - C</m>. (Are the two sets equal?
+          If not, is one of the sets a subset of the other set?)
+        </p>
+      </task>
+      <task>
+        <p>
+          Prove the conjecture from <xref ref="exer_sec43-setdiff3"/>.
+        </p>
+      </task>
+    </exercise>
+
+    <exercise xml:id="exer_sec43-setdiff3x-2">
+      <introduction>
+        <p>
+          Let <m>A</m>, <m>B</m>,
+          and <m>C</m> be subsets of some universal set <m>U</m>.
+        </p>
+      </introduction>
+
+      <task xml:id="exer_sec43-setdiff3a">
+        <p>
+          Draw two general Venn diagrams for the sets <m>A</m>, <m>B</m>,
+          and <m>C</m>.
+          On one, shade the region that represents <m>A - \left( {B - C} \right)</m>,
+          and on the other,
+          shade the region that represents <m>\left( {A - B} \right) \cup \left( A - C^c \right)</m>.
+          Based on the Venn diagrams,
+          make a conjecture about the relationship between the sets <m>A - \left( {B - C} \right)</m> and
+          <m>\left( {A - B} \right) \cup \left( A - C^c \right)</m>. (Are the two sets equal?
+          If not, is one of the sets a subset of the other set?)
+        </p>
+      </task>
+      <task>
+        <p>
+          Prove the conjecture from <xref ref="exer_sec43-setdiff3a"/>.
+        </p>
+      </task>
+    </exercise>
+
+    <exercise xml:id="exer_sec43-7">
+      <introduction>
+        <p>
+          Let <m>A</m> and <m>B</m> be subsets of some universal set <m>U</m>.
+        </p>
+      </introduction>
+      
+      <task>
+        <p>
+          Prove that <m>A</m> and <m>B - A</m> are disjoint sets.
+        </p>
+      </task>
+      <task>
+        <p>
+          Prove that <m>A \cup B = A \cup \left( {B - A} \right)</m>.
+        </p>
+      </task>
+    </exercise>
+
+    <exercise xml:id="exer_sec43-8">
+      <introduction>
+        <p>
+          Let <m>A</m> and <m>B</m> be subsets of some universal set <m>U</m>.
+        </p>
+      </introduction>
+
+      <task>
+        <p>
+          Prove that <m>A - B</m> and <m>A \cap B</m> are disjoint sets.
+        </p>
+      </task>
+      <task>
+        <p>
+          Prove that <m>A = \left( {A - B} \right) \cup \left( {A \cap B} \right)</m>.
+        </p>
+      </task>
+    </exercise>
+
+    <exercise>
+      <introduction>
+        <p>
+          Let <m>A</m> and <m>B</m> be subsets of some universal set <m>U</m>.
+          Prove or disprove each of the following:
+        </p>
+      </introduction>
+
+      <task>
+        <p>
+          <m>A - \left(A \cap B^c \right) = A \cap B</m>
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>\left( A^c \cup B \right)^c \cap A = A - B</m>
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>\left( A \cup B \right) - A = B - A</m>
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>\left( A \cup B \right) - B = A - \left( A \cap B \right)</m>
+        </p>
+      </task>
+    </exercise>
+
+    <exercise>
+      <title>Evaluation of Proofs</title>
+      <introduction>
+        <p>
+          See the instructions for <xref ref="exer_proofeval"></xref>
+          from <xref ref="S_directproof"></xref>.
+        </p>
+      </introduction>
+
+      <task>
+        <p>
+          If <m>A</m>, <m>B</m>,
+          and <m>C</m> are subsets of some universal set <m>U</m>,
+          then <m>A - \left( B - C \right) = A - \left(B \cup C \right)</m>.
+          <proof>
+            <md>
+              <mrow>A - \left( B - C \right) \amp = \left(A - B \right) - \left( A - C \right)</mrow>
+              <mrow> \amp = \left( A \cap B^c \right) \cap \left(A \cap C^c \right)</mrow>
+              <mrow> \amp = A \cap \left( B^c \cap C^c\right)</mrow>
+              <mrow> \amp = A \cap \left( B \cup C \right)^c</mrow>
+              <mrow> \amp </mrow>
+              = A - \left( B \cup C \right)
+            </md>
+            <m>\blacksquare</m>
+          </proof>
+        </p>
+      </task>
+      <task>
+        <p>
+          If <m>A</m>, <m>B</m>,
+          and <m>C</m> are subsets of some universal set <m>U</m>,
+          then <m>A - \left(B \cup C \right) = \left(A - B \right) \cap \left(A - C \right)</m>.
+          <proof>
+            <p>
+              We first write <m>A - \left(B \cup C \right) = A \cap \left(B \cup C \right)^c</m> 
+              and then use one of De Morgan's Laws to obtain
+              <me>
+                A - \left(B \cup C \right)= A \cap \left(B^c \cap C^c \right)
+              </me>.
+              We now use the fact that <m>A = A \cap A</m> and obtain
+            </p>
+            <p>
+              <m>A - \left(B \cup C \right)= A \cap A \cap B^c \cap C^c = \left(A \cap B^c \right) 
+              \cap \left(A \cap C^c \right) = \left(A - B \right) \cap \left(A - C \right)</m>.
+              <m>\blacksquare</m>
+            </p>
+          </proof>
+        </p>
+      </task>
+    </exercise>
+
+    <activity>
+      <title>Comparison to Properties of the Real Numbers</title>
+      
+      <introduction>
+        <p>
+          The following are some of the basic properties of addition and multiplication of real numbers.
+          <dl>
+            <li>
+              <title>Commutative Laws:</title>
+              <idx><h>commutative laws</h><h>for real numbers</h></idx>
+              <p>
+                <m>a+b=b+a</m>, for all <m>a,b \in \mathbb{R}</m>.
+              </p>
+              <p>
+                <m>a \cdot b=b \cdot a</m>, for all <m>a,b \in \mathbb{R}</m>.
+              </p>
+            </li>
+            <li>
+              <title>Associative Laws:</title>
+              <idx><h>associative laws</h><h>for real numbers</h></idx>
+              <p>
+                <m>\left( {a + b} \right) + c = a + \left( {b + c} \right)</m>, 
+                for all <m>a,b,c \in \mathbb{R}</m>.
+              </p>
+              <p>
+                <m>\left( {a \cdot b} \right) \cdot c = a \cdot \left( {b \cdot c} \right)</m>, 
+                for all <m>a,b,c \in \mathbb{R}</m>.
+              </p>
+            </li>
+            <li>
+              <title>Distributive Law:</title>
+              <idx><h>distributive laws</h><h>for real numbers</h></idx>
+              <p>
+                <m>a \cdot \left( {b + c} \right) = a \cdot b + a \cdot c</m>, for all 
+                <m>a,b,c \in \mathbb{R}</m>.
+              </p>
+            </li>
+            <li>
+              <title>Additive Identity</title>
+              <idx><h>additive identity</h></idx>
+              <p>
+                For all <m>a \in \mathbb{R}</m>, <m>a + 0 = a = 0 + a</m>.
+              </p>
+            </li>
+            <li>
+              <title>Multiplicative Identity:</title>
+              <idx><h>multiplicative identity</h></idx>
+              <p>
+                For all <m>a \in \mathbb{R}</m>, <m>a \cdot 1 = a = 1 \cdot a</m>.
+              </p>
+            </li>
+            <li>
+              <title>Additive Inverses:</title>
+              <idx><h>additive inverse</h></idx>
+              <p>
+                For all <m>a \in \mathbb{R}</m>, <m>a + ( - a) = 0 = ( - a) + a</m>.
+              </p>
+            </li>
+            <li>
+              <title>Multiplicative Inverses:</title>
+              <idx><h>multiplicative inverse</h></idx>
+              <p>
+                For all <m>a \in \mathbb{R}</m> with <m>a \ne 0</m>, 
+                <m>a \cdot a^{ - 1} = 1 = a^{ - 1} \cdot a</m>.
+              </p>
+            </li>
+          </dl>
+          Discuss the similarities and differences among the properties of addition and 
+          multiplication of real numbers and the properties of union and intersection of sets.
+        </p>
+      </introduction>
+    </activity>
+    
+  </exercises>
+
+</section>

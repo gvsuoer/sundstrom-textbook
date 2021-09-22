@@ -1,0 +1,1551 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<section xml:id="S_typesoffunctions">
+  <title>Beginning Activity 1: Injections, Surjections, and Bijections</title>
+  <introduction>
+    <p>
+      Functions are frequently used in mathematics to define and describe certain relationships 
+      between sets and other mathematical objects.
+      In addition,
+      functions can be used to impose certain mathematical structures on sets.
+      In this section,
+      we will study special types of functions that are used to describe these relationships 
+      that are called injections and surjections.
+      Before defining these types of functions,
+      we will revisit what the definition of a function tells us and explore certain functions 
+      with finite domains.
+    </p>
+  </introduction>
+  
+    <worksheet xml:id="PA_functionswithfinitedom">
+      <title>Functions with Finite Domains</title>
+      <p>
+        Let <m>A</m> and <m>B</m> be sets.
+        Given a function <m>f\x A \to B</m>, we know the following:
+        <ul>
+          <li>
+            <p>
+              For every <m>x \in A</m>, <m>f( x ) \in B</m>.
+              That is, every element of <m>A</m> is an input for the function <m>f</m>.
+              This could also be stated as follows: For each <m>x \in A</m>,
+              there exists a <m>y \in B</m> such that <m>y = f( x )</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              For a given <m>x \in A</m>,
+              there is exactly one <m>y \in B</m> such that <m>y = f( x )</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+      <p>
+        The definition of a function does not require that different inputs produce different outputs.
+        That is, it is possible to have <m>x_1 , x_2 \in A</m> with
+        <m>x_1 \ne x_2</m> and <m>f( {x_1 } ) = f( {x_2 } )</m>.
+        The arrow diagram for the function <m>f</m> in <xref ref="fig_arrow63-1new"></xref> 
+        illustrates such a function.
+      </p>
+
+      <p>
+        Also, the definition of a function does not require that the range of the function must 
+        equal the codomain.
+        The range is always a subset of the codomain,
+        but these two sets are not required to be equal.
+        That is, if <m>g\x A \to B</m>,
+        then it is possible to have a <m>y \in B</m> such that
+        <m>g( x ) \ne y</m> for all <m>x \in A</m>.
+        The arrow diagram for the function <m>g</m> in <xref ref="fig_arrow63-1new"></xref> 
+        illustrates such a function.
+      </p>
+      <figure xml:id="fig_arrow63-1new">
+        <caption>Arrow Diagram for Two Functions</caption>
+        <image width="73%" source="assets/figps-arrow63-1new.svg"/>
+      </figure>
+      <p>
+        Now let <m>A = \left\{ {1,2,3} \right\}</m>,
+        <m>B = \left\{ {a,b,c,d} \right\}</m>,
+        and <m>C = \left\{ {s,t} \right\}</m>.
+        Define
+      </p>
+      <tabular halign="center">
+        <row>
+          <cell right="medium"><m>f\x A \to B</m> by</cell>
+          <cell right="medium"><m>g\x A \to B</m> by</cell>
+          <cell><m>h\x A \to C</m> by</cell>
+        </row>
+        <row>
+          <cell right="medium"><m>f( 1 ) = a</m></cell>
+          <cell right="medium"><m>g( 1 ) = a</m></cell>
+          <cell><m>h( 1 ) = s</m></cell>
+        </row>
+        <row>
+          <cell right="medium"><m>f( 2 ) = b</m></cell>
+          <cell right="medium"><m>g( 2 ) = b</m></cell>
+          <cell><m>h( 2 ) = t</m></cell>
+        </row>
+        <row>
+          <cell right="medium"><m>f( 3 ) = c</m></cell>
+          <cell right="medium"><m>g( 3 ) = a</m></cell>
+          <cell><m>h( 3 ) = s</m></cell>
+        </row>
+      </tabular>
+
+      <exercise>
+        <statement>
+          <p>
+            Which of these functions satisfy the following property for a function <m>F</m>?
+            <blockquote>
+              For all <m>x, y \in \text{ dom} ( F )</m>, if <m>x \ne y</m>, then <m>F(x) \ne F(y)</m>.
+            </blockquote>
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Which of these functions satisfy the following property for a function <m>F</m>?
+            <blockquote>
+              For all <m>x, y \in \text{ dom} ( F )</m>, if <m>F( x ) = F( y )</m>, then 
+              <m>x = y</m>.
+            </blockquote>
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Determine the range of each of these functions.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Which of these functions have their range equal to their codomain?
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Which of the these functions satisfy the following property for a function <m>F</m>?
+            <blockquote>
+              For all <m>y</m> in the codomain of <m>F</m>, there exists an 
+              <m>x \in \text{ dom} ( F )</m> such that <m>F( x ) = y</m>.
+            </blockquote>
+          </p>
+        </statement>
+      </exercise>
+
+    </worksheet>
+
+    <worksheet xml:id="PA_functionstatements">
+      <title>Beginning Activity 2: Statements Involving Functions</title>
+      <p>
+        Let <m>A</m> and <m>B</m> be nonempty sets and let <m>f\x A \to B</m>.
+        In <xref ref="PA_functionswithfinitedom">Beginning Activity 1</xref>,
+        we determined whether or not certain functions satisfied some specified properties.
+        These properties were written in the form of statements,
+        and we will now examine these statements in more detail.
+      </p>
+      <exercise xml:id="PA_funtionstatements1">
+        <introduction>
+          <p>
+            Consider the following statement:
+
+          <blockquote>
+            For all <m>x, y \in A</m>, if <m>x \ne y</m>, then <m>f ( x ) \ne f ( y )</m>.
+          </blockquote>
+          </p>
+        </introduction>
+          
+            <task>
+              <p>
+                Write the contrapositive of this conditional statement.
+              </p>
+            </task>
+            <task>
+              <p>
+                Write the negation of this conditional statement.
+              </p>
+            </task>
+         
+        </exercise>
+        <exercise xml:id="PA_functionstatements2">
+          <statement>
+          <p>
+            Now consider the statement:
+            <blockquote>
+              For all <m>y \in B</m>, there exists an <m>x \in A</m> such that <m>f ( x ) = y</m>.
+            </blockquote>
+          
+          Write the negation of this statement.
+          </p>
+          </statement>
+        </exercise>
+        <exercise xml:id="PA_functionstatements3">
+          <statement>
+          <p>
+            Let <m>g:\R \to \R</m> be defined by
+            <m>g ( x ) = 5x + 3</m>, for all <m>x \in \R</m>.
+            Complete the following proofs of the following propositions about the function <m>g</m>.
+          
+          
+            <proposition>
+              <title>Propostion 1</title>
+              <statement>
+                <p>
+                  For all <m>a,
+                  b \in \R</m>, if <m>g ( a ) = g ( b )</m>, then <m>a = b</m>.
+                </p>
+              </statement>
+              <proof>
+                <p>
+                  We let <m>a, b \in \R</m>,
+                  and we assume that <m>g ( a ) = g ( b )</m> and will prove that <m>a = b</m>.
+                  Since <m>g(a) = g(b)</m>, we know that
+                  <me>
+                    5a + 3 = 5b + 3
+                  </me>.
+                  (Now prove that in this situation,
+                  <m>a = b</m>.)
+                </p>
+              </proof>
+            </proposition>
+
+            <proposition>
+              <title>Proposition 2</title>
+              <statement>
+                <p>
+                  For all <m>b \in \R</m>,
+                  there exists an <m>a \in \R</m> such that <m>g ( a ) = b</m>.
+                </p>
+              </statement>
+              <proof>
+                <p>
+                  We let <m>b \in \R</m>.
+                  We will prove that there exists an <m>a \in \R</m> such that
+                  <m>g ( a ) = b</m> by constructing such an <m>a</m> in <m>\R</m>.
+                  In order for this to happen,
+                  we need <m>g(a) = 5a + 3 = b</m>. 
+                </p>
+                <p>
+                  (Now solve the equation for <m>a</m> and then 
+                  show that for this real number <m>a</m>,
+                  <m>g ( a ) = b</m>.)
+                </p>
+              </proof>
+            </proposition>
+            
+          </p>
+          </statement>
+        </exercise>
+    </worksheet>
+
+  <subsection>
+    <title>Injections</title>
+    <p>
+      In previous sections and in <xref ref="PA_functionswithfinitedom">Beginning Activity 1</xref>,
+      we have seen examples of functions for which there exist different inputs that produce 
+      the same output.
+      Using more formal notation,
+      this means that there are functions
+      <m>f:A \to B</m> for which there exist \mbox{<m>x_1 , x_2 \in A</m>} with
+      <m>x_1 \ne x_2</m> and <m>f( {x_1 } ) = f( {x_2 } )</m>.
+      The work in the beginning activities was intended to motivate the following definition.
+    </p>
+    <definition xml:id="injection">
+      <statement>
+        <p>
+          Let <m>f:A \to B</m> be a function from the set <m>A</m> to the set <m>B</m>.
+          The function <m>f</m> is called an <term>injection</term>
+              <idx><h>injection</h></idx>
+          provided that 
+          <blockquote>
+            for all <m>x_1 , x_2 \in A</m>,
+            if <m>x_1 \ne x_2</m>, then <m>f( {x_1 } ) \ne f( {x_2 } )</m>.
+          </blockquote>
+          When <m>f</m> is an injection,
+          we also say that <m>f</m> is a <term>one-to-one function</term>,
+              <idx><h>one-to-one function</h></idx>
+              <idx><h>function</h><h>one-to-one</h></idx>
+          or that <m>f</m> is an <term>injective function</term>.
+              <idx><h>function</h><h>injective</h></idx>
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Notice that the condition that specifies that a function <m>f</m> is an injection is given 
+      in the form of a conditional statement.
+      As we shall see, in proofs,
+      it is usually easier to use the contrapositive of this conditional statement.
+      Although we did not define the term then,
+      we have already written the contrapositive for the conditional statement in the definition 
+      of an injection in <xref ref="PA_functionstatements1">Exercise</xref> of 
+      <xref ref="PA_functionstatements">Beginning Activity 2</xref>.
+      In that activity,
+      we also wrote the negation of the definition of an injection.
+      Following is a summary of this work giving the conditions for <m>f</m> being an injection 
+      or not being an injection.
+    </p>
+
+    <!-- tk Made this an insight (which is renamed Summary). Something to come back to. -->
+    <insight>
+      <p>
+        Let <m>\boldsymbol{f\x A \to B}</m>.
+      </p>
+      <p>
+        <q>The function <m>\boldsymbol{f}</m> is an injection</q>
+        means that
+
+        <ul>
+        <li>
+          <p>
+            For all <m>x_1 , x_2 \in A</m>,
+            if <m>x_1 \ne x_2</m>, then <m>f( {x_1 } ) \ne f( {x_2 } )</m>; or
+          </p>
+        </li>
+        <li>
+          <p>
+            For all <m>x_1 , x_2 \in A</m>,
+            if <m>f( {x_1 } ) = f( {x_2 } )</m>, then <m>x_1 = x_2</m>.
+          </p>
+        </li>
+      </ul>
+      </p>
+      <p>
+        <q>The function <m>\boldsymbol{f}</m> is not an injection</q>
+        means that
+
+        <ul>
+        <li>
+          <p>
+            There exist <m>x_1 , x_2 \in A</m> such that
+            <m>x_1 \ne x_2</m> and <m>f( {x_1 } ) = f( {x_2 } )</m>.
+          </p>
+        </li>
+      </ul>
+      </p>
+    </insight>
+
+    <exercise xml:id="pr_injections">
+      <title>Working with the Definition of an Injection</title>
+      <introduction>
+      <p>
+        Now that we have defined what it means for a function to be an injection,
+        we can see that in <xref ref="PA_functionstatements3">Exercise</xref> of 
+        <xref ref="PA_functionstatements">Beginning Actiivty 2</xref>,
+        we proved that the function <m>g\x \R \to \R</m> is an injection,
+        where <m>g ( x ) = 5x + 3</m> for all <m>x \in \R</m>.
+        Use the definition
+        (or its negation)
+        to determine whether or not the following functions are injections.
+      </p>
+      </introduction>
+       
+          <task>
+            <p>
+              <m>k:A \to B</m>, where <m>A = \left\{a, b, c \right\}</m>,
+              <m>B = \left\{1, 2, 3, 4 \right\}</m>,
+              and <m>k (a) = 4</m>, <m>k(b) = 1</m>, and <m>k(c) = 3</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>f:A \to C</m>, where <m>A = \left\{a, b, c \right\}</m>,
+              <m>C = \left\{1, 2, 3\right\}</m>,
+              and <m>f(a) = 2</m>, <m>f(b) = 3</m>, and <m>f(c) = 2</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>F: \Z \to \Z</m> defined by
+              <m>F ( m ) = 3m + 2</m> for all <m>m \in \Z</m>
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>h: \R \to \R</m> defined by
+              <m>h ( x ) = x^2 - 3x</m> for all <m>x \in \R</m>
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>R_5 = \{0, 1, 2, 3, 4 \}</m> and <m>s:R_5 \to R_5</m> defined by
+              <m>s ( x ) = x^3 \pmod 5</m> for all <m>x \in R_5</m>.
+            </p>
+          </task>
+
+    </exercise>
+  </subsection>
+
+  <subsection>
+    <title>Surjections</title>
+    <p>
+      In previous sections and in <xref ref="PA_functionswithfinitedom">Beginning Activity 1</xref>,
+      we have seen that there exist functions
+      <m>f\x A \to B</m> for which <m>\text{ range} (f) = B</m>.
+      This means that every element of <m>B</m> is an output of the function <m>f</m> for some 
+      input from the set <m>A</m>.
+      Using quantifiers, this means that for every <m>y \in B</m>,
+      there exists an <m>x \in A</m> such that
+      <m>f( x ) = y</m> . One of the objectives of the beginning activities was to motivate the 
+      following definition.
+    </p>
+    <definition xml:id="surjection">
+      <statement>
+        <p>
+          Let <m>f\x A \to B</m> be a function from the set <m>A</m> to the set <m>B</m>.
+          The function <m>f</m> is called a <term>surjection</term>
+              <idx><h>surjection</h></idx>
+          provided that the range of <m>f</m> equals the codomain of <m>f</m>.
+          This means that 
+          <blockquote>
+            for every <m>y \in B</m>,
+            there exists an <m>x \in A</m> such that <m>f( x ) = y</m>.
+          </blockquote>
+          When <m>f</m> is a surjection,
+          we also say that <m>f</m> is an
+          <term>onto function</term>
+              <idx><h>onto function</h></idx>
+              <idx><h>function</h><h>onto</h></idx>
+          or that <m>f</m> maps <m>\boldsymbol{A}</m>
+          <term>onto <m>\boldsymbol{B}</m></term>.
+          We also say that <m>f</m> is a <term>surjective function</term>.
+              <idx><h>function</h><h>surjective</h></idx>
+        </p>
+      </statement>
+    </definition>
+    <p>
+      One of the conditions that specifies that a function <m>f</m> is a surjection is given 
+      in the form of a universally quantified statement,
+      which is the primary statement used in proving a function is
+      (or is not)
+      a surjection.
+      Although we did not define the term then,
+      we have already written the negation for the statement defining a surjection in 
+      <xref ref="PA_functionstatements2">Exercise</xref> of 
+      <xref ref="PA_functionstatements">Beginning Activity 2</xref>.
+      We now summarize the conditions for <m>f</m> being a surjection or not being a surjection.
+    </p>
+
+    <!-- tk Again with the insights. -->
+    <insight>
+      <p>
+        Let <m>\boldsymbol{f\x A \to B}</m>.
+      </p>
+      <p>
+        <q>The function <m>\boldsymbol{f}</m> is a surjection</q>
+        means that
+        <ul>
+        <li>
+          <p>
+            <m>\text{ range} ( f ) = \text{ codom} ( f ) = B</m>; or
+          </p>
+        </li>
+        <li>
+          <p>
+            For every <m>y \in B</m>,
+            there exists an <m>x \in A</m> such that <m>f( x ) = y</m>.
+          </p>
+        </li>
+      </ul>
+      </p>
+      <p>
+        <q>The function <m>\boldsymbol{f}</m> is not a surjection</q>
+        means that
+        <ul>
+        <li>
+          <p>
+            <m>\text{ range} ( f ) \ne \text{ codom} ( f )</m>; or
+          </p>
+        </li>
+        <li>
+          <p>
+            There exists a <m>y \in B</m> such that for all <m>x \in A</m>,
+            <m>f( x ) \ne y</m>.
+          </p>
+        </li>
+      </ul>
+      </p>
+    </insight>
+    <p>
+      One other important type of function is when a function is both an injection and surjection.
+      This type of function is called a bijection.
+    </p>
+    <definition xml:id="bijection">
+      <statement>
+        <p>
+          A <term>bijection</term>
+              <idx><h>bijection</h></idx>
+          is a function that is both an injection and a surjection.
+          If the function <m>f</m> is a bijection,
+          we also say that <m>f</m> is <term>one-to-one and onto</term>
+          and that <m>f</m> is a <term>bijective function</term>.
+              <idx><h>function</h><h>bijective</h></idx>
+        </p>
+      </statement>
+    </definition>
+
+    <exercise xml:id="pr_functionswithfinitedom">
+      <title>Working with the Definition of a Surjection</title>
+      <introduction>
+      <p>
+        Now that we have defined what it means for a function to be a surjection,
+        we can see that in <xref ref="PA_functionstatements3">Exercise</xref> of 
+        <xref ref="PA_functionstatements">Beginning Activity 2</xref>,
+        we proved that the function <m>g: \R \to \R</m> is a surjection,
+        where <m>g ( x ) = 5x + 3</m> for all <m>x \in \R</m>.
+        Determine whether or not the following functions are surjections.
+      </p>
+      </introduction>
+        
+          <task>
+            <p>
+              <m>k\x A \to B</m>, where <m>A = \left\{a, b, c \right\}</m>,
+              <m>B = \left\{1, 2, 3, 4 \right\}</m>,
+              and <m>k (a) = 4</m>, <m>k(b) = 1</m>, and <m>k(c) = 3</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>f\x \R \to \R</m> defined by
+              <m>f ( x ) = 3x + 2</m> for all <m>x \in \R</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>F\x \Z \to \Z</m> defined by
+              <m>F ( m ) = 3m + 2</m> for all <m>m \in \Z</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              <m>s:R_5 \to R_5</m> defined by
+              <m>s ( x ) = x^3 \pmod 5</m> for all <m>x \in R_5</m>.
+            </p>
+          </task>
+
+    </exercise>
+  </subsection>
+  
+  <subsection>
+    <title>The Importance of the Domain and Codomain</title>
+    <p>
+      The functions in the next two examples will illustrate why the domain and the codomain 
+      of a function are just as important as the rule defining the outputs of a function when we 
+      need to determine if the function is a surjection.
+    </p>
+    <example xml:id="E_domainandcodomain">
+      <title>A Function that Is Neither an Injection nor a Surjection</title>
+      <statement>
+        <p>
+          Let <m>f\x \mathbb{R} \to \mathbb{R}</m> be defined by <m>f( x ) = x^2  + 1</m>.
+          Notice that
+          <me>
+            f( 2 ) = 5  \text{ and }  f( { - 2} ) = 5
+          </me>.
+        </p>
+        <p>
+          This is enough to prove that the function <m>f</m> is not an injection since this 
+          shows that there exist two different inputs that produce the same output.
+        </p>
+        <p>
+          Since <m>f( x ) = x^2 + 1</m>,
+          we know that <m>f( x ) \geq 1</m> for all <m>x \in \mathbb{R}</m>.
+          This implies that the function <m>f</m> is not a surjection.
+          For example, <m>- 2</m> is in the codomain of <m>f</m> and
+          <m>f( x ) \ne - 2</m> for all <m>x</m> in the domain of <m>f</m>.
+        </p>
+      </statement>
+    </example>
+
+    <example xml:id="E_domainandcodomain2">
+      <title>A Function that Is Not an Injection but Is a Surjection</title>
+      <statement>
+        <p>
+          Let <m>T = \left\{ y \in \mathbb{R} \mid y \geq 1 \right\}</m>,
+          and define <m>F\x \mathbb{R} \to T</m> by <m>F( x ) = x^2 + 1</m>.
+          As in <xref ref="E_domainandcodomain"></xref>,
+          the function <m>F</m> is not an injection since <m>F( 2 ) = F( { - 2} ) = 5</m>.
+        </p>
+        <p>
+          Is the function <m>F</m> a surjection?
+          That is, does <m>F</m> map <m>\mathbb{R}</m> onto <m>T</m>?
+          As in <xref ref="E_domainandcodomain"></xref>,
+          we do know that <m>F( x ) \geq 1</m> for all <m>x \in \mathbb{R}</m>.
+        </p>
+        <p>
+          To see if it is a surjection,
+          we must determine if it is true that for every <m>y \in T</m>,
+          there exists an <m>x \in \mathbb{R}</m> such that <m>F ( x ) = y</m>.
+          So we choose <m>y \in T</m>.
+          The goal is to determine if there exists an <m>x \in \mathbb{R}</m> such that
+          <md>
+            <mrow>F( x ) \amp = y \text{ , or }</mrow>
+            <mrow>x^2  + 1 \amp = y</mrow>
+          </md>.
+        </p>
+        <p>
+          One way to proceed is to work backward and solve the last equation
+          (if possible)
+          for <m>x</m>.
+          Doing so, we get
+          <md>
+            <mrow>x^2 \amp = y - 1</mrow>
+            <mrow>x = \sqrt {y - 1} \amp \text{   or   } x =  - \sqrt {y - 1}</mrow>
+          </md>.
+        </p>
+        <p>
+          Now, since <m>y \in T</m>,
+          we know that <m>y \geq 1</m> and hence that <m>y - 1 \geq 0</m>.
+          This means that <m>\sqrt {y - 1}  \in \mathbb{R}</m>.
+          Hence, if we use <m>x = \sqrt {y - 1}</m>,
+          then <m>x \in \mathbb{R}</m>, and
+          <md>
+            <mrow>F( x ) \amp = F\left( {\sqrt {y - 1} } \:\right)</mrow>
+            <mrow> \amp = \left( {\sqrt {y - 1} } \: \right)^2  + 1</mrow>
+            <mrow> \amp = ( {y - 1} ) + 1</mrow>
+            <mrow> \amp = y</mrow>
+          </md>.
+        </p>
+        <p>
+          This proves that <m>F</m> is a surjection since we have shown that for all <m>y \in T</m>,
+          there exists an <m>x \in \mathbb{R}</m> such that <m>F( x ) = y</m>.
+          Notice that for each <m>y \in T</m>,
+          this was a constructive proof of the existence of an
+          <m>x \in \mathbb{R}</m> such that <m>F ( x ) = y</m>.
+        </p>
+      </statement>
+    </example>
+
+    <paragraphs>
+    <title>An Important Lesson</title>
+    <p>
+      
+      In <xref ref="E_domainandcodomain"></xref>
+      and <xref ref="E_domainandcodomain2"></xref>,
+      the same mathematical formula was used to determine the outputs for the functions.
+      However, one function was not a surjection and the other one was a surjection.
+      This illustrates the important fact that whether a function is surjective depends not 
+      only on the formula that defines the output of the function but also on the domain and 
+      codomain of the function.
+    </p>
+    </paragraphs>
+    <p>
+      The next example will show that whether or not a function is an injection also depends 
+      on the domain of the function.
+    </p>
+
+    <example xml:id="E_domainandcodomain3">
+      <title>A Function that Is an Injection but Is Not a Surjection</title>
+      <statement>
+        <p>
+          Let <m>\mathbb{Z}^* = \left\{ { {x \in \mathbb{Z}} \mid x \geq 0} \right\} = 
+          \mathbb{N} \cup \left\{ 0 \right\}</m>.
+          Define <m>g\x \mathbb{Z}^* \to \mathbb{N}</m> by <m>g( x ) = x^2 + 1</m>.
+          (Notice that this is the same formula used in <xref ref="E_domainandcodomain"></xref>
+          and <xref ref="E_domainandcodomain2"></xref>.)
+          Following is a table of values for some inputs for the function <m>g</m>.
+        </p>
+
+        <sidebyside margina="50%">
+          <tabular halign="center">
+            <row bottom="medium">
+              <cell right="medium"><m>x</m></cell>
+              <cell><m>g ( x )</m></cell>
+            </row>
+            <row bottom="medium">
+              <cell right="medium">0</cell>
+              <cell>1</cell>
+            </row>
+            <row bottom="medium">
+              <cell right="medium">1</cell>
+              <cell>2</cell>
+            </row>
+            <row>
+              <cell right="medium">2</cell>
+              <cell>5</cell>
+            </row>
+          </tabular>
+
+          <tabular halign="center">
+            <row bottom="medium">
+              <cell right="medium"><m>x</m></cell>
+              <cell><m>g ( x )</m></cell>
+            </row>
+            <row bottom="medium">
+              <cell right="medium">3</cell>
+              <cell>10</cell>
+            </row>
+            <row bottom="medium">
+              <cell right="medium">4</cell>
+              <cell>17</cell>
+            </row>
+            <row>
+              <cell right="medium">5</cell>
+              <cell>26</cell>
+            </row>
+          </tabular>
+          
+        </sidebyside>
+        
+        <p>
+          Notice that the codomain is <m>\mathbb{N}</m>,
+          and the table of values suggests that some natural numbers are not outputs of this function.
+          So it appears that the function <m>g</m> is not a surjection.
+        </p>
+        <p>
+          To prove that <m>g</m> is not a surjection,
+          pick an element of <m>\N</m> that does not appear to be in the range.
+          We will use 3, and we will use a proof by contradiction to prove that there is no 
+          <m>x</m> in the domain
+          <m>\left( \Z^*\right)</m> such that <m>g( x ) = 3</m>.
+          So we assume that there exists an
+          <m>x \in \Z^*</m> with <m>g( x ) = 3</m>.
+          Then
+          <md>
+            <mrow>x^2  + 1 \amp = 3</mrow>
+            <mrow>x^2 \amp = 2</mrow>
+            <mrow>x \amp =  \pm \sqrt 2</mrow>
+          </md>.
+        </p>
+        <p>
+          But this is not possible since <m>\sqrt 2 \notin \mathbb{Z}^*</m>.
+          Therefore, there is no <m>x \in \mathbb{Z}^*</m> with <m>g( x ) = 3</m>.
+          This means that for every <m>x \in \mathbb{Z}^*</m>, <m>g( x ) \ne 3</m>.
+          Therefore, 3 is not in the range of <m>g</m>,
+          and hence <m>g</m> is not a surjection.
+        </p>
+        <p>
+          The table of values suggests that different inputs produce different outputs,
+          and hence that <m>g</m> is an injection.
+          To prove that <m>g</m> is an injection,
+          assume that <m>s, t \in \Z^*</m>
+          (the domain)
+          with <m>g( s ) = g( t )</m>.
+          Then
+          <md>
+            <mrow>s^2  + 1 \amp = t^2  + 1</mrow>
+            <mrow>s^2  \amp = t^2</mrow>
+          </md>.
+        </p>
+        <p>
+          Since <m>s, t \in \mathbb{Z}^*</m>,
+          we know that <m>s \geq 0\text{ and } t \geq 0</m>.
+          So the preceding equation implies that <m>s = t</m>.
+          Hence, <m>g</m> is an injection.
+        </p>
+      </statement>
+    </example>
+    <paragraphs>
+    <title>An Important Lesson</title>
+    <p>
+      The functions in the three preceding examples all used the same formula to determine 
+      the outputs.
+      The functions in <xref ref="E_domainandcodomain"></xref>
+      and <xref ref="E_domainandcodomain2"></xref>
+      are not injections but the function in <xref ref="E_domainandcodomain3"></xref> is an injection.
+      This illustrates the important fact that whether a function is injective not only depends 
+      on the formula that defines the output of the function but also on the domain of the function.
+    </p>
+    </paragraphs>
+
+    <exercise xml:id="pr_domainandcodomain">
+      <title>The Importance of the Domain and Codomain</title>
+      <statement>
+      <p>
+        Let <m>\R^+ = \{ y \in \R \mid y > 0 \}</m>.
+        Define
+        <blockquote>
+          <m>f \x \R \to \R</m> by <m>f(x) = e^{-x}</m>, for each <m>x \in \R</m>, and
+        </blockquote>
+        <blockquote>
+          <m>g \x \R \to \R^+</m> by <m>g(x) = e^{-x}</m>, for each <m>x \in \R</m>.
+        </blockquote>
+        Determine if each of these functions is an injection or a surjection.
+        Justify your conclusions.
+      </p>
+    
+    <p>
+      Note: Before writing proofs,
+      it might be helpful to draw the graph of <m>y = e^{-x}</m>.
+      A reasonable graph can be obtained using
+      <m>-3 \leq x \leq 3</m> and <m>-2 \leq y \leq 10</m>.
+      Please keep in mind that the graph does not prove any conclusion,
+      but may help us arrive at the correct conclusions,
+      which will still need proof.
+    </p>
+    </statement>
+    </exercise>
+  </subsection>
+
+  <subsection>
+    <title>Working with a Function of Two Variables</title>
+    
+    <p>
+      It takes time and practice to become efficient at working with the formal definitions of 
+      injection and surjection.
+      As we have seen, all parts of a function are important
+      (the domain,
+      the codomain, and the rule for determining outputs).
+      This is especially true for functions of two variables.
+    </p>
+    <p>
+      For example,
+      we define <m>f\x \mathbb{R} \times \mathbb{R} \to \mathbb{R} \times \mathbb{R}</m> by
+      <me>
+        f( {a, b} ) = ( {2a + b, a - b} )  \text{ for all } ( {a, b} ) \in \R \times \R
+      </me>.
+    </p>
+    <p>
+      Notice that both the domain and the codomain of this function are the set 
+      <m>\mathbb{R} \times \mathbb{R}</m>.
+      Thus, the inputs and the outputs of this function are ordered pairs of real numbers.
+      For example,
+      <me>
+        f( {1, 1} ) = ( {3, 0} )  \text{ and }   f( { - 1, 2} ) = ( {0,  - 3} ). \\
+      </me>
+    </p>
+    <p>
+      To explore whether or not <m>f</m> is an injection,
+      we assume that <m>( {a, b} ) \in \mathbb{R} \times \mathbb{R}</m>,
+      <m>( {c, d} ) \in \mathbb{R} \times \mathbb{R}</m>,
+      and <m>f( {a, b} ) = f( {c, d} )</m>.
+      This means that
+      <me>
+        ( {2a + b, a - b} ) = ( {2c + d, c - d} )
+      </me>.
+    </p>
+    <p>
+      Since this equation is an equality of ordered pairs, we see that
+      <md>
+        <mrow>2a + b \amp = 2c + d\text{ \!, and }</mrow>
+        <mrow>a - b \amp = c - d\!</mrow>
+      </md>.
+    </p>
+    <p>
+      By adding the corresponding sides of the two equations in this system,
+      we obtain <m>3a = 3c</m> and hence, <m>a = c</m>.
+      Substituting <m>a = c</m> into either equation in the system give us <m>b = d</m>.
+      Since <m>a = c</m> and <m>b = d</m>, we conclude that
+      <me>
+        ( {a, b} ) = ( {c, d} )
+      </me>.
+    </p>
+    <p>
+      Hence, we have shown that if <m>f( {a, b} ) = f( {c, d} )</m>,
+      then <m>( {a, b} ) = ( {c, d} )</m>.
+      Therefore, <m>f</m> is an injection.
+    </p>
+    <p>
+      Now, to determine if <m>f</m> is a surjection,
+      we let <m>( {r, s} ) \in \mathbb{R} \times \mathbb{R}</m>,
+      where <m>( {r, s} )</m> is considered to be an arbitrary element of the codomain of the 
+      function <m>f</m>.
+      Can we find an ordered pair
+      <m>( {a, b} ) \in \mathbb{R} \times \mathbb{R}</m> such that <m>f( {a, b} ) = ( {r, s} )</m>?
+      Working backward, we see that in order to do this, we need
+      <me>
+        ( {2a + b, a - b} ) = ( {r, s} )
+      </me>.
+    </p>
+    <p>
+      That is, we need
+      <me>
+        2a + b = r  \text{ and }      a - b = s
+      </me>.
+    </p>
+    <p>
+      Solving this system for <m>a</m> and <m>b</m> yields
+      <me>
+        a = \frac{{r + s}}{3} \text{ and }  b = \frac{{r - 2s}}{3}
+      </me>.
+    </p>
+    <p>
+      Since <m>r, s \in \mathbb{R}</m>,
+      we can conclude that <m>a \in \mathbb{R}</m> and
+      <m>b \in \mathbb{R}</m> and hence that <m>( {a, b} ) \in \mathbb{R} \times \mathbb{R}</m>. 
+      We now need to verify that for these values of <m>a</m> and <m>b</m>,
+      we get <m>f( {a, b} ) = ( {r, s} )</m>.
+      So
+      <md>
+        <mrow>f( {a, b} ) \amp = f\!\left( {\frac{{r + s}}{3}, \frac{{r - 2s}}{3}} \right)</mrow>
+        <mrow>\amp = \left( {2\left( {\frac{{r + s}}{3}} \right) + \frac{{r - 2s}}{3}, 
+        \frac{{r + s}}{3} - \frac{{r - 2s}}{3}} \right)</mrow>
+        <mrow>\amp = \left( {\frac{{2r + 2s + r - 2s}}{3}, \frac{{r + s - r + 2s}}{3}} \right)</mrow>
+        <mrow>\amp = ( {r, s} )</mrow>
+      </md>
+    </p>
+    <p>
+      This proves that for all <m>( {r, s} ) \in \mathbb{R} \times \mathbb{R}</m>,
+      there exists <m>( {a, b} ) \in \mathbb{R} \times \mathbb{R}</m> such that 
+      <m>f( {a, b} ) = ( {r, s} )</m>.
+      Hence, the function <m>f</m> is a surjection.
+      Since <m>f</m> is both an injection and a surjection, it is a bijection.
+    </p>
+
+    <exercise xml:id="pr_function2variables">
+      <title>A Function of Two Variables</title>
+      <introduction>
+      <p>
+        Let <m>g \x \R \times \R \to \R</m> be defined by <m>g(x, y) = 2x + y</m>,
+        for all <m>(x, y) \in \R \times \R</m>.
+      </p>
+      <p>
+        Note: Be careful!
+        One major difference between this function and the previous example is that for the 
+        function <m>g</m>,
+        the codomain is <m>\R</m>, not <m>\R \times \R</m>.
+        It is a good idea to begin by computing several outputs for several inputs
+        (and remember that the inputs are ordered pairs).
+      </p>
+      </introduction>
+        
+          <task>
+            <p>
+              Notice that the ordered pair <m>(1, 0) \in \R \times \R</m>.
+              That is, <m>(1, 0)</m> is in the domain of <m>g</m>.
+              Also notice that <m>g(1, 0) = 2</m>.
+              Is it possible to find another ordered pair
+              <m>(a, b) \in \R \times \R</m> such that <m>g(a, b) = 2</m>?
+            </p>
+          </task>
+          <task>
+            <p>
+              Let <m>z \in \R</m>.
+              Then <m>(0, z) \in \R \times \R</m> and so <m>(0, z) \in \text{ dom} (g)</m>.
+              Now determine <m>g(0, z)</m>.
+            </p>
+          </task>
+          <task>
+            <p>
+              Is the function <m>g</m> an injection?
+              Is the function <m>g</m> a surjection?
+              Justify your conclusions.
+            </p>
+          </task>
+
+    </exercise>
+  </subsection>
+
+  <exercises>
+    
+    <exercise>
+      <introduction>
+        <p>
+          Draw an arrow diagram that
+        </p>
+      </introduction>
+      <task>
+        <p>
+          represents a function that is an injection but is not a surjection.
+        </p>
+      </task>
+      <task>
+        <p>
+          represents a function that is an injection and is a surjection.
+        </p>
+      </task>
+      <task>
+        <p>
+          represents a function that is not an injection and is not a surjection.
+        </p>
+      </task>
+      <task>
+        <p>
+          represents a function that is not an injection but is a surjection.
+        </p>
+      </task>
+      <task>
+        <p>
+          represents a function that is not a bijection.
+        </p>
+      </task>
+    </exercise>
+
+    <exercise xml:id="exer_sec63-mod5function">
+      <introduction>
+        <p>
+          We know <m>R_5 = \left\{ {0, 1, 2, 3, 4} \right\}</m> and 
+          <m>R_6 = \left\{ {0, 1, 2, 3, 4, 5} \right\}</m>.
+          For each of the following functions,
+          determine if the function is an injection and determine if the function is a surjection.
+          Justify all conclusions.
+        </p>
+      </introduction>
+      <task>
+        <p>
+          <m>f\x R_5 \to R_5</m> by <m>f( x ) = x^2 + 4 \pmod 5</m>,
+          for all <m>x \in R_5</m>
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>g\x R_6 \to R_6</m> by <m>g( x ) = x^2 + 4 \pmod 6</m>,
+          for all <m>x \in R_6</m>
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>F\x R_5 \to R_5</m> by <m>F( x ) = x^3 + 4 \pmod 5</m>,
+          for all <m>x \in R_5</m>
+        </p>
+      </task>
+    </exercise>
+
+    <exercise xml:id="exer_sec63-5">
+      <introduction>
+        <p>
+          For each of the following functions,
+          determine if the function is an injection and determine if the function is a surjection.
+          Justify all conclusions.
+        </p>
+      </introduction>
+      <task>
+        <p>
+          <m>f\x\mathbb{Z} \to \mathbb{Z}</m> defined by
+          <m>f( x ) = 3x + 1</m>, for all <m>x \in \Z</m>.
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>F\x\mathbb{Q} \to \mathbb{Q}</m> defined by
+          <m>F( x ) = 3x + 1</m>, for all <m>x \in \Q</m>.
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>g\x\mathbb{R} \to \mathbb{R}</m> defined by
+          <m>g( x ) = x^3</m>, for all <m>x \in \R</m>.
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>G \x\mathbb{Q} \to \mathbb{Q}</m> defined by
+          <m>G( x ) = x^3</m>, for all <m>x \in \Q</m>.
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>k \x \R \to \R</m> defined by
+          <m>k(x) = e^{-x^2}</m>, for all <m>x \in \R</m>.
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>K\x \R^* \to \R</m> defined by <m>K(x) = e^{-x^2}</m>,
+          for all <m>x \in \R^*</m>.
+        </p>
+        <p>
+          Note: <m>\R^* = \left\{ x \in \R \mid x \geq 0 \right\}</m>.
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>K_1 \x \R^* \to T</m> defined by <m>K_1(x) = e^{-x^2}</m>,
+          for all <m>x \in \R^*</m>,
+          where <m>T = \left\{ y \in \R \mid 0 \lt y \leq 1 \right\}</m>.
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>h \x\R \to \R</m> defined by
+          <m>h ( x ) = \dfrac{2x}{x^2 + 4}</m>, for all <m>x \in \R</m>.
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>H \x \{x \in \R \mid x \geq 0 \} \to \left\{ y \in \R \left| 0 
+          \leq y \leq \dfrac{1}{2} \right. \right\}</m> 
+          defined by <m>H ( x ) = \dfrac{2x}{x^2 + 4}</m>,
+          for all <m>x \in \{x \in \R \mid x \geq 0 \}</m>.
+        </p>
+      </task>
+    </exercise>
+
+    <exercise xml:id="exer_forexample">
+      <introduction>
+        <p>
+          For each of the following functions,
+          determine if the function is a bijection.
+          Justify all conclusions.
+        </p>
+      </introduction>
+      <task>
+        <p>
+          <m>F\x\mathbb{R} \to \mathbb{R}</m> defined by <m>F( x ) = 5x + 3</m>,
+          for all <m>x \in \mathbb{R}</m>.
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>G\x\Z \to \Z</m> defined by
+          <m>G( x ) = 5x + 3</m>, for all <m>x \in \Z</m>.
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>f\x ( \R -\left\{ 4 \right\} ) \to \R</m> defined by <m>f ( x ) = \dfrac{3x}{x - 4}</m>,
+          for all <m>x \in \left( \R - \{ 4 \} \right)</m>.
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>g\x ( \R -\left\{ 4 \right\} ) \to ( \R - \left\{ 3 \right\} )</m> defined by 
+          <m>g ( x ) = \dfrac{3x}{x - 4}</m>,
+          for all \linebreak<m>x \in \left( \R - \{ 4 \} \right)</m>.
+        </p>
+      </task>
+    </exercise>
+
+    <exercise xml:id="exer_sec63-sumdivisors">
+      <statement>
+        <p>
+          Let <m>s\x\mathbb{N} \to \mathbb{N}</m>,
+          where for each <m>n \in \mathbb{N}</m>,
+          <m>s( n )</m> is the sum of the distinct natural number divisors of <m>n</m>.
+          This is the <term>sum of the divisors function</term>
+            <idx><h>sum of divisors function</h></idx>
+          that was introduced in <xref ref="PA_otherfunctions">Beginning Activity 2</xref>
+          from <xref ref="S_introfunctions"></xref>.
+          Is <m>s</m> an injection?
+          Is <m>s</m> a surjection?
+          Justify your conclusions.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_sec63-numdivisors">
+      <statement>
+        <p>
+          Let <m>d\x\mathbb{N} \to \mathbb{N}</m>,
+          where <m>d( n )</m> is the number of natural number divisors of <m>n</m>.
+          This is the <term>number of divisors function</term>
+            <idx><h>number of divisors function</h></idx>
+          introduced in <xref ref="exer_numberofdivisors"/> from 
+          <xref ref="S_introfunctions"></xref>.
+          Is the function <m>d</m> an injection?
+          Is the function <m>d</m> a surjection?
+          Justify your conclusions.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_sec63-9">
+      <statement>
+        <p>
+          In <xref ref="PA_otherfunctions">Beginning Activity 2</xref>
+          from <xref ref="S_introfunctions"></xref>,
+          we introduced the <term>birthday function</term>.
+            <idx><h>birthday function</h></idx>
+          Is the birthday function an injection?
+          Is it a surjection?
+          Justify your conclusions.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_sec63-10">
+      <introduction>
+        <p>
+          Complete the following. Justify your conclusions.
+        </p>
+      </introduction>
+      <task>
+        <p>
+          Let <m>f\x\mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}</m> be defined by 
+          <m>f( {m, n} ) = 2m + n</m>.
+          Is the function <m>f</m> an injection?
+          Is the function <m>f</m> a surjection?
+        </p>
+      </task>
+      <task>
+        <p>
+          Let <m>g\x\mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}</m> be defined by 
+          <m>g( {m, n} ) = 6m + 3n</m>.
+          Is the function <m>g</m> an injection?
+          Is the function <m>g</m> a surjection?
+        </p>
+      </task>
+    </exercise>
+
+    <exercise xml:id="exer_sec63-11">
+      <introduction>
+        <p>
+          Complete the following. Justify your conclusions. 
+        </p>
+      </introduction>
+
+      <task>
+        <p>
+          Let <m>f\x\mathbb{R} \times \mathbb{R} \to \mathbb{R} \times \mathbb{R}</m> 
+          be defined by <m>f( {x, y} ) = ( {2x, x + y} )</m>.
+          Is the function <m>f</m> an injection?
+          Is the function <m>f</m> a surjection?
+        </p>
+      </task>
+      <task>
+        <p>
+          Let <m>g\x\mathbb{Z} \times \mathbb{Z} \to \mathbb{Z} \times \mathbb{Z}</m> be 
+          defined by <m>g( {x, y} ) = ( {2x, x + y} )</m>.
+          Is the function <m>g</m> an injection?
+          Is the function <m>g</m> a surjection?
+        </p>
+      </task>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Let <m>f\x\R \times \R \to \R</m> be the function defined by <m>f (x, y ) = -x^2y+3y</m>,
+          for all <m>(x, y ) \in \R \times \R</m>.
+          Is the function <m>f</m> an injection?
+          Is the function <m>f</m> a surjection?
+          Justify your conclusions.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Let <m>g\x\R \times \R \to \R</m> be the function defined by <m>g (x, y ) = ( x^3 + 2) \sin y</m>,
+          for all <m>(x, y ) \in \R \times \R</m>.
+          Is the function <m>g</m> an injection?
+          Is the function <m>g</m> a surjection?
+          Justify your conclusions.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Let <m>A</m> be a nonempty set.
+          The <term>identity function on the set <m>\boldsymbol{A}</m></term>,
+            <idx><h>identity function</h></idx>
+          denoted by <m>I_A</m>,
+          is the function <m>I_A \x A \to A</m> defined by
+          <m>I_A ( x ) = x</m> for every <m>x</m> in <m>A</m>.
+          Is <m>I_A</m> an injection?
+          Is <m>I_A</m> a surjection?
+          Justify your conclusions.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <introduction>
+        <p>
+          Let  <m>A</m>  and  <m>B</m>  be two nonempty sets.
+          Define
+          <me>
+            p_1 \x A \times B \to A \text{ by }   p_1 ( {a, b} ) = a
+          </me>
+          for every  <m>( {a, b} ) \in A \times B</m>.
+          This is the <term>first projection function</term>
+            <idx><h>projection function</h></idx>
+          introduced in <xref ref="sym_projfunc"/> in <xref ref="S_moreaboutfunctions"></xref>.
+        </p>
+      </introduction>
+
+      <task>
+        <p>
+          Is the function <m>p_1</m> a surjection?
+          Justify your conclusion.
+        </p>
+      </task>
+      <task>
+        <p>
+          If <m>B = \left\{ b \right\}</m>,
+          is the function <m>p_1</m> an injection?
+          Justify your conclusion.
+        </p>
+      </task>
+      <task>
+        <p>
+          Under what condition(s) is the function <m>p_1</m> not an injection?
+          Make a conjecture and prove it.
+        </p>
+      </task>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Define <m>f:\N \to \Z</m> as follows: For each <m>n \in \N</m>,
+          <me>
+            f(n) = \dfrac{1 + (-1)^n (2n - 1)}{4}
+          </me>.
+          Is the function <m>f</m> an injection?
+          Is the function <m>f</m> a surjection?
+          Justify your conclusions.
+        </p>
+        <p>
+          Suggestions: Start by calculating several outputs for the function before you attempt 
+          to write a proof.
+          In exploring whether or not the function is an injection,
+          it might be a good idea to use cases based on whether the inputs are even or odd.
+          In exploring whether <m>f</m> is a surjection,
+          consider using cases based on whether the output is positive or less than or equal to zero.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Let <m>C</m> be the set of all real functions that are continuous on the closed interval 
+          <m>\left[ 0, 1 \right]</m>.
+          Define the function <m>A\x C \to \mathbb{R}</m> as follows: For each <m>f \in C</m>,
+          <me>
+            A ( f ) = \int_0^1 {f( x ) \, dx}
+          </me>.
+          Is the function <m>A</m> an injection?
+          Is it a surjection?
+          Justify your conclusions.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <introduction>
+        <p>
+          Let <m>A = \left\{ ( m, n ) \mid m \in \mathbb{Z}, n \in \mathbb{Z}, \text{ and } n \ne 0 \right\}</m>.
+          Define <m>f\x A \to \mathbb{Q}</m> as follows:
+          <blockquote>
+            For each <m>( m, n ) \in A</m>, <m>f ( m, n ) = \dfrac{m+n}{n}</m>.
+          </blockquote>
+        </p>
+      </introduction>
+
+      <task>
+        <p>
+          Is the function <m>f</m> an injection?
+          Justify your conclusion.
+        </p>
+      </task>
+      <task>
+        <p>
+          Is the function <m>f</m> a surjection?
+          Justify your conclusion.
+        </p>
+      </task>
+    </exercise>
+
+    <exercise>
+      <title>Evaluation of Proofs</title>
+      <introduction>
+        <p>
+          See the instructions for <xref ref="exer_proofeval"></xref>
+          from <xref ref="S_directproof"></xref>.
+        </p>
+      </introduction>
+
+      <task>
+        <p>
+          <dl width="narrow">
+            <li>
+              <title>Proposition</title>
+              <p>
+                Propostion: The function <m>f\x\R \times \R \to \R \times \R</m> defined by 
+                <m>f( {x, y} ) = ( {2x + y, x - y} )</m> is an injection.
+              </p>
+            </li>
+            <li>
+              <title>Proof</title>
+              <p>
+                For each <m>(a, b)</m> and <m>(c, d)</m> in <m>\R \times \R</m>,
+                if <m>f(a, b) = f(c, d)</m>, then
+                <me>
+                  (2a + b, a - b) = (2c + d, c - d)
+                </me>.
+              </p>
+              <p>
+                We will use systems of equations to prove that <m>a = c</m> and <m>b = d</m>.
+                <md>
+                  <mrow>2a + b \amp = 2c + d</mrow>
+                  <mrow>a - b \amp =  c - d</mrow>
+                  <mrow>3a  \amp = 3c</mrow>
+                  <mrow>a  \amp = c</mrow>
+                </md>
+              </p>
+              <p>
+                Since <m>a = c</m>, we see that
+                <me>
+                  (2c + b, c - b) = (2c + d, c - d)
+                </me>.
+              </p>
+              <p>
+                So <m>b = d</m>.
+                Therefore, we have proved that the function <m>f</m> is an injection.
+              </p>
+            </li>
+          </dl>
+        </p>
+      </task>
+
+      <task>
+        <p>
+          <dl width="narrow">
+            <li>
+              <title>Proposition</title>
+              <p>
+                The function <m>f\x\R \times \R \to \R \times \R</m> defined by 
+                <m>f( {x, y} ) = ( {2x + y, x - y} )</m> is a surjection.
+              </p>
+            </li>
+            <li>
+              <title>Proof</title>
+              <p>
+                We need to find an ordered pair such that
+                <m>f(x, y) = (a, b)</m> for each <m>(a, b)</m> in <m>\R \times \R</m>.
+                That is, we need <m>(2x + y, x - y) = (a, b)</m>, or
+                <me>
+                  2x + y = a \qquad \text{ and }  \qquad x - y = b
+                </me>.
+              </p>
+              <p>
+                Treating these two equations as a system of equations and solving for <m>x</m> and <m>y</m>,
+                we find that
+                <me>
+                  x = \frac{a + b}{3} \qquad \text{ and }  \qquad y = \frac{a - 2b}{3}
+                </me>.
+              </p>
+              <p>
+                Hence, <m>x</m> and <m>y</m> are real numbers,
+                <m>(x, y) \in \R \times \R</m>, and
+                <md>
+                  <mrow>f(x, y) \amp = f \left( \frac{a + b}{3}, \frac{a - 2b}{3} \right)</mrow>
+                  <mrow>\amp = \left(2 \left( \frac{a + b}{3} \right) + \frac{a - 2b}{3}, 
+                  \frac{a + b}{3} - \frac{a - 2b}{3} \right)</mrow>
+                  <mrow>\amp = \left( \frac{2a + 2b + a - 2b}{3}, \frac{a + b - a + 2b}{3} \right)</mrow>
+                  <mrow>\amp = \left( \frac{3a}{3}, \frac{3b}{3} \right)</mrow>
+                  <mrow>\amp = (a, b)</mrow>
+                </md>.
+              </p>
+              <p>
+                Therefore, we have proved that for every <m>(a, b) \in \R \times \R</m>,
+                there exists an <m>(x, y) \in \R \times \R</m> such that <m>f(x, y) = (a, b)</m>.
+                This proves that the function <m>f</m> is a surjection.
+              </p>
+            </li>
+          </dl>
+        </p>
+      </task>
+
+    </exercise>
+
+  <activity xml:id="exer_piecewisefunction">
+    <title>Piecewise Defined Functions</title>
+    <introduction>
+      <p>
+        We often say that a function is a
+          <term>piecewise defined function</term>
+            <idx><h>function</h><h>piecewise defined</h></idx>
+            <idx><h>piecewise defined function</h></idx>
+          if it has different rules for determining the output for different parts of its domain.
+          For example, we can define a function
+          <m>f\x\R \to \R</m> by giving a rule for calculating <m>f(x)</m> when
+          <m>x \geq 0</m> and giving a rule for calculating <m>f(x)</m> when <m>x \lt  0</m> as follows:
+          <men>
+            f(x) = \begin{cases}x^2 + 1,    \amp   \text{ if \(x \geq 0\); }  \\ x - 1      \amp   \text{ if \(x \lt  0\). } \end{cases}
+          </men>
+      </p>
+    </introduction>
+
+    <task>
+      <p>
+        Sketch a graph of the function <m>f</m>.
+        Is the function <m>f</m> an injection?
+        Is the function <m>f</m> a surjection?
+        Justify your conclusions.
+      </p>
+    </task>
+    <!-- Made these sub tasks rather than two separate tasks. -->
+    <task>
+      <introduction>
+        <p>
+          For each of the following functions, determine if the function is an injection and 
+          determine if the function is a surjection.  Justify all conclusions.
+        </p>
+      </introduction>
+
+      <task>
+        <p>
+          <m>g\x[0, 1] \to (0, 1)</m> by
+          <men>
+            g(x) = \begin{cases}0.8, \amp   \text{ if \(x = 0\); }  \\ 0.5 x,    \amp   
+            \text{ if \(0 \lt  x \lt  1\); }  \\ 0.6  \amp   \text{ if \(x = 1\). } \end{cases}
+          </men>
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>h\x\Z \to \left\{ 0, 1 \right\}</m> by
+          <men>
+            h(x) = \begin{cases}0,  \amp  \text{ if \(x\) is even; }  \\ 1,  \amp  
+            \text{ if \(x\) is odd. } \end{cases}
+          </men>
+        </p>
+      </task>
+    </task>
+    
+  </activity>
+
+  <activity>
+    <title>Functions Whose Domain is <m>\boldsymbol{\mathcal{M}_2(\R)}</m></title>
+
+    <introduction>
+      <p>
+        Let <m>\mathcal{M}_2 ( \R )</m> represent the set of all 2 by 2 matrices over <m>\mathbb{R}</m>.
+      </p>
+    </introduction>
+
+    <task xml:id="sym_detfunc">
+      <p>
+        Define  <m>\det \x\mathcal{M}_2( \R ) \to \mathbb{R}</m> by
+        <me>
+          \det \left[ {\begin{array}{*{20}c} a \amp  b  \\ c \amp  d \end{array}  } \right] = ad - bc
+        </me>.
+        This is the <term>determinant function</term>
+          <idx><h>determinant</h></idx>
+        introduced in <xref ref="sym_determinant"/> from <xref ref="S_moreaboutfunctions"></xref>.
+        Is the determinant function an injection?
+        Is the determinant function a surjection?
+        Justify your conclusions.
+      </p>
+    </task>
+    <task xml:id="sym_tranfunc">
+      <p>
+        Define <m>\text{ tran } \x\mathcal{M}_2( \R ) \to \mathcal{M}_2 ( \R )</m> by
+        <me>
+          \text{ tran } \left[ {\begin{array}{*{20}c} a \amp  b  \\ c \amp  d \end{array}  } 
+          \right] = A^T  = \left[ {\begin{array}{*{20}c} a \amp  c  \\ b \amp  d \end{array}  } \right]
+        </me>.
+        This is the <term>transpose function</term>
+          <idx><h>transpose</h></idx>
+        introduced in <xref ref="sym_transpose"/> from <xref ref="S_moreaboutfunctions"></xref>.
+        Is the transpose function an injection?
+        Is the transpose function a surjection?
+        Justify your conclusions.
+      </p>
+    </task>
+    <task xml:id="sym_detfunc">
+      <p>
+        Define <m>F \x\mathcal{M}_2( \R ) \to \mathbb{R}</m> by
+        <me>
+          F \left[ {\begin{array}{*{20}c} a \amp  b  \\ c \amp  d \end{array}  } \right] = a^2 + d^2 - b^2 - c^2
+        </me>.
+        Is the function <m>F</m> an injection?
+        Is the function <m>F</m> a surjection?
+        Justify your conclusions.
+      </p>
+    </task>
+  </activity>
+
+  </exercises>
+
+</section>

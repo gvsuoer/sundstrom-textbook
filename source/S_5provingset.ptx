@@ -312,7 +312,7 @@
         Hence, this last equation proves that <m>x</m> must be even.
         Therefore, we have shown that if <m>x</m> is an element of <m>S</m>,
         then <m>x</m> is an element of <m>T</m>,
-        and hence that <m>S \subseteq T</m>. <m>\blacksquare</m>
+        and hence that <m>S \subseteq T</m>. 
       </p>
     </proof>
     </proposition>
@@ -538,7 +538,7 @@
       </p>
       <p>
         Since we have proved that <m>A - (A - B) \subseteq A \cap B</m> and <m>A \cap B \subseteq A - (A - B)</m>,
-        we conclude that <m>A - (A - B) = A \cap B</m>. <m>\blacksquare</m>
+        we conclude that <m>A - (A - B) = A \cap B</m>. 
       </p>
     </proof>
     </proposition>
@@ -592,7 +592,7 @@
     </p>
     <figure xml:id="fig_asubsetb2">
       <caption>Venn Diagram with <m>A \subseteq B</m></caption>
-      <image width="73%" source="assets/figps-asubsetb2.svg"/>
+      <image width="73%" source="figps-asubsetb2.svg"/>
     </figure>
     <p>
       From the Venn diagram, it appears that <m>A \cap B^c = \emptyset</m>.
@@ -695,7 +695,7 @@
       </p>
       <p>
         The proof that if <m>A \cap B^c = \emptyset</m>,
-        then <m>A \subseteq B</m> is <xref ref="exer_subsetprop"/>. <m>\blacksquare</m>
+        then <m>A \subseteq B</m> is <xref ref="exer_subsetprop"/>. 
       </p>
     </proof>
     </proposition>
@@ -1214,70 +1214,96 @@
 
     <task>
       <p>
-        Let <m>A</m>,
-        <m>B</m>, and <m>C</m> be subsets of some universal set.
-        If <m>A \not \subseteq B</m> and <m>B \not \subseteq C</m>,
-        then <m>A \not \subseteq C</m>.
+        <dl width="narrow">
+          <li>
+            <title>Proposition</title>
+            <p>
+              Let <m>A</m>,
+              <m>B</m>, and <m>C</m> be subsets of some universal set.
+              If <m>A \not \subseteq B</m> and <m>B \not \subseteq C</m>,
+              then <m>A \not \subseteq C</m>.
+            </p>
+          </li>
+          <li>
+            <title>Proof</title>
+            <p>
+              We assume that <m>A</m>, <m>B</m>,
+              and <m>C</m> are subsets of some universal set and that
+              <m>A \not \subseteq B</m> and <m>B \not \subseteq C</m>.
+              This means that there exists an element <m>x</m> in <m>A</m> that is not in 
+              <m>B</m> and there exists an element <m>x</m> that is in <m>B</m> and not in <m>C</m>.
+              Therefore, <m>x \in A</m> and <m>x \notin C</m>,
+              and we have proved that <m>A \not \subseteq C</m>.
+            </p>
+          </li>
+        </dl>
       </p>
-      <proof>
-        <p>
-          We assume that <m>A</m>, <m>B</m>,
-          and <m>C</m> are subsets of some universal set and that
-          <m>A \not \subseteq B</m> and <m>B \not \subseteq C</m>.
-          This means that there exists an element <m>x</m> in <m>A</m> that is not in <m>B</m> and there exists an element <m>x</m> that is in <m>B</m> and not in <m>C</m>.
-          Therefore, <m>x \in A</m> and <m>x \notin C</m>,
-          and we have proved that <m>A \not \subseteq C</m>. <m>\blacksquare</m>
-        </p>
-      </proof>
     </task>
-    <task>
-      <p>
-        Let <m>A</m>,
-                <m>B</m>, and <m>C</m> be subsets of some universal set.
-                If <m>A \cap B = A \cap C</m>, then <m>B = C</m>.
-      </p>
-                <proof>
-                  <p>
-                    We assume that <m>A \cap B = A \cap C</m> and will prove that <m>B = C</m>.
-                    We will first prove that <m>B \subseteq C</m>.
-                  </p>
-                  <p>
-                    So let <m>x \in B</m>.
-                    If <m>x \in A</m>, then <m>x \in A \cap B</m>,
-                    and hence, <m>x \in A \cap C</m>.
-                    From this we can conclude that <m>x \in C</m>.
-                    If <m>x \notin A</m>, then <m>x \notin A \cap B</m>,
-                    and hence, <m>x \notin A \cap C</m>.
-                    However, since <m>x \notin A</m>,
-                    we may conclude that <m>x \in C</m>.
-                    Therefore, <m>B \subseteq C</m>.
-                  </p>
-                  <p>
-                    The proof that <m>C \subseteq B</m> may be done in a similar manner.
-                    Hence, <m>B = C</m>. <m>\blacksquare</m>
-                  </p>
-                </proof>
-      
-    </task>
-    <task>
-      <p>
-        Let <m>A</m>,
-                <m>B</m>, and <m>C</m> be subsets of some universal set.
-                If <m>A \not \subseteq B</m> and <m>B \subseteq C</m>,
-                then <m>A \not \subseteq C</m>.
-      </p>
-                <proof>
-                  <p>
-                    Assume that <m>A \not \subseteq B</m> and <m>B \subseteq C</m>.
-                    Since <m>A \not \subseteq B</m>,
-                    there exists an element <m>x</m> such that <m>x \in A</m> and <m>x \notin B</m>.
-                    Since <m>B \subseteq C</m>, we may conclude that <m>x \notin C</m>.
-                    Hence, <m>x \in A</m> and <m>x \notin C</m>,
-                    and we have proved that <m>A \not \subseteq C</m>. <m>\blacksquare</m>
-                  </p>
-                </proof>
 
+    <task>
+      <p>
+        <dl width="narrow">
+          <li>
+            <title>Proposition</title>
+            <p>
+              Let <m>A</m>,
+              <m>B</m>, and <m>C</m> be subsets of some universal set.
+              If <m>A \cap B = A \cap C</m>, then <m>B = C</m>.
+            </p>
+          </li>
+          <li>
+            <title>Proof</title>
+              <p>
+                We assume that <m>A \cap B = A \cap C</m> and will prove that <m>B = C</m>.
+                We will first prove that <m>B \subseteq C</m>.
+              </p>
+              <p>
+                So let <m>x \in B</m>.
+                If <m>x \in A</m>, then <m>x \in A \cap B</m>,
+                and hence, <m>x \in A \cap C</m>.
+                From this we can conclude that <m>x \in C</m>.
+                If <m>x \notin A</m>, then <m>x \notin A \cap B</m>,
+                and hence, <m>x \notin A \cap C</m>.
+                However, since <m>x \notin A</m>,
+                we may conclude that <m>x \in C</m>.
+                Therefore, <m>B \subseteq C</m>.
+              </p>
+              <p>
+                The proof that <m>C \subseteq B</m> may be done in a similar manner.
+                Hence, <m>B = C</m>. 
+              </p>
+          </li>
+        </dl>
+      </p>
     </task>
+
+    <task>
+      <p>
+        <dl width="narrow">
+          <li>
+            <title>Proposition</title>
+            <p>
+              Let <m>A</m>,
+              <m>B</m>, and <m>C</m> be subsets of some universal set.
+              If <m>A \not \subseteq B</m> and <m>B \subseteq C</m>,
+              then <m>A \not \subseteq C</m>.
+            </p>
+          </li>
+          <li>
+            <title>Proof</title>
+            <p>
+              Assume that <m>A \not \subseteq B</m> and <m>B \subseteq C</m>.
+              Since <m>A \not \subseteq B</m>,
+              there exists an element <m>x</m> such that <m>x \in A</m> and <m>x \notin B</m>.
+              Since <m>B \subseteq C</m>, we may conclude that <m>x \notin C</m>.
+              Hence, <m>x \in A</m> and <m>x \notin C</m>,
+              and we have proved that <m>A \not \subseteq C</m>. 
+            </p>
+          </li>
+        </dl>
+      </p>
+    </task>
+
   </exercise>
 
   <activity xml:id="exer52-choose">
@@ -1387,7 +1413,7 @@
                 <p>
                   So let <m>x \in \Z</m> and let <m>y \in \Z</m>.
                   Since <m>t</m> divides <m>a</m>,
-                  there exists an integer <m>m</m> such that <m>\ldots </m>. <m>\blacksquare</m>
+                  there exists an integer <m>m</m> such that <m>\ldots </m>. 
                 </p>
               </proof>
       </p>

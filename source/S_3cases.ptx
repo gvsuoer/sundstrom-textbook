@@ -463,7 +463,7 @@
         then <m>\left| x \right| = a</m>.
         Because we have proven both conditional statements,
         we have proven that <m>\left| x \right| = a</m> if and only if <m>x = a</m> or <m>x = -a</m>.
-        <m>\blacksquare</m>
+        
       </p>
     </proof>
     </theorem>
@@ -877,104 +877,109 @@
 
     <exercise>
     <title>Evaluation of Proofs</title>
-      <statement>
+      <introduction>
         <p>
           See the instructions for <xref ref="exer_proofeval"/>
           from <xref ref="S_directproof"></xref>.
-
-          <task>
-            <p>
-              <proposition>
-                <statement>
-                  <p>
-                    For all nonzero integers <m>a</m> and <m>b</m>,
-                    if <m>a + 2b \ne 3</m> and <m>9a + 2b \ne 1</m>,
-                    then the equation <m>ax^3 + 2bx = 3</m> does not have a solution that is a 
-                    natural number.
-                  </p>
-                </statement>
-                <proof>
-                  <p>
-                    We will prove the contrapositive,
-                    which is: For all nonzero integers <m>a</m> and <m>b</m>,
-                    if the equation <m>ax^3 + 2bx = 3</m> has a solution that is a natural number,
-                    then <m>a + 2b = 3</m> or <m>9a + 2b = 1</m>.
-                  </p>
-                  <p>
-                    So we let <m>a</m> and <m>b</m> be nonzero integers and assume that the 
-                    natural number <m>n</m> is a solution of the equation <m>ax^3 + 2bx = 3</m>.
-                    So we have
-                    <md>
-                      <mrow>an^3 + 2bn \amp = 3 \qquad \text{ or }</mrow>
-                      <mrow>n \left( an^2 + 2b \right) \amp = 3</mrow>
-                    </md>.
-                  </p>
-                  <p>
-                    So we can conclude that <m>n = 3</m> and <m>an^2 + 2b = 1</m>.
-                    Since we now have the value of <m>n</m>,
-                    we can substitute it in the equation
-                    <m>an^3 + 2bn = 3</m> and obtain <m>27a + 6b = 3</m>.
-                    Dividing both sides of this equation by 3 shows that <m>9a + 2b = 1</m>.
-                    So there is no need for us to go any further,
-                    and this concludes the proof of the contrapositive of the proposition. <m>\blacksquare</m>
-                  </p>
-                </proof>
-              </proposition>
-            </p>
-          </task>
-          <task>
-            <p>
-              <proposition>
-                <statement>
-                  <p>
-                    For all nonzero integers <m>a</m> and <m>b</m>,
-                    if <m>a + 2b \ne 3</m> and <m>9a + 2b \ne 1</m>,
-                    then the equation <m>ax^3 + 2bx = 3</m> does not have a solution that is a 
-                    natural number.
-                  </p>
-                </statement>
-                <proof>
-                  <p>
-                    We will use a proof by contradiction.
-                    Let us assume that there exist nonzero integers <m>a</m> and <m>b</m> such that 
-                    <m>a + 2b = 3</m> and
-                    <m>9a + 2b = 1</m> and <m>an^3 + 2bn = 3</m>,
-                    where <m>n</m> is a natural number.
-                    First, we will solve one equation for <m>2b</m>;
-                    doing this, we obtain
-                    <mdn>
-                      <mrow number="no">a + 2b \amp = 3</mrow>
-                      <mrow>2b \amp = 3 - a</mrow>
-                    </mdn>.
-                  </p>
-                  <p>
-                    We can now substitute for <m>2b</m> in <m>an^3 + 2bn = 3</m>.
-                    This gives
-                    <md>
-                      <mrow number="no">an^3 + (3 - a)n \amp = 3</mrow>
-                      <mrow number="no">an^3 + 3n - an  \amp = 3</mrow>
-                      <mrow>n \left( an^2 + 3 - a \right) \amp = 3</mrow>
-                    </md>.
-                  </p>
-                  <p>
-                    By the closure properties of the integers,
-                    <m>\left( an^2 + 3 - a \right)</m> is an integer and, hence,
-                    equation<nbsp/>(2) implies that <m>n</m> divides 3.
-                    So <m>n = 1</m> or <m>n = 3</m>.
-                    When we substitute <m>n = 1</m> into the equation <m>an^3 + 2bn = 3</m>,
-                    we obtain <m>a + 2b = 3</m>.
-                    This is a contradiction since we are told in the proposition that 
-                    <m>a + 2b \ne 3</m>.
-                    This proves that the negation of the proposition is false and,
-                    hence, the proposition is true. <m>\blacksquare</m>
-                  </p>
-                </proof>
-              </proposition>
-            </p>
-          </task>
         </p>
+      </introduction>
 
-      </statement>
+      <task>
+        <p>
+          <dl width="narrow">
+            <li>
+              <title>Proposition</title>
+              <p>
+                For all nonzero integers <m>a</m> and <m>b</m>,
+                if <m>a + 2b \ne 3</m> and <m>9a + 2b \ne 1</m>,
+                then the equation <m>ax^3 + 2bx = 3</m> does not have a solution that is a 
+                natural number.
+              </p>
+            </li>
+            <li>
+              <title>Proof</title>
+              <p>
+                We will prove the contrapositive,
+                which is: For all nonzero integers <m>a</m> and <m>b</m>,
+                if the equation <m>ax^3 + 2bx = 3</m> has a solution that is a natural number,
+                then <m>a + 2b = 3</m> or <m>9a + 2b = 1</m>.
+              </p>
+              <p>
+                So we let <m>a</m> and <m>b</m> be nonzero integers and assume that the 
+                natural number <m>n</m> is a solution of the equation <m>ax^3 + 2bx = 3</m>.
+                So we have
+                <md>
+                  <mrow>an^3 + 2bn \amp = 3 \qquad \text{ or }</mrow>
+                  <mrow>n \left( an^2 + 2b \right) \amp = 3</mrow>
+                </md>.
+              </p>
+              <p>
+                So we can conclude that <m>n = 3</m> and <m>an^2 + 2b = 1</m>.
+                Since we now have the value of <m>n</m>,
+                we can substitute it in the equation
+                <m>an^3 + 2bn = 3</m> and obtain <m>27a + 6b = 3</m>.
+                Dividing both sides of this equation by 3 shows that <m>9a + 2b = 1</m>.
+                So there is no need for us to go any further,
+                and this concludes the proof of the contrapositive of the proposition. 
+              </p>
+            </li>
+          </dl>
+        </p>
+      </task>
+
+      <task>
+        <p>
+          <dl width="narrow">
+            <li>
+              <title>Proposition</title>
+              <p>
+                For all nonzero integers <m>a</m> and <m>b</m>,
+                if <m>a + 2b \ne 3</m> and <m>9a + 2b \ne 1</m>,
+                then the equation <m>ax^3 + 2bx = 3</m> does not have a solution that is a 
+                natural number.
+              </p>
+            </li>
+            <li>
+              <title>Proof</title>
+              <p>
+                We will use a proof by contradiction.
+                Let us assume that there exist nonzero integers <m>a</m> and <m>b</m> such that 
+                <m>a + 2b = 3</m> and
+                <m>9a + 2b = 1</m> and <m>an^3 + 2bn = 3</m>,
+                where <m>n</m> is a natural number.
+                First, we will solve one equation for <m>2b</m>;
+                doing this, we obtain
+                <mdn>
+                  <mrow number="no">a + 2b \amp = 3</mrow>
+                  <mrow>2b \amp = 3 - a</mrow>
+                </mdn>.
+              </p>
+              <p>
+                We can now substitute for <m>2b</m> in <m>an^3 + 2bn = 3</m>.
+                This gives
+                <md>
+                  <mrow number="no">an^3 + (3 - a)n \amp = 3</mrow>
+                  <mrow number="no">an^3 + 3n - an  \amp = 3</mrow>
+                  <mrow>n \left( an^2 + 3 - a \right) \amp = 3</mrow>
+                </md>.
+              </p>
+              <p>
+                By the closure properties of the integers,
+                <m>\left( an^2 + 3 - a \right)</m> is an integer and, hence,
+                equation<nbsp/>(2) implies that <m>n</m> divides 3.
+                So <m>n = 1</m> or <m>n = 3</m>.
+                When we substitute <m>n = 1</m> into the equation <m>an^3 + 2bn = 3</m>,
+                we obtain <m>a + 2b = 3</m>.
+                This is a contradiction since we are told in the proposition that 
+                <m>a + 2b \ne 3</m>.
+                This proves that the negation of the proposition is false and,
+                hence, the proposition is true. 
+              </p>
+            </li>
+          </dl>
+        </p>
+      </task>
+
     </exercise>
 
     <activity xml:id="exer_triangleineq">

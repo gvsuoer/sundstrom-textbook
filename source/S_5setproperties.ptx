@@ -194,7 +194,7 @@
         The first part of this theorem was included in <xref ref="exer_intersectandunion"/> 
         from <xref ref="S_provingset"></xref>.
         The second part of the theorem was <xref ref="exer_unionandintersect"/> from 
-        <xref ref="S_provingset"></xref>. <m>\blacksquare</m>
+        <xref ref="S_provingset"></xref>. 
       </p>
     </proof>
     </theorem>
@@ -318,7 +318,7 @@
         <me>
           x \in A \cap B\text{  if and only if  } x \in B \cap A
         </me>,
-        and, hence, we have proved that <m>A \cap B = B \cap A</m>. <m>\blacksquare</m>
+        and, hence, we have proved that <m>A \cap B = B \cap A</m>. 
       </p>
     </proof>
 
@@ -426,7 +426,7 @@
         \subseteq A \cup \left( {B \cap C} \right)</m>.
         The two subset relations establish the equality of the two sets.
         Thus, <m>A \cup \left( {B \cap C} \right) = \left( {A \cup B} \right) 
-        \cap \left( {A \cup C} \right)</m>. <m>\blacksquare</m>
+        \cap \left( {A \cup C} \right)</m>. 
       </p>
     </proof>
   </subsection>
@@ -522,7 +522,7 @@
         <me>
           x \in \left( {A \cup B} \right)^c \text{  if and only if  } x \in A^c  \cap B^c
         </me>,
-        and, hence, that <m>\left( {A \cup B} \right)^c  = A^c  \cap B^c</m>. <m>\blacksquare</m>
+        and, hence, that <m>\left( {A \cup B} \right)^c  = A^c  \cap B^c</m>. 
       </p>
     </proof>
     </theorem>
@@ -572,7 +572,7 @@
               that <m>\left( {A \cup B} \right) - C = \left( {A - C} \right) \cup \left( {B - C} 
               \right)</m>.
               <md>
-                <mrow>\left( {A \cup B} \right) - C \amp = \left( {A \cup B} \right) \cap C^c \amp  \text{ (<xref ref="T_propsofcomplements"></xref>) }</mrow>
+                <mrow>\left( {A \cup B} \right) - C \amp = \left( {A \cup B} \right) \cap C^c \amp  <xref ref="T_propsofcomplements"></xref></mrow>
                 <mrow>\amp = C^c  \cap \left( {A \cup B} \right) \amp \text{ (Commutative Property) }</mrow>
                 <mrow>\amp = \left( C^c \cap A \right) \cup \left( C^c \cap B \right)</mrow>
                 <mrow>\amp = \left( A \cap C^c \right) \cup \left( B \cap C^c \right)</mrow>
@@ -689,7 +689,7 @@
         Since we have now proved that <xref ref="T_subsetitem1"/> implies <xref ref="T_subsetitem2"/>,
         that <xref ref="T_subsetitem2"/> implies <xref ref="T_subsetitem3"/>,
         and that <xref ref="T_subsetitem3"/> implies <xref ref="T_subsetitem1"/>,
-        we have proved that the three conditions are equivalent. <m>\blacksquare</m>
+        we have proved that the three conditions are equivalent. 
       </p>
     </proof>
     </theorem>
@@ -986,44 +986,63 @@
 
       <task>
         <p>
-          If <m>A</m>, <m>B</m>,
-          and <m>C</m> are subsets of some universal set <m>U</m>,
-          then <m>A - \left( B - C \right) = A - \left(B \cup C \right)</m>.
-          <proof>
-            <md>
-              <mrow>A - \left( B - C \right) \amp = \left(A - B \right) - \left( A - C \right)</mrow>
-              <mrow> \amp = \left( A \cap B^c \right) \cap \left(A \cap C^c \right)</mrow>
-              <mrow> \amp = A \cap \left( B^c \cap C^c\right)</mrow>
-              <mrow> \amp = A \cap \left( B \cup C \right)^c</mrow>
-              <mrow> \amp </mrow>
-              = A - \left( B \cup C \right)
-            </md>
-            <m>\blacksquare</m>
-          </proof>
+          <dl width="narrow">
+            <li>
+              <title>Proposition</title>
+              <p>
+                If <m>A</m>, <m>B</m>,
+                and <m>C</m> are subsets of some universal set <m>U</m>,
+                then <m>A - \left( B - C \right) = A - \left(B \cup C \right)</m>.
+              </p>
+            </li>
+            <li>
+              <title>Proof</title>
+              <p>
+                <md>
+                  <mrow>A - \left( B - C \right) \amp = \left(A - B \right) - \left( A - C \right)</mrow>
+                  <mrow> \amp = \left( A \cap B^c \right) \cap \left(A \cap C^c \right)</mrow>
+                  <mrow> \amp = A \cap \left( B^c \cap C^c\right)</mrow>
+                  <mrow> \amp = A \cap \left( B \cup C \right)^c</mrow>
+                  <mrow> \amp </mrow>
+                  = A - \left( B \cup C \right)
+                </md>
+              </p>
+            </li>
+          </dl>
         </p>
       </task>
+
       <task>
         <p>
-          If <m>A</m>, <m>B</m>,
-          and <m>C</m> are subsets of some universal set <m>U</m>,
-          then <m>A - \left(B \cup C \right) = \left(A - B \right) \cap \left(A - C \right)</m>.
-          <proof>
-            <p>
-              We first write <m>A - \left(B \cup C \right) = A \cap \left(B \cup C \right)^c</m> 
-              and then use one of De Morgan's Laws to obtain
-              <me>
-                A - \left(B \cup C \right)= A \cap \left(B^c \cap C^c \right)
-              </me>.
-              We now use the fact that <m>A = A \cap A</m> and obtain
-            </p>
-            <p>
-              <m>A - \left(B \cup C \right)= A \cap A \cap B^c \cap C^c = \left(A \cap B^c \right) 
-              \cap \left(A \cap C^c \right) = \left(A - B \right) \cap \left(A - C \right)</m>.
-              <m>\blacksquare</m>
-            </p>
-          </proof>
+          <dl width="narrow">
+            <li>
+              <title>Proposition</title>
+              <p>
+                If <m>A</m>, <m>B</m>,
+                and <m>C</m> are subsets of some universal set <m>U</m>,
+                then <m>A - \left(B \cup C \right) = \left(A - B \right) \cap \left(A - C \right)</m>.
+              </p>
+            </li>
+            <li>
+              <title>Proof</title>
+              <p>
+                We first write <m>A - \left(B \cup C \right) = A \cap \left(B \cup C \right)^c</m> 
+                and then use one of De Morgan's Laws to obtain
+                <me>
+                  A - \left(B \cup C \right)= A \cap \left(B^c \cap C^c \right)
+                </me>.
+                We now use the fact that <m>A = A \cap A</m> and obtain
+              </p>
+              <p>
+                <m>A - \left(B \cup C \right)= A \cap A \cap B^c \cap C^c = \left(A \cap B^c \right) 
+                \cap \left(A \cap C^c \right) = \left(A - B \right) \cap \left(A - C \right)</m>.
+
+              </p>
+            </li>
+          </dl>
         </p>
       </task>
+
     </exercise>
 
     <activity>

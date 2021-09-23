@@ -1,0 +1,348 @@
+\section*{Section \ref{S:reviewproofs} Review of Proof Methods}
+
+
+\begin{enumerate}
+\item If $(a, b)$ is on or inside the circle $(x - 1)^2 + (y - 2)^2 = 4$, then we know that 
+$(a - 1)^2 + (b - 2)^2 \leq 4$, and so 
+\[
+(a - 1)^2 \leq 4 \qquad \text{and} \qquad (b - 2)^2 \leq 4.  
+\]
+This two inequalities imply that
+\[
+-2 \leq a - 1 \leq 2 \qquad \text{and} \qquad -2 \leq b - 2 \leq 4.
+\]
+We can then conclude that $-1 \leq a \leq 3$ and $0 \leq b \leq 4$.  We can now rewrite the inequality $(a - 1)^2 + (b - 2)^2 \leq 4$ as follows:
+\begin{align*}
+(a^2 - 2a + 1) + (b^2 - 4b + 4) &\leq 4 \\
+a^2 + b^2 &\leq -1 + 2a + 4b \\
+a^2 + b^2 &\leq -1 + 2(3) + 4(4) \\
+a^2 + b^2 &\leq 21.
+\end{align*}
+This implies that $a^2 + b^2 < 26$ and hence, $(a, b)$ is inside the circle $x^2 + y^2 = 26$.
+
+
+\item With $x^2 + y^2 = r^2$, we have the following:
+\begin{enumerate}
+\item $2x + 2y \dfrac{dy}{dx} = 0$.  Solving for $\dfrac{dy}{dx}$ gives 
+$\dfrac{dy}{dx} = -\dfrac{x}{y}$.
+
+\item If $(a, b)$ is on the circle, the slope of the line tangent to the circle at $(a, b)$ is 
+$-\dfrac{a}{b}$.
+
+\item The slope of the radius from the origin to the point $(a, b)$ is $\dfrac{b}{a}$.  So the product of this slope with the slope of the tangent line in~(b) is $-1$.  This means that the radius is perpendicular to the line tangent to the circle.
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item  This statement is true.  If we assume that 3 does not divide $a$, then we can use two cases.  In the first case, assume $\mod{a}{1}{3}$ and then use congruence arithmetic to show that $\mod{\left(2a^2 + 1 \right)}{0}{3}$.  This proves that if $\mod{a}{1}{3}$, then 3 divides $\left(2a^2 + 1 \right)$.  The second case when $\mod{a}{2}{3}$ is done in a similar manner.
+
+\item This statement is true.  Prove the contrapositive, which is ``For each integer $a$, if 3 divides $a$, then 3 does not divide $\left(2a^2 + 1 \right)$.''  Since 3 divides $a$, we know that $\mod{a}{0}{3}$ and we can use congruence arithmetic to prove that $\mod{\left(2a^2 + 1 \right)}{1}{3}$, and hence, 3 does not divide $\left(2a^2 + 1 \right)$.
+
+\item By using parts~(a) and~(b), we see that this statement is true.
+\end{enumerate}
+
+
+\item Use a proof by contradiction.  Assume that there exists a real number $x$ and there exists an irrational number $q$ such that $(x + q)$ is rational and $(x - q)$ is rational.  Since the rational numbers are closed under subtraction, this implies that $(x + q) - (x - q) = 2q$ is a rational number.  However, if $2q$ is rational, then $q$ is rational.  This is a contradiction to the assumption that $q$ is irrational.
+
+
+\item We know that $\sqrt{2}$ is irrational.  Now consider the real number $q = \sqrt{2}^{\sqrt{2}}$.  The real number $q$ is either rational or irrational.
+\begin{itemize}
+\item If $q$ is rational, then we can use $u = \sqrt{2}$ and $v = \sqrt{2}$ as an example where $u$ and $v$ are irrational and $u^v$ is rational.
+
+\item If $q$ is irrational, then use $u = \sqrt{2}^{\sqrt{2}}$ and $v = \sqrt{2}$.  We then see that
+\begin{align*}
+u^v &= \left( \sqrt{2}^{\sqrt{2}} \right)^{\sqrt{2}} \\
+    &= \sqrt{2}^{\left( \sqrt{2} \cdot \sqrt{2} \right)} \\
+    &= \sqrt{2}^2 \\
+    &= 2
+\end{align*}
+So in this case, we have an example where $u$ and $v$ are irrational and $u^v$ is rational.
+\end{itemize}
+These two cases prove that there exist irrational numbers $u$ and $v$ such that $u^v$ is rational.
+
+
+
+\item  We are given that $a$ and $b$ are natural numbers and that $a^2 = b^3$.
+\begin{enumerate}
+\item Assume that $a$ is even.  Then there exists an integer $k$ such that $a = 2k$.  So,
+\[
+4k^2 = b^3.
+\]
+Hence, $b^3$ is even and by Exercise~(1), $b$ is even. So, there exists an integer $m$ such that $b = 2m$.  Since $a^2 = b^3$, we see that $4k^2 = 8m^3$.  Hence, $k^2$ is even.  By 
+Theorem~\ref{T:n2isodd}, $k$ is even.  So, there exists an integer $q$ such that $k = 2q$ and since $a = 2k$, we see that $a = 4q$.  Hence, 4 divides $a$.
+
+\item Since 4 divides $a$, there exist an integer $n$ such that $a = 4n$.  Using this, we see that $b^3 = 16n^2$. So, $b^3$ is even and hence $b$ is even and there exists an integer $m$ such that $b = 2m$.  This implies that
+\[
+\begin{aligned}
+8m^3 &= 16n^2 \\
+m^3 &= 2n^2 \\
+\end{aligned}
+\]
+Hence, $m^3$ is even and so by Exercise~(1), $m$ is even.  Since $b = 2m$, we see that 4 divides $b$.
+
+\item If 4 divides $b$, then since $a^2 = b^3$, we conclude that $a^2$ is even.  But this implies that $a$ is even (Theorem~\ref{T:n2isodd}).  Hence, by Part~(a), 4 divides $a$.  So, there exist integers $s$ and $t$ such that $b = 4s$ and $a = 4t$.  Hence,
+\[
+\begin{aligned}
+16t^2 &= 64s^3 \\
+t^2 &= 4s^3 \\
+\end{aligned}
+\]
+So, $t^2$ is even and hence $t$ must be even.  Since $a = 4t$, we conclude that 8 divides $a$.
+
+\item Use Parts~(a), (b), and~(c).
+
+\item $a = 8$, $b = 4$.
+\end{enumerate}
+
+\item Let $a$ and $b$ be integers with $a \ne 0$.  We will prove the contrapositive.  So assume that the equation $ax^3 + bx + \left( b + a \right) = 0$ has a solution that is a natural number.  Let $n$ be a natural number that is a solution of this equation.  Then
+\[
+\begin{aligned}
+an^3 + bn + \left( b + a \right) &= 0 \\
+an^3 + a &= -bn - b \\
+a \left(n + 1\right) \left(n^2 - n + 1 \right) &= -b \left( n + 1 \right) \\
+a \left( n^2 - n + 1 \right) &= -b \\
+\end{aligned}
+\]
+The last equation can be used to conclude that $a \mid b$, and this completes the proof of the contrapositive.
+
+
+\item \begin{enumerate}
+\item  Use a proof by contradiction.  So assume that there exist natural numbers $a$, $b$, and $c$ with $a < b < c$ such that $a$, $b$, and $c$ form a Pythagorean triple and 3 does not divide $a$ and 3 does not divide $b$.  Then by Exercise~(\ref{exer:sec34-4}) in Section~\ref{S:divalgo}, $\mod{a^2}{1}{3}$ and $\mod{b^2}{1}{3}$.  Since $c^2 = a^2 + b^2$, we can then conclude that $\mod{c^2}{2}{3}$.  However, using Exercise~(\ref{exer:sec34-4}) in Section~\ref{S:divalgo} in Section~\ref{S:divalgo} again, we can conclude that $\mod{c^2}{0}{3}$ or $\mod{c^2}{1}{3}$ and so we have a contradiction.
+
+\item Use a proof by contradiction.  So assume that there exist natural numbers $a$, $b$, and $c$ with $a < b < c$ such that $a$, $b$, and $c$ form a Pythagorean triple and 5 does not divide $a$ and 5 does not divide $b$ and 5 does not divide $c$.  Then by Proposition~\ref{prop:congmod5}, we know that
+\begin{itemize}
+\item $\mod{a^2}{1}{5}$ or $\mod{a^2}{4}{5}$;
+\item $\mod{b^2}{1}{5}$ or $\mod{b^2}{4}{5}$;
+\item $\mod{c^2}{1}{5}$ or $\mod{c^2}{4}{5}$.
+\end{itemize}
+We will now use the fact that $c^2 = a^2 + b^2$ to also determine the value of $c^2$ modulo 5.  Using the values for $a^2$ and $b^2$ modulo 5 and the facts that $\mod{1 + 1}{2}{5}$, $\mod{1 + 4}{0}{5}$, $\mod{4 + 1}{0}{5}$, and $\mod{4 + 4}{3}{5}$, we see that $c^2$ is congruent to 0, 2, or 3 modulo 5.  However, this contradicts the earlier conclusion that $\mod{c^2}{1}{5}$ or $\mod{c^2}{4}{5}$.  So we conclude that 5 divides $a$ or 5 divides $b$ or 5 divides $c$.
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item One such Pythagorean triple is 5, 12, 13.
+\item One such Pythagorean triple is 7, 24, 25.
+\item Let $m$ be an odd natural number that is greater than 1.  We then know that $m^2 - 1$ is an even natural number and hence, $\left( \dfrac{m^2 - 1}{2} \right)$ is a natural number.  We notice that
+\begin{align*}
+\frac{m^2 - 1}{2} + 1 &= \frac{m^2 - 1 + 2}{2} \\
+                      &= \frac{m^2 + 1}{2}
+\end{align*}
+Hence, $\left( \dfrac{m^2 - 1}{2} \right)$ and $\left( \dfrac{m^2 + 1}{2} \right)$ are consecutive natural numbers.  We now prove that $m$, $\left( \dfrac{m^2 - 1}{2} \right)$, and $\left( \dfrac{m^2 + 1}{2} \right)$ form a Pythagorean triple.
+\begin{align*}
+m^2 + \left( \frac{m^2 - 1}{2} \right)^2 &= m^2 + \frac{m^4 - 2m^2 + 1}{4} \\
+                                         &= \frac{4m^2 + m^4 -2m^2 + 1}{4} \\
+                                         &= \frac{m^4 + 2m^2 + 1}{4} \\
+                                         &= \left(  \frac{m^2 + 1}{2} \right)^2
+\end{align*}
+This proves that $m$, $\left( \dfrac{m^2 - 1}{2} \right)$, and $\left( \dfrac{m^2 + 1}{2} \right)$ form a Pythagorean triple.
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item $50 = 3 + 47$, \quad $142 = 71 + 71$, \quad $150 = 11 + 139$.
+%\item \begin{align*}
+%50 &= 3 + 47  &  142 &= 71 + 71  &  150 &= 11 + 139
+%\end{align*}
+
+\item We assume Goldbach's conjecture is true and let $n$ be an integer that is greater than 5.
+
+If $n$ is even, then $n \geq 6$ and so $n - 2 \geq 4$ and $n -2$ is even.  We can then use Goldbach's conjecture to conclude that there exist prime numbers $p$ and $q$ such that $n - 2 = p + q$.  Then
+\[
+n = 2 + p + q,
+\]
+and so $n$ can be written as the sum of three primes.
+
+If $n$ is odd, then $n \geq 7$ and so $n - 3$ is an even integer that is greater than 4.  We can then use Goldbach's conjecture to conclude that there exist prime numbers $p$ and $q$ such that $n - 3 = p + q$.  Then
+\[
+n = 3 + p + q,
+\]
+and so $n$ can be written as the sum of three primes.
+
+Since we have proved it for even and odd integers, we have proved that Goldbach's Conjecture implies that every integer greater than $5$ can be written as a sum of three primes.
+
+
+\item We assume Goldbach's Conjecture is true and let $n$ be an odd integer that is greater than 7. We have seen in part~(b) that $n$ can be written as the sum of three primes.  So we write
+\[
+n = p + q + r,
+\]
+where $p$, $q$, and $r$ are prime numbers.  If all three of these primes are odd, then we are done.  Otherwise, since $n$ is odd, two of the primes must be even.  Since the only even prime number is 2, we will use $p = 2$ and $q = 2$ and so
+\[
+n = 2 + 2 + r,
+\]
+where $r$ is a prime and since $n > 7$, $r > 3$.  We now use $2 = 3 - 1$ and write
+\begin{align*}
+n &= (3 - 1) + (3 - 1) + r \\
+n &= 3 + 3 + (r - 2)
+\end{align*}
+Now, $(r - 2)$ is an odd number and $r - 2 > 1$.  We now rewrite the previous equation as follows:
+\begin{align*}
+n & = 3 + (3 + (r - 2)) \\
+n & = 3 + (r + 1)
+\end{align*}
+Since $r$ is odd and $r > 3$, we see that $r + 1$ is even and $r + 1 > 4$.  So if Goldbach's Conjecture is true, there exist prime numbers $u$ and $v$ such that $r + 1 = u + v$.  Since $(r + 1)$ is even, both $u$ and $v$ must be odd primes.  So we have
+\[
+n = r + u + v
+\]
+and $r$, $u$, and $v$ are odd primes.  This proves that every odd integer that is greater than 7 is the sum of three odd prime numbers.
+
+\end{enumerate}
+
+
+
+\item Let $p$ and $q$ be twin primes other than 3 and 5.  We will let $q = p + 2$.  We then see that
+\begin{align*}
+pq + 1 &= p(p + 2) + 1 \\
+       &= p^2 + 2p + 1 \\
+       &= (p + 1)^2
+\end{align*}
+This proves that $pq + 1$ is a perfect square.  We will now look at cases for $p$ based on congruence modulo 6.  We first note that since $p$ is an odd prime, then $p$ cannot be congruent to 0, 2, or 4 modulo 6.  In addition, since $p$ is an odd prime other than 3, $p$ cannot be congruent to 3 modulo 6.  Finally, if $\mod{p}{1}{6}$, then $\mod{q}{3}{6}$, and this is not possible.  So we conclude that $\mod{p}{5}{6}$.  Therefore, there exists an integer $k$ such that $p = 6k + 5$ and so $q = 6k + 7$.  We then see that
+\begin{align*}
+pq + 1 &= (6k + 5)(6k + 7) + 1 \\
+       &= 36k^2 + 72k + 36 \\
+       &= 36 \left( k^2 + 2k + 1 \right)
+\end{align*}
+This proves that 36 divides $pq + 1$.
+
+
+\item \begin{enumerate}
+\item Since $(a + b)^2 = a^2 + 2ab + b^2$, we see that 
+\[
+(a + b)^2 - \left( a^2 + b^2 \right) = 2ab.
+\]
+This implies that $\mod{(a + b)^2}{\left( a^2 + b^2 \right)}{2}$.
+
+\item Since $(a + b)^3 = a^3 + 3a^2 b + 3a b^2 + b^3$, we see that 
+\[
+(a + b)^3 - \left( a^3 + b^3 \right) = 3 \left( a^2 b + a b^2 \right).
+\]
+This implies that $\mod{(a + b)^3}{\left( a^3 + b^3 \right)}{3}$.
+
+\item This statement is false.  A counterexample is $a = 1$ and $b = 1$.  For these values, 
+$\mod{(a + b)^4}{0}{4}$ and $\mod{\left( a^4 + b^4 \right)}{2}{4}$.
+
+\item Since $(a + b)^5 = a^5 + 5a^4 b + 10 a^3 b^2 + 10 a^2 b^3 + 5a b^4 + b^5$, we see that 
+\[
+(a + b)^5 - \left( a^5 + b^5 \right) = 5 \left( a^4 b + 2a^3 b^2 + 2a^2 b^3+ a b^4 \right).
+\]
+This implies that $\mod{(a + b)^5}{\left( a^5 + b^5 \right)}{5}$.
+\end{enumerate}
+
+
+
+\item \begin{enumerate}
+\item $f ' (x) = 3ax^2 + 2bx + c$ and $f '' (x) = 6ax + 2b$.
+
+\item The critical points of the function $f$ correspond to solutions of the equation $f'(x) = 0$.  Since this is a quadratic equation, there are at most two solutions and so the function $f$ has at most two critical points.
+
+\noindent
+At at point of inflection, we have $f ''(x) = 0$.  The only solution for this equation is $x =  - \dfrac{b}{3a}$.  Also notice that
+\begin{itemize}
+\item If $a > 0$ and $x >  - \dfrac{b}{3a}$, then $3ax + b > 0$ and $6ax + 2b > 0$.  So $f''(x) > 0$ and the graph of $f$ is concave up.  If $a > 0$ and $x <  - \dfrac{b}{3a}$, then $3ax + b < 0$ and $6ax + 2b < 0$.  So $f''(x) < 0$ and the graph of $f$ is concave down.
+
+\item If $a < 0$ and $x >  - \dfrac{b}{3a}$, then $3ax + b < 0$ and $6ax + 2b < 0$.  So $f''(x) < 0$ and the graph of $f$ is concave down.  If $a > 0$ and $x <  - \dfrac{b}{3a}$, then $3ax + b > 0$ and $6ax + 2b > 0$.  So $f''(x) > 0$ and the graph of $f$ is concave up.
+\end{itemize}
+Since the graph of $f$ changes concavity in both cases, we see that the only inflection point of the function $f$ is when $x =  - \dfrac{b}{3a}$.
+\end{enumerate}
+\end{enumerate}
+
+
+
+
+\subsection*{Explorations and Activities}
+\setcounter{oldenumi}{\theenumi}
+\begin{enumerate} \setcounter{enumi}{\theoldenumi}
+\item \begin{enumerate}
+\item When $a = 2$ and $b = 2$, we see that $c^3 = 8$ and since $c$ is an integer, this is a contradiction.
+
+\item If $a$ and $b$ are both odd prime numbers, then $a^3 + b^3$ is an even natural number.  This means that $c^3$ is even and hence, that $c$ is even.  However, $c$ is prime and so $c = 2$.  This is a contradiction since $c$ must be greater than both $a$ and $b$.
+
+\item If one of $a$ and $b$ is even and the other is odd, then one of them must be equal to 2.  We can use $b = 2$.  Since $b = 2$ and $a$ is odd and $c^3 = a^3 + b^3$, we see that $c^3$ is odd and hence, $c$ is odd.  We now write $b^3 = 2 = c^3 - a^3$ and factor as follows:
+\[
+8 = (c - a) \left( c^2 + ac + a^2 \right).
+\]
+This implies that $\left( c^2 + ac + a^2 \right)$ is a factor of 8, and since $a$ and $c$ are both odd, 
+$\left( c^2 + ac + a^2 \right)$ is odd.  The only odd factor of 8 is 1 and so we obtain
+\[
+c^2 + ac + a^2 = 1.
+\]
+This is a contradiction since $\left( c^2 + ac + a^2 \right) > 1$.
+\end{enumerate}
+
+\item \begin{enumerate}
+\item The following table shows the possible values for an integer $x$ modulo 9 and $x^3$ modulo 9.
+$$
+\BeginTable
+\BeginFormat
+|c | c | c | c | c | c | c | c | c | c |
+\EndFormat
+\_
+|$x$|0|1|2|3|4|5|6|7|8| \\+22 \_
+|$x^3$|0|1|8|0|1|8|0|1|8| \\+33 \_
+\EndTable
+$$
+
+\item For all integers $x$ and $y$, there are three possibilities for $x^3$ modulo 9 and three possibilities for $y^3$ modulo 9.  The following table shows the nine cases for $x^3 + y^3$ modulo 9.
+$$
+\BeginTable
+\BeginFormat
+|c | c |c|c|c|c|c|c|c|c|
+\EndFormat
+\_
+|$x^3$|0|0|0|1|1|1|8|8|8| \\+33 \_
+|$y^3$|0|1|8|0|1|8|0|1|8| \\+33 \_
+|$x^3+y^3$|0|1|8|1|2|0|8|0|7| \\+33 \_
+\EndTable
+$$
+
+\item The table in Part~(b) shows that for all integers $x$ and $y$, $x^3+y^3$ is congruent (modulo 9) to 0, 1, 2, 7, or 8.  So if $\mod{k}{3}{9}$, then $k$ cannot be written as the sum of the cubes of two integers.
+\item The table in Part~(b) shows that for all integers $x$ and $y$, $x^3+y^3$ is congruent (modulo 9) to 0, 1, 2, 7, or 8.  So if $\mod{k}{4}{9}$, then $k$ cannot be written as the sum of the cubes of two integers.
+
+\item The table in Part~(b) can be used to prove the following theorem:
+\begin{list}{}
+\item For each integer $k$, if $k$ is congruent (modulo 9) to 3, 4, 5, or 6, then $k$ cannot be written as the sum of the cubes of two integers.
+\end{list}
+
+\item Let $x$, $y$, and $z$ be integers.  From Part~(b), we see that there are five possibilities for $x^3+y^3$.  From Part~(a), there are three possibilities for $z^3$.  So we will use 15 cases to examine $x^3+y^3+z^3$ as is shown in the following table.
+$$
+\BeginTable
+\BeginFormat
+| c | c | c | 
+\EndFormat
+\_
+| $x^3 + y^3$ | $z^3$ | $x^3+y^3+z^3$ | \\+33 \_
+|0|0|0| \\+11 \_
+|0|1|1| \\+11\_
+|0|8|8| \\+11\_
+|1|0|1| \\+11\_
+|1|1|2| \\+11\_
+|1|8|0| \\+11\_
+|2|0|2| \\+11\_
+|2|1|3| \\+11\_
+|2|8|1| \\+11\_
+|7|0|7| \\+11\_
+|7|1|8| \\+11\_
+|7|8|6| \\+11\_
+|8|0|8| \\+11\_
+|8|1|0| \\+11\_
+|8|8|7| \\+11\_
+\EndTable
+$$
+
+\item The table in Part~(7) shows that for all integers $x$, $y$, and $z$, $x^3+y^3+z^3$ is congruent (modulo 9) to 0, 1, 2, 3, 6, 7, or 8.  So if $\mod{k}{4}{9}$, then $k$ cannot be written as the sum of the cubes of three integers.
+
+\item The table in Part~(f) can be used to prove the following theorem:
+\begin{list}{}
+\item For each integer $k$, if $k$ is congruent (modulo 9) to 4 or 5, then $k$ cannot be written as the sum of the cubes of three integers.
+\end{list}
+
+\end{enumerate}
+\note There are, of course, other ways to prove the result in Part~(h).  For example, if we consider all possible cases for $x$, $y$, and $z$ using congruence modulo 9, there would be $9^3 = 729$ cases to consider.  Probably the most important thing is to first prove Part~(a).  Then there are 3 cases each for $x^3$, $y^3$, and $z^3$ resulting in $3^3 = 27$ cases.  By using Part~(b) and~(f), we end up with $9+15 = 24$ cases.  This is a slight improvement, but along the way, we also get the result in Part~(b).
+\end{enumerate}
+\hbreak
+\endinput
+
+
+
+
+
+

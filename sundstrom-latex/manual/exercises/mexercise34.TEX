@@ -1,0 +1,269 @@
+\section*{Section \ref{S:cases} Using Cases in Proofs}
+
+\begin{enumerate}
+\item Use the fact that $n^2 + n = n \left( n+1 \right)$.
+
+%\item
+%\begin{enumerate}
+%\item Use $m = k - 1$.  Then, $m +1 = k$, and $m + 2 = k + 1$.
+%\item Use $n^3 - n = n \left( n - 1 \right) \left( n + 1 \right) = 
+%\left( n - 1 \right) n \left( n + 1 \right)$.
+%\end{enumerate}
+
+\item If there exists a  solution of the equation $x^2 + x - u = 0$ that is an integer, then we can conclude that there exists an integer $n$ such that $n^2 + n - u = 0$.  Then,
+\[
+u = n \left( n + 1 \right).
+\]
+From Exercise~(1), we know that $n(n + 1)$ is even and hence, $u$ is even.  This contradicts the assumption that $u$ is odd.
+
+
+\item If $n$ is an odd integer, then there exists an integer $m$ such that $n = 2m + 1$.  Use two cases: (1) $m$ is even; (2) $m$ is odd.  If $m$ is even, then there exists an integer $k$ such that $m = 2k$ and this means that $n = 2(2k) + 1$ or $n = 4k + 1$.  If $m$ is odd, then there exists an integer $k$ such that $m = 2k + 1$.  Then $n = 2(2k + 1) + 1$ or $n = 4k + 3$.
+
+
+\item If $a \in \Z$ and $a^2 = a$, then $a(a - 1) = 0$.  Since the product is equal to zero, at least one of the factors must be zero.  In the first case, $a = 0$.  In the second case, 
+$a - 1 = 0$ or $a = 1$.
+
+
+\item
+\begin{enumerate}
+\item Two cases that can be used are:  (i) $d \mid a$, (ii) $d \mid b$.  In the case where $d \mid a$, there exists an integer $k$ such that $a = dk$.  Then, $ab = d \left( bk \right)$, which proves that $d \mid \left( ab \right)$.  The case where $d \mid b$ is handled similarly.
+
+\item Let $a$, $b$, and $d$ be integers.  If $d$ does not divide the product $ab$, then $d$ does not divide $a$ and $d$ does not divide $b$.
+
+\item Let $a$, $b$, and $d$ be integers.  If $d$ divides the product $ab$, then $d$ divides $a$ or $d$ divides $b$.  This is false.  A counterexample is:  $a = 4$, $b = 3$, $d = 6$.
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item The statement, for all integers $m$ and $n$, if 4 divides $\left(m^2 + n^2 - 1 \right)$, then $m$ and $n$ are consecutive integers, is false.  A counterexample is $m = 2$ and $n = 5$.
+
+The statement, for all integers $m$ and $n$, if $m$ and $n$ are consecutive integers, then 4 divides $\left(m^2 + n^2 - 1 \right)$, is true.  To prove this, let $n = m + 1$.  Then
+\[
+m^2 + n^2 - 1 = 2m^2 + 2m = 2m(m + 1).
+\]
+We have proven the $m(m + 1)$ is even.  (See Exercise~(1).)  So this can be used to prove that 4 divides $\left(m^2 + n^2 - 1 \right)$.
+
+\item The biconditional statement is true. First assume both $m$ and $n$ are even or both $m$ and $n$ are odd. Use two cases.  If both are even, then use the fact that there exist integers 
+$j$ and $k$ such that $m = 2j$ and $n = 2k$.  If both are odd, then use the fact that there exist integers $j$ and $k$ such that $m = 2j + 1$ and $n = 2k + 1$.  In both cases, it can be proven that 4 divides $m^2 - n^2$.
+
+For the converse, use a proof by contradiction.  So assume that  This is equivalent to the following:
+\begin{list}{}
+\item There exists integers $m$ and $n$ such that 4 divides $m^2 - n^2$ and one of $m$ or $n$ is even and the other is odd.
+\end{list}
+So there exists an integer $q$ such that $m^2 - n^2 = 4q$.  For one case, assume that $m$ is odd and $n$ is even.  Then there exist integers $j$ and $k$ such that $m = 2j + 1$ and $n = 2k$.  We can then prove that
+\begin{align*}
+m^2 - n^2 &= \left(4j^2 + 4j + 1 \right) - 4k^2 \\
+       4q &=4 \left( j^2 + j - k^2 \right) + 1.
+\end{align*}
+The last equation implies that 4 divides 1, which is a contradiction.  The other case when $m$ is even and $n$ is odd is proven similarly.
+\end{enumerate}
+
+
+\item The proposition is true.  If $n$ is odd, then there exists an integer $m$ such that 
+$n = 2m + 1$.  We then see that $n^2 = 4m^2 + 4m + 1$ and, hence, $n^2 - 1 = 4m(m + 1)$.  From Exercise~(1), $m(m + 1)$ is even and so there exists an integer $k$ such that 
+$m(m + 1) = 2k$.  Then
+\[
+n^2 - 1 = 4(2k) = 8k,
+\]
+and this proves that 8 divides $n^2 - 1$.
+
+
+\setcounter{equation}{0}
+\item Use a proof by contradiction.  Assume there exist natural numbers $a$ and $n$ with 
+$n \geq 2$ such that $a^2 + 1 = 2^n$.  If $a$ is even, then $a^2 + 1$ is odd, which is a contradiction since $2^n$ is even.  So now assume that $a$ is odd.  Then there exists an integer $k$ such that $a = 2k + 1$.  Since $a^2 + 1 = 2^n$, we then see that
+\begin{equation}
+4k^2 + 4k + 2 = 2^n.
+\end{equation}
+We now use the assumption that $n \geq 2$ and write $2^n = 4 \cdot 2^{n-2}$.  Using this and 
+equation~(1), we have
+\[
+2 = 4 \left(2^{n-2} - k^2 - k \right),
+\]
+and this implies that 4 divides 2, which is a contradiction. 
+
+
+\item \begin{enumerate}
+\item If $a \ne 0$, then the equation $ax + b = 0$ has a rational number solution, which is 
+$- \dfrac{b}{a}$.
+
+\setcounter{equation}{0}
+\item Let $a$, $b$, and $c$ be odd integers.  Assume the equation has a rational number solution $\dfrac{p}{q}$, where $p$ and $q$ are integers, $q > 0$, and $p$ and $q$ have no common factor greater than 1.  We then see that
+\begin{align}
+a \frac{p^2}{q^2} + b \frac{p}{q} + c &= 0 \notag \\
+a p^2 + bpq + cq^2 &= 0.
+\end{align}
+Since $p$ and $q$ have no common factor greater than 1, both cannot be even.  If both are odd, then the left side of equation~(1)is an odd integer, and this is a contradiction.  If one of $p$ and $q$ is odd and the other is even, then the left side of equation~(1) is also an odd integer, which is a contradiction.
+
+\item The proposition is false.  A counterexample is $a = 1$, $b = 1$, $c = 1$, and $d = 1$.  The integer $-1$ is a solution of the equation $x^3 + x^2 + x + 1 = 0$.
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item Use three cases.  If $x = 0$, then $|-x| = |-0| = 0 = |x|$.  For the second case, if 
+$x > 0$, then $-x < 0$ and
+\[
+|-x| = - (-x) = x = |x|.
+\]
+For the last case, if $x < 0$, then $-x > 0$ and
+\[
+|-x| = -x = |x|.
+\]
+
+\item If $x > 0$ and $y > 0$, then $xy > 0$ and
+\[
+|xy| = xy = |x||y|.
+\]
+If $x > 0$ and $y < 0$, then $xy < 0$ and
+\[
+|xy| = -(xy) = = x (-y) = |x||y|.
+\]
+If $x < 0$ and $y > 0$, then $xy < 0$ and
+\[
+|xy| = -(xy) = = (-x)y = |x||y|.
+\]
+If $x < 0$ and $y < 0$, then $xy > 0$ and
+\[
+|xy| = (xy) = = (-x) (-y) = |x||y|.
+\]
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item For each real number $x$, $\left| x \right| \geq a$ if and only if $x \geq a$ or 
+$x \leq -a$.
+
+\item There are two cases:  $|x| < a$ or $|x| = a$.  In the first case, we have $-a < x < a$ and in the second case, we have $x = a$ or $x = -a$.  So in both cases, we have $-a \leq x \leq a$.
+
+\item For each real number $x$, $\left| x \right| > a$ if and only if $x > a$ or 
+$x < -a$.
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item If $x > 0$, then $\dfrac{1}{x} > 0$ and $\left| \dfrac{1}{x} \right| = \dfrac{1}{x} = \dfrac{1}{|x|}$.
+
+If $x < 0$, then $\dfrac{1}{x} < 0$ and $\left| \dfrac{1}{x} \right| = - \dfrac{1}{x} = 
+\dfrac{1}{-x} = \dfrac{1}{|x|}$.
+
+\item We start with $|x| = |x + y + (-y)|$ and rewrite this as $|x| = |(x -y) + y|$ and then apply the triangle inequality.
+\begin{align*}
+      |x| &\leq |x - y| + |y|, \quad \text{and hence,} \\
+|x| - |y| &\leq |x - y|.
+\end{align*}
+This proves that $|x - y| \geq |x| - |y|$.
+
+\item This follows from the result in Part~(b).
+\end{enumerate}
+\end{enumerate}
+
+
+
+
+\subsection*{Evaluation of Proofs}
+\setcounter{oldenumi}{\theenumi}
+\begin{enumerate} \setcounter{enumi}{\theoldenumi}
+\item \begin{enumerate}
+\item The proposition is true.  However, this is not a valid proof.  The problem is that when we get to the equation $n\left( an^2 + b \right) = 3$, we cannot conclude that $n = 3$.  What we can conclude is that $n$ divides 3 since $n$ is a natural number and $ \left( an^2 + b\right)$ is an integer.  This means that $n = 1$ or $n = 3$.  We can now revised the given proof using two cases.
+One minor writing issue is that two consecutive paragraphs started with the word ``so.''  Following is a proof of this proposition.
+
+
+\begin{myproof}
+We will prove the contrapositive, which is
+\begin{list}{}
+\item For all nonzero integers $a$ and $b$, if the equation $ax^3 + 2bx = 3$ has a solution that is a natural number, then $a + 2b = 3$ or $9a + 2b = 1$.
+\end{list}
+\vskip6pt
+\noindent
+So we let $a$ and $b$ be nonzero integers and assume that the natural number $n$ is a solution of the equation $ax^3 + 2bx = 3$.  We will prove that $a + 2b = 3$ or $9a + 2b = 1$.  We have
+\begin{align*}
+an^3 + 2bn &= 3 \qquad \text{or}\\
+n \left( an^2 + 2b \right) &= 3.
+\end{align*}
+This means that we can conclude 3 divides $n$ since $n$ is a natural number and 
+$ \left( an^2 + 2b\right)$ is an integer.  Hence, $n = 1$ or $n = 3$.  We now use these as two cases.
+\begin{itemize}
+\item In the case where $n = 1$, we substitute $n = 1$ in the equation $an^3 + 2bn = 3$ and obtain 
+$a + 2n = 3$.
+
+\item In the case where $n = 3$, we substitute $n = 3$ in the equation $an^3 + 2bn = 3$ and obtain $27a + 6b = 3$.  Dividing both sides of this equation by 3 shows that $9a + 2b = 1$.  
+\end{itemize}
+In both cases, we have $a + 2n = 3$ or $9a + 2b = 1$.  This concludes the proof of the contrapositive of the proposition, and so we have proved that for all nonzero integers $a$ and $b$, if $a + 2b \ne 3$ and 
+$9a + 2b \ne 1$, then the equation $ax^3 + 2bx = 3$ does not have a solution that is a natural number.
+\end{myproof}
+
+
+\item The proposition is true.  However, the proof by contradiction is not set up correctly.  The assumptions at the beginning of a proof by contradiction should be the following:
+\begin{list}{}
+\item There exist nonzero integers $a$ and $b$ such that $a + 2b \ne 3$ and $9a + 2b \ne 1$ and that the equation $ax^3 + 2bx = 3$ has a solution that is a natural number.
+\end{list}
+\vskip6pt
+\noindent
+So we can also conclude that there exists a natural number $n$ such that $an^3 + 2bn = 3$.  In addition, although it is correct, the work that leads to equation~(2) is not necessary.  We can work with the equation $an^3 + 2bn = 3$ without substituting for $2b$.  Finally, the end of the proof requires two cases and only one is given.   Following is a proof by contradiction of this proposition.
+
+
+\setcounter{equation}{0}
+\begin{myproof}
+We will use a proof by contradiction.  So we assume that there exist nonzero integers $a$ and $b$ such that $a + 2b \ne 3$ and $9a + 2b \ne 1$ and that the equation $ax^3 + 2bx = 3$ has a solution that is a natural number.  This means that there exists a natural number $n$ such that $an^3 + 2bn = 3$.  So we have
+\begin{align*}
+               an^3 + 2bn &= 3 \\
+n \left( an^2 + b \right) &= 3.
+\end{align*}
+
+By the closure properties of the integers, $\left( an^2 + b \right)$ is an integer and, hence, the last equation implies that $n$ divides 3.  So $n = 1$ or $n = 3$.  
+
+\begin{itemize}
+\item When we substitute $n = 1$ into the equation $an^3 + 2bn = 3$, we obtain 
+$a + 2b = 3$.  This is a contradiction to the assumption that $a + 2b \ne 3$.  
+
+\item When we substitute $n = 3$ into the equation $an^3 + 2bn = 3$, we obtain 
+$27a + 6b = 3$ and, hence, $9a + 2b = 1$.  This is a contradiction since to the assumption that $9a + 2b \ne 3$.
+\end{itemize}
+
+So we obtain a contradiction in both cases, and this proves that the negation of the proposition is false and, hence, the proposition is true.  
+\end{myproof}
+\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection*{Explorations and Activities}
+\setcounter{oldenumi}{\theenumi}
+\begin{enumerate} \setcounter{enumi}{\theoldenumi}
+\item \begin{enumerate}
+\item One example is $x = 5$ and $y = -7$.  In this case, 
+\[
+\left| x + y \right| = \left| 2 \right| = 2 \qquad \text{and} \qquad \left| x \right| + \left| y \right| = 5 + 7 = 12.
+\]
+So for these values of $x$ and $y$, we see that 
+$\left| x + y \right| \leq \left| x \right| + \left| y \right|$.
+
+\item Let $r$ be a real number. In the case where $r \geq 0$, we see that $\left| r \right| = r$ and this implies that $r \leq \left| r \right|$. In addition, $-\left| r \right| \leq 0$ and so 
+$-\left| r \right| \leq r$.  So in this case, $-\left| r \right| \leq r \leq \left| r \right|$.
+
+In the case where $r < 0$, we see that $\left| r \right| = -r$ and hence, 
+$r = -\left| r \right|$.  This implies that 
+$-\left| r \right| \leq r$. In addition, $\left| r \right| > 0$ and so 
+$r < \left| r \right|$.  So in this case, $-\left| r \right| \leq r \leq \left| r \right|$.
+
+Since the result is true in both cases, we have proven that for each real number $r$, 
+$-\left| r \right| \leq r \leq \left| r \right|$.
+
+\item Let $x$ and $y$ be real numbers.  By the result in Part~(2), we see that
+\begin{align*}
+-\left| x \right| &\leq x \leq \left| x \right| \quad \text{and} \\
+-\left| y \right| &\leq y \leq \left| y \right|.
+\end{align*}
+If we now add the corresponding parts of these inequalities, we obtain
+\begin{align*}
+-\left| x \right| - \left| y \right| &\leq x + y \leq \left| x \right| + \left| y \right| \\
+-\left( \left| x \right| + \left| y \right| \right) &\leq x + y \leq \left| x \right| + \left| y \right|
+\end{align*}
+We can now use Part~(a) of Theorem~3.25 to conclude that 
+$\left| x + y \right| \leq \left| x \right| + \left| y \right|$.
+\end{enumerate}
+
+\end{enumerate}
+
+\hbreak
+
+\endinput

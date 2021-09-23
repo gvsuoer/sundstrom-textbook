@@ -1,0 +1,402 @@
+\section*{Section \ref{S:contradiction} Proof by Contradiction}
+
+\begin{enumerate}
+\item
+\begin{enumerate} 
+\item $P \vee C$
+\item If $P \vee C$ is true, then we know that $P$ is true or $C$ is true.  However, $C$ is a contradiction, and by definition, it is false.  Therefore, $P$ must be true.
+\item If we prove the negation of $P$ implies a contradiction, then we have proven that the disjunction of $P$ with a contradiction is true.  Since the contradiction is false, $P$ must be true.
+\end{enumerate}
+
+
+
+
+\item \begin{enumerate}
+\item This statement is true.  Use a proof by contradiction.  So assume that $a$ and $b$ are integers, $a$ is even, $b$ is odd, and 4 divides $a^2 + b^2$.  So there exist integers $m$ and 
+$n$ such that
+\[
+a = 2m \qquad \text{and} \qquad a^2 + b^2 = 4n.
+\]
+Substitute $a = 2m$ into the second equation and use algebra to rewrite in the form 
+$b^2 = 4(n - m^2)$.  This means that $b^2$ is even and hence, that $b$ is even.  This is a contradiction to the assumption that $b$ is odd.
+
+
+\item This statement is true.  Use a proof by contradiction.  So assume that $a$ and $b$ are integers, $a$ is even, $b$ is odd, and 6 divides $a^2 + b^2$.  So there exist integers $m$ and 
+$n$ such that
+\[
+a = 2m \qquad \text{and} \qquad a^2 + b^2 = 6n.
+\]
+Substitute $a = 2m$ into the second equation and use algebra to rewrite in the form 
+$b^2 = 2(3n - 2m^2)$.  This means that $b^2$ is even and hence, that $b$ is even.  This is a contr
+
+\item This statement is true.  Use a proof by contradiction.  So assume that $a$ and $b$ are integers, $a$ is even, $b$ is odd, and 4 divides $a^2 + 2b^2$.  So there exist integers $m$ and 
+$n$ such that
+\[
+a = 2m \qquad \text{and} \qquad a^2 + 2b^2 = 4n.
+\]
+Substitute $a = 2m$ into the second equation and use algebra to rewrite in the form 
+$b^2 = 2(n - m^2)$.  This means that $b^2$ is even and hence, that $b$ is even.  This is a contradiction to the assumption that $b$ is odd.
+
+\item This statement is true.  Use a direct proof.  Since $a$ and $b$ are odd, there exist integers $m$ and $n$ such that
+\[
+a = 2m + 1 \qquad \text{and} \qquad b = 2n + 1.
+\]
+We then see that
+\begin{align*}
+a^2 + 3b^2 &= 4m^2 + 4m + 1 + 12n^2 + 12n + 3 \\
+           &= 4\left( m^2 + m + 3n^2 + 3n + 1 \right).
+\end{align*}
+This shows that 4 divides $a^2 + 3b^2$.
+\end{enumerate}
+
+
+
+
+
+\item
+\begin{enumerate}
+\item Let  $r$  be a real number such that $r^2 = 18$.  We will prove that  $r$  is irrational using a proof by contradiction.  So, we assume that  $r$  is a rational number.
+
+\item  Use the fact that $\sqrt{18} = 3\sqrt{2}$.  So, if we assume that $\sqrt{18}$ is rational, then $\dfrac{\sqrt{18}}{3}$ is rational, and hence $\sqrt{2}$ is rational.  This is a contradiction.
+\end{enumerate}
+
+
+\item Use a proof by contradiction.  If $\sqrt[3]{2}$ is rational, then there exist nonzero integers $m$ and $n$ such that $\sqrt[3]{2} = \dfrac{m}{n}$ and $m$ and $n$ have no common factor greater than 1.  By cubing both sides of this equation, we can see that $2n^3 = m^3$.  This means that $m^3$ is even and hence, $m$ is even.  So there exists an integer $k$ such that 
+$m = 2k$.  We can then use this to obtain the following:
+\begin{align*}
+2n^3 &= 8k^3 \\
+ n^3 &= 4k^3.
+\end{align*}
+Hence, $n^3$ is even and so, $n$ is even.  This means that $m$ and $n$ are both even and have a common factor of 2.  This is a contradiction to the assumption that $m$ and $n$ have no common factor greater than 1.
+
+
+
+\item \begin{enumerate}
+\item Use a proof by contradiction.  So, we assume that there exist real numbers $x$ and $y$ such that $x$ is rational, $y$ is irrational, and $x + y$ is rational.  Since the rational numbers are closed under addition, this implies that $\left( x + y \right) - x$ is a rational number.  Since $\left( x + y \right) - x = y$, we conclude that $y$ is a rational number and this contradicts the assumption that $y$ is irrational.
+
+\item Use a proof by contradiction.  So, we assume that there exist nonzero real numbers $x$ and $y$ such that $x$ is rational, $y$ is irrational, and $xy$ is rational.  Since the rational numbers are closed under division by nonzero rational numbers, this implies that 
+$\dfrac{xy}{x}$ is a rational number.  Since $\dfrac{xy}{x} = y$, we conclude that $y$ is a rational number and this contradicts the assumption that $y$ is irrational.
+\end{enumerate}
+
+\item
+\begin{enumerate}
+\item This statement is false.  A counterexample is $x = \sqrt{2}$.
+\item This statement is true since the contrapositive is true.  The contrapositive is:
+\begin{list}{}
+\item For any real number $x$, if $\sqrt{x}$ is rational, then $x$ is rational.
+\end{list}
+If there exist integers $a$ and $b$ with $b \ne 0$ such that $sqrt{x} = \dfrac{a}{b}$, then 
+$x^2 = \dfrac{a^2}{b^2}$ and hence, $x^2$ is rational.
+
+\item This statement is false.  A counterexample is $x = \sqrt{2}$, $y = -\sqrt{2}$.
+
+\item This statement is true since the contrapositive is true.  The contrapositive is:
+\begin{list}{}
+\item For every pair of real numbers $x$ and $y$, if $x$ is rational and $y$ is rational, then 
+$x + y$ is rational.
+\end{list}
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item $(3 + \sqrt{2}) + (-\sqrt{2}) = 3$
+
+\item Even though $\sqrt{2}$ and $\sqrt{5}$ are irrational numbers, based on these facts alone, we cannot conclude that $\sqrt{2} + \sqrt{5}$ is irrational since there do exist irrational numbers whose sum is a rational number.
+
+\item To prove that $\sqrt{2} + \sqrt{5}$ is irrational, use a proof by contradiction.  So, if we assume that $\sqrt{2} + \sqrt{5}$ is rational, then we can write
+\[
+\sqrt{2} + \sqrt{5} = a
+\]
+where $a \in \mathbb{Q}$.  Rewrite this equation as $\sqrt{5} = a - \sqrt{2}$ and then square both sides.  This gives
+\[
+5 = a^2 - 2a \sqrt{2} + 2.
+\]
+Rewrite this as $\sqrt{2} = \dfrac{a^2 - 3}{2a}$.  This proves that $\sqrt{2}$ is rational, which is a contradiction.
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item Use a proof by contradiction.  Assume that there exists a real number $x$ such that 
+$(x + \sqrt{2})$ is rational and $(x - \sqrt{2})$ is rational.  The rational numbers are closed under subtraction.  Hence, we may conclude that the sum of these two rational numbers is rational.  However,
+\[
+(x + \sqrt{2}) - (x - \sqrt{2}) = 2 \sqrt{2}.
+\]
+This implies that $2 \sqrt{2}$ is rational, which in turn, implies that $\sqrt{2}$ is rational.  This is a contradiction.
+
+\item One generalization is the following:  For each real number $x$, if $y$ is an irrational number, then $(x + y)$ is irrational or $(x - y)$ is irrational.  A proof can be obtained by replacing $\sqrt{2}$ with $y$ in the proof in Part~(a).
+\end{enumerate}
+
+
+
+\item Use a proof by contradiction.  So assume that $x$ and $y$ are positive real numbers and that $\sqrt{x + y} > \sqrt{x} + \sqrt{y}$.  After squaring both sides of this inequality, we see that $x + y > x + 2 \sqrt{x} \sqrt{y} + y$.  This implies that $0 > \sqrt{xy}$.  This is a contradiction since $\sqrt{xy}$ is a positive number.
+
+
+\item Use a proof by contradiction.  Assume there exists a real number $x$ such that 
+$x(1 - x) > \dfrac{1}{4}$.  By first multiplying both sides of this inequality by 4 and then using algebra, we obtain
+\begin{align*}
+4x - 4x^2 &> 1 \\
+        0 &> 4x^2 - 4x + 1 \\
+        0 &> (2x - 1)^2.
+\end{align*}
+This is a contradiction since for every real number $x$, $(2x - 1)^2 \geq 0$.
+
+
+\item
+\begin{enumerate}
+\item $\log_2 32 = 5$.  So, $\log_2 32$ is a rational number.
+
+\item Assume that $\log_2 3$ is a rational number.  So, if $\log_2 3 = a$, then $2^a = 3$.  This means that $a > 0$.  So, there exist natural numbers $m$ and $n$ such that
+\[
+2^{m/n} = 3.
+\]
+From this, we conclude that $2^m = 3^n$.  However, $2^m$ is even and $3^n$ is odd.  This is a contradiction.
+\end{enumerate}
+
+
+\item Assume that $m$ is an integer solution of the equation $x^3 - 4x^2 = 7$.  This means that 
+$m^3 - 4m^2 = 7$, and we can write $m\left( m^2 - 4m \right) = 7$.  From this we conclude that 
+$m$ divides 7, and hence, $m$ must be $-7$, $-1$, $1$, or $7$.  By substitution, we can check that none of these integers is a solution of the equation $x^3 - 4x^2 = 7$.
+
+
+
+
+
+\item \begin{enumerate}
+\item A direct proof is possible.
+\[
+\begin{aligned}
+\left( \sin \theta + \cos \theta \right)^2 &= \sin^2 \theta + 2 \left( \sin \theta \right) \left( \cos \theta \right) + \cos^2 \theta \\
+                                           &= 1 + \sin \left( 2 \theta \right) \\
+\end{aligned}
+\]
+Since $0 < \theta < \dfrac{\pi}{2}$, we see that $0 < 2 \theta < \pi$, and hence, 
+$\sin \left( 2 \theta \right) > 0$.  Thus, we can conclude that 
+$\left( \sin \theta + \cos \theta \right)^2 > 1$ and hence that \\
+$\left( \sin \theta + \cos \theta \right) > 1$.
+
+\item Use a proof by contradiction.  Assume there exist nonzero real numbers $a$ and $b$ such that $\sqrt{a^2 + b^2} = a + b$.  If we square both sides of this equation, we obtain 
+$a^2 + b^2 = a^2 + 2ab + b^2$, and this equation implies that $2ab = 0$.  This is a contradiction since $a \ne 0$ and $b \ne 0$.
+
+\item Use a proof by contradiction.  Assume $n$ is an integer greater than 2 and that there exists an integer $m$ such that $n$ divides $m$ and $n + m = nm$.  So, there exists an integer $k$ such that $m = nk$.  Substituting this into the equation $n + m = nm$ yields
+\[
+\begin{aligned}
+n + nk &= n^2 k \\
+n \left( 1 + k \right) &= n \left( nk \right) \\
+\end{aligned}
+\]
+Since $n > 2$, we can conclude that $1 + k = nk$ and this implies that 
+$1 = n \left( k - 1 \right)$.  Hence, $n$ divides 1 and this is a contradiction since $n > 2$.
+
+
+\item Use a proof by contradiction.  Assume there exist positive real numbers $a$ and $b$ such that
+\[
+\frac{2}{a} + \frac{2}{b} = \frac{4}{a + b}.
+\]
+If we multiply both sides of this equation by $ab \left( a + b \right)$, we obtain
+\[
+\begin{aligned}
+2b \left( a + b \right) + 2a \left( a + b \right) &= 4ab \\
+2a^2 + 2b^2 + 4ab &= 4ab \\
+2 \left( a^2 + b^2 \right) &= 0. \\
+\end{aligned}
+\]
+The last equation is a contradiction since both $a$ and $b$ are positive and so the left side of the equation must be positive.
+\end{enumerate}
+
+
+\item Using a proof by contradiction, we assume that $n$, $n + 1$, and $n + 2$ are three consecutive natural numbers such that $(n + 2)^3 = (n + 1)^3 + n^3$.  Expanding the terms in this equation and collecting like terms gives
+\begin{align*}
+          n^3 - 3n^2 - 9n - 7 &= 0 \\
+n \left( n^2 - 3n - 9 \right) &= 7.
+\end{align*}
+The last equation implies that $n$ divides 7 and so $n = 1$ or $n = 7$.  However, this is a contradiction since $3^3 \ne 2^3 + 1^3$ and $9^3 \ne 8^3 + 7^3$.
+
+
+
+\item \begin{enumerate}
+\item $20^2 + 21^2 = 841$ and $29^2 = 841$.
+
+\item $3, 4, 5$ and $5, 12, 13$ are Pythagorean triples.
+
+\item The proposition is true.  Use a proof by contradiction.  Assume $a$, $b$, and $c$ are integers, $a^2 + b^2 = c^2$, and $a$ is odd and $b$ is odd.  This means that $a^2$ and $b^2$ are odd and hence, $a^2 + b^2$ must be even.  Therefore, $c^2$ is even and hence, $c$ is even.  so there exist integers $m$, $n$, and $k$ such that
+\begin{center}
+$a = 2m + 1$, \quad $b = 2n + 1$, \quad and $c = 2k$.
+\end{center}
+We now substitute these expressions into $a^2 + b^2 = c^2$.  This gives
+\[
+\begin{aligned}
+\left( 4m^2 + 4m + 1 \right) + \left( 4n^2 + 4n + 1 \right) &= 4k^2 \\
+4 \left( k^2 - m^2 - m - n^2 - n \right)&= 2. \\
+\end{aligned}
+\]
+The last equation implies that 4 divides 2, which is a contradiction.
+\end{enumerate}
+
+\item \begin{enumerate}
+\item For all integers $a$ and $b$, $b^2 \ne 4a + 2$.
+
+\item  Use a proof by contradiction.  Assume there exist integers $a$ and $b$ such that 
+$b^2 = 4a + 2$.  This equation can be rewritten as $b^2 = 2 \left( 2a + 1 \right)$.  Therefore, $b^2$ is even and hence $b$ is even.  This means that there exists an integer $k$ such that 
+$b = 2k$.  Substituting this into the equation $b^2 = 4a + 2$ gives
+\[
+\begin{aligned}
+4k^2 &= 4a + 2 \\
+4 \left( k^2 - a^2 \right) &= 2. \\
+\end{aligned}
+\]
+This equation implies that 4 divides 2, which is a contradiction.
+\end{enumerate}
+
+
+\item Use a proof by contradiction.  So, assume that $n$ is a natural number greater than 1, $a$ is the smallest positive factor of $n$, and $a$ is not prime.  This means that there exists a natural number $b$ such that $b$ divides $a$ and $1 < b < a$.  But then, $b$ divides $n$ and $a$ is not the smallest positive factor of $n$.
+
+It is also possible to prove the contrapositive.
+
+
+
+\item If the array could be completed to be a magic square, then the sum would have to be 23.  (Consider the diagonal from the top right to the bottom left.)  Then, the entry in the first row and first column would have to be 5, and then the entry in the first row and third column would have to be 15.  This would make the sum of the entries in the third column too large.  So, we cannot form a magic square.
+
+
+\item Since the sum of the 9 digits is 45, the sum of each row must be 15.  This means that the sum of each column must be 15, and the sum of each diagonal must be 15.  Using these results and the 3 in the center position, we see that each of the following must be true:
+\[
+a + h = 12 \qquad c + f = 12 \qquad d + e = 12 \qquad \text{and} \qquad b + g = 12.
+\]
+So there must be four different pairs of digits whose sum is 12.  However, using each of the digits 1 through 9 only once, the only ways to have a sum of 12 are
+\[
+3 + 9 \qquad 4 + 8 \qquad \text{and} \qquad 5 + 7.
+\]
+This is a contradiction.
+
+\newpar
+Another way to obtain a contradiction, is to notice that each of the other 8 digits must be added to the center digit, 3.  In particular, 1 must be added to 3.  Since $1 + 3 = 4$, it is not possible to find another digit $x$ with $1 + 3 + x = 15$.
+\end{enumerate}
+
+
+
+\subsection*{Evaluation of Proofs}
+\setcounter{oldenumi}{\theenumi}
+\begin{enumerate} \setcounter{enumi}{\theoldenumi}
+\item \begin{enumerate}
+
+\item This proposition is false.  A counterexample is $x = \sqrt{2}$ and $m = 0$.  In this case, $x$ is irrational, but $mx = 0$ and so, $mx$ is rational.  However, if we change the proposition to read, ``For each real number $x$, if $x$ is irrational and $m$ is a nonzero integer, then $mx$ is irrational,'' then the proposition is true.  
+
+An argument can be made that this is a valid proof for the revised proposition.  One writing issue is that there is not indication of what will be proven at the beginning of the proof.  However, the proof rests on the fact that if it is true that $x \ne \dfrac{a}{b}$, for all integers $a$ and $b$ with $b \ne 0$, then it is also true that $mx \ne \dfrac{ma}{b}$, for all integers $a$ and $b$ with $b \ne 0$.  Although this is true, it always makes me a little uneasy when trying to make conclusions with ``unequal.''  This can be avoided using a proof by contradiction for the revised proposition.
+
+\begin{myproof}
+We will use a proof by contradiction.  So we will assume that there exists a real number $x$ and a nonzero integer $m$ such that $x$ is irrational and $mx$ is rational.  Since $mx$ is rational, there exist integers $c$ and $d$ with $d \ne 0$ such that $mx = \dfrac{c}{d}$.  If we now divide both sides of this equation by the nonzero integer $m$, we obtain
+\[
+x = \frac{c}{md}.
+\]
+Since $c$ and $md$ are integers and $md \ne 0$, the last equation implies that $x$ is rational.  This is a contradiction to the assumption that $x$ is irrational.  Therefore, the proposition is not false, and we have proved that for each real number $x$, if $x$ is irrational and $m$ is an integer, then $mx$ is irrational.
+\end{myproof}
+
+
+\item The proposition is true, and this is a well-written proof.
+
+
+\item This proposition is true, but the proof is not a valid proof.  A mistake is made by using $x = 3$.  The proof is started well and it is properly assumed that there exists a real number $x$ such that $x(1 - x) > \dfrac{1}{4}$.  However, by using $x = 3$, the only thing that is proved is that the real number that was assumed to exist is not $x = 3$.  
+
+\newpar
+To obtain a contradiction from the inequality $4x(1 - x) > 1$, rewrite the inequality as $4x - 4x^2 > 1$ and then obtain
+\begin{align*}
+-\left( 4x - 4x^2 \right) &< -1 \\
+4x^2 - 4x + 1 &< 0 \\
+(2x - 1)^2 &< 0
+\end{align*}
+Since $(2x - 1)$ is a real number, the last inequality is a contradiction.
+\end{enumerate}
+\end{enumerate}
+
+
+\subsection*{Explorations and Activities}
+\setcounter{oldenumi}{\theenumi}
+\begin{enumerate} \setcounter{enumi}{\theoldenumi}
+\item \textbf{Proposition}: Let  $a$, $b$, and $c$  be integers.  If  3  divides  $a$,  3  divides  $b$,  and  $c \equiv 1 \pmod 3$, then the equation $ax + by = c$ has no solution in which both  $x$  and  $y$  are integers.
+
+\begin{myproof}
+A proof by contradiction will be used.  So, we assume that the statement is false.  That is, we assume that $a$, $b$, and $c$ are integers, that  3  divides both  $a$  and  $b$, that  $c \equiv 1 \pmod 3$,  and that  the equation
+\[
+ax + by = c
+\]
+has a solution in which both  $x$  and  $y$  are integers.
+
+So, let  $m$  and  $n$  be integers  such that 
+\setcounter{equation}{0}
+\begin{equation} \label{eq:act317a}
+am  + bn  = c.
+\end{equation}
+Since  3  divides both  $a$  and  $b$, we know there exist integers  $q$  and  $r$  such that
+\[
+a = 3q\text{  and  }b = 3r.
+\]
+Substituting these equations into equation~(\ref{eq:act317a}) gives
+\begin{align} 
+  3qm + 3rn &= c \notag \\ 
+  3\left( {qm + rn} \right) &= c.  \label{eq:act317b}
+\end{align}
+Now, equation~(\ref{eq:act317b}) tells us that  3  divides  $c$ and hence, that  
+$c \equiv 0 \pmod 3$, but this contradicts the assumption that  $c \equiv 1 \pmod 3$.  Thus, the assumption that the proposition is false is incorrect and we have proven that if  3  divides  $a$,  3  divides  $b$,  and  $c \equiv 1 \pmod 3$, then the equation $ax + by = c$  has no solution in which both  $x$  and  $y$  are integers.
+\end{myproof}
+
+
+
+\item \begin{multicols}{2}
+\begin{enumerate}
+\item $x = \dfrac{{ - 2 \pm \sqrt {12} }}{2}$
+
+\item $x = \dfrac{{ - 4 \pm \sqrt 8 }}{2}$
+
+%\item $x = \dfrac{{ - 2 \pm i\sqrt {20} }}{2}$
+\end{enumerate}
+\end{multicols}
+
+\begin{enumerate} \setcounter{enumii}{3}
+\item A proof by contradiction is reasonable since the conclusion of the conditional statement is in the form of a negation.  With a proof by contradiction, we have the additional assumption that the equation $x^2  + 2mx + 2n = 0$ has an integer solution.
+
+\item We assume that there exists an integer  $m$  and there exists an odd integer $n$  such that the equation $x^2  + 2mx + 2n = 0$ has an integer solution for  $x$.
+
+\item
+\noindent
+\textbf{Proposition}.  For all integers $m$ and $n$, if $n$ is odd, then the equation
+   \[
+   x^2+2mx+2n=0
+   \]
+   has no integer solution for $x$.
+\begin{myproof}
+We will use a proof by contradiction.  So, we assume that the proposition is false.  That is, we assume that there exists an integer  $m$  and there exists an odd integer $n$  such that the equation $x^2  + 2mx + 2n = 0$ has an integer solution for  $x$.  We will let  $r$ represent an integer solution for this equation.  So, we have integers  $m$, $n$, and  $r$, with  $n$  being an odd integer, and
+\setcounter{equation}{0}
+\begin{equation} \label{eq:act318a}
+r^2  + 2mr + 2n = 0.
+\end{equation}
+We can rewrite equation~(\ref{eq:act318a}) in the following form:
+\begin{align}
+  r^2  &=  - 2mr - 2n \notag \\ 
+       &= 2\left( { - 2m - n} \right) \label{eq:act318b} 
+\end{align} 
+Since  $\left( { - 2m - n} \right) \in \mathbb{Z}$, equation~(\ref{eq:act318b}) implies that  
+$r^2 $ is an even integer.  So, by Theorem 3.6, we may conclude that  $r$  is an even integer.  Consequently, there exists an integer  $k$  such that  $r = 2k$.  If we substitute this into equation~(\ref{eq:act318a}), we obtain
+\begin{align}
+  \left( {2k} \right)^2  + 2m\left( {2k} \right) + 2n &= 0 \notag \\ 
+                                     4k^2  + 4mk + 2n &= 0 \label{eq:act318c} 
+\end{align}
+We now solve equation~(\ref{eq:act318c}) for  $n$ and obtain
+\[
+\begin{aligned}
+  2n &=  - 4k^2  - 4mk \\ 
+  2n &= 4\left( { - k^2  - mk} \right) \\ 
+   n &=  - 2\left( { - k^2  - mk} \right) \\ 
+\end{aligned} 
+\]
+However, since  $\left( { - k^2  - mk} \right)$ is an integer, this last equation tells us that  
+$n$  is an even integer.  This contradicts the assumption that  $n$  is an odd integer.  So, our assumption that the proposition is false is incorrect, and we have proven that if  $m$  and  $n$  are integers and  $n$  is odd, then the equation  $x^2  + 2mx + 2n = 0$ has no integer solution for  x.
+\end{myproof}
+\end{enumerate}
+
+\end{enumerate}
+
+
+
+
+\hbreak
+
+\endinput

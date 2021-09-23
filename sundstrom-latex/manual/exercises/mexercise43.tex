@@ -1,0 +1,790 @@
+\section*{Section \ref{S:recursion} Induction and Recursion}
+
+\begin{enumerate}
+\item  If  $a_k = k!$, then
+\begin{align*}
+a_{k+1} &= \left( k + 1 \right)a_k \\
+        &= \left( k + 1 \right) k! \\
+        &= \left( k + 1 \right)! \\
+\end{align*}
+
+
+
+
+
+
+
+\item
+\begin{enumerate}
+\item Let $P \left( n \right)$ be, ``$f_{4n}$ is a multiple of 3.''  Since $f_4 = 3$, 
+$P \left( 1 \right)$ is true.  If $P \left( k \right)$ is true, then there exists an integer $m$ such that $f_{4k} = 3m$.  Then,
+\[
+\begin{aligned}
+f_{4 \left( k + 1 \right)} &= f_{4k + 4} \\
+                           &= f_{4k+3} + f_{4k+2} \\
+                 &= \left( f_{4k+2} + f_{4k+1} \right) + \left( f_{4k+1} + f_{4k} \right) \\
+                 &= f_{4k+2} + 2 f_{4k+1} + f_{4k} \\
+                 &= f_{4k+1} + f{4k} + 2 f_{4k+1} + f_{4k} \\
+                 &= 3 f_{4k+1} + 2 f_{4k} \\
+                 &= 3 f_{4k+1} + 2 \left( 3m \right) \\
+                 &= 3 \left( f_{4k+1} + 2m \right) \\
+\end{aligned}
+\]
+This proves that if $P \left( k \right)$ is true, then $P \left( k + 1\right)$ is true.
+
+\item Let $P \left( n \right)$ be, ``$f_{5n}$ is a multiple of 5.''  Since $f_5 = 5$, 
+$P \left( 1 \right)$ is true.  If $P \left( k \right)$ is true, then there exists an integer $m$ such that $f_{5k} = 5m$.  Then,
+\[
+\begin{aligned}
+f_{5 \left( k + 1 \right)} &= f_{5k + 5} \\
+                           &= f_{5k+4} + f_{5k+3} \\
+                 &= \left( f_{5k+3} + f_{5k+2} \right) + \left( f_{5k+2} + f_{5k+1} \right) \\
+                 &= f_{5k+3} + 2 f_{5k+2} + f_{5k+1} \\
+         &= \left( f_{5k+2} + f_{5k+1} \right) + 2 \left( f_{5k+1} + f_{5k} \right) + f_{5k+1} \\
+         &= f_{5k+2} +4 f_{5k+1} + 2 f_{5k} \\
+         &= \left( f_{5k+1} + f_{5k} \right) + 4f_{5k + 1} + 2 f_{5k} \\
+                 &= 5 f_{5k+1} + 3 f_{5k} \\
+                 &= 5 f_{5k+1} + 3 \left( 5m \right) \\
+                 &= 5 \left( f_{5k+1} + 3m \right) \\
+\end{aligned}
+\]
+This proves that if $P \left( k \right)$ is true, then $P \left( k + 1\right)$ is true.
+
+\item Let $P \left( n \right)$ be, ``$f_1  + f_2  +  \cdots  + f_{n - 1}  = f_{n + 1}  - 1$.''  Since $f_1 = f_3 - 1$, $P \left( 2 \right)$ is true.  For $k \geq 2$, if $P \left( k \right)$ is true, then $f_1  + f_2  +  \cdots  + f_{k - 1}  = f_{k + 1}  - 1$.  Then,
+\[
+\begin{aligned}
+\left( f_1  + f_2  +  \cdots  + f_{k - 1} \right) + f_k  &= \left( f_{k + 1}  - 1 \right) + f_k \\
+            &= \left( f_{k+1} + f_k \right) - 1 \\
+            &= f_{k+2} - 1.
+\end{aligned}
+\]
+This proves that if $P \left( k \right)$ is true, then $P \left( k + 1\right)$ is true.
+
+\item Let $P \left( n \right)$ be, ``$f_1  + f_3  +  \cdots  + f_{2n - 1}  = f_{2n}$.''  Since 
+$f_1 = f_2$, $P \left( 1 \right)$ is true.  For $k \in \mathbb{N}$, if $P \left( k \right)$ is true, then $f_1  + f_3  +  \cdots  + f_{2k - 1}  = f_{2k}$.  Then,
+\[
+\begin{aligned}
+\left( f_1  + f_3  +  \cdots  + f_{2k - 1} \right) + f_{2k+1}  &= 
+f_{2k} + f_{2k+1} \\
+\left( f_1  + f_3  +  \cdots  + f_{2k - 1} \right) + f_{2 \left( k + 1 \right) - 1}  &= 
+f_{2k+2} \\
+f_1  + f_3  +  \cdots  + f_{2k - 1} + f_{2 \left( k + 1 \right) - 1}  &= 
+f_{2 \left(k+1 \right)} \\          
+\end{aligned}
+\]
+This proves that if $P \left( k \right)$ is true, then $P \left( k + 1\right)$ is true.
+
+\item Let $P \left( n \right)$ be, ``$f_2  + f_4  +  \cdots  + f_{2n}  = f_{2n + 1}  - 1$.''  Since $f_2 = f_3 - 1$, $P \left( 1 \right)$ is true.  For $k \in \mathbb{N}$, if 
+$P \left( k \right)$ is true, then $f_2  + f_4  +  \cdots  + f_{2k}  = f_{2k + 1}  - 1$.  Then,
+\[
+\begin{aligned}
+\left( f_2  + f_4  +  \cdots  + f_{2k} \right) + f_{2k+2}  &= 
+\left( f_{2k+1} - 1 \right) + f_{2k+2} \\
+f_2  + f_4  +  \cdots  + f_{2k} + f_{2 \left( k+1 \right)}  &= f_{2k+1} + f_{2k+2} -1 \\
+                                                            &= f_{2k+3} - 1 \\
+                                                        &= f_{2 \left( k + 1 \right) + 1} - 1. \\          
+\end{aligned}
+\]
+This proves that if $P \left( k \right)$ is true, then $P \left( k + 1\right)$ is true.
+
+\item Let $P \left( n \right)$ be, ``$f_1^2  + f_2^2  +  \cdots  + f_n^2  = f_n f_{n + 1} $.''  Since $f_1^2 = f_1 f_2$, $P \left( 1 \right)$ is true.  For $k \in \mathbb{N}$, if 
+$P \left( k \right)$ is true, then $f_1^2  + f_2^2  +  \cdots  + f_k^2  = f_k f_{k + 1} $.  Then,
+\[
+\begin{aligned}
+\left( f_1^2  + f_2^2  +  \cdots  + f_k^2  \right) + f_{k+1}^2  &= 
+f_k f_{k + 1} + f_{k+1}^2 \\
+f_1^2  + f_2^2  +  \cdots  + f_k^2 + f_{k+1}^2  &= f_{k+1} \left( f_k + f_{k+1} \right) \\
+                                                &= f_{k+1} f_{k+2}         
+\end{aligned}
+\]
+This proves that if $P \left( k \right)$ is true, then $P \left( k + 1\right)$ is true.
+
+\item Let $P \left( n \right)$ be, ``$f_{3n+1}$ and $f_{3n+2}$ are both odd.''  
+$P \left( 0 \right)$ is true since $f_1 = 1$ and $f_2 = 1$.  For $k \in \mathbb{Z}$ with 
+$k \geq 0$, if $P \left( k \right)$ is true, then $f_{3k+1}$ and $f_{3k+2}$ are both odd.  Then,
+\[
+\begin{aligned}
+f_{3 \left( k + 1 \right) + 1} &= f_{3k + 4} \\
+                               &= f_{3k + 3} + f_{3k + 2}. \\
+\end{aligned}
+\]
+Now, by Proposition~\ref{P:thirdfibonacci}, $f_{3k+3}$ is even and by the inductive assumption, 
+$f_{3k+2}$ is odd.  Hence, $f_{3 \left( k + 1 \right) + 1}$ is odd.  In addition,
+\[
+\begin{aligned}
+f_{3 \left( k + 1 \right) + 2} &= f_{3k + 5} \\
+                               &= f_{3k + 4} + f_{3k + 3}. \\
+\end{aligned}
+\]
+By Proposition~\ref{P:thirdfibonacci}, $f_{3k+3}$ is even and we have just proven above that 
+$f_{3k+4}$ is odd.  Therefore, $f_{3 \left( k + 1 \right) + 2}$ is odd.
+
+This proves that if $P \left( k \right)$ is true, then $P \left( k + 1\right)$ is true.
+\end{enumerate}
+
+
+
+\item Using Part~(f) of Exercise~(\ref{exer:sec53-fib}), we obtain
+\begin{align*}
+\frac{f_1^2  + f_2^2  +  \cdots  + f_n^2 + f_{n+1}^2}{f_1^2  + f_2^2  +  \cdots  + f_n^2}  &= 
+\frac{f_{n+1}f_{n+2}}{f_n f_{n + 1}}  \\
+  &= \frac{f_{n+2}}{f_n} \\
+  &= \frac{f_{n} + f_{n+1}}{f_n} \\
+  &= 1 + \frac{f_{n+1}}{f_n}.
+\end{align*}
+
+
+
+\item \begin{enumerate}
+\item $\dfrac{\alpha^1 - \beta^1}{\alpha - \beta} = 1 = f_1$.
+
+\item $\dfrac{\alpha^2 - \beta^2}{\alpha - \beta} = \dfrac{( \alpha - \beta)( \alpha + \beta )}{\alpha - \beta} = \alpha + \beta = 1 = f_2$.
+
+\item  In what follows, we will use the facts that $\alpha + 1 = \alpha^2$ and $\beta + 1 = \beta^2$.
+\begin{align*}
+f_3 &= f_2 + f_1 = \frac{\alpha^2 - \beta^2}{\alpha - \beta} + \frac{\alpha - \beta}{\alpha - \beta} \\
+    &= \frac{\alpha^2 - \beta^2 + \alpha - \beta}{\alpha - \beta} \\
+    &= \frac{\left( \alpha^2 + \alpha \right) - \left(\beta^2 + \beta \right)}{\alpha - \beta} \\
+    &= \frac{ \alpha(\alpha + 1) - \beta(\beta + 1)}{\alpha - \beta} \\
+    &= \frac{\alpha \cdot \alpha^2 - \beta \cdot \beta^2}{ \alpha - \beta} \\
+    &= \frac{\alpha^3 - \beta^3}{\alpha - \beta}
+\end{align*}
+
+\item Let $P(n)$ be $f_n = \dfrac{\alpha^n - \beta^n}{\alpha - \beta}$.  We have seen that $P(1)$, $P(2)$, and $P(3)$ are true.  So let $k \in \N$ with $k \geq 2$ and assume that $P(1), P(2), \ldots, P(k)$ are true.  We prove that $P(k + 1)$ is true as follows:
+\begin{align*}
+f_{k+1} &= f_k + f_{k-1} = \frac{\alpha^k - \beta^k}{\alpha - \beta} + \frac{\alpha^{k-1} - \beta^{k-1}}{\alpha - \beta} \\
+    &= \frac{\alpha^2 - \beta^2 + \alpha - \beta}{\alpha - \beta} \\
+    &= \frac{\left( \alpha^k + \alpha^{-1} \right) - \left(\beta^k + \beta^{k-1} \right)}{\alpha - \beta} \\
+    &= \frac{ \alpha^{k-1}(\alpha + 1) - \beta^{k-1}(\beta + 1)}{\alpha - \beta} \\
+    &= \frac{\alpha^{k-1} \cdot \alpha^2 - \beta^{k-1} \cdot \beta^2}{ \alpha - \beta} \\
+    &= \frac{\alpha^{k+1} - \beta^{k+1}}{\alpha - \beta}
+\end{align*}
+This proves that if $P(1), P(2), \ldots, P(k)$ are true, then $P(k + 1)$ is true.
+\end{enumerate}
+
+
+
+\item The conjecture is true.  We will show that $f_nf_{n+3}$, $2f_{n+1}f_{n+2}$, and 
+$\left( f_{n+1}^2 + f_{n+2}^2 \right)$ form a Pythagorean triple by proving that 
+$\left( f_nf_{n+3} \right)^2 + \left( 2f_{n+1}f_{n+2} \right)^2 = \left( f_{n+1}^2 + f_{n+2}^2 \right)^2$.  We will use the facts that $f_n = f_{n+2} - f_{n+1}$ and $f_{n+3} = f_{n+2} + f_{n+1}$
+\begin{align*}
+\left( f_nf_{n+3} \right)^2 + \left( 2f_{n+2}f_{n+1} \right)^2 &= 
+\left[ \left( f_{n+2} - f_{n+1} \right)\left( f_{n+2} + f_{n+1} \right) \right]^2 + 4f_{n+2}^2 f_{n+1}^2 \\
+   &= \left[ f_{n+2}^2 - f_{n+1}^2 \right] + 4f_{n+2}^2 f_{n+1}^2 \\
+   &= \left[ f_{n+2}^4 - 2f_{n+2}^2 f_{n+1}^2 + f_{n+1}^4 \right] + 4f_{n+2}^2 f_{n+1}^2 \\
+   &= f_{n+2}^4 + 2f_{n+2}^2 f_{n+1}^2 + f_{n+1}^4 \\
+   &= \left( f_{n+2}^2 + f_{n+1}^2 \right)^2
+\end{align*}
+This proves that that $f_nf_{n+3}$, $2f_{n+1}f_{n+2}$, and 
+$\left( f_{n+1}^2 + f_{n+2}^2 \right)$ form a Pythagorean triple
+
+
+\item If $a_k = a \cdot r^{k - 1}$, then
+\begin{align*}
+a_{k+1} &= r \cdot a_k \\
+        &= r \left( a \cdot r^{k-1} \right) \\
+        &= a \cdot r^k. \\
+\end{align*}
+
+
+
+\item If $S_k  = a + a \cdot r + a \cdot r^2  +  \cdots  + a \cdot r^{k - 1}$, then
+\begin{align*}
+S_{k + 1}  &= a + r \cdot S_k \\
+           &= a + r \left( a + a \cdot r + a \cdot r^2  +  \cdots  + a \cdot r^{k - 1} \right) \\
+           &= a + \left( a \cdot r + a \cdot r^2 + a \cdot r^3  +  \cdots  + a \cdot r^k \right) \\
+           &= a + a \cdot r + a \cdot r^2 + a \cdot r^3  +  \cdots  + a \cdot r^k. \\
+\end{align*}
+
+
+\item Let  $P( n )$  be, ``$S_n  = a\left( {\dfrac{{1 - r^n }}{{1 - r}}} \right)$.''
+We first prove that $P \left( 1 \right)$ is true.  For  $n = 1$,  $S_1  = a$  and  
+\[
+a\left( {\frac{{1 - r^n }}{{1 - r}}} \right) = a\left( {\frac{{1 - r}}{{1 - r}}} \right) = a.
+\]
+This proves that  $P\left( 1 \right)$ is true.
+
+\setcounter{equation}{0}
+For the inductive step, let  $k \in \mathbb{N}$ and assume that  
+$P( k )$ is true.  That is, assume that
+%
+\begin{equation}
+S_k  = a\left( {\frac{{1 - r^k }}{{1 - r}}} \right).
+\end{equation}
+%
+The goal now is to prove that  $P\left( {k + 1} \right)$ is true or that  
+\[
+S_{k + 1}  = a\left( {\dfrac{{1 - r^{k + 1} }}{{1 - r}}} \right).
+\]
+We start by using the recurrence relation for the sequence,
+\[
+S_{k + 1}  = a + r \cdot S_k.
+\]
+We now substitute the expression for $S_k$ from equation~(1) into this relation to find
+%
+\begin{align} \notag
+  S_{k + 1}  &= a + r \cdot S_k  \\ 
+             &= a + r \cdot a\left( {\frac{{1 - r^k }}{{1 - r}}} \right). \\ \notag 
+\end{align}
+%
+We can now factor an  $a$  from the right side of equation~(2) and obtain
+%
+\begin{equation}
+S_{k + 1}  = a\left( {1 + r\left( {\frac{{1 - r^k }}{{1 - r}}} \right)} \right).
+\end{equation}
+%
+Next, we rewrite the right side of equation~(3) as a single fraction by finding a common denominator and performing the following algebraic steps:
+%
+\begin{align*}
+  S_{k + 1}  &= a\left( {1 + r\left( {\frac{{1 - r^k }}{{1 - r}}} \right)} \right) \\ 
+             &= a\left( {\frac{{\left( {1 - r} \right) + r\left( {1 - r^k } \right)}}
+{{1 - r}}} \right) \\ 
+             &= a\left( {\frac{{1 - r + r - r^{k + 1} }}{{1 - r}}} \right) \\ 
+             &= a\left( {\frac{{1 - r^{k + 1} }}{{1 - r}}} \right)
+\end{align*}
+%
+This last equation shows that  if $P(k)$ is true, then $P( {k + 1} )$  is true.
+
+
+\item \begin{enumerate}
+\item $a_2 = 7$, $a_3 = 9$, $a_4 = 11$, $a_5 = 13$, $a_6 = 15$.
+
+\item For each $n \in \N$, $a_n = 5 + 2(n - 1)$.
+
+\item Let $P(n)$ be ``$a_n = 5 + 2(n - 1)$.''  We have seen that $P(1), P(2), \ldots P(6)$ are true.  For the inductive step, let $k \in \N$ and assume that $P(k)$ is true.  That is, assume that
+\[
+a_k = 5 + 2(k - 1).
+\]
+We now need to prove $P(k+1)$ or that $a_{k+1} = 5 + 2k$.  We see that
+\begin{align*}
+a_{k+1} &= a_k + 2 \\
+        &= 5 + 2(k - 1) + 2 \\
+        &= 5 + 2k
+\end{align*}
+This proves that if $P(k)$ is true, then $P(k + 1)$ is true.
+\end{enumerate}
+
+
+
+\item \begin{enumerate}
+\item $a_2 = c + d$, $a_3 = c + 2d$, \ldots, $a_8 = c + 7d$.
+\item For each $n \in \N$, $a_n = c + (n - 1)d$.
+\item Let $P(n)$ be ``$a_n = c + (n - 1)d$.''  We have seen that $P(1), P(2), \ldots P(8)$ are true.  For the inductive step, let $k \in \N$ and assume that $P(k)$ is true.  That is, assume that
+\[
+a_k = c + (k - 1)d.
+\]
+We now need to prove $P(k+1)$ or that $a_{k+1} = c + k d$.  We see that
+\begin{align*}
+a_{k+1} &= a_k + d \\
+        &= c + (k - 1)d + d \\
+        &= c + k d
+\end{align*}
+This proves that if $P(k)$ is true, then $P(k + 1)$ is true.
+\end{enumerate}
+
+
+
+\item For each natural number $n$, let $P(n)$ be ``$a_n = 2^n + (-1)^n$. For $n = 1$, we see that
+\[
+2^1 + (-1)^1 = 1 = a_1,
+\]
+and so $P(1)$ is true.  In addition, for $n = 2$,
+\[
+2^2 + (-1)^2 = 5 = a_2,
+\]
+and so $P(2)$ is true. Now let $k \in \N$ with $k \geq 2$ and assume that \\$P(1), P(2), \ldots P(k)$ are true.  We need to prove that $P(k + 1)$ is true or that $a_{k+1} = 2^{k+1} + (-1)^{k+1}$.  We start with the recursion formula and then use the assumptions that $P(k)$ and $P(k-1)$ are true.
+\begin{align*}
+a_{k+1} &= a_k + 2a_{k-1} \\
+        &= \left( 2^k + (-1)^k \right) + 2\left( 2^{k-1} + (-1)^{k-1} \right) \\
+        &= \left( 2^k + (-1)^k \right) + \left( 2^k + 2 \cdot (-1)^{k-1} \right) \\
+        &= \left( 2^k + 2^k \right) + \left( (-1)^k + 2 \cdot (-1)^{k-1} \right) \\
+        &= 2 \cdot 2^k + (-1)^{k-1} \left( (-1) + 2 \right) \\
+        &= 2^{k+1} + (-1)^{k-1}
+\end{align*}
+However, $(-1)^{k+1} = (-1)^{k-1}(-1)^2 = (-1)^{k-1}$ and so the last equation shows that 
+$a_{k+1} = 2^{k+1} + (-1)^{k+1}$.  This proves that if $P(1), P(2), \ldots P(k)$ are true, then $P(k+1)$ is true.
+
+
+
+
+
+\item Let $P \left( n \right)$ be, ``$a_n < 3$.''  Since $a_1 = 1$, $P \left( 1 \right)$ is true.  For $k \in \mathbb{N}$, if $P \left( k \right)$ is true, then $a_k < 3$.  Now,
+\[
+a_{k+1} = \sqrt{5 + a_k}.
+\] 
+Since $a_k < 3$, this implies that $a_{k+1} < \sqrt{8}$ and hence, $a_{k+1} < 3$.
+
+This proves that if $P \left( k \right)$ is true, then $P \left( k + 1\right)$ is true.
+
+
+
+
+
+\item 
+\begin{enumerate} \setcounter{enumii}{1}
+\item The conjecture is that $a_n = 2^n - 1$.
+
+\item Let $P \left( n \right)$ be, ``$a_n = 2^n - 1$.''  Since $a_1 = 1$, $P \left( 1 \right)$ is true, and since $a_2 = 3$, $P \left( 2 \right)$ is true.  Let $k \in \mathbb{N}$ with $k \geq 2$.  Assume that $P \left( 1 \right)$, $P \left( 2 \right)$, \ldots, $P \left( k \right)$ are true.  Then, $a_{k+1} = 3 a_k - 2 a_{k-1}$.  Since $k \geq 2$, $a_k = 2^k - 1$, and since $k - 1 \geq 1$, 
+$a_{k-1} = 2^{k-1} - 1$.  Hence,
+\[
+\begin{aligned}
+a_{k+1} &= 3 a_k - 2 a_{k-1} \\
+        &= 3 \left( 2^k - 1 \right) - 2 \left(2^{k-1} - 1 \right) \\
+        &= 3 \cdot 2^k - 3 - 2 \cdot 2^{k-1} + 2 \\
+        &= 3 \cdot 2^k - 2^k - 1 \\
+        &= 2 \cdot 2^k - 1 \\
+        &= 2^{k+1} - 1. \\
+\end{aligned}
+\]
+This proves that if $P \left( 1 \right)$, $P \left( 2 \right)$, \ldots, $P \left( k \right)$ are true,  then $P \left( k + 1\right)$ is true.
+\end{enumerate}
+
+
+
+\item \begin{enumerate}
+\item $a_3 = \dfrac{3}{2}$, $a_4 =\dfrac{7}{4}$, $a_5 =\dfrac{37}{24}$, $a_6 =\dfrac{451}{336}$.
+
+\item Let $P \left( n \right)$ be, ``$1 \leq a_n  \leq 2$.'' $P \left( 1 \right)$ and  
+$P \left( 2 \right)$ are true.  Let $k \in \mathbb{N}$ with $k \geq 3$ and assume that 
+$P \left( 1 \right)$, $P \left( 2 \right)$, \ldots, $P \left( k \right)$ are true.  Since 
+$k \geq 3$, $k -1 \geq 2$, and hence
+\[
+a_{k + 1} = \frac{1}{2} \left( a_k + \frac{2}{a_{k-1}} \right).
+\]
+Now, $a_k \leq 2$ and since $a_{k-1} \geq 1$, we conlcude that $\dfrac{2}{a_{k-1}} \leq 2$.  Hence,
+\[
+\begin{aligned}
+a_{k + 1} &= \frac{1}{2} \left( a_k + \frac{2}{a_{k-1}} \right) \\
+          & \leq \frac{1}{2} \left( 2 + 2 \right). \\
+\end{aligned}
+\]
+Thus, $a_{k+1} \leq 2$.  In addition, $a_k \geq 1$ and since $a_{k-1} \leq 2$, we conlcude that $\dfrac{2}{a_{k-1}} \geq 1$.  Hence,
+\[
+\begin{aligned}
+a_{k + 1} &= \frac{1}{2} \left( a_k + \frac{2}{a_{k-1}} \right) \\
+          & \geq \frac{1}{2} \left( 1 + 1 \right). \\
+\end{aligned}
+\]
+Thus, $a_{k+1} \geq 1$, and this proves that if $P \left( 1 \right)$, $P \left( 2 \right)$, \ldots, $P \left( k \right)$ are true,  then $P \left( k + 1\right)$ is true.
+\end{enumerate}
+
+
+
+\item \begin{enumerate}
+\item $a_4 = 3$, $a_5 =5$, $a_6 =9$, $a_7 =17$.
+
+\item Let $P \left( n \right)$ be, ``$a_n \leq 2^{n-2}$.''  $P \left( 2 \right)$, 
+$P \left( 3 \right)$, and $P \left( 4 \right)$ are true.  Let 
+$k \in \mathbb{N}$ with $k \geq 4$ and assume that $P \left( 1 \right)$, $P \left( 2 \right)$, \ldots, $P \left( k \right)$ are true.  Then,
+\[
+a_{k+1} = a_k + a_{k-1} + a_{k-2}.
+\]
+Since $k \geq 4$, we see that $k - 2 \geq 2$ and hence, $a_k \leq 2^{k-2}$, \\
+$a_{k-1} \leq 2^{k-3}$, and $a_{k-2} \leq 2^{k-4}$. Hence,
+\[
+\begin{aligned}
+a_{k+1} & \leq 2^{k-2} + 2^{k-3} + 2^{k-4} \\
+a_{k+1} & \leq 2^{k-4} \left( 2^2 + 2 + 1 \right) \\
+a_{k+1} & \leq 2^{k-4} \left( 2^2 + 2^2 \right) \\
+a_{k+1} & \leq 2^{k-4} \left( 2 \cdot 2^2 \right) \\
+a_{k+1} & \leq 2^{k-1}. \\
+\end{aligned}
+\]
+This proves that if $P \left( 1 \right)$, $P \left( 2 \right)$, \ldots, $P \left( k \right)$ are true,  then $P \left( k + 1\right)$ is true.
+\end{enumerate}
+
+
+
+\item \begin{enumerate} \setcounter{enumii}{1}
+\item \begin{multicols}{3}
+$a_2 = 5$
+
+$a_3 = 23$
+
+$a_4 = 119$
+
+$a_5 = 719$
+
+$a_6 = 5039$
+
+$a_7 = 40319$
+
+$a_8 = 362879$
+
+$a_9 = 3628799$
+
+$a_{10} = 39916799$
+\end{multicols}
+
+\item The conjecture is: $a_n = \left( n + 1 \right)! - 1$.
+
+\item Let $P \left( n \right)$ be: $a_n = \left( n + 1 \right)! - 1$.  Verify that 
+$P \left( 1 \right)$ is true.
+
+For the inductive step, let $k \in \mathbb{N}$ and assume that $P \left( k \right)$ is true.  That is, assume that
+\[
+a_k = \left( k + 1 \right)! - 1.
+\]
+We need to prove that $P \left( k + 1 \right)$ is true or that 
+$a_{k+1} = \left( k + 2 \right)! - 1$.  We start by adding 
+$\left( k + 1 \right) \left( k + 1 \right)!$ to both sides of the equation for 
+$P \left( k \right)$.
+\[
+\begin{aligned}
+a_k + \left( k + 1 \right) \left( k + 1 \right)! &= \left( \left( k + 1 \right)! - 1 \right) + \left( k + 1 \right) \left( k + 1 \right)! \\
+a_{k+1} &= \left( k + 1 \right)! \left[ 1 + \left( k + 1 \right) \right] - 1 \\
+a_{k+1} &= \left( k + 1 \right)! \left( k + 2 \right) - 1 \\
+a_{k+1} &= \left( k + 2 \right)! - 1. \\
+\end{aligned}
+\]
+This proves that if $P \left( k  \right)$ is true, then $P \left( k + 1 \right)$ is true.
+\end{enumerate}
+
+
+
+\item Let $P(n)$ be, ``4 divides $a_{3n}$.''  Then $P(1)$ is true since $a_3 = 4$.  So let $k$ be a natural number and assume that $P(k)$ is true.  This means that 4 divides $a_{3k}$ and, hence, there exists an integer $m$ such that
+\[
+a_{3k} = 4m.
+\]
+Using this equation and the recursion formula, we obtain the following:
+\begin{align*}
+a_{3(k + 1)} &= a_{3k + 3} \\
+             &= a_{3k + 2} + 3a_{3k + 1} \\
+             &= \left( a_{3k + 1} + 3a_{3k} \right) + 3a_{3k + 1} \\
+             &= 4a_{3k + 1} + 3(4m) \\
+             &= 4 \left( a_{3k + 1} + 3m \right).
+\end{align*}
+Hence, 4 divides $a_{3(k + 1)}$ and this proves that if $P(k)$ is true, then 
+$P(k + 1)$ is true.
+
+
+
+
+\item \begin{enumerate}
+\item Let $P(n)$ be, ``$L_n = 2f_{n+1} - f_n$.''  First, verify that $P(1)$ and $P(2)$ are true.  Now let $k$ be a natural number with $k \geq 2$ and assume that $P(1)$, $P(2)$, \ldots, 
+$P(k)$ are all true. Since $P(k)$ and $P(k-1)$ are both assumed to be true, we can use them to help prove that $P(k+1)$ must then be true as follows:
+\begin{align*}
+L_{k+1} &= L_k + L_{k-1} \\
+        &= \left( 2f_{k+1} - f_k \right) + \left( 2f_k - f_{k-1} \right) \\
+        &= 2 \left( f_{k+1} + f_k \right) - \left( f_k + f_{k-1} \right) \\
+        &= 2f_{k+2} - f_{k+1}.
+\end{align*}
+
+
+
+\item Let $P(n)$ be, ``$5f_n = L_{n-1} + L_{n+1}$.''  First, verify that $P(2)$ and $P(3)$ are true.  Now let $k$ be a natural number with $k \geq 3$ and assume that $P(2)$, $P(3)$, \ldots, 
+$P(k)$ are all true. Since $P(k)$ and $P(k-1)$ are both assumed to be true, we can use them to help prove that $P(k+1)$ must then be true as follows:
+\begin{align*}
+5f_{k+1} &= 5f_k + 5f_{k-1} \\
+        &= \left( L_{k-1} + L_{k+1} \right) + \left( L_{k-2} + L_k \right) \\
+        &= \left( L_{k-1} + L_{k-2} \right) - \left( L_k + L_{k+1} \right) \\
+        &= L_k + L_{k+2}.
+\end{align*}
+
+
+\item Let $P(n)$ be, ``$L_n = f_{n+2} - f_{n-2}$.''  First, verify that $P(3)$ and $P(4)$ are true.  Now let $k$ be a natural number with $k \geq 3$ and assume that $P(3)$, $P(4)$, \ldots, 
+$P(k)$ are all true. Since $P(k)$ and $P(k-1)$ are both assumed to be true, we can use them to help prove that $P(k+1)$ must then be true as follows:
+\begin{align*}
+L_{k+1} &= L_k + L_{k-1} \\
+        &= \left( f_{k+2} - f_{k-2} \right) + \left( f_{k+1} - f_{k-3} \right) \\
+        &= \left( f_{k+2} + f_{k+1} \right) - \left( f_{k-2} + f_{k-3} \right) \\
+        &= f_{k+3} - f_{k-1}.
+\end{align*}
+\end{enumerate}
+
+
+\item Let $P(n)$ be ``$L_n = \alpha^n + \beta^n$.  Notice that $\alpha + \beta = 1 = L_1$ and so $P(1)$ is true.  In addition,
+\begin{align*}
+\alpha^2 + \beta^2 &= \frac{6 + 2\sqrt{5}}{4} + \frac{6 - 2\sqrt{5}}{4} \\
+                   &= 3 \\
+                   &= L_3
+\end{align*}
+and so $P(2)$ is true.  We now let $k$ be a natural number with $k \geq 2$ and assume that $P(1), P(2), \ldots , P(k)$ are true.  In particular, we have assumed that $L_k = \alpha^k + \beta^k$ and $L_{k-1} = \alpha^{k-1} + \beta^{k-1}$.  We now need to prove that $P(k +1)$ is true.
+\begin{align*}
+L_{k+1} &= L_k + L_{k-1} \\
+        &= \left( \alpha^k + \beta^k \right) + \left( \alpha^{k-1} + \beta^{k-1} \right) \\
+        &= \left( \alpha^k + \alpha^{k-1} \right) + \left( \beta^k + \beta^{k-1} \right) \\
+        &= \alpha^{k-1}(\alpha + 1) + \beta^{k-1}(\beta + 1) \\
+        &= \alpha^{k-1} \cdot \alpha^2 + \beta^{k-1} \cdot \beta^2 \\
+        &= \alpha^{k + 1} + \beta^{k + 1}.
+\end{align*}
+This proves that if $P(1), P(2), \ldots , P(k)$ are true, then $P(k + 1)$ is true.
+
+
+\item \begin{enumerate}
+\item Using the formula from the previous exercise, we obtain
+\begin{align*}
+\frac{f_{2n}}{f_n} &= \dfrac{\dfrac{\alpha^{2n} - \beta^{2n}}{\alpha - \beta}}{\dfrac{\alpha^{n} - \beta^{n}}{\alpha - \beta}}  \\
+                   &= \frac{\left( \alpha^n - \beta^n \right) \left( \alpha^n + \beta^n \right)}{\alpha^n - \beta^n} \\
+                   &= \alpha^n + \beta^n \\
+                   &= L_n
+\end{align*}
+
+
+\item This result follows from Part~(a) of Exercise~(\ref{exer:lucasnumbers}).  An induction proof can also be done.  Let $P(n)$ be, 
+``$f_{n+1} = \dfrac{f_n + L_n}{2}$.''  First, verify that $P(1)$ and $P(2)$ are true.  Now let 
+$k$ be a natural number with $k \geq 2$ and assume that $P(1)$, $P(2)$, \ldots, 
+$P(k)$ are all true. Since $P(k)$ and $P(k-1)$ are both assumed to be true, we can use them to help prove that $P(k+1)$ must then be true as follows:
+\begin{align*}
+f_{k + 2} &= f_{k+1} + f_k \\
+          &= \frac{f_k + L_k}{2} + \frac{f_{k-1} + L_{k-1}}{2} \\
+          &= \frac{\left( f_k + f_{k-1} \right) + \left( L_k + L_{k-1} \right)}{2} \\
+          &= \frac{f_{k+1} + L_{k+1}}{2}.
+\end{align*}
+
+
+\item This result follows from the result in Part~(b) of of Exercise~(\ref{exer:lucasnumbers}).  To see this, use the fact that 
+$L_{n-1} = L_{n+1} - L_n$ in the result from Part~(b) as follows:
+\begin{align*}
+5f_n &= L_{n-1} + L_{n+1} \\
+     &= L_{n+1} - L_n + L_{n+1} \\
+     &= 2L_{n+1} - L_n \\
+2L_{n+1} &= L_n + 5f_n.
+\end{align*}
+If Part~(b) of Exercise~(\ref{exer:lucasnumbers}) is not assigned, an induction can be done.  Let $P(n)$ be, 
+``$L_{n+1} = \dfrac{L_n + 5f_n}{2}$.''  First, verify that $P(1)$ and $P(2)$ are true.  Now let 
+$k$ be a natural number with $k \geq 2$ and assume that $P(1)$, $P(2)$, \ldots, 
+$P(k)$ are all true. Since $P(k)$ and $P(k-1)$ are both assumed to be true, we can use them to help prove that $P(k+1)$ must then be true as follows:
+\begin{align*}
+L_{k + 2} &= L_{k+1} + L_k \\
+          &= \frac{L_k + 5f_k}{2} + \frac{L_{k-1} + 5f_{k-1}}{2} \\
+          &= \frac{\left( L_k + L_{k-1} \right) + 5\left( f_k + f_{k-1} \right)}{2} \\
+          &= \frac{L_{k+1} + 5f_{k+1}}{2}.
+\end{align*}
+
+
+\item This result follows from the result in Part~(a) of Exercise~(\ref{exer:lucasnumbers}).  To see this, use the fact that 
+$f_{n+1} = f_{n} + f_{n-1}$ in the result from Part~(b) as follows:
+\begin{align*}
+L_n &= 2f_{n+1} - f_n \\
+    &= f_{n+1} + \left( f_n + f_{n-1} \right) - f_n \\
+    &= f_{n+1} + f_{n-1}.
+\end{align*}
+If Part~(a) of Exercise~(\ref{exer:lucasnumbers}) is not assigned, an induction can be done.  Let $P(n)$ be, 
+``$L_n = f_{n+1} + f_{n-1}$.''  First, verify that $P(1)$ and $P(2)$ are true.  Now let 
+$k$ be a natural number with $k \geq 2$ and assume that $P(1)$, $P(2)$, \ldots, 
+$P(k)$ are all true. Since $P(k)$ and $P(k-1)$ are both assumed to be true, we can use them to help prove that $P(k+1)$ must then be true as follows:
+\begin{align*}
+L_{k+1} &= L_k + L_{k-1} \\
+        &= \left( f_{k+1} + f_{k - 1} \right) + \left( f_k + f_{k-2} \right) \\
+        &= \left( f_{k+1} + f_k \right) + \left( f_{k-1} + f_{k-2} \right) \\
+        &= f_{k+2} + f_k.
+\end{align*}
+\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection*{Evaluation of Proofs}
+\setcounter{oldenumi}{\theenumi}
+\begin{enumerate} \setcounter{enumi}{\theoldenumi}
+%\item \begin{enumerate}
+\item This is a well-written proof of the proposition.
+%\end{enumerate}
+\end{enumerate}
+
+
+\subsection*{Explorations and Activities}
+\setcounter{oldenumi}{\theenumi}
+\begin{enumerate} \setcounter{enumi}{\theoldenumi}
+\item \begin{enumerate}
+\item The amount of money in the account at the end of the third period equals the amount of money in the account at the end of the second period plus the interest earned during the third period.  The amount of money in the account at the end of the second period is  $V_2 $, and the interest earned during the third period is  $i \cdot V_2 $.  Hence,  $V_3  = V_2  + i \cdot V_2 $.  So, 
+\[
+\begin{aligned}
+V_3  &= V_2  + i \cdot V_2  \\ 
+     &= \left( {1 + i} \right)V_2  \\ 
+     &= \left( {1 + i} \right)\left[ {\left( {1 + i} \right)^2 R} \right] \\ 
+     &= \left( {1 + i} \right)^3 R \\ 
+\end{aligned}
+\]
+\item The amount of money in the account at the end of the $\left( {n + 1} \right)^{st} $
+ period equals the amount of money in the account at the end of the $n^{th} $ period plus the interest earned during the $n^{th} $ period.  The amount of money in the account at the end of the $n^{th} $ period is  $V_n $, and the interest earned during the $\left( {n + 1} \right)^{st}$ period is  $i \cdot V_n $.  Hence,  $V_{n + 1}  = V_n  + i \cdot V_n $.
+
+\item  The following equations show that this is a geometric sequence with intial term  $\left( {1 + i} \right)$ and a common ratio of  $R$.
+\begin{align*}
+V_{n + 1}  &= V_n  + i \cdot V_n \\
+V_{n + 1}  &= \left( {1 + i} \right)V_n
+\end{align*}
+
+\item For each  $n \in \mathbb{N}$,  $V_n  = \left( {1 + i} \right)^n R$.
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item For each $n \in \mathbb{N}$, $S_{n+1} = R + \left( {1+i} \right) S_n$.
+
+\item This is a geometric series with initial condition  $S_1 = R$ and recurrence relation  \\
+$S_{n+1} = R + \left( {1+i} \right) S_n$.  So in the  formula for a geometric series,
+\[
+a = r \text{ and } r = \left( {1+i} \right).
+\]
+So,
+\[
+\begin{aligned}
+  S_n  &= a\left( {\frac{{1 - r^n }}{{1 - r}}} \right) \\
+       &= R\left( {\frac{{1 - \left( {1 + i} \right)^n }}{{1 - \left( {1 + i} \right)}}} \right) \\
+       &= R\left( {\frac{{1 - \left( {1 + i} \right)^n }}{{ - i}}} \right) \\
+       &= R\left( {\frac{{\left( {1 + i} \right)^n  - 1}}{i}} \right)  \\ 
+\end{aligned}
+\]
+\item Using $R = 200$, $i = \dfrac{0.06}{12} = 0.005$, and $n = 20 \cdot 12 = 240$, we use the formula in Part (2) and get $S_{240} = 92408.18$.  This means that there will be \$92,408.18 in the account at the end of 20 years.  The total amount deposited is 240 times \$200 or \$48,000.  Thus, the total amount of interest accumulated in the account during the 20 years is \$52,408.18. 
+\end{enumerate}
+\end{enumerate}
+\hbreak
+
+
+
+\endinput
+
+
+%
+%\item Let $P(n)$ be, ``$L_n = \dfrac{f_{2n}}{f_n}$.''  First, verify that $P(1)$ and $P(2)$ are true.  Now let $k$ be a natural number with $k \geq 2$ and assume that $P(1)$, $P(2)$, \ldots, 
+%$P(k)$ are all true. Since $P(k)$ and $P(k-1)$ are both assumed to be true, we can use them to help prove that $P(k+1)$ must then be true as follows:
+%\begin{align*}
+%L_{k+1} &= L_k + L_{k-1} \\
+%        &= \frac{f_{2k}}{f_k} + \frac{f_{2k - 2}}{f_{k - 1}}
+%\end{align*}
+%
+%
+%\item Before assigning this problem (or problem (e)), it may be useful to prove Binet's formulas for the Fibonacci and its analog for the Lucas numbers using mathematical induction.  This can be done as an assignment or an activity.  I had assumed it would not be difficult to construct an induction proof for this identity, but I have not yet been able to do so.  
+
+
+For Binet's formulas, we let
+\[
+\alpha = \dfrac{1 + \sqrt{5}}{2}\quad \text{and} \quad \beta = \dfrac{1 - \sqrt{2}}{2}.
+\]
+These are the two roots of the quadratic equation 
+$x^2 - x - 1 = 0$.  So we know that $\alpha^2 = \alpha + 1$ and $\beta^2 = \beta + 1$.  Binet's formula for the Fibonacci numbers and its analog for the Lucas numbers state that for each natural number $n$,
+\[
+f_n = \frac{\alpha^n - \beta^n}{\alpha - \beta} \quad \text{and} \quad 
+L_n = \alpha^n + \beta^n.
+\]
+Once these formulas have been proved, we can let $n \in \N$ and see that
+\begin{align*}
+\frac{f_{2n}}{f_n} &= \frac{\dfrac{\alpha^n - \beta^n}{\alpha - \beta}}{\dfrac{\alpha^n - \beta^n}{\alpha - \beta}} \\
+       &= \frac{\alpha^{2n} - \beta^{2n}}{\alpha^n - \beta^n} \\
+       &= \frac{\left( \alpha^n + \beta^n \right)\left( \alpha^n - \beta^n \right)}{ \alpha^n - \beta^n} \\
+       &= \alpha^n + \beta^n \\
+       &= L_n.
+\end{align*}
+
+To prove the formula involving the Fibonacci numbers, we let $P(n)$ be, 
+``$f_n = \dfrac{\alpha^n - \beta^n}{\alpha - \beta}$.''  We verify that $P(1)$ and $P(2)$ are true.  We then let $k \in \N$ with $k \geq 2$ and assume that 
+$P(1), P(2), \ldots , P(k)$ are true.  In particular, $P(k-1)$ and $P(k)$ are assumed to be true so that
+\[
+f_{k-1} = \frac{\alpha^{k-1} - \beta^{k-1}}{\alpha - \beta} \quad \text{and} \quad
+f_k = \frac{\alpha^k - \beta^k}{\alpha - \beta}.
+\]
+We then see that
+\begin{align*}
+f_{k+1} &= f_k + f_{k-1} \\
+        &= \frac{\alpha^k - \beta^k}{\alpha - \beta} + \frac{\alpha^{k-1} - \beta^{k-1}}{\alpha - \beta} \\
+        &= \frac{\left( \alpha^k + \alpha^{k-1} \right) - \left( \beta^k + \beta^{k-1} \right)}{\alpha - \beta} \\
+        &= \frac{\alpha^{k-1} (\alpha + 1) - \beta^{k-1}(\beta + 1)}{\alpha - \beta} \\
+        &= \frac{\alpha^{k-1} \cdot \alpha^2 - \beta^{k-1}\cdot \beta^2}{\alpha - \beta} \\
+        &= \frac{\alpha^{k+1} - \beta^{k+1}}{\alpha - \beta}.
+\end{align*}
+This proves that if $P(1), P(2), \ldots , P(k)$ are true, then $P(k+1)$ is true, and so by induction, we have proved Binet's formula for the Fibonacci numbers.
+
+\vskip6pt
+We use a similar induction proof for the formula for the Lucas numbers.  In this case,
+\begin{align*}
+L_{k+1} &= L_k + L_{k-1} \\
+        &= \left( \alpha^k + \beta^k \right) + \left( \alpha^{k-1} + \beta^{k-1} \right) \\
+        &= \left( \alpha^k + \alpha^{k-1} \right) + \left( \beta^k + \beta^{k-1} \right) \\
+        &= \alpha^{k-1}(\alpha + 1) + \beta^{k-1}(\beta + 1) \\
+        &= \alpha^{k-1} \cdot \alpha^2 + \beta^{k-1} \cdot \beta^2 \\
+        &= \alpha^{k + 1} + \beta^{k + 1}.
+\end{align*}
+
+
+\item See the comments for Part~(d).  This formula follows from the formula in Part~(d),or Binet's formulas can be used.
+\begin{align*}
+f_n L_n &= \frac{\alpha^n - \beta^n}{\alpha - \beta} \cdot \left( \alpha^n + \beta^n \right) \\
+        &= \frac{\alpha^{2n} - \beta^{2n}}{\alpha - \beta} \\
+        &= f_{2n}.
+\end{align*}
+
+\item This result follows from the result in Part~(a).  However, a separate induction proof could be done if Part~(a) is not assigned.  Let $P(n)$ be, 
+``$f_{n+1} = \dfrac{f_n + L_n}{2}$.''  First, verify that $P(1)$ and $P(2)$ are true.  Now let 
+$k$ be a natural number with $k \geq 2$ and assume that $P(1)$, $P(2)$, \ldots, 
+$P(k)$ are all true. Since $P(k)$ and $P(k-1)$ are both assumed to be true, we can use them to help prove that $P(k+1)$ must then be true as follows:
+\begin{align*}
+f_{k + 2} &= f_{k+1} + f_k \\
+          &= \frac{f_k + L_k}{2} + \frac{f_{k-1} + L_{k-1}}{2} \\
+          &= \frac{\left( f_k + f_{k-1} \right) + \left( L_k + L_{k-1} \right)}{2} \\
+          &= \frac{f_{k+1} + L_{k+1}}{2}.
+\end{align*}
+
+
+\item This result follows from the result in Part~(b).  To see this, use the fact that 
+$L_{n-1} = L_{n+1} - L_n$ in the result from Part~(b) as follows:
+\begin{align*}
+5f_n &= L_{n-1} + L_{n+1} \\
+     &= L_{n+1} - L_n + L_{n+1} \\
+     &= 2L_{n+1} - L_n \\
+2L_{n+1} &= L_n + 5f_n.
+\end{align*}
+If Part~(b) is not assigned, an induction can be done.  Let $P(n)$ be, 
+``$L_{n+1} = \dfrac{L_n + 5f_n}{2}$.''  First, verify that $P(1)$ and $P(2)$ are true.  Now let 
+$k$ be a natural number with $k \geq 2$ and assume that $P(1)$, $P(2)$, \ldots, 
+$P(k)$ are all true. Since $P(k)$ and $P(k-1)$ are both assumed to be true, we can use them to help prove that $P(k+1)$ must then be true as follows:
+\begin{align*}
+L_{k + 2} &= L_{k+1} + L_k \\
+          &= \frac{L_k + 5f_k}{2} + \frac{L_{k-1} + 5f_{k-1}}{2} \\
+          &= \frac{\left( L_k + L_{k-1} \right) + 5\left( f_k + f_{k-1} \right)}{2} \\
+          &= \frac{L_{k+1} + 5f_{k+1}}{2}.
+\end{align*}
+
+
+\item This result follows from the result in Part~(a).  To see this, use the fact that 
+$f_{n+1} = f_{n} + f_{n-1}$ in the result from Part~(b) as follows:
+\begin{align*}
+L_n &= 2f_{n+1} - f_n \\
+    &= f_{n+1} + \left( f_n + f_{n-1} \right) - f_n \\
+    &= f_{n+1} + f_{n-1}.
+\end{align*}
+If Part~(a) is not assigned, an induction can be done.  Let $P(n)$ be, 
+``$L_n = f_{n+1} + f_{n-1}$.''  First, verify that $P(1)$ and $P(2)$ are true.  Now let 
+$k$ be a natural number with $k \geq 2$ and assume that $P(1)$, $P(2)$, \ldots, 
+$P(k)$ are all true. Since $P(k)$ and $P(k-1)$ are both assumed to be true, we can use them to help prove that $P(k+1)$ must then be true as follows:
+\begin{align*}
+L_{k+1} &= L_k + L_{k-1} \\
+        &= \left( f_{k+1} + f_{k - 1} \right) + \left( f_k + f_{k-2} \right) \\
+        &= \left( f_{k+1} + f_k \right) + \left( f_{k-1} + f_{k-2} \right) \\
+        &= f_{k+2} + f_k.
+\end{align*}
+
+
+\item This result follows from the result in Part~(b) by dividing both sides of the equation in~(b) by 5.  If Part~(b) is not assigned, an induction can be done.  Let $P(n)$ be, 
+``$f_n = \dfrac{L_{n+1} + L_{n-1}}{5}$.''  First, verify that $P(1)$ and $P(2)$ are true.  Now let 
+$k$ be a natural number with $k \geq 2$ and assume that $P(1)$, $P(2)$, \ldots, 
+$P(k)$ are all true. Since $P(k)$ and $P(k-1)$ are both assumed to be true, we can use them to help prove that $P(k+1)$ must then be true as follows:
+\begin{align*}
+f_{k + 1} &= f_k + f_{k-1} \\
+          &= \frac{L_{k+1} + L_{k-1}}{5} + \frac{L_k + L_{k-2}}{5} \\
+          &= \frac{\left( L_{k+1} + L_k \right) + \left( L_{k-1} + L_{k-2} \right)}{5} \\
+          &= \frac{L_{k+2} + L_k}{5}.
+\end{align*}
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item This is a well-written proof of the proposition.
+\end{enumerate}
+
+
+\end{enumerate}
+
+
+
+\hbreak
+
+
+\endinput
+
+
+
+
+
+

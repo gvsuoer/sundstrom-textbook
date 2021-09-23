@@ -1,0 +1,110 @@
+\section*{Section \ref{S:uncountablesets} Uncountable Sets}
+
+\begin{enumerate}
+\item \begin{enumerate}
+\item $f:\left( 0, \infty \right) \to \mathbb{R}$ by $f \left( x \right) = \ln x$ for all 
+$x \in \left( 0, \infty \right)$.
+
+\item $g: \left( 0, \infty \right) \to \left( a, \infty \right)$ by $g \left( x \right) = x + a$ for all $x \in \left( 0, \infty \right)$.  The function $g$ is a bijection and so 
+$\left( 0, \infty \right) \approx \left( a, \infty \right)$.  Then use Part~(a).
+
+\item Let $\mathbb{Z}^* = \left\{ x \in \mathbb{Z} \mid x \geq 0 \right\}$.  Define 
+$f : \mathbb{R} \to \left( \mathbb{R} - \left\{ 0 \right\} \right)$ as follows:
+\begin{equation} \notag
+f \left( x \right) = 
+\begin{cases}
+x         &\text{if } x \notin \mathbb{Z}^* \\
+ %                     &                      \\
+x +1        &\text{if } x \in \mathbb{Z}^*.
+\end{cases}
+\end{equation}
+The function $f$ is a bijection and so 
+$\mathbb{R} \approx \left( \mathbb{R} - \left\{ 0 \right\} \right)$.
+
+
+\item $g: \left( \mathbb{R} - \left\{ 0 \right\} \right) \to 
+\left( \mathbb{R} - \left\{ a \right\} \right)$ by $g \left( x \right) = x + a$ for all 
+$x \in \mathbb{R}$.  The function $g$ is a bijection and so 
+$\left( \mathbb{R} - \left\{ 0 \right\} \right) \approx 
+\left( \mathbb{R} - \left\{ a \right\} \right)$.
+
+\end{enumerate}
+
+\item Let $\mathbb{H}$ be the set of irrational numbers.  Then 
+$\mathbb{R} = \mathbb{Q} \cup \mathbb{H}$ and $\mathbb{Q}$ and $\mathbb{H}$ are disjoint.  So if $\mathbb{H}$ is countable, then by Theorem~\ref{T:unionofcountable}, $\mathbb{R}$ would be countably infinite.  Therefore, $\mathbb{H}$ is uncountable.
+
+\item By Corollary~\ref{C:subsetofcountable}, every subset of a countable set is countable.  So if 
+$B$ is countable, then $A$ is countable.
+
+\item \begin{enumerate}
+\item $f: \left( 0, 1 \right) \to \left[ 0, 1 \right]$ by $f \left( x \right) = x$ for all 
+$x \in \left( 0, 1 \right)$.
+
+\item $h: \left[ 0, 1 \right] \to \left( -1, 2 \right)$ by $h \left( x \right) = x$ for all 
+$x \in \left[ 0, 1 \right]$.
+
+\item Since $\left( -1, 2 \right) \approx \left( 0, 1 \right)$, there exists a bijection 
+$k: \left( -1, 2 \right) \to \left( 0, 1 \right)$.  Hence, 
+$k \circ h : \left[0, 1 \right] \to  \left( 0, 1 \right)$ is a bijection.
+
+\item Parts~(a) and~(c) and the Cantor-Schr\"{o}der-Bernstein Theorem imply that 
+$\left[0, 1 \right] \approx \left( 0, 1 \right)$.
+\end{enumerate}
+
+\item Define $f: \left[ a, b \right] \to \left[ 0, 1 \right]$ by 
+$f \left( x \right) = \dfrac{x - a}{b - a}$ for all $x \in \left[ a, b \right]$.  The function 
+$f$ is a bijection and hence $\left[ a, b \right] \approx \left[ 0, 1 \right]$.
+
+\item By Cantor's Theorem (Theorem~\ref{T:cantor}), $\mathbb{R}$ and 
+$\mathcal{P} \left( \mathbb{R} \right)$ do not have the same cardinality.
+
+
+
+\item \begin{enumerate}
+\item The function $f$ defined as follows is an injection.
+\[
+f\x \Q^c \to \R \quad \text{by} \quad f(x) = x, \text{ for each } x \in \Q^c.
+\]
+
+\item If $a \in \R$ and $a = A.a_1 a_2 a_3 a_4 \cdots a_n \cdots$, where $A$ is an integer and the decimal part $( 0.a_1 a_2 a_3 a_4 \cdots )$ is in normalized form, then the real number
+\[
+A.a_1 0 a_2 1 1 a_3 0 0 0 a_4 1 1 1 1 a_5 0 0 0 0 0 a_6 1 1 1 1 1 1 \cdots 
+\]
+has an infinite nonrepeating decimal expansion, and hence, it is an irrational number.
+
+\item Define $g\x \R \to \Q^c$ as follows:  If $a \in \R$ and $a = A.a_1 a_2 a_3 a_4 \cdots a_n \cdots$, where $A$ is an integer and the decimal part $( 0.a_1 a_2 a_3 a_4 \cdots )$ is in normalized form, then 
+\[
+g(a) = A.a_1 0 a_2 1 1 a_3 0 0 0 a_4 1 1 1 1 a_5 0 0 0 0 0 a_6 1 1 1 1 1 1 \cdots \,.
+\]
+The decimal part of $g(a)$ is in normalized form.  This can be used to prove that $g$ is an injection since two decimal numbers in normalized form are equal if and only if they have identical digits in each decimal position.
+
+\item We can now use the Cantor-Schr\"{o}der-Bernstein Theorem to conclude that $\R$ has the same cardinality as $\Q^c$.
+\end{enumerate}
+
+
+
+\item \begin{enumerate}
+\item \begin{multicols}{2}
+$f ( 0.3, 0.625 ) = 0.3602505$ 
+
+$f \!\left( \dfrac{1}{3}, \dfrac{1}{4} \right) = 0.3235303030 \cdots$
+
+$f \!\left( \dfrac{1}{6}, \dfrac{5}{6} \right) = 0.1863636363 \cdots$
+\end{multicols}
+
+\item $f(0.24, 0.35) = 0.2345$
+
+\item $f \!\left( \dfrac{1}{3}, \dfrac{1}{3} \right) = \dfrac{1}{3}$
+
+\item There is no $(x, y) \in S$ such that $f(x, y) = \dfrac{1}{2}$.
+
+\item The result in Part~(d) shows that $f$ is not a surjection.  Since the decimal expansions are all in normalized form, if $(a, b) \in S$ and $(c, d) \in S$ with $f(a, b) = f(c, d)$, then the normalized forms of $f(a, b)$ and $f(c, d)$ are identical.  This implies that the normalized form of $a$ and $c$ are identical and the normalized forms of $b$ and $d$ are identical.  Hence, 
+$a = c$ and $b = d$ and so, $(a, b) = (c, d)$.  Therefore, $f$ is an injection.
+
+\item The function $f\x S \to J$ in Part~(e) is an injection.  We can also define 
+$g\x J \to S$ by $g(a) = (a, 0.5)$ for each $a \in J$.  This function is also an injection and hence, bt the Cantor-Schr\"{o}der-Bernstein Theorem, \linebreak
+$S \approx J$.  This means that the cardinality of the open unit square $S$ is equal to $\boldsymbol{c}$.
+\end{enumerate}
+\end{enumerate}
+\hbreak
+\endinput

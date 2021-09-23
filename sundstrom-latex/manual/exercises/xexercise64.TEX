@@ -1,0 +1,160 @@
+\section*{Section \ref{S:compositionoffunctions} Composition of Functions}
+
+\begin{enumerate}
+\item \begin{enumerate}
+\item It is possible to determine $\left( {g \circ f} \right)\left( x \right)$  for all  
+$x \in \mathbb{R}$.  In fact,
+\[
+\begin{aligned}
+\left( {g \circ f} \right)\left( x \right) &= g \left( x^2 + 1 \right) \\
+                                           &= \frac{1}{x^2 + 1}. \\
+\end{aligned}
+\]
+\item Let  $f:A \to T$ and  $g:B \to C$.  If $T \subseteq B$, then the composite function 
+$g \circ f:A \to C$ can be defined.
+\end{enumerate}
+
+
+
+\item \begin{enumerate}
+\item $F\left( x \right) = \left( {g \circ f} \right)\left( x \right)$, where 
+$f\left( x \right) = e^x$  and $g\left( x \right) = \cos x$.
+
+\item $G\left( x \right) = \left( {g \circ f} \right)\left( x \right)$ where 
+$f\left( x \right) = \cos x$ and $g\left( x \right) = e^x $.
+
+\item $H\left( x \right) = \left( {g \circ f} \right)\left( x \right)$, 
+$f\left( x \right) = \sin x$, $g\left( x \right) = \frac{1}{x}$.
+
+\item $K\left( x \right) = \left( {g \circ f} \right)\left( x \right)$, 
+$f\left( x \right) = e^{-x^2}$, $g\left( x \right) = \cos x$.
+\end{enumerate}
+
+
+
+\item \begin{enumerate}
+\item $\left[ {\left( {h \circ g} \right) \circ f} \right]\left( x \right) = \sqrt[3]{{\sin \left( {x^2 } \right)}}$; 
+$\left[ {h \circ \left( {g \circ f} \right)} \right]\left( x \right) = \sqrt[3]{{\sin \left( {x^2 } \right)}}$.
+
+\item 
+$\left[ {\left( {h \circ g} \right) \circ f} \right]\left( x \right) 
+  = \left[ \left( {h \circ g} \right) \right] \left( f \left( x \right) \right)
+  = h \left( g \left( f \left( x \right) \right) \right).$
+
+$\left[ {h \circ \left( {g \circ f} \right)} \right]\left( x \right) 
+  = h \left( \left( g \circ f \right) \left( x \right) \right) 
+  = h \left( g \left( f \left( x \right) \right) \right)$. 
+\end{enumerate}
+
+\item \begin{enumerate}
+\item For each  $x \in A$, $\left( {f \circ I_A } \right)\left( x \right) = f\left( {I_A \left( x \right)} \right) = f\left( x \right)$.  Therefore, $f \circ I_A  = f$.
+
+\item For each  $x \in A$, $\left( {I_B \circ f } \right)\left( x \right) = I_B \left( {f \left( x \right)} \right) = f\left( x \right)$.  Therefore, $I_B \circ f  = f$.
+\end{enumerate}
+
+
+
+\item Let  $A$, $B$, and  $C$  be nonempty sets and let  $f:A \to B$  and  $g:B \to C$.  If  $f$  and  $g$  are both injections, then  $g \circ f$  is an injection. 
+
+\textbf{\emph{Proof:}} Let  $A$, $B$, and  $C$  be nonempty sets and let  $f:A \to B$  and  
+$g:B \to C$.  Assume that $f$  and  $g$  are both injections.  Let  $x, y \in A$ and assume that  
+$\left( {g \circ f} \right)\left( x \right) = \left( {g \circ f} \right)\left( y \right)$.  Then,
+\[
+g \left( f \left( x \right) \right) = g \left( f \left( y \right) \right),
+\] 
+and since $g$ is an injection, we conclude that $f \left( x \right) = f \left( y \right)$.  Now, since $f$ is an injection, we see that $x = y$ and hence $g \circ f$ is an injection.
+
+
+
+\item \begin{enumerate}
+\item Let  $A$, $B$, and  $C$  be nonempty sets and let  $f:A \to B$  and  $g:B \to C$.  If  
+$g \circ f:A \to C$  is an injection, then  $f:A \to B$  is an injection.
+
+\textbf{\emph{Proof:}}  Let  $A$, $B$, and  $C$  be nonempty sets and let  $f:A \to B$  and  
+$g:B \to C$.  Assume that $g \circ f$ is an injection.  To prove that $f$ is an injection, we let $x$ and $y$ be in $A$ and assume that $f \left( x \right) = f \left( y \right)$.  Since $f \left( x \right)$ is in $B$, we can use the function $g$ to conclude that
+\[
+\begin{aligned}
+g \left( f \left( x \right) \right) &= g \left( f \left( y \right) \right) \\
+\left( g \circ f \right) \left( x \right) &= \left( g \circ f \right) \left( y \right). \\
+\end{aligned}
+\]
+Since $g \circ f$ is an injection, the last equation implies that $x = y$. Hence, $f$ is an injection.
+
+\item Let  $A$, $B$, and  $C$  be nonempty sets and let  $f:A \to B$  and  $g:B \to C$.  If  
+$g \circ f:A \to C$  is a surjection, then  $g:B \to C$  is a surjection.
+
+\textbf{\emph{Proof:}}  Let  $A$, $B$, and  $C$  be nonempty sets and let  $f:A \to B$  and  
+$g:B \to C$, and assume that $g \circ f$ is a surjection.  To prove that $g$ is a surjection, we let $z \in C$.  Now, since $g \circ f$ is a surjection, there exists an $x \in A$ such that
+\[
+\left( g \circ f \right) \left( x \right) = z,
+\]
+and this implies that $g \left( f \left( x \right) \right) = z$.  In addition, 
+$f \left( x \right) \in B$ and hence using $y = f \left( x \right)$, we have proven that there exists an element $y \in B$ such that $g \left( y \right) = z$.  Therefore, $g$ is a surjection.
+\end{enumerate}
+
+
+
+\item \begin{enumerate}
+\item $f: \mathbb{R} \to \mathbb{R}$ by $f \left( x \right) = x$, 
+$g: \mathbb{R} \to \mathbb{R}$ by $g \left( x \right) = x^2$.  The function $f$ is a surjection, but $g \circ f$ is not a surjection.
+
+\item $f: \mathbb{R} \to \mathbb{R}$ by $f \left( x \right) = x$, 
+$g: \mathbb{R} \to \mathbb{R}$ by $g \left( x \right) = x^2$.  The function $f$ is an injection, but $g \circ f$ is not an injection.
+
+\item $f: \mathbb{R} \to \mathbb{R}$ by $f \left( x \right) = x^2$, 
+$g: \mathbb{R} \to \mathbb{R}$ by $g \left( x \right) = x$.  The function $g$ is a surjection, but $g \circ f$ is not a surjection.
+
+\item $f: \mathbb{R} \to \mathbb{R}$ by $f \left( x \right) = x^2$, 
+$g: \mathbb{R} \to \mathbb{R}$ by $g \left( x \right) = x$.  The function $g$ is an injection, but $g \circ f$ is not an injection.
+
+\item $f:\mathbb{R} \to \mathbb{R}$ by $f \left( x \right) = e^x$, 
+$g:\mathbb{R} \to \mathbb{R}$ by $g \left( x \right) = \ln x$.  The function $f$ is not a surjection but the function $g \circ f$ is a surjection.
+
+\item By Part~(\ref{T:morecompositefunctions1}) of Theorem~\ref{T:morecompositefunctions}, this is not possible since if $g \circ f$ is an injection, then $f$ is an injection.
+
+\item By Part~(\ref{T:morecompositefunctions2}) of Theorem~\ref{T:morecompositefunctions}, this is not possible since if $g \circ f$ is a surjection, then $g$ is a surjection.
+
+\item $f:\mathbb{R} \to \mathbb{R}$ by $f \left( x \right) = e^x$, 
+$g:\mathbb{R} \to \mathbb{R}$ by $g \left( x \right) = x^2$.  The function $g$ is not an injection but the function $g \circ f$ is an injection. 
+$\left[ \left( g \circ f \right) \left( x \right) = e^{2x}.\right]$
+\end{enumerate}
+
+
+
+\item \begin{enumerate}
+\item Verify that $f^2(x) = x + 2$, $f^3(x) = x + 3$, and $f^4(x) = x + 4$.  Let $P(n)$ be 
+``$f^n(x) = x + n$.  We have verified that the basis step is true.  So let $k \in \N$ and assume that $P(k)$ is true.  So $f^k(x) = x + k$.  Then
+\begin{align*}
+f^{k+1}(x) &= \left( f \circ f^k \right)(x) \\
+           &= f \left( f^k(x) \right) \\
+           &= f(x + k) \\
+           &= (x + k) + 1 \\
+           &= x + (k + 1).
+\end{align*}
+This proves that if $P(k)$ is true, then $P(k + 1)$ is true.
+
+\item Verify that $f^2(x) = a^2x + 2b$, $f^3(x) = a^3x + 3b$, and $f^4(x) = a^4x + 4b$.  Let $P(n)$ be ``$f^n(x) = a^nx + nb$.  We have verified that the basis step is true.  So let $k \in \N$ and assume that $P(k)$ is true.  So $f^k(x) = a^kx + kb$.  Then
+\begin{align*}
+f^{k+1}(x) &= \left( f \circ f^k \right)(x) \\
+           &= f \left( f^k(x) \right) \\
+           &= f\left(a^kx + kb \right) \\
+           &= a\left(a^kx + kb \right) + b \\
+           &= a^{k+1}x + (k + 1)b.
+\end{align*}
+This proves that if $P(k)$ is true, then $P(k + 1)$ is true.
+
+\item Let $P^n(x)$ be ``$f^{n+1} = f^n \circ f$''.  Then $P(1)$ is true since 
+$f^2 = f \circ f = f^1 \circ f$.  Now let $k \in \N$ and assume that $P(k)$ is true.  That is, assume that $f^{k+1} = f^k \circ f$.  We then see that
+\begin{align*}
+f^{k+2} &= f \circ f^{k+1} \\
+        &= f \circ \left( f^k \circ f \right) \\
+        &= \left( f \circ f^k \right) \circ f \\
+        &= f^{k+1} \circ f.
+\end{align*}
+This proves that if $P(k)$ is true, then $P(k + 1)$ is true.
+\end{enumerate}
+\end{enumerate}
+\hbreak
+
+
+\endinput

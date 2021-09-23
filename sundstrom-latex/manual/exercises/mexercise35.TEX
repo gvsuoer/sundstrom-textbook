@@ -1,0 +1,502 @@
+\section*{Section \ref{S:divalgo} The Division Algorithm and Congruence}
+
+
+\begin{enumerate}
+
+\item In this case,  $n = 3q + 2$, and when we substitute, we obtain
+\[
+\begin{aligned}
+  n^3  - n &= \left( {3q + 2} \right)^3  - \left( {3q + 2} \right) \\ 
+           &= \left( {27q^3  + 54q^2  + 36q + 8} \right) - \left( {3q + 2} \right) \\ 
+           &= 3\left( {9q^3  + 18q^2  + 11q + 2} \right) \\ 
+\end{aligned} 
+\]
+By the Closure Properties of the integers,  $9q^3  + 18q^2  + 11q + 2$  is an integer.  This proves that in this case, 3  divides  $n^3  - n$.
+
+\item \begin{enumerate}
+\item The first case is when $\mod{n}{0}{3}$.  We can then use Theorem~\ref{T:propsofcong} to conclude that $\mod{n^3}{0^3}{3}$ or that $\mod{n^3}{0}{3}$.  So in this case, $\mod{n^3}{n}{3}$.
+
+\noindent
+For the second case, $\mod{n}{1}{3}$.  We can then use Theorem~\ref{T:propsofcong} to conclude that $\mod{n^3}{1^3}{3}$ or that $\mod{n^3}{1}{3}$.  So in this case, $\mod{n^3}{n}{3}$.
+
+\noindent
+The last case is when $\mod{n}{2}{3}$.  We then get $\mod{n^3}{2^3}{3}$ or $\mod{n^3}{8}{3}$.  Since $\mod{8}{2}{3}$, we can use the transitive property to conclude that $\mod{n^3}{2}{3}$, and so $\mod{n^3}{n}{3}$.
+
+\noindent
+Since we have proved it in all three cases, we conclude that for each integer $n$, $\mod{n^3}{n}{3}$.
+
+\item Since $\mod{n^3}{n}{3}$, we use the definition of congruence to conclude that 3 divides $\left( n^3 - n \right)$.
+\end{enumerate}
+
+%\item In this case, $n \equiv 2 \pmod 3$. So $n^3 \equiv 2^3 \pmod 3$ and, hence,
+%\begin{align*}
+%\left(n^3 - n \right) &\equiv (8 - 2) \pmod 3 \\
+%                      &\equiv 6 \pmod 3 \\
+%                      &\equiv 0 \pmod 3.
+%\end{align*}
+
+
+%\item \begin{enumerate}
+%\item Use $m = k - 1$.  Then, $m +1 = k$, and $m + 2 = k + 1$.
+%
+%\item Use $n^3 - n = n \left( n - 1 \right) \left( n + 1 \right) = 
+%\left( n - 1 \right) n \left( n + 1 \right)$.
+%
+%\item Use cases based on congruence modulo 6.  For example,
+%\begin{itemize}
+%\item If $n \equiv 0 \pmod 6$, then $n^3 - n \equiv 0^3 - 0 \pmod 6$ and so 
+%$n^3 - n \equiv 0 \pmod 6$.
+%
+%\item If $n \equiv 2 \pmod 6$, then $n^3 - n \equiv 2^3 - 2 \pmod 6$ and so 
+%$n^3 - n \equiv 6 \pmod 6$ and $n^3 - n \equiv 0 \pmod 6$.
+%
+%\item If $n \equiv 4 \pmod 6$, then $n^3 - n \equiv 4^3 - 4 \pmod 6$ and so 
+%$n^3 - n \equiv 60 \pmod 6$ and $n^3 - n \equiv 0 \pmod 6$.
+%\end{itemize}
+%\end{enumerate}
+ 
+
+
+\item If  $a \equiv b \pmod n$,  then  $n \mid ( a - b )$.  Hence, there exists an integer $k$ such that $a - b = nk$.  Then, $b - a = n ( -k )$ and $b \equiv a \pmod n$.
+
+\item \begin{enumerate}
+\item The contrapositive is:  For each integer $a$, if 3 does not divide $a$, then 3 does not divide $a^2$.
+\item Use the Division Algorithm to set up cases.  Assuming 3 does not divide $a$, we know that $a = 3q + 1$ or $a = 3q + 2$.
+
+For $a = 3q + 1$, $a^2 = 9q^2 + 6q + 1 = 3\left( 3q^2 + 2q + \right) + 1$ and so 3 does not divide $a^2$.
+
+For $a = 3q + 2$, $a^2 = 9q^2 + 12q + 4 = 3\left( 3q^2 + 4q + 1 \right) + 1$ and so 3 does not divide $a^2$.
+
+\end{enumerate}
+
+\item
+\begin{enumerate}
+\item $a \equiv 0 \pmod n$ if and only if $n \mid \left( a - 0 \right)$.
+
+\item Let  $a \in \mathbb{Z}$.  Corollary~\ref{C:congtorem} tell us that  if  $a \not \equiv 0 \left( {\bmod 3} \right)$, then  \\
+$a \equiv 1 \pmod 3$ or  
+$a \equiv 2 \pmod 3$.
+
+\item Part (b) tells us we can use a proof by cases using the following two cases:  
+(1) $a \equiv 1 \pmod 3$;  (2) $a \equiv 2 \pmod 3$.
+
+So, if $a \equiv 1 \pmod 3$, then by Theorem~\ref{T:propsofcong}, 
+$a \cdot a \equiv 1 \cdot 1 \pmod 3$, and hence, $a^2 \equiv 1 \pmod 3$.
+
+If $a \equiv 2 \pmod 3$, then by Theorem~\ref{T:propsofcong}, 
+$a \cdot a \equiv 2 \cdot 2 \pmod 3$, and hence, $a^2 \equiv 4 \pmod 3$.  Since 
+$4 \equiv 1 \pmod 3$, this implies that $a^2 \equiv 1 \pmod 3$.
+\end{enumerate}
+
+
+%\item \begin{enumerate}
+%\item The first case is when $\mod{n}{0}{3}$.  We can then use Theorem~\ref{T:propsofcong} to conclude that $\mod{n^3}{0^3}{3}$ or that $\mod{n^3}{0}{3}$.  So in this case, $\mod{n^3}{n}{3}$.
+%
+%\noindent
+%For the second case, $\mod{n}{1}{3}$.  We can then use Theorem~\ref{T:propsofcong} to conclude that $\mod{n^3}{1^3}{3}$ or that $\mod{n^3}{1}{3}$.  So in this case, $\mod{n^3}{n}{3}$.
+%
+%\noindent
+%The last case is when $\mod{n}{2}{3}$.  We then get $\mod{n^3}{2^3}{3}$ or $\mod{n^3}{8}{3}$.  Since $\mod{8}{2}{3}$, we can use the transitive property to conclude that $\mod{n^3}{2}{3}$, and so $\mod{n^3}{n}{3}$.
+%
+%\noindent
+%Since we have proved it in all three cases, we conclude that for each integer $n$, $\mod{n^3}{n}{3}$.
+%
+%\item Since $\mod{n^3}{n}{3}$, we use the definition of congruence to conclude that 3 divides $\left( n^3 - n \right)$.
+%\end{enumerate}
+
+
+
+
+
+%\item In a proof by contradiction, we assume that there exists a natural number $n$ such that 
+%$a = \sqrt{3n + 2}$ is a natural number.  We then see that $a^2 = 3n + 2$.  However, this implies that $a^2 \equiv 2 \pmod 3$ and this contradicts the result in Part~(c) of Exercise~3).
+
+
+
+\item
+The contrapositive is:  Let $a$ and $b$ be integers.  If $a \not\equiv 0 \pmod3$ and 
+$b \not\equiv 0 \pmod 3$, then $ab \not\equiv 0 \pmod 3$.
+
+Using Exericise~(3b), we can use the following four cases: \\ 
+(1) $a \equiv 1 \pmod 3$ and $b \equiv 1 \pmod 3$; \\
+(2) $a \equiv 1 \pmod 3$ and $b \equiv 2 \pmod 3$; \\
+(3) $a \equiv 2 \pmod 3$ and $b \equiv 1 \pmod 3$; \\
+(4) $a \equiv 2 \pmod 3$ and $b \equiv 2 \pmod 3$. \\
+In all four cases, we use Theorem~\ref{T:propsofcong} to conclude that 
+$ab \not\equiv 0 \pmod 3$.
+
+
+\item \begin{enumerate}
+\item This follows from Exercise~(6) and the fact that  $3 \mid k$ if and only if  
+$k \equiv 0 \pmod 3$.
+\item This follows directly from Part~(a) using $a = b$.
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item Mimic the proof of Theorem~3.18 that $\sqrt{2}$ is irrational.  In this case, if we assume that $\sqrt{3}$ is rational, then there exist integers $m$ and $n$ with $n > 0$ and $m$ and $n$ have no common factor greater than 1 such that $\sqrt{3} = \dfrac{m}{n}$.  We can then use algebra to prove that $3n^2 = m^2$.  This means that 3 divides $m^2$ and, hence, by Exercise~(6b), 3 divides $m$.  So there exists an integer $p$ such that $m = 3p$.  We can then obtain $3n^2 = 9p^2$ and $n^2 = 3p^2$.  This implies that 3 divides $n^2$ and, hence, that 3 divides $n$.  This contradicts the assumption that $m$ and $n$ have no common factor greater than 1.
+
+\item Assume that $\sqrt{12}$ is rational and write $\sqrt{12} = p$.  So $p \in \Q$.  Now write 
+$\sqrt{12} = 2 \sqrt{3}$ and conclude that $\sqrt{3} = \dfrac{p}{2}$.  This means that $\sqrt{3}$ is a rational number, which is a contradiction.
+\end{enumerate}
+
+
+\item In a proof by contradiction, we assume that there exists a natural number $n$ such that 
+$a = \sqrt{3n + 2}$ is a natural number.  We then see that $a^2 = 3n + 2$.  However, this implies that $a^2 \equiv 2 \pmod 3$ and this contradicts the result in Part~(c) of Exercise~3).
+
+
+
+\item \begin{enumerate}
+\item Use $m = k - 1$.  Then, $m +1 = k$, and $m + 2 = k + 1$.
+
+\item Use $n^3 - n = n \left( n - 1 \right) \left( n + 1 \right) = 
+\left( n - 1 \right) n \left( n + 1 \right)$.
+
+\item Use cases based on congruence modulo 6.  For example,
+\begin{itemize}
+\item If $n \equiv 0 \pmod 6$, then $n^3 - n \equiv 0^3 - 0 \pmod 6$ and so 
+$n^3 - n \equiv 0 \pmod 6$.
+
+\item If $n \equiv 2 \pmod 6$, then $n^3 - n \equiv 2^3 - 2 \pmod 6$ and so 
+$n^3 - n \equiv 6 \pmod 6$ and $n^3 - n \equiv 0 \pmod 6$.
+
+\item If $n \equiv 4 \pmod 6$, then $n^3 - n \equiv 4^3 - 4 \pmod 6$ and so 
+$n^3 - n \equiv 60 \pmod 6$ and $n^3 - n \equiv 0 \pmod 6$.
+\end{itemize}
+\end{enumerate}
+
+\item  \begin{enumerate}
+\item Assume that $m$ is a perfect square.  Then there exists an integer $a$ such that $m = a^2$.  If $\mod{a}{0}{5}$, then $\mod{a^2}{0}{5}$ and if $a \not\equiv 0 \pmod 5$, then by Proposition~\ref{prop:congmod5},  
+ $a^2 \equiv 1 \pmod 5$ or $a^2 \equiv 4 \pmod 5$.  So $a^2$ and hence $m$ must be congruent to 0, 1, or 4 modulo 5.  This contradicts the fact that $5,344,580,232,468,953,153 \equiv 3 \pmod 5$.
+
+\item Use the same reasoning as in Part~(a).  We see that \\$\mod{782,456,231,189,002,288,438}{3}{5}$ and so it is not a perfect square.
+\end{enumerate}
+
+
+
+
+
+
+\item \begin{enumerate}
+\item If $5 \mid a^2$, then $a^2 \equiv 0 \pmod 5$.  If 5 does not divide $a$, then 
+$a \not\equiv 0 \pmod 5$ and by Proposition~\ref{prop:congmod5}, $a^2 \not\equiv 0 \pmod 5$.  This is a contradiction and, hence, 5 must divide $a$.
+
+\item Mimic the proof of Theorem~3.18 that $\sqrt{2}$ is irrational.  In this case, if we assume that $\sqrt{5}$ is rational, then there exist integers $m$ and $n$ with $n > 0$ and $m$ and $n$ have no common factor greater than 1 such that $\sqrt{5} = \dfrac{m}{n}$.  We can then use algebra to prove that $5n^2 = m^2$.  This means that 5 divides $m^2$ and, hence, by Part~(a), 5 divides $m$.  So there exists an integer $p$ such that $m = 5p$.  We can then obtain $5n^2 = 25p^2$ and $n^2 = 5p^2$.  This implies that 5 divides $n^2$ and, hence, that 5 divides $n$.  This contradicts the assumption that $m$ and $n$ have no common factor greater than 1.
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item Use six cases.  If $a \not\equiv 0 \pmod 7$, then $a$ must be congruent to 1, 2, 3, 4, 5, or 6 modulo 7.  In each case, prove that $a^2 \not\equiv 0 \pmod 7$.
+
+\item The contrapositive of this statement is equivalent to the statement in Part~(a).
+
+\item Mimic the proof in Exercise~(9) that $\sqrt{5}$ is irrational.  In this case, if we assume that $\sqrt{7}$ is rational, then there exist integers $m$ and $n$ with $n > 0$ and $m$ and $n$ have no common factor greater than 1 such that $\sqrt{7} = \dfrac{m}{n}$.  We can then use algebra to prove that $7n^2 = m^2$.  This means that 7 divides $m^2$ and, hence, by Part~(a), 7 divides $m$.  So there exists an integer $p$ such that $m = 7p$.  We can then obtain 
+$7n^2 = 49p^2$ and $n^2 = 7p^2$.  This implies that 7 divides $n^2$ and, hence, that 7 divides 
+$n$.  This contradicts the assumption that $m$ and $n$ have no common factor greater than 1.
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item If an integer $a$ has a remainder of 6 when divided by 7, then $a \equiv 6 \pmod 7$.  Then, $a^2 \equiv 6^2 \pmod 7$ or $a^2 \equiv 36 \pmod 7$.  Since $36 \equiv 1 \pmod 7$, we can use the transitive property to conclude that $a^2 \equiv 1 \pmod 7$.  This means that $a^2$ has a remainder of 1 when divided by 7.
+
+\item If an integer $a$ has a remainder of 11 when divided by 12, then $a \equiv 11 \pmod 12$.  Then, $a^2 \equiv 11^2 \pmod 12$ or $a^2 \equiv 121 \pmod 12$.  Since $121 \equiv 1 \pmod 12$, we can use the transitive property to conclude that $a^2 \equiv 1 \pmod 12$.  This means that 
+$a^2$ has a remainder of 1 when divided by 12.
+
+\item If an integer $a$ has a remainder of $(n - 1)$ when divided by $n$, then 
+$a \equiv (n - 1) \pmod n$.  Then, $a^2 \equiv (n - 1)^2 \pmod n$ or 
+$a^2 \equiv (n^2 - 2n + 1) \pmod n$.  Since $(n^2 - 2n + 1) \equiv 1 \pmod n$, we can use the transitive property to conclude that $a^2 \equiv 1 \pmod n$.  This means that $a^2$ has a remainder of 1 when divided by $n$.
+\end{enumerate}
+
+
+\item If an integer $a$ has a remainder of $(n - 2)$ when divided by $n$, then 
+$a \equiv (n - 2) \pmod n$.  Then, $a^2 \equiv (n - 2)^2 \pmod n$ or 
+$a^2 \equiv (n^2 - 4n + 4) \pmod n$.  Since $(n^2 - 4n + 4) \equiv 4 \pmod n$, we can use the transitive property to conclude that $a^2 \equiv 4 \pmod n$.  So, if $n = 3$, then 
+$a^2 \equiv 1 \pmod 3$ and $a^2$ has a remainder of 1 when divided by 3.  If $n = 4$, then 
+$a^2 \equiv 0 \pmod 4$ and $a^2$ has a remainder of 0 when divided by 4.  If $n > 4$, then $a^2$ has a remainder of 4 when divided by $n$.
+
+
+\item Prove the contrapositive, which is:  If $n$ is a prime number and $n \ne 3$, then 
+$3$ divides $\left( n^2 + 2 \right)$.  Since $n$ is a prime number that is not equal to 3, we can conclude that $n \not\equiv 0 \pmod 3$.  Then, by Exercise~(4c), $n^2 \equiv 1 \pmod 3$, and hence, $\left( n^2 + 2 \right) \equiv 3 \pmod 3$.  From this, we see that 
+$\left( n^2 + 2 \right) \equiv 0 \pmod 3$, which implies that $3 \mid \left( n^2 + 2 \right)$.
+
+
+
+\item \begin{enumerate}
+\item First make the argument that if $n$ is odd, then $n$  must be congruent to 1, 3, 5, or 7 modulo 8.  Then use these as four cases.
+\begin{itemize}
+\item If $n \equiv 1 \pmod 8$, then $n^2 \equiv 1^2 \pmod 8$ or $n^2 \equiv 1 \pmod 8$.
+
+\item If $n \equiv 3 \pmod 8$, then $n^2 \equiv 3^2 \pmod 8$ or $n^2 \equiv 9 \pmod 8$.  
+Since $9 \equiv 1 \pmod 8$, then $n^2 \equiv 1 \pmod 8$.
+
+\item If $n \equiv 5 \pmod 8$, then $n^2 \equiv 5^2 \pmod 8$ or $n^2 \equiv 25 \pmod 8$.  
+Since $25 \equiv 1 \pmod 8$, then $n^2 \equiv 1 \pmod 8$.
+
+\item If $n \equiv 7 \pmod 8$, then $n^2 \equiv 7^2 \pmod 8$ or $n^2 \equiv 49 \pmod 8$.  
+Since $49 \equiv 1 \pmod 8$, then $n^2 \equiv 1 \pmod 8$.
+\end{itemize}
+
+\item This is equivalent to the proposition in Exercise~(7) in Section 3.4 since 
+$n^2 \equiv 1 \pmod 8$ if and only if 8 divides $(n^2 - 1)$.
+
+\item From Part~(a), we know that $n^2 \equiv 1 \pmod 8$.  So there exists an integer $k$ such that $n^2 = 8k + 1$.  From Exercise~(8b), we also know that $\mod{n^2}{1}{3}$.  Now look at cases for $k$ modulo 3.
+
+\begin{itemize}
+  \item If $\mod{k}{1}{3}$, then since $n^2 = 8k + 1$, we see that $\mod{n^2}{9}{3}$ or $\mod{n^2}{0}{3}$, which is a contradiction.
+  \item If $\mod{k}{2}{3}$, then since $n^2 = 8k + 1$, we see that $\mod{n^2}{17}{3}$ or $\mod{n^2}{2}{3}$, which is a contradiction.
+\end{itemize}
+We can then conclude that $\mod{k}{0}{3}$ and so there exists an integer $m$ such that $k = 3m$.  Substituting $k = 3m$ into $n^2 = 8k + 1$, we see that $n^2 = 24m + 1$ or $\mod{n^2}{1}{24}$.
+\end{enumerate}
+
+
+\item Prove the contrapositive.  So assume that 3 does not divide $a$ and 3 does not divide 
+$b$.  We can then conclude that $a \not\equiv 0 \pmod 3$ or $b \not\equiv 0 \pmod 3$ and then by Exercise~(3c), $a^2 \equiv 1 \pmod 3$ or $b^2 \equiv 1 \pmod 3$.  We can then use two cases.
+\begin{itemize}
+\item For the first case, $a^2 \equiv 1 \pmod 3$.  We know that $b^2 \equiv 0 \pmod 3$ or 
+$b^2 \equiv 1 \pmod 3$ and hence,  $a^2 + b^2 \equiv 1 \pmod 3$ or 
+$a^2 + b^2 \equiv 2 \pmod 3$.  So we can conclude that $a^2 + b^2 \not\equiv 0 \pmod 3$ and hence, 3 does not divide $(a^2 + b^2)$.
+
+\item For the second case, $b^2 \equiv 1 \pmod 3$.  We know that $a^2 \equiv 0 \pmod 3$ or 
+$a^2 \equiv 1 \pmod 3$ and hence,  $a^2 + b^2 \equiv 1 \pmod 3$ or 
+$a^2 + b^2 \equiv 2 \pmod 3$.  So we can conclude that $a^2 + b^2 \not\equiv 0 \pmod 3$ and hence, 3 does not divide $(a^2 + b^2)$.
+\end{itemize}
+
+
+\item Use three cases to prove that $\left(a^3 + 23a \right) \equiv 0 \pmod 3$.
+\begin{itemize}
+\item If $a \equiv 0 \pmod 3$, then $a^3 \equiv 0 \pmod 3$ and 
+$23a \equiv 0 \pmod 3$ and, hence, $\left(a^3 + 23a \right) \equiv 0 \pmod 3$.
+
+\item If $a \equiv 1 \pmod 3$, then $a^3 \equiv 1 \pmod 3$ and 
+$23a \equiv 23 \pmod 3$ and, hence, $\left(a^3 + 23a \right) \equiv 24 \pmod 3$, which implies that $\left(a^3 + 23a \right) \equiv 0 \pmod 3$.
+
+\item If $a \equiv 2 \pmod 3$, then $a^3 \equiv 8 \pmod 3$ and 
+$23a \equiv 46 \pmod 3$ and, hence, $\left(a^3 + 23a \right) \equiv 54 \pmod 3$, which implies that $\left(a^3 + 23a \right) \equiv 0 \pmod 3$.
+\end{itemize}
+
+
+\item \begin{enumerate}
+\item This statement is false.  A counterexample is $a = 3$ and $b = 2$.
+
+\item This statement is false.  A counterexample is $a = 4$ and $b = 2$.
+
+\item This statement is false.  A counterexample is $a = 5$ and $b = 5$.
+
+\item This statement is false.  A counterexample is $a = 5$ and $b = 11$.
+\end{enumerate}
+
+
+
+
+\item \begin{enumerate}
+\item All the integers resulting from these calculations are congruent to 0 modulo 5.
+
+\item If $(m + n) \equiv 0 \pmod 5$, then there exists an integer $k$ such that $m + n = 5k$.  Also, with $a \equiv b \pmod 5$, there exists an integer $q$ such that $a = b + 5q$.  We then see that
+\begin{align*}
+ma + nb &= m(b + 5q) + nb \\
+        &= mb + 5mq + nb \\
+        &= (m + n)b + 5mq \\
+        &= 5kb + 5mq \\
+        &= 5(kb + mq).
+\end{align*}
+This proves that $(ma + nb) \equiv 0 \pmod 5$.  Alternatively, since $a \equiv b \pmod 5$, we can conclude that $na \equiv nb \pmod 5$ and, hence, 
+\begin{align*}
+(ma + nb) &\equiv (ma + na) \pmod 5 \\
+(ma + nb) &\equiv (m + n)a \pmod 5 \\
+(ma + nb) &\equiv 0 \pmod 5.
+\end{align*}
+\end{enumerate}
+\end{enumerate}
+
+
+\subsection*{Evaluation of Proofs}
+\setcounter{oldenumi}{\theenumi}
+\begin{enumerate} \setcounter{enumi}{\theoldenumi}
+\item \begin{enumerate}
+\item The proposition is true, but the proof is not valid.  The conclusion of the conditional statement is used in the proof.  This occurs when it is stated that for 
+$(2a + b) \equiv 0 \pmod 3$, there exists an integer $x$ such that $2a + b = 3x$.  The goal is to prove that $(2a + b) \equiv 0 \pmod 3$.
+
+Perhaps this mistake could have been avoided if it was stated at the beginning of the proof that we will prove that $(2a + b) \equiv 0 \pmod 3$.  Following is a proof of this proposition.
+
+\begin{myproof}
+We assume $a, b \in \Z$ and $(a + 2b) \equiv 0 \pmod 3$ and will prove that 
+$(2a + b) \equiv 0 \pmod 3$.  This means that 3 divides $a + 2b$ and, hence, there exists an integer $m$ such that $a + 2b = 3m$.  If we multiply both sides of this equation by 2, we obtain
+\begin{align*}
+    2a + 4b &= 6m \\
+2a + 3b + b &= 6m \\
+     2a + b &= 3(2m - 1).
+\end{align*}
+Since $m$ is an integer, $(2m - 1)$ is an integer and so, the last equation implies that 3 divides $2a + b$ and, hence, $2a + b \equiv 0 \pmod 3$.  This proves that if $(a + 2b) \equiv 0 \pmod 3$, then $(2a + b) \equiv 0 \pmod 3$.
+\end{myproof}
+
+\noindent
+\textbf{Another Way to Do the Proof}.  
+This proof could also be done using congruence arithmetic instead of using ``divides.''  The idea is that if $(a + 2b) \equiv 0 \pmod 3$, we can multiply both sides of this congruence by 2 to obtain
+\[
+2a + 4b \equiv 0 \pmod 3.
+\]
+Then, since $3b \equiv 0 \pmod 3$, we can subtract corresponding sides of the two congruences to obtain
+\[
+2a + b \equiv 0 \pmod 3.
+\]
+
+\item This is a good start for a proof.  However, the proof is not complete since there are five cases for $m$ modulo 5.  The five cases should also be defined in the first paragraph of the proof. A little more detail could also be provided in the last three cases. Following is a complete proof of the proposition.  In addition, a concluding paragraph is needed for the proof.
+
+\begin{myproof}
+Let $m \in \Z$.  We will prove that 5 divides $\left(m^5 - m \right)$ by proving that 
+$\left(m^5 - m \right) \equiv 0 \pmod 5$.  We will use five cases since $m$ must be congruent to 0, 1, 2, 3, or 4 modulo 5.
+
+\begin{itemize}
+\item For the first case, if $m \equiv 0 \pmod 5$, then $m^5 \equiv 0 \pmod 5$ and, hence, 
+$\left(m^5 - m \right) \equiv 0 \pmod 5$.
+
+\item For the second case, if $m \equiv 1 \pmod 5$, then $m^5 \equiv 1 \pmod 5$ and, hence, 
+$\left(m^5 - m \right) \equiv (1 - 1) \pmod 5$, which means that 
+$\left(m^5 - m \right) \equiv 0 \pmod 5$.
+
+\item For the third case, if $m \equiv 2 \pmod 5$, then $m^5 \equiv 32 \pmod 5$ and, hence, 
+$\left(m^5 - m \right) \equiv (32 - 2) \pmod 5$, which means that 
+$\left(m^5 - m \right) \equiv 30 \pmod 5$.  Since $32 \equiv 0 \pmod 5$, we can use the transitive property of congruence to conclude that $\left(m^5 - m \right) \equiv 0 \pmod 5$.
+
+\item For the fourth case, if $m \equiv 3 \pmod 5$, then $m^5 \equiv 243 \pmod 5$ and, hence, 
+$\left(m^5 - m \right) \equiv (243 - 3) \pmod 5$, which means that 
+$\left(m^5 - m \right) \equiv 240 \pmod 5$.  Since $240 \equiv 0 \pmod 5$, we can use the transitive property of congruence to conclude that $\left(m^5 - m \right) \equiv 0 \pmod 5$.
+
+\item For the fifth case, if $m \equiv 4 \pmod 5$, then $m^5 \equiv 1024 \pmod 5$ and, hence, 
+$\left(m^5 - m \right) \equiv (1024 - 4) \pmod 5$, which means that 
+$\left(m^5 - m \right) \equiv 1020 \pmod 5$.  Since $1020 \equiv 0 \pmod 5$, we can use the transitive property of congruence to conclude that $\left(m^5 - m \right) \equiv 0 \pmod 5$.
+\end{itemize}
+So in all five cases, we have proved that $\left(m^5 - m \right) \equiv 0 \pmod 5$, and this proves that for each integer $m$, 5 divides $\left(m^5 - m \right)$.
+\end{myproof}
+\end{enumerate}
+\end{enumerate}
+
+
+
+
+\subsection*{Explorations and Activities}
+\setcounter{oldenumi}{\theenumi}
+\begin{enumerate} \setcounter{enumi}{\theoldenumi}
+\item \begin{enumerate} \setcounter{enumii}{2}
+\item The statement is false.  A counterexample is $a = 12$.
+\item The examples from Part~(b) suggest this statement is true.
+
+\noindent
+\textbf{Proposition.}
+Let  $a \in \mathbb{Z}$.  If  2  divides  $a$  and  3  divides  $a$, then  6  divides  $a$.
+
+\noindent
+\textbf{\emph{Proof}}:  Let  $a \in \mathbb{Z}$ and assume that  2  divides  $a$  and  3  divides  $a$.  We will prove that  6 divides  $a$.  Since  3  divides  $a$, there exists an integer  $n$  such that
+\[
+a = 3n.
+\]
+The integer  $n$  is either even or it is odd.  We will show that it must be even by obtaining a contradiction if it assumed to be odd.  So, assume that  $n$  is odd. Then, there exists an integer $m$ such that  $n = 2m + 1$.  Substituting this into the previous equation gives
+\[
+a = 6m + 3.
+\]
+However, this implies that $a = 2 \left( 3m + 1 \right) + 1$ and hence, $a$ must be odd.  This contradicts the assumption that 2 divides $a$.  This proves that $n$ cannot be odd, and hence must be even.
+
+So, there exists an integer $k$ such that $n = 2k$.  Substituting this into the equation $a = 3n$ shows that $a = 6k$.  Hence, 6 divides $a$.  This proves that if 2 divides $a$ and 3 divides $a$, then 6 divides $a$. \qedsymbol
+\end{enumerate}
+
+
+\item
+\begin{enumerate}
+\item Since  $3^4  \equiv 81 \pmod{100}$, we can use Theorem 3.24 to conclude that
+\[
+\begin{aligned}
+  3^4  \cdot 3^4  &\equiv 81 \cdot 81 \pmod{100} \\ 
+  3^8  &\equiv 6561 \pmod{100} \\ 
+  3^8  &\equiv 61 \pmod{100} \\ 
+\end{aligned}
+\]
+We then square both sides of this congruence to obtain  
+$3^{16}  \equiv 3721 \pmod{100}$ and hence that  $3^{16}  \equiv 21 \pmod{100}$.  This tells us that the last two digits in the decimal representation of  $3^{16} $are  21.
+
+\item Since  $3^4  \equiv 81 \pmod{100}$ and  $3^{16}  \equiv 21 \pmod{100}$, we conclude that  
+$3^4  \cdot 3^{16}  \equiv 81 \cdot 21 \pmod{100}$. Since  $81 \cdot 21 = 1701$, we see that this implies that  $3^{20}  \equiv 1 \pmod{100}$. This tells us that the last two digits in the decimal representation of  $3^{20} $ are  01.
+
+\item $3^{20}  \equiv 1 \pmod{100}$ and so  
+$\left( {3^{20} } \right)^{20}  \equiv 1^{20} \pmod{100}$  or  
+$3^{400}  \equiv 1 \pmod{100}$. This tells us that the last two digits in the decimal representation of  $3^{400} $ are  01.
+
+\item 
+\begin{tabular}[t]{l l}
+$3^4 \equiv 81 \pmod {100}$ & $3^8 \equiv 61 \pmod {100}$ \\
+$3^{16} \equiv 21 \pmod {100}$ & $3^{32} \equiv 41 \pmod {100}$ \\
+$3^{64} \equiv 81 \pmod {100}$ & $3^{128} \equiv 61 \pmod{100}$ \\
+$3^{256} \equiv 21 \pmod {100}$ & $3^{512} \equiv 41 \pmod {100}$ \\
+$3^{1024} \equiv 81 \pmod {100}$ & $3^{2048} \equiv 61 \pmod {100}$ \\
+\end{tabular}
+
+Now use the fact that $3356 = 2048 + 1024 + 256 + 16 + 8 + 4$ to conclude that
+\[
+\begin{aligned}
+3^{3356} &\equiv 61 \cdot 81 \cdot 61 \cdot 21 \cdot 61 \cdot 9 \pmod {100} \\
+         & \equiv 21 \pmod {100} \\
+\end{aligned}
+\]
+The last two digits of $3^{3356}$ are 21.
+
+
+\item \begin{multicols}{2}
+$4^2  \equiv 16 \pmod{100}$
+
+$4^4  \equiv 56 \pmod{100}$
+
+$4^8  \equiv 36 \pmod{100}$
+
+$4^{16}  \equiv 96 \pmod{100}$
+
+$4^{32}  \equiv 16 \pmod{100}$
+
+$4^{64}  \equiv 56 \pmod{100}$
+
+$4^{128}  \equiv 36 \pmod{100}$
+
+$4^{256}  \equiv 96 \pmod{100}$
+
+$4^{512}  \equiv 16 \pmod{100}$
+
+\end{multicols}
+Now,  $804 = 512 + 256 + 32 + 4$.  So,  
+$4^{804}  = 4^{512}  \cdot 4^{256}  \cdot 4^{32}  \cdot 4^4 $.  This means that
+\[
+\begin{aligned}
+  4^{804}  &\equiv 4^{512}  \cdot 4^{256}  \cdot 4^{32}  \cdot 4^4  \pmod{100} \hfill \\
+  4^{804}  &\equiv 16 \cdot 96 \cdot 16 \cdot 56 \pmod{100} \hfill \\
+  4^{804}  &\equiv 56 \pmod{100}. \hfill \\ 
+\end{aligned}
+\]
+
+This tells us that the last two digits in the decimal representation of  $4^{804} $
+ are  56.
+
+\item 
+\begin{tabular}[t]{l l}
+$7^2 \equiv 49 \pmod {100}$ & $7^4 \equiv 1 \pmod {100}$ \\
+$7^{8} \equiv 1 \pmod {100}$ & $7^{16} \equiv 1 \pmod {100}$ \\
+$7^{32} \equiv 1 \pmod {100}$ & $7^{64} \equiv 1 \pmod{100}$ \\
+$7^{128} \equiv 1 \pmod {100}$ & $7^{256} \equiv 1 \pmod {100}$ \\
+\end{tabular}
+
+Now use the fact that $403 = 256 + 128 + 16 + 2 + 1$ to conclude that
+\[
+\begin{aligned}
+7^{403} &\equiv 1 \cdot 1 \cdot 1 \cdot 49 \cdot 7 \pmod {100} \\
+         & \equiv 43 \pmod {100} \\
+\end{aligned}
+\]
+The last two digits of $7^{403}$ are 43.
+\end{enumerate}
+
+\end{enumerate}
+\hbreak
+
+\endinput
+
+
+
+
+
+

@@ -1,0 +1,341 @@
+\section*{Section \ref{S:moremethods} More Methods of Proof}
+
+\begin{enumerate}
+\item \begin{enumerate}
+\item If there exists an integer $k$ such that $n = 2k$, then $n^3 = 8k^3 = 2 \left( 4k^3 \right)$.
+
+\item Prove the contrapositve:  If $n$ is odd, then $n^3$ is odd.  In this case, if there exists an integer $k$ such that $n = 2k + 1$, then
+\[
+\begin{aligned}
+n^3 &= 8k^3 + 12k^2 + 6k + 1 \\
+    &= 2 \left( 4k^3 + 6k^2 + 3k) + 1\right).
+\end{aligned}
+\]
+
+\item The two conditional statements in Part~(a) prove this biconditional statement.
+
+\item The two conditional statements whose conjuction is equivalent to this biconditional statement are the contrapositives of the statements in Parts~(a) and~(b).
+\end{enumerate}
+
+\item \begin{enumerate}
+\item The contrapositive is:  Let  $a$  and  $b$  be integers.  If  
+$ab \equiv 0\left( {\bmod 6} \right)$, then  $a \equiv 0\left( {\bmod 6} \right)$  or   
+$b \equiv 0\left( {\bmod 6} \right)$.
+
+\item The proposition is false.  A counterexample is $a = 3$ and $b = 2$.
+\end{enumerate}
+
+\item \begin{enumerate}
+\item The contrapositive is:  For all positive real numbers $a$ and $b$,  if $a = b$, then 
+$\sqrt{ab} = \dfrac{a + b}{2}$.
+
+\item The statement is true.  If $a = b$, then $\dfrac{a + b}{2} = \dfrac{2a}{2} = a$, and \\
+$\sqrt{ab} = \sqrt{a^2} = a$.
+\end{enumerate}
+
+
+
+\item \begin{enumerate}
+\item True.  If $a \equiv 2 \pmod 5$, then there exists an integer $k$ such that $a - 2 = 5k$.  
+Then, 
+\[
+a^2 = \left( 2 + 5k \right)^2 = 4 + 20k + 25k^2.  
+\]
+This means that $a^2 - 4 = 5 \left( 4k + 5k^2 \right)$, and hence, $a^2 \equiv 4 \pmod 5$.
+
+\item False.  A counterexample is $a = 3$.
+
+\item False.  Part~(b) shows this is false.
+\end{enumerate}
+
+
+\item The proposition is true.  The contrapositive, which is:  For all integers $a$ and $b$, if $a$ is odd and $b$ is odd, then $ab$ is odd.  This is true by Theorem~1.8 in Section~1.2.
+
+
+\item \begin{enumerate}
+\item For each integer $a$, if $a \equiv 3 \pmod 7$, then $(a^2 + 5a) \equiv 3 \pmod 7$, and if $(a^2 + 5a) \equiv 3 \pmod 7$, then $a \equiv 3 \pmod 7$.
+
+\item For each integer $a$, if $a \equiv 3 \pmod 7$, then $(a^2 + 5a) \equiv 3 \pmod 7$ is true.  To prove this, if $a \equiv 3 \pmod 7$, then there exists an integer $k$ such that 
+$a = 3 + 7k$.  We can then prove that
+\[
+a^2 + 5a = 24 + 77k + 49k^2 = 3 + 7(3 + 11k + 7k^2).
+\]
+This shows that $(a^2 + 5a) \equiv 3 \pmod 7$.
+
+For each integer $a$,if $(a^2 + 5a) \equiv 3 \pmod 7$, then $a \equiv 3 \pmod 7$ is false.  A counterexample is $a = 6$.  When $a = 6$, $a^2 + 5a = 66$ and 
+$66 \equiv 3 \pmod 7$ and $6 \not \equiv 3 \pmod 7$.
+
+\item Since one of the two conditional statements in Part~(b) is false, the given proposition is false.
+\end{enumerate}
+
+
+
+\item \begin{enumerate}
+\item For each integer $a$, if $a \equiv 2 \pmod 8$, then $(a^2 + 4a) \equiv 4 \pmod 8$, and if $(a^2 + 4a) \equiv 4 \pmod 8$, then $a \equiv 2 \pmod 8$.
+
+\item For each integer $a$, if $a \equiv 2 \pmod 8$, then $(a^2 + 4a) \equiv 4 \pmod 8$ is true.  To prove this, if $a \equiv 2 \pmod 8$, then there exists an integer $k$ such that 
+$a = 2 + 8k$.  We can then prove that
+\[
+a^2 + 4a = 4 + 32k + 64k^2 = 4 + 8(4k + 8k^2).
+\]
+This shows that $(a^2 + 4a) \equiv 2 \pmod 8$.
+
+For each integer $a$,if $(a^2 + 4a) \equiv 4 \pmod 8$, then $a \equiv 2 \pmod 8$ is false.  A counterexample is $a = 6$.  When $a = 6$, $a^2 + 4a = 60$.  We note that $60 \equiv 4 \pmod 8$ and $6 \not \equiv 2 \pmod 8$.
+
+\item Since one of the two conditional statements in Part~(b) is false, the given proposition is false.
+\end{enumerate}
+
+
+\item %\begin{multicols}{2}
+\begin{enumerate}
+\item  $A = \dfrac{1}{2}ab$.  An isosceles triangle is a triangle in which two sides have equal length.
+
+\item $c^2 = a^2 + b^2$
+\end{enumerate}
+%\end{multicols}
+
+\begin{enumerate} \setcounter{enumii}{2}
+%\item An isosceles triangle is a triangle in which two sides have equal length.
+
+\item If the triangle is an isosceles triangle, then $a = b$.  Consequently, 
+$A = \dfrac{1}{2}a^2$.  Using the Pythagorean Theorem, we see that
+\[
+c^2 = a^2 + a^2 = 2a^2.
+\]
+Hence, $a^2 = \dfrac{1}{2}c^2$, and we obtain $A = \dfrac{1}{2}a^2 = \dfrac{1}{4}c^2$.
+
+Conversely, if the area of this isosceles triangle is $A = \dfrac{1}{4}c^2$, then since the area is also $\dfrac{1}{2}ab$, we see that
+\[
+\begin{aligned}
+\frac{1}{4}c^2 &= \frac{1}{2}ab \\
+c^2 &= 2ab \\
+\end{aligned}
+\]
+We now use the Pythagoren Theorem to conlcude that $a^2 + b^2 = 2ab$.  This equation can be rewrttten as follows:
+\[
+\begin{aligned}
+a^2 - 2ab + b^2 &= 0 \\
+\left( a - b \right)^2 &= 0. \\
+\end{aligned}
+\]
+The last equation implies that $a = b$ and hence the right triangle is an isosceles triangle.
+\end{enumerate}
+
+\item  The statement is true.  It is easier to prove the contrapositive, which is:
+
+\begin{list}{}
+\item For each positive real number $x$, if $\sqrt{x}$ is rational, then $x$ is rational.
+\end{list}
+If there exist positive integers $m$ and $n$ such that $\sqrt{x} = \dfrac{m}{n}$, then 
+$x = \dfrac{m^2}{n^2}$.
+
+
+
+\item The statement is true.  One way to prove this is to prove the following two conditional statements:
+\begin{itemize}
+\item If $n$ is even, then 4 divides $n^2$.
+\item If 4 divides $n^2$, then $n$ is even.
+\end{itemize}
+Use a direct proof for the first conditional statement and prove the contrapositive of the second condtional statement.
+
+
+\item If $a$ is an integer and $a^2 - 1$ is even, then $a^2$ is odd.  This implies that $a$ is odd and hence, there exists an integer $k$ such that $a = 2k + 1$.  So
+\begin{align*}
+a^2 - 1 &= (2k + 1)^2 - 1 \\
+        &= 4(k^2 + k),
+\end{align*}
+and this proves that 4 divides $a^2 - 1$.
+
+
+\item From the Pythagorean Theorem, $a^2 + m^2 = (m + 1)^2$, and this implies that 
+$a^2 + m^2 = m^2 + 2m + 1$.  From this, we see that $a^2 = 2m + 1$.  Therefore, $a^2$ is odd and hence, $a$ is odd.
+
+
+\item If $p, q \in \Q$ with $p < q$, then let $x = \dfrac{p + q}{2}$.  Since $\Q$ is closed under addition and division by nonzero numbers, $x \in \Q$.  In addition,
+\[
+2p < p + q  < 2q,
+\]
+and hence, $p < \dfrac{p + q}{2} < q$.  This proves that there exists a rational number $x$ such that $p < x < q$.
+
+
+\item \begin{enumerate}
+\item True. If $x = 2$ and $y = -1$, then $4x + 6y = 2$.
+
+\item False.  For all integers $x$ and $y$, 3 divides $6x + 15y$.
+
+\item True.  If $x = 4$ and $y = -1$, then $6x + 15y = 9$.
+\end{enumerate}
+
+
+\item Let $f(x) = x^3 - 4x$. Then $f(4) = 0$ and $f(5) = 25$.  By the Intermediate Value Theorem, there exists a real number $x$ with $4 < x < 5$ such that $f(x) = 7$. 
+
+
+\item Let $y_{\text{max}}$ be the largest of $y_1$, $y_2$, $y_3$, and $y_4$.  For each $i$ with $1 \leq i \leq 4$, $y_{\text{max}} \geq y_i$.  Hence,
+\[
+\overline y \leq \frac{4 y_{\text{max}}}{4},
+\]
+or $\overline y \leq y_{\text{max}}$.  Since $y_{\text{max}} = y_i$ for some $i$ with 
+$1 \leq i \leq 4$, this proves that there exists a $y_i$ with $1 \leq i \leq 4$ such that 
+$y_i \geq \overline y$.
+
+
+
+\item  We are given that $a$ and $b$ are natural numbers and that $a^2 = b^3$.
+\begin{enumerate}
+\item Assume that $a$ is even.  Then there exists an integer $k$ such that $a = 2k$.  So,
+\[
+4k^2 = b^3.
+\]
+Hence, $b^3$ is even and by Exercise~(1), $b$ is even. So, there exists an integer $m$ such that $b = 2m$.  Since $a^2 = b^3$, we see that $4k^2 = 8m^3$.  Hence, $k^2$ is even.  By 
+Theorem~\ref{T:n2isodd}, $k$ is even.  So, there exists an integer $q$ such that $k = 2q$ and since $a = 2k$, we see that $a = 4q$.  Hence, 4 divides $a$.
+
+\item Since 4 divides $a$, there exist an integer $n$ such that $a = 4n$.  Using this, we see that $b^3 = 16n^2$. So, $b^3$ is even and hence $b$ is even and there exists an integer $m$ such that $b = 2m$.  This implies that
+\[
+\begin{aligned}
+8m^3 &= 16n^2 \\
+m^3 &= 2n^2 \\
+\end{aligned}
+\]
+Hence, $m^3$ is even and so by Exercise~(1), $m$ is even.  Since $b = 2m$, we see that 4 divides $b$.
+
+\item If 4 divides $b$, then since $a^2 = b^3$, we conclude that $a^2$ is even.  But this implies that $a$ is even (Theorem~\ref{T:n2isodd}).  Hence, by Part~(a), 4 divides $a$.  So, there exist integers $s$ and $t$ such that $b = 4s$ and $a = 4t$.  Hence,
+\[
+\begin{aligned}
+16t^2 &= 64s^3 \\
+t^2 &= 4s^3 \\
+\end{aligned}
+\]
+So, $t^2$ is even and hence $t$ must be even.  Since $a = 4t$, we conclude that 8 divides $a$.
+
+\item Use Parts~(a), (b), and~(c).
+
+\item $a = 8$, $b = 4$.
+\end{enumerate}
+
+\item Let $a$ and $b$ be integers with $a \ne 0$.  We will prove the contrapositive.  So assume that the equation $ax^3 + bx + \left( b + a \right) = 0$ has a solution that is an natural number.  Let $n$ be a natural number that is a solution of this equation.  Then
+\[
+\begin{aligned}
+an^3 + bn + \left( b + a \right) &= 0 \\
+an^3 + a &= -bn - b \\
+a \left(n + 1\right) \left(n^2 - n + 1 \right) &= -b \left( n + 1 \right) \\
+a \left( n^2 - n + 1 \right) &= -b \\
+\end{aligned}
+\]
+The last equation can be used to conclude that $a \mid b$, and this completes the proof of the contrapositive.
+\end{enumerate}
+
+
+\subsection*{Evaluation of Proofs}
+\setcounter{oldenumi}{\theenumi}
+\begin{enumerate} \setcounter{enumi}{\theoldenumi}
+\item \begin{enumerate}
+\item The proposition is true, but the proof is not a valid proof.  Basically, the proof begins with the conclusion of the proposition and proceeds to prove the hypothesis.  This is essentially a proof of the converse of the proposition.
+
+In addition, the assumptions for the proposition are not stated at the beginning of the proof and there is no indication of what will be proven.  In particular, the variable $m$ is not defined in the body of the proof.  
+Following is a valid proof of this proposition.
+
+\begin{myproof}
+Let $m$ be an odd integer.  We will prove that $m + 6$ is an odd integer.  Since $m$ is odd, there exists an integer $n$ such that
+\[
+m = 2n + 1.
+\]
+By adding 6 to both sides of this equation, we obain 
+\[
+\begin{aligned}
+m +6 &= (2n + 1) + 6 \\
+     &= (2n + 6) + 1 \\
+     &= 2(n + 3) + 1.
+\end{aligned}
+\]
+By the closure properties of the integers, $(n + 3)$ is an integer, and hence, the last equation implies that $m + 6$ is an odd integer.  This proves that if $m$ is an odd integer, then $m+6$ is an odd integer.
+\end{myproof}
+
+
+\item The proposition is true, but the proof is not a valid proof.  Basically, the proof begins with the conclusion of the proposition and proceeds to prove the hypothesis.  This is essentially a proof of the converse of the proposition.
+
+In addition, the assumptions for the proposition are not stated at the beginning of the proof and there is no indication of what will be proven.  In particular, the variables $m$ and $n$ are not defined in the body of the proof.
+
+It is important to realize that a direct proof of this proposition is really not possible.  It is better to prove the contrapositive of this proposition as follows:
+
+\begin{myproof}
+We will prove the contrapositive of this proposition.  So we will prove,
+
+\begin{list}{}
+\item For all integers $m$ and $n$, if $m$ is an odd integer and $n$ is an odd integer, then $mn$ is an odd integer.
+\end{list}
+\vskip6pt
+\noindent
+So we let $m$ and $n$ be odd integers.  We will prove that $mn$ is an odd integer.  Since $m$ and $n$ are odd, there exist integers $p$ and $q$ such that $m = 2p + 1$ and $n = 2q + 1$.  Using these equations, we see that
+\begin{align*}
+mn &= (2p + 1)(2q + 1) \\
+   &= 4pq + 2p + 2q + 1 \\
+   &= 2(2pq + p + q) + 1.
+\end{align*}
+Using the closure properties of the integers, we know that $(2pq + p + q)$ is an integer and, hence, the last equation implies that $mn$ is odd.  This proves the contrapositive of the proposition.  Therefore, we have proven that for all integers $m$ and $n$, if $mn$ is an even integer, then $m$ is even or $n$ is even.
+\end{myproof}
+\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection*{Explorations and Activities}
+\setcounter{oldenumi}{\theenumi}
+\begin{enumerate} \setcounter{enumi}{\theoldenumi}
+\item \begin{enumerate}
+\item If we use the symbolic form  
+$\left( {\mynot  Q \wedge \mynot  R} \right) \to \mynot  P$  as a model for this proposition, then  $P$  is, ``3 divides the product  $a \cdot b$'',  $Q$  is, ``3  divides  $a$'', and  $R$ is, 
+``3 divides  $b$.''  
+
+\item A  symbolic form for the contrapositive of   
+$\left( {\mynot  Q \wedge \mynot  R} \right) \to \mynot  P$ is  $P \to \left( {Q \vee R} \right)$.
+
+\item For all integers $a$  and  $b$, if  3  divides the product  $a \cdot b$, then  3  divides  $a$  or  3  divides  $b$.
+
+\item \begin{enumerate}
+  \item When  $a = 5$, we see that  $2 \cdot 3 + 5\left( { - 1} \right) = 1$.
+  \item When  $a = 2$, we see that  $1 \cdot 3 + 2\left( { - 1} \right) = 1$.
+  \item When $a =  - 2$, we see that  $1 \cdot 3 + \left( { - 2} \right)\left( 1 \right) = 1$.
+\end{enumerate}
+
+\item
+For all integers $a$  and  $b$, if  3  divides the product  $a \cdot b$, then  3  divides  $a$  or  3  divides  $b$.
+
+\begin{myproof}
+Let  $a$  and  $b$  be integers.  We will prove this proposition by proving that if  3  divides the product  $a \cdot b$ and  3  does not divide  $a$, then  3  divides  $b$.
+
+So, assume that   3  divides the product  $a \cdot b$  and  3  does not divide  $a$.  Since  3  divides  $a \cdot b$, there exists an integer  $m$  such that
+\setcounter{equation}{0}
+\begin{equation} \label{eq:act312a}
+a b = 3m,
+\end{equation}
+%
+and since  3  does not divide  $a$, there exist integers  $x$  and  $y$  such that
+\begin{equation} \label{eq:act312b}
+3x + ay = 1.
+\end{equation}
+
+If we multiply equation~(\ref{eq:act312b}) by  $b$, we obtain
+\begin{equation} \label{eq:act312c}
+3bx + aby = b.
+\end{equation}
+
+We can now use equation~(\ref{eq:act312a}) to substitute for  $a b$ in 
+Equation~(\ref{eq:act312c}).  This gives:
+\[
+3bx + 3my = b.
+\]
+Factoring a  3  from the left side of this equation gives 
+\[
+3\left( {bx + my} \right) = b.
+\]
+By the closure properties of the integers, we know that  $bx + my$ is an integer, and hence we have proven that  3 divides  $b$.  So, we have proven that if  3  divides the product  
+$a \cdot b$, then  3  divides  $a$  or  3  divides  $b$.
+\end{myproof}
+\end{enumerate}
+
+\end{enumerate}
+
+
+\hbreak
+
+\endinput

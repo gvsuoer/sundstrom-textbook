@@ -1,0 +1,90 @@
+\section*{Section~\ref{S:moremethods} More Methods of Proof}
+Plan about one and one-half class periods for this section.  It may be a good idea to plan on three class days for this section and Section~\ref{S:directproof}.  
+
+
+\subsection*{Main Topics}
+Proofs that use the contrapositive of a conditional statement, proofs of biconditional statements, the use of logical equivalencies in proofs, existence theorems and constructive proofs.
+
+\subsection*{The Preview Activities}
+\subsubsection*{Preview Activity~\ref{PA:attempt} (Attempting a Proof)} 
+This can be a frustrating preview activity for students since the purpose is to convince them that a direct proof of a relatively simple statement is not always possible.
+
+\subsubsection*{Preview Activity~\ref{PA:contrapositive} (The Contrapositive)}  
+In this preview activity, students are asked to prove that the contrapositive of a conditional statement is logically equivalent to the conditional statement.  (This was also done in Preview Activity~\ref{PA:converse} in Section~\ref{S:logequiv}.)  Students will then use this fact to prove the statement in Preview Activity~\ref{PA:attempt}.
+
+\subsubsection*{Preview Activity~\ref{PA:biconditional} (A Biconditional Statement)}
+The purpose of this preview activity is to introduce a standard method for proving that a biconditional statement is true.  The logical equivalency was also done in 
+Exercise~(\ref{exer:sec23-bicond}) in Section~\ref{S:logequiv}.
+\hbreak
+
+
+\subsection*{Activity~\ref{A:usingcontr} (Using a Logical Equivalency)}  
+This a good activity for students to show students how to use a contrapositive in a nontrivial proof of a proposition that seems like it should be easy to prove.  It is not.  Students may find the proof in Part~(5) difficult since they are asked to assume that Proposition~X is true and they will have to use another logical equivalency. 
+\hbreak
+
+\subsection*{A Classroom Activity}
+Following is an example that can be used as a class discussion item or for students to work on in small groups.  I recommend doing this as a class discussion with the instructor taking an active part in trying to lead the students through the activity.  Many students will have a difficult time formulating responses to the first two parts of the activity without assistance.
+
+\vskip6pt
+\noindent
+Consider the following proposition:
+
+\noindent
+For all nonzero integers $a$ and $b$, if $a + b \ne 7$ and $49a + b \ne 1$, then the equation 
+$ax^3 + bx - 7 = 0$ has no solution that is a natural number.
+
+\begin{enumerate}
+\item Focus on the conclusion in the conditional sentence, which is: the equation 
+$ax^3 + bx - 7 = 0$ has no solution that is a natural number.  What does it mean to say that this equation has no solution that is a natural number?
+
+\item Write the contrapositive of the proposition.
+
+\item Outline a proof of the contrapositive of the proposition.
+\end{enumerate}
+
+In the first part of the activity, I usually try to lead the students to a formulation of the answer in terms of a universal quantifier.  Following is such an answer.
+
+\vskip6pt
+\begin{center}
+$\left( \forall n \in \mathbb{N} \right) \left( an^3 + bn - 7 \ne 0 \right)$
+\end{center}
+
+Although this is not completely necessary, students need practice formulating sentences with quantifiers, and it will help to reinforce the process for negating a quantified sentence in the next part.  Also, it seems to help students better understand what a solution to an equation is and how to formulate a sentence involving a solution of an equation in a precise mathematical way.
+
+The contrapositive of the proposition is:  For all nonzero integers $a$ and $b$, if the equation 
+$ax^3 + bx - 7 = 0$ has a solution that is a natural number, then $a + b = 7$ or $49a + b = 1$.
+
+In setting up a proof for this contrapositive, I tell the students that I like to use a letter other than $x$ for the solution that is assumed to exist.  This also helps with the idea that a solution is a specific number that is substituted for the variable $x$.  With this in mind, following is an outline of the proof.
+
+Let $a$ and $b$ be nonzero integers and assume that the equation $ax^3 + bx - 7 = 0$ has a solution that is a natural number.  Let $n$ be a natural number that is a solution of this equation.  Then
+
+\begin{equation} \notag
+an^3 + bn - 7 = 0.
+\end{equation}
+
+The idea is now to rewrite the equation in the form $n \left(an^2 + b \right) = 7$ and use this to conclude that $n \mid 7$.  This in turn implies that $n = 1$ or $n = 7$.  Using $n = 1$ in the equation gives $a + b = 7$.  Using $n = 7$ in the equation gives $49a + b = 1$.
+
+\vskip6pt
+I usually do this as a discussion since this is a difficult proof at this stage for most students.  One difficulty is that there is not too much that can be done with the ``show'' portion of a 
+know-show table.  How do you prove that $a + b = 7$ or $49a + b = 1$?  So I usually try to ask the students questions about what they might be able to do with the equation
+
+\begin{equation} \notag
+an^3 + bn - 7 = 0.
+\end{equation}
+
+I try to get them to rewrite it in equivalent forms and then ask if any conclusions can be made from these other equations.  I will remind them that they are working with integers and that some of the tools we have developed for studying integers are the divides relation, congruence modulo $m$, and even and odd integers.  If they do not see what to do, a question such as, ``Is there anything special about the number 7,'' might help.  This will usually get a few students to realize that we can conclude that $n$ divides 7, and once that is done, the proof can usually be completed.
+
+Finally, I usually mention that the last step of the proof technically is a proof that uses cases and that we will study this proof method in Section \ref{S:cases}.
+\hbreak 
+
+
+\subsection*{The Exercises}
+Assign as many of these exercises as possible.  Two of Exercises~(\ref{exer:sec32-2}), (\ref{exer:sec32-4}), and~(\ref{exer:sec32-congmod7}) should be included since they contain false statements. At least one of Exercises~(\ref{exer:sec32-6}) and ~(\ref{exer:sec32-8}) should be included as they involve the proof of a biconditional statement.  Exercise~(\ref{exer:sec32-9}) is considered optional at this point since it does get quite involved, and Exercise~(\ref{exer:sec32-equation}) provides a good use of using the contrapositive.  
+Exercises~(\ref{exer:rationalbetween}) through~(15) involve existence proofs.
+\vskip6pt
+\noindent
+Typical Assignment:  Exercises 2, 3, 6, 8, 9, 12, 13, 17
+
+
+\hbreak
+\endinput

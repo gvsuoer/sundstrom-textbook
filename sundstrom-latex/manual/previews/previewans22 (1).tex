@@ -1,0 +1,79 @@
+\section*{Section~\ref{S:logequiv} Logically Equivalent Statements}
+
+\subsection*{Preview Activity 1 (Logically Equivalent Statements)}
+\begin{enumerate}
+
+\item 
+\begin{tabular}[t]{| c | c || c | c | c | c | c |}  \hline
+$P$  &  $Q$  &  $P \wedge Q$  &  $\mynot  ( {P \wedge Q} )$  &  $\mynot P$  &  
+$\mynot Q$  &  $\mynot  P \vee \mynot  Q$ \\ \hline
+T  &  T  &  T  &  F  &  F  &  F  &  F  \\ \hline
+T  &  F  &  F  &  T  &  F  &  T  &  T  \\ \hline
+F  &  T  &  F  &  T  &  T  &  F  &  T  \\ \hline
+F  &  F  &  F  &  T  &  T  &  T  &  T  \\ \hline
+\end{tabular}
+
+\item The truth table shows that the expressions $\mynot  ( {P \wedge Q} )$ and 
+$\mynot  P \vee \mynot  Q$ are logically equivalent.
+
+\item The negation of ``I will play golf and I will mow the lawn'' is ``I will not play golf or I will not mow the lawn.''
+
+\item Different definitions for  $P$ and  $Q$  than the ones shown here can be used.
+Let  $P$  be the statement ``You do not clean your room.''  Let  $Q$  be the statement  ``You cannot watch TV.''
+The first statement is then $P \to Q$  and the second statement is  $\mynot P \vee Q$. 
+\item 
+\begin{tabular}[t]{| c | c || c | c | c |}  \hline
+$P$  &  $Q$  &  $\mynot P$  &  $P \to Q$  &  $\mynot P \vee Q$ \\ \hline
+T  &  T  &  F  &  T  &  T  \\ \hline
+T  &  F  &  F  &  F  &  F  \\ \hline
+F  &  T  &  T  &  T  &  T  \\ \hline
+F  &  F  &  T  &  T  &  T  \\ \hline
+\end{tabular}
+
+Therefore, $P \to Q$ is logically equivalent to  $\mynot  P \vee Q$, or symbolically,  
+$( {P \to Q} ) \equiv ( {\mynot  P \vee Q} )$.
+
+\item Statement 1 and Statement 2 are logically equivalent.  The conditional statement is false when $P$ is true and $Q$ is false.  So when the conditional statement is false, the statement ``You do not clean your room and you can watch TV'' is true.  Symbolically, this statement is $P \wedge \mynot Q$ . 
+
+\item 
+\begin{tabular}[t]{| c | c || c | c | c | c |}  \hline
+$P$  &  $Q$  &  $P \to Q$  &  $\mynot ( {P \to Q} )$  &  $\mynot Q$ &  $P \wedge \mynot Q$ \\ \hline
+T  &  T  &  T  &  F  &  F & F \\ \hline
+T  &  F  &  F  &  T  &  T & T \\ \hline
+F  &  T  &  T  &  F  &  F & F  \\ \hline
+F  &  F  &  T  &  F  &  T & F \\ \hline
+\end{tabular}
+
+This shows that  $\mynot  ( {P \to Q} )$  is logically equivalent to  
+$P \wedge \mynot  Q$.
+
+\end{enumerate}
+\hbreak
+
+
+\subsection*{Preview Activity 2 (Converse and Contrapositive)}
+
+\begin{enumerate}
+\item Statements (a) and (c) are true.  Statements (b) and (d) are false.
+
+\item The converse of ``If $x=3$, then $x^2 = 9$'' is ``If $x^2=9$, then $x=3$'', which is Statement (b).
+
+The contrapositive of ``If $x=3$, then $x^2 = 9$'' is ``If  $x^2 \ne 9$, then $x \ne 3$'', which is Statement (c).
+
+\item
+\begin{tabular}[t]{| c | c || c | c | c | c | c |}  \hline
+$P$  &  $Q$  &  $P \to Q$  &  $Q \to P$  &  $\mynot Q$  &  $\mynot P$  &  
+$\mynot  Q \to\mynot  P$ \\ \hline
+T  &  T  &  T  &  T  &  F  &  F  &  T  \\ \hline
+T  &  F  &  F  &  T  &  T  &  F  &  F  \\ \hline
+F  &  T  &  T  &  F  &  F  &  T  &  T  \\ \hline
+F  &  F  &  T  &  T  &  T  &  T  &  T  \\ \hline
+\end{tabular}
+
+The columns for $P \to Q$ and $\mynot  Q \to\mynot  P$ show that these two statements are logically equivalent.  The columns for $P \to Q$ and $Q \to P$ show that these two statements are not logically equivalent.
+\end{enumerate}
+\hbreak
+
+\newpage
+
+\endinput

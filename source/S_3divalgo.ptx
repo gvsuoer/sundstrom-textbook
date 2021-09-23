@@ -369,7 +369,7 @@
             This is shown on the number line in <xref ref="fig_divalgo"></xref>.
             <figure xml:id="fig_divalgo">
               <caption>Remainder for the Division Algorithm</caption>
-              <image width="73%" source="assets/figps-divalgo.svg"/>
+              <image width="73%" source="figps-divalgo.svg"/>
             </figure>
 
             If <m>r</m> represents the distance from <m>b \cdot q</m> to <m>a</m>, then
@@ -577,7 +577,7 @@
         Once this case is completed,
         we will have proved that 3 divides <m>n^3 - n</m> in all three cases.
         Hence, we may conclude that if <m>n</m> is an integer,
-        then 3 divides <m>n^3 - n</m>. <m>\blacksquare</m>
+        then 3 divides <m>n^3 - n</m>. 
       </p>
     </proof>
     </proposition>
@@ -691,7 +691,7 @@
         To construct a formal proof for this,
         we could use a proof by mathematical induction.
         This will be studied in <xref ref="C_induction"></xref>.
-        See <xref ref="exer_sec51-cong"/> in <xref ref="S_mathinduction"></xref>. <m>\blacksquare</m>
+        See <xref ref="exer_sec51-cong"/> in <xref ref="S_mathinduction"></xref>. 
       </p>
     </proof>
     </theorem>
@@ -806,7 +806,7 @@
         <m>\left( {k + q} \right) \in \mathbb{Z}</m>,
         and so this equation proves that
         <m>n \mid \left(a-c \right)</m> and hence that <m>a \equiv c \pmod n</m>.
-        This completes the proof of the transitive property of congruence modulo <m>n</m>. <m>\blacksquare</m>
+        This completes the proof of the transitive property of congruence modulo <m>n</m>. 
       </p>
     </proof>
     </theorem>
@@ -1508,86 +1508,91 @@
 
     <exercise>
       <title>Evaluation of Proofs</title>
-      <statement>
+      <introduction>
         <p>
           See the instructions for <xref ref="exer_proofeval"/>
           from <xref ref="S_directproof"></xref>.
-
-          <task>
-            <p>
-              <proposition>
-                <statement>
-                  <p>
-                    For all integers <m>a</m> and <m>b</m>,
-                    if <m>(a + 2b) \equiv 0 \pmod 3</m>,
-                    then <m>(2a + b) \equiv 0 \pmod 3</m>.
-                  </p>
-                </statement>
-                <proof>
-                  <p>
-                    We assume <m>a, b \in \Z</m> and <m>(a + 2b) \equiv 0 \pmod 3</m>.
-                    This means that 3 divides <m>a + 2b</m> and, hence,
-                    there exists an integer <m>m</m> such that <m>a + 2b = 3m</m>.
-                    Hence, <m>a = 3m - 2b</m>.
-                    For <m>(2a + b) \equiv 0 \pmod 3</m>,
-                    there exists an integer <m>x</m> such that <m>2a + b = 3x</m>.
-                    Hence,
-                    <md>
-                      <mrow>2(3m - 2b) + b \amp = 3x</mrow>
-                      <mrow>6m - 3b \amp = 3x</mrow>
-                      <mrow>3(2m - b) \amp = 3x</mrow>
-                      <mrow>2m - b \amp = x</mrow>
-                    </md>.
-                  </p>
-                  <p>
-                    Since <m>(2m - b)</m> is an integer,
-                    this proves that 3 divides <m>(2a + b)</m> and hence,
-                    <m>(2a + b) \equiv 0 \pmod 3</m>. <m>\blacksquare</m>
-                  </p>
-                </proof>
-              </proposition>
-            </p>
-          </task>
-
-          <task>
-            <p>
-              <proposition>
-                <statement>
-                  <p>
-                    For each integer <m>m</m>, 5 divides <m>\left(m^5 - m \right)</m>.
-                  </p>
-                </statement>
-                <proof>
-                  <p>
-                    Let <m>m \in \Z</m>.
-                    We will prove that 5 divides
-                    <m>\left(m^5 - m \right)</m> by proving that 
-                    <m>\left(m^5 - m \right) \equiv 0 \pmod 5</m>.
-                    We will use cases.
-                  </p>
-                  <p>
-                    For the first case, if <m>m \equiv 0 \pmod 5</m>,
-                    then <m>m^5 \equiv 0 \pmod 5</m> and,
-                    hence, <m>\left(m^5 - m \right) \equiv 0 \pmod 5</m>.
-                  </p>
-                  <p>
-                    For the second case, if <m>m \equiv 1 \pmod 5</m>,
-                    then <m>m^5 \equiv 1 \pmod 5</m> and, hence,
-                    <m>\left(m^5 - m \right) \equiv (1 - 1) \pmod 5</m>,
-                    which means that <m>\left(m^5 - m \right) \equiv 0 \pmod 5</m>.
-                  </p>
-                  <p>
-                    For the third case, if <m>m \equiv 2 \pmod 5</m>,
-                    then <m>m^5 \equiv 32 \pmod 5</m> and, hence,
-                    <m>\left(m^5 - m \right) \equiv (32 - 2) \pmod 5</m>,
-                    which means that <m>\left(m^5 - m \right) \equiv 0 \pmod 5</m>. <m>\blacksquare</m>
-                  </p>
-                </proof>
-              </proposition>
-            </p>
-          </task>
         </p>
-      </statement>
+      </introduction>
+
+      <task>
+        <p>
+          <dl width="narrow">
+            <li>
+              <title>Proposition</title>
+              <p>
+                For all integers <m>a</m> and <m>b</m>,
+                if <m>(a + 2b) \equiv 0 \pmod 3</m>,
+                then <m>(2a + b) \equiv 0 \pmod 3</m>.
+              </p>
+            </li>
+            <li>
+              <title>Proof</title>
+                <p>
+                  We assume <m>a, b \in \Z</m> and <m>(a + 2b) \equiv 0 \pmod 3</m>.
+                  This means that 3 divides <m>a + 2b</m> and, hence,
+                  there exists an integer <m>m</m> such that <m>a + 2b = 3m</m>.
+                  Hence, <m>a = 3m - 2b</m>.
+                  For <m>(2a + b) \equiv 0 \pmod 3</m>,
+                  there exists an integer <m>x</m> such that <m>2a + b = 3x</m>.
+                  Hence,
+                  <md>
+                    <mrow>2(3m - 2b) + b \amp = 3x</mrow>
+                    <mrow>6m - 3b \amp = 3x</mrow>
+                    <mrow>3(2m - b) \amp = 3x</mrow>
+                    <mrow>2m - b \amp = x</mrow>
+                  </md>.
+                </p>
+                <p>
+                  Since <m>(2m - b)</m> is an integer,
+                  this proves that 3 divides <m>(2a + b)</m> and hence,
+                  <m>(2a + b) \equiv 0 \pmod 3</m>. 
+                </p>
+            </li>
+          </dl>
+        </p>
+      </task>
+
+      <task>
+        <p>
+          <dl width="narrow">
+            <li>
+              <title>Proposition</title>
+              <p>
+                For each integer <m>m</m>, 5 divides <m>\left(m^5 - m \right)</m>.
+              </p>
+            </li>
+            <li>
+              <title>Proof</title>
+              <p>
+                Let <m>m \in \Z</m>.
+                We will prove that 5 divides
+                <m>\left(m^5 - m \right)</m> by proving that 
+                <m>\left(m^5 - m \right) \equiv 0 \pmod 5</m>.
+                We will use cases.
+              </p>
+              <p>
+                For the first case, if <m>m \equiv 0 \pmod 5</m>,
+                then <m>m^5 \equiv 0 \pmod 5</m> and,
+                hence, <m>\left(m^5 - m \right) \equiv 0 \pmod 5</m>.
+              </p>
+              <p>
+                For the second case, if <m>m \equiv 1 \pmod 5</m>,
+                then <m>m^5 \equiv 1 \pmod 5</m> and, hence,
+                <m>\left(m^5 - m \right) \equiv (1 - 1) \pmod 5</m>,
+                which means that <m>\left(m^5 - m \right) \equiv 0 \pmod 5</m>.
+              </p>
+              <p>
+                For the third case, if <m>m \equiv 2 \pmod 5</m>,
+                then <m>m^5 \equiv 32 \pmod 5</m> and, hence,
+                <m>\left(m^5 - m \right) \equiv (32 - 2) \pmod 5</m>,
+                which means that <m>\left(m^5 - m \right) \equiv 0 \pmod 5</m>. 
+              </p>
+            </li>
+          </dl>
+        </p>
+      </task>
+
     </exercise>
 
     <activity xml:id="exer_sec34-9">

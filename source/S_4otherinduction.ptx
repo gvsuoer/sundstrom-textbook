@@ -600,7 +600,7 @@
         we conclude that <m>P( n )</m> is true for all
         <m>n \in \mathbb{N}</m> with <m>n \geq 2</m>,
         and this means that each natural number greater than 1 is either a prime number or is a 
-        product of prime numbers. <m>\blacksquare</m>
+        product of prime numbers. 
       </p>
     </proof>
     </theorem>
@@ -968,87 +968,92 @@
 
     <exercise>
       <title>Evaluation of Proofs</title>
-      <statement>
+      <introduction>
         <p>
           See the instructions for <xref ref="exer_proofeval"/>
           from <xref ref="S_directproof"></xref>.
-
-          <task>
-            <p>
-              <proposition>
-                <statement>
-                  <p>
-                    For each natural number <m>n</m> with <m>n \geq 2</m>,
-                    <m>2^n > 1 + n</m>.
-                  </p>
-                </statement>
-                <proof>
-                  <p>
-                    We let <m>k</m> be a natural number and assume that <m>2^k > 1 + k</m>.
-                    Multiplying both sides of this inequality by 2, we see that <m>2^{k+1} > 2 + 2k</m>.
-                    However, <m>2 + 2k > 2 + k</m> and, hence,
-                    <me>
-                      2^{k+1} > 1 + \left(k + 1 \right)\!
-                    </me>.
-                    By mathematical induction, we conclude that <m>2^n > 1 + n</m>. <m>\blacksquare</m>
-                  </p>
-                </proof>
-              </proposition>
-            </p>
-          </task>
-          <task>
-            <p>
-              <proposition>
-                <statement>
-                  <p>
-                    Each natural number greater than or equal to 6 can be written as the sum of 
-                    natural numbers,
-                    each of which is a 2 or a 5.
-                  </p>
-                </statement>
-                <proof>
-                  <p>
-                    We will use a proof by induction.
-                    For each natural number <m>n</m>, we let <m>P( n )</m> be,
-                    <q>There exist nonnegative integers <m>x</m> and <m>y</m> such that 
-                    <m>n = 2x + 5y</m>.</q>
-                    Since
-                    <md>
-                      <mrow>6 \amp = 3 \cdot 2 + 0 \cdot 5  \amp   7 \amp = 2 + 5</mrow>
-                      <mrow>8 \amp = 4 \cdot 2 + 0 \cdot 5  \amp   9 \amp = 2 \cdot 2 + 1 \cdot 5</mrow>
-                    </md>
-                    we see that <m>P(6 ), P(7 ), P(8 )</m>,
-                    and <m>P( 9 )</m> are true.
-                  </p>
-                  <p>
-                    We now suppose that for some natural number <m>k</m> with
-                    <m>k \geq 10</m> that <m>P(6 ), P (7 ), \ldots, P (k )</m> are true.
-                    Now
-                    <me>
-                      k + 1 = \left(k - 4 \right) + 5
-                    </me>.
-                  </p>
-                  <p>
-                    Since <m>k \geq 10</m>, we see that <m>k - 4 \geq 6</m> and,
-                    hence, <m>P(k - 4 )</m> is true.
-                    So <m>k - 4 = 2x + 5y</m> and, hence,
-                    <md>
-                      <mrow>k + 1 \amp = \left(2x + 5y \right) + 5</mrow>
-                      <mrow> \amp = 2x + 5 \left(y + 1 \right)\!</mrow>
-                    </md>.
-
-                    This proves that <m>P(k + 1 )</m> is true,
-                    and hence, by the Second Principle of Mathematical Induction,
-                    we have proved that for each natural number <m>n</m> with <m>n \geq 6</m>,
-                    there exist nonnegative integers <m>x</m> and <m>y</m> such that 
-                    <m>n = 2x + 5y</m>. <m>\blacksquare</m>
-                  </p>
-                </proof>
-              </proposition>
-            </p>
-          </task>
         </p>
-      </statement>
+      </introduction>
+
+      <task>
+        <p>
+          <dl width="narrow">
+            <li>
+              <title>Proposition</title>
+              <p>
+                For each natural number <m>n</m> with <m>n \geq 2</m>,
+                <m>2^n > 1 + n</m>.
+              </p>
+            </li>
+            <li>
+              <title>Proof</title>
+              <p>
+                We let <m>k</m> be a natural number and assume that <m>2^k > 1 + k</m>.
+                Multiplying both sides of this inequality by 2, we see that <m>2^{k+1} > 2 + 2k</m>.
+                However, <m>2 + 2k > 2 + k</m> and, hence,
+                <me>
+                  2^{k+1} > 1 + \left(k + 1 \right)\!
+                </me>.
+                By mathematical induction, we conclude that <m>2^n > 1 + n</m>.
+              </p>
+            </li>
+          </dl>
+        </p>
+      </task>
+
+      <task>
+        <p>
+          <dl width="narrow">
+            <li>
+              <title>Proposition</title>
+              <p>
+                Each natural number greater than or equal to 6 can be written as the sum of 
+                natural numbers,
+                each of which is a 2 or a 5.
+              </p>
+            </li>
+            <li>
+              <title>Proof</title>
+              <p>
+                We will use a proof by induction.
+                For each natural number <m>n</m>, we let <m>P( n )</m> be,
+                <q>There exist nonnegative integers <m>x</m> and <m>y</m> such that 
+                <m>n = 2x + 5y</m>.</q>
+                Since
+                <md>
+                  <mrow>6 \amp = 3 \cdot 2 + 0 \cdot 5  \amp   7 \amp = 2 + 5</mrow>
+                  <mrow>8 \amp = 4 \cdot 2 + 0 \cdot 5  \amp   9 \amp = 2 \cdot 2 + 1 \cdot 5</mrow>
+                </md>
+                we see that <m>P(6 ), P(7 ), P(8 )</m>,
+                and <m>P( 9 )</m> are true.
+              </p>
+              <p>
+                We now suppose that for some natural number <m>k</m> with
+                <m>k \geq 10</m> that <m>P(6 ), P (7 ), \ldots, P (k )</m> are true.
+                Now
+                <me>
+                  k + 1 = \left(k - 4 \right) + 5
+                </me>.
+              </p>
+              <p>
+                Since <m>k \geq 10</m>, we see that <m>k - 4 \geq 6</m> and,
+                hence, <m>P(k - 4 )</m> is true.
+                So <m>k - 4 = 2x + 5y</m> and, hence,
+                <md>
+                  <mrow>k + 1 \amp = \left(2x + 5y \right) + 5</mrow>
+                  <mrow> \amp = 2x + 5 \left(y + 1 \right)\!</mrow>
+                </md>
+                This proves that <m>P(k + 1 )</m> is true,
+                and hence, by the Second Principle of Mathematical Induction,
+                we have proved that for each natural number <m>n</m> with <m>n \geq 6</m>,
+                there exist nonnegative integers <m>x</m> and <m>y</m> such that 
+                <m>n = 2x + 5y</m>. 
+              </p>
+            </li>
+          </dl>
+        </p>
+      </task>
+
     </exercise>
 
     <activity xml:id="exer_convexquads">

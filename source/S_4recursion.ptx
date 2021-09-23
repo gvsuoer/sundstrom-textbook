@@ -1160,70 +1160,74 @@
 
     <exercise>
       <title>Evaluation of Proofs</title>
-      <statement>
+      <introduction>
         <p>
           See the instructions for <xref ref="exer_proofeval"/>
           from <xref ref="S_directproof"></xref>.
-          <task>
-            <p>
-              <proposition>
-                <statement>
-                  <p>
-                    Let <m>f_n</m> be the <m>n^\text{ th }</m> Fibonacci number,
-                    and let <m>\alpha</m> be the positive solution of the equation 
-                    <m>x^2 = x + 1</m>.
-                    So <m>\alpha = \dfrac{1 + \sqrt{5}}{2}</m>.
-                    For each natural number <m>n</m>,
-                    <m>f_n \leq \alpha^{n-1}</m>.
-                  </p>
-                </statement>
-                <proof>
-            <p>
+        </p>
+      </introduction>
+
+      <task>
+        <p>
+          <dl width="narrow">
+            <li>
+              <title>Proposition</title>
+              <p>
+                Let <m>f_n</m> be the <m>n^\text{ th }</m> Fibonacci number,
+                and let <m>\alpha</m> be the positive solution of the equation 
+                <m>x^2 = x + 1</m>.
+                So <m>\alpha = \dfrac{1 + \sqrt{5}}{2}</m>.
+                For each natural number <m>n</m>,
+                <m>f_n \leq \alpha^{n-1}</m>.
+              </p>
+            </li>
+            <li>
+              <title>Proof</title>
+              <p>
               We will use a proof by mathematical induction.
               For each natural number <m>n</m>, we let <m>P( n )</m> be,
               <q><m>f_n \leq \alpha^{n-1}</m>.</q>
-            </p>
-            <p>
-              We first note that <m>P( 1 )</m> is true since <m>f_1 = 1</m> and <m>\alpha^0 = 1</m>.
-              We also notice that <m>P( 2 )</m> is true since <m>f_2 = 1</m> and,
-              hence, <m>f_2 \leq \alpha^1</m>.
-            </p>
-            <p>
-              We now let <m>k</m> be a natural number with
-              <m>k \geq 2</m> and assume that <m>P ( 1 )</m>,
-              <m>P( 2 )</m>, <ellipsis/> , <m>P( k )</m> are all true.
-              We now need to prove that <m>P \left( k + 1 \right)</m> is true or that 
-              <m>f_{k+1} \leq \alpha^k</m>.
-            </p>
-            <p>
-              Since <m>P( k -1 )</m> and <m>P ( k )</m> are true,
-              we know that <m>f_{k-1} \leq \alpha^{k-2}</m> and <m>f_k \leq \alpha^{k-1}</m>.
-              Therefore,
-              <md>
-                <mrow>f_{k + 1} \amp = f_k + f_{k-1}</mrow>
-                <mrow>f_{k + 1} \amp \leq \alpha^{k-1} + \alpha^{k-2}</mrow>
-                <mrow>f_{k + 1} \amp \leq \alpha^{k-2} \left(\alpha + 1 \right)\!</mrow>
-              </md>.
-              We now use the fact that <m>\alpha + 1 = \alpha^2</m> and the preceding 
-              inequality to obtain
-              <md>
-                <mrow>f_{k+1} \amp \leq \alpha^{k-2} \alpha^2</mrow>
-                <mrow>f_{k+1} \amp \leq \alpha^k</mrow>
-              </md>
+              </p>
+              <p>
+                We first note that <m>P( 1 )</m> is true since <m>f_1 = 1</m> and <m>\alpha^0 = 1</m>.
+                We also notice that <m>P( 2 )</m> is true since <m>f_2 = 1</m> and,
+                hence, <m>f_2 \leq \alpha^1</m>.
+              </p>
+              <p>
+                We now let <m>k</m> be a natural number with
+                <m>k \geq 2</m> and assume that <m>P ( 1 )</m>,
+                <m>P( 2 )</m>, <ellipsis/> , <m>P( k )</m> are all true.
+                We now need to prove that <m>P \left( k + 1 \right)</m> is true or that 
+                <m>f_{k+1} \leq \alpha^k</m>.
+              </p>
+              <p>
+                Since <m>P( k -1 )</m> and <m>P ( k )</m> are true,
+                we know that <m>f_{k-1} \leq \alpha^{k-2}</m> and <m>f_k \leq \alpha^{k-1}</m>.
+                Therefore,
+                <md>
+                  <mrow>f_{k + 1} \amp = f_k + f_{k-1}</mrow>
+                  <mrow>f_{k + 1} \amp \leq \alpha^{k-1} + \alpha^{k-2}</mrow>
+                  <mrow>f_{k + 1} \amp \leq \alpha^{k-2} \left(\alpha + 1 \right)\!</mrow>
+                </md>.
+                We now use the fact that <m>\alpha + 1 = \alpha^2</m> and the preceding 
+                inequality to obtain
+                <md>
+                  <mrow>f_{k+1} \amp \leq \alpha^{k-2} \alpha^2</mrow>
+                  <mrow>f_{k+1} \amp \leq \alpha^k</mrow>
+                </md>
 
-              This proves that if <m>P( 1 )</m>, <m>P( 2 )</m>,
-              <ellipsis/> , <m>P( k )</m> are true,
-              then <m>P(k + 1 )</m> is true.
-              Hence, by the Second Principle of Mathematical Induction,
-              we conclude that for each natural number <m>n</m>,
-              <m>f_n \leq \alpha^{n-1}</m>. <m>\blacksquare</m>
-            </p>
-          </proof>
-              </proposition>
-            </p>
-          </task>
+                This proves that if <m>P( 1 )</m>, <m>P( 2 )</m>,
+                <ellipsis/> , <m>P( k )</m> are true,
+                then <m>P(k + 1 )</m> is true.
+                Hence, by the Second Principle of Mathematical Induction,
+                we conclude that for each natural number <m>n</m>,
+                <m>f_n \leq \alpha^{n-1}</m>. 
+              </p>
+            </li>
+          </dl>
         </p>
-      </statement>
+      </task>
+
     </exercise>
 
     <activity xml:id="exer_compoundinterest">

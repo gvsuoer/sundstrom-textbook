@@ -589,7 +589,7 @@
         Hence, the inductive step has been established,
         and by the <xref ref="principle-math-induction"/>,
         we have proved that for each natural number <m>n</m>,
-        <m>1^2 + 2^2 + \, \cdots \, + n^2 = \dfrac{{n(n + 1)(2n + 1)}}{6}</m>. <m>\blacksquare</m>
+        <m>1^2 + 2^2 + \, \cdots \, + n^2 = \dfrac{{n(n + 1)(2n + 1)}}{6}</m>. 
       </p>
     </proof>
     </proposition>
@@ -808,7 +808,7 @@
         then <m>P( k + 1 )</m> is true and the inductive step has been established.
         Thus, by <xref ref="principle-math-induction"/>,
         for every natural number <m>n</m>, 4 divides <m>\left( {5^n - 1} \right)</m>.
-        <m>\blacksquare</m>
+        
       </p>
     </proof>
     </proposition>
@@ -1314,162 +1314,170 @@
 
     <exercise>
       <title>Evaluation of Proofs</title>
-      <statement>
+      <introduction>
         <p>
           See the instructions for <xref ref="exer_proofeval"/> on 
-          <xref ref="exer_proofeval"></xref>
           from <xref ref="S_directproof"></xref>.
-          <task>
-            <p>
-              <proposition>
-                <statement>
-                  <p>
-                    For each natural number <m>n</m>,
-                    <m>1 + 4 + 7 + \cdots + \left( 3n - 2 \right) = \dfrac{n \left(3n - 1 
-                    \right)}{2}</m>.
-                  </p>
-                </statement>
-                <proof>
-                  <p>
-                    We will prove this proposition using mathematical induction.
-                    So we let <m>P ( n )</m> be the open sentence
-                    <me>
-                      1 + 4 + 7 + \cdots + \left( 3n - 2 \right)\!
-                    </me>.
-                  </p>
-                  <p>
-                    Using <m>n = 1</m>, we see that <m>3n - 2 = 1</m> and hence,
-                    <m>P \left( 1 \right)</m> is true.
-                  </p>
-                  <p>
-                    We now assume that <m>P( k )</m> is true.
-                    That is,
-                    <me>
-                      1 + 4 + 7 + \cdots + \left( 3k - 2 \right) = \frac{k \left(3k -1 \right)}{2}
-                    </me>.
-                  </p>
-                  <p>
-                    We then see that
-                    <md>
-                      <mrow>1 + 4 + 7 + \cdots + \left( 3k - 2 \right) + \left( 3 (k + 1) - 2 \right)
-                      \amp = \frac{\left(k + 1 \right) \left(3k + 2 \right)}{2}</mrow>
-                      <mrow>\frac{k \left(3k -1 \right)}{2} + \left(3k + 1 \right)
-                      \amp = \frac{\left(k + 1 \right) \left(3k + 2 \right)}{2}</mrow>
-                      <mrow>\frac{\left(3k^2 - k \right) + \left(6k + 2 \right) }{2} 
-                      \amp = \frac{3k^2 + 5k + 2}{2}</mrow>
-                      <mrow>\frac{3k^2 +5k + 2}{2} \amp = \frac{3k^2 + 5k + 2}{2}</mrow>
-                    </md>.
-                  </p>
-                  <p>
-                    We have thus proved that <m>P( k + 1 )</m> is true, and hence,
-                    we have proved the proposition. <m>\blacksquare</m>
-                  </p>
-                </proof>
-              </proposition>
-            </p>
-          </task>
-          <task>
-            <p>
-              <proposition>
-                <statement>
-                  <p>
-                    For each natural number <m>n</m>,
-                    <m>1 + 4 + 7 + \cdots + \left( 3n - 2 \right) = \dfrac{n \left(3n - 1 \right)}{2}</m>.
-                  </p>
-                </statement>
-                <proof>
-                  <p>
-                    We will prove this proposition using mathematical induction.
-                    So we let
-                    <me>
-                      P( n ) = 1 + 4 + 7 + \cdots + \left( 3n - 2 \right)\!
-                    </me>.
-                  </p>
-                  <p>
-                    Using <m>n = 1</m>, we see that
-                    <m>P( 1 ) = 1</m> and hence, <m>P( 1 )</m> is true.
-                  </p>
-                  <p>
-                    We now assume that <m>P( k )</m> is true.
-                    That is,
-                    <me>
-                      1 + 4 + 7 + \cdots + \left( 3k - 2 \right) = \frac{k \left(3k -1 \right)}{2}
-                    </me>.
-                  </p>
-                  <p>
-                    We then see that
-                    <md>
-                      <mrow>P( k + 1 ) \amp = 1 + 4 + 7 + \cdots + \left( 3k - 2 \right) + 
-                      \left( 3 (k + 1) - 2 \right)</mrow>
-                      <mrow> \amp = \frac{k \left( 3k - 1 \right)}{2} + 3 \left(k + 1 \right) - 2</mrow>
-                      <mrow> \amp = \frac{3k^2 - k + 6k + 6 - 4}{2}</mrow>
-                      <mrow> \amp = \frac{3k^2 + 5k + 2}{2}</mrow>
-                      <mrow> \amp = \frac{\left(k + 1 \right) \left(3k + 2 \right)}{2}</mrow>
-                    </md>.
-                  </p>
-                  <p>
-                    We have thus proved that <m>P( k + 1 )</m> is true, and hence,
-                    we have proved the proposition. <m>\blacksquare</m>
-                  </p>
-                </proof>
-              </proposition>
-            </p>
-          </task>
-          <task>
-            <p>
-              <proposition>
-                <statement>
-                  <p>
-                    All dogs are the same breed.
-                  </p>
-                </statement>
-                <proof>
-                  <p>
-                    We will prove this proposition using mathematical induction.
-                    For each natural number <m>n</m>, we let <m>P( n )</m> be
-                  </p>
-                  <p>
-                    Any set of <m>n</m> dogs consists entirely of dogs of the same breed.
-                  </p>
-                  <p>
-                    We will prove that for each natural number <m>n</m>,
-                    <m>P( n )</m> is true, which will prove that all dogs are the same breed.
-                    A set with only one dog consists entirely of dogs of the same breed and,
-                    hence, <m>P( 1 )</m> is true.
-                  </p>
-                  <p>
-                    So we let <m>k</m> be a natural number and assume that <m>P( k )</m> is true, that is,
-                    that every set of <m>k</m> dogs consists of dogs of the same breed.
-                    Now consider a set <m>D</m> of <m>k + 1</m> dogs, where
-                    <me>
-                      D = \left\{ d_1, d_2, \ldots, d_k, d_{k+1} \right\}\!
-                    </me>.
-                  </p>
-                  <p>
-                    If we remove the dog <m>d_1</m> from the set <m>D</m>,
-                    we then have a set <m>D_1</m> of <m>k</m> dogs,
-                    and using the assumption that <m>P( k )</m> is true,
-                    these dogs must all be of the same breed.
-                    Similarly, if we remove <m>d_{k+1}</m> from the set <m>D</m>,
-                    we again have a set <m>D_2</m> of <m>k</m> dogs,
-                    and these dogs must all be of the same breed.
-                    Since <m>D = D_1 \cup D_2</m>,
-                    we have proved that all of the dogs in <m>D</m> must be of the same breed.
-                  </p>
-                  <p>
-                    This proves that if <m>P( k )</m> is true,
-                    then <m>P( k + 1 )</m> is true and, hence,
-                    by mathematical induction,
-                    we have proved that for each natural number <m>n</m>,
-                    any set of <m>n</m> dogs consists entirely of dogs of the same breed.
-                    <m>\blacksquare</m>
-                  </p>
-                </proof>
-              </proposition>
-            </p>
-          </task>
         </p>
-      </statement>
+      </introduction>
+
+      <task>
+        <p>
+          <dl width="narrow">
+            <li>
+              <title>Proposition</title>
+              <p>
+                For each natural number <m>n</m>,
+                <m>1 + 4 + 7 + \cdots + \left( 3n - 2 \right) = \dfrac{n \left(3n - 1 
+                \right)}{2}</m>.
+              </p>
+            </li>
+            <li>
+              <title>Proof</title>
+              <p>
+                We will prove this proposition using mathematical induction.
+                So we let <m>P ( n )</m> be the open sentence
+                <me>
+                  1 + 4 + 7 + \cdots + \left( 3n - 2 \right)\!
+                </me>.
+              </p>
+              <p>
+                Using <m>n = 1</m>, we see that <m>3n - 2 = 1</m> and hence,
+                <m>P \left( 1 \right)</m> is true.
+              </p>
+              <p>
+                We now assume that <m>P( k )</m> is true.
+                That is,
+                <me>
+                  1 + 4 + 7 + \cdots + \left( 3k - 2 \right) = \frac{k \left(3k -1 \right)}{2}
+                </me>.
+              </p>
+              <p>
+                We then see that
+                <md>
+                  <mrow>1 + 4 + 7 + \cdots + \left( 3k - 2 \right) + \left( 3 (k + 1) - 2 \right)
+                  \amp = \frac{\left(k + 1 \right) \left(3k + 2 \right)}{2}</mrow>
+                  <mrow>\frac{k \left(3k -1 \right)}{2} + \left(3k + 1 \right)
+                  \amp = \frac{\left(k + 1 \right) \left(3k + 2 \right)}{2}</mrow>
+                  <mrow>\frac{\left(3k^2 - k \right) + \left(6k + 2 \right) }{2} 
+                  \amp = \frac{3k^2 + 5k + 2}{2}</mrow>
+                  <mrow>\frac{3k^2 +5k + 2}{2} \amp = \frac{3k^2 + 5k + 2}{2}</mrow>
+                </md>.
+              </p>
+              <p>
+                We have thus proved that <m>P( k + 1 )</m> is true, and hence,
+                we have proved the proposition. 
+              </p>
+            </li>
+          </dl>
+        </p>
+      </task>
+      
+      <task>
+        <p>
+          <dl width="narrow">
+            <li>
+              <title>Proposition</title>
+              <p>
+                For each natural number <m>n</m>,
+                <m>1 + 4 + 7 + \cdots + \left( 3n - 2 \right) = \dfrac{n \left(3n - 1 \right)}{2}</m>.
+              </p>
+            </li>
+            <li>
+              <title>Proof</title>
+              <p>
+                We will prove this proposition using mathematical induction.
+                So we let
+                <me>
+                  P( n ) = 1 + 4 + 7 + \cdots + \left( 3n - 2 \right)\!
+                </me>.
+              </p>
+              <p>
+                Using <m>n = 1</m>, we see that
+                <m>P( 1 ) = 1</m> and hence, <m>P( 1 )</m> is true.
+              </p>
+              <p>
+                We now assume that <m>P( k )</m> is true.
+                That is,
+                <me>
+                  1 + 4 + 7 + \cdots + \left( 3k - 2 \right) = \frac{k \left(3k -1 \right)}{2}
+                </me>.
+              </p>
+              <p>
+                We then see that
+                <md>
+                  <mrow>P( k + 1 ) \amp = 1 + 4 + 7 + \cdots + \left( 3k - 2 \right) + 
+                  \left( 3 (k + 1) - 2 \right)</mrow>
+                  <mrow> \amp = \frac{k \left( 3k - 1 \right)}{2} + 3 \left(k + 1 \right) - 2</mrow>
+                  <mrow> \amp = \frac{3k^2 - k + 6k + 6 - 4}{2}</mrow>
+                  <mrow> \amp = \frac{3k^2 + 5k + 2}{2}</mrow>
+                  <mrow> \amp = \frac{\left(k + 1 \right) \left(3k + 2 \right)}{2}</mrow>
+                </md>.
+              </p>
+              <p>
+                We have thus proved that <m>P( k + 1 )</m> is true, and hence,
+                we have proved the proposition. 
+              </p>
+            </li>
+          </dl>
+        </p>
+      </task>
+
+      <task>
+        <p>
+          <dl width="narrow">
+            <li>
+              <title>Proposition</title>
+              <p>
+                All dogs are the same breed.
+              </p>
+            </li>
+            <li>
+              <title>Proof</title>
+              <p>
+                We will prove this proposition using mathematical induction.
+                For each natural number <m>n</m>, we let <m>P( n )</m> be
+              </p>
+              <p>
+                Any set of <m>n</m> dogs consists entirely of dogs of the same breed.
+              </p>
+              <p>
+                We will prove that for each natural number <m>n</m>,
+                <m>P( n )</m> is true, which will prove that all dogs are the same breed.
+                A set with only one dog consists entirely of dogs of the same breed and,
+                hence, <m>P( 1 )</m> is true.
+              </p>
+              <p>
+                So we let <m>k</m> be a natural number and assume that <m>P( k )</m> is true, that is,
+                that every set of <m>k</m> dogs consists of dogs of the same breed.
+                Now consider a set <m>D</m> of <m>k + 1</m> dogs, where
+                <me>
+                  D = \left\{ d_1, d_2, \ldots, d_k, d_{k+1} \right\}\!
+                </me>.
+              </p>
+              <p>
+                If we remove the dog <m>d_1</m> from the set <m>D</m>,
+                we then have a set <m>D_1</m> of <m>k</m> dogs,
+                and using the assumption that <m>P( k )</m> is true,
+                these dogs must all be of the same breed.
+                Similarly, if we remove <m>d_{k+1}</m> from the set <m>D</m>,
+                we again have a set <m>D_2</m> of <m>k</m> dogs,
+                and these dogs must all be of the same breed.
+                Since <m>D = D_1 \cup D_2</m>,
+                we have proved that all of the dogs in <m>D</m> must be of the same breed.
+              </p>
+              <p>
+                This proves that if <m>P( k )</m> is true,
+                then <m>P( k + 1 )</m> is true and, hence,
+                by mathematical induction,
+                we have proved that for each natural number <m>n</m>,
+                any set of <m>n</m> dogs consists entirely of dogs of the same breed.
+              </p>
+            </li>
+          </dl>
+        </p>
+      </task>
+
     </exercise>
 
     <activity xml:id="exer_basis">
@@ -1535,7 +1543,7 @@
           See <xref ref="fig_circleregions"></xref>.
           <figure xml:id="fig_circleregions">
             <caption>Regions of Circles</caption>
-            <image width="73%" source="assets/figps-circleregions.svg"/>
+            <image width="73%" source="figps-circleregions.svg"/>
           </figure>
           Count the number of distinct regions within each circle.
           For example, with three points on the circle,
@@ -1574,7 +1582,7 @@
           Are your conjectures correct or incorrect?
           <figure xml:id="fig_circleregions56">
             <caption>Regions of Circles</caption>
-              <image width="73%" source="assets/figps-circle5-6.svg"/>
+              <image width="73%" source="figps-circle5-6.svg"/>
           </figure>
         </p>
       </task>

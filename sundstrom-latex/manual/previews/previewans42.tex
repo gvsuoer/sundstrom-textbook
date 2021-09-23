@@ -1,0 +1,69 @@
+\section*{Section~\ref{S:otherinduction} Other Forms of Mathematical Induction}
+
+\subsection*{Preview Activity 1 (Exploring a Proposition about Factorials)}
+\begin{enumerate}
+\item
+\begin{tabular}[t]{| c | c | c | c | c | c | c | c |} \hline
+$n$  &  1  &  2  &  3  &  4  &  5  &  6  &  7  \\ \hline
+$2^n$  &  2  &  4  &  8  &  16  &  32  &  64  &  128  \\ \hline
+$n!$  &  1  &  2  &  6  &  24  &  120  &  720  &  5040  \\ \hline
+\end{tabular}
+\item $P(1), P(2), P(3)$ are false.  $P(4), P(5), P(6), P(7)$ are true.
+\item Based on the evidence so far, the following proposition appears to be true:  For each natural number  
+$n$ with $n \geq 4$, $2^n > n!$. 
+\item Since $(k + 1)!$ is the product of the firt $k + 1$ natural numbers, we can think of this as the product of the first $k$ natural numbers times $(k + 1)$.  This means that $(k + 1)!$ is equal to $(k + 1)$ times $k!$.
+\item If we multiply both sides of the inequality $(k + 1) > 2$ by $2^k$, we obtain 
+\begin{align*}
+(k + 1)2^k &> 2 \cdot 2^k \\
+(k + 1)2^k &> 2^{k+1}
+\end{align*}
+\item We have
+\begin{equation} 
+(k + 1)\cdot k! > (k + 1) 2^k 
+\end{equation}
+and from part (5),
+\begin{equation}
+(k + 1)2^k > 2^{k+1}
+\end{equation}
+These two equations then imply that $(k + 1)\cdot k! > 2^{k+1}$ or that $(k + 1)! > 2^{k+1}$.
+
+%\item What appears to be a true proposition can be formed by adding the condition that  $n$  be greater than or equal to 4.  That is, the following proposition seems to be true:
+%For each natural number  $n$  with $n \geq 4$, $n! > 2^n$.
+\end{enumerate}
+\hbreak
+
+
+
+\subsection*{Preview Activity 2 (Prime Factors of a Natural Number)}
+\begin{enumerate}
+\setcounter{enumi}{1}
+\item 
+\begin{tabular}[t]{p{1in} p{2in} p{1in} p{2in}}
+$20 = 2^2 \cdot 5$ &  $40 = 2 \cdot 20$  & $50 = 2 \cdot 5^2$ & $150 = 3 \cdot 50$ \\
+                   &  $40 = 2 ( {2^2 \cdot 5} )$  &  & $150 = 3 ( {2 \cdot 5^2} )$ \\
+                   &  $40 = 2^3 \cdot 5$  &  & $150 = 2 \cdot 3 \cdot 5^2$ \\
+\end{tabular}
+
+%\item 
+%\begin{tabular}[t]{p{1in} p{2in}}
+%$50 = 2 \cdot 5^2$  & $150 = 3 \cdot 50$ \\
+%                   &  $150 = 3 ( {2 \cdot 5^2} )$ \\
+%                   &  $150 = 2 \cdot 3 \cdot 5^2$ \\
+%\end{tabular}
+
+\addtocounter{enumi}{1}
+\item A natural number  $n$  is a composite number provided that there exists a natural number  
+$d$  such that  $d$  divides  $n$  and  $d \ne 1$  and  $d \ne n$.  This means that there exists a natural number  $m$  such that  $n = m \cdot d$, $1 < d < n$, and  $1 < m < n$.
+
+\item In this section, we will see how to use induction to prove that any composite number can be written as a product of primes.  The idea will be to factor a composite number as  
+$n = m \cdot d$,  where  $1 < d < n$, and  $1 < m < n$.  We will then use induction to conclude that  $m$  and  $d$  can be factored as a product of primes.  (This was illustrated in 
+Part~(2).)  We will need the Second Principle of Mathematical Induction, which is introduced in this section.
+\end{enumerate}
+\hbreak
+
+
+
+
+\newpage
+
+\endinput

@@ -1,0 +1,376 @@
+\section*{Section \ref{S:provingset} Proving Set Relationships}
+
+\begin{enumerate}
+%\item \begin{enumerate}
+%\item If $x \in A$, then there exists an integer $k$ such that $x = 9k$.  This means that 
+%$x = 3 \left( 3k \right)$ and since $3k \in \mathbb{Z}$, we see that $x \in B$.
+%
+%\item The set $B$ is not a subset of $A$ since there exist elements (such as 3 and 6) that are in 
+%$B$ but not in $A$.
+%\end{enumerate}
+
+\item \begin{enumerate}
+\item The set  $A$  is  a subset of  $B$.  If  $x \in A$, then  
+$ - 2 < x < 2$.  Hence,  $x < 2$ and we conclude that  $x \in B$.
+
+\item The set  $B$  is not a subset of  $A$ since there exist real numbers that are in  $B$  but not in  $A$.  For example, $-4$ and $-3$ are in $B$ but not in $A$.
+\end{enumerate}
+
+
+\item 
+\begin{enumerate}\setcounter{enumii}{1}
+\item Assume that $A \subseteq B$ and that $B \subseteq C$, and let $x \in A$.  Then, $x \in B$ since $A$ is a subset of $B$, and since $B$ is a subset of $C$, this implies that $x \in C$.  Hence,$A \subseteq C$.
+\end{enumerate}
+
+
+\item \begin{enumerate} \setcounter{enumii}{1}
+\item To prove that $A \subseteq B$, let $x \in A$.  Then, $x \equiv 7 \pmod 8$ and so, 
+$8 \mid \left( x - 7 \right)$.  This means that there exists an integer $m$ such that
+\[
+x - 7 = 8m.
+\]
+By adding 4 to both sides of this equation, we see that $x - 3 = 8m + 4$, or 
+$x - 3 = 4 \left( 2m + 1 \right)$.  From this, we conclude that $4 \mid \left( x - 3 \right)$ and that $x \equiv 3 \pmod 4$.  Hence, $x \in B$.
+
+\item $B \not \subseteq A$.  For example, $3 \in B$ and $3 \notin A$.
+\end{enumerate}
+
+
+\item \begin{enumerate} \setcounter{enumii}{1}
+\item To prove that $C \subseteq D$, let $x \in C$.  Then, $x \equiv 7 \pmod 9$ and so, 
+$9 \mid \left( x - 7 \right)$.  This means that there exists an integer $m$ such that
+\[
+x - 7 = 9m.
+\]
+By adding 6 to both sides of this equation, we see that $x - 1 = 9m + 6$, or 
+$x - 1 = 3 \left( 3m + 2 \right)$.  From this, we conclude that $3 \mid \left( x - 1 \right)$ and that $x \equiv 1 \pmod 3$.  Hence, $x \in D$.
+
+\item $D \not \subseteq C$.  For example, $4 \in D$ and $4 \notin C$.
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item $A = \left\{ x \in \Z \mid \mod{x}{2}{3} \right\} = B = \left\{ y \in \Z \mid 6 \text{ divides } (2y - 4) \right\}$.
+
+\noindent
+Notice that if $x \in A$, then there exists an integer $m$ such that $x - 2 = 3m$.  We can use this equation to see that $2x - 4 = 6m$ and so 6 divides $(2x - 4$.  Therefore, $x \in B$.
+
+\noindent
+Conversely, if $y \in B$, then there exists an integer $m$ such that $2y - 4 = 6m$.  Hence, $y - 2 = 3m$, which implies that $\mod{y}{2}{3}$ and $y \in A$.
+
+\item For $A = \left\{ x \in \Z \mid \mod{x}{3}{4} \right\}$ and 
+$B = \left\{ y \in \Z \mid 3 \text{ divides } (y - 2) \right\}$, none of the relations are true.  We can see that $A \not \subseteq B$ since $3 \in A$ and $3 \notin B$.  We can also see that $B \not \subseteq A$ since $2 \in B$ and $2 \notin A$.  In addition, the two sets are not disjoint since $11 \in (A \cap B)$.
+
+\item If $A = \left\{ x \in \Z \mid \mod{x}{1}{5} \right\}$ and 
+$B = \left\{ y \in \Z \mid \mod{y}{7}{10} \right\}$, then $A \cap B = \emptyset$.
+
+\noindent
+Use a proof by contradiction and assume that $A \cap B \ne \emptyset$.  So there exists an $x$ in $A \cap B$.  We can then conclude that there exist integers $m$ and $n$ such that $x - 1 = 5m$ and $x - y = 10n$.  So $x = 5m + 1$ and $x = 10n + 7$.  We then see that
+\begin{align*}
+5m + 1 &= 10n + 7 \\
+5(m - 2n) &= 6
+\end{align*}
+The last equation implies that 5 divides 6, and this is a contradiction.
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item We will use the fact that $x^2 - 3x - 10 = (x + 2)(x - 5)$.  Let 
+$a \in \left\{x \in \R \mid x^2 - 3x - 10 < 0 \right\}$.  We can then conclude that 
+\[
+(a + 2)(a - 5) < 0
+\]
+and this means that either $a + 2 < 0$ and $a - 5 > 0$ or 
+$a + 2 > 0$ and $a - 5 < 0$.  However, in the first case, $a < -2$ and $a > 5$ and this is  impossible.  Therefore, $a > -2$ and $a < 5$, which means that $-2 < a < 5$ and 
+$a \in \left\{ x \in \R \mid -2 < x < 5 \right\}$.  
+
+We now assume that 
+$b \in \left\{ x \in \R \mid -2 < x < 5 \right\}$.  Then $-2 < b < 5$.  This implies that 
+$b + 2 > 0$ and $b - 5 < 0$ and, hence, $(b + 2)(b - 5) < 0$ or $b^2 - 3b - 10 < 0$.  Therefore, 
+$b \in \left\{x \in \R \mid x^2 - 3x - 10 < 0 \right\}$ and we have proved that 
+\[
+\left\{x \in \R \mid x^2 - 3x - 10 < 0 \right\} = \left\{ x \in \R \mid -2 < x < 5 \right\}
+\]
+since we have proved that each set is a subset of the other set.
+
+\item We will use the fact that $x^2 - 5x + 6 = (x - 2)(x - 3)$.  Let 
+$a \in \left\{x \in \R \mid x^2 - 5x + 6 < 0 \right\}$.  We can then conclude that 
+\[
+(a - 2)(a - 3) < 0
+\]
+and this means that either $a - 2 < 0$ and $a - 3 > 0$ or 
+$a - 2 > 0$ and $a - 3 < 0$.  However, in the first case, $a < 2$ and $a > 3$ and this is  impossible.  Therefore, $a > 2$ and $a < 3$, which means that $2 < a < 3$ and 
+$a \in \left\{ x \in \R \mid 2 < x < 3 \right\}$.  
+
+We now assume that 
+$b \in \left\{ x \in \R \mid 2 < x < 3 \right\}$.  Then $2 < b < 3$.  This implies that 
+$b - 2 > 0$ and $b - 3 < 0$ and, hence, $(b - 2)(b - 3) < 0$ or $b^2 - 5b + 6 < 0$.  Therefore, 
+$b \in \left\{x \in \R \mid x^2 - 5x + 6 < 0 \right\}$ and we have proved that 
+\[
+\left\{x \in \R \mid x^2 - 5x + 6 < 0 \right\} = \left\{ x \in \R \mid 2 < x < 3 \right\}
+\]
+since we have proved that each set is a subset of the other set.
+
+\item Let $a \in \left\{x \in \R \mid x^2 \geq 4 \right\}$.  Then $a^2 - 4 \geq 0$ or 
+$(a + 2)(a - 2) \geq 0$.  This means that $a + 2 \leq 0$ and $a - 2 \leq 0$ or $a + 2 \geq 0$ and 
+$a - 2 \geq 0$.  In the first case, $a \leq -2$ and in the second case, $a \geq 2$. This proves that $a \leq -2$ or $a \geq 2$ and, hence, 
+$a \in \left\{x \in \R \mid x \leq -2 \right\} \cup \left\{x \in \R \mid x \geq 2 \right\}$.
+
+Now let 
+$b \in \left\{x \in \R \mid x \leq -2 \right\} \cup \left\{x \in \R \mid x \geq 2 \right\}$.  Then $b \leq -2$ or $b \geq 2$.  In the first case, $b + 2 \leq 0$ and $b - 2 \leq 0$ and, hence, 
+$(b + 2)(b - 2) \geq 0$, which means $b^2 \geq 4$.  In the second case, $b + 2 \geq 0$ and 
+$b - 2 \geq 0$ and, hence, $(b + 2)(b - 2) \geq 0$, which means $b^2 \geq 4$.  In both cases, 
+$b \in \left\{x \in \R \mid x^2 \geq 4 \right\}$.  So we have proved that
+\[
+\left\{x \in \R \mid x^2 \geq 4 \right\} = \left\{x \in \R \mid x \leq -2 \right\} \cup \left\{x \in \R \mid x \geq 2 \right\}
+\]
+since we have proved that each set is a subset of the other set.
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item Let $x \in A \cap B$.  Then, $x \in A$ and $x \in B$.  This proves that 
+$A \cap B \subseteq A$.
+
+\item Let $x \in A$.  Then, the statement ``$x \in A$ or $x \in B$'' is true.  Hence, 
+$A \subseteq A \cup B$.
+
+\item By Part~(a), $A \cap A \subseteq A$.  Now, let $x \in A$.  Then, the statement 
+``$x \in A$ and $x \in A$'' is true.  Hence, $A \subseteq A \cap A$ and so, $A \cap A = A$.
+
+\item By Part~(b), $A \subseteq A \cup A$.  Now, let $x \in A \cup A$.  Then, the statement 
+``$x \in A$ or $x \in A$'' is true.  Hence, $x \in A$, and therefore, $A \cup A \subseteq A$ and so, $A \cup A = A$.
+
+\item We know that $\emptyset \subseteq A \cap \emptyset$.  By Part~(a), 
+$A \cap \emptyset \subseteq \emptyset$.  Therefore, $A \cap \emptyset = \emptyset$.
+
+\item By Part~(b), $A \subseteq A \cup \emptyset$.  So, let $x \in A \cup \emptyset$.  Then, 
+$x \in A$ or $x \in \emptyset$.  Since $x$ cannot be in the empty set, we conclude that $x \in A$.  Therefore, $A \cup \emptyset \subseteq A$ and so, $A \cup \emptyset = A$.
+\end{enumerate}
+
+
+\item We still need to prove that if $B^c \subseteq A^c$, then $A \subseteq B$.  We will prove the contrapositive.  So we assume there exists an element $y$ in $A$ such that $y \notin B$.  Then $y \notin A^c$ and $y \in B^c$.  This means that $B^c \not\subseteq A^c$ and this proves the contrapositive.
+
+
+%\item The statement is true.  Prove the contrapositive, which is ``If $A \not\subseteq B$, then 
+%$A \cap B^c \ne \emptyset$.``  So, we assume $A \not\subseteq B$.  This means that there exists an element $x$ that is in $A$ and not in $B$.  From this, we conclude that $x \in A$ and $x \in B^c$.  Consequently, $A \cap B^c \ne \emptyset$.
+
+\item The statement is true.  To prove it, use a proof by contradiction.  So, we assume that 
+$A \cap B$ and $A - B$ are not disjoint.  This means that there exists an element $x$ such that 
+$x \in A \cap B$ and $x \in A - B$.  Since $x \in A \cap B$, we conclude that $x \in B$, and since $x \in A - B$, we conclude that $x \notin B$.  This is a contradiction.  Therefore, 
+$A \cap B$ and $A - B$ are disjoint.
+
+
+\item Prove the contrapositive.  So assume that $A$ and $B$ are subsets of some universal set $U$ and that $A \not \subseteq B$.  Then, there exists an element $x \in A$ such that $x \notin B$.  We can then conclude that $x in A$ and $x \in B^c$.  Hence, $x \in A \cap B^c$ and $A \cap B^c \ne \emptyset$.  This proves the contrapositive.
+
+
+
+
+\item \begin{enumerate}
+\item This statement is false.  With $U = \N$, a counterexample is $A = \{1\}$, 
+$B = \{ 1, 2, 3 \}$, $C = \{ 2 \}$, and $D = \{ 2, 3 \}$.  An appropriate Venn diagram could also be used to provide a counterexample.
+
+\item This statement is true.  Use a proof by contradiction.  So assume that $A \subseteq B$, $C \subseteq D$, and 
+$A \cap C \ne \emptyset$.  Since $A \cap C \ne \emptyset$, let $x \in A \cap C$.  Since $A \subseteq B$, $x \in B$, and since $C \subseteq D$, $x \in D$. This means that $B \cap D \ne \emptyset$, which contradicts the assumption that $B$ and $D$ are disjoint.
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item Assume that $A$ is a subset of $B$, and let $x \in A \cap C$.  Then, $x \in A$ and 
+$x \in C$.  Since $x \in A$ and $A \subseteq B$, we know that $x \in B$.  Thus, $x \in B$ and 
+$x \in C$, and hence $x \in B \cap C$.  Therefore, if $x \in A \cap C$, then $x \in B \cap C$ and hence, $A \cap C \subseteq B \cap C$.
+
+\item Assume that $A$ is a subset of $B$, and let $x \in A \cup C$.  Then, $x \in A$ or 
+$x \in C$.  In the case where $x \in A$, we see that $x \in B$ since $A \subseteq B$.  So, in this case, $x \in B \cup C$.  In the case where $x \in C$, we also conclude that $x \in B \cup C$. Therefore, if $x \in A \cup C$, then $x \in B \cup C$ and hence, $A \cup C \subseteq B \cup C$.
+\end {enumerate}
+
+
+\item \begin{enumerate}
+\item The statement is false.  A counterexample is $A = \left\{ 1, 2 \right\}$, 
+$B = \left\{ 2, 3 \right\}$, and $C = \left\{ 2 \right\}$.  Then, $A \cap C = \left\{ 2 \right\}$ and $B \cap C = \left\{ 2 \right\}$, but $A \not\subseteq B$.
+
+\item The statement is false.  A counterexample is $A = \left\{ 1, 2 \right\}$, 
+$B = \left\{ 1 \right\}$, and $C = \left\{ 2, 3 \right\}$.  Then, 
+$A \cup C = \left\{ 1, 2, 3 \right\}$ and $B \cup C = \left\{ 1, 2, 3 \right\}$, but 
+$A \not\subseteq B$.
+
+\item This statement is false.  The counterexample for Part~(b) is also a counterexample for this statement.
+
+\item This statement is false.  The counterexample for Part~(a) is also a counterexample for this statement.
+%A counterexample is $A = \{1, 2, 3\}$, $B = \{2 \}$, and 
+%$C = \{1, 2, 3 \}$.  Then $A \cap C = \{1, 2, 3 \}$, $B \cup C = \{1, 2, 3 \}$, and $A \ne B$.
+
+\item This statement is true.  To prove that $A \subseteq B$, let $x \in A$.  Then 
+$x \in A \cup C$ and since $A \cup C = B \cup C$, $x \in B \cup C$.  So $x \in B$ or $x \in C$.  If $x \in C$, then $x \in A \cap C$ and since $A \cap C = B \cap C$, $x \in B \cap C$.  This means that $x \in B$.  So $x$ must be in $B$ and this proves that $A \subseteq B$.  The proof that $B \subseteq A$ is similar.
+\end{enumerate}
+
+
+\item To prove $B \subseteq C$, let $x \in B$.  Use two cases: $x \in A$ or $x \notin A$.  If $x \in A$, then $x \in A \cap B$.  Since $A \cap B = A \cap C$, $x \in A \cap C$ and therefore, $x \in C$.  If $x \notin A$, then $x \in A^c$ and $x \in A^c \cap B$.  Since 
+$A^c \cap B = A^c \cap C$, $x \in A^c \cap C$ and therefore, $x \in C$.  In both cases, $x \in C$ and this proves that $B \subseteq C$.  Now use a similar proof to prove that $C \subseteq B$.
+
+
+\item \begin{enumerate}
+\item If $A \subseteq B$, then $A \cap B^c = \emptyset$ was proved in Proposition~4.14.  For the converse, prove the contrapositive, which states that if $A \cap B^c \ne \emptyset$, then 
+$A \not\subseteq B$. Since $A \cap B^c \ne \emptyset$, there exists an element 
+$x \in A \cap B^c$.  This means that $x \in A$ and $x \notin B$, which implies that 
+$A \not\subseteq B$.
+
+\item First, assume $A \subseteq B$.  We know that $B \subseteq A \cup B$, so let 
+$x \in A \cup B$.  Then $x \in A$ or $x \in B$. However, if $x \in A$, then since 
+$A \subseteq B$.  So in both cases, $x \in B$ and hence, $A \cup B \subseteq B$.  This proves that if $A \subseteq B$, then $A \cup B = B$.
+
+Now assume that $A \cup B = B$ and let $x \in A$. Then $x \in A \cup B$ and since 
+$A \cup B = B$, we see that $x \in B$.  Hence, $A \subseteq B$.
+
+\item First, assume $A \subseteq B$.  We know that $A \cap B \subseteq A$, so let 
+$x \in A$.  Then $x \in B$ and, hence, $x \in A \cap B$. This proves that if $A \subseteq B$, then $A \cap B = A$.
+
+Now assume that $A \cap B = A$ and let $x \in A$. Then since $A \cap B = A$, $x \in A \cap B$, and we see that $x \in B$.  Therefore, $A \subseteq B$.
+
+\item The following conditional statement is false:
+\begin{list}{}
+\item If $A \subseteq B \cup C$, then $A \subseteq B$ or $A \subseteq C$.
+\end{list}
+A counterexample is $A = \{1, 2, 3 \}$, $B = \{1, 2 \}$, and $C = \{2, 3 \}$.
+
+The following conditional statement is true:
+\begin{list}{}
+\item If $A \subseteq B $ or $A \subseteq C$, then $A \subseteq B \cup C$.
+\end{list}
+\item Assume $A \subseteq B$ and $A \subseteq C$ and let $x \in A$.  Then $x \in B$ and $x \in C$ and hence, $x \in B \cap C$, and we conclude that $A \subseteq B \cap C$.
+
+Now assume $A \subseteq B \cap C$.  Since $B \cap C \subseteq B$ and $B \cap C \subseteq C$, we can conclude that $A \subseteq B$ and $A \subseteq C$.
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item If $a \in T$, then $a \in S \cup T$ and hence, $a \in X \cup Y$.
+
+\item If $a \in T$, then $a \notin S$.
+
+\item If $a \in T$, then $a \in X \cup Y$, which means that $a \in X$ or $a \in Y$.  However, if $a \in X$, then since $X \subseteq S$, we know that $a$ must be in $S$.  However, we have shown in Part~(b) that $a \notin S$.  Therefore, $a \notin X$ and hence, $a$ must be in $Y$.  
+Consequently, $T \subseteq Y$.
+\end{enumerate}
+
+
+
+%\item The statement is true.  Assume that $a$ and $b$ are integers with $a \ne 0$ and that $a \mid b$.  Now, let 
+%$x \in \mathbb{Z}$ with $x \ne 0$.  We will prove that $ax \mid bx$.  Since $a \mid b$, there exists an integer $k$ such that $b = ak$.  Multiplying both sides of this equation by $x$ gives 
+%$bx = \left( ax \right) k$.  This proves that $ax \mid bx$.
+%
+%\item \begin{enumerate}
+%\item One way is to prove that a certain even natural number greater than 2 cannot be written as the sum of two prime numbers.
+%
+%\item  Prove the contrapositive, which is:
+%\begin{list}{}
+%\item  If Goldbach's conjecture is true, then every odd integer greater than 5 is the sum of three prime numbers.
+%\end{list}
+%To prove this, let $n$ be an odd integer that is greater than 5.  Then, $n-3$ is an even integer that is greater than 2.  If Goldbach's Conjecture is true, then there exist prime numbers $p$ and $q$ such that $n - 3 = p + q$.  Then,
+%\[
+%n = p + q + 3,
+%\]
+%and we see that $n$ is the sum of three prime numbers.
+%\end{enumerate}
+\end{enumerate}
+
+
+
+
+\subsection*{Evaluations of Proofs}
+\setcounter{oldenumi}{\theenumi}
+\begin{enumerate} \setcounter{enumi}{\theoldenumi}
+\item \begin{enumerate}
+\item This proposition is false.  Following is a counterexample.
+
+\noindent
+Let $U = \Z$ and let $A = \{1 \}$, $B = \{2 \}$, and $C = \{1, 3\}$.  In this example, 
+$A \not \subseteq B$ and $B \notsubseteq C$ and $A \subseteq C$.
+
+\vskip6pt
+\noindent
+A problem with the proposed proof is that $x$ was used for two different elements.  We can only conclude that there exists an element in $A$ that is not in $B$ and that there exists an element in $B$ that is not in $C$.  There is no guarantee that these two elements must be the same.  So if we use $x$ for the element that is in $A$ but not in $B$, we must use a different letter for the element that is in $B$ but not in $C$.
+
+\item This proposition is false.  Following is a counterexample.
+
+\noindent
+Let $U = \Z$ and let $A = \{1 \}$, $B = \{1, 2 \}$, and $C = \{1, 3\}$.  In this example, 
+$A \cap B = \{1 \}$, $A \cap C = \{1 \}$ and so, $A \cap B = A \cap C$.  However, $B \ne C$.
+
+\noindent
+There is a problem in the second paragraph in the proposed proof.  We can get to the conclusion that $x \notin A \cap C$.  However, care was not taken at this point.  From here, it is only possible to conclude that $x \notin A$ or $x \notin C$.  The fact that $x \notin A$ does not allow us to conclude that $x$ must be in $C$.
+
+
+\item This proposition is false.  Following is a counterexample.
+
+\noindent
+Let $U = \Z$ and let $A = \{1 \}$, $B = \{2, 3 \}$, and $C = \{1, 2, 3\}$.  In this example, 
+$A \not \subseteq B$, $B \subseteq C$, and $A \subseteq C$.
+
+\vskip6pt
+\noindent
+In the proposed proof, it is legitimate to conclude that there exists an element $x$ such that 
+$x \in A$ and $x \notin B$.  However, the assumption that $B \subseteq C$ allows us to conclude that if $y \in B$, then $y \in C$ or that if $y \notin C$, then $y \notin B$.  We cannot use this assumption to conclude that $x \notin C$ because $x \notin B$.
+\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection*{Explorations and Activities}
+\setcounter{oldenumi}{\theenumi}
+\begin{enumerate} \setcounter{enumi}{\theoldenumi}
+\item \begin{enumerate}
+\item Let  $a = 20$, $b = 12$, and  $d = 4$.  In this case,  $d \mid a$ and $d \mid b$. 
+\begin{center}
+\begin{tabular}[t]{| c | c | c | c |} \hline
+$x$  &  $y$  &  $ax + by$  &	Does  $d$  divide  $ax + by$? \\ \hline
+1  &	1  &	32  &	Yes \\ \hline
+1  &	$-1$ &	8   &	Yes \\ \hline
+2  &	2  &	64  &	Yes \\ \hline
+2  &	$-3$ &	4   &	Yes \\ \hline
+$-2$ &	3  &	$-4$  &	Yes \\ \hline
+$-2$ &	$-5$ &	$-100$ & Yes \\ \hline
+\end{tabular}
+\end{center}
+
+\item Let  $a = 21$, $b =  - 6$, and  $d = 3$. In this case,  $d \mid a$ and $d \mid b$.
+\begin{center}
+\begin{tabular}[t]{| c | c | c | c |} \hline
+$x$  &  $y$  &  $ax + by$  &	Does  $d$  divide  $ax + by$? \\ \hline
+1  &	1  &	15  &	Yes \\ \hline
+1  &	$-1$ &	27  &	Yes \\ \hline
+2  &	2  &	30  &	Yes \\ \hline
+2  &	$-3$ &	60   &	Yes \\ \hline
+$-2$ &	3  &	$-60$  &	Yes \\ \hline
+$-2$ &	$-5$ &	$-72$ & Yes \\ \hline
+\end{tabular}
+\end{center}
+
+\item \textbf{Proposition~\ref{P:divlinearcomb}}.  Let $a$, $b$, and  $d$  be integers.  If  $d$  divides  $a$  and  $d$  divides  $b$, then for all integers  $x$  and  $y$,  $d$  divides  $ax + by$.
+
+\begin{myproof}
+Let $a$, $b$, and  $d$  be integers, and assume that $d$  divides  $a$  and  $d$  divides  $b$.  We will prove that for all integers  $x$  and  $y$,  $d$  divides  $ax + by$.
+
+So, let  $x \in \mathbb{Z}$ and let  $y \in Z$.  Since  $d$  divides  $a$ and $d$ divides $b$, there exist an integers  $m$ and $n$  such that
+\[
+a = md \qquad \text{ and } \qquad b = nd.
+\]
+We substitute the expressions for  $a$  and  $b$  given in these two equations into  $ax + by$.  This gives
+\[
+\begin{aligned}
+  ax + by &= \left( {md} \right)x + \left( {nd} \right)y \\ 
+          &= d\left( {mx + ny} \right). \\ 
+\end{aligned} 
+\]
+By the closure properties of the integers,  $mx + ny$ is an integer, and hence we may conclude that  $d$  divides  $ax + by$.  Since  $x$  and  $y$  were chosen as arbitrary integers, we have proven that if  $d$  divides  $a$  and  $d$  divides  $b$, then for all integers  $x$  and  $y$,  $d$  divides  $ax + by$.
+\end{myproof}
+
+
+\end{enumerate}
+\end{enumerate}
+
+\hbreak
+
+
+
+
+\endinput

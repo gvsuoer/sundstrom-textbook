@@ -1,0 +1,167 @@
+\section*{Section \ref{S:finitesets} Finite Sets}
+
+\begin{enumerate}
+\item To prove that $g$ is a surjection, let $y \in \N_{k+1}$.  Consider the following two cases.
+\begin{itemize}
+\item If $y = k +1$, then by definition, $g(x) = k + 1 = y$.
+
+\item If $y \ne k + 1$, then $y \in A$.  Since the function $f\x A \to \N_k$ is a bijection, there exists an element $t \in A$ such that $f(t) = y$.  But we then have $t \in A \cup \{ x \}$ and
+\[
+g(t) = f(t) = y.
+\]
+So in both cases, there exists an element $t \in A \cup \{ x \}$ such that $g(t) = y$.  Therefore, $g$ is a surjection. 
+\end{itemize}
+
+
+\item Use $f: A \times \left\{ x \right\} \to A$ by $f \left( a, x \right) = a$, for all 
+$\left( a, x \right) \in A \times \left\{ x \right\}$.
+
+\item The function $f$ is a bijection, where $f: \mathbb{N} \to E^+$ by $f \left( n \right) = 2n$ for all $n \in \mathbb{N}$.
+
+\item Notice that $A = \left( A - \left\{ x \right\} \right) \cup \left\{x \right\}$.  Use 
+Theorem~\ref{T:finitesubsets} to conclude that $A - \left\{ x \right\}$ is finite.  Then use 
+Lemma~\ref{L:addone} to conclude that 
+$\text{card} \left( A \right) = \text{card} \left( A \cup \left\{ x \right\} \right) + 1$.
+
+\item \begin{enumerate}
+\item Since $A \cap B \subseteq A$, if $A$ is finite, then Theorem~\ref{T:finitesubsets} implies that $A \cap B$ is finite.
+
+\item The sets $A$ and $B$ are subsets of $A \cup B$.  So if $A \cup B$ is finite, then $A$ and $B$ are finite.
+
+\item This is the contrapositive of part~(a).
+
+\item This is the contrapositive of part~(b).
+\end{enumerate}
+
+\item Let $A$ be the set of people living in New York City and let $B$ be the set of natural numbers less than or equal to 200,000.  Define \linebreak
+$f: A \to B$ by $f \left( x \right) = \text{the number of hairs on person} $x$'\text{s head}$.  By the Pigeonhole Principle, the function $f$ is not an injection.  So, there exist $a, b \in A$ with $a \ne b$ and 
+$f \left( a \right) = f \left( b \right)$.
+
+%\item The set $S$ has $2^{10} = 1024$ subsets.  The sum of the elements of $\emptyset$ is 0.  The maximum sum of the elements for a subset of $S$ is $90 + 91 + \cdots 99 = 945$.  So define
+%\[
+%f: \mathcal{P} \left( S \right) \to \mathbb{N}_{945}
+%\]
+%so that for each $X \in \mathcal{P} \left( S \right)$, $f \left( X \right) $ equals the sum of the elements in $X$.  By the Pigeonhole Principle, $f$ is not an injection.  This means that there exist subsets $A$ and $B$ of $S$ such that $A \ne B$ and 
+%$f \left( A \right) = f \left( B \right)$.  So the sum of the elements of $A$ is equal to the sum of the elements of $B$.  So if
+%\[
+%C = A - \left( A \cap B \right) \quad \text{and} \quad D = B - \left( A \cap B \right)
+%\]
+%then $C$ and $D$ are disjoint and the sum of the elements of $C$ equals the sum of the elements of $D$.
+
+\item \begin{enumerate}
+\item Remember that two ordered pairs are equal if and only if their corresponding coordinates are equal.  So if $\left( a_1, c_1 \right) , \left( a_2, c_2 \right) \in A \times C$ and $h \left( a_1, c_1 \right) = h \left( a_2, c_2 \right)$, then 
+$\left( f \left( a_1 \right), g \left( c_1 \right) \right) = 
+\left( f \left( a_2 \right), g \left( c_2 \right) \right)$.  We can then conclude that 
+$f \left( a_1 \right) = f \left( a_2 \right)$ and $g \left( c_1 \right) = g \left( c_2 \right)$.  Since $f$ and $g$ are both injections, this means that $a_1 = a_2$ and $c_1 = c_2$ and therefore, 
+$\left( a_1, c_1 \right) = \left( a_2, c_2 \right)$.
+
+Now let $\left( b, d \right) \in B \times D$.  Since $f$ and $g$ are surjections, there exists 
+$a \in A$ and $c \in C$ such that $f \left( a \right) = b$ and $g \left( c \right) = d$.  Therefore, $h \left( a, c \right) = \left( b, d \right)$.
+
+\item Let $y \in B \cup D$.  If $y \in B$, then since $f$ is a surjection, there exists an 
+$x \in A$ such that $f \left( x \right) = y$.  If $y \in D$, then since $g$ is a surjection, there exists an $x \in C$ such that $g \left( x \right) = y$.  In both cases, $x \in A \cup C$ and 
+$k \left( x \right) = y$.
+
+Now let $s, t \in A \cup C$ and assume $k \left( s \right) = k \left( t \right)$.  Since $B$ and 
+$D$ are disjoint, $k \left( s \right)$ is in $B$ or $D$ but not both.  If 
+$k \left( s \right) \in B$, then
+\[
+f \left( s \right) = k \left( s \right) = k \left( t \right) = f \left( t \right).
+\]
+Since $f$ is an injection, this implies that $s = t$.  If $k \left( s \right) \in D$, then we use a similar argument to conclude that $g \left( s \right) = g \left( t \right)$ and hence that 
+$s = t$.
+\end{enumerate}
+
+\item \begin{enumerate}
+\item $f \left( 1 \right) = a$, $f \left( 2 \right) = b$, $f \left( 3 \right) = c$, 
+$f \left( 4 \right) = a$, and $f \left( 5 \right) = b$.
+
+\item $g \left( a \right) = 1$, $g \left( b \right) = 2$, and $g \left( 3 \right) = c$.  The function $g$ is an injection.
+\end{enumerate}
+
+\item Since $f$ is a surjection, for each $x \in A$, 
+$f^{-1} \left( \left\{ x \right\} \right) \ne \emptyset$.  Now let $x \in A$ and let 
+$g \left( x \right) = j$.  Since $j \in f^{-1} \left( \left\{ x \right\} \right)$,
+\[
+\begin{aligned}
+\left( f \circ g \right) \left( x \right) &= f \left( g \left( x \right) \right) \\
+                                          &= f \left( j \right) \\
+                                          &= x.
+\end{aligned}
+\]
+Therefore, $f \circ g = I_A$.  Since $I_A$ is an injection, Theorem~\ref{T:morecompositefunctions} implies that $g$ is an injection.
+
+\item We have a surjection $f: B \to A$  and a bijection $k: \mathbb{N}_m \to B$.  This implies that $f \circ k: \mathbb{N}_m \to A$ is a surjection.  Hence, by Exercise~(9), there exists an injection $g: A \to \mathbb{N}_m$ such that $\left( f \circ k \right) \circ g = I_A$.
+
+Let $h = k \circ g$ so that $h: A \to B$.  Since $k$ and $g$ are both injections, we see that $h$ is an injection.  In addition,
+\[
+\begin{aligned}
+f \circ h &= f \circ \left( k \circ g \right) \\
+          &= \left( f \circ k \right) \circ g \\
+          &= I_A.
+\end{aligned}
+\]
+\end{enumerate}
+
+
+
+\subsection*{Explorations and Activities}
+\setcounter{oldenumi}{\theenumi}
+\begin{enumerate} \setcounter{enumi}{\theoldenumi}
+\item \begin{enumerate}
+\item Let $A = \left\{ 3, 5, 11, 17, 21, 24, 26, 29 \right\}$.  Notice that
+\begin{align}
+\left\{3, 21, 24, 26 \right\} &\subseteq A \quad \text{ and }   &3 + 21 + 24 + 26 &= 74 \notag \\
+\left\{3, 5, 11, 26, 29 \right\} &\subseteq A \quad \text{ and }   &3 + 5 + 11 + 26 + 29 &= 74 \notag
+\end{align}
+By removing the elements common to the two subsets of $A$, we we see that 
+$\left\{21, 24,  \right\}$ and  $\left\{5, 11, 29 \right\}$ are two disjoint subsets of $A$ whose elements have the same sum.
+
+\item Let $B = \left\{ 3, 6, 9, 12, 15, 18, 21, 24 \right\}$.  The sets $\left\{ 3, 6 \right\}$ and $\left\{ 9 \right\}$ are two disjoint subsets of $B$ whose elements have the same sum.  There are several other examples.
+
+\item Now let $C$ be any subset of $\mathbb{N}_{30}$ that contains 8 elements.  
+\begin{enumerate}
+\item By Proposition~5.11 in Section~5.2, the set $C$ has $2^8 = 256$ subsets.
+
+\item If $C = \left\{23, 24, 25, 26, 27, 28, 29, 30 \right\}$, then the sum of the elements of $C$ will be as large as possible.  These elements sum to 212.  So, the maximum of the elements for any subset of $C$ is 212.
+
+\item Now define a function $f:\mathcal{P} \left( C \right) \to \mathbb{N}_M$ so that for each 
+$X \in \mathcal{P} \left( C \right)$, $f \left( X \right)$ is equal to the sum of the elements in $X$.
+
+Since $\text{card} \left( \mathcal{P} \left( C \right) \right) = 256$ and 
+$\text{card} \left( \mathbb{N}_M \right) = 212$, the Pigeonhole Principle tells us that the function $f$ is not an injection.  This means that 
+\begin{center}
+there exist $A, B \in \mathcal{P} \left( C \right)$ such that 
+$f \left( A \right) = f \left( B \right)$.
+\end{center}
+In other words, $A$ and $B$ are subsets of $C$ whose elements have the same sum.
+\end{enumerate}
+
+\item If the two sets $A$ and $B$ from Part~(3c) are not disjoint, we remove the elements common to both the sets to obtain two disjoint subsets of $C$ whose elements have the same sum.  These two sets are $A_1$ and $B_1$ where
+\[
+\begin{aligned}
+A_1 &= A - \left( A \cap B \right), \\
+B_1 &= B - \left( A \cap B \right).
+\end{aligned}
+\]
+
+
+\item The set $S$ has $2^{10} = 1024$ subsets.  The sum of the elements of $\emptyset$ is 0.  The maximum sum of the elements for a subset of $S$ is $90 + 91 + \cdots + 99 = 945$.  So define
+\[
+f: \mathcal{P} \left( S \right) \to \mathbb{N}_{945}
+\]
+so that for each $X \in \mathcal{P} \left( S \right)$, $f \left( X \right) $ equals the sum of the elements in $X$.  By the Pigeonhole Principle, $f$ is not an injection.  This means that there exist subsets $A$ and $B$ of $S$ such that $A \ne B$ and 
+$f \left( A \right) = f \left( B \right)$.  So the sum of the elements of $A$ is equal to the sum of the elements of $B$.  So if
+\[
+C = A - \left( A \cap B \right) \quad \text{and} \quad D = B - \left( A \cap B \right)
+\]
+then $C$ and $D$ are disjoint and the sum of the elements of $C$ equals the sum of the elements of $D$.
+
+\end{enumerate}
+
+
+\end{enumerate}
+
+\hbreak
+
+\endinput

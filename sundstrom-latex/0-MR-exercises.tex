@@ -1,0 +1,164 @@
+\documentclass[11pt,openany]{book}
+%\usepackage{../styles/author2}
+
+\usepackage{c://pctex/author3}
+
+\usepackage{xr}
+
+\externaldocument{0-MR3}
+
+\usepackage{times}
+\usepackage[subscriptcorrection,nofontinfo]{mtpro2}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{datetime}
+
+\usepackage{amsmath,amssymb,amsthm, amsfonts,graphics,multicol}
+\usepackage{enumerate}
+\graphicspath{{./epsfigs/}}
+
+\usepackage[dvips, bookmarks, colorlinks=true, plainpages = false,
+  linkcolor=black,citecolor = black, urlcolor = black, filecolor = blue]{hyperref}
+
+\usepackage{makeidx}
+\makeindex
+
+\newcommand{\exer}[1]{\bf{\ref{#1}}.}
+
+
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\
+                                         \thechapter. #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection. #1}}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[LO]{\rightmark}
+\fancyhead[RE]{\leftmark}
+%\fancyfoot[LE,RO]{\small{\copyright~2013 Ted Sundstrom}}
+\markboth{Exercise Answers}{Exercise Answers}
+
+\fancyfoot[LE,RO]{\scalebox{0.35}{\includegraphics{CClicense.eps}}}
+
+%\includeonly{manual/parts/part-usingtext,manual/parts/part-sections, manual/parts/part-previews,manual/parts/part-exercises}
+
+%\includeonly{}
+
+\begin{document}
+\input table
+
+\begin{titlepage}
+\vspace*{0.5in}
+\begin{center}
+\fontsize{23}{12}\selectfont \textbf{Solutions for the Exercises}
+
+\smallskip
+\fontsize{23}{12}\selectfont \textbf{\emph{Mathematical Reasoning}}
+%\textbf{\Huge{Mathematical Reasoning}} \\
+
+%\smallskip
+\textbf{\huge{\emph{Writing and Proof}}} \\
+%\fontsize{23}{12}\selectfont \textbf{\emph{Writing and Proof}}\\
+\vspace{0.3125in}
+%\includegraphics{CClicense.eps}
+\includegraphics{CC-by-nc-sa.eps}
+
+\vspace{0.3in}
+\textbf{\large{Version 3, Version 2.1, and Version 2}} \\
+\textbf{\large{\monthname~\the\day,~~\the\year}}
+
+\vspace{1.0in}
+\textbf{\huge{Ted Sundstrom}}
+
+
+
+\smallskip
+\Large{Professor Emeritus, Grand Valley State University}
+\end{center}
+
+
+\end{titlepage}
+
+\input{blankpage}
+
+
+%\newpage
+%\thispagestyle{empty}
+%$ $
+
+\newpage
+
+\mainmatter
+%\mainmatter
+%\include{chapters/chapter1}
+%\include{chapters/chapter2}
+%\include{chapters/chapter3}
+%\include{chapters/chapter4}
+%\include{chapters/chapter5}
+%\include{chapters/chapter6}
+%\include{chapters/chapter7}
+%\include{chapters/chapter8}
+%\include{chapters/chapter9}
+
+\setcounter{page}{3}
+\chapter*{Chapter \ref{C:intro}\\Introduction to \\Writing in Mathematics}
+\input{manual/exercises/mexercise11}
+\input{manual/exercises/mexercise12}
+%\end{document}
+
+\chapter*{Chapter \ref{C:logic}\\Logical Reasoning}
+\input{manual/exercises/mexercise21}
+\input{manual/exercises/mexercise22}
+\input{manual/exercises/mexercise23}
+\input{manual/exercises/mexercise24}
+
+\chapter*{Chapter \ref{C:proofs}\\Constructing and Writing Proofs in Mathematics}
+
+\input{manual/exercises/mexercise31}
+\input{manual/exercises/mexercise32}
+\input{manual/exercises/mexercise33}
+\input{manual/exercises/mexercise34}
+\input{manual/exercises/mexercise35}
+\input{manual/exercises/mexercise36}
+
+\chapter*{Chapter \ref{C:induction}  \\Mathematical Induction}
+\input{manual/exercises/mexercise41}
+\input{manual/exercises/mexercise42}
+\input{manual/exercises/mexercise43}
+
+
+
+
+\chapter*{Chapter \ref{C:settheory}\\Set Theory}
+\input{manual/exercises/mexercise51}
+\input{manual/exercises/mexercise52}
+\input{manual/exercises/mexercise53}
+\input{manual/exercises/mexercise54}
+\input{manual/exercises/mexercise55}
+
+
+
+\chapter*{Chapter \ref{C:functions} \\Functions}
+\input{manual/exercises/mexercise61}
+\input{manual/exercises/mexercise62}
+\input{manual/exercises/mexercise63}
+\input{manual/exercises/mexercise64}
+\input{manual/exercises/mexercise65}
+\input{manual/exercises/mexercise66}
+
+\chapter*{Chapter \ref{C:equivrelations} \\Equivalence Relations}
+\input{manual/exercises/mexercise71}
+\input{manual/exercises/mexercise72}
+\input{manual/exercises/mexercise73}
+\input{manual/exercises/mexercise74}
+
+\chapter*{Chapter \ref{C:numbertheory} \\Topics in Number Theory}
+\input{manual/exercises/mexercise81}
+\input{manual/exercises/mexercise82}
+\input{manual/exercises/mexercise83}
+
+\chapter*{Chapter \ref{C:topicsinsets} \\Topics in Set Theory}
+\input{manual/exercises/mexercise91}
+\input{manual/exercises/mexercise92}
+\input{manual/exercises/mexercise93}
+
+
+\end{document}

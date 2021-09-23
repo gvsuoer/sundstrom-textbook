@@ -1,0 +1,101 @@
+\section*{Section~\ref{S:cases} Using Cases in Proofs}
+
+\subsection*{Preview Activity 1 (A Logical Equivalency)}
+
+\begin{enumerate}
+\item 
+$$
+\BeginTable
+\BeginFormat
+| c | c | c | c | c | c | c | c |
+\EndFormat
+\_6
+       | $P$  |  $Q$  |  $R$  \|6  $P \vee Q$  |  $(P \vee Q) \to R$  |  $P \to R$ | $Q \to R$ | $(P \to R) \wedge (Q \to R)$ | \\+22 \_6
+          | T | T | T \|6 T | T | T  | T | T | \\ 
+          | T | T | F \|6 T | F | F  | F | F | \\ 
+          | T | F | T \|6 T | T | T  | T | T | \\ 
+          | T | F | F \|6 T | F | F  | T | F | \\ 
+          | F | T | T \|6 T | T | T  | T | T | \\ 
+          | F | T | F \|6 T | F | T  | F | F | \\ 
+          | F | F | T \|6 F | T | T  | T | T | \\ 
+          | F | F | F \|6 F | T | T  | T | T | \\ \_6
+\EndTable
+$$
+
+
+\item If we prove both  $P \to R$  and  $Q \to R$, then we have proven  
+$( {P \to R} ) \wedge ( {Q \to R} )$.  Since the statements   
+$( {P \vee Q} ) \to R$  and   
+$( {P \to R} ) \wedge ( {Q \to R} )$  are logically equivalent, this means we have also proven  $( {P \vee Q} ) \to R$.
+
+\item The contrapositive is:  For all integers $x$ and $y$, if $x$ is even or $y$ is even, then $xy$ is even.
+
+\item If $x$ is an even integer, then there exists an integer $k$ such that $x = 2k$.  So if $y$ is an integer, then
+\[
+xy = (2k)y = 2(ky).
+\]
+Since $ky$ is an integer, this proves that if $x$ is even, then $xy$ is even.
+
+%\newpar
+\eighth
+\noindent
+If $y$ is an even integer, then there exists an integer $m$ such that $y = 2m$.  So if $x$ is an integer, then
+\[
+xy = x(2m) = 2(xm).
+\]
+Since $xm$ is an integer, this proves that if $y$ is even, then $xy$ is even.
+
+\item The proposition in part~(3) is of the form $(P \vee Q) \to R$, which is logically equivalent to 
+$( {P \to R} ) \wedge ( {Q \to R} )$.  In part~(4), we proved $P \to R$ and $Q \to R$ and so we proved 
+$( {P \to R} ) \wedge ( {Q \to R} )$.  Because of the logical equivalency, we have proved the proposition in part~(3).
+
+
+
+%\item Since an integer is either even or odd, the hypothesis, ``$n$  is an integer'', can be written as, ``$n$ is an even integer or  $n$  is an odd  integer.''  This means that the given proposition can be written in the form  $( {P \vee Q} ) \to R$.  Hence, it is logically equivalent to  $( {P \to R} ) \wedge ( {Q \to R} )$.
+\end{enumerate}
+\hbreak
+
+
+\subsection*{Preview Activity 2 (Using Cases in a Proof)}
+
+\begin{enumerate}
+\item Let  $n$  be an even integer.  We will show that  $n^2  + n$  is an even integer.  By the definition of an even integer, there exists an integer  $m$  such that
+\[
+n = 2m.
+\]
+Substituting this into the expression  $n^2  + n$  yields
+\[
+\begin{aligned}
+  n^2  + n &= ( {2m} )^2  + 2m \\ 
+           &= 4m^2  + 2m \\ 
+           &= 2( {2m^2  + m} ). \\ 
+\end{aligned} 
+\]
+By the closure properties of the integers,  $2m^2  + m$  is an integer, and hence   
+$n^2  + n$  is even.  So this proves that  when  $n$  is an even integer, $n^2  + n$  is an even integer. \qedsymbol
+
+\item Let  $n$  be an odd integer.  We will show that  $n^2  + n$  is an even integer.  By the definition of an odd integer, there exists an integer  $m$  such that
+\[
+n = 2m+1.
+\]
+Substituting this into the expression  $n^2  + n$  yields
+\[
+\begin{aligned}
+  n^2  + n &= ( {2m + 1} )^2  + ( 2m+1 ) \\ 
+           &= 4m^2  + 6m + 2 \\ 
+           &= 2( {2m^2  + 3m + 1} ). \\ 
+\end{aligned} 
+\]
+By the closure properties of the integers,  $2m^2  + 3m + 1$  is an integer, and hence   
+$n^2  + n$  is even.  So this proves that  when  $n$  is an odd integer, $n^2  + n$  is an even integer. \qedsymbol
+
+\item The proofs of Propositions 2 and 3 constitute a proof of Proposition 1 since the integer $n$ must be even or must be odd.
+\end{enumerate}
+\hbreak
+
+
+
+
+\newpage
+
+\endinput

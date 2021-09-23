@@ -1,0 +1,149 @@
+\section*{Section \ref{S:diophantine} Linear Diophantine Equations}
+
+\begin{enumerate}
+\item Prove the contrapositive.  If the linear Diophantine equation $ax + by = c$ has a solution, then there exist integers $m$ and $n$ such that $am + bn = c$.  This means that $c$ is a linear combination of $a$ and $b$ and hence by Theorem~\ref{T:gcddivideslincombs}, $d \mid c$.
+
+\item \begin{enumerate}
+\item $x = -3 + 14k$, \quad  $y = 2 - 9k$
+
+\item $x = -1 + 11k$, \quad  $y = 1 + 9k$
+
+\item No solution
+
+\item $x = 2+3k$, \quad  $y = -2-4k$
+
+\item $x = -120 + 49k, y = 490 - 200k$
+
+\item No solution
+
+\item $x = 1 - 7k, y = -3 - 10k$
+
+\item $x = 2 + 3k, y = -1 - 2k$
+\end{enumerate}
+
+\item If $a$ and $b$ are relatively prime, then $d = \gcd \left( a, b \right) = 1$.  Hence, $d \mid c$.  Now use Theorem~\ref{T:lindioph2}.
+
+\item There are several possible solutions to this problem.  Each solution can be generated from the solutions of the Diophantine equation $27x + 50y = 25$.  For example, one form of the general solution for this equation is
+\[
+x = 25 + 50k, y = -13 - 27k.
+\]
+If we use the solution $x = 25$ and $y = -13$, we see that if 25 of the 27 gram weights are put on one side of the balance and the artifact and 13 of the  50 gram weights are put on the other side of the balance, then the scale should balance.
+
+Another way is to use the solution $x = -25$ and $y = 14$.  If we put the artifact and 25 of the 27 gram weights on one side and 14 of the 50 gram weights on the other side.
+
+\underline{Note}:  If the Euclidean Algorithm is used, we get $27 \cdot 13 + 50 \left( -7 \right) = 1$.  Then, 
+$27 \left( 325 \right) + 50 \left( -175 \right) = 25$ and so the general solution of the linear Diophantine equation is $x = 325 + 50k$ and $y = -175 - 27k$.  Using $k = -6$ gives $x = 25$ and 
+$y = -13$.
+
+\item This problem can be solved using solutions of the linear Diophantine equation 
+$25x + 16y = 1461$.  From the Euclidean Algorithm, we obtain
+\[
+\begin{aligned}
+25 \left( -7 \right) + 16 \cdot 11 &= 1 \\
+25 \left( -10227 \right) + 16 \left( 16071 \right) &= 1461. 
+\end{aligned}
+\]
+The general solution of the linear Diophantine equation is
+\[
+\begin{aligned}
+x &= -10227 + 16k \\
+y &= 16071 - 25k. \\
+\end{aligned}
+\]
+For this problem, we need $x \geq 0$ and $y \geq 0$.  The first inequality implies that 
+$k > 639$, and the second inequality implies that $k < 643$.
+
+\begin{multicols}{2}
+When $k = 640$, $x = 13$ and $y = 71$.
+
+When $k = 641$, $x = 29$ and $y = 46$.
+
+When $k = 642$, $x = 45$ and $y = 21$.
+\end{multicols}
+
+These are the only possible solutions with $x \geq 0$ and $y \geq 0$.  So either 66, 75, or 84 people attended.
+
+\item \begin{enumerate}
+\item $y = 12 + 16k, x_3 = -1 - 3k$
+
+\item If $3y = 12x_1 + 9x_2$ and $3y + 16x_3 = 20$, we can substitute for $3y$ and obtain 
+$12x_1 + 9x_2 + 16x_3 = 20$.
+
+\item Rewrite the equation $12x_1 + 9x_2 = 3y$ as $4x_1 + 3x_2 = y$.  A general solution for this linear Diophantine equation is
+\[
+\begin{aligned}
+x_1 &= y + 3n \\
+x_2 &= -y - 4n. \\
+\end{aligned}
+\]
+\item $x_1 = 12 + 16k + 3n$, $x_2 = -12 - 16k - 4n$, $x_3 = -1 - 3k$.
+
+\item \[
+\begin{aligned}
+12x_1 + 9x_2 + 16x_3 &= 12 \left( 12 + 16k + 3n \right) + 9 \left( -12 -16k - 4n \right) \\
+                     &\qquad + 16 \left( -1 - 3k \right) \\
+                     &= \left( 144 + 192k + 36n \right) + \left( -108 - 144k - 36 n \right) \\
+                     &\qquad + \left( -16 - 48k \right) \\
+                     &= 20.
+\end{aligned}
+\]
+\end{enumerate}
+
+\item First solve the Diophantine equation $4y - 6x_3 = 6$.
+\[
+\begin{aligned}
+y &= 0 - 3k \\
+x_3 &= -1 - 2k. \\
+\end{aligned}
+\]
+Next, solve $8x_1 + 4x_2 = 4y$.
+\[
+\begin{aligned}
+x_1 &= y + n \\
+x_2 &= =y -2n. \\
+\end{aligned}
+\]
+So the solutions of $8x_1 + 4x_2 - 6x_3 = 6$ can be written as
+\[
+\begin{aligned}
+x_1 &= 0 - 3k + n \\
+x_2 &= 0 + 3k - 2n \\
+x_3 &= -1 - 2k, \\
+\end{aligned}
+\]
+where $k$ and $n$ are integers.
+
+\item The Diophantine equation $24x_1 - 18x_2 + 60x_3 = 21$ has no solution since the left side of the equation is a multiple of 6 for all integers $x_1$, $x_2$, and $x_3$.
+
+\item \begin{enumerate}
+\item If two integers are equal, then they are congruent modulo 3.
+
+\item For each integer $x$, $3x^2 \equiv \pmod 3$.  Therefore, if 
+\[
+3x^2 - y^2 \equiv -2 \pmod 3, 
+\]
+then $-y^2 \equiv -2 \pmod 3$ and hence $y^2 \equiv 2 \pmod 3$.
+
+\item If there is a solution to the Diophantine equation $3x^2 - y^2 = -2$, then by Parts~(a) and~(b), we see that $y^2 \equiv 2 \pmod 3$.  This is a contradiction to the fact that for all integers $y$, $y^2 \not \equiv 2 \pmod 3$.
+\end{enumerate}
+
+\item Use congruence modulo 7.  If the Diophantine equation $7x^2 + 2 = y^3$ has a solution, then there exists an integer $y$ such that $y^3 \equiv 2 \pmod 7$.  Verify that
+\begin{multicols}{3}
+$0^3 \equiv 0 \pmod 7$
+
+$1^3 \equiv 1 \pmod 7$
+
+$2^3 \equiv 1 \pmod 7$
+
+$3^3 \equiv 6 \pmod 7$
+
+$4^3 \equiv 1 \pmod 7$
+
+$5^3 \equiv 6 \pmod 7$
+
+$6^3 \equiv 6 \pmod 7$
+\end{multicols}
+\end{enumerate}
+\hbreak
+
+\endinput

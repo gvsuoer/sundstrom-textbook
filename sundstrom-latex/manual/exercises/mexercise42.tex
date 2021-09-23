@@ -1,0 +1,541 @@
+\section*{Section \ref{S:otherinduction} Other Forms of Mathematical Induction}
+
+\begin{enumerate}
+\item \begin{enumerate}
+\item Let $P \left( n \right)$ be, ``$3^n > 1 + 2^n$.''  $P \left( 2 \right)$ is true.
+
+If $P \left( k \right)$ is true, then $3^k > 1 + 2^k$.  Multiplying both sides of this inequality by 3 gives
+\[
+3^{k + 1} > 3 + 3 \cdot 2^k.
+\]
+Now, since $3 > 1$ and $3 \cdot 2^k > 2^{k + 1}$, we see that $3 + 3 \cdot 2^k > 1 + 2^{k+1}$ and hence, $3^{k + 1} > 1 + 2^{k+1}$.  Thus, if $P \left( k \right)$ is true, then $P \left( k +1  \right)$ is true.
+
+\item Let $P \left( n \right)$ be, ``$2^n  > \left( n + 1 \right)^2$.''  $P \left( 6 \right)$ is true.
+
+If $P \left( k \right)$ is true, then $2^k  > \left( k + 1 \right)^2$.  Multiplying both sides of this inequality by 2 yields
+\[
+\begin{aligned}
+2^{k + 1} &> 2 \left( k + 1 \right)^2, \text{ or } \\
+2^{k + 1} &> 2k^2 + 4k + 2.
+\end{aligned}
+\]
+Now, for $k \geq 6$ and $k^2 > 2$, and hence $2k^2 > k^2 + 2$.  So, from the inequality 
+$2^{k + 1} > 2k^2 + 4k + 2$, we see that
+\[
+\begin{aligned}
+2^{k + 1} &> k^2 + 4k + 4 \\
+2^{k + 1} &> \left( k + 2 \right)^2.
+\end{aligned}
+\]
+Thus, if $P \left( k \right)$ is true, then $P \left( k +1  \right)$ is true.
+
+\item Let $P \left( n \right)$ be, ``$\left( {1 + \dfrac{1}{n}} \right)^n  < n$.''  
+$P \left( 3 \right)$ is true.
+
+If $P \left( k \right)$ is true, then $\left( {1 + \dfrac{1}{k}} \right)^k  < k$.  Multiplying both sides of this inequality by $\left( 1 + \dfrac{1}{k} \right)$ gives
+\[
+\begin{aligned}
+\left( {1 + \frac{1}{k}} \right)^{k+1}  &< k \left( 1 + \frac{1}{k} \right) \\
+\left( {1 + \frac{1}{k}} \right)^{k+1}  &< k + 1.
+\end{aligned}
+\]
+Now, since $\dfrac{1}{k+1} < \dfrac{1}{k}$ and hence, 
+$\left( {1 + \dfrac{1}{k + 1}} \right)^{k+1} < \left( {1 + \dfrac{1}{k}} \right)^{k+1}$.  Using this and the last displayed inequality, we see that 
+\[
+\left( {1 + \dfrac{1}{k + 1}} \right)^{k+1} < k + 1.
+\]
+Thus, if $P \left( k \right)$ is true, then $P \left( k +1  \right)$ is true.
+\end{enumerate}
+
+
+\item We see that when $n = 1$, $n^2 < 2^n$.  In addition, it appears that for each $n \in \N$ with $n \geq 5$, $n^2 < 2^n$.  For an induction proof, let $P(n_)$ be ``$n^2 < 2^n$.''
+
+\noindent
+For $n = 5$, $n^2 = 25$ and $2^n = 32$.  So $P(5)$ is true.  For the inductive step, let $k \in \N$ with $k \geq 5$ and assume that $P(k)$ is true.  That is, assume that $k^2 < 2^k$.   We need to prove that 
+$(k + 1)^2 < 2^{k+1}$.
+
+\noindent
+We multiply both sides of $k^2 < 2^k$ by 2 to obtain $2k^2 < 2^{k+1}$.  We now note that since $k \geq 5$,
+\begin{align*}
+k^2 &\geq 5k \\
+k^2 &> 2k + k \\
+k^2 &> 2k + 1
+\end{align*}
+So $2k^2 > k^2 + (2k + 1)$ or $(k + 1)^2 < 2k^2$.  Since we already have $2k^2 < 2^{k+1}$, we can conclude that $(k + 1)^2 < 2^{k + 1}$.  This proves that if $P(k)$ is true, then $P(k + 1)$ is true and the inductive step has been established.
+
+
+\item For $1 \leq n \leq 6$, $n! < 3^n$.  For $n \in \N$ with $n \geq 7$, let $P(n)$ be $n! > 3^n$.  We then see that $P(7)$ is true since $7! = 5040$ and $3^7 = 2187$.
+
+\noindent
+For the inductive step, let $k \in \N$ with $k \geq 7$ and assume that $P(k)$ is true.    That is, assume that
+\setcounter{equation}{0}
+\begin{equation}
+k! > 3^k.
+\end{equation}
+We need to prove that $P(k + 1)$ is true or that $(k + 1)! > 3^{k+1}$.  So we multiply both sides of equation~(1) by $(k + 1)$ to obtain $(k + 1)! > (k + 1)\cdot 3^k$.  Since $(k + 1) > 3$, we can conclude that 
+$(k + 1) \cdot 3^k > 3^{k + 1}$ and hence, that $(k + 1)! > 3^{k+1}$.  This proves that if $P(k)$ is true, then $P(k + 1)$ is true, which proves the inductive step.
+
+
+
+
+
+\item \begin{enumerate} \setcounter{enumii}{2}
+\item For $n \geq 2$, $\left( {1 - \dfrac{1}{4}} \right)\left( {1 - \dfrac{1}{9}} \right)\left( {1 - \dfrac{1}{{16}}} \right) \cdots \left( {1 - \dfrac{1}{{n^2 }}} \right) = \dfrac{n+1}{2n}$.
+
+\item $P \left( n \right)$ is the predicate in Part~(c).  If $P \left( k \right)$ is true, then
+\[
+\left( {1 - \frac{1}{4}} \right)\left( {1 - \frac{1}{9}} \right)\left( {1 - \frac{1}{{16}}} \right) \cdots \left( {1 - \frac{1}{{k^2 }}} \right) = \frac{k+1}{2k}.
+\]
+We now multiply both sides of this equation by 
+$\left( 1 - \dfrac{1}{\left( k+1 \right)^2} \right)$, which gives
+\[
+\left( {1 - \frac{1}{4}} \right)\left( {1 - \frac{1}{9}} \right)\left( {1 - \frac{1}{{16}}} \right) \cdots \left( {1 - \frac{1}{{k^2 }}} \right) \left( 1 - \dfrac{1}{\left( k+1 \right)^2} \right) 
+\]
+\[
+\begin{aligned}
+  \ &= \frac{k+1}{2k} \left( 1 - \dfrac{1}{\left( k+1 \right)^2} \right) \\
+  \ &= \frac{k+1}{2k} \cdot \frac{k^2 + 2k}{ \left( k + 1 \right)^2} \\
+  \ &= \frac{k + 2}{2 \left( k + 1 \right)}. \\
+\end{aligned}
+\]
+Thus, if $P \left( k \right)$ is true, then $P \left( k +1  \right)$ is true.  
+\end{enumerate}
+
+
+
+\item The proposition is true.  Let $P \left( n \right)$ be, ``$8^n \mid \left( {4n} \right)!$.''  Then, $P \left( 0 \right)$ is true.  If $P \left( k \right)$ is true, then 
+$8^k \mid \left( {4k} \right)!$ and so there exists an integer $q$ such that
+\[
+\left( 4k \right)! = 8^kq.
+\]
+Multiply both sides of this equation by 
+$\left( 4k + 4\right) \left( 4k + 3 \right) \left( 4k + 2 \right) \left( 4k + 1 \right)$.  This gives
+\[
+\begin{aligned}
+\left( 4 \left( k + 1 \right) \right)! 
+  &= 8^kq \left( 4k + 4\right) \left( 4k + 3 \right) \left( 4k + 2 \right) \left( 4k + 1 \right) \\
+  &= 8^kq \left[ 4 \left( k + 1 \right) \left( 4k + 3 \right) \cdot 2 \left( 2k + 1 \right) \left( 4k + 1 \right) \right] \\
+  &= 8^{k+1} q \left( k + 1 \right) \left( 4k + 3 \right) \left( 2k + 1 \right) \left( 4k + 1 \right) \\
+\end{aligned}
+\]
+This implies that $8^{k+1}$ divides $\left( 4 \left( k + 1 \right) \right)!$. Hence, if 
+$P \left( k \right)$ is true, then $P \left( k + 1 \right)$ is true.
+
+
+\item \begin{enumerate}
+\item $\dfrac{{dy}}{{dx}} = \dfrac{1}{x}$,$\dfrac{{d^2 y}}{{dx^2 }} = -\dfrac{1}{x^2}$,
+$\dfrac{{d^3 y}}{{dx^3 }} = \dfrac{2}{x^3}$, and $\dfrac{{d^4 y}}{{dx^4 }} = -\dfrac{6}{x^4}$.
+
+\item $P \left( n \right)$ is 
+``$\dfrac{{d^n y}}{{dx^n }} = \left( -1 \right)^{n-1} \dfrac{ \left( n - 1 \right)!}{x^n}$.''
+
+If $\dfrac{{d^k y}}{{dx^k }} = \left( -1 \right)^{k-1} \dfrac{ \left( k - 1 \right)!}{x^k}$, then 
+\[
+\begin{aligned}
+\frac{{d^{(k+1)} y}}{{dx^{(k+1)} }} &= \frac{d}{dx} \left( \dfrac{{d^k y}}{{dx^k }} \right) \\
+  &= \frac{d}{dx} \left( ( -1 \right)^{k-1} \frac{ \left( k - 1 \right)!}{x^k} \\
+  &=  \left( -1 \right)^{k-1} \cdot \left( -k \right) \left( k - 1 \right)! x^{-k-1} \\
+  &=  \left( -1 \right)^k \frac{k!}{x^{k+1}}. \\
+\end{aligned}
+\]
+This proves that if $P \left( k \right)$ is true, then $P \left( k + 1 \right)$ is true.
+\end{enumerate}
+
+
+\item If $n$ is 4, 5, 7, 8, 9, or 10 or if $n \geq 12$, then there exist non-negative integers 
+$x$ and $y$ such that $n = 4x + 5y$.
+
+Let $P \left( n \right)$ be, ``There exist non-negative integers $x$ and $y$ such that 
+
+$n = 4x + 5y.$''  Verify that $P \left( 12 \right)$, $P \left( 13 \right)$, $P \left( 14 \right)$, $P \left( 15 \right)$, and $P \left( 16 \right)$ are true.  Now let $k \in \mathbb{N}$ with 
+$k \geq 16$ and assume that $P \left( 12 \right), P \left( 13 \right), \ldots, P \left( k \right)$ are true.  Then, $k - 4 \geq 12$ and hence $P \left( k - 4 \right)$ is true.  So, there exist non-negative integers $s$ and $t$ such that
+\[
+k - 4 = 4s + 5t.
+\]
+Then,
+\begin{align*}
+(k - 4) + 5 &= 4s + 5t + 5 \\
+     k + 1  &= 4s +5(t + 1)
+\end{align*}
+This shows that if $P \left( 12 \right), P \left( 13 \right), \ldots, P \left( k \right)$ are true, then  $P \left( k + 1 \right)$ is true.
+
+
+
+\item Let $P \left( n \right)$ be, ``$n$ can be written as the sum of at least two natural numbers, each of which is a 2 or a 3.''  $P \left( 4 \right)$, $P \left( 5 \right)$, and 
+$P \left( 6 \right)$ are true.
+
+Now let $k \in \mathbb{N}$ with $k \geq 6$.  Assume that $P \left( 4 \right), P \left( 5 \right), \ldots, P \left( k \right)$ are true.  Since
+\[
+k + 1 = \left( k - 2 \right) + 3,
+\]
+and $4 \leq k - 2 < k$, we see that $P \left( k - 2 \right)$ is true.  Hence, $ k - 2$ is a sum of at least 2 natural numbers, each of which is a 2 or a 3.  So, the displayed equation implies that $k + 1$ is a sum of at least 2 natural numbers, each of which is a 2 or a 3, and hence, 
+$P \left( k + 1 \right)$ is true.
+
+
+
+\item Let $P \left( n \right)$ be, ``$n$ can be written as the sum of at least two natural numbers, each of which is a 2 or a 5.''  $P \left( 6 \right)$, $P \left( 7 \right)$, 
+$P \left( 8 \right)$, $P \left( 9 \right)$ and $P \left( 10 \right)$ are true.
+
+Now let $k \in \mathbb{N}$ with $k \geq 10$.  Assume that $P \left( 6 \right), P \left( 7 \right), \ldots, P \left( k \right)$ are true.  Since
+\[
+k + 1 = \left( k - 4 \right) + 5,
+\]
+and $6 \leq k - 4 < k$, we see that $P \left( k - 4 \right)$ is true.  Hence, $ k - 4$ is a sum of at least 2 natural numbers, each of which is a 2 or a 5.  So, the displayed equation implies that $k + 1$ is a sum of at least 2 natural numbers, each of which is a 2 or a 5, and hence, 
+$P \left( k + 1 \right)$ is true.
+
+%\item If $n \geq 5$, then $n^2 < 2^n$.  Let $P \left( n \right)$ be, ``$n^2 < 2^n$.''  
+%$P \left( 5 \right)$ is true since $5^2 = 25$ and $2^5 = 32$.
+%
+%Let $k$ be a natural number greater than or equal to 5 and assume that $P \left( k \right)$ is true.  Then, $k^2 < 2^k$.  We must prove that $P \left( k + 1 \right)$ is true.  That is, we must prove that $\left( k + 1 \right)^2 < 2^{k + 1}$.  This is equivalent to proving
+%\[
+%k^2 + 2k + 1 < 2^{k+1}.
+%\]
+%Now, $k^2 < 2^k$ and hence, 
+%\[
+%\left( k + 1 \right)^2 = k^2 + 2k + 1 < 2^k + 2k + 1.
+%\]
+%In addition, since $k > 4$, $k^2 > 4k = 2k + 2k$.  
+%Also, since $k > 4$, we see that $2k + 2k > 2k + 2 \cdot 4 > 2k + 1$.  Hence, $k^2 > 2k + 2k$ and 
+%$2k + 2k > 2k + 1$.  Therefore, $k^2 > 2k + 1$ or $2k + 1 < k^2$.  Hence, we see that
+%\[
+%\begin{aligned}
+%\left( k + 1 \right)^2 &< 2^k + 2k + 1 \\
+%                      &< 2^k + 2^k.
+%\end{aligned}
+%\]
+%Since $2^k + 2^k = 2^{k+1}$, we conclude that $\left( k + 1 \right)^2 < 2^{k+1}$.  This proves that if $P \left( k \right)$ is true, then $P \left( k + 1 \right)$ is true.
+
+
+
+
+
+
+\item Let $x$ be a real number with $x > -1$.  Let $P \left( n \right)$ be 
+``$\left( 1 + x \right)^n > 1 + nx.$''  Verify that $P \left( 2 \right)$ is true.
+
+Let $k \in \mathbb{N}$ with $k \geq 2$ and assume that $P \left( k \right)$ is true.  Then,
+\[
+\left( 1 + x \right)^k > 1 + kx.
+\]
+Since $x > -1$, we see that $1 + x > 0$.  Hence, if we multiply both sides of the previous inequality by $1 + x$, we obtain:
+\[
+\begin{aligned}
+\left( 1 + x \right)^{k+1} &> \left( 1 + kx \right) \left( 1 + x \right) \\
+\left( 1 + x \right)^{k+1} &> 1 + kx + x + kx^2 \\
+\left( 1 + x \right)^{k+1} &> 1 + \left(k + 1 \right) x. \\
+\end{aligned}
+\]
+Hence, if $P \left( k \right)$ is true, then $P \left( k + 1 \right)$ is true.
+
+
+
+\item Let $P \left( m \right)$ be
+\[
+\left( {1 + \frac{1}{2}} \right)
+\left( {1 - \frac{1}{3}} \right)
+\left( {1 + \frac{1}{4}} \right) 
+\cdots 
+\left( {1 + \frac{{\left( { - 1} \right)^{2m+1} }}{2m+1}} \right) = 1.
+\]
+This is equivalent to
+\[
+\left( {1 + \frac{1}{2}} \right)
+\left( {1 - \frac{1}{3}} \right)
+\left( {1 + \frac{1}{4}} \right)
+\left( {1 - \frac{1}{5}} \right) 
+\cdots 
+\left( 1 + \frac{1}{2m} \right) \left( {1 - \frac{1}{2m+1}} \right) = 1.
+\]
+$P \left( 1 \right)$ is true since $\dfrac{3}{2} \cdot \dfrac{2}{3} = 1$.  Let $k \in \mathbb{N}$ assume that $P \left( k \right)$ is true.  Then
+\[
+\left( {1 + \frac{1}{2}} \right)
+\left( {1 - \frac{1}{3}} \right)
+\left( {1 + \frac{1}{4}} \right)
+\left( {1 - \frac{1}{5}} \right) 
+\cdots 
+\left( 1 + \frac{1}{2k} \right) \left( {1 - \frac{1}{2k+1}} \right) = 1.
+\]
+To see if $P \left( k + 1 \right)$ is true, we multiply both sides of the previous equation by
+\[
+\left(1 + \frac{1}{2k+2} \right) \left( 1 - \frac{1}{2k+3} \right).
+\]
+But notice that
+\[
+\begin{aligned}
+\left(1 + \frac{1}{2k+2} \right) \left( 1 - \frac{1}{2k+3} \right) &=
+\frac{2k+3}{2k+2} \cdot \frac{2k+2}{2k+3} \\
+&= 1. \\
+\end{aligned}
+\]
+Hence,
+\[
+\begin{aligned}
+\left( {1 + \frac{1}{2}} \right)
+\left( {1 - \frac{1}{3}} \right)
+\cdots 
+\left(1 + \frac{1}{2k+2} \right) \left( 1 - \frac{1}{2k+3} \right) &= 1 \cdot 1 \\
+ &= 1.
+\end{aligned}
+\]
+This proves that if $P \left( k \right)$ is true, then $P \left( k + 1 \right)$ is true.
+
+
+
+\item Let $P \left( n \right)$ be, ``Any set with $n$ elements has 
+$\dfrac{n \left( n - 1 \right)}{2}$ 2-element subsets.''  $P \left( 1 \right)$ is true since any set with only one element has no 2-element subsets.
+
+Let $k \in \mathbb{N}$ and assume that $P \left( k \right)$ is true.  This means that any set with $k$ elements has $\dfrac{k \left( k - 1 \right)}{2}$ 2-element subsets.  Now let $A$ be a set with 
+$k + 1$ elements, and let $x \in A$.  Then, the set $A - \left\{ x \right\}$ is a set with $k$ elements.  So, $A - \left\{ x \right\}$ has $\dfrac{k \left( k - 1 \right)}{2}$ 2-element subsets.  These are also 2-element subsets of $A$.  The other 2-element subsets of $A$ are of the form 
+$\left\{ x, y \right\}$ where $y \in A - \left\{ x \right\}$.  There are $k$ such 2-element subsets of $A$.  So, the total number of 2-element subsets of $A$ is
+\[
+\begin{aligned}
+\frac{k \left( k - 1 \right)}{2} + k &= \frac{k \left( k - 1 \right) +2k}{2} \\
+                                     &= \frac{ \left( k + 1 \right) k}{2}. \\
+\end{aligned}
+\]
+This proves that if $P \left( k \right)$ is true, then $P \left( k + 1 \right)$ is true.
+
+
+
+
+%
+
+
+\item \begin{enumerate}
+\item Let $P(n)$ be, $\dfrac{1}{1 \cdot 2} + \dfrac{1}{2 \cdot 3} + \cdots + \dfrac{1}{n (n + 1 )} = \dfrac{n}{n+1}$.  Verify that $P(1)$ is true.  Now let $k \in \N$ and assume that $P(k)$ is true.  That is, assume that
+\[
+\frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \cdots + \frac{1}{k (k + 1 )} = \frac{k}{k+1}.
+\]
+Then,
+\begin{align*}
+\frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \cdots + \frac{1}{k (k + 1 )} &+ \frac{1}{(k + 1)(k + 2)} \\
+ &=  \frac{k}{k+1} + \frac{1}{(k + 1)(k + 2)} \\
+ &= \frac{k(k + 2) + 1}{(k + 1)(k + 2)} \\
+ &= \frac{k^2 + 2k + 1}{(k + 1)(k + 2)} \\
+ &= \frac{(k + 1)^2}{(k + 1)(k + 2)} \\
+ &= \frac{k + 1}{k + 2}.
+\end{align*}
+This proves that if $P(k)$ is true, then $P(k + 1)$ is true.
+
+\item Use the result from Part~(a) as follows:
+\begin{align*}
+\frac{1}{3 \cdot 4} + \frac{1}{4 \cdot 5} + \cdots &+ \frac{1}{n (n + 1 )} \\
+&= \frac{1}{1 \cdot 2} + \frac{1}{3 \cdot 4} + \frac{1}{4 \cdot 5} + \cdots + \frac{1}{n (n + 1 )} - \frac{1}{1 \cdot 2} - \frac{1}{2 \cdot 3} \\
+  &= \frac{n}{n + 1} - \frac{1}{2} - \frac{1}{6} \\
+  &= \frac{n}{n + 1} - \frac{2}{3} \\
+  &= \frac{n - 2}{3n + 3}.
+\end{align*}
+
+\item Let $P(n)$ be $1 \cdot 2 + 2 \cdot 3 + 3 \cdot 4 + \cdots + n (n + 1 ) = \dfrac{n (n + 1 ) (n + 2 )}{3}$.  Verify that $P(1)$ is true.  Now let $k \in \N$ and assume that $P(k)$ is true.  That is, assume that
+\[
+1 \cdot 2 + 2 \cdot 3 + 3 \cdot 4 + \cdots + k (k + 1 ) = \dfrac{k (k + 1 ) (k + 2 )}{3}.
+\]
+For $P(k + 1)$, we add $(k + 1)(k + 2)$ to both sides of this equation.  This gives
+\begin{align*}
+1 \cdot 2 + 2 \cdot 3 + 3 \cdot 4 + \cdots &+ k (k + 1 ) + (k + 1)(k + 2) \\
+   &= \dfrac{k (k + 1 ) (k + 2 )}{3} + (k + 1)(k + 2) \\
+   &= \frac{k (k + 1 ) (k + 2 ) + 3(k + 1)(k + 2)}{3} \\
+   &= \frac{(k + 1)(k + 2)(k + 3)}{3}.
+\end{align*}
+This proves that if $P(k)$ is true, then $P(k + 1)$ is true.
+\end{enumerate}
+
+
+\item For each natural number $n$, we let $P(n)$ be, 
+``$\left( \dfrac{n^3}{3} + \dfrac{n^2}{2} + \dfrac{7n}{6} \right)$ is a natural number.''
+
+For the basis step, we let $n = 1$ and notice that
+\[
+\frac{1}{3} + \frac{1}{2} + \frac{7}{6} =2.
+\]
+For the inductive step, we let $k$ be a natural number and assume that $P(k)$ is true.  That is, we assume that
+\begin{center}
+$R = \left( \dfrac{k^3}{3} + \dfrac{k^2}{2} + \dfrac{7k}{6}  \right)$ is a natural number.
+\end{center}
+We now need to prove that $P(k+1)$ is true or that
+\begin{center}
+$S = \left( \dfrac{(k+1)^3}{3} + \dfrac{(k+1)^2}{2} + \dfrac{7(k+1)}{6} \right)$ is a natural number.
+\end{center}
+We will use algebra to expand and simplify the expression in $P(k+1)$.  This gives
+\begin{align*}
+S &= \dfrac{(k+1)^3}{3} + \dfrac{(k+1)^2}{2} + \dfrac{7(k+1)}{6} \\
+  &= \frac{k^3 + 3k^2 + 3k + 1}{3} + \frac{k^2 + 2k + 1}{2} + \frac{7k + 7}{6} \\
+  &= \left( \frac{k^3}{3} + \frac{k^2}{2} + \frac{7k}{6} \right) + \frac{6k^2 + 6k + 2 + 6k + 3 + 7}{6} \\
+  &= R + \left( k^2 + 2k + 2 \right).
+\end{align*}
+We have assumed that $R$ is an integer and we know that $\left( k^2 + 2k + 2 \right)$ is an integer.  So the last equation proves that $S$ is an integer.  This proves that if 
+$P(k)$ is true, then $P(k+1)$ is true and the inductive step has been established.  Therefore, by the Principle of Mathematical Induction, we conclude that for each natural number $n$, 
+$\left( \dfrac{n^3}{3} + \dfrac{n^2}{2} + \dfrac{7n}{6} \right)$ is an integer.
+
+
+
+
+\item For each natural number $n$, we let $P(n)$ be, 
+``$\left( \dfrac{n^5}{5} + \dfrac{n^4}{2} + \dfrac{n^3}{3} - \dfrac{n}{30} \right)$ is a natural number.''
+
+For the basis step, we let $n = 1$ and notice that
+\[
+\left( \dfrac{n^5}{5} + \dfrac{n^4}{2} + \dfrac{n^3}{3} - \dfrac{n}{30} \right) = \frac{1}{5} + \frac{1}{2} + \frac{1}{3} - \frac{1}{30} = 1.
+\]
+For the inductive step, we let $k$ be a natural number and assume that $P(k)$ is true.  That is, we assume that
+\begin{center}
+$R = \left( \dfrac{k^5}{5} + \dfrac{k^4}{2} + \dfrac{k^3}{3} - \dfrac{k}{30} \right)$ is a natural number.
+\end{center}
+We now need to prove that $P(k+1)$ is true or that
+\begin{center}
+$S = \left( \dfrac{(k+1)^5}{5} + \dfrac{(k+1)^4}{2} + \dfrac{(k+1)^3}{3} - \dfrac{k+1}{30} \right)$ is a natural number.
+\end{center}
+We will use algebra to expand and simplify the expression in $P(k+1)$.  This gives
+\begin{align*}
+S = \frac{k^5 + 5k^4 + 10k^3 + 10k^2 + 5k + 1}{5} &+ \frac{k^4 + 4k^3 + 6k^2 + 4k + 1}{2} \\
+&+ \frac{k^3 + 3k^2 + 3k + 1}{3} - \frac{k+1}{30}
+\end{align*}
+Doing more algebra yields the following:
+\begin{align*}
+S = \left( \frac{k^5}{5} + k^4 + 2k^3 + 2k^2 + k + \frac{1}{5} \right) &+ \left( \frac{k^4}{2} + 2k^3 + 3k^2 + 2k + \frac{1}{2} \right) \\
+ &+ \left( \frac{k^3}{3} + k^2 + k + \frac{1}{3} \right) - \frac{k}{30} - \frac{1}{30} \\
+\end{align*}
+We finally obtain
+\begin{align*}
+S &= \left( \frac{k^5}{5} + \frac{k}{2} + \frac{k^3}{3} - \frac{k}{30} \right) + \left( k^4 + 4k^3 + 6k^2 + 4k + 1 \right) \\
+&= R + \left( k^4 + 4k^3 + 6k^2 + 4k + 1 \right)
+\end{align*}
+We have assumed that $R$ is an integer and we know that $\left( k^4 + 4k^3 + 6k^2 + 4k + 1 \right)$ is an integer.  So the last equation proves that $S$ is an integer.  This proves that if 
+$P(k)$ is true, then $P(k+1)$ is true and the inductive step has been established.  Therefore, by the Principle of Mathematical Induction, we conclude that for each natural number $n$, 
+$\left( \dfrac{n^5}{5} + \dfrac{n^4}{2} + \dfrac{n^3}{3} - \dfrac{n}{30} \right)$ is an integer.
+
+
+
+
+
+
+\item \begin{enumerate}
+\item Let $n \in \N$.  If $n = 1$, then $n = 2^0 \cdot 1$.  If $n > 1$, then $n$ is a product of prime numbers.  If $n$ is odd, then $n$ is a product of odd prime numbers 
+$p_1$, $p_2$, \ldots, $p_r$.  So if $m = p_1 p_2 \cdots p_r$, then $n = 2^0 m$, and $m$ is odd.  If $n$ is even, then one (or more) of its prime factors must be 2.  This means that there is a natural number $k$ such that $2^k$ divides $n$ but $2^{k+1}$ does not divide 
+$n$.  Therefore, there exist odd prime numbers $p_1$, $p_2$, \ldots, $p_r$ such that 
+$n = 2^k p_1 p_2 \cdots p_r$.  So if $m = p_1 p_2 \cdots p_r$, then $n = 2^k m$, and $m$ is odd.
+
+\item Assume that $n = 2^k m$ and $n = 2^q p$ where $m$ and 
+$p$ are odd natural numbers and $k$ and $q$ are nonnegative integers.
+\begin{itemize}
+\item If $k < q$, then $2^k m = 2^q p$ implies that $m = 2^{q -k} p$.  This is a contradiction since the left side of the equation is an odd number and the right side is an even number.
+
+\item If $k > q$, then $2^k m = 2^q p$ implies that $2^{k-q}m = p$.  This is a contradiction since the left side of the equation is an even number and the right side is an odd number.
+\end{itemize}
+Therefore, $k = q$ and hence, $2^k m = 2^k p$ and this implies that $m = p$.
+\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection*{Evaluation of Proofs}
+\setcounter{oldenumi}{\theenumi}
+\begin{enumerate} \setcounter{enumi}{\theoldenumi}
+\item \begin{enumerate}
+\item This could be a very condensed version of an induction proof if it included a proof of the basis step.  However, to be complete, the predicate should be defined first, and it should be clear when the basis step is being proved and when the induction step is being proved.  Following is a well-written induction proof of this proposition.
+
+\setcounter{equation}{0}
+\begin{myproof}
+We will use a proof by mathematical induction.  So for each natural number $n$, we let
+\begin{center}
+$P(n)$ be ``$2^n > 1+n$.''
+\end{center}
+We first prove that $P(2)$ is true.  When $n = 2$, $2^n = 4$ and $1 + n = 3$.  Since $4 > 3$, we see that $P(2)$ is true.
+
+We now let $k$ be a natural number with $k \geq 2$ and assume that $P(k)$ is true.  That is, we assume that
+\begin{equation}
+2^k > 1 + k.
+\end{equation}
+The goal now is to prove that $P(k + 1)$ is true.  That is, we need to prove that
+\begin{equation}
+2^{k + 1} > 1 + (k + 1).
+\end{equation}
+To do this, we multiply both sides of inequality~(1) and obtain
+\begin{align*}
+2 \cdot 2^k &> 2(1 + k) \\
+  2^{k + 1} &> 2 + k \\
+  2^{k + 1} &> 1 + (k + 1).
+\end{align*}
+Comparing the last inequality to inequality~(2), we see we have proved that if $P(k)$ is true, then $P(k + 1)$ is true.  Hence, the inductive step has been established and by the Extended Principle of Mathematical Induction, we have proved that for all natural numbers $n$ with 
+$n \geq 2$, $2^n > 1 + n$.
+\end{myproof}
+
+\item This is a good proof of the proposition.  A few small improvements can be made.  First, in the inductive step, it would be nice to state that we need to prove that $P(k + 1)$ is true or that there exist nonnegative integers $u$ and $v$ such that $k + 1 = 2u + 5v$.  (Notice that $x$ and 
+$y$ were not used here.)  One technical point is that instead of saying that this proves that 
+$P(k + 1)$ is true, it is better to say that this proves that if $P(6 ), P (7 ), \ldots P (k )$ are true, then $P(k + 1)$ is true.
+
+\quarter
+\begin{myproof}
+We will use a proof by induction.  For each natural number $n$, we let $P( n )$ be, 
+``There exist nonnegative integers $x$ and $y$ such that $n = 2x + 5y$.''
+Since
+\begin{align} \notag
+6 &= 3 \cdot 2 + 0 \cdot 5  &  7 &= 2 + 5 \\ \notag
+8 &= 4 \cdot 2 + 0 \cdot 5  &  9 &= 2 \cdot 2 + 1 \cdot 5 \notag 
+\end{align}
+we see that $P(6 ), P(7 ), P(8 )$, and $P( 9 )$ are true.  
+
+We now suppose that for some natural number $k$ with $k \geq 10$ that 
+$P(6 ), P (7 ), \ldots P (k )$ are true.  We need to prove that $P(k + 1)$ is true or that there exist nonnegative integers $u$ and $v$ such that $k + 1 = 2u + 5v$.  Now
+\[
+k + 1 = \left(k - 4 \right) + 5.
+\]
+Since $k \geq 10$, we see that $k - 4 \geq 6$ and, hence, $P(k - 4 )$ is true.  So
+$k - 4 = 2x + 5y$ and, hence,
+\[
+\begin{aligned}
+k + 1 &= \left(2x + 5y \right) + 5 \\
+      &= 2x + 5 \left(y + 1 \right)\!.
+\end{aligned}
+\]
+This proves that if $P(6 ), P (7 ), \ldots P (k )$ are true, then $P(k + 1)$ is true, and hence, by the Second Principle of Mathematical Induction, we have proved that for each natural number $n$ with $n \geq 6$, there exist nonnegative integers $x$ and $y$ such that $n = 2x + 5y$.     
+\end{myproof}
+\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection*{Explorations and Activities}
+\setcounter{oldenumi}{\theenumi}
+\begin{enumerate} \setcounter{enumi}{\theoldenumi}
+\item \begin{enumerate}
+\item Draw a diagonal to divide the quadrilateral into two triangles.  Conclude that the sum of the angles of a convex quadrilateral is $360^\circ$.
+
+\item Draw a line between two vertices of the pentagon to divide it into a triangle and a quadrilateral.  Use this to conclude that the sum of the angles of a convex pentagon is 
+$540^\circ$.
+
+\item Draw a line between two vertices of the hexagon to divide it into a triangle and a pentagon.  Use this to conclude that the sum of the angles of a convex hexagon is 
+$720^\circ$.
+
+\item Let $P(n)$ be, ``The sum of the angles of a convex polygon with $n$ sides is 
+$(n - 2)180^\circ$.  The basis step is the theorem in Euclidean geometry for the sum of the angles of a triangle.  We have also established that $P(4)$, $P(5)$, and $P(6)$ are true.  For the inductive step, let $k \in \N$ with $k \geq 3$ and assume that $P(k)$ is true.
+
+Now consider a convex polygon with $(k + 1)$ sides.  Pick one of the vertices of this polygon and call its adjacent vertices $A$ and $B$.  If we draw a line segment between $A$ and $B$, we will divide this polygon into a triangle and a convex polygon with $k$ sides.  This means that the sum of the angles of this convex polygon with $(k + 1)$ sides is
+\[
+(k - 2)180^\circ + 180^\circ = (k - 1) 180^\circ,
+\]
+and this shows that if $P(k)$ is true, then $P(k + 1)$ is true.
+\end{enumerate}
+
+
+\item For the inductive step, the following trigonometric identities are useful:
+\begin{list}{}
+\item $\cos \left( \alpha + \beta \right) = \cos \alpha \cos \beta - \sin \alpha \sin \beta$.
+\item $\sin \left( \alpha + \beta \right) = \sin \alpha \cos \beta + \cos \alpha \sin \beta$.
+
+\end{list}
+If $\left[ {\cos x + i(\sin x)} \right]^k  = \cos (kx) + i\left( {\sin (kx)} \right)$, then
+\begin{align*}
+\left[ {\cos x + i(\sin x)} \right]^{k+1} &= \left[ {\cos x + i(\sin x)} \right]^k \left[ {\cos x + i \left(\sin x \right)} \right] \\
+  &= \left( \cos (kx) + i {\sin (kx)} \right) \left( \cos x + i \left(\sin x \right) \right) \\
+  &= \left( \cos \left( kx \right) \cos x - \sin \left( kx \right) \sin x \right) \\
+  &+ i \left( \sin \left( kx \right) \cos x + \cos \left( kx \right) \sin x \right)\\
+  &= \cos \left(kx + x \right) + i \sin \left( kx + x \right) \\
+  &= \cos \left( \left( k + 1 \right ) x \right) + i \sin \left( \left( k + 1 \right ) x \right)
+\end{align*}
+
+\end{enumerate}
+
+
+\hbreak
+\endinput

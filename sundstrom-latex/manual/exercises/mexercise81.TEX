@@ -1,0 +1,193 @@
+\section*{Section \ref{S:gcd} The Greatest Common Divisor}
+
+\begin{enumerate}
+\item \begin{multicols}{2}
+\begin{enumerate}
+\item $\gcd \left( {21, 28} \right) = 7$
+
+\item $\gcd \left( { - 21, 28} \right) = 7$
+
+\item $\gcd \left( {58, 63} \right) = 1$
+
+\item $\gcd \left( {0, 12} \right) = 12$
+
+\item $\gcd \left( {110, 215} \right) = 5$
+
+\item $\gcd \left( {110, -215} \right) = 12$
+\end{enumerate}
+\end{multicols}
+
+
+
+\item \begin{enumerate}
+\item If $k \mid a$ and $k \mid \left( a + 1 \right)$, then by a result in 
+Exercise~(\ref{exer:3truefalse}) in Section~\ref{S:directproof}, 
+$k \mid \left[ \left( a + 1 \right) - a \right]$.  Hence, $k \mid 1$.
+
+\item Let $d = \gcd \left( a, a + 1 \right)$.  Then, $d \mid a$ and 
+$d \mid \left( a + 1 \right)$.  Hence, $d \mid 1$ and so $d = 1$.
+\end{enumerate}
+
+
+
+\item \begin{enumerate}
+\item If $k \mid a$ and $k \mid \left( a + 2 \right)$, then by a result in 
+Exercise~(\ref{exer:3truefalse}) in Section~\ref{S:directproof}, 
+$k \mid \left[ \left( a + 2 \right) - a \right]$.  Hence, $k \mid 2$.
+
+\item Let $d = \gcd \left( a, a + 2 \right)$.  Then, $d \mid a$ and $d \mid \left( a + 2 \right)$.  Hence, $d \mid 2$ and so $d = 1$ or $d = 2$.  In addition, it can be shown that if $a$ is odd, then $d = 1$ and if $a$ is even, then $d = 2$.
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item If $b \in \mathbb{Z}$ and $b \ne 0$, then $\left| b \right|$ is the largest positive divisor of $b$.  Hence, $\gcd \left( 0, b \right) = \left|b \right|$.
+
+\item The integers $b$ and $-b$ have the same divisors.  Therefore, \\
+$\gcd \left( a, -b \right) = \gcd \left( a, b \right)$.
+\end{enumerate}
+
+
+
+\item \begin{enumerate}
+\item $\gcd \left( {36, 60} \right) = 12$, and 
+$12 = 36 \cdot 2 + 60 \cdot \left( { - 1} \right)$.
+
+\item $\gcd \left( {901, 935} \right) = 17$, and 
+$17 = 901 \cdot 27 + 935 \cdot \left( { - 26} \right)$.
+
+\item $\gcd \left( 72, 714 \right) = 6$, and  
+$6 = 72 \cdot 10 + 714 \cdot \left( -1 \right) $.
+
+\item $\gcd \left( 12628, 21361 \right) = 41$, and 
+$41 = 12628 \cdot 181 + 21361 \cdot \left( 107 \right)$.
+
+\item $\gcd \left( -36, -60 \right) = 12$, and  
+$12 = -36 \cdot (-2) + (-60) \cdot 1 $.
+
+\item $\gcd \left( 901, -935 \right) = 17$, and  
+$17 = 901 \cdot 27 + (-935) \cdot 26 $.
+\end{enumerate}
+
+
+
+\item \begin{enumerate}
+\item One possibility is $u = -3$ and $v = 2$.  In this case, $9u + 14v = 1$.  We then multiply both sides of this equation by 10 to obtain
+\[
+9 \cdot (-30) + 14 \cdot 20 = 10.
+\]
+So we can use $x = -30$ and $y = 20$.
+
+\item This is not possible.  If we could find such integers $x$ and $y$, we would then have 
+$9x + 15y = 10$.  However, 3 divides the left side of the equation and 3 does not divide 10.  This is a contradiction.
+
+\item First write $9 \cdot (-3) + 15 \cdot 2 = 3$.  Mutliply both sides of this equation by 1054 to obtain
+\[
+9 \cdot (-3162) + 15 \cdot 2108 = 3162.
+\]
+So we can use $x = -3162$ and $y = 2108$.
+\end{enumerate}
+
+
+
+
+\item \begin{enumerate}
+\item $11 \left( -3 \right) + 17 \cdot 2 = 1$.
+
+\item $\dfrac{m}{11} + \dfrac{n}{17} = \dfrac{17m + 11n}{187}$.
+
+\item Multiply both sides of the equation in Part~(a) to obtain \\
+$11 \left( -30 \right) + 17 \cdot 20 = 10$.  Then, divide both sides of this equation by 
+$11 \cdot 17 = 187$ to obtain
+\[
+\begin{aligned}
+\frac{11 \left( -30 \right) + 17 \cdot 20}{187} &= \frac{10}{187} \\
+                                                & \\
+                 \frac{-30}{17} + \frac{20}{11} &= \frac{10}{187}. \\
+\end{aligned}
+\]
+\end{enumerate}
+\end{enumerate}
+
+
+\subsection*{Explorations and Activities}
+\setcounter{oldenumi}{\theenumi}
+\begin{enumerate} \setcounter{enumi}{\theoldenumi}
+\item \begin{enumerate}
+\item The greatest common divisor of 12 and 20 is 4.
+
+\item $\gcd(20, 12) = 4 = 20\cdot (-1) + 12 \cdot 2$.
+
+\item Following are some liner combinations of 20 and 12. Notice that $\gcd(20, 12)$ divides each of these linear combinations.
+\begin{align*}
+20 \cdot 1 + 12 \cdot 1 &= 32  & 20 \cdot 2 + 12 \cdot 1 &= 52 \\
+20 \cdot 1 + 12 \cdot (-1) &= 8 & 20 \cdot 2 + 12 \cdot (-2) &= 16 \\
+20 \cdot (-2) + 12 \cdot 1 &= -28 & 20 \cdot (-2) + 12 \cdot 3 &= 4 \\
+20 \cdot 3 + 12 \cdot 2 &= 84  &  20 \cdot 3 + 12 \cdot (-5) &= 0
+\end{align*}
+
+\item The greatest common divisor of 21 and $-6$ is 3.  Following are some linear combinations of 21 and $-6$.  Notice that $\gcd(21, -6)$ divides each of these linear combinations.
+\begin{align*}
+21 \cdot 1 + (-6) \cdot 1 &= 15  & 21 \cdot 2 + (-6) \cdot 1 &= 36 \\
+21 \cdot 1 + (-6) \cdot (-1) &= 27 & 21 \cdot 2 + (-6) \cdot (-2) &= 54 \\
+21 \cdot (-2) + (-6) \cdot 1 &= -48 & 21 \cdot (-2) + (-6) \cdot 3 &= -60 \\
+21 \cdot 3 + (-6) \cdot 2 &= 51  &  21 \cdot 3 + (-6) \cdot (-5) &= 93
+\end{align*}
+
+\item \textbf{Proposition 4.15} \emph{Let $a$, $b$, and $t$ be integers with $t \ne 0$.  If $t$ divides $a$ and $t$ divides $b$, then for all integers $x$ and $y$, $t$ divides 
+$(ax + by)$}.
+
+\begin{myproof}
+Let $a$, $b$, and  $d$  be integers, and assume that $d$  divides  $a$  and  $d$  divides  $b$.  We will prove that for all integers  $x$  and  $y$,  $d$  divides  $ax + by$.
+
+So, let  $x \in \mathbb{Z}$ and let  $y \in Z$.  Since  $d$  divides  $a$ and $d$ divides $b$, there exist an integers  $m$ and $n$  such that
+\[
+a = md \qquad \text{ and } \qquad b = nd.
+\]
+We substitute the expressions for  $a$  and  $b$  given in these two equations into  $ax + by$.  This gives
+\[
+\begin{aligned}
+  ax + by &= \left( {md} \right)x + \left( {nd} \right)y \\ 
+          &= d\left( {mx + ny} \right). \\ 
+\end{aligned} 
+\]
+By the closure properties of the integers,  $mx + ny$ is an integer, and hence we may conclude that  $d$  divides  $ax + by$.  Since  $x$  and  $y$  were chosen as arbitrary integers, we have proven that if  $d$  divides  $a$  and  $d$  divides  $b$, then for all integers  $x$  and  $y$,  $d$  divides  $ax + by$.
+\end{myproof}
+
+\item \textbf{Proposition} \emph{Let $a$ and $b$ be integers, not both zero and let 
+$d = \gcd \left(a, b \right)$.  In addition, let $S$ and $T$ be the following sets:
+\[
+S = \left\{ ax + by \mid x, y \in \Z \right\} \qquad \text{and} \qquad 
+T = \left\{ kd \mid k \in \Z \right\}.
+\]
+That is, $S$ is the set of all linear combinations of $a$ and $b$, and $T$ is the set of all multiples of the greatest common divisor of $a$ and $b$.  Then $S = T$}.
+
+\begin{myproof}
+Let $a$ and $b$ be integers, not both zero and let 
+$d = \gcd \left(a, b \right)$.  In addition, let $S$ and $T$ be the following sets:
+\[
+S = \left\{ ax + by \mid x, y \in \Z \right\} \qquad \text{and} \qquad 
+T = \left\{ kd \mid k \in \Z \right\}.
+\]
+We will prove that $S = T$ by proving that each set is a subset of the other set. We first let $c \in S$ so that $c = ax + by$ for some integers $x$ and $y$.  By Proposition~4.15, we know that $d$ divides $c$.  So there exists an integer $q$ such that $c = qd$.  This proves that $c \in T$ and hence, $S$ is a subset of $T$. 
+
+
+We now note that by Theorem~\ref{T:gcdaslincomb}, $d$ is a linear combination of $a$ and $b$.  So, there exist integers $u$ and $v$ such that
+\[
+d = au + bv.
+\]
+Let $t \in T$.  So, there exists an integer $k$ such that $t = kd$.  We now use the fact that $d$ is a linear combination of $a$ and $b$ and write
+\begin{align*}
+t &= k \left( au + bv \right) \\
+  &= kau + kbv \\
+  &= a(ku) + b(kv)
+\end{align*}
+Since $ku$ and $kv$ are integers, this proves that $t \in S$ and hence, we have proven that $T$ is a subset of $S$.  Since we have proven that each set is a subset of the other, we have proven that $S = T$.
+\end{myproof}
+
+
+\end{enumerate}
+
+\end{enumerate}
+
+\hbreak
+\endinput

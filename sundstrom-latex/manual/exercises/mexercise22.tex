@@ -1,0 +1,356 @@
+\section*{Section \ref{S:logequiv} Logically Equivalent Statements}
+
+\begin{enumerate}
+\item \begin{enumerate}
+\item Converse:  If $a^2 = 25$, then $a = 5$.
+
+Contrapositive:  If $a^2 \ne 25$, then $a \ne 5$.
+\item Converse:  If Laura is playing golf, then it is not raining.
+
+Contrapositive:  If Laura is not playing golf, then it is raining.
+\item Converse:  If $a^4 \ne b^4$, then $a \ne b$.
+
+Contrapositive:  If $a^4 = b^4$, then $a = b$.
+\item Converse:  If $3a$ is an odd integer, then $a$ is an odd integer.
+
+Contrapositive:  If $3a$ is an even integer, then $a$ is an even integer.
+\end{enumerate}
+
+\item \begin{enumerate}
+\item Logically equivalent disjunction:  $a \ne 5$ or $a^2 = 25$.
+
+Negation:  $a = 5$ and $a^2 \ne 25$.
+\item Logically equivalent disjunction:  It is raining or Laura is playing golf.
+
+Negation:  It is not raining and Laura is not playing golf.
+\item Logically equivalent disjunction:  $a = b$ or $a^4 \ne b^4$.
+
+Negation:  $a \ne b$ and $a^4 = b^4$.
+\item Logically equivalent disjunction:  $a$ is an even integer or $3a$ is an odd integer.
+
+Negation:  $a$ is an odd integer and $3a$ is an even integer.
+\end{enumerate}
+
+\item \begin{enumerate}
+\item We will not win the first game or we will not win the second game.
+\item They will not lose the first game and they will not lose the second game.
+\item You mow the lawn and I will not pay you \$20.
+\item We do not win the first game and we will play a second game.
+\item I will not wash the car and I will not mow the lawn.
+\item You graduate from college, and you will not get a job and you will not go to graduate school.
+\item I play tennis, and I will  not wash the car and I will not do the dishes.
+\item Clean your room or do the dishes, and you cannot go to see a movie.
+\item It is not warm outside, or it does not rain and I will not play golf.
+\end{enumerate}
+
+\item $$ 
+\BeginTable
+    \BeginFormat
+    | c | c | c | c | c | c |
+    \EndFormat
+     \_6
+      | $P$ | $Q$ \|6 $P \leftrightarrow Q$ | $\left(P \to Q \right) \wedge \left(Q \to P\right)$ | $ Q \leftrightarrow P$ | $ \mynot P \leftrightarrow \mynot Q$ | \\+22 \_6
+      | T   |  T  \|6  T | T | T | T | \\ 
+      | T   |  F  \|6  F | F | F | F | \\ 
+      | F   |  T  \|6  F | F | F | F | \\ 
+      | F   |  F  \|6  T | T | T | T | \\ \_6
+ \EndTable
+ $$
+
+\item \begin{enumerate}
+\item $$
+\BeginTable
+\BeginFormat
+| c | c | c | c | c |
+\EndFormat
+\_6
+       | $P$  |  $Q$  |  $R$  \|6  $P \wedge (Q \vee R)$  |  $(P \wedge Q) \vee (P \wedge R)$  | \\+22 \_6
+          | T | T | T \|6 T | T | \\ 
+          | T | T | F \|6 T | T |  \\ 
+          | T | F | T \|6 T | T | \\ 
+          | T | F | F \|6 F | F | \\ 
+          | F | T | T \|6 F | F | \\ 
+          | F | T | F \|6 F | F | \\ 
+          | F | F | T \|6 F | F |  \\ 
+          | F | F | F \|6 F | F |  \\ \_6
+\EndTable
+$$
+\item $$
+\BeginTable
+\BeginFormat
+| c | c | c | c | c |
+\EndFormat
+\_6
+       | $P$  |  $Q$  |  $R$  \|6  $P \vee (Q \wedge R)$  |  $(P \vee Q) \wedge (P \vee R)$  | \\+22 \_6
+          | T | T | T \|6 T | T | \\ 
+          | T | T | F \|6 T | T |  \\ 
+          | T | F | T \|6 T | T | \\ 
+          | T | F | F \|6 T | T | \\ 
+          | F | T | T \|6 T | T | \\ 
+          | F | T | F \|6 F | F | \\ 
+          | F | F | T \|6 F | F |  \\ 
+          | F | F | F \|6 F | F |  \\ \_6
+\EndTable
+$$
+
+\end{enumerate}
+
+
+
+
+
+\item $$
+\BeginTable
+\BeginFormat
+| c | c | c | c | c | c | c |
+\EndFormat
+\_6
+       | $P$  |  $Q$  |  $R$  \|6  $\left( P \vee Q \right) \to R$  |  $P \to R$  | $Q \to R$ | $\left( P \to R \right) \wedge \left( Q \to R \right)$ | \\+22 \_6
+          | T | T | T \|6 T | T | T | T |\\ 
+          | T | T | F \|6 F | F | F | F | \\ 
+          | T | F | T \|6 T | T | T | T | \\\ 
+          | T | F | F \|6 F | F | T | F | \\ 
+          | F | T | T \|6 T | T | T | T |\\ 
+          | F | T | F \|6 F | T | F | F |\\ 
+          | F | F | T \|6 T | T | T | T | \\ 
+          | F | F | F \|6 T | T | T | T | \\ \_6
+\EndTable
+$$
+
+
+
+
+\item \begin{enumerate}
+\item In this case, it may be better to work with the right side first.
+\begin{align*}
+\left( {P \to R} \right) \vee \left( {Q \to R} \right) &\equiv 
+\left( \mynot P \vee R \right) \vee \left( \mynot Q \vee R \right) \\
+&\equiv 
+\left( \mynot P \vee \mynot Q \right) \vee \left( R \vee R \right) \\
+&\equiv
+\left( \mynot P \vee \mynot Q \right) \vee R \\
+&\equiv 
+\mynot \left( P \wedge Q \right) \vee R \\
+&\equiv \left( P \wedge Q \right) \to R
+\end{align*}
+
+\item In this case, we start with the left side.
+\begin{align*}
+\left[ P \to \left( Q \wedge R \right) \right] &\equiv \mynot P \vee \left( Q \wedge R \right) \\
+              &\equiv \left( \mynot P \wedge Q \right) \vee \left( \mynot P \wedge R \right) \\
+              &\equiv \left( P \to Q \right) \wedge \left( P \to R \right)
+\end{align*}
+\end{enumerate}
+
+\item It can be shown that the statements $(P  \vee Q) \wedge \mynot(P \wedge Q)$ and 
+$(P \wedge \mynot Q) \vee (Q \wedge \mynot P)$ have the same truth table and hence, are logically equivalent.  Previously proven logical equivalencies can also be used as follows:
+\begin{align*}
+(P  \vee Q) \wedge \mynot(P \wedge Q) &\equiv (P \vee Q) \wedge (\mynot P \vee \mynot Q) \\
+    &\equiv [P \wedge (\mynot P \vee \mynot Q)] \vee [Q \wedge (\mynot P \vee \mynot Q)] \\
+    &\equiv [(P \wedge \mynot P) \vee (P \wedge \mynot Q)] \vee [(Q \wedge \mynot P) \vee (Q \wedge \mynot Q)] \\
+    &\equiv (P \wedge \mynot Q) \vee (Q \wedge \mynot P)
+\end{align*}
+
+%\item \begin{enumerate}
+%\item \begin{tabular}[t]{| c | c | c || c | c | c | c |} \hline
+%$P$ & $Q$ & $R$ & $\left( P \wedge Q \right) \to R$ & $P \to R$ & $Q \to R$ &
+%$\left( P \to R \right) \vee \left( Q \to R \right)$ \\ \hline
+%
+%T & T & T & T & T & T & T \\ \hline
+%T & T & F & F & F & F & F \\ \hline
+%T & F & T & T & T & T & T \\ \hline
+%T & F & F & T & F & T & T \\ \hline
+%F & T & T & T &\ T & T & T \\ \hline
+%F & T & F & T & T & F & T \\ \hline
+%F & F & T & T & T & T & T \\ \hline
+%F & F & F & T & T & T & T \\ \hline
+%\end{tabular}
+%
+%\item \begin{tabular}[t]{| c | c | c || c | c |} \hline
+%$P$ & $Q$ & $R$ & $P \to \left( Q \wedge R \right)$ & 
+%$\left( P \to Q \right) \wedge \left( P \to R \right)$ \\ \hline
+%
+%T & T & T & T & T  \\ \hline
+%T & T & F & F & F  \\ \hline
+%T & F & T & F & F  \\ \hline
+%T & F & F & F & F  \\ \hline
+%F & T & T & T & T  \\ \hline
+%F & T & F & T & T  \\ \hline
+%F & F & T & T & T  \\ \hline
+%F & F & F & T & T  \\ \hline
+%\end{tabular}
+%\end{enumerate}
+
+%\item \begin{tabular}[t]{| c | c || c | c | c |} \hline
+%$P$ & $Q$ & $\mynot P$ & $ Q \wedge \mynot Q$ & $\mynot P \to \left( Q \wedge \mynot Q \right)$ \\ \hline
+%T & T & F & F & T \\ \hline
+%T & F & F & F & T \\ \hline
+%F & T & T & F & F \\ \hline
+%F & F & T & F & F \\ \hline
+%\end{tabular}
+
+\item \begin{enumerate}
+\item The statement $\left( Q \wedge \mynot Q \right)$ is a contradiction, which we label as 
+$C$. So,
+\begin{align*}
+\mynot P \to \left( Q \wedge \mynot Q \right) &\equiv \mynot P \to C \\
+               &\equiv \mynot \left( \mynot P \right) \vee C \\
+               &\equiv P \vee C \\
+               &\equiv P
+\end{align*}
+
+\item \begin{align*}
+\left( P \leftrightarrow Q \right) &\equiv \left( P \to Q \right) \wedge \left( Q \to P \right) \\
+            &\equiv \left( \mynot P \vee Q \right) \wedge \left( \mynot Q \vee P \right)
+\end{align*}
+
+\item Using Part~(b), 
+\begin{align*}
+\mynot \left( P \leftrightarrow Q \right) &\equiv \mynot \left[ \left( \mynot P \vee Q \right) \wedge \left( \mynot Q \vee P \right) \right] \\
+   &\equiv \mynot \left( \mynot P \vee Q \right) \vee \mynot \left( \mynot Q \vee P \right) \\
+   &\equiv (P \wedge \mynot Q) \vee (Q \wedge \mynot P)
+\end{align*}
+
+
+\item \begin{align*}
+\left(P \to Q \right) \to R &\equiv \left( \mynot P \vee Q \right) \to R \\
+                     &\equiv \mynot \left( \mynot P \vee Q \right) \vee R \\
+                     &\equiv \left( P \wedge \mynot Q \right) \vee R
+\end{align*}
+
+
+\item \begin{align*}
+\left( P \to Q \right) \to R &\equiv \left( \mynot P \vee Q \right) \to R \\
+           &\equiv \mynot \left( \mynot P \vee Q \right) \vee R \\
+           &\equiv \left( P \wedge \mynot Q \right) \vee R \\
+           &\equiv \left( P \vee R \right) \wedge \left( \mynot Q \vee R \right) \\
+           &\equiv \left( \mynot P \to R \right) \wedge \left( Q \to R \right)
+\end{align*}
+
+\item \begin{align*}
+\left[ \left( P \wedge Q \right) \to \left( R \vee S \right) \right] &\equiv 
+\left[ \mynot \left( R \vee S \right) \to \mynot \left( P \wedge Q \right) \right] \\
+&\equiv \left[ \left( \mynot R \wedge \mynot S \right) \to \left( \mynot P \vee \mynot Q \right) \right] \\
+\end{align*}
+
+\item \begin{align*}
+\left[ \left( P \wedge Q \right) \to \left( R \vee S \right) \right] &\equiv 
+\left[ \left( P \wedge Q \right) \wedge \mynot R  \to S \right] \\
+&\equiv \left[ \left( P \wedge Q \wedge \mynot R \right) \to S \right]
+\end{align*}
+
+\item \begin{align*}
+\left[ \left( P \wedge Q \right) \to \left( R \vee S \right) \right] &\equiv 
+[\mynot(P \wedge Q) \vee (R \vee S)] \\
+&\equiv [(\mynot P \vee \mynot Q) \vee (R \vee S)] \\
+&\equiv (\mynot P \vee \mynot Q \vee R \vee S)
+\end{align*}
+
+\item \begin{align*}
+\mynot \left[ \left( P \wedge Q \right) \to \left( R \vee S \right) \right] &\equiv 
+[(P \wedge Q) \wedge \mynot (R \vee S)] \\
+&\equiv [(P \wedge Q) \wedge (\mynot R \wedge \mynot S)] \\
+&\equiv (P \wedge Q \wedge \mynot R \wedge \mynot S)
+\end{align*}
+
+\end{enumerate}
+
+
+\item The given statement is of the form $P \to Q$.
+\begin{enumerate}
+\item This statement is $Q \to P$.  It is not equivalent to the given statement and it is not the negation of it.  It is the converse of the given statement.
+
+\item This statement is $\mynot P \to \mynot Q$.  It is not equivalent to the given statement, and it is not its negation.
+
+\item This statement is $\mynot Q \to \mynot P$.  It is the contrapositive of the given statement, and hence is equivalent to it.
+
+\item This statement is $\mynot P \vee Q$.  It is equivalent to the given statement.
+
+\item This statement is $\mynot Q \vee P$.  It is not equivalent to the given statement, and it is not its negation.
+
+\item This statement is $P \wedge \mynot Q$.  It is the negation of the given statement.
+\end{enumerate}
+
+\item The given statement is of the form $P \to \left( Q \vee R \right)$.
+
+\begin{enumerate}
+\item This statement is $\left( Q \vee R \right) \to P$.  It is not equivalent to the given statement and it is not the negation of it.  It is the converse of the given statement.
+
+\item This statement is $\left( \mynot Q \vee \mynot R \right) \to \mynot P$.  It is not equivalent to the given statement, and it is not its negation.
+
+\item This statement is $P \wedge \left( \mynot Q \wedge \mynot R \right)$.  It is the negation of the given statement.
+
+\item This statement is $\left( \mynot Q \wedge \mynot R \right) \to \mynot P$.  It is the contrapositive of the given statement and hence is equivalent to it.
+
+\item This statement is $\mynot P \vee \left( Q \vee R \right)$.  It is equivalent to the given statement.
+
+\item This statement is $\left( P \wedge \mynot R \right) \to Q$.  It is equivalent to the given statement.
+
+\item This statement is $\left( P \vee \mynot Q \right) \to R$.  It is not equivalent to the given statement, and it is not its negation.
+\end{enumerate}
+
+
+\item The given statement is of the form $P \to \left( Q \vee R \right)$.
+\begin{enumerate}
+\item This statement is $\left( \mynot Q \wedge \mynot R \right) \to \mynot P$.  It is the contrapositive of the given statement and hence is equivalent to it.
+
+\item This statement is $\left( Q \vee R \right) \to P$.  It is not equivalent to the given statement and it is not the negation of it.  It is the converse of the given statement.
+
+\item This statement is $\left( \mynot Q \vee \mynot R \right) \to \mynot P$.  It is not equivalent to the given statement, and it is not its negation.
+
+\item This statement is $\left( P \wedge \mynot Q \right) \to R$.  It is equivalent to the given statement.
+
+\item This statement is $\left( P \vee \mynot Q \right) \to R$.  It is not equivalent to the given statement and it is not the negation of it.
+
+\item This statement is $P \wedge \mynot Q \wedge \mynot R$.  It is the negation of the given statement.
+
+\item This statement is $\mynot P \vee \left( Q \vee R \right)$.  It is equivalent to the given statement.
+\end{enumerate}
+\end{enumerate}
+
+
+\subsection*{Explorations and Activities}
+\setcounter{oldenumi}{\theenumi}
+\begin{enumerate} \setcounter{enumi}{\theoldenumi}
+\item Suppose we are trying to prove the following for integers  $x$  and  $y$:
+
+\begin{center}
+If  $x \cdot y$  is even then  $x$  is  even  or  $y$  is even.
+\end{center}
+
+\begin{enumerate}
+%\item By letting  $P$  be the statement, ``$x \cdot y$ is even'', $Q$ be the statement, 
+%``$x$  is even'', and  $R$  be the statement, ``$y$  is even'', we can write this statement in the symbolic form:
+%\[
+%P \to \left( {Q \vee R} \right).
+%\]
+
+\item The contrapositive of  $P \to \left( {Q \vee R} \right)$ can be written as  
+$\mynot  \left( {Q \vee R} \right) \to \mynot  P$.  We can use one of De Morgan's Laws to rewrite the hypothesis of this conditional statement and obtain the following logical equivalency:
+
+\[
+\mynot  \left( {Q \vee R} \right) \to \mynot  P \equiv \left( {\mynot  Q \wedge \mynot  R} \right) \to \mynot  P.
+\]
+
+This shows that
+\[
+P \to \left( {Q \vee R} \right) \equiv \left( {\mynot  Q \wedge \mynot  R} \right) \to \mynot  P.
+\]
+
+\item Using the notation from Part (1),  $\mynot  P$ is, ``$x \cdot y$  is odd'',  
+$\mynot  Q$  is, ``$x$  is odd'', and  $\mynot  R$  is, `$y$ is odd.''  So the logical equivalency in Part (2) tells us that  the given statement is logically equivalent to the following statement:
+
+\begin{center}
+If  $x$  is  odd and  $y$  is odd, then  $x \cdot y$  is odd.
+\end{center}
+\end{enumerate}
+
+The statements in this activity are logically equivalent.  We now have the choice of proving either of the bulleted statements.  If we prove one, we prove the other, or if we show one is false, the other is also false.
+
+We have proven the second statement in Section~\ref{S:direct}.  See Theorem~\ref{T:xyodd}.
+
+
+\end{enumerate}
+
+\hbreak
+\endinput

@@ -1,0 +1,424 @@
+\section*{Section \ref{S:directproof}  Direct Proofs}
+
+\begin{enumerate}
+\item  \begin{enumerate}
+\item Since $a \mid b$ and $a \mid c$, there exist integers $m$ and $n$ such that $b = am$ and $c = an$.  Hence,
+\begin{align*}
+b - c &= am - an \\
+      &= a(m - n)
+\end{align*}
+Since $m - n$ is an integer (by the closure properties of the integers), the last equation implies that $a$ divides $b - c$.
+
+\item Since $n$ is an odd integer, there exists an integer $k$ such that $n = 2k + 1$.  Then
+\begin{align*}
+n^3 &= (2k + 1)^3 \\
+    &= 8k^3 + 12k^2 + 6k + 1 \\
+    &= 2\left( 4k^3 + 6k^2 + 3k \right) + 1
+\end{align*}
+From the closure properties of the integers, we conclude that $\left( 4k^3 + 6k^2 + 3k \right)$ is an integer and so the last equation implies that $n^3$ is an odd integer.
+
+\item We assume $a$ is an integer and that 4 divides $(a - 1)$.  Hence, there exists an integer $m$ such that $a - 1 = 4m$ or $a = 4m + 1$.  We then see that
+\begin{align*}
+a^2 - 1 &= (4m + 1)^2 - 1 \\
+        &= 16m^2 + 8m + 1 - 1 \\
+        &= 4 \left( 4m^2 + 2m \right)
+\end{align*}
+Since the integers are closed under addition and multiplication, we conclude that  $\left( 4m^2 + 2m \right)$ is an integer.  Hence, the last equation implies that 4 divides $\left( a^2 - 1 \right)$.
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item The natural number 9 is a counterexample.
+\item The natural number 5 is a counterexample.  With $n = 5$, $\left( 3 \cdot 2^5 + 2 \cdot 3^5 + 1 \right) = 583$ and $583 = 11 \cdot 53$.
+\item A counterexample is $x = 0$ and $y = 0$.  With these values $\sqrt{x^2 + y^2} = 0$ and $2xy = 0$.
+\item The integer 3 is a counterexample.  Using $a = 3$, $a^2 - 1 = 8$ and $a - 1 = 2$.  The integer 4 divides 8 but 4 does not divide 2.
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item If $a \mid b$, then there exists an integer $m$ such that $b = am$.  Then, \\
+$bc = \left( am \right)c = a \left( mc \right)$ and hence, $a \mid \left( bc \right)$.
+
+\item The statement is false.  One counterexample is $b = 3$ and $c = 4$.
+
+\item Since $a$ divides $(b - 1)$ and $a$ divides $(c - 1)$, there exist integers $m$ and $n$ such that $b - 1 = am$ and $c - 1 = an$.  So $b = 1 + am$ and $c = 1 + an$.  We then see that
+\begin{align*}
+bc - 1 &= (1 + am)(1 + an) - 1 \\
+       &= (1 + am + an + a^2 mn) - 1 \\
+       &= a(m + n + amn)
+\end{align*}
+Since $(m + n + amn)$ is an integer, this proves that $a$ divides $(bc - 1)$.
+
+\item This statement is false.  One counterexample is $n = 5$.  With this value, $n^2 - 1 = 21$ and 7 divides 21.  However, $n - 2 = 3$ and 7 does not divide 3.
+
+\item This statement is false.  One counterexample is $n = 0$.  Actually, any even integer will be a counterexample.
+
+\item If $n$ is odd, then there exists an integer $m$ such that $n = 2m + 1$, and
+\begin{align*}
+4n^2 + 7n + 6 &= 6m^2 + 30m + 17 \\
+              &= 2 \left( 3m^2 + 15m + 8 \right) + 1.
+\end{align*}
+So $4n^2 + 7n + 6$ is an odd integer.
+
+\item The statement is false.  One counterexample is $d = 2$, $a = 5$, and $b = 3$.
+
+\item This statement is false.  One counterexample is $a = 6$, $b = 3$, and $c = 4$.
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item The only divisors of 1 are 1 and $-1$.
+\item If $a \mid b$ and $b \mid a$, then there exist integers $m$ and $n$ such that 
+$b = am$ and $a = bn$.  Substituting for $a$ gives $b = \left( bn \right) m$.  Since $b \ne 0$, this implies that $1 = nm$.  But then $n = \pm 1$ and hence, $a = \pm b$.
+\end{enumerate}
+
+
+\item If $a \mid ( 4n + 3 )$ and $a \mid ( 2n + 1 )$, then there exist integers $m$ and $q$ such that
+\[
+4n + 3 = am \qquad \text{and} \qquad 2n + 1 = aq.
+\]
+Multiplying the second equation by 2 yields $4n + 2 = 2aq$.  If we subtract this from the first equation, we obtain $1 = a ( m - 2q )$.  This implies that $a \mid 1$ and hence, 
+$a = \pm 1$.
+
+
+\item \begin{enumerate}
+\item If $a \mid ( 8n + 7 )$ and $a \mid ( 4n + 1 )$, then there exist integers $m$ and $q$ such that
+\[
+8n + 7 = am \qquad \text{and} \qquad 4n + 1 = aq.
+\]
+Multiplying both sides of the second equation by 2 yields $8n + 2 = 2aq$.  If we subtract the sides of this from the corresponding sides of the first equation, we obtain $5 = a ( m - 2q )$.  This implies that $a$ divides 5. 
+
+\item If $a \mid ( 9n + 5 )$ and $a \mid ( 6n + 1 )$, then there exist integers $m$ and $q$ such that
+\[
+9n + 5 = am \qquad \text{and} \qquad 6n + 1 = aq.
+\]
+If we multiply both sides of the first equation by 2 and multiply both sides of the second equation by 3, we obtain
+\[
+18n + 10 = 2am \qquad \text{and} \qquad 18n + 3 = 3aq.
+\]
+If we now subtract the corresponding sides of these two equations, we obtain $7 = 2am - 3 aq$ or 
+$7 = a(2m - 3q)$.  This implies that $a$ divides 7. 
+
+\item Since $n$ is odd, there exists an integer $k$ such that $n = 2k + 1$.  We substitute and use algebra to obtain
+\begin{align*}
+n^4 + 4n^2 + 11 &= (2k + 1)^4 + 4(2k + 1)^2 + 11 \\
+                &= 16k^4 + 32k^3 + 40k^2 + 24k + 16 \\
+                &= 8 \left( 2k^4 + 4k^3 + 5k^2 + 3k + 2 \right)
+\end{align*}
+This proves that 8 divides $\left( n^4 + 4n^2 + 11 \right)$.
+
+\item This statement is false.  A counterexample is $n = 1$.
+\end{enumerate}
+
+
+
+\item \begin{enumerate}
+\item If $a \equiv 0 \pmod n$, then $n \mid \left( a - 0 \right)$, or $n \mid a$.
+\item If $n \mid a$, then $n \mid \left( a - 0 \right)$ and hence, $a \equiv 0 \pmod n$.
+\end{enumerate}
+
+
+
+\item Assuming that $a$ and $b$ are both congruent to 2 modulo 3, there exist integers $m$ and $n$ such that $a = 3m + 2$ and $b = 3n + 2$.  Then,
+\begin{align*}
+a + b &= (3m + 2) + (3n + 2) \\
+      &= 3m + 3n + 3 + 1 \\
+      &= 3(m + n + 1) + 1
+\end{align*}
+and this proves that $a + b \equiv 1 \pmod 3$.  Also,
+\begin{align*}
+ab &= (3m + 2)(3n + 2) \\
+   &= 9mn + 6m + 6n + 4 \\
+   &= 3(3mn + 2m + 2n + 1 ) + 1
+\end{align*}
+and this proves that $ab \equiv 1 \pmod 3$.
+
+
+
+\item Assuming that $a \equiv 7 \pmod 8$ and $b \equiv 3 \pmod 8$, there exist integers $m$ and $n$ such that $a = 8m + 7$ and $b = 8n + 3$.  Then,
+\begin{align*}
+a + b &= (8m + 7) + (8n + 3) \\
+      &= 8m + 8n + 8 + 2 \\
+      &= 8(m + n + 1) + 2
+\end{align*}
+and this proves that $a + b \equiv 2 \pmod 8$.  Also,
+\begin{align*}
+ab &= (8m + 7)(8n + 3) \\
+   &= 64mn + 24m + 56n + 21 \\
+   &= 8(8mn + 3m + 7n + 2) + 5
+\end{align*}
+and this proves that $ab \equiv 5 \pmod 8$.
+
+
+
+\item \begin{enumerate}
+\item This statement is false.  A counterexample is $a = 3$ and $b = 2$.  With these values 
+$\mod{ab}{0}{6}$ and $a \not \equiv 0 \pmod 6$  and $b \not \equiv 0 \pmod 6$.
+
+
+\item Assuming $\mod{a}{2}{8}$, we know that 8 divides $a - 2$ and hence, there exists an integer $m$ such that $a - 2 = 8m$.  So $a = 2 + 8m$ and
+\begin{align*}
+a^2 - 4 &= (2 + 8m)^2 - 4 \\
+        &= 32m + 64m^2 \\
+        &= 8 \left( 4m + 8m^2 \right)
+\end{align*}
+This proves that 8 divides $\left( a^2 - 4 \right)$ and hence, $\mod{a^2}{4}{8}$.
+
+
+\item This statement is false.  Notice that if $a = 6$, then $a^2 = 36$ and $\mod{36}{4}{8}$.  However, 
+$6 \not \equiv 2 \pmod 8$, and so $a = 6$ is a counterexample.
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item Since $a - a = 0$ and $n$ divides 0, $\mod{a}{a}{n}$.
+
+\item If  $a \equiv b \pmod n$,  then  $n \mid ( a - b )$.  Hence, there exists an integer $k$ such that $a - b = nk$.  Then, $b - a = n ( -k )$ and $b \equiv a \pmod n$.
+
+\item If $a \equiv b \pmod n$ and $b \equiv b \pmod n$,  then  $n \mid ( a - b )$ and $n \mid (b - c)$.  Hence, there exists an integer $k$ such that $a - b = nk$ and there exists an integer $m$ such that 
+$b - c = nm$.  If we add the corresponding sides of these two equations, we obtain
+\begin{align*}
+(a - b) + (b - c) &= nk + nm \\
+          (a - c) &= n(k + m)
+\end{align*}
+Since $(k + m)$ is an integer, the last equation shows that $n$ divides $(a - c)$ and hence, $\mod{a}{c}{b}$.
+\end{enumerate}
+
+
+\item If $a \equiv b \pmod n$ and $c \equiv d \pmod n$, then $n \mid \left( a - b \right)$ and 
+$n \mid \left( c - d \right)$.  Hence, there exist integers $m$ and $q$ such that 
+$a - b = nm$ and $c - d = nq$.  Solving for $a$ and $c$, we obtain
+\[
+a = b + nm \qquad \text{and} \qquad c = d + nq.
+\]
+\begin{enumerate}
+\item So, $a + c = \left( b + nm \right) + \left( d + nq \right)$.  This implies that
+\[
+\left( a + c \right) - \left( b + d \right) = n \left( m + q \right),
+\]
+and hence, $\left( a + c \right) \equiv \left( b + d \right) \pmod n$.
+
+\item Also, $ac = \left( b + nm \right) \left( d + nq \right)$.  This implies that
+\[
+ac - bd = n \left( bq + dm + mnq \right),
+\]
+and hence, $ac \equiv bd \pmod n$.
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item The quadratic formula gives the solutions for the quadratic equation $ax^2 + bx + c = 0$ and is
+\[
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.
+\]
+The discriminant is $b^2 - 4ac$.
+\begin{itemize}
+  \item If $b^2 - 4ac > 0$, then the quadratic equation has two real number solutions.
+  \item If $b^2 - 4ac = 0$, then the quadartic equation has one real number solution.
+  \item if $b^2 - 4ac < 0$, then the quadratic equation has no real number solutions.
+\end{itemize}
+
+\item If $a > 0$ and $c < 0$, then $-4ac > 0$ and hence, $b^2 - 4ac > 0$.  Therefore, the discriminant is positive and the quadratic equation has two real number solutions.  Since $-4ac > 0$, we also see that
+\[
+b^2 - 4ac > b^2.
+\]
+From this, we conclude that $\sqrt{b^2 - 4ac} > \sqrt{b^2}$ and so, $\sqrt{b^2 - 4ac} > b$ and hence, 
+$-b + \sqrt{b^2 - 4ac} > 0$.  In addition $a > 0$ and so the solution $\dfrac{-b + \sqrt{b^2 - 4ac}}{2a}$ is a positive real number.
+
+\item If $a \ne 0$, $b > 0$, and $\dfrac{b}{2} < \sqrt{ac}$, then $\dfrac{b^2}{4} < ac$ and hence, $b^2 < 4ac$.  This implies that $b^2 - 4ac < 0$ and so the quadrtic equation has no real number solutions.
+\end{enumerate}
+
+
+\item If $(a, b)$ is on or inside the circle $(x - 1)^2 + (y - 2)^2 = 4$, then we know that 
+$(a - 1)^2 + (b - 2)^2 \leq 4$, and so 
+\[
+(a - 1)^2 \leq 4 \qquad \text{and} \qquad (b - 2)^2 \leq 4.  
+\]
+This two inequalities imply that
+\[
+-2 \leq a - 1 \leq 2 \qquad \text{and} \qquad -2 \leq b - 2 \leq 4.
+\]
+We can then conclude that $-1 \leq a \leq 3$ and $0 \leq b \leq 4$.  We can now rewrite the inequality $(a - 1)^2 + (b - 2)^2 \leq 4$ as follows:
+\begin{align*}
+(a^2 - 2a + 1) + (b^2 - 4b + 4) &\leq 4 \\
+a^2 + b^2 &\leq -1 + 2a + 4b \\
+a^2 + b^2 &\leq -1 + 2(3) + 4(4) \\
+a^2 + b^2 &\leq 21.
+\end{align*}
+This implies that $a^2 + b^2 < 26$ and hence, $(a, b)$ is inside the circle $x^2 + y^2 = 26$.
+
+
+
+
+\item With $x^2 + y^2 = r^2$, we have the following:
+\begin{enumerate}
+\item $2x + 2y \dfrac{dy}{dx} = 0$.  Solving for $\dfrac{dy}{dx}$ gives 
+$\dfrac{dy}{dx} = -\dfrac{x}{y}$.
+
+\item If $(a, b)$ is on the circle, the slope of the line tangent to the circle at $(a, b)$ is 
+$-\dfrac{a}{b}$.
+
+\item The slope of the radius from the origin to the point $(a, b)$ is $\dfrac{b}{a}$.  So the product of this slope with the slope of the tangent line in~(b) is $-1$.  This means that the radius is perpendicular to the line tangent to the circle.
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item This statement is false.  One counterexample is $x = -1$ and $y = -1$.
+
+\item Let $x, y \in \R$.  We start with the fact that $(x - y)^2 \geq 0$.  We then have 
+$0 \leq x^2 - 2xy + y^2$.  We now add $4xy$ to both sides of this inequality.  This gives
+\begin{align*}
+4xy &\leq x^2 + 2xy + y^2 \\
+ xy &\leq \frac{(x + y)^2}{4} \\
+ xy &\leq \left( \frac{x + y}{2} \right)^2.
+\end{align*}
+
+\item Let $x$ and $y$ be nonnegative real numbers.  We can use the result in Part~(b) to prove this result.  Since $xy \geq 0$ and $\dfrac{x+y}{2} \geq 0$, we can take the square root of both sides of the inequality in Part~(b) to obtain
+\[
+\sqrt{xy} \leq \frac{x + y}{2}.
+\]
+\end{enumerate}
+
+
+\item Let $a$ be a real number and let $y = x(a - x)$.  When $x = \dfrac{a}{2}$, we see that $y = \dfrac{a^2}{4}$.  Now for any real number $x$, we can use the result in Part~(b) of Exercise~(16) to see that
+\begin{align*}
+x(a - x) &\leq \left( \frac{x + (a - x)}{2} \right)^2 \\
+x(a - x) &\leq \left( \frac{a}{2} \right)^2 \\
+x(a - x) &\leq \frac{a^2}{4}
+\end{align*}
+This shows that the maximum value for $y = x(a - x)$ occurs when $x = \dfrac{a}{2}$.
+
+
+\item \begin{enumerate} \setcounter{enumii}{1}
+\item The area of the right triangle is $\dfrac{1}{2}xh$.  Using the Pythagorean Theorem, we see that $h^2 + \dfrac{x^2}{4} = x^2$ and this implies that $h^2 = \dfrac{3}{4} x^2$.  Since $h$ and $x$ are positive, $h = \dfrac{\sqrt{3}}{2} x$, and so the area of the right triangle is
+\[
+\frac{1}{2}xh = \frac{\sqrt{3}}{4}x^2.
+\]
+
+\item The area of the equilateral triangle on the hypotenuse is $\dfrac{\sqrt{3}}{4}c^2$ and by the Pythagorean Theorem $c^2 = a^2 + b^2$.  Therefore,
+\begin{align*}
+\frac{\sqrt{3}}{4}c^2 &= \frac{\sqrt{3}}{4}(a^2 + b^2) \\
+                      &= \frac{\sqrt{3}}{4}a^2 + \frac{\sqrt{3}}{4}b^2
+\end{align*}
+This shows that the area of the equilateral triangle on the hypotenuse is equal to the sum of the areas of the equilateral triangles on the other two sides.
+\end{enumerate}
+\end{enumerate}
+
+
+
+\subsection*{Evaluation of Proofs}
+\setcounter{oldenumi}{\theenumi}
+\begin{enumerate} \setcounter{enumi}{\theoldenumi}
+\item \begin{enumerate}
+\item This proof is not well-written.  The assumptions for the proposition are not stated at the beginning of the proof and there is no indication of what will be proven.  In particular, the variables $m$ and $n$ are not defined in the body of the proof. Also,  the important equations are not displayed.  A better way to write the proof is as follows:
+
+\begin{myproof}
+Let $m$ be an even integer.  Then there exists an integer $n$ such that $m = 2n$.  Using this, we see that
+\begin{align*}
+5m + 4 &= 5(2n) + 4 \\
+       &= 2(5n + 2).
+\end{align*}
+Using the closure properties of the integers, we know that $(5n + 2)$ is an integer and, so, the last equation implies that $5m + 4$ is an even integer.  This proves that if $m$ is an even  integer, then $5m + 4$ is an even integer.
+\end{myproof}
+
+
+\item The proposition is true, but the proof is not a valid proof.  Basically, the proof begins with the conclusion of the proposition and proceeds to prove the hypothesis.  This is essentially a proof of the converse of the proposition.
+
+
+In addition, the assumptions for the proposition are not stated at the beginning of the proof and there is no indication of what will be proven.  In particular, the variables $x$ and $y$ are not defined in the body of the proof.  
+Following is a valid proof of this proposition.
+
+\begin{myproof}
+Let $x$ and $y$ be positive real numbers and assume that $x \ne y$.  We will prove that 
+$\dfrac{x}{y} + \dfrac{y}{x} > 2$.  Since $x \ne y$, we can conclude that $x - y \ne 0$ and hence, $(x - y)^2 > 0$.  From this, we obtain
+\begin{align*}
+      (x - y)^2 &> 0 \\
+x^2 - 2xy + y^2 &> 0 \\
+      x^2 + y^2 &> 2xy.
+\end{align*}
+We also know that $xy \ne 0$ and so, we can divide both sides of the last inequality to obtain
+\begin{align*}
+           \frac{x^2 + y^2 }{xy}&> \frac{2xy}{xy} \\
+\frac{x^2}{xy} + \frac{y^2}{xy} &> 2 \\
+      \frac{x}{y} + \frac{y}{x} &> 2.
+\end{align*}
+So we have proved that for all real numbers $x$ and $y$, if $x \ne y$, $x > 0$, and $y >0$, then $\dfrac{x}{y} + \dfrac{y}{x} > 2$.
+\end{myproof}
+
+
+\item This proposition is false.  A counterexample is $a = 4$, $b = 2$, and $c = 3$.  In this case, 
+$bc = 12$ and so, $a \mid (bc)$.  However, $a$ does not divide $b$, and $a$ does not divide $c$.
+
+\vskip6pt
+\noindent
+The problem with the proposed proof is that from the fact that $bc = mna$, it is not possible to conclude that $b = ma$ or $c = na$.
+
+
+\item We should not start the counterexample with the equation $\left( a^b \right)^c = a^{\left( b^c \right)}$ since by doing so, we are implying the equation is true.  We could write that with $a = 2$, $b = 3$, and $c = 2$, we see that
+
+\begin{align*}
+\left( a^b \right)^c &= \left( 2^3 \right)^2 &\text{and}& &a^{\left( b^c \right)} &= 2^{\left( 3^2 \right)} \\
+                   &= 8^2  & & & &= 2^9\\
+                   &= 64   & & & &= 512
+\end{align*}
+Since $64 \ne 512$, this is a counterexample that shows the proposition is false.
+\end{enumerate}
+\end{enumerate}
+
+
+\subsection*{Explorations and Activities}
+\setcounter{oldenumi}{\theenumi}
+\begin{enumerate} \setcounter{enumi}{\theoldenumi}
+\item \begin{enumerate}
+\item The integers that are congruent to 5 modulo 6 are in the set \\  
+$\left\{ { \ldots ,  - 13,  - 7,  - 1, 5, 11, 17,  \ldots } \right\}$.
+
+\item For each integer  $m$  from Part (1), $m^2  \equiv 1 \pmod 6$.  
+
+\item For each integer $m$, if $\mod{m}{5}{6}$, then $\mod{m^2}{1}{6}$.
+
+\item \textbf{Proposition}:  For all  $m \in \mathbb{Z}$, if  $m \equiv 5 \pmod 6$, then  
+$m^2  \equiv 1 \pmod 6$.
+\begin{myproof}
+Let $m$ be an integer and assume that $m \equiv 5 \pmod 6$.  We will prove that 
+$m^2  \equiv 1 \pmod 6$.  From the assumption, we know that 6 divides $(m - 5)$ and hence, there exists an integer $k$ such that $m - 5 = 6k$.  We can then conclude that 
+$m = 5 + 6k$ and use algebra as follows:
+\begin{align*}
+m^2 - 1 &= \left( 5 + 6k \right)^2 - 1 \\
+        &= \left( 25 + 60k + 36k^2 \right) - 1 \\
+        &= 24 + 60k + 36k^2 \\
+        &= 6 \left( 4 + 10k + 6k^2 \right)
+\end{align*}
+From the closure properties of the integers, we know that 
+$\left( {4 + 10k + 6k^2 } \right)$ is an integer, and hence, the last equation proves that 6 divides $\left( m^2 - 1 \right)$, which in turn means that $m^2  \equiv 1 \pmod 6$.  This proves that if $m \equiv 5 \pmod 6$, then  $m^2  \equiv 1 \pmod 6$.
+\end{myproof}
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item \textbf{Theorem}.  The only Pythagorean triple consisting of three consecutive natural numbers is 3, 4, 5.
+
+\begin{myproof}
+Let $n$ be a natural number.  We can then represent .  For these three numbers to form a Pythgorean triple, we need $n^2 + (n + 1)^2 = (n + 2)^2$.  We rewrite this equation as follows:
+\begin{align*}
+n^2 + (n + 1)^2 &= (n + 2)^2 \\
+n^2 + \left( n^2 + 2n + 1 \right) &= n^2 + 4n + 4 \\
+n^2 - 2n - 3 &= 0
+\end{align*}
+We can factor the left side of the last equation and solve the resulting equation.  This gives $(n - 3)(n + 1) = 0$.  The solutions are $n = 3$ and $n = -1$.  Since $n$ is a natural number, we conclude $n = 3$.  This proves that the only Pythagorean triple consisting of three consecutive natural numbers is 3, 4, 5.
+\end{myproof}
+
+
+\item We represent three natural numbers as $m$, $m + 7$, and $m +8$, for some integer $m$.  For these three numbers to form a Pythgorean triple, we need $m^2 + (m + 7)^2 = (m + 8)^2$.  We rewrite this equation as follows:
+\begin{align*}
+m^2 + (m + 7)^2 &= (m + 8)^2 \\
+m^2 + \left( m^2 + 14m + 49 \right) &= m^2 + 16m + 64 \\
+m^2 - 2m - 15 &= 0
+\end{align*}
+We can factor the left side of the last equation and solve the resulting equation.  This gives $(m - 5)(m + 3) = 0$.  The solutions are $m = 5$ and $m = -3$.  Since $m$ is a natural number, we conclude $m = 5$.  This proves that the only Pythagorean triple of the form $m$, $m + 7$, and $m + 8$ is 5, 12, 13.
+\end{enumerate}
+
+\end{enumerate}
+
+\hbreak
+\endinput

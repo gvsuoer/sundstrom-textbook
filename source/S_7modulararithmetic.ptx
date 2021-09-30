@@ -1,0 +1,1383 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<section xml:id="S_modulararithmetic">
+  <title>Modular Arithmetic</title>
+ 
+    <worksheet xml:id="PA_congruencemod6">
+      <title>Beginning Activity 1: Congruence Modulo 6</title>
+      <p>
+        For this activity,
+        we will only use the relation of congruence modulo 6 on the set of integers.
+      </p>
+        
+          <exercise xml:id="PA_congruencemod6-1">
+            <statement>
+            <p>
+              Find five different integers <m>a</m> such that
+              <m>a \equiv 3 \pmod 6</m> and find five different integers <m>b</m> such that <m>b \equiv 4 \pmod 6</m>.
+              That is, find five different integers in <m>[3]</m>,
+              the congruence class of 3 modulo 6 and five different integers in <m>[4]</m>,
+              the congruence class of 4 modulo 6.
+            </p>
+            </statement>
+          </exercise>
+          <exercise>
+          <statement>
+            <p>
+              Calculate <m>s = a + b</m> using several values of <m>a</m> in <m>[3]</m> and 
+              several values of <m>b</m> in <m>[4]</m> from <xref ref="PA_congruencemod6-1">Exercise</xref>.
+              For each sum <m>s</m> that is calculated,
+              find <m>r</m> so that <m>0 \leq r \lt 6</m> and <m>s \equiv r \pmod 6</m>.
+              What do you observe?
+            </p>
+          </statement>
+          </exercise>
+          <exercise>
+          <statement>
+            <p>
+              Calculate <m>p = a \cdot b</m> using several values of <m>a</m> in <m>[3]</m> and 
+              several values of <m>b</m> in <m>[4]</m> from <xref ref="PA_congruencemod6-1">Exercise</xref>.
+              For each product <m>p</m> that is calculated,
+              find <m>r</m> so that <m>0 \leq r \lt 6</m> and <m>p \equiv r \pmod 6</m>.
+              What do you observe?
+            </p>
+          </statement>
+          </exercise>
+          <exercise>
+          <statement>
+            <p>
+              Calculate <m>q = a^2</m> using several values of <m>a</m> in <m>[3]</m> 
+              from <xref ref="PA_congruencemod6-1">Exercise</xref>.
+              For each product <m>q</m> that is calculated,
+              find <m>r</m> so that <m>0 \leq r \lt 6</m> and <m>q \equiv r \pmod 6</m>.
+              What do you observe?
+            </p>
+          </statement>
+        </exercise>
+
+    </worksheet>
+
+    <worksheet xml:id="PA_remainderdivide9">
+      <title>Beginning Activity 2: The Remainder When Dividing by 9</title>
+      <p>
+        If <m>a</m> and <m>b</m> are integers with <m>b > 0</m>,
+        then from the Division Algorithm,
+        we know that there exist unique integers <m>q</m> and <m>r</m> such that
+        <me>
+          a = bq + r \text{ and }  0 \leq r \lt  b
+        </me>.
+ 
+        In this activity, we are interested in the remainder <m>r</m>.
+        Notice that <m>r = a - bq</m>.
+        So, given <m>a</m> and <m>b</m>,
+        if we can calculate <m>q</m>,
+        then we can calculate <m>r</m>.
+      </p>
+      <p>
+        We can use the
+        <q>int</q>
+        function on a calculator to calculate <m>q</m>. [The
+        <q>int</q>
+        function is the
+        <q>greatest integer function.</q>
+        If <m>x</m> is a real number,
+        then <m>\operatorname{int}( x )</m> is the greatest integer that is less than or equal 
+        to <m>x</m>.]
+      </p>
+      <p>
+        So, in the context of the Division Algorithm,
+        <m>q = \operatorname{int} \!\left( {\dfrac{a}{b}} \right)</m>.
+        Consequently,
+        <me>
+          r = a - b \cdot \operatorname{int} \!\left( {\frac{a}{b}} \right)
+        </me>.
+
+        If <m>n</m> is a positive integer,
+        we will let <m>s\left( n \right)</m> denote the sum of the digits of <m>n</m>.
+        For example, if <m>n = 731</m>, then
+        <me>
+          s( {731} ) = 7 + 3 + 1 = 11
+        </me>.
+      </p>
+      <p>
+        For each of the following values of <m>n</m>, calculate
+        <ul>
+          <li>
+            <p>
+              The remainder when <m>n</m> is divided by 9, and
+            </p>
+          </li>
+          <li>
+            <p>
+              The value of <m>s( n )</m> and the remainder when <m>s( n )</m> is divided by 9.
+            </p>
+          </li>
+        </ul>
+      </p>
+        
+
+        <exercise>
+          <statement>
+            <p>
+              <m>n=498</m>
+            </p>
+          </statement>
+        </exercise>
+        <exercise>
+          <statement>
+            <p>
+              <m>n=7319</m>
+            </p>
+          </statement>
+        </exercise>
+        <exercise>
+          <statement>
+            <p>
+              <m>n=4672</m>
+            </p>
+          </statement>
+        </exercise>
+        <exercise>
+          <statement>
+            <p>
+              <m>n=9845</m>
+            </p>
+          </statement>
+        </exercise>
+        <exercise>
+          <statement>
+            <p>
+              <m>n=51381</m>
+            </p>
+          </statement>
+        </exercise>
+        <exercise>
+          <statement>
+            <p>
+              <m>n=305877</m>
+            </p>
+          </statement>
+        </exercise>
+      
+      <conclusion>
+        <p>
+          What do you observe?
+        </p>
+      </conclusion>
+
+    </worksheet>
+
+ 
+  <subsection>
+    <title>The Integers Modulo <m>\boldsymbol{n}</m></title>
+    <p>
+      Let <m>n \in \mathbb{N}</m>.
+      Since the relation of congruence modulo <m>n</m> is an equivalence relation on 
+      <m>\mathbb{Z}</m>,
+      we can discuss its equivalence classes.
+      Recall that in this situation,
+      we refer to the equivalence classes as congruence classes.
+    </p>
+
+    <definition xml:id="integersmodn">
+      <statement>
+        <p>
+          Let <m>n \in \mathbb{N}</m>.
+          The set of congruence classes for the relation of congruence modulo <m>n</m> on 
+          <m>\mathbb{Z}</m> is the set of
+          <term>integers modulo <m>\boldsymbol{n}</m></term>,
+              <idx><h>integers modulo <m>n</m></h></idx>
+          or the set of integers mod <m>n</m>.
+          We will denote this set of congruence classes by <m>\mathbb{Z}_{n}</m>.
+        </p>
+      </statement>
+    </definition>
+    
+    <p>
+      <xref ref="C_propsofcongclasses2"></xref> tells us that
+      <me>
+        \mathbb{Z} = [ 0 ] \cup [ 1 ] \cup [ 2 ] \cup   \cdots  \cup  [ {n - 1} ]
+      </me>.
+
+      In addition,
+      we know that each integer is congruent to precisely one of the integers 
+      <m>0, 1, 2, \ldots , n - 1</m>.
+      This tells us that one way to represent <m>\mathbb{Z}_{n}</m> is
+      <me>
+        \mathbb{Z}_{n}  = \left\{ {[ 0 ], [ 1 ], [ 2 ],  \ldots, [ {n - 1} ]} \right\}
+      </me>.
+
+      Consequently, even though each integer has a congruence class,
+      the set <m>\mathbb{Z}_{n}</m> has only <m>n</m> distinct congruence classes.
+    </p>
+    <p>
+      The set of integers <m>\Z</m> is more than a set.
+      We can add and multiply integers.
+      That is, there are the arithmetic operations of addition and multiplication on the set <m>\Z</m>,
+      and we know that <m>\Z</m> is closed with respect to these two operations.
+    </p>
+    <p>
+      One of the basic problems dealt with in modern algebra is to determine if the arithmetic 
+      operations on one set
+      <q>transfer</q>
+      to a related set.
+      In this case, the related set is <m>\mathbb{Z}_{n}</m>.
+      For example, in the integers modulo 5, <m>\Z_5</m>,
+      is it possible to add the congruence classes <m>[ 4 ]</m> and <m>[ 2 ]</m> as follows?
+      <md>
+        <mrow>\oplus [ 2 ] \amp = [ {4 + 2} ]</mrow>
+        <mrow>\amp = [ 6 ]</mrow>
+        <mrow>\amp = [ 1 ]</mrow>
+      </md>.
+    </p>
+    <p>
+      We have used the symbol <m>\oplus</m> to denote addition in
+      <m>\mathbb{Z}_{5}</m> so that we do not confuse it with addition in <m>\mathbb{Z}</m>.
+      This looks simple enough, but there is a problem.
+      The congruence classes <m>[ 4 ]</m> and <m>[ 2 ]</m> are not numbers,
+      <em>they are infinite sets</em>.
+      We have to make sure that we get the same answer no matter what element of <m>[ 4 ]</m> 
+      we use and no matter what element of <m>[ 2 ]</m> we use.
+      For example,
+      <md>
+        <mrow>9 \amp \equiv 4 \pmod 5  \amp \amp \text{ and so } \amp \amp [ 9 ] = [ 4 ].  \text{  Also, }</mrow>
+        <mrow>7 \amp \equiv 2 \pmod 5  \amp \amp \text{ and so } \amp \amp [ 7 ] = [ 2 ]</mrow>
+      </md>.
+
+      Do we get the same result if we add <m>[ 9 ]</m> and <m>[ 7 ]</m> in the way we did when 
+      we added <m>[ 4 ]</m> and <m>[ 2 ]</m>?
+      The following computation confirms that we do:
+      <md>
+        <mrow>\oplus [ 7 ] \amp = [ {9 + 7} ]</mrow>
+        <mrow>\amp = [ {16} ]</mrow>
+        <mrow>\amp = [ 1 ]</mrow>
+      </md>.
+    </p>
+    <p>
+      This is one of the ideas that was explored in <xref ref="PA_congruencemod6">Beginning Activity 1</xref>.
+      The main difference is that in this activity,
+      we used the relation of congruence,
+      and here we are using congruence classes.
+      All of the examples in <xref ref="PA_congruencemod6">Beginning Activity 1</xref>
+      should have illustrated the properties of congruence modulo 6 in the following table.
+      The left side shows the properties in terms of the congruence relation and the right side 
+      shows the properties in terms of the congruence classes.
+    </p>
+
+    <sidebyside>
+      <p>
+        If <m>a \equiv 3 \pmod 6</m> and  <m>b \equiv 4 \pmod 6</m>, then
+          <ul>
+            <li>
+              <p>
+                <m>\left( {a + b} \right) \equiv \left( {3 + 4} \right) \pmod 6</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\left( {a \cdot b} \right) \equiv \left( {3 \cdot 4} \right) \pmod 6</m>.
+              </p>
+            </li>
+          </ul>
+      </p>
+      <p>
+        If <m>[ a ] = [ 3 ]</m>  and  <m>[ b ] = [ 4 ]</m> in <m>\Z_6</m>, then
+          <ul>
+            <li>
+              <p>
+                <m>[ {a + b} ] = [ {3 + 4} ]</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>[ {a \cdot b} ] = [ {3 \cdot 4} ]</m>.
+              </p>
+            </li>
+          </ul>
+      </p>
+    </sidebyside>
+
+    <tabular>
+      
+      <row>
+        <cell right="medium">If  <m>a \equiv 3 \pmod 6</m> and  <m>b \equiv 4 \pmod 6</m>, then
+          <ul>
+            <li>
+              <p>
+                <m>\left( {a + b} \right) \equiv \left( {3 + 4} \right) \pmod 6</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\left( {a \cdot b} \right) \equiv \left( {3 \cdot 4} \right) \pmod 6</m>.
+              </p>
+            </li>
+          </ul></cell>
+        <cell>If <m>[ a ] = [ 3 ]</m>  and  <m>[ b ] = [ 4 ]</m> in <m>\Z_6</m>, then
+          <ul>
+            <li>
+              <p>
+                <m>[ {a + b} ] = [ {3 + 4} ]</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>[ {a \cdot b} ] = [ {3 \cdot 4} ]</m>.
+              </p>
+            </li>
+          </ul></cell>
+      </row>
+      
+    </tabular>
+
+    <p>
+      These are illustrations of general properties that we have already proved in 
+      <xref ref="T_propsofcong"></xref>.
+      We repeat the statement of the theorem here because it is so important for defining 
+      the operations of addition and multiplication in <m>\mathbb{Z}_{n}</m>.
+    </p>
+
+    <paragraphs>
+    <title><xref ref="T_propsofcong"></xref> Restated</title>
+    <p>
+      Let <m>n</m> be a natural number and let <m>a,
+      b, c, \text{ and } d</m> be integers.
+      Then
+      <ol>
+        <li>
+          <p>
+            If <m>a \equiv b \pmod n</m> and <m>c \equiv d \pmod n</m>,
+            then <m>\left( {a + c} \right) \equiv \left( {b + d} \right) \pmod n</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            If <m>a \equiv b \pmod n</m> and <m>c \equiv d \pmod n</m>,
+            then <m>ac \equiv bd \pmod n</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            If <m>a \equiv b \pmod n</m> and <m>m \in \mathbb{N}</m>,
+            then <m>a^m \equiv b^m \pmod n</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+    </paragraphs>
+
+    <p>
+      Since <m>x \equiv y \pmod n</m> if and only if <m>[ x ] = [ y ]</m>,
+      we can restate the result of this <xref ref="T_propsofcong"></xref>
+      in terms of congruence classes in <m>\mathbb{Z}_n</m>.
+    </p>
+
+    <corollary xml:id="C_propsofcong-76">
+      <statement>
+        <p>
+          Let <m>n</m> be a natural number and let
+          <m>a,
+          b, c</m>, and <m>d</m> be integers.
+          Then, in <m>\mathbb{Z}_n</m>,
+          <ol>
+            <li>
+              <p>
+                If <m>[ a ] = [ b ]</m> and <m>[ c ] = [ d ]</m>,
+                then <m>[ {a + c} ] = [ {b + d} ]</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>[ a ] = [ b ]</m> and <m>[ c ] = [ d ]</m>,
+                then <m>[ {a \cdot c} ] = [ {b \cdot d} ]</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>[ a ] = [ b ]</m> and <m>m \in \mathbb{N}</m>,
+                then <m>[ a ^m] = [ b ^m]</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </corollary>
+
+    <p>
+      Because of <xref ref="C_propsofcong-76"></xref>,
+      we know that the following formal definition of addition and multiplication of 
+      congruence classes in
+      <m>\mathbb{Z}_{n}</m> is independent of the choice of the elements we choose from each class.
+      We say that these definitions of addition and multiplication are <term>well defined</term>.
+    </p>
+
+    <definition xml:id="modulararithmetic">
+      <statement>
+        <p>
+          Let <m>n \in \mathbb{N}</m>.
+          <term>Addition and multiplication</term>
+            <idx><h>integers modulo <m>n</m></h><h>addition</h></idx>
+            <idx><h>integers modulo <m>n</m></h><h>multiplication</h></idx>
+          in <m>\mathbb{Z}_n</m> are defined as follows: For <m>[ a ], [ c ] \in \mathbb{Z}_n</m>,
+          <me>
+            [ a ] \oplus [ c ] = [ {a + c} ] \text{  and  } [ a ] \odot [ c ] = [ {ac} ]
+          </me>.
+        </p>
+        <p>
+          The term <term>modular arithmetic</term>
+              <idx><h>modular arithmetic</h></idx>
+          is used to refer to the operations of addition and multiplication of congruence 
+          classes in the integers modulo<nbsp/><m>n</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      So if <m>n \in \mathbb{N}</m>,
+      then we have an addition and multiplication defined on <m>\mathbb{Z}_n</m>,
+      the integers modulo<nbsp/><m>n</m>.
+    </p>
+    <p>
+      Always remember that for each of the equations in the definitions,
+      the operations on the left,
+      <m>\oplus \text{ and } \odot</m>,
+      are the new operations that are being defined.
+      The operations on the right side of the equations
+      <m>\left( + \text{ and } \cdot \right)</m> are the known operations of addition and 
+      multiplication in <m>\mathbb{Z}</m>.
+    </p>
+    <p>
+      Since <m>\mathbb{Z}_n</m> is a finite set,
+      it is possible to construct addition and multiplication tables for <m>\mathbb{Z}_n</m>.
+      In constructing these tables,
+      we follow the convention that all sums and products should be in the form <m>[ r]</m>,
+      where <m>0 \leq r \lt  n</m>.
+      For example, in <m>\Z_3</m>,
+      we see that by the definition,
+      <m>[1] \oplus [2] = [3]</m>,
+      but since <m>\mod{3}{0}{3}</m>,
+      we see that <m>[3] = [0]</m> and so we write
+      <me>
+        [1] \oplus [2] = [3] = [0]
+      </me>.
+
+      Similarly, by definition,
+      <m>[2] \odot [2] = [4]</m>, and in <m>\Z_3</m>, <m>[4] = [1]</m>.
+      So we write
+      <me>
+        [2] \odot [2] = [4] = [1]
+      </me>.
+
+      The complete addition and multiplication tables for <m>\Z_3</m> are
+    </p>
+
+    <sidebyside>
+      <tabular halign="center">
+        <row bottom="medium">
+          <cell right="medium"><m>\oplus</m></cell>
+          <cell><m>[ 0 ]</m></cell>
+          <cell><m>[ 1 ]</m></cell>
+          <cell><m>[2]</m></cell>
+        </row>
+
+        <row>
+          <cell right="medium"><m>[ 0 ]</m></cell>
+          <cell><m>[ 0 ]</m></cell>
+          <cell><m>[ 1 ]</m></cell>
+          <cell><m>[2]</m></cell>
+        </row>
+
+        <row>
+          <cell right="medium"><m>[ 1 ]</m></cell>
+          <cell><m>[ 1 ]</m></cell>
+          <cell><m>[ 2 ]</m></cell>
+          <cell><m>[0]</m></cell>
+        </row>
+
+        <row>
+          <cell right="medium"><m>[ 2 ]</m></cell>
+          <cell><m>[ 2 ]</m></cell>
+          <cell><m>[ 0 ]</m></cell>
+          <cell><m>[1]</m></cell>
+        </row>
+      </tabular>
+      
+      <tabular halign="center">
+        <row bottom="medium">
+          <cell right="medium"><m>\odot</m></cell>
+          <cell><m>[ 0 ]</m></cell>
+          <cell><m>[ 1 ]</m></cell>
+          <cell><m>[2]</m></cell>
+        </row>
+
+        <row>
+          <cell right="medium"><m>[ 0 ]</m></cell>
+          <cell><m>[ 0 ]</m></cell>
+          <cell><m>[ 0 ]</m></cell>
+          <cell><m>[0]</m></cell>
+        </row>
+
+        <row>
+          <cell right="medium"><m>[ 1 ]</m></cell>
+          <cell><m>[ 0 ]</m></cell>
+          <cell><m>[ 1 ]</m></cell>
+          <cell><m>[2]</m></cell>
+        </row>
+
+        <row>
+          <cell right="medium"><m>[ 2 ]</m></cell>
+          <cell><m>[ 0 ]</m></cell>
+          <cell><m>[ 2 ]</m></cell>
+          <cell><m>[1]</m></cell>
+        </row>
+      </tabular>
+    </sidebyside>
+
+    <exercise xml:id="prog_modulararithmetic5-6">
+      <title>Modular Arithmetic in <m>\boldsymbol{\Z_2}</m>, <m>\boldsymbol{\Z_5}</m>, and 
+      <m>\boldsymbol{\Z_6}</m></title>
+      <!-- Change these to <task>! -->
+      <task>
+        <statement>
+          <p>
+            Construct addition and multiplication tables for <m>\Z_2</m>,
+            the integers modulo 2.
+          </p>
+        </statement>
+      </task>
+      <task xml:id="exam_sec74-tables">
+        <statement>
+          <p>
+            Verify that the following addition and multiplication tables for 
+            <m>\mathbb{Z}_5</m> are correct.
+
+            <sidebyside>
+              <tabular halign="center">
+                <row bottom="medium">
+                  <cell right="medium"><m>\oplus</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 1 ]</m></cell>
+                  <cell><m>[ 2 ]</m></cell>
+                  <cell><m>[ 3 ]</m></cell>
+                  <cell><m>[ 4 ]</m></cell>
+                </row>
+
+                <row>
+                  <cell right="medium"><m>[ 0 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 1 ]</m></cell>
+                  <cell><m>[ 2 ]</m></cell>
+                  <cell><m>[ 3 ]</m></cell>
+                  <cell><m>[ 4 ]</m></cell>
+                </row>
+
+                <row>
+                  <cell right="medium"><m>[ 1 ]</m></cell>
+                  <cell><m>[ 1 ]</m></cell>
+                  <cell><m>[ 2 ]</m></cell>
+                  <cell><m>[ 3 ]</m></cell>
+                  <cell><m>[ 4 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                </row>
+
+                <row>
+                  <cell right="medium"><m>[ 2 ]</m></cell>
+                  <cell><m>[ 2 ]</m></cell>
+                  <cell><m>[ 3 ]</m></cell>
+                  <cell><m>[ 4 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 1 ]</m></cell>
+                </row>
+
+                <row>
+                  <cell right="medium"><m>[ 3 ]</m></cell>
+                  <cell><m>[ 3 ]</m></cell>
+                  <cell><m>[ 4 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 1 ]</m></cell>
+                  <cell><m>[ 2 ]</m></cell>
+                </row>
+
+                <row>
+                  <cell right="medium"><m>[ 4 ]</m></cell>
+                  <cell><m>[ 4 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 1 ]</m></cell>
+                  <cell><m>[ 2 ]</m></cell>
+                  <cell><m>[ 3 ]</m></cell>
+                </row>
+              </tabular>
+
+              <tabular halign="center">
+                <row bottom="medium">
+                  <cell right="medium"><m>\odot</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 1 ]</m></cell>
+                  <cell><m>[ 2 ]</m></cell>
+                  <cell><m>[ 3 ]</m></cell>
+                  <cell><m>[ 4 ]</m></cell>
+                </row>
+
+                <row>
+                  <cell right="medium"><m>[ 0 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                </row>
+
+                <row>
+                  <cell right="medium"><m>[ 1 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 1 ]</m></cell>
+                  <cell><m>[ 2 ]</m></cell>
+                  <cell><m>[ 3 ]</m></cell>
+                  <cell><m>[ 4 ]</m></cell>
+                </row>
+
+                <row>
+                  <cell right="medium"><m>[ 2 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 2 ]</m></cell>
+                  <cell><m>[ 4 ]</m></cell>
+                  <cell><m>[ 1 ]</m></cell>
+                  <cell><m>[ 3 ]</m></cell>
+                </row>
+
+                <row>
+                  <cell right="medium"><m>[ 3 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 3 ]</m></cell>
+                  <cell><m>[ 1 ]</m></cell>
+                  <cell><m>[ 4 ]</m></cell>
+                  <cell><m>[ 2 ]</m></cell>
+                </row>
+
+                <row>
+                  <cell right="medium"><m>[ 4 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 4 ]</m></cell>
+                  <cell><m>[ 3 ]</m></cell>
+                  <cell><m>[ 2 ]</m></cell>
+                  <cell><m>[ 1 ]</m></cell>
+                </row>
+              </tabular>
+            </sidebyside>
+          </p>
+        </statement>
+        </task>
+        <task>
+        <statement>
+          <p>
+            Construct complete addition and multiplication tables for <m>\Z_6</m>.
+          </p>
+        </statement>
+        </task>
+        <task>
+        <statement>
+          <p>
+            In the integers, the following statement is true.
+            We sometimes call this the zero product property for the integers.
+            <blockquote>
+              For all <m>a, b \in \Z</m>, if <m>a \cdot b = 0</m>, then <m>a = 0</m> or 
+              <m>b = 0</m>.
+            </blockquote>
+          Write the contrapositive of the conditional statement in this property.
+          </p>
+        </statement>
+        </task>
+        <task>
+        <introduction>
+          <p>
+            Are the following statements true or false?
+            Justify your conclusions.
+          </p>
+        </introduction>
+            
+              <task>
+                <p>
+                  For all <m>[ a ], [ b ] \in \Z_5</m>,
+                  if <m>[ a ] \odot [ b ] = [ 0 ]</m>,
+                  then <m>[ a ] = [ 0 ]</m> or <m>[ b ] = [ 0 ]</m>.
+                </p>
+              </task>
+              <task>
+                <p>
+                  For all <m>[ a ], [ b ] \in \Z_6</m>,
+                  if <m>[ a ] \odot [ b ] = [ 0 ]</m>,
+                  then <m>[ a ] = [ 0 ]</m> or <m>[ b ] = [ 0 ]</m>.
+                </p>
+              </task>
+
+        </task>
+
+    </exercise>
+  </subsection>
+
+  <subsection>
+    <title>Divisibility Tests</title>
+    <p>
+      Congruence arithmetic can be used to prove certain divisibility tests.
+      For example,
+      you may have learned that a natural number is divisible by 9 if the sum of its digits is 
+      divisible by 9.
+      As an easy example,
+      note that the sum of the digits of 5823 is equal to <m>5 + 8 + 2 + 3 = 18</m>,
+      and we know that 18 is divisible by 9.
+      It can also be verified that 5823 is divisible by 9. (The quotient is 647.) We can actually 
+      generalize this property by dealing with remainders when a natural number is divided by 9.
+    </p>
+    <p>
+      Let <m>n \in \mathbb{N}</m> and let <m>s( n )</m> denote the sum of the digits of <m>n</m>.
+      For example, if <m>n = 7319</m>,
+      then <m>s( {7319} ) = 7 + 3 + 1 + 9 = 20</m>.
+      In <xref ref="PA_remainderdivide9">Beginning Activity 2</xref>,
+      we saw that <me>7319 \equiv 2 \pmod 9 \text{ and } 20 \equiv 2 \pmod 9</me>.
+      In fact, for every example in <xref ref="PA_remainderdivide9">Beginning Activity 2</xref>,
+      we saw that <m>n</m> and <m>s( n )</m> were congruent modulo 9 since they both had the 
+      same remainder when divided by 9.
+      The concepts of congruence and congruence classes can help prove that this is always true.
+    </p>
+    <p>
+      We will use the case of <m>n = 7319</m> to illustrate the general process.
+      We must use our standard place value system.
+      By this, we mean that we will write <m>7319</m> as follows:
+      <men xml:id="eq_divideby9-1">
+        7319 = \left( {7 \times 10^3 } \right) + \left( {3 \times 10^2 } \right) + \left( {1 
+        \times 10^1 } \right) + \left( 9 \times 10^0 \right)
+      </men>.
+    </p>
+    <p>
+      The idea is to now use the definition of addition and multiplication in
+      <m>\mathbb{Z}_9</m> to convert <xref ref="eq_divideby9-1">Equation</xref> to an 
+      equation in <m>\mathbb{Z}_9</m>.
+      We do this as follows:
+      <mdn>
+        <mrow number="no">\amp = [ {\left( {7 \times 10^3 } \right) + \left( {3 \times 10^2 }  
+        \right) + \left( {1 \times 10^1 } \right) + \left( 9 \times 10^0 \right)} ]</mrow>
+        <mrow number="no">\amp = [ {7 \times 10^3 } ] \oplus [ {3 \times 10^2 } ]  
+        \oplus [ {1 \times 10^1 } ] \oplus [ {9 \times 10^0 } ]</mrow>
+        <mrow xml:id="eq_divideby9-2">\amp = \left( {[ 7 ] \odot [ {10^3 } ]} \right) 
+        \oplus \left( {[ 3 ] \odot [ {10}^2 ]} \right) \oplus \left( {[ 1 ] \odot [ 10^ 1 ]} 
+        \right) \oplus \left( [ 9 ] \odot [ 1 ] \right)</mrow>
+      </mdn>.
+    </p>
+    <p>
+      Since <m>10^3  \equiv 1 \pmod 9</m>,
+      <m>10^2  \equiv 1 \pmod 9</m> and <m>10 \equiv 1 \pmod 9</m>,
+      we can conclude that <m>[ 10^3 ] = [ 1 ]</m>,
+      <m>[ {10^2 } ] = [ 1 ]</m> and <m>[ {10} ] = [ 1 ]</m>.
+      Hence, we can use these facts and  <xref ref="eq_divideby9-2">Equation</xref> to obtain
+      <mdn>
+        <mrow number="no">[ {7319} ] \amp =\left( {[ 7 ] \odot [ {10^3 } ]} \right) \oplus 
+        \left( {[ 3 ] \odot [ {10^2} ]} \right) \oplus \left( {[ 1 ] \odot [ 10 ]} \right) 
+        \oplus \left( [ 9 ] \odot [ 1 ] \right)</mrow>
+        <mrow number="no">\amp = \left( {[ 7 ] \odot [ 1 ]} \right) \oplus \left( {[ 3 ] 
+        \odot [ 1 ]} \right) \oplus \left( {[ 1 ] \odot [ 1 ]} \right) \oplus \left( [ 9 ] 
+        \odot [ 1 ] \right)</mrow>
+        <mrow number="no">\amp = [ 7 ] \oplus [ 3 ] \oplus [ 1 ] \oplus [ 9 ]</mrow>
+        <mrow xml:id="eq_divideby9-3">\amp = [ {7 + 3 + 1 + 9} ]</mrow>
+      </mdn>.
+
+      <xref ref="eq_divideby9-3">Equation</xref> tells us that 7319 has the same remainder when 
+      divided by 9 as the sum of its digits.
+      It is easy to check that the sum of the digits is 20 and hence has a remainder of 2.
+      This means that when 7319 is divided by 9, the remainder is 2.
+    </p>
+    <p>
+      To prove that any natural number has the same remainder when divided by 9 as the sum of its digits,
+      it is helpful to introduce notation for the decimal representation of a natural number.
+      The notation we will use is similar to the notation for the number 7319 
+      in <xref ref="eq_divideby9-1">Equation</xref>.
+    </p>
+    <p>
+      In general, if <m>n \in \mathbb{N}</m>,
+      and <m>n = a_k a_{k - 1} \cdots a_1 a_0</m> is the decimal representation of <m>n</m>, then
+      <me>
+        n = \left( {a_k  \times 10^k } \right) + \left( {a_{k - 1}  \times 10^{k - 1} } \right) + 
+         \cdots  + \left( {a_1  \times 10^1 } \right) + \left( {a_0  \times 10^0 } \right)\!
+      </me>.
+
+      This can also be written using summation notation as follows:
+      <me>
+        n = \sum\limits_{j = 0}^k {\left( {a_j  \times 10^j } \right)}
+      </me>.
+    </p>
+    <p>
+      Using congruence classes for congruence modulo 9, we have
+      <mdn>
+        <mrow number="no">\amp = [ {\left( {a_k  \times 10^k } \right) + \left( {a_{k - 1}  
+        \times 10^{k - 1} } \right) +  \cdots  + \left( {a_1  \times 10^1 } \right) + 
+        \left( {a_0  \times 10^0 } \right)} ]</mrow>
+        <mrow number="no">\amp = [ {a_k  \times 10^k } ] \oplus [ {a_{k - 1}  
+        \times 10^{k - 1} } ] \oplus  \cdots  \oplus [ {a_1  \times 10^1 } ] 
+        \oplus [ {a_0  \times 10^0 } ]</mrow>
+        <mrow number="no">\amp = \left( {[ {a_k } ] \odot [ {10^k } ]} \right) 
+        \oplus \left( {[ {a_{k - 1} } ] \odot [ {10^{k - 1} } ]} \right) \oplus \cdots</mrow>
+        <mrow xml:id="eq_divideby9-4">\amp  \hspace{5cm} \oplus \left( {[ {a_1 } ] 
+        \odot [ {10^1 } ]} \right) \oplus \left( {[ {a_0 } ] \odot [ {10^0 } ]} \right)\!</mrow>
+      </mdn>.
+    </p>
+    <p>
+      One last detail is needed.
+      It is given in <xref ref="P_poweroftenmod9"></xref>.
+      The proof by mathematical induction is <xref ref="exer_poweroftenmod9"/>.
+    </p>
+
+    <proposition xml:id="P_poweroftenmod9">
+      <statement>
+        <p>
+          If <m>n</m> is a nonnegative integer,
+          then <m>10^n \equiv 1 \pmod 9</m>,
+          and hence for the equivalence relation of congruence modulo 9, <m>[ {10^n } ] = [ 1 ]</m>.
+        </p>
+      </statement>
+    </proposition>
+
+    <p>
+      If we let <m>s( n )</m> denote the sum of the digits of <m>n</m>, then
+      <me>
+        s( n ) = a_k  + a_{k - 1}  +  \cdots  + a_1  + a_0
+      </me>,
+    </p>
+    <p>
+      Now using <xref ref="eq_divideby9-4">Equation</xref> and <xref ref="P_poweroftenmod9"></xref>,
+      we obtain
+      <md>
+        <mrow>[ n ] \amp = \left( {[ {a_k } ] \odot [ 1 ]} \right) \oplus 
+        \left( {[ {a_{k - 1} } ] \odot [ 1 ]} \right) \oplus  \cdots  \oplus \left( {[ {a_1 } ] 
+        \odot [ 1 ]} \right) \oplus \left( {[ {a_0 } ] \odot [ 1 ]} \right)</mrow>
+        <mrow>\amp = [ {a_k } ] \oplus [ {a_{k - 1} } ] \oplus  \cdots  \oplus [ {a_1 } ] 
+        \oplus [ {a_0 } ]</mrow>
+        <mrow>\amp = [ {a_k  + a_{k - 1}  +  \cdots  + a_1  + a_0 } ].</mrow>
+        <mrow>\amp = [ s( n ) ]</mrow>
+      </md>.
+
+      This completes the proof of <xref ref="T_sumofdigitsmod9"></xref>.
+    </p>
+
+    <theorem xml:id="T_sumofdigitsmod9">
+      <statement>
+        <p>
+          Let <m>n \in \mathbb{N}</m> and let <m>s( n )</m> denote the sum of the digits of <m>n</m>.
+          Then
+          <ol>
+            <li>
+              <p>
+                <m>[ n ] = [ {s( n )} ]</m>, using congruence classes modulo 9.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>n \equiv s( n ) \pmod 9</m>.
+              </p>
+            </li>
+            <li xml:id="T_sumofdigitsmod9-part">
+              <p>
+                <m>9 \mid n</m> if and only if <m>9 \mid s( n )</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </theorem>
+
+    <p>
+      <xref ref="T_sumofdigitsmod9-part"/> of <xref ref="T_sumofdigitsmod9"></xref>
+      is called a <term>divisibility test</term>.
+          <idx><h>divisibility test</h></idx>
+          <idx><h>divisibility test</h><h>for 9</h></idx>
+      If gives a necessary and sufficient condition for a natural number to be divisible by 9.
+      Other divisibility tests will be explored in the exercises.
+      Most of these divisibility tests can be proved in a manner similar to the proof of the 
+      divisibility test for 9.
+    </p>
+  </subsection>
+
+  <exercises>
+    
+    <exercise xml:id="exer_sec74-modtables">
+      <introduction>
+        <p>
+          Complete the addition and multiplication tables for the following.
+        </p>
+      </introduction>
+
+      <task>
+        <p>
+          <m>\mathbb{Z}_4</m>.
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>\mathbb{Z}_7</m>.
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>\mathbb{Z}_8</m>.
+        </p>
+      </task>
+    </exercise>
+
+    <exercise xml:id="exer_sec74-3">
+      <introduction>
+        <p>
+          The set <m>\mathbb{Z}_n</m> contains <m>n</m> elements.
+          One way to solve an equation in
+          <m>\mathbb{Z}_n</m> is to substitute each of these <m>n</m> elements in the 
+          equation to check which ones are solutions.
+          In <m>\mathbb{Z}_n</m>, when parentheses are not used,
+          we follow the usual order of operations,
+          which means that multiplications are done first and then additions.
+          Solve each of the following equations:
+        </p>
+      </introduction>
+
+      <task>
+        <p>
+          <m>[ x ]^2 = [ 1 ]</m> in <m>\mathbb{Z}_4</m>
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>[ x ]^2 = [ 1 ]</m> in <m>\mathbb{Z}_8</m>
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>[ x ]^4 = [ 1 ]</m> in <m>\mathbb{Z}_5</m>
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>[ x ]^2 \oplus [ 3 ] \odot [ x ] = [ 3 ]</m> in <m>\mathbb{Z}_6</m>
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>[ x ]^2 \oplus [ 1 ] = [ 0 ]</m> in <m>\mathbb{Z}_5</m>
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>[ 3 ] \odot [ x ] \oplus [ 2 ] = [ 0 ]</m> in <m>\mathbb{Z}_5</m>
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>[ 3 ] \odot [ x ] \oplus [ 2 ] = [ 0 ]</m> in <m>\mathbb{Z}_6</m>
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>[ 3 ] \odot [ x ] \oplus [ 2 ] = [ 0 ]</m> in <m>\mathbb{Z}_9</m>
+        </p>
+      </task>
+    </exercise>
+
+    <exercise xml:id="exer_sec74-4">
+      <introduction>
+        <p>
+          In each case, determine if the statement is true or false.
+        </p>
+      </introduction>
+
+      <task>
+        <p>
+          For all <m>[ a ] \in \mathbb{Z}_6</m>,
+          if <m>[ a ] \ne [ 0 ]</m>,
+          then there exists a <m>[ b ] \in \mathbb{Z}_6</m> such that <m>[ a ] 
+          \odot [ b ] = [ 1 ]</m>.
+        </p>
+      </task>
+      <task>
+        <p>
+          For all <m>[ a ] \in \mathbb{Z}_5</m>,
+          if <m>[ a ] \ne [ 0 ]</m>,
+          then there exists a <m>[ b ] \in \mathbb{Z}_5</m> such that 
+          <m>[ a ] \odot [ b ] = [ 1 ]</m>.
+        </p>
+      </task>
+    </exercise>
+
+    <exercise xml:id="exer_sec74-5">
+      <introduction>
+        <p>
+          In each case, determine if the statement is true or false.
+        </p>
+      </introduction>
+
+      <task>
+        <p>
+          For all <m>[ a ], [ b ] \in \mathbb{Z}_6</m>,
+          if <m>[ a ] \ne [ 0 ]</m> and <m>[ b ] \ne [ 0 ]</m>,
+          then <m>[ a ] \odot [ b ] \ne [ 0 ]</m>.
+        </p>
+      </task>
+
+      <task>
+        <p>
+          For all <m>[ a ], [ b ] \in \mathbb{Z}_5</m>,
+          if <m>[ a ] \ne [ 0 ]</m> and <m>[ b ] \ne [ 0 ]</m>,
+          then <m>[ a ] \odot [ b ] \ne [ 0 ]</m>.
+        </p>
+      </task>
+    </exercise>
+
+    <exercise xml:id="exer_squaresinZ5">
+      <introduction>
+        <p>
+          Complete the following.
+        </p>
+      </introduction>
+
+      <task xml:id="exersquaresinz5a">
+        <p>
+          Prove the following proposition:
+          <blockquote>
+            For each <m>[ a ] \in \Z_5</m>, if <m>[ a ] \ne [ 0 ]</m>, then 
+            <m>[ a ]^2 = [ 1 ]</m> or <m>[ a ]^2 = [ 4 ]</m>.
+          </blockquote>
+        </p>
+      </task>
+      <task>
+        <p>
+          Does there exist an integer <m>a</m> such that <m>a^2 = 5,158,232,468,953,153</m>?
+          Use your work in <xref ref="exersquaresinz5a"/> to justify your conclusion.
+          Compare to <xref ref="exer_squaremod5"/> in <xref ref="S_divalgo"></xref>.
+        </p>
+      </task>
+    </exercise>
+
+    <exercise xml:id="exer_poweroftenmod9">
+      <statement>
+        <p>
+          Use mathematical induction to prove <xref ref="P_poweroftenmod9"></xref>.
+          <blockquote>
+            If <m>n</m> is a nonnegative integer, then <m>10^n \equiv 1 \pmod 9</m>, and 
+            hence for the equivalence relation of congruence modulo 9, <m>[ {10^n } ] = [ 1 ]</m>.
+          </blockquote>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_poweroftenmod3">
+      <statement>
+        <p>
+          Use mathematical induction to prove that if <m>n</m> is a nonnegative integer,
+          then <m>10^n \equiv 1 \pmod 3</m>.
+          Hence, for congruence classes modulo 3, if <m>n</m> is a nonnegative integer,
+          then <m>[ {10^n } ] = [ 1 ]</m>.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_divtest3">
+      <introduction>
+        <p>
+          Let  <m>n \in \mathbb{N}</m> and let  <m>s( n )</m> denote the sum of the digits of  <m>n</m>.
+          So if we write
+          <me>
+            n = \left( {a_k  \times 10^k } \right) + \left( {a_{k - 1}  \times 10^{k - 1} } 
+            \right) +  \cdots  + \left( {a_1  \times 10^1 } \right) + \left( {a_0  \times 10^0 } \right)
+          </me>,
+          then <m>s( n ) = a_k  + a_{k - 1}  +  \cdots  + a_1  + a_0</m>.
+          Use the result in <xref ref="exer_poweroftenmod3"/> to help prove each of the following:
+        </p>
+      </introduction>
+
+      <task>
+        <p>
+          <m>[ n ] = [ {s( n )} ]</m>, using congruence classes modulo 3.
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>n \equiv s( n ) \pmod 3</m>.
+        </p>
+      </task>
+      <task xml:id="T_sumofdigitsmod9-3">
+        <p>
+          <m>3 \mid n</m> if and only if <m>3 \mid s( n )</m>.
+            <idx><h>divisibility test</h><h>for 3</h></idx>
+        </p>
+      </task>
+    </exercise>
+    
+    <exercise xml:id="exer_poweroftenmod5">
+      <statement>
+        <p>
+          Use mathematical induction to prove that if <m>n</m> is an integer and <m>n \geq 1</m>,
+          then <m>10^n \equiv 0 \pmod 5</m>.
+          Hence, for congruence classes modulo 5, if <m>n</m> is an integer and <m>n \geq 1</m>,
+          then <m>[ {10^n } ] = [ 0 ]</m>.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_divtest5">
+      <introduction>
+        <p>
+          Let <m>n \in \mathbb{N}</m> and assume
+          <me>
+            n = \left( {a_k  \times 10^k } \right) + \left( {a_{k - 1}  \times 10^{k - 1} } 
+            \right) +  \cdots  + \left( {a_1  \times 10^1 } \right) + \left( {a_0  \times 10^0 } \right)\!
+          </me>.
+          Use the result in <xref ref="exer_poweroftenmod5"/> to help prove each of the following:
+        </p>
+      </introduction>
+
+      <task>
+        <p>
+          <m>[ n ] = [ {a_0 } ]</m>, using congruence classes modulo 5.
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>n \equiv a_0 \pmod 5</m>.
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>5 \mid n</m> if and only if <m>5 \mid a_0</m>.
+            <idx><h>divisibility test</h><h>for 5</h></idx>
+        </p>
+      </task>
+    </exercise>
+
+    <exercise xml:id="exer_poweroftenmod4">
+      <statement>
+        <p>
+          Use mathematical induction to prove that if <m>n</m> is an integer and <m>n \geq 2</m>,
+          then <m>10^n \equiv 0 \pmod 4</m>.
+          Hence, for congruence classes modulo 4, if <m>n</m> is an integer and <m>n \geq 2</m>,
+          then <m>[ {10^n } ] = [ 0 ]</m>.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_divtest4">
+      <introduction>
+        <p>
+          Let  <m>n \in \mathbb{N}</m> and assume
+          <me>
+            n = \left( {a_k  \times 10^k } \right) + \left( {a_{k - 1}  \times 10^{k - 1} } \right) +  \cdots  + \left( {a_1  \times 10^1 } \right) + \left( {a_0  \times 10^0 } \right)\!
+          </me>.
+          Use the result in <xref ref="exer_poweroftenmod4"/> to help prove each of the following:
+        </p>
+      </introduction>
+
+      <task>
+        <p>
+          <m>[ n ] = [ {10a_1 + a_0 } ]</m>,
+          using congruence classes modulo 4.
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>n \equiv \left( {10a_1 + a_0 } \right) \pmod 4</m>.
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>4 \mid n</m> if and only if <m>4 \mid \left( {10a_1 + a_0 } \right)</m>.
+            <idx><h>divisibility test</h><h>for 4</h></idx>
+        </p>
+      </task>
+    </exercise>
+
+    <exercise xml:id="exer_poweroftenmod8">
+      <statement>
+        <p>
+          Use mathematical induction to prove that if <m>n</m> is an integer and <m>n \geq 3</m>,
+          then <m>10^n \equiv 0 \pmod 8</m>.
+          Hence, for congruence classes modulo 8, if <m>n</m> is an integer and <m>n \geq 3</m>,
+          then <m>[ {10^n } ] = [ 0 ]</m>.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_divtest8">
+      <statement>
+        <p>
+          Let  <m>n \in \mathbb{N}</m> and assume
+          <me>
+            n = \left( {a_k  \times 10^k } \right) + \left( {a_{k - 1}  \times 10^{k - 1} } 
+            \right) +  \cdots  + \left( {a_1  \times 10^1 } \right) + \left( {a_0  \times 10^0 } \right)\!
+          </me>.
+          Use the result in <xref ref="exer_poweroftenmod8"/> to help develop a divisibility test for 8.
+          Prove that your divisibility test is correct.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_poweroftenmod11">
+      <statement>
+        <p>
+          Use mathematical induction to prove that if <m>n</m> is a nonnegative integer then <m>10^n \equiv \left( -1 \right)^{n} \pmod {11}</m>.
+          Hence, for congruence classes modulo 11,
+          if <m>n</m> is a nonnegative integer,
+          then <m>[ {10^n } ] = [ \left( -1 \right)^{n} ]</m>.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_divtest11">
+      <introduction>
+        <p>
+          Let  <m>n \in \mathbb{N}</m> and assume
+          <me>
+            n = \left( {a_k  \times 10^k } \right) + \left( {a_{k - 1}  \times 10^{k - 1} } 
+            \right) +  \cdots  + \left( {a_1  \times 10^1 } \right) + \left( {a_0  \times 10^0 } \right)\!
+          </me>.
+          Use the result in <xref ref="exer_poweroftenmod11"/> to help prove each of the following:
+        </p>
+      </introduction>
+
+      <task>
+        <p>
+          <m>n \equiv \sum\limits_{j = 0}^k {\left( { - 1} \right)^j a_j } \pmod {11}</m>.
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>[ n ] = [ {\sum\limits_{j = 0}^k {\left( { - 1} \right)^j a_j } } ]</m>,
+          using congruence classes modulo 11.
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>11</m> divides <m>n</m> if and only if <m>11</m> divides 
+          <m>\sum\limits_{j = 0}^k {\left( { - 1} \right)^j a_j }</m>.
+            <idx><h>divisibility test</h><h>for 11</h></idx>
+        </p>
+      </task>
+    </exercise>
+
+    <exercise xml:id="exer_sec74cong3">
+      <introduction>
+        <p>
+          Prove the following propositions.
+        </p>
+      </introduction>
+
+      <task>
+        <p>
+          For all <m>[ a ], [ b ] \in \mathbb{Z}_3</m>, if <m>[ a ]^2 + [ b ]^2 = [ 0 ]</m>, 
+          then <m>[ a ] = 0</m> and <m>[ b ] = [ 0 ]</m>.
+        </p>
+      </task>
+      <task xml:id="exer_sec74cong3b">
+        <p>
+          Let <m>a, b \in \mathbb{Z}</m>. If <m>\left( {a^2 + b^2 } \right) \equiv 0 \pmod 3</m>, 
+          then <m>a \equiv 0 \pmod 3</m> and <m>b \equiv 0 \pmod 3</m>.
+        </p>
+        <p>
+          (Use <xref ref="exer_sec74cong3a"/>.)
+        </p>
+      </task>
+      <task>
+        <p>
+          For all <m>a, b \in \mathbb{Z}</m>, if 3 divides <m>\left( {a^2 + b^2 } \right)</m>, 
+          then 3 divides <m>a</m> and 3 divides <m>b</m>.
+        </p>
+        <p>
+          (Use <xref ref="exer_sec74cong3b"/>.)
+        </p>
+      </task>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Prove the following proposition:
+          <blockquote>
+            For each <m>a \in \mathbb{Z}</m>, if there exist integers <m>b</m> and <m>c</m> 
+            such that <m>a = b^4 + c^4</m>, then the units digit of <m>a</m> must be 0, 1, 2, 5, 6, or 7.
+          </blockquote>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_sec74-15">
+      <statement>
+        <p>
+          Is the following proposition true or false?
+          Justify your conclusion.
+          <blockquote>
+            Let <m>n \in \mathbb{Z}</m>. If <m>n</m> is odd, then <m>8 \mid \left( {n^2 - 1} \right)</m>. 
+          </blockquote>
+        </p>
+        <p>
+          Hint: What are the possible values of <m>n</m> (mod 8)?
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Prove the following proposition:
+          <blockquote>
+            Let <m>n \in \mathbb{N}</m>. If <m>n \equiv 7 \pmod 8</m>, then <m>n</m> is not 
+            the sum of three squares. That is, there do not exist natural numbers <m>a</m>, 
+            <m>b</m>, and <m>c</m> such that <m>n = a^2 + b^2 + c^2</m>.
+          </blockquote>
+        </p>
+      </statement>
+    </exercise>
+
+    <activity xml:id="exer_usingcongruencemod4">
+      <title> Using Congruence Modulo 4</title>
+
+      <introduction>
+        <p>
+          The set  <m>\mathbb{Z}_n</m> is a finite set,
+          and hence one way to prove things about
+          <m>\mathbb{Z}_n</m> is to simply use the  <m>n</m>  elements in
+          <m>\mathbb{Z}_n</m> as the  <m>n</m>  cases for a proof using cases.
+          For example, if  <m>n \in \mathbb{Z}</m>,
+          then in  <m>\mathbb{Z}_4</m>, <m>[ n ] = [ 0 ]</m>,
+          <m>[ n ] = [ 1 ]</m>, <m>[ n ] = [ 2 ]</m>, or <m>[ n ] = [ 3 ]</m>.
+        </p>
+      </introduction>
+
+      <task>
+        <p>
+          Prove that if <m>n \in \mathbb{Z}</m>,
+          then in <m>\mathbb{Z}_4</m>,
+          <m>[ n ]^2 = [ 0 ]</m> or <m>[ n ]^2 = [ 1 ]</m>.
+          Use this to conclude that in <m>\mathbb{Z}_4</m>,
+          <m>[ {n^2 } ] = [ 0 ]</m> or <m>[ {n^2 } ] = [ 1 ]</m>.
+        </p>
+      </task>
+      <task>
+        <p>
+          Translate the equations <m>\left[ {n^2 } \right] = [ 0 ]</m> and 
+          <m>\left[ {n^2 } \right] = [ 1 ]</m> in
+          <m>\mathbb{Z}_4</m> into congruences modulo 4.
+        </p>
+      </task>
+      <task>
+        <p>
+          Use a result in <xref ref="exer_divtest4"/> to determine the value of  <m>r</m> 
+          so that <m>r \in \mathbb{Z}</m>,
+          <m>0 \leq r \lt  3</m>, and
+          <me>
+            {104 \  257 \ 833 \ 259} \equiv r \pmod 4\!
+          </me>.
+          That is,  <m>[ {104 \ 257 \ 833 \ 259} ] = [ r ]</m> in  <m>\mathbb{Z}_4</m>.
+        </p>
+      </task>
+      <task>
+        <p>
+          Is the natural number <m>104 \ 257 \ 833 \ 259</m> a perfect square?
+          Justify your conclusion.
+        </p>
+      </task>
+    </activity>
+
+  </exercises>
+
+</section>

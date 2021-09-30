@@ -1,0 +1,1356 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<section xml:id="S_gcd">
+  <title>The Greatest Common Divisor</title>
+  
+    <worksheet xml:id="PA_gcd">
+      <title>Beginning Activity 1: The Greatest Common Divisor</title>
+      
+      <exercise>
+        <statement>
+          <p>
+            Explain what it means to say that a nonzero integer <m>m</m> divides an integer <m>n</m>.
+            Recall that we use the notation
+            <m>m \mid n</m> to indicate that the nonzero integer <m>m</m> divides the integer <m>n</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Let <m>m</m> and <m>n</m> be integers with <m>m \ne 0</m>.
+            Explain what it means to say that <m>m</m> does not divide <m>n</m>.
+          </p>
+        </statement>
+      </exercise>
+
+      <definition xml:id="gcd">
+        <statement>
+          <p>
+            Let <m>a</m> and <m>b</m> be integers, not both 0.
+            A <term>common divisor</term>
+                <idx><h>common divisor</h></idx>
+            of <m>a</m> and <m>b</m> is any nonzero integer that divides both <m>a</m> and <m>b</m>.
+            The <term>largest</term> natural number that divides both <m>a</m> and <m>b</m> is called the
+            <term>greatest common divisor</term>
+                <idx><h>greatest common divisor</h></idx>
+            of <m>a</m> and <m>b</m>.
+            The greatest common divisor of <m>a</m> and <m>b</m> is denoted by 
+            <m>\gcd \left( {a, b} \right)</m>.
+          </p>
+        </statement>
+      </definition>
+
+      <exercise xml:id="PA_gcd1">
+        <statement>
+          <p>
+            Use the roster method to list the elements of the set that contains all the natural 
+            numbers that are divisors of 48.
+          </p>
+        </statement>
+      </exercise>
+      <exercise xml:id="PA_gcd2">
+        <statement>
+          <p>
+            Use the roster method to list the elements of the set that contains all the natural 
+            numbers that are divisors of 84.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            Determine the intersection of the two sets in <xref ref="PA_gcd1"></xref> and 
+            <xref ref="PA_gcd2"></xref>.
+            This set contains all the natural numbers that are common divisors of 48 and 84.
+          </p>
+        </statement>
+      </exercise>
+      <exercise xml:id="PA_gcd4">
+        <statement>
+          <p>
+            What is the greatest common divisor of 48 and 84?
+          </p>
+        </statement>
+      </exercise>
+      <exercise xml:id="PA_gcd5">
+        <statement>
+          <p>
+            Use the method suggested in <xref ref="PA_gcd1"></xref> 
+            through <xref ref="PA_gcd4"></xref> 
+            to determine each of the following:
+            <m>\gcd( {8, - 12})</m>, <m>\gcd( {0, 5} )</m>,
+            <m>\gcd( {8, 27} )</m>, and <m>\gcd( {14, 28})</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
+          <p>
+            If <m>a</m> and <m>b</m> are integers,
+            make a conjecture about how the common divisors of <m>a</m> and <m>b</m> are 
+            related to the greatest common divisor of <m>a</m> and <m>b</m>.
+          </p>
+        </statement>
+      </exercise>
+
+    </worksheet>
+
+    <worksheet xml:id="PA_gcdanddivalgo">
+      <title>Beginning Acivity 2: The GCD and the Division Algorithm</title>
+      <p>
+        When we speak of the quotient and the remainder when we
+        <q>divide an integer <m>a</m> by the positive integer <m>b</m>,</q>
+        we will always mean the quotient <m>q</m> and the remainder <m>r</m> guaranteed by the 
+        Division Algorithm.
+        (See <xref ref="S_divalgo"></xref>,
+        <xref ref="divalgorithm">The Division Algorithm</xref>.)
+      </p>
+        <exercise xml:id="PA_gcdanddivalgo2">
+          <statement>
+            <p>
+              Each row in the following table contains values for the integers <m>a</m> and <m>b</m>.
+              In this table, the value of <m>r</m> is the remainder
+              (from the Division Algorithm)
+              when <m>a</m> is divided by <m>b</m>.
+              Complete each row in this table by determining <m>\gcd( {a, b} )</m>,
+              <m>r</m>, and <m>\gcd( {b, r} )</m>.
+              <tabular halign="center">
+                <row bottom="medium">
+                  
+                  <cell right="medium"><m>a</m></cell>
+                  <cell right="medium"><m>b</m></cell>
+                  <cell right="medium"><m>\gcd(a, b)</m></cell>
+                  <cell right="medium">Remainder <m>r</m></cell>
+                  <cell><m>\gcd(b,r)</m></cell>
+                  
+                </row>
+                <row bottom="medium">
+                  
+                  <cell right="medium">44</cell>
+                  <cell right="medium">12</cell>
+                  <cell right="medium"></cell>
+                  <cell right="medium"></cell>
+                  <cell></cell>
+                  
+                </row>
+                <row bottom="medium">
+                  
+                  <cell right="medium">75</cell>
+                  <cell right="medium">21</cell>
+                  <cell right="medium"></cell>
+                  <cell right="medium"></cell>
+                  <cell></cell>
+                  
+                </row>
+                <row>
+                  
+                  <cell right="medium">50</cell>
+                  <cell right="medium">33</cell>
+                  <cell right="medium"></cell>
+                  <cell right="medium"></cell>
+                  <cell></cell>
+                  
+                </row>
+              </tabular>
+            </p>
+          </statement>
+        </exercise>
+        <exercise>
+          <statement>
+            <p>
+              Formulate a conjecture based on the results of the table in 
+              <xref ref="PA_gcdanddivalgo2"/>.
+            </p>
+          </statement>
+        </exercise>
+
+    </worksheet>
+  
+  <subsection>
+    <title>The System of Integers</title>
+    <p>
+      Number theory is a study of the system of integers,
+          <idx><h>integers</h><h>system</h></idx>
+      which consists of the set of integers,
+      <m>\mathbb{Z} = \left\{ {\, \ldots , - 3, - 2, - 1, 0, 1, 2, 3, \ldots \, } \right\}</m> 
+      and the various properties of this set under the usual operations of addition and 
+      multiplication and under the usual ordering relation of
+      <q>less than.</q>
+      The properties of the integers in <xref ref="Ta_axiomsforintegers"></xref>
+      will be considered axioms in this text.
+    </p>
+    <p>
+      We will also assume the properties of the integers shown in <xref ref="Ta_propertiesofintegers"></xref>.
+      These properties can be proven from the properties in <xref ref="Ta_axiomsforintegers"></xref>.
+      (However, we will not do so here.)
+    </p>
+
+    <table xml:id="Ta_axiomsforintegers">
+      <title>Axioms for the Integers</title>
+      <tabular>
+        <row bottom="medium">
+          <cell right="medium"></cell>
+          <cell>For all integers <m>a, b,</m> and <m>c</m>:</cell>
+        </row>
+
+        <row bottom="medium">
+          <cell right="medium">Closure Proporties for Addition and Multiplication</cell>
+          <cell><m>a + b \in \mathbb{Z}</m> and
+            <m>ab \in \mathbb{Z}</m></cell>
+        </row>
+        <row bottom="medium">
+          <cell right="medium">Commutative Properties for Addition and Multiplication</cell>
+          <cell><m>a + b = b + a</m>, and
+            <m>ab = ba</m></cell>
+        </row>
+        <row bottom="medium">
+          <cell right="medium">Associative Properties for Addition and Multiplication</cell>
+          <cell><line><m>\left( {a + b} \right) + c = a + \left( {b + c} \right)</m> and</line>
+            <line><m>\left( {ab} \right)c = a\left( {bc} \right)</m></line></cell>
+        </row>
+
+        <row bottom="medium">
+          <cell right="medium">Distributive Properties of Multiplication over Addition</cell>
+          <cell><line><m>a\left( {b + c} \right) = ab + ac</m>, and</line>
+            <line><m>\left( {b + c} \right)a = ba + ca</m></line></cell>
+        </row>
+
+        <row bottom="medium">
+          <cell right="medium">Additive and Multiplicative Identity Properties</cell>
+          <cell><line><m>a + 0 = 0 + a = a</m>, and</line>
+            <line><m>a \cdot 1 = 1 \cdot a = a</m></line></cell>
+        </row>
+
+        <row>
+          <cell right="medium">Additive Inverse Property</cell>
+          <cell><m>a + \left( { - a} \right) = \left( { - a} \right) + a = 0</m></cell>
+        </row>
+
+      </tabular>
+    </table>
+  
+    <table xml:id="Ta_propertiesofintegers">
+      <title>Properties of the Integers</title>
+      <tabular>
+        
+        <row bottom="medium">
+          <cell right="medium">Zero Property of Multiplication</cell>
+          <cell>If  <m>a \in \mathbb{Z}</m>, then  <m>a \cdot 0 = 0 \cdot a = 0</m>.</cell>
+        </row>
+        
+        <row>
+          <cell right="medium"><line>Cancellation Properties of </line><line>Addition and Multiplication</line></cell>
+          <cell><line>If  <m>a, b, c \in \mathbb{Z}</m> and
+            <m>a + b = a + c</m>, then  <m>b = c</m>.</line>
+            <line>If <m>a, b, c \in \mathbb{Z}</m>, <m>a \ne 0</m> and <m>ac = bc</m>, 
+            then <m>b = c</m>.</line></cell>
+        </row>
+      
+      </tabular>
+    </table>
+
+    <p>
+      We have already studied a good deal of number theory in this text in our discussion of 
+      proof methods.
+      In particular, we have studied even and odd integers,
+      divisibility of integers, congruence,
+      and the Division Algorithm.
+      See the summary <xref ref="S_3summary"/>
+      for a summary of results concerning even and odd integers as well as results 
+      concerning properties of divisors.
+      We reviewed some of these properties and the Division Algorithm in the beginning activities.
+    </p>
+  </subsection>
+
+  <subsection>
+    <title>The Greatest Common Divisor</title>
+    <p>
+      One of the most important concepts in elementary number theory is that of the greatest 
+      common divisor of two integers.
+      The definition for the greatest common divisor of two integers
+      (not both zero)
+      was given in <xref ref="PA_gcd">Beginning Activity 1</xref>.
+      <ol>
+        <li>
+          <p>
+            If <m>a, b \in \mathbb{Z}</m> and <m>a</m> and <m>b</m> are not both 0, and if 
+            <m>d \in \mathbb{N}</m>,
+            then <m>d = \gcd( {a, b} )</m> provided that it satisfies all of the following 
+            properties:
+            <ul>
+              <li>
+                <p>
+                  <m>d \mid a</m> and <m>d \mid b</m>.
+                  That is, <m>d</m> is a common divisor of <m>a</m> and <m>b</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  If <m>k</m> is a natural number such that <m>k \mid a</m> and
+                  <m>k \mid b</m>, then <m>k \leq d</m>.
+                  That is, any other common divisor of <m>a</m> and <m>b</m> is less than or 
+                  equal to <m>d</m>.
+                </p>
+              </li>
+            </ul>
+          </p>
+        </li>
+        <li>
+          <p>
+            Consequently,
+            a natural number <m>d</m> is not the greatest common divisor of <m>a</m> and 
+            <m>b</m> provided that it does not satisfy at least one of these properties.
+            That is, <m>d</m> is not equal to <m>\gcd( {a, b} )</m> provided that
+            <ul>
+              <li>
+                <p>
+                  <m>d</m> does not divide <m>a</m> or <m>d</m> does not divide <m>b</m>; or
+                </p>
+              </li>
+              <li>
+                <p>
+                  There exists a natural number <m>k</m> such that
+                  <m>k \mid a</m> and <m>k \mid b</m> and <m>k > d</m>.
+                </p>
+              </li>
+            </ul>
+          </p>
+          <p>
+          This means that <m>d</m> is not the greatest common divisor of <m>a</m> and <m>b</m> 
+          provided that it is not a common divisor of <m>a</m> and <m>b</m> or that there exists 
+          a common divisor of <m>a</m> and <m>b</m> that is greater than <m>d</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      In the beginning activities,
+      we determined the greatest common divisors for several pairs of integers.
+      The process we used was to list all the divisors of both integers,
+      then list all the common divisors of both integers and, finally,
+      from the list of all common divisors,
+      find the greatest (largest) common divisor.
+      This method works reasonably well for small integers but can get quite cumbersome if the 
+      integers are large.
+      Before we develop an efficient method for determining the greatest common divisor of two 
+      integers,
+      we need to establish some properties of greatest common divisors.
+    </p>
+    <p>
+      One property was suggested in <xref ref="PA_gcd">Beginning Activity 1</xref>.
+      If we look at the results in <xref ref="PA_gcd5"/> of that beginning activity,
+      we should observe that any common divisor of <m>a</m> and <m>b</m> will divide 
+      <m>\gcd( {a, b} )</m>.
+      In fact, the primary goals of the remainder of this section are
+      <ol>
+        <li>
+          <p>
+            To find an efficient method for determining <m>\gcd( {a, b} )</m>,
+            where <m>a</m> and <m>b</m> are integers.
+          </p>
+        </li>
+        <li>
+          <p>
+            To prove that the natural number
+            <m>\gcd( {a, b} )</m> is the only natural number <m>d</m> that satisfies the 
+            following properties:
+            <ul>
+              <li>
+                <p>
+                  <m>d</m> divides <m>a</m> and <m>d</m> divides <m>b</m>; and
+                </p>
+              </li>
+              <li>
+                <p>
+                  if <m>k</m> is a natural number such that <m>k \mid a</m> and
+                  <m>k \mid b</m>, then <m>k \mid d</m>.
+                </p>
+              </li>
+            </ul>
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      The second goal is only slightly different from the definition of the greatest common divisor.
+      The only difference is in the second condition where
+      <m>k \leq d</m> is replaced by <m>k \mid d</m>.
+    </p>
+    <p>
+      We will first consider the case where <m>a</m> and <m>b</m> are integers with 
+      <m>a \ne 0</m> and <m>b > 0</m>.
+      The proof of the result stated in the second goal contains a method
+      (called the Euclidean Algorithm)
+      for determining the greatest common divisor of the two integers <m>a</m> and <m>b</m>.
+      The main idea of the method is to keep replacing the pair of integers
+      <m>\left( {a, b} \right)</m> with another pair of integers <m>\left( {b, r} \right)</m>,
+      where <m>0 \leq r \lt b</m> and <m>\gcd ( {b, r} ) = \gcd ( {a, b} )</m>.
+      This idea was explored in <xref ref="PA_gcdanddivalgo">Beginning Activity 2</xref>.
+      <xref ref="L_gcdanddivalgo"></xref>
+      is a conjecture that could have been formulated in <xref ref="PA_gcdanddivalgo">Beginning Activity 2</xref>.
+    </p>
+
+    <lemma xml:id="L_gcdanddivalgo">
+      <statement>
+        <p>
+          Let <m>c</m> and <m>d</m> be integers, not both equal to zero.
+          If <m>q</m> and <m>r</m> are integers such that <m>c = d \cdot q + r</m>,
+          then <m>\gcd( {c, d} ) = \gcd( {d, r} )</m>.
+        </p>
+      </statement>
+    
+    <proof>
+      <p>
+        Let <m>c</m> and <m>d</m> be integers, not both equal to zero.
+        Assume that <m>q</m> and <m>r</m> are integers such that <m>c = d \cdot q + r</m>.
+        For ease of notation, we will let
+        <me>
+          m = \gcd( {c, d} )\text{  and  }  n = \gcd( {d, r} )
+        </me>.
+      </p>
+      <p>
+        Now, <m>m</m> divides <m>c</m> and <m>m</m> divides <m>d</m>.
+        Consequently,
+        there exist integers <m>x</m> and <m>y</m> such that <m>c = mx</m> and <m>d = my</m>.
+        Hence,
+        <md>
+          <mrow>r \amp = c - d \cdot q</mrow>
+          <mrow>r \amp = mx - ( {my} )q</mrow>
+          <mrow>r \amp = m ( {x - yq} )</mrow>
+        </md>.
+
+        But this means that <m>m</m> divides <m>r</m>.
+        Since <m>m</m> divides <m>d</m> and <m>m</m> divides <m>r</m>,
+        <m>m</m> is less than or equal to <m>\gcd( {d, r} )</m>.
+        Thus, <m>m \leq n</m>.
+      </p>
+      <p>
+        Using a similar argument,
+        we see that <m>n</m> divides <m>d</m> and <m>n</m> divides <m>r</m>.
+        Since <m>c = d \cdot q + r</m>,
+        we can prove that <m>n</m> divides <m>c</m>.
+        Hence, <m>n</m> divides <m>c</m> and <m>n</m> divides <m>d</m>.
+        Thus, <m>n \leq \gcd( {c, d} )</m> or <m>n \leq m</m>.
+        We now have <m>m \leq n</m> and <m>n \leq m</m>.
+        Hence, <m>m = n</m> and <m>\gcd( {c, d} ) = \gcd( {d, r} )</m>.
+      </p>
+    </proof>
+    </lemma>
+
+    <exercise xml:id="prog_lemma81">
+      <title>Illustrations of <xref ref="L_gcdanddivalgo"/></title>
+      <introduction>
+      <p>
+        We completed several examples illustrating <xref ref="L_gcdanddivalgo"></xref>
+        in <xref ref="PA_gcdanddivalgo">Beginning Activity 2</xref>.
+        For another example, let <m>c = 56</m> and <m>d = 12</m>.
+        The greatest common divisor of 56 and 12 is 4.
+      </p>
+      </introduction>
+       
+          <task>
+            <p>
+              According to the Division Algorithm,
+              what is the remainder <m>r</m> when 56 is divided by 12?
+            </p>
+          </task>
+          <task>
+            <p>
+              What is the greatest common divisor of 12 and the remainder <m>r</m>?
+            </p>
+          </task>
+          <task>
+            <p>
+              The key to finding the greatest common divisor
+              (in more complicated cases)
+              is to use the Division Algorithm again,
+              this time with 12 and <m>r</m>.
+              We now find integers <m>q_2 \text{ and } r_2</m> such that
+              <me>
+                12 = r \cdot q_2  + r_2
+              </me>.
+            </p>
+            <p>
+              What is the greatest common divisor of <m>r</m> and <m>r_2</m>?
+            </p>
+          </task>
+    </exercise>
+
+  </subsection>
+
+  <subsection>
+    <title>The Euclidean Algorithm</title>
+    <p>
+      The example in <xref ref="prog_lemma81"></xref>
+      illustrates the main idea of the
+      <term>Euclidean Algorithm</term>
+          <idx><h>Euclidean Algorithm</h></idx>
+      for finding <m>\gcd( {a, b} )</m>,
+      which is explained in the proof of the following theorem.
+    </p>
+
+    <theorem xml:id="T_euclidalgo">
+      <statement>
+        <p>
+          Let <m>a</m> and <m>b</m> be integers with <m>a \ne 0</m> and <m>b > 0</m>.
+          Then <m>\gcd( {a, b} )</m> is the only natural number <m>d</m> such that
+          <ol label="(a)">
+            <li xml:id="T_euclidalgo1">
+              <p>
+                <m>d</m> divides <m>a</m> and <m>d</m> divides <m>b</m>, and
+              </p>
+            </li>
+            <li xml:id="T_euclidalgo2">
+              <p>
+                if <m>k</m> is an integer that divides both <m>a</m> and <m>b</m>,
+                then <m>k</m> divides <m>d</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    
+    <proof>
+      <p>
+        Let <m>a</m> and <m>b</m> be integers with <m>a \ne 0</m> and <m>b > 0</m>,
+        and let <m>d = \gcd( {a, b} )</m>.
+        By the Division Algorithm,
+        there exist integers <m>q_1</m> and <m>r_1</m> such that
+        <men xml:id="eq_euclidalgo1">
+          a = b \cdot q_1  + r_1 \text{ ,  and  } 0 \leq r_1  \lt  b
+        </men>.
+      </p>
+      <p>
+        If <m>r_1 = 0</m>,
+        then equation<nbsp/><xref ref="eq_euclidalgo1"/> implies that <m>b</m> divides <m>a</m>.
+        Hence, <m>b = d = \gcd( {a, b} )</m> and this number satisfies 
+        <xref ref="T_euclidalgo1">Condition</xref>
+        and <xref ref="T_euclidalgo2">Condition</xref>.
+      </p>
+      <p>
+        If <m>r_1  > 0</m>, then by <xref ref="L_gcdanddivalgo"></xref>,
+        <m>\gcd( {a, b} ) = \gcd( {b, r_1 } )</m>.
+        We use the Division Algorithm again to obtain integers <m>q_2</m> and <m>r_2</m> such that
+        <men xml:id="eq_euclidalgo2">
+          b = r_1  \cdot q_2  + r_2 \text{ ,  and  } 0 \leq r_2  \lt  r_1
+        </men>.
+      </p>
+      <p>
+        If <m>r_2 = 0</m>,
+        then equation<nbsp/><xref ref="eq_euclidalgo2"/> implies that <m>r_1</m> divides <m>b</m>.
+        This means that <m>r_1 = \gcd( {b, r_1 } )</m>.
+        But we have already seen that <m>\gcd( {a, b} ) = \gcd( {b, r_1 } )</m>.
+        Hence, <m>r_1 = \gcd( {a, b} )</m>.
+        In addition,
+        if <m>k</m> is an integer that divides both <m>a</m> and <m>b</m>, then,
+        using equation<nbsp/><xref ref="eq_euclidalgo1"/>,
+        we see that <m>r_1 = a - b \cdot q_1</m> and,
+        hence <m>k</m> divides <m>r_1</m>.
+        This shows that <m>r_1 = \gcd( {a, b} )</m> satisfies <xref ref="T_euclidalgo1">Condition</xref>
+        and <xref ref="T_euclidalgo2">Condition</xref>.
+      </p>
+      <p>
+        If <m>r_2 > 0</m>, then by <xref ref="L_gcdanddivalgo"></xref>,
+        <m>\gcd( {b, r_1 } ) = \gcd( {r_1 , r_2 } )</m>.
+        But we have already seen that <m>\gcd( {a, b} ) = \gcd( {b, r_1 } )</m>.
+        Hence, <m>\gcd( {a, b} ) = \gcd( {r_1 , r_2 } )</m>.
+        We now continue to apply the Division Algorithm to produce a sequence of pairs of integers
+        (all of which have the same greatest common divisor).
+        This is summarized in the following table:
+      </p>
+      <tabular>
+        <row header="yes" bottom="minor">
+          
+          <cell right="medium">Original Pair</cell>
+          <cell right="medium"><line>Equation from</line><line>Division Algorithm</line></cell>
+          <cell right="medium"><line>Inequality from</line><line>Division Algorithm</line></cell>
+          <cell>New Pair</cell>
+          
+        </row>
+
+        <row bottom="medium">
+         
+          <cell right="medium"><m>\left( {a, b} \right)</m></cell>
+          <cell right="medium"><m>a = b \cdot q_1  + r_1</m></cell>
+          <cell right="medium"><m>0 \leq r_1  \lt  b</m></cell>
+          <cell><m>\left( {b, r_1 } \right)</m></cell>
+          
+        </row>
+
+        <row bottom="medium">
+          
+          <cell right="medium"><m>\left( {b, r_1 } \right)</m></cell>
+          <cell right="medium"><m>b = r_1  \cdot q_2  + r_2</m></cell>
+          <cell right="medium"><m>0 \leq r_2  \lt  r_1</m></cell>
+          <cell><m>\left( {r_1 , r_2 } \right)</m></cell>
+          
+        </row>
+        <row bottom="minor">
+          
+          <cell right="medium"><m>\left( {r_1 , r_2 } \right)</m></cell>
+          <cell right="medium"><m>r_1  = r_2  \cdot q_3  + r_3</m></cell>
+          <cell right="medium"><m>0 \leq r_3  \lt  r_2</m></cell>
+          <cell><m>\left( {r_2 , r_3 } \right)</m></cell>
+          
+        </row>
+        <row bottom="medium">
+          
+          <cell right="medium"><m>\left( {r_2 , r_3 } \right)</m></cell>
+          <cell right="medium"><m>r_2  = r_3  \cdot q_4  + r_4</m></cell>
+          <cell right="medium"><m>0 \leq r_4  \lt  r_3</m></cell>
+          <cell><m>\left( {r_3 , r_4 } \right)</m></cell>
+          
+        </row>
+        <row bottom="medium">
+          
+          <cell right="medium"><m>\left( {r_3 , r_4 } \right)</m></cell>
+          <cell right="medium"><m>r_3  = r_4  \cdot q_5  + r_5</m></cell>
+          <cell right="medium"><m>0 \leq r_5  \lt  r_4</m></cell>
+          <cell><m>\left( {r_4 , r_5 } \right)</m></cell>
+          
+        </row>
+        <row>
+          
+          <cell right="medium"><m>\vdots</m></cell>
+          <cell right="medium"><m>\vdots</m></cell>
+          <cell right="medium"><m>\vdots</m></cell>
+          <cell><m>\vdots</m></cell>
+          
+        </row>
+      </tabular>
+      <p>
+        From the inequalities in the third column of this table,
+        we have a strictly decreasing sequence of nonnegative integers 
+        <m>\left( {b > r_1 > r_2 > r_3 > r_4 \cdots } \right)</m>.
+        Consequently,
+        a term in this sequence must eventually be equal to zero.
+        Let <m>p</m> be the smallest natural number such that <m>r_{p + 1} = 0</m>.
+        This means that the last two rows in the preceding table will be
+      </p>
+      <tabular>
+        <row header="yes" bottom="minor">
+          
+          <cell right="medium">Original Pair</cell>
+          <cell right="medium"><line>Equation from</line><line>Division Algorithm</line></cell>
+          <cell right="medium"><line>Inequality from</line><line>Division Algorithm</line></cell>
+          <cell>New Pair</cell>
+          
+        </row>
+        
+        <row bottom="medium">
+          
+          <cell right="medium"><m>\left( {r_{p - 2} , r_{p - 1} } \right)</m></cell>
+          <cell right="medium"><m>r_{p - 2}  = r_{p - 1}  \cdot q_p  + r_p</m></cell>
+          <cell right="medium"><m>0 \leq r_p  \lt  r_{p - 1}</m></cell>
+          <cell><m>\left( {r_{p - 1} , r_p } \right)</m></cell>
+         
+        </row>
+        <row>
+          
+          <cell right="medium"><m>\left( {r_{p - 1} , r_p } \right)</m></cell>
+          <cell right="medium"><m>r_{p - 1}  = r_p  \cdot q_{p + 1}  + 0</m></cell>
+          <cell right="medium"></cell>
+          <cell></cell>
+         
+        </row>
+      </tabular>
+      <p>
+        Remember that this table was constructed by repeated use of <xref ref="L_gcdanddivalgo"></xref>
+        and that the greatest common divisor of each pair of integers produced equals 
+        <m>\gcd( {a, b} )</m>.
+        Also, the last row in the table indicates that <m>r_p</m> divides <m>r_{p - 1}</m>.
+        This means that <m>\gcd( {r_{p - 1} , r_p } ) = r_p</m> and hence <m>r_p = \gcd( {a, b} )</m>.
+      </p>
+      <p>
+        This proves that <m>r_p = \gcd( {a, b} )</m> satisfies 
+        <xref ref="T_euclidalgo1">Condition</xref> of this theorem.
+        Now assume that <m>k</m> is an integer such that <m>k</m> divides <m>a</m> and <m>k</m> 
+        divides <m>b</m>.
+        We proceed through the table row by row.
+        First, since <m>r_1 = a - b \cdot q</m>,
+        we see that <m>k</m> must divide <m>r_1</m>.
+        The second row tells us that <m>r_2 = b - r_1 \cdot q_2</m>.
+        Since <m>k</m> divides <m>b</m> and <m>k</m> divides <m>r_1</m>,
+        we conclude that <m>k</m> divides <m>r_2</m>.
+        Continuing with each row,
+        we see that <m>k</m> divides each of the remainders <m>r_1</m>,
+        <m>r_2</m>,
+        <m>r_3</m>, <m>\ldots, r_p</m>.
+        This means that <m>r_p = \gcd( {a, b} )</m> satisfies 
+        <xref ref="T_euclidalgo2">Condition</xref> of the theorem.
+      </p>
+    </proof>
+    </theorem>
+
+    <exercise xml:id="prog_usingeuclid1">
+     
+        <statement>
+          <p>
+            Use the Euclidean Algorithm to determine <m>\gcd( {180, 126} )</m>.
+            Notice that we have deleted the third column (Inequality from Division Algorithm) 
+            from the following table.
+            It is not needed in the computations.
+            <tabular>
+              <row header="yes" bottom="medium">
+          
+                <cell right="medium">Original Pair</cell>
+                <cell right="medium"><line>Equation from</line><line>Division Algorithm</line></cell>
+                <cell>New Pair</cell>
+
+              </row>
+              <row bottom="medium">
+                <cell right="medium"><m>\left( {180, 126} \right)</m></cell>
+                <cell right="medium"><m>180 = 126 \cdot 1 + 54</m></cell>
+                <cell><m>\left( {126, 54} \right)</m></cell>
+              </row>
+              
+              <row bottom="medium"> 
+                <cell right="medium"><m>\left( {126, 54} \right)</m></cell>
+                <cell right="medium"><m>126 =</m></cell>
+                <cell></cell>
+              </row>
+              
+              <row>
+                <cell right="medium"></cell>
+                <cell right="medium"></cell>
+                <cell></cell>
+              </row>
+              
+            </tabular>
+          </p>
+          <p>
+            Consequently,
+            <m>\gcd( {180, 126} ) = </m> <fillin/>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise xml:id="prog_usingeuclid2">
+        <statement>
+          <p>
+            Use the Euclidean Algorithm to determine <m>\gcd( {4208, 288} )</m>.
+            <tabular>
+              <row header="yes" bottom="medium">
+          
+                <cell right="medium">Original Pair</cell>
+                <cell right="medium"><line>Equation from</line><line>Division Algorithm</line></cell>
+                <cell>New Pair</cell>
+
+              </row>
+              
+              <row bottom="medium">
+                <cell right="medium"><m>\left( {4208, 288} \right)</m></cell>
+                <cell right="medium"><m>4208 = 288 \cdot 14 + 176</m></cell>
+                <cell><m>\left( {288, \qquad} \right)</m></cell>
+              </row>
+             
+              <row>
+                <cell right="medium"></cell>
+                <cell right="medium"></cell>
+                <cell></cell>
+              </row>
+              
+            </tabular>
+          </p>
+          <p>
+            Consequently,
+            <m>\gcd( {4208, 288} ) = </m> <fillin/>.
+          </p>
+        </statement>
+      
+    </exercise>
+
+  </subsection>
+
+  <subsection>
+    <title>Some Remarks about <xref ref="T_euclidalgo"></xref></title>
+    <p>
+      <xref ref="T_euclidalgo"></xref>
+      was proven with the assumptions that
+      <m>a,
+      b \in \mathbb{Z}</m> with <m>a \ne 0</m> and <m>b > 0</m>.
+      A more general version of this theorem can be proven with <m>a,
+      b \in \mathbb{Z}</m> and <m>b \ne 0</m>.
+      This can be proven using <xref ref="T_euclidalgo"></xref>
+      and the results in the following lemma.
+    </p>
+
+    <lemma xml:id="L_moregcd">
+      <statement>
+        <p>
+          Let <m>a, b \in \mathbb{Z}</m> with <m>b \ne 0</m>.
+          Then
+          <ol>
+            <li>
+              <p>
+                <m>\gcd( {0, b} ) = \left| b \right|</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                If <m>\gcd( {a, b} ) = d</m>,
+                then <m>\gcd( {a, - b} ) = d</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </lemma>
+
+    <p>
+      The proofs of these results are in <xref ref="exer_sec81-props"/>.
+      An application of this result is given in the next example.
+    </p>
+
+    <example xml:id="E_euclidalgo">
+      <title>Using the Euclidean Algorithm</title>
+      <statement>
+        <p>
+          Let <m>a = 234</m> and <m>b = - 42</m>.
+          We will use the Euclidean Algorithm to determine <m>\gcd( {234, 42} )</m>.
+        </p>
+        <tabular>
+          <row header="yes" bottom="medium">
+          
+          <cell right="medium">Step</cell>
+          <cell right="medium">Original Pair</cell>
+          <cell right="medium"><line>Equation from</line><line>Division Algorithm</line></cell>
+          <cell>New Pair</cell>
+          
+          </row>
+         
+          <row bottom="medium">
+            <cell right="medium">1</cell>
+            <cell right="medium"><m>\left( {234, 42} \right)</m></cell>
+            <cell right="medium"><m>234 = 42 \cdot 5 + 24</m></cell>
+            <cell><m>\left( {42, 24} \right)</m></cell>
+          </row>
+        
+          <row bottom="medium">
+            <cell right="medium">2</cell>
+            <cell right="medium"><m>\left( {42, 24} \right)</m></cell>
+            <cell right="medium"><m>42 = 24 \cdot 1 + 18</m></cell>
+            <cell><m>\left( {24, 18} \right)</m></cell>
+          </row>
+          
+          <row bottom="medium">
+            <cell right="medium">3</cell>
+            <cell right="medium"><m>\left( {24, 18} \right)</m></cell>
+            <cell right="medium"><m>24 = 18 \cdot 1 + 6</m></cell>
+            <cell><m>\left( {18, 6} \right)</m></cell>
+          </row>
+          
+          <row>
+            <cell right="medium">4</cell>
+            <cell right="medium"><m>\left( {18, 6} \right)</m></cell>
+            <cell right="medium"><m>18 = 6 \cdot 3</m></cell>
+            <cell></cell>
+          </row>
+          
+        </tabular>
+        <p>
+          So <m>\gcd( {234, 42} ) = 6</m> and hence <m>\gcd( {234, - 42} ) = 6</m>.
+        </p>
+      </statement>
+    </example>
+  </subsection>
+
+  <subsection>
+    <title>Writing <m>\boldsymbol{\gcd (a, b)}</m>  in Terms of <m>a</m> and <m>b</m></title>
+    <p>
+      We will use <xref ref="E_euclidalgo"></xref>
+      to illustrate another use of the Euclidean Algorithm.
+      It is possible to use the steps of the Euclidean Algorithm in reverse order to write
+      <m>\gcd( {a, b} )</m> in terms of <m>a</m> and <m>b</m>.
+      We will use these steps in reverse order to find integers <m>m</m> and <m>n</m> such that 
+      <m>\gcd( {234, 42} ) = 234m + 42n</m>.
+      The idea is to start with the row with the last nonzero remainder and work backward as 
+      shown in the following table:
+    </p>
+    <tabular>
+     
+      <row header="yes" bottom="medium">
+        <cell right="medium">Explanation</cell>
+        <cell>Result</cell>
+      </row>
+      
+      <row bottom="medium">
+        <cell right="medium"><line>First, use the equation in Step 3 to</line>
+              <line>write 6 in terms of  24  and  18.</line></cell>
+        <cell><m>6 = 24 - 18 \cdot 1</m></cell>
+      </row>
+
+      <row bottom="medium">
+        <cell right="medium"><line>Use the equation in Step 2 to write</line>
+              <line><m>18 = 42 - 24 \cdot 1</m>. Substitute this into</line>
+              <line>the preceding result and simplify.</line></cell>
+        <cell>
+          <md>
+            <mrow>6 \amp = 24 - 18 \cdot 1</mrow>
+            <mrow> \amp = 24 - \left( {42 - 24 \cdot 1} \right)</mrow>
+            <mrow> \amp = 42 \cdot \left( { - 1} \right) + 24 \cdot 2</mrow>
+          </md></cell>
+      </row>
+
+      <row>
+        <cell right="medium"><line>We now have written  6  in terms of</line>
+              <line>42 and 24.  Use the equation in</line>
+              <line>Step 1 to write <m>24 = 234 - 42 \cdot 5</m>.</line>
+              <line>Substitute this into the preceding</line>
+              <line>result and simplify</line></cell>
+        <cell>
+          <md>
+            <mrow>6 \amp = 42 \cdot \left( { - 1} \right) + 24 \cdot 2</mrow>
+            <mrow> \amp = 42 \cdot \left( { - 1} \right) + \left( {234 - 42 \cdot 5} \right) \cdot 2</mrow>
+            <mrow> \amp = 234 \cdot 2 + 42 \cdot \left( { - 11} \right)</mrow>
+          </md></cell>
+      </row>
+      
+    </tabular>
+
+    <p>
+      Hence, we can write
+      <me>
+        \gcd( {234, 42} ) = 234 \cdot 2 + 42 \cdot ( { - 11} )
+      </me>.
+    </p>
+    <p>
+      (Check this with a calculator.) In this case,
+      we say that we have written
+      <m>\gcd( {234, 42} )</m> as a linear combination of 234 and 42.
+      More generally, we have the following definition.
+    </p>
+
+    <definition xml:id="linearcombination">
+      <statement>
+        <p>
+          Let <m>a</m> and <m>b</m> be integers.
+          A <term>linear combination</term>
+              <idx><h>linear combination</h></idx>
+          of <m>a</m> and <m>b</m> is an integer of the form <m>ax + by</m>,
+          where <m>x</m> and <m>y</m> are integers.
+        </p>
+      </statement>
+    </definition>
+
+    <exercise xml:id="prog_gcdaslincomb">
+      <title>Writing the gcd as a Linear Combination</title>
+      <introduction>
+      <p>
+        Use the results from <xref ref="prog_usingeuclid1"></xref> and <xref ref="prog_usingeuclid2"/> to
+      </p>
+      </introduction>
+        
+          <task>
+            <p>
+              Write <m>\gcd( {180, 126} )</m> as a linear combination of 180 and 126.
+            </p>
+          </task>
+          <task>
+            <p>
+              Write <m>\gcd( {4208, 288} )</m> as a linear combination of 4208 and 288.
+            </p>
+          </task>
+
+    </exercise>
+
+    <p>
+      The previous example and progress check illustrate the following important result in 
+      number theory,
+      which will be used in the next section to help prove some other significant results.
+    </p>
+
+    <theorem xml:id="T_gcdaslincomb">
+      <statement>
+        <p>
+          Let <m>a</m> and <m>b</m> be integers, not both 0.
+          Then <m>\gcd( {a, b} )</m> can be written as a linear combination of <m>a</m> and <m>b</m>.
+          That is, there exist integers <m>u</m> and <m>v</m> such that <m>\gcd( {a, b} ) = au + bv</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <p>
+      We will not give a formal proof of this theorem.
+      Hopefully, the examples and activities provide evidence for its validity.
+      The idea is to use the steps of the Euclidean Algorithm in reverse order to write
+      <m>\gcd( {a, b} )</m> as a linear combination of <m>a</m> and <m>b</m>.
+      For example,
+      assume the completed table for the Euclidean Algorithm is
+    </p>
+    <tabular>
+      <row header="yes" bottom="medium">
+          
+          <cell right="medium">Step</cell>
+          <cell right="medium">Original Pair</cell>
+          <cell right="medium"><line>Equation from</line><line>Division Algorithm</line></cell>
+          <cell>New Pair</cell>
+          
+      </row>
+ 
+      <row bottom="medium">
+        <cell right="medium">1</cell>
+        <cell right="medium"><m>\left( {a, b} \right)</m></cell>
+        <cell right="medium"><m>a = b \cdot q_1  + r_1</m></cell>
+        <cell><m>\left( {b, r_1 } \right)</m></cell>
+      </row>
+   
+      <row bottom="medium">
+        <cell right="medium">2</cell>
+        <cell right="medium"><m>\left( {b, r_1 } \right)</m></cell>
+        <cell right="medium"><m>b = r_1  \cdot q_2  + r_2</m></cell>
+        <cell><m>\left( {r_1 , r_2 } \right)</m></cell>
+      </row>
+  
+      <row bottom="medium">
+        <cell right="medium">3</cell>
+        <cell right="medium"><m>\left( {r_1 , r_2 } \right)</m></cell>
+        <cell right="medium"><m>r_1  = r_2  \cdot q_3  + r_3</m></cell>
+        <cell><m>\left( {r_2 , r_3 } \right)</m></cell>
+      </row>
+
+      <row>
+        <cell right="medium">4</cell>
+        <cell right="medium"><m>\left( {r_2 , r_3 } \right)</m></cell>
+        <cell right="medium"><m>r_2  = r_3  \cdot q_4  + 0</m></cell>
+        <cell></cell>
+      </row>
+
+    </tabular>
+    <p>
+      We can use Step 3 to write
+      <m>r_3 = \gcd( {a, b} )</m> as a linear combination of <m>r_1</m> and <m>r_2</m>.
+      We can then solve the equation in Step 2 for <m>r_2</m> and use this to write
+      <m>r_3 = \gcd( {a, b} )</m> as a linear combination of <m>r_1</m> and <m>b</m>.
+      We can then use the equation in Step 1 to solve for <m>r_1</m> and use this to write
+      <m>r_3 = \gcd( {a, b} )</m> as a linear combination of <m>a</m> and <m>b</m>.
+    </p>
+    <p>
+      In general, if we can write
+      <m>r_p = \gcd( {a, b} )</m> as a linear combination of a pair in a given row,
+      then we can use the equation in the preceding step to write
+      <m>r_p = \gcd( {a, b} )</m> as a linear combination of the pair in this preceding row.
+    </p>
+    <p>
+      The notational details of this induction argument get quite involved.
+      Many mathematicians prefer to prove <xref ref="T_gcdaslincomb"></xref>
+      using a property of the natural numbers called the Well-Ordering Principle.
+      <term>The Well-Ordering Principle</term>
+          <idx><h>Well Ordering Principle</h></idx>
+      for the natural numbers states that any nonempty set of natural numbers must contain a 
+      least element.
+      It can be proven that the Well-Ordering Principle is equivalent to the Principle of 
+      Mathematical Induction.
+    </p>
+  </subsection>
+
+  <exercises>
+
+    <exercise xml:id="exer_sec81-1">
+      <introduction>
+        <p>
+          Find each of the following greatest common divisors by listing all of the positive 
+          common divisors of each pair of integers.
+        </p>
+      </introduction>
+      <task>
+        <p>
+          <m>\gcd( {21, 28} )</m>
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>\gcd( { - 21, 28} )</m>
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>\gcd( {58, 63} )</m>
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>\gcd( {0, 12} )</m>
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>\gcd( {110, 215} )</m>
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>\gcd( {110, - 215} )</m>
+        </p>
+      </task>
+    </exercise>
+
+    <exercise xml:id="exer_sec81-2">
+      <introduction>
+        <p>
+          Complete the following.
+        </p>
+      </introduction>
+
+      <task>
+        <p>
+          Let <m>a \in \Z</m> and let <m>k \in \Z</m> with <m>k \ne 0</m>.
+          Prove that if <m>k \mid a</m> and <m>k \mid \left( {a + 1} \right)</m>,
+          then <m>k \mid 1</m>, and hence <m>k = \pm 1</m>.
+        </p>
+      </task>
+      <task>
+        <p>
+          Let <m>a \in \mathbb{Z}</m>.
+          Find the greatest common divisor of the consecutive integers <m>a</m> and <m>a + 1</m>.
+          That is, determine <m>\gcd( {a, a + 1} )</m>.
+        </p>
+      </task>
+    </exercise>
+
+    <exercise>
+      <introduction>
+        <p>
+          Complete the following.
+        </p>
+      </introduction>
+
+      <task>
+        <p>
+          Let <m>a \in \Z</m> and let <m>k \in \Z</m> with <m>k \ne 0</m>.
+          Prove that if <m>k \mid a</m> and
+          <m>k \mid \left( {a + 2} \right)</m>, then <m>k \mid 2</m>.
+        </p>
+      </task>
+      <task>
+        <p>
+          Let <m>a \in \mathbb{Z}</m>.
+          What conclusions can be made about the greatest common divisor of <m>a</m> and <m>a + 2</m>?
+        </p>
+      </task>
+    </exercise>
+
+    <exercise xml:id="exer_sec81-props">
+      <introduction>
+        <p>
+          Let <m>a, b \in \mathbb{Z}</m> with <m>b \ne 0</m>.
+          Prove each of the following:
+        </p>
+      </introduction>
+
+      <task>
+        <p>
+          <m>\gcd( {0, b} ) = \left| b \right|</m>
+        </p>
+      </task>
+      <task>
+        <p>
+          If <m>\gcd( {a, b} ) = d</m>,
+          then <m>\gcd( {a, - b} ) = d</m>.
+          That is, <m>\gcd \left( {a, - b} \right) = \gcd( {a, b} )</m>.
+        </p>
+      </task>
+    </exercise>
+
+    <exercise xml:id="exer_sec81-4">
+      <introduction>
+        <p>
+          For each of the following pairs of integers,
+          use the Euclidean Algorithm to find <m>\gcd( {a, b} )</m> and to write
+          <m>\gcd( {a, b} )</m> as a linear combination of <m>a</m> and <m>b</m>.
+          That is, find integers <m>m</m> and <m>n</m> such that <m>d = am + bn</m>.
+        </p>
+      </introduction>
+
+      <task>
+        <p>
+          <m>a = 36, b = 60</m>
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>a = 901, b = 935</m>
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>a = 72, b = 714</m>
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>a = 12628, b = 21361</m>
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>a = 901</m>, <m>b = -935</m>
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>a = -36</m>, <m>b = -60</m>
+        </p>
+      </task>
+    </exercise>
+
+    <exercise xml:id="exer81_solvingeqn">
+      <introduction>
+        <p>
+          Complete the following.
+        </p>
+      </introduction>
+
+      <task>
+        <p>
+          Find integers <m>u</m> and <m>v</m> such that
+          <m>9u + 14v = 1</m> or explain why it is not possible to do so.
+          Then find integers <m>x</m> and <m>y</m> such that
+          <m>9x + 14y = 10</m> or explain why it is not possible to do so.
+        </p>
+      </task>
+      <task>
+        <p>
+          Find integers <m>x</m> and <m>y</m> such that
+          <m>9x + 15y = 10</m> or explain why it is not possible to do so.
+        </p>
+      </task>
+      <task>
+        <p>
+          Find integers <m>x</m> and <m>y</m> such that
+          <m>9x + 15y = 3162</m> or explain why it is not possible to do so.
+        </p>
+      </task>
+    </exercise>
+
+    <exercise xml:id="exer_gcdandfractions">
+      <introduction>
+        <p>
+          Complete the following.
+        </p>
+      </introduction>
+
+      <task xml:id="exer_gcdanddena">
+        <p>
+          Notice that <m>\gcd( {11, 17} ) = 1</m>.
+          Find integers <m>x</m> and <m>y</m> such that <m>11x + 17y = 1</m>.
+        </p>
+      </task>
+      <task xml:id="exer_gcdanddenb">
+        <p>
+          Let <m>m, n \in \mathbb{Z}</m>.
+          Write the sum <m>\dfrac{m}{{11}} + \dfrac{n}{{17}}</m> as a single fraction.
+        </p>
+      </task>
+      <task>
+        <p>
+          Find two rational numbers with denominators of  11  and  17,
+          respectively , whose sum is equal to
+          <m>\dfrac{{10}}{{187}}</m>. 
+        </p>
+        <p>
+          Hint: Write the rational numbers in the form
+          <m>\dfrac{m}{{11}}</m>  and  <m>\dfrac{n}{{17}}</m>,
+          where  <m>m, n \in \mathbb{Z}</m>.
+          Then write
+          <me>
+            \frac{m}{{11}} + \frac{n}{{17}} = \frac{{10}}{{187}}
+          </me>.
+          Use <xref ref="exer_gcdanddena"/> and <xref ref="exer_gcdanddenb"/> to determine  
+          <m>m</m>  and  <m>n</m>.
+        </p>
+      </task>
+      <task>
+        <p>
+          Find two rational numbers with denominators 17 and 21, respectively,
+          whose sum is equal to <m>\dfrac{326}{357}</m> or explain why it is not possible to do so.
+        </p>
+      </task>
+      <task>
+        <p>
+          Find two rational numbers with denominators 9 and 15, respectively,
+          whose sum is equal to <m>\dfrac{10}{225}</m> or explain why it is not possible to do so.
+        </p>
+      </task>
+    </exercise>
+
+    <activity xml:id="exer81_lincomb">
+      <title>Linear Combinations and the Greatest Common Divisor</title>
+
+      <task>
+        <p>
+          Determine the greatest common divisor of 20 and 12.
+        </p>
+      </task>
+      <task>
+        <p>
+          Let <m>d = \gcd( {20, 12} )</m>.
+          Write <m>d</m> as a linear combination of 20 and 12.
+        </p>
+      </task>
+      <task xml:id="exer81_lincombc">
+        <p>
+          Generate at least six different linear combinations of 20 and 12.
+          Are these linear combinations of 20 and 12 multiples of <m>\gcd( {20, 12} )</m>?
+        </p>
+      </task>
+      <task xml:id="exer81_lincombd">
+        <p>
+          Determine the greatest common divisor of 21 and <m>-6</m> and then generate at least 
+          six different linear combinations of 21 and <m>-6</m>.
+          Are these linear combinations of 21 and <m>-6</m> multiples of <m>\gcd( {21, -6} )</m>?
+        </p>
+      </task>
+      <task>
+        <p>
+          The following proposition was first introduced in <xref ref="exer52-choose"/>
+          in <xref ref="S_provingset"></xref>.
+          Complete the proof of this proposition if you have not already done so.
+        </p>
+        <p>
+          <xref ref="P_divlinearcomb"></xref>:
+          Let a, b, and t be integers with <m>t \ne 0</m>.
+          If t divides a and t divides b, then for all integers x and y, t divides \text{(} ax + by\text{)} .
+        </p>
+        <p>
+          Proof.
+          Let <m>a</m>,
+          <m>b</m>, and <m>t</m> be integers with <m>t \ne 0</m>,
+          and assume that <m>t</m> divides <m>a</m> and <m>t</m> divides <m>b</m>.
+          We will prove that for all integers <m>x</m> and <m>y</m>,
+          <m>t</m> divides <m>(ax + by)</m>.
+          So let <m>x \in \mathbb{Z}</m> and let <m>y \in \mathbb{Z}</m>.
+          Since <m>t</m> divides <m>a</m>,
+          there exists an integer <m>m</m> such that <m>\ldots </m>.
+        </p>
+      </task>
+
+      <task>
+        <p>
+          Now let <m>a</m> and <m>b</m> be integers, not both zero,
+          and let <m>d = \gcd(a, b )</m>.
+          <xref ref="T_gcdaslincomb"></xref>
+          states that <m>d</m> is a linear combination of <m>a</m> and <m>b</m>.
+          In addition, let <m>S</m> and <m>T</m> be the following sets:
+          <me>
+            S = \left\{ ax + by \mid x, y \in \Z \right\} \qquad \text{ and }  
+            \qquad T = \left\{ kd \mid k \in \Z \right\}\!
+          </me>.
+          That is, <m>S</m> is the set of all linear combinations of <m>a</m> and <m>b</m>,
+          and <m>T</m> is the set of all multiples of the greatest common divisor of <m>a</m> and <m>b</m>.
+          Does the set <m>S</m> equal the set <m>T</m>?
+          If not, is one of these sets a subset of the other set?
+          Justify your conclusions.  
+        </p>
+        <p>
+          In <xref ref="exer81_lincombc"/> and <xref ref="exer81_lincombd"/>,
+          we were exploring special cases for these two sets.
+        </p>
+      </task>
+      
+    </activity>
+    
+  </exercises>
+
+</section>

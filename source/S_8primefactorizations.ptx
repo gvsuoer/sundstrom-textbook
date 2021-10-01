@@ -1,11 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
 <section xml:id="S_primefactorizations">
   <title>Prime Numbers and Prime Factorizations</title>
-  <introduction>
+
     <worksheet xml:id="PA_exporingexamples">
-      <title>Exploring Examples where $\boldsymbol{a}$ Divides
-      $\boldsymbol{b \cdot c}$</title>
-      <ol>
-        <li xml:id="PA_exporingexamples1">
+      <title>Beginning Activity 1: Exploring Examples where <m>\boldsymbol{a}</m> Divides
+      <m>\boldsymbol{b \cdot c}</m></title>
+      <exercise xml:id="PA_exporingexamples1">
+        <statement>
           <p>
             Find at least three different examples of nonzero integers <m>a</m>,
             <m>b</m>,
@@ -13,8 +15,10 @@
             In each case,
             compute <m>\gcd( {a, b} )</m> and <m>\gcd( {a, c} )</m>.
           </p>
-        </li>
-        <li xml:id="PA_exporingexamples2">
+        </statement>
+      </exercise>
+      <exercise xml:id="PA_exporingexamples2">
+        <statement>
           <p>
             Find at least three different examples of nonzero integers <m>a</m>,
             <m>b</m>,
@@ -22,40 +26,48 @@
             In each example,
             is there any relation between the integers <m>a</m> and <m>c</m>?
           </p>
-        </li>
-        <li>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
           <p>
-            Formulate a conjecture based on your work in <xref ref="PA_exporingexamples1"/> and<nbsp/><xref ref="PA_exporingexamples2"/>.
+            Formulate a conjecture based on your work in <xref ref="PA_exporingexamples1"/> 
+            and <xref ref="PA_exporingexamples2"/>.
           </p>
-        </li>
-      </ol>
+        </statement>
+      </exercise>
     </worksheet>
+
     <worksheet xml:id="PA_primefactorization25">
-      <title>Prime Factorizations</title>
+      <title>Beginning Activity 2: Prime Factorizations</title>
       <p>
         Recall that a natural number <m>p</m> is a
         <term>prime number</term>
             <idx><h>prime number</h></idx>
-        provided that it is greater than 1 and the only natural numbers that divide <m>p</m> are 1 and <m>p</m>.
+        provided that it is greater than 1 and the only natural numbers that divide <m>p</m> 
+        are 1 and <m>p</m>.
         A natural number other than 1 that is not a prime number is a
         <term>composite number</term>.
             <idx><h>composite number</h></idx>
         The number 1 is neither prime nor composite.
-        (See <xref ref="exer_prime">Exercise</xref>
-        from <xref ref="S_2quantifier"></xref>
-        on <xref ref="exer_prime"></xref>.)
-        <ol>
-          <li>
-            <p>
-              Give examples of four natural numbers that are prime and four natural numbers that are composite.
-            </p>
-          </li>
-        </ol>
+        (See <xref ref="exer_prime"></xref>
+        from <xref ref="S_2quantifier"></xref>.)
       </p>
+
+        <exercise>
+          <statement>
+            <p>
+              Give examples of four natural numbers that are prime and four natural numbers 
+              that are composite.
+            </p>
+          </statement>
+        </exercise>
+      
       <p>
         <xref ref="T_primefactors"></xref>
         in <xref ref="S_otherinduction"></xref>
-        states that every natural number greater than 1 is either a prime number or a product of prime numbers.
+        states that every natural number greater than 1 is either a prime number or a product 
+        of prime numbers.
       </p>
       <p>
         When a composite number is written as a product of prime numbers,
@@ -64,47 +76,56 @@
         of that composite number.
         For example, since <m>60 = 2^2 \cdot 3 \cdot 5</m>,
         we say that <m>2^2 \cdot 3 \cdot 5</m> is a prime factorization of 60.
-        <ol>
-          <li xml:id="PA_primefactorization25-2">
+        <exercise xml:id="PA_primefactorization25-2">
+          <statement>
             <p>
               Write the number 40 as a product of prime numbers by first writing
               <m>40 = 2 \cdot 20</m> and then factoring 20 into a product of primes.
               Next, write the number 40 as a product of prime numbers by first writing
               <m>40 = 5 \mspace{1mu}\cdot\mspace{1mu} 8</m> and then factoring 8 into a product of primes.
             </p>
-          </li>
-          <li xml:id="PA_primefactorization25-3">
+          </statement>
+        </exercise>
+        <exercise xml:id="PA_primefactorization25-3">
+          <statement>
             <p>
               In <xref ref="PA_primefactorization25-2"/>,
               we used two different methods to obtain a prime factorization of 40.
-              Did these methods produce the same prime factorization or different prime factorizations?
+              Did these methods produce the same prime factorization or different prime 
+              factorizations?
               Explain.
             </p>
-          </li>
-          <li>
+          </statement>
+        </exercise>
+        <exercise>
+          <statement>
             <p>
-              Repeat <xref ref="PA_primefactorization25-2"/> and<nbsp/><xref ref="PA_primefactorization25-3"/> with 150.
+              Repeat <xref ref="PA_primefactorization25-2"/> and 
+              <xref ref="PA_primefactorization25-3"/> with 150.
               First, start with <m>150 = 3 \cdot 50</m>,
               and then start with <m>150 = 5 \cdot 30</m>.
             </p>
-          </li>
-        </ol>
+          </statement>
+        </exercise>
       </p>
     </worksheet>
-  </introduction>
+  
   <subsection>
     <title>Greatest Common Divisors and Linear Combinations</title>
     <p>
       In <xref ref="S_gcd"></xref>,
       we introduced the concept of the greatest common divisor of two integers.
-      We showed how the Euclidean Algorithm can be used to find the greatest common divisor of two integers,
+      We showed how the Euclidean Algorithm can be used to find the greatest common divisor of 
+      two integers,
       <m>a</m> and <m>b</m>,
-      and also showed how to use the results of the Euclidean Algorithm to write the greatest common divisor of <m>a</m> and <m>b</m> as a linear combination of <m>a</m> and <m>b</m>.
+      and also showed how to use the results of the Euclidean Algorithm to write the greatest 
+      common divisor of <m>a</m> and <m>b</m> as a linear combination of <m>a</m> and <m>b</m>.
     </p>
     <p>
       In this section,
       we will use these results to help prove the so-called Fundamental Theorem of Arithmetic,
-      which states that any natural number greater than 1 that is not prime can be written as product of primes in
+      which states that any natural number greater than 1 that is not prime can be written as 
+      product of primes in
       <q>essentially</q>
       only one way.
       This means that given two prime factorizations,
@@ -112,16 +133,18 @@
       and the only difference may be in the order in which the prime factors are written.
       We start with more results concerning greatest common divisors.
       We first prove <xref ref="P_divlinearcomb"></xref>,
-      which was part of <xref ref="exer52-choose"/> on <xref ref="exer52-choose"></xref>
+      which was part of <xref ref="exer52-choose"/>
       in <xref ref="S_provingset"></xref>
-      and <xref ref="exer81_lincomb"/> on <xref ref="exer81_lincomb"></xref>
+      and <xref ref="exer81_lincomb"/>
       in <xref ref="S_gcd"></xref>.
     </p>
-    <p>
-      <em><xref ref="P_divlinearcomb"></xref></em>
-      <em>Let a, b, and t be integers with <m>t \ne 0</m>.
-      If t divides a and t divides b, then for all integers x and y, t divides \text{(} ax + by\text{)} .</em>
-    </p>
+    <proposition xml:id="P_divlinearcomb">
+      <statement>
+        Let a, b, and t be integers with <m>t \ne 0</m>.
+        If <m>t</m> divides <m>a</m> and <m>t</m> divides <m>b</m>, then for all integers 
+        <m>x</m> and <m>y</m>, 
+        <m>t</m> divides <m>\left( ax + by \right)</m>.
+      </statement>
     <proof>
       <p>
         Let <m>a</m>,
@@ -147,6 +170,8 @@
         <m>t</m> divides <m>(ax + by)</m>.
       </p>
     </proof>
+    </proposition>
+
     <p>
       We now let <m>a, b \in \mathbb{Z}</m>,
       not both 0, and let <m>d = \gcd( {a, b} )</m>.
@@ -158,9 +183,11 @@
       y \in \mathbb{Z}</m>, <m>d \mid \left( {ax + by} \right)</m>.
       This means that <m>d</m> divides every linear combination of <m>a</m> and <m>b</m>.
       In addition,
-      this means that <m>d</m> must be the smallest positive number that is a linear combination of <m>a</m> and <m>b</m>.
+      this means that <m>d</m> must be the smallest positive number that is a linear combination 
+      of <m>a</m> and <m>b</m>.
       We summarize these results in <xref ref="T_gcddivideslincombs"></xref>.
     </p>
+
     <theorem xml:id="T_gcddivideslincombs">
       <statement>
         <p>
@@ -192,12 +219,14 @@
       </statement>
     </theorem>
   </subsection>
+
   <subsection>
     <title>Relatively Prime Integers</title>
     <p>
-      In <xref ref="PA_exporingexamples"></xref>,
+      In <xref ref="PA_exporingexamples">Beginning Activity 1</xref>,
       we constructed several examples of integers <m>a</m>, <m>b</m>,
-      and <m>c</m> such that <m>a \mid \left( {bc} \right)</m> but <m>a</m> does not divide <m>b</m> and <m>a</m> does not divide <m>c</m>.
+      and <m>c</m> such that <m>a \mid \left( {bc} \right)</m> but <m>a</m> does not divide 
+      <m>b</m> and <m>a</m> does not divide <m>c</m>.
       For each example, we observed that
       <m>\gcd( {a, b} ) \ne 1</m> and <m>\gcd( {a, c} ) \ne 1</m>.
     </p>
@@ -207,6 +236,7 @@
       In all of these cases, we noted that <m>a</m> divides <m>c</m>.
       Integers whose greatest common divisor is equal to 1 are given a special name.
     </p>
+
     <definition xml:id="relativelyprime">
       <statement>
         <p>
@@ -217,10 +247,11 @@
         </p>
       </statement>
     </definition>
+
     <exercise xml:id="prog_relativelyprime">
       <title>Relatively Prime Integers</title>
-      <ol>
-        <li>
+      
+        <task>
           <p>
             Construct at least three different examples where <m>p</m> is a prime number,
             <m>a \in \mathbb{Z}</m> , and <m>p \mid a</m>.
@@ -229,8 +260,8 @@
             formulate a conjecture about
             <m>\gcd( {a, p} )</m> when <m>p \mid a</m>.
           </p>
-        </li>
-        <li>
+        </task>
+        <task>
           <p>
             Construct at least three different examples where <m>p</m> is a prime number,
             <m>a \in \mathbb{Z}</m> , and <m>p</m> does not divide <m>a</m>.
@@ -239,16 +270,17 @@
             formulate a conjecture about
             <m>\gcd( {a, p} )</m> when <m>p</m> does not divide <m>a</m>.
           </p>
-        </li>
-        <li>
+        </task>
+        <task>
           <p>
             Give at least three different examples of integers <m>a</m> and <m>b</m> where <m>a</m> is not prime,
             <m>b</m> is not prime, and <m>\gcd( {a, b} ) = 1</m>,
             or explain why it is not possible to construct such examples.
           </p>
-        </li>
-      </ol>
+        </task>
+      
     </exercise>
+
     <theorem xml:id="T_relativelyprime">
       <statement>
         <p>
@@ -277,23 +309,29 @@
         </p>
       </statement>
     </theorem>
+
     <p>
       <xref ref="T_relativelyprime1"/> of <xref ref="T_relativelyprime"></xref>
       is actually a corollary of <xref ref="T_gcddivideslincombs"></xref>.
-      <xref ref="P_relativelyprime2"/> and<nbsp/><xref ref="T_relativelyprime3"/> could have been the conjectures you formulated in <xref ref="prog_relativelyprime"></xref>.
+      <xref ref="P_relativelyprime2"/> and<nbsp/><xref ref="T_relativelyprime3"/> could have 
+      been the conjectures you formulated in <xref ref="prog_relativelyprime"></xref>.
       The proofs are included in <xref ref="exer_sec82-1"/>.
     </p>
+
     <p>
       Given nonzero integers <m>a</m> and <m>b</m>,
-      we have seen that it is possible to use the Euclidean Algorithm to write their greatest common divisor as a linear combination of <m>a</m> and <m>b</m>.
+      we have seen that it is possible to use the Euclidean Algorithm to write their greatest 
+      common divisor as a linear combination of <m>a</m> and <m>b</m>.
       We have also seen that this can sometimes be a tedious,
       time-consuming process,
       which is why people have programmed computers to do this.
       Fortunately, in many proofs of number theory results,
-      we do not actually have to construct this linear combination since simply knowing that it exists can be useful in proving results.
+      we do not actually have to construct this linear combination since simply knowing that it 
+      exists can be useful in proving results.
       This will be illustrated in the proof of <xref ref="T_relativelyprimeprop"></xref>,
-      which is based on work in <xref ref="PA_exporingexamples"></xref>.
+      which is based on work in <xref ref="PA_exporingexamples">Beginning Activity 1</xref>.
     </p>
+
     <theorem xml:id="T_relativelyprimeprop">
       <statement>
         <p>
@@ -304,8 +342,9 @@
         </p>
       </statement>
     </theorem>
+
     <p>
-      The explorations in <xref ref="PA_exporingexamples"></xref> were related to this theorem.
+      The explorations in <xref ref="PA_exporingexamples">Beginning Activity 1</xref> were related to this theorem.
       We will first explore the forward-backward process for the proof.
       The goal is to prove that <m>a \mid c</m>.
       A standard way to do this is to prove that there exists an integer <m>q</m> such that
@@ -321,7 +360,8 @@
       </men>.
     </p>
     <p>
-      It may seem tempting to divide both sides of equation<nbsp/><xref ref="eq_relprime2"/> by <m>b</m>,
+      It may seem tempting to divide both sides of <xref ref="eq_relprime2">Equation</xref> 
+      by <m>b</m>,
       but if we do so,
       we run into problems with the fact that the integers are not closed under division.
       Instead, we look at the other part of the hypothesis,
@@ -329,7 +369,7 @@
       This means that <m>\gcd( {a, b} ) = 1</m>.
       How can we use this?
       This means that <m>a</m> and <m>b</m> have no common factors except for 1.
-      In light of equation<nbsp/><xref ref="eq_relprime2"/>,
+      In light of <xref ref="eq_relprime2">Equation</xref>,
       it seems reasonable that any factor of <m>a</m> must also be a factor of <m>c</m>.
       But how do we formalize this?
     </p>
@@ -342,36 +382,40 @@
       </men>.
     </p>
     <p>
-      We may consider solving equation<nbsp/><xref ref="eq_relprime3"/> for <m>b</m> and substituting this into equation<nbsp/><xref ref="eq_relprime2"/>.
+      We may consider solving <xref ref="eq_relprime3">Equation</xref> for <m>b</m> and 
+      substituting this into <xref ref="eq_relprime2">Equation</xref>.
       The problem, again,
-      is that in order to solve equation<nbsp/><xref ref="eq_relprime3"/> for <m>b</m>,
+      is that in order to solve <xref ref="eq_relprime3">Equation</xref> for <m>b</m>,
       we need to divide by <m>n</m>.
     </p>
     <p>
       Before doing anything else,
-      we should look at the goal in equation<nbsp/><xref ref="eq_relprime1"/>.
-      We need to introduce <m>c</m> into equation<nbsp/><xref ref="eq_relprime3"/>.
-      One way to do this is to multiply both sides of equation<nbsp/><xref ref="eq_relprime3"/> by <m>c</m>.
+      we should look at the goal in <xref ref="eq_relprime1">Equation</xref>.
+      We need to introduce <m>c</m> into <xref ref="eq_relprime3">Equation</xref>.
+      One way to do this is to multiply both sides of <xref ref="eq_relprime3">Equation</xref> by <m>c</m>.
       (This keeps us in the system of integers since the integers are closed under multiplication.)
       This gives
-      <md>
-        <mrow>\left( {am + bn} \right)c \amp = 1 \cdot c</mrow>
+      <mdn>
+        <mrow number="no">\left( {am + bn} \right)c \amp = 1 \cdot c</mrow>
         <mrow xml:id="eq_relprime4">acm + bcn \amp = c</mrow>
-      </md>.
+      </mdn>.
     </p>
     <p>
-      Notice that the left side of equation<nbsp/><xref ref="eq_relprime4"/> contains a term,
+      Notice that the left side of <xref ref="eq_relprime4">Equation</xref> contains a term,
       <m>bcn</m>, that contains <m>bc</m>.
-      This means that we can use equation<nbsp/><xref ref="eq_relprime2"/> and substitute <m>bc = ak</m> in equation<nbsp/><xref ref="eq_relprime4"/>.
+      This means that we can use <xref ref="eq_relprime2">Equation</xref> and substitute 
+      <m>bc = ak</m> in <xref ref="eq_relprime4">Equation</xref>.
       After doing this,
       we can factor the left side of the equation to prove that <m>a \mid c</m>.
     </p>
+
     <exercise xml:id="prog_relativelyprimeprop">
       <title>Completing the Proof of <xref ref="T_relativelyprimeprop"></xref></title>
       <p>
         Write a complete proof of <xref ref="T_relativelyprimeprop"></xref>.
       </p>
     </exercise>
+
     <corollary xml:id="C_primedivides">
       <statement>
         <ol>
@@ -396,36 +440,41 @@
         </ol>
       </statement>
     </corollary>
+
     <p>
       <xref ref="C_primedivides1"/> of <xref ref="C_primedivides"></xref>
       is a corollary of <xref ref="T_relativelyprimeprop"></xref>.
       <xref ref="C_primedivides2"/> is proved using mathematical induction.
       The basis step is the case where <m>n = 1</m>,
       and <xref ref="C_primedivides1"/> is the case where <m>n = 2</m>.
-      The proofs of these two results are included in Exercises<nbsp/><xref ref="exer_sec82-2"/> and<nbsp/><xref ref="exer_sec82-3"/>.
+      The proofs of these two results are included in <xref ref="exer_sec82-2"/> and 
+      <xref ref="exer_sec82-3"/>.
     </p>
   </subsection>
+
   <subsection>
     <title>Historical Note</title>
     <p>
       <xref ref="C_primedivides1"/> of <xref ref="C_primedivides"></xref>
-      is known as <em>Euclid's Lemma</em>.
+      is known as <term>Euclid's Lemma</term>.
           <idx><h>Euclid's Lemma</h></idx>
       Most people associate geometry with
-      <em>Euclid's Elements</em>,
+      <pubtitle>Euclid's Elements</pubtitle>,
       but these books also contain many basic results in number theory.
       Many of the results that are contained in this section appeared in
-      <em>Euclid's Elements</em>.
+      <pubtitle>Euclid's Elements</pubtitle>.
           <idx><h>Euclid's Elements@<em>Euclid's Elements</em></h></idx>
     </p>
   </subsection>
+
   <subsection>
     <title>Prime Numbers and Prime Factorizations</title>
     <p>
       We are now ready to prove the Fundamental Theorem of Arithmetic.
       The first part of this theorem was proved in <xref ref="T_primefactors"></xref>
       in <xref ref="S_otherinduction"></xref>.
-      This theorem states that each natural number greater than 1 is either a prime number or is a product of prime numbers.
+      This theorem states that each natural number greater than 1 is either a prime number or 
+      is a product of prime numbers.
       Before we state the Fundamental Theorem of Arithmetic,
       we will discuss some notational conventions that will help us with the proof.
       We start with an example.
@@ -436,9 +485,10 @@
       In addition,
       we can factor 24 as <m>24 = 2 \cdot 2 \cdot 2 \cdot 3</m>.
       So we can write
-      <me>
-        \begin{aligned}120 \amp = 5 \cdot 24 \\ \amp = 5\left( {2 \cdot 2 \cdot 2 \cdot 3} \right). \end{aligned}
-      </me>
+      <md>
+        <mrow>120 \amp = 5 \cdot 24</mrow>
+        <mrow> \amp = 5 \left( 2 \cdot 2 \cdot 2 \cdot 3 \right)</mrow>
+      </md>.
     </p>
     <p>
       This is a prime factorization of 120,
@@ -451,31 +501,35 @@
     </p>
     <p>
       Now, let <m>n \in \mathbb{N}</m>.
-      To write the prime factorization of <m>n</m> with the prime factors in ascending order requires that if we write <m>n = p_1 p_2 \cdots p_r</m>,
+      To write the prime factorization of <m>n</m> with the prime factors in ascending order 
+      requires that if we write <m>n = p_1 p_2 \cdots p_r</m>,
       where <m>p_1 , p_2 , \ldots, p_r</m> are prime numbers,
       we will have <m>p_1 \leq p_2 \leq \cdots \leq p_r</m>.
     </p>
+
     <theorem xml:id="T_fundtheorem">
       <title>The Fundamental Theorem of Arithmetic</title>
+      <idx><h>Fundamental Theorem</h><h>of Arithmetic</h></idx>
       <statement>
         <p>
-              <idx><h>Fundamental Theorem</h><h>of Arithmetic</h></idx>
           <ol>
             <li>
               <p>
-                Each natural number greater than 1 is either a prime number or is a product of prime numbers.
+                Each natural number greater than 1 is either a prime number or is a product of 
+                prime numbers.
               </p>
             </li>
             <li>
               <p>
-                Let   <m>n \in \mathbb{N}</m> with  <m>n > 1</m>.
+                Let <m>n \in \mathbb{N}</m> with <m>n > 1</m>.
                 Assume that
                 <me>
                   n = p_1 p_2  \cdots p_r \text{  and that  } n = q_1 q_2  \cdots q_s
                 </me>,
                 where  <m>p_1 , p_2 ,  \ldots,
                 p_r</m> and  <m>q_1 , q_2 ,  \ldots,
-                q_s</m> are primes with <m>p_1  \leq p_2  \leq  \cdots  \leq p_r</m> and <m>q_1  \leq q_2  \leq  \cdots  \leq q_s</m>.
+                q_s</m> are primes with <m>p_1  \leq p_2  \leq  \cdots  \leq p_r</m> and 
+                <m>q_1  \leq q_2  \leq  \cdots  \leq q_s</m>.
                 Then  <m>r = s</m>,
                 and for each  <m>j</m>  from  1  to  r,  <m>p_j  = q_j</m>.
               </p>
@@ -483,16 +537,20 @@
           </ol>
         </p>
       </statement>
-    </theorem>
+    
     <proof>
       <p>
         The first part of this theorem was proved in <xref ref="T_primefactors"></xref>.
-        We will prove the second part of the theorem by induction on <m>n</m> using the Second Principle of Mathematical Induction.
+        We will prove the second part of the theorem by induction on <m>n</m> using the Second 
+        Principle of Mathematical Induction.
         (See <xref ref="S_otherinduction"></xref>.)
         For each natural number <m>n</m> with <m>n > 1</m>, let <m>P( n )</m> be
-        <ul>
-          \item If <m>n = p_1 p_2 \cdots p_r</m> and <m>n = q_1 q_2 \cdots q_s</m>, where <m>p_1 , p_2 , \ldots, p_r</m> and <m>q_1 , q_2 , \ldots, q_s</m> are primes with <m>p_1 \leq p_2 \leq \cdots \leq p_r</m> and <m>q_1 \leq q_2 \leq \cdots \leq q_s</m>, then <m>r = s</m>, and for each <m>j</m> from 1 to <m>r</m>, <m>p_j = q_j</m>.
-        </ul>
+        <blockquote>
+          If <m>n = p_1 p_2 \cdots p_r</m> and <m>n = q_1 q_2 \cdots q_s</m>, where 
+          <m>p_1 , p_2 , \ldots, p_r</m> and <m>q_1 , q_2 , \ldots, q_s</m> are primes with 
+          <m>p_1 \leq p_2 \leq \cdots \leq p_r</m> and <m>q_1 \leq q_2 \leq \cdots \leq q_s</m>, 
+          then <m>r = s</m>, and for each <m>j</m> from 1 to <m>r</m>, <m>p_j = q_j</m>.
+        </blockquote>
       </p>
       <p>
         For the basis step, we notice that since 2 is a prime number,
@@ -506,18 +564,18 @@
         For the inductive step, let
         <m>k \in \mathbb{N}</m> with <m>k \geq 2</m>.
         We will assume that
-      </p>
-      <p>
         <m>P( 2 ), P( 3 ), \ldots , P( k )</m> are true.
         The goal now is to prove that <m>P( {k + 1} )</m> is true.
         To prove this,
-        we assume that <m>(k + 1)</m> has two prime factorizations and then prove that these prime factorizations are the same.
+        we assume that <m>(k + 1)</m> has two prime factorizations and then prove that these 
+        prime factorizations are the same.
         So we assume that
-        <ul>
-          \item <m>k + 1 = p_1 p_2 \cdots p_r</m> and that <m>k + 1 = q_1 q_2 \cdots q_s</m>, where <m>p_1 , p_2 , \ldots, p_r</m> and <m>q_1 , q_2 , \ldots, q_s</m> are primes with <m>p_1 \leq p_2 \leq \cdots \leq p_r</m> and <m>q_1 \leq q_2 \leq \cdots \leq q_s</m>.
-        </ul>
-      </p>
-      <p>
+        <blockquote>
+          <m>k + 1 = p_1 p_2 \cdots p_r</m> and that <m>k + 1 = q_1 q_2 \cdots q_s</m>, where 
+          <m>p_1 , p_2 , \ldots, p_r</m> and <m>q_1 , q_2 , \ldots, q_s</m> are primes with 
+          <m>p_1 \leq p_2 \leq \cdots \leq p_r</m> and <m>q_1 \leq q_2 \leq \cdots \leq q_s</m>.
+        </blockquote>
+
         We must now prove that <m>r = s</m>,
         and for each <m>j</m> from 1 to <m>r</m>, <m>p_j = q_j</m>.
         We can break our proof into two cases: (1) <m>p_1 \leq q_1</m>;
@@ -548,7 +606,8 @@
         </me>.
       </p>
       <p>
-        We now use this and the fact that <m>k + 1 = p_1 p_2  \cdots p_r  = q_1 q_2  \cdots q_s</m> to conclude that
+        We now use this and the fact that <m>k + 1 = p_1 p_2  \cdots p_r  = q_1 q_2  \cdots q_s</m> 
+        to conclude that
         <me>
           p_2  \cdots p_r  = q_2  \cdots q_s
         </me>.
@@ -567,9 +626,11 @@
         This completes the proof of the theorem.
       </p>
     </proof>
+    </theorem>
     <p>
-      \note We often shorten the result of the Fundamental Theorem of Arithmetic by simply saying that each natural number greater than one that is not a prime has a
-      <em>unique factorization</em>
+      Note: We often shorten the result of the Fundamental Theorem of Arithmetic by simply 
+      saying that each natural number greater than one that is not a prime has a
+      <term>unique factorization</term>
           <idx><h>unique factorization</h></idx>
       as a product of primes.
       This simply means that if <m>n \in \mathbb{N}</m>,
@@ -579,32 +640,36 @@
       The only difference may be in the order in which we write the prime factors.
     </p>
   </subsection>
+
   <subsection>
     <title>Further Results and Conjectures about Prime Numbers</title>
     <ol>
-      <li>
+      <li xml:id="numprimes">
+        <title>The Number of Prime Numbers</title>
         <p>
-          <em>The Number of Prime Numbers</em>
           Prime numbers have fascinated mathematicians for centuries.
           For example,
           we can easily start writing a list of prime numbers in ascending order.
           Following is a list of the prime numbers less than 100.
-          <ul>
-            \item 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97
-          </ul>
+          <blockquote>
+            2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 
+            79, 83, 89, 97
+          </blockquote>
         </p>
-        This list contains the first 25 prime numbers.
-        Does this list ever stop?
-        The question was answered in <em>Euclid's Elements</em>,
-        and the result is stated in <xref ref="T_infiniteprimes"></xref>.
-        The proof of this theorem is considered to be one of the classical proofs by contradiction.
+        <p>
+          This list contains the first 25 prime numbers.
+          Does this list ever stop?
+          The question was answered in <pubtitle>Euclid's Elements</pubtitle>,
+          and the result is stated in <xref ref="T_infiniteprimes"></xref>.
+          The proof of this theorem is considered to be one of the classical proofs by contradiction.
+        </p>
         <theorem xml:id="T_infiniteprimes">
           <statement>
             <p>
               There are infinitely many prime numbers.
             </p>
           </statement>
-        </theorem>
+        
         <proof>
           <p>
             We will use a proof by contradiction.
@@ -627,7 +692,7 @@
             Since we have listed all the prime numbers,
             this means that there exists a natural number <m>j</m> with
             <m>1 \leq j \leq m</m> such that <m>p_j \mid  M</m>.
-            Now, we can rewrite equation<nbsp/><xref ref="T_infiniteprimes1"/> as follows:
+            Now, we can rewrite <xref ref="T_infiniteprimes1">Equation</xref> as follows:
             <men xml:id="T_infiniteprimes2">
               1 = M - p_1 p_2  \cdots p_m
             </men>.
@@ -636,29 +701,33 @@
             We have proved <m>p_j \mid M</m>,
             and since <m>p_j</m> is one of the prime factors of <m>p_1 p_2 \cdots p_m</m>,
             we can also conclude that <m>p_j \mid \left( {p_1 p_2 \cdots p_m } \right)</m>.
-            Since <m>p_j</m> divides both of the terms on the right side of equation<nbsp/><xref ref="T_infiniteprimes2"/>,
+            Since <m>p_j</m> divides both of the terms on the right side of 
+            <xref ref="T_infiniteprimes2">Equation</xref>,
             we can use this equation to conclude that <m>p_j</m> divides 1.
             This is a contradiction since a prime number is greater than 1 and cannot divide 1.
             Hence, our assumption that there are only finitely many primes is false,
             and so there must be infinitely many primes.
           </p>
         </proof>
+        </theorem>
       </li>
-      <li>
+      <li xml:id="dist-of-primes">
+        <title>The Distribution of Prime Numbers</title>
+        <idx><h>prime numbers</h><h>distribution of</h></idx>
         <p>
-          <em>The Distribution of Prime Numbers</em>
-            <idx><h>prime numbers</h><h>distribution of</h></idx>
-        There are infinitely many primes,
+          There are infinitely many primes,
           but when we write a list of the prime numbers,
           we can see some long sequences of consecutive natural numbers that contain no prime numbers.
           For example, there are no prime numbers between 113 and 127.
-          The following theorem shows that there exist arbitrarily long sequences of consecutive natural numbers containing no prime numbers.
+          The following theorem shows that there exist arbitrarily long sequences of 
+          consecutive natural numbers containing no prime numbers.
           A guided proof of this theorem is included in <xref ref="exer_consecutivecomposites"/>.
           <theorem xml:id="P_consecutivecomposites">
             <statement>
               <p>
                 For any natural number <m>n</m>,
-                there exist at least <m>n</m> consecutive natural numbers that are composite numbers.
+                there exist at least <m>n</m> consecutive natural numbers that are composite 
+                numbers.
               </p>
             </statement>
           </theorem>
@@ -669,24 +738,25 @@
       There are many unanswered questions about prime numbers,
       two of which will now be discussed.
       <ol>
-        <li>
+        <li xml:id="conj_twinprime">
+          <title>The Twin Prime Conjecture</title>
           <p>
-            <em>The Twin Prime Conjecture</em>
             By looking at the list of the first 25 prime numbers,
             we see several cases where consecutive prime numbers differ by 2.
             Examples are:  3  and  5;  11 and  13;  17 and  19; 29  and  31.
-            Such pairs of prime numbers are said to be <em>twin primes</em>.
+            Such pairs of prime numbers are said to be <term>twin primes</term>.
               <idx><h>twin primes</h></idx>
               <idx><h>prime numbers</h><h>twin</h></idx>
-          How many twin primes exist?
+            How many twin primes exist?
             The answer is not known.
-            The <em>Twin Prime Conjecture</em>
+            The <term>Twin Prime Conjecture</term>
               <idx><h>Twin Prime Conjecture</h></idx>
             states that there are infinitely many twin primes.
             As of June 25, 2010, this is still a conjecture as it has not been proved or disproved.
             For some interesting information on prime numbers,
-            visit the Web site <em>The Prime Pages</em>
-            (http://primes.utm.edu/), where there is a link to The Largest Known Primes Web site.
+            visit the Web site 
+            <url href="http://primes.utm.edu/"><pubtitle>The Prime Pages</pubtitle><fn><c>primes.utm.edu</c></fn></url> 
+            where there is a link to The Largest Known Primes Web site.
             According to information at this site as of June 25, 2010,
             the largest known twin primes are
             <me>
@@ -695,10 +765,10 @@
             Each of these prime numbers contains 100355 digits.
           </p>
         </li>
-        <li>
+        <li xml:id="conj_goldbach">
+          <title>Goldbach's Conjecture</title>
+          <idx><h>Goldbach's Conjecture</h></idx>
           <p>
-            <em>Goldbach's Conjecture</em>
-              <idx><h>Goldbach's Conjecture</h></idx>
             Given an even natural number,
             is it possible to write it as a sum of two prime numbers?
             For example,
@@ -706,374 +776,488 @@
               <mrow>4 \amp = 2 + 2  \amp    6 \amp = 3 + 3  \amp   8 \amp = 5+3</mrow>
               <mrow>78 \amp = 37 + 41 \amp   90 \amp = 43 + 47  \amp   138 \amp = 67 + 71</mrow>
             </md>
-            One of the most famous unsolved problems in mathematics is a conjecture made by Christian Goldbach in a letter to Leonhard Euler in 1742.
+            One of the most famous unsolved problems in mathematics is a conjecture made by 
+            Christian Goldbach in a letter to Leonhard Euler in 1742.
             The conjecture,
-            now known as <em>Goldbach's Conjecture</em>, is as follows:
-            <ul>
-              \item Every even integer greater than 2 can be expressed as the sum of two (not necessarily distinct) prime numbers.
-            </ul>
-          </p>
+            now known as <term>Goldbach's Conjecture</term>, is as follows:
+            <blockquote>
+              Every even integer greater than 2 can be expressed as the sum of two 
+              (not necessarily distinct) prime numbers.
+            </blockquote>
+          
           As of June 25, 2010, it is not known if this conjecture is true or false,
           although most mathematicians believe it to be true.
+          </p>
         </li>
       </ol>
     </p>
-    <p>
-      \exercises{Exercises 8.2}
-    </p>
-    <ol>
-      <li xml:id="exer_sec82-1">
-        <p>
-          Prove the second and third parts of <xref ref="T_relativelyprime"></xref>.
-        </p>
-        <ol>
-          <li>
-            <p>
-              Let <m>a</m> be a nonzero integer,
-              and let <m>p</m> be a prime number.
-              If <m>p \mid a</m>, then <m>\gcd( {a, p} ) = p</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              Let <m>a</m> be a nonzero integer,
-              and let <m>p</m> be a prime number.
-              If <m>p</m> does not divide <m>a</m>,
-              then <m>\gcd( {a, p} ) = 1</m>.
-            </p>
-          </li>
-        </ol>
-      </li>
-      <li xml:id="exer_sec82-2">
-        <p>
-          Prove the first part of <xref ref="C_primedivides"></xref>.
-          Let <m>a, b \in \mathbb{Z}</m>,
-          and let <m>p</m> be a prime number.
-          If <m>p \mid \left( {ab} \right)</m>,
-          then <m>p \mid a</m> or <m>p \mid b</m>. \hint Consider two cases: (1) <m>p \mid a</m>;
-          and (2) <m>p</m> does not divide <m>a</m>.
-        </p>
-      </li>
-      <li xml:id="exer_sec82-3">
-        <p>
-          Use mathematical induction to prove the second part of <xref ref="C_primedivides"></xref>.
-          Let <m>p</m> be a prime number,
-          let <m>n \in \mathbb{N}</m>,
-          and let <m>a_1 ,a_2 , \ldots , a_n \in \mathbb{Z}</m>.
-          If <m>p \mid \left( {a_1 a_2 \cdots a_n } \right)</m>,
-          then there exists a <m>k \in \mathbb{N}</m> with
-          <m>1 \leq k \leq n</m> such that <m>p \mid a_k</m>.
-        </p>
-      </li>
-      <li xml:id="exer_lincombequalone">
-        <ol>
-          <li>
-            <p>
-              Let <m>a</m> and <m>b</m> be nonzero integers.
-              If there exist integers <m>x</m> and <m>y</m> such that <m>ax + by = 1</m>,
-              what conclusion can be made about <m>\gcd( {a, b} )</m>?
-              Explain.
-            </p>
-          </li>
-          <li>
-            <p>
-              Let <m>a</m> and <m>b</m> be nonzero integers.
-              If there exist integers <m>x</m> and <m>y</m> such that <m>ax + by = 2</m>,
-              what conclusion can be made about <m>\gcd( {a, b} )</m>?
-              Explain.
-            </p>
-          </li>
-        </ol>
-      </li>
-      <li xml:id="exer_sec82-gcdconsec">
-        <ol>
-          <li>
-            <p>
-              Let <m>a \in \mathbb{Z}</m>.
-              What is <m>\gcd( {a, a + 1} )</m>?
-              That is, what is the greatest common divisor of two consecutive integers?
-              Justify your conclusion. \hint <xref ref="exer_lincombequalone"/> might be helpful.
-            </p>
-          </li>
-          <li>
-            <p>
-              Let <m>a \in \mathbb{Z}</m>.
-              What conclusion can be made about <m>\gcd( {a, a + 2} )</m>?
-              That is, what conclusion can be made about the greatest common divisor of two integers that differ by 2?
-              Justify your conclusion.
-            </p>
-          </li>
-        </ol>
-      </li>
-      <li xml:id="exer_sec82-moregcd">
-        <ol>
-          <li>
-            <p>
-              Let <m>a \in \mathbb{Z}</m>.
-              What conclusion can be made about <m>\gcd( {a, a + 3} )</m>?
-              That is, what conclusion can be made about the greatest common divisor of two integers that differ by 3?
-              Justify your conclusion.
-            </p>
-          </li>
-          <li>
-            <p>
-              Let <m>a \in \mathbb{Z}</m>.
-              What conclusion can be made about <m>\gcd( {a, a + 4} )</m>?
-              That is, what conclusion can be made about the greatest common divisor of two integers that differ by 4?
-              Justify your conclusion.
-            </p>
-          </li>
-        </ol>
-      </li>
-      <li>
-        <ol>
-          <li xml:id="exer_gcd-divbyd">
-            <p>
-              Let <m>a = 16</m> and <m>b = 28</m>.
-              Determine the value of <m>d = \gcd( a, b )</m>,
-              and then determine the value of <m>\gcd \!\left( {\dfrac{a}{d}, \dfrac{b}{d}} \right )</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              Repeat <xref ref="exer_gcd-divbyd"/> with <m>a = 10</m> and <m>b = 45</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              Let <m>a, b \in \mathbb{Z}</m>,
-              not both equal to 0, and let <m>d = \gcd( a, b )</m>.
-              Explain why <m>\dfrac{a}{d}</m> and <m>\dfrac{b}{d}</m> are integers.
-              Then prove that <m>\gcd \!\left( {\dfrac{a}{d}, \dfrac{b}{d}} \right ) = 1</m>. \hint Start by writing <m>d</m> as a linear combination of <m>a</m> and <m>b</m>.
-            </p>
-          </li>
-        </ol>
+  </subsection>
+
+<exercises>
+
+  <exercise xml:id="exer_sec82-1">
+    <introduction>
+      <p>
+        Prove the second and third parts of <xref ref="T_relativelyprime"></xref>.
+      </p>
+    </introduction>
+
+    <task>
+      <p>
+        Let <m>a</m> be a nonzero integer,
+        and let <m>p</m> be a prime number.
+        If <m>p \mid a</m>, then <m>\gcd( {a, p} ) = p</m>.
+      </p>
+    </task>
+    <task>
+      <p>
+        Let <m>a</m> be a nonzero integer,
+        and let <m>p</m> be a prime number.
+        If <m>p</m> does not divide <m>a</m>,
+        then <m>\gcd( {a, p} ) = 1</m>.
+      </p>
+    </task>
+  </exercise>
+
+  <exercise xml:id="exer_sec82-2">
+    <statement>
+      <p>
+        Prove the first part of <xref ref="C_primedivides"></xref>.
+        Let <m>a, b \in \mathbb{Z}</m>,
+        and let <m>p</m> be a prime number.
+        If <m>p \mid \left( {ab} \right)</m>,
+        then <m>p \mid a</m> or <m>p \mid b</m>. 
+      </p>
+    </statement>
+    <hint>
+      <p>
+        Consider two cases: (1) <m>p \mid a</m>;
+        and (2) <m>p</m> does not divide <m>a</m>.
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="exer_sec82-3">
+    <statement>
+      <p>
+        Use mathematical induction to prove the second part of <xref ref="C_primedivides"></xref>.
+        Let <m>p</m> be a prime number,
+        let <m>n \in \mathbb{N}</m>,
+        and let <m>a_1 ,a_2 , \ldots , a_n \in \mathbb{Z}</m>.
+        If <m>p \mid \left( {a_1 a_2 \cdots a_n } \right)</m>,
+        then there exists a <m>k \in \mathbb{N}</m> with
+        <m>1 \leq k \leq n</m> such that <m>p \mid a_k</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="exer_lincombequalone">
+    <introduction>
+      <p>
+        Let <m>a</m> and <m>b</m> be nonzero integers.
+      </p>
+    </introduction>
+
+    <task>
+      <p>
+        If there exist integers <m>x</m> and <m>y</m> such that <m>ax + by = 1</m>,
+        what conclusion can be made about <m>\gcd( {a, b} )</m>?
+        Explain.
+      </p>
+    </task>
+    <task>
+      <p>
+        If there exist integers <m>x</m> and <m>y</m> such that <m>ax + by = 2</m>,
+        what conclusion can be made about <m>\gcd( {a, b} )</m>?
+        Explain.
+      </p>
+    </task>
+  </exercise>
+
+  <exercise xml:id="exer_sec82-gcdconsec">
+    <introduction>
+      <p>
+        Let <m>a \in \Z</m>.
+      </p>
+    </introduction>
+
+    <task>
+      <p>
+        What is <m>\gcd( {a, a + 1} )</m>?
+        That is, what is the greatest common divisor of two consecutive integers?
+        Justify your conclusion. \hint <xref ref="exer_lincombequalone"/> might be helpful.
+      </p>
+    </task>
+    <task>
+      <p>
+        What conclusion can be made about <m>\gcd( {a, a + 2} )</m>?
+        That is, what conclusion can be made about the greatest common divisor of two integers 
+        that differ by 2?
+        Justify your conclusion.
+      </p>
+    </task>
+  </exercise>
+
+  <exercise xml:id="exer_sec82-moregcd">
+    <introduction>
+      <p>
+        Let <m>a \in \Z</m>.
+      </p>
+    </introduction>
+
+    <task>
+      <p>
+        What conclusion can be made about <m>\gcd( {a, a + 3} )</m>?
+        That is, what conclusion can be made about the greatest common divisor of two integers 
+        that differ by 3?
+        Justify your conclusion.
+      </p>
+    </task>
+    <task>
+      <p>
+        What conclusion can be made about <m>\gcd( {a, a + 4} )</m>?
+        That is, what conclusion can be made about the greatest common divisor of two integers 
+        that differ by 4?
+        Justify your conclusion.
+      </p>
+    </task>
+  </exercise>
+
+  <exercise xml:id="exer_gcd-divbyd">
+    <introduction>
+      <p>
+        Complete the following.
+      </p>
+    </introduction>
+
+    <task xml:id="exer_gcd-divbyda">
+      <p>
+        Let <m>a = 16</m> and <m>b = 28</m>.
+        Determine the value of <m>d = \gcd( a, b )</m>,
+        and then determine the value of <m>\gcd \!\left( {\dfrac{a}{d}, \dfrac{b}{d}} \right )</m>.
+      </p>
+    </task>
+    <task>
+      <p>
+        Repeat <xref ref="exer_gcd-divbyda"/> with <m>a = 10</m> and <m>b = 45</m>.
+      </p>
+    </task>
+    <task>
+      <statement>
+      <p>
+        Let <m>a, b \in \mathbb{Z}</m>,
+        not both equal to 0, and let <m>d = \gcd( a, b )</m>.
+        Explain why <m>\dfrac{a}{d}</m> and <m>\dfrac{b}{d}</m> are integers.
+        Then prove that <m>\gcd \!\left( {\dfrac{a}{d}, \dfrac{b}{d}} \right ) = 1</m>.
+      </p>
+      <p>
         This says that if you divide both <m>a</m> and <m>b</m> by their greatest common divisor,
         the result will be two relatively prime integers.
-      </li>
-      <li xml:id="exer_sec82-truefalse">
+      </p>
+      </statement>
+      <hint>
         <p>
-          Are the following propositions true or false?
-          Justify your conclusions.
-          <ol>
-            <li>
-              <p>
-                For all integers <m>a, b, \text{ and } c</m>,
-                if <m>a \mid c</m> and <m>b \mid c</m>,
-                then <m>\left( {ab} \right) \mid c</m>.
-              </p>
-            </li>
-            <li>
-              <p>
-                For all integers <m>a, b, \text{ and } c</m>, if <m>a \mid c</m>,
-                <m>b \mid c</m> and <m>\gcd( {a, b} ) = 1</m>,
-                then <m>( {ab} ) \mid c</m>.
-              </p>
-            </li>
-          </ol>
+          Start by writing <m>d</m> as a linear combination of <m>a</m> and <m>b</m>.
         </p>
-      </li>
-      <li xml:id="exer_24divides-nsquaredminus1">
-        <p>
-          In <xref ref="exer_sec34-new9"/> in <xref ref="S_divalgo"></xref>,
-          it was proved that if <m>n</m> is an odd integer,
-          then <m>8 \mid \left( n^2 - 1 \right)</m>.
-          (This result was also proved in <xref ref="exer_sec74-15"/> in <xref ref="S_modulararithmetic"></xref>.)
-          Now, prove the following proposition:
-          <ul>
-            \item If <m>n</m> is an odd integer and 3 does not divide <m>n</m>, then <m>24 \mid \left( n^2 - 1 \right)</m>.
-          </ul>
-        </p>
-      </li>
-      <li>
-        <ol>
-          <li>
-            <p>
-              Prove the following proposition: For all <m>a, b, c \in \mathbb{Z}</m>,
-              <m>\gcd(a, bc) = 1</m> if and only if
-              <m>\gcd( {a, b} ) = 1</m> and <m>\gcd( {a, c} ) = 1</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              Use mathematical induction to prove the following proposition: Let <m>n \in \mathbb{N}</m> and let <m>a,
-              b_1 , b_2 , \ldots , b_n \in \mathbb{Z}</m>.
-              If <m>\gcd \!\left( {a, b_i } \right) = 1</m> for all
-              <m>i \in \mathbb{N}</m> with <m>1 \leq i \leq n</m>,
-              then <m>\gcd \!\left( {a, b_1 b_2 \cdots b_n } \right) = 1</m>.
-            </p>
-          </li>
-        </ol>
-      </li>
-      <li xml:id="exer_cdividessum">
-        <p>
-          Is the following proposition true or false?
+      </hint>
+    </task>
+  </exercise>
+
+  <exercise xml:id="exer_sec82-truefalse">
+    <introduction>
+      <p>
+        Are the following propositions true or false?
+        Justify your conclusions.
+      </p>
+    </introduction>
+
+    <task>
+      <p>
+        For all integers <m>a, b, \text{ and } c</m>,
+        if <m>a \mid c</m> and <m>b \mid c</m>,
+        then <m>\left( {ab} \right) \mid c</m>.
+      </p>
+    </task>
+    <task>
+      <p>
+        For all integers <m>a, b, \text{ and } c</m>, if <m>a \mid c</m>,
+        <m>b \mid c</m> and <m>\gcd( {a, b} ) = 1</m>,
+        then <m>( {ab} ) \mid c</m>.
+      </p>
+    </task>
+  </exercise>
+
+  <exercise xml:id="exer_24divides-nsquaredminus1">
+    <statement>
+      <p>
+        In <xref ref="exer_sec34-new9"/> in <xref ref="S_divalgo"></xref>,
+        it was proved that if <m>n</m> is an odd integer,
+        then <m>8 \mid \left( n^2 - 1 \right)</m>.
+        (This result was also proved in <xref ref="exer_sec74-15"/> in 
+        <xref ref="S_modulararithmetic"></xref>.)
+        Now, prove the following proposition:
+        <blockquote>
+          If <m>n</m> is an odd integer and 3 does not divide <m>n</m>, then 
+          <m>24 \mid \left( n^2 - 1 \right)</m>.
+        </blockquote>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="exer_82_10">
+    <introduction>
+      <p>
+        Prove the following propositions. Use mathematical induction for <xref ref="exer_82_10b"/>
+      </p>
+    </introduction>
+
+    <task xml:id="exer_82_10a">
+      <p>
+        For all <m>a, b, c \in \mathbb{Z}</m>,
+        <m>\gcd(a, bc) = 1</m> if and only if
+        <m>\gcd( {a, b} ) = 1</m> and <m>\gcd( {a, c} ) = 1</m>.
+      </p>
+    </task>
+    <task xml:id="exer_82_10b">
+      <p>
+        Let <m>n \in \mathbb{N}</m> and let <m>a,
+        b_1 , b_2 , \ldots , b_n \in \mathbb{Z}</m>.
+        If <m>\gcd \!\left( {a, b_i } \right) = 1</m> for all
+        <m>i \in \mathbb{N}</m> with <m>1 \leq i \leq n</m>,
+        then <m>\gcd \!\left( {a, b_1 b_2 \cdots b_n } \right) = 1</m>.
+      </p>
+    </task>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Is the following proposition true or false?
           Justify your conclusion.
-          <ul>
-            \item For all integers <m>a, b, \text{ and } c</m>, if <m>\gcd( {a, b} ) = 1</m> and <m>c \mid \left( {a + b} \right)</m>, then <m>\gcd( {a, c} ) = 1</m> and <m>\gcd( {b, c} ) = 1</m>.
-          </ul>
-        </p>
-      </li>
-      <li>
+          <blockquote>
+            For all integers <m>a, b, \text{ and } c</m>, if <m>\gcd( {a, b} ) = 1</m> and 
+            <m>c \mid \left( {a + b} \right)</m>, then <m>\gcd( {a, c} ) = 1</m> and <m>\gcd( {b, c} ) = 1</m>.
+          </blockquote>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Is the following proposition true or false?
+        Justify your conclusion.
+        <blockquote>
+          If <m>n \in \mathbb{N}</m>, then <m>\gcd( {5n + 2, 12n + 5} ) = 1</m>.
+        </blockquote>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="exer_fundtheoremcons">
+    <statement>
+      <p>
+        Let <m>y \in \mathbb{N}</m>.
+        Use the Fundamental Theorem of Arithmetic to prove that there exists an odd natural 
+        number <m>x</m> and a nonnegative integer <m>k</m> such that <m>y = 2^k x</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="exer_sec82-primescong3">
+    <introduction>
+      <p>
+        Complete the following.
+      </p>
+    </introduction>
+
+    <task>
+      <p>
+        Determine five different primes that are congruent to 3 modulo 4.
+      </p>
+    </task>
+    <task>
+      <p>
+        Prove that there are infinitely many primes that are congruent to 3 modulo 4.
+      </p>
+    </task>
+  </exercise>
+
+  <exercise xml:id="exer_consecutivecomposites">
+    <introduction>
+      <p>
+        Let <m>n \in \N</m>.
+      </p>
+    </introduction>
+
+    <task>
+      <p>
+        Prove that 2 divides <m>\left[ {\left( {n + 1} \right)! + 2} \right]</m>.
+      </p>
+    </task>
+    <task>
+      <p>
+        Prove that 3 divides <m>\left[ {\left( {n + 1} \right)! + 3} \right]</m>.
+      </p>
+    </task>
+    <task xml:id="exer_consecutivecompositesc">
+      <p>
+        Prove that for each <m>k \in \mathbb{N}</m> with <m>2 \leq k \leq \left( {n + 1} \right)</m>,
+        <m>k</m> divides <m>\left[ {\left( {n + 1} \right)! + k} \right]</m>.
+      </p>
+    </task>
+    <task>
+      <p>
+        Use the result of <xref ref="exer_consecutivecompositesc"/> to prove that for each 
+        <m>n \in \mathbb{N}</m>,
+        there exist at least <m>n</m> consecutive composite natural numbers.
+      </p>
+    </task>
+  </exercise>
+  
+  <exercise>
+    <introduction>
+      <p>
+        The Twin Prime Conjecture states that there are infinitely many twin primes,
+        but it is not known if this conjecture is true or false.
+        The answers to the following questions,
+        however, can be determined.
+      </p>
+    </introduction>
+
+    <task>
+      <p>
+        How many pairs of primes <m>p</m> and <m>q</m> exist where <m>q - p = 3</m>?
+        That is, how many pairs of primes are there that differ by 3?
+        Prove that your answer is correct.
+        (One such pair is 2 and 5.)
+      </p>
+    </task>
+    <task>
+      <statement>
+      <p>
+        How many triplets of primes of the form <m>p</m>,
+        <m>p+2</m>, and <m>p+4</m> are there?
+        That is, how many triplets of primes exist where each prime is 2 more than the preceding 
+        prime?
+        Prove that your answer is correct.
+        Notice that one such triplet is 3, 5, and 7.
+      </p>
+    
+    </statement>
+    <hint>
+      <p>
+        Try setting up cases using congruence 
+        modulo 3.
+      </p>
+    </hint>
+    </task>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Prove the following proposition:
+        <blockquote>
+          Let <m>n \in \mathbb{N}</m>. For each <m>a \in \mathbb{Z}</m>, if 
+          <m>\gcd( {a, n} ) = 1</m>, then for every <m>b \in \mathbb{Z}</m>, 
+          there exists an <m>x \in \mathbb{Z}</m> such that <m>ax \equiv b \pmod n</m>.
+        </blockquote>
+      </p>
+    </statement>
+    <hint>
+      <p>
+        One way is to start by writing 1 as a linear combination of <m>a</m> and <m>n</m>.
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise xml:id="exer_sec82-twinprimes">
+    <statement>
+      <p>
+        Prove the following proposition:
+        <blockquote>
+          For all natural numbers <m>m</m> and <m>n</m>, if <m>m</m> and <m>n</m> are twin 
+          primes other than the pair 3 and 5, then 36 divides <m>mn + 1</m> and <m>mn + 1</m> 
+          is a perfect square.
+        </blockquote>
+      </p>
+    </statement>
+    <hint>
+      <p>
+        Look at several examples of twin primes. What do you notice about the number that is 
+        between the two twin primes? Set up cases based on this observation.
+      </p>
+    </hint>
+  </exercise>
+
+  <activity xml:id="exer82_squareroot">
+    <title>Square Roots and Irrational Numbers</title>
+
+      <introduction>
         <p>
-          Is the following proposition true or false?
-          Justify your conclusion.
-          <ul>
-            \item If <m>n \in \mathbb{N}</m>, then <m>\gcd( {5n + 2, 12n + 5} ) = 1</m>.
-          </ul>
-        </p>
-      </li>
-      <li xml:id="exer_fundtheoremcons">
-        <p>
-          Let <m>y \in \mathbb{N}</m>.
-          Use the Fundamental Theorem of Arithmetic to prove that there exists an odd natural number <m>x</m> and a nonnegative integer <m>k</m> such that <m>y = 2^k x</m>.
-        </p>
-      </li>
-      <li xml:id="exer_sec82-primescong3">
-        <ol>
-          <li>
-            <p>
-              Determine five different primes that are congruent to 3 modulo 4.
-            </p>
-          </li>
-          <li>
-            <p>
-              Prove that there are infinitely many primes that are congruent to 3 modulo 4.
-            </p>
-          </li>
-        </ol>
-      </li>
-      <li xml:id="exer_consecutivecomposites">
-        <ol>
-          <li>
-            <p>
-              Let <m>n \in \mathbb{N}</m>.
-              Prove that 2 divides <m>\left[ {\left( {n + 1} \right)! + 2} \right]</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              Let <m>n \in \mathbb{N}</m> with <m>n \geq 2</m>.
-              Prove that 3 divides <m>\left[ {\left( {n + 1} \right)! + 3} \right]</m>.
-            </p>
-          </li>
-          <li xml:id="exer_consecutivecompositesc">
-            <p>
-              Let <m>n \in \mathbb{N}</m>.
-              Prove that for each <m>k \in \mathbb{N}</m> with <m>2 \leq k \leq \left( {n + 1} \right)</m>,
-              <m>k</m> divides <m>\left[ {\left( {n + 1} \right)! + k} \right]</m>.
-            </p>
-          </li>
-          <li>
-            <p>
-              Use the result of <xref ref="exer_consecutivecompositesc"/> to prove that for each <m>n \in \mathbb{N}</m>,
-              there exist at least <m>n</m> consecutive composite natural numbers.
-            </p>
-          </li>
-        </ol>
-      </li>
-      <li>
-        <p>
-          The Twin Prime Conjecture states that there are infinitely many twin primes,
-          but it is not known if this conjecture is true or false.
-          The answers to the following questions,
-          however, can be determined.
-          <ol>
-            <li>
-              <p>
-                How many pairs of primes <m>p</m> and <m>q</m> exist where <m>q - p = 3</m>?
-                That is, how many pairs of primes are there that differ by 3?
-                Prove that your answer is correct.
-                (One such pair is 2 and 5.)
-              </p>
-            </li>
-            <li>
-              <p>
-                How many triplets of primes of the form <m>p</m>,
-                <m>p+2</m>, and <m>p+4</m> are there?
-                That is, how many triplets of primes exist where each prime is 2 more than the preceding prime?
-                Prove that your answer is correct.
-                Notice that one such triplet is 3, 5, and 7. \hint Try setting up cases using congruence modulo 3.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </li>
-      <li>
-        <p>
-          Prove the following proposition:
-          <ul>
-            \item Let <m>n \in \mathbb{N}</m>. For each <m>a \in \mathbb{Z}</m>, if <m>\gcd( {a, n} ) = 1</m>, then for every <m>b \in \mathbb{Z}</m>, there exists an <m>x \in \mathbb{Z}</m> such that <m>ax \equiv b \pmod n</m>.
-          </ul>
-        </p>
-        \hint One way is to start by writing 1 as a linear combination of <m>a</m> and <m>n</m>.
-      </li>
-      <li xml:id="exer_sec82-twinprimes">
-        <p>
-          Prove the following proposition:
-          <ul>
-            \item For all natural numbers <m>m</m> and <m>n</m>, if <m>m</m> and <m>n</m> are twin primes other than the pair 3 and 5, then 36 divides <m>mn + 1</m> and <m>mn + 1</m> is a perfect square.
-          </ul>
-        </p>
-        \hint Look at several examples of twin primes. What do you notice about the number that is between the two twin primes? Set up cases based on this observation.
-      </li>
-    </ol>
-  </subsection>
-  <subsection>
-    <title>Explorations and Activities</title>
-    <ol>
-      <li xml:id="exer82_squareroot">
-        <p>
-          <em>Square Roots and Irrational Numbers</em>.
           In <xref ref="C_proofs"></xref>,
           we proved that some square roots
           (such as <m>\sqrt{2}</m> and <m>\sqrt{3}</m>)
           are irrational numbers.
           In this activity,
-          we will use the Fundamental Theorem of Arithmetic to prove that if a natural number is not a perfect square,
+          we will use the Fundamental Theorem of Arithmetic to prove that if a natural number 
+          is not a perfect square,
           then its square root is an irrational number.
-          <ol>
-            <li xml:id="exer82_squareroot-a">
-              <p>
-                Let <m>n</m> be a natural number.
-                Use the Fundamental Theorem of Arithmetic to explain why if <m>n</m> is composite,
-                then there exist distinct prime numbers
-                <m>p_1, p_2, \ldots,
-                p_r</m> and natural numbers <m>\alpha_1, \alpha_2, \ldots, \alpha_r</m> such that
-                <men xml:id="A_squarerootsirrational1">
-                  n = p_1^{\alpha_1} p_2^{\alpha_2} \cdots p_r^{\alpha_r}
-                </men>.
-                Using <m>r = 1</m> and <m>\alpha_1 = 1</m> for a prime number,
-                explain why we can write any natural number greater than one in the form given in equation<nbsp/><xref ref="A_squarerootsirrational1"/>.
-              </p>
-            </li>
-            <li>
-              <p>
-                A natural number <m>b</m> is a <em>perfect square</em>
-    <idx><h>perfect square</h></idx>
-                if and only if there exists a natural number <m>a</m> such that <m>b = a^2</m>.
-                Explain why 36, 400, and 15876 are perfect squares.
-                Then determine the prime factorization of these perfect squares.
-                What do you notice about these prime factorizations?
-              </p>
-            </li>
-            <li>
-              <p>
-                Let <m>n</m> be a natural number written in the form given in equation<nbsp/><xref ref="A_squarerootsirrational1"/> in part<nbsp/>(a).
-                Prove that <m>n</m> is a perfect square if and only if for each natural number <m>k</m> with
-                <m>1 \leq k \leq r</m>, <m>\alpha_k</m> is even.
-              </p>
-            </li>
-            <li>
-              <p>
-                Prove that for all natural numbers <m>n</m>,
-                if <m>n</m> is not a perfect square,
-                then <m>\sqrt{n}</m> is an irrational number. \hint Use a proof by contradiction.
-              </p>
-            </li>
-          </ol>
         </p>
-      </li>
-    </ol>
-  </subsection>
+      </introduction>
+
+      <task xml:id="exer82_squareroot-a">
+        <p>
+          Let <m>n</m> be a natural number.
+          Use the Fundamental Theorem of Arithmetic to explain why if <m>n</m> is composite,
+          then there exist distinct prime numbers
+          <m>p_1, p_2, \ldots,
+          p_r</m> and natural numbers <m>\alpha_1, \alpha_2, \ldots, \alpha_r</m> such that
+          <men xml:id="A_squarerootsirrational1">
+            n = p_1^{\alpha_1} p_2^{\alpha_2} \cdots p_r^{\alpha_r}
+          </men>.
+          Using <m>r = 1</m> and <m>\alpha_1 = 1</m> for a prime number,
+          explain why we can write any natural number greater than one in the form given in 
+          <xref ref="A_squarerootsirrational1">Equation</xref>.
+        </p>
+      </task>
+      <task>
+        <p>
+          A natural number <m>b</m> is a <term>perfect square</term>
+          <idx><h>perfect square</h></idx>
+          if and only if there exists a natural number <m>a</m> such that <m>b = a^2</m>.
+          Explain why 36, 400, and 15876 are perfect squares.
+          Then determine the prime factorization of these perfect squares.
+          What do you notice about these prime factorizations?
+        </p>
+      </task>
+      <task>
+        <p>
+          Let <m>n</m> be a natural number written in the form given in 
+          <xref ref="A_squarerootsirrational1">Equation</xref> in <xref ref="exer82_squareroot-a"/>
+          Prove that <m>n</m> is a perfect square if and only if for each natural number 
+          <m>k</m> with
+          <m>1 \leq k \leq r</m>, <m>\alpha_k</m> is even.
+        </p>
+      </task>
+      <task>
+        <statement>
+        <p>
+          Prove that for all natural numbers <m>n</m>,
+          if <m>n</m> is not a perfect square,
+          then <m>\sqrt{n}</m> is an irrational number.
+        </p>
+        </statement>
+        <hint>
+          <p>
+            Use a proof by contradiction.
+          </p>
+        </hint>
+      </task>
+
+  </activity>
+  
+</exercises>
+
 </section>

@@ -1,8 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
 <section xml:id="S_infinitesets">
   <title>Countable Sets</title>
-  <introduction>
+
     <worksheet xml:id="PA_introtoinfinite">
-      <title>Introduction to Infinite Sets</title>
+      <title>Beginning Activity 1: Introduction to Infinite Sets</title>
       <p>
         In <xref ref="S_finitesets"></xref>,
         we defined a <term>finite set</term>
@@ -13,200 +15,247 @@
             <idx><h>infinite set</h></idx>
         to be a set that is not finite, but the question now is,
         <q>How do we know if a set is infinite?</q>
-        One way to determine if a set is an infinite set is to use <xref ref="C_propersubsets"></xref>,
+        One way to determine if a set is an infinite set is to use 
+        <xref ref="C_propersubsets"></xref>,
         which states that a finite set is not equivalent to any of its subsets.
         We can write this as a conditional statement as follows:
-        <ul>
-          \item If <m>A</m> is a finite set, then <m>A</m> is not equivalent to any of its proper subsets.
-        </ul>
+        <blockquote>
+          If <m>A</m> is a finite set, then <m>A</m> is not equivalent to any of its proper subsets.
+        </blockquote>
       </p>
       <p>
         or more formally as
-        <ul>
-          \item For each set <m>A</m>, if <m>A</m> is a finite set, then for each proper subset <m>B</m> of <m>A</m>, <m>A \not\approx B</m>.
-        </ul>
+        <blockquote>
+          For each set <m>A</m>, if <m>A</m> is a finite set, then for each proper subset 
+          <m>B</m> of <m>A</m>, <m>A \not\approx B</m>.
+        </blockquote>
       </p>
-      <ol>
-        <li>
+      <exercise>
+        <statement>
           <p>
             Write the contrapositive of the preceding conditional statement.
             Then explain how this statement can be used to determine if a set is infinite.
           </p>
-        </li>
-        <li xml:id="PA_introtoinfinite2">
+        </statement>
+      </exercise>
+      <exercise xml:id="PA_introtoinfinite2">
+        <introduction>
           <p>
             Let <m>D^+</m> be the set of all odd natural numbers.
             In <xref ref="PA_equivalentsets"></xref>
             from <xref ref="S_finitesets"></xref>,
             we proved that <m>\mathbb{N} \approx D^+</m>.
-            <ol>
-              <li>
+          </p>
+        </introduction>
+          
+              <task>
                 <p>
                   Use this to explain carefully why <m>\mathbb{N}</m> is an infinite set.
                 </p>
-              </li>
-              <li>
+              </task>
+              <task>
                 <p>
                   Is <m>D^+</m> a finite set or an infinite set?
                   Explain carefully how you know.
                 </p>
-              </li>
-            </ol>
-          </p>
-        </li>
-        <li xml:id="PA_introtoinfinite3">
+              </task>
+
+        </exercise>
+        <exercise xml:id="PA_introtoinfinite3">
+          <introduction>
           <p>
             Let <m>b</m> be a positive real number.
-            Let <m>( 0, 1 )</m> and <m>( 0, b )</m> be the open intervals from 0 to 1 and 0 to <m>b</m>,
+            Let <m>( 0, 1 )</m> and <m>( 0, b )</m> be the open intervals from 0 to 1 and 0 to 
+            <m>b</m>,
             respectively.
-            In <xref ref="A_equivsets4"/> of <xref ref="prog_equivsets"></xref>
-            (on <xref ref="prog_equivsets"></xref>),
+            In <xref ref="A_equivsets4"/> of 
+            <xref ref="prog_equivsets"></xref>,
             we proved that <m>( 0, 1 ) \approx ( 0, b )</m>.
-            <ol>
-              <li>
+          </p>
+          </introduction>
+            
+              <task>
                 <p>
                   Use a value for <m>b</m> where
                   <m>0 \lt b \lt 1</m> to explain why <m>( 0, 1 )</m> is an infinite set.
                 </p>
-              </li>
-              <li>
+              </task>
+              <task>
                 <p>
-                  Use a value for <m>b</m> where <m>b > 1</m> to explain why <m>( 0, b )</m> is an infinite set.
+                  Use a value for <m>b</m> where <m>b > 1</m> to explain why <m>( 0, b )</m> 
+                  is an infinite set.
                 </p>
-              </li>
-            </ol>
-          </p>
-        </li>
-      </ol>
+              </task>
+
+        </exercise>
+
     </worksheet>
+
     <worksheet xml:id="PA_functionNtoZ">
-      <title>A Function from $\boldsymbol{\N}$ to $\boldsymbol{\Z}$</title>
+      <title>Beginning Activity 2: A Function from <m>\boldsymbol{\N}</m> to <m>\boldsymbol{\Z}</m></title>
       <p>
         In this activity,
         we will define and explore a function <m>f:\mathbb{N} \to \mathbb{Z}</m>.
         We will start by defining <m>f ( n )</m> for the first few natural numbers <m>n</m>.
       </p>
-      <tabular>
-        <row>
-          <cell><m>f ( 1 ) = 0</m></cell>
-          <cell></cell>
-          <cell></cell>
-        </row>
-        <row>
-          <cell><m>f ( 2 ) = 1</m></cell>
-          <cell></cell>
-          <cell><m>f ( 3 ) = -1</m></cell>
-        </row>
-        <row>
-          <cell><m>f ( 4 ) = 2</m></cell>
-          <cell></cell>
-          <cell><m>f ( 5 ) = -2</m></cell>
-        </row>
-        <row>
-          <cell><m>f ( 6 ) = 3</m></cell>
-          <cell></cell>
-          <cell><m>f ( 7 ) = -3</m></cell>
-        </row>
-      </tabular>
+      <md>
+        <mrow>f ( 1 ) \amp = 0 \amp </mrow>
+        <mrow>f ( 2 ) \amp = 1 \amp f ( 3 ) \amp = -1</mrow>
+        <mrow>f ( 4 ) \amp = 2 \amp f ( 5 ) \amp = -2</mrow>
+        <mrow>f ( 6 ) \amp = 3 \amp f ( 7 ) \amp = -3</mrow>
+      </md>
+
       <p>
-        Notice that if we list the outputs of <m>f</m> in the order <m>f ( 1 ), f ( 2 ), f ( 3 ), \ldots</m>,
+        Notice that if we list the outputs of <m>f</m> in the order 
+        <m>f ( 1 ), f ( 2 ), f ( 3 ), \ldots</m>,
         we create the following list of integers:
         <m>0, 1, -1, 2, -2, 3, -3, \ldots</m>.
         We can also illustrate the outputs of this function with the following diagram:
       </p>
-      <table xml:id="fig_functionNtoZ">
+      <figure xml:id="fig_functionNtoZ">
         <caption>A Function from <m>\N</m> to <m>\Z</m></caption>
-        <tabular>
+        <tabular halign="center">
           <row>
-            <cell>" 1 " 2 " 3 " 4 " 5 " 6 " 7 " 8 " 9 " 10 " <m>\cdots</m> "</cell>
+            <cell>1</cell>
+            <cell>2</cell>
+            <cell>3</cell>
+            <cell>4</cell>
+            <cell>5</cell>
+            <cell>6</cell>
+            <cell>7</cell>
+            <cell>8</cell>
+            <cell>9</cell>
+            <cell>10</cell>
+            <cell><m>\cdots</m></cell>
           </row>
+
           <row>
-            <cell>" <m>\downarrow</m> " <m>\downarrow</m> " <m>\downarrow</m> " <m>\downarrow</m> " <m>\downarrow</m> " <m>\downarrow</m> " <m>\downarrow</m> " <m>\downarrow</m> " <m>\downarrow</m> " <m>\downarrow</m> " <m>\cdots</m> "</cell>
+            <cell><m>\downarrow</m></cell>
+            <cell><m>\downarrow</m></cell>
+            <cell><m>\downarrow</m></cell>
+            <cell><m>\downarrow</m></cell>
+            <cell><m>\downarrow</m></cell>
+            <cell><m>\downarrow</m></cell>
+            <cell><m>\downarrow</m></cell>
+            <cell><m>\downarrow</m></cell>
+            <cell><m>\downarrow</m></cell>
+            <cell><m>\downarrow</m></cell>
+            <cell><m>\cdots</m></cell>
           </row>
+
           <row>
-            <cell>" 0 " 1 " <m>-1</m> " 2 " <m>-2</m> " 3 " <m>-3</m> " 4 " <m>-4</m> " 5 "  <m>\cdots</m> "</cell>
+            <cell>0</cell>
+            <cell>1</cell>
+            <cell><m>-1</m></cell>
+            <cell>2</cell>
+            <cell><m>-2</m></cell>
+            <cell>3</cell>
+            <cell><m>-3</m></cell>
+            <cell>4</cell>
+            <cell><m>-4</m></cell>
+            <cell>5</cell>
+            <cell><m>\cdots</m></cell>
           </row>
         </tabular>
-      </table>
-      <ol>
-        <li xml:id="PA_functionNtoZ1">
+      </figure>
+
+      <exercise xml:id="PA_functionNtoZ1">
+        <statement>
           <p>
             If the pattern suggested by the function values we have defined continues,
             what are <m>f ( 11 )</m> and <m>f ( 12 )</m>?
             What is <m>f ( n )</m> for <m>n</m> from 13 to 16?
           </p>
-        </li>
-        <li>
+        </statement>
+      </exercise>
+      <exercise>
+        <statement>
           <p>
             If the pattern of outputs continues,
             does the function <m>f</m> appear to be an injection?
             Does <m>f</m> appear to be a surjection? (Formal proofs are not required.)
           </p>
-        </li>
-      </ol>
+        </statement>
+      </exercise>
       <p>
         We will now attempt to determine a formula for <m>f ( n )</m>,
         where <m>n \in \mathbb{N}</m>.
         We will actually determine two formulas:
         one for when <m>n</m> is even and one for when <m>n</m> is odd.
       </p>
-      <ol>
-        <li xml:id="PA_functionNtoZ3">
+      <exercise xml:id="PA_functionNtoZ3">
+        <statement>
           <p>
             Look at the pattern of the values of <m>f ( n )</m> when <m>n</m> is even.
             What appears to be a formula for <m>f ( n )</m> when <m>n</m> is even?
           </p>
-        </li>
-        <li xml:id="PA_functionNtoZ4">
+        </statement>
+      </exercise>
+      <exercise xml:id="PA_functionNtoZ4">
+        <statement>
           <p>
             Look at the pattern of the values of <m>f ( n )</m> when <m>n</m> is odd.
             What appears to be a formula for <m>f ( n )</m> when <m>n</m> is odd?
           </p>
-        </li>
-        <li xml:id="PA_functionNtoZ5">
+        </statement>
+      </exercise>
+      <exercise xml:id="PA_functionNtoZ5">
+        <statement>
           <p>
-            Use the work in <xref ref="PA_functionNtoZ3"/> and <xref ref="PA_functionNtoZ4"/> to complete the following:  Define <m>f\x \mathbb{N} \to \mathbb{Z}</m>, where
+            Use the work in <xref ref="PA_functionNtoZ3"/> and 
+            <xref ref="PA_functionNtoZ4"/> to complete the following:  Define 
+            <m>f\x \mathbb{N} \to \mathbb{Z}</m>, where
             <me>
-              f ( n ) = \left\{ \begin{gathered} ?? \text{  if  } n \text{ is even }   \\ \\ ?? \text{  if  } n \text{ is odd } . \end{gathered}  \right.
+              f ( n ) = \left\{ \begin{gathered} ?? \text{  if  } n \text{ is even }   \\ \\ ?? 
+              \text{  if  } n \text{ is odd } . \end{gathered}  \right.
             </me>
           </p>
-        </li>
-        <li>
+        </statement>
+      </exercise>
+      <exercise>
+        <introduction>
           <p>
             Use the formula in <xref ref="PA_functionNtoZ5"/> to
           </p>
-          <ol>
-            <li>
+        </introduction>
+          
+            <task>
               <p>
                 Calculate <m>f ( 1 )</m> through <m>f ( 10 )</m>.
-                Are these results consistent with the pattern exhibited at the start of this activity?
+                Are these results consistent with the pattern exhibited at the start of 
+                this activity?
               </p>
-            </li>
-            <li>
+            </task>
+            <task>
               <p>
                 Calculate <m>f ( 1000 )</m> and <m>f ( 1001 )</m>.
               </p>
-            </li>
-            <li>
+            </task>
+            <task>
               <p>
                 Determine the value of <m>n</m> so that <m>f ( n ) = 1000</m>.
               </p>
-            </li>
-          </ol>
-        </li>
-      </ol>
+            </task>
+
+        </exercise>
+
     </worksheet>
+
+  <introduction>
     <p>
       In this section,
-      we will describe several infinite sets and define the cardinal number for so-called countable sets.
-      Most of our examples will be subsets of some of our standard number systems such as <m>\mathbb{N}</m>,
+      we will describe several infinite sets and define the cardinal number for so-called 
+      countable sets.
+      Most of our examples will be subsets of some of our standard number systems such as 
+      <m>\mathbb{N}</m>,
       <m>\mathbb{Z}</m>, and <m>\mathbb{Q}</m>.
     </p>
   </introduction>
+
   <subsection>
     <title>Infinite Sets</title>
     <p>
-      In <xref ref="PA_introtoinfinite"></xref>,
+      In <xref ref="PA_introtoinfinite">Beginning Activity 1</xref>,
       we saw how to use <xref ref="C_propersubsets"></xref>
       to prove that a set is infinite.
       This corollary implies that if <m>A</m> is a finite set,
@@ -214,13 +263,16 @@
       By writing the contrapositive of this conditional statement,
       we can restate <xref ref="C_propersubsets"></xref> in the following form:
     </p>
+    <paragraphs>
+      <title><xref ref="C_propersubsets"></xref> Restated</title>
     <p>
-      <em><xref ref="C_propersubsets"></xref></em>.
-      <em>If a set <m>A</m> is equivalent to one of its proper subsets,
-      then <m>A</m> is infinite.</em>
+      If a set <m>A</m> is equivalent to one of its proper subsets,
+      then <m>A</m> is infinite.
     </p>
+    </paragraphs>
+
     <p>
-      In <xref ref="PA_introtoinfinite"></xref>,
+      In <xref ref="PA_introtoinfinite">Beginning Activity 1</xref>,
       we used <xref ref="C_propersubsets"></xref> to prove that
       <ul>
         <li>
@@ -243,6 +295,7 @@
       about finite sets to help obtain a contradiction.
       This is illustrated in the next theorem.
     </p>
+
     <theorem xml:id="T_subsetisinfinite">
       <statement>
         <p>
@@ -263,11 +316,12 @@
           </ol>
         </p>
       </statement>
-    </theorem>
+    
     <proof>
       <p>
         We will prove <xref ref="T_subsetisinfinite1"/>.
-        The proof of <xref ref="T_subsetisinfinite2"/> is <xref ref="exer_subsetisinfinite"/> on <xref ref="exer_subsetisinfinite"></xref>.
+        The proof of <xref ref="T_subsetisinfinite2"/> is
+        <xref ref="exer_subsetisinfinite"></xref>.
       </p>
       <p>
         To prove <xref ref="T_subsetisinfinite1"/>,
@@ -283,44 +337,50 @@
         then <m>B</m> is infinite.
       </p>
     </proof>
+    </theorem>
+
     <exercise xml:id="E_infinitesets">
       <title>Examples of Infinite Sets</title>
-      <ol>
-        <li>
+      
+        <task>
           <p>
-            In <xref ref="PA_introtoinfinite"></xref>,
+            In <xref ref="PA_introtoinfinite">Beginning Activity 1</xref>,
             we used <xref ref="C_propersubsets"></xref>
             to prove that <m>\N</m> is an infinite set.
             Now use this and <xref ref="T_subsetisinfinite"></xref>
-            to explain why our standard number systems <m>( \Z, \Q, \text{ and } \R )</m> are infinite sets.
+            to explain why our standard number systems <m>( \Z, \Q, \text{ and } \R )</m> 
+            are infinite sets.
             Also, explain why the set of all positive rational numbers,
             <m>\Q^+</m>,
             and the set of all positive real numbers,
             <m>\R^+</m>, are infinite sets.
           </p>
-        </li>
-        <li>
+        </task>
+        <task>
           <p>
             Let <m>D^+</m> be the set of all odd natural numbers.
-            In <xref ref="PA_introtoinfinite2"/> of <xref ref="PA_introtoinfinite"></xref>,
+            In <xref ref="PA_introtoinfinite2"/> of <xref ref="PA_introtoinfinite">Beginning Activity 1</xref>,
             we proved that <m>D^+ \approx \mathbb{N}</m>.
             Use <xref ref="T_subsetisinfinite"></xref>
             to explain why <m>D^+</m> is an infinite set.
           </p>
-        </li>
-        <li>
+        </task>
+        <task>
           <p>
             Prove that the set <m>E^+</m> of all even natural numbers is an infinite set.
           </p>
-        </li>
-      </ol>
+        </task>
+
     </exercise>
+
   </subsection>
+
   <subsection>
     <title>Countably Infinite Sets</title>
     <p>
       In <xref ref="S_finitesets"></xref>,
-      we used the set <m>\mathbb{N}_k</m> as the standard set with cardinality <m>k</m> in the sense that a set is finite if and only if it is equivalent to <m>\mathbb{N}_k</m>.
+      we used the set <m>\mathbb{N}_k</m> as the standard set with cardinality <m>k</m> in 
+      the sense that a set is finite if and only if it is equivalent to <m>\mathbb{N}_k</m>.
       In a similar manner,
       we will use some infinite sets as standard sets for certain infinite cardinal numbers.
       The first set we will use is <m>\mathbb{N}</m>.
@@ -335,12 +395,14 @@
       <m>\mathbb{N}_k</m> for some natural number <m>k</m>.
       We will be able to
       <q>count</q>
-      the elements of an infinite set if we can define a one-to-one correspondence between the set and <m>\mathbb{N}</m>.
+      the elements of an infinite set if we can define a one-to-one correspondence between the 
+      set and <m>\mathbb{N}</m>.
     </p>
+
     <definition xml:id="aleph0">
       <statement>
         <p>
-          The <term>cardinality of</term> <m>\boldsymbol{\mathbb{N}}</m>
+          The <term>cardinality of <m>\boldsymbol{\mathbb{N}}</m></term>
               <idx><h>cardinality</h></idx>
               <idx><h>cardinality</h><h>natural numbers</h></idx>
               <idx><h>cardinality</h><h><m>\aleph_0</m></h></idx>
@@ -363,6 +425,7 @@
         </p>
       </statement>
     </definition>
+
     <definition xml:id="countinfinite">
       <statement>
         <p>
@@ -387,29 +450,33 @@
         </p>
       </statement>
     </definition>
+
     <exercise xml:id="prog_countablyinfinitesets">
       <title>Examples of Countably Infinite Sets</title>
-      <ol>
-        <li>
+    
+        <task>
           <p>
-            In <xref ref="PA_equivalentsets"></xref>
+            In <xref ref="PA_equivalentsets">Beginning Activity 1</xref>
             from <xref ref="S_finitesets"></xref>,
             we proved that <m>\mathbb{N} \approx D^+</m>,
             where <m>D^+</m> is the set of all odd natural numbers.
             Explain why <m>\text{ card} ( D^+ ) = \aleph_0</m>.
           </p>
-        </li>
-        <li>
+        </task>
+        <task>
           <p>
             Use a result from <xref ref="E_infinitesets"></xref>
             to explain why <m>\text{ card} ( E^+ ) = \aleph_0</m>.
           </p>
-        </li>
-        <li>
+        </task>
+        <task>
           <p>
             At this point,
             if we wish to prove a set <m>S</m> is countably infinite,
-            we must find a bijection between the set <m>S</m> and some set that is known to be countably infinite.
+            we must find a bijection between the set <m>S</m> and some set that is known to be 
+            countably infinite.
+          </p>
+          <p>
             Let <m>S</m> be the set of all natural numbers that are perfect squares.
             Define a function
             <me>
@@ -418,14 +485,17 @@
             that can be used to prove that <m>S \approx \mathbb{N}</m> and, hence,
             that <m>\text{ card} ( S ) = \aleph_0</m>.
           </p>
-        </li>
-      </ol>
+        </task>
+  
     </exercise>
+
     <p>
-      The fact that the set of integers is a countably infinite set is important enough to be called a theorem.
+      The fact that the set of integers is a countably infinite set is important enough to be 
+      called a theorem.
       The function we will use to establish that
-      <m>\N \approx \Z</m> was explored in <xref ref="PA_functionNtoZ"></xref>.
+      <m>\N \approx \Z</m> was explored in <xref ref="PA_functionNtoZ">Beginning Activity 2</xref>.
     </p>
+
     <theorem xml:id="T_ZequivtoN">
       <statement>
         <p>
@@ -433,18 +503,19 @@
           and so <m>\text{ card} ( \Z ) = \aleph_0</m>.
         </p>
       </statement>
-    </theorem>
+    
     <proof>
       <p>
         To prove that <m>\N \approx \Z</m>,
         we will use the following function:
         <m>f\x \N \to \Z</m>, where
-        <men>
-          f ( n ) = \begin{cases}\dfrac{n}{2}         \amp \text{ if \(n\) is even }  \\ \amp                       \\ \dfrac{1-n}{2}       \amp \text{ if \(n\) is odd } . \end{cases}
-        </men>
+        <me>
+          f ( n ) = \begin{cases}\dfrac{n}{2} \amp \text{ if \(n\) is even }  \\ \amp \\ \dfrac{1-n}{2} 
+          \amp \text{ if \(n\) is odd } . \end{cases}
+        </me>
       </p>
       <p>
-        From our work in <xref ref="PA_functionNtoZ"></xref>,
+        From our work in <xref ref="PA_functionNtoZ">Beginning Activity 2</xref>,
         it appears that if <m>n</m> is an even natural number,
         then <m>f ( n ) > 0</m>,
         and if <m>n</m> is an odd natural number,
@@ -476,8 +547,6 @@
       <p>
         These two cases prove that if <m>y \in \mathbb{Z}</m>,
         then there exists an <m>n \in \mathbb{N}</m> such that
-      </p>
-      <p>
         <m>f ( n ) = y</m>.
         Hence, <m>f</m> is a surjection.
       </p>
@@ -486,21 +555,22 @@
         <m>m,
         n \in \mathbb{N}</m> and assume that <m>f ( m ) = f ( n )</m>.
         First note that if one of <m>m</m> and <m>n</m> is odd and the other is even,
-        then one of <m>f ( m )</m> and <m>f ( n )</m> is positive and the other is less than or equal to 0.
+        then one of <m>f ( m )</m> and <m>f ( n )</m> is positive and the other is less than or 
+        equal to 0.
         So if <m>f ( m ) = f ( n )</m>,
         then both <m>m</m> and <m>n</m> must be even or both <m>m</m> and <m>n</m> must be odd.
         <ul>
           <li>
             <p>
               If both <m>m</m> and <m>n</m> are even,
-              then <m>f ( m ) = f ( n )</m> implies that
-              <m>\dfrac{m}{2} = \dfrac{n}{2}</m> and hence that <m>m = n</m>.
+              then <me>f ( m ) = f ( n ) \text{ implies that }
+              \dfrac{m}{2} = \dfrac{n}{2}</me> and hence that <m>m = n</m>.
             </p>
           </li>
           <li>
             <p>
               If both <m>m</m> and <m>n</m> are odd,
-              then <m>f ( m ) = f ( n )</m> implies that <m>\dfrac{1-m}{2} = \dfrac{1-n}{2}</m>.
+              then <me>f ( m ) = f ( n ) \text{ implies that } \dfrac{1-m}{2} = \dfrac{1-n}{2}</me>.
               From this, we conclude that <m>1 - m</m> = <m>1 - n</m> and hence that <m>m = n</m>.
               This proves that if <m>f ( m ) = f ( n )</m>,
               then <m>m = n</m> and hence that <m>f</m> is an injection.
@@ -515,11 +585,14 @@
         Hence, <m>\mathbb{Z}</m> is countably infinite and <m>\text{ card} ( \Z ) = \aleph_0</m>.
       </p>
     </proof>
+    </theorem>
+
     <p>
       The result in <xref ref="T_ZequivtoN"></xref> can seem a bit surprising.
       It exhibits one of the distinctions between finite and infinite sets.
       If we add elements to a finite set,
-      we will increase its size in the sense that the new set will have a greater cardinality than the old set.
+      we will increase its size in the sense that the new set will have a greater cardinality 
+      than the old set.
       However, with infinite sets,
       we can add elements and the new set may still have the same cardinality as the original set.
       For example,
@@ -527,7 +600,8 @@
       We say that these sets have the same cardinality.
     </p>
     <p>
-      Following is a summary of some of the main examples dealing with the cardinality of sets that we have explored.
+      Following is a summary of some of the main examples dealing with the cardinality of sets 
+      that we have explored.
       <ul>
         <li>
           <p>
@@ -540,7 +614,8 @@
           <p>
             The sets <m>\mathbb{N}</m>,
             <m>\mathbb{Z}</m>, the set of all odd natural numbers,
-            and the set of all even natural numbers are examples of sets that are countable and countably infinite.
+            and the set of all even natural numbers are examples of sets that are countable 
+            and countably infinite.
           </p>
         </li>
         <li>
@@ -551,12 +626,14 @@
       </ul>
     </p>
   </subsection>
+  
   <subsection xml:id="tworationals">
     <title>The Set of Positive Rational Numbers</title>
     <p>
       If we expect to find an uncountable set in our usual number systems,
       the rational numbers might be the place to start looking.
-      One of the main differences between the set of rational numbers and the integers is that given any integer <m>m</m>,
+      One of the main differences between the set of rational numbers and the integers is that 
+      given any integer <m>m</m>,
       there is a next integer, namely <m>m + 1</m>.
       This is not true for the set of rational numbers.
       We know that <m>\Q</m> is closed under division
@@ -607,28 +684,34 @@
         c_{k + 1} = \frac{c_k + b}{2}
       </me>
       and obtain the result that
-      <m>a \lt  c_1 \lt  c_2 \lt  \cdots \lt  c_n \lt  \cdots \lt  b</m> and this proves that the set
-      <m>\left\{ c_k \mid k \in \mathbb{N} \right\}</m> is a countably infinite set where each element is a rational number between <m>a</m> and <m>b</m>. (A formal proof can be completed using mathematical induction.) See <xref ref="exer_tworationals"/>.
+      <m>a \lt  c_1 \lt  c_2 \lt  \cdots \lt  c_n \lt  \cdots \lt  b</m> and this proves 
+      that the set
+      <m>\left\{ c_k \mid k \in \mathbb{N} \right\}</m> is a countably infinite set where 
+      each element is a rational number between <m>a</m> and <m>b</m>. (A formal proof can be 
+      completed using mathematical induction.) See <xref ref="exer_tworationals"/>.
     </p>
     <p>
       This result is true no matter how close together <m>a</m> and <m>b</m> are.
       For example,
-      we can now conclude that there are infinitely many rational numbers between 0 and <m>\dfrac{1}{10000}</m>.
+      we can now conclude that there are infinitely many rational numbers between 0 and 
+      <m>\dfrac{1}{10000}</m>.
       This might suggest that the set
       <m>\mathbb{Q}</m> of rational numbers is uncountable.
       Surprisingly, this is not the case.
       We start with a proof that the set of positive rational numbers is countable.
     </p>
+
     <theorem xml:id="T_positiverationals">
       <statement>
         <p>
           The set of positive rational numbers is countably infinite.
         </p>
       </statement>
-    </theorem>
+    
     <proof>
       <p>
-        We can write all the positive rational numbers in a two-dimensional array as shown in <xref ref="fig_positiverationals"></xref>.
+        We can write all the positive rational numbers in a two-dimensional array as shown 
+        in <xref ref="fig_positiverationals"></xref>.
       </p>
       <figure xml:id="fig_positiverationals">
         <caption>Counting the Positive Rational Numbers</caption>
@@ -640,11 +723,13 @@
         and the left column represents the denominator.
         We follow the arrows in <xref ref="fig_positiverationals"></xref>
         to define <m>f\x \mathbb{N} \to \mathbb{Q}^+</m>.
-        The idea is to start in the upper left corner of the table and move to successive diagonals as follows:
+        The idea is to start in the upper left corner of the table and move to successive 
+        diagonals as follows:
         <ul>
           <li>
             <p>
-              We start with all fractions in which the sum of the numerator and denominator is 2 <m>\left( \text{ only } \dfrac{1}{1} \right)</m>.
+              We start with all fractions in which the sum of the numerator and denominator is 2 
+              <m>\left( \text{ only } \dfrac{1}{1} \right)</m>.
               So <m>f ( 1 ) = \dfrac{1}{1}</m>.
             </p>
           </li>
@@ -672,9 +757,11 @@
         Therefore, <m>\mathbb{N} \approx \mathbb{Q}^+</m> and <m>\text{ card} ( \mathbb{Q}^+ ) = \aleph_0</m>.
       </p>
     </proof>
+    </theorem>
+
     <p>
-      \note For another proof of <xref ref="T_positiverationals"></xref>,
-      see <xref ref="A_Qcountable"/> on <xref ref="A_Qcountable"></xref>.
+      Note: For another proof of <xref ref="T_positiverationals"></xref>,
+      see <xref ref="A_Qcountable"/>.
     </p>
     <p>
       Since <m>\mathbb{Q}^+</m> is countable,
@@ -688,6 +775,7 @@
       We still have a few more issues to deal with concerning countable sets.
     </p>
   </subsection>
+
   <subsection>
     <title>Countably Infinite Sets</title>
     <theorem xml:id="T_addonetocountable">
@@ -697,7 +785,7 @@
           then <m>A \cup \left\{ x \right\}</m> is a countably infinite set.
         </p>
       </statement>
-    </theorem>
+    
     <proof>
       <p>
         Let <m>A</m> be a countably infinite set.
@@ -712,9 +800,10 @@
       <p>
         If <m>x \notin A</m>,
         define <m>g\x \mathbb{N} \to A \cup \left\{ x \right\}</m> by
-        <men>
-          g( n ) = \begin{cases}x                        \amp \text{ if \(n = 1\) }  \\ f ( n - 1 )   \amp \text{ if \(n > 1\). } \end{cases}
-        </men>
+        <me>
+          g( n ) = \begin{cases}x \amp \text{ if \(n = 1\) }  \\ f ( n - 1 )   
+          \amp \text{ if \(n > 1\). } \end{cases}
+        </me>
       </p>
       <p>
         The proof that the function <m>g</m> is a bijection is <xref ref="exer_addonetocountable"/>.
@@ -723,6 +812,8 @@
         <m>A \cup \left\{ x \right\}</m> is countably infinite.
       </p>
     </proof>
+    </theorem>
+
     <theorem xml:id="T_addfinitetocountable">
       <statement>
         <p>
@@ -730,12 +821,14 @@
           then <m>A \cup B</m> is a countably infinite set.
         </p>
       </statement>
-    </theorem>
+    
     <proof>
       <p>
-        <xref ref="exer_addfinitetocountable"/> on <xref ref="exer_addfinitetocountable"></xref>.
+        <xref ref="exer_addfinitetocountable"/>.
       </p>
     </proof>
+    </theorem>
+
     <p>
       <xref ref="T_addfinitetocountable"></xref>
       says that if we add a finite number of elements to a countably infinite set,
@@ -749,22 +842,57 @@
       The proof of this result is similar to the proof that the integers are countably infinite
       (<xref ref="T_ZequivtoN"></xref>).
       In fact, if <m>A = \{a_1, a_2, a_3, \ldots \}</m> and <m>B = \{b_1, b_2, b_3, \ldots \}</m>,
-      then we can use the following diagram to help define a bijection from <m>\N</m> to <m>A \cup B</m>.
+      then we can use the following diagram to help define a bijection from <m>\N</m> to 
+      <m>A \cup B</m>.
     </p>
-    <table xml:id="fig_functionNtoUnion">
-      <caption>A Function from <m>\N</m> to <m>A \cup B</m></caption>
-      <tabular>
-        <row>
-          <cell>" 1 " 2 " 3 " 4 " 5 " 6 " 7 " 8 " 9 " 10 " <m>\cdots</m> "</cell>
-        </row>
-        <row>
-          <cell>" <m>\downarrow</m> " <m>\downarrow</m> " <m>\downarrow</m> " <m>\downarrow</m> " <m>\downarrow</m> " <m>\downarrow</m> " <m>\downarrow</m> " <m>\downarrow</m> " <m>\downarrow</m> " <m>\downarrow</m> " <m>\cdots</m> "</cell>
-        </row>
-        <row>
-          <cell>" <m>a_1</m> " <m>b_1</m> " <m>a_2</m> " <m>b_2</m> " <m>a_3</m> " <m>b_3</m> " <m>a_4</m> " <m>b_4</m> " <m>a_5</m> " <m>b_5</m> "  <m>\cdots</m> "</cell>
-        </row>
-      </tabular>
-    </table>
+
+    <figure xml:id="fig_functionNtoZ">
+        <caption>A Function from <m>\N</m> to <m>A \cup B</m></caption>
+        <tabular halign="center">
+          <row>
+            <cell>1</cell>
+            <cell>2</cell>
+            <cell>3</cell>
+            <cell>4</cell>
+            <cell>5</cell>
+            <cell>6</cell>
+            <cell>7</cell>
+            <cell>8</cell>
+            <cell>9</cell>
+            <cell>10</cell>
+            <cell><m>\cdots</m></cell>
+          </row>
+
+          <row>
+            <cell><m>\downarrow</m></cell>
+            <cell><m>\downarrow</m></cell>
+            <cell><m>\downarrow</m></cell>
+            <cell><m>\downarrow</m></cell>
+            <cell><m>\downarrow</m></cell>
+            <cell><m>\downarrow</m></cell>
+            <cell><m>\downarrow</m></cell>
+            <cell><m>\downarrow</m></cell>
+            <cell><m>\downarrow</m></cell>
+            <cell><m>\downarrow</m></cell>
+            <cell><m>\cdots</m></cell>
+          </row>
+
+          <row>
+            <cell><m>a_1</m></cell>
+            <cell><m>b_1</m></cell>
+            <cell><m>a_2</m></cell>
+            <cell><m>b_2</m></cell>
+            <cell><m>a_3</m></cell>
+            <cell><m>b_3</m></cell>
+            <cell><m>a_4</m></cell>
+            <cell><m>b_4</m></cell>
+            <cell><m>a_5</m></cell>
+            <cell><m>b_5</m></cell>
+            <cell><m>\cdots</m></cell>
+          </row>
+        </tabular>
+      </figure>
+
     <theorem xml:id="T_unionofcountable">
       <statement>
         <p>
@@ -774,40 +902,47 @@
           <m>A \cup B</m> is a countably infinite set.
         </p>
       </statement>
-    </theorem>
+    
     <proof>
       <p>
         Let <m>A</m> and <m>B</m> be countably infinite sets and let
         <m>f\x \mathbb{N} \to A</m> and <m>g\x \mathbb{N} \to B</m> be bijections.
         Define <m>h\x \mathbb{N} \to A \cup B</m> by
-        <men>
-          h( n ) = \begin{cases}f \!\left( \dfrac{n+1}{2} \right)                        \amp \text{ if \(n\) is odd }  \\ \amp  \\ g \!\left( \dfrac{n}{2} \right)                          \amp \text{ if \(n\) is even } . \end{cases}
-        </men>
+        <me>
+          h( n ) = \begin{cases}f \!\left( \dfrac{n+1}{2} \right) \amp \text{ if \(n\) is odd }  \\ 
+          \amp  \\ g \!\left( \dfrac{n}{2} \right) \amp \text{ if \(n\) is even } . \end{cases}
+        </me>
       </p>
       <p>
-        It is left as <xref ref="exer_unionofcountable"/> on <xref ref="exer_unionofcountable"></xref>
+        It is left as <xref ref="exer_unionofcountable"/>
         to prove that the function <m>h</m> is a bijection.
       </p>
     </proof>
+    </theorem>
+
     <p>
-      Since we can write the set of rational numbers <m>\Q</m> as the union of the set of nonnegative rational numbers and the set of negative rational numbers,
+      Since we can write the set of rational numbers <m>\Q</m> as the union of the set of 
+      nonnegative rational numbers and the set of negative rational numbers,
       we can use the results in <xref ref="T_positiverationals"></xref>,
       <xref ref="T_addonetocountable"></xref>,
       and <xref ref="T_unionofcountable"></xref>
       to prove the following theorem.
     </p>
+
     <theorem xml:id="T_Qiscountable">
       <statement>
         <p>
           The set <m>\mathbb{Q}</m> of all rational numbers is countably infinite.
         </p>
       </statement>
-    </theorem>
+    
     <proof>
       <p>
-        <xref ref="exer_Qiscountable"/> on <xref ref="exer_Qiscountable"></xref>.
+        <xref ref="exer_Qiscountable"/>.
       </p>
     </proof>
+    </theorem>
+
     <p>
           <idx><h>countably infinite sets</h><h>subsets of</h></idx>
       In <xref ref="S_finitesets"></xref>,
@@ -817,7 +952,8 @@
       We first prove that every subset of <m>\mathbb{N}</m> is countable.
       For an infinite subset <m>B</m> of <m>\mathbb{N}</m>,
       the idea of the proof is to define a function
-      <m>g\x \mathbb{N} \to B</m> by removing the elements from <m>B</m> from smallest to the next smallest to the next smallest,
+      <m>g\x \mathbb{N} \to B</m> by removing the elements from <m>B</m> from smallest to the 
+      next smallest to the next smallest,
       and so on.
       We do this by defining the function <m>g</m> recursively as follows:
       <ul>
@@ -828,30 +964,34 @@
         </li>
         <li>
           <p>
-            Remove <m>g ( 1 )</m> from <m>B</m> and let <m>g ( 2 )</m> be the smallest natural number in <m>B - \left\{ g ( 1 ) \right\}</m>.
+            Remove <m>g ( 1 )</m> from <m>B</m> and let <m>g ( 2 )</m> be the smallest natural 
+            number in <m>B - \left\{ g ( 1 ) \right\}</m>.
           </p>
         </li>
         <li>
           <p>
-            Remove <m>g ( 2 )</m> and let <m>g ( 3 )</m> be the smallest natural number in <m>B - \left\{ g ( 1 ), g ( 2 ) \right\}</m>.
+            Remove <m>g ( 2 )</m> and let <m>g ( 3 )</m> be the smallest natural number in 
+            <m>B - \left\{ g ( 1 ), g ( 2 ) \right\}</m>.
           </p>
         </li>
         <li>
           <p>
             We continue this process.
             The formal recursive definition of
-            <m>g\x \mathbb{N} \to B</m> is included in the proof of <xref ref="T_subsetsofN"></xref>.
+            <m>g\x \mathbb{N} \to B</m> is included in the proof of 
+            <xref ref="T_subsetsofN"></xref>.
           </p>
         </li>
       </ul>
     </p>
+
     <theorem xml:id="T_subsetsofN">
       <statement>
         <p>
           Every subset of the natural numbers is countable.
         </p>
       </statement>
-    </theorem>
+    
     <proof>
       <p>
         Let <m>B</m> be a subset of <m>\mathbb{N}</m>.
@@ -870,336 +1010,428 @@
               For each <m>n \in \mathbb{N}</m>,
               the set <m>B - \left\{ g ( 1 ), g ( 2 ), \ldots,
               g ( n ) \right\}</m> is not empty since <m>B</m> is infinite.
-              Define <m>g ( n + 1 )</m> to be the smallest natural number in <m>B - \left\{ g ( 1 ), g ( 2 ), \ldots,
+              Define <m>g ( n + 1 )</m> to be the smallest natural number in 
+              <m>B - \left\{ g ( 1 ), g ( 2 ), \ldots,
               g ( n ) \right\}</m>.
             </p>
           </li>
         </ul>
       </p>
       <p>
-        The proof that the function <m>g</m> is a bijection is <xref ref="exer_subsetofN"/> on <xref ref="exer_subsetofN"></xref>.
+        The proof that the function <m>g</m> is a bijection is <xref ref="exer_subsetofN"/>.
       </p>
     </proof>
+    </theorem>
+
     <corollary xml:id="C_subsetofcountable">
       <statement>
         <p>
           Every subset of a countable set is countable.
         </p>
       </statement>
-    </corollary>
+    
     <proof>
       <p>
-        <xref ref="exer_subsetofcountable"/> on <xref ref="exer_subsetofcountable"></xref>.
+        <xref ref="exer_subsetofcountable"/>.
       </p>
     </proof>
-    <p>
-          <idx><h>countably infinite sets</h><h>subsets of</h></idx>
-    </p>
-    <p>
-      \exercises{<xref ref="S_infinitesets">Exercises</xref>}
-    </p>
-    <ol>
-      <li xml:id="exer_sec93-1">
+    </corollary>
+
+  </subsection>
+
+  <exercises>
+
+    <exercise xml:id="exer_sec93-1">
+      <introduction>
         <p>
           State whether each of the following is true or false.
         </p>
-        <ol>
-          <li>
-            <p>
-              If a set <m>A</m> is countably infinite,
-              then <m>A</m> is infinite.
-            </p>
-          </li>
-          <li>
-            <p>
-              If a set <m>A</m> is countably infinite,
-              then <m>A</m> is countable.
-            </p>
-          </li>
-          <li>
-            <p>
-              If a set <m>A</m> is uncountable,
-              then <m>A</m> is not countably infinite.
-            </p>
-          </li>
-          <li>
-            <p>
-              If <m>A \approx \mathbb{N}_k</m> for some <m>k \in \mathbb{N}</m>,
-              then <m>A</m> is not countable.
-            </p>
-          </li>
-        </ol>
-      </li>
-      <li xml:id="exer_sec93-2">
+      </introduction>
+
+      <task>
+        <p>
+          If a set <m>A</m> is countably infinite,
+          then <m>A</m> is infinite.
+        </p>
+      </task>
+      <task>
+        <p>
+          If a set <m>A</m> is countably infinite,
+          then <m>A</m> is countable.
+        </p>
+      </task>
+      <task>
+        <p>
+          If a set <m>A</m> is uncountable,
+          then <m>A</m> is not countably infinite.
+        </p>
+      </task>
+      <task>
+        <p>
+          If <m>A \approx \mathbb{N}_k</m> for some <m>k \in \mathbb{N}</m>,
+          then <m>A</m> is not countable.
+        </p>
+      </task>
+    </exercise>
+
+    <exercise xml:id="exer_sec93-2">
+      <introduction>
         <p>
           Prove that each of the following sets is countably infinite.
-          <ol cols="2">
-            <li>
-              <p>
-                The set <m>F^+</m> of all natural numbers that are multiples of 5
-              </p>
-            </li>
-            <li>
-              <p>
-                The set <m>F</m> of all integers that are multiples of 5
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\left\{ \left. \dfrac{1}{2^k} \right| k \in \mathbb{N} \right\}</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\left\{ n \in \mathbb{Z} \mid n \geq -10 \right\}</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\mathbb{N} - \left\{ 4, 5, 6 \right\}</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\left\{ m \in \mathbb{Z} \mid m \equiv 2 \pmod 3 \right\}</m>
-              </p>
-            </li>
-          </ol>
         </p>
-      </li>
-      <li xml:id="exer_subsetisinfinite">
+      </introduction>
+
+      <task>
+        <p>
+          The set <m>F^+</m> of all natural numbers that are multiples of 5
+        </p>
+      </task>
+      <task>
+        <p>
+          The set <m>F</m> of all integers that are multiples of 5
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>\left\{ \left. \dfrac{1}{2^k} \right| k \in \mathbb{N} \right\}</m>
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>\left\{ n \in \mathbb{Z} \mid n \geq -10 \right\}</m>
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>\mathbb{N} - \left\{ 4, 5, 6 \right\}</m>
+        </p>
+      </task>
+      <task>
+        <p>
+          <m>\left\{ m \in \mathbb{Z} \mid m \equiv 2 \pmod 3 \right\}</m>
+        </p>
+      </task>
+    </exercise>
+
+    <exercise xml:id="exer_subsetisinfinite">
+      <statement>
         <p>
           Prove <xref ref="T_subsetisinfinite2"/> of <xref ref="T_subsetisinfinite"></xref>.
-          Let <m>A</m> and <m>B</m> be sets.
-          If <m>A</m> is infinite and <m>A \subseteq B</m>,
+        </p>
+        <p>
+          Let <m>A</m> and <m>B</m> be sets. If <m>A</m> is infinite and <m>A \subseteq B</m>,
           then <m>B</m> is infinite.
         </p>
-      </li>
-      <li xml:id="exer_addonetocountable">
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_addonetocountable">
+      <statement>
         <p>
           Complete the proof of <xref ref="T_addonetocountable"></xref>
           by proving the following: Let <m>A</m> be a countably infinite set and <m>x \notin A</m>.
           If <m>f\x \mathbb{N} \to A</m> is a bijection,
           then <m>g</m> is a bijection,
           where <m>g\x \mathbb{N} \to A \cup \left\{ x \right\}</m> by
-          <men>
-            g( n ) = \begin{cases}x                        \amp \text{ if \(n = 1\) }  \\ f ( n - 1 )   \amp \text{ if \(n > 1\) } . \end{cases}
-          </men>
+          <me>
+            g( n ) = \begin{cases}x \amp \text{ if \(n = 1\) }  \\ f ( n - 1 )   
+            \amp \text{ if \(n > 1\) } . \end{cases}
+          </me>
         </p>
-      </li>
-      <li xml:id="exer_addfinitetocountable">
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_addfinitetocountable">
+      <statement>
         <p>
           Prove <xref ref="T_addfinitetocountable"></xref>.
+        </p>
+        <p>
           If <m>A</m> is a countably infinite set and <m>B</m> is a finite set,
-          then <m>A \cup B</m> is a countably infinite set. \hint Let
+          then <m>A \cup B</m> is a countably infinite set. 
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Let
           <m>\text{ card} ( B ) = n</m> and use a proof by induction on <m>n</m>.
           <xref ref="T_addonetocountable"></xref> is the basis step.
         </p>
-      </li>
-      <li xml:id="exer_unionofcountable">
+      </hint>
+    </exercise>
+
+    <exercise xml:id="exer_unionofcountable">
+      <statement>
         <p>
           Complete the proof of <xref ref="T_unionofcountable"></xref>
-          by proving the following: Let <m>A</m> and <m>B</m> be disjoint countably infinite sets and let
+          by proving the following: Let <m>A</m> and <m>B</m> be disjoint countably infinite 
+          sets and let
           <m>f\x \mathbb{N} \to A</m> and <m>g\x \mathbb{N} \to B</m> be bijections.
           Define <m>h\x \mathbb{N} \to A \cup B</m> by
-          <men>
-            h( n ) = \begin{cases}f \!\left( \dfrac{n+1}{2} \right)                        \amp \text{ if \(n\) is odd }  \\ \amp  \\ g \!\left( \dfrac{n}{2} \right)                          \amp \text{ if \(n\) is even } . \end{cases}
-          </men>
+          <me>
+            h( n ) = \begin{cases}f \!\left( \dfrac{n+1}{2} \right) 
+            \amp \text{ if \(n\) is odd }  \\ \amp  \\ g \!\left( \dfrac{n}{2} \right)                          \amp \text{ if \(n\) is even } . \end{cases}
+          </me>
           Then the function <m>h</m> is a bijection.
         </p>
-      </li>
-      <li xml:id="exer_Qiscountable">
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_Qiscountable">
+      <statement>
         <p>
           Prove <xref ref="T_Qiscountable"></xref>.
-          The set <m>\mathbb{Q}</m> of all rational numbers is countable. \hint Use <xref ref="T_addonetocountable"></xref>
+        </p>
+        <p>
+          The set <m>\mathbb{Q}</m> of all rational numbers is countable.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Use <xref ref="T_addonetocountable"></xref>
           and <xref ref="T_unionofcountable"></xref>.
         </p>
-      </li>
-      <li xml:id="exer_countinf-finite">
+      </hint>
+    </exercise>
+
+    <exercise xml:id="exer_countinf-finite">
+      <statement>
         <p>
           Prove that if <m>A</m> is countably infinite and <m>B</m> is finite,
           then <m>A - B</m> is countably infinite.
         </p>
-      </li>
-      <li xml:id="exer_NxNbijection">
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_NxNbijection">
+      <introduction>
         <p>
-          Define <m>f\x \mathbb{N} \times \mathbb{N} \to \mathbb{N}</m> as follows:  For each <m>( m, n ) \in \mathbb{N} \times \mathbb{N}</m>,
+          Define <m>f\x \mathbb{N} \times \mathbb{N} \to \mathbb{N}</m> as follows: 
+          For each <m>( m, n ) \in \mathbb{N} \times \mathbb{N}</m>,
           <me>
             f ( m, n ) = 2^{m-1} (2n - 1 )
           </me>.
-          <ol>
-            <li>
-              <p>
-                Prove that <m>f</m> is an injection. \hint If <m>f ( m, n ) = f ( s, t )</m>,
-                there are three cases to consider:
-                <m>m > s</m>, <m>m \lt s</m>, and <m>m = s</m>.
-                Use laws of exponents to prove that the first two cases lead to a contradiction.
-              </p>
-            </li>
-            <li>
-              <p>
-                Prove that <m>f</m> is a surjection. \hint You may use the fact that if
+        </p>
+      </introduction>
+
+      <task>
+        <statement>
+        <p>
+          Prove that <m>f</m> is an injection.
+        </p>
+        </statement>
+        <hint>
+          <p>
+            If <m>f ( m, n ) = f ( s, t )</m>,
+            there are three cases to consider:
+            <m>m > s</m>, <m>m \lt s</m>, and <m>m = s</m>.
+            åUse laws of exponents to prove that the first two cases lead to a contradiction.
+          </p>
+        </hint>
+      </task>
+      <task>
+        <statement>
+        <p>
+          Prove that <m>f</m> is a surjection.
+        </p>
+        </statement>
+        <hint>
+          <p>
+            You may use the fact that if
                 <m>y \in \mathbb{N}</m>, then <m>y = 2^k x</m>,
                 where <m>x</m> is an odd natural number and <m>k</m> is a non-negative integer.
                 This is actually a consequence of the Fundamental Theorem of Arithmetic,
-                <xref ref="T_fundtheorem"></xref>. [See <xref ref="exer_fundtheoremcons"/> in <xref ref="S_primefactorizations"></xref>.]
-              </p>
-            </li>
-            <li>
-              <p>
-                Prove that <m>\mathbb{N} \times \mathbb{N} \approx \mathbb{N}</m> and hence that <m>\text{ card} \left( \mathbb{N} \times \mathbb{N} \right) = \aleph_0</m>.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </li>
-      <li>
+                <xref ref="T_fundtheorem"></xref>. [See <xref ref="exer_fundtheoremcons"/> in 
+                <xref ref="S_primefactorizations"></xref>.]
+          </p>
+        </hint>
+      </task>
+      <task>
         <p>
-          Use <xref ref="exer_NxNbijection"/> to prove that if <m>A</m> and <m>B</m> are countably infinite sets,
+          Prove that <m>\mathbb{N} \times \mathbb{N} \approx \mathbb{N}</m> and hence that 
+          <m>\text{ card} \left( \mathbb{N} \times \mathbb{N} \right) = \aleph_0</m>.
+        </p>
+      </task>
+      
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Use <xref ref="exer_NxNbijection"/> to prove that if <m>A</m> and <m>B</m> are 
+          countably infinite sets,
           then <m>A \times B</m> is a countably infinite set.
         </p>
-      </li>
-      <li xml:id="exer_subsetofN">
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_subsetofN">
+      <statement>
         <p>
           Complete the proof of <xref ref="T_subsetsofN"></xref>
           by proving that the function <m>g</m> defined in the proof is a bijection from
-          <m>\mathbb{N}</m> to <m>B</m>. \hint To prove that <m>g</m> is an injection,
+          <m>\mathbb{N}</m> to <m>B</m>.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          To prove that <m>g</m> is an injection,
           it might be easier to prove that for all <m>r, s \in \mathbb{N}</m>,
           if <m>r \ne s</m>, then <m>g ( r ) \ne g ( s )</m>.
-          To do this, we may assume that <m>r \lt s</m> since one of the two numbers must be less than the other.
+          To do this, we may assume that <m>r \lt s</m> since one of the two numbers must be 
+          less than the other.
           Then notice that <m>g ( r ) \in \left\{ g( 1 ), g( 2 ), \ldots,
           g( s-1 ) \right\}</m>.
           To prove that <m>g</m> is a surjection,
           let <m>b \in B</m> and notice that for some <m>k \in \mathbb{N}</m>,
           there will be <m>k</m> natural numbers in <m>B</m> that are less than <m>b</m>.
         </p>
-      </li>
-      <li xml:id="exer_subsetofcountable">
+      </hint>
+    </exercise>
+
+    <exercise xml:id="exer_subsetofcountable">
+      <statement>
         <p>
           Prove <xref ref="C_subsetofcountable"></xref>,
-          which states that every subset of a countable set is countable. \hint Let <m>S</m> be a countable set and assume that <m>A \subseteq S</m>.
+          which states that every subset of a countable set is countable. 
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Let <m>S</m> be a countable set and assume that <m>A \subseteq S</m>.
           There are two cases: <m>A</m> is finite or <m>A</m> is infinite.
           If <m>A</m> is infinite,
           let <m>f\x S \to \mathbb{N}</m> be a bijection and define <m>g\x A \to f ( A )</m> by
           <m>g ( x ) = f ( x )</m>, for each <m>x \in A</m>.
         </p>
-      </li>
-      <li>
+      </hint>
+    </exercise>
+
+    <exercise>
+      <statement>
         <p>
           Use <xref ref="C_subsetofcountable"></xref>
           to prove that the set of all rational numbers between 0 and 1 is countably infinite.
         </p>
-      </li>
-      <li xml:id="exer_tworationals">
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exer_tworationals">
+      <introduction>
         <p>
           Let <m>a, b \in \mathbb{Q}</m> with <m>a \lt  b</m>.
-          On <xref ref="tworationals"></xref>,
-          we proved that <m>c = \dfrac{a+b}{2}</m> is a rational number and that <m>a \lt  c \lt  b</m>,
+          On <xref ref="tworationals">The Set of Positive Rational Numbers</xref>,
+          we proved that <m>c = \dfrac{a+b}{2}</m> is a rational number and that 
+          <m>a \lt  c \lt  b</m>,
           which proves that here is a rational number between any two (unequal) rational numbers.
-          <ol>
-            <li>
-              <p>
-                Now let <m>c_1 = \dfrac{a+b}{2}</m>,
-                and define <m>c_2 = \dfrac{c_1 + b}{2}</m>.
-                Prove that <m>c_1 \lt c_2 \lt b</m> and hence,
-                that <m>a \lt c_1 \lt c_2 \lt b</m>.
-              </p>
-            </li>
-            <li>
-              <p>
-                For each <m>k \in \mathbb{N}</m>, define
-                <me>
-                  c_{k+1} = \frac{c_k + b}{2}
-                </me>.
-                Prove that for each <m>k \in \mathbb{N}</m>,
-                <m>a \lt  c_k \lt  c_{k+1} \lt  b</m>.
-                Use this to explain why the set
-                <m>\left\{ c_k \mid k \in \mathbb{N} \right\}</m> is an infinite set where each element is a rational number between <m>a</m> and <m>b</m>.
-              </p>
-            </li>
-          </ol>
         </p>
-      </li>
-    </ol>
-  </subsection>
-  <subsection>
-    <title>Explorations and Activities</title>
-    <ol>
-      <li xml:id="A_Qcountable">
+      </introduction>
+      <task>
         <p>
-          <em>Another Proof that <m>\mathbf{\Q^+}</m> Is Countable</em>.
-          For this activity,
-          it may be helpful to use the Fundamental Theorem of Arithmetic
-          (see <xref ref="T_fundtheorem"></xref>
-          on <xref ref="T_fundtheorem"></xref>).
-          Let <m>\Q^+</m> be the set of positive rational numbers.
-          Every positive rational number has a unique representation as a fraction <m>\dfrac{m}{n}</m>,
-          where <m>m</m> and <m>n</m> are relatively prime natural numbers.
-          We will now define a function
-          <m>f\x  \Q^+ \to \N</m> as follows:  \eighth  If
-          <m>x \in \Q^+</m> and <m>x = \dfrac{m}{n}</m>, where
-          <m>m,
-          n \in \N</m>, <m>n \ne 1</m> and <m>\gcd(m, n) = 1</m>, we write
-          <me>
-            \begin{aligned}m \amp = p_1^{\alpha_1} p_2^{\alpha_2} \cdots p_r^{\alpha_r},  \text{ and }  \\ n \amp = q_1^{\beta_1} q_2^{\beta_2} \cdots q_s^{\beta_s}, \end{aligned}
-          </me>
-          where <m>p_1</m>, <m>p_2</m>,
-          <ellipsis/>, <m>p_r</m> are distinct prime numbers,
-          <m>q_1</m>, <m>q_2</m>, <ellipsis/>,
-          <m>q_s</m> are distinct prime numbers, and <m>\alpha_1</m>,
-          <m>\alpha_2</m>, <ellipsis/>, <m>\alpha_r</m> and <m>\beta_1</m>,
-          <m>\beta_2</m>, <ellipsis/>, <m>\beta_s</m> are natural numbers.
-          We also write <m>1 = 2^0</m> when <m>m = 1</m>.
-          We then define
-          <me>
-            f(x) = p_1^{2\alpha_1} p_2^{2\alpha_2} \cdots p_r^{2\alpha_r} q_1^{2\beta_1 -1 } q_2^{2 \beta_2 - 1} \cdots q_s^{2 \beta_s - 1}
-          </me>.
-          If <m>x = \dfrac{m}{1}</m>,
-          then we define <m>f(x) = p_1^{2\alpha_1} p_2^{2\alpha_2} \cdots p_r^{2\alpha_r} = m^2</m>.
-          <ol>
-            <li>
-              <p>
-                Determine <m>f \!\left( \dfrac{2}{3} \right)</m>,
-                <m>f \!\left( \dfrac{5}{6} \right)</m>, <m>f ( 6 )</m>,
-                <m>f ( \dfrac{12}{25} )</m>, <m>f \!\left( \dfrac{375}{392} \right)</m>,
-                and <m>f \!\left( \dfrac{2^3 \cdot 11^3}{3 \cdot 5^4} \right)</m>.
-              </p>
-            </li>
-            <li>
-              <p>
-                If possible,
-                find <m>x \in \Q^+</m> such that <m>f(x) = 100</m>.
-              </p>
-            </li>
-            <li>
-              <p>
-                If possible, find <m>x \in \Q^+</m> such that <m>f(x) = 12</m>.
-              </p>
-            </li>
-            <li>
-              <p>
-                If possible,
-                find <m>x \in \Q^+</m> such that <m>f(x) = 2^8 \cdot 3^5 \cdot 13 \cdot 17^2</m>.
-              </p>
-            </li>
-            <li>
-              <p>
-                Prove that the function <m>f</m> is an injection.
-              </p>
-            </li>
-            <li>
-              <p>
-                Prove that the function <m>f</m> is a surjection.
-              </p>
-            </li>
-            <li>
-              <p>
-                What has been proved?
-              </p>
-            </li>
-          </ol>
+          Now let <m>c_1 = \dfrac{a+b}{2}</m>,
+          and define <m>c_2 = \dfrac{c_1 + b}{2}</m>.
+          Prove that <m>c_1 \lt c_2 \lt b</m> and hence,
+          that <m>a \lt c_1 \lt c_2 \lt b</m>.
         </p>
-      </li>
-    </ol>
-  </subsection>
+      </task>
+      <task>
+        <p>
+          For each <m>k \in \mathbb{N}</m>, define
+          <me>
+            c_{k+1} = \frac{c_k + b}{2}
+          </me>.
+          Prove that for each <m>k \in \mathbb{N}</m>,
+          <m>a \lt  c_k \lt  c_{k+1} \lt  b</m>.
+          Use this to explain why the set
+          <m>\left\{ c_k \mid k \in \mathbb{N} \right\}</m> is an infinite set where each 
+          element is a rational number between <m>a</m> and <m>b</m>.
+        </p>
+      </task>
+    </exercise>
+
+    <activity xml:id="A_Qcountable">
+      <title>Another Proof that <m>\mathbf{\Q^+}</m> Is Countable</title>
+
+        <introduction>
+          <p>
+            For this activity,
+            it may be helpful to use the Fundamental Theorem of Arithmetic
+            (see <xref ref="T_fundtheorem"></xref>.
+            Let <m>\Q^+</m> be the set of positive rational numbers.
+            Every positive rational number has a unique representation as a fraction 
+            <m>\dfrac{m}{n}</m>,
+            where <m>m</m> and <m>n</m> are relatively prime natural numbers.
+            We will now define a function
+          <m>f\x  \Q^+ \to \N</m> as follows:
+          </p>
+          <p>
+            If
+            <m>x \in \Q^+</m> and <m>x = \dfrac{m}{n}</m>, where
+            <m>m,
+            n \in \N</m>, <m>n \ne 1</m> and <m>\gcd(m, n) = 1</m>, we write
+            <md>
+              <mrow>m \amp = p_1^{\alpha_1} p_2^{\alpha_2} \cdots p_r^{\alpha_r}, \text{ and }</mrow>
+              <mrow>n \amp = q_1^{\beta_1} q_2^{\beta_2} \cdots q_s^{\beta_s}</mrow>
+            </md>,
+            where <m>p_1</m>, <m>p_2</m>,
+            <ellipsis/>, <m>p_r</m> are distinct prime numbers,
+            <m>q_1</m>, <m>q_2</m>, <ellipsis/>,
+            <m>q_s</m> are distinct prime numbers, and <m>\alpha_1</m>,
+            <m>\alpha_2</m>, <ellipsis/>, <m>\alpha_r</m> and <m>\beta_1</m>,
+            <m>\beta_2</m>, <ellipsis/>, <m>\beta_s</m> are natural numbers.
+            We also write <m>1 = 2^0</m> when <m>m = 1</m>.
+            We then define
+            <me>
+              f(x) = p_1^{2\alpha_1} p_2^{2\alpha_2} \cdots p_r^{2\alpha_r} q_1^{2\beta_1 -1 } 
+              q_2^{2 \beta_2 - 1} \cdots q_s^{2 \beta_s - 1}
+            </me>.
+            If <m>x = \dfrac{m}{1}</m>,
+            then we define <m>f(x) = p_1^{2\alpha_1} p_2^{2\alpha_2} \cdots p_r^{2\alpha_r} = m^2</m>.
+          </p>
+        </introduction>
+
+        <task>
+          <p>
+            Determine <m>f \!\left( \dfrac{2}{3} \right)</m>,
+            <m>f \!\left( \dfrac{5}{6} \right)</m>, <m>f ( 6 )</m>,
+            <m>f ( \dfrac{12}{25} )</m>, <m>f \!\left( \dfrac{375}{392} \right)</m>,
+            and <m>f \!\left( \dfrac{2^3 \cdot 11^3}{3 \cdot 5^4} \right)</m>.
+          </p>
+        </task>
+        <task>
+          <p>
+            If possible,
+            find <m>x \in \Q^+</m> such that <m>f(x) = 100</m>.
+          </p>
+        </task>
+        <task>
+          <p>
+            If possible, find <m>x \in \Q^+</m> such that <m>f(x) = 12</m>.
+          </p>
+        </task>
+        <task>
+          <p>
+            If possible,
+            find <m>x \in \Q^+</m> such that <m>f(x) = 2^8 \cdot 3^5 \cdot 13 \cdot 17^2</m>.
+          </p>
+        </task>
+        <task>
+          <p>
+            Prove that the function <m>f</m> is an injection.
+          </p>
+        </task>
+        <task>
+          <p>
+            Prove that the function <m>f</m> is a surjection.
+          </p>
+        </task>
+        <task>
+          <p>
+            What has been proved?
+          </p>
+        </task>
+    </activity>
+    
+  </exercises>
+
 </section>

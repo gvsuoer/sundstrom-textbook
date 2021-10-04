@@ -1,14 +1,14 @@
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="C_writingguides">
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<appendix xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="C_writingguides">
   <title>Guidelines for Writing Mathematical Proofs</title>
-  <p>
         <idx><h>writing guidelines</h></idx>
-  </p>
   <p>
     One of the most important forms of mathematical writing is writing mathematical proofs.
     The writing of mathematical proofs is an acquired skill and takes a lot of practice.
     Throughout the textbook,
     we have introduced various guidelines for writing proofs.
-    These guidelines are in <xref ref="S_1prop">Sections</xref>,
+    These guidelines are in <xref ref="S_1prop"></xref>,
     <xref ref="S_1direct"></xref>,
     <xref ref="S_directproof"></xref>,
     <xref ref="S_moremethods"></xref>,
@@ -17,25 +17,30 @@
   </p>
   <p>
     Following is a summary of all the writing guidelines introduced in the text.
-    This summary contains some standard conventions that are usually followed when writing a mathematical proof.
+    This summary contains some standard conventions that are usually followed when writing a 
+    mathematical proof.
     <ol>
       <li xml:id="writing_know">
+      <title>Know your audience</title>
         <p>
-          <em>Know your audience</em>.
+          
           Every writer should have a clear idea of the intended audience for a piece of writing.
           In that way,
-          the writer can give the right amount of information at the proper level of sophistication to communicate effectively.
+          the writer can give the right amount of information at the proper level of 
+          sophistication to communicate effectively.
           This is especially true for mathematical writing.
           For example,
-          if a mathematician is writing a solution to a textbook problem for a solutions manual for instructors,
+          if a mathematician is writing a solution to a textbook problem for a solutions manual 
+          for instructors,
           the writing would be brief with many details omitted.
           However, if the writing was for a students' solution manual,
           more details would be included.
         </p>
       </li>
       <li>
+        <title>Begin with a carefully worded statement of the theorem or result to be proven</title>
         <p>
-          <em>Begin with a carefully worded statement of the theorem or result to be proven.</em>
+
           The statement should be a simple declarative statement of the problem.
           Do not simply rewrite the problem as stated in the textbook or given on a handout.
           Problems often begin with phrases such as
@@ -50,28 +55,37 @@
           Begin the proof on the same line.
           Make sure that all paragraphs can be easily identified.
           Skipping a line between paragraphs or indenting each paragraph can accomplish this.
+        </p>
+        <p>
           As an example, an exercise in a text might read,
           <q>Prove that if <m>x</m> is an odd integer,
           then <m>x^2</m> is an odd integer.</q>
           This could be started as follows:
-          <em>Theorem.</em> If <m>x</m> is an odd integer,
-          then <m>x^2</m> is an odd integer.
-          <em>Proof</em>: We assume that <m>x</m> is an odd integer <ellipsis/> .
+          <blockquote>
+            Theorem. If <m>x</m> is an odd integer,
+            then <m>x^2</m> is an odd integer.
+          </blockquote>
+          <blockquote>
+            Proof: We assume that <m>x</m> is an odd integer <ellipsis/>.
+          </blockquote>
         </p>
       </li>
       <li>
+        <title>Begin the proof with a statement of your assumptions</title>
         <p>
-          <em>Begin the proof with a statement of your assumptions.</em>
           Follow the statement of your assumptions with a statement of what you will prove.
-          <em>Proof</em>.
-          We assume that <m>x</m> and <m>y</m> are odd integers and will prove that <m>x \cdot y</m> is an odd integer.
+          <blockquote>
+            Proof.
+            We assume that <m>x</m> and <m>y</m> are odd integers and will prove that 
+            <m>x \cdot y</m> is an odd integer.
+          </blockquote>
         </p>
       </li>
       <li>
+        <title>Use the pronoun
+          <q>we</q></title>
         <p>
-          <em>Use the pronoun
-          <q>we.</q>
-          </em> If a pronoun is used in a proof,
+          If a pronoun is used in a proof,
           the usual convention is to use
           <q>we</q>
           instead of
@@ -83,25 +97,31 @@
         </p>
       </li>
       <li>
+        <title>Use italics for variables when using a word processor</title>
         <p>
-          <em>Use italics for variables when using a word processor.</em>
+
           When using a word processor to write mathematics,
-          the word processor needs to be capable of producing the appropriate mathematical symbols and equations.
+          the word processor needs to be capable of producing the appropriate mathematical 
+          symbols and equations.
           The mathematics that is written with a word processor should look like typeset mathematics.
           This means that variables need to be italicized,
           boldface is used for vectors,
-          and regular font is used for mathematical terms such as the names of the trigonometric functions and logarithmic functions.
+          and regular font is used for mathematical terms such as the names of the trigonometric 
+          functions and logarithmic functions.
           For example, we do not write sin x or <m>sin \: x</m>.
           The proper way to typeset this is <m>\sin x</m>.
         </p>
       </li>
       <li>
+        <title>Do not use <m>*</m> for multiplication or ^ for exponents</title>
         <p>
-          <em>Do not use <m>*</m> for multiplication or composition or exponents.</em>
+   
           Leave this type of notation for writing computer code.
           The use of this notation makes it difficult for humans to read.
           In addition,
           avoid using <m>/</m> for division when using a complex fraction.
+        </p>
+        <p>
           For example,
           it is very difficult to read <m>\left(x^3 -3x^2 + 1/2 \right)/\left(2x/3 - 7\right)</m>;
           the fraction
@@ -112,8 +132,9 @@
         </p>
       </li>
       <li>
+        <title>Use complete sentences and proper paragraph structure</title>
         <p>
-          <em>Use complete sentences and proper paragraph structure.</em>
+    
           Good grammar is an important part of any writing.
           Therefore, conform to the accepted rules of grammar.
           Pay careful attention to the structure of sentences.
@@ -124,9 +145,11 @@
         </p>
       </li>
       <li>
+        <title>Keep the reader informed</title>
         <p>
-          <em>Keep the reader informed.</em>
-          Sometimes a theorem is proven by proving the contrapositive or by using a proof by contradiction.
+
+          Sometimes a theorem is proven by proving the contrapositive or by using a proof 
+          by contradiction.
           If either proof method is used,
           this should be indicated within the first few lines of the proof.
           This also applies if the result is going to be proven using mathematical induction.
@@ -153,22 +176,25 @@
               </p>
             </li>
           </ul>
-        </p>
+        
         In addition,
         make sure the reader knows the status of every assertion that is made.
         That is, make sure it is clearly stated whether an assertion is an assumption of the theorem,
         a previously proven result, a well-known result,
         or something from the reader's mathematical background.
+        </p>
       </li>
       <li>
+        <title>Display important equations and mathematical expressions</title>
         <p>
-          <em>Display important equations and mathematical expressions.</em>
+
           Equations and manipulations are often an integral part of the exposition.
           Do not write equations, algebraic manipulations,
           or formulas in one column with reasons given in another column
           (as is often done in geometry texts).
           Important equations and manipulations should be displayed.
-          This means that they should be centered with blank lines before and after the equation or manipulations,
+          This means that they should be centered with blank lines before and after the 
+          equation or manipulations,
           and if one side of an equation does not change,
           it should not be repeated.
           For example,  Using algebra, we obtain
@@ -182,20 +208,25 @@
         </p>
       </li>
       <li>
+        <title>Equation numbering guidelines</title>
         <p>
-          <em>Equation numbering guidelines.</em>
+
           If it is necessary to refer to an equation later in a proof,
           that equation should be centered and displayed,
           and it should be given a number.
-          The number for the equation should be written in parentheses on the same line as the equation at the right-hand margin.
-          <em>Example:</em>   Since  <m>x</m>  is an odd integer,
+          The number for the equation should be written in parentheses on the same line as the 
+          equation at the right-hand margin.
+        </p>
+        <p>
+          Example: Since  <m>x</m>  is an odd integer,
           there exists an integer  <m>n</m>  such that
           <men xml:id="wg_eqnum">
             x = 2n + 1
           </men>.
           Later in the proof, there may be a line such as Then,
-          using the result in equation<nbsp/><xref ref="wg_eqnum"/>, we obtain <m>\ldots </m>.
-          Please note that we should only number those equations we will be referring to later in the proof.
+          using the result in <xref ref="wg_eqnum">equation</xref>, we obtain <m>\ldots </m>.
+          Please note that we should only number those equations we will be referring to later 
+          in the proof.
           Also, note that the word
           <q>equation</q>
           is not capitalized when we are referring to an equation by number.
@@ -205,8 +236,9 @@
         </p>
       </li>
       <li>
+        <title>Do not use a mathematical symbol at the beginning of a sentence</title>
         <p>
-          <em>Do not use a mathematical symbol at the beginning of a sentence.</em>
+
           For example, we should not write,
           <q>Let <m>n</m> be an integer.
           <m>n</m> is an odd integer provided that <m>\ldots </m>.</q>
@@ -216,8 +248,10 @@
         </p>
       </li>
       <li>
+        <title>Use English and minimize the use of cumbersome notation</title>
+
         <p>
-          <em>Use English and minimize the use of cumbersome notation</em>.
+   
           Do not use the special symbols for quantifiers <m>\forall</m>
           (for all),
           <m>\exists</m>
@@ -240,29 +274,34 @@
         </p>
       </li>
       <li>
+        <title>Tell the reader when the proof has been completed</title>
         <p>
-          <em>Tell the reader when the proof has been completed.</em>
+
           Perhaps the best way to do this is to say outright that,
           <q>This completes the proof.</q>
           Although it may seem repetitive,
-          a good alternative is to finish a proof with a sentence that states precisely what has been proven.
+          a good alternative is to finish a proof with a sentence that states precisely what has 
+          been proven.
           In any case, it is usually good practice to use some
           <q>end of proof symbol</q>
           such as <m>\blacksquare</m>.
         </p>
       </li>
       <li>
+        <title>Keep it simple</title>
         <p>
-          <em>Keep it simple.</em> It is often difficult to understand a mathematical argument no matter how well it is written.
+          It is often difficult to understand a mathematical argument no matter how well it is written.
           Do not let your writing help make it more difficult for the reader.
           Use simple, declarative sentences and short paragraphs,
           each with a simple point.
         </p>
       </li>
       <li>
+        <title>Write a first draft of your proof and then revise it</title>
         <p>
-          <em>Write a first draft of your proof and then revise it.</em>
-          Remember that a proof is written so that readers are able to read and understand the reasoning in the proof.
+
+          Remember that a proof is written so that readers are able to read and understand 
+          the reasoning in the proof.
           Be clear and concise.
           Include details but do not ramble.
           Do not be satisfied with the first draft of a proof.
@@ -277,4 +316,4 @@
       </li>
     </ol>
   </p>
-</chapter>
+</appendix>

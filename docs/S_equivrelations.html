@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-10-05T14:52:02-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Equivalence Relations</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\def\C{\JustCenter}
+\newcommand{\typeu}{Beginning }
+\def\C{\JustCenter}
+\newcommand{\typel}{beginning }
+\def\C{\JustCenter}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\
+\thechapter. #1}{}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\def\C{\JustCenter}
+\renewcommand{\theenumi}{\alph{enumi}}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\theenumi}{({\alph{enumi}})}
+\def\C{\JustCenter}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\mynot}{\neg}
+\newcommand{\card}{\mathbf{card}}
+\newcommand{\x}{:}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Mathematical Reasoning:</span> <span class="subtitle">Writing and Proof (Version 3)</span></a></h1>
+<p class="byline">Ted Sundstrom, Professor Emeritus</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_relations.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_equivrelations.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_equivclasses.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_relations.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C_equivrelations.html" title="Up">Up</a><a class="next-button button toolbar-item" href="S_equivclasses.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="fm-versions.html" data-scroll="fm-versions">Version 3 and Version 2.1</a></li>
+<li><a href="fm-student-note.html" data-scroll="fm-student-note">Note to Students</a></li>
+<li><a href="fm-preface.html" data-scroll="fm-preface">Preface</a></li>
+<li><a href="fm-imp-features.html" data-scroll="fm-imp-features">Important Features of the Book</a></li>
+<li><a href="fm-cont-org.html" data-scroll="fm-cont-org">Content and Organization</a></li>
+<li><a href="fm-inst-note.html" data-scroll="fm-inst-note">Supplementary Materials for the Instructor</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_1intro.html" data-scroll="C_1intro"><span class="codenumber">1</span> <span class="title">Introduction to Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_1prop.html" data-scroll="S_1prop">Statements and Conditional Statements</a></li>
+<li><a href="S_1direct.html" data-scroll="S_1direct">Constructing Direct Proofs</a></li>
+<li><a href="S_1summary.html" data-scroll="S_1summary">Chapter 1 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_2logic.html" data-scroll="C_2logic"><span class="codenumber">2</span> <span class="title">Logical Reasoning</span></a><ul>
+<li><a href="S_2logop.html" data-scroll="S_2logop">Statements and Logical Operators</a></li>
+<li><a href="S_logequiv.html" data-scroll="S_logequiv">Logically Equivalent Statements</a></li>
+<li><a href="S_2predicates.html" data-scroll="S_2predicates">Open Sentences and Sets</a></li>
+<li><a href="S_2quantifier.html" data-scroll="S_2quantifier">Quantifiers and Negations</a></li>
+<li><a href="S_2summary.html" data-scroll="S_2summary">Chapter 2 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_proofs.html" data-scroll="C_proofs"><span class="codenumber">3</span> <span class="title">Constructing and Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_directproof.html" data-scroll="S_directproof">Direct Proofs</a></li>
+<li><a href="S_moremethods.html" data-scroll="S_moremethods">More Methods of Proof</a></li>
+<li><a href="S_contradiction.html" data-scroll="S_contradiction">Proof by Contradiction</a></li>
+<li><a href="S_cases.html" data-scroll="S_cases">Using Cases in Proofs</a></li>
+<li><a href="S_divalgo.html" data-scroll="S_divalgo">Beginning Activity 1: The Division Algorithm and Congruence</a></li>
+<li><a href="S_reviewproofs.html" data-scroll="S_reviewproofs">Review of Proof Methods</a></li>
+<li><a href="S_3summary.html" data-scroll="S_3summary">Chapter 3 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_induction.html" data-scroll="C_induction"><span class="codenumber">4</span> <span class="title">Mathematical Induction</span></a><ul>
+<li><a href="S_mathinduction.html" data-scroll="S_mathinduction">The Principle of Mathematical Induction</a></li>
+<li><a href="S_otherinduction.html" data-scroll="S_otherinduction">Other Forms of Mathematical Induction</a></li>
+<li><a href="S_recursion.html" data-scroll="S_recursion">Induction and Recursion</a></li>
+<li><a href="S_4summary.html" data-scroll="S_4summary">Chapter 4 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_settheory.html" data-scroll="C_settheory"><span class="codenumber">5</span> <span class="title">Set Theory</span></a><ul>
+<li><a href="S_setoperations.html" data-scroll="S_setoperations">Sets and Operations on Sets</a></li>
+<li><a href="S_provingset.html" data-scroll="S_provingset">Proving Set Relationships</a></li>
+<li><a href="S_setproperties.html" data-scroll="S_setproperties">Properties of Set Operations</a></li>
+<li><a href="S_cartesian.html" data-scroll="S_cartesian">Cartesian Products</a></li>
+<li><a href="S_indexfamily.html" data-scroll="S_indexfamily">Indexed Families of Sets</a></li>
+<li><a href="S_5summary.html" data-scroll="S_5summary">Chapter 5 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_functions.html" data-scroll="C_functions"><span class="codenumber">6</span> <span class="title">Functions</span></a><ul>
+<li><a href="S_introfunctions.html" data-scroll="S_introfunctions">Introduction to Functions</a></li>
+<li><a href="S_moreaboutfunctions.html" data-scroll="S_moreaboutfunctions">More about Functions</a></li>
+<li><a href="S_typesoffunctions.html" data-scroll="S_typesoffunctions">Beginning Activity 1: Injections, Surjections, and Bijections</a></li>
+<li><a href="S_compositionoffunctions.html" data-scroll="S_compositionoffunctions">Composition of Functions</a></li>
+<li><a href="S_inversefunctions.html" data-scroll="S_inversefunctions">Inverse Functions</a></li>
+<li><a href="S_functionsonsets.html" data-scroll="S_functionsonsets">Functions Acting on Sets</a></li>
+<li><a href="S_6summary.html" data-scroll="S_6summary">Chapter 6 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_equivrelations.html" data-scroll="C_equivrelations"><span class="codenumber">7</span> <span class="title">Equivalence Relations</span></a><ul>
+<li><a href="S_relations.html" data-scroll="S_relations">Relations</a></li>
+<li><a href="S_equivrelations.html" data-scroll="S_equivrelations" class="active">Equivalence Relations</a></li>
+<li><a href="S_equivclasses.html" data-scroll="S_equivclasses">Equivalence Classes</a></li>
+<li><a href="S_modulararithmetic.html" data-scroll="S_modulararithmetic">Modular Arithmetic</a></li>
+<li><a href="section-37.html" data-scroll="section-37">Chapter 7 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_numbertheory.html" data-scroll="C_numbertheory"><span class="codenumber">8</span> <span class="title">Topics in Number Theory</span></a><ul>
+<li><a href="S_gcd.html" data-scroll="S_gcd">The Greatest Common Divisor</a></li>
+<li><a href="S_primefactorizations.html" data-scroll="S_primefactorizations">Prime Numbers and Prime Factorizations</a></li>
+<li><a href="S_diophantine.html" data-scroll="S_diophantine">Linear Diophantine Equations</a></li>
+<li><a href="section-41.html" data-scroll="section-41">Chapter 8 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_topicsinsets.html" data-scroll="C_topicsinsets"><span class="codenumber">9</span> <span class="title">Finite and Infinite Sets</span></a><ul>
+<li><a href="S_finitesets.html" data-scroll="S_finitesets">Finite Sets</a></li>
+<li><a href="S_infinitesets.html" data-scroll="S_infinitesets">Countable Sets</a></li>
+<li><a href="S_uncountablesets.html" data-scroll="S_uncountablesets">Uncountable Sets</a></li>
+<li><a href="section-45.html" data-scroll="section-45">Chapter 9 Summary</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="C_writingguides.html" data-scroll="C_writingguides"><span class="codenumber">A</span> <span class="title">Guidelines for Writing Mathematical Proofs</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="S_equivrelations"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">7.2</span> <span class="title">Equivalence Relations</span>
+</h2>
+<section class="worksheet" id="PA_propsofrelaitons"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Beginning Activity 1: Properties of Relations</span><div class="print-links">
+<a href="PA_propsofrelaitons-A4.html" class="a4">A4</a><a href="PA_propsofrelaitons-letter.html" class="us">US</a>
+</div>
+</h3>
+<p id="p-3938">In previous mathematics courses, we have worked with the equality relation. For example, let \(R\) be the relation on \(\Z\) defined as follows: For all \(a,
+b \in \Z\text{,}\) \(a \mathrel{R} b\) if and only if \(a = b\text{.}\) We know this equality relation on \(\Z\) has the following properties:</p>
+<ul class="disc">
+<li id="li-519"><p id="p-3939">For each \(a \in \Z\text{,}\) \(a = a\) and so \(a \mathrel{R} a\text{.}\)</p></li>
+<li id="li-520"><p id="p-3940">For all \(a, b \in \Z\text{,}\) if \(a = b\text{,}\) then \(b = a\text{.}\) That is, if \(a \mathrel{R} b\text{,}\) then \(b \mathrel{R} a\text{.}\)</p></li>
+<li id="li-521"><p id="p-3941">For all \(a, b, c \in \Z\text{,}\) if \(a = b\) and \(b = c\text{,}\) then \(a = c\text{.}\) That is, if \(a \mathrel{R} b\) and \(b \mathrel{R} c\text{,}\) then \(a \mathrel{R} c\text{.}\)</p></li>
+</ul>
+<p class="continuation">In mathematics, when something satisfies certain properties, we often ask if other things satisfy the same properties. Before investigating this, we will give names to these properties.</p>
+<article class="definition definition-like" id="ref-sym-trans"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.2.1</span><span class="period">.</span>
+</h6>
+<p id="p-3942">Let \(A\) be a nonempty set and let \(R\) be a relation on \(A\text{.}\)</p>
+<ul class="disc">
+<li id="li-522"><p id="p-3943">The relation \(R\) is <dfn class="terminology">reflexive on \(\boldsymbol{A}\)</dfn>  provided that for each \(x \in A\text{,}\) \(x \mathrel{R} x\) or, equivalently, \(\left( {x, x} \right) \in R\text{.}\)</p></li>
+<li id="li-523"><p id="p-3944">The relation \(R\) is <dfn class="terminology">symmetric</dfn>  provided that for every \(x,
+y \in A\text{,}\) if \(x \mathrel{R} y\text{,}\) then \(y \mathrel{R} x\) or, equivalently, for every \(x, y \in A\text{,}\) if \(\left( {x, y} \right) \in R\text{,}\) then \(\left( {y, x} \right) \in R\text{.}\)</p></li>
+<li id="li-524"><p id="p-3945">The relation \(R\) is <dfn class="terminology">transitive</dfn>  provided that for every \(x, y, z \in A\text{,}\) if \(x \mathrel{R} y\) and \(y \mathrel{R} z\text{,}\) then \(x \mathrel{R} z\) or, equivalently, for every \(x, y, z \in A\text{,}\) if \(\left( {x, y} \right) \in R\) and \(\left( {y, z} \right) \in R\text{,}\) then \(\left( {x, z} \right) \in R\text{.}\)</p></li>
+</ul></article><p id="p-3946">Before exploring examples, for each of these properties, it is a good idea to understand what it means to say that a relation does not satisfy the property. So let \(A\) be a nonempty set and let \(R\) be a relation on \(A\text{.}\)</p>
+<article class="exercise exercise-like" id="exercise-682"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-3947">Carefully explain what it means to say that the relation \(R\) is not reflexive on the set \(A\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-683"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-3948">Carefully explain what it means to say that the relation \(R\) is not symmetric.</p></article><article class="exercise exercise-like" id="exercise-684"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-3949">Carefully explain what it means to say that the relation \(R\) is not transitive.</p></article><p id="p-3950">To illustrate these properties, we let \(A = \left\{ {1, 2, 3, 4} \right\}\) and define the relations \(R\) and \(T\) on \(A\) as follows:</p>
+<div class="displaymath">
+\begin{align*}
+R \amp = \left\{ {( {1, 1} ), ( {2, 2} ), ( {3, 3} ), ( {4, 4} ), ( {1, 3} ), ( {3, 2} )} \right\}\\
+T \amp = \left\{ {( {1, 1} ), ( {1, 4} ), ( {2, 4} ), ( {4, 1} ), ( {4, 2} )} \right\}
+\end{align*}
+</div>
+<article class="exercise exercise-like" id="exercise-685"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-3951">Draw a directed graph for the relation \(R\text{.}\) Then explain why the relation \(R\) is reflexive on \(A\text{,}\) is not symmetric, and is not transitive.</p></article><article class="exercise exercise-like" id="exercise-686"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-3952">Draw a directed graph for the relation \(T\text{.}\) Is the relation \(T\) reflexive on \(A\text{?}\) Is the relation \(T\) symmetric? Is the relation \(T\) transitive? Explain.</p></article></section><section class="worksheet" id="PA_reviewofcongruence"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Beginning Activity 2: Review of Congruence Modulo \(\boldsymbol{n}\)</span><div class="print-links">
+<a href="PA_reviewofcongruence-A4.html" class="a4">A4</a><a href="PA_reviewofcongruence-letter.html" class="us">US</a>
+</div>
+</h3>
+<article class="exercise exercise-like" id="exercise-687"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-3953">Let \(a, b \in \mathbb{Z}\) and let \(n \in \mathbb{N}\text{.}\) On <a class="xref" data-knowl="./knowl/congruence.html" title="Definition 3.1.9">Definition 3.1.9</a> of <a href="S_directproof.html" class="internal" title="Section 3.1: Direct Proofs">Section 3.1</a>, we defined what it means to say that \(a\) is congruent to \(b\) modulo \(n\text{.}\) Write this definition and state two different conditions that are equivalent to the definition.</p></article><article class="exercise exercise-like" id="exercise-688"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-3954">Explain why congruence modulo \(n\) is a relation on \(\mathbb{Z}\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-689"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-3955">Carefully review <a class="xref" data-knowl="./knowl/T_modprops.html" title="Theorem 3.5.8: Properties of Congruence Modulo \(\boldsymbol{n}\)">Theorem 3.5.8</a> and the proofs given on <a class="xref" data-knowl="./knowl/T_modprops.html" title="Theorem 3.5.8: Properties of Congruence Modulo \(\boldsymbol{n}\)">Theorem 3.5.8</a> of <a href="S_divalgo.html" class="internal" title="Section 3.5: Beginning Activity 1: The Division Algorithm and Congruence">Section 3.5</a>. In terms of the properties of relations introduced in <a href="S_equivrelations.html#PA_propsofrelaitons" class="internal" title="Worksheet: Beginning Activity 1: Properties of Relations">Beginning Activity 1 </a>, what does this theorem say about the relation of congruence modulo \(n\) on the integers?</p></article><article class="exercise exercise-like" id="exercise-690"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-3956">Write a complete statement of <a class="xref" data-knowl="./knowl/T_congtorem.html" title="Theorem 3.5.9">Theorem 3.5.9</a> and <a class="xref" data-knowl="./knowl/C_congtorem.html" title="Corollary 3.5.10">Corollary 3.5.10</a>.</p></article><article class="exercise exercise-like" id="exercise-691"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-3957">Write a proof of the symmetric property for congruence modulo \(n\text{.}\) That is, prove the following: <blockquote class="blockquote" id="blockquote-219">Let \(a, b \in \mathbb{Z}\) and let \(n \in \mathbb{N}\text{.}\) If \(a \equiv b \pmod n\text{,}\) then \(b \equiv a \pmod n\text{.}\)</blockquote></p></article></section><section class="subsection" id="subsection-137"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Directed Graphs and Properties of Relations</span>
+</h3>
+<p id="p-3958">In <a href="S_relations.html" class="internal" title="Section 7.1: Relations">Section 7.1</a>, we used directed graphs, or digraphs, to represent relations on finite sets. Three properties of relations were introduced in <a href="S_equivrelations.html#PA_propsofrelaitons" class="internal" title="Worksheet: Beginning Activity 1: Properties of Relations">Beginning Activity 1 </a> and will be repeated in the following descriptions of how these properties can be visualized on a directed graph.</p>
+<p id="p-3959">Let \(A\) be a nonempty set and let \(R\) be a relation on \(A\text{.}\)</p>
+<ul class="disc">
+<li id="li-525"><p id="p-3960">The relation \(R\) is <dfn class="terminology">reflexive on \(\boldsymbol{A}\)</dfn>  provided that for each \(x \in A\text{,}\) \(x \mathrel{R} x\) or, equivalently, \(\left( {x, x} \right) \in R\text{.}\) This means that if a reflexive relation is represented on a digraph, there would have to be a loop at each vertex, as is shown in the following figure. <div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="external/figps-reflexive.svg" class="contained" alt=""></div></p></li>
+<li id="li-526"><p id="p-3961">The relation \(R\) is <dfn class="terminology">symmetric</dfn>  provided that for every \(x,
+y \in A\text{,}\) if \(x \mathrel{R} y\text{,}\) then \(y \mathrel{R} x\) or, equivalently, for every \(x, y \in A\text{,}\) if \(\left( {x, y} \right) \in R\text{,}\) then \(\left( {y, x} \right) \in R\text{.}\) This means that if a symmetric relation is represented on a digraph, then anytime there is a directed edge from one vertex to a second vertex, there would be a directed edge from the second vertex to the first vertex, as is shown in the following figure. <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/figps-symmetric.svg" class="contained" alt=""></div></p></li>
+<li id="li-527">
+<p id="p-3962">The relation \(R\) is <dfn class="terminology">transitive</dfn>  provided that for every \(x, y, z \in A\text{,}\) if \(x \mathrel{R} y\) and \(y \mathrel{R} z\text{,}\) then \(x \mathrel{R} z\) or, equivalently, for every \(x, y, z \in A\text{,}\) if \(\left( {x, y} \right) \in R\) and \(\left( {y, z} \right) \in R\text{,}\) then \(\left( {x, z} \right) \in R\text{.}\) So if a transitive relation is represented by a digraph, then anytime there is a directed edge from a vertex \(x\) to a vertex \(y\) and a directed edge from \(y\) to a vertex \(z\text{,}\) there would be a directed edge from \(x\) to \(z\text{.}\)</p>
+<p id="p-3963">In addition, if a transitive relation is represented by a digraph, then anytime there is a directed edge from a vertex \(x\) to a vertex \(y\) and a directed edge from \(y\) to the vertex \(x\text{,}\) there would be loops at \(x\) and \(y\text{.}\) These two situations are illustrated as follows: <div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/figps-transitive.svg" class="contained" alt=""></div></p>
+</li>
+</ul>
+<article class="exercise exercise-like" id="prog_proprelations"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">7.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Properties of Relations.</span>
+</h6>
+<p id="p-3964">Let \(A = \{ a, b, c, d \}\) and let \(R\) be the following relation on \(A\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+R = \{ (a, a), (b, b), (a, c), (c, a), (b, d), (d, b) \}\text{.}
+\end{equation*}
+</div>
+<p id="p-3965">Draw a directed graph for the relation \(R\) and then determine if the relation \(R\) is reflexive on \(A\text{,}\) if the relation \(R\) is symmetric, and if the relation \(R\) is transitive.</p></article></section><section class="subsection" id="subsection-138"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Definition of an Equivalence Relation</span>
+</h3>
+<p id="p-3966">In mathematics, as in real life, it is often convenient to think of two different things as being essentially the same. For example, when you go to a store to buy a cold soft drink, the cans of soft drinks in the cooler are often sorted by brand and type of soft drink. The Coca Colas are grouped together, the Pepsi Colas are grouped together, the Dr. Peppers are grouped together, and so on. When we choose a particular can of one type of soft drink, we are assuming that all the cans are essentially the same. Even though the specific cans of one type of soft drink are physically different, it makes no difference which can we choose. In doing this, we are saying that the cans of one type of soft drink are equivalent, and we are using the mathematical notion of an equivalence relation.</p>
+<p id="p-3967">An equivalence relation on a set is a relation with a certain combination of properties that allow us to sort the elements of the set into certain classes. In this section, we will focus on the properties that define an equivalence relation, and in the next section, we will see how these properties allow us to sort or partition the elements of the set into certain classes.</p>
+<article class="definition definition-like" id="equivalencerelation"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.2.3</span><span class="period">.</span>
+</h6>
+<p id="p-3968">Let \(A\) be a nonempty set. A relation \(\sim\) on the set \(A\) is an <dfn class="terminology">equivalence relation</dfn>  provided that \(\sim\) is reflexive, symmetric, and transitive. For \(a, b \in A\text{,}\) if \(\sim\) is an equivalence relation on \(A\) and \(a \sim b\text{,}\) we say that \(\boldsymbol{a}\) <dfn class="terminology">is equivalent to \(\boldsymbol{b}\)</dfn>.</p></article><p id="p-3969">Most of the examples we have studied so far have involved a relation on a small finite set. For these examples, it was convenient to use a directed graph to represent the relation. It is now time to look at some other type of examples, which may prove to be more interesting. In these examples, keep in mind that there is a subtle difference between the reflexive property and the other two properties. The reflexive property states that some ordered pairs actually belong to the relation \(R\text{,}\) or some elements of \(A\) are related. The reflexive property has a universal quantifier and, hence, we must prove that for all \(x \in A\text{,}\) \(x \mathrel{R} x\text{.}\) Symmetry and transitivity, on the other hand, are defined by conditional sentences. We often use a direct proof for these properties, and so we start by assuming the hypothesis and then showing that the conclusion must follow from the hypothesis.</p>
+<article class="example example-like" id="example-23"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">A Relation that Is Not an Equivalence Relation.</span>
+</h6>
+<p id="p-3970">Let \(M\) be the relation on \(\mathbb{Z}\) defined as follows: <blockquote class="blockquote" id="blockquote-220">For \(a, b \in \mathbb{Z}\text{,}\) \(a \mathrel{M} b\) if and only if \(a\) is a multiple of \(b\text{.}\)</blockquote></p>
+<p id="p-3971">So \(a \mathrel{M} b\) if and only if there exists a \(k \in \mathbb{Z}\) such that \(a = b k\text{.}\)</p>
+<ul class="disc">
+<li id="li-528"><p id="p-3972">The relation \(M\) is reflexive on \(\mathbb{Z}\) since for each \(x \in \mathbb{Z}\text{,}\) \(x = x \cdot 1\) and, hence, \(x \mathrel{M} x\text{.}\)</p></li>
+<li id="li-529"><p id="p-3973">Notice that \(4 \mathrel{M} 2\text{,}\) but \(2 \mathrel{\not \negthickspace M} 4\text{.}\) So there exist integers \(x\) and \(y\) such that \(x \mathrel{M} y\) but \(y \mathrel{\not \negthickspace M} x\text{.}\) Hence, the relation \(M\) is not symmetric.</p></li>
+<li id="li-530">
+<p id="p-3974">Now assume that  \(x \mathrel{M} y\) and  \(y \mathrel{M} z\text{.}\) Then there exist integers  \(p\)  and  \(q\)  such that</p>
+<div class="displaymath">
+\begin{equation*}
+x = y  p\text{  and  } y = z q\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Using the second equation to make a substitution in the first equation, we see that \(x = z \left( {p q} \right)\text{.}\) Since  \(p q \in \mathbb{Z}\text{,}\) we have shown that  \(x\)  is a multiple of  \(z\) and hence  \(x \mathrel{M} z\text{.}\) Therefore,  \(M\)  is a transitive relation.</p>
+</li>
+</ul></article><p id="p-3975">The relation \(M\) is reflexive on \(\Z\) and is transitive, but since \(M\) is not symmetric, it is not an equivalence relation on \(\Z\text{.}\)</p>
+<article class="exercise exercise-like" id="prog_example-equiv"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">7.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">A Relation that Is an Equivalence Relation.</span>
+</h6>
+<p id="p-3976">Define the relation \(\sim\) on \(\Q\) as follows: For all \(a,
+b \in \Q\text{,}\) \(a \sim b\) if and only if \(a - b \in \Z\text{.}\) For example:</p>
+<ul class="disc">
+<li id="li-531"><p id="p-3977">\(\dfrac{3}{4} \sim \dfrac{7}{4}\) since \(\dfrac{3}{4} - \dfrac{7}{4} = -1\) and \(-1 \in \Z\text{.}\)</p></li>
+<li id="li-532"><p id="p-3978">\(\dfrac{3}{4} \not \sim \dfrac{1}{2}\) since \(\dfrac{3}{4} - \dfrac{1}{2} = \dfrac{1}{4}\) and \(\dfrac{1}{4} \notin \Z\text{.}\)</p></li>
+</ul>
+<p id="p-3979">To prove that \(\sim\) is reflexive on \(\Q\text{,}\) we note that for all \(a \in \Q\text{,}\) \(a - a = 0\text{.}\) Since \(0 \in \Z\text{,}\) we conclude that \(a \sim a\text{.}\) Now prove that the relation \(\sim\) is symmetric and transitive, and hence, that \(\sim\) is an equivalence relation on \(\Q\text{.}\)</p></article></section><section class="subsection" id="subsection-139"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Congruence Modulo \(\boldsymbol{n}\)</span>
+</h3>
+<p id="p-3980">One of the important equivalence relations we will study in detail is that of congruence  modulo \(n\text{.}\) We reviewed this relation in <a href="S_equivrelations.html#PA_reviewofcongruence" class="internal" title="Worksheet: Beginning Activity 2: Review of Congruence Modulo \(\boldsymbol{n}\)">Beginning Activity 2 </a>.</p>
+<p id="p-3981"><a class="xref" data-knowl="./knowl/T_modprops.html" title="Theorem 3.5.8: Properties of Congruence Modulo \(\boldsymbol{n}\)">Theorem 3.5.8</a> tells us that congruence modulo \(n\) is an equivalence relation on \(\mathbb{Z}\text{.}\) Recall that by the Division Algorithm, if \(a \in \mathbb{Z}\text{,}\) then there exist unique integers \(q\) and \(r\) such that</p>
+<div class="displaymath">
+\begin{equation*}
+a = nq + r \text{  and  } 0 \leq r \lt  n\text{.}
+\end{equation*}
+</div>
+<p id="p-3982"><a class="xref" data-knowl="./knowl/T_congtorem.html" title="Theorem 3.5.9">Theorem 3.5.9</a> and <a class="xref" data-knowl="./knowl/C_congtorem.html" title="Corollary 3.5.10">Corollary 3.5.10</a> then tell us that \(a \equiv r \pmod n\text{.}\) That is, \(a\) is congruent modulo \(n\) to its remainder \(r\) when it is divided by \(n\text{.}\) When we use the term “remainder” in this context, we always mean the remainder \(r\) with \(0 \leq r \lt n\) that is guaranteed by the Division Algorithm. We can use this idea to prove the following theorem.</p>
+<article class="theorem theorem-like" id="T_congruence-remainder"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.2.6</span><span class="period">.</span>
+</h6>
+<p id="p-3983">Let \(n \in \mathbb{N}\) and let \(a, b \in \mathbb{Z}\text{.}\) Then \(a \equiv b \pmod n\) if and only if \(a\) and \(b\) have the same remainder when divided by \(n\text{.}\)</p></article><article class="hiddenproof" id="proof-46"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-46"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-46"><article class="hiddenproof"><p id="p-3984">Let \(n \in \mathbb{N}\) and let \(a, b \in \mathbb{Z}\text{.}\) We will first prove that if \(a\) and \(b\) have the same remainder when divided by \(n\text{,}\) then \(a \equiv b \pmod n\text{.}\) So assume that \(a\) and \(b\) have the same remainder when divided by \(n\text{,}\) and let \(r\) be this common remainder. Then, by <a class="xref" data-knowl="./knowl/T_congtorem.html" title="Theorem 3.5.9">Theorem 3.5.9</a>,</p>
+<div class="displaymath">
+\begin{equation*}
+a \equiv r \pmod n \text{  and  } b \equiv r \pmod n\!\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Since congruence modulo \(n\) is an equivalence relation, it is a symmetric relation. Hence, since \(b \equiv r \pmod n\text{,}\) we can conclude that \(r \equiv b \pmod n\text{.}\) Combining this with the fact that \(a \equiv r \pmod n\text{,}\) we now have</p>
+<div class="displaymath">
+\begin{equation*}
+a \equiv r \pmod n\text{  and  } r \equiv b \pmod n\!\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We can now use the transitive property to conclude that \(a \equiv b \pmod n\text{.}\) This proves that if \(a\) and \(b\) have the same remainder when divided by \(n\text{,}\) then \(a \equiv b \pmod n\text{.}\)</p>
+<p id="p-3985">We will now prove that if \(a \equiv b \pmod n\text{,}\) then \(a\) and \(b\) have the same remainder when divided by \(n\text{.}\) Assume that \(a \equiv b \pmod n\text{,}\) and let \(r\) be the least nonnegative remainder when \(b\) is divided by \(n\text{.}\) Then \(0 \leq r \lt  n\) and, by <a class="xref" data-knowl="./knowl/T_congtorem.html" title="Theorem 3.5.9">Theorem 3.5.9</a>,</p>
+<div class="displaymath">
+\begin{equation*}
+b \equiv r \pmod n\!\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Now, using the facts that \(a \equiv b \pmod n\) and \(b \equiv r \pmod n\text{,}\) we can use the transitive property to conclude that</p>
+<div class="displaymath">
+\begin{equation*}
+a \equiv r \pmod n\!\text{.}
+\end{equation*}
+</div>
+<p class="continuation">This means that there exists an integer \(q\) such that \(a - r = nq\) or that</p>
+<div class="displaymath">
+\begin{equation*}
+a = nq + r\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Since we already know that \(0 \leq r \lt n\text{,}\) the last equation tells us that \(r\) is the least nonnegative remainder when \(a\) is divided by \(n\text{.}\) Hence we have proven that if \(a \equiv b \pmod n\text{,}\) then \(a\) and \(b\) have the same remainder when divided by \(n\text{.}\)</p></article></div></section><section class="subsection" id="subsection-140"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Examples of Other Equivalence Relations</span>
+</h3>
+<ol class="decimal">
+<li id="li-533"><p id="p-3986">The relation \(\sim\) on \(\Q\) from <a class="xref" data-knowl="./knowl/prog_example-equiv.html" title="Progress Check 7.2.5: A Relation that Is an Equivalence Relation">Progress Check 7.2.5</a> is an equivalence relation.</p></li>
+<li id="li-534">
+<p id="p-3987">Let \(A\) be a nonempty set. The <dfn class="terminology">equality relation on \(\boldsymbol{A}\)</dfn>  is an equivalence relation. This relation is also called the <dfn class="terminology">identity relation on \(\boldsymbol{A}\)</dfn> and is denoted by  \(I_A\text{,}\) where</p>
+<div class="displaymath">
+\begin{equation*}
+I_A  = \left\{ {\left( {x, x} \right)   \mid x \in A} \right\}\!\text{.}
+\end{equation*}
+</div>
+</li>
+<li id="li-535">
+<p id="p-3988">Define the relation \(\sim\) on \(\mathbb{R}\) as follows: <blockquote class="blockquote" id="blockquote-221">For \(a, b \in \mathbb{R}\text{,}\) \(a \sim b\) if and only if there exists an integer \(k\) such that \(a - b = 2k\pi\text{.}\)</blockquote></p>
+<p id="p-3989">We will prove that the relation \(\sim\) is an equivalence relation on \(\mathbb{R}\text{.}\) The relation  \(\sim\)  is reflexive on \(\mathbb{R}\) since for each  \(a \in \mathbb{R}\text{,}\) \(a - a = 0 = 2 \cdot 0 \cdot \pi\text{.}\)</p>
+<p id="p-3990">Now, let  \(a,
+b \in \mathbb{R}\) and assume that  \(a \sim b\text{.}\) We will prove that  \(b \sim a\text{.}\) Since  \(a \sim b\text{,}\) there exists an integer  \(k\)  such that</p>
+<div class="displaymath">
+\begin{equation*}
+a - b = 2k\pi\text{.}
+\end{equation*}
+</div>
+<p class="continuation">By multiplying both sides of this equation by \(-1\text{,}\) we obtain</p>
+<div class="displaymath">
+\begin{align*}
+( { - 1} )( {a - b} ) \amp = ( { - 1} )( {2k\pi } )\\
+b = a \amp = 2( { - k} )\pi\text{.}
+\end{align*}
+</div>
+<p class="continuation">Since  \(- k \in \mathbb{Z}\text{,}\) the last equation proves that  \(b \sim a\text{.}\) Hence, we have proven that if  \(a \sim b\text{,}\) then  \(b \sim a\) and, therefore, the relation  \(\sim\)  is symmetric.</p>
+<p id="p-3991">To prove transitivity, let \(a,
+b, c \in \mathbb{R}\) and assume that  \(a \sim b\) and \(b \sim c\text{.}\) We will prove that  \(a \sim c\text{.}\) Now, there exist integers  \(k\)  and  \(n\)  such that</p>
+<div class="displaymath">
+\begin{equation*}
+a - b = 2k\pi \text{  and  } b - c = 2n\pi\text{.}
+\end{equation*}
+</div>
+<p class="continuation">By adding the corresponding sides of these two equations, we see that</p>
+<div class="displaymath">
+\begin{align*}
+( {a - b} ) + ( {b - c} ) \amp = 2k\pi  + 2n\pi\\
+a - c \amp = 2( {k + n} )\pi
+\end{align*}
+</div>
+<p class="continuation">By the closure properties of the integers, \(k + n \in \mathbb{Z}\text{.}\) So this proves that \(a \sim c\) and, hence the relation  \(\sim\)  is transitive.</p>
+<p id="p-3992">We have now proven that  \(\sim\)  is an equivalence relation on  \(\mathbb{R}\text{.}\) This equivalence relation is important in trigonometry. If   \(a \sim b\text{,}\) then there exists an integer  \(k\)  such that  \(a - b = 2k\pi\) and, hence,  \(a = b + k( {2\pi } )\text{.}\) Since the sine and cosine functions are periodic with a period of  \(2\pi\text{,}\) we see that</p>
+<div class="displaymath">
+\begin{align*}
+\sin a \amp = \sin( {b + k( {2\pi } )} ) = \sin b,\text{ and }\\
+\cos a \amp = \cos( {b + k( {2\pi } )} ) = \cos b\text{.}
+\end{align*}
+</div>
+<p class="continuation">Therefore, when  \(a \sim b\text{,}\) each of the trigonometric functions have the same value at  \(a\)  and  \(b\text{.}\)</p>
+</li>
+<li id="li-536"><p id="p-3993">For an example from Euclidean geometry, we define a relation \(P\) on the set \(\mathcal{L}\) of all lines in the plane as follows: <blockquote class="blockquote" id="blockquote-222">For \(l_1 , l_2 \in \mathcal{L}\text{,}\) \(l_1 \mathrel{P}l_2\) if and only if \(l_1\) is parallel to \(l_2\) or \(l_1 = l_2\text{.}\)</blockquote> We added the second condition to the definition of \(P\) to ensure that \(P\) is reflexive on \(\mathcal{L}\text{.}\) Theorems from Euclidean geometry tell us that if \(l_1\) is parallel to \(l_2\text{,}\) then \(l_2\) is parallel to \(l_1\text{,}\) and if \(l_1\) is parallel to \(l_2\) and \(l_2\) is parallel to \(l_3\text{,}\) then \(l_1\) is parallel to \(l_3\text{.}\) (Drawing pictures will help visualize these properties.) This tells us that the relation \(P\) is reflexive, symmetric, and transitive and, hence, an equivalence relation on \(\mathcal{L}\text{.}\)</p></li>
+</ol>
+<article class="exercise exercise-like" id="prog_anotherequiv"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">7.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Another Equivalence Relation.</span>
+</h6>
+<p id="p-3994">Let \(U\) be a finite, nonempty set and let \(\mathcal{P}\left( U \right)\) be the power set of \(U\text{.}\) Recall that \(\mathcal{P}\left( U \right)\) consists of all subsets of \(U\text{.}\) (See <a class="xref" data-knowl="./knowl/D_powerset.html" title="Definition 5.1.12">Definition 5.1.12</a>.) Define the relation \(\approx\) on \(\mathcal{P}\left( U \right)\) as follows: <blockquote class="blockquote" id="blockquote-223">For \(A, B \in \mathcal{P}\left( U \right)\text{,}\) \(A \approx B\) if and only if \(\card(A) = \card(B)\text{.}\)</blockquote> For the definition of the cardinality of a finite set, see <a class="xref" data-knowl="./knowl/D_cardinality.html" title="Definition 5.1.14">Definition 5.1.14</a>. This relation states that two subsets of \(U\) are equivalent provided that they have the same number of elements. Prove that \(\approx\) is an equivalence relation on the power set \(\mathcal{P}\left( U \right)\text{.}\)</p></article></section><section class="exercises" id="exercises-28"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exer_sec72-1"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-3995">Let \(A = \left\{ {a, b} \right\}\) and let \(R = \left\{ {\left( {a, b} \right)} \right\}\text{.}\) Is \(R\) an equivalence relation on \(A\text{?}\) If not, is \(R\) reflexive, symmetric, or transitive? Justify all conclusions.</p></article><article class="exercise exercise-like" id="exer_sec72examples"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-222"><p id="p-3996">Let \(A = \left\{ {a, b, c} \right\}\text{.}\) For each of the following, draw a directed graph that represents a relation with the specified properties.</p></div>
+<article class="task exercise-like" id="task-1514"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3997">A relation on \(A\) that is symmetric but not transitive</p></article><article class="task exercise-like" id="task-1515"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3998">A relation on \(A\) that is transitive but not symmetric</p></article><article class="task exercise-like" id="task-1516"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-3999">A relation on \(A\) that is symmetric and transitive but not reflexive on \(A\)</p></article><article class="task exercise-like" id="task-1517"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-4000">A relation on \(A\) that is not reflexive on \(A\text{,}\) is not symmetric, and is not transitive</p></article><article class="task exercise-like" id="task-1518"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-4001">A relation on \(A\text{,}\) other than the identity relation, that is an equivalence relation on \(A\)</p></article></article><article class="exercise exercise-like" id="exer71_notidentity"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-4002">Let  \(A = \left\{ {1, 2, 3, 4, 5} \right\}\text{.}\) The identity relation on  \(A\)  is</p>
+<div class="displaymath">
+\begin{equation*}
+I_A  = \left\{ {( {1, 1} ), ( {2, 2} ), ( {3, 3} ), ( {4, 4} ), ( {5, 5} )} \right\}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Determine an equivalence relation on  \(A\)  that is different from  \(I_A\) or explain why this is not possible.</p></article><article class="exercise exercise-like" id="exer_sec72-2"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-4003">Let \(R = \left\{ { {\left( {x, y} \right) \in \mathbb{R} \times \mathbb{R} } 
+\mid \left| x \right| + \left| y \right| = 4} \right\}\text{.}\) Then \(R\) is a relation on \(\mathbb{R}\text{.}\) Is \(R\) an equivalence relation on \(\R\text{?}\) If not, is \(R\) reflexive, symmetric, or transitive? Justify all conclusions.</p></article><article class="exercise exercise-like" id="exer_sec72-absvalue"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-4004">A relation \(R\) is defined on \(\Z\) as follows: For all \(a,
+b \in \Z\text{,}\) \(a \mathrel{R} b\) if and only if \(\left| a - b \right| \leq 3\text{.}\) Is \(R\) an equivalence relation on \(\R\text{?}\) If not, is \(R\) reflexive, symmetric, or transitive? Justify all conclusions.</p></article><article class="exercise exercise-like" id="exer_equivrelwithfunction"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-223">
+<p id="p-4005">Let  \(f\x \mathbb{R} \to \mathbb{R}\) be defined by \(f( x ) = x^2  - 4\) for each  \(x \in \mathbb{R}\text{.}\) Define a relation  \(\sim\)  on  \(\mathbb{R}\) as follows:</p>
+<div class="displaymath">
+\begin{equation*}
+\text{ For } a, b \in \R,  a \sim b \text{ if and only if } f( a ) = f( b )\text{.}
+\end{equation*}
+</div>
+</div>
+<article class="task exercise-like" id="exer_equivrelwithfunctiona"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-4006">Is the relation \(\sim\) an equivalence relation on \(\mathbb{R}\text{?}\) Justify your conclusion.</p></article><article class="task exercise-like" id="task-1520"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-4007">Determine all real numbers in the set \(C = \left\{ { {x \in \R } \mid x \sim 5} \right\}\text{.}\)</p></article></article><article class="exercise exercise-like" id="exer_equivrelwithfunction2"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-4008">Repeat <a class="xref" data-knowl="./knowl/exer_equivrelwithfunction.html" title="Exercise 6">Exercise 6</a> using the function \(f\x \mathbb{R} \to \mathbb{R}\) that is defined by \(f( x ) = x^2 - 3x - 7\) for each \(x \in \mathbb{R}\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-702"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-224"><p id="p-4009">Complete the following.</p></div>
+<article class="task exercise-like" id="task-1521"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-4010">Repeat <a class="xref" data-knowl="./knowl/exer_equivrelwithfunctiona.html" title="Task 6.a">Task 6.a</a> using the function \(f\x \mathbb{R} \to \mathbb{R}\) that is defined by \(f( x ) = \sin x\) for each \(x \in \mathbb{R}\text{.}\)</p></article><article class="task exercise-like" id="task-1522"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-4011">Determine all real numbers in the set \(C = \left\{ { {x \in \R } \mid x \sim \pi } 
+\right\}\text{.}\)</p></article></article><article class="exercise exercise-like" id="exer_sec72-diffQ"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-225"><p id="p-4012">Define the relation \(\sim\) on \(\Q\) as follows: For \(a,
+b \in \Q\text{,}\) \(a \sim b\) if and only if \(a - b \in \Z\text{.}\) In <a class="xref" data-knowl="./knowl/prog_example-equiv.html" title="Progress Check 7.2.5: A Relation that Is an Equivalence Relation">Progress Check 7.2.5</a>, we showed that the relation \(\sim\) is an equivalence relation on \(\Q\text{.}\)</p></div>
+<article class="task exercise-like" id="task-1523"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-4013">List four different elements of the set \(C = \left\{ { {x \in \Q } \mid x \sim 
+\dfrac{5}{7} } \right\}\text{.}\)</p></article><article class="task exercise-like" id="task-1524"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-4014">Use set builder notation (without using the symbol \(\sim\)) to specify the set \(C\text{.}\)</p></article><article class="task exercise-like" id="task-1525"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-4015">Use the roster method to specify the set \(C\text{.}\)</p></article></article><article class="exercise exercise-like" id="exer_oneequivonenot"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-226">
+<p id="p-4016">Let \(\sim\) and \(\approx\) be relations on \(\Z\) defined as follows:</p>
+<ul class="disc">
+<li id="li-537"><p id="p-4017">For \(a, b \in \Z\text{,}\) \(a \sim b\) if and only if 2 divides \(a + b\text{.}\)</p></li>
+<li id="li-538"><p id="p-4018">For \(a, b \in \Z\text{,}\) \(a \approx b\) if and only if 3 divides \(a + b\text{.}\)</p></li>
+</ul>
+</div>
+<article class="task exercise-like" id="task-1526"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-4019">Is \(\sim\) an equivalence relation on \(\Z\text{?}\) If not, is this relation reflexive, symmetric, or transitive?</p></article><article class="task exercise-like" id="task-1527"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-4020">Is \(\approx\) an equivalence relation on \(\Z\text{?}\) If not, is this relation reflexive, symmetric, or transitive?</p></article></article><article class="exercise exercise-like" id="exercise-705"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
+<p id="p-4021">Let \(U\) be a finite, nonempty set and let \(\mathcal{P}( U )\) be the power set of \(U\text{.}\) That is, \(\mathcal{P} ( U )\) is the set of all subsets of \(U\text{.}\) Define the relation \(\sim\) on \(\mathcal{P}( U )\) as follows: For \(A, B \in \mathcal{P}( U )\text{,}\) \(A \sim B\) if and only if \(A \cap B = \emptyset\text{.}\) That is, the ordered pair \(\left( {A, B} \right)\) is in the relation \(\sim\) if and only if \(A\) and \(B\) are disjoint. Is the relation \(\sim\) an equivalence relation on \(\mathcal{P}( U )\text{?}\) If not, is it reflexive, symmetric, or transitive? Justify all conclusions.</p></article><article class="exercise exercise-like" id="exer_sec72-powerset"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
+<p id="p-4022">Let \(U\) be a nonempty set and let \(\mathcal{P} ( U )\) be the power set of \(U\text{.}\) That is, \(\mathcal{P} \left( U \right)\) is the set of all subsets of \(U\text{.}\) For \(A\) and \(B\) in \(\mathcal{P} ( U )\text{,}\) define \(A \sim B\) to mean that there exists a bijection \(f:A \to B\text{.}\) Prove that \(\sim\) is an equivalence relation on \(\mathcal{P} ( U )\text{.}\)</p>
+<p id="p-4023">Use results from <a href="S_compositionoffunctions.html" class="internal" title="Section 6.4: Composition of Functions">Section 6.4</a> and <a href="S_inversefunctions.html" class="internal" title="Section 6.5: Inverse Functions">Section 6.5</a>.</p></article><article class="exercise exercise-like" id="exer_modequivrel"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-227">
+<p id="p-4024">Let \(\sim\) and \(\approx\) be relations on \(\Z\) defined as follows:</p>
+<ul class="disc">
+<li id="li-539"><p id="p-4025">For \(a, b \in \Z\text{,}\) \(a \sim b\) if and only if \(2a + 3b \equiv 0 \pmod 5\text{.}\)</p></li>
+<li id="li-540"><p id="p-4026">For \(a, b \in \Z\text{,}\) \(a \approx b\) if and only if \(a + 3b \equiv 0 \pmod 5\text{.}\)</p></li>
+</ul>
+</div>
+<article class="task exercise-like" id="task-1528"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-4027">Is \(\sim\) an equivalence relation on \(\Z\text{?}\) If not, is this relation reflexive, symmetric, or transitive?</p></article><article class="task exercise-like" id="task-1529"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-4028">Is \(\approx\) an equivalence relation on \(\Z\text{?}\) If not, is this relation reflexive, symmetric, or transitive?</p></article></article><article class="exercise exercise-like" id="exer72-signed"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-228">
+<p id="p-4029">Let \(\sim\) and \(\approx\) be relations on \(\R\) defined as follows:</p>
+<ul class="disc">
+<li id="li-541"><p id="p-4030">For \(x, y \in \R\text{,}\) \(x \sim y\) if and only if \(xy \geq 0\text{.}\)</p></li>
+<li id="li-542"><p id="p-4031">For \(x, y \in \R\text{,}\) \(x \approx y\) if and only if \(xy \leq 0\text{.}\)</p></li>
+</ul>
+</div>
+<article class="task exercise-like" id="task-1530"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-4032">Is \(\sim\) an equivalence relation on \(\R\text{?}\) If not, is this relation reflexive, symmetric, or transitive?</p></article><article class="task exercise-like" id="task-1531"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-4033">Is \(\approx\) an equivalence relation on \(\R\text{?}\) If not, is this relation reflexive, symmetric, or transitive?</p></article></article><article class="exercise exercise-like" id="exer_sec72-circles"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-229"><p id="p-4034">Define the relation  \(\approx\) on \(\mathbb{R} \times \mathbb{R}\) as follows: For \(\left( {a, b} \right), \left( {c, d} \right) \in \mathbb{R} \times \mathbb{R}\text{,}\) \(\left( {a, b} \right) \approx \left( {c, d} \right)\) if and only if \(a^2  + b^2  = c^2  + d^2\text{.}\)</p></div>
+<article class="task exercise-like" id="task-1532"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-4035">Prove that \(\approx\) is an equivalence relation on \(\mathbb{R} \times \mathbb{R}\text{.}\)</p></article><article class="task exercise-like" id="task-1533"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-4036">List  four  different elements of the set</p>
+<div class="displaymath">
+\begin{equation*}
+C = \left\{ { {\left( {x, y} \right) \in \mathbb{R} \times \mathbb{R} } \mid                 \left( {x, y} \right) \approx \left( {4, 3} \right)} \right\}\text{.}
+\end{equation*}
+</div></article><article class="task exercise-like" id="task-1534"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-4037">Give a geometric description of the set \(C\text{.}\)</p></article></article><article class="exercise exercise-like" id="exercise-710"><h6 class="heading">
+<span class="codenumber">16<span class="period">.</span></span><span class="space"> </span><span class="title">Evaluation of Proofs.</span>
+</h6>
+<div class="introduction" id="introduction-230"><p id="p-4038">See the instructions for <a class="xref" data-knowl="./knowl/exer_proofeval.html" title="Exercise 19: Evaluation of Proofs">Exercise 19</a> from <a href="S_directproof.html" class="internal" title="Section 3.1: Direct Proofs">Section 3.1</a>.</p></div>
+<article class="task exercise-like" id="task-1535"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<dl id="p-4039" class="description-list narrow">
+<dt id="li-543">Proposition</dt>
+<dd><p id="p-4040">Let \(R\) be a relation on a set \(A\text{.}\) If \(R\) is symmetric and transitive, then \(R\) is reflexive.</p></dd>
+<dt id="li-544">Proof</dt>
+<dd><p id="p-4041">Let \(x, y \in A\text{.}\) If \(x \mathrel{R} y\text{,}\) then \(y \mathrel{R} x\) since \(R\) is symmetric. Now, \(x \mathrel{R} y\) and \(y \mathrel{R} x\text{,}\) and since \(R\) is transitive, we can conclude that \(x \mathrel{R} x\text{.}\) Therefore, \(R\) is reflexive.</p></dd>
+</dl></article><article class="task exercise-like" id="task-1536"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<dl id="p-4042" class="description-list narrow">
+<dt id="li-545">Proposition</dt>
+<dd><p id="p-4043">Let \(\sim\) be a relation on \(\Z\) where for all \(a,
+b \in \Z\text{,}\) \(a \sim b\) if and only if \(\left( a + 2b \right) \equiv 0 \pmod 3\text{.}\) The relation \(\sim\) is an equivalence relation on \(\Z\text{.}\)</p></dd>
+<dt id="li-546">Proof</dt>
+<dd>
+<p id="p-4044">Assume \(a \sim a\text{.}\) Then \(\left( a + 2a \right) \equiv 0 \pmod 3\) since</p>
+<p id="p-4045">\(\left( 3a \right) \equiv 0 \pmod 3\text{.}\) Therefore, \(\sim\) is reflexive on \(\Z\text{.}\) In addition, if \(a \sim b\text{,}\) then \(\left( a + 2b \right) \equiv 0 \pmod 3\text{,}\) and if we multiply both sides of this congruence by 2, we get</p>
+<div class="displaymath">
+\begin{align*}
+2\left( a + 2b \right) \amp \equiv 2 \cdot 0 \pmod 3\\
+\left( 2a + 4b \right) \amp \equiv 0 \pmod 3\\
+\left( 2a + b \right) \amp \equiv 0 \pmod 3\\
+\left( b + 2a \right) \amp \equiv 0 \pmod 3\text{.}
+\end{align*}
+</div>
+<p id="p-4046">This means that \(b \sim a\) and hence, \(\sim\) is symmetric.</p>
+<p id="p-4047">We now assume that \(\left( a + 2b \right) \equiv 0\pmod 3\) and \(\left( b + 2c \right) \equiv 0\pmod 3\text{.}\) By adding the corresponding sides of these two congruences, we obtain</p>
+<div class="displaymath">
+\begin{align*}
+\left( a + 2b \right) + \left( b + 2c \right) \amp \equiv 0 + 0 \pmod 3\\
+\left( a + 3b + 2c \right) \amp \equiv 0 \pmod 3\\
+\left( a + 2c \right) \amp \equiv 0 \pmod 3\text{.}
+\end{align*}
+</div>
+<p id="p-4048">Hence, the relation \(\sim\) is transitive and we have proved that \(\sim\) is an equivalence relation on \(\Z\text{.}\)</p>
+</dd>
+</dl></article></article><article class="activity project-like" id="activity-43"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">43</span><span class="period">.</span><span class="space"> </span><span class="title">Other Types of Relations.</span>
+</h6>
+<div class="introduction" id="introduction-231">
+<p id="p-4049">In this section, we focused on the properties of a relation that are part of the definition of an equivalence relation. However, there are other properties of relations that are of importance. We will study two of these properties in this activity.</p>
+<p id="p-4050">A relation \(R\) on a set \(A\) is a <dfn class="terminology">circular relation</dfn>  provided that for all \(x\text{,}\) \(y\text{,}\) and \(z\) in \(A\text{,}\) if \(x \mathrel{R} y\) and \(y \mathrel{R} z\text{,}\) then \(z \mathrel{R} x\text{.}\)</p>
+</div>
+<article class="task exercise-like" id="task-1537"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-4051">Carefully explain what it means to say that a relation \(R\) on a set \(A\) is not circular.</p></article><article class="task exercise-like" id="task-1538"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-4052">Let \(A = \{ 1, 2, 3 \}\text{.}\) Draw a directed graph of a relation on \(A\) that is circular and draw a directed graph of a relation on \(A\) that is not circular.</p></article><article class="task exercise-like" id="task-1539"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-4053">Let \(A = \{ 1, 2, 3 \}\text{.}\) Draw a directed graph of a relation on \(A\) that is circular and not transitive and draw a directed graph of a relation on \(A\) that is transitive and not circular.</p></article><article class="task exercise-like" id="task-1540"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-4054">Prove the following proposition: <blockquote class="blockquote" id="blockquote-224">A relation \(R\) on a set \(A\) is an equivalence relation if and only if it is reflexive and circular.</blockquote></p></article><article class="task exercise-like" id="task-1541"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-4055">A relation \(R\) on a set \(A\) is an <dfn class="terminology">antisymmetric relation</dfn>  provided that for all \(x, y \in A\text{,}\) if \(x \mathrel{R} y\) and \(y \mathrel{R} x\text{,}\) then \(x = y\text{.}\)</p>
+<p id="p-4056">Carefully explain what it means to say that a relation on a set \(A\) is not antisymmetric.</p></article><article class="task exercise-like" id="task-1542"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-4057">Let \(A = \{ 1, 2, 3 \}\text{.}\) Draw a directed graph of a relation on \(A\) that is antisymmetric and draw a directed graph of a relation on \(A\) that is not antisymmetric.</p></article><article class="task exercise-like" id="task-1543"><h6 class="heading"><span class="codenumber">(g)</span></h6>
+<div class="introduction" id="introduction-232"><p id="p-4058">Are the following propositions true or false? Justify all conclusions.</p></div>
+<article class="task exercise-like" id="task-1544"><h6 class="heading"><span class="codenumber">(i)</span></h6>
+<p id="p-4059">If a relation \(\mathrel{R}\) on a set \(A\) is both symmetric and antisymmetric, then \(\mathrel{R}\) is transitive.</p></article><article class="task exercise-like" id="task-1545"><h6 class="heading"><span class="codenumber">(ii)</span></h6>
+<p id="p-4060">If a relation \(\mathrel{R}\) on a set \(A\) is both symmetric and antisymmetric, then \(\mathrel{R}\) is reflexive.</p></article></article></article></section></section></div></main>
+</div>
+</body>
+</html>

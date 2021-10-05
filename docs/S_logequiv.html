@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-10-05T14:47:44-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Logically Equivalent Statements</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\def\C{\JustCenter}
+\newcommand{\typeu}{Beginning }
+\def\C{\JustCenter}
+\newcommand{\typel}{beginning }
+\def\C{\JustCenter}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\
+\thechapter. #1}{}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\def\C{\JustCenter}
+\renewcommand{\theenumi}{\alph{enumi}}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\theenumi}{({\alph{enumi}})}
+\def\C{\JustCenter}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\mynot}{\neg}
+\newcommand{\card}{\mathbf{card}}
+\newcommand{\x}{:}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Mathematical Reasoning:</span> <span class="subtitle">Writing and Proof (Version 3)</span></a></h1>
+<p class="byline">Ted Sundstrom, Professor Emeritus</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_2logop.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_2logic.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_2predicates.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_2logop.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C_2logic.html" title="Up">Up</a><a class="next-button button toolbar-item" href="S_2predicates.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="fm-versions.html" data-scroll="fm-versions">Version 3 and Version 2.1</a></li>
+<li><a href="fm-student-note.html" data-scroll="fm-student-note">Note to Students</a></li>
+<li><a href="fm-preface.html" data-scroll="fm-preface">Preface</a></li>
+<li><a href="fm-imp-features.html" data-scroll="fm-imp-features">Important Features of the Book</a></li>
+<li><a href="fm-cont-org.html" data-scroll="fm-cont-org">Content and Organization</a></li>
+<li><a href="fm-inst-note.html" data-scroll="fm-inst-note">Supplementary Materials for the Instructor</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_1intro.html" data-scroll="C_1intro"><span class="codenumber">1</span> <span class="title">Introduction to Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_1prop.html" data-scroll="S_1prop">Statements and Conditional Statements</a></li>
+<li><a href="S_1direct.html" data-scroll="S_1direct">Constructing Direct Proofs</a></li>
+<li><a href="S_1summary.html" data-scroll="S_1summary">Chapter 1 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_2logic.html" data-scroll="C_2logic"><span class="codenumber">2</span> <span class="title">Logical Reasoning</span></a><ul>
+<li><a href="S_2logop.html" data-scroll="S_2logop">Statements and Logical Operators</a></li>
+<li><a href="S_logequiv.html" data-scroll="S_logequiv" class="active">Logically Equivalent Statements</a></li>
+<li><a href="S_2predicates.html" data-scroll="S_2predicates">Open Sentences and Sets</a></li>
+<li><a href="S_2quantifier.html" data-scroll="S_2quantifier">Quantifiers and Negations</a></li>
+<li><a href="S_2summary.html" data-scroll="S_2summary">Chapter 2 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_proofs.html" data-scroll="C_proofs"><span class="codenumber">3</span> <span class="title">Constructing and Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_directproof.html" data-scroll="S_directproof">Direct Proofs</a></li>
+<li><a href="S_moremethods.html" data-scroll="S_moremethods">More Methods of Proof</a></li>
+<li><a href="S_contradiction.html" data-scroll="S_contradiction">Proof by Contradiction</a></li>
+<li><a href="S_cases.html" data-scroll="S_cases">Using Cases in Proofs</a></li>
+<li><a href="S_divalgo.html" data-scroll="S_divalgo">Beginning Activity 1: The Division Algorithm and Congruence</a></li>
+<li><a href="S_reviewproofs.html" data-scroll="S_reviewproofs">Review of Proof Methods</a></li>
+<li><a href="S_3summary.html" data-scroll="S_3summary">Chapter 3 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_induction.html" data-scroll="C_induction"><span class="codenumber">4</span> <span class="title">Mathematical Induction</span></a><ul>
+<li><a href="S_mathinduction.html" data-scroll="S_mathinduction">The Principle of Mathematical Induction</a></li>
+<li><a href="S_otherinduction.html" data-scroll="S_otherinduction">Other Forms of Mathematical Induction</a></li>
+<li><a href="S_recursion.html" data-scroll="S_recursion">Induction and Recursion</a></li>
+<li><a href="S_4summary.html" data-scroll="S_4summary">Chapter 4 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_settheory.html" data-scroll="C_settheory"><span class="codenumber">5</span> <span class="title">Set Theory</span></a><ul>
+<li><a href="S_setoperations.html" data-scroll="S_setoperations">Sets and Operations on Sets</a></li>
+<li><a href="S_provingset.html" data-scroll="S_provingset">Proving Set Relationships</a></li>
+<li><a href="S_setproperties.html" data-scroll="S_setproperties">Properties of Set Operations</a></li>
+<li><a href="S_cartesian.html" data-scroll="S_cartesian">Cartesian Products</a></li>
+<li><a href="S_indexfamily.html" data-scroll="S_indexfamily">Indexed Families of Sets</a></li>
+<li><a href="S_5summary.html" data-scroll="S_5summary">Chapter 5 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_functions.html" data-scroll="C_functions"><span class="codenumber">6</span> <span class="title">Functions</span></a><ul>
+<li><a href="S_introfunctions.html" data-scroll="S_introfunctions">Introduction to Functions</a></li>
+<li><a href="S_moreaboutfunctions.html" data-scroll="S_moreaboutfunctions">More about Functions</a></li>
+<li><a href="S_typesoffunctions.html" data-scroll="S_typesoffunctions">Beginning Activity 1: Injections, Surjections, and Bijections</a></li>
+<li><a href="S_compositionoffunctions.html" data-scroll="S_compositionoffunctions">Composition of Functions</a></li>
+<li><a href="S_inversefunctions.html" data-scroll="S_inversefunctions">Inverse Functions</a></li>
+<li><a href="S_functionsonsets.html" data-scroll="S_functionsonsets">Functions Acting on Sets</a></li>
+<li><a href="S_6summary.html" data-scroll="S_6summary">Chapter 6 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_equivrelations.html" data-scroll="C_equivrelations"><span class="codenumber">7</span> <span class="title">Equivalence Relations</span></a><ul>
+<li><a href="S_relations.html" data-scroll="S_relations">Relations</a></li>
+<li><a href="S_equivrelations.html" data-scroll="S_equivrelations">Equivalence Relations</a></li>
+<li><a href="S_equivclasses.html" data-scroll="S_equivclasses">Equivalence Classes</a></li>
+<li><a href="S_modulararithmetic.html" data-scroll="S_modulararithmetic">Modular Arithmetic</a></li>
+<li><a href="section-37.html" data-scroll="section-37">Chapter 7 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_numbertheory.html" data-scroll="C_numbertheory"><span class="codenumber">8</span> <span class="title">Topics in Number Theory</span></a><ul>
+<li><a href="S_gcd.html" data-scroll="S_gcd">The Greatest Common Divisor</a></li>
+<li><a href="S_primefactorizations.html" data-scroll="S_primefactorizations">Prime Numbers and Prime Factorizations</a></li>
+<li><a href="S_diophantine.html" data-scroll="S_diophantine">Linear Diophantine Equations</a></li>
+<li><a href="section-41.html" data-scroll="section-41">Chapter 8 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_topicsinsets.html" data-scroll="C_topicsinsets"><span class="codenumber">9</span> <span class="title">Finite and Infinite Sets</span></a><ul>
+<li><a href="S_finitesets.html" data-scroll="S_finitesets">Finite Sets</a></li>
+<li><a href="S_infinitesets.html" data-scroll="S_infinitesets">Countable Sets</a></li>
+<li><a href="S_uncountablesets.html" data-scroll="S_uncountablesets">Uncountable Sets</a></li>
+<li><a href="section-45.html" data-scroll="section-45">Chapter 9 Summary</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="C_writingguides.html" data-scroll="C_writingguides"><span class="codenumber">A</span> <span class="title">Guidelines for Writing Mathematical Proofs</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="S_logequiv"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.2</span> <span class="title">Logically Equivalent Statements</span>
+</h2>
+<section class="worksheet" id="PA_logequiv"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Beginning Activity 1: Logically Equivalent Statements</span><div class="print-links">
+<a href="PA_logequiv-A4.html" class="a4">A4</a><a href="PA_logequiv-letter.html" class="us">US</a>
+</div>
+</h3>
+<p id="p-506">In <a class="xref" data-knowl="./knowl/exer_sec22-5.html" title="Exercise 5">Exercise 5</a> and <a class="xref" data-knowl="./knowl/exer_sec22-4.html" title="Exercise 6">Exercise 6</a> from <a href="S_2logop.html" class="internal" title="Section 2.1: Statements and Logical Operators">Section 2.1</a>, we observed situations where two different statements have the same truth tables. Basically, this means these statements are equivalent, and we make the following definition: <article class="definition definition-like" id="D_logequiv"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span>
+</h6>
+<p id="p-507">Two expressions are <dfn class="terminology">logically equivalent</dfn>  provided that they have the same truth value for all possible combinations of truth values for all variables appearing in the two expressions. In this case, we write \(X \equiv Y\) and say that \(X\) and \(Y\) are logically equivalent.</p></article></p>
+<article class="exercise exercise-like" id="exercise-68"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-508">Complete truth tables for \(\mynot \left( {P \wedge Q} \right)\) and \(\mynot P \vee \mynot Q\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-69"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-509">Are the expressions \(\mynot \left( {P \wedge Q} \right)\) and \(\mynot P \vee \mynot Q\) logically equivalent?</p></article><article class="exercise exercise-like" id="exercise-70"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-510">Suppose that the statement “I will play golf and I will mow the lawn” is false. Then its negation is true. Write the negation of this statement in the form of a disjunction. Does this make sense?</p></article><p id="p-511">Sometimes we actually use logical reasoning in our everyday living! Perhaps you can imagine a parent making the following two statements. <blockquote class="blockquote" id="blockquote-46">Statement 1: If you do not clean your room, then you cannot watch TV.</blockquote> <blockquote class="blockquote" id="blockquote-47">Statement 2: You clean your room or you cannot watch TV.</blockquote></p>
+<article class="exercise exercise-like" id="PA_conditional2-2"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-512">Let \(P\) be “you do not clean your room,” and let \(Q\) be “you cannot watch TV.” Use these to translate Statement 1 and Statement 2 into symbolic forms.</p></article><article class="exercise exercise-like" id="PA_logequiv6"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-513">Construct a truth table for each of the expressions you determined in <a class="xref" data-knowl="./knowl/PA_conditional2-2.html" title="Exercise 4">Exercise 4 4</a>. Are the expressions logically equivalent?</p></article><article class="exercise exercise-like" id="PA_conditional2-4"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-514">Assume that Statement 1 and Statement 2 are false. In this case, what is the truth value of \(P\) and what is the truth value of \(Q\text{?}\) Now, write a true statement in symbolic form that is a conjunction and involves \(P\) and \(Q\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-74"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-515">Write a truth table for the (conjunction) statement in <a class="xref" data-knowl="./knowl/PA_conditional2-4.html" title="Exercise 6">Exercise 6 6</a> and compare it to a truth table for \(\mynot \left( {P \to Q} \right)\text{.}\) What do you observe?</p></article></section><section class="worksheet" id="PA_converse"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Beginning Activity 2: Converse and Contrapositive</span><div class="print-links">
+<a href="PA_converse-A4.html" class="a4">A4</a><a href="PA_converse-letter.html" class="us">US</a>
+</div>
+</h3>
+<p id="p-516">We now define two important conditional statements that are associated with a given conditional statement. <article class="definition definition-like" id="D_converse"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="period">.</span>
+</h6>
+<p id="p-517">If \(P\) and \(Q\) are statements, then <blockquote class="blockquote" id="blockquote-48">The <dfn class="terminology">converse</dfn> of the conditional statement \(P \to Q\) is the conditional statement \(Q \to P\text{.}\)</blockquote> <blockquote class="blockquote" id="blockquote-49">The <dfn class="terminology">contrapositive</dfn> of the conditional statement \(P \to Q\) is the conditional statement \(\mynot Q \to \mynot P\text{.}\)</blockquote></p></article></p>
+<article class="exercise exercise-like" id="PA_converse1"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-518">For the following, the variable \(x\) represents a real number. Label each of the following statements as true or false. <article class="task exercise-like" id="PA_converse1a"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-519">If \(x = 3\text{,}\) then \(x^2 = 9\text{.}\)</p></article> <article class="task exercise-like" id="task-187"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-520">If \(x^2 = 9\text{,}\) then \(x = 3\text{.}\)</p></article> <article class="task exercise-like" id="task-188"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-521">If \(x^2 \ne 9\text{,}\) then \(x \ne 3\text{.}\)</p></article> <article class="task exercise-like" id="task-189"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-522">If \(x \ne 3\text{,}\) then \(x^2 \ne 9\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exercise-76"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-523">Which statement in the list of conditional statements in <a class="xref" data-knowl="./knowl/PA_converse1.html" title="Exercise 1">Exercise 1 1</a> is the converse of <a class="xref" data-knowl="./knowl/PA_converse1a.html" title="Task a">Task a</a>? Which is the contrapositive of <a class="xref" data-knowl="./knowl/PA_converse1a.html" title="Task a">Task a</a>?</p></article><article class="exercise exercise-like" id="exercise-77"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-524">Complete appropriate truth tables to show that <article class="task exercise-like" id="task-190"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-525">\(P \to Q\) is logically equivalent to its contrapositive \(\mynot Q \to 
+\mynot P\text{.}\)</p></article> <article class="task exercise-like" id="task-191"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-526">\(P \to Q\) is not logically equivalent to its converse \(Q \to P\text{.}\)</p></article></p></article></section><section class="introduction" id="introduction-9"><p id="p-527">In <a href="S_logequiv.html#PA_logequiv" class="internal" title="Worksheet: Beginning Activity 1: Logically Equivalent Statements">Beginning Activity 1 </a>, we introduced the concept of logically equivalent expressions and the notation \(X \equiv Y\) to indicate that statements \(X\) and \(Y\) are logically equivalent. The following theorem gives two important logical equivalencies. They are sometimes referred to as <dfn class="terminology">De Morgan's Laws</dfn>. </p>
+<article class="theorem theorem-like" id="T_demorgan"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">De Morgan's Laws.</span>
+</h6>
+<p id="p-528">For statements \(P\) and \(Q\text{,}\) <blockquote class="blockquote" id="blockquote-50">The statement \(\mynot \left( {P \wedge Q} \right)\) is logically equivalent to \(\mynot P \vee \mynot Q\text{.}\) This can be written as \(\mynot \left( {P \wedge Q} \right) \equiv \;\mynot P \vee \mynot Q\text{.}\)</blockquote> <blockquote class="blockquote" id="blockquote-51">The statement \(\mynot \left( {P \vee Q} \right)\) is logically equivalent to \(\mynot P \wedge \mynot Q\text{.}\) This can be written as \(\mynot \left( {P \vee Q} \right) \equiv \;\mynot P \wedge \mynot Q\text{.}\)</blockquote></p></article><p id="p-529">The first equivalency in <a class="xref" data-knowl="./knowl/T_demorgan.html" title="Theorem 2.2.3: De Morgan's Laws">Theorem 2.2.3</a> was established in <a href="S_logequiv.html#PA_logequiv" class="internal" title="Worksheet: Beginning Activity 1: Logically Equivalent Statements">Beginning Activity 1 </a>. <a class="xref" data-knowl="./knowl/Ta_Demorgan.html" title="Table 2.2.4: Truth Table for One of De Morgan's Laws">Table 2.2.4</a> establishes the second equivalency.</p>
+<figure class="table table-like" id="Ta_Demorgan"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.2.4<span class="period">.</span></span><span class="space"> </span>Truth Table for One of De Morgan's Laws</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="c m b3 r2 l0 t0 lines">\(P\)</th>
+<th class="c m b3 r3 l0 t0 lines">\(Q\)</th>
+<th class="c m b3 r2 l0 t0 lines">\(P \vee Q\)</th>
+<th class="c m b3 r2 l0 t0 lines">\(\mynot  \left( {P \vee Q} \right)\)</th>
+<th class="c m b3 r1 l0 t0 lines">\(\mynot  P\)</th>
+<th class="c m b3 r2 l0 t0 lines">\(\mynot  Q\)</th>
+<th class="c m b3 r0 l0 t0 lines">\(\mynot  P \wedge \mynot  Q\)</th>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r3 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r3 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r3 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r3 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+</table></div></figure><p id="p-530">It is possible to develop and state several different logical equivalencies at this time. However, we will restrict ourselves to what are considered to be some of the most important ones. Since many mathematical statements are written in the form of conditional statements, logical equivalencies related to conditional statements are quite important.</p></section><section class="subsection" id="subsection-18"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Logical Equivalencies Related to Conditional Statements</span>
+</h3>
+<p id="p-531">The first two logical equivalencies in <a class="xref" data-knowl="./knowl/T_logical-condition.html" title="Theorem 2.2.5">Theorem 2.2.5</a> were established in <a href="S_logequiv.html#PA_logequiv" class="internal" title="Worksheet: Beginning Activity 1: Logically Equivalent Statements">Beginning Activity 1 </a>, and the third logical equivalency was established in <a href="S_logequiv.html#PA_converse" class="internal" title="Worksheet: Beginning Activity 2: Converse and Contrapositive">Beginning Activity 2 </a>.</p>
+<article class="theorem theorem-like" id="T_logical-condition"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.5</span><span class="period">.</span>
+</h6>
+<p id="p-532">For statements \(P\) and \(Q\text{,}\)</p>
+<ol class="decimal">
+<li id="li-82"><p id="p-533">The conditional statement \(P \to Q\) is logically equivalent to \(\mynot P \vee Q\text{.}\)</p></li>
+<li id="li-83"><p id="p-534">The statement \(\mynot \left( {P \to Q} \right)\) is logically equivalent to \(P \wedge \mynot Q\text{.}\)</p></li>
+<li id="li-84"><p id="p-535">The conditional statement \(P \to Q\) is logically equivalent to its contrapositive \(\mynot Q \to \mynot P\text{.}\)</p></li>
+</ol></article></section><section class="subsection" id="subsection-19"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">The Negation of a Conditional Statement</span>
+</h3>
+<p id="p-536"> The logical equivalency \(\mynot \left( {P \to Q} \right) \equiv P \wedge \mynot Q\) is interesting because it shows us that <em class="emphasis">the negation of a conditional statement is not another conditional statement.</em>  The negation of a conditional statement can be written in the form of a conjunction. So what does it mean to say that the conditional statement <blockquote class="blockquote" id="blockquote-52">If you do not clean your room, then you cannot watch TV,</blockquote> is false? To answer this, we can use the logical equivalency \(\mynot \left( {P \to Q} \right) \equiv P \wedge \mynot Q\text{.}\) The idea is that if \(P \to Q\) is false, then its negation must be true. So the negation of this can be written as <blockquote class="blockquote" id="blockquote-53">You do not clean your room and you can watch TV.</blockquote> For another example, consider the following conditional statement:</p>
+<div class="displaymath">
+\begin{equation*}
+\text{If } -5 \lt -3, \text{then } \left( -5 \right)^2 \lt \left( -3 \right)^2.
+\end{equation*}
+</div>
+<p class="continuation">This conditional statement is false since its hypothesis is true and its conclusion is false. Consequently, its negation must be true. Its negation is not a conditional statement. The negation can be written in the form of a conjunction by using the logical equivalency \(\mynot \left( {P \to Q} \right) \equiv P \wedge \mynot Q\text{.}\) So, the negation can be written as follows:</p>
+<div class="displaymath">
+\begin{equation*}
+-5 \lt -3 \text{ and } \mynot \left( {\left( -5 \right)^2 \lt \left( -3 \right)^2} \right)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">However, the second part of this conjunction can be written in a simpler manner by noting that “not less than” means the same thing as “greater than or equal to.” So we use this to write the negation of the original conditional statement as follows:</p>
+<div class="displaymath">
+\begin{equation*}
+-5 \lt -3 \text{ and } \left( -5 \right)^2 \geqslant \left( -3 \right)^2\text{.}
+\end{equation*}
+</div>
+<p class="continuation">This conjunction is true since each of the individual statements in the conjunction is true.</p></section><section class="subsection" id="Ss_logequiv"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Another Method of Establishing Logical Equivalencies</span>
+</h3>
+<p id="p-537">We have seen that it is often possible to use a truth table to establish a logical equivalency. However, it is also possible to prove a logical equivalency using a sequence of previously established logical equivalencies. For example,</p>
+<ul class="disc">
+<li id="li-85"><p id="p-538">\(P \to Q\) is logically equivalent to \(\mynot P \vee Q\text{.}\) So</p></li>
+<li id="li-86"><p id="p-539">\(\mynot \left( {P \to Q} \right)\) is logically equivalent to \(\mynot \left( {\mynot P \vee Q} \right)\text{.}\)</p></li>
+<li id="li-87"><p id="p-540">Hence, by <a class="xref" data-knowl="./knowl/T_demorgan.html" title="Theorem 2.2.3: De Morgan's Laws">Theorem 2.2.3</a> (one of DeMorgan's Laws), \(\mynot \left( {P \to Q} \right)\) is logically equivalent to \(\mynot \left( {\mynot P} \right) \wedge \mynot Q\text{.}\)</p></li>
+<li id="li-88"><p id="p-541">This means that \(\mynot \left( {P \to Q} \right)\) is logically equivalent to \(P \wedge \mynot Q\text{.}\)</p></li>
+</ul>
+<p id="p-542">The last step used the fact that \(\mynot \left( {\mynot P} \right)\) is logically equivalent to \(P\text{.}\)</p>
+<p id="p-543">When proving theorems in mathematics, it is often important to be able to decide if two expressions are logically equivalent. Sometimes when we are attempting to prove a theorem, we may be unsuccessful in developing a proof for the original statement of the theorem. However, in some cases, it is possible to prove an equivalent statement. Knowing that the statements are equivalent tells us that if we prove one, then we have also proven the other. In fact, once we know the truth value of a statement, then we know the truth value of any other logically equivalent statement. This is illustrated in <a class="xref" data-knowl="./knowl/pr_workingeq2.html" title="Progress Check 2.2.6">Progress Check 2.2.6</a> and <a class="xref" data-knowl="./knowl/pr_workingeq3.html" title="Progress Check 2.2.7">Progress Check 2.2.7</a>.</p>
+<article class="exercise exercise-like" id="pr_workingeq2"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span>
+</h6>
+<p id="p-544">In <a href="S_2logop.html" class="internal" title="Section 2.1: Statements and Logical Operators">Section 2.1</a>, we constructed a truth table for \(\left( {P \wedge \mynot  Q} \right) \to R\text{.}\) See <a class="xref" data-knowl="./knowl/Ta_compoundtruthtable.html" title="Table 2.1.3: Truth Table for \(\left( P \wedge \mynot  Q \right) \to R\)">Table 2.1.3</a>.</p>
+<p id="p-545">Although it is possible to use truth tables to show that \(P \to \left( {Q \vee R} \right)\) is logically equivalent to \(\left( {P \wedge \mynot  Q} \right) \to R\text{,}\) we instead use previously proven logical equivalencies to prove this logical equivalency. In this case, it may be easier to start working with \(\left( {P \wedge \mynot  Q} \right) \to R\text{.}\) Start with</p>
+<div class="displaymath">
+\begin{equation*}
+\left( {P \wedge \mynot  Q} \right) \to R \equiv \mynot \left( P \wedge \mynot Q \right) \vee R\text{,}
+\end{equation*}
+</div>
+<p class="continuation">which is justified by the logical equivalency established in <a class="xref" data-knowl="./knowl/PA_logequiv6.html" title="Exercise 5">Exercise 5</a> of <a href="S_logequiv.html#PA_logequiv" class="internal" title="Worksheet: Beginning Activity 1: Logically Equivalent Statements">Beginning Activity 1 </a>. Continue by using one of De Morgan's Laws on \(\mynot \left( P \wedge \mynot Q \right)\text{.}\)</p></article><article class="exercise exercise-like" id="pr_workingeq3"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">2.2.7</span><span class="period">.</span>
+</h6>
+<p id="p-546">Let \(a\) and \(b\) be integers. Suppose we are trying to prove the following: <blockquote class="blockquote" id="blockquote-54">If 3 is a factor of \(a \cdot b\text{,}\) then 3 is a factor of \(a\) or 3 is a factor of \(b\text{.}\)</blockquote> Explain why we will have proven this statement if we prove the following: <blockquote class="blockquote" id="blockquote-55">If 3 is a factor of \(a \cdot b\) and 3 is not a factor of \(a\text{,}\) then 3 is a factor of \(b\text{.}\)</blockquote></p></article><p id="p-547">As we will see, it is often difficult to construct a direct proof for a conditional statement of the form \(P \to \left( {Q \vee R} \right)\text{.}\) The logical equivalency in <a class="xref" data-knowl="./knowl/pr_workingeq2.html" title="Progress Check 2.2.6">Progress Check 2.2.6</a> gives us another way to attempt to prove a statement of the form \(P \to \left( {Q \vee R} \right)\text{.}\) The advantage of the equivalent form, \(\left( {P \wedge \mynot Q} \right) \to R\text{,}\) is that we have an additional assumption, \(\mynot Q\text{,}\) in the hypothesis. This gives us more information with which to work.</p>
+<p id="p-548"><a class="xref" data-knowl="./knowl/T_logequiv.html" title="Theorem 2.2.8: Important Logical Equivalencies">Theorem 2.2.8</a> states some of the most frequently used logical equivalencies used when writing mathematical proofs.</p>
+<article class="theorem theorem-like" id="T_logequiv"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Important Logical Equivalencies.</span>
+</h6>
+<p id="p-549">For statements \(P\text{,}\) \(Q\text{,}\) and \(R\text{,}\)</p>
+<section class="paragraphs" id="paragraphs-22"><h5 class="heading"><span class="title">De Morgan's Laws.</span></h5>
+<div class="displaymath">
+\begin{equation*}
+\mynot  \left( {P \wedge Q} \right) \equiv \;\mynot  P \vee \mynot  Q
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\mynot  \left( {P \vee Q} \right) \equiv \;\mynot  P \wedge \mynot  Q
+\end{equation*}
+</div></section><section class="paragraphs" id="paragraphs-23"><h5 class="heading"><span class="title">Conditional Statements.</span></h5>
+<div class="displaymath">
+\begin{equation*}
+P \to Q \equiv \;\mynot  Q \to \mynot  P \text{()}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\mynot  \left( {P \to Q} \right) \equiv P \wedge \mynot  Q
+\end{equation*}
+</div></section><section class="paragraphs" id="paragraphs-24"><h5 class="heading"><span class="title">Biconditional Statement.</span></h5>
+<div class="displaymath">
+\begin{equation*}
+\left( {P \leftrightarrow Q} \right) \equiv \left( {P \to Q} \right) \wedge 
+\left( {Q \to P} \right)
+\end{equation*}
+</div></section><section class="paragraphs" id="paragraphs-25"><h5 class="heading"><span class="title">Double Negation.</span></h5>
+<div class="displaymath">
+\begin{equation*}
+\mynot  \left( {\mynot  P} \right) \equiv P
+\end{equation*}
+</div></section><section class="paragraphs" id="paragraphs-26"><h5 class="heading"><span class="title">Distributive Laws.</span></h5>
+<div class="displaymath">
+\begin{equation*}
+P \vee \left( {Q \wedge R} \right) \equiv \left( {P \vee Q} \right) \wedge 
+\left( {P \vee R} \right)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+P \wedge \left( {Q \vee R} \right) \equiv \left( {P \wedge Q} \right) \vee 
+\left( {P \wedge R} \right)
+\end{equation*}
+</div></section><section class="paragraphs" id="paragraphs-27"><h5 class="heading"><span class="title">Conditionals with Disjunctions.</span></h5>
+<div class="displaymath">
+\begin{equation*}
+P \to \left( {Q \vee R} \right) \equiv \left( {P \wedge \mynot  Q} \right) \to R
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\left( {P \vee Q} \right) \to R\; \equiv \;\left( {P \to R} \right) \wedge 
+\left( {Q \to R} \right)
+\end{equation*}
+</div></section></article><p id="p-550">We have already established many of these equivalencies. Others will be established in the exercises.</p></section><section class="exercises" id="exercises-2_2"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exer_sec23-1"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-551">Write the converse and contrapositive of each of the following conditional statements. <article class="task exercise-like" id="task-192"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-552">If \(a = 5\text{,}\) then \(a^2 = 25\text{.}\)</p></article> <article class="task exercise-like" id="task-193"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-553">If it is not raining, then Laura is playing golf.</p></article> <article class="task exercise-like" id="task-194"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-554">If \(a \ne b\text{,}\) then \(a^4 \ne b^4\text{.}\)</p></article> <article class="task exercise-like" id="task-195"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-555">If \(a\) is an odd integer, then \(3a\) is an odd integer.</p></article></p></article><article class="exercise exercise-like" id="exer_sec23-2"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-556">Write each of the conditional statements in <a class="xref" data-knowl="./knowl/exer_sec23-1.html" title="Exercise 1">Exercise 1</a> as a logically equivalent disjunction, and write the negation of each of the conditional statements in <a class="xref" data-knowl="./knowl/exer_sec23-1.html" title="Exercise 1">Exercise 1</a> as a conjunction.</p></article><article class="exercise exercise-like" id="exer_sec23-3"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-557">Write a useful negation of each of the following statements. Do not leave a negation as a prefix of a statement. For example, we would write the negation of “I will play golf and I will mow the lawn” as “I will not play golf or I will not mow the lawn.” <article class="task exercise-like" id="task-196"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-558">We will win the first game and we will win the second game.</p></article> <article class="task exercise-like" id="task-197"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-559">They will lose the first game or they will lose the second game.</p></article> <article class="task exercise-like" id="task-198"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-560">If you mow the lawn, then I will pay you $20.</p></article> <article class="task exercise-like" id="task-199"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-561">If we do not win the first game, then we will not play a second game.</p></article> <article class="task exercise-like" id="task-200"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-562">I will wash the car or I will mow the lawn.</p></article> <article class="task exercise-like" id="task-201"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-563">If you graduate from college, then you will get a job or you will go to graduate school.</p></article> <article class="task exercise-like" id="task-202"><h6 class="heading"><span class="codenumber">(g)</span></h6>
+<p id="p-564">If I play tennis, then I will wash the car or I will do the dishes.</p></article> <article class="task exercise-like" id="task-203"><h6 class="heading"><span class="codenumber">(h)</span></h6>
+<p id="p-565">If you clean your room or do the dishes, then you can go to see a movie.</p></article> <article class="task exercise-like" id="task-204"><h6 class="heading"><span class="codenumber">(i)</span></h6>
+<p id="p-566">It is warm outside and if it does not rain, then I will play golf.</p></article></p></article><article class="exercise exercise-like" id="exer_sec23-bicond"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-567">Use truth tables to establish each of the following logical equivalencies dealing with biconditional statements: <article class="task exercise-like" id="exer_bicond"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-568">\(\left( {P \leftrightarrow Q} \right) \equiv \left( {P \to Q} \right) \wedge 
+\left( {Q \to P} \right)\)</p></article> <article class="task exercise-like" id="task-206"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-569">\(\left( {P \leftrightarrow Q} \right) \equiv \left( {Q \leftrightarrow P} \right)\)</p></article> <article class="task exercise-like" id="task-207"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-570">\(\left( {P \leftrightarrow Q} \right) \equiv \left( {\mynot P \leftrightarrow \mynot Q} 
+\right)\)</p></article></p></article><article class="exercise exercise-like" id="exer_sec22-distrib"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-571">Use truth tables to prove each of the <dfn class="terminology">distributive laws</dfn> from <a class="xref" data-knowl="./knowl/T_logequiv.html" title="Theorem 2.2.8: Important Logical Equivalencies">Theorem 2.2.8</a>.  <article class="task exercise-like" id="task-208"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-572">\(P \vee \left( {Q \wedge R} \right) \equiv \left( {P \vee Q} \right) \wedge 
+\left( {P \vee R} \right)\)</p></article> <article class="task exercise-like" id="task-209"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-573">\(P \wedge \left( {Q \vee R} \right) \equiv \left( {P \wedge Q} \right) \vee 
+\left( {P \wedge R} \right)\)</p></article></p></article><article class="exercise exercise-like" id="exer_sec23-6"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-574">Use truth tables to prove the following logical equivalency from <a class="xref" data-knowl="./knowl/T_logequiv.html" title="Theorem 2.2.8: Important Logical Equivalencies">Theorem 2.2.8</a>:</p>
+<div class="displaymath">
+\begin{equation*}
+\left[ {\left( {P \vee Q} \right) \to R} \right] \equiv \left( {P \to R} \right) \wedge 
+\left( {Q \to R} \right)\text{.}
+\end{equation*}
+</div></article><article class="exercise exercise-like" id="exer_sec23-7"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-575">Use previously proven logical equivalencies to prove each of the following logical equivalencies about <dfn class="terminology">conditionals with conjunctions:</dfn> <article class="task exercise-like" id="task-210"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-576">\(\left[ {\left( {P \wedge Q} \right) \to R} \right] \equiv \left( {P \to R} \right) 
+\vee \left( {Q \to R} \right)\)</p></article> <article class="task exercise-like" id="task-211"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-577">\(\left[ {P \to \left( {Q \wedge R} \right)} \right] \equiv \left( {P \to Q} \right) 
+\wedge \left( {P \to R} \right)\)</p></article></p></article><article class="exercise exercise-like" id="exer_sec23-9"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="p-578">If \(P\) and \(Q\) are statements, is the statement \(\left( P \vee Q \right) \wedge \mynot \left( P \wedge Q \right)\) logically equivalent to the statement \(\left( P \wedge \mynot Q \right) \vee \left( Q 
+\wedge \mynot P \right)\text{?}\) Justify your conclusion.</p></article><article class="exercise exercise-like" id="exer_sec23-8"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="p-579">Use previously proven logical equivalencies to prove each of the following logical equivalencies: <article class="task exercise-like" id="task-212"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-580">\(\left[ {\mynot P \to \left( {Q \wedge \mynot Q} \right)} \right] \equiv P\)</p></article> <article class="task exercise-like" id="task-213"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-581">\(\left( P \leftrightarrow Q \right) \equiv \left( \mynot P \vee Q \right) \wedge 
+\left( \mynot Q \vee P \right)\)</p></article> <article class="task exercise-like" id="task-214"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-582">\(\mynot \left( P \leftrightarrow Q \right) \equiv \left( P \wedge \mynot Q \right) 
+\vee \left( Q \wedge \mynot P \right)\)</p></article> <article class="task exercise-like" id="task-215"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-583">\(\left( P \to Q \right) \to R \equiv \left( P \wedge \mynot Q \right) \vee R\)</p></article> <article class="task exercise-like" id="task-216"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-584">\(\left( P \to Q \right) \to R \equiv \left( \mynot P \to R \right) \wedge 
+\left( Q \to R \right)\)</p></article> <article class="task exercise-like" id="task-217"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-585">\(\left[ \left( P \wedge Q \right) \to \left( R \vee S \right) \right] \equiv 
+\left[ \left( \mynot R \wedge \mynot S \right) \to \left( \mynot P \vee \mynot Q \right) 
+\right]\)</p></article> <article class="task exercise-like" id="task-218"><h6 class="heading"><span class="codenumber">(g)</span></h6>
+<p id="p-586">\(\left[ \left( P \wedge Q \right) \to \left( R \vee S \right) \right] \equiv 
+\left[ \left( P \wedge Q \wedge \mynot R \right) \to S \right]\)</p></article> <article class="task exercise-like" id="task-219"><h6 class="heading"><span class="codenumber">(h)</span></h6>
+<p id="p-587">\(\left[ \left( P \wedge Q \right) \to \left( R \vee S \right) \right] \equiv 
+\left( \mynot P \vee \mynot Q \vee R \vee S \right)\)</p></article> <article class="task exercise-like" id="task-220"><h6 class="heading"><span class="codenumber">(i)</span></h6>
+<p id="p-588">\(\mynot \left[ \left( P \wedge Q \right) \to \left( R \vee S \right) \right] \equiv 
+\left( P \wedge Q \wedge \mynot R \wedge \mynot S \right)\)</p></article></p></article><article class="exercise exercise-like" id="exer_diffimpliescont"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<p id="p-589">Let \(a\) be a real number and let \(f\) be a real-valued function defined on an interval containing \(x = a\text{.}\) Consider the following conditional statement: <blockquote class="blockquote" id="blockquote-56">If \(f\) is differentiable at \(x = a\text{,}\) then \(f\) is continuous at \(x = a\text{.}\)</blockquote> Which of the following statements have the same meaning as this conditional statement and which ones are negations of this conditional statement? <article class="note remark-like" id="note_diffimpliescont"><h6 class="heading">
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">2.2.9</span><span class="period">.</span>
+</h6>
+<p id="p-590">This is not asking which statements are true and which are false. It is asking which statements are logically equivalent to the given statement. It might be helpful to let \(P\) represent the hypothesis of the given statement, \(Q\) represent the conclusion, and then determine a symbolic representation for each statement. Instead of using truth tables, try to use already established logical equivalencies to justify your conclusions.</p></article> <article class="task exercise-like" id="exer_diffa"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-591">If \(f\) is continuous at \(x = a\text{,}\) then \(f\) is differentiable at \(x = a\text{.}\)</p></article> <article class="task exercise-like" id="exer_diffb"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-592">If \(f\) is not differentiable at \(x = a\text{,}\) then \(f\) is not continuous at \(x = a\text{.}\)</p></article> <article class="task exercise-like" id="exer_diffc"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-593">If \(f\) is not continuous at \(x = a\text{,}\) then \(f\) is not differentiable at \(x = a\text{.}\)</p></article> <article class="task exercise-like" id="exer_diffd"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-594">\(f\) is not differentiable at \(x = a\) or \(f\) is continuous at \(x = a\text{.}\)</p></article> <article class="task exercise-like" id="exer_diffe"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-595">\(f\) is not continuous at \(x = a\) or \(f\) is differentiable at \(x = a\text{.}\)</p></article> <article class="task exercise-like" id="exer_difff"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-596">\(f\) is differentiable at \(x = a\) and \(f\) is not continuous at \(x = a\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exer_sec23-10"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
+<p id="p-597">Let \(a, b\text{,}\) and \(c\) be integers. Consider the following conditional statement: <blockquote class="blockquote" id="blockquote-57">If \(a\) divides \(bc\text{,}\) then \(a\) divides \(b\) or \(a\) divides \(c\text{.}\)</blockquote> Which of the following statements have the same meaning as this conditional statement and which ones are negations of this conditional statement? <a class="xref" data-knowl="./knowl/note_diffimpliescont.html" title="Note 2.2.9">Note 2.2.9</a> also applies to this exercise OR The note for <a class="xref" data-knowl="./knowl/exer_diffimpliescont.html" title="Exercise 10">Exercise 10</a> also applies to this exercise. <article class="task exercise-like" id="task-227"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-598">If \(a\) divides \(b\) or \(a\) divides \(c\text{,}\) then \(a\) divides \(bc\text{.}\)</p></article> <article class="task exercise-like" id="task-228"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-599">If \(a\) does not divide \(b\) or \(a\) does not divide \(c\text{,}\) then \(a\) does not divide \(bc\text{.}\)</p></article> <article class="task exercise-like" id="task-229"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-600">\(a\) divides \(bc\text{,}\) \(a\) does not divide \(b\text{,}\) and \(a\) does not divide \(c\text{.}\)</p></article> <article class="task exercise-like" id="task-230"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-601">If \(a\) does not divide \(b\) and \(a\) does not divide \(c\text{,}\) then \(a\) does not divide \(bc\text{.}\)</p></article> <article class="task exercise-like" id="task-231"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-602">\(a\) does not divide \(bc\) or \(a\) divides \(b\) or \(a\) divides \(c\text{.}\)</p></article> <article class="task exercise-like" id="task-232"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-603">If \(a\) divides \(bc\) and \(a\) does not divide \(c\text{,}\) then \(a\) divides \(b\text{.}\)</p></article> <article class="task exercise-like" id="task-233"><h6 class="heading"><span class="codenumber">(g)</span></h6>
+<p id="p-604">If \(a\) divides \(bc\) or \(a\) does not divide \(b\text{,}\) then \(a\) divides \(c\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exer_sec23-11"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
+<p id="p-605">Let \(x\) be a real number. Consider the following conditional statement: <blockquote class="blockquote" id="blockquote-58">If \(x^3 - x = 2x^2 + 6\text{,}\) then \(x = - 2\) or \(x = 3\text{.}\)</blockquote> Which of the following statements have the same meaning as this conditional statement and which ones are negations of this conditional statement? Explain each conclusion. (See <a class="xref" data-knowl="./knowl/note_diffimpliescont.html" title="Note 2.2.9">Note 2.2.9</a>.) <article class="task exercise-like" id="task-234"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-606">If \(x \ne - 2\) and \(x \ne 3\text{,}\) then \(x^3 - x \ne 2x^2 + 6\text{.}\)</p></article> <article class="task exercise-like" id="task-235"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-607">If \(x = - 2\) or \(x = 3\text{,}\) then \(x^3 - x = 2x^2 + 6\text{.}\)</p></article> <article class="task exercise-like" id="task-236"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-608">If \(x \ne - 2\) or \(x \ne 3\text{,}\) then \(x^3 - x \ne 2x^2 + 6\text{.}\)</p></article> <article class="task exercise-like" id="task-237"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-609">If \(x^3 - x = 2x^2 + 6\) and \(x \ne - 2\text{,}\) then \(x = 3\text{.}\)</p></article> <article class="task exercise-like" id="task-238"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-610">If \(x^3 - x = 2x^2 + 6\) or \(x \ne - 2\text{,}\) then \(x = 3\text{.}\)</p></article> <article class="task exercise-like" id="task-239"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-611">\(x^3 - x = 2x^2 + 6\text{,}\) \(x \ne - 2\text{,}\) and \(x \ne 3\text{.}\)</p></article> <article class="task exercise-like" id="task-240"><h6 class="heading"><span class="codenumber">(g)</span></h6>
+<p id="p-612">\(x^3 - x \ne 2x^2 + 6\) or \(x = - 2\) or \(x = 3\text{.}\)</p></article></p></article><article class="activity project-like" id="A_workingeq"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span><span class="space"> </span><span class="title">Working with a Logical Equivalency.</span>
+</h6>
+<div class="introduction" id="introduction-10">
+<p id="p-613">Suppose we are trying to prove the following for integers  \(x\)  and  \(y\text{:}\) <blockquote class="blockquote" id="blockquote-59">If  \(x \cdot y\) is even, then  \(x\)  is  even  or  \(y\)  is even.</blockquote> We notice that we can write this statement in the following symbolic form:</p>
+<div class="displaymath">
+\begin{equation*}
+P \to \left( {Q \vee R} \right)\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where \(P\) is “\(x \cdot y\) is even,” \(Q\) is “\(x\) is even,” and \(R\) is “\(y\) is even.”</p>
+</div>
+<article class="task exercise-like" id="pr_workingeq2part2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-614">Write the symbolic form of the contrapositive of \(P \to \left( {Q \vee R} \right)\text{.}\) Then use one of De Morgan's Laws (<a class="xref" data-knowl="./knowl/T_demorgan.html" title="Theorem 2.2.3: De Morgan's Laws">Theorem 2.2.3</a>) to rewrite the hypothesis of this conditional statement.</p></article><article class="task exercise-like" id="task-242"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-615">Use the result from <a class="xref" data-knowl="./knowl/pr_workingeq2part2.html" title="Task 6.a">Task 6.a</a> to explain why the given statement is logically equivalent to the following statement: <blockquote class="blockquote" id="blockquote-60">If \(x\) is odd and \(y\) is odd, then \(x \cdot y\) is odd.</blockquote></p></article><div class="conclusion" id="conclusion-1"><p id="p-616">The two statements in this activity are logically equivalent.  We now have the choice of proving either of these statements.  If we prove one, we prove the other, or if we show one is false, the other is also false.  The second statement is <a class="xref" data-knowl="./knowl/T_xyodd.html" title="Theorem 1.2.6">Theorem 1.2.6</a>, which was proven in <a href="S_1direct.html" class="internal" title="Section 1.2: Constructing Direct Proofs">Section 1.2</a>.</p></div></article></section></section></div></main>
+</div>
+</body>
+</html>

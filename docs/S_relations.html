@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-10-05T14:51:53-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Relations</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\def\C{\JustCenter}
+\newcommand{\typeu}{Beginning }
+\def\C{\JustCenter}
+\newcommand{\typel}{beginning }
+\def\C{\JustCenter}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\
+\thechapter. #1}{}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\def\C{\JustCenter}
+\renewcommand{\theenumi}{\alph{enumi}}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\theenumi}{({\alph{enumi}})}
+\def\C{\JustCenter}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\mynot}{\neg}
+\newcommand{\card}{\mathbf{card}}
+\newcommand{\x}{:}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Mathematical Reasoning:</span> <span class="subtitle">Writing and Proof (Version 3)</span></a></h1>
+<p class="byline">Ted Sundstrom, Professor Emeritus</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="C_equivrelations.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_equivrelations.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_equivrelations.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="C_equivrelations.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C_equivrelations.html" title="Up">Up</a><a class="next-button button toolbar-item" href="S_equivrelations.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="fm-versions.html" data-scroll="fm-versions">Version 3 and Version 2.1</a></li>
+<li><a href="fm-student-note.html" data-scroll="fm-student-note">Note to Students</a></li>
+<li><a href="fm-preface.html" data-scroll="fm-preface">Preface</a></li>
+<li><a href="fm-imp-features.html" data-scroll="fm-imp-features">Important Features of the Book</a></li>
+<li><a href="fm-cont-org.html" data-scroll="fm-cont-org">Content and Organization</a></li>
+<li><a href="fm-inst-note.html" data-scroll="fm-inst-note">Supplementary Materials for the Instructor</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_1intro.html" data-scroll="C_1intro"><span class="codenumber">1</span> <span class="title">Introduction to Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_1prop.html" data-scroll="S_1prop">Statements and Conditional Statements</a></li>
+<li><a href="S_1direct.html" data-scroll="S_1direct">Constructing Direct Proofs</a></li>
+<li><a href="S_1summary.html" data-scroll="S_1summary">Chapter 1 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_2logic.html" data-scroll="C_2logic"><span class="codenumber">2</span> <span class="title">Logical Reasoning</span></a><ul>
+<li><a href="S_2logop.html" data-scroll="S_2logop">Statements and Logical Operators</a></li>
+<li><a href="S_logequiv.html" data-scroll="S_logequiv">Logically Equivalent Statements</a></li>
+<li><a href="S_2predicates.html" data-scroll="S_2predicates">Open Sentences and Sets</a></li>
+<li><a href="S_2quantifier.html" data-scroll="S_2quantifier">Quantifiers and Negations</a></li>
+<li><a href="S_2summary.html" data-scroll="S_2summary">Chapter 2 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_proofs.html" data-scroll="C_proofs"><span class="codenumber">3</span> <span class="title">Constructing and Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_directproof.html" data-scroll="S_directproof">Direct Proofs</a></li>
+<li><a href="S_moremethods.html" data-scroll="S_moremethods">More Methods of Proof</a></li>
+<li><a href="S_contradiction.html" data-scroll="S_contradiction">Proof by Contradiction</a></li>
+<li><a href="S_cases.html" data-scroll="S_cases">Using Cases in Proofs</a></li>
+<li><a href="S_divalgo.html" data-scroll="S_divalgo">Beginning Activity 1: The Division Algorithm and Congruence</a></li>
+<li><a href="S_reviewproofs.html" data-scroll="S_reviewproofs">Review of Proof Methods</a></li>
+<li><a href="S_3summary.html" data-scroll="S_3summary">Chapter 3 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_induction.html" data-scroll="C_induction"><span class="codenumber">4</span> <span class="title">Mathematical Induction</span></a><ul>
+<li><a href="S_mathinduction.html" data-scroll="S_mathinduction">The Principle of Mathematical Induction</a></li>
+<li><a href="S_otherinduction.html" data-scroll="S_otherinduction">Other Forms of Mathematical Induction</a></li>
+<li><a href="S_recursion.html" data-scroll="S_recursion">Induction and Recursion</a></li>
+<li><a href="S_4summary.html" data-scroll="S_4summary">Chapter 4 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_settheory.html" data-scroll="C_settheory"><span class="codenumber">5</span> <span class="title">Set Theory</span></a><ul>
+<li><a href="S_setoperations.html" data-scroll="S_setoperations">Sets and Operations on Sets</a></li>
+<li><a href="S_provingset.html" data-scroll="S_provingset">Proving Set Relationships</a></li>
+<li><a href="S_setproperties.html" data-scroll="S_setproperties">Properties of Set Operations</a></li>
+<li><a href="S_cartesian.html" data-scroll="S_cartesian">Cartesian Products</a></li>
+<li><a href="S_indexfamily.html" data-scroll="S_indexfamily">Indexed Families of Sets</a></li>
+<li><a href="S_5summary.html" data-scroll="S_5summary">Chapter 5 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_functions.html" data-scroll="C_functions"><span class="codenumber">6</span> <span class="title">Functions</span></a><ul>
+<li><a href="S_introfunctions.html" data-scroll="S_introfunctions">Introduction to Functions</a></li>
+<li><a href="S_moreaboutfunctions.html" data-scroll="S_moreaboutfunctions">More about Functions</a></li>
+<li><a href="S_typesoffunctions.html" data-scroll="S_typesoffunctions">Beginning Activity 1: Injections, Surjections, and Bijections</a></li>
+<li><a href="S_compositionoffunctions.html" data-scroll="S_compositionoffunctions">Composition of Functions</a></li>
+<li><a href="S_inversefunctions.html" data-scroll="S_inversefunctions">Inverse Functions</a></li>
+<li><a href="S_functionsonsets.html" data-scroll="S_functionsonsets">Functions Acting on Sets</a></li>
+<li><a href="S_6summary.html" data-scroll="S_6summary">Chapter 6 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_equivrelations.html" data-scroll="C_equivrelations"><span class="codenumber">7</span> <span class="title">Equivalence Relations</span></a><ul>
+<li><a href="S_relations.html" data-scroll="S_relations" class="active">Relations</a></li>
+<li><a href="S_equivrelations.html" data-scroll="S_equivrelations">Equivalence Relations</a></li>
+<li><a href="S_equivclasses.html" data-scroll="S_equivclasses">Equivalence Classes</a></li>
+<li><a href="S_modulararithmetic.html" data-scroll="S_modulararithmetic">Modular Arithmetic</a></li>
+<li><a href="section-37.html" data-scroll="section-37">Chapter 7 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_numbertheory.html" data-scroll="C_numbertheory"><span class="codenumber">8</span> <span class="title">Topics in Number Theory</span></a><ul>
+<li><a href="S_gcd.html" data-scroll="S_gcd">The Greatest Common Divisor</a></li>
+<li><a href="S_primefactorizations.html" data-scroll="S_primefactorizations">Prime Numbers and Prime Factorizations</a></li>
+<li><a href="S_diophantine.html" data-scroll="S_diophantine">Linear Diophantine Equations</a></li>
+<li><a href="section-41.html" data-scroll="section-41">Chapter 8 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_topicsinsets.html" data-scroll="C_topicsinsets"><span class="codenumber">9</span> <span class="title">Finite and Infinite Sets</span></a><ul>
+<li><a href="S_finitesets.html" data-scroll="S_finitesets">Finite Sets</a></li>
+<li><a href="S_infinitesets.html" data-scroll="S_infinitesets">Countable Sets</a></li>
+<li><a href="S_uncountablesets.html" data-scroll="S_uncountablesets">Uncountable Sets</a></li>
+<li><a href="section-45.html" data-scroll="section-45">Chapter 9 Summary</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="C_writingguides.html" data-scroll="C_writingguides"><span class="codenumber">A</span> <span class="title">Guidelines for Writing Mathematical Proofs</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="S_relations"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">7.1</span> <span class="title">Relations</span>
+</h2>
+<section class="worksheet" id="PA_USA"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Beginning Activity 1: The United States of America</span><div class="print-links">
+<a href="PA_USA-A4.html" class="a4">A4</a><a href="PA_USA-letter.html" class="us">US</a>
+</div>
+</h3>
+<p id="p-3819">Recall from <a href="S_cartesian.html" class="internal" title="Section 5.4: Cartesian Products">Section 5.4</a> that the <dfn class="terminology">Cartesian product</dfn>  of two sets \(A\) and \(B\text{,}\) written \(A \times B\text{,}\) is the set of all ordered pairs \(\left( {a,b} \right)\text{,}\) where \(a \in A\) and \(b \in B\text{.}\) That is, \(A \times B = \left\{ {\left( {a,b} \right) \mid a \in A\text{ and } b \in B} \right\}\text{.}\)</p>
+<p id="p-3820">Let \(A\) be the set of all states in the United States and let</p>
+<div class="displaymath">
+\begin{equation*}
+R = \left\{ { {\left( {x, y} \right) \in A \times A } \mid x \text{  and  } y \text{  have a land border in common } } \right\}\!\text{.}
+\end{equation*}
+</div>
+<p id="p-3821">For example, since California and Oregon have a land border, we can say that \((\text{ California, Oregon } ) \in R\) and \((\text{ Oregon, California } ) \in R\text{.}\) Also, since California and Michigan do not share a land border, \(\text{ (California, Michigan) } \notin R\) and \((\text{ Michigan, California } ) \notin R\text{.}\)</p>
+<article class="exercise exercise-like" id="exercise-661"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-203"><p id="p-3822">Use the roster method to specify the elements in each of the following sets:</p></div>
+<article class="task exercise-like" id="task-1455"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3823">\(B = \left\{ {y \in A\left| {\left( {\text{ Michigan, } y} \right) \in R} \right.} \right\}\)</p></article><article class="task exercise-like" id="task-1456"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3824">\(C = \left\{ {x \in A\left| {\left( {x,\text{ Michigan } } \right) \in R} \right.} \right\}\)</p></article><article class="task exercise-like" id="task-1457"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-3825">\(D = \left\{ {y \in A\left| {\left( {\text{ Wisconsin, } y} \right) \in R} \right.} \right\}\)</p></article></article><article class="exercise exercise-like" id="exercise-662"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-3826">Find two different examples of two ordered pairs, \(\left( {x, y} \right)\) and \(\left( {y, z} \right)\) such that \(\left( {x, y} \right) \in R\text{,}\) \(\left( {y, z} \right) \in R\text{,}\) but \(\left( {x, z} \right)\not \in R\text{,}\) or explain why no such example exists. Based on this, is the following conditional statement true or false? <blockquote class="blockquote" id="blockquote-218">For all \(x, y, z \in A\text{,}\) if \((x, y) \in R\) and \((y, z) \in R\text{,}\) then \((x, z) \in R\text{.}\)</blockquote></p></article><article class="exercise exercise-like" id="exercise-663"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-3827">Is the following conditional statement true or false? Explain. For all \(x, y \in A\text{,}\) if \((x, y) \in R\text{,}\) then \((y, x) \in R\text{.}\)</p></article></section><section class="worksheet" id="PA_eqn2variables"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Beginning Activity 2: The Solution Set of an Equation with Two Variables</span><div class="print-links">
+<a href="PA_eqn2variables-A4.html" class="a4">A4</a><a href="PA_eqn2variables-letter.html" class="us">US</a>
+</div>
+</h3>
+<p id="p-3828">In <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "S_predicates" missing or not unique]</code>, we introduced the concept of the <dfn class="terminology">truth set of an open sentence with one variable</dfn>.  This was defined to be the set of all elements in the universal set that can be substituted for the variable to make the open sentence a true proposition. Assume that \(x\) and \(y\) represent real numbers. Then the equation</p>
+<div class="displaymath">
+\begin{equation*}
+4x^2  + y^2  = 16
+\end{equation*}
+</div>
+<p class="continuation">is an open sentence with two variables. An element of the truth set of this open sentence (also called a solution of the equation) is an ordered pair \(\left( {a, b} \right)\) of real numbers so that when \(a\) is substituted for \(x\) and \(b\) is substituted for \(y\text{,}\) the predicate becomes a true statement (a true equation in this case). We can use set builder notation to describe the truth set \(S\) of this equation with two variables as follows:</p>
+<div class="displaymath">
+\begin{equation*}
+S = \left\{ (x, y) \in \R \times \R \mid 4x^2 + y^2 = 16 \right\}\!\text{.}
+\end{equation*}
+</div>
+<p id="p-3829">When a set is a truth set of an open sentence that is an equation, we also call the set the <dfn class="terminology">solution set</dfn>  of the equation.</p>
+<article class="exercise exercise-like" id="exercise-664"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-3830">List four different elements of the set \(S\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-665"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-3831">The graph of the equation \(4x^2 + y^2 = 16\) in the \(xy\)-coordinate plane is an ellipse. Draw the graph and explain why this graph is a representation of the truth set (solution set) of the equation \(4x^2 + y^2 = 16\text{.}\)</p></article><article class="exercise exercise-like" id="PA_eqn2variables3"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-204"><p id="p-3832">Describe each of the following sets as an interval of real numbers:</p></div>
+<article class="task exercise-like" id="task-1458"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3833">\(A = \left\{ x \in \R \mid \text{ there exists a } y \in \R \text{ such that } 4x^2 + y^2 = 16 \right\}\text{.}\)</p></article><article class="task exercise-like" id="task-1459"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3834">\(B = \left\{ y \in \R \mid \text{ there exists an } x \in \R \text{ such that } 4x^2 + y^2 = 16 \right\}\text{.}\)</p></article></article></section><section class="subsection" id="subsection-132"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Introduction to Relations</span>
+</h3>
+<p id="p-3835">In <a href="S_introfunctions.html" class="internal" title="Section 6.1: Introduction to Functions">Section 6.1</a>, we introduced the formal definition of a function from one set to another set. The notion of a function can be thought of as one way of relating the elements of one set with those of another set (or the same set). A function is a special type of <dfn class="terminology">relation</dfn> in the sense that each element of the first set, the domain, is “related” to exactly one element of the second set, the codomain.</p>
+<p id="p-3836">This idea of relating the elements of one set to those of another set using ordered pairs is not restricted to functions. For example, we may say that one integer, \(a\text{,}\) is related to another integer, \(b\text{,}\) provided that \(a\) is congruent to \(b\) modulo 3. Notice that this relation of congruence modulo 3 provides a way of relating one integer to another integer. However, in this case, an integer \(a\) is related to more than one other integer. For example, since</p>
+<div class="displaymath">
+\begin{equation*}
+5 \equiv 5 \pmod 3\!,  5 \equiv 2 \pmod 3\!,  \text{ and }   5 \equiv -1 \pmod 3\!\text{,}
+\end{equation*}
+</div>
+<p class="continuation">we can say that 5 is related to 5, 5 is related to 2, and 5 is related to \(-1\text{.}\) Notice that, as with functions, each relation of the form \(a \equiv b \pmod 3\) involves two integers \(a\) and \(b\) and hence involves an ordered pair \(\left( {a, b} \right)\text{,}\) which is an element of \(\Z \times \Z\text{.}\)</p>
+<article class="definition definition-like" id="relation"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.1.1</span><span class="period">.</span>
+</h6>
+<p id="p-3837">Let \(A\) and \(B\) be sets. A <dfn class="terminology">relation <dfn class="terminology">R</dfn> from the set \(\boldsymbol{A}\) to the set \(\boldsymbol{B}\)</dfn>  is a subset of \(A \times B\text{.}\) That is, \(R\) is a collection of ordered pairs where the first coordinate of each ordered pair is an element of \(A\text{,}\) and the second coordinate of each ordered pair is an element of \(B\text{.}\)</p>
+<p id="p-3838">A relation from the set \(A\) to the set \(A\) is called a <dfn class="terminology">relation on the set \(\boldsymbol{A}\)</dfn>. So a relation on the set \(A\) is a subset of \(A \times A\text{.}\)</p></article><p id="p-3839">In <a href="S_introfunctions.html" class="internal" title="Section 6.1: Introduction to Functions">Section 6.1</a>, we defined the domain and range of a function. We make similar definitions for a relation.</p>
+<article class="definition definition-like" id="domrangeofrelation"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.1.2</span><span class="period">.</span>
+</h6>
+<p id="p-3840">If \(R\) is a relation from the set \(A\) to the set \(B\text{,}\) then the subset of \(A\) consisting of all the first coordinates of the ordered pairs in \(R\) is called the <dfn class="terminology">domain</dfn>  of \(R\text{.}\) The subset of \(B\) consisting of all the second coordinates of the ordered pairs in \(R\) is called the <dfn class="terminology">range</dfn>  of \(R\text{.}\)</p>
+<p id="p-3841">We use the notation \(\text{ dom} ( R )\) for the domain of \(R\) and \(\text{ range} ( R )\) for the range of \(R\text{.}\) So using set builder notation,</p>
+<div class="displaymath">
+\begin{align*}
+\text{ dom} ( R ) \amp = \left\{ { {u \in A } \mid \left( {u, y} \right) 
+\in R\text{ for at least one } y \in B} \right\}\\
+\text{ range}  ( R ) \amp = \left\{ { {v \in B } 
+\mid \left( {x, v} \right) \in R\text{ for at least one } x \in A} \right\}\!\text{.}
+\end{align*}
+</div></article><article class="example example-like" id="exam_relation"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Domain and Range.</span>
+</h6>
+<p id="p-3842">A relation was studied in each of the beginning activities for this section. For <a href="S_relations.html#PA_eqn2variables" class="internal" title="Worksheet: Beginning Activity 2: The Solution Set of an Equation with Two Variables">Beginning Activity 2 </a>, the set \(S = \left\{ (x, y) \in \R \times \R \mid 4x^2 + y^2 = 16 \right\}\!\) is a subset of \(\R \times \R\) and, hence, \(S\) is a relation on \(\R\text{.}\) In <a class="xref" data-knowl="./knowl/PA_eqn2variables3.html" title="Exercise 3">Exercise 3</a> of <a href="S_relations.html#PA_eqn2variables" class="internal" title="Worksheet: Beginning Activity 2: The Solution Set of an Equation with Two Variables">Beginning Activity 2 </a>, we actually determined the domain and range of this relation.</p>
+<div class="displaymath">
+\begin{align*}
+\text{ dom} (S) \amp = A = \left\{ x \in \R \mid \text{ there exists a }  y 
+\in \R \text{ such that }  4x^2 + y^2 = 16 \right\}\\
+\text{ range} (S) \amp = B = \left\{ y \in \R \mid \text{ there exists an }  x 
+\in \R \text{ such that }  4x^2 + y^2 = 16 \right\}
+\end{align*}
+</div>
+<p id="p-3843">So from the results in <a href="S_relations.html#PA_eqn2variables" class="internal" title="Worksheet: Beginning Activity 2: The Solution Set of an Equation with Two Variables">Beginning Activity 2 </a>, we can say that the domain of the relation \(S\) is the closed interval \(\left[ -2, 2 \right]\) and the range of \(S\) is the closed interval \(\left[ -4, 4 \right]\text{.}\)</p></article><article class="exercise exercise-like" id="A_relationexamples1"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">7.1.4</span><span class="period">.</span>
+</h6>
+<div class="introduction" id="introduction-205"><p id="p-3844">Let \(T = \left\{ {\left( {x, y} \right) \in \mathbb{R} \times \mathbb{R} 
+\mid x^2 + y^2 = 64} \right\}\text{.}\)</p></div>
+<article class="task exercise-like" id="task-1460"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3845">Explain why \(T\) is a relation on \(\mathbb{R}\text{.}\)</p></article><article class="task exercise-like" id="task-1461"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3846">Find all values of \(x\) such that \(\left( {x, 4} \right) \in T\text{.}\) Find all values of \(x\) such that \(\left( {x, 9} \right) \in T\text{.}\)</p></article><article class="task exercise-like" id="task-1462"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-3847">What is the domain of the relation \(T\text{?}\) What is the range of \(T\text{?}\)</p></article><article class="task exercise-like" id="task-1463"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-3848">Since \(T\) is a relation on \(\mathbb{R}\text{,}\) its elements can be graphed in the coordinate plane. Describe the graph of the relation \(T\text{.}\)</p></article></article><article class="exercise exercise-like" id="A_relationexamples2"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">7.1.5</span><span class="period">.</span>
+</h6>
+<div class="introduction" id="introduction-206">
+<p id="p-3849">From <a href="S_relations.html#PA_USA" class="internal" title="Worksheet: Beginning Activity 1: The United States of America">Beginning Activity 1 </a>, \(A\) is the set of all states in the United States, and</p>
+<div class="displaymath">
+\begin{equation*}
+R = \left\{ { {\left( {x, y} \right) \in A \times A } \mid x\text{  and  } y 
+\text{  have a land border in common } } \right\}\!\text{.}
+\end{equation*}
+</div>
+</div>
+<article class="task exercise-like" id="task-1464"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3850">Explain why \(R\) is a relation on \(A\text{.}\)</p></article><article class="task exercise-like" id="task-1465"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3851">What is the domain of the relation \(R\text{?}\) What is the range of the relation \(R\text{?}\)</p></article><article class="task exercise-like" id="task-1466"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="introduction" id="introduction-207"><p id="p-3852">Are the following statements true or false? Justify your conclusions.</p></div>
+<article class="task exercise-like" id="task-1467"><h6 class="heading"><span class="codenumber">(i)</span></h6>
+<p id="p-3853">For all \(x, y \in A\text{,}\) if \((x, y) \in R\text{,}\) then \((y, x) \in R\text{.}\)</p></article><article class="task exercise-like" id="task-1468"><h6 class="heading"><span class="codenumber">(ii)</span></h6>
+<p id="p-3854">For all \(x, y, z \in A\text{,}\) if \((x, y) \in R\) and \((y, z) \in R\text{,}\) then \((x, z) \in R\text{.}\)</p></article></article></article></section><section class="subsection" id="subsection-133"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Some Standard Mathematical Relations</span>
+</h3>
+<p id="p-3855">There are many different relations in mathematics. For example, two real numbers can be considered to be related if one number is less than the other number. We call this the “less than” relation on \(\mathbb{R}\text{.}\) If \(x, y \in \mathbb{R}\) and \(x\) is less than \(y\text{,}\) we often write \(x \lt  y\text{.}\) As a set of ordered pairs, this relation is \(R_{  \lt  }\text{,}\) where</p>
+<div class="displaymath">
+\begin{equation*}
+R_{  \lt  }  = \left\{ { {\left( {x, y} \right) \in \mathbb{R} \times \mathbb{R} } \mid x \lt  y} \right\}\!\text{.}
+\end{equation*}
+</div>
+<p id="p-3856">With many mathematical relations, we do not write the relation as a set of ordered pairs even though, technically, it is a set of ordered pairs. <a class="xref" data-knowl="./knowl/Ta_standardrelations.html" title="Table 7.1.6: Standard Mathematical Relations">Table 7.1.6</a> describes some standard mathematical relations.</p>
+<figure class="table table-like" id="Ta_standardrelations"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">7.1.6<span class="period">.</span></span><span class="space"> </span>Standard Mathematical Relations</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="l m b2 r2 l0 t0 lines">Name</th>
+<th class="l m b2 r2 l0 t0 lines">Open<br>Sentence</th>
+<th class="l m b2 r0 l0 t0 lines">Relation as a Set of<br>Ordered Pairs</th>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">The “less than”<br>relation on \(\mathbb{R}\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(x \lt  y\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(\left\{ { {\left( {x, y} \right) \in \mathbb{R} \times \mathbb{R} } 
+\mid x \lt  y} \right\}\)</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">The “equality”<br>relation on \(\mathbb{R}\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(x=y\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(\left\{ { {\left( {x, y} \right) \in \mathbb{R} \times \mathbb{R} } 
+\mid x = y} \right\}\)</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">The “divides”<br>relation on  \(\mathbb{Z}\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(m \mid n\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(\left\{ { {\left( {m, n} \right) \in \mathbb{Z} \times \mathbb{Z} } \mid m
+\text{ divides } n} \right\}\)</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">The “subset”<br>relation on  \(\mathcal{P}\left( U \right)\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(S \subseteq T\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(\left\{ { {\left( {S, T} \right) \in \mathcal{P}\left( U \right) \times 
+\mathcal{P}\left( U \right) } \mid S \subseteq T} \right\}\)</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">The “element of”<br>relation from  \(U\) to \(\mathcal{P}\left( U \right)\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(x \in S\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(\left\{ { {\left( {x, S} \right) \in U \times \mathcal{P}\left( U \right) } 
+\mid x \in S} \right\}\)</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">The “congruence modulo \(n\)”<br>relation on \(\mathbb{Z}\)</td>
+<td class="l m b0 r2 l0 t0 lines">\(a \equiv b \pmod n\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\left\{ {\left( {a, b} \right) \in \mathbb{Z} \times \mathbb{Z} \mid a 
+\equiv b \pmod n} \right\}\)</td>
+</tr>
+</table></div></figure></section><section class="subsection" id="sym_xrelatedy"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Notation for Relations</span>
+</h3>
+<p id="p-3857">The mathematical relations in <a class="xref" data-knowl="./knowl/Ta_standardrelations.html" title="Table 7.1.6: Standard Mathematical Relations">Table 7.1.6</a> all used a relation symbol between the two elements that form the ordered pair in \(A \times B\text{.}\) For this reason, we often do the same thing for a general relation from the set \(A\) to the set \(B\text{.}\) So if \(R\) is a relation from \(A\) to \(B\text{,}\) and \(x \in A\) and \(y \in B\text{,}\) we use the notation</p>
+<div class="displaymath">
+\begin{align*}
+x \mathrel{R} y \amp \amp \text{ to mean } \amp \amp \amp 
+\left( {x, y} \right) \in R; \text{ and}\\
+x \mathrel{\not \negthickspace R} y \amp \amp \text{ to mean } \amp \amp \amp
+\left( {x, y} \right) \notin R\text{.}
+\end{align*}
+</div>
+<p class="continuation">In some cases, we will even use a generic relation symbol for defining a new relation or speaking about relations in a general context. Perhaps the most commonly used symbol is “\(\sim\)”, read “tilde” or “squiggle” or “is related to.” When we do this, we will write</p>
+<div class="displaymath">
+\begin{align*}
+x \sim y \amp \amp \text{ means the same thing as } \amp \amp \amp
+\left( {x, y} \right) \in R; \text{ and }\\
+x \nsim y \amp \amp \text{ means the same thing as } \amp \amp \amp
+\left( {x, y} \right) \notin R\text{.}
+\end{align*}
+</div>
+<article class="exercise exercise-like" id="prog_dividesrelation"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">7.1.7</span><span class="period">.</span><span class="space"> </span><span class="title">The Divides Relation.</span>
+</h6>
+<div class="introduction" id="introduction-208">
+<p id="p-3858">Whenever we have spoken about one integer dividing another integer, we have worked with the “divides”  relation on \(\mathbb{Z}\text{.}\) In particular, we can write</p>
+<div class="displaymath">
+\begin{equation*}
+D = \left\{ { {\left( {m, n} \right) \in \mathbb{Z} \times \mathbb{Z} } \mid m 
+\text{  divides  } n} \right\}\!\text{.}
+\end{equation*}
+</div>
+<p id="p-3859">In this case, we have a specific notation for “divides,” and we write</p>
+<div class="displaymath">
+\begin{equation*}
+m \mid n \text{ if and only if } \left( {m, n} \right) \in D\text{.}
+\end{equation*}
+</div>
+</div>
+<article class="task exercise-like" id="task-1469"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3860">What is the domain of the “divides” relation? What is the range of the “divides” relation?</p></article><article class="task exercise-like" id="task-1470"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="introduction" id="introduction-209"><p id="p-3861">Are the following statements true or false? Explain.</p></div>
+<article class="task exercise-like" id="task-1471"><h6 class="heading"><span class="codenumber">(i)</span></h6>
+<p id="p-3862">For every nonzero integer \(a\text{,}\) \(a \mid a\text{.}\)</p></article><article class="task exercise-like" id="task-1472"><h6 class="heading"><span class="codenumber">(ii)</span></h6>
+<p id="p-3863">For all nonzero integers \(a\) and \(b\text{,}\) if \(a \mid b\text{,}\) then \(b \mid a\text{.}\)</p></article><article class="task exercise-like" id="task-1473"><h6 class="heading"><span class="codenumber">(iii)</span></h6>
+<p id="p-3864">For all nonzero integers \(a\text{,}\) \(b\text{,}\) and \(c\text{,}\) if \(a \mid b\) and \(b \mid c\text{,}\) then \(a \mid c\text{.}\)</p></article></article></article></section><section class="subsection" id="subsection-135"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Functions as Relations</span>
+</h3>
+<p id="p-3865">If we have a function \(f\x A \to B\text{,}\) we can generate a set of ordered pairs \(f\) that is a subset of \(A \times B\) as follows:</p>
+<div class="displaymath">
+\begin{equation*}
+f = \left\{ { {\left( {a, f( a )} \right) } \mid a \in A} \right\}  
+\text{ or } f = \left\{ {( {a, b} ) \in A \times B   \mid b = f( a )} \right\}\text{.}
+\end{equation*}
+</div>
+<p id="p-3866">This means that \(f\) is a relation from \(A\) to \(B\text{.}\) Since, \(\text{ dom} ( f ) = A\text{,}\) we know that</p>
+<div class="displaymath">
+\begin{equation}
+\text{ For every } a \in A, \text{ there exists a } 
+b \in B \text{ such that } ( a, b ) \in f\text{.}\label{condition1}\tag{7.1}
+\end{equation}
+</div>
+<p id="p-3867">When \(\left( a, b \right) \in f\text{,}\) we write \(b = f( a )\text{.}\) In addition, to be a function, each input can produce only one output. In terms of ordered pairs, this means that there will never be two ordered pairs \(( {a, b} )\) and \(( {a, c} )\) in the function \(f\text{,}\) where \(a \in A\text{,}\) \(b, c \in B\text{,}\) and \(b \ne c\text{.}\) We can formulate this as a conditional statement as follows:</p>
+<div class="displaymath">
+\begin{equation}
+\text{ For every } a \in A \text{ and every } b, c \in B, \text{ if } ( a, b ) \in f
+\text{ and } (a, c ) \in f, \text{ then } b = c\text{.}\label{condition2}\tag{7.2}
+\end{equation}
+</div>
+<p id="p-3868">This means that a function \(f\) from \(A\) to \(B\) is a relation from \(A\) to \(B\) that satisfies <a class="xref" data-knowl="./knowl/condition1.html" title="Equation 7.1">Condition (7.1)</a> and <a class="xref" data-knowl="./knowl/condition2.html" title="Equation 7.2">Condition (7.2)</a> (See <a class="xref" data-knowl="./knowl/T_functionasordered.html" title="Theorem 6.5.1">Theorem 6.5.1</a> in <a href="S_inversefunctions.html" class="internal" title="Section 6.5: Inverse Functions">Section 6.5</a>.) Not every relation, however, will be a function. For example, consider the relation \(T\) in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "A_relationexamples" missing or not unique]</code>.</p>
+<div class="displaymath">
+\begin{equation*}
+T = \left\{ {\left( {x, y} \right) \in \mathbb{R} \times \mathbb{R} 
+\mid x^2  + y^2  = 64} \right\}
+\end{equation*}
+</div>
+<p id="p-3869">This relation fails <a class="xref" data-knowl="./knowl/condition2.html" title="Equation 7.2">Condition (7.2)</a> above since a counterexample comes from the facts that \((0, 8) \in T\) and \((0, -8) \in T\) and \(8 \ne -8\text{.}\)</p>
+<article class="exercise exercise-like" id="prog_setofpairs"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">7.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">A Set of Ordered Pairs.</span>
+</h6>
+<div class="introduction" id="introduction-210"><p id="p-3870">Let \(F = \left\{ (x, y) \in \R \times \R \mid y = x^2 \right\}\text{.}\) The set \(F\) can then be considered to be relation on \(\R\) since it is a subset of \(\R \times \R\text{.}\)</p></div>
+<article class="task exercise-like" id="task-1474"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3871">List five different ordered pairs that are in the set \(F\text{.}\)</p></article><article class="task exercise-like" id="task-1475"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="introduction" id="introduction-211"><p id="p-3872">Use the roster method to specify the elements of each of the following the sets:</p></div>
+<article class="task exercise-like" id="task-1476"><h6 class="heading"><span class="codenumber">(i)</span></h6>
+<p id="p-3873">\(A = \left\{ x \in \R \mid (x, 4) \in F \right\}\)</p></article><article class="task exercise-like" id="task-1477"><h6 class="heading"><span class="codenumber">(ii)</span></h6>
+<p id="p-3874">\(B = \left\{ x \in \R \mid (x, 10) \in F \right\}\)</p></article><article class="task exercise-like" id="task-1478"><h6 class="heading"><span class="codenumber">(iii)</span></h6>
+<p id="p-3875">\(C = \left\{ y \in \R \mid (5, y) \in F \right\}\)</p></article><article class="task exercise-like" id="task-1479"><h6 class="heading"><span class="codenumber">(iv)</span></h6>
+<p id="p-3876">\(D = \left\{ y \in \R \mid (-3, y) \in F \right\}\)</p></article></article><article class="task exercise-like" id="task-1480"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-3877">Since each real number \(x\) produces only one value of \(y\) for which \(y = x^2\text{,}\) the set \(F\) can be used to define a function from the set \(\R\) to \(\R\text{.}\) Draw a graph of this function.</p></article></article></section><section class="subsection" id="directedgraph"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Visual Representations of Relations</span>
+</h3>
+<p id="p-3878">In <a class="xref" data-knowl="./knowl/prog_setofpairs.html" title="Progress Check 7.1.8: A Set of Ordered Pairs">Progress Check 7.1.8</a>, we were able to draw a graph of a relation as a way to visualize the relation. In this case, the relation was a function from \(\R\) to \(\R\text{.}\) In addition, in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "A_relationexamples" missing or not unique]</code>, we were also able to use a graph to represent a relation. In this case, the graph of the relation \(T = \left\{ {\left( {x, y} \right) \in \mathbb{R} \times \mathbb{R} \mid x^2 + y^2 = 64} \right\}\) is a circle of radius 8 whose center is at the origin.</p>
+<p id="p-3879">When \(R\) is a relation from a subset of the real numbers \(\R\) to a subset of \(\R\text{,}\) we can often use a graph to provide a visual representation of the relation. This is especially true if the relation is defined by an equation or even an inequality. For example, if</p>
+<div class="displaymath">
+\begin{equation*}
+R = \left\{ (x, y) \in \R \times \R \mid y \geq x^2 \right\}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">then we can use the following graph as a way to visualize the points in the plane that are also in this relation.</p>
+<figure class="figure figure-like" id="fig_graph-relation"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/figps-sec71-graph.svg" class="contained" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.1.9<span class="period">.</span></span><span class="space"> </span>Graph of \(y \geq x^2\)</figcaption></figure><p id="p-3880">The points \((x, y)\) in the relation \(R\) are the points on the graph of \(y = x^2\) or are in the shaded region. This because for these points, \(y \geq x^2\text{.}\) One of the shortcomings of this type of graph is that the graph of the equation and the shaded region are actually unbounded and so we can never show the entire graph of this relation. However, it does allow us to see that the points in this relation are either on the parabola defined by the equation \(y = x^2\) or are “inside” the parabola.</p>
+<p id="p-3881">When the domain or range of a relation is infinite, we cannot provide a visualization of the entire relation. However, if \(A\) is a (small) finite set, a relation \(R\) on \(A\) can be specified by simply listing all the ordered pairs in \(R\text{.}\) For example, if \(A = \left\{ {1, 2, 3, 4} \right\}\text{,}\) then</p>
+<div class="displaymath">
+\begin{equation*}
+R = \left\{ {( {1, 1} ), ( {4, 4} ), ( {1, 3} ), ( {3, 2} ), ( {1, 2} ), ( {2, 1} )} \right\}
+\end{equation*}
+</div>
+<p class="continuation">is a relation on \(A\text{.}\) A convenient way to represent such a relation is to draw a point in the plane for each of the elements of \(A\) and then for each \(\left( {x, y} \right) \in R\) (or \(x \mathrel{R} y\)), we draw an arrow starting at the point \(x\) and pointing to the point \(y\text{.}\) If \(\left( {x, x} \right) \in R\) (or \(x \mathrel{R} x\)), we draw a loop at the point \(x\text{.}\) The resulting diagram is called a <dfn class="terminology">directed graph</dfn>  or a <dfn class="terminology">digraph</dfn>.  The diagram in <a class="xref" data-knowl="./knowl/fig_dirgraph2.html" title="Figure 7.1.10">Figure 7.1.10</a> is a digraph for the relation \(R\text{.}\)</p>
+<figure class="figure figure-like" id="fig_dirgraph2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/figps-prev72digraph.svg" class="contained" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.1.10<span class="period">.</span></span><span class="space"> </span>Directed Graph for a Relation</figcaption></figure><p id="p-3882">In a directed graph, the points are called the <dfn class="terminology">vertices</dfn>. So each element of \(A\) corresponds to a <dfn class="terminology">vertex</dfn>.  The arrows, including the loops, are called the <dfn class="terminology">directed edges</dfn>  of the directed graph. We will make use of these directed graphs in the next section when we study equivalence relations.</p>
+<article class="exercise exercise-like" id="prog_directedgraph"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">7.1.11</span><span class="period">.</span><span class="space"> </span><span class="title">The Directed Graph of a Relation.</span>
+</h6>
+<p id="p-3883">Let \(A = \{ 1, 2, 3, 4, 5, 6 \}\text{.}\) Draw a directed graph for the following two relations on the set \(A\text{.}\) For each relation, it may be helpful to arrange the vertices of \(A\) as shown in <a class="xref" data-knowl="./knowl/fig_dirgraph3.html" title="Figure 7.1.12">Figure 7.1.12</a>.</p>
+<div class="displaymath">
+\begin{equation*}
+R = \{ (x, y) \in A \times A \mid x \text{ divides }  y \}, \qquad T = \{ (x, y) 
+\in A \times A \mid x + y \text{ is even }  \}\text{.}
+\end{equation*}
+</div>
+<figure class="figure figure-like" id="fig_dirgraph3"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/figps-sec71-dirgraph.svg" class="contained" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">7.1.12<span class="period">.</span></span><span class="space"> </span>Vertices for \(A\)</figcaption></figure></article></section><section class="exercises" id="exercises-27"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exer_sec71-1"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-212"><p id="p-3884">Let \(A = \left\{ {a, b, c} \right\}\text{,}\) \(B = \left\{ {p, q, r} \right\}\text{,}\) and let \(R\) be the set of ordered pairs defined by \(R = \left\{ {\left( {a, p} \right), \left( {b, q} \right), \left( {c, p} \right), 
+\left( {a, q} \right)} \right\}\text{.}\)</p></div>
+<article class="task exercise-like" id="task-1481"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3885">Use the roster method to list all the elements of \(A \times B\text{.}\) Explain why \(A \times B\) can be considered to be a relation from \(A\) to \(B\text{.}\)</p></article><article class="task exercise-like" id="task-1482"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3886">Explain why \(R\) is a relation from \(A\) to \(B\text{.}\)</p></article><article class="task exercise-like" id="task-1483"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-3887">What is the domain of \(R\text{?}\) What is the range of \(R\text{?}\)</p></article></article><article class="exercise exercise-like" id="exer_sec71-2"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-213"><p id="p-3888">Let \(A = \left\{ {a, b, c} \right\}\) and let \(R = \left\{ {\left( {a, a} \right), \left( {a, c} \right), \left( {b, b} \right), 
+\left( {b, c} \right), \left( {c, a} \right), \left( {c, b} \right)} \right\}\) (so \(R\) is a relation on \(A\)). Are the following statements true or false? Explain.</p></div>
+<article class="task exercise-like" id="task-1484"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3889">For each \(x \in A\text{,}\) \(x \mathrel{R} x\text{.}\)</p></article><article class="task exercise-like" id="task-1485"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3890">For every \(x, y \in A\text{,}\) if \(x \mathrel{R} y\text{,}\) then \(y \mathrel{R} x\text{.}\)</p></article><article class="task exercise-like" id="task-1486"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-3891">For every \(x, y, z \in A\text{,}\) if \(x \mathrel{R} y\) and \(y \mathrel{R} z\text{,}\) then \(x \mathrel{R} z\text{.}\)</p></article><article class="task exercise-like" id="task-1487"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-3892">\(R\) is a function from \(A\) to \(A\text{.}\)</p></article></article><article class="exercise exercise-like" id="exer_sec71-3"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-214">
+<p id="p-3893">Let  \(A\)  be the set of all female citizens of the United States. Let  \(D\)  be the relation on  \(A\)  defined by</p>
+<div class="displaymath">
+\begin{equation*}
+D = \left\{ { {\left( {x, y} \right) \in A \times A } \mid x\text{  is a daughter of  } y} \right\}\!\text{.}
+\end{equation*}
+</div>
+<p class="continuation">That is,  \(x \mathrel{D} y\) means that  \(x\)  is a daughter of  \(y\text{.}\)</p>
+</div>
+<article class="task exercise-like" id="task-1488"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3894">Describe those elements of \(A\) that are in the domain of \(D\text{.}\)</p></article><article class="task exercise-like" id="task-1489"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3895">Describe those elements of \(A\) that are in the range of \(D\text{.}\)</p></article><article class="task exercise-like" id="task-1490"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-3896">Is the relation \(D\) a function from \(A\) to \(A\text{?}\) Explain.</p></article></article><article class="exercise exercise-like" id="exer_sec71-4"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-215">
+<p id="p-3897">Let  \(U\)  be a nonempty set, and let \(R\) be the “subset relation” on \(\mathcal{P}( U )\text{.}\) That is,</p>
+<div class="displaymath">
+\begin{equation*}
+R = \left\{ { {\left( {S, T} \right) \in \mathcal{P}( U ) \times \mathcal{P}( U ) } 
+\mid S \subseteq T} \right\}\!\text{.}
+\end{equation*}
+</div>
+</div>
+<article class="task exercise-like" id="task-1491"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3898">Write the open sentence \(\left( {S, T} \right) \in R\) using standard subset notation.</p></article><article class="task exercise-like" id="task-1492"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3899">What is the domain of this subset relation, \(R\text{?}\)</p></article><article class="task exercise-like" id="task-1493"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-3900">What is the range of this subset relation, \(R\text{?}\)</p></article><article class="task exercise-like" id="task-1494"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-3901">Is \(R\) a function from \(\mathcal{P}( U )\) to \(\mathcal{P}( U )\text{?}\) Explain.</p></article></article><article class="exercise exercise-like" id="exer_sec71-5"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-216">
+<p id="p-3902">Let \(U\) be a nonempty set, and let  \(R\)  be the “element of” relation from \(U\) to \(\mathcal{P}\left( U \right)\text{.}\) That is,</p>
+<div class="displaymath">
+\begin{equation*}
+R = \left\{ { {\left( {x, S} \right) \in U \times \mathcal{P}( U ) } \mid x \in S} 
+\right\}\!\text{.}
+\end{equation*}
+</div>
+</div>
+<article class="task exercise-like" id="task-1495"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3903">What is the domain of this “element of” relation, \(R\text{?}\)</p></article><article class="task exercise-like" id="task-1496"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3904">What is the range of this “element of” relation, \(R\text{?}\)</p></article><article class="task exercise-like" id="task-1497"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-3905">Is \(R\) a function from \(U\) to \(\mathcal{P}( U )\text{?}\) Explain.</p></article></article><article class="exercise exercise-like" id="exer_circle-mainmain"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-217"><p id="p-3906">Let \(S = \left\{ {\left( {x, y} \right) \in \mathbb{R} \times \mathbb{R} 
+\mid x^2 + y^2 = 100} \right\}\text{.}\)</p></div>
+<article class="task exercise-like" id="exer_circle-a"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3907">Determine the set of all values of \(x\) such that \(\left( {x, 6} \right) \in S\text{,}\) and determine the set of all values of \(x\) such that \(\left( {x, 9} \right) \in S\text{.}\)</p></article><article class="task exercise-like" id="task-1499"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3908">Determine the domain and range of the relation \(S\) and write each set using set builder notation.</p></article><article class="task exercise-like" id="exer_circle-e"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-3909">Is the relation \(S\) a function from \(\mathbb{R}\) to \(\mathbb{R}\text{?}\) Explain.</p></article><article class="task exercise-like" id="task-1501"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-3910">Since \(S\) is a relation on \(\mathbb{R}\text{,}\) its elements can be graphed in the coordinate plane. Describe the graph of the relation \(S\text{.}\) Is the graph consistent with your answers in <a class="xref" data-knowl="./knowl/exer_circle-a.html" title="Task 6.a">Task 6.a</a> through <a class="xref" data-knowl="./knowl/exer_circle-e.html" title="Task 6.c">Task 6.c</a>? Explain.</p></article></article><article class="exercise exercise-like" id="exer_semicircle"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-3911">Repeat <a class="xref" data-knowl="./knowl/exer_circle-mainmain.html" title="Exercise 6">Exercise 6</a> using the relation on \(\R\) defined by</p>
+<div class="displaymath">
+\begin{equation*}
+S = \left\{ {\left( {x, y} \right) \in \mathbb{R} \times \mathbb{R} 
+\mid y = \sqrt {100 - x^2 } } \right\}\!\text{.}
+\end{equation*}
+</div>
+<p class="continuation">What is the connection between this relation and the relation in <a class="xref" data-knowl="./knowl/exer_circle-mainmain.html" title="Exercise 6">Exercise 6</a>?</p></article><article class="exercise exercise-like" id="exercise-679"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-218"><p id="p-3912">Determine the domain and range of each of the following relations on \(\R\) and sketch the graph of each relation.</p></div>
+<article class="task exercise-like" id="task-1502"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3913">\(R = \left\{ {\left( {x, y} \right) \in \mathbb{R} \times \mathbb{R} 
+\mid x^2 + y^2 = 10} \right\}\)</p></article><article class="task exercise-like" id="task-1503"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3914">\(S = \left\{ {\left( {x, y} \right) \in \mathbb{R} \times \mathbb{R} 
+\mid y^2 = x+10} \right\}\)</p></article><article class="task exercise-like" id="task-1504"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-3915">\(T = \left\{ {\left( {x, y} \right) \in \mathbb{R} \times \mathbb{R} 
+\mid |x| + |y| = 10} \right\}\)</p></article><article class="task exercise-like" id="task-1505"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-3916">\(R = \left\{ {\left( {x, y} \right) \in \mathbb{R} \times \mathbb{R} 
+\mid x^2 =y^2} \right\}\)</p></article></article><article class="exercise exercise-like" id="exer_absvalueless2"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-219"><p id="p-3917">Let \(\mathrel{R}\) be the relation on \(\Z\) where for all \(a,
+b \in \Z\text{,}\) \(a \mathrel{R} b\) if and only if \(\left| a - b \right| \leq 2\text{.}\)</p></div>
+<article class="task exercise-like" id="task-1506"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3918">Use set builder notation to describe the relation \(\mathrel{R}\) as a set of ordered pairs.</p></article><article class="task exercise-like" id="task-1507"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3919">Determine the domain and range of the relation \(\mathrel{R}\text{.}\)</p></article><article class="task exercise-like" id="task-1508"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-3920">Use the roster method to specify the set of all integers \(x\) such that \(x \mathrel{R} 5\) and the set of all integers \(x\) such that \(5 \mathrel{R} x\text{.}\)</p></article><article class="task exercise-like" id="task-1509"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-3921">If possible, find integers \(x\) and \(y\) such that \(x \mathrel{R} 8\text{,}\) \(8 \mathrel{R} y\text{,}\) but \(x \mathrel{\not \negthickspace R} y\text{.}\)</p></article><article class="task exercise-like" id="task-1510"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-3922">If \(b \in \Z\text{,}\) use the roster method to specify the set of all \(x \in \Z\) such that \(x \mathrel{R} b\text{.}\)</p></article></article><article class="exercise exercise-like" id="exer_sec71-lessthan"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-220"><p id="p-3923">Let \(R_{ \lt } = \left\{ { {\left( {x, y} \right) \in \mathbb{R} \times 
+\mathbb{R} } \mid x \lt y} \right\}\text{.}\) This means that \(R_{ \lt }\) is the “less than” relation on \(\R\text{.}\)</p></div>
+<article class="task exercise-like" id="task-1511"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3924">What is the domain of the relation \(R_{ \lt }\text{?}\)</p></article><article class="task exercise-like" id="task-1512"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3925">What is the range of the relation \(R_{ \lt }\text{?}\)</p></article><article class="task exercise-like" id="task-1513"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-3926">Is the relation \(R_{ \lt }\) a function from \(\mathbb{R}\) to \(\mathbb{R}\text{?}\) Explain.</p></article><div class="conclusion" id="conclusion-6"><p id="p-3927">Note: Remember that a relation is a set. Consequently, we can talk about one relation being a subset of another relation. Another thing to remember is that the elements of a relation are ordered pairs.</p></div></article><article class="activity project-like" id="exer_provinginverse"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">42</span><span class="period">.</span><span class="space"> </span><span class="title">The Inverse of a Relation.</span>
+</h6>
+<div class="introduction" id="introduction-221">
+<p id="p-3928">In <a href="S_inversefunctions.html" class="internal" title="Section 6.5: Inverse Functions">Section 6.5</a>, we introduced the <em class="emphasis">inverse of a function</em>.  If \(A\) and \(B\) are nonempty sets and if \(f:A \to B\) is a function, then the inverse of  \(f\text{,}\) denoted by  \(f^{ - 1}\text{,}\) is defined as</p>
+<div class="displaymath">
+\begin{align*}
+f^{ - 1}  \amp = \left\{ { {\left( {b, a} \right) \in B \times A } 
+\mid f\left( a \right) = b} \right\}\\
+\amp = \left\{ { {\left( {b, a} \right) \in B \times A } \mid \left( {a, b} 
+\right) \in f} \right\}\!\text{.}
+\end{align*}
+</div>
+<p class="continuation">Now that we know about relations, we see that  \(f^{ - 1}\)  is always a relation from  \(B\)  to \(A\text{.}\) The concept of the inverse of a function is actually a special case of the more general concept of the inverse of a relation, which we now define.</p>
+<article class="definition definition-like" id="inverseofrelation"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">7.1.13</span><span class="period">.</span>
+</h6>
+<p id="p-3929">Let \(R\) be a relation from the set \(A\) to the set \(B\text{.}\) The <dfn class="terminology">inverse of \(\boldsymbol{R}\)</dfn>,  written \(R^{ - 1}\) and read “\(R\) inverse,” is the relation from \(B\) to \(A\) defined by</p>
+<div class="displaymath">
+\begin{align*}
+R^{ - 1} \amp = \left\{ { {\left( {y, x} \right) \in B \times A } \mid 
+\left( {x, y} \right) \in R} \right\}\text{ , or }\\
+R^{ - 1} \amp = \left\{ { {\left( {y, x} \right) \in B \times A } 
+\mid x \mathrel{R} y} \right\}\!\text{.}
+\end{align*}
+</div>
+<p id="p-3930">That is, \(R^{ - 1}\) is the subset of \(B \times A\) consisting of all ordered pairs \(\left( {y, x} \right)\) such that \(x \mathrel{R} y\text{.}\)</p></article><p id="p-3931">For example, let \(D\) be the “divides” relation on  \(\mathbb{Z}\text{.}\)  See <a class="xref" data-knowl="./knowl/prog_dividesrelation.html" title="Progress Check 7.1.7: The Divides Relation">Progress Check 7.1.7</a>. So</p>
+<div class="displaymath">
+\begin{equation*}
+D = \left\{ { {\left( {m, n} \right) \in \mathbb{Z} \times \mathbb{Z} } 
+\mid m\text{  divides  } n} \right\}\!\text{.}
+\end{equation*}
+</div>
+<p class="continuation">This means that we can write \(m \mid n\) if and only if \(\left( {m, n} \right) 
+\in D\text{.}\) So, in this case,</p>
+<div class="displaymath">
+\begin{align*}
+D^{ - 1}  \amp = \left\{ { {\left( {n, m} \right) \in \mathbb{Z} \times 
+\mathbb{Z} } \mid \left( {m, n} \right) \in D} \right\}\\
+\amp = \left\{ { {\left( {n, m} \right) \in \mathbb{Z} \times \mathbb{Z} } 
+\mid m\text{  divides  } n} \right\}\!\text{.}
+\end{align*}
+</div>
+<p class="continuation">Now, if we would like to focus on the first coordinate instead of the second coordinate in \(D^{ - 1}\text{,}\) we know that “\(m\)  divides  \(n\)” means the same thing as “\(n\)  is a multiple of  \(m\text{.}\)” Hence,</p>
+<div class="displaymath">
+\begin{equation*}
+D^{ - 1}  = \left\{ { {\left( {n, m} \right) \in \mathbb{Z} \times \mathbb{Z} } 
+\mid n\text{  is a multiple of  } m} \right\}\!\text{.}
+\end{equation*}
+</div>
+<p id="p-3932">We can say that the inverse of the “divides” relation on  \(\mathbb{Z}\)  is the “is a multiple of” relation on  \(\mathbb{Z}\text{.}\) <a class="xref" data-knowl="./knowl/T_inverserelations.html" title="Theorem 7.1.14">Theorem 7.1.14</a>, which follows, contains some elementary facts about inverse relations.</p>
+<article class="theorem theorem-like" id="T_inverserelations"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.1.14</span><span class="period">.</span>
+</h6>
+<p id="p-3933">Let \(R\) be a relation from the set \(A\) to the set \(B\text{.}\) Then</p>
+<ul class="disc">
+<li id="T_inverserelations1"><p id="p-3934">The domain of \(R^{ - 1}\) is the range of \(R\text{.}\) That is, \(\text{ dom} \!\left( {R^{ - 1} } \right) = \text{ range} ( R )\text{.}\)</p></li>
+<li id="T_inverserelations2"><p id="p-3935">The range of \(R^{ - 1}\) is the domain of \(R\text{.}\) That is, \(\text{ range} \!\left( {R^{ - 1} } \right) = \text{ dom} ( R )\text{.}\)</p></li>
+<li id="T_inverserelations3"><p id="p-3936">The inverse of \(R^{ - 1}\) is \(R\text{.}\) That is, \(\left( {R^{ - 1} } \right)^{ - 1} = R\text{.}\)</p></li>
+</ul></article><p id="p-3937">To prove the first part of <a class="xref" data-knowl="./knowl/T_inverserelations.html" title="Theorem 7.1.14">Theorem 7.1.14</a>, observe that the goal is to prove that two sets are equal,</p>
+<div class="displaymath">
+\begin{equation*}
+\text{ dom} \!\left( {R^{ - 1} } \right) = \text{ range} ( R )\text{.}
+\end{equation*}
+</div>
+<p class="continuation">One way to do this is to prove that each is a subset of the other. To prove that \(\text{ dom} \!\left( {R^{ - 1} } \right) \subseteq \text{ range} ( R )\text{,}\) we can start by choosing an arbitrary element of \(\text{ dom} \!\left( {R^{ - 1} } \right)\text{.}\)  So let \(y \in \text{ dom} \!\left( {R^{ - 1} } \right)\text{.}\)  The goal now is to prove that \(y~\in~\text{ range} ( R )\text{.}\) What does it mean to say that \(y \in \text{ dom} \!\left( {R^{ - 1} } \right)\text{?}\)  It means that there exists an \(x \in A\)  such that</p>
+<div class="displaymath">
+\begin{equation*}
+\left( {y, x} \right) \in R^{ - 1}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Now what does it mean to say that  \(( {y, x} ) \in R^{ - 1}\text{?}\) It means that \(( {x, y} ) \in R\text{.}\) What does this tell us about \(y\text{?}\) Complete the proof of the first part of <a class="xref" data-knowl="./knowl/T_inverserelations.html" title="Theorem 7.1.14">Theorem 7.1.14</a>. Then, complete the proofs of the other two parts of <a class="xref" data-knowl="./knowl/T_inverserelations.html" title="Theorem 7.1.14">Theorem 7.1.14</a>.</p>
+</div></article></section></section></div></main>
+</div>
+</body>
+</html>

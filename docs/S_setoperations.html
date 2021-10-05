@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-10-05T14:49:59-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Sets and Operations on Sets</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\def\C{\JustCenter}
+\newcommand{\typeu}{Beginning }
+\def\C{\JustCenter}
+\newcommand{\typel}{beginning }
+\def\C{\JustCenter}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\
+\thechapter. #1}{}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\def\C{\JustCenter}
+\renewcommand{\theenumi}{\alph{enumi}}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\theenumi}{({\alph{enumi}})}
+\def\C{\JustCenter}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\mynot}{\neg}
+\newcommand{\card}{\mathbf{card}}
+\newcommand{\x}{:}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Mathematical Reasoning:</span> <span class="subtitle">Writing and Proof (Version 3)</span></a></h1>
+<p class="byline">Ted Sundstrom, Professor Emeritus</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="C_settheory.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_settheory.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_provingset.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="C_settheory.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C_settheory.html" title="Up">Up</a><a class="next-button button toolbar-item" href="S_provingset.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="fm-versions.html" data-scroll="fm-versions">Version 3 and Version 2.1</a></li>
+<li><a href="fm-student-note.html" data-scroll="fm-student-note">Note to Students</a></li>
+<li><a href="fm-preface.html" data-scroll="fm-preface">Preface</a></li>
+<li><a href="fm-imp-features.html" data-scroll="fm-imp-features">Important Features of the Book</a></li>
+<li><a href="fm-cont-org.html" data-scroll="fm-cont-org">Content and Organization</a></li>
+<li><a href="fm-inst-note.html" data-scroll="fm-inst-note">Supplementary Materials for the Instructor</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_1intro.html" data-scroll="C_1intro"><span class="codenumber">1</span> <span class="title">Introduction to Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_1prop.html" data-scroll="S_1prop">Statements and Conditional Statements</a></li>
+<li><a href="S_1direct.html" data-scroll="S_1direct">Constructing Direct Proofs</a></li>
+<li><a href="S_1summary.html" data-scroll="S_1summary">Chapter 1 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_2logic.html" data-scroll="C_2logic"><span class="codenumber">2</span> <span class="title">Logical Reasoning</span></a><ul>
+<li><a href="S_2logop.html" data-scroll="S_2logop">Statements and Logical Operators</a></li>
+<li><a href="S_logequiv.html" data-scroll="S_logequiv">Logically Equivalent Statements</a></li>
+<li><a href="S_2predicates.html" data-scroll="S_2predicates">Open Sentences and Sets</a></li>
+<li><a href="S_2quantifier.html" data-scroll="S_2quantifier">Quantifiers and Negations</a></li>
+<li><a href="S_2summary.html" data-scroll="S_2summary">Chapter 2 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_proofs.html" data-scroll="C_proofs"><span class="codenumber">3</span> <span class="title">Constructing and Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_directproof.html" data-scroll="S_directproof">Direct Proofs</a></li>
+<li><a href="S_moremethods.html" data-scroll="S_moremethods">More Methods of Proof</a></li>
+<li><a href="S_contradiction.html" data-scroll="S_contradiction">Proof by Contradiction</a></li>
+<li><a href="S_cases.html" data-scroll="S_cases">Using Cases in Proofs</a></li>
+<li><a href="S_divalgo.html" data-scroll="S_divalgo">Beginning Activity 1: The Division Algorithm and Congruence</a></li>
+<li><a href="S_reviewproofs.html" data-scroll="S_reviewproofs">Review of Proof Methods</a></li>
+<li><a href="S_3summary.html" data-scroll="S_3summary">Chapter 3 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_induction.html" data-scroll="C_induction"><span class="codenumber">4</span> <span class="title">Mathematical Induction</span></a><ul>
+<li><a href="S_mathinduction.html" data-scroll="S_mathinduction">The Principle of Mathematical Induction</a></li>
+<li><a href="S_otherinduction.html" data-scroll="S_otherinduction">Other Forms of Mathematical Induction</a></li>
+<li><a href="S_recursion.html" data-scroll="S_recursion">Induction and Recursion</a></li>
+<li><a href="S_4summary.html" data-scroll="S_4summary">Chapter 4 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_settheory.html" data-scroll="C_settheory"><span class="codenumber">5</span> <span class="title">Set Theory</span></a><ul>
+<li><a href="S_setoperations.html" data-scroll="S_setoperations" class="active">Sets and Operations on Sets</a></li>
+<li><a href="S_provingset.html" data-scroll="S_provingset">Proving Set Relationships</a></li>
+<li><a href="S_setproperties.html" data-scroll="S_setproperties">Properties of Set Operations</a></li>
+<li><a href="S_cartesian.html" data-scroll="S_cartesian">Cartesian Products</a></li>
+<li><a href="S_indexfamily.html" data-scroll="S_indexfamily">Indexed Families of Sets</a></li>
+<li><a href="S_5summary.html" data-scroll="S_5summary">Chapter 5 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_functions.html" data-scroll="C_functions"><span class="codenumber">6</span> <span class="title">Functions</span></a><ul>
+<li><a href="S_introfunctions.html" data-scroll="S_introfunctions">Introduction to Functions</a></li>
+<li><a href="S_moreaboutfunctions.html" data-scroll="S_moreaboutfunctions">More about Functions</a></li>
+<li><a href="S_typesoffunctions.html" data-scroll="S_typesoffunctions">Beginning Activity 1: Injections, Surjections, and Bijections</a></li>
+<li><a href="S_compositionoffunctions.html" data-scroll="S_compositionoffunctions">Composition of Functions</a></li>
+<li><a href="S_inversefunctions.html" data-scroll="S_inversefunctions">Inverse Functions</a></li>
+<li><a href="S_functionsonsets.html" data-scroll="S_functionsonsets">Functions Acting on Sets</a></li>
+<li><a href="S_6summary.html" data-scroll="S_6summary">Chapter 6 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_equivrelations.html" data-scroll="C_equivrelations"><span class="codenumber">7</span> <span class="title">Equivalence Relations</span></a><ul>
+<li><a href="S_relations.html" data-scroll="S_relations">Relations</a></li>
+<li><a href="S_equivrelations.html" data-scroll="S_equivrelations">Equivalence Relations</a></li>
+<li><a href="S_equivclasses.html" data-scroll="S_equivclasses">Equivalence Classes</a></li>
+<li><a href="S_modulararithmetic.html" data-scroll="S_modulararithmetic">Modular Arithmetic</a></li>
+<li><a href="section-37.html" data-scroll="section-37">Chapter 7 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_numbertheory.html" data-scroll="C_numbertheory"><span class="codenumber">8</span> <span class="title">Topics in Number Theory</span></a><ul>
+<li><a href="S_gcd.html" data-scroll="S_gcd">The Greatest Common Divisor</a></li>
+<li><a href="S_primefactorizations.html" data-scroll="S_primefactorizations">Prime Numbers and Prime Factorizations</a></li>
+<li><a href="S_diophantine.html" data-scroll="S_diophantine">Linear Diophantine Equations</a></li>
+<li><a href="section-41.html" data-scroll="section-41">Chapter 8 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_topicsinsets.html" data-scroll="C_topicsinsets"><span class="codenumber">9</span> <span class="title">Finite and Infinite Sets</span></a><ul>
+<li><a href="S_finitesets.html" data-scroll="S_finitesets">Finite Sets</a></li>
+<li><a href="S_infinitesets.html" data-scroll="S_infinitesets">Countable Sets</a></li>
+<li><a href="S_uncountablesets.html" data-scroll="S_uncountablesets">Uncountable Sets</a></li>
+<li><a href="section-45.html" data-scroll="section-45">Chapter 9 Summary</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="C_writingguides.html" data-scroll="C_writingguides"><span class="codenumber">A</span> <span class="title">Guidelines for Writing Mathematical Proofs</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="S_setoperations"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5.1</span> <span class="title">Sets and Operations on Sets</span>
+</h2>
+<section class="worksheet" id="PA_setops"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Beginning Activity 1: Set Operations</span><div class="print-links">
+<a href="PA_setops-A4.html" class="a4">A4</a><a href="PA_setops-letter.html" class="us">US</a>
+</div>
+</h3>
+<p id="p-2276">Before beginning this section, it would be a good idea to review sets and set notation, including the roster method and set builder notation, in <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "S_predicates" missing or not unique]</code>.</p>
+<p id="p-2277">In <a href="S_2logop.html" class="internal" title="Section 2.1: Statements and Logical Operators">Section 2.1</a>, we used logical operators (conjunction, disjunction, negation) to form new statements from existing statements. In a similar manner, there are several ways to create new sets from sets that have already been defined. In fact, we will form these new sets using the logical operators of conjunction (and), disjunction (or), and negation (not). For example, if the universal set is the set of natural numbers \(\N\) and</p>
+<div class="displaymath">
+\begin{equation*}
+A = \{ 1, 2, 3, 4, 5, 6 \} \qquad \text{ and }  \qquad B = \{ 1, 3, 5, 7, 9 \}\text{,}
+\end{equation*}
+</div>
+<ul class="disc">
+<li id="li-328"><p id="p-2278">The set consisting of all natural numbers that are in \(A\) and are in \(B\) is the set \(\{1, 3, 5 \}\text{;}\)</p></li>
+<li id="li-329"><p id="p-2279">The set consisting of all natural numbers that are in \(A\) or are in \(B\) is the set \(\{ 1, 2, 3, 4, 5, 6, 7, 9 \}\text{;}\) and</p></li>
+<li id="li-330"><p id="p-2280">The set consisting of all natural numbers that are in \(A\) and are not in \(B\) is the set \(\{ 2, 4, 6 \}\text{.}\)</p></li>
+</ul>
+<p id="p-2281">These sets are examples of some of the most common set operations, which are given in the following definitions.</p>
+<article class="definition definition-like" id="intersection"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.1.1</span><span class="period">.</span>
+</h6>
+<p id="p-2282">Let \(A\) and \(B\) be subsets of some universal set \(U\text{.}\) The <dfn class="terminology">intersection</dfn>  of \(A\) and \(B\text{,}\) written \(A \cap B\) and read “\(A\) intersect \(B\text{,}\)” is the set of all elements that are in both \(A\) and \(B\text{.}\) That is,</p>
+<div class="displaymath">
+\begin{equation*}
+A \cap B = \left\{ {x \in U} \mid {x \in A \text{  and  }  x \in B}  \right\}\!\text{.}
+\end{equation*}
+</div>
+<p id="p-2283">The <dfn class="terminology">union</dfn>  of \(A\) and \(B\text{,}\) written \(A \cup B\) and read “\(A\) union \(B\text{,}\)” is the set of all elements that are in \(A\) or in \(B\text{.}\) That is,</p>
+<div class="displaymath">
+\begin{equation*}
+A \cup B = \left\{ {x \in U} \mid {x \in A \text{  or  }  x \in B}  \right\}\text{.}
+\end{equation*}
+</div></article><article class="definition definition-like" id="setdiff"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.1.2</span><span class="period">.</span>
+</h6>
+<p id="p-2284">Let \(A\) and \(B\) be subsets of some universal set \(U\text{.}\) The <dfn class="terminology">set difference</dfn>  of \(A\) and \(B\text{,}\) or <dfn class="terminology">relative complement</dfn>  of \(B\) with respect to \(A\text{,}\) written \(A - B\) and read “\(A\) minus \(B\)” or “the complement of \(B\) with respect to \(A\text{,}\)” is the set of all elements in \(A\) that are not in \(B\text{.}\) That is,</p>
+<div class="displaymath">
+\begin{equation*}
+A - B = \left\{ {x \in U} \mid {x \in A} \text{ and }  {x \notin B} \right\}\!\text{.}
+\end{equation*}
+</div>
+<p id="p-2285">The <dfn class="terminology">complement</dfn>  of the set \(A\text{,}\) written \(A^c\) and read “the complement of \(A\text{,}\)” is the set of all elements of \(U\) that are not in \(A\text{.}\) That is,</p>
+<div class="displaymath">
+\begin{equation*}
+A^c  = \left\{ {x \in U} \mid {x \notin A} \right\}\!\text{.}
+\end{equation*}
+</div></article><p id="p-2286">For the rest of this beginning activity, the universal set is \(U = \left\{ {0, 1, 2, 3, \ldots , 10} \right\}\text{,}\) and we will use the following subsets of \(U\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+A = \left\{ {0, 1, 2, 3, 9} \right\} \qquad \text{ and } \qquad 
+B = \left\{ {2, 3, 4, 5, 6} \right\}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">So in this case, \(A \cap B = \left\{ {x \in U} \mid {x \in A \text{ and } x \in B} \right\} = \{2, 3 \}\text{.}\) Use the roster method to specify each of the following subsets of \(U\text{.}\)</p>
+<article class="exercise exercise-like" id="exercise-402"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-2287">\(A \cup B\)</p></article><article class="exercise exercise-like" id="exercise-403"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-2288">\(A^c\)</p></article><article class="exercise exercise-like" id="exercise-404"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-2289">\(B^c\)</p></article><p id="p-2290">We can now use these sets to form even more sets. For example,</p>
+<div class="displaymath">
+\begin{equation*}
+A \cap B^c = \{0, 1, 2, 3, 9 \} \cap \{0, 1, 7, 8, 9, 10 \} = \{0, 1, 9 \}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Use the roster method to specify each of the following subsets of \(U\text{.}\)</p>
+<article class="exercise exercise-like" id="exercise-405"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-2291">\(A \cup B^c\)</p></article><article class="exercise exercise-like" id="exercise-406"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-2292">\(A^c \cap B^c\)</p></article><article class="exercise exercise-like" id="exercise-407"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-2293">\(A^c \cup B^c\)</p></article><article class="exercise exercise-like" id="exercise-408"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-2294">\((A \cap B)^c\)</p></article></section><section class="worksheet" id="PA_venn"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Beginning Activity 2: Venn Diagrams for Two Sets</span><div class="print-links">
+<a href="PA_venn-A4.html" class="a4">A4</a><a href="PA_venn-letter.html" class="us">US</a>
+</div>
+</h3>
+<p id="p-2295">In <a href="S_setoperations.html#PA_setops" class="internal" title="Worksheet: Beginning Activity 1: Set Operations">Beginning Activity 1 </a>, we worked with verbal and symbolic definitions of set operations. However, it is also helpful to have a visual representation of sets. <dfn class="terminology">Venn diagrams</dfn> are used to  represent sets by circles (or some other closed geometric shape) drawn inside a rectangle. The points inside the rectangle represent the universal set \(U\text{,}\) and the elements of a set are represented by the points inside the circle that represents the set. For example, <a class="xref" data-knowl="./knowl/fig_venn2-prev.html" title="Figure 5.1.3">Figure 5.1.3</a> is a Venn diagram showing two sets.</p>
+<figure class="figure figure-like" id="fig_venn2-prev"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/figps-venn2.svg" class="contained" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.1.3<span class="period">.</span></span><span class="space"> </span>Venn Diagram for Two Sets</figcaption></figure><p id="p-2296">In <a class="xref" data-knowl="./knowl/fig_venn2-prev.html" title="Figure 5.1.3">Figure 5.1.3</a>, the elements of \(A\) are represented by the points inside the left circle, and the elements of \(B\) are represented by the points inside the right circle. The four distinct regions in the diagram are numbered for reference purposes only. (The numbers do not represent elements in a set.) The following table describes the four regions in the diagram. <div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class=" m b2 r0 l0 t0 lines">Region</th>
+<th class=" m b2 r0 l0 t0 lines">Elements of \(U\)</th>
+<th class=" m b2 r0 l0 t0 lines">Set</th>
+</tr>
+<tr>
+<td class=" m b0 r0 l0 t0 lines">1</td>
+<td class=" m b0 r0 l0 t0 lines">In \(A\) and not in \(B\)</td>
+<td class=" m b0 r0 l0 t0 lines">\(A - B\)</td>
+</tr>
+<tr>
+<td class=" m b0 r0 l0 t0 lines">2</td>
+<td class=" m b0 r0 l0 t0 lines">In \(A\) and in \(B\)</td>
+<td class=" m b0 r0 l0 t0 lines">\(A \cap B\)</td>
+</tr>
+<tr>
+<td class=" m b0 r0 l0 t0 lines">3</td>
+<td class=" m b0 r0 l0 t0 lines">In \(B\) and not in \(A\)</td>
+<td class=" m b0 r0 l0 t0 lines">\(B - A\)</td>
+</tr>
+<tr>
+<td class=" m b0 r0 l0 t0 lines">4</td>
+<td class=" m b0 r0 l0 t0 lines">Not in \(A\) and not in \(B\)</td>
+<td class=" m b0 r0 l0 t0 lines">\(A^c \cap B^c\)</td>
+</tr>
+</table></div> We can use these regions to represent other sets. For example, the set \(A \cup B\) is represented by regions 1, 2, and 3 or the shaded region in <a class="xref" data-knowl="./knowl/fig_union2.html" title="Figure 5.1.4">Figure 5.1.4</a>. <figure class="figure figure-like" id="fig_union2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/figps-aunionb.svg" class="contained" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.1.4<span class="period">.</span></span><span class="space"> </span>Venn Diagram for \(A \cup B\)</figcaption></figure></p>
+<p id="p-2297">Let \(A\) and \(B\) be subsets of a universal set \(U\text{.}\) For each of the following, draw a Venn diagram for two sets and shade the region that represent the specified set. In addition, describe the set using set builder notation.</p>
+<article class="exercise exercise-like" id="exercise-409"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-2298">\(A^c\)</p></article><article class="exercise exercise-like" id="exercise-410"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-2299">\(B^c\)</p></article><article class="exercise exercise-like" id="exercise-411"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-2300">\(A^c \cup B\)</p></article><article class="exercise exercise-like" id="exercise-412"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-2301">\(A^c \cup B^c\)</p></article><article class="exercise exercise-like" id="exercise-413"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-2302">\(\left( A \cap B \right)^c\)</p></article><article class="exercise exercise-like" id="exercise-414"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-2303">\(\left( A \cup B \right) - \left( A \cap B \right)\)</p></article></section><section class="subsection" id="ss_propersubset"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Set Equality, Subsets, and Proper Subsets</span>
+</h3>
+<p id="p-2304">In <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "S_predicates" missing or not unique]</code>, we introduced some basic definitions used in set theory, what it means to say that two sets are equal and what it means to say that one set is a subset of another set. See the definitions on <a class="xref" data-knowl="./knowl/D_setequality.html" title="Definition 2.3.3">Definition 2.3.3</a>. We need one more definition.</p>
+<article class="definition definition-like" id="propersubset"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.1.5</span><span class="period">.</span>
+</h6>
+<p id="p-2305">Let \(A\) and \(B\) be two sets contained in some universal set \(U\text{.}\) The set \(A\) is a <dfn class="terminology">proper subset</dfn>  of \(B\) provided that \(A \subseteq B\) and \(A \ne B\text{.}\) When \(A\) is a proper subset of \(B\text{,}\) we write \(A \subset B\text{.}\)</p></article><p id="p-2306">One reason for the definition of proper subset is that each set is a subset of itself. That is, If \(A\) is a set, then \(A \subseteq A\text{.}\) However, sometimes we need to indicate that a set \(X\) is a subset of \(Y\) but \(X \ne Y\text{.}\) For example, if</p>
+<div class="displaymath">
+\begin{equation*}
+X = \left\{ {1, 2} \right\}\text{  and  } Y = \left\{ {0, 1, 2, 3} \right\}\!\text{,}
+\end{equation*}
+</div>
+<p class="continuation">then \(X \subset Y\text{.}\) We know that \(X \subseteq Y\) since each element of \(X\) is an element of \(Y\text{,}\) but \(X \ne Y\) since \(0 \in Y\) and \(0 \notin X\text{.}\) (Also, \(3 \in Y\) and \(3 \notin X\text{.}\)) Notice that the notations \(A \subset B\) and \(A \subseteq B\) are used in a manner similar to inequality notation for numbers (\(a \lt  b\) and \(a \leq b\)).</p>
+<p id="p-2307">It is often very important to be able to describe precisely what it means to say that one set is not a subset of the other. In the preceding example, \(Y\) is not a subset of \(X\) since there exists an element of \(Y\) (namely, 0) that is not in \(X\text{.}\)</p>
+<p id="p-2308">In general, the subset relation is described with the use of a universal quantifier since \(A \subseteq B\) means that for each element \(x\) of \(U\text{,}\) if \(x \in A\text{,}\) then \(x \in B\text{.}\) So when we negate this, we use an existential quantifier as follows:</p>
+<div class="displaymath">
+\begin{align*}
+A \subseteq B \amp \amp \text{ means } \amp \amp 
+\left( {\forall x \in U} \right)\left[ {\left( {x \in A} \right) \to 
+\left( {x \in B} \right)} \right]\\
+A \not\subseteq B \amp \amp \text{ means } \amp \amp 
+\mynot  \left( {\forall x \in U} \right)\left[ {\left( {x \in A} \right) \to 
+\left( {x \in B} \right)} \right]\\
+\amp \amp \amp \amp \left( {\exists x \in U} \right) \mynot  
+\left[ {\left( {x \in A} \right) \to \left( {x \in B} \right)} \right]\\
+\amp \amp \amp \amp \left( {\exists x \in U} \right)
+\left[ {\left( {x \in A} \right) \wedge \left( {x \notin B} \right)} \right]\text{.}
+\end{align*}
+</div>
+<p class="continuation">So we see that \(A \not\subseteq B\) means that there exists an \(x\) in \(U\) such that \(x \in A\) and \(x \notin B\text{.}\)</p>
+<p id="p-2309">Notice that if \(A = \emptyset\text{,}\) then the conditional statement, “For each \(x \in U\text{,}\) if \(x \in \emptyset\text{,}\) then \(x \in B\)” must be true since the hypothesis will always be false. Another way to look at this is to consider the following statement: <blockquote class="blockquote" id="blockquote-161">\(\emptyset \not \subseteq B\) means that there exists an \(x \in \emptyset\) such that \(x \notin B\text{.}\)</blockquote> However, this statement must be false since there does not exist an \(x\) in \(\emptyset\text{.}\) Since this is false, we must conclude that \(\emptyset \subseteq B\text{.}\) Although the facts that \(\emptyset \subseteq B\) and \(B \subseteq B\) may not seem very important, we will use these facts later, and hence we summarize them in <a class="xref" data-knowl="./knowl/T_subsets.html" title="Theorem 5.1.6">Theorem 5.1.6</a>.</p>
+<article class="theorem theorem-like" id="T_subsets"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.1.6</span><span class="period">.</span>
+</h6>
+<p id="p-2310">For any set \(B\text{,}\) \(\emptyset \subseteq B\) and \(B \subseteq B\text{.}\)</p></article><p id="p-2311">In <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "S_predicates" missing or not unique]</code>, we also defined two sets to be equal when they have precisely the same elements. For example,</p>
+<div class="displaymath">
+\begin{equation*}
+\left\{ {\left. {x \in \mathbb{R}\,} \right|\;x^2  = 4} \right\} = 
+\left\{ { - 2,\;2} \right\}\!\text{.}
+\end{equation*}
+</div>
+<p id="p-2312">If the two sets \(A\) and \(B\) are equal, then it must be true that every element of \(A\) is an element of \(B\text{,}\) that is, \(A \subseteq B\text{,}\) and it must be true that every element of \(B\) is an element of \(A\text{,}\) that is, \(B \subseteq A\text{.}\) Conversely, if \(A \subseteq B\) and \(B \subseteq A\text{,}\) then \(A\) and \(B\) must have precisely the same elements. This gives us the following test for set equality:</p>
+<article class="theorem theorem-like" id="T_setequality"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.1.7</span><span class="period">.</span>
+</h6>
+<p id="p-2313">Let \(A\) and \(B\) be subsets of some universal set \(U\text{.}\) Then \(A = B\) if and only if \(A \subseteq B\) and \(B \subseteq A\text{.}\)</p></article><article class="exercise exercise-like" id="prog_setnotation"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">5.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Using Set Notation.</span>
+</h6>
+<p id="p-2314">Let the universal set be \(U = \left\{ {1,2,3,4,5,6} \right\}\text{,}\) and let</p>
+<div class="displaymath">
+\begin{equation*}
+A = \left\{ {1,2,4} \right\}\!,   B = \left\{ {1,2,3,5} \right\}\!, 
+C = \left\{ {\left. {x \in U} \right|x^2  \leq 2} \right\}\!\text{.}
+\end{equation*}
+</div>
+<p id="p-2315">In each of the following, fill in the blank with one or more of the symbols \(\subset, \\ \subseteq, =, \ne, \in ,\text{ or } \notin\) so that the resulting statement is true. For each blank, include all symbols that result in a true statement. If none of these symbols makes a true statement, write nothing in the blank. <article class="task exercise-like" id="task-820"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2316">\(A\)<span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>\(B\)</p></article> <article class="task exercise-like" id="task-821"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2317">5<span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>\(B\)</p></article> <article class="task exercise-like" id="task-822"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2318">\(A\)<span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>\(C\)</p></article> <article class="task exercise-like" id="task-823"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-2319">\(\left\{ {1, 2} \right\}\)<span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>\(A\)</p></article> <article class="task exercise-like" id="task-824"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-2320">6<span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>\(A\)</p></article> <article class="task exercise-like" id="task-825"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-2321">\(\emptyset\)<span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>\(A\)</p></article> <article class="task exercise-like" id="task-826"><h6 class="heading"><span class="codenumber">(g)</span></h6>
+<p id="p-2322">\(\left\{ 5 \right\}\)<span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>\(B\)</p></article> <article class="task exercise-like" id="task-827"><h6 class="heading"><span class="codenumber">(h)</span></h6>
+<p id="p-2323">\(\left\{ {1, 2} \right\}\)<span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>\(C\)</p></article> <article class="task exercise-like" id="task-828"><h6 class="heading"><span class="codenumber">(i)</span></h6>
+<p id="p-2324">\(\left\{ {4, 2, 1} \right\}\)<span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>\(A\)</p></article> <article class="task exercise-like" id="task-829"><h6 class="heading"><span class="codenumber">(j)</span></h6>
+<p id="p-2325">\(B\)<span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>\(\emptyset\)</p></article></p></article></section><section class="subsection" id="ss_venn3"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">More about Venn Diagrams</span>
+</h3>
+<p id="p-2326">In <a href="S_setoperations.html#PA_venn" class="internal" title="Worksheet: Beginning Activity 2: Venn Diagrams for Two Sets">Beginning Activity 2 </a>, we learned how to use Venn diagrams as a visual representation for sets, set operations, and set relationships. In that activity, we restricted ourselves to using two sets. We can, of course, include more than two sets in a Venn diagram. <a class="xref" data-knowl="./knowl/fig_aintersectc.html" title="Figure 5.1.9">Figure 5.1.9</a> shows a general Venn diagram for three sets (including a shaded region that corresponds to \(A \cap C\)).</p>
+<p id="p-2327">In this diagram, there are eight distinct regions, and each region has a unique reference number. For example, the set \(A\) is represented by the combination of regions 1, 2, 4, and 5, whereas the set \(C\) is represented by the combination of regions 4, 5, 6, and 7. This means that the set \(A \cap C\) is represented by the combination of regions 4 and 5. This is shown as the shaded region in <a class="xref" data-knowl="./knowl/fig_aintersectc.html" title="Figure 5.1.9">Figure 5.1.9</a>.</p>
+<figure class="figure figure-like" id="fig_aintersectc"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/figps-ainterc3.svg" class="contained" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.1.9<span class="period">.</span></span><span class="space"> </span>Venn Diagram for \(A \cap C\)</figcaption></figure><p id="p-2328">Finally, Venn diagrams can also be used to illustrate special relationships between sets. For example, if \(A \subseteq B\text{,}\) then the circle representing \(A\) should be completely contained in the circle for \(B\text{.}\) So if \(A \subseteq B\text{,}\) and we know nothing about any relationship between the set \(C\) and the sets \(A\) and \(B\text{,}\) we could use the Venn diagram shown in <a class="xref" data-knowl="./knowl/fig_asubsetb.html" title="Figure 5.1.10">Figure 5.1.10</a>.</p>
+<figure class="figure figure-like" id="fig_asubsetb"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/figps-asubsetb3.svg" class="contained" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.1.10<span class="period">.</span></span><span class="space"> </span>Venn Diagram Showing \(A \subseteq B\)</figcaption></figure><article class="exercise exercise-like" id="prog_venndiagrams"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">5.1.11</span><span class="period">.</span><span class="space"> </span><span class="title">Using Venn Diagrams.</span>
+</h6>
+<div class="introduction" id="introduction-39"><p id="p-2329">Let \(A\text{,}\) \(B\text{,}\) and \(C\) be subsets of a universal set \(U\text{.}\)</p></div>
+<article class="task exercise-like" id="task-830"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<article class="task exercise-like" id="task-831"><h6 class="heading"><span class="codenumber">(i)</span></h6>
+<p id="p-2331">\((A \cap B) \cap C\)</p></article><article class="task exercise-like" id="task-832"><h6 class="heading"><span class="codenumber">(ii)</span></h6>
+<p id="p-2332">\((A \cap B) \cup C\)</p></article><article class="task exercise-like" id="task-833"><h6 class="heading"><span class="codenumber">(iii)</span></h6>
+<p id="p-2333">\(\left( A^c \cup B \right)\)</p></article><article class="task exercise-like" id="task-834"><h6 class="heading"><span class="codenumber">(iv)</span></h6>
+<p id="p-2334">\(A^c \cap (B \cup C)\)</p></article></article><article class="task exercise-like" id="task-835"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2335">Draw the most general Venn diagram showing \(B \subseteq (A \cup C)\text{.}\)</p></article><article class="task exercise-like" id="task-836"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2336">Draw the most general Venn diagram showing \(A \subseteq \left( B^c \cup C \right)\text{.}\)</p></article></article></section><section class="subsection" id="subsection-87"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">The Power Set of a Set</span>
+</h3>
+<p id="p-2337">The symbol \(\in\) is used to describe a relationship between an element of the universal set and a subset of the universal set, and the symbol \(\subseteq\) is used to describe a relationship between two subsets of the universal set. For example, the number 5 is an integer, and so it is appropriate to write \(5 \in \mathbb{Z}\text{.}\) It is not appropriate, however, to write \(5 \subseteq \mathbb{Z}\) since 5 is not a set. It is important to distinguish between 5 and \(\left\{ 5 \right\}\text{.}\) The difference is that 5 is an integer and \(\left\{ 5 \right\}\) is a set consisting of one element. Consequently, it is appropriate to write \(\left\{ 5 \right\} \subseteq \mathbb{Z}\text{,}\) but it is not appropriate to write \(\left\{ 5 \right\} \in \mathbb{Z}\text{.}\) The distinction between these two symbols \(\left( 5 \text{ and } \left\{ 5 \right\} \right)\) is important when we discuss what is called the power set of a given set.</p>
+<article class="definition definition-like" id="D_powerset"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.1.12</span><span class="period">.</span>
+</h6>
+<p id="p-2338">If \(A\) is a subset of a universal set \(U\text{,}\) then the set whose members are all the subsets of \(A\) is called the <dfn class="terminology">power set</dfn>  of \(A\text{.}\) We denote the power set of \(A\) by \(\mathcal{P}( A )\) . Symbolically, we write</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal{P}( A ) = \left\{ {X \subseteq U  \mid X \subseteq A} \right\}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">That is, \(X \in \mathcal{P}( A )\) if and only if \(X \subseteq A\text{.}\)</p></article><p id="p-2339">When dealing with the power set of \(A\text{,}\) we must always remember that \(\emptyset  \subseteq A\) and \(A \subseteq A\text{.}\) For example, if \(A = \left\{ {a,b} \right\}\text{,}\) then the subsets of \(A\) are</p>
+<div class="displaymath">
+\begin{equation}
+\emptyset,\left\{ a \right\}\!,\left\{ b \right\}\!,\left\{ {a,b} \right\}\!\text{.}\label{eq_subsets2}\tag{5.1}
+\end{equation}
+</div>
+<p id="p-2340">We can write this as</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal{P}( A ) = \left\{ {\emptyset,\left\{ a \right\}\!,\left\{ b \right\}\!,
+\left\{ {a,b} \right\}} \right\}\!\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Now let \(B = \left\{ {a, b, c} \right\}\text{.}\) Notice that \(B = A \cup \{ c \}\text{.}\) We can determine the subsets of \(B\) by starting with the subsets of \(A\) in <a class="xref" data-knowl="./knowl/eq_subsets2.html" title="Equation 5.1">(5.1)</a>. We can form the other subsets of \(B\) by taking the union of each set in <a class="xref" data-knowl="./knowl/eq_subsets2.html" title="Equation 5.1">(5.1)</a> with the set \(\{c \}\text{.}\) This gives us the following subsets of \(B\text{.}\)</p>
+<div class="displaymath">
+\begin{equation}
+\{ c \},\left\{ a, c \right\}\!,\left\{ b, c \right\}\!,\left\{ {a,b, c} \right\}\!\text{.}\label{eq_subsets2a}\tag{5.2}
+\end{equation}
+</div>
+<p class="continuation">So the subsets of \(B\) are those sets in <a class="xref" data-knowl="./knowl/eq_subsets2.html" title="Equation 5.1">(5.1)</a> combined with those sets in <a class="xref" data-knowl="./knowl/eq_subsets2a.html" title="Equation 5.2">(5.2)</a>. That is, the subsets of \(B\) are</p>
+<div class="displaymath">
+\begin{equation}
+\emptyset,\left\{ a \right\}\!,\left\{ b \right\}\!,\left\{ {a,b} \right\}, \{ c \},
+\left\{ a, c \right\}\!,\left\{ b, c \right\}\!,\left\{ {a,b, c} \right\}\!\text{,}\label{eq_subsets2b}\tag{5.3}
+\end{equation}
+</div>
+<p class="continuation">which means that</p>
+<div class="displaymath">
+\begin{equation*}
+\mathcal{P}( B ) = \left\{ {\emptyset,\left\{ a \right\}\!, \left\{ b \right\}\!, 
+\left\{ {a, b} \right\}\!,\left\{ c \right\}\!,\left\{ {a,c} \right\}\!,\left\{ {b,c} 
+\right\}\!,\left\{ {a,b,c} \right\}} \right\}\!\text{.}
+\end{equation*}
+</div>
+<p id="p-2341">Notice that we could write</p>
+<div class="displaymath">
+\begin{equation*}
+\left\{ {a,c} \right\} \subseteq B \text{  or that  } \left\{ {a,c} \right\} \in 
+\mathcal{P}( B )\text{.}
+\end{equation*}
+</div>
+<p id="p-2342">Also, notice that \(A\) has two elements and \(A\) has four subsets, and \(B\) has three elements and \(B\) has eight subsets. Now, let \(n\) be a nonnegative integer. The following result can be proved using mathematical induction. (See <a class="xref" data-knowl="./knowl/exer_powerset.html" title="Activity 29: Proof of Theorem 5.1.13">Activity 29</a>.)</p>
+<article class="theorem theorem-like" id="T_powerset"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.1.13</span><span class="period">.</span>
+</h6>
+<p id="p-2343">Let \(n\) be a nonnegative integer and let \(T\) be a subset of some universal set. If the set \(T\) has \(n\) elements, then the set \(T\) has \(2^n\) subsets. That is, \(\mathcal{P}(T)\) has \(2^n\) elements.</p></article></section><section class="subsection" id="subsection-88"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">The Cardinality of a Finite Set</span>
+</h3>
+<p id="p-2344">In our discussion of the power set, we were concerned with the number of elements in a set. In fact, the number of elements in a finite set is a distinguishing characteristic of the set, so we give it the following name. <article class="definition definition-like" id="D_cardinality"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.1.14</span><span class="period">.</span>
+</h6>
+<p id="p-2345">The number of elements in a finite set \(A\) is called the <dfn class="terminology">cardinality</dfn>  of \(A\) and is denoted by \(\card(A)\text{.}\)</p></article> For example, \(\card (\emptyset) = 0\text{;}\) \(\card (\left\{ {a,b} \right\}) = 2\text{;}\) \(\card \left( \mathcal{P}( \left\{ {a,b} \right\}) \right) = 4\text{.}\)</p>
+<p id="p-2346">Theoretical Note: There is a mathematical way to distinguish between finite and infinite sets, and there is a way to define the cardinality of an infinite set. We will not concern ourselves with this at this time.  More about the cardinality of finite and infinite sets is discussed in <a href="C_topicsinsets.html" class="internal" title="Chapter 9: Finite and Infinite Sets">Chapter 9</a>.</p></section><section class="subsection" id="subsection-89"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Standard Number Systems</span>
+</h3>
+<p id="p-2347">We can use set notation to specify and help describe our standard number systems. The starting point is the set of <dfn class="terminology">natural numbers</dfn>,  for which we use the roster method.</p>
+<div class="displaymath">
+\begin{equation*}
+\N = \left\{ 1, 2, 3, 4, \ldots \;\right\}
+\end{equation*}
+</div>
+<p id="p-2348">The <dfn class="terminology">integers</dfn>  consist of the natural numbers, the negatives of the natural numbers, and zero. If we let \(\N^- = \left\{ \ldots, -4, -3, -2, -1 \right\}\text{,}\) then we can use set union and write</p>
+<div class="displaymath">
+\begin{equation*}
+\Z = \N^- \cup \left\{ 0 \right\} \cup \N\text{.}
+\end{equation*}
+</div>
+<p class="continuation">So we see that \(\N \subseteq \Z\text{,}\) and in fact, \(\N \subset \Z\text{.}\)</p>
+<p id="p-2349">We need to use set builder notation for the set \(\Q\) of all <dfn class="terminology">rational numbers</dfn>, which consists of quotients of integers.</p>
+<div class="displaymath">
+\begin{equation*}
+\Q = \left\{ \left. \frac{m}{n}  \right| m, n \in \Z \text{ and }  n \ne 0 \right\}
+\end{equation*}
+</div>
+<p class="continuation">Since any integer \(n\) can be written as \(n = \dfrac{n}{1}\text{,}\) we see that \(\Z \subseteq \Q\text{.}\)</p>
+<p id="p-2350">We do not yet have the tools to give a complete description of the real numbers. We will simply say that the <dfn class="terminology">real numbers</dfn>  consist of the rational numbers and the <dfn class="terminology">irrational numbers</dfn>.  In effect, the irrational numbers are the complement of the set of rational numbers \(\Q\) in \(\R\text{.}\) So we can use the notation \(\Q^c = \left\{ x \in \R \mid x \notin \Q \right\}\) and write</p>
+<div class="displaymath">
+\begin{equation*}
+\R = \Q \cup \Q^c \qquad \text{ and }  \qquad \Q \cap \Q^c = \emptyset\text{.}
+\end{equation*}
+</div>
+<p id="p-2351">A number system that we have not yet discussed is the set of <dfn class="terminology">complex numbers</dfn>.  The complex numbers, \(\mathbb{C}\text{,}\) consist of all numbers of the form \(a + bi\text{,}\) where \(a,
+b \in \R\) and \(i = \sqrt{-1}\) (or \(i^2 = -1\)). That is,</p>
+<div class="displaymath">
+\begin{equation*}
+\mathbb{C} = \left\{  a + bi \left|  a, b \in \R \text{ and }  i = \sqrt{-1} \right. \right\}\!\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We can add and multiply complex numbers as follows: If \(a,
+b, c, d \in \R\text{,}\) then</p>
+<div class="displaymath">
+\begin{align*}
+\left( a + bi \right) + \left( c + di \right) \amp 
+= \left(a + c \right) + \left(b + d \right)i, \text{ and }\\
+\left( a + bi \right) \left( c + di \right) \amp = ac + adi + bci + bdi^2\\
+\amp = \left(ac - bd \right) + \left(ad + bc \right)i\text{.}
+\end{align*}
+</div></section><section class="exercises" id="exercises-16"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exer_sec41-1"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-40">
+<p id="p-2352">Assume the universal set is the set of real numbers. Let</p>
+<div class="displaymath">
+\begin{align*}
+A \amp = \left\{ { - 3, - 2,2,3} \right\}\!, \amp   B \amp 
+= \left\{ {\left. {x \in \mathbb{R}} \right|x^2  = 4\text{  or  } x^2  = 9} \right\}\!,\\
+C \amp = \left\{ {x \in \mathbb{R}\left.  \right|x^2  + 2 = 0} \right\}\!,  
+\amp  D \amp = \left\{ {x \in \mathbb{R}\left.  \right|x &gt; 0} \right\}\!\text{.}
+\end{align*}
+</div>
+<p class="continuation">Respond to each of the following questions. In each case, explain your answer.</p>
+</div>
+<article class="task exercise-like" id="task-837"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2353">Is the set \(A\) equal to the set \(B\text{?}\)</p></article><article class="task exercise-like" id="task-838"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2354">Is the set \(A\) a subset of the set \(B\text{?}\)</p></article><article class="task exercise-like" id="task-839"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2355">Is the set \(C\) equal to the set \(D\text{?}\)</p></article><article class="task exercise-like" id="task-840"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-2356">Is the set \(C\) a subset of the set \(D\text{?}\)</p></article><article class="task exercise-like" id="task-841"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-2357">Is the set \(A\) a subset of the set \(D\text{?}\)</p></article></article><article class="exercise exercise-like" id="exer41-equalsets"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<article class="task exercise-like" id="task-842"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2358">Explain why the set \(\left\{ {a,b} \right\}\) is equal to the set \(\left\{ {b,a} \right\}\text{.}\)</p></article><article class="task exercise-like" id="task-843"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2359">Explain why the set \(\left\{ {a,b,b,a,c} \right\}\) is equal to the set \(\left\{ {b,c,a} \right\}\text{.}\)</p></article></article><article class="exercise exercise-like" id="exer_sec41-3"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-41">
+<p id="p-2360">Assume that the universal set is the set of integers. Let</p>
+<div class="displaymath">
+\begin{align*}
+A \amp = \left\{ { - 3, - 2,2,3} \right\}\!,  \amp   B 
+\amp = \left\{ {x \in \mathbb{Z}\left.  \right|x^2  \leq 9} \right\}\!,\\
+C \amp = \left\{ {\left. {x \in \mathbb{Z}} \right|x \geq  - 3} \right\}\!,  
+\amp   D \amp = \left\{ {1,2,3,4} \right\}\!\text{.}
+\end{align*}
+</div>
+<p class="continuation">In each of the following, fill in the blank with one or more of the symbols  \(\subset\) , \(\subseteq\) , \(\not \subseteq\text{,}\) \(=\) , \(\ne\text{,}\) \(\in\text{,}\) \(\text{ or }  \notin\) so that the resulting statement is true. For each blank, include all symbols that result in a true statement. If none of these symbols makes a true statement, write nothing in the blank.</p>
+</div>
+<article class="task exercise-like" id="task-844"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2361">\(A\)<span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>\(B\)</p></article><article class="task exercise-like" id="task-845"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2362">5<span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>\(C\)</p></article><article class="task exercise-like" id="task-846"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2363">\(A\)<span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>\(C\)</p></article><article class="task exercise-like" id="task-847"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-2364">\(\left\{ 1, 2 \right\}\)<span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>\(A\)</p></article><article class="task exercise-like" id="task-848"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-2365">4<span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>\(B\)</p></article><article class="task exercise-like" id="task-849"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-2366">\(\card(A)\)<span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>\(\card(D)\)</p></article><article class="task exercise-like" id="task-850"><h6 class="heading"><span class="codenumber">(g)</span></h6>
+<p id="p-2367">\(A\)<span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>\(\mathcal{P}(A)\)</p></article><article class="task exercise-like" id="task-851"><h6 class="heading"><span class="codenumber">(h)</span></h6>
+<p id="p-2368">\(\emptyset\)<span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>\(A\)</p></article><article class="task exercise-like" id="task-852"><h6 class="heading"><span class="codenumber">(i)</span></h6>
+<p id="p-2369">\(\left\{ 5 \right\}\)<span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>\(C\)</p></article><article class="task exercise-like" id="task-853"><h6 class="heading"><span class="codenumber">(j)</span></h6>
+<p id="p-2370">\(\left\{ 1, 2 \right\}\)<span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>\(B\)</p></article><article class="task exercise-like" id="task-854"><h6 class="heading"><span class="codenumber">(k)</span></h6>
+<p id="p-2371">\(\left\{ 3, 2, 1 \right\}\)<span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>\(D\)</p></article><article class="task exercise-like" id="task-855"><h6 class="heading"><span class="codenumber">(l)</span></h6>
+<p id="p-2372">\(D\)<span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>\(\emptyset\)</p></article><article class="task exercise-like" id="task-856"><h6 class="heading"><span class="codenumber">(m)</span></h6>
+<p id="p-2373">\(\card(A)\)<span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>\(\card(B)\)</p></article><article class="task exercise-like" id="task-857"><h6 class="heading"><span class="codenumber">(n)</span></h6>
+<p id="p-2374">\(A\)<span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>\(\mathcal{P}(B)\)</p></article></article><article class="exercise exercise-like" id="exer_sec51-numbers"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-2375">Write all of the proper subset relations that are possible using the sets of numbers \(\mathbb{N}\text{,}\) \(\mathbb{Z}\text{,}\) \(\mathbb{Q}\text{,}\) and \(\mathbb{R}\text{.}\)</p></article><article class="exercise exercise-like" id="exer_sec41-5"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-42"><p id="p-2376">For each statement, write a brief, clear explanation of why the statement is true or why it is false.</p></div>
+<article class="task exercise-like" id="task-858"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2377">The set \(\left\{ {a,b} \right\}\) is a subset of \(\left\{ {a,c,d,e} \right\}\text{.}\)</p></article><article class="task exercise-like" id="task-859"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2378">The set \(\left\{ { - 2,0,2} \right\}\) is equal to \(\left\{ {x \in \mathbb{Z} \mid x\text{ is even and } x^2 \lt 5} \right\}\text{.}\)</p></article><article class="task exercise-like" id="task-860"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2379">The empty set \(\emptyset\) is a subset of \(\left\{ 1 \right\}\text{.}\)</p></article><article class="task exercise-like" id="task-861"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-2380">If \(A = \left\{ {a,b} \right\}\text{,}\) then the set \(\left\{ a \right\}\) is a subset of \(\mathcal{P}( A )\text{.}\)</p></article></article><article class="exercise exercise-like" id="exer_sec41-8"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-43"><p id="p-2381">Use the definitions of set intersection, set union, and set difference to write useful negations of these definitions. That is, complete each of the following sentences</p></div>
+<article class="task exercise-like" id="task-862"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2382">\(x \notin A \cap B\) if and only if \(\ldots \text{.}\)</p></article><article class="task exercise-like" id="task-863"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2383">\(x \notin A \cup B\) if and only if \(\ldots \text{.}\)</p></article><article class="task exercise-like" id="task-864"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2384">\(x \notin A - B\) if and only if \(\ldots \text{.}\)</p></article></article><article class="exercise exercise-like" id="exer_sec41-6"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-44">
+<p id="p-2385">Let \(U = \left\{ {1,2,3,4,5,6,7,8,9,10} \right\}\text{,}\) and let</p>
+<div class="displaymath">
+\begin{align*}
+A \amp = \left\{ {3,4,5,6,7} \right\}\!,  \amp   
+B \amp = \left\{ {1,5,7,9} \right\}\!,\\
+C \amp = \left\{ {3,6,9} \right\}\!,      \amp   
+D \amp = \left\{ {2,4,6,8} \right\}\!\text{.}
+\end{align*}
+</div>
+<p class="continuation">Use the roster method to list all of the elements of each of the following sets.</p>
+</div>
+<article class="task exercise-like" id="task-865"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2386">\(A \cap B\)</p></article><article class="task exercise-like" id="task-866"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2387">\(A \cup B\)</p></article><article class="task exercise-like" id="task-867"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2388">\(\left( {A \cup B} \right)^c\)</p></article><article class="task exercise-like" id="task-868"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-2389">\(A^c \cap B^c\)</p></article><article class="task exercise-like" id="task-869"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-2390">\(\left( {A \cup B} \right) \cap C\)</p></article><article class="task exercise-like" id="task-870"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-2391">\(A \cap C\)</p></article><article class="task exercise-like" id="task-871"><h6 class="heading"><span class="codenumber">(g)</span></h6>
+<p id="p-2392">\(B \cap C\)</p></article><article class="task exercise-like" id="task-872"><h6 class="heading"><span class="codenumber">(h)</span></h6>
+<p id="p-2393">\(\left( {A \cap C} \right) \cup \left( {B \cap C} \right)\)</p></article><article class="task exercise-like" id="task-873"><h6 class="heading"><span class="codenumber">(i)</span></h6>
+<p id="p-2394">\(B \cap D\)</p></article><article class="task exercise-like" id="task-874"><h6 class="heading"><span class="codenumber">(j)</span></h6>
+<p id="p-2395">\(\left( {B \cap D} \right)^c\)</p></article><article class="task exercise-like" id="task-875"><h6 class="heading"><span class="codenumber">(k)</span></h6>
+<p id="p-2396">\(A - D\)</p></article><article class="task exercise-like" id="task-876"><h6 class="heading"><span class="codenumber">(l)</span></h6>
+<p id="p-2397">\(B - D\)</p></article><article class="task exercise-like" id="task-877"><h6 class="heading"><span class="codenumber">(m)</span></h6>
+<p id="p-2398">\(\left( A - D \right) \cup \left( B - D \right)\)</p></article><article class="task exercise-like" id="task-878"><h6 class="heading"><span class="codenumber">(n)</span></h6>
+<p id="p-2399">\(\left( A \cup B \right) - D\)</p></article></article><article class="exercise exercise-like" id="exer_sec41-6x"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-45">
+<p id="p-2400">Let  \(U = \N\text{,}\) and let</p>
+<div class="displaymath">
+\begin{align*}
+A \amp = \left\{ x \in \N \mid x \geq 7 \right\}\!,  \amp   
+B \amp = \left\{ x \in \N \mid x \text{ is odd }  \right\}\!,\\
+C \amp = \left\{ x \in \N \mid x \text{ is a multiple of 3 }  \right\}\!, 
+\amp D \amp = \left\{ x \in \N \mid x \text{ is even }  \right\}\!\text{.}
+\end{align*}
+</div>
+<p class="continuation">Use the roster method to list all of the elements of each of the following sets.</p>
+</div>
+<article class="task exercise-like" id="task-879"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2401">\(A \cap B\)</p></article><article class="task exercise-like" id="task-880"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2402">\(A \cup B\)</p></article><article class="task exercise-like" id="task-881"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2403">\(\left( {A \cup B} \right)^c\)</p></article><article class="task exercise-like" id="task-882"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-2404">\(A^c \cap B^c\)</p></article><article class="task exercise-like" id="task-883"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-2405">\(\left( {A \cup B} \right) \cap C\)</p></article><article class="task exercise-like" id="task-884"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-2406">\(\left( {A \cap C} \right) \cup \left( {B \cap C} \right)\)</p></article><article class="task exercise-like" id="task-885"><h6 class="heading"><span class="codenumber">(g)</span></h6>
+<p id="p-2407">\(B \cap D\)</p></article><article class="task exercise-like" id="task-886"><h6 class="heading"><span class="codenumber">(h)</span></h6>
+<p id="p-2408">\(\left( {B \cap D} \right)^c\)</p></article><article class="task exercise-like" id="task-887"><h6 class="heading"><span class="codenumber">(i)</span></h6>
+<p id="p-2409">\(A - D\)</p></article><article class="task exercise-like" id="task-888"><h6 class="heading"><span class="codenumber">(j)</span></h6>
+<p id="p-2410">\(B - D\)</p></article><article class="task exercise-like" id="task-889"><h6 class="heading"><span class="codenumber">(k)</span></h6>
+<p id="p-2411">\(\left( A - D \right) \cup \left( B - D \right)\)</p></article><article class="task exercise-like" id="task-890"><h6 class="heading"><span class="codenumber">(l)</span></h6>
+<p id="p-2412">\(\left( A \cup B \right) - D\)</p></article></article><article class="exercise exercise-like" id="exercise-425"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-46"><p id="p-2413">Let \(P\text{,}\) \(Q\text{,}\) \(R\text{,}\) and \(S\) be subsets of a universal set \(U\text{.}\) Assume that \(\left( P - Q \right) \subseteq \left( R \cap S \right)\text{.}\)</p></div>
+<article class="task exercise-like" id="exer_subset-defa"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2414">Complete the following sentence: <blockquote class="blockquote" id="blockquote-162">For each \(x \in U\text{,}\) if \(x \in \left( P - Q \right)\text{,}\) then \(\ldots \text{.}\)</blockquote></p></article><article class="task exercise-like" id="task-892"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2415">Write a useful negation of the statement in <a class="xref" data-knowl="./knowl/exer_subset-defa.html" title="Task 9.a">Task 9.a</a>.</p></article><article class="task exercise-like" id="task-893"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2416">Write the contrapositive of the statement in <a class="xref" data-knowl="./knowl/exer_subset-defa.html" title="Task 9.a">Task 9.a</a>.</p></article></article><article class="exercise exercise-like" id="exer_sec41-10"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-47"><p id="p-2417">Let \(U\) be the universal set. Consider the following statement: <blockquote class="blockquote" id="blockquote-163">For all \(A\) and \(B\) that are subsets of \(U\text{,}\) if \(A \subseteq B\text{,}\) then \(B^c \subseteq A^c\text{.}\)</blockquote></p></div>
+<article class="task exercise-like" id="task-894"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2418">Identify three conditional statements in the given statement.</p></article><article class="task exercise-like" id="task-895"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2419">Write the contrapositive of this statement.</p></article><article class="task exercise-like" id="task-896"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2420">Write the negation of this statement.</p></article></article><article class="exercise exercise-like" id="exer_sec41-11"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-48"><p id="p-2421">Let \(A\text{,}\) \(B\text{,}\) and \(C\) be subsets of some universal set \(U\text{.}\) Draw a Venn diagram for each of the following situations.</p></div>
+<article class="task exercise-like" id="task-897"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2422">\(A \subseteq C\)</p></article><article class="task exercise-like" id="task-898"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2423">\(A \cap B = \emptyset\)</p></article><article class="task exercise-like" id="task-899"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2424">\(A \not \subseteq B,B \not \subseteq A,C \subseteq A,\text{ and } C \not \subseteq B\)</p></article><article class="task exercise-like" id="task-900"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-2425">\(A \subseteq B,C \subseteq B,\text{ and } A \cap C = \emptyset\)</p></article></article><article class="exercise exercise-like" id="exer_sec41-12"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-49"><p id="p-2426">Let \(A\text{,}\) \(B\text{,}\) and \(C\) be subsets of some universal set \(U\text{.}\) For each of the following, draw a general Venn diagram for the three sets and then shade the indicated region.</p></div>
+<article class="task exercise-like" id="task-901"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2427">\(A \cap B\)</p></article><article class="task exercise-like" id="task-902"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2428">\(A \cap C\)</p></article><article class="task exercise-like" id="task-903"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2429">\(\left( {A \cap B} \right) \cup \left( {A \cap C} \right)\)</p></article><article class="task exercise-like" id="task-904"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-2430">\(B \cup C\)</p></article><article class="task exercise-like" id="task-905"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-2431">\(A \cap \left( {B \cup C} \right)\)</p></article><article class="task exercise-like" id="task-906"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-2432">\(\left( {A \cap B} \right) - C\)</p></article></article><article class="exercise exercise-like" id="exer_congruence41"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-50"><p id="p-2433">We can extend the idea of consecutive integers (See <a class="xref" data-knowl="./knowl/exer_sec34-2.html" title="Exercise 10">Exercise 10</a> in <a href="S_divalgo.html" class="internal" title="Section 3.5: Beginning Activity 1: The Division Algorithm and Congruence">Section 3.5</a>) to represent four consecutive integers as \(m\text{,}\) \(m + 1\text{,}\) \(m + 2\text{,}\) and \(m + 3\text{,}\) where \(m\) is an integer. There are other ways to represent four consecutive integers. For example, if \(k \in \Z\text{,}\) then \(k - 1\text{,}\) \(k\text{,}\) \(k + 1\text{,}\) and \(k + 2\) are four consecutive integers.</p></div>
+<article class="task exercise-like" id="task-907"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2434">Prove that for each \(n \in \Z\text{,}\) \(n\) is the sum of four consecutive integers if and only if \(n \equiv 2 \pmod 4\text{.}\)</p></article><article class="task exercise-like" id="task-908"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2435">Use set builder notation or the roster method to specify the set of integers that are the sum of four consecutive integers.</p></article><article class="task exercise-like" id="task-909"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2436">Specify the set of all natural numbers that can be written as the sum of four consecutive natural numbers.</p></article><article class="task exercise-like" id="task-910"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-2437">Prove that for each \(n \in \Z\text{,}\) \(n\) is the sum of eight consecutive integers if and only if \(n \equiv 4 \pmod 8\text{.}\)</p></article><article class="task exercise-like" id="task-911"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-2438">Use set builder notation or the roster method to specify the set of integers that are the sum of eight consecutive integers.</p></article><article class="task exercise-like" id="task-912"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-2439">Specify the set of all natural numbers can be written as the sum of eight consecutive natural numbers.</p></article></article><article class="exercise exercise-like" id="exercise-430"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
+<p id="p-2440">One of the properties of real numbers is the so-called <dfn class="terminology">Law of Trichotomy</dfn>,  which states that if \(a,
+b \in \R\text{,}\) then exactly one of the following is true:</p>
+<ul class="disc cols3">
+<li id="li-331"><p id="p-2441">\(a \lt b\text{;}\)</p></li>
+<li id="li-332"><p id="p-2442">\(a = b\text{;}\)</p></li>
+<li id="li-333"><p id="p-2443">\(a &gt; b\text{.}\)</p></li>
+</ul>
+<p class="continuation">Is the following proposition concerning sets true or false? Either provide a proof that it is true or a counterexample showing it is false. If \(A\) and \(B\) are subsets of some universal set, then exactly one of the following is true:</p>
+<ul class="disc cols3">
+<li id="li-334"><p id="p-2444">\(A \subseteq B\text{;}\)</p></li>
+<li id="li-335"><p id="p-2445">\(A = B\text{;}\)</p></li>
+<li id="li-336"><p id="p-2446">\(B \subseteq A\text{.}\)</p></li>
+</ul></article><article class="activity project-like" id="A_intervals"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">27</span><span class="period">.</span><span class="space"> </span><span class="title">Intervals of Real Numbers.</span>
+</h6>
+<div class="introduction" id="introduction-51">
+<p id="p-2447">In previous mathematics courses, we have frequently used subsets of the real numbers called <dfn class="terminology">intervals</dfn>.  There are some common names and notations for intervals. These are given in the following table, where it is assumed that \(a\) and \(b\) are real numbers and \(a \lt b\text{.}\)</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r0 l0 t0 lines">Interval<br>Notation</td>
+<td class="l m b2 r0 l0 t0 lines">Set Notation</td>
+<td class="l m b2 r0 l0 t0 lines">Name</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(\left( {a,b} \right) =\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\left\{ {x \in \mathbb{R}\left. \right|a \lt x \lt b} \right\}\)</td>
+<td class="l m b0 r0 l0 t0 lines">Open interval  from \(a\) to \(b\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(\left[ {a,b} \right] =\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\left\{ {x \in \mathbb{R}\left. \right|a \leq x \leq b} \right\}\)</td>
+<td class="l m b0 r0 l0 t0 lines">Closed interval  from \(a\) to \(b\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(\left[ {a,b} \right) =\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\left\{ {x \in \mathbb{R}\left. \right|a \leq x \lt b} \right\}\)</td>
+<td class="l m b0 r0 l0 t0 lines">Half-open interval </td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(\left( {a,b} \right] =\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\left\{ {x \in \mathbb{R}\left. \right|a \lt x \leq b} \right\}\)</td>
+<td class="l m b0 r0 l0 t0 lines">Half-open interval</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(\left( {a, + \infty } \right) =\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\left\{ {\left. {x \in \mathbb{R}} \right|x &gt; a} \right\}\)</td>
+<td class="l m b0 r0 l0 t0 lines">Open ray</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(\left( { - \infty ,b} \right) =\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\left\{ {\left. {x \in \mathbb{R}} \right|x \lt b} \right\}\)</td>
+<td class="l m b0 r0 l0 t0 lines">Open ray </td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(\left[ {a, + \infty } \right) =\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\left\{ {\left. {x \in \mathbb{R}} \right|x \geq a} \right\}\)</td>
+<td class="l m b0 r0 l0 t0 lines">Closed ray </td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">\(\left( { - \infty ,b} \right] =\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\left\{ {\left. {x \in \mathbb{R}} \right|x \leq b} \right\}\)</td>
+<td class="l m b0 r0 l0 t0 lines">Closed ray</td>
+</tr>
+</table></div>
+</div>
+<article class="task exercise-like" id="task-913"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2448">Is \(\left( {a,b} \right)\) a proper subset of \(\left( {a,b} \right]\text{?}\) Explain.</p></article><article class="task exercise-like" id="task-914"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2449">Is \(\left[ {a,b} \right]\) a subset of \(\left( {a, + \infty } \right)\text{?}\) Explain.</p></article><article class="task exercise-like" id="task-915"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2450">Use interval notation to describe <article class="task exercise-like" id="task-916"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2451">the intersection of the interval \(\left[ { - 3,7} \right]\) with the interval \(\left( {5,9} \right]\text{;}\)</p></article> <article class="task exercise-like" id="task-917"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2452">the union of the interval \(\left[ { - 3,7} \right]\) with the interval \(\left( {5,9} \right]\text{;}\)</p></article> <article class="task exercise-like" id="task-918"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2453">the set difference \(\left[ -3, 7 \right] - \left( 5, 9 \right]\text{.}\)</p></article></p></article><article class="task exercise-like" id="task-919"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-2454">Write the set \(\left\{ {x \in \mathbb{R}} \mid \left| x \right| \leq 0.01 \right\}\) using interval notation.</p></article><article class="task exercise-like" id="task-920"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-2455">Write the set \(\left\{ x \in \mathbb{R} \mid \left| x \right| &gt; 2 \right\}\) as the union of two intervals.</p></article></article><article class="activity project-like" id="exer_intervals41"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">28</span><span class="period">.</span><span class="space"> </span><span class="title">More Work with Intervals.</span>
+</h6>
+<div class="introduction" id="introduction-52"><p id="p-2456">For this exercise, use the interval notation described in <a class="xref" data-knowl="./knowl/A_intervals.html" title="Activity 27: Intervals of Real Numbers">Activity 27</a>.</p></div>
+<article class="task exercise-like" id="task-921"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2457">Determine the intersection and union of \([2, 5]\) and \([-1, +\infty)\text{.}\)</p></article><article class="task exercise-like" id="task-922"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2458">Determine the intersection and union of \([2, 5]\) and \([3.4, +\infty)\text{.}\)</p></article><article class="task exercise-like" id="task-923"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2459">Determine the intersection and union of \([2, 5]\) and \([7, +\infty)\text{.}\)</p></article><article class="task exercise-like" id="task-924"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-2460">Now let \(a\text{,}\) \(b\text{,}\) and \(c\) be real numbers with \(a \lt b\text{.}\)</p>
+<p id="p-2461">Explain why the intersection of \([a, b]\) and \([c, +\infty)\) is either a closed interval, a set with one element, or the empty set.</p></article><article class="task exercise-like" id="task-925"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-2462">Explain why the union of \([a, b]\) and \([c, +\infty)\) is either a closed ray or the union of a closed interval and a closed ray.</p></article></article><article class="activity project-like" id="exer_powerset"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">29</span><span class="period">.</span><span class="space"> </span><span class="title">Proof of Theorem 5.1.13.</span>
+</h6>
+<div class="introduction" id="introduction-53">
+<p id="p-2463">To help with the proof by induction of <a class="xref" data-knowl="./knowl/T_powerset.html" title="Theorem 5.1.13">Theorem 5.1.13</a>, we first prove the following lemma. (The idea for the proof of this lemma was illustrated with the discussion of power set after <a class="xref" data-knowl="./knowl/D_powerset.html" title="Definition 5.1.12">Definition 5.1.12</a>.) <article class="lemma theorem-like" id="L_inductivestepforsubsets"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">5.1.15</span><span class="period">.</span>
+</h6>
+<p id="p-2464">Let \(A\) and \(B\) be subsets of some universal set. If \(A = B \cup \left\{ x \right\}\text{,}\) where \(x \notin B\text{,}\) then any subset of \(A\) is either a subset of \(B\) or a set of the form \(C \cup \left\{ x \right\}\text{,}\) where \(C\) is a subset of \(B\text{.}\)</p></article><article class="hiddenproof" id="proof-26"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-26"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-26"><article class="hiddenproof"><p id="p-2465">Let \(A\) and \(B\) be subsets of some universal set, and assume that \(A = B \cup \left\{ x \right\}\) where \(x \notin B\text{.}\) Let \(Y\) be a subset of \(A\text{.}\) We need to show that \(Y\) is a subset of \(B\) or that \(Y = C \cup \left\{ x \right\}\text{,}\) where \(C\) is some subset of \(B\text{.}\) There are two cases to consider: (1) \(x\) is not an element of \(Y\text{,}\) and (2) \(x\) is an element of \(Y\text{.}\)</p>
+<p id="p-2466">Case 1: Assume that \(x \notin Y\text{.}\) Let \(y \in Y\text{.}\) Then \(y \in A\) and \(y \ne x\text{.}\) Since</p>
+<div class="displaymath">
+\begin{equation*}
+A = B \cup \left\{ x \right\}\!\text{,}
+\end{equation*}
+</div>
+<p class="continuation">this means that \(y\) must be in \(B\text{.}\) Therefore, \(Y \subseteq B\text{.}\)</p>
+<p id="p-2467">Case 2: Assume that \(x \in Y\text{.}\) In this case, let \(C = Y - \left\{ x \right\}\text{.}\) Then every element of \(C\) is an element of \(B\text{.}\) Hence, we can conclude that \(C \subseteq B\) and that \(Y = C \cup \left\{ x \right\}\text{.}\)</p>
+<p id="p-2468">Cases (1) and (2) show that if \(Y \subseteq A\text{,}\) then \(Y \subseteq B\) or \(Y = C \cup \left\{ x \right\}\text{,}\) where \(C \subseteq B\text{.}\)</p></article></div></p>
+<p id="p-2469">To begin the induction proof of <a class="xref" data-knowl="./knowl/T_powerset.html" title="Theorem 5.1.13">Theorem 5.1.13</a>, for each nonnegative integer \(n\text{,}\) we let \(P ( n )\) be, “If   a finite set has exactly \(n\)  elements, then  that set  has exactly  \(2^n\) subsets.” </p>
+</div>
+<article class="task exercise-like" id="task-926"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2470">Verify that \(P ( 0 )\) is true. (This is the basis step for the induction proof.)</p></article><article class="task exercise-like" id="task-927"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2471">Verify that \(P( 1 )\) and \(P( 2 )\) are true.</p></article><article class="task exercise-like" id="task-928"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2472">Now assume that \(k\) is a nonnegative integer and assume that \(P( k )\) is true. That is, assume that if a set has \(k\) elements, then that set has \(2^k\) subsets. (This is the inductive assumption for the induction proof.) Let \(T\) be a subset of the universal set with \(\card (T) = k + 1\text{,}\) and let \(x \in T\text{.}\) Then the set \(B = T - \left\{ x \right\}\) has \(k\) elements. Now use the inductive assumption to determine how many subsets \(B\) has. Then use <a class="xref" data-knowl="./knowl/L_inductivestepforsubsets.html" title="Lemma 5.1.15">Lemma 5.1.15</a> to prove that \(T\) has twice as many subsets as \(B\text{.}\) This should help complete the inductive step for the induction proof.</p></article></article></section></section></div></main>
+</div>
+</body>
+</html>

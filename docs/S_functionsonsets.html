@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-10-05T14:51:40-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Functions Acting on Sets</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\def\C{\JustCenter}
+\newcommand{\typeu}{Beginning }
+\def\C{\JustCenter}
+\newcommand{\typel}{beginning }
+\def\C{\JustCenter}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\
+\thechapter. #1}{}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\def\C{\JustCenter}
+\renewcommand{\theenumi}{\alph{enumi}}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\theenumi}{({\alph{enumi}})}
+\def\C{\JustCenter}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\mynot}{\neg}
+\newcommand{\card}{\mathbf{card}}
+\newcommand{\x}{:}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Mathematical Reasoning:</span> <span class="subtitle">Writing and Proof (Version 3)</span></a></h1>
+<p class="byline">Ted Sundstrom, Professor Emeritus</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_inversefunctions.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_functions.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_6summary.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_inversefunctions.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C_functions.html" title="Up">Up</a><a class="next-button button toolbar-item" href="S_6summary.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="fm-versions.html" data-scroll="fm-versions">Version 3 and Version 2.1</a></li>
+<li><a href="fm-student-note.html" data-scroll="fm-student-note">Note to Students</a></li>
+<li><a href="fm-preface.html" data-scroll="fm-preface">Preface</a></li>
+<li><a href="fm-imp-features.html" data-scroll="fm-imp-features">Important Features of the Book</a></li>
+<li><a href="fm-cont-org.html" data-scroll="fm-cont-org">Content and Organization</a></li>
+<li><a href="fm-inst-note.html" data-scroll="fm-inst-note">Supplementary Materials for the Instructor</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_1intro.html" data-scroll="C_1intro"><span class="codenumber">1</span> <span class="title">Introduction to Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_1prop.html" data-scroll="S_1prop">Statements and Conditional Statements</a></li>
+<li><a href="S_1direct.html" data-scroll="S_1direct">Constructing Direct Proofs</a></li>
+<li><a href="S_1summary.html" data-scroll="S_1summary">Chapter 1 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_2logic.html" data-scroll="C_2logic"><span class="codenumber">2</span> <span class="title">Logical Reasoning</span></a><ul>
+<li><a href="S_2logop.html" data-scroll="S_2logop">Statements and Logical Operators</a></li>
+<li><a href="S_logequiv.html" data-scroll="S_logequiv">Logically Equivalent Statements</a></li>
+<li><a href="S_2predicates.html" data-scroll="S_2predicates">Open Sentences and Sets</a></li>
+<li><a href="S_2quantifier.html" data-scroll="S_2quantifier">Quantifiers and Negations</a></li>
+<li><a href="S_2summary.html" data-scroll="S_2summary">Chapter 2 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_proofs.html" data-scroll="C_proofs"><span class="codenumber">3</span> <span class="title">Constructing and Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_directproof.html" data-scroll="S_directproof">Direct Proofs</a></li>
+<li><a href="S_moremethods.html" data-scroll="S_moremethods">More Methods of Proof</a></li>
+<li><a href="S_contradiction.html" data-scroll="S_contradiction">Proof by Contradiction</a></li>
+<li><a href="S_cases.html" data-scroll="S_cases">Using Cases in Proofs</a></li>
+<li><a href="S_divalgo.html" data-scroll="S_divalgo">Beginning Activity 1: The Division Algorithm and Congruence</a></li>
+<li><a href="S_reviewproofs.html" data-scroll="S_reviewproofs">Review of Proof Methods</a></li>
+<li><a href="S_3summary.html" data-scroll="S_3summary">Chapter 3 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_induction.html" data-scroll="C_induction"><span class="codenumber">4</span> <span class="title">Mathematical Induction</span></a><ul>
+<li><a href="S_mathinduction.html" data-scroll="S_mathinduction">The Principle of Mathematical Induction</a></li>
+<li><a href="S_otherinduction.html" data-scroll="S_otherinduction">Other Forms of Mathematical Induction</a></li>
+<li><a href="S_recursion.html" data-scroll="S_recursion">Induction and Recursion</a></li>
+<li><a href="S_4summary.html" data-scroll="S_4summary">Chapter 4 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_settheory.html" data-scroll="C_settheory"><span class="codenumber">5</span> <span class="title">Set Theory</span></a><ul>
+<li><a href="S_setoperations.html" data-scroll="S_setoperations">Sets and Operations on Sets</a></li>
+<li><a href="S_provingset.html" data-scroll="S_provingset">Proving Set Relationships</a></li>
+<li><a href="S_setproperties.html" data-scroll="S_setproperties">Properties of Set Operations</a></li>
+<li><a href="S_cartesian.html" data-scroll="S_cartesian">Cartesian Products</a></li>
+<li><a href="S_indexfamily.html" data-scroll="S_indexfamily">Indexed Families of Sets</a></li>
+<li><a href="S_5summary.html" data-scroll="S_5summary">Chapter 5 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_functions.html" data-scroll="C_functions"><span class="codenumber">6</span> <span class="title">Functions</span></a><ul>
+<li><a href="S_introfunctions.html" data-scroll="S_introfunctions">Introduction to Functions</a></li>
+<li><a href="S_moreaboutfunctions.html" data-scroll="S_moreaboutfunctions">More about Functions</a></li>
+<li><a href="S_typesoffunctions.html" data-scroll="S_typesoffunctions">Beginning Activity 1: Injections, Surjections, and Bijections</a></li>
+<li><a href="S_compositionoffunctions.html" data-scroll="S_compositionoffunctions">Composition of Functions</a></li>
+<li><a href="S_inversefunctions.html" data-scroll="S_inversefunctions">Inverse Functions</a></li>
+<li><a href="S_functionsonsets.html" data-scroll="S_functionsonsets" class="active">Functions Acting on Sets</a></li>
+<li><a href="S_6summary.html" data-scroll="S_6summary">Chapter 6 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_equivrelations.html" data-scroll="C_equivrelations"><span class="codenumber">7</span> <span class="title">Equivalence Relations</span></a><ul>
+<li><a href="S_relations.html" data-scroll="S_relations">Relations</a></li>
+<li><a href="S_equivrelations.html" data-scroll="S_equivrelations">Equivalence Relations</a></li>
+<li><a href="S_equivclasses.html" data-scroll="S_equivclasses">Equivalence Classes</a></li>
+<li><a href="S_modulararithmetic.html" data-scroll="S_modulararithmetic">Modular Arithmetic</a></li>
+<li><a href="section-37.html" data-scroll="section-37">Chapter 7 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_numbertheory.html" data-scroll="C_numbertheory"><span class="codenumber">8</span> <span class="title">Topics in Number Theory</span></a><ul>
+<li><a href="S_gcd.html" data-scroll="S_gcd">The Greatest Common Divisor</a></li>
+<li><a href="S_primefactorizations.html" data-scroll="S_primefactorizations">Prime Numbers and Prime Factorizations</a></li>
+<li><a href="S_diophantine.html" data-scroll="S_diophantine">Linear Diophantine Equations</a></li>
+<li><a href="section-41.html" data-scroll="section-41">Chapter 8 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_topicsinsets.html" data-scroll="C_topicsinsets"><span class="codenumber">9</span> <span class="title">Finite and Infinite Sets</span></a><ul>
+<li><a href="S_finitesets.html" data-scroll="S_finitesets">Finite Sets</a></li>
+<li><a href="S_infinitesets.html" data-scroll="S_infinitesets">Countable Sets</a></li>
+<li><a href="S_uncountablesets.html" data-scroll="S_uncountablesets">Uncountable Sets</a></li>
+<li><a href="section-45.html" data-scroll="section-45">Chapter 9 Summary</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="C_writingguides.html" data-scroll="C_writingguides"><span class="codenumber">A</span> <span class="title">Guidelines for Writing Mathematical Proofs</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="S_functionsonsets"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">6.6</span> <span class="title">Functions Acting on Sets</span>
+</h2>
+<section class="worksheet" id="PA_functionsandsets"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Beginning Activity 1: Functions and Sets</span><div class="print-links">
+<a href="PA_functionsandsets-A4.html" class="a4">A4</a><a href="PA_functionsandsets-letter.html" class="us">US</a>
+</div>
+</h3>
+<p id="p-3634">Let \(S = \left\{ a, b, c, d \right\}\) and \(T = \left\{ s, t, u \right\}\text{.}\) Define \(f\x S \to T\) by</p>
+<div class="displaymath">
+\begin{align*}
+f(a) \amp = s \amp   f(b) \amp = t \amp   f(c) \amp = t \amp   f(d) \amp = s\text{.}
+\end{align*}
+</div>
+<article class="exercise exercise-like" id="exercise-636"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-185"><p id="p-3635">Let \(A = \left\{ a,c \right\}\) and \(B = \left\{ a, d \right\}\text{.}\) Notice that \(A\) and \(B\) are subsets of \(S\text{.}\) Use the roster method to specify the elements of the following two subsets of \(T\text{:}\)</p></div>
+<article class="task exercise-like" id="task-1391"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3636">\(\left\{ f ( x ) \mid x \in A \right\}\)</p></article><article class="task exercise-like" id="task-1392"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3637">\(\left\{ f ( x ) \mid x \in B \right\}\)</p></article></article><article class="exercise exercise-like" id="exercise-637"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-186"><p id="p-3638">Let \(C = \left\{ s, t \right\}\) and \(D = \left\{ s, u \right\}\text{.}\) Notice that \(C\) and \(D\) are subsets of \(T\text{.}\) Use the roster method to specify the elements of the following two subsets of \(S\text{:}\)</p></div>
+<article class="task exercise-like" id="task-1393"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3639">\(\left\{ x \in S \mid f ( x ) \in C \right\}\)</p></article><article class="task exercise-like" id="task-1394"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3640">\(\left\{ x \in S \mid f ( x ) \in D \right\}\)</p></article></article><p id="p-3641">Now let \(g\x \R \to \R\) be defined by \(g ( x ) = x^2\text{,}\) for each \(x \in \mathbb{R}\text{.}\)</p>
+<article class="exercise exercise-like" id="exercise-638"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-3642">Let \(A = \left\{ 1, 2, 3, -1 \right\}\text{.}\) Use the roster method to specify the elements of the set \(\left\{ g ( x ) \mid x \in A \right\}\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-639"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-187"><p id="p-3643">Use the roster method to specify the elements of each of the following sets:</p></div>
+<article class="task exercise-like" id="task-1395"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3644">\(\left\{ x \in \R \mid g( x ) = 1 \right\}\)</p></article><article class="task exercise-like" id="task-1396"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3645">\(\left\{ x \in \R \mid g( x ) = 9 \right\}\)</p></article><article class="task exercise-like" id="task-1397"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-3646">\(\left\{ x \in \R \mid g( x ) = 15 \right\}\)</p></article><article class="task exercise-like" id="task-1398"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-3647">\(\left\{ x \in \R \mid g( x ) = -1 \right\}\)</p></article></article><article class="exercise exercise-like" id="exercise-640"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-3648">Let \(B = \left\{ 1, 9, 15, -1 \right\}\text{.}\) Use the roster method to specify the elements of the set \(\left\{ x \in \mathbb{R} \mid g ( x ) \in B \right\}\text{.}\)</p></article></section><section class="worksheet" id="PA_functionsandint"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Beginning Activity 2: Functions and Intervals</span><div class="print-links">
+<a href="PA_functionsandint-A4.html" class="a4">A4</a><a href="PA_functionsandint-letter.html" class="us">US</a>
+</div>
+</h3>
+<p id="p-3649">Let \(g\x \mathbb{R} \to \mathbb{R}\) be defined by \(g ( x ) = x^2\text{,}\) for each \(x \in \mathbb{R}\text{.}\)</p>
+<article class="exercise exercise-like" id="exercise-641"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-188"><p id="p-3650">We will first determine where \(g\) maps the closed interval \(\left[ 1, 2 \right]\text{.}\) (Recall that \([1, 2] = \left\{ x \in \R \mid 1 \leq x \leq 2 \right\}\text{.}\)) That is, we will describe, in simpler terms, the set \(\left\{ g ( x ) \mid x \in \left[ 1, 2 \right] \right\}\text{.}\) This is the set of all images of the real numbers in the closed interval \(\left[ 1, 2 \right]\text{.}\)</p></div>
+<article class="task exercise-like" id="task-1399"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3651">Draw a graph of the function \(g\) using \(-3 \leq x \leq 3\text{.}\)</p></article><article class="task exercise-like" id="task-1400"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3652">On the graph, draw the vertical lines \(x = 1\) and \(x = 2\) from the \(x\)-axis to the graph. Label the points \(P \!\left(1, f ( 1 ) \right)\) and \(Q \!\left(2, f ( 2 ) \right)\) on the graph.</p></article><article class="task exercise-like" id="task-1401"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-3653">Now draw horizontal lines from the points \(P\) and \(Q\) to the \(y\)-axis. Use this information from the graph to describe the set \(\left\{ g ( x ) \mid x \in \left[ 1, 2 \right] \right\}\) in simpler terms. Use interval notation or set builder notation.</p></article></article><article class="exercise exercise-like" id="exercise-642"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-189"><p id="p-3654">We will now determine all real numbers that \(g\) maps into the closed interval \(\left[ 1, 4 \right]\text{.}\) That is, we will describe the set \(\left\{ x \in \mathbb{R} \mid g ( x ) \in 
+\left[ 1, 4 \right] \right\}\) in simpler terms. This is the set of all preimages of the real numbers in the closed interval \(\left[ 1, 4 \right]\text{.}\)</p></div>
+<article class="task exercise-like" id="task-1402"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3655">Draw a graph of the function \(g\) using \(-3 \leq x \leq 3\text{.}\)</p></article><article class="task exercise-like" id="PA_functionsandintb"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3656">On the graph, draw the horizontal lines \(y = 1\) and \(y = 4\) from the \(y\)-axis to the graph. Label all points where these two lines intersect the graph.</p></article><article class="task exercise-like" id="task-1404"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-3657">Now draw vertical lines from the points in <a class="xref" data-knowl="./knowl/PA_functionsandintb.html" title="Task 2.b">Task 2.b</a> to the \(x\)-axis, and then use the resulting information to describe the set \(\left\{ x \in \mathbb{R} \mid g ( x ) \in \left[ 1, 4 \right] \right\}\) in simpler terms. (You will need to describe this set as a union of two intervals. Use interval notation or set builder notation.)</p></article></article></section><section class="subsection" id="subsection-128"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Functions Acting on Sets</span>
+</h3>
+<p id="p-3658">In our study of functions, we have focused on how a function “maps” individual elements of its domain to the codomain. We also studied the preimage of an individual element in its codomain. For example, if \(f\x \mathbb{R} \to \mathbb{R}\) is defined by \(f ( x ) = x^2\text{,}\) for each \(x \in \mathbb{R}\text{,}\) then</p>
+<ul class="disc">
+<li id="li-463"><p id="p-3659">\(f ( 2 ) = 4\text{.}\) We say that \(f\) maps 2 to 4 or that 4 is the image of 2 under the function \(f\text{.}\)</p></li>
+<li id="li-464"><p id="p-3660">Since \(f ( x ) = 4\) implies that \(x = 2\) or \(x = -2\text{,}\) we say that the preimages of 4 are 2 and \(-2\) or that the set of preimages of 4 is \(\left\{ -2, 2 \right\}\text{.}\)</p></li>
+</ul>
+<p id="p-3661">For a function \(f\x S \to T\text{,}\) the next step is to consider subsets of \(S\) or \(T\) and what corresponds to them in the other set. We did this in the beginning activities. We will give some definitions and then revisit the examples in the beginning activities in light of these definitions. We will first consider the situation where \(A\) is a subset of \(S\) and consider the set of outputs whose inputs are from \(A\text{.}\) This will be a subset of \(T\text{.}\)</p>
+<article class="definition definition-like" id="imageofA"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.6.1</span><span class="period">.</span>
+</h6>
+<p id="p-3662">Let \(f\x S \to T\text{.}\) If \(A \subseteq S\text{,}\) then the <dfn class="terminology">image of \(\boldsymbol{A}\) under \(\boldsymbol{f}\)</dfn>  is the set \(f ( A )\text{,}\) where</p>
+<div class="displaymath">
+\begin{equation*}
+f ( A ) = \left\{f ( x ) \mid x \in A \right\}\!\text{.}
+\end{equation*}
+</div>
+<p id="p-3663">If there is no confusion as to which function is being used, we call \(f ( A )\) <dfn class="terminology">the image of \(\boldsymbol{A}\)</dfn>.</p></article><p id="p-3664">We now consider the situation in which \(C\) is a subset of \(T\) and consider the subset of \(A\) consisting of all elements of \(T\) whose outputs are in \(C\text{.}\)</p>
+<article class="definition definition-like" id="inverseimage"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.6.2</span><span class="period">.</span>
+</h6>
+<p id="p-3665">Let \(f\x S \to T\text{.}\) If \(C \subseteq T\text{,}\) then the <dfn class="terminology">preimage of \(\boldsymbol{C}\) under \(\boldsymbol{f}\)</dfn>  is the set \(f^{-1} ( C )\text{,}\) where</p>
+<div class="displaymath">
+\begin{equation*}
+f^{-1} ( C ) = \left\{x \in S \mid f ( x ) \in C \right\}\text{.}
+\end{equation*}
+</div>
+<p id="p-3666">If there is no confusion as to which function is being used, we call \(f^{-1} ( C )\) <dfn class="terminology">the preimage of \(\boldsymbol{C}\)</dfn>. The preimage of the set \(C\) under \(f\) is also called the <dfn class="terminology">inverse image of \(\boldsymbol{C}\) under \(\boldsymbol{f}\)</dfn>. </p></article><p id="p-3667">Notice that the set \(f^{-1} ( C )\) is defined whether or not \(f^{-1}\) is a function.</p>
+<article class="exercise exercise-like" id="prog_functionsandsets"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">6.6.3</span><span class="period">.</span><span class="space"> </span><span class="title">Beginning Activity 1  Revisited.</span>
+</h6>
+<div class="introduction" id="introduction-190">
+<p id="p-3668">Let \(S = \left\{ a, b, c, d \right\}\) and \(T = \left\{ s, t, u \right\}\text{.}\) Define \(f\x S \to T\) by</p>
+<div class="displaymath">
+\begin{align*}
+f(a) \amp = s \amp   f(b) \amp = t \amp   f(c) \amp = t \amp   f(d) \amp = s\text{.}
+\end{align*}
+</div>
+<p id="p-3669">Let \(A = \left\{ a, c \right\}, B = \left\{ a, d \right\}, C = \left\{ s, t \right\}, 
+\text{ and } D = \left\{ s, u \right\}\text{.}\)</p>
+<p id="p-3670">Use your work in <a href="S_functionsonsets.html#PA_functionsandsets" class="internal" title="Worksheet: Beginning Activity 1: Functions and Sets">Beginning Activity 1 </a> to determine each of the following sets:</p>
+</div>
+<article class="task exercise-like" id="task-1405"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3671">\(f ( A )\)</p></article><article class="task exercise-like" id="task-1406"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3672">\(f ( B )\)</p></article><article class="task exercise-like" id="task-1407"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-3673">\(f^{-1} ( C )\)</p></article><article class="task exercise-like" id="task-1408"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-3674">\(f^{-1} ( D )\)</p></article></article><article class="example example-like" id="exam_imageandinverse"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.6.4</span><span class="period">.</span><span class="space"> </span><span class="title">Images and Preimages of Sets.</span>
+</h6>
+<p id="p-3675">Let \(f\x \mathbb{R} \to \mathbb{R}\) be defined by \(f( x ) = x^2\text{,}\) for each \(x \in \mathbb{R}\text{.}\) The following results are based on the examples in <a href="S_functionsonsets.html#PA_functionsandsets" class="internal" title="Worksheet: Beginning Activity 1: Functions and Sets">Beginning Activity 1 </a> and <a href="S_functionsonsets.html#PA_functionsandint" class="internal" title="Worksheet: Beginning Activity 2: Functions and Intervals">Beginning Activity 2 </a>.</p>
+<ul class="disc">
+<li id="li-465"><p id="p-3676">Let \(A = \left\{ 1, 2, 3, -1 \right\}\text{.}\) Then \(f ( A ) = \left\{ 1, 4, 9 \right\}\text{.}\)</p></li>
+<li id="li-466"><p id="p-3677">Let \(B = \left\{ 1, 9, 15, -1 \right\}\text{.}\) Then \(f^{-1} ( B ) = \left\{ -\sqrt{15}, -3, -1, 1, 3, \sqrt{15} \right\}\text{.}\)</p></li>
+</ul>
+<p id="p-3678">The graphs from <a href="S_functionsonsets.html#PA_functionsandint" class="internal" title="Worksheet: Beginning Activity 2: Functions and Intervals">Beginning Activity 2 </a> illustrate the following results:</p>
+<ul class="disc">
+<li id="li-467">
+<p id="p-3679">If \(T\) is the closed interval \(\left[ 1, 2 \right]\text{,}\) then the image of the set \(T\) is</p>
+<div class="displaymath">
+\begin{align*}
+f ( T ) \amp = \left\{ f ( x ) \mid x \in \left[ 1, 2 \right] \right\}\\
+\amp = \left[ 1, 4 \right]\text{.}
+\end{align*}
+</div>
+</li>
+<li id="li-468">
+<p id="p-3680">If \(C\) is the closed interval \(\left[ 1, 4 \right]\text{,}\) then the preimage of the set \(C\) is</p>
+<div class="displaymath">
+\begin{equation*}
+f^{-1} ( C ) = \left\{ x \in \mathbb{R} \mid f ( x ) \in \left[ 1, 4 \right] \right\} = \left[ -2, -1 \right] \cup \left[ 1, 2 \right]\text{.}
+\end{equation*}
+</div>
+</li>
+</ul></article></section><section class="subsection" id="subsection-129"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Set Operations and Functions Acting on Sets</span>
+</h3>
+<p id="p-3681">We will now consider the following situation: Let \(S\) and \(T\) be sets and let \(f\) be a function from \(S\) to \(T\text{.}\) Also, let \(A\) and \(B\) be subsets of \(S\) and let \(C\) and \(D\) be subsets of \(T\text{.}\) In the remainder of this section, we will consider the following situations and answer the questions posed in each case.</p>
+<ul class="disc">
+<li id="li-469">
+<p id="p-3682">The set \(A \cap B\) is a subset of \(S\) and so \(f ( A \cap B )\) is a subset of \(T\text{.}\) In addition, \(f ( A )\) and \(f ( B )\) are subsets of \(T\text{.}\) Hence, \(f ( A ) \cap f ( B )\) is a subset of \(T\text{.}\)</p>
+<p id="p-3683">Is there any relationship between \(f ( A \cap B )\) and \(f ( A ) \cap f ( B )\text{?}\)</p>
+</li>
+<li id="li-470">
+<p id="p-3684">The set \(A \cup B\) is a subset of \(S\) and so \(f ( A \cup B )\) is a subset of \(T\text{.}\) In addition, \(f ( A )\) and \(f ( B )\) are subsets of \(T\text{.}\) Hence, \(f ( A ) \cup f ( B )\) is a subset of \(T\text{.}\)</p>
+<p id="p-3685">Is there any relationship between \(f ( A \cup B )\) and \(f ( A ) \cup f ( B )\text{?}\)</p>
+</li>
+<li id="li-471">
+<p id="p-3686">The set \(C \cap D\) is a subset of \(T\) and so \(f^{-1} ( C \cap D )\) is a subset of \(S\text{.}\) In addition, \(f^{-1} ( C )\) and \(f^{-1} ( D )\) are subsets of \(S\text{.}\) Hence, \(f^{-1} ( C ) \cap f^{-1} ( D )\) is a subset of \(S\text{.}\)</p>
+<p id="p-3687">Is there any relationship between the sets \(f^{-1} ( C \cap D )\) and \(f^{-1} ( C ) \cap f^{-1} ( D )\text{?}\)</p>
+</li>
+<li id="li-472">
+<p id="p-3688">The set \(C \cup D\) is a subset of \(T\) and so \(f^{-1} ( C \cup D )\) is a subset of \(S\text{.}\) In addition, \(f^{-1} ( C )\) and \(f^{-1} ( D )\) are subsets of \(S\text{.}\) Hence, \(f^{-1} ( C ) \cup f^{-1} ( D )\) is a subset of \(S\text{.}\)</p>
+<p id="p-3689">Is there any relationship between the sets \(f^{-1} ( C \cup D )\) and \(f^{-1} ( C ) \cup f^{-1} ( D )\text{?}\)</p>
+</li>
+</ul>
+<p id="p-3690">These and other questions will be explored in the next progress check.</p>
+<article class="exercise exercise-like" id="prog_setsandfunctions"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">6.6.5</span><span class="period">.</span><span class="space"> </span><span class="title">Set Operations and Functions Acting on Sets.</span>
+</h6>
+<div class="introduction" id="introduction-191">
+<p id="p-3691">In <a href="S_moreaboutfunctions.html" class="internal" title="Section 6.2: More about Functions">Section 6.2</a>, we introduced functions involving congruences. For example, if we let</p>
+<div class="displaymath">
+\begin{equation*}
+R_8 = \left\{0, 1, 2, 3, 4, 5, 6, 7 \right\}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">then we can define \(f\x  R_8 \to R_8\) by \(f ( x ) = r\text{,}\) where \(\left( x^2 + 2 \right) \equiv r \pmod 8\) and \(r \in R_8\text{.}\) Moreover, we shortened this notation to</p>
+<div class="displaymath">
+\begin{equation*}
+f ( x ) = \left( x^2 + 2 \right) \pmod 8\text{.}
+\end{equation*}
+</div>
+<p id="p-3692">We will use the following subsets of \(\R_8\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+A = \left\{ 1, 2, 4 \right\} \qquad B = \left\{ 3, 4, 6 \right\} \qquad
+C = \left\{ 1, 2, 3 \right\} \qquad D = \left\{ 3, 4, 5 \right\}\text{.}
+\end{equation*}
+</div>
+</div>
+<article class="task exercise-like" id="task-1409"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3693">Verify that \(f ( 0 ) = 2\text{,}\) \(f ( 1 ) = 3\text{,}\) \(f ( 2 ) = 6\text{,}\) and \(f ( 3 ) = 3\text{.}\) Then determine \(f ( 4 )\text{,}\) \(f ( 5 )\text{,}\) \(f ( 6 )\text{,}\) and \(f ( 7 )\text{.}\)</p></article><article class="task exercise-like" id="task-1410"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3694">Determine \(f (A )\text{,}\) \(f (B )\text{,}\) \(f^{-1} (C )\text{,}\) and \(f^{-1} (D )\text{.}\)</p></article><article class="task exercise-like" id="task-1411"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="introduction" id="introduction-192"><p id="p-3695">For each of the following, determine the two subsets of \(R_8\) and then determine if there is a relationship between the two sets. For example, \(A \cap B = \left\{ 4 \right\}\) and since \(f(4) = 2\text{,}\) we see that \(f ( A \cap B ) = \left\{ 2 \right\}\text{.}\)</p></div>
+<article class="task exercise-like" id="task-1412"><h6 class="heading"><span class="codenumber">(i)</span></h6>
+<p id="p-3696">\(f ( A \cap B )\) and \(f ( A ) \cap f ( B )\)</p></article><article class="task exercise-like" id="task-1413"><h6 class="heading"><span class="codenumber">(ii)</span></h6>
+<p id="p-3697">\(f ( A \cup B )\) and \(f ( A ) \cup f ( B )\)</p></article><article class="task exercise-like" id="task-1414"><h6 class="heading"><span class="codenumber">(iii)</span></h6>
+<p id="p-3698">\(f^{-1} ( C \cap D )\) and \(f^{-1} ( C ) \cap f^{-1} ( D )\)</p></article><article class="task exercise-like" id="task-1415"><h6 class="heading"><span class="codenumber">(iv)</span></h6>
+<p id="p-3699">\(f^{-1} ( C \cup D )\) and \(f^{-1} ( C ) \cup f^{-1} ( D )\)</p></article></article><article class="task exercise-like" id="task-1416"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-3700">Notice that \(f ( A )\) is a subset of the codomain, \(R_8\text{.}\) Consequently, \(f^{-1} \!\left( f ( A ) \right)\) is a subset of the domain, \(R_8\text{.}\) Is there any relation between \(A\) and \(f^{-1} \!\left( f ( A ) \right)\) in this case?</p></article><article class="task exercise-like" id="task-1417"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-3701">Notice that \(f^{-1} ( C )\) is a subset of the domain, \(R_8\text{.}\) Consequently, \(f \!\left( f^{-1} ( C ) \right)\) is a subset of the codomain, \(R_8\text{.}\) Is there any relation between \(C\) and \(f \!\left( f^{-1} ( C ) \right)\) in this case?</p></article></article><article class="exercise exercise-like" id="exam_setsandfunctions2"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">6.6.6</span><span class="period">.</span><span class="space"> </span><span class="title">Set Operations and Functions Acting on Sets.</span>
+</h6>
+<div class="introduction" id="introduction-193">
+<p id="p-3702">Define \(f\x \mathbb{R} \to \mathbb{R}\) by \(f ( x ) = x^2 + 2\) for all \(x \in \mathbb{R}\text{.}\) It will be helpful to use the graph shown in <a class="xref" data-knowl="./knowl/fig_examplein91.html" title="Figure 6.6.7">Figure 6.6.7</a>.</p>
+<figure class="figure figure-like" id="fig_examplein91"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/figps-setsandfunctions.svg" class="contained" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.6.7<span class="period">.</span></span><span class="space"> </span>Graph for <a class="xref" data-knowl="./knowl/exam_setsandfunctions2.html" title="Progress Check 6.6.6: Set Operations and Functions Acting on Sets">Progress Check 6.6.6</a></figcaption></figure><p id="p-3703">We will use the following closed intervals:</p>
+<div class="displaymath">
+\begin{equation*}
+A = \left[ 0, 3 \right] \qquad B = \left[ -2, 1\right] \qquad
+C = \left[ 2, 6 \right] \qquad D = \left[ 0, 3 \right]
+\end{equation*}
+</div>
+</div>
+<article class="task exercise-like" id="task-1418"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3704">Verify that \(f ( A ) = [2, 11]\text{,}\) \(f ( B ) = [2, 6]\text{,}\) \(f^{-1} ( C ) = [-2, 2]\text{,}\) and that \(f^{-1} ( D ) = [-1, 1]\text{.}\)</p></article><article class="task exercise-like" id="task-1419"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="introduction" id="introduction-194"><p id="p-3705">Explain why</p></div>
+<article class="task exercise-like" id="task-1420"><h6 class="heading"><span class="codenumber">(i)</span></h6>
+<p id="p-3706">\(f ( A \cap B ) = [2, 3]\) and \(f ( A ) \cap f ( B ) = [2, 6]\text{.}\) So in this case, \(f ( A \cap B ) \subseteq f ( A ) \cap f ( B )\text{.}\)</p></article><article class="task exercise-like" id="task-1421"><h6 class="heading"><span class="codenumber">(ii)</span></h6>
+<p id="p-3707">\(f ( A \cup B ) = [2, 11]\) and \(f ( A ) \cup f ( B ) = [2, 11]\text{.}\) So in this case, \(f ( A \cup B ) = f ( A ) \cup f ( B )\text{.}\)</p></article><article class="task exercise-like" id="task-1422"><h6 class="heading"><span class="codenumber">(iii)</span></h6>
+<p id="p-3708">\(f^{-1} ( C \cap D ) = [-1, 1]\) and \(f^{-1} ( C ) \cap f^{-1} ( D ) = [-1, 1]\text{.}\) So in this case, \(f^{-1} ( C \cap D ) = f^{-1} ( C ) \cap f^{-1} ( D )\text{.}\)</p></article><article class="task exercise-like" id="task-1423"><h6 class="heading"><span class="codenumber">(iv)</span></h6>
+<p id="p-3709">\(f^{-1} ( C \cup D ) = [-2, 2]\) and \(f^{-1} ( C ) \cup f^{-1} ( D ) = [-2, 2]\text{.}\) So in this case, \(f^{-1} ( C \cup D ) = f^{-1} ( C ) \cup f^{-1} ( D )\text{.}\)</p></article></article><article class="task exercise-like" id="task-1424"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-3710">Recall that \(A = [0, 3]\text{.}\) Notice \(f ( A ) = [2, 11]\) is a subset of the codomain, \(\mathbb{R}\text{.}\) Explain why \(f^{-1} \!\left( f ( A ) \right) = [-3, 3]\text{.}\) Since \(f^{-1} \!\left( f ( A ) \right)\) is a subset of the domain, \(\mathbb{R}\text{,}\) we see that in this case, \(A \subseteq f^{-1} \!\left( f ( A ) \right)\text{.}\)</p></article><article class="task exercise-like" id="task-1425"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-3711">Recall that \(C = [2, 6]\text{.}\) Notice that \(f^{-1} ( C ) = [-2, 2]\) is a subset of the domain, \(\mathbb{R}\text{.}\) Explain why \(f \!\left( f^{-1} ( C ) \right) = [2, 6]\text{.}\) Since \(f \!\left( f^{-1} ( C ) \right)\) is a subset of the codomain, \(\mathbb{R}\text{,}\) we see that in this case \(f \!\left( f^{-1} ( C ) \right) = C\text{.}\)</p></article></article><p id="p-3712">The examples in <a class="xref" data-knowl="./knowl/prog_setsandfunctions.html" title="Progress Check 6.6.5: Set Operations and Functions Acting on Sets">Progress Check 6.6.5</a> and <a class="xref" data-knowl="./knowl/exam_setsandfunctions2.html" title="Progress Check 6.6.6: Set Operations and Functions Acting on Sets">Progress Check 6.6.6</a> were meant to illustrate general results about how functions act on sets. In particular, we investigated how the action of a function on sets interacts with the set operations of intersection and union. We will now state the theorems that these examples were meant to illustrate. Some of the proofs will be left as exercises.</p>
+<article class="theorem theorem-like" id="T_imageofoperations"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.6.8</span><span class="period">.</span>
+</h6>
+<p id="p-3713">Let \(f\x S \to T\) be a function and let \(A\) and \(B\) be subsets of \(S\text{.}\) Then</p>
+<ol class="decimal">
+<li id="T_imageofoperations1"><p id="p-3714">\(f ( A \cap B ) \subseteq f ( A ) \cap f ( B )\) </p></li>
+<li id="T_imageofoperations2"><p id="p-3715">\(f ( A \cup B ) = f ( A ) \cup f ( B )\) </p></li>
+</ol></article><article class="hiddenproof" id="proof-43"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-43"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-43"><article class="hiddenproof"><p id="p-3716">We will prove <a class="xref" data-knowl="./knowl/T_imageofoperations1.html" title="Item 1">Item 1</a>. The proof of <a class="xref" data-knowl="./knowl/T_imageofoperations2.html" title="Item 2">Item 2</a> is <a class="xref" data-knowl="./knowl/exer_sec91-5.html" title="Exercise 5">Exercise 5</a>.</p>
+<p id="p-3717">Assume that \(f\x S \to T\) is a function and let \(A\) and \(B\) be subsets of \(S\text{.}\) We will prove that \(f ( A \cap B ) \subseteq f ( A ) \cap f ( B )\) by proving that for all \(y \in T\text{,}\) if \(y \in f ( A \cap B )\text{,}\) then \(y \in f ( A ) \cap f ( B )\text{.}\)</p>
+<p id="p-3718">We assume that \(y \in f ( A \cap B )\text{.}\) This means that there exists an \(x \in A \cap B\) such that \(f ( x ) = y\text{.}\) Since \(x \in A \cap B\text{,}\) we conclude that \(x \in A\) and \(x \in B\text{.}\)</p>
+<ul class="disc">
+<li id="li-475"><p id="p-3719">Since \(x \in A\) and \(f ( x ) = y\text{,}\) we conclude that \(y \in f ( A )\text{.}\)</p></li>
+<li id="li-476"><p id="p-3720">Since \(x \in B\) and \(f ( x ) = y\text{,}\) we conclude that \(y \in f ( B )\text{.}\)</p></li>
+</ul>
+<p id="p-3721">Since \(y \in f ( A )\) and \(y \in f ( B )\text{,}\) \(y \in f ( A ) \cap f ( B )\text{.}\) This proves that if \(y \in f ( A \cap B )\text{,}\) then \(y \in f ( A ) \cap f ( B )\text{.}\) Hence \(f ( A \cap B ) \subseteq f ( A ) \cap f ( B )\text{.}\)</p></article></div>
+<article class="theorem theorem-like" id="T_invimageofoperations"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.6.9</span><span class="period">.</span>
+</h6>
+<p id="p-3722">Let \(f\x S \to T\) be a function and let \(C\) and \(D\) be subsets of \(T\text{.}\) Then</p>
+<ol class="decimal">
+<li id="T_invimageofoperations1"><p id="p-3723">\(f^{-1} ( C \cap D ) = f^{-1} ( C ) \cap f^{-1} ( D )\) </p></li>
+<li id="T_invimageofoperations2"><p id="p-3724">\(f^{-1} ( C \cup D ) = f^{-1} ( C ) \cup f^{-1} ( D )\) </p></li>
+</ol></article><article class="hiddenproof" id="proof-44"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-44"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-44"><article class="hiddenproof"><p id="p-3725">We will prove <a class="xref" data-knowl="./knowl/T_invimageofoperations2.html" title="Item 2">Item 2</a>. The proof of <a class="xref" data-knowl="./knowl/T_invimageofoperations1.html" title="Item 1">Item 1</a> is <a class="xref" data-knowl="./knowl/exer_sec91-6.html" title="Exercise 6">Exercise 6</a>.</p>
+<p id="p-3726">Assume that \(f\x S \to T\) is a function and that \(C\) and \(D\) are subsets of \(T\text{.}\) We will prove that \(f^{-1} ( C \cup D ) = f^{-1} ( C ) \cup f^{-1} ( D )\) by proving that each set is a subset of the other.</p>
+<p id="p-3727">We start by letting \(x\) be an element of \(f^{-1} ( C \cup D )\text{.}\) This means that \(f ( x )\) is an element of \(C \cup D\text{.}\) Hence,</p>
+<div class="displaymath">
+\begin{equation*}
+f ( x ) \in C \text{ or }  f ( x ) \in D\text{.}
+\end{equation*}
+</div>
+<p class="continuation">In the case where \(f ( x ) \in C\text{,}\) we conclude that \(x \in f^{-1} ( C )\text{,}\) and hence that \(x \in f^{-1} ( C ) \cup f^{-1} ( D )\text{.}\) In the case where \(f ( x ) \in D\text{,}\) we see that \(x \in f^{-1} ( D )\text{,}\) and hence that \(x \in f^{-1} ( C ) \cup f^{-1} ( D )\text{.}\) So in both cases, \(x \in f^{-1} ( C ) \cup f^{-1} ( D )\text{,}\) and we have proved that \(f^{-1} ( C \cup D ) \subseteq f^{-1} ( C ) \cup f^{-1} ( D )\text{.}\)</p>
+<p id="p-3728">We now let \(t \in f^{-1} ( C ) \cup f^{-1} ( D )\text{.}\) This means that</p>
+<div class="displaymath">
+\begin{equation*}
+t \in f^{-1} ( C ) \text{ or }  t \in f^{-1} ( D )\text{.}
+\end{equation*}
+</div>
+<ul class="disc">
+<li id="li-479"><p id="p-3729">In the case where \(t \in f^{-1} ( C )\text{,}\) we conclude that \(f ( t ) \in C\) and hence that \(f ( t ) \in C \cup D\text{.}\) This means that \(t \in f^{-1} ( C \cup D )\text{.}\)</p></li>
+<li id="li-480"><p id="p-3730">Similarly, when \(t \in f^{-1} ( D )\text{,}\) it follows that \(f ( t ) \in D\) and hence that \(f ( t ) \in C \cup D\text{.}\) This means that \(t \in f^{-1} ( C \cup D )\text{.}\)</p></li>
+</ul>
+<p id="p-3731">These two cases prove that if \(t \in f^{-1} ( C ) \cup f^{-1} ( D )\text{,}\) then \(t \in f^{-1} ( C \cup D )\text{.}\) Therefore, \(f^{-1} ( C ) \cup f^{-1} ( D ) \subseteq f^{-1} ( C \cup D )\text{.}\)</p>
+<p id="p-3732">Since we have now proved that each of the two sets is a subset of the other set, we can conclude that \(f^{-1} ( C \cup D ) = f^{-1} ( C ) \cup f^{-1} ( D )\text{.}\)</p></article></div>
+<article class="theorem theorem-like" id="T_imageofinvimage"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.6.10</span><span class="period">.</span>
+</h6>
+<p id="p-3733">Let \(f\x S \to T\) be a function and let \(A\) be a subset of \(S\) and let \(C\) be a subset of \(T\text{.}\) Then</p>
+<ol class="decimal cols2">
+<li id="T_imageofinvimage1"><p id="p-3734">\(\displaystyle A \subseteq f^{-1} \!\left( f ( A ) \right)\)</p></li>
+<li id="T_imageofinvimage2"><p id="p-3735">\(\displaystyle f \!\left( f^{-1} ( C ) \right) \subseteq C\)</p></li>
+</ol></article><article class="hiddenproof" id="proof-45"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-45"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-45"><article class="hiddenproof"><p id="p-3736">We will prove <a class="xref" data-knowl="./knowl/T_imageofinvimage1.html" title="Item 1">Item 1</a>. The proof of <a class="xref" data-knowl="./knowl/T_imageofinvimage2.html" title="Item 2">Item 2</a> is <a class="xref" data-knowl="./knowl/exer_sec91-7.html" title="Exercise 7">Exercise 7</a>.</p>
+<p id="p-3737">To prove <a class="xref" data-knowl="./knowl/T_imageofinvimage1.html" title="Item 1">Item 1</a>, we will prove that for all \(a \in S\text{,}\) if \(a \in A\text{,}\) then</p>
+<p id="p-3738">\(a \in f^{-1} \!\left( f ( A ) \right)\text{.}\) So let \(a \in A\text{.}\) Then, by definition, \(f ( a ) \in f ( A )\text{.}\) We know that \(f ( A ) \subseteq T\text{,}\) and so \(f^{-1} \!\left( f ( A ) \right) \subseteq S\text{.}\) Notice that</p>
+<div class="displaymath">
+\begin{equation*}
+f^{-1} \!\left( f ( A ) \right) = \left\{ x \in S \mid f ( x ) \in f ( A ) \right\}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Since \(f ( a ) \in f ( A )\text{,}\) we use this to conclude that \(a \in f^{-1}\!\left ( f ( A ) \right)\text{.}\) This proves that if \(a \in A\text{,}\) then \(a \in f^{-1} \!\left( f ( A ) \right)\text{,}\) and hence that \(A \subseteq f^{-1} \!\left( f ( A ) \right)\text{.}\)</p></article></div></section><section class="exercises" id="exercises-26"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exer_sec91-1"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-195"><p id="p-3739">Let \(f\x S \to T\text{,}\) let \(A\) and \(B\) be subsets of \(S\text{,}\) and let \(C\) and \(D\) be subsets of \(T\text{.}\) For \(x \in S\) and \(y \in T\text{,}\) carefully explain what it means to say that</p></div>
+<article class="task exercise-like" id="task-1426"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3740">\(y \in f ( A \cap B )\)</p></article><article class="task exercise-like" id="task-1427"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3741">\(y \in f ( A \cup B )\)</p></article><article class="task exercise-like" id="task-1428"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-3742">\(y \in f ( A ) \cap f ( B )\)</p></article><article class="task exercise-like" id="task-1429"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-3743">\(y \in f ( A ) \cup f ( B )\)</p></article><article class="task exercise-like" id="task-1430"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-3744">\(x \in f^{-1} ( C \cap D )\)</p></article><article class="task exercise-like" id="task-1431"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-3745">\(x \in f^{-1} ( C \cup D )\)</p></article><article class="task exercise-like" id="task-1432"><h6 class="heading"><span class="codenumber">(g)</span></h6>
+<p id="p-3746">\(x \in f^{-1} ( C ) \cap f^{-1} ( D )\)</p></article><article class="task exercise-like" id="task-1433"><h6 class="heading"><span class="codenumber">(h)</span></h6>
+<p id="p-3747">\(x \in f^{-1} ( C ) \cup f^{-1} ( D )\)</p></article></article><article class="exercise exercise-like" id="exer_sec91-2"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-196"><p id="p-3748">Let \(f\x \mathbb{R} \to \mathbb{R}\) by \(f ( x ) = -2x + 1\text{.}\) Let \(A = \left[ 2, 5 \right]\) \(B = \left[ -1, 3 \right]\) \(C = \left[ -2, 3 \right]\) \(D = \left[ 1, 4 \right]\text{.}\) Find each of the following:</p></div>
+<article class="task exercise-like" id="task-1434"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3749">\(f ( A )\)</p></article><article class="task exercise-like" id="task-1435"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3750">\(f^{-1} ( f ( A ) )\)</p></article><article class="task exercise-like" id="task-1436"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-3751">\(f^{-1} ( C )\)</p></article><article class="task exercise-like" id="task-1437"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-3752">\(f ( f^{-1} ( C ) )\)</p></article><article class="task exercise-like" id="task-1438"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-3753">\(f ( A \cap B )\)</p></article><article class="task exercise-like" id="task-1439"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-3754">\(f ( A ) \cap f ( B )\)</p></article><article class="task exercise-like" id="task-1440"><h6 class="heading"><span class="codenumber">(g)</span></h6>
+<p id="p-3755">\(f^{-1} ( C \cap D )\)</p></article><article class="task exercise-like" id="task-1441"><h6 class="heading"><span class="codenumber">(h)</span></h6>
+<p id="p-3756">\(f^{-1} ( C ) \cap f^{-1} ( D )\)</p></article></article><article class="exercise exercise-like" id="exer_sec91-3"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-197"><p id="p-3757">Let \(g\x \mathbb{N} \times \mathbb{N} \to \mathbb{N}\) by \(g ( m, n ) = 2^m 3^n\text{,}\) let \(A = \left\{ 1, 2, 3 \right\}\text{,}\) and let \(C = \left\{ 1, 4, 6, 9, 12, 16, 18 \right\}\text{.}\) Find</p></div>
+<article class="task exercise-like" id="task-1442"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3758">\(g ( A \times A )\)</p></article><article class="task exercise-like" id="task-1443"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3759">\(g^{-1} ( C )\)</p></article><article class="task exercise-like" id="task-1444"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-3760">\(g^{-1} \!\left( g ( A \times A ) \right)\)</p></article><article class="task exercise-like" id="task-1445"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-3761">\(g \!\left( g^{-1} ( C ) \right)\)</p></article></article><article class="exercise exercise-like" id="exer_sec91-4"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-198"><p id="p-3762">Let \(S = \left\{1, 2, 3, 4 \right\}\text{.}\)</p></div>
+<article class="task exercise-like" id="task-1446"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3763">Define \(F\x S \to \mathbb{N}\) by \(F ( x ) = x^2\) for each \(x \in S\text{.}\) What is the range of the function \(F\) and what is \(F ( S )\text{?}\) How do these two sets compare?</p></article><article class="task exercise-like" id="task-1447"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3764">Now let \(A\) and \(B\) be sets and let \(f\x A \to B\) be an arbitrary function from \(A\) to \(B\text{.}\)</p>
+<p id="p-3765">Explain why \(f ( A ) = \text{ range} ( f )\text{.}\)</p></article><article class="task exercise-like" id="task-1448"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-3766">Define a function \(g\x A \to f ( A )\) by \(g ( x ) = f ( x )\) for all \(x\) in \(A\text{.}\) Prove that the function \(g\) is a surjection.</p></article></article><article class="exercise exercise-like" id="exer_sec91-5"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-3767">Prove <a class="xref" data-knowl="./knowl/T_imageofoperations2.html" title="Item 2">Item 2</a> of <a class="xref" data-knowl="./knowl/T_imageofoperations.html" title="Theorem 6.6.8">Theorem 6.6.8</a>. Let \(f\x S \to T\) be a function and let \(A\) and \(B\) be subsets of \(S\text{.}\) Then \(f ( A \cup B ) = f ( A ) \cup f ( B )\text{.}\)</p></article><article class="exercise exercise-like" id="exer_sec91-6"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-3768">Prove <a class="xref" data-knowl="./knowl/T_invimageofoperations1.html" title="Item 1">Item 1</a> of <a class="xref" data-knowl="./knowl/T_invimageofoperations.html" title="Theorem 6.6.9">Theorem 6.6.9</a>. Let \(f\x S \to T\) be a function and let \(C\) and \(D\) be subsets of \(T\text{.}\) Then \(f^{-1} ( C \cap D ) = f^{-1} ( C ) \cap f^{-1} ( D )\text{.}\)</p></article><article class="exercise exercise-like" id="exer_sec91-7"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-3769">Prove <a class="xref" data-knowl="./knowl/T_imageofinvimage2.html" title="Item 2">Item 2</a> of <a class="xref" data-knowl="./knowl/T_imageofinvimage.html" title="Theorem 6.6.10">Theorem 6.6.10</a>. Let \(f\x S \to T\) be a function and let \(C \subseteq T\text{.}\) Then \(f \!\left( f^{-1} ( C ) \right) \subseteq C\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-653"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-199"><p id="p-3770"></p></div></article><article class="exercise exercise-like" id="exercise-654"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-200"><p id="p-3771">Let \(f\x S \to T\) and let \(A\) and \(B\) be subsets of \(S\text{.}\) Prove or disprove each of the following:</p></div>
+<article class="task exercise-like" id="task-1449"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3772">If \(A \subseteq B\text{,}\) then \(f( A ) \subseteq f( B )\text{.}\)</p></article><article class="task exercise-like" id="task-1450"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3773">If \(f ( A ) \subseteq f (B )\text{,}\) then \(A \subseteq B\text{.}\)</p></article></article><article class="exercise exercise-like" id="exer_invimagetruefalse"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-201"><p id="p-3774">Let \(f\x S \to T\) and let \(C\) and \(D\) be subsets of \(T\text{.}\) Prove or disprove each of the following:</p></div>
+<article class="task exercise-like" id="task-1451"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3775">If \(C \subseteq D\text{,}\) then \(f^{-1} ( C ) \subseteq f^{-1} (D )\text{.}\)</p></article><article class="task exercise-like" id="task-1452"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3776">If \(f^{-1} ( C ) \subseteq f^{-1} (D )\text{,}\) then \(C \subseteq D\text{.}\)</p></article></article><article class="exercise exercise-like" id="exercise-656"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
+<p id="p-3777">Prove or disprove:</p>
+<p id="p-3778">If \(f\x S \to T\) is a function and \(A\) and \(B\) are subsets of \(S\text{,}\) then \(f ( A ) \cap f ( B ) \subseteq f ( A \cap B )\text{.}\)</p>
+<p id="p-3779">Note: <a class="xref" data-knowl="./knowl/T_imageofoperations1.html" title="Item 1">Item 1</a> of <a class="xref" data-knowl="./knowl/T_imageofoperations.html" title="Theorem 6.6.8">Theorem 6.6.8</a> states that \(f ( A \cap B ) \subseteq f ( A ) \cap f ( B )\text{.}\)</p></article><article class="exercise exercise-like" id="exer_sec91-11"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-202"><p id="p-3780">Let \(f\x S \to T\) be a function, let \(A \subseteq S\text{,}\) and let \(C \subseteq T\text{.}\)</p></div>
+<article class="task exercise-like" id="task-1453"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3781"><a class="xref" data-knowl="./knowl/T_imageofinvimage1.html" title="Item 1">Item 1</a> of <a class="xref" data-knowl="./knowl/T_imageofinvimage.html" title="Theorem 6.6.10">Theorem 6.6.10</a> states that \(A \subseteq f^{-1} \!\left( f ( A ) \right)\text{.}\) Give an example where \(f^{-1} \!\left( f ( A ) \right) \not \subseteq A\text{.}\)</p></article><article class="task exercise-like" id="task-1454"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3782"><a class="xref" data-knowl="./knowl/T_imageofinvimage2.html" title="Item 2">Item 2</a> of <a class="xref" data-knowl="./knowl/T_imageofinvimage.html" title="Theorem 6.6.10">Theorem 6.6.10</a> states that \(f \!\left( f^{-1} ( C ) \right) \subseteq C\text{.}\) Give an example where \(C \not \subseteq f \!\left( f^{-1} ( C ) \right)\text{.}\)</p></article></article><article class="exercise exercise-like" id="exer_sec91-12"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
+<p id="p-3783">Is the following proposition true or false? Justify your conclusion with a proof or a counterexample. <blockquote class="blockquote" id="blockquote-216">If \(f\x S \to T\) is an injection and \(A \subseteq S\text{,}\) then \(f^{-1} \!\left( f ( A ) \right) = A\text{.}\)</blockquote></p></article><article class="exercise exercise-like" id="exer_sec91-13"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
+<p id="p-3784">Is the following proposition true or false? Justify your conclusion with a proof or a counterexample. <blockquote class="blockquote" id="blockquote-217">If \(f\x S \to T\) is a surjection and \(C \subseteq T\text{,}\) then \(f \!\left( f^{-1} ( C ) \right) = C\text{.}\)</blockquote></p></article><article class="exercise exercise-like" id="exercise-660"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
+<p id="p-3785">Let \(f\x S \to T\text{.}\) Prove that \(f ( A \cap B ) = f ( A ) \cap f ( B )\) for all subsets \(A\) and \(B\) of \(S\) if and only if \(f\) is an injection.</p></article></section></section></div></main>
+</div>
+</body>
+</html>

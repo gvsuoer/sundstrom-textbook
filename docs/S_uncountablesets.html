@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-10-05T14:53:29-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Uncountable Sets</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\def\C{\JustCenter}
+\newcommand{\typeu}{Beginning }
+\def\C{\JustCenter}
+\newcommand{\typel}{beginning }
+\def\C{\JustCenter}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\
+\thechapter. #1}{}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\def\C{\JustCenter}
+\renewcommand{\theenumi}{\alph{enumi}}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\theenumi}{({\alph{enumi}})}
+\def\C{\JustCenter}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\mynot}{\neg}
+\newcommand{\card}{\mathbf{card}}
+\newcommand{\x}{:}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Mathematical Reasoning:</span> <span class="subtitle">Writing and Proof (Version 3)</span></a></h1>
+<p class="byline">Ted Sundstrom, Professor Emeritus</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_infinitesets.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_topicsinsets.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-45.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_infinitesets.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C_topicsinsets.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-45.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="fm-versions.html" data-scroll="fm-versions">Version 3 and Version 2.1</a></li>
+<li><a href="fm-student-note.html" data-scroll="fm-student-note">Note to Students</a></li>
+<li><a href="fm-preface.html" data-scroll="fm-preface">Preface</a></li>
+<li><a href="fm-imp-features.html" data-scroll="fm-imp-features">Important Features of the Book</a></li>
+<li><a href="fm-cont-org.html" data-scroll="fm-cont-org">Content and Organization</a></li>
+<li><a href="fm-inst-note.html" data-scroll="fm-inst-note">Supplementary Materials for the Instructor</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_1intro.html" data-scroll="C_1intro"><span class="codenumber">1</span> <span class="title">Introduction to Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_1prop.html" data-scroll="S_1prop">Statements and Conditional Statements</a></li>
+<li><a href="S_1direct.html" data-scroll="S_1direct">Constructing Direct Proofs</a></li>
+<li><a href="S_1summary.html" data-scroll="S_1summary">Chapter 1 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_2logic.html" data-scroll="C_2logic"><span class="codenumber">2</span> <span class="title">Logical Reasoning</span></a><ul>
+<li><a href="S_2logop.html" data-scroll="S_2logop">Statements and Logical Operators</a></li>
+<li><a href="S_logequiv.html" data-scroll="S_logequiv">Logically Equivalent Statements</a></li>
+<li><a href="S_2predicates.html" data-scroll="S_2predicates">Open Sentences and Sets</a></li>
+<li><a href="S_2quantifier.html" data-scroll="S_2quantifier">Quantifiers and Negations</a></li>
+<li><a href="S_2summary.html" data-scroll="S_2summary">Chapter 2 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_proofs.html" data-scroll="C_proofs"><span class="codenumber">3</span> <span class="title">Constructing and Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_directproof.html" data-scroll="S_directproof">Direct Proofs</a></li>
+<li><a href="S_moremethods.html" data-scroll="S_moremethods">More Methods of Proof</a></li>
+<li><a href="S_contradiction.html" data-scroll="S_contradiction">Proof by Contradiction</a></li>
+<li><a href="S_cases.html" data-scroll="S_cases">Using Cases in Proofs</a></li>
+<li><a href="S_divalgo.html" data-scroll="S_divalgo">Beginning Activity 1: The Division Algorithm and Congruence</a></li>
+<li><a href="S_reviewproofs.html" data-scroll="S_reviewproofs">Review of Proof Methods</a></li>
+<li><a href="S_3summary.html" data-scroll="S_3summary">Chapter 3 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_induction.html" data-scroll="C_induction"><span class="codenumber">4</span> <span class="title">Mathematical Induction</span></a><ul>
+<li><a href="S_mathinduction.html" data-scroll="S_mathinduction">The Principle of Mathematical Induction</a></li>
+<li><a href="S_otherinduction.html" data-scroll="S_otherinduction">Other Forms of Mathematical Induction</a></li>
+<li><a href="S_recursion.html" data-scroll="S_recursion">Induction and Recursion</a></li>
+<li><a href="S_4summary.html" data-scroll="S_4summary">Chapter 4 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_settheory.html" data-scroll="C_settheory"><span class="codenumber">5</span> <span class="title">Set Theory</span></a><ul>
+<li><a href="S_setoperations.html" data-scroll="S_setoperations">Sets and Operations on Sets</a></li>
+<li><a href="S_provingset.html" data-scroll="S_provingset">Proving Set Relationships</a></li>
+<li><a href="S_setproperties.html" data-scroll="S_setproperties">Properties of Set Operations</a></li>
+<li><a href="S_cartesian.html" data-scroll="S_cartesian">Cartesian Products</a></li>
+<li><a href="S_indexfamily.html" data-scroll="S_indexfamily">Indexed Families of Sets</a></li>
+<li><a href="S_5summary.html" data-scroll="S_5summary">Chapter 5 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_functions.html" data-scroll="C_functions"><span class="codenumber">6</span> <span class="title">Functions</span></a><ul>
+<li><a href="S_introfunctions.html" data-scroll="S_introfunctions">Introduction to Functions</a></li>
+<li><a href="S_moreaboutfunctions.html" data-scroll="S_moreaboutfunctions">More about Functions</a></li>
+<li><a href="S_typesoffunctions.html" data-scroll="S_typesoffunctions">Beginning Activity 1: Injections, Surjections, and Bijections</a></li>
+<li><a href="S_compositionoffunctions.html" data-scroll="S_compositionoffunctions">Composition of Functions</a></li>
+<li><a href="S_inversefunctions.html" data-scroll="S_inversefunctions">Inverse Functions</a></li>
+<li><a href="S_functionsonsets.html" data-scroll="S_functionsonsets">Functions Acting on Sets</a></li>
+<li><a href="S_6summary.html" data-scroll="S_6summary">Chapter 6 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_equivrelations.html" data-scroll="C_equivrelations"><span class="codenumber">7</span> <span class="title">Equivalence Relations</span></a><ul>
+<li><a href="S_relations.html" data-scroll="S_relations">Relations</a></li>
+<li><a href="S_equivrelations.html" data-scroll="S_equivrelations">Equivalence Relations</a></li>
+<li><a href="S_equivclasses.html" data-scroll="S_equivclasses">Equivalence Classes</a></li>
+<li><a href="S_modulararithmetic.html" data-scroll="S_modulararithmetic">Modular Arithmetic</a></li>
+<li><a href="section-37.html" data-scroll="section-37">Chapter 7 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_numbertheory.html" data-scroll="C_numbertheory"><span class="codenumber">8</span> <span class="title">Topics in Number Theory</span></a><ul>
+<li><a href="S_gcd.html" data-scroll="S_gcd">The Greatest Common Divisor</a></li>
+<li><a href="S_primefactorizations.html" data-scroll="S_primefactorizations">Prime Numbers and Prime Factorizations</a></li>
+<li><a href="S_diophantine.html" data-scroll="S_diophantine">Linear Diophantine Equations</a></li>
+<li><a href="section-41.html" data-scroll="section-41">Chapter 8 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_topicsinsets.html" data-scroll="C_topicsinsets"><span class="codenumber">9</span> <span class="title">Finite and Infinite Sets</span></a><ul>
+<li><a href="S_finitesets.html" data-scroll="S_finitesets">Finite Sets</a></li>
+<li><a href="S_infinitesets.html" data-scroll="S_infinitesets">Countable Sets</a></li>
+<li><a href="S_uncountablesets.html" data-scroll="S_uncountablesets" class="active">Uncountable Sets</a></li>
+<li><a href="section-45.html" data-scroll="section-45">Chapter 9 Summary</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="C_writingguides.html" data-scroll="C_writingguides"><span class="codenumber">A</span> <span class="title">Guidelines for Writing Mathematical Proofs</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="S_uncountablesets"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">9.3</span> <span class="title">Uncountable Sets</span>
+</h2>
+<section class="worksheet" id="PA_dodgeball"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">The Game of Dodge Ball</span><div class="print-links">
+<a href="PA_dodgeball-A4.html" class="a4">A4</a><a href="PA_dodgeball-letter.html" class="us">US</a>
+</div>
+</h3>
+<p id="p-4968">(From <span class="booktitle">The Heart of Mathematics: An Invitation to Effective Thinking</span> by Edward B. Burger and Michael Starbird, Key Publishing Company, © 2000 by Edward B. Burger and Michael Starbird.)</p>
+<p id="p-4969">Dodge Ball is a game for two players. It is played on a game board such as the one shown in <a class="xref" data-knowl="./knowl/fig_dodgeball.html" title="Figure 9.3.1">Figure 9.3.1</a>.</p>
+<figure class="figure figure-like" id="fig_dodgeball"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/7536aeedb9b0b30a6cff9a8ffe8167c2cb2a9302.svg" class="contained" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">9.3.1<span class="period">.</span></span><span class="space"> </span>Game Board for Dodge Ball</figcaption></figure><p id="p-4970">Player One has a 6 by 6 array to complete and Player Two has a 1 by 6 row to complete. Each player has six turns as described next.</p>
+<ul class="disc">
+<li id="li-680"><p id="p-4971">Player One begins by filling in the first horizontal row of his or her table with a sequence of six X's and O's, one in each square in the first row.</p></li>
+<li id="li-681"><p id="p-4972">Then Player Two places either an X or an O in the first box of his or her row. At this point, Player One has completed the first row and Player Two has filled in the first box of his or her row with one letter.</p></li>
+<li id="li-682"><p id="p-4973">The game continues with Player One completing a row with six letters (X's and O's), one in each box of the next row followed by Player Two writing one letter (an X or an O) in the next box of his or her row. The game is completed when Player One has completed all six rows and Player Two has completed all six boxes in his or her row.</p></li>
+</ul>
+<ul id="p-4974" class="disc">
+<li id="li-683"><p id="p-4975">Player One wins if any horizontal row in the 6 by 6 array is identical to the row that Player Two created. (Player One matches Player Two.)</p></li>
+<li id="li-684"><p id="p-4976">Player Two wins if Player Two's row of six letters is different than each of the six rows produced by Player One. (Player Two “dodges” Player One.)</p></li>
+</ul>
+<p id="p-4977">There is a winning strategy for one of the two players. This means that there is plan by which one of the two players will always win. Which player has a winning strategy? Carefully describe this winning strategy.</p>
+<section class="paragraphs" id="paragraphs-40"><h5 class="heading"><span class="title">Applying the Winning Strategy to Lists of Real Numbers.</span></h5>
+<p id="p-4978">Following is a list of real numbers between 0 and 1. Each real number is written as a decimal number.</p>
+<div class="displaymath">
+\begin{align*}
+a_1 \amp = 0.1234567890   \amp   a_6 \amp = 0.0103492222\\
+a_2 \amp = 0.3216400000   \amp   a_7 \amp = 0.0011223344\\
+a_3 \amp = 0.4321593333   \amp   a_8 \amp = 0.7077700022\\
+a_4 \amp = 0.9120930092   \amp   a_9 \amp = 0.2100000000\\
+a_5 \amp = 0.0000234102   \amp  a_{10} \amp = 0.9870008943
+\end{align*}
+</div>
+<p id="p-4979">Use a method similar to the winning strategy in the game of Dodge Ball to write a real number (in decimal form) between 0 and 1 that is not in this list of 10 numbers.</p></section><article class="exercise exercise-like" id="exercise-878"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-4980">Do you think your method could be used for any list of 10 real numbers between 0 and 1 if the goal is to write a real number between 0 and 1 that is not in the list?</p></article><article class="exercise exercise-like" id="exercise-879"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-4981">Do you think this method could be extended to a list of 20 different real numbers? To a list of 50 different real numbers?</p></article><article class="exercise exercise-like" id="exercise-880"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-4982">Do you think this method could be extended to a countably infinite list of real numbers?</p></article></section><section class="worksheet" id="PA_powerset"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Beginning Activity 2: Functions from a Set to Its Power Set</span><div class="print-links">
+<a href="PA_powerset-A4.html" class="a4">A4</a><a href="PA_powerset-letter.html" class="us">US</a>
+</div>
+</h3>
+<p id="p-4983">Let \(A\) be a set. In <a href="S_setoperations.html" class="internal" title="Section 5.1: Sets and Operations on Sets">Section 5.1</a>, we defined the <dfn class="terminology">power set</dfn>  \(\mathcal{P} ( A )\) of \(A\) to be the set of all subsets of \(A\text{.}\) This means that \(X \in \mathcal{P} ( A )\) if and only if \(X \subseteq A\text{.}\) <a class="xref" data-knowl="./knowl/T_powerset.html" title="Theorem 5.1.13">Theorem 5.1.13</a> in <a href="S_setoperations.html" class="internal" title="Section 5.1: Sets and Operations on Sets">Section 5.1</a> states that if a set \(A\) has \(n\) elements, then \(A\) has \(2^n\) subsets or that \(\mathcal{P} ( A )\) has \(2^n\) elements. Using our current notation for cardinality, this means that if \(\text{ card} ( A ) = n\text{,}\) then \(\text{ card} ( \mathcal{P} ( A ) ) = 2^n\text{.}\) (The proof of this theorem was <a class="xref" data-knowl="./knowl/exer_powerset.html" title="Activity 29: Proof of Theorem 5.1.13">Activity 29</a>.)</p>
+<p id="p-4984">We are now going to define and explore some functions from a set \(A\) to its power set \(\mathcal{P} ( A )\text{.}\) This means that the input of the function will be an element of \(A\) and the output of the function will be a subset of \(A\text{.}\)</p>
+<article class="exercise exercise-like" id="exercise-881"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-299">
+<p id="p-4985">Let \(A = \left\{1, 2, 3, 4 \right\}\text{.}\) Define \(f\x A \to \mathcal{P} ( A )\) by</p>
+<div class="displaymath">
+\begin{align*}
+f ( 1 ) \amp = \left\{ 1, 2, 3 \right\} \amp f ( 2 ) \amp = \left\{ 1, 3, 4 \right\}\\
+f ( 3 ) \amp = \left\{ 1, 4 \right\} \amp f ( 4 ) \amp = \left\{ 2, 4 \right\}
+\end{align*}
+</div>
+</div>
+<article class="task exercise-like" id="task-1796"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-4986">Is \(1 \in f ( 1 )\text{?}\) Is \(2 \in f ( 2 )\text{?}\) Is \(3 \in f ( 3 )\text{?}\) Is \(4 \in f ( 4 )\text{?}\)</p></article><article class="task exercise-like" id="task-1797"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-4987">Determine \(S = \left\{ x \in A \mid x \notin f ( x ) \right\}\text{.}\)</p></article><article class="task exercise-like" id="task-1798"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-4988">Notice that \(S \in \mathcal{P} ( A )\text{.}\) Does there exist an element \(t\) in \(A\) such that \(f ( t ) = S\text{?}\) That is, is \(S \in \text{ range} ( f )\text{?}\)</p></article></article><article class="exercise exercise-like" id="exercise-882"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-300">
+<p id="p-4989">Let \(A = \left\{1, 2, 3, 4 \right\}\text{.}\) Define \(f\x A \to \mathcal{P} ( A )\) by</p>
+<div class="displaymath">
+\begin{equation*}
+f ( x ) = A - \left\{ x \right\} \text{ for each } x \in A\text{.}
+\end{equation*}
+</div>
+</div>
+<article class="task exercise-like" id="task-1799"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-4990">Determine \(f ( 1 )\text{.}\) Is \(1 \in f ( 1 )\text{?}\)</p></article><article class="task exercise-like" id="task-1800"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-4991">Determine \(f ( 2 )\text{.}\) Is \(2 \in f ( 2 )\text{?}\)</p></article><article class="task exercise-like" id="task-1801"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-4992">Determine \(f ( 3 )\text{.}\) Is \(3 \in f ( 3 )\text{?}\)</p></article><article class="task exercise-like" id="task-1802"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-4993">Determine \(f ( 4 )\text{.}\) Is \(4 \in f ( 4 )\text{?}\)</p></article><article class="task exercise-like" id="task-1803"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-4994">Determine \(S = \left\{ x \in A \mid x \notin f ( x ) \right\}\text{.}\)</p></article><article class="task exercise-like" id="task-1804"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-4995">Notice that \(S \in \mathcal{P} ( A )\text{.}\) Does there exist an element \(t\) in \(A\) such that \(f ( t ) = S\text{?}\) That is, is \(S \in \text{ range} ( f )\text{?}\)</p></article></article><article class="exercise exercise-like" id="exercise-883"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-301">
+<p id="p-4996">Define \(f\x \mathbb{N} \to \mathcal{P} ( \mathbb{N} )\) by</p>
+<div class="displaymath">
+\begin{equation*}
+f ( n ) = \mathbb{N} - \left\{n^2, n^2-2n \right\},
+\text{ for each } n \in \mathbb{N}\text{.}
+\end{equation*}
+</div>
+</div>
+<article class="task exercise-like" id="task-1805"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-4997">Determine \(f ( 1 )\text{,}\) \(f ( 2 )\text{,}\) \(f ( 3 )\text{,}\) and \(f ( 4 )\text{.}\) In each of these cases, determine if \(k \in f ( k )\text{.}\)</p></article><article class="task exercise-like" id="task-1806"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-4998">Prove that if \(n &gt; 3\text{,}\) then \(n \in f ( n )\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-44" id="hint-44"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-44"><div class="hint solution-like"><p id="p-4999">Prove that if \(n &gt;3\text{,}\) then \(n^2 &gt; n\) and \(n^2 - 2n &gt;n\text{.}\)</p></div></div>
+</div></article><article class="task exercise-like" id="task-1807"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-5000">Determine \(S = \left\{ x \in \mathbb{N} \mid x \notin f ( x ) \right\}\text{.}\)</p></article><article class="task exercise-like" id="task-1808"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-5001">Notice that \(S \in \mathcal{P} ( \mathbb{N} )\text{.}\) Does there exist an element \(t\) in \(\mathbb{N}\) such that \(f ( t ) = S\text{?}\) That is, is \(S \in \text{ range} ( f )\text{?}\)</p></article></article></section><section class="introduction" id="introduction-302"><p id="p-5002">We have seen examples of sets that are countably infinite, but we have not yet seen an example of an infinite set that is uncountable. We will do so in this section. The first example of an uncountable set will be the open interval of real numbers \(( 0, 1 )\text{.}\) The proof that this interval is uncountable uses a method similar to the winning strategy for Player Two in the game of Dodge Ball from <a href="S_uncountablesets.html#PA_dodgeball" class="internal" title="Worksheet: The Game of Dodge Ball">Beginning Activity 1 </a>. Before considering the proof, we need to state an important result about decimal expressions for real numbers.</p></section><section class="subsection" id="subsection-168"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Decimal Expressions for Real Numbers</span>
+</h3>
+<p id="p-5003">In its decimal form, any real number \(a\) in the interval \(( 0, 1 )\) can be written as \(a = 0.a_1 a_2 a_3 a_4 \ldots \text{,}\) where each \(a_i\) is an integer with \(0 \leq a_i \leq 9\text{.}\) For example,</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{5}{12} = 0.416666 \ldots\text{.}
+\end{equation*}
+</div>
+<p id="p-5004">We often abbreviate this as \(\dfrac{5}{12} = 0.41 \overline{6}\) to indicate that the \(6\) is repeated. We can also repeat a block of digits. For example, \(\dfrac{5}{26} = 0.19 \overline{230769}\) to indicate that the block 230769 repeats. That is,</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{5}{26} = 0.19230769230769230769 \ldots\text{.}
+\end{equation*}
+</div>
+<p id="p-5005">There is only one situation in which a real number can be represented as a decimal in more than one way. A decimal that ends with an infinite string of 9's is equal to one that ends with an infinite string of 0's. For example, \(0.3199999 \ldots\) represents the same real number as \(0.3200000 \ldots \text{.}\) Geometric series can be used to prove that a decimal that ends with an infinite string of 9's is equal to one that ends with an infinite string of 0's, but we will not do so here.</p>
+<article class="definition definition-like" id="normalized"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">9.3.2</span><span class="period">.</span>
+</h6>
+<p id="p-5006">A decimal representation of a real number \(a\) is in <dfn class="terminology">normalized form</dfn>  provided that there is no natural number \(k\) such that for all natural numbers \(n\) with \(n &gt; k\text{,}\) \(a_n = 9\text{.}\) That is, the decimal representation of \(a\) is in normalized form if and only if it does not end with an infinite string of 9's.</p></article><p id="p-5007">One reason the normalized form is important is the following theorem (which will not be proved here).</p>
+<article class="theorem theorem-like" id="T_normalized"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.3.3</span><span class="period">.</span>
+</h6>
+<p id="p-5008">Two decimal numbers in normalized form are equal if and only if they have identical digits in each decimal position.</p></article></section><section class="subsection" id="sym_continuum"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Uncountable Subsets of \(\boldsymbol{\mathbb{R}}\)</span>
+</h3>
+<p id="p-5009">In the proof that follows, we will use only the normalized form for the decimal representation of a real number in the interval \(( 0, 1 )\text{.}\)</p>
+<article class="theorem theorem-like" id="T_uncountableinterval"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.3.4</span><span class="period">.</span>
+</h6>
+<p id="p-5010">The open interval \(( 0, 1 )\) is an uncountable set.</p></article><article class="hiddenproof" id="proof-70"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-70"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-70"><article class="hiddenproof"><p id="p-5011">Since the interval \(( 0, 1 )\) contains the infinite subset \(\left\{\dfrac{1}{2}, \dfrac{1}{3}, \dfrac{1}{4}, \ldots \,\right\}\text{,}\) we can use <a class="xref" data-knowl="./knowl/T_subsetisinfinite.html" title="Theorem 9.2.2">Theorem 9.2.2</a>, to conclude that \(( 0, 1 )\) is an infinite set. So \(( 0, 1 )\) is either countably infinite or uncountable. We will prove that \(( 0, 1 )\) is uncountable by proving that any function from \(\N\) to \((0, 1)\) is not a surjection, and hence, there is no bijection from \(\N\) to \((0, 1)\text{.}\)</p>
+<p id="p-5012">So suppose that \(f\x \mathbb{N} \to ( 0, 1 )\) is a function. We will show that \(f\) is not a surjection by showing that there exists an element in \(( 0, 1 )\) that cannot be in the range of \(f\text{.}\) Writing the images of the elements of \(\mathbb{N}\) in normalized form, we can write</p>
+<div class="displaymath">
+\begin{align*}
+f ( 1 ) \amp = 0.a_{1 1} a_{1 2} a_{1 3} a_{1 4} a_{1 5} \ldots\\
+f ( 2 ) \amp = 0.a_{2 1} a_{2 2} a_{2 3} a_{2 4} a_{2 5} \ldots\\
+f ( 3 ) \amp = 0.a_{3 1} a_{3 2} a_{3 3} a_{3 4} a_{3 5} \ldots\\
+f ( 4 ) \amp = 0.a_{4 1} a_{4 2} a_{4 3} a_{4 4} a_{4 5} \ldots\\
+f ( 5 ) \amp = 0.a_{5 1} a_{5 2} a_{5 3} a_{5 4} a_{5 5} \ldots\\
+\amp \vdots\\
+f ( n ) \amp = 0.a_{n 1} a_{n 2} a_{n 3} a_{n 4} a_{n 5} \ldots\\
+\amp \vdots
+\end{align*}
+</div>
+<p id="p-5013">Notice the use of the double subscripts. The number \(a_{i j}\) is the \(j^\text{ th }\) digit to the right of the decimal point in the normalized decimal representation of \(f ( i )\text{.}\)</p>
+<p id="p-5014">We will now construct a real number \(b = 0.b_1 b_2 b_3 b_4 b_5 \ldots\) in \(( 0, 1 )\) and in normalized form that is not in this list.</p>
+<p id="p-5015">Note: The idea is to start in the upper left corner and move down the diagonal in a manner similar to the winning strategy for Player Two in the game in <a href="S_uncountablesets.html#PA_dodgeball" class="internal" title="Worksheet: The Game of Dodge Ball">Beginning Activity 1 </a>. At each step, we choose a digit that is not equal to the diagonal digit.</p>
+<p id="p-5016">Start with \(a_{1 1}\) in \(f ( 1 )\text{.}\) We want to choose \(b_1\) so that \(b_1 \ne 0\text{,}\) \(b_1 \ne a_{1 1}\text{,}\) and \(b_1 \ne 9\text{.}\) (To ensure that we end up with a decimal that is in normalized form, we make sure that each digit is not equal to 9.) We then repeat this process with \(a_{2 2}\text{,}\) \(a_{3 3}\text{,}\) \(a_{4 4}\text{,}\) \(a_{5 5}\text{,}\) and so on. So we let \(b\) be the real number \(b = 0.b_1 b_2 b_3 b_4 b_5 \ldots \text{,}\) where for each \(k \in \mathbb{N}\)</p>
+<div class="displaymath">
+\begin{equation*}
+b_k = \begin{cases}3 \amp \text{if \(a_{k k} \ne 3\)}  \\ 5 \amp 
+\text{if \(a_{k k} = 3\).} \end{cases}
+\end{equation*}
+</div>
+<p class="continuation">(The choice of 3 and 5 is arbitrary. Other choices of distinct digits will also work.)</p>
+<p id="p-5017">Now for each \(n \in \mathbb{N}\text{,}\) \(b \ne f ( n )\) since \(b\) and \(f ( n )\) are in normalized form and \(b\) and \(f ( n )\) differ in the \(n\){th} decimal place. Therefore, \(f\) is not a surjection. This proves that any function from \(\mathbb{N}\) to \(( 0, 1 )\) is not a surjection and hence, there is no bijection from \(\mathbb{N}\) to \(( 0, 1 )\text{.}\) Therefore, \(( 0, 1 )\) is not countably infinite and hence must be an uncountable set.</p></article></div>
+<article class="exercise exercise-like" id="prog_diagonal"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">9.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Dodge Ball and Cantor's Diagonal Argument.</span>
+</h6>
+<p id="p-5018">The proof of <a class="xref" data-knowl="./knowl/T_uncountableinterval.html" title="Theorem 9.3.4">Theorem 9.3.4</a> is often referred to as <dfn class="terminology">Cantor's diagonal argument</dfn>.  It is named after the mathematician Georg Cantor, who first published the proof in 1874. Explain the connection between the winning strategy for Player Two in Dodge Ball  (see <a href="S_uncountablesets.html#PA_dodgeball" class="internal" title="Worksheet: The Game of Dodge Ball">Beginning Activity 1 </a>) and the proof of <a class="xref" data-knowl="./knowl/T_uncountableinterval.html" title="Theorem 9.3.4">Theorem 9.3.4</a> using Cantor's diagonal argument.</p></article><p id="p-5019">The open interval \(( 0, 1 )\) is our first example of an uncountable set. The cardinal number of \(( 0, 1 )\) is defined to be \(\boldsymbol{c}\text{,}\) which stands for <dfn class="terminology">the cardinal number of the continuum</dfn>.  So the two infinite cardinal numbers we have seen are \(\aleph_0\) for countably infinite sets and \(\boldsymbol{c}\text{.}\)</p>
+<article class="definition definition-like" id="cardinalityc"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">9.3.6</span><span class="period">.</span>
+</h6>
+<p id="p-5020">A set \(A\) is said to have <dfn class="terminology">cardinality \(\boldsymbol{c}\)</dfn>  provided that \(A\) is equivalent to \(( 0, 1 )\text{.}\) In this case, we write \(\text{ card} ( A ) = \boldsymbol{c}\) and say that the cardinal number of \(A\) is \(\boldsymbol{c}\text{.}\)</p></article><p id="p-5021">The proof of <a class="xref" data-knowl="./knowl/T_openintervals.html" title="Theorem 9.3.7">Theorem 9.3.7</a> is included in <a class="xref" data-knowl="./knowl/prog_openintervals.html" title="Progress Check 9.3.8: Proof of Theorem 9.3.7">Progress Check 9.3.8</a>.</p>
+<article class="theorem theorem-like" id="T_openintervals"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.3.7</span><span class="period">.</span>
+</h6>
+<p id="p-5022">Let \(a\) and \(b\) be real numbers with \(a \lt b\text{.}\) The open interval \(( a, b )\) is uncountable and has cardinality \(\boldsymbol{c}\text{.}\)</p></article><article class="exercise exercise-like" id="prog_openintervals"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">9.3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Proof of Theorem 9.3.7.</span>
+</h6>
+<article class="task exercise-like" id="task-1809"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-5023">In <a class="xref" data-knowl="./knowl/A_equivsets4.html" title="Task 9.1.3.c">Task 9.1.3.c</a> of <a class="xref" data-knowl="./knowl/prog_equivsets.html" title="Progress Check 9.1.3: Examples of Equivalent Sets">Progress Check 9.1.3</a>, we proved that if \(b \in \R\) and \(b &gt; 0\text{,}\) then the open interval \(( 0, 1 )\) is equivalent to the open interval \(( 0, b )\text{.}\) Now let \(a\) and \(b\) be real numbers with \(a \lt  b\text{.}\) Find a function</p>
+<div class="displaymath">
+\begin{equation*}
+f\x  ( 0, 1 ) \to ( a, b )
+\end{equation*}
+</div>
+<p class="continuation">that is a bijection and conclude that the open interval \(( 0, 1) \approx ( a, b )\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-45" id="hint-45"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-45"><div class="hint solution-like"><p id="p-5024">Find a linear function that passes through the points \(( 0, a )\) and \(( 1, b )\text{.}\) Use this to define the function \(f\text{.}\) Make sure you prove that this function \(f\) is a bijection.</p></div></div>
+</div></article><article class="task exercise-like" id="task-1810"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-5025">Let \(a, b, c, d\) be real numbers with \(a \lt b\) and \(c \lt d\text{.}\) Prove that the open interaval \(( a, b )\) is equivalent to the open interval \(( c, d )\text{.}\)</p></article></article><article class="theorem theorem-like" id="T_realsuncount"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.3.9</span><span class="period">.</span>
+</h6>
+<p id="p-5026">The set of real numbers \(\mathbb{R}\) is uncountable and has cardinality \(\boldsymbol{c}\text{.}\)</p></article><article class="hiddenproof" id="proof-71"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-71"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-71"><article class="hiddenproof"><p id="p-5027">Let \(f\x \left( -\dfrac{\pi}{2}, \dfrac{\pi}{2} \right) \to \mathbb{R}\) be defined by \(f ( x ) = \tan x\text{,}\) for each \(x \in \mathbb{R}\text{.}\) The function \(f\) is a bijection and, hence, \(\left(-\dfrac{\pi}{2}, \dfrac{\pi}{2} \right) \approx \mathbb{R}\text{.}\) So by <a class="xref" data-knowl="./knowl/T_openintervals.html" title="Theorem 9.3.7">Theorem 9.3.7</a>, \(\mathbb{R}\) is uncountable and has cardinality \(\boldsymbol{c}\text{.}\)</p></article></div></section><section class="subsection" id="subsection-170"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Cantor's Theorem</span>
+</h3>
+<p id="p-5028"></p>
+<p id="p-5029">We have now seen two different infinite cardinal numbers, \(\aleph_0\) and \(\boldsymbol{c}\text{.}\) It can seem surprising that there is more than one infinite cardinal number. A reasonable question at this point is, “Are there any other infinite cardinal numbers?” The astonishing answer is that there are, and in fact, there are infinitely many different infinite cardinal numbers. The basis for this fact is the following theorem, which states that a set is not equivalent to its power set. The proof is due to Georg Cantor (1845–1918),  and the idea for this proof was explored in <a href="S_uncountablesets.html#PA_powerset" class="internal" title="Worksheet: Beginning Activity 2: Functions from a Set to Its Power Set">Beginning Activity 2 </a>. The basic idea of the proof is to prove that any function from a set \(A\) to its power set cannot be a surjection.</p>
+<article class="theorem theorem-like" id="T_cantor"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.3.10</span><span class="period">.</span><span class="space"> </span><span class="title">Cantor's Theorem.</span>
+</h6>
+<p id="p-5030">For every set \(A\text{,}\) \(A\) and \(\mathcal{P} ( A )\) do not have the same cardinality.</p></article><article class="hiddenproof" id="proof-72"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-72"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-72"><article class="hiddenproof"><p id="p-5031">Let \(A\) be a set. If \(A = \emptyset\text{,}\) then \(\mathcal{P} ( A ) = \left\{ \emptyset \right\}\text{,}\) which has cardinality 1. Therefore, \(\emptyset\) and \(\mathcal{P} ( \emptyset )\) do not have the same cardinality.</p>
+<p id="p-5032">Now suppose that \(A \ne \emptyset\text{,}\) and let \(f\x  A \to \mathcal{P} ( A )\text{.}\) We will show that \(f\) cannot be a surjection, and hence there is no bijection from \(A\) to \(\mathcal{P} ( A )\text{.}\) This will prove that \(A\) is not equivalent to \(\mathcal{P} ( A )\text{.}\) Define</p>
+<div class="displaymath">
+\begin{equation*}
+S = \left\{ x \in A \mid x \notin f ( x ) \right\}\text{.}
+\end{equation*}
+</div>
+<p id="p-5033">Assume that there exists a \(t\) in \(A\) such that \(f ( t ) = S\text{.}\) Now, either \(t \in S\) or \(t \notin S\text{.}\)</p>
+<ul class="disc">
+<li id="li-685"><p id="p-5034">If \(t \in S\text{,}\) then \(t \in \left\{ x \in A \mid x \notin f ( x ) \right\}\text{.}\) By the definition of \(S\text{,}\) this means that \(t \notin f ( t )\text{.}\) However, \(f ( t ) = S\) and so we conclude that \(t \notin S\text{.}\) But now we have \(t \in S\) and \(t \notin S\text{.}\) This is a contradiction.</p></li>
+<li id="li-686"><p id="p-5035">If \(t \notin S\text{,}\) then \(t \notin \left\{ x \in A \mid x \notin f ( x ) \right\}\text{.}\) By the definition of \(S\text{,}\) this means that \(t \in f ( t )\text{.}\) However, \(f ( t ) = S\) and so we conclude that \(t \in S\text{.}\) But now we have \(t \notin S\) and \(t \in S\text{.}\) This is a contradiction.</p></li>
+</ul>
+<p id="p-5036">So in both cases we have arrived at a contradiction. This means that there does not exist a \(t\) in \(A\) such that \(f ( t ) = S\text{.}\) Therefore, any function from \(A\) to \(\mathcal{P} ( A )\) is not a surjection and hence not a bijection. Hence, \(A\) and \(\mathcal{P} ( A )\) do not have the same cardinality.</p></article></div>
+<article class="corollary theorem-like" id="C_cantor"><h6 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">9.3.11</span><span class="period">.</span>
+</h6>
+<p id="p-5037">\(\mathcal{P} ( \mathbb{N} )\) is an infinite set that is not countably infinite.</p></article><article class="hiddenproof" id="proof-73"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-73"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-73"><article class="hiddenproof"><p id="p-5038">Since \(\mathcal{P} ( \mathbb{N} )\) contains the infinite subset \(\left\{ \left\{ 1 \right\}, \left\{ 2 \right\}, \left\{ 3 \right\} \ldots \,\right\}\text{,}\) we can use <a class="xref" data-knowl="./knowl/T_subsetisinfinite.html" title="Theorem 9.2.2">Theorem 9.2.2</a>, to conclude that \(\mathcal{P} ( \mathbb{N} )\) is an infinite set. By Cantor's Theorem (<a class="xref" data-knowl="./knowl/T_cantor.html" title="Theorem 9.3.10: Cantor's Theorem">Theorem 9.3.10</a>), \(\mathbb{N}\) and \(\mathcal{P} ( \mathbb{N} )\) do not have the same cardinality. Therefore, \(\mathcal{P} ( \mathbb{N} )\) is not countable and hence is an uncountable set.</p></article></div></section><section class="subsection" id="subsection-171"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Some Final Comments about Uncountable Sets</span>
+</h3>
+<ol id="p-5039" class="decimal">
+<li id="sec94_comment1">
+<p id="p-5040">We have now seen that any open interval of real numbers is uncountable and has cardinality \(\boldsymbol{c}\text{.}\) In addition, \(\mathbb{R}\) is uncountable and has cardinality \(\boldsymbol{c}\text{.}\) Now, <a class="xref" data-knowl="./knowl/C_cantor.html" title="Corollary 9.3.11">Corollary 9.3.11</a> tells us that \(\mathcal{P} ( \mathbb{N} )\) is uncountable. A question that can be asked is, “Does \(\mathcal{P} ( \mathbb{N} )\) have the same cardinality as \(\mathbb{R}\text{?}\)” The answer is yes, although we are not in a position to prove it yet. A proof of this fact uses the following theorem, which is known as the Cantor-Schröder-Bernstein Theorem.</p>
+<article class="theorem theorem-like" id="T_bernstein"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.3.12</span><span class="period">.</span><span class="space"> </span><span class="title">Cantor-Schröder-Bernstein.</span>
+</h6>
+<p id="p-5041">Let \(A\) and \(B\) be sets. If there exist injections \(f\x A \to B\) and \(g\x B \to A\text{,}\) then \(A \approx B\text{.}\)</p></article><p id="p-5042">In the statement of this theorem, notice that it is not required that the function \(g\) be the inverse of the function \(f\text{.}\) We will not prove the Cantor-Schröder-Bernstein Theorem here. The following items will show some uses of this important theorem.</p>
+</li>
+<li id="li-688"><p id="p-5043">The Cantor-Schröder-Bernstein Theorem can also be used to prove that the closed interval \([ 0, 1 ]\) is equivalent to the open interval \(( 0, 1 )\text{.}\) See <a class="xref" data-knowl="./knowl/exer_closedinterval.html" title="Exercise 6">Exercise 6</a>.</p></li>
+<li id="sec94_comment3">
+<p id="p-5044">Another question that was posed earlier is, “Are there other infinite cardinal numbers other than \(\aleph_0\) and \(\boldsymbol{c}\text{?}\)” Again, the answer is yes, and the basis for this is Cantor's Theorem (<a class="xref" data-knowl="./knowl/T_cantor.html" title="Theorem 9.3.10: Cantor's Theorem">Theorem 9.3.10</a>). We can start with \(\text{ card} ( \mathbb{N} ) = \aleph_0\text{.}\) We then define the following infinite cardinal numbers:</p>
+<div class="displaymath">
+\begin{align*}
+\amp \text{ card} ( \mathcal{P} ( \mathbb{N} ) ) = \alpha_1 \amp \amp
+\text{ card} ( \mathcal{P} ( \mathcal{P} ( \mathbb{N} ) ) ) = \alpha_2\\
+\amp \text{ card} ( \mathcal{P} ( \mathcal{P} ( \mathcal{P} 
+( \mathbb{N} ) ) ) ) = \alpha_3 \amp \amp \vdots
+\end{align*}
+</div>
+<p id="p-5045">Cantor's Theorem tells us that these are all different cardinal numbers, and so we are just using the lowercase Greek letter \(\alpha\) (alpha) to help give names to these cardinal numbers. In fact, although we will not define it here, there is a way to “order” these cardinal numbers in such a way that</p>
+<div class="displaymath">
+\begin{equation*}
+\aleph_0 \lt  \alpha_1 \lt  \alpha_2 \lt  \alpha_3 \lt  \cdots\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Keep in mind, however, that even though these are different cardinal numbers, Cantor's Theorem does not tell us that these are the only cardinal numbers.</p>
+</li>
+<li id="li-690">
+<p id="p-5046">In <a class="xref" data-knowl="./knowl/sec94_comment1.html" title="Item 1">Comment 1</a>, we indicated that \(\mathcal{P} ( \mathbb{N} )\) and \(\mathbb{R}\) have the same cardinality. Combining this with the notation in <a class="xref" data-knowl="./knowl/sec94_comment3.html" title="Item 3">Comment 3</a>, this means that</p>
+<div class="displaymath">
+\begin{equation*}
+\alpha_1 = \boldsymbol{c}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">However, this does not necessarily mean that \(\boldsymbol{c}\) is the “next largest” cardinal number after \(\aleph_0\text{.}\) A reasonable question is, “Is there an infinite set with cardinality between \(\aleph_0\) and \(\boldsymbol{c}\text{?}\)” Rewording this in terms of the real number line, the question is, “On the real number line, is there an infinite set of points that is not equivalent to the entire line and also not equivalent to the set of natural numbers?” This question was asked by Cantor, but he was unable to find any such set. He conjectured that no such set exists. That is, he conjectured that \(\boldsymbol{c}\) is really the next cardinal number after \(\aleph_0\text{.}\) This conjecture has come to be known as the <dfn class="terminology">Continuum Hypothesis</dfn>.  Stated somewhat more formally, the Continuum Hypothesis is <blockquote class="blockquote" id="blockquote-249">There is no set \(X\) such that \(\aleph_0 \lt  \text{ card}  ( X ) 
+\lt  \boldsymbol{c}\text{.}\)</blockquote> The question of whether the Continuum Hypothesis is true or false is one of the most famous problems in modern mathematics.</p>
+<p id="p-5047">Through the combined work of Kurt Gödel  in the 1930s and Paul Cohen  in 1963, it has been proved that the Continuum Hypothesis cannot be proved or disproved from the standard axioms of set theory. This means that either the Continuum Hypothesis or its negation can be added to the standard axioms of set theory without creating a contradiction.</p>
+</li>
+</ol></section><section class="exercises" id="exercises-36"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exer_sec94-1"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-303"><p id="p-5048">Use an appropriate bijection to prove that each of the following sets has cardinality \(\boldsymbol{c}\text{.}\)</p></div>
+<article class="task exercise-like" id="task-1811"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-5049">\(( 0, \infty )\)</p></article><article class="task exercise-like" id="task-1812"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-5050">\(( a, \infty )\text{,}\) for any \(a \in \mathbb{R}\)</p></article><article class="task exercise-like" id="task-1813"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-5051">\(\mathbb{R} - \left\{ 0 \right\}\)</p></article><article class="task exercise-like" id="task-1814"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-5052">\(\mathbb{R} - \left\{ a \right\}\text{,}\) for any \(a \in \mathbb{R}\)</p></article></article><article class="exercise exercise-like" id="exer_irrationaluncount"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-5053">Is the set of irrational numbers countable or uncountable? Prove that your answer is correct.</p></article><article class="exercise exercise-like" id="exer_supersetofuncount"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-5054">Prove that if \(A\) is uncountable and \(A \subseteq B\text{,}\) then \(B\) is uncountable.</p></article><article class="exercise exercise-like" id="exer93_uncountablesets"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-5055">Do two uncountable sets always have the same cardinality? Justify your conclusion.</p></article><article class="exercise exercise-like" id="exercise-890"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-5056">Let  \(C\)  be the set of all infinite sequences, each of whose entries is the digit 0 or the digit 1. For example,</p>
+<div class="displaymath">
+\begin{align*}
+\left( 1, 0, 1, 0, 1, 0, 1, 0, \ldots \right) \amp \in C;\\
+\left( 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, \ldots \right) \amp \in C;\\
+\left( 2, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, \ldots \right) \amp \notin C\text{.}
+\end{align*}
+</div>
+<p class="continuation">Is the set  \(C\)  a countable set or an uncountable set? Justify your conclusion.</p></article><article class="exercise exercise-like" id="exer_closedinterval"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-304"><p id="p-5057">The goal of this exercise is to use the Cantor-Schröder-Bernstein Theorem to prove that the cardinality of the closed interval \([ 0, 1 ]\) is \(\boldsymbol{c}\text{.}\)</p></div>
+<article class="task exercise-like" id="exer_closedintervala"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-5058">Find an injection \(f\x ( 0, 1 ) \to [ 0, 1 ]\text{.}\)</p></article><article class="task exercise-like" id="exer_closedintervalb"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-5059">Find an injection \(h\x [ 0, 1 ] \to ( -1, 2 )\text{.}\)</p></article><article class="task exercise-like" id="exer_closedintervalc"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-5060">Use the fact that \(( -1, 2 ) \approx ( 0, 1 )\) to prove that there exists an injection \(g\x [ 0, 1 ] \to ( 0, 1 )\text{.}\) (It is only necessary to prove that the injection \(g\) exists. It is not necessary to determine a specific formula for \(g ( x )\text{.}\))</p>
+<p id="p-5061">Instead of doing <a class="xref" data-knowl="./knowl/exer_closedintervalb.html" title="Task 6.b">Task 6.b</a> as stated, another approach is to find an injection \(k \x [0, 1] \to (0, 1)\text{.}\) Then, it is possible to skip <a class="xref" data-knowl="./knowl/exer_closedintervalc.html" title="Task 6.c">Task 6.c</a> and go directly to <a class="xref" data-knowl="./knowl/exer_closedintervald.html" title="Task 6.d">Task 6.d</a>.</p></article><article class="task exercise-like" id="exer_closedintervald"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-5062">Use the Cantor-Schröder-Bernstein Theorem to conclude that \([ 0, 1 ] \approx ( 0, 1 )\) and hence that the cardinality of \([ 0, 1 ]\) is \(\boldsymbol{c}\text{.}\)</p></article></article><article class="exercise exercise-like" id="exercise-892"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-5063">In <a class="xref" data-knowl="./knowl/exer_closedinterval.html" title="Exercise 6">Exercise 6</a>, we proved that the closed interval \([ 0, 1 ]\) is uncountable and has cardinality \(\boldsymbol{c}\text{.}\) Now let \(a, b \in \mathbb{R}\) with \(a \lt b\text{.}\) Prove that \([ a, b ] \approx [ 0, 1 ]\) and hence that \([ a, b ]\) is uncountable and has cardinality \(\boldsymbol{c}\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-893"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="p-5064">Is the set of all finite subsets of \(\N\) countable or uncountable? Let \(F\) be the set of all finite subsets of \(\N\text{.}\) Determine the cardinality of the set \(F\text{.}\) Consider defining a function \(f:F \to \N\) that produces the following.</p>
+<ul class="disc">
+<li id="li-691"><p id="p-5065">If \(A = \{1, 2, 6 \}\text{,}\) then \(f(A) = 2^1 3^2 5^6\text{.}\)</p></li>
+<li id="li-692"><p id="p-5066">If \(B = \{3, 6 \}\text{,}\) then \(f(B) = 2^3 3^6\text{.}\)</p></li>
+<li id="li-693"><p id="p-5067">If \(C = \left\{ m_1, m_2, m_3, m_4 \right\}\) with \(m_1 \lt m_2 \lt m_3 \lt m_4\text{,}\) then \(f(C) = 2^{m_1} 3^{m_2} 5^{m_3} 7^{m_4}\text{.}\)</p></li>
+</ul>
+<p id="p-5068">It might be helpful to use the <a class="xref" data-knowl="./knowl/T_fundtheorem.html" title="Theorem 8.2.9: The Fundamental Theorem of Arithmetic">Fundamental Theorem of Arithmetic</a> and to denote the set of all primes as \(P = \left\{ p_1, p_2, p_3, p_4, \ldots \right\}\) with \(p_1 \lt  p_2 \lt  p_3 \lt  p_4 \cdots\text{.}\) Using the sets \(A\text{,}\) \(B\text{,}\) and \(C\) defined above, we would then write</p>
+<div class="displaymath">
+\begin{equation*}
+f(A) = p_1^1 p_2^2 p_3^6,  f(B) = p_1^3 p_2^6,  \text{ and }   
+f(C) = p_1^{m_1} p_2^{m_2} p_3^{m_3} p_4^{m_4}\text{.}
+\end{equation*}
+</div></article><article class="exercise exercise-like" id="exercise-894"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-305"><p id="p-5069">In <a class="xref" data-knowl="./knowl/exer_irrationaluncount.html" title="Exercise 2">Exercise 2</a>, we showed that the set of irrational numbers is uncountable. However, we still do not know the cardinality of the set of irrational numbers. Notice that we can use \(\Q^c\) to stand for the set of irrational numbers.</p></div>
+<article class="task exercise-like" id="task-1819"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-5070">Construct a function \(f\x \Q^c \to \R\) that is an injection.</p></article><article class="task exercise-like" id="task-1820"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-5071">We know that any real number \(a\) can be represented in decimal form as follows:</p>
+<div class="displaymath">
+\begin{equation*}
+a = A.a_1 a_2 a_3 a_4 \cdots a_n \cdots\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where \(A\) is an integer and the decimal part \(( 0.a_1 a_2 a_3 a_4 \cdots )\) is in normalized form. (See <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "normalizedform" missing or not unique]</code>.) We also know that the real number \(a\) is an irrational number if and only \(a\) has an infinite non-repeating decimal expansion. We now associate with \(a\) the real number</p>
+<div class="displaymath">
+\begin{equation}
+A.a_1 0 a_2 1 1 a_3 0 0 0 a_4 1 1 1 1 a_5 0 0 0 0 0 a_6 1 1 1 1 1 1 \cdots\text{.}\label{exer_irrationalsuncount}\tag{9.1}
+\end{equation}
+</div>
+<p class="continuation">Notice that to construct the real number in <a class="xref" data-knowl="./knowl/exer_irrationalsuncount.html" title="Equation 9.1">equation (9.1)</a>, we started with the decimal expansion of \(a\text{,}\) inserted a 0 to the right of the first digit after the decimal point, inserted two 1's to the right of the second digit to the right of the decimal point, inserted three 0's to the right of the third digit to the right of the decimal point, and so on.</p>
+<p id="p-5072">Explain why the real number in <a class="xref" data-knowl="./knowl/exer_irrationalsuncount.html" title="Equation 9.1">Equaiton (9.1)</a> is an irrational number.</p></article><article class="task exercise-like" id="task-1821"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-5073">Use these ideas to construct a function \(g\x \R \to \Q^c\) that is an injection.</p></article><article class="task exercise-like" id="task-1822"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-5074">What can we now conclude by using the Cantor-Schröder-Bernstein Theorem?</p></article></article><article class="exercise exercise-like" id="exercise-895"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-306">
+<p id="p-5075">Let \(J\) be the unit open interval. That is, \(J = \left\{ x \in \R \mid 0 \lt  x \lt  1 \right\}\) and let \(S = \left\{ (x, y) \in \R \times \R \mid 0 \lt  x \lt  1 \text{ and }  0 
+\lt  y \lt  1 \right\}\text{.}\) We call \(S\) the unit open square. We will now define a function \(f\) from \(S\) to \(J\text{.}\) Let \((a, b) \in S\) and write the decimal expansions of \(a\) and \(b\) in normalized form as</p>
+<div class="displaymath">
+\begin{align*}
+a \amp = 0.a_1 a_2 a_3 a_4 \cdots a_n \cdots\\
+b \amp = 0.b_1 b_2 b_3 b_4 \cdots b_n \cdots \text{.}
+\end{align*}
+</div>
+<p class="continuation">We then define \(f(a, b) = 0.a_1 b_1 a_2 b_2 a_3 b_3 a_4 b_4 \cdots a_n b_n \cdots\text{.}\)</p>
+</div>
+<article class="task exercise-like" id="task-1823"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-5076">Determine the values of \(f ( 0.3, 0.625 )\text{,}\) \(f \!\left( \dfrac{1}{3}, \dfrac{1}{4} \right)\text{,}\) and \(f \!\left( \dfrac{1}{6}, \dfrac{5}{6} \right)\text{.}\)</p></article><article class="task exercise-like" id="task-1824"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-5077">If possible, find \((x, y) \in S\) such that \(f ( x, y ) = 0.2345\text{.}\)</p></article><article class="task exercise-like" id="task-1825"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-5078">If possible, find \((x, y) \in S\) such that \(f ( x, y ) = \dfrac{1}{3}\text{.}\)</p></article><article class="task exercise-like" id="task-1826"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-5079">If possible, find \((x, y) \in S\) such that \(f ( x, y ) = \dfrac{1}{2}\text{.}\)</p></article><article class="task exercise-like" id="task-1827"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-5080">Explain why the function \(f\x S \to J\) is an injection but is not a surjection.</p></article><article class="task exercise-like" id="task-1828"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-5081">Use the Cantor-Schröder-Bernstein Theorem to prove that the cardinality of the unit open square \(S\) is equal to \(\boldsymbol{c}\text{.}\) If this result seems surprising, you are in good company. In a letter written in 1877 to the mathematician Richard Dedekind describing this result that he had discovered, Georg Cantor wrote, “I see it but I do not believe it.”</p></article></article><article class="activity project-like" id="A_closedinterval"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">52</span><span class="period">.</span><span class="space"> </span><span class="title">The Closed Interval \(\boldsymbol{ [ 0, 1 ]}\).</span>
+</h6>
+<div class="introduction" id="introduction-307"><p id="p-5082">In <a class="xref" data-knowl="./knowl/exer_closedinterval.html" title="Exercise 6">Exercise 6</a>, the Cantor-Schröder-Bernstein Theorem was used to prove that the closed interval \([0, 1]\) has cardinality \(\boldsymbol{c}\text{.}\) This may seem a bit unsatisfactory since we have not proved the Cantor-Schröder-Bernstein Theorem. In this activity, we will prove that \(\text{ card} \!\left( [ 0, 1 ] \right) = \boldsymbol{c}\) by using appropriate bijections.</p></div>
+<article class="task exercise-like" id="A_closedinterval1"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="introduction" id="introduction-308">
+<p id="p-5083">Let \(f\x  [ 0, 1 ] \to [ 0, 1 )\) by</p>
+<div class="displaymath">
+\begin{equation}
+f ( x ) = \begin{cases}\dfrac{1}{n+1} \amp \text{if \(x=\dfrac{1}{n}\) for 
+some \(n \in \mathbb{N}\)}  \\ x \amp \text{ otherwise } . \end{cases}\tag{9.2}
+\end{equation}
+</div>
+</div>
+<article class="task exercise-like" id="A_closedinterval1a"><h6 class="heading"><span class="codenumber">(i)</span></h6>
+<p id="p-5084">Determine \(f ( 0 )\text{,}\) \(f ( 1 )\text{,}\) \(f \!\left( \dfrac{1}{2} \right)\text{,}\) \(f \!\left( \dfrac{1}{3} \right)\text{,}\) \(f \!\left( \dfrac{1}{4} \right)\text{,}\) and \(f \!\left( \dfrac{1}{5} \right)\text{.}\)</p></article><article class="task exercise-like" id="task-1831"><h6 class="heading"><span class="codenumber">(ii)</span></h6>
+<p id="p-5085">Sketch a graph of the function \(f\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-46" id="hint-46"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-46"><div class="hint solution-like"><p id="p-5086">Start with the graph of \(y = x\) for \(0 \leq x \leq 1\text{.}\) Remove the point \(( 1, 1 )\) and replace it with the point \(\!\left( 1, \dfrac{1}{2} \right)\text{.}\) Next, remove the point \(\!\left( \dfrac{1}{2}, \dfrac{1}{2} \right)\) and replace it with the point \(\!\left( \dfrac{1}{2}, \dfrac{1}{3} \right)\text{.}\) Continue this process of removing points on the graph of \(y = x\) and replacing them with the points determined from the information in <a class="xref" data-knowl="./knowl/A_closedinterval1a.html" title="Task 52.a.i">Task 52.a.i</a>. Stop after repeating this four or five times so that pattern of this process becomes apparent.</p></div></div>
+</div></article><article class="task exercise-like" id="task-1832"><h6 class="heading"><span class="codenumber">(iii)</span></h6>
+<p id="p-5087">Explain why the function \(f\) is a bijection.</p></article><article class="task exercise-like" id="task-1833"><h6 class="heading"><span class="codenumber">(iv)</span></h6>
+<p id="p-5088">Prove that \([ 0, 1 ] \approx [ 0, 1 )\text{.}\)</p></article></article><article class="task exercise-like" id="task-1834"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<div class="introduction" id="introduction-309">
+<p id="p-5089">Let \(g\x  [ 0, 1 ) \to ( 0, 1 )\) by</p>
+<div class="displaymath">
+\begin{equation}
+g ( x ) = \begin{cases}\dfrac{1}{2} \amp \text{ if \(x=0\) }  \\ \dfrac{1}{n+1}  
+\amp \text{if \(x=\dfrac{1}{n}\) for some \(n \in \mathbb{N}\)}  \\ x 
+\amp \text{ otherwise } . \end{cases}\tag{9.3}
+\end{equation}
+</div>
+</div>
+<article class="task exercise-like" id="task-1835"><h6 class="heading"><span class="codenumber">(i)</span></h6>
+<p id="p-5090">Follow the procedure suggested in <a class="xref" data-knowl="./knowl/A_closedinterval1.html" title="Task 52.a">Task 52.a</a> to sketch a graph of \(g\text{.}\)</p></article><article class="task exercise-like" id="task-1836"><h6 class="heading"><span class="codenumber">(ii)</span></h6>
+<p id="p-5091">Explain why the function \(g\) is a bijection.</p></article><article class="task exercise-like" id="task-1837"><h6 class="heading"><span class="codenumber">(iii)</span></h6>
+<p id="p-5092">Prove that \([ 0, 1 ) \approx ( 0, 1 )\text{.}\)</p></article></article><article class="task exercise-like" id="task-1838"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-5093">Prove that \([ 0, 1 ]\) and \([ 0, 1 )\) are both uncountable and have cardinality \(\boldsymbol{c}\text{.}\)</p></article></article></section></section></div></main>
+</div>
+</body>
+</html>

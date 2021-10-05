@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-10-05T14:48:10-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Quantifiers and Negations</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\def\C{\JustCenter}
+\newcommand{\typeu}{Beginning }
+\def\C{\JustCenter}
+\newcommand{\typel}{beginning }
+\def\C{\JustCenter}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\
+\thechapter. #1}{}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\def\C{\JustCenter}
+\renewcommand{\theenumi}{\alph{enumi}}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\theenumi}{({\alph{enumi}})}
+\def\C{\JustCenter}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\mynot}{\neg}
+\newcommand{\card}{\mathbf{card}}
+\newcommand{\x}{:}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Mathematical Reasoning:</span> <span class="subtitle">Writing and Proof (Version 3)</span></a></h1>
+<p class="byline">Ted Sundstrom, Professor Emeritus</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_2predicates.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_2logic.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_2summary.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_2predicates.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C_2logic.html" title="Up">Up</a><a class="next-button button toolbar-item" href="S_2summary.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="fm-versions.html" data-scroll="fm-versions">Version 3 and Version 2.1</a></li>
+<li><a href="fm-student-note.html" data-scroll="fm-student-note">Note to Students</a></li>
+<li><a href="fm-preface.html" data-scroll="fm-preface">Preface</a></li>
+<li><a href="fm-imp-features.html" data-scroll="fm-imp-features">Important Features of the Book</a></li>
+<li><a href="fm-cont-org.html" data-scroll="fm-cont-org">Content and Organization</a></li>
+<li><a href="fm-inst-note.html" data-scroll="fm-inst-note">Supplementary Materials for the Instructor</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_1intro.html" data-scroll="C_1intro"><span class="codenumber">1</span> <span class="title">Introduction to Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_1prop.html" data-scroll="S_1prop">Statements and Conditional Statements</a></li>
+<li><a href="S_1direct.html" data-scroll="S_1direct">Constructing Direct Proofs</a></li>
+<li><a href="S_1summary.html" data-scroll="S_1summary">Chapter 1 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_2logic.html" data-scroll="C_2logic"><span class="codenumber">2</span> <span class="title">Logical Reasoning</span></a><ul>
+<li><a href="S_2logop.html" data-scroll="S_2logop">Statements and Logical Operators</a></li>
+<li><a href="S_logequiv.html" data-scroll="S_logequiv">Logically Equivalent Statements</a></li>
+<li><a href="S_2predicates.html" data-scroll="S_2predicates">Open Sentences and Sets</a></li>
+<li><a href="S_2quantifier.html" data-scroll="S_2quantifier" class="active">Quantifiers and Negations</a></li>
+<li><a href="S_2summary.html" data-scroll="S_2summary">Chapter 2 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_proofs.html" data-scroll="C_proofs"><span class="codenumber">3</span> <span class="title">Constructing and Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_directproof.html" data-scroll="S_directproof">Direct Proofs</a></li>
+<li><a href="S_moremethods.html" data-scroll="S_moremethods">More Methods of Proof</a></li>
+<li><a href="S_contradiction.html" data-scroll="S_contradiction">Proof by Contradiction</a></li>
+<li><a href="S_cases.html" data-scroll="S_cases">Using Cases in Proofs</a></li>
+<li><a href="S_divalgo.html" data-scroll="S_divalgo">Beginning Activity 1: The Division Algorithm and Congruence</a></li>
+<li><a href="S_reviewproofs.html" data-scroll="S_reviewproofs">Review of Proof Methods</a></li>
+<li><a href="S_3summary.html" data-scroll="S_3summary">Chapter 3 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_induction.html" data-scroll="C_induction"><span class="codenumber">4</span> <span class="title">Mathematical Induction</span></a><ul>
+<li><a href="S_mathinduction.html" data-scroll="S_mathinduction">The Principle of Mathematical Induction</a></li>
+<li><a href="S_otherinduction.html" data-scroll="S_otherinduction">Other Forms of Mathematical Induction</a></li>
+<li><a href="S_recursion.html" data-scroll="S_recursion">Induction and Recursion</a></li>
+<li><a href="S_4summary.html" data-scroll="S_4summary">Chapter 4 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_settheory.html" data-scroll="C_settheory"><span class="codenumber">5</span> <span class="title">Set Theory</span></a><ul>
+<li><a href="S_setoperations.html" data-scroll="S_setoperations">Sets and Operations on Sets</a></li>
+<li><a href="S_provingset.html" data-scroll="S_provingset">Proving Set Relationships</a></li>
+<li><a href="S_setproperties.html" data-scroll="S_setproperties">Properties of Set Operations</a></li>
+<li><a href="S_cartesian.html" data-scroll="S_cartesian">Cartesian Products</a></li>
+<li><a href="S_indexfamily.html" data-scroll="S_indexfamily">Indexed Families of Sets</a></li>
+<li><a href="S_5summary.html" data-scroll="S_5summary">Chapter 5 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_functions.html" data-scroll="C_functions"><span class="codenumber">6</span> <span class="title">Functions</span></a><ul>
+<li><a href="S_introfunctions.html" data-scroll="S_introfunctions">Introduction to Functions</a></li>
+<li><a href="S_moreaboutfunctions.html" data-scroll="S_moreaboutfunctions">More about Functions</a></li>
+<li><a href="S_typesoffunctions.html" data-scroll="S_typesoffunctions">Beginning Activity 1: Injections, Surjections, and Bijections</a></li>
+<li><a href="S_compositionoffunctions.html" data-scroll="S_compositionoffunctions">Composition of Functions</a></li>
+<li><a href="S_inversefunctions.html" data-scroll="S_inversefunctions">Inverse Functions</a></li>
+<li><a href="S_functionsonsets.html" data-scroll="S_functionsonsets">Functions Acting on Sets</a></li>
+<li><a href="S_6summary.html" data-scroll="S_6summary">Chapter 6 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_equivrelations.html" data-scroll="C_equivrelations"><span class="codenumber">7</span> <span class="title">Equivalence Relations</span></a><ul>
+<li><a href="S_relations.html" data-scroll="S_relations">Relations</a></li>
+<li><a href="S_equivrelations.html" data-scroll="S_equivrelations">Equivalence Relations</a></li>
+<li><a href="S_equivclasses.html" data-scroll="S_equivclasses">Equivalence Classes</a></li>
+<li><a href="S_modulararithmetic.html" data-scroll="S_modulararithmetic">Modular Arithmetic</a></li>
+<li><a href="section-37.html" data-scroll="section-37">Chapter 7 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_numbertheory.html" data-scroll="C_numbertheory"><span class="codenumber">8</span> <span class="title">Topics in Number Theory</span></a><ul>
+<li><a href="S_gcd.html" data-scroll="S_gcd">The Greatest Common Divisor</a></li>
+<li><a href="S_primefactorizations.html" data-scroll="S_primefactorizations">Prime Numbers and Prime Factorizations</a></li>
+<li><a href="S_diophantine.html" data-scroll="S_diophantine">Linear Diophantine Equations</a></li>
+<li><a href="section-41.html" data-scroll="section-41">Chapter 8 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_topicsinsets.html" data-scroll="C_topicsinsets"><span class="codenumber">9</span> <span class="title">Finite and Infinite Sets</span></a><ul>
+<li><a href="S_finitesets.html" data-scroll="S_finitesets">Finite Sets</a></li>
+<li><a href="S_infinitesets.html" data-scroll="S_infinitesets">Countable Sets</a></li>
+<li><a href="S_uncountablesets.html" data-scroll="S_uncountablesets">Uncountable Sets</a></li>
+<li><a href="section-45.html" data-scroll="section-45">Chapter 9 Summary</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="C_writingguides.html" data-scroll="C_writingguides"><span class="codenumber">A</span> <span class="title">Guidelines for Writing Mathematical Proofs</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="S_2quantifier"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.4</span> <span class="title">Quantifiers and Negations</span>
+</h2>
+<section class="worksheet" id="PA_quantifier"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Beginning Activity 1: An Introduction to Quantifiers</span><div class="print-links">
+<a href="PA_quantifier-A4.html" class="a4">A4</a><a href="PA_quantifier-letter.html" class="us">US</a>
+</div>
+</h3>
+<p id="p-741"> We have seen that one way to create a statement from an open sentence is to substitute a specific element from the universal set for each variable in the open sentence. Another way is to make some claim about the truth set of the open sentence. This is often done by using a quantifier. For example, if the universal set is \(\mathbb{R}\text{,}\) then the following sentence is a statement. <blockquote class="blockquote" id="blockquote-65">For each real number \(x\text{,}\) \(x^2 &gt; 0\text{.}\)</blockquote> The phrase “For each real number \(x\)” is said to <dfn class="terminology">quantify the variable</dfn> that follows it in the sense that the sentence is claiming that something is true for all real numbers. So this sentence is a statement (which happens to be false). <article class="definition definition-like" id="D_every"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.1</span><span class="period">.</span>
+</h6>
+<p id="p-742">The phrase “for every” (or its equivalents) is called a <dfn class="terminology">universal quantifier</dfn>.  The phrase “there exists” (or its equivalents) is called an <dfn class="terminology">existential quantifier</dfn>.  The symbol \(\forall\) is used to denote a universal quantifier, and the symbol \(\exists\) is used to denote an existential quantifier.</p></article></p>
+<p id="p-743">Using this notation, the statement “For each real number \(x\text{,}\) \(x^2 &gt; 0\)” could be written in symbolic form as: \(\left( {\forall x \in \mathbb{R}} \right)\left( {x^2 &gt; 0} \right)\text{.}\) The following is an example of a statement involving an existential quantifier. <blockquote class="blockquote" id="blockquote-66">There exists an integer \(x\) such that \(3x - 2 = 0\text{.}\)</blockquote> This could be written in symbolic form as</p>
+<div class="displaymath">
+\begin{equation*}
+\left( {\exists x \in \Z} \right) \left( 3x - 2 = 0 \right)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">This statement is false because there are no integers that are solutions of the linear equation \(3x - 2 = 0\text{.}\) <a class="xref" data-knowl="./knowl/T_quantifiers.html" title="Table 2.4.2: Properties of Quantifiers">Table 2.4.2</a> summarizes the facts about the two types of quantifiers.</p>
+<figure class="table table-like" id="T_quantifiers"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.4.2<span class="period">.</span></span><span class="space"> </span>Properties of Quantifiers</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="l m b2 r2 l0 t0 lines">A statement<br>involving</th>
+<th class="l m b2 r2 l0 t0 lines">Often has the form</th>
+<th class="l m b2 r0 l0 t0 lines">The statement is true<br>provided that</th>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">A universal<br>quantifier:<br>\(\left( \forall x, P(x) \right)\)</td>
+<td class="l m b2 r2 l0 t0 lines">“For every \(x\text{,}\) \(P(x)\text{,}\)”<br>where \(P(x)\) is a predicate.</td>
+<td class="l m b2 r0 l0 t0 lines">Every value of \(x\) in<br>the universal set<br>makes \(P(x)\) true.</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">An existential<br>quantifier:<br>\(\left( \exists x, P(x) \right)\)</td>
+<td class="l m b0 r2 l0 t0 lines">“There exists an \(x\) such that \(P(x)\text{,}\)”<br>where \(P(x)\)<br>is a predicate.</td>
+<td class="l m b0 r0 l0 t0 lines">There is at least one value<br>of \(x\) in the universal set that<br>makes \(P(x)\) true.</td>
+</tr>
+</table></div></figure><p id="p-744">In effect, the table indicates that the universally quantified statement is true provided that the truth set of the predicate equals the universal set, and the existentially quantified statement is true provided that the truth set of the predicate contains at least one element.</p>
+<p id="p-745">Each of the following sentences is a statement or an open sentence. Assume that the universal set for each variable in these sentences is the set of all real numbers. If a sentence is an open sentence (predicate), determine its truth set. If a sentence is a statement, determine whether it is true or false.</p>
+<article class="exercise exercise-like" id="exercise-113"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-746">\(\left( \forall a \in \mathbb{R}\right) \left(a + 0 = a\right)\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-114"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-747">\(3x - 5 = 9\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-115"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-748">\(\sqrt x \in \mathbb{R}\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-116"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-749">\(\sin( {2x} ) = 2( {\sin x} )( {\cos x})\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-117"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-750">\(\left( \forall x \in \R\right) \left(\sin( {2x} ) = 2( {\sin x})( {\cos x}) \right)\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-118"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-751">\(\left( \exists x \in \R \right)\left( x^2 + 1 = 0 \right)\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-119"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-752">\(\left( \forall x \in \R \right) \left( x^3 \geq x^2 \right)\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-120"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="p-753">If \(x^2 \geq 1\text{,}\) then \(x \geq 1\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-121"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="p-754">\(\left( \forall x \in \R \right)\left( \text{ If } x^2 \geq 1, \text{ then } x 
+\geq 1 \right)\text{.}\)</p></article></section><section class="worksheet" id="PA_negatequantifier"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Beginning Activity 2: Attempting to Negate Quantified Statements</span><div class="print-links">
+<a href="PA_negatequantifier-A4.html" class="a4">A4</a><a href="PA_negatequantifier-letter.html" class="us">US</a>
+</div>
+</h3>
+<article class="exercise exercise-like" id="exercise-122"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-755">Consider the following statement written in symbolic form: \(\left( {\forall x \in \mathbb{Z}} \right)\left( {x\text{ is a multiple of 2 } } 
+\right)\text{.}\) <article class="task exercise-like" id="task-296"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-756">Write this statement as an English sentence.</p></article> <article class="task exercise-like" id="negatequantifier2"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-757">Is the statement true or false? Why?</p></article> <article class="task exercise-like" id="task-298"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-758">How would you write the negation of this statement as an English sentence?</p></article> <article class="task exercise-like" id="task-299"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-759">If possible, write your negation of this statement from <a class="xref" data-knowl="./knowl/negatequantifier2.html" title="Task b">Task b</a> symbolically (using a quantifier).</p></article></p></article><article class="exercise exercise-like" id="exercise-123"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-760">Consider the following statement written in symbolic form: \(\left( {\exists x \in \mathbb{Z}} \right)\left( {x^3 &gt; 0} \right)\text{.}\) <article class="task exercise-like" id="task-300"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-761">Write this statement as an English sentence.</p></article> <article class="task exercise-like" id="negatequantifier6"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-762">Is the statement true or false? Why?</p></article> <article class="task exercise-like" id="task-302"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-763">How would you write the negation of this statement as an English sentence?</p></article> <article class="task exercise-like" id="task-303"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-764">If possible, write your negation of this statement from <a class="xref" data-knowl="./knowl/negatequantifier6.html" title="Task b">Task b</a> symbolically (using a quantifier).</p></article></p></article></section><section class="introduction" id="introduction-12"><p id="p-765">We introduced the concepts of open sentences and quantifiers in <a href="S_2predicates.html" class="internal" title="Section 2.3: Open Sentences and Sets">Section 2.3</a>. Review the definitions given in <a class="xref" data-knowl="./knowl/D_universal.html" title="Definition 2.3.1">Definition 2.3.1</a>, <a class="xref" data-knowl="./knowl/D_truthset.html" title="Definition 2.3.10">Definition 2.3.10</a>, and <a class="xref" data-knowl="./knowl/D_every.html" title="Definition 2.4.1">Definition 2.4.1</a>.</p></section><section class="subsection" id="SS_quant_eng"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Forms of Quantified Statements in English</span>
+</h3>
+<p id="p-766">There are many ways to write statements involving quantifiers in English. In some cases, the quantifiers are not apparent, and this often happens with conditional statements. The following examples illustrate these points. Each example contains a quantified statement written in symbolic form followed by several ways to write the statement in English.</p>
+<article class="example example-like" id="D_counterexample"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.4.3</span><span class="period">.</span>
+</h6>
+<div class="displaymath">
+\begin{equation*}
+\left( {\forall x \in \mathbb{R}} \right)\left( {x^2 &gt; 0} \right)
+\end{equation*}
+</div>
+<ul id="p-767" class="disc">
+<li id="li-103"><p id="p-768">For each real number \(x\text{,}\) \(x^2 &gt; 0\text{.}\)</p></li>
+<li id="li-104"><p id="p-769">The square of every real number is greater than 0.</p></li>
+<li id="li-105"><p id="p-770">The square of a real number is greater than 0.</p></li>
+<li id="li-106"><p id="p-771">If \(x \in \mathbb{R}\text{,}\) then \(x^2 &gt; 0\text{.}\)</p></li>
+</ul>
+<p id="p-772">In the second to the last example, the quantifier is not stated explicitly.  Care must be taken when reading this because it really does say the same thing as the previous examples. The last example illustrates the fact that conditional statements often contain a “hidden” universal quantifier.  If the universal set is  \(\R\text{,}\) then the truth set of the open sentence  \(x^2  &gt; 0\) is the set of all nonzero real numbers.  That is, the truth set is</p>
+<div class="displaymath">
+\begin{equation*}
+\left\{ {x \in \mathbb{R}} \mid x \ne 0 \right\}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">So the preceding statements are false.  For the conditional statement, the example using \(x = 0\) produces a true hypothesis and a false conclusion.  This is a <dfn class="terminology">counterexample</dfn>  that shows that the statement with a universal quantifier is false.</p></article><article class="example example-like" id="example-12"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.4.4</span><span class="period">.</span>
+</h6>
+<div class="displaymath">
+\begin{equation*}
+\left( {\exists x \in \mathbb{R}} \right)\left( {x^2 = 5} \right)
+\end{equation*}
+</div>
+<ul id="p-773" class="disc">
+<li id="li-107"><p id="p-774">There exists a real number \(x\) such that \(x^2 = 5\text{.}\)</p></li>
+<li id="li-108"><p id="p-775">\(x^2 = 5\) for some real number \(x\text{.}\)</p></li>
+<li id="li-109"><p id="p-776">There is a real number whose square equals 5.</p></li>
+</ul>
+<p id="p-777">The second example is usually not used since it is not considered good writing practice to start a sentence with a mathematical symbol. If the universal set is \(\R\text{,}\) then the truth set of the predicate “\(x^2 = 5\)” is \(\left\{ { - \sqrt 5 ,\;\sqrt 5 } \right\}\text{.}\) So these are all true statements.</p></article></section><section class="subsection" id="subsection-27"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Negations of Quantified Statements</span>
+</h3>
+<p id="p-778">In <a href="S_2quantifier.html#PA_quantifier" class="internal" title="Worksheet: Beginning Activity 1: An Introduction to Quantifiers">Beginning Activity 1 </a>, we wrote negations of some quantified statements. This is a very important mathematical activity. As we will see in future sections, it is sometimes just as important to be able to describe when some object does not satisfy a certain property as it is to describe when the object satisfies the property. Our next task is to learn how to write negations of quantified statements in a useful English form.</p>
+<p id="p-779">We first look at the negation of a statement involving a universal quantifier. The general form for such a statement can be written as \(\left( {\forall x} \in U \right)\left( {P( x )} \right)\text{,}\) where \(P( x )\) is an open sentence and \(U\) is the universal set for the variable \(x\text{.}\) When we write</p>
+<div class="displaymath">
+\begin{equation*}
+\mynot  \left( {\forall x} \in U \right)\left[ {P\left( x \right)} \right]\text{,}
+\end{equation*}
+</div>
+<p class="continuation">we are asserting that the statement \(\left( {\forall x} \in U \right)\left[ {P( x )} \right]\) is false. This is equivalent to saying that the truth set of the open sentence \(P( x )\) is not the universal set. That is, there exists an element \(x\) in the universal set \(U\) such that \(P( x )\) is false. This in turn means that there exists an element \(x\) in \(U\) such that \(\mynot  P( x )\) is true, which is equivalent to saying that \(\left( {\exists x} \in U \right)\left[ {\mynot  P( x )} \right]\) is true. This explains why the following result is true:</p>
+<div class="displaymath">
+\begin{equation*}
+\mynot  \left( {\forall x} \in U \right)\left[ {P( x )} \right] \equiv \left( {\exists x} 
+\in U \right)\left[ {\mynot  P( x )} \right]\text{.}
+\end{equation*}
+</div>
+<p id="p-780">Similarly, when we write</p>
+<div class="displaymath">
+\begin{equation*}
+\mynot  \left( {\exists x} \in U \right)\left[ {P( x )} \right]\text{,}
+\end{equation*}
+</div>
+<p class="continuation">we are asserting that the statement \(\left( {\exists x} \in U \right)\left[ {P( x )} \right]\) is false. This is equivalent to saying that the truth set of the open sentence \(P( x )\) is the empty set. That is, there is no element \(x\) in the universal set \(U\) such that \(P( x )\) is true. This in turn means that for each element \(x\) in \(U\text{,}\) \(\mynot  P( x )\) is true, and this is equivalent to saying that \(\left( {\forall x} \in U \right)\left[ {\mynot  P( x )} \right]\) is true. This explains why the following result is true:</p>
+<div class="displaymath">
+\begin{equation*}
+\mynot  \left( {\exists x} \in U \right)\left[ {P( x )} \right] \equiv \left( {\forall x} 
+\in U \right)\left[ {\mynot  P( x )} \right]\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We summarize these results in the following theorem.</p>
+<article class="theorem theorem-like" id="T_negations"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.4.5</span><span class="period">.</span>
+</h6>
+<p id="p-781">For any open sentence \(P( x )\text{,}\)</p>
+<div class="displaymath">
+\begin{align*}
+\mynot  \left( {\forall x} \in U \right)\left[ {P( x )} \right] \amp 
+\equiv \left( {\exists x} \in U \right)\left[ {\mynot  P( x )} \right]\text{ , and }\\
+\mynot  \left( {\exists x} \in U \right)\left[ {P( x )} \right] \amp 
+\equiv \left( {\forall x} \in U \right)\left[ {\mynot  P( x )} \right].
+\end{align*}
+</div></article><article class="example example-like" id="E_negations"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.4.6</span><span class="period">.</span><span class="space"> </span><span class="title">Negations of Quantified Statements.</span>
+</h6>
+<p id="p-782">Consider the following statement: \(\left( {\forall x \in \mathbb{R}} \right)\left( {x^3 \geq x^2 } \right)\text{.}\)</p>
+<p id="p-783">We can write this statement as an English sentence in several ways. Following are two different ways to do so.</p>
+<ul class="disc">
+<li id="li-110"><p id="p-784">For each real number \(x\text{,}\) \(x^3 \geq x^2\text{.}\)</p></li>
+<li id="li-111"><p id="p-785">If \(x\) is a real number, then \(x^3\) is greater than or equal to \(x^2\text{.}\)</p></li>
+</ul>
+<p class="continuation">The second statement shows that in a conditional statement, there is often a hidden universal quantifier. This statement is false since there are real numbers \(x\) for which \(x^3\) is not greater than or equal to \(x^2\text{.}\) For example, we could use \(x = - 1\) or \(x = \frac{1}{2}\text{.}\)</p>
+<p id="p-786">This means that the negation must be true. We can form the negation as follows:</p>
+<div class="displaymath">
+\begin{equation*}
+\mynot  \left( {\forall x \in \mathbb{R}} \right)\left( {x^3  \geq x^2 } \right) \equiv 
+\left( {\exists x \in \mathbb{R}} \right)\mynot  \left( {x^3  \geq x^2 } \right)\text{.}
+\end{equation*}
+</div>
+<p id="p-787">In most cases, we want to write this negation in a way that does not use the negation symbol. In this case, we can now write the open sentence \(\mynot  \left( {x^3  \geq x^2 } \right)\) as \(\left( {x^3  \lt  x^2 } \right)\text{.}\) (That is, the negation of “is greater than or equal to” is “is less than.”) So we obtain the following:</p>
+<div class="displaymath">
+\begin{equation*}
+\mynot  \left( {\forall x \in \mathbb{R}} \right)\left( {x^3  \geq x^2 } \right) \equiv 
+\left( {\exists x \in \mathbb{R}} \right)\left( {x^3  \lt  x^2 } \right)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">The statement \(\left( {\exists x \in \mathbb{R}} \right)\left( {x^3 \lt x^2 } \right)\) could be written in English as follows: <blockquote class="blockquote" id="blockquote-67">There exists a real number \(x\) such that \(x^3 \lt x^2\text{.}\)</blockquote> <blockquote class="blockquote" id="blockquote-68">There exists an \(x\) such that \(x\) is a real number and \(x^3 \lt x^2\text{.}\)</blockquote></p></article><article class="exercise exercise-like" id="pr_negating"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">2.4.7</span><span class="period">.</span><span class="space"> </span><span class="title">Negating Quantified Statements.</span>
+</h6>
+<p id="p-788">For each of the following statements</p>
+<ol class="decimal">
+<li id="li-112"><p id="p-789">Write the statement in the form of an English sentence that does not use the symbols for quantifiers.</p></li>
+<li id="li-113"><p id="p-790">Write the negation of the statement in a symbolic form that does not use the negation symbol.</p></li>
+<li id="li-114"><p id="p-791">Write the negation of the statement in the form of an English sentence that does not use the symbols for quantifiers.</p></li>
+</ol>
+<p class="continuation"><article class="task exercise-like" id="task-304"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-792">\(\left( \forall a \in \mathbb{R}\right) \left( a + 0 = a \right)\text{.}\)</p></article> <article class="task exercise-like" id="task-305"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-793">\(\left( \forall x \in \mathbb{R} \right) \left[ \sin ( {2x} ) = 2 ( {\sin x} )
+( {\cos x} ) \right]\text{.}\)</p></article> <article class="task exercise-like" id="task-306"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-794">\(\left( \forall x \in \mathbb{R} \right) \left( \tan ^2 x + 1 = \sec ^2 x \right)\text{.}\)</p></article> <article class="task exercise-like" id="task-307"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-795">\(\left( \exists x \in \mathbb{Q} \right) \left( x^2 - 3x - 7 = 0 \right)\text{.}\)</p></article> <article class="task exercise-like" id="task-308"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-796">\(\left( \exists x \in \mathbb{R} \right) \left( x^2 + 1 = 0 \right)\text{.}\)</p></article></p></article></section><section class="subsection" id="D_counterexample2"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Counterexamples and Negations of Conditional Statements</span>
+</h3>
+<p id="p-797"> The real number \(x = - 1\) in the previous example was used to show that the statement \(\left( {\forall x \in \mathbb{R}} \right)\left( {x^3 \geq x^2 } \right)\) is false. This is called a <dfn class="terminology">counterexample</dfn> to the statement.  In general, a <dfn class="terminology">counterexample</dfn> to a statement of the form \(\left( {\forall x} \right)\left[ {P( x )} \right]\) is an object \(a\) in the universal set \(U\) for which \(P( a )\) is false. It is an example that proves that \(\left( {\forall x} \right)\left[ {P( x )} \right]\) is a false statement, and hence its negation, \(\left( {\exists x} \right)\left[ {\mynot P( x )} \right]\text{,}\) is a true statement.</p>
+<p id="p-798">In the preceding example, we also wrote the universally quantified statement as a conditional statement. The number \(x =  - 1\) is a counterexample for the statement If \(x\) is a real number, then \(x^3\) is greater than or equal to \(x^2\text{.}\) So the number \(-1\) is an example that makes the hypothesis of the conditional statement true and the conclusion false. Remember that a conditional statement often contains a “hidden” universal quantifier. Also, recall that in <a href="S_logequiv.html" class="internal" title="Section 2.2: Logically Equivalent Statements">Section 2.2</a> we saw that the negation of the conditional statement “If \(P\) then \(Q\)” is the statement “\(P\) and not \(Q\text{.}\)” Symbolically, this can be written as follows:</p>
+<div class="displaymath">
+\begin{equation*}
+\mynot  \left( {P \to Q} \right) \equiv \;P \wedge \mynot  Q\text{.}
+\end{equation*}
+</div>
+<p id="p-799">So when we specifically include the universal quantifier, the symbolic form of the negation of a conditional statement is</p>
+<div class="displaymath">
+\begin{align*}
+\mynot  \left( {\forall x} \in U \right)\left[ {P( x ) \to Q( x )} \right] \amp 
+\equiv \left( {\exists x} \in U \right)\mynot  \left[ {P( x ) \to Q( x )} \right]\\
+\amp \equiv \left( {\exists x} \in U \right)\left[ {P( x ) \wedge \mynot  Q( x )} 
+\right]
+\end{align*}
+</div>
+<p id="p-800">That is,</p>
+<div class="displaymath">
+\begin{equation*}
+\mynot  \left( {\forall x} \in U \right)\left[ {P( x ) \to Q( x )} \right] \equiv 
+\left( {\exists x} \in U \right)\left[ {P( x ) \wedge \mynot  Q( x )} \right]\text{.}
+\end{equation*}
+</div>
+<article class="exercise exercise-like" id="pr_counterexamples"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">2.4.8</span><span class="period">.</span><span class="space"> </span><span class="title">Using Counterexamples.</span>
+</h6>
+<p id="p-801">Use counterexamples to explain why each of the following statements is false. <article class="task exercise-like" id="task-309"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-802">For each integer \(n\text{,}\) \(\left( n^2 + n + 1 \right)\) is a prime number.</p></article> <article class="task exercise-like" id="task-310"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-803">For each real number \(x\text{,}\) if \(x\) is positive, then \(2x^2 &gt; x\text{.}\)</p></article></p></article></section><section class="subsection" id="subsection-29"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Quantifiers in Definitions</span>
+</h3>
+<p id="p-804"> Definitions of terms in mathematics often involve quantifiers. These definitions are often given in a form that does not use the symbols for quantifiers. Not only is it important to know a definition, it is also important to be able to write a negation of the definition. This will be illustrated with the definition of what it means to say that a natural number is a perfect square. <article class="definition definition-like" id="D_square"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.9</span><span class="period">.</span>
+</h6>
+<p id="p-805">A natural number \(n\) is a <dfn class="terminology">perfect square</dfn>  provided that there exists a natural number \(k\) such that \(n = k^2\text{.}\)</p></article></p>
+<p id="p-806">This definition can be written in symbolic form using appropriate quantifiers as follows: <blockquote class="blockquote" id="blockquote-69">A natural number \(n\) is a <dfn class="terminology">perfect square</dfn> provided \(\left( {\exists k \in \mathbb{N}} \right) \! \left( {n = k^2 } \right)\text{.}\)</blockquote></p>
+<p id="p-807">We frequently use the following steps to gain a better understanding of a definition.</p>
+<ol class="decimal">
+<li id="li-115"><p id="p-808">Examples of natural numbers that are perfect squares are 1, 4, 9, and 81 since \(1 = 1^2\text{,}\) \(4 = 2^2\text{,}\) \(9 = 3^2\text{,}\) and \(81 = 9^2\text{.}\)</p></li>
+<li id="li-116"><p id="p-809">Examples of natural numbers that are not perfect squares are 2, 5, 10, and 50.</p></li>
+<li id="li-117">
+<p id="p-810">This definition gives two “conditions.” One is that the natural number \(n\) is a perfect square and the other is that there exists a natural number \(k\) such that \(n = k^2\text{.}\) The definition states that these mean the same thing. So when we say that a natural number \(n\) is not a perfect square, we need to negate the condition that  there exists a natural number \(k\) such that \(n = k^2\text{.}\) We can use the symbolic form to do this.</p>
+<div class="displaymath">
+\begin{equation*}
+\mynot \left( {\exists k \in \mathbb{N}} \right)\left( {n = k^2 } \right) \equiv \left( 
+\forall k \in \N \right) \left( n \ne k^2 \right)
+\end{equation*}
+</div>
+<p class="continuation">Notice that instead of writing \(\mynot \left(n = k^2 \right)\text{,}\) we used the equivalent form of \(\left(n \ne k^2 \right)\text{.}\) This will be easier to translate into an English sentence. So we can write, <blockquote class="blockquote" id="blockquote-70">A natural number \(n\)  is not a perfect square provided that for every natural number \(k\text{,}\) \(n \ne k^2\text{.}\)</blockquote></p>
+</li>
+</ol>
+<p id="p-811">The preceding method illustrates a good method for trying to understand a new definition. Most textbooks will simply define a concept and leave it to the reader to do the preceding steps. Frequently, it is not sufficient just to read a definition and expect to understand the new term. We must provide examples that satisfy the definition, as well as examples that do not satisfy the definition, and we must be able to write a coherent negation of the definition.</p>
+<article class="exercise exercise-like" id="pr_mutliple3"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">2.4.10</span><span class="period">.</span><span class="space"> </span><span class="title">Multiples of Three.</span>
+</h6>
+<p id="p-812"><article class="definition definition-like" id="D_multiple3"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.11</span><span class="period">.</span>
+</h6>
+<p id="p-813">An integer \(n\) is a <dfn class="terminology">multiple of 3</dfn> provided that there exists an integer \(k\) such that \(n = 3k\text{.}\)</p></article> <article class="task exercise-like" id="task-311"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-814">Write this definition in symbolic form using quantifiers by completing the following: <blockquote class="blockquote" id="blockquote-71">An integer \(n\) is a multiple of 3 provided that ….</blockquote></p></article> <article class="task exercise-like" id="task-312"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-815">Give several examples of integers (including negative integers) that are multiples of 3.</p></article> <article class="task exercise-like" id="task-313"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-816">Give several examples of integers (including negative integers) that are not multiples of 3.</p></article> <article class="task exercise-like" id="task-314"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-817">Use the symbolic form of the definition of a multiple of 3 to complete the following sentence: “An integer \(n\) is not a multiple of 3 provided that ….”</p></article> <article class="task exercise-like" id="task-315"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-818">Without using the symbols for quantifiers, complete the following sentence: “An integer \(n\) is not a multiple of 3 provided that ….”</p></article></p></article></section><section class="subsection" id="subsection-30"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Statements with More than One Quantifier</span>
+</h3>
+<p id="p-819">When a predicate contains more than one variable, each variable must be quantified to create a statement. For example, assume the universal set is the set of integers, \(\mathbb{Z}\text{,}\) and let \(P\left( {x, y} \right)\) be the predicate, “\(x + y = 0\text{.}\)” We can create a statement from this predicate in several ways.</p>
+<ol class="decimal">
+<li id="twoquantifiers1">
+<p id="p-820">\(\left( {\forall x \in \mathbb{Z}} \right)\left( {\forall y \in \mathbb{Z}} \right)
+\left( {x + y = 0} \right)\)</p>
+<p id="p-821">We could read this as, “For all integers \(x\) and \(y\text{,}\) \(x + y = 0\text{.}\)” This is a false statement since it is possible to find two integers whose sum is not zero \(\left( {2 + 3 \ne 0} \right)\text{.}\)</p>
+</li>
+<li id="twoquantifiers2">
+<p id="p-822">\(\left( {\forall x \in \mathbb{Z}} \right)\left( {\exists y \in \mathbb{Z}} 
+\right)\left( {x + y = 0} \right)\)</p>
+<p id="p-823">We could read this as, “For every integer \(x\text{,}\) there exists an integer \(y\) such that \(x + y = 0\text{.}\)” This is a true statement.</p>
+</li>
+<li id="twoquantifiers3">
+<p id="p-824">\(\left( {\exists x \in \mathbb{Z}} \right)\left( {\forall y \in \mathbb{Z}} 
+\right)\left( {x + y = 0} \right)\)</p>
+<p id="p-825">We could read this as, “There exists an integer \(x\) such that for each integer \(y\text{,}\) \(x + y = 0\text{.}\)” This is a false statement since there is no integer whose sum with each integer is zero.</p>
+</li>
+<li id="twoquantifiers4">
+<p id="p-826">\(\left( {\exists x \in \mathbb{Z}} \right)\left( {\exists y \in \mathbb{Z}}
+\right)\left( {x + y = 0} \right)\)</p>
+<p id="p-827">We could read this as, “There exist integers \(x\) and \(y\) such that \(x + y = 0\text{.}\)” This is a true statement. For example, \(2 + \left( { - 2} \right) = 0\text{.}\)</p>
+</li>
+</ol>
+<p class="continuation">When we negate a statement with more than one quantifier, we consider each quantifier in turn and apply the appropriate part of <a class="xref" data-knowl="./knowl/T_negations.html" title="Theorem 2.4.5">Theorem 2.4.5</a>. As an example, we will negate <a class="xref" data-knowl="./knowl/twoquantifiers3.html" title="Item 3">Item 3</a> from the preceding list. The statement is</p>
+<div class="displaymath">
+\begin{equation*}
+\left( {\exists x \in \mathbb{Z}} \right)\left( {\forall y \in \mathbb{Z}} 
+\right)\left( {x + y = 0} \right)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We first treat this as a statement in the following form: \(\left( {\exists x \in \mathbb{Z}} \right)\left( {P( x )} \right)\) where \(P( x )\) is the predicate \(\left( {\forall y \in \mathbb{Z}} \right)\left( {x + y = 0} \right)\text{.}\) Using <a class="xref" data-knowl="./knowl/T_negations.html" title="Theorem 2.4.5">Theorem 2.4.5</a>, we have</p>
+<div class="displaymath">
+\begin{equation*}
+\mynot  \left( {\exists x \in \mathbb{Z}} \right)\left( {P( x )} \right) \equiv \left( 
+{\forall x \in \mathbb{Z}} \right)\left( {\mynot  P( x )} \right)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Using <a class="xref" data-knowl="./knowl/T_negations.html" title="Theorem 2.4.5">Theorem 2.4.5</a> again, we obtain the following:</p>
+<div class="displaymath">
+\begin{align*}
+\mynot  P( x ) \amp 
+\equiv \mynot  \left( {\forall y \in \mathbb{Z}} \right)\left( {x + y = 0} \right)\\
+\amp \equiv \left( {\exists y \in \mathbb{Z}} \right)\mynot  \left( {x + y = 0} \right)\\
+\amp \equiv \left( {\exists y \in \mathbb{Z}} \right)\left( {x + y \ne 0} \right)
+\end{align*}
+</div>
+<p class="continuation">Combining these two results, we obtain</p>
+<div class="displaymath">
+\begin{equation*}
+\mynot  \left( {\exists x \in \mathbb{Z}} \right)\left( {\forall y \in \mathbb{Z}} 
+\right)\left( {x + y = 0} \right) \equiv \left( {\forall x \in \mathbb{Z}} \right)\left( 
+{\exists y \in \mathbb{Z}} \right)\left( {x + y \ne 0} \right)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">The results are summarized in the following table.</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="l m b2 r2 l0 t0 lines"></th>
+<th class="l m b2 r2 l0 t0 lines">Symbolic Form</th>
+<th class="l m b2 r0 l0 t0 lines">English Form</th>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">Statement</td>
+<td class="l m b2 r2 l0 t0 lines">\(\left( {\exists x \in \mathbb{Z}} \right)\left( {\forall y \in 
+\mathbb{Z}} \right)\left( {x + y = 0} \right)\)</td>
+<td class="l m b2 r0 l0 t0 lines">There exists an integer<br>\(x\)  such that for each<br>integer   \(y\text{,}\) \(x + y = 0\text{.}\)</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">Negation</td>
+<td class="l m b0 r2 l0 t0 lines">\(\left( {\forall x \in \mathbb{Z}} \right)\left( {\exists y 
+\in \mathbb{Z}} \right)\left( {x + y \ne 0} \right)\)</td>
+<td class="l m b0 r0 l0 t0 lines">For each integer  \(x\text{,}\) there<br>exists an integer \(y\) such<br>that \(x + y \ne 0\text{.}\)</td>
+</tr>
+</table></div>
+<p id="p-828">Since the given statement is false, its negation is true.</p>
+<p id="p-829">We can construct a similar table for each of the four statements. The next table shows <a class="xref" data-knowl="./knowl/twoquantifiers2.html" title="Item 2">Item 2</a>, which is true, and its negation, which is false.</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="l m b2 r2 l0 t0 lines"></th>
+<th class="l m b2 r2 l0 t0 lines">Symbolic Form</th>
+<th class="l m b2 r0 l0 t0 lines">English Form</th>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">Statement</td>
+<td class="l m b2 r2 l0 t0 lines">\(\left( {\forall x \in \mathbb{Z}} \right)\left( {\exists y \in 
+\mathbb{Z}} \right)\left( {x + y = 0} \right)\)</td>
+<td class="l m b2 r0 l0 t0 lines">For every integer  \(x\text{,}\)<br>there exists an integer  \(y\)<br>such that \(x + y = 0\text{.}\)</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">Negation</td>
+<td class="l m b0 r2 l0 t0 lines">\(\left( {\exists x \in \mathbb{Z}} \right)\left( {\forall y \in 
+\mathbb{Z}} \right)\left( {x + y \ne 0} \right)\)</td>
+<td class="l m b0 r0 l0 t0 lines">There exists an integer<br>\(x\)  such that for every<br>integer  \(y\text{,}\)  \(x + y \ne 0\text{.}\)</td>
+</tr>
+</table></div>
+<article class="exercise exercise-like" id="pr_twoquant"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">2.4.12</span><span class="period">.</span><span class="space"> </span><span class="title">Negating a Statement with Two Quantifiers.</span>
+</h6>
+<p id="p-830">Write the negation of the statement</p>
+<div class="displaymath">
+\begin{equation*}
+\left( {\forall x \in \mathbb{Z}} \right)\left( {\forall y \in \mathbb{Z}} \right)\left( 
+{x + y = 0} \right)
+\end{equation*}
+</div>
+<p class="continuation">in symbolic form and as a sentence written in English.</p></article></section><section class="subsection" id="subsection-31"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Writing Guideline</span>
+</h3>
+<p id="p-831"> Try to use English and minimize the use of cumbersome notation. Do not use the special symbols for quantifiers \(\forall\) (for all), \(\exists\) (there exists), \(\mathrel\backepsilon\) (such that), or \(\therefore\) (therefore) in formal mathematical writing. It is often easier to write and usually easier to read, if the English words are used instead of the symbols. For example, why make the reader interpret</p>
+<div class="displaymath">
+\begin{equation*}
+\left( \forall x \in \R \right) \left( \exists y \in \R \right)\left( x + y = 0 \right)
+\end{equation*}
+</div>
+<p class="continuation">when it is possible to write <blockquote class="blockquote" id="blockquote-72">For each real number \(x\text{,}\) there exists a real number \(y\) such that \(x + y = 0\text{,}\)</blockquote> or, more succinctly (if appropriate), <blockquote class="blockquote" id="blockquote-73">Every real number has an additive inverse.</blockquote></p></section><section class="exercises" id="exercises-6"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exer_sec24-1"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-832">For each of the following, write the statement as an English sentence and then explain why the statement is false. <article class="task exercise-like" id="task-316"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-833">\(\left(\exists x \in \mathbb{Q} \right) \left( x^2 - 3x - 7 = 0 \right)\text{.}\)</p></article> <article class="task exercise-like" id="task-317"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-834">\(\left( \exists x \in \mathbb{R} \right) \left( x^2 + 1 = 0 \right)\text{.}\)</p></article> <article class="task exercise-like" id="task-318"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-835">\(\left( \exists m \in \N \right) \left( m^2 \lt 1 \right)\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exer_sec24-2new"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-836">For each of the following, use a counterexample to show that the statement is false. Then write the negation of the statement in English, without using symbols for quantifiers. <article class="task exercise-like" id="task-319"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-837">\(\left( {\forall m \in \mathbb{Z}} \right)\left( {m^2 \text{ is even } } \right)\text{.}\)</p></article> <article class="task exercise-like" id="task-320"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-838">\(\left( {\forall x \in \mathbb{R}} \right)\left( {x^2 &gt; 0} \right)\text{.}\)</p></article> <article class="task exercise-like" id="task-321"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-839">For each real number \(x\text{,}\) \(\sqrt{x} \in \R\text{.}\)</p></article> <article class="task exercise-like" id="task-322"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-840">\(\left( \forall m \in \Z \right) \left( \dfrac{m}{3} \in \Z \right)\text{.}\)</p></article> <article class="task exercise-like" id="task-323"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-841">\(\left( {\forall a \in \mathbb{Z}} \right)\left( {\sqrt {a^2 } = a} \right)\text{.}\)</p></article> <article class="task exercise-like" id="task-324"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-842">\(\left( {\forall x \in \mathbb{R}} \right)\left( {\tan ^2 x + 1 = \sec ^2 x} 
+\right)\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exer_sec24-2"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-843">For each of the following statements</p>
+<ul class="disc">
+<li id="li-122"><p id="p-844">Write the statement as an English sentence that does not use the symbols for quantifiers.</p></li>
+<li id="li-123"><p id="p-845">Write the negation of the statement in symbolic form in which the negation symbol is not used.</p></li>
+<li id="li-124"><p id="p-846">Write a useful negation of the statement in an English sentence that does not use the symbols for quantifiers.</p></li>
+</ul>
+<p class="continuation"><article class="task exercise-like" id="task-325"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-847">\(\left( {\exists x \in \mathbb{Q}} \right)\left( {x &gt; \sqrt 2 } \right)\text{.}\)</p></article> <article class="task exercise-like" id="task-326"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-848">\(\left( {\forall x \in \mathbb{Q}} \right)\left( {x^2 - 2 \ne 0} \right)\text{.}\)</p></article> <article class="task exercise-like" id="task-327"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-849">\(\left( {\forall x \in \mathbb{Z}} \right)\left( {x\text{ is even or } x\text{ is odd } } 
+\right)\text{.}\)</p></article> <article class="task exercise-like" id="task-328"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-850">\(\left( {\exists x \in \mathbb{Q}} \right)\left( {\sqrt 2 \lt x \lt \sqrt 3 } 
+\right)\text{.}\)</p>
+<p id="p-851">Note: The sentence “\(\sqrt 2 \lt x \lt \sqrt 3\)” is actually a conjuction. It means \(\sqrt 2 \lt x\) and \(x \lt \sqrt 3\text{.}\)</p></article> <article class="task exercise-like" id="task-329"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-852">\(\left( {\forall x \in \mathbb{Z}} \right)\left( {\text{ If } x^2 \text{ is odd,
+then } x\text{ is odd } } \right)\text{.}\)</p></article> <article class="task exercise-like" id="task-330"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-853">\(\left( {\forall n \in \mathbb{N}} \right)\) [If \(n\) is a perfect square, then \(\left( {2^n - 1} \right)\) is not a prime number].</p></article> <article class="task exercise-like" id="task-331"><h6 class="heading"><span class="codenumber">(g)</span></h6>
+<p id="p-854">\(\left( {\forall n \in \mathbb{N}} \right)\left( {n^2 - n + 41} \text{ is a prime number 
+} \right)\text{.}\)</p></article> <article class="task exercise-like" id="task-332"><h6 class="heading"><span class="codenumber">(h)</span></h6>
+<p id="p-855">\(\left( {\exists x \in \mathbb{R}} \right) \left( {\cos ( {2x} ) = 2( {\cos x} )} 
+\right)\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exer_sec24-3"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-856">Write each of the following statements as an English sentence that does not use the symbols for quantifiers. <article class="task exercise-like" id="task-333"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-857">\(\left( {\exists m} \in \Z \right)\left( {\exists n} \in \Z \right)\left( {m &gt; n} 
+\right)\)</p></article> <article class="task exercise-like" id="task-334"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-858">\(\left( {\exists m} \in \Z \right)\left( {\forall n} \in \Z \right)\left( {m &gt; n} 
+\right)\)</p></article> <article class="task exercise-like" id="task-335"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-859">\(\left( {\forall m} \in \Z \right)\left( {\exists n} \in \Z \right)\left( {m &gt; n} 
+\right)\)</p></article> <article class="task exercise-like" id="task-336"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-860">\(\left( {\forall m}\in \Z \right)\left( {\forall n} \in \Z \right)\left( {m &gt; n} 
+\right)\)</p></article> <article class="task exercise-like" id="task-337"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-861">\(\left( {\exists n} \in \Z \right)\left( {\forall m} \in \Z \right)\left( {m^2 &gt; n} 
+\right)\)</p></article> <article class="task exercise-like" id="task-338"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-862">\(\left( {\forall n} \in \Z \right)\left( {\exists m} \in \Z \right)\left( {m^2 &gt; n} 
+\right)\)</p></article></p></article><article class="exercise exercise-like" id="exer_sec24-4"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-863">Write the negation of each statement in <a class="xref" data-knowl="./knowl/exer_sec24-3.html" title="Exercise 4">Exercise 4</a> in symbolic form and as an English sentence that does not use the symbols for quantifiers.</p></article><article class="exercise exercise-like" id="Exer_quantifier1"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-864">Assume that the universal set is  \(\mathbb{Z}\text{.}\) Consider the following sentence:</p>
+<div class="displaymath">
+\begin{equation*}
+\left( {\exists t \in \mathbb{Z}} \right)\left( {t \cdot x = 20} \right)\text{.}
+\end{equation*}
+</div>
+<p class="continuation"><article class="task exercise-like" id="task-339"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-865">Explain why this sentence is an open sentence and not a statement.</p></article> <article class="task exercise-like" id="task-340"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-866">If 5 is substituted for \(x\text{,}\) is the resulting sentence a statement? If it is a statement, is the statement true or false?</p></article> <article class="task exercise-like" id="task-341"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-867">If 8 is substituted for \(x\text{,}\) is the resulting sentence a statement? If it is a statement, is the statement true or false?</p></article> <article class="task exercise-like" id="task-342"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-868">If \(-2\) is substituted for \(x\text{,}\) is the resulting sentence a statement? If it is a statement, is the statement true or false?</p></article> <article class="task exercise-like" id="task-343"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-869">What is the truth set of the open sentence \(\left( {\exists t \in \mathbb{Z}} 
+\right)\left( {t \cdot x = 20} \right)\text{?}\)</p></article></p></article><article class="exercise exercise-like" id="Exer_quantifier"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-870">Assume that the universal set is  \(\mathbb{R}\text{.}\) Consider the following sentence:</p>
+<div class="displaymath">
+\begin{equation*}
+\left( {\exists t \in \mathbb{R}} \right)\left( {t \cdot x = 20} \right)\text{.}
+\end{equation*}
+</div>
+<p class="continuation"><article class="task exercise-like" id="task-344"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-871">Explain why this sentence is an open sentence and not a statement.</p></article> <article class="task exercise-like" id="task-345"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-872">If 5 is substituted for \(x\text{,}\) is the resulting sentence a statement? If it is a statement, is the statement true or false?</p></article> <article class="task exercise-like" id="task-346"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-873">If \(\pi\) is substituted for \(x\text{,}\) is the resulting sentence a statement? If it is a statement, is the statement true or false?</p></article> <article class="task exercise-like" id="task-347"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-874">If \(0\) is substituted for \(x\text{,}\) is the resulting sentence a statement? If it is a statement, is the statement true or false?</p></article> <article class="task exercise-like" id="task-348"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-875">What is the truth set of the open sentence \(\left( {\exists t \in \mathbb{R}} 
+\right)\left( {t \cdot x = 20} \right)\text{?}\)</p></article></p></article><article class="exercise exercise-like" id="exer-z-star"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="p-876">Let \(\Z^*\) be the set of all nonzero integers. <article class="task exercise-like" id="exer-z-stara"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-877">Use a counterexample to explain why the following statement is false: <blockquote class="blockquote" id="blockquote-74">For each \(x \in \Z^*\text{,}\) there exists a \(y \in \Z^*\) such that \(xy = 1\text{.}\)</blockquote></p></article> <article class="task exercise-like" id="exer-z-starb"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-878">Write the statement in <a class="xref" data-knowl="./knowl/exer-z-stara.html" title="Task a">Task a</a> in symbolic form using appropriate symbols for quantifiers.</p></article> <article class="task exercise-like" id="exer-z-starc"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-879">Write the negation of the statement in <a class="xref" data-knowl="./knowl/exer-z-starb.html" title="Task b">Task b</a> in symbolic form using appropriate symbols for quantifiers.</p></article> <article class="task exercise-like" id="task-352"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-880">Write the negation from <a class="xref" data-knowl="./knowl/exer-z-starc.html" title="Task c">Task c</a> in English without using the symbols for quantifiers.</p></article></p></article><article class="exercise exercise-like" id="exercise-136"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="p-881">An integer \(m\) is said to have the <dfn class="terminology">divides property</dfn>  provided that for all integers \(a\) and \(b\text{,}\) if \(m\) divides \(ab\text{,}\) then \(m\) divides \(a\) or \(m\) divides \(b\text{.}\) <article class="task exercise-like" id="task-353"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-882">Using the symbols for quantifiers, write what it means to say that the integer \(m\) has the divides property.</p></article> <article class="task exercise-like" id="task-354"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-883">Using the symbols for quantifiers, write what it means to say that the integer \(m\) does not have the divides property.</p></article> <article class="task exercise-like" id="task-355"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-884">Write an English sentence stating what it means to say that the integer \(m\) does not have the divides property.</p></article></p></article><article class="exercise exercise-like" id="exer_24-increasing"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<p id="p-885">In calculus, we define a function \(f\) with domain \(\mathbb{R}\) to be <dfn class="terminology">strictly increasing</dfn>  provided that for all real numbers \(x\) and \(y\text{,}\) \(f\left( x \right) \lt f\left( y \right)\) whenever \(x \lt y\text{.}\) Complete each of the following sentences using the appropriate symbols for quantifiers:</p>
+<article class="task exercise-like" id="task-356"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-886">A function \(f\) with domain \(\mathbb{R}\) is strictly increasing provided that \(\ldots \text{.}\)</p></article><article class="task exercise-like" id="task-357"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-887">A function \(f\) with domain \(\mathbb{R}\) is not strictly increasing provided that \(\ldots \text{.}\)</p></article><article class="task exercise-like" id="task-358"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-888">Complete the following sentence in English without using symbols for quantifiers:</p>
+<p id="p-889">A function \(f\) with domain \(\mathbb{R}\) is not strictly increasing provided that \(\ldots \text{.}\)</p></article></article><article class="exercise exercise-like" id="exer_24-continuous"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
+<p id="p-890">In calculus, we define a function \(f\) to be <dfn class="terminology">continuous</dfn>  at a real number \(a\) provided that for every \(\varepsilon &gt; 0\text{,}\) there exists a \(\delta &gt; 0\) such that if \(\left| {x - a} \right| \lt \delta\text{,}\) then \(\left| {f\left( x \right) - f\left( a \right)} \right| \lt \varepsilon\text{.}\)</p>
+<p id="p-891">Note: The symbol \(\varepsilon\) is the lowercase Greek letter epsilon, and the symbol \(\delta\) is the lowercase Greek letter delta.</p>
+<p id="p-892">Complete each of the following sentences using the appropriate symbols for quantifiers:</p>
+<article class="task exercise-like" id="task-359"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-893">A function \(f\) is continuous at the real number \(a\) provided that \(\ldots \text{.}\)</p></article><article class="task exercise-like" id="task-360"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-894">A function \(f\) is not continuous at the real number \(a\) provided that \(\ldots \text{.}\)</p></article><article class="task exercise-like" id="task-361"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-895">Complete the following sentence in English without using symbols for quantifiers:</p>
+<p id="p-896">A function \(f\) is not continuous at the real number \(a\) provided that \(\ldots \text{.}\)</p></article></article><article class="exercise exercise-like" id="exer_advanced"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
+<p id="p-897">The following exercises contain definitions or results from more advanced mathematics courses. Even though we may not understand all of the terms involved, it is still possible to recognize the structure of the given statements and write a meaningful negation of that statement.</p>
+<article class="task exercise-like" id="task-362"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-898">In abstract algebra, an operation \(*\) on a set \(A\) is called a <dfn class="terminology">commutative operation</dfn>  provided that for all \(x, y \in A\text{,}\) \(x * y = y * x\text{.}\) Carefully explain what it means to say that an operation \(*\) on a set \(A\) is not a commutative operation.</p></article><article class="task exercise-like" id="task-363"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-899">In abstract algebra, a <dfn class="terminology">ring</dfn>  consists of a nonempty set \(R\) and two operations called addition and multiplication. A nonzero element \(a\) in a ring \(R\) is called a <em class="emphasis">zero divisor</em>  provided that there exists a nonzero element \(b\) in \(R\) such that \(ab = 0\) or \(ba = 0\text{.}\) Carefully explain what it means to say that a nonzero element \(a\) in a ring \(R\) is not a zero divisor.</p></article><article class="task exercise-like" id="task-364"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-900">A set \(M\) of real numbers is called a <dfn class="terminology">neighborhood</dfn>  of a real number \(a\) provided that there exists a positive real number \(\varepsilon\) such that the open interval \((a - \varepsilon,
+a + \varepsilon)\) is contained in \(M\text{.}\) Carefully explain what it means to say that a set \(M\) is not a neighborhood of a real number \(a\text{.}\)</p></article><article class="task exercise-like" id="task-365"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-901">In advanced calculus, a sequence of real numbers \(\left(x_1, x_2, \ldots,
+x_k, \ldots \right)\) is called a <dfn class="terminology">Cauchy sequence</dfn>  provided that for each positive real number \(\varepsilon\text{,}\) there exists a natural number \(N\) such that for all \(m,
+n \in \N\text{,}\) if \(m &gt; N\) and \(n &gt; N\text{,}\) then \(\left| x_n - x_m \right| \lt \varepsilon\text{.}\) Carefully explain what it means to say that the sequence of real numbers \(\left(x_1, x_2, \ldots,
+x_k, \ldots \right)\) is not a Cauchy sequence.</p></article></article><article class="activity project-like" id="exer_prime"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">8</span><span class="period">.</span><span class="space"> </span><span class="title">Prime Numbers.</span>
+</h6>
+<div class="introduction" id="introduction-13"><p id="p-902">The following definition of a prime number is very important in many areas of mathematics. We will use this definition at various places in the text. It is introduced now as an example of how to work with a definition in mathematics. <article class="definition definition-like" id="D_prime"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.4.13</span><span class="period">.</span>
+</h6>
+<p id="p-903">A natural number \(p\) is a <dfn class="terminology">prime number</dfn>  provided that it is greater than 1 and the only natural numbers that are factors of \(p\) are 1 and \(p\text{.}\) A natural number other than 1 that is not a prime number is a <dfn class="terminology">composite number</dfn>.  The number 1 is neither prime nor composite.</p></article> Using the definition of a prime number, we see that 2, 3, 5, and 7 are prime numbers. Also, 4 is a composite number since \(4 = 2 \cdot 2\text{;}\) 10 is a composite number since \(10 = 2 \cdot 5\text{;}\) and 60 is a composite number since \(60 = 4 \cdot 15\text{.}\)</p></div>
+<article class="task exercise-like" id="task-366"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-904">Give examples of four natural numbers other than 2, 3, 5, and 7 that are prime numbers.</p></article><article class="task exercise-like" id="task-367"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-905">Explain why a natural number \(p\) that is greater than 1 is a prime number provided that <blockquote class="blockquote" id="blockquote-75">For all \(d \in \mathbb{N}\text{,}\) if \(d\) is a factor of \(p\text{,}\) then \(d = 1\) or \(d = p\text{.}\)</blockquote></p></article><article class="task exercise-like" id="task-368"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-906">Give examples of four natural numbers that are composite numbers and explain why they are composite numbers.</p></article><article class="task exercise-like" id="task-369"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-907">Write a useful description of what it means to say that a natural number is a composite number (other than saying that it is not prime).</p></article></article><article class="activity project-like" id="A_upper"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">9</span><span class="period">.</span><span class="space"> </span><span class="title">Upper Bounds for Subsets of \(\mathbb{R}\).</span>
+</h6>
+<div class="introduction" id="introduction-14"><p id="p-908">Let \(A\) be a subset of the real numbers. A number \(b\) is called an <dfn class="terminology">upper bound</dfn>  for the set \(A\) provided that for each element \(x\) in \(A\text{,}\) \(x \leq b\text{.}\)</p></div>
+<article class="task exercise-like" id="task-370"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-909">Write this definition in symbolic form by completing the following: Let \(A\) be a subset of the real numbers. A number \(b\) is called an upper bound for the set \(A\) provided that \(\ldots \text{.}\)</p></article><article class="task exercise-like" id="task-371"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-910">Give examples of three different upper bounds for the set \(A = \left\{ x \in \mathbb{R} \mid 1 \leq x \leq 3 \right\}\text{.}\)</p></article><article class="task exercise-like" id="task-372"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-911">Does the set \(B = \left\{ x \in \mathbb{R} \mid x &gt; 0 \right\}\) have an upper bound? Explain.</p></article><article class="task exercise-like" id="A_upper4"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-912">Give examples of three different real numbers that are not upper bounds for the set \(A = \left\{ x \in \mathbb{R} \mid 1 \leq x \leq 3 \right\}\text{.}\)</p></article><article class="task exercise-like" id="task-374"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-913">Complete the following in symbolic form: “Let \(A\) be a subset of \(\R\text{.}\) A number \(b\) is not an upper bound for the set \(A\) provided that \(\ldots \text{.}\)”</p></article><article class="task exercise-like" id="A_upper6"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-914">Without using the symbols for quantifiers, complete the following sentence: “Let \(A\) be a subset of \(\R\text{.}\) A number \(b\) is not an upper bound for the set \(A\) provided that \(\ldots \text{.}\)”</p></article><article class="task exercise-like" id="task-376"><h6 class="heading"><span class="codenumber">(g)</span></h6>
+<p id="p-915">Are your examples in <a class="xref" data-knowl="./knowl/A_upper4.html" title="Task 9.d">Task 9.d</a> consistent with your work in <a class="xref" data-knowl="./knowl/A_upper6.html" title="Task 9.f">Task 9.f</a>? Explain.</p></article></article><article class="activity project-like" id="exer_leastupper"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">10</span><span class="period">.</span><span class="space"> </span><span class="title">Least Upper Bound for a Subset of \(\R\).</span>
+</h6>
+<div class="introduction" id="introduction-15">
+<p id="p-916">In <a class="xref" data-knowl="./knowl/A_upper.html" title="Activity 9: Upper Bounds for Subsets of \(\mathbb{R}\)">Activity 9</a>, we introduced the definition of an upper bound for a subset of the real numbers. Assume that we know this definition and that we know what it means to say that a number is not an upper bound for a subset of the real numbers.</p>
+<p id="p-917">Let \(A\) be a subset of \(\mathbb{R}\text{.}\) A real number \(\alpha\) is the <dfn class="terminology">least upper bound</dfn>  for \(A\) provided that \(\alpha\) is an upper bound for \(A\text{,}\) and if \(\beta\) is an upper bound for \(A\text{,}\) then \(\alpha \leq \beta\text{.}\)</p>
+<p id="p-918">Note: The symbol \(\alpha\) is the lowercase Greek letter alpha, and the symbol \(\beta\) is the lowercase Greek letter beta.</p>
+<p id="p-919">If we define \(P\left( x \right)\) to be “\(x\) is an upper bound for \(A\text{,}\)” then we can write the definition for least upper bound as follows: <blockquote class="blockquote" id="blockquote-76">A real number \(\alpha\) is the <dfn class="terminology">least upper bound</dfn> for \(A\) provided that \(P\left( \alpha \right) \wedge 
+\left[ {\left( {\forall \beta \in \mathbb{R}} \right)\left( {P\left( \beta \right) \to \left( 
+{\alpha \leq \beta } \right)} \right)} \right]\text{.}\)</blockquote></p>
+</div>
+<article class="task exercise-like" id="task-377"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-920">Why is a universal quantifier used for the real number \(\beta\text{?}\)</p></article><article class="task exercise-like" id="task-378"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-921">Complete the following sentence in symbolic form: “A real number \(\alpha\) is not the least upper bound for \(A\) provided that \(\ldots \text{.}\)”</p></article><article class="task exercise-like" id="task-379"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-922">Complete the following sentence as an English sentence: “A real number \(\alpha\) is not the least upper bound for \(A\) provided that \(\ldots \text{.}\)”</p></article></article></section></section></div></main>
+</div>
+</body>
+</html>

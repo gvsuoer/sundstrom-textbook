@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-10-05T14:47:37-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Statements and Logical Operators</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\def\C{\JustCenter}
+\newcommand{\typeu}{Beginning }
+\def\C{\JustCenter}
+\newcommand{\typel}{beginning }
+\def\C{\JustCenter}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\
+\thechapter. #1}{}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\def\C{\JustCenter}
+\renewcommand{\theenumi}{\alph{enumi}}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\theenumi}{({\alph{enumi}})}
+\def\C{\JustCenter}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\mynot}{\neg}
+\newcommand{\card}{\mathbf{card}}
+\newcommand{\x}{:}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Mathematical Reasoning:</span> <span class="subtitle">Writing and Proof (Version 3)</span></a></h1>
+<p class="byline">Ted Sundstrom, Professor Emeritus</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="C_2logic.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_2logic.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_logequiv.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="C_2logic.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C_2logic.html" title="Up">Up</a><a class="next-button button toolbar-item" href="S_logequiv.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="fm-versions.html" data-scroll="fm-versions">Version 3 and Version 2.1</a></li>
+<li><a href="fm-student-note.html" data-scroll="fm-student-note">Note to Students</a></li>
+<li><a href="fm-preface.html" data-scroll="fm-preface">Preface</a></li>
+<li><a href="fm-imp-features.html" data-scroll="fm-imp-features">Important Features of the Book</a></li>
+<li><a href="fm-cont-org.html" data-scroll="fm-cont-org">Content and Organization</a></li>
+<li><a href="fm-inst-note.html" data-scroll="fm-inst-note">Supplementary Materials for the Instructor</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_1intro.html" data-scroll="C_1intro"><span class="codenumber">1</span> <span class="title">Introduction to Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_1prop.html" data-scroll="S_1prop">Statements and Conditional Statements</a></li>
+<li><a href="S_1direct.html" data-scroll="S_1direct">Constructing Direct Proofs</a></li>
+<li><a href="S_1summary.html" data-scroll="S_1summary">Chapter 1 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_2logic.html" data-scroll="C_2logic"><span class="codenumber">2</span> <span class="title">Logical Reasoning</span></a><ul>
+<li><a href="S_2logop.html" data-scroll="S_2logop" class="active">Statements and Logical Operators</a></li>
+<li><a href="S_logequiv.html" data-scroll="S_logequiv">Logically Equivalent Statements</a></li>
+<li><a href="S_2predicates.html" data-scroll="S_2predicates">Open Sentences and Sets</a></li>
+<li><a href="S_2quantifier.html" data-scroll="S_2quantifier">Quantifiers and Negations</a></li>
+<li><a href="S_2summary.html" data-scroll="S_2summary">Chapter 2 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_proofs.html" data-scroll="C_proofs"><span class="codenumber">3</span> <span class="title">Constructing and Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_directproof.html" data-scroll="S_directproof">Direct Proofs</a></li>
+<li><a href="S_moremethods.html" data-scroll="S_moremethods">More Methods of Proof</a></li>
+<li><a href="S_contradiction.html" data-scroll="S_contradiction">Proof by Contradiction</a></li>
+<li><a href="S_cases.html" data-scroll="S_cases">Using Cases in Proofs</a></li>
+<li><a href="S_divalgo.html" data-scroll="S_divalgo">Beginning Activity 1: The Division Algorithm and Congruence</a></li>
+<li><a href="S_reviewproofs.html" data-scroll="S_reviewproofs">Review of Proof Methods</a></li>
+<li><a href="S_3summary.html" data-scroll="S_3summary">Chapter 3 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_induction.html" data-scroll="C_induction"><span class="codenumber">4</span> <span class="title">Mathematical Induction</span></a><ul>
+<li><a href="S_mathinduction.html" data-scroll="S_mathinduction">The Principle of Mathematical Induction</a></li>
+<li><a href="S_otherinduction.html" data-scroll="S_otherinduction">Other Forms of Mathematical Induction</a></li>
+<li><a href="S_recursion.html" data-scroll="S_recursion">Induction and Recursion</a></li>
+<li><a href="S_4summary.html" data-scroll="S_4summary">Chapter 4 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_settheory.html" data-scroll="C_settheory"><span class="codenumber">5</span> <span class="title">Set Theory</span></a><ul>
+<li><a href="S_setoperations.html" data-scroll="S_setoperations">Sets and Operations on Sets</a></li>
+<li><a href="S_provingset.html" data-scroll="S_provingset">Proving Set Relationships</a></li>
+<li><a href="S_setproperties.html" data-scroll="S_setproperties">Properties of Set Operations</a></li>
+<li><a href="S_cartesian.html" data-scroll="S_cartesian">Cartesian Products</a></li>
+<li><a href="S_indexfamily.html" data-scroll="S_indexfamily">Indexed Families of Sets</a></li>
+<li><a href="S_5summary.html" data-scroll="S_5summary">Chapter 5 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_functions.html" data-scroll="C_functions"><span class="codenumber">6</span> <span class="title">Functions</span></a><ul>
+<li><a href="S_introfunctions.html" data-scroll="S_introfunctions">Introduction to Functions</a></li>
+<li><a href="S_moreaboutfunctions.html" data-scroll="S_moreaboutfunctions">More about Functions</a></li>
+<li><a href="S_typesoffunctions.html" data-scroll="S_typesoffunctions">Beginning Activity 1: Injections, Surjections, and Bijections</a></li>
+<li><a href="S_compositionoffunctions.html" data-scroll="S_compositionoffunctions">Composition of Functions</a></li>
+<li><a href="S_inversefunctions.html" data-scroll="S_inversefunctions">Inverse Functions</a></li>
+<li><a href="S_functionsonsets.html" data-scroll="S_functionsonsets">Functions Acting on Sets</a></li>
+<li><a href="S_6summary.html" data-scroll="S_6summary">Chapter 6 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_equivrelations.html" data-scroll="C_equivrelations"><span class="codenumber">7</span> <span class="title">Equivalence Relations</span></a><ul>
+<li><a href="S_relations.html" data-scroll="S_relations">Relations</a></li>
+<li><a href="S_equivrelations.html" data-scroll="S_equivrelations">Equivalence Relations</a></li>
+<li><a href="S_equivclasses.html" data-scroll="S_equivclasses">Equivalence Classes</a></li>
+<li><a href="S_modulararithmetic.html" data-scroll="S_modulararithmetic">Modular Arithmetic</a></li>
+<li><a href="section-37.html" data-scroll="section-37">Chapter 7 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_numbertheory.html" data-scroll="C_numbertheory"><span class="codenumber">8</span> <span class="title">Topics in Number Theory</span></a><ul>
+<li><a href="S_gcd.html" data-scroll="S_gcd">The Greatest Common Divisor</a></li>
+<li><a href="S_primefactorizations.html" data-scroll="S_primefactorizations">Prime Numbers and Prime Factorizations</a></li>
+<li><a href="S_diophantine.html" data-scroll="S_diophantine">Linear Diophantine Equations</a></li>
+<li><a href="section-41.html" data-scroll="section-41">Chapter 8 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_topicsinsets.html" data-scroll="C_topicsinsets"><span class="codenumber">9</span> <span class="title">Finite and Infinite Sets</span></a><ul>
+<li><a href="S_finitesets.html" data-scroll="S_finitesets">Finite Sets</a></li>
+<li><a href="S_infinitesets.html" data-scroll="S_infinitesets">Countable Sets</a></li>
+<li><a href="S_uncountablesets.html" data-scroll="S_uncountablesets">Uncountable Sets</a></li>
+<li><a href="section-45.html" data-scroll="section-45">Chapter 9 Summary</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="C_writingguides.html" data-scroll="C_writingguides"><span class="codenumber">A</span> <span class="title">Guidelines for Writing Mathematical Proofs</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="S_2logop"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.1</span> <span class="title">Statements and Logical Operators</span>
+</h2>
+<section class="worksheet" id="PA_compound"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Beginning Activity 1: Compound Statements</span><div class="print-links">
+<a href="PA_compound-A4.html" class="a4">A4</a><a href="PA_compound-letter.html" class="us">US</a>
+</div>
+</h3>
+<p id="p-370">Mathematicians often develop ways to construct new mathematical objects from existing mathematical objects. It is possible to form new statements from existing statements by connecting the statements with words such as “and” and “or” or by negating the statement. A <dfn class="terminology">logical operator</dfn>  (or <dfn class="terminology">connective</dfn>)  on mathematical statements is a word or combination of words that combines one or more mathematical statements to make a new mathematical statement. A <dfn class="terminology">compound statement</dfn>  is a statement that contains one or more operators. Because some operators are used so frequently in logic and mathematics, we give them names and use special symbols to represent them.</p>
+<ul id="p-371" class="disc">
+<li id="sym_and"><p id="p-372">The <dfn class="terminology">conjunction</dfn>  of the statements \(P\) and \(Q\) is the statement “\(P\) <em class="emphasis">and</em> \(Q\)” and its denoted by \(P \wedge Q\) . The statement \(P \wedge Q\) is true only when both \(P\) and \(Q\) are true.</p></li>
+<li id="sym_or"><p id="p-373">The <dfn class="terminology">disjunction</dfn>  of the statements \(P\) and \(Q\) is the statement “\(P\) <em class="emphasis">or</em> \(Q\)” and its denoted by \(P \vee Q\text{.}\) The statement \(P \vee Q\) is true only when at least one of \(P\) or \(Q\) is true.</p></li>
+<li id="sym_not"><p id="p-374">The <dfn class="terminology">negation</dfn>  of the statement \(P\) is the statement “<em class="emphasis">not</em> \(P\)” and is denoted by \(\mynot P\) . The negation of \(P\) is true only when \(P\) is false, and \(\mynot P\) is false only when \(P\) is true.</p></li>
+<li id="sym_cond2"><p id="p-375">The <dfn class="terminology">implication</dfn>  or <dfn class="terminology">conditional</dfn> is the statement “<em class="emphasis">If</em> \(P\) <em class="emphasis">then</em> \(Q\)” and is denoted by \(P \to Q\) . The statement \(P \to Q\) is often read as “\(P\) <em class="emphasis">implies</em> \(Q\text{,}\)” and we have seen in <a href="S_1prop.html" class="internal" title="Section 1.1: Statements and Conditional Statements">Section 1.1</a> that \(P \to Q\) is false only when \(P\) is true and \(Q\) is false.</p></li>
+</ul>
+<section class="paragraphs" id="paragraphs-19"><h5 class="heading"><span class="title">Some comments about the disjunction..</span></h5>
+<p id="p-376">It is important to understand the use of the operator “or.” In mathematics, we use the “<dfn class="terminology">inclusive or</dfn>”  unless stated otherwise. This means that \(P \vee Q\) is true when both \(P\) and \(Q\) are true and also when only one of them is true. That is, \(P \vee Q\) is true when at least one of \(P\) or \(Q\) is true, or \(P \vee Q\) is false only when both \(P\) and \(Q\) are false.</p>
+<p id="p-377">A different use of the word “or” is the “<dfn class="terminology">exclusive or.</dfn>”  For the exclusive or, the resulting statement is false when both statements are true. That is, “\(P\) exclusive or \(Q\)” is true only when exactly one of \(P\) or \(Q\) is true. In everyday life, we often use the exclusive or. When someone says, “At the intersection, turn left or go straight,” this person is using the exclusive or.</p></section><section class="paragraphs" id="paragraphs-20"><h5 class="heading"><span class="title">Some comments about the negation.</span></h5>
+<p id="p-378">Although the statement, \(\mynot P\text{,}\) can be read as “It is not the case that \(P\text{,}\)” there are often better ways to say or write this in English. For example, we would usually say (or write): <blockquote class="blockquote" id="blockquote-33">The negation of the statement, “391 is prime” is “391 is not prime.”</blockquote> <blockquote class="blockquote" id="blockquote-34">The negation of the statement, “\(12 \lt 9\)” is “\(12 \geq 9\text{.}\)”</blockquote></p></section><article class="exercise exercise-like" id="exercise-46"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-379">For the statements <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"></div></div> write each of the following statements as English sentences and determine whether they are true or false. Notice that \(P\) is true and \(Q\) is false. <article class="task exercise-like" id="task-124"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-380">\(P \wedge Q\text{.}\)</p></article> <article class="task exercise-like" id="task-125"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-381">\(P \vee Q\)</p></article> <article class="task exercise-like" id="task-126"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-382">\(P \wedge \mynot Q\)</p></article> <article class="task exercise-like" id="task-127"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-383">\(\mynot P \vee \mynot Q\)</p></article></p></article><article class="exercise exercise-like" id="exercise-47"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-384">For the statements <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"></div></div> write each of the following statements in symbolic form using the operators \(\wedge\text{,}\) \(\vee\text{,}\) and \(\mynot\text{.}\) <article class="task exercise-like" id="task-128"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-385">\(15 \geq 17\text{.}\)</p></article> <article class="task exercise-like" id="task-129"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-386">15 is odd or \(15 \geq 17\text{.}\)</p></article> <article class="task exercise-like" id="task-130"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-387">15 is even or \(15 \lt 7\)</p></article> <article class="task exercise-like" id="task-131"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-388">15 is odd and \(15 \geq 17\text{.}\)</p></article></p></article></section><section class="worksheet" id="PA_truth"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Beginning Activity 2: Truth Values of Statements</span><div class="print-links">
+<a href="PA_truth-A4.html" class="a4">A4</a><a href="PA_truth-letter.html" class="us">US</a>
+</div>
+</h3>
+<p id="p-389">We will use the following two statements for all of this activity: <blockquote class="blockquote" id="blockquote-39">\(P\) is the statement “It is raining.”</blockquote> <blockquote class="blockquote" id="blockquote-40">\(Q\) is the statement “Daisy is playing golf.”</blockquote></p>
+<p id="p-390">In each of the following four parts, a truth value will be assigned to statements \(P\) and \(Q\text{.}\) For example, in Question (1), we will assume that each statement is true. In Question (2), we will assume that \(P\) is true and \(Q\) is false. In each part, determine the truth value of each of the following statements:</p>
+<ol id="p-391" class="lower-alpha">
+<li id="li-65"><p id="p-392">\(\left( P \wedge Q \right)\) It is raining and Daisy is playing golf.</p></li>
+<li id="li-66"><p id="p-393">\(\left( P \vee Q \right)\) It is raining or Daisy is playing golf.</p></li>
+<li id="li-67"><p id="p-394">\(\left( P \to Q \right)\) If it is raining, then Daisy is playing golf.</p></li>
+<li id="li-68"><p id="p-395">\(\left( \mynot P \right)\) It is not raining.</p></li>
+</ol>
+<p id="p-396">Which of the four statements [(a) through (d)] are true and which are false in each of the following four situations?</p>
+<article class="exercise exercise-like" id="exercise-48"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-397">When \(P\) is true (it is raining) and \(Q\) is true (Daisy is playing golf).</p></article><article class="exercise exercise-like" id="exercise-49"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-398">When \(P\) is true (it is raining) and \(Q\) is false (Daisy is not playing golf).</p></article><article class="exercise exercise-like" id="exercise-50"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-399">When \(P\) is false (it is not raining) and \(Q\) is true (Daisy is playing golf).</p></article><article class="exercise exercise-like" id="exercise-51"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-400">When \(P\) is false (it is not raining) and \(Q\) is false (Daisy is not playing golf).</p></article></section><section class="introduction" id="introduction-7"><p id="p-401">In the beginning activities for this section, we learned about compound statements and their truth values. This information can be summarized with the following truth tables:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel fixed-width top" style="width:50%;"><table class="tabular">
+<tr>
+<td class="c m b2 r2 l0 t0 lines">\(P\)</td>
+<td class="c m b2 r0 l0 t0 lines">\(\mynot P\)</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+</table></div>
+<div class="sbspanel fixed-width top" style="width:50%;"><table class="tabular">
+<tr>
+<td class="c m b2 r1 l0 t0 lines">\(P\)</td>
+<td class="c m b2 r2 l0 t0 lines">\(Q\)</td>
+<td class="c m b2 r0 l0 t0 lines">\(P \wedge Q\)</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+</table></div>
+</div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel fixed-width top" style="width:50%;"><table class="tabular">
+<tr>
+<td class="c m b2 r1 l0 t0 lines">\(P\)</td>
+<td class="c m b2 r2 l0 t0 lines">\(Q\)</td>
+<td class="c m b2 r0 l0 t0 lines">\(P \vee Q\)</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+</table></div>
+<div class="sbspanel fixed-width top" style="width:50%;"><table class="tabular">
+<tr>
+<td class="c m b2 r1 l0 t0 lines">\(P\)</td>
+<td class="c m b2 r2 l0 t0 lines">\(Q\)</td>
+<td class="c m b2 r0 l0 t0 lines">\(P \to Q\)</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+</table></div>
+</div></div>
+<p id="p-402">Rather than memorizing the truth tables, for many people it is easier to remember the rules summarized in <a class="xref" data-knowl="./knowl/T_truthvalues.html" title="Table 2.1.1: Truth Values for Common Connectives">Table 2.1.1</a>.</p>
+<figure class="table table-like" id="T_truthvalues"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.1.1<span class="period">.</span></span><span class="space"> </span>Truth Values for Common Connectives</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="l m b2 r2 l0 t0 lines">Operator</th>
+<th class="l m b2 r1 l0 t0 lines">Symbolic Form</th>
+<th class="l m b2 r0 l0 t0 lines">Summary of Truth Values</th>
+</tr>
+<tr>
+<td class="l m b1 r2 l0 t0 lines">Conjunction</td>
+<td class="c m b1 r1 l0 t0 lines">\(P \wedge Q\)</td>
+<td class="l m b1 r0 l0 t0 lines">True only when both \(P\) and \(Q\) are true</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">Disjunction</td>
+<td class="c m b2 r1 l0 t0 lines">\(P \vee Q\)</td>
+<td class="l m b2 r0 l0 t0 lines">False only when both \(P\) and \(Q\) are false</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">Negation</td>
+<td class="c m b2 r1 l0 t0 lines">\(\mynot P\)</td>
+<td class="l m b2 r0 l0 t0 lines">Opposite truth value of \(P\)</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">Conditional</td>
+<td class="c m b0 r1 l0 t0 lines">\(P \to Q\)</td>
+<td class="l m b0 r0 l0 t0 lines">False only when \(P\) is true and \(Q\) is false</td>
+</tr>
+</table></div></figure></section><section class="subsection" id="subsection-13"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Other Forms of Conditional Statements</span>
+</h3>
+<p id="p-403"><dfn class="terminology">Conditional statements</dfn>  are extremely important in mathematics because almost all mathematical theorems are (or can be) stated as a conditional statement in the following form: <blockquote class="blockquote" id="blockquote-41">If “certain conditions are met,” then “something happens.”</blockquote> It is imperative that all students studying mathematics thoroughly understand the meaning of a conditional statement and the truth table for a conditional statement.</p>
+<p id="p-404">We also need to be aware that in the English language, there are other ways for expressing the conditional statement \(P \to Q\) other than “If \(P\text{,}\) then \(Q\text{.}\)” Following are some common ways to express the conditional statement \(P \to Q\) in the English language:</p>
+<ul class="disc cols2">
+<li id="li-69"><p id="p-405">If \(P\text{,}\) then \(Q\text{.}\)</p></li>
+<li id="li-70"><p id="p-406">\(P\) implies \(Q\text{.}\)</p></li>
+<li id="li-71"><p id="p-407">\(P\) only if \(Q\text{.}\) </p></li>
+<li id="li-72"><p id="p-408">\(Q\) if \(P\text{.}\)</p></li>
+<li id="li-73"><p id="p-409">Whenever \(P\) is true, \(Q\) is true.</p></li>
+<li id="li-74"><p id="p-410">\(Q\) is true whenever \(P\) is true.</p></li>
+<li id="li-75"><p id="p-411">\(Q\) is <dfn class="terminology">necessary</dfn>  for \(P\text{.}\) (This means that if \(P\) is true, then \(Q\) is necessarily true.)</p></li>
+<li id="li-76"><p id="p-412">\(P\) is <dfn class="terminology">sufficient</dfn> for \(Q\text{.}\) (This means that if you want \(Q\) to be true, it is sufficient  to show that \(P\) is true.)</p></li>
+</ul>
+<p id="p-413">In all of these cases, \(P\) is the <dfn class="terminology">hypothesis</dfn>  of the conditional statement and \(Q\) is the <dfn class="terminology">conclusion</dfn>  of the conditional statement.</p>
+<article class="exercise exercise-like" id="pr_onlyif"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">The “Only If” Statement.</span>
+</h6>
+<p id="p-414">Recall that a quadrilateral is a four-sided polygon. Let \(S\) represent the following true conditional statement: <blockquote class="blockquote" id="blockquote-42">If a quadrilateral is a square, then it is a rectangle.</blockquote></p>
+<p id="p-415">Write this conditional statement in English using <article class="task exercise-like" id="task-132"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-416">the word “whenever”</p></article> <article class="task exercise-like" id="task-133"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-417">the phrase “only if”</p></article> <article class="task exercise-like" id="task-134"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-418">the phrase “is necessary for”</p></article> <article class="task exercise-like" id="task-135"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-419">the phrase “is sufficient for”</p></article></p></article></section><section class="subsection" id="subsection-14"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Constructing Truth Tables</span>
+</h3>
+<p id="p-420">Truth tables for compound statements can be constructed by using the truth tables for the basic connectives. To illustrate this, we will construct a truth table for \(\left( {P \wedge \mynot Q} \right) \to R\text{.}\) The first step is to determine the number of rows needed.</p>
+<section class="paragraphs" id="paragraphs-21"><p id="p-421">For a truth table with two different simple statements, four rows are needed since there are four different combinations of truth values for the two statements. We should be consistent with how we set up the rows. The way we will do it in this text is to label the rows for the first statement with (T, T, F, F) and the rows for the second statement with (T, F, T, F). All truth tables in the text have this scheme.</p>
+<p id="p-422">For a truth table with three different simple statements, eight rows are needed since there are eight different combinations of truth values for the three statements. Our standard scheme for this type of truth table is shown in <a class="xref" data-knowl="./knowl/Ta_compoundtruthtable.html" title="Table 2.1.3: Truth Table for \(\left( P \wedge \mynot  Q \right) \to R\)">Table 2.1.3</a>.</p></section><p id="p-423">The next step is to determine the columns to be used. One way to do this is to work backward from the form of the given statement. For \(\left( {P \wedge \mynot Q} \right) \to R\text{,}\) the last step is to deal with the conditional operator \(\left( \to \right)\text{.}\) To do this, we need to know the truth values of \(\left( {P \wedge \mynot Q} \right)\) and \(R\text{.}\) To determine the truth values for \(\left( {P \wedge \mynot Q} \right)\text{,}\) we need to apply the rules for the conjunction operator \(\left( \wedge \right)\) and we need to know the truth values for \(P\) and \(\mynot Q\text{.}\)</p>
+<p id="p-424"><a class="xref" data-knowl="./knowl/Ta_compoundtruthtable.html" title="Table 2.1.3: Truth Table for \(\left( P \wedge \mynot  Q \right) \to R\)">Table 2.1.3</a> is a completed truth table for \(\left( {P \wedge \mynot Q} \right) \to R\) with the step numbers indicated at the bottom of each column. The step numbers correspond to the order in which the columns were completed.</p>
+<figure class="table table-like" id="Ta_compoundtruthtable"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.1.3<span class="period">.</span></span><span class="space"> </span>Truth Table for \(\left( P \wedge \mynot  Q \right) \to R\)</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="c m b3 r1 l0 t0 lines">\(P\)</th>
+<th class="c m b3 r2 l0 t0 lines">\(Q\)</th>
+<th class="c m b3 r3 l0 t0 lines">\(R\)</th>
+<th class="c m b3 r1 l0 t0 lines">\(\mynot  Q\)</th>
+<th class="c m b3 r2 l0 t0 lines">\(P \wedge \mynot  Q\)</th>
+<th class="c m b3 r0 l0 t0 lines">\(\left( P \wedge \mynot  Q \right) \to R\)</th>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r3 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r3 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r3 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r3 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r3 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r3 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r3 l0 t0 lines">T</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b3 r1 l0 t0 lines">F</td>
+<td class="c m b3 r2 l0 t0 lines">F</td>
+<td class="c m b3 r3 l0 t0 lines">F</td>
+<td class="c m b3 r1 l0 t0 lines">T</td>
+<td class="c m b3 r2 l0 t0 lines">F</td>
+<td class="c m b3 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r3 l0 t0 lines">1</td>
+<td class="c m b0 r1 l0 t0 lines">2</td>
+<td class="c m b0 r2 l0 t0 lines">3</td>
+<td class="c m b0 r0 l0 t0 lines">4</td>
+</tr>
+</table></div></figure><ul id="p-425" class="disc">
+<li id="li-77"><p id="p-426">When completing the column for \(P \wedge \mynot Q\text{,}\) remember that the only time the conjunction is true is when both \(P\) and \(\mynot Q\) are true.</p></li>
+<li id="li-78"><p id="p-427">When completing the column for \(\left( {P \wedge \mynot Q} \right) \to R\text{,}\) remember that the only time the conditional statement is false is when the hypothesis \(\left( {P \wedge \mynot Q} \right)\) is true and the conclusion, \(R\text{,}\) is false.</p></li>
+</ul>
+<p id="p-428">The last column entered is the truth table for the statement \(\left( {P \wedge \mynot Q} \right) \to R\) using the setup in the first three columns.</p>
+<article class="exercise exercise-like" id="pr_truthtables"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">2.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Constructing Truth Tables.</span>
+</h6>
+<p id="p-429">Construct a truth table for each of the following statements: <article class="task exercise-like" id="task-136"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-430">\(P \wedge \mynot Q\)</p></article> <article class="task exercise-like" id="task-137"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-431">\(\mynot \left( {P \wedge Q} \right)\)</p></article> <article class="task exercise-like" id="task-138"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-432">\(\mynot P \wedge \mynot Q\)</p></article> <article class="task exercise-like" id="task-139"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-433">\(\mynot P \vee \mynot Q\)</p></article></p>
+<p id="p-434">Do any of these statements have the same truth table?</p></article></section><section class="subsection" id="sym_bicond"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">The Biconditional Statement</span>
+</h3>
+<p id="p-435"> Some mathematical results are stated in the form “\(P\) if and only if \(Q\)” or “\(P\) is necessary and sufficient for \(Q\text{.}\)” An example would be, “A triangle is equilateral if and only if its three interior angles are congruent.” The symbolic form for the <dfn class="terminology">biconditional statement</dfn> “\(P\) if and only if \(Q\)” is \(P \leftrightarrow Q\text{.}\) In order to determine a truth table for a biconditional statement, it is instructive to look carefully at the form of the phrase “\(P\) if and only if \(Q\text{.}\)” The word “and” suggests that this statement is a conjunction. Actually it is a conjunction of the statements “\(P\) if \(Q\)” and “\(P\) only if \(Q\text{.}\)” The symbolic form of this conjunction is \(\left[ {\left( {Q \to P} \right) \wedge \left( {P \to Q} \right)} \right]\text{.}\)</p>
+<article class="exercise exercise-like" id="pr_biconditional"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">2.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">The Truth Table for the Biconditional Statement.</span>
+</h6>
+<p id="p-436">Complete a truth table for \(\left[ {\left( {Q \to P} \right) \wedge \left( {P \to Q} \right)} \right]\text{.}\) Use the following columns: \(P\text{,}\) \(Q\text{,}\) \(Q \to P\text{,}\) \(P \to Q\text{,}\) and \(\left[ {\left( {Q \to P} \right) \wedge \left( {P \to Q} \right)} \right]\text{.}\) The last column of this table will be the truth table for \(P \leftrightarrow Q\text{.}\)</p></article></section><section class="subsection" id="subsection-16"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Other Forms of the Biconditional Statement</span>
+</h3>
+<p id="p-437"> As with the conditional statement, there are some common ways to express the biconditional statement, \(P \leftrightarrow Q\text{,}\) in the English language. For example, <blockquote class="blockquote" id="blockquote-43">\(P\) if and only if \(Q\text{.}\)</blockquote> <blockquote class="blockquote" id="blockquote-44">\(P\) implies \(Q\) and \(Q\) implies \(P\text{.}\)</blockquote> <blockquote class="blockquote" id="blockquote-45">\(P\) is necessary and sufficient for \(Q\text{.}\)</blockquote></p></section><section class="subsection" id="subsection-17"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Tautologies and Contradictions</span>
+</h3>
+<article class="definition definition-like" id="D_tautology"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1.6</span><span class="period">.</span>
+</h6>
+<p id="p-438">A <dfn class="terminology">tautology</dfn>  is a compound statement \(S\) that is true for all possible combinations of truth values of the component statements that are part of \(S\text{.}\) A <dfn class="terminology">contradiction</dfn>  is a compound statement that is false for all possible combinations of truth values of the component statements that are part of \(S\text{.}\)</p></article><p id="p-439">That is, a tautology is necessarily true in all circumstances, and a contradiction is necessarily false in all circumstances.</p>
+<article class="exercise exercise-like" id="pr_tautology"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">2.1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Tautologies and Contradictions.</span>
+</h6>
+<p id="p-440">For statements \(P\) and \(Q\text{:}\) <article class="task exercise-like" id="task-140"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-441">Use a truth table to show that \(\left( {P \vee \mynot P} \right)\) is a tautology.</p></article> <article class="task exercise-like" id="task-141"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-442">Use a truth table to show that \(\left( {P \wedge \mynot P} \right)\) is a contradiction.</p></article> <article class="task exercise-like" id="task-142"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-443">Use a truth table to determine if \(P \to (P \vee Q)\) is a tautology, a contradiction, or neither.</p></article></p></article></section><section class="exercises" id="exercises-2_1"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exer_sec22-1"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-444">Suppose that Daisy says, “If it does not rain, then I will play golf.” Later in the day you come to know that it did rain but Daisy still played golf. Was Daisy's statement true or false? Support your conclusion.</p></article><article class="exercise exercise-like" id="exer_sec22-2"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-445">Suppose that \(P\) and \(Q\) are statements for which \(P \to Q\) is true and for which \(\mynot Q\) is true. What conclusion (if any) can be made about the truth value of each of the following statements? <article class="task exercise-like" id="task-143"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-446">\(P\)</p></article> <article class="task exercise-like" id="task-144"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-447">\(P \wedge Q\)</p></article> <article class="task exercise-like" id="task-145"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-448">\(P \vee Q\)</p></article></p></article><article class="exercise exercise-like" id="exer_sec22-3"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-449">Suppose that \(P\) and \(Q\) are statements for which \(P \to Q\) is false. What conclusion (if any) can be made about the truth value of each of the following statements? <article class="task exercise-like" id="task-146"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-450">\(\mynot P \to Q\)</p></article> <article class="task exercise-like" id="task-147"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-451">\(Q \to P\)</p></article> <article class="task exercise-like" id="task-148"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-452">\(P \vee Q\)</p></article></p></article><article class="exercise exercise-like" id="exer_statements4"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-453">Suppose that \(P\) and \(Q\) are statements for which \(Q\) is false and \(\mynot P \to Q\) is true (and it is not known if \(R\) is true or false). What conclusion (if any) can be made about the truth value of each of the following statements? <article class="task exercise-like" id="task-149"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-454">\(\mynot Q \to P\)</p></article> <article class="task exercise-like" id="task-150"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-455">\(P\)</p></article> <article class="task exercise-like" id="task-151"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-456">\(P \wedge R\)</p></article> <article class="task exercise-like" id="task-152"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-457">\(R \to \mynot P\)</p></article></p></article><article class="exercise exercise-like" id="exer_sec22-5"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-458">Construct a truth table for each of the following statements: <article class="task exercise-like" id="task-153"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-459">\(P \to Q\)</p></article> <article class="task exercise-like" id="task-154"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-460">\(Q \to P\)</p></article> <article class="task exercise-like" id="task-155"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-461">\(\mynot P \to \mynot Q\)</p></article> <article class="task exercise-like" id="task-156"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-462">\(\mynot Q \to \mynot P\)</p></article> Do any of these statements have the same truth table?</p></article><article class="exercise exercise-like" id="exer_sec22-4"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-463">Construct a truth table for each of the following statements: <article class="task exercise-like" id="task-157"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-464">\(P \vee \mynot Q\)</p></article> <article class="task exercise-like" id="task-158"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-465">\(\mynot (P \vee Q)\)</p></article> <article class="task exercise-like" id="task-159"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-466">\(\mynot P \vee \mynot Q\)</p></article> <article class="task exercise-like" id="task-160"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-467">\(\mynot P \wedge \mynot Q\)</p></article> Do any of these statements have the same truth table?</p></article><article class="exercise exercise-like" id="exer_sec22-6"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-468">Construct truth tables for \(P \wedge \left( {Q \vee R} \right)\) and \(\left( {P \wedge Q} \right) \vee \left( {P \wedge R} \right)\text{.}\) What do you observe?</p></article><article class="exercise exercise-like" id="exer_sec22-7"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="p-469">Suppose each of the following statements is true.</p>
+<ul class="disc">
+<li id="li-79"><p id="p-470">Laura is in the seventh grade.</p></li>
+<li id="li-80"><p id="p-471">Laura got an A on the mathematics test or Sarah got an A on the mathematics test.</p></li>
+<li id="li-81"><p id="p-472">If Sarah got an A on the mathematics test, then Laura is not in the seventh grade.</p></li>
+</ul>
+<p class="continuation">If possible, determine the truth value of each of the following statements. Carefully explain your reasoning. <article class="task exercise-like" id="task-161"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-473">Laura got an A on the mathematics test.</p></article> <article class="task exercise-like" id="task-162"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-474">Sarah got an A on the mathematics test.</p></article> <article class="task exercise-like" id="task-163"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-475">Either Laura or Sarah did not get an A on the mathematics test.</p></article></p></article><article class="exercise exercise-like" id="exer_sec22-8"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="p-476">Let \(P\) stand for “the integer \(x\) is even,” and let \(Q\) stand for “\(x^2\) is even.” Express the conditional statement \(P \to Q\) in English using <article class="task exercise-like" id="task-164"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-477">The “if then” form of the conditional statement</p></article> <article class="task exercise-like" id="task-165"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-478">The word “implies”</p></article> <article class="task exercise-like" id="task-166"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-479">The “only if” form of the conditional statement</p></article> <article class="task exercise-like" id="task-167"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-480">The phrase “is necessary for”</p></article> <article class="task exercise-like" id="task-168"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-481">The phrase “is sufficient for”</p></article></p></article><article class="exercise exercise-like" id="exer_sec22-9"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<p id="p-482">Repeat <a class="xref" data-knowl="./knowl/exer_sec22-8.html" title="Exercise 9">Exercise 9</a> for the conditional statement \(Q \to P\text{.}\)</p></article><article class="exercise exercise-like" id="exer_tautology-contra"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
+<p id="p-483">For statements \(P\) and \(Q\text{,}\) use truth tables to determine if each of the following statements is a tautology, a contradiction, or neither. <article class="task exercise-like" id="task-169"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-484">\(\mynot Q \vee (P \to Q)\text{.}\)</p></article> <article class="task exercise-like" id="task-170"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-485">\(Q \wedge (P \wedge \mynot Q)\text{.}\)</p></article> <article class="task exercise-like" id="task-171"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-486">\((Q \wedge P) \wedge (P \to \mynot Q)\text{.}\)</p></article> <article class="task exercise-like" id="task-172"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-487">\(\mynot Q \to (P \wedge \mynot P)\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exer_sec22-10"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
+<p id="p-488">For statements \(P\text{,}\) \(Q\text{,}\) and \(R\text{:}\) <article class="task exercise-like" id="task-173"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-489">Show that \(\left[ (P \to Q) \wedge P \right] \to Q\) is a tautology.</p>
+<p id="p-490">Note: In symbolic logic, this is an important logical argument form called <dfn class="terminology">modus ponens</dfn>. </p></article> <article class="task exercise-like" id="task-174"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-491">Show that \(\left[ (P \to Q) \wedge (Q \to R) \right] \to (P \to R)\) is a tautology.</p>
+<p id="p-492">Note: In symbolic logic, this is an important logical argument form called <dfn class="terminology">syllogism</dfn>. </p></article></p></article><article class="activity project-like" id="exer_working-conditional"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span><span class="space"> </span><span class="title">Working with Conditional Statements.</span>
+</h6>
+<article class="task exercise-like" id="task-175"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-493">Complete the following table:</p>
+<figure class="table table-like" id="truth-act-2_1_1"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.1.8<span class="period">.</span></span><span class="space"> </span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="c m b2 r1 l0 t0 lines">English Form</th>
+<th class="c m b2 r2 l0 t0 lines">Hypothesis</th>
+<th class="c m b2 r2 l0 t0 lines">Conclusion</th>
+<th class="c m b2 r0 l0 t0 lines">Symbolic Form</th>
+</tr>
+<tr>
+<td class="c m b2 r1 l0 t0 lines">If \(P\text{,}\) then \(Q\text{.}\)</td>
+<td class="c m b2 r2 l0 t0 lines">\(P\)</td>
+<td class="c m b2 r2 l0 t0 lines">\(Q\)</td>
+<td class="c m b2 r0 l0 t0 lines">\(P \to Q\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">\(Q\) only if \(P\text{.}\)</td>
+<td class="c m b1 r2 l0 t0 lines">\(Q\)</td>
+<td class="c m b1 r2 l0 t0 lines">\(P\)</td>
+<td class="c m b1 r0 l0 t0 lines">\(Q \to P\)</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">\(P\) is necessary for \(Q\text{.}\)</td>
+<td class="c m b1 r2 l0 t0 lines"></td>
+<td class="c m b1 r2 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">\(P\) is sufficient for \(Q\text{.}\)</td>
+<td class="c m b1 r2 l0 t0 lines"></td>
+<td class="c m b1 r2 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">\(Q\) is necessary for \(P\text{.}\)</td>
+<td class="c m b1 r2 l0 t0 lines"></td>
+<td class="c m b1 r2 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b2 r1 l0 t0 lines">\(P\) implies \(Q\text{.}\)</td>
+<td class="c m b2 r2 l0 t0 lines"></td>
+<td class="c m b2 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b2 r1 l0 t0 lines">\(P\) only if \(Q\text{.}\)</td>
+<td class="c m b2 r2 l0 t0 lines"></td>
+<td class="c m b2 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">\(P\) if \(Q\text{.}\)</td>
+<td class="c m b1 r2 l0 t0 lines"></td>
+<td class="c m b1 r2 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">If \(Q\) then \(P\text{.}\)</td>
+<td class="c m b1 r2 l0 t0 lines"></td>
+<td class="c m b1 r2 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">If \(\neg Q\text{,}\) then \(\neg P\text{.}\)</td>
+<td class="c m b1 r2 l0 t0 lines"></td>
+<td class="c m b1 r2 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b2 r1 l0 t0 lines">If \(P\text{,}\) then \(Q \wedge R\text{.}\)</td>
+<td class="c m b2 r2 l0 t0 lines"></td>
+<td class="c m b2 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">If \(P \vee Q\text{,}\) then \(R\text{.}\)</td>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></figure></article></article><article class="activity project-like" id="exer_working-truth"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span><span class="space"> </span><span class="title">Working With Truth Values of Statements.</span>
+</h6>
+<div class="introduction" id="introduction-8">
+<p id="p-494">Suppose that \(P\) and \(Q\) are true statements, that \(U\) and \(V\) are false statements, and that \(W\) is a statement and it is not known if \(W\) is true or false.</p>
+<p id="p-495">Which of the following statements are true, which are false, and for which statements is it not possible to determine if it is true or false? Justify your conclusions.</p>
+</div>
+<article class="task exercise-like" id="task-176"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-496">\((P \vee Q) \vee (U \wedge W)\)</p></article><article class="task exercise-like" id="task-177"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-497">\(P \wedge (Q \to W)\)</p></article><article class="task exercise-like" id="task-178"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-498">\(P \wedge (W \to Q)\)</p></article><article class="task exercise-like" id="task-179"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-499">\(W \to (P \wedge U)\)</p></article><article class="task exercise-like" id="task-180"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-500">\(W \to (P \wedge \mynot U)\)</p></article><article class="task exercise-like" id="task-181"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-501">\((\mynot P \vee \mynot U) \wedge (Q \vee \mynot V)\)</p></article><article class="task exercise-like" id="task-182"><h6 class="heading"><span class="codenumber">(g)</span></h6>
+<p id="p-502">\((P \wedge \mynot V) \wedge (U \vee W)\)</p></article><article class="task exercise-like" id="task-183"><h6 class="heading"><span class="codenumber">(h)</span></h6>
+<p id="p-503">\((P \vee \mynot Q) \to (U \wedge W)\)</p></article><article class="task exercise-like" id="task-184"><h6 class="heading"><span class="codenumber">(i)</span></h6>
+<p id="p-504">\((P \vee W) \to (U \wedge W)\)</p></article><article class="task exercise-like" id="task-185"><h6 class="heading"><span class="codenumber">(j)</span></h6>
+<p id="p-505">\((U \wedge \mynot V) \to (P \wedge W)\)</p></article></article></section></section></div></main>
+</div>
+</body>
+</html>

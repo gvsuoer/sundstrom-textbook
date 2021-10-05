@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-10-05T14:57:37-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="hiddenproof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof</span></h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">We will use a proof by mathematical induction. For this proof, we let \(P( n )\) be “\(n! &gt; 2^n\text{.}\)” We first prove that \(P( 4 )\) is true. Using \(n = 4\text{,}\) we see that \(4! = 24\) and \(2^4 = 16\text{.}\) This means that \(4! &gt; 2^4\) and, hence, \(P\left( 4 \right)\) is true.</p>
+<p>For the inductive step, we prove that for all \(k \in \mathbb{N}\) with \(k \geq 4\text{,}\) if \(P( k )\) is true, then \(P( k + 1 )\) is true. So let \(k\) be a natural number greater than or equal to 4, and assume that \(P( k )\) is true. That is, assume that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+k! &gt; 2^k\text{.}\tag{4.14}
+\end{equation}
+</div>
+<p>The goal is to prove that \(P( {k + 1} )\) is true or that \(\left( {k + 1} \right)! &gt; 2^{k + 1}\text{.}\) Multiplying both sides of inequality <a class="xref" data-knowl="./knowl/eq_5h.html" title="Equation 4.14">(4.14)</a> by \(k + 1\) gives</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align}
+\left( k + 1 \right) \cdot k! \amp &gt; \left( k + 1 \right) 
+\cdot 2^k ,\text{  or }\notag\\
+\left( k + 1 \right)! \amp &gt; \left( k + 1 \right) \cdot 2^k \text{.}\tag{4.15}
+\end{align}
+</div>
+<p>Now, \(k \geq 4\text{.}\) Thus, \(k + 1 &gt; 2\text{,}\) and hence \(\left( k + 1 \right) \cdot 2^k &gt; 2 \cdot 2^k\text{.}\) This means that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+\left( k + 1 \right) \cdot 2^k &gt; 2^{k + 1}\text{.}\tag{4.16}
+\end{equation}
+</div>
+<p>Inequalities <a class="xref" data-knowl="./knowl/eq_5i.html" title="Equation 4.15">(4.15)</a> and <a class="xref" data-knowl="./knowl/eq_5j.html" title="Equation 4.16">(4.16)</a> show that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(k + 1)! &gt; 2^{k + 1}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">and this proves that if \(P(k)\) is true, then \(P( {k + 1} )\) is true. Thus, the inductive step has been established, and so by the Extended Principle of Mathematical Induction, \(n! &gt; 2^n\) for each natural number \(n\) with \(n \geq 4\text{.}\)</p></article><span class="incontext"><a href="S_otherinduction.html#proof-24">in-context</a></span>
+</body>
+</html>

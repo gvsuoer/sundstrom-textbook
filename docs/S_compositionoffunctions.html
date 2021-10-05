@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-10-05T14:51:18-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Composition of Functions</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\def\C{\JustCenter}
+\newcommand{\typeu}{Beginning }
+\def\C{\JustCenter}
+\newcommand{\typel}{beginning }
+\def\C{\JustCenter}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\
+\thechapter. #1}{}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\def\C{\JustCenter}
+\renewcommand{\theenumi}{\alph{enumi}}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\theenumi}{({\alph{enumi}})}
+\def\C{\JustCenter}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\mynot}{\neg}
+\newcommand{\card}{\mathbf{card}}
+\newcommand{\x}{:}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Mathematical Reasoning:</span> <span class="subtitle">Writing and Proof (Version 3)</span></a></h1>
+<p class="byline">Ted Sundstrom, Professor Emeritus</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_typesoffunctions.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_functions.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_inversefunctions.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_typesoffunctions.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C_functions.html" title="Up">Up</a><a class="next-button button toolbar-item" href="S_inversefunctions.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="fm-versions.html" data-scroll="fm-versions">Version 3 and Version 2.1</a></li>
+<li><a href="fm-student-note.html" data-scroll="fm-student-note">Note to Students</a></li>
+<li><a href="fm-preface.html" data-scroll="fm-preface">Preface</a></li>
+<li><a href="fm-imp-features.html" data-scroll="fm-imp-features">Important Features of the Book</a></li>
+<li><a href="fm-cont-org.html" data-scroll="fm-cont-org">Content and Organization</a></li>
+<li><a href="fm-inst-note.html" data-scroll="fm-inst-note">Supplementary Materials for the Instructor</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_1intro.html" data-scroll="C_1intro"><span class="codenumber">1</span> <span class="title">Introduction to Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_1prop.html" data-scroll="S_1prop">Statements and Conditional Statements</a></li>
+<li><a href="S_1direct.html" data-scroll="S_1direct">Constructing Direct Proofs</a></li>
+<li><a href="S_1summary.html" data-scroll="S_1summary">Chapter 1 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_2logic.html" data-scroll="C_2logic"><span class="codenumber">2</span> <span class="title">Logical Reasoning</span></a><ul>
+<li><a href="S_2logop.html" data-scroll="S_2logop">Statements and Logical Operators</a></li>
+<li><a href="S_logequiv.html" data-scroll="S_logequiv">Logically Equivalent Statements</a></li>
+<li><a href="S_2predicates.html" data-scroll="S_2predicates">Open Sentences and Sets</a></li>
+<li><a href="S_2quantifier.html" data-scroll="S_2quantifier">Quantifiers and Negations</a></li>
+<li><a href="S_2summary.html" data-scroll="S_2summary">Chapter 2 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_proofs.html" data-scroll="C_proofs"><span class="codenumber">3</span> <span class="title">Constructing and Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_directproof.html" data-scroll="S_directproof">Direct Proofs</a></li>
+<li><a href="S_moremethods.html" data-scroll="S_moremethods">More Methods of Proof</a></li>
+<li><a href="S_contradiction.html" data-scroll="S_contradiction">Proof by Contradiction</a></li>
+<li><a href="S_cases.html" data-scroll="S_cases">Using Cases in Proofs</a></li>
+<li><a href="S_divalgo.html" data-scroll="S_divalgo">Beginning Activity 1: The Division Algorithm and Congruence</a></li>
+<li><a href="S_reviewproofs.html" data-scroll="S_reviewproofs">Review of Proof Methods</a></li>
+<li><a href="S_3summary.html" data-scroll="S_3summary">Chapter 3 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_induction.html" data-scroll="C_induction"><span class="codenumber">4</span> <span class="title">Mathematical Induction</span></a><ul>
+<li><a href="S_mathinduction.html" data-scroll="S_mathinduction">The Principle of Mathematical Induction</a></li>
+<li><a href="S_otherinduction.html" data-scroll="S_otherinduction">Other Forms of Mathematical Induction</a></li>
+<li><a href="S_recursion.html" data-scroll="S_recursion">Induction and Recursion</a></li>
+<li><a href="S_4summary.html" data-scroll="S_4summary">Chapter 4 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_settheory.html" data-scroll="C_settheory"><span class="codenumber">5</span> <span class="title">Set Theory</span></a><ul>
+<li><a href="S_setoperations.html" data-scroll="S_setoperations">Sets and Operations on Sets</a></li>
+<li><a href="S_provingset.html" data-scroll="S_provingset">Proving Set Relationships</a></li>
+<li><a href="S_setproperties.html" data-scroll="S_setproperties">Properties of Set Operations</a></li>
+<li><a href="S_cartesian.html" data-scroll="S_cartesian">Cartesian Products</a></li>
+<li><a href="S_indexfamily.html" data-scroll="S_indexfamily">Indexed Families of Sets</a></li>
+<li><a href="S_5summary.html" data-scroll="S_5summary">Chapter 5 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_functions.html" data-scroll="C_functions"><span class="codenumber">6</span> <span class="title">Functions</span></a><ul>
+<li><a href="S_introfunctions.html" data-scroll="S_introfunctions">Introduction to Functions</a></li>
+<li><a href="S_moreaboutfunctions.html" data-scroll="S_moreaboutfunctions">More about Functions</a></li>
+<li><a href="S_typesoffunctions.html" data-scroll="S_typesoffunctions">Beginning Activity 1: Injections, Surjections, and Bijections</a></li>
+<li><a href="S_compositionoffunctions.html" data-scroll="S_compositionoffunctions" class="active">Composition of Functions</a></li>
+<li><a href="S_inversefunctions.html" data-scroll="S_inversefunctions">Inverse Functions</a></li>
+<li><a href="S_functionsonsets.html" data-scroll="S_functionsonsets">Functions Acting on Sets</a></li>
+<li><a href="S_6summary.html" data-scroll="S_6summary">Chapter 6 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_equivrelations.html" data-scroll="C_equivrelations"><span class="codenumber">7</span> <span class="title">Equivalence Relations</span></a><ul>
+<li><a href="S_relations.html" data-scroll="S_relations">Relations</a></li>
+<li><a href="S_equivrelations.html" data-scroll="S_equivrelations">Equivalence Relations</a></li>
+<li><a href="S_equivclasses.html" data-scroll="S_equivclasses">Equivalence Classes</a></li>
+<li><a href="S_modulararithmetic.html" data-scroll="S_modulararithmetic">Modular Arithmetic</a></li>
+<li><a href="section-37.html" data-scroll="section-37">Chapter 7 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_numbertheory.html" data-scroll="C_numbertheory"><span class="codenumber">8</span> <span class="title">Topics in Number Theory</span></a><ul>
+<li><a href="S_gcd.html" data-scroll="S_gcd">The Greatest Common Divisor</a></li>
+<li><a href="S_primefactorizations.html" data-scroll="S_primefactorizations">Prime Numbers and Prime Factorizations</a></li>
+<li><a href="S_diophantine.html" data-scroll="S_diophantine">Linear Diophantine Equations</a></li>
+<li><a href="section-41.html" data-scroll="section-41">Chapter 8 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_topicsinsets.html" data-scroll="C_topicsinsets"><span class="codenumber">9</span> <span class="title">Finite and Infinite Sets</span></a><ul>
+<li><a href="S_finitesets.html" data-scroll="S_finitesets">Finite Sets</a></li>
+<li><a href="S_infinitesets.html" data-scroll="S_infinitesets">Countable Sets</a></li>
+<li><a href="S_uncountablesets.html" data-scroll="S_uncountablesets">Uncountable Sets</a></li>
+<li><a href="section-45.html" data-scroll="section-45">Chapter 9 Summary</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="C_writingguides.html" data-scroll="C_writingguides"><span class="codenumber">A</span> <span class="title">Guidelines for Writing Mathematical Proofs</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="S_compositionoffunctions"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">6.4</span> <span class="title">Composition of Functions</span>
+</h2>
+<section class="worksheet" id="PA_compositionintro"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Beginning Activity 1: Constructing a New Function</span><div class="print-links">
+<a href="PA_compositionintro-A4.html" class="a4">A4</a><a href="PA_compositionintro-letter.html" class="us">US</a>
+</div>
+</h3>
+<p id="p-3409">Let \(A = \left\{ {a, b, c, d} \right\}\text{,}\) \(B = \left\{ {p, q, r} \right\}\text{,}\) and \(C = \left\{ {s, t, u, v} \right\}\text{.}\) The arrow diagram in <a class="xref" data-knowl="./knowl/fig_preview64.html" title="Figure 6.4.1">Figure 6.4.1</a> shows two functions: \(f\x A \to B\) and \(g\x B \to C\text{.}\)</p>
+<p id="p-3410">Notice that if \(x \in A\text{,}\) then \(f(x) \in B\text{.}\) Since \(f(x) \in B\text{,}\) we can apply the function \(g\) to \(f(x)\text{,}\) and we obtain \(g(f(x))\text{,}\) which is an element of \(C\text{.}\)</p>
+<p id="p-3411">Using this process, determine \(g(f(a))\text{,}\) \(g ( f(b) )\text{,}\) \(g ( f(c) )\text{,}\) and \(g ( f(d) )\text{.}\) Then explain how we can use this information to define a function from \(A\) to \(C\text{.}\)</p>
+<figure class="figure figure-like" id="fig_preview64"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/figps-prev641.svg" class="contained" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.4.1<span class="period">.</span></span><span class="space"> </span>Arrow Diagram Showing Two Functions</figcaption></figure></section><section class="worksheet" id="PA_verbaldescriptions"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Beginning Activity 2: Verbal Descriptions of Functions</span><div class="print-links">
+<a href="PA_verbaldescriptions-A4.html" class="a4">A4</a><a href="PA_verbaldescriptions-letter.html" class="us">US</a>
+</div>
+</h3>
+<p id="p-3412">The outputs of most real functions we have studied in previous mathematics courses have been determined by mathematical expressions. In many cases, it is possible to use these expressions to give step-by-step verbal descriptions of how to compute the outputs. For example, if</p>
+<div class="displaymath">
+\begin{equation*}
+f\x \mathbb{R} \to \mathbb{R}\text{  is defined by  } f( x ) = ( {3x + 2} )^3\text{,}
+\end{equation*}
+</div>
+<p class="continuation">we could describe how to compute the outputs as follows:</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="l m b2 r2 l0 t0 lines">Step</th>
+<th class="l m b2 r2 l0 t0 lines">Verbal Description</th>
+<th class="l m b2 r0 l0 t0 lines">Symbolic Result</th>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">1</td>
+<td class="l m b2 r2 l0 t0 lines">Choose an input.</td>
+<td class="l m b2 r0 l0 t0 lines">\(x\)</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">2</td>
+<td class="l m b2 r2 l0 t0 lines">Multiply by 3.</td>
+<td class="l m b2 r0 l0 t0 lines">\(3x\)</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">3</td>
+<td class="l m b2 r2 l0 t0 lines">Add 2.</td>
+<td class="l m b2 r0 l0 t0 lines">\(3x + 2\)</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">4</td>
+<td class="l m b0 r2 l0 t0 lines">Cube the result.</td>
+<td class="l m b0 r0 l0 t0 lines">\(( {3x + 2} )^3\)</td>
+</tr>
+</table></div>
+<p id="p-3413">Complete step-by-step verbal descriptions for each of the following functions.</p>
+<article class="exercise exercise-like" id="exercise-597"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-3414">\(f\x \mathbb{R} \to \mathbb{R}\) by \(f( x ) = \sqrt {3x^2 + 2}\text{,}\) for each \(x \in \R\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-598"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-3415">\(g\x \mathbb{R} \to \mathbb{R}\) by \(g( x ) = \sin \! \left( {3x^2 + 2} \right)\text{,}\) for each \(x \in \R\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-599"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-3416">\(h\x \mathbb{R} \to \mathbb{R}\) by \(h( x ) = e^{3x^2 + 2}\text{,}\) for each \(x \in \R\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-600"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-3417">\(G\x \R \to \R\) by \(G(x) = \ln ( x^4 + 3 )\text{,}\) for each \(x \in \R\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-601"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-3418">\(k \x \R \to \R\) by \(k(x) = \sqrt[3]{\dfrac{\sin (4x + 3)}{x^2 + 1}}\text{,}\) for each \(x \in \R\text{.}\)</p></article></section><section class="subsection" id="sub-compfunc"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Composition of Functions</span>
+</h3>
+<p id="p-3419">There are several ways to combine two existing functions to create a new function. For example, in calculus, we learned how to form the product and quotient of two functions and then how to use the product rule to determine the derivative of a product of two functions and the quotient rule to determine the derivative of the quotient of two functions.</p>
+<p id="p-3420">The chain rule in calculus was used to determine the derivative of the composition of two functions, and in this section, we will focus only on the composition of two functions. We will then consider some results about the compositions of injections and surjections.</p>
+<p id="p-3421">The basic idea of function composition is that when possible, the output of a function \(f\) is used as the input of a function \(g\text{.}\) This can be referred to as “\(f\) followed by \(g\)” and is called the composition of \(f\) and \(g\text{.}\) In previous mathematics courses, we used this idea to determine a formula for the composition of two real functions.</p>
+<p id="p-3422">For example, if</p>
+<div class="displaymath">
+\begin{equation*}
+f( x ) = 3x^2  + 2  \text{ and }   g( x ) = \sin x\text{,}
+\end{equation*}
+</div>
+<p class="continuation">then we can compute \(g( f( x ) )\) as follows:</p>
+<div class="displaymath">
+\begin{align*}
+g( {f( x )} ) \amp = g \! \left( {3x^2  + 2} \right)\\
+\amp = \sin \! \left( {3x^2  + 2} \right)\text{.}
+\end{align*}
+</div>
+<p id="p-3423">In this case, \(f( x )\text{,}\) the output of the function \(f\text{,}\) was used as the input for the function \(g\text{.}\) We now give the formal definition of the composition of two functions.</p>
+<article class="definition definition-like" id="functioncomposition"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.4.2</span><span class="period">.</span>
+</h6>
+<p id="p-3424">Let \(A\text{,}\) \(B\text{,}\) and \(C\) be nonempty sets, and let \(f\x A \to B\) and \(g\x B \to C\) be functions. The <dfn class="terminology">composition of \(\boldsymbol{f}\) and \(\boldsymbol{g}\)</dfn>  is the function \(g \circ f\x A \to C\) defined by</p>
+<div class="displaymath">
+\begin{equation*}
+( {g \circ f} )( x ) = g\left( {f( x )} \right)
+\end{equation*}
+</div>
+<p class="continuation">for all \(x \in A\text{.}\) We often refer to the function \(g \circ f\) as a <dfn class="terminology">composite function</dfn>. </p></article><p id="p-3425">It is helpful to think of the composite function \(g \circ f\) as “<dfn class="terminology">\(\boldsymbol{f}\) followed by \(\boldsymbol{g}\text{.}\)</dfn>” We then refer to \(f\) as the <dfn class="terminology">inner function</dfn>  and \(g\) as the <dfn class="terminology">outer function</dfn>. </p></section><section class="subsection" id="subsection-121"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Composition and Arrow Diagrams</span>
+</h3>
+<p id="p-3426">The concept of the composition of two functions can be illustrated with arrow diagrams when the domain and codomain of the functions are small, finite sets. Although the term “composition” was not used then, this was done in <a href="S_compositionoffunctions.html#PA_compositionintro" class="internal" title="Worksheet: Beginning Activity 1: Constructing a New Function">Beginning Activity 1 </a>, and another example is given here.</p>
+<p id="p-3427">Let \(A = \left\{ {a, b, c, d} \right\}\text{,}\) \(B = \left\{ {p, q, r} \right\}\text{,}\) and \(C = \left\{ {s, t, u, v} \right\}\text{.}\) The arrow diagram in <a class="xref" data-knowl="./knowl/fig_arrow64-1.html" title="Figure 6.4.3">Figure 6.4.3</a> shows two functions: \(f\x A \to B\) and \(g\x B \to C\text{.}\)</p>
+<figure class="figure figure-like" id="fig_arrow64-1"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/figps-sec641.svg" class="contained" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.4.3<span class="period">.</span></span><span class="space"> </span>Arrow Diagram for Two Functions</figcaption></figure><p id="p-3428">If we follow the arrows from the set \(A\) to the set \(C\text{,}\) we will use the outputs of \(f\) as inputs of \(g\text{,}\) and get the arrow diagram from \(A\) to \(C\) shown in <a class="xref" data-knowl="./knowl/fig_arrow64-2.html" title="Figure 6.4.4">Figure 6.4.4</a>. This diagram represents the composition of \(f\) followed by \(g\text{.}\)</p>
+<figure class="figure figure-like" id="fig_arrow64-2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/figps-sec642.svg" class="contained" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.4.4<span class="period">.</span></span><span class="space"> </span>Arrow Diagram for \(g \circ f\x  A \to C\)</figcaption></figure><article class="exercise exercise-like" id="pr_compose"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">6.4.5</span><span class="period">.</span><span class="space"> </span><span class="title">The Composition of Two Functions.</span>
+</h6>
+<p id="p-3429">Let \(A = \{ a, b, c, d \}\) and \(B = \{ 1, 2, 3 \}\text{.}\) Define the functions \(f\) and \(g\) as follows: <blockquote class="blockquote" id="blockquote-208">\(f \x A \to B\) defined by \(f(a) = 2\text{,}\) \(f(b) = 3\text{,}\) \(f(c) = 1\text{,}\) and \(f(d) = 2\text{.}\)</blockquote> <blockquote class="blockquote" id="blockquote-209">\(g \x B \to B\) defined by \(g(1) = 3\text{,}\) \(g(2) = 1\text{,}\) and \(g(3) = 2\text{.}\)</blockquote></p>
+<p id="p-3430">Create arrow diagrams for the functions \(f\text{,}\) \(g\text{,}\) \(g \circ f\text{,}\) and \(g \circ g\text{.}\)</p></article></section><section class="subsection" id="subsection-122"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Decomposing Functions</span>
+</h3>
+<p id="p-3431">We use the <dfn class="terminology">chain rule</dfn>  in calculus to find the derivative of a composite function. The first step in the process is to recognize a given function as a composite function. This can be done in many ways, but the work in <a href="S_compositionoffunctions.html#PA_verbaldescriptions" class="internal" title="Worksheet: Beginning Activity 2: Verbal Descriptions of Functions">Beginning Activity 2 </a> can be used to decompose a function in a way that works well with the chain rule. The use of the terms “inner function” and “outer function” can also be helpful. The idea is that we use the last step in the process to represent the outer function, and the steps prior to that to represent the inner function. So for the function,</p>
+<div class="displaymath">
+\begin{equation*}
+f\x \mathbb{R} \to \mathbb{R}\text{  by  } f( x ) = ( {3x + 2} )^3\text{,}
+\end{equation*}
+</div>
+<p class="continuation">the last step in the verbal description table was to cube the result. This means that we will use the function \(g\) (the cubing function) as the outer function and will use the prior steps as the inner function. We will denote the inner function by \(h\text{.}\) So we let \(h\x \R \to \R\) by \(h( x ) = 3x + 2\) and \(g\x \R \to \R\) by \(g( x ) = x^3\text{.}\) Then</p>
+<div class="displaymath">
+\begin{align*}
+( {g \circ h} )( x ) \amp = g\left( {h( x )} \right)\\
+\amp = g( {3x + 2} )\\
+\amp = ( {3x + 2} )^3\\
+\amp = f( x )\text{.}
+\end{align*}
+</div>
+<p class="continuation">We see that \(g \circ h = f\) and, hence, we have “decomposed” the function \(f\text{.}\) It should be noted that there are other ways to write the function \(f\) as a composition of two functions, but the way just described is the one that works well with the chain rule. In this case, the chain rule gives</p>
+<div class="displaymath">
+\begin{align*}
+f'(x) \amp = ( g \circ h )'(x)\\
+\amp = g'(h(x))\; h'(x)\\
+\amp = 3(h(x))^2 \cdot 3\\
+\amp = 9 (3x + 2)^2
+\end{align*}
+</div>
+<article class="exercise exercise-like" id="prog_decompose"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">6.4.6</span><span class="period">.</span><span class="space"> </span><span class="title">Decomposing Functions.</span>
+</h6>
+<div class="introduction" id="introduction-161"><p id="p-3432">Write each of the following functions as the composition of two functions.</p></div>
+<article class="task exercise-like" id="task-1311"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3433">\(F\x \R \to \R\) by \(F(x) = ( x^2 +3 )^3\)</p></article><article class="task exercise-like" id="task-1312"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3434">\(G\x \R \to \R\) by \(G(x) = \ln ( x^2 + 3 )\)</p></article><article class="task exercise-like" id="task-1313"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-3435">\(f\x \Z \to \Z\) by \(f(x) = | x^2 - 3 |\)</p></article><article class="task exercise-like" id="task-1314"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-3436">\(g\x \R \to \R\) by \(g(x) = \cos \! \left( \dfrac{2x-3}{x^2+1} \right)\)</p></article></article></section><section class="subsection" id="subsection-123"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Theorems about Composite Functions</span>
+</h3>
+<p id="p-3437">If \(f \x A \to B\) and \(g \x B \to C\text{,}\) then we can form the composite function \(g \circ f \x A \to C\text{.}\) In <a href="S_typesoffunctions.html" class="internal" title="Section 6.3: Beginning Activity 1: Injections, Surjections, and Bijections">Section 6.3</a>, we learned about injections and surjections. We now explore what type of function \(g \circ f\) will be if the functions \(f\) and \(g\) are injections (or surjections).</p>
+<article class="exercise exercise-like" id="prog_compositesofinjections"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">6.4.7</span><span class="period">.</span><span class="space"> </span><span class="title">Compositions of Injections and Surjections.</span>
+</h6>
+<div class="introduction" id="introduction-162">
+<p id="p-3438">Although other representations of functions can be used, it will be helpful to use arrow diagrams to represent the functions in this progress check. We will use the following sets:</p>
+<div class="displaymath">
+\begin{equation*}
+A = \{ a, b, c \},  B = \{p, q, r\},  C = \{u, v, w, x \},  \text{ and }   D = \{u, v \}\text{.}
+\end{equation*}
+</div>
+</div>
+<article class="task exercise-like" id="task-1315"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3439">Draw an arrow diagram for a function \(f \x A \to B\) that is an injection and an arrow diagram for a function \(g \x B \to C\) that is an injection. In this case, is the composite function \(g \circ f \x A \to C\) an injection? Explain.</p></article><article class="task exercise-like" id="task-1316"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3440">Draw an arrow diagram for a function \(f \x A \to B\) that is a surjection and an arrow diagram for a function \(g \x B \to D\) that is a surjection. In this case, is the composite function \(g \circ f \x A \to D\) a surjection? Explain.</p></article><article class="task exercise-like" id="task-1317"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-3441">Draw an arrow diagram for a function \(f \x A \to B\) that is a bijection and an arrow diagram for a function \(g \x B \to A\) that is a bijection. In this case, is the composite function \(g \circ f \x A \to A\) bijection? Explain.</p></article></article><p id="p-3442">In <a class="xref" data-knowl="./knowl/prog_compositesofinjections.html" title="Progress Check 6.4.7: Compositions of Injections and Surjections">Progress Check 6.4.7</a>, we explored some properties of composite functions related to injections, surjections, and bijections. The following theorem contains results that these explorations were intended to illustrate. Some of the proofs will be included in the exercises.</p>
+<article class="theorem theorem-like" id="T_compositefunctions"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.4.8</span><span class="period">.</span>
+</h6>
+<p id="p-3443">Let \(A\text{,}\) \(B\text{,}\) and \(C\) be nonempty sets and assume that \(f\x A \to B\) and \(g\x B \to C\text{.}\)</p>
+<ol class="decimal">
+<li id="T_compositefunctions1"><p id="p-3444">If \(f\) and \(g\) are both injections, then \((g \circ f) \x A \to C\) is an injection.</p></li>
+<li id="T_compositefunctions2"><p id="p-3445">If \(f\) and \(g\) are both surjections, then \((g \circ f) \x A \to C\) is a surjection.</p></li>
+<li id="T_compositefunctions3"><p id="p-3446">If \(f\) and \(g\) are both bijections, then \((g \circ f) \x A \to C\) is a bijection.</p></li>
+</ol></article><p id="p-3447">The proof of <a class="xref" data-knowl="./knowl/T_compositefunctions1.html" title="Item 1">Item 1</a> is <a class="xref" data-knowl="./knowl/exer_compositefunctions1.html" title="Exercise 6">Exercise 6</a>. <a class="xref" data-knowl="./knowl/T_compositefunctions3.html" title="Item 3">Item 3</a> is a direct consequence of the first two parts. We will discuss a process for constructing a proof of <a class="xref" data-knowl="./knowl/T_compositefunctions2.html" title="Item 2">Item 2</a>. Using the forward-backward process, we first look at the conclusion of the conditional statement in <a class="xref" data-knowl="./knowl/T_compositefunctions2.html" title="Item 2">Item 2</a>. The goal is to prove that \(g \circ f\) is a surjection. Since \(g \circ f\x A \to C\text{,}\) this is equivalent to proving that <blockquote class="blockquote" id="blockquote-210">For all \(c \in C\text{,}\) there exists an \(a \in A\) such that \(( {g \circ f} )( a ) = c\text{.}\)</blockquote> Since this statement in the backward process uses a universal quantifier, we will use the choose-an-element method and choose an arbitrary element \(c\) in the set \(C\text{.}\) The goal now is to find an \(a \in A\) such that \(( {g \circ f} )( a ) = c\text{.}\)</p>
+<p id="p-3448">Now we can look at the hypotheses. In particular, we are assuming that both \(f\x A \to B\) and \(g\x B \to C\) are surjections. Since we have chosen \(c \in C\text{,}\) and \(g\x B \to C\) is a surjection, we know that</p>
+<div class="displaymath">
+\begin{equation*}
+\text{there exists a } b \in B \text{ such that } g( b ) = c\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Now, \(b \in B\) and \(f\x A \to B\) is a surjection. Hence</p>
+<div class="displaymath">
+\begin{equation*}
+\text{there exists an } a \in A \text{ such that } f( a ) = b\text{.}
+\end{equation*}
+</div>
+<p class="continuation">If we now compute \(( {g \circ f} )( a )\text{,}\) we will see that</p>
+<div class="displaymath">
+\begin{equation*}
+( {g \circ f} )( a ) = g \left( f ( a ) \right) = g ( b ) = c\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We can now write the proof as follows:</p>
+<section class="paragraphs" id="paragraphs-37"><h5 class="heading"><span class="title">Proof of Theorem 6.4.8, Item 2.</span></h5>
+<p id="p-3449">Let \(A\text{,}\) \(B\text{,}\) and \(C\) be nonempty sets and assume that \(f\x A \to B\) and \(g\x B \to C\) are both surjections. We will prove that \(g \circ f\x A \to C\) is a surjection.</p>
+<p id="p-3450">Let \(c\) be an arbitrary element of \(C\text{.}\) We will prove there exists an \(a \in A\) such that \(( g \circ f ) ( a ) = c\text{.}\) Since \(g\x B \to C\) is a surjection, we conclude that</p>
+<p id="p-3451">there exists a \(b \in B\) such that \(g( b ) = c\text{.}\)</p>
+<p id="p-3452">Now, \(b \in B\) and \(f\x A \to B\) is a surjection. Hence</p>
+<div class="displaymath">
+\begin{equation*}
+\text{there exists an } a \in A \text{ such that } f( a ) = b\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We now see that</p>
+<div class="displaymath">
+\begin{align*}
+( {g \circ f} )( a ) \amp = g\left( {f( a )} \right)\\
+\amp = g( b )\\
+\amp = c\text{.}
+\end{align*}
+</div>
+<p id="p-3453">We have now shown that for every \(c \in C\text{,}\) there exists an \(a \in A\) such that \(( {g \circ f} )( a ) = c\text{,}\) and this proves that \(g \circ f\) is a surjection.</p></section><p id="p-3454"><a class="xref" data-knowl="./knowl/T_compositefunctions.html" title="Theorem 6.4.8">Theorem 6.4.8</a> shows us that if \(f\) and \(g\) are both special types of functions, then the composition of \(f\) followed by \(g\) is also that type of function. The next question is, “If the composition of \(f\) followed by \(g\) is an injection (or surjection), can we make any conclusions about \(f\) or \(g\text{?}\)” A partial answer to this question is provided in <a class="xref" data-knowl="./knowl/T_morecompositefunctions.html" title="Theorem 6.4.9">Theorem 6.4.9</a>. This theorem will be investigated and proved in the Explorations and Activities for this section. See <a class="xref" data-knowl="./knowl/exer_morecompositefunctions1.html" title="Activity 39: The Proof of Theorem 6.4.9">Activity 39</a>.</p>
+<article class="theorem theorem-like" id="T_morecompositefunctions"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.4.9</span><span class="period">.</span>
+</h6>
+<p id="p-3455">Let \(A\text{,}\) \(B\text{,}\) and \(C\) be nonempty sets and assume that \(f\x A \to B\) and \(g\x B \to C\text{.}\)</p>
+<ol class="decimal">
+<li id="T_morecompositefunctions1"><p id="p-3456">If \(g \circ f\x A \to C\) is an injection, then \(f\x A \to B\) is an injection.</p></li>
+<li id="T_morecompositefunctions2"><p id="p-3457">If \(g \circ f\x A \to C\) is a surjection, then \(g\x B \to C\) is a surjection.</p></li>
+</ol></article></section><section class="exercises" id="exercises-24"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exer_sec64-1"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-163">
+<p id="p-3458">In our definition of the composition of two functions, \(f\) and \(g\text{,}\) we required that the domain of \(g\) be equal to the codomain of \(f\text{.}\) However, it is sometimes possible to form the composite function \(g \circ f\) even though \(\text{ dom} ( g ) \ne \text{ codom} ( f )\text{.}\) For example, let</p>
+<div class="displaymath">
+\begin{align*}
+\amp f: \R \to \R \amp \amp \text{ be defined by } \amp \amp f( x ) = x^2 + 1, \text{ and let}\\
+\amp g: \R - \left\{ 0 \right\} \to \R \amp \amp \text{ be defined by } \amp \amp g( x ) = \dfrac{1}{x}
+\end{align*}
+</div>
+</div>
+<article class="task exercise-like" id="task-1318"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3459">Is it possible to determine \(( {g \circ f} )( x )\) for all \(x \in \mathbb{R}\text{?}\) Explain.</p></article><article class="task exercise-like" id="task-1319"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3460">In general, let \(f\x A \to T\) and \(g\x B \to C\text{.}\) Find a condition on the domain of \(g\) (other than \(B = T\)) that results in a meaningful definition of the composite function \(g \circ f\x A \to C\text{.}\)</p></article></article><article class="exercise exercise-like" id="exer64_notcommutative"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-3461">Let \(h\x \mathbb{R} \to \mathbb{R}\) be defined by \(h( x ) = 3x + 2\) and \(g\x \mathbb{R} \to \mathbb{R}\) be defined by \(g( x ) = x^3\text{.}\) Determine formulas for the composite functions \(g \circ h\) and \(h \circ g\text{.}\) Is the function \(g \circ h\) equal to the function \(h \circ g\text{?}\) Explain. What does this tell you about the operation of composition of functions?</p></article><article class="exercise exercise-like" id="exer_sec64-2"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-164"><p id="p-3462">Following are formulas for certain real functions. Write each of these real functions as the composition of two functions. That is, decompose each of the functions.</p></div>
+<article class="task exercise-like" id="task-1320"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3463">\(F( x ) = \cos ( {e^x } )\)</p></article><article class="task exercise-like" id="task-1321"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3464">\(G( x ) = e^{\cos ( x )}\)</p></article><article class="task exercise-like" id="task-1322"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-3465">\(H( x ) = \dfrac{1}{{\sin x}}\)</p></article><article class="task exercise-like" id="task-1323"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-3466">\(K( x ) = \cos \!\left( {e^{ - x^2 } } \right)\)</p></article></article><article class="exercise exercise-like" id="exer_sec64-4"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-165"><p id="p-3467">The <dfn class="terminology">identity function</dfn>  on a set \(S\text{,}\) denoted by \(I_S\text{,}\) is defined as follows: \(I_S \x S \to S\) by \(I_S ( x ) = x\) for each \(x \in S\text{.}\) Let \(f\x A \to B\text{.}\)</p></div>
+<article class="task exercise-like" id="task-1324"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3468">For each \(x \in A\text{,}\) determine \(( {f \circ I_A } )( x )\) and use this to prove that \(f \circ I_A = f\text{.}\)</p></article><article class="task exercise-like" id="task-1325"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3469">Prove that \(I_B \circ f = f\text{.}\)</p></article></article><article class="exercise exercise-like" id="exer_sec64-3"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-166"><p id="p-3470">Complete the following.</p></div>
+<article class="task exercise-like" id="task-1326"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3471">Let \(f\x \mathbb{R} \to \mathbb{R}\) be defined by \(f( x ) = x^2\text{,}\) let \(g\x \mathbb{R} \to \mathbb{R}\) be defined by \(g( x ) = \sin x\text{,}\) and let \(h\x \mathbb{R} \to \mathbb{R}\) be defined by \(h( x ) = \sqrt[3]{x}\text{.}\)</p>
+<p id="p-3472">Determine formulas for \(\left[ ( {h \circ g} ) \circ f \right] ( x )\) and \(\left[ h \circ ( {g \circ f} ) \right] ( x )\text{.}\)</p>
+<p id="p-3473">Does this prove that \(( {h \circ g} ) \circ f = h \circ ( {g \circ f} )\) for these particular functions? Explain.</p></article><article class="task exercise-like" id="task-1327"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3474">Now let \(A\text{,}\) \(B\text{,}\) \(C\text{,}\) and \(D\) be sets and let \(f\x A \to B\text{,}\) \(g\x B \to C\text{,}\) and \(h\x C \to D\text{.}\) Prove that \(( {h \circ g} ) \circ f = h \circ ( {g \circ f} )\text{.}\) That is, prove that function composition is an associative operation.</p></article></article><article class="exercise exercise-like" id="exer_compositefunctions1"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-3475">Prove <a class="xref" data-knowl="./knowl/T_compositefunctions1.html" title="Item 1">Item 1</a> of <a class="xref" data-knowl="./knowl/T_compositefunctions.html" title="Theorem 6.4.8">Theorem 6.4.8</a>.</p>
+<p id="p-3476">Let \(A\text{,}\) \(B\text{,}\) and \(C\) be nonempty sets and let \(f\x A \to B\) and \(g\x B \to C\text{.}\) If \(f\) and \(g\) are both injections, then \(g \circ f\) is an injection.</p></article><article class="exercise exercise-like" id="exer_sec64-8"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-167"><p id="p-3477">For each of the following, give an example of functions \(f\x A \to B\) and \(g\x B \to C\) that satisfy the stated conditions, or explain why no such example exists.</p></div>
+<article class="task exercise-like" id="task-1328"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3478">The function \(f\) is a surjection, but the function \(g \circ f\) is not a surjection.</p></article><article class="task exercise-like" id="task-1329"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3479">The function \(f\) is an injection, but the function \(g \circ f\) is not an injection.</p></article><article class="task exercise-like" id="task-1330"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-3480">The function \(g\) is a surjection, but the function \(g \circ f\) is not a surjection.</p></article><article class="task exercise-like" id="task-1331"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-3481">The function \(g\) is an injection, but the function \(g \circ f\) is not an injection.</p></article><article class="task exercise-like" id="task-1332"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-3482">The function \(f\) is not a surjection, but the function \(g \circ f\) is a surjection.</p></article><article class="task exercise-like" id="task-1333"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-3483">The function \(f\) is not an injection, but the function \(g \circ f\) is an injection.</p></article><article class="task exercise-like" id="task-1334"><h6 class="heading"><span class="codenumber">(g)</span></h6>
+<p id="p-3484">The function \(g\) is not a surjection, but the function \(g \circ f\) is a surjection.</p></article><article class="task exercise-like" id="task-1335"><h6 class="heading"><span class="codenumber">(h)</span></h6>
+<p id="p-3485">The function \(g\) is not an injection, but the function \(g \circ f\) is an injection.</p></article></article><article class="exercise exercise-like" id="exercise-612"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-168"><p id="p-3486">Let \(A\) be a nonempty set and let \(f\x A \to A\text{.}\) For each \(n \in \N\text{,}\) define a function \(f^n\x A \to A\) recursively as follows: \(f^1 = f\) and for each \(n \in \N\text{,}\) \(f^{n+1} = f \circ f^n\text{.}\) For example, \(f^2 = f \circ f^1 = f \circ f\) and \(f^3 = f \circ f^2 = f \circ ( f \circ f )\text{.}\)</p></div>
+<article class="task exercise-like" id="task-1336"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3487">Let \(f\x \R \to \R\) by \(f(x) = x + 1\) for each \(x \in \R\text{.}\) For each \(n \in \N\) and for each \(x \in \R\text{,}\) determine a formula for \(f^n(x)\) and use induction to prove that your formula is correct.</p></article><article class="task exercise-like" id="task-1337"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3488">Let \(a, b \in \R\) and let \(f\x \R \to \R\) by \(f(x) = ax + b\) for each \(x \in \R\text{.}\) For each \(n \in \N\) and for each \(x \in \R\text{,}\) determine a formula for \(f^n(x)\) and use induction to prove that your formula is correct.</p></article><article class="task exercise-like" id="task-1338"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-3489">Now let \(A\) be a nonempty set and let \(f\x A \to A\text{.}\) Use induction to prove that for each \(n \in \N\text{,}\) \(f^{n+1} = f^n \circ f\text{.}\) (Note: You will need to use the result in <a class="xref" data-knowl="./knowl/exer_sec64-3.html" title="Exercise 5">Exercise 5</a>.)</p></article></article><article class="activity project-like" id="exer_exploringcomposite"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">38</span><span class="period">.</span><span class="space"> </span><span class="title">Exploring Composite Functions.</span>
+</h6>
+<div class="introduction" id="introduction-169"><p id="p-3490">Let \(A\text{,}\) \(B\text{,}\) and \(C\) be nonempty sets and let \(f\x A \to B\) and \(g\x B \to C\text{.}\) For this activity, it may be useful to draw your arrow diagrams in a triangular arrangement as follows: <figure class="figure figure-like" id="figure-21"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/figps-comparrow.svg" class="contained" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.4.10<span class="period">.</span></span><span class="space"> </span></figcaption></figure> It might be helpful to consider examples where the sets are small. Try constructing examples where the set \(A\) has 2 elements, the set \(B\) has 3 elements, and the set \(C\) has 2 elements.</p></div>
+<article class="task exercise-like" id="task-1339"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3491">Is it possible to construct an example where \(g \circ f\) is an injection, \(f\) is an injection, but \(g\) is not an injection? Either construct such an example or explain why it is not possible.</p></article><article class="task exercise-like" id="task-1340"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3492">Is it possible to construct an example where \(g \circ f\) is an injection, \(g\) is an injection, but \(f\) is not an injection? Either construct such an example or explain why it is not possible.</p></article><article class="task exercise-like" id="task-1341"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-3493">Is it possible to construct an example where \(g \circ f\) is a surjection, \(f\) is a surjection, but \(g\) is not a surjection? Either construct such an example or explain why it is not possible.</p></article><article class="task exercise-like" id="task-1342"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-3494">Is it possible to construct an example where \(g \circ f\) is surjection, \(g\) is a surjection, but \(f\) is not a surjection? Either construct such an example or explain why it is not possible.</p></article></article><article class="activity project-like" id="exer_morecompositefunctions1"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">39</span><span class="period">.</span><span class="space"> </span><span class="title">The Proof of Theorem 6.4.9.</span>
+</h6>
+<div class="introduction" id="introduction-170"><p id="p-3495">Use the ideas from <a class="xref" data-knowl="./knowl/exer_exploringcomposite.html" title="Activity 38: Exploring Composite Functions">Activity 38</a> to prove <a class="xref" data-knowl="./knowl/T_morecompositefunctions.html" title="Theorem 6.4.9">Theorem 6.4.9</a>. Let \(A\text{,}\) \(B\text{,}\) and \(C\) be nonempty sets and let \(f\x A \to B\) and \(g\x B \to C\text{.}\)</p></div>
+<article class="task exercise-like" id="exer_sec64-6"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-3496">If \(g \circ f\x A \to C\) is an injection, then \(f\x A \to B\) is an injection.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-21" id="hint-21"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-21"><div class="hint solution-like"><p id="p-3497">Start by asking, “What do we have to do to prove that \(f\) is an injection?” Start with a similar question for <a class="xref" data-knowl="./knowl/exer_sec64-7.html" title="Task 39.b">Task 39.b</a>.</p></div></div>
+</div></article><article class="task exercise-like" id="exer_sec64-7"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-3498">If \(g \circ f\x A \to C\) is a surjection, then \(g\x B \to C\) is a surjection.</p></article></article></section></section></div></main>
+</div>
+</body>
+</html>

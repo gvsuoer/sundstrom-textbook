@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-10-05T14:50:09-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Proving Set Relationships</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\def\C{\JustCenter}
+\newcommand{\typeu}{Beginning }
+\def\C{\JustCenter}
+\newcommand{\typel}{beginning }
+\def\C{\JustCenter}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\
+\thechapter. #1}{}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\def\C{\JustCenter}
+\renewcommand{\theenumi}{\alph{enumi}}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\theenumi}{({\alph{enumi}})}
+\def\C{\JustCenter}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\mynot}{\neg}
+\newcommand{\card}{\mathbf{card}}
+\newcommand{\x}{:}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Mathematical Reasoning:</span> <span class="subtitle">Writing and Proof (Version 3)</span></a></h1>
+<p class="byline">Ted Sundstrom, Professor Emeritus</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_setoperations.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_settheory.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_setproperties.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_setoperations.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C_settheory.html" title="Up">Up</a><a class="next-button button toolbar-item" href="S_setproperties.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="fm-versions.html" data-scroll="fm-versions">Version 3 and Version 2.1</a></li>
+<li><a href="fm-student-note.html" data-scroll="fm-student-note">Note to Students</a></li>
+<li><a href="fm-preface.html" data-scroll="fm-preface">Preface</a></li>
+<li><a href="fm-imp-features.html" data-scroll="fm-imp-features">Important Features of the Book</a></li>
+<li><a href="fm-cont-org.html" data-scroll="fm-cont-org">Content and Organization</a></li>
+<li><a href="fm-inst-note.html" data-scroll="fm-inst-note">Supplementary Materials for the Instructor</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_1intro.html" data-scroll="C_1intro"><span class="codenumber">1</span> <span class="title">Introduction to Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_1prop.html" data-scroll="S_1prop">Statements and Conditional Statements</a></li>
+<li><a href="S_1direct.html" data-scroll="S_1direct">Constructing Direct Proofs</a></li>
+<li><a href="S_1summary.html" data-scroll="S_1summary">Chapter 1 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_2logic.html" data-scroll="C_2logic"><span class="codenumber">2</span> <span class="title">Logical Reasoning</span></a><ul>
+<li><a href="S_2logop.html" data-scroll="S_2logop">Statements and Logical Operators</a></li>
+<li><a href="S_logequiv.html" data-scroll="S_logequiv">Logically Equivalent Statements</a></li>
+<li><a href="S_2predicates.html" data-scroll="S_2predicates">Open Sentences and Sets</a></li>
+<li><a href="S_2quantifier.html" data-scroll="S_2quantifier">Quantifiers and Negations</a></li>
+<li><a href="S_2summary.html" data-scroll="S_2summary">Chapter 2 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_proofs.html" data-scroll="C_proofs"><span class="codenumber">3</span> <span class="title">Constructing and Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_directproof.html" data-scroll="S_directproof">Direct Proofs</a></li>
+<li><a href="S_moremethods.html" data-scroll="S_moremethods">More Methods of Proof</a></li>
+<li><a href="S_contradiction.html" data-scroll="S_contradiction">Proof by Contradiction</a></li>
+<li><a href="S_cases.html" data-scroll="S_cases">Using Cases in Proofs</a></li>
+<li><a href="S_divalgo.html" data-scroll="S_divalgo">Beginning Activity 1: The Division Algorithm and Congruence</a></li>
+<li><a href="S_reviewproofs.html" data-scroll="S_reviewproofs">Review of Proof Methods</a></li>
+<li><a href="S_3summary.html" data-scroll="S_3summary">Chapter 3 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_induction.html" data-scroll="C_induction"><span class="codenumber">4</span> <span class="title">Mathematical Induction</span></a><ul>
+<li><a href="S_mathinduction.html" data-scroll="S_mathinduction">The Principle of Mathematical Induction</a></li>
+<li><a href="S_otherinduction.html" data-scroll="S_otherinduction">Other Forms of Mathematical Induction</a></li>
+<li><a href="S_recursion.html" data-scroll="S_recursion">Induction and Recursion</a></li>
+<li><a href="S_4summary.html" data-scroll="S_4summary">Chapter 4 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_settheory.html" data-scroll="C_settheory"><span class="codenumber">5</span> <span class="title">Set Theory</span></a><ul>
+<li><a href="S_setoperations.html" data-scroll="S_setoperations">Sets and Operations on Sets</a></li>
+<li><a href="S_provingset.html" data-scroll="S_provingset" class="active">Proving Set Relationships</a></li>
+<li><a href="S_setproperties.html" data-scroll="S_setproperties">Properties of Set Operations</a></li>
+<li><a href="S_cartesian.html" data-scroll="S_cartesian">Cartesian Products</a></li>
+<li><a href="S_indexfamily.html" data-scroll="S_indexfamily">Indexed Families of Sets</a></li>
+<li><a href="S_5summary.html" data-scroll="S_5summary">Chapter 5 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_functions.html" data-scroll="C_functions"><span class="codenumber">6</span> <span class="title">Functions</span></a><ul>
+<li><a href="S_introfunctions.html" data-scroll="S_introfunctions">Introduction to Functions</a></li>
+<li><a href="S_moreaboutfunctions.html" data-scroll="S_moreaboutfunctions">More about Functions</a></li>
+<li><a href="S_typesoffunctions.html" data-scroll="S_typesoffunctions">Beginning Activity 1: Injections, Surjections, and Bijections</a></li>
+<li><a href="S_compositionoffunctions.html" data-scroll="S_compositionoffunctions">Composition of Functions</a></li>
+<li><a href="S_inversefunctions.html" data-scroll="S_inversefunctions">Inverse Functions</a></li>
+<li><a href="S_functionsonsets.html" data-scroll="S_functionsonsets">Functions Acting on Sets</a></li>
+<li><a href="S_6summary.html" data-scroll="S_6summary">Chapter 6 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_equivrelations.html" data-scroll="C_equivrelations"><span class="codenumber">7</span> <span class="title">Equivalence Relations</span></a><ul>
+<li><a href="S_relations.html" data-scroll="S_relations">Relations</a></li>
+<li><a href="S_equivrelations.html" data-scroll="S_equivrelations">Equivalence Relations</a></li>
+<li><a href="S_equivclasses.html" data-scroll="S_equivclasses">Equivalence Classes</a></li>
+<li><a href="S_modulararithmetic.html" data-scroll="S_modulararithmetic">Modular Arithmetic</a></li>
+<li><a href="section-37.html" data-scroll="section-37">Chapter 7 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_numbertheory.html" data-scroll="C_numbertheory"><span class="codenumber">8</span> <span class="title">Topics in Number Theory</span></a><ul>
+<li><a href="S_gcd.html" data-scroll="S_gcd">The Greatest Common Divisor</a></li>
+<li><a href="S_primefactorizations.html" data-scroll="S_primefactorizations">Prime Numbers and Prime Factorizations</a></li>
+<li><a href="S_diophantine.html" data-scroll="S_diophantine">Linear Diophantine Equations</a></li>
+<li><a href="section-41.html" data-scroll="section-41">Chapter 8 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_topicsinsets.html" data-scroll="C_topicsinsets"><span class="codenumber">9</span> <span class="title">Finite and Infinite Sets</span></a><ul>
+<li><a href="S_finitesets.html" data-scroll="S_finitesets">Finite Sets</a></li>
+<li><a href="S_infinitesets.html" data-scroll="S_infinitesets">Countable Sets</a></li>
+<li><a href="S_uncountablesets.html" data-scroll="S_uncountablesets">Uncountable Sets</a></li>
+<li><a href="section-45.html" data-scroll="section-45">Chapter 9 Summary</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="C_writingguides.html" data-scroll="C_writingguides"><span class="codenumber">A</span> <span class="title">Guidelines for Writing Mathematical Proofs</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="S_provingset"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5.2</span> <span class="title">Proving Set Relationships</span>
+</h2>
+<section class="worksheet" id="PA_working2sets"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Beginning Activity 1: Working with Two Specific Sets</span><div class="print-links">
+<a href="PA_working2sets-A4.html" class="a4">A4</a><a href="PA_working2sets-letter.html" class="us">US</a>
+</div>
+</h3>
+<p id="p-2473">Let \(S\) be the set of all integers that are multiples of 6, and let \(T\) be the set of all even integers.</p>
+<article class="exercise exercise-like" id="exercise-431"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-2474">List at least four different positive elements of \(S\) and at least four different negative elements of \(S\text{.}\) Are all of these integers even?</p></article><article class="exercise exercise-like" id="exercise-432"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-2475">Use the roster method to specify the sets \(S\) and \(T\text{.}\) (See <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "S_predicates" missing or not unique]</code> for a review of the roster method.) Does there appear to be any relationship between these two sets? That is, does it appear that the sets are equal or that one set is a subset of the other set?</p></article><article class="exercise exercise-like" id="exercise-433"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-2476">Use set builder notation to specify the sets \(S\) and \(T\text{.}\) (See <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "S_predicates" missing or not unique]</code> for a review of the set builder notation.)</p></article><article class="exercise exercise-like" id="exercise-434"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-2477">Using appropriate definitions, describe what it means to say that an integer \(x\) is a multiple of 6 and what it means to say that an integer \(y\) is even.</p></article><article class="exercise exercise-like" id="exercise-435"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-2478">In order to prove that \(S\) is a subset of \(T\text{,}\) we need to prove that for each integer \(x\text{,}\) if \(x \in S\text{,}\) then \(x \in T\)</p>
+<p id="p-2479">Complete the know-show table in <a class="xref" data-knowl="./knowl/table_preview42.html" title="Table 5.2.1: Know-show table for Beginning Activity 1 ">Table 5.2.1</a> for the proposition that \(S\) is a subset of \(T\text{.}\)</p>
+<p id="p-2480">This table is in the form of a proof method called the <dfn class="terminology">choose-an-element method.</dfn>  This method is frequently used when we encounter a universal quantifier in a statement in the backward process. (In this case, this is Step \(Q1\text{.}\)) The key is that we have to prove something about all elements in \(\Z\text{.}\) We can then add something to the forward process by choosing an arbitrary element from the set \(S\text{.}\) (This is done in Step \(P1\text{.}\)) This does not mean that we can choose a specific element of \(S\text{.}\) Rather, we must give the arbitrary element a name and use only the properties it has by being a member of the set \(S\text{.}\) In this case, the element is a multiple of 6. <figure class="table table-like" id="table_preview42"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">5.2.1<span class="period">.</span></span><span class="space"> </span>Know-show table for Beginning Activity 1 </figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r2 l0 t0 lines">Step</td>
+<td class="l m b2 r2 l0 t0 lines">Know</td>
+<td class="l m b2 r0 l0 t0 lines">Reason</td>
+</tr>
+<tr>
+<td class="l m b1 r2 l0 t0 lines">\(P\)</td>
+<td class="l m b1 r2 l0 t0 lines">\(S\) is the set of all integers that<br>are multiples of 6.<br>\(T\) is the set of all even integers.</td>
+<td class="l m b1 r0 l0 t0 lines">Hypothesis</td>
+</tr>
+<tr>
+<td class="l m b1 r2 l0 t0 lines">\(P1\)</td>
+<td class="l m b1 r2 l0 t0 lines">Let \(x \in S\text{.}\)</td>
+<td class="l m b1 r0 l0 t0 lines">Choose an arbitrary element<br>of \(S\text{.}\)</td>
+</tr>
+<tr>
+<td class="l m b1 r2 l0 t0 lines">\(P2\)</td>
+<td class="l m b1 r2 l0 t0 lines">\(\left( {\exists m \in \mathbb{Z}} \right)
+\left( {x = 6m} \right)\)</td>
+<td class="l m b1 r0 l0 t0 lines">Definition of “multiple”</td>
+</tr>
+<tr>
+<td class="l m b1 r2 l0 t0 lines">\(\vdots\)</td>
+<td class="l m b1 r2 l0 t0 lines">\(\vdots\)</td>
+<td class="l m b1 r0 l0 t0 lines">\(\vdots\)</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">\(Q2\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(x\) is an element of \(T\text{.}\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(x\) is even</td>
+</tr>
+<tr>
+<td class="l m b1 r2 l0 t0 lines">\(Q1\)</td>
+<td class="l m b1 r2 l0 t0 lines">\(\left( \forall x \in \Z \right) \left[ \left( x \in S \right) \to 
+\left( x \in T \right) \right]\)</td>
+<td class="l m b1 r0 l0 t0 lines">Step \(P1\) and Step \(Q2\)</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">\(Q\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(S \subseteq T\text{.}\)</td>
+<td class="l m b2 r0 l0 t0 lines">Definition of “subset”</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">Step</td>
+<td class="l m b0 r2 l0 t0 lines">Show</td>
+<td class="l m b0 r0 l0 t0 lines">Reason</td>
+</tr>
+</table></div></figure></p></article></section><section class="worksheet" id="PA_workingvenn"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Beginning Activity 2: Working with Venn Diagrams</span><div class="print-links">
+<a href="PA_workingvenn-A4.html" class="a4">A4</a><a href="PA_workingvenn-letter.html" class="us">US</a>
+</div>
+</h3>
+<article class="exercise exercise-like" id="exercise-436"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-2481">Draw a Venn diagram for two sets, \(A\) and \(B\text{,}\) with the assumption that \(A\) is a subset of \(B\text{.}\) On this Venn diagram, lightly shade the area corresponding to \(A^c\text{.}\) Then, determine the region on the Venn diagram that corresponds to \(B^c\text{.}\) What appears to be the relationship between \(A^c\) and \(B^c\text{?}\) Explain.</p></article><article class="exercise exercise-like" id="exercise-437"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-2482">Draw a general Venn diagram for two sets, \(A\) and \(B\text{.}\) First determine the region that corresponds to the set \(A - B\) and then, on the Venn diagram, shade the region corresponding to \(A - (A - B)\) and shade the region corresponding to \(A \cap B\text{.}\) What appears to be the relationship between these two sets? Explain.</p></article></section><section class="introduction" id="introduction-54"><p id="p-2483">In this section, we will learn how to prove certain relationships about sets. Two of the most basic types of relationships between sets are the equality relation and the subset relation. So if we are asked a question of the form, “How are the sets \(A\) and \(B\) related?”, we can answer the question if we can prove that the two sets are equal or that one set is a subset of the other set. There are other ways to answer this, but we will concentrate on these two for now. This is similar to asking a question about how two real numbers are related. Two real numbers can be related by the fact that they are equal or by the fact that one number is less than the other number.</p></section><section class="subsection" id="SS_choosemethod"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">The Choose-an-Element Method</span>
+</h3>
+<p id="p-2484">The method of proof we will use in this section can be called the <dfn class="terminology">choose-an-element method.</dfn>  This method was introduced in <a href="S_provingset.html#PA_working2sets" class="internal" title="Worksheet: Beginning Activity 1: Working with Two Specific Sets">Beginning Activity 1 </a>. This method is frequently used when we encounter a universal quantifier in a statement in the backward process. This statement often has the form <blockquote class="blockquote" id="blockquote-164">For each element with a given property, something happens.</blockquote> Since most statements with a universal quantifier can be expressed in the form of a conditional statement, this statement could have the following equivalent form: <blockquote class="blockquote" id="blockquote-165">If an element has a given property, then something happens.</blockquote> We will illustrate this with the proposition from <a href="S_provingset.html#PA_working2sets" class="internal" title="Worksheet: Beginning Activity 1: Working with Two Specific Sets">Beginning Activity 1 </a>. This proposition can be stated as follows: <blockquote class="blockquote" id="blockquote-166">Let S be the set of all integers that are multiples of 6, and let T be the set of all even integers. Then S is a subset of T.</blockquote> In <a href="S_provingset.html#PA_working2sets" class="internal" title="Worksheet: Beginning Activity 1: Working with Two Specific Sets">Beginning Activity 1 </a>, we worked on a know-show table for this proposition. The key was that in the backward process, we encountered the following statement: <blockquote class="blockquote" id="blockquote-167">Each element of \(S\) is an element of \(T\) or, more precisely, if \(x \in S\text{,}\) then \(x \in T\text{.}\)</blockquote></p>
+<p id="p-2485">In this case, the “element” is an integer, the “given property” is that it is an element of \(S\text{,}\) and the “something that happens” is that the element is also an element of \(T\text{.}\) One way to approach this is to create a list of all elements with the given property and verify that for each one, the “something happens.” When the list is short, this may be a reasonable approach. However, as in this case, when the list is infinite (or even just plain long), this approach is not practical.</p>
+<p id="p-2486">We overcome this difficulty by using the <dfn class="terminology">choose-an-element method</dfn>, where we choose an arbitrary element with the given property. So in this case, we choose an integer \(x\) that is a multiple of 6. We cannot use a specific multiple of 6 (such as 12 or 24), but rather the only thing we can assume is that the integer satisfies the property that it is a multiple of 6. This is the key part of this method. <blockquote class="blockquote" id="blockquote-168">Whenever we choose an arbitrary element with a given property, we are not selecting a specific element. Rather, the only thing we can assume about the element is the given property.</blockquote> It is important to realize that once we have chosen the arbitrary element, we have added information to the forward process. So in the know-show table for this proposition, we added the statement, “Let \(x \in S\)” to the forward process. Following is a completed proof of this proposition following the outline of the know-show table from <a href="S_provingset.html#PA_working2sets" class="internal" title="Worksheet: Beginning Activity 1: Working with Two Specific Sets">Beginning Activity 1 </a>.</p>
+<article class="proposition theorem-like" id="P_SissubsetT"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.2.2</span><span class="period">.</span>
+</h6>
+<p id="p-2487">Let S be the set of all integers that are multiples of 6, and let T be the set of all even integers. Then S is a subset of T.</p></article><article class="hiddenproof" id="proof-27"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-27"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-27"><article class="hiddenproof"><p id="p-2488">Let \(S\) be the set of all integers that are multiples of 6, and let \(T\) be the set of all even integers. We will show that \(S\) is a subset of \(T\) by showing that if an integer \(x\) is an element of \(S\text{,}\) then it is also an element of \(T\text{.}\)</p>
+<p id="p-2489">Let \(x \in S\text{.}\) (Note: The use of the word “let” is often an indication that the we are choosing an arbitrary element.) This means that \(x\) is a multiple of 6. Therefore, there exists an integer \(m\) such that</p>
+<div class="displaymath">
+\begin{equation*}
+x = 6m\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Since \(6 = 2 \cdot 3\text{,}\) this equation can be written in the form</p>
+<div class="displaymath">
+\begin{equation*}
+x = 2( {3m})\text{.}
+\end{equation*}
+</div>
+<p class="continuation">By closure properties of the integers, \(3m\) is an integer. Hence, this last equation proves that \(x\) must be even. Therefore, we have shown that if \(x\) is an element of \(S\text{,}\) then \(x\) is an element of \(T\text{,}\) and hence that \(S \subseteq T\text{.}\)</p></article></div>
+<p id="p-2490">Having proved that \(S\) is a subset of \(T\text{,}\) we can now ask if \(S\) is actually equal to \(T\text{.}\) The work we did in <a href="S_provingset.html#PA_working2sets" class="internal" title="Worksheet: Beginning Activity 1: Working with Two Specific Sets">Beginning Activity 1 </a> can help us answer this question. In that activity, we should have found several elements that are in \(T\) but not in \(S\text{.}\) For example, the integer 2 is in \(T\) since 2 is even but \(2 \notin S\) since 2 is not a multiple of 6. Therefore, \(S \ne T\) and we can also conclude that \(S\) is a proper subset of \(T\text{.}\)</p>
+<p id="p-2491">One reason we do this in a “two-step” process is that it is much easier to work with the subset relation than the proper subset relation. The subset relation is defined by a conditional statement and most of our work in mathematics deals with proving conditional statements. In addition, the proper subset relation is a conjunction of two statements (\(S \subseteq T\) and \(S \ne T\)) and so it is natural to deal with the two parts of the conjunction separately.</p>
+<article class="exercise exercise-like" id="prog_setequality"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">5.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Subsets and Set Equality.</span>
+</h6>
+<div class="introduction" id="introduction-55"><p id="p-2492">Let \(A = \left\{ x \in \mathbb{Z} \mid x \text{ is a multiple of 9 } \right\}\) and let \(B = \left\{ x \in \mathbb{Z} \mid x \text{ is a multiple of 3 } \right\}\text{.}\)</p></div>
+<article class="task exercise-like" id="task-929"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2493">Is the set \(A\) a subset of \(B\text{?}\) Justify your conclusion.</p></article><article class="task exercise-like" id="task-930"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2494">Is the set \(A\) equal to the set \(B\text{?}\) Justify your conclusion.</p></article></article><article class="exercise exercise-like" id="prog_usingchoose"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">5.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Using the Choose-an-Element Method.</span>
+</h6>
+<div class="introduction" id="introduction-56">
+<p id="p-2495">The Venn diagram in <a href="S_provingset.html#PA_workingvenn" class="internal" title="Worksheet: Beginning Activity 2: Working with Venn Diagrams">Beginning Activity 2 </a> suggests that the following proposition is true.</p>
+<article class="proposition theorem-like" id="P_subsetandcomp"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.2.5</span><span class="period">.</span>
+</h6>
+<p id="p-2496">Let \(A\) and \(B\) be subsets of the universal set \(U\text{.}\) If \(A \subseteq B\text{,}\) then \(B^c \subseteq A^c\text{.}\)</p></article>
+</div>
+<article class="task exercise-like" id="task-931"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2497">The conclusion of the conditional statement is \(B^c \subseteq A^c\text{.}\) Explain why we should try the choose-an-element method to prove this proposition.</p></article><article class="task exercise-like" id="task-932"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2498">Complete the following know-show table for this proposition and explain exactly where the choose-an-element method is used. <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b1 r2 l0 t0 lines">Step</td>
+<td class="l m b1 r2 l0 t0 lines">Know</td>
+<td class="l m b1 r0 l0 t0 lines">Reason</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">\(P\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(A \subseteq B\)</td>
+<td class="l m b2 r0 l0 t0 lines">Hypothesis</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">\(P1\)</td>
+<td class="l m b2 r2 l0 t0 lines">Let \(x \in B^c\text{.}\)</td>
+<td class="l m b2 r0 l0 t0 lines">Choose an arbitrary element<br>of \(B^c\text{.}\)</td>
+</tr>
+<tr>
+<td class="l m b1 r2 l0 t0 lines">\(P2\)</td>
+<td class="l m b1 r2 l0 t0 lines">If \(x \in A\text{,}\) then \(x \in B\text{.}\)</td>
+<td class="l m b1 r0 l0 t0 lines">Definition of “subset”</td>
+</tr>
+<tr>
+<td class="c m b1 r2 l0 t0 lines">\(\vdots\)</td>
+<td class="c m b1 r2 l0 t0 lines">\(\vdots\)</td>
+<td class="c m b1 r0 l0 t0 lines">\(\vdots\)</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">\(Q1\)</td>
+<td class="l m b2 r2 l0 t0 lines">If \(x \in B^c\text{,}\) then \(x \in A^c\text{.}\)</td>
+<td class="l m b2 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">\(Q\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(B^c \subseteq A^c\)</td>
+<td class="l m b2 r0 l0 t0 lines">Definition of “subset”</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">Step</td>
+<td class="l m b0 r2 l0 t0 lines">Show</td>
+<td class="l m b0 r0 l0 t0 lines">Reason</td>
+</tr>
+</table></div></p></article></article></section><section class="subsection" id="subsection-91"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Proving Set Equality</span>
+</h3>
+<p id="p-2499">One way to prove that two sets are equal is to use <a class="xref" data-knowl="./knowl/T_setequality.html" title="Theorem 5.1.7">Theorem 5.1.7</a> and prove each of the two sets is a subset of the other set. In particular, let \(A\) and \(B\) be subsets of some universal set. <a class="xref" data-knowl="./knowl/T_setequality.html" title="Theorem 5.1.7">Theorem 5.1.7</a> states that \(A = B\) if and only if \(A \subseteq B\text{ and } B \subseteq A\text{.}\)</p>
+<p id="p-2500">In <a href="S_provingset.html#PA_workingvenn" class="internal" title="Worksheet: Beginning Activity 2: Working with Venn Diagrams">Beginning Activity 2 </a>, we created a Venn diagram that indicated that \(A - (A - B) = A \cap B\text{.}\) Following is a proof of this result. Notice where the choose-an-element method is used in each case.</p>
+<article class="proposition theorem-like" id="P_setdifference"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.2.6</span><span class="period">.</span>
+</h6>
+<p id="p-2501">Let \(A\) and \(B\) be subsets of some universal set. Then \(A - (A - B) = A \cap B\text{.}\)</p></article><article class="hiddenproof" id="proof-28"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-28"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-28"><article class="hiddenproof"><p id="p-2502">Let \(A\) and \(B\) be subsets of some universal set. We will prove that</p>
+<p id="p-2503">\(A - (A - B) = A \cap B\) by proving that \(A - (A - B) \subseteq A \cap B\) and that \(A \cap B \subseteq A - (A - B)\text{.}\)</p>
+<p id="p-2504">First, let \(x \in A - (A - B)\text{.}\) This means that</p>
+<div class="displaymath">
+\begin{equation*}
+x \in A\text{  and  } x \notin (A - B)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We know that an element is in \((A - B)\) if and only if it is in \(A\) and not in \(B\text{.}\) Since \(x \notin (A - B)\text{,}\) we conclude that \(x \notin A\) or \(x \in B\text{.}\) However, we also know that \(x \in A\) and so we conclude that \(x \in B\text{.}\) This proves that</p>
+<div class="displaymath">
+\begin{equation*}
+x \in A \text{  and  } x \in B\text{.}
+\end{equation*}
+</div>
+<p id="p-2505">This means that \(x \in A \cap B\text{,}\) and hence we have proved that \(A - (A - B) \subseteq A \cap B\text{.}\) Now choose \(y \in A \cap B\text{.}\) This means that</p>
+<div class="displaymath">
+\begin{equation*}
+y \in A\text{  and  } y \in B\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We note that \(y \in (A - B)\) if and only if \(y \in A\) and \(y \notin B\) and hence, \(y \notin (A - B)\) if and only if \(y \notin A\) or \(y \in B\text{.}\) Since we have proved that \(y \in B\text{,}\) we conclude that \(y \notin (A - B)\text{,}\) and hence, we have established that \(y \in A\) and \(y \notin (A - B)\text{.}\) This proves that if \(y \in A \cap B\text{,}\) then \(y \in A - (A - B)\) and hence, \(A \cap B \subseteq A - (A - B)\text{.}\)</p>
+<p id="p-2506">Since we have proved that \(A - (A - B) \subseteq A \cap B\) and \(A \cap B \subseteq A - (A - B)\text{,}\) we conclude that \(A - (A - B) = A \cap B\text{.}\)</p></article></div>
+<article class="exercise exercise-like" id="prog_setequality2"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">5.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Set Equality.</span>
+</h6>
+<div class="introduction" id="introduction-57"><p id="p-2507">Prove the following proposition. To do so, prove each set is a subset of the other set by using the choose-an-element method.</p></div>
+<article class="proposition theorem-like" id="P_setequality"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.2.8</span><span class="period">.</span>
+</h6>
+<p id="p-2508">Let \(A\) and \(B\) be subsets of some universal set. Then \(A - B = A \cap B^c\text{.}\)</p></article></article></section><section class="subsection" id="subsection-92"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Disjoint Sets</span>
+</h3>
+<p id="p-2509">Earlier in this section, we discussed the concept of set equality and the relation of one set being a subset of another set. There are other possible relationships between two sets; one is that the sets are disjoint. Basically, two sets are disjoint if and only if they have nothing in common. We express this formally in the following definition.</p>
+<article class="definition definition-like" id="D_disjointsets"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.2.9</span><span class="period">.</span>
+</h6>
+<p id="p-2510">Let \(A\) and \(B\) be subsets of the universal set \(U\text{.}\) The sets \(A\) and \(B\) are said to be <dfn class="terminology">disjoint</dfn>  provided that \(A \cap B = \emptyset\text{.}\)</p></article><p id="p-2511">For example, the Venn diagram in <a class="xref" data-knowl="./knowl/fig_asubsetb2.html" title="Figure 5.2.10">Figure 5.2.10</a> shows two sets \(A\) and \(B\) with \(A \subseteq B\text{.}\) The shaded region is the region that represents \(B^c\text{.}\)</p>
+<figure class="figure figure-like" id="fig_asubsetb2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/figps-asubsetb2.svg" class="contained" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.2.10<span class="period">.</span></span><span class="space"> </span>Venn Diagram with \(A \subseteq B\)</figcaption></figure><p id="p-2512">From the Venn diagram, it appears that \(A \cap B^c = \emptyset\text{.}\) This means that \(A\) and \(B^c\) are disjoint. The preceding example suggests that the following proposition is true: <blockquote class="blockquote" id="blockquote-169">If \(A \subseteq B\text{,}\) then \(A \cap B^c = \emptyset\text{.}\)</blockquote> If we would like to prove this proposition, a reasonable “backward question” is, “How do we prove that a set \(\left( \text{ namely } A \cap B^c \right)\) is equal to the empty set?”</p>
+<p id="p-2513">This question seems difficult to answer since how do we prove that a set is empty? This is an instance where proving the contrapositive or using a proof by contradiction could be reasonable approaches. To illustrate these methods, let us assume the proposition we are trying to prove is of the following form: <blockquote class="blockquote" id="blockquote-170">If \(P\text{,}\) then \(T = \emptyset\text{.}\)</blockquote> If we choose to prove the contrapositive or use a proof by contradiction, we will assume that \(T \ne \emptyset\text{.}\) These methods can be outlined as follows:</p>
+<ul class="disc">
+<li id="li-337"><p id="p-2514">The contrapositive of “If \(P\text{,}\) then \(T = \emptyset\)” is, “If \(T \ne \emptyset\text{,}\) then \(\mynot P\text{.}\)” So in this case, we would assume \(T \ne \emptyset\) and try to prove \(\mynot P\text{.}\)</p></li>
+<li id="li-338"><p id="p-2515">Using a proof by contradiction, we would assume \(P\) and assume that \(T \ne \emptyset\text{.}\) From these two assumptions, we would attempt to derive a contradiction.</p></li>
+</ul>
+<p class="continuation">One advantage of these methods is that when we assume that \(T \ne \emptyset\text{,}\) then we know that there exists an element in the set \(T\text{.}\) We can then use that element in the rest of the proof. We will prove one of the conditional statements for <a class="xref" data-knowl="./knowl/P_subsetprop.html" title="Proposition 5.2.11">Proposition 5.2.11</a> by proving its contrapositive. The proof of the other conditional statement associated with <a class="xref" data-knowl="./knowl/P_subsetprop.html" title="Proposition 5.2.11">Proposition 5.2.11</a> is <a class="xref" data-knowl="./knowl/exer_subsetprop.html" title="Exercise 10">Exercise 10</a>.</p>
+<article class="proposition theorem-like" id="P_subsetprop"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.2.11</span><span class="period">.</span>
+</h6>
+<p id="p-2516">Let \(A\) and \(B\) be subsets of some universal set. Then \(A \subseteq B\) if and only if \(A \cap B^c = \emptyset\text{.}\)</p></article><article class="hiddenproof" id="proof-29"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-29"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-29"><article class="hiddenproof"><p id="p-2517">Let \(A\) and \(B\) be subsets of some universal set. We will first prove that if \(A \subseteq B\text{,}\) then \(A \cap B^c = \emptyset\text{,}\) by proving its contrapositive. That is, we will prove <blockquote class="blockquote" id="blockquote-171">If \(A \cap B^c \ne \emptyset\text{,}\) then \(A \not \subseteq B\text{.}\)</blockquote> So assume that \(A \cap B^c \ne \emptyset\text{.}\) We will prove that \(A \not \subseteq B\) by proving that there must exist an element \(x\) such that \(x \in A\) and \(x \notin B\text{.}\)</p>
+<p id="p-2518">Since \(A \cap B^c  \ne \emptyset\text{,}\) there exists an element \(x\) that is in \(A \cap B^c\text{.}\) This means that</p>
+<div class="displaymath">
+\begin{equation*}
+x \in A\text{  and  } x \in B^c\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Now, the fact that \(x \in B^c\) means that \(x \notin B\text{.}\) Hence, we can conclude that</p>
+<div class="displaymath">
+\begin{equation*}
+x \in A\text{  and  } x \notin B\text{.}
+\end{equation*}
+</div>
+<p class="continuation">This means that \(A \not \subseteq B\text{,}\) and hence, we have proved that if \(A \cap B^c \ne \emptyset\text{,}\) then \(A \not \subseteq B\text{,}\) and therefore, we have proved that if \(A \subseteq B\text{,}\) then \(A \cap B^c = \emptyset\text{.}\)</p>
+<p id="p-2519">The proof that if \(A \cap B^c = \emptyset\text{,}\) then \(A \subseteq B\) is <a class="xref" data-knowl="./knowl/exer_subsetprop.html" title="Exercise 10">Exercise 10</a>.</p></article></div>
+<article class="exercise exercise-like" id="prog_disjointsets"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">5.2.12</span><span class="period">.</span><span class="space"> </span><span class="title">Proving Two Sets Are Disjoint.</span>
+</h6>
+<p id="p-2520">It has been noted that it is often possible to prove that two sets are disjoint by using a proof by contradiction. In this case, we assume that the two sets are not disjoint and hence, their intersection is not empty. Use this method to prove that the following two sets are disjoint.</p>
+<div class="displaymath">
+\begin{equation*}
+A = \{ x \in \Z \mid x \equiv 3 \pmod 12 \}  \text{ and }   
+B = \{ y \in \Z \mid y \equiv 2 \pmod 8 \}\text{.}
+\end{equation*}
+</div></article></section><section class="subsection" id="subsection-93"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">A Final Comment</span>
+</h3>
+<p id="p-2521">We have used the choose-an-element method  to prove <a class="xref" data-knowl="./knowl/P_SissubsetT.html" title="Proposition 5.2.2">Proposition 5.2.2</a>, <a class="xref" data-knowl="./knowl/P_setdifference.html" title="Proposition 5.2.6">Proposition 5.2.6</a>, and <a class="xref" data-knowl="./knowl/P_subsetprop.html" title="Proposition 5.2.11">Proposition 5.2.11</a>. Proofs involving sets that use this method are sometimes referred to as <dfn class="terminology">element-chasing proofs.</dfn>  This name is used since the basic method is to choose an arbitrary element from one set and “chase it” until you prove it must be in another set.</p></section><section class="exercises" id="exercises-17"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exer_sec42-2"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-58"><p id="p-2522">Let \(A = \left\{ {\left. {x \in \mathbb{R}} \right| x^2 \lt 4} \right\}\) and let \(B = \left\{ {x \in \mathbb{R}\left. \right| x \lt 2} \right\}\text{.}\)</p></div>
+<article class="task exercise-like" id="task-933"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2523">Is \(A \subseteq B\text{?}\) Justify your conclusion with a proof or a counterexample.</p></article><article class="task exercise-like" id="task-934"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2524">Is \(B \subseteq A\text{?}\) Justify your conclusion with a proof or a counterexample.</p></article></article><article class="exercise exercise-like" id="exer_sec42-3"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-59"><p id="p-2525">Let \(A\text{,}\) \(B\text{,}\) and \(C\) be subsets of a universal set \(U\text{.}\)</p></div>
+<article class="task exercise-like" id="task-935"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2526">Draw a Venn diagram with \(A \subseteq B\) and \(B \subseteq C\text{.}\) Does it appear that \(A \subseteq C\text{?}\)</p></article><article class="task exercise-like" id="task-936"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2527">Prove the following proposition: <blockquote class="blockquote" id="blockquote-172">If \(A \subseteq B\) and \(B \subseteq C\text{,}\) then \(A \subseteq C\text{.}\)</blockquote></p>
+<p id="p-2528">Note: This may seem like an obvious result. However, one of the reasons for this exercise is to provide practice at properly writing a proof that one set is a subset of another set. So we should start the proof by assuming that \(A \subseteq B\) and \(B \subseteq C\text{.}\) Then we should choose an arbitrary element of \(A\text{.}\)</p></article></article><article class="exercise exercise-like" id="exer_modsubset"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-60"><p id="p-2529">Let \(A = \{ x \in \mathbb{Z} \mid x \equiv 7 \pmod 8 \}\) and \(B = \{ x \in \mathbb{Z} \mid x \equiv 3 \pmod 4 \}\text{.}\)</p></div>
+<article class="task exercise-like" id="task-937"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2530">List at least five different elements of the set \(A\) and at least five elements of the set \(B\text{.}\)</p></article><article class="task exercise-like" id="task-938"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2531">Is \(A \subseteq B\text{?}\) Justify your conclusion with a proof or a counterexample.</p></article><article class="task exercise-like" id="task-939"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2532">Is \(B \subseteq A\text{?}\) Justify your conclusion with a proof or a counterexample.</p></article></article><article class="exercise exercise-like" id="exer_modsubset2"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-61"><p id="p-2533">Let \(C = \{ x \in \mathbb{Z} \mid x \equiv 7 \pmod {9} \}\) and \(D = \{ x \in \mathbb{Z} \mid x \equiv 1 \pmod {3} \}\text{.}\)</p></div>
+<article class="task exercise-like" id="task-940"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2534">List at least five different elements of the set \(C\) and at least five elements of the set \(D\text{.}\)</p></article><article class="task exercise-like" id="task-941"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2535">Is \(C \subseteq D\text{?}\) Justify your conclusion with a proof or a counterexample.</p></article><article class="task exercise-like" id="task-942"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2536">Is \(D \subseteq C\text{?}\) Justify your conclusion with a proof or a counterexample.</p></article></article><article class="exercise exercise-like" id="exer51_modsets"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-62"><p id="p-2537">In each case, determine if \(A \subseteq B\text{,}\) \(B \subseteq A\text{,}\) \(A = B\text{,}\) or \(A \cap B = \emptyset\) or none of these.</p></div>
+<article class="task exercise-like" id="task-943"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2538">\(A = \left\{ x \in \Z \mid \mod{x}{2}{3} \right\}\) and \(B = \left\{ y \in \Z \mid 6 \text{ divides } (2y - 4) \right\}\text{.}\)</p></article><article class="task exercise-like" id="task-944"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2539">\(A = \left\{ x \in \Z \mid \mod{x}{3}{4} \right\}\) and \(B = \left\{ y \in \Z \mid 3 \text{ divides } (y - 2) \right\}\text{.}\)</p></article><article class="task exercise-like" id="task-945"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2540">\(A = \left\{ x \in \Z \mid \mod{x}{1}{5} \right\}\) and \(B = \left\{ y \in \Z \mid \mod{y}{7}{10} \right\}\text{.}\)</p></article></article><article class="exercise exercise-like" id="exercise-447"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-63">
+<p id="p-2541">To prove the following set equalities, it may be necessary to use some of the properties of positive and negative real numbers. For example, it may be necessary to use the facts that:</p>
+<ul class="disc">
+<li id="li-339"><p id="p-2542">The product of two real numbers is positive if and only if the two real numbers are either both positive or both negative.</p></li>
+<li id="li-340"><p id="p-2543">The product of two real numbers is negative if and only if one of the two numbers is positive and the other is negative.</p></li>
+</ul>
+<p class="continuation">For example, if \(x \left( x - 2 \right) \lt 0\text{,}\) then we can conclude that either (1) \(x \lt 0\) and \(x - 2 &gt; 0\) or (2) \(x &gt; 0\) and \(x - 2 \lt 0\text{.}\) However, in the first case, we must have \(x \lt 0\) and \(x &gt; 2\text{,}\) and this is impossible. Therefore, we conclude that \(x &gt; 0\) and \(x - 2 \lt 0\text{,}\) which means that \(0 \lt x \lt 2\text{.}\)</p>
+<p id="p-2544">Use the choose-an-element method to prove each of the following:</p>
+</div>
+<article class="task exercise-like" id="task-946"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2545">\(\left\{x \in \R \mid x^2 - 3x - 10 \lt 0 \right\} = \left\{ x \in \R \mid -2 \lt x 
+\lt 5 \right\}\)</p></article><article class="task exercise-like" id="task-947"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2546">\(\left\{x \in \R \mid x^2 - 5x + 6 \lt 0 \right\} = \left\{ x \in \R \mid 2 
+\lt x \lt 3 \right\}\)</p></article><article class="task exercise-like" id="task-948"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2547">\(\left\{ x \in \R \mid x^2 \geq 4 \right\} = \left\{ x \in \R \mid x 
+\leq -2 \right\} \cup \left\{ x \in \R \mid x \geq 2 \right\}\)</p></article></article><article class="exercise exercise-like" id="exer_intersectandunion"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-64"><p id="p-2548">Let \(A\) and \(B\) be subsets of some universal set \(U\text{.}\) Prove each of the following:</p></div>
+<article class="task exercise-like" id="task-949"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2549">\(A \cap B \subseteq A\)</p></article><article class="task exercise-like" id="task-950"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2550">\(A \subseteq A \cup B\)</p></article><article class="task exercise-like" id="task-951"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2551">\(A \cap A = A\)</p></article><article class="task exercise-like" id="task-952"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-2552">\(A \cup A = A\)</p></article><article class="task exercise-like" id="task-953"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-2553">\(A \cap \emptyset = \emptyset\)</p></article><article class="task exercise-like" id="task-954"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-2554">\(A \cup \emptyset = A\)</p></article></article><article class="exercise exercise-like" id="exer_sec43-2"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="p-2555">Let \(A\) and \(B\) be subsets of some universal set \(U\text{.}\) From <a class="xref" data-knowl="./knowl/P_subsetandcomp.html" title="Proposition 5.2.5">Proposition 5.2.5</a>, we know that if \(A \subseteq B\text{,}\) then \(B^c \subseteq A^c\text{.}\) Now prove the following proposition: <blockquote class="blockquote" id="blockquote-173">For all sets \(A\) and \(B\) that are subsets of some universal set \(U\text{,}\) \(A \subseteq B\) if and only if \(B^c \subseteq A^c\text{.}\)</blockquote></p></article><article class="exercise exercise-like" id="exer_sec42-6"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="p-2556">Is the following proposition true or false? Justify your conclusion with a proof or a counterexample. <blockquote class="blockquote" id="blockquote-174">For all sets \(A\) and \(B\) that are subsets of some universal set \(U\text{,}\) the sets \(A \cap B\) and \(A - B\) are disjoint.</blockquote></p></article><article class="exercise exercise-like" id="exer_subsetprop"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<p id="p-2557">Complete the proof of <a class="xref" data-knowl="./knowl/P_subsetprop.html" title="Proposition 5.2.11">Proposition 5.2.11</a> by proving the following conditional statement: <blockquote class="blockquote" id="blockquote-175">Let \(A\) and \(B\) be subsets of some universal set. If \(A \cap B^c = \emptyset\text{,}\) then \(A \subseteq B\) .</blockquote></p></article><article class="exercise exercise-like" id="exer_sec42-disjoint"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-65"><p id="p-2558">Let \(A\text{,}\) \(B\text{,}\) \(C\text{,}\) and \(D\) be subsets of some universal set \(U\text{.}\) Are the following propositions true or false? Justify your conclusions.</p></div>
+<article class="task exercise-like" id="task-955"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2559">If \(A \subseteq B\) and \(C \subseteq D\) and \(A\) and \(C\) are disjoint, then \(B\) and \(D\) are disjoint.</p></article><article class="task exercise-like" id="task-956"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2560">If \(A \subseteq B\) and \(C \subseteq D\) and \(B\) and \(D\) are disjoint, then \(A\) and \(C\) are disjoint.</p></article></article><article class="exercise exercise-like" id="exer_unionandintersect"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-66"><p id="p-2561">Let \(A\text{,}\) \(B\text{,}\) and \(C\) be subsets of a universal set \(U\text{.}\) Prove:</p></div>
+<article class="task exercise-like" id="task-957"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2562">If \(A \subseteq B\text{,}\) then \(A \cap C \subseteq B \cap C\text{.}\)</p></article><article class="task exercise-like" id="task-958"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2563">If \(A \subseteq B\text{,}\) then \(A \cup C \subseteq B \cup C\text{.}\)</p></article></article><article class="exercise exercise-like" id="exer_sec42-unionandintersect"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-67"><p id="p-2564">Let \(A\text{,}\) \(B\text{,}\) and \(C\) be subsets of a universal set \(U\text{.}\) Are the following propositions true or false? Justify your conclusions.</p></div>
+<article class="task exercise-like" id="task-959"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2565">If \(A \cap C \subseteq B \cap C\text{,}\) then \(A \subseteq B\text{.}\)</p></article><article class="task exercise-like" id="task-960"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2566">If \(A \cup C \subseteq B \cup C\text{,}\) then \(A \subseteq B\text{.}\)</p></article><article class="task exercise-like" id="task-961"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2567">If \(A \cup C = B \cup C\text{,}\) then \(A = B\text{.}\)</p></article><article class="task exercise-like" id="task-962"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-2568">If \(A \cap C = B \cap C\text{,}\) then \(A = B\text{.}\)</p></article><article class="task exercise-like" id="task-963"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-2569">If \(A \cup C = B \cup C\) and \(A \cap C = B \cap C\text{,}\) then \(A = B\text{.}\)</p></article></article><article class="exercise exercise-like" id="exercise-455"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
+<p id="p-2570">Prove the following proposition: <blockquote class="blockquote" id="blockquote-176">For all sets \(A\text{,}\) \(B\text{,}\) and \(C\) that are subsets of some universal set, if \(A \cap B = A \cap C\) and \(A^c \cap B = A^c \cap C\text{,}\) then \(B = C\text{.}\)</blockquote></p></article><article class="exercise exercise-like" id="exer42_setstruefalse"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-68"><p id="p-2571">Are the following biconditional statements true or false? Justify your conclusion. If a biconditional statement is found to be false, you should clearly determine if one of the conditional statements within it is true and provide a proof of this conditional statement.</p></div>
+<article class="task exercise-like" id="task-964"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2572">For all subsets \(A\) and \(B\) of some universal set \(U\text{,}\) \(A \subseteq B\) if and only if \(A \cap B^c = \emptyset\text{.}\)</p></article><article class="task exercise-like" id="task-965"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2573">For all subsets \(A\) and \(B\) of some universal set \(U\text{,}\) \(A \subseteq B\) if and only if \(A \cup B = B\text{.}\)</p></article><article class="task exercise-like" id="task-966"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2574">For all subsets \(A\) and \(B\) of some universal set \(U\text{,}\) \(A \subseteq B\) if and only if \(A \cap B = A\text{.}\)</p></article><article class="task exercise-like" id="task-967"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-2575">For all subsets \(A\text{,}\) \(B\text{,}\) and \(C\) of some universal set \(U\text{,}\) \(A \subseteq B \cup C\) if and only if \(A \subseteq B\) or \(A \subseteq C\text{.}\)</p></article><article class="task exercise-like" id="task-968"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-2576">For all subsets \(A\text{,}\) \(B\text{,}\) and \(C\) of some universal set \(U\text{,}\) \(A \subseteq B \cap C\) if and only if \(A \subseteq B\) and \(A \subseteq C\text{.}\)</p></article></article><article class="exercise exercise-like" id="exercise-457"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-69">
+<p id="p-2577">Let \(S\text{,}\) \(T\text{,}\) \(X\text{,}\) and \(Y\) be subsets of some universal set. Assume that</p>
+<ol class="lower-roman cols3">
+<li id="li-341"><p id="p-2578">\(S \cup T \subseteq X \cup Y\text{;}\)</p></li>
+<li id="li-342"><p id="p-2579">\(S \cap T = \emptyset\text{;}\) and</p></li>
+<li id="li-343"><p id="p-2580">\(X \subseteq S\text{.}\)</p></li>
+</ol>
+</div>
+<article class="task exercise-like" id="task-969"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2581">Using assumption (i), what conclusion(s) can be made if it is known that \(a \in T\text{?}\)</p></article><article class="task exercise-like" id="task-970"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2582">Using assumption (ii), what conclusion(s) can be made if it is known that \(a \in T\text{?}\)</p></article><article class="task exercise-like" id="task-971"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2583">Using all three assumptions, either prove that \(T \subseteq Y\) or explain why it is not possible to do so.</p></article></article><article class="exercise exercise-like" id="exercise-458"><h6 class="heading">
+<span class="codenumber">17<span class="period">.</span></span><span class="space"> </span><span class="title">Evaluation of Proofs.</span>
+</h6>
+<div class="introduction" id="introduction-70"><p id="p-2584">See the instructions for <a class="xref" data-knowl="./knowl/exer_proofeval.html" title="Exercise 19: Evaluation of Proofs">Exercise 19</a> from <a href="S_directproof.html" class="internal" title="Section 3.1: Direct Proofs">Section 3.1</a>.</p></div>
+<article class="task exercise-like" id="task-972"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<dl id="p-2585" class="description-list narrow">
+<dt id="li-344">Proposition</dt>
+<dd><p id="p-2586">Let \(A\text{,}\) \(B\text{,}\) and \(C\) be subsets of some universal set. If \(A \not \subseteq B\) and \(B \not \subseteq C\text{,}\) then \(A \not \subseteq C\text{.}\)</p></dd>
+<dt id="li-345">Proof</dt>
+<dd><p id="p-2587">We assume that \(A\text{,}\) \(B\text{,}\) and \(C\) are subsets of some universal set and that \(A \not \subseteq B\) and \(B \not \subseteq C\text{.}\) This means that there exists an element \(x\) in \(A\) that is not in \(B\) and there exists an element \(x\) that is in \(B\) and not in \(C\text{.}\) Therefore, \(x \in A\) and \(x \notin C\text{,}\) and we have proved that \(A \not \subseteq C\text{.}\)</p></dd>
+</dl></article><article class="task exercise-like" id="task-973"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<dl id="p-2588" class="description-list narrow">
+<dt id="li-346">Proposition</dt>
+<dd><p id="p-2589">Let \(A\text{,}\) \(B\text{,}\) and \(C\) be subsets of some universal set. If \(A \cap B = A \cap C\text{,}\) then \(B = C\text{.}\)</p></dd>
+<dt id="li-347">Proof</dt>
+<dd>
+<p id="p-2590">We assume that \(A \cap B = A \cap C\) and will prove that \(B = C\text{.}\) We will first prove that \(B \subseteq C\text{.}\)</p>
+<p id="p-2591">So let \(x \in B\text{.}\) If \(x \in A\text{,}\) then \(x \in A \cap B\text{,}\) and hence, \(x \in A \cap C\text{.}\) From this we can conclude that \(x \in C\text{.}\) If \(x \notin A\text{,}\) then \(x \notin A \cap B\text{,}\) and hence, \(x \notin A \cap C\text{.}\) However, since \(x \notin A\text{,}\) we may conclude that \(x \in C\text{.}\) Therefore, \(B \subseteq C\text{.}\)</p>
+<p id="p-2592">The proof that \(C \subseteq B\) may be done in a similar manner. Hence, \(B = C\text{.}\)</p>
+</dd>
+</dl></article><article class="task exercise-like" id="task-974"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<dl id="p-2593" class="description-list narrow">
+<dt id="li-348">Proposition</dt>
+<dd><p id="p-2594">Let \(A\text{,}\) \(B\text{,}\) and \(C\) be subsets of some universal set. If \(A \not \subseteq B\) and \(B \subseteq C\text{,}\) then \(A \not \subseteq C\text{.}\)</p></dd>
+<dt id="li-349">Proof</dt>
+<dd><p id="p-2595">Assume that \(A \not \subseteq B\) and \(B \subseteq C\text{.}\) Since \(A \not \subseteq B\text{,}\) there exists an element \(x\) such that \(x \in A\) and \(x \notin B\text{.}\) Since \(B \subseteq C\text{,}\) we may conclude that \(x \notin C\text{.}\) Hence, \(x \in A\) and \(x \notin C\text{,}\) and we have proved that \(A \not \subseteq C\text{.}\)</p></dd>
+</dl></article></article><article class="activity project-like" id="exer52-choose"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">30</span><span class="period">.</span><span class="space"> </span><span class="title">Using the Choose-an-Element Method in a Different Setting.</span>
+</h6>
+<div class="introduction" id="introduction-71"><p id="p-2596">We have used the choose-an-element method to prove results about sets. This method, however, is a general proof technique and can be used in settings other than set theory. It is often used whenever we encounter a universal quantifier in a statement in the backward process. Consider the following proposition. <article class="proposition theorem-like" id="P_divlinearcomb"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.2.13</span><span class="period">.</span>
+</h6>
+<p id="p-2597">Let a, b, and t be integers with \(t \ne 0\text{.}\) If t divides a and t divides b, then for all integers x and y, t divides (ax + by).</p></article></p></div>
+<article class="task exercise-like" id="A_divlincomb1"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<div class="introduction" id="introduction-72"><p id="p-2598">Whenever we encounter a new proposition, it is a good idea to explore the proposition by looking at specific examples. For example, let \(a = 20\text{,}\) \(b = 12\text{,}\) and \(t = 4\text{.}\) In this case, \(t \mid a\) and \(t \mid b\text{.}\) In each of the following cases, determine the value of \(\left(ax + by \right)\) and determine if \(t\) divides \(\left(ax + by\right)\text{.}\)</p></div>
+<article class="task exercise-like" id="task-976"><h6 class="heading"><span class="codenumber">(i)</span></h6>
+<p id="p-2599">\(x=1, y=1\)</p></article><article class="task exercise-like" id="task-977"><h6 class="heading"><span class="codenumber">(ii)</span></h6>
+<p id="p-2600">\(x=1, y=-1\)</p></article><article class="task exercise-like" id="task-978"><h6 class="heading"><span class="codenumber">(iii)</span></h6>
+<p id="p-2601">\(x=2, y=2\)</p></article><article class="task exercise-like" id="task-979"><h6 class="heading"><span class="codenumber">(iv)</span></h6>
+<p id="p-2602">\(x=2, y=-3\)</p></article><article class="task exercise-like" id="task-980"><h6 class="heading"><span class="codenumber">(v)</span></h6>
+<p id="p-2603">\(x=-2, y=3\)</p></article><article class="task exercise-like" id="task-981"><h6 class="heading"><span class="codenumber">(vi)</span></h6>
+<p id="p-2604">\(x=-2, y=-5\)</p></article></article><article class="task exercise-like" id="task-982"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2605">Repeat <a class="xref" data-knowl="./knowl/A_divlincomb1.html" title="Task 30.a">Task 30.a</a> with \(a = 21\text{,}\) \(b = - 6\text{,}\) and \(t = 3\text{.}\)</p>
+<p id="p-2606">Notice that the conclusion of the conditional statement in this proposition involves the universal quantifier. So in the backward process, we would have <blockquote class="blockquote" id="blockquote-177">\(Q\text{:}\) For all integers \(x\) and \(y\text{,}\) \(t\) divides \(ax + by\text{.}\)</blockquote> The “elements” in this sentence are the integers \(x\) and \(y\text{.}\) In this case, these integers have no “given property” other than that they are integers. The “something that happens” is that \(t\) divides \(\left(ax + by\right)\text{.}\) This means that in the forward process, we can use the hypothesis of the proposition and choose integers \(x\) and \(y\text{.}\) That is, in the forward process, we could have <blockquote class="blockquote" id="blockquote-178">\(P\text{:}\) \(a\text{,}\) \(b\text{,}\) and \(t\) are integers with \(t \ne 0\text{,}\) \(t\) divides \(a\) and \(t\) divides \(b\text{.}\) \item \(P1\text{:}\) Let \(x \in \Z\) and let \(y \in \Z\text{.}\)</blockquote></p></article><article class="task exercise-like" id="task-983"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2607">Complete the following proof of <a class="xref" data-knowl="./knowl/P_divlinearcomb.html" title="Proposition 5.2.13">Proposition 5.2.13</a>. <article class="hiddenproof" id="proof-30"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-30"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-30"><article class="hiddenproof"><p id="p-2608">Let \(a\text{,}\) \(b\text{,}\) and \(t\) be integers with \(t \ne 0\text{,}\) and assume that \(t\) divides \(a\) and \(t\) divides \(b\text{.}\) We will prove that for all integers \(x\) and \(y\text{,}\) \(t\) divides \(\left(ax + by\right)\text{.}\)</p>
+<p id="p-2609">So let \(x \in \Z\) and let \(y \in \Z\text{.}\) Since \(t\) divides \(a\text{,}\) there exists an integer \(m\) such that \(\ldots \text{.}\)</p></article></div></p></article></article></section></section></div></main>
+</div>
+</body>
+</html>

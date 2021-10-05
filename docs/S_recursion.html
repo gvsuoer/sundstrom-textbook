@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-10-05T14:49:43-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Induction and Recursion</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\def\C{\JustCenter}
+\newcommand{\typeu}{Beginning }
+\def\C{\JustCenter}
+\newcommand{\typel}{beginning }
+\def\C{\JustCenter}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\
+\thechapter. #1}{}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\def\C{\JustCenter}
+\renewcommand{\theenumi}{\alph{enumi}}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\theenumi}{({\alph{enumi}})}
+\def\C{\JustCenter}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\mynot}{\neg}
+\newcommand{\card}{\mathbf{card}}
+\newcommand{\x}{:}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Mathematical Reasoning:</span> <span class="subtitle">Writing and Proof (Version 3)</span></a></h1>
+<p class="byline">Ted Sundstrom, Professor Emeritus</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_otherinduction.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_induction.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_4summary.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_otherinduction.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C_induction.html" title="Up">Up</a><a class="next-button button toolbar-item" href="S_4summary.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="fm-versions.html" data-scroll="fm-versions">Version 3 and Version 2.1</a></li>
+<li><a href="fm-student-note.html" data-scroll="fm-student-note">Note to Students</a></li>
+<li><a href="fm-preface.html" data-scroll="fm-preface">Preface</a></li>
+<li><a href="fm-imp-features.html" data-scroll="fm-imp-features">Important Features of the Book</a></li>
+<li><a href="fm-cont-org.html" data-scroll="fm-cont-org">Content and Organization</a></li>
+<li><a href="fm-inst-note.html" data-scroll="fm-inst-note">Supplementary Materials for the Instructor</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_1intro.html" data-scroll="C_1intro"><span class="codenumber">1</span> <span class="title">Introduction to Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_1prop.html" data-scroll="S_1prop">Statements and Conditional Statements</a></li>
+<li><a href="S_1direct.html" data-scroll="S_1direct">Constructing Direct Proofs</a></li>
+<li><a href="S_1summary.html" data-scroll="S_1summary">Chapter 1 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_2logic.html" data-scroll="C_2logic"><span class="codenumber">2</span> <span class="title">Logical Reasoning</span></a><ul>
+<li><a href="S_2logop.html" data-scroll="S_2logop">Statements and Logical Operators</a></li>
+<li><a href="S_logequiv.html" data-scroll="S_logequiv">Logically Equivalent Statements</a></li>
+<li><a href="S_2predicates.html" data-scroll="S_2predicates">Open Sentences and Sets</a></li>
+<li><a href="S_2quantifier.html" data-scroll="S_2quantifier">Quantifiers and Negations</a></li>
+<li><a href="S_2summary.html" data-scroll="S_2summary">Chapter 2 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_proofs.html" data-scroll="C_proofs"><span class="codenumber">3</span> <span class="title">Constructing and Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_directproof.html" data-scroll="S_directproof">Direct Proofs</a></li>
+<li><a href="S_moremethods.html" data-scroll="S_moremethods">More Methods of Proof</a></li>
+<li><a href="S_contradiction.html" data-scroll="S_contradiction">Proof by Contradiction</a></li>
+<li><a href="S_cases.html" data-scroll="S_cases">Using Cases in Proofs</a></li>
+<li><a href="S_divalgo.html" data-scroll="S_divalgo">Beginning Activity 1: The Division Algorithm and Congruence</a></li>
+<li><a href="S_reviewproofs.html" data-scroll="S_reviewproofs">Review of Proof Methods</a></li>
+<li><a href="S_3summary.html" data-scroll="S_3summary">Chapter 3 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_induction.html" data-scroll="C_induction"><span class="codenumber">4</span> <span class="title">Mathematical Induction</span></a><ul>
+<li><a href="S_mathinduction.html" data-scroll="S_mathinduction">The Principle of Mathematical Induction</a></li>
+<li><a href="S_otherinduction.html" data-scroll="S_otherinduction">Other Forms of Mathematical Induction</a></li>
+<li><a href="S_recursion.html" data-scroll="S_recursion" class="active">Induction and Recursion</a></li>
+<li><a href="S_4summary.html" data-scroll="S_4summary">Chapter 4 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_settheory.html" data-scroll="C_settheory"><span class="codenumber">5</span> <span class="title">Set Theory</span></a><ul>
+<li><a href="S_setoperations.html" data-scroll="S_setoperations">Sets and Operations on Sets</a></li>
+<li><a href="S_provingset.html" data-scroll="S_provingset">Proving Set Relationships</a></li>
+<li><a href="S_setproperties.html" data-scroll="S_setproperties">Properties of Set Operations</a></li>
+<li><a href="S_cartesian.html" data-scroll="S_cartesian">Cartesian Products</a></li>
+<li><a href="S_indexfamily.html" data-scroll="S_indexfamily">Indexed Families of Sets</a></li>
+<li><a href="S_5summary.html" data-scroll="S_5summary">Chapter 5 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_functions.html" data-scroll="C_functions"><span class="codenumber">6</span> <span class="title">Functions</span></a><ul>
+<li><a href="S_introfunctions.html" data-scroll="S_introfunctions">Introduction to Functions</a></li>
+<li><a href="S_moreaboutfunctions.html" data-scroll="S_moreaboutfunctions">More about Functions</a></li>
+<li><a href="S_typesoffunctions.html" data-scroll="S_typesoffunctions">Beginning Activity 1: Injections, Surjections, and Bijections</a></li>
+<li><a href="S_compositionoffunctions.html" data-scroll="S_compositionoffunctions">Composition of Functions</a></li>
+<li><a href="S_inversefunctions.html" data-scroll="S_inversefunctions">Inverse Functions</a></li>
+<li><a href="S_functionsonsets.html" data-scroll="S_functionsonsets">Functions Acting on Sets</a></li>
+<li><a href="S_6summary.html" data-scroll="S_6summary">Chapter 6 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_equivrelations.html" data-scroll="C_equivrelations"><span class="codenumber">7</span> <span class="title">Equivalence Relations</span></a><ul>
+<li><a href="S_relations.html" data-scroll="S_relations">Relations</a></li>
+<li><a href="S_equivrelations.html" data-scroll="S_equivrelations">Equivalence Relations</a></li>
+<li><a href="S_equivclasses.html" data-scroll="S_equivclasses">Equivalence Classes</a></li>
+<li><a href="S_modulararithmetic.html" data-scroll="S_modulararithmetic">Modular Arithmetic</a></li>
+<li><a href="section-37.html" data-scroll="section-37">Chapter 7 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_numbertheory.html" data-scroll="C_numbertheory"><span class="codenumber">8</span> <span class="title">Topics in Number Theory</span></a><ul>
+<li><a href="S_gcd.html" data-scroll="S_gcd">The Greatest Common Divisor</a></li>
+<li><a href="S_primefactorizations.html" data-scroll="S_primefactorizations">Prime Numbers and Prime Factorizations</a></li>
+<li><a href="S_diophantine.html" data-scroll="S_diophantine">Linear Diophantine Equations</a></li>
+<li><a href="section-41.html" data-scroll="section-41">Chapter 8 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_topicsinsets.html" data-scroll="C_topicsinsets"><span class="codenumber">9</span> <span class="title">Finite and Infinite Sets</span></a><ul>
+<li><a href="S_finitesets.html" data-scroll="S_finitesets">Finite Sets</a></li>
+<li><a href="S_infinitesets.html" data-scroll="S_infinitesets">Countable Sets</a></li>
+<li><a href="S_uncountablesets.html" data-scroll="S_uncountablesets">Uncountable Sets</a></li>
+<li><a href="section-45.html" data-scroll="section-45">Chapter 9 Summary</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="C_writingguides.html" data-scroll="C_writingguides"><span class="codenumber">A</span> <span class="title">Guidelines for Writing Mathematical Proofs</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="S_recursion"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.3</span> <span class="title">Induction and Recursion</span>
+</h2>
+<section class="worksheet" id="PA_recursivesequences"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Beginning Activity 1: Recursively Defined Sequences</span><div class="print-links">
+<a href="PA_recursivesequences-A4.html" class="a4">A4</a><a href="PA_recursivesequences-letter.html" class="us">US</a>
+</div>
+</h3>
+<p id="p-2140">In a proof by mathematical induction, we “start with a first step” and then prove that we can always go from one step to the next step. We can use this same idea to define a sequence as well. We can think of a <dfn class="terminology">sequence</dfn>  as an infinite list of numbers that are indexed by the natural numbers (or some infinite subset of \(\mathbb{N} \cup \left\{ 0 \right\}\)). We often write a sequence in the following form:</p>
+<div class="displaymath">
+\begin{equation*}
+a_1, a_2, \ldots,a_n, \ldots\text{.}
+\end{equation*}
+</div>
+<p id="p-2141">The number \(a_n\) is called the \(n^\text{ th }\) term of the sequence. One way to define a sequence is to give a specific formula for the \(n^\text{ th }\) term of the sequence such as \(a_n = \dfrac{1}{n}\text{.}\)</p>
+<p id="p-2142">Another way to define a sequence is to give a specific definition of the first term (or the first few terms) and then state, in general terms, how to determine \(a_{n + 1}\) in terms of \(n\) and the first \(n\) terms \(a_1 ,a_2 , \ldots ,a_n\text{.}\) This process is known as <dfn class="terminology">definition by recursion</dfn> and is  also called a <dfn class="terminology">recursive definition</dfn>.  The specific definition of the first term is called the <dfn class="terminology">initial condition</dfn>,  and the general definition of \(a_{n + 1}\) in terms of \(n\) and the first \(n\) terms \(a_1 ,a_2 , \ldots ,a_n\) is called the <dfn class="terminology">recurrence relation</dfn>.  (When more than one term is defined explicitly, we say that these are the initial conditions.) For example, we can define a sequence recursively as follows: <blockquote class="blockquote" id="blockquote-151">\(b_1 = 16\text{,}\) and for each \(n \in \mathbb{N}\text{,}\) \(b_{n + 1} = \dfrac{1}{2}b_n\text{.}\)</blockquote></p>
+<p id="p-2143">Using \(n = 1\) and then \(n = 2\text{,}\) we then see that</p>
+<div class="displaymath">
+\begin{align*}
+b_2 \amp = \frac{1}{2} b_1 \amp     b_3 \amp = \frac{1}{2} b_2\\
+\amp = \frac{1}{2} \cdot 16 \amp     \amp = \frac{1}{2} \cdot 8\\
+\amp = 8                    \amp     \amp = 4
+\end{align*}
+</div>
+<article class="exercise exercise-like" id="PA_recursivesequences1"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-2144">Calculate \(b_4\) through \(b_{10}\text{.}\) What seems to be happening to the values of \(b_n\) as \(n\) gets larger?</p></article><article class="exercise exercise-like" id="PA_recursivesequences2"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-2145">Define a sequence recursively as follows: <blockquote class="blockquote" id="blockquote-152">\(T_1 = 16\text{,}\) and for each \(n \in \mathbb{N}\text{,}\) \(T_{n + 1} = 16 + \dfrac{1}{2}T_n\text{.}\)</blockquote> Then \(T_2 = 16 + \dfrac{1}{2} T_1 = 16 + 8 = 24\text{.}\) Calculate \(T_3\) through \(T_{10}\text{.}\) What seems to be happening to the values of \(T_n\) as \(n\) gets larger?</p></article><p id="p-2146">The sequences in <a class="xref" data-knowl="./knowl/PA_recursivesequences1.html" title="Exercise 1">Exercise 1</a> and <a class="xref" data-knowl="./knowl/PA_recursivesequences2.html" title="Exercise 2">Exercise 2</a> can be generalized as follows: Let \(a\) and \(r\) be real numbers. Define two sequences recursively as follows: <blockquote class="blockquote" id="blockquote-153">\(a_1 = a\text{,}\) and for each \(n \in \mathbb{N}\text{,}\) \(a_{n + 1} = r \cdot a_n\text{.}\)</blockquote> <blockquote class="blockquote" id="blockquote-154">\(S_1 = a\text{,}\) and for each \(n \in \mathbb{N}\text{,}\) \(S_{n + 1} = a + r \cdot S_n\text{.}\)</blockquote></p>
+<article class="exercise exercise-like" id="exercise-370"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-2147">Determine formulas (in terms of \(a\) and \(r\)) for \(a_2\) through \(a_6\text{.}\) What do you think \(a_n\) is equal to (in terms of \(a\text{,}\) \(r\text{,}\) and \(n\))?</p></article><article class="exercise exercise-like" id="exercise-371"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-2148">Determine formulas (in terms of \(a\) and \(r\)) for \(S_2\) through \(S_6\text{.}\) What do you think \(S_n\) is equal to (in terms of \(a\text{,}\) \(r\text{,}\) and \(n\))?</p></article><p id="p-2149">In <a href="S_otherinduction.html#PA_factorials" class="internal" title="Worksheet: Beginning Activity 1: Exploring a Proposition about Factorials">Beginning Activity 1 </a> in <a href="S_otherinduction.html" class="internal" title="Section 4.2: Other Forms of Mathematical Induction">Section 4.2</a>, for each natural number \(n\text{,}\) we defined \(n!\text{,}\) read <dfn class="terminology">\(n\) factorial</dfn>,  as the product of the first \(n\) natural numbers. We also defined \(0!\) to be equal to 1. Now recursively define a sequence of numbers \(a_0 ,a_1 ,a_2 , \ldots\) as follows: <blockquote class="blockquote" id="blockquote-155">\(a_0 = 1\text{,}\) and</blockquote> <blockquote class="blockquote" id="blockquote-156">for each nonnegative integer \(n\text{,}\) \(a_{n + 1} = \left( {n + 1} \right) \cdot a_n\text{.}\)</blockquote></p>
+<p id="p-2150">Using \(n=0\text{,}\) we see that this implies that \(a_1 =1 \cdot a_0 = 1 \cdot 1 = 1\text{.}\) Then using \(n = 1\text{,}\) we see that</p>
+<div class="displaymath">
+\begin{equation*}
+a_2 = 2 a_1 = 2 \cdot 1 = 2\text{.}
+\end{equation*}
+</div>
+<article class="exercise exercise-like" id="exercise-372"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-2151">Calculate \(a_3, a_4, a_5\text{,}\) and \(a_6\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-373"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-2152">Do you think that it is possible to calculate \(a_{20}\) and \(a_{100}\text{?}\) Explain.</p></article><article class="exercise exercise-like" id="exercise-374"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-2153">Do you think it is possible to calculate \(a_n\) for any natural number \(n\text{?}\) Explain.</p></article><article class="exercise exercise-like" id="exercise-375"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="p-2154">Compare the values of \(a_0 ,a_1 ,a_2 ,a_3 ,a_4 ,a_5\text{,}\) and \(a_6\) with those of \(0!,1!,2!,3!,4!,5!\text{,}\) and \(6!\text{.}\) What do you observe? We will use mathematical induction to prove a result about this sequence in <a class="xref" data-knowl="./knowl/exer_sec51-factorial.html" title="Exercise 1">Exercise 1</a>.</p></article></section><section class="worksheet" id="PA_fibonaccinumbers"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Beginning Activity 2: The Fibonacci Numbers</span><div class="print-links">
+<a href="PA_fibonaccinumbers-A4.html" class="a4">A4</a><a href="PA_fibonaccinumbers-letter.html" class="us">US</a>
+</div>
+</h3>
+<p id="p-2155">The <dfn class="terminology">Fibonacci numbers</dfn>  are a sequence of natural numbers \(f_1 ,f_2 ,f_3 , \ldots ,f_n , \ldots\) defined recursively as follows:</p>
+<ul class="disc">
+<li id="li-309"><p id="p-2156">\(f_1 = 1\) and \(f_2 = 1\text{,}\) and</p></li>
+<li id="li-310"><p id="p-2157">For each natural number \(n\text{,}\) \(f_{n + 2} = f_{n + 1} + f_n\text{.}\)</p></li>
+</ul>
+<p class="continuation">In words, the recursion formula states that for any natural number \(n\) with \(n \geq 3\text{,}\) the \(n^{th}\) Fibonacci number is the sum of the two previous Fibonacci numbers. So we see that</p>
+<div class="displaymath">
+\begin{align*}
+f_3  \amp = f_2  + f_1  = 1 + 1 = 2,\\
+f_4  \amp = f_3  + f_2  = 2 + 1 = 3, \text{ and }\\
+f_5  \amp = f_4  + f_3 = 3 + 2 = 5\text{.}
+\end{align*}
+</div>
+<article class="exercise exercise-like" id="exercise-376"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-2158">Calculate \(f_6\) through \(f_{20}\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-377"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-2159">Which of the Fibonacci numbers \(f_1\) through \(f_{20}\) are even? Which are multiples of 3?</p></article><article class="exercise exercise-like" id="exercise-378"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-2160">For \(n = 2\text{,}\) \(n = 3\text{,}\) \(n = 4\text{,}\) and \(n = 5\text{,}\) how is the sum of the first \((n - 1)\) Fibonacci numbers related to the \((n + 1)^{st}\) Fibonacci number?</p></article><article class="exercise exercise-like" id="exercise-379"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-2161">Record any other observations about the values of the Fibonacci numbers or any patterns that you observe in the sequence of Fibonacci numbers. If necessary, compute more Fibonacci numbers.</p></article></section><section class="subsection" id="subsection-80"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">The Fibonacci Numbers</span>
+</h3>
+<p id="p-2162">The Fibonacci numbers form a famous sequence in mathematics that was investigated by Leonardo of Pisa  (1170 — 1250), who is better known as Fibonacci. Fibonacci introduced this sequence to the Western world as a solution of the following problem: <blockquote class="blockquote" id="blockquote-157">Suppose that a pair of adult rabbits (one male, one female) produces a pair of rabbits (one male, one female) each month.  Also, suppose that newborn rabbits become adults in two months and produce another pair of rabbits.  Starting with one adult pair of rabbits, how many pairs of rabbits will be produced each month for one year?</blockquote></p>
+<p id="p-2163">Since we start with one adult pair, there will be one pair produced the first month, and since there is still only one adult pair, one pair will also be produced in the second month (since the new pair produced in the first month is not yet mature). In the third month, two pairs will be produced, one by the original pair and one by the pair which was produced in the first month. In the fourth month, three pairs will be produced, and in the fifth month, five pairs will be produced.</p>
+<p id="p-2164">The basic rule is that in a given month after the first two months, the number of adult pairs is the number of adult pairs one month ago plus the number of pairs born two months ago. This is summarized in <a class="xref" data-knowl="./knowl/T_fibonacci.html" title="Table 4.3.1: Fibonacci Numbers">Table 4.3.1</a>, where the number of pairs produced is equal to the number of adult pairs, and the number of adult pairs follows the Fibonacci sequence of numbers that we developed in <a href="S_recursion.html#PA_fibonaccinumbers" class="internal" title="Worksheet: Beginning Activity 2: The Fibonacci Numbers">Beginning Activity 2 </a>.</p>
+<figure class="table table-like" id="T_fibonacci"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.3.1<span class="period">.</span></span><span class="space"> </span>Fibonacci Numbers</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b3 r2 l0 t0 lines">Months</td>
+<td class="c m b3 r2 l0 t0 lines">1</td>
+<td class="c m b3 r2 l0 t0 lines">2</td>
+<td class="c m b3 r2 l0 t0 lines">3</td>
+<td class="c m b3 r2 l0 t0 lines">4</td>
+<td class="c m b3 r2 l0 t0 lines">5</td>
+<td class="c m b3 r2 l0 t0 lines">6</td>
+<td class="c m b3 r2 l0 t0 lines">7</td>
+<td class="c m b3 r2 l0 t0 lines">8</td>
+<td class="c m b3 r2 l0 t0 lines">9</td>
+<td class="c m b3 r0 l0 t0 lines">10</td>
+</tr>
+<tr>
+<td class="c m b1 r2 l0 t0 lines">Adult Pairs</td>
+<td class="c m b1 r2 l0 t0 lines">1</td>
+<td class="c m b1 r2 l0 t0 lines">1</td>
+<td class="c m b1 r2 l0 t0 lines">2</td>
+<td class="c m b1 r2 l0 t0 lines">3</td>
+<td class="c m b1 r2 l0 t0 lines">5</td>
+<td class="c m b1 r2 l0 t0 lines">8</td>
+<td class="c m b1 r2 l0 t0 lines">13</td>
+<td class="c m b1 r2 l0 t0 lines">21</td>
+<td class="c m b1 r2 l0 t0 lines">34</td>
+<td class="c m b1 r0 l0 t0 lines">55</td>
+</tr>
+<tr>
+<td class="c m b1 r2 l0 t0 lines">Newborn Pairs</td>
+<td class="c m b1 r2 l0 t0 lines">1</td>
+<td class="c m b1 r2 l0 t0 lines">1</td>
+<td class="c m b1 r2 l0 t0 lines">2</td>
+<td class="c m b1 r2 l0 t0 lines">3</td>
+<td class="c m b1 r2 l0 t0 lines">5</td>
+<td class="c m b1 r2 l0 t0 lines">8</td>
+<td class="c m b1 r2 l0 t0 lines">13</td>
+<td class="c m b1 r2 l0 t0 lines">21</td>
+<td class="c m b1 r2 l0 t0 lines">34</td>
+<td class="c m b1 r0 l0 t0 lines">55</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">Month-Old Pairs</td>
+<td class="c m b0 r2 l0 t0 lines">0</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">1</td>
+<td class="c m b0 r2 l0 t0 lines">2</td>
+<td class="c m b0 r2 l0 t0 lines">3</td>
+<td class="c m b0 r2 l0 t0 lines">5</td>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+<td class="c m b0 r2 l0 t0 lines">13</td>
+<td class="c m b0 r2 l0 t0 lines">21</td>
+<td class="c m b0 r0 l0 t0 lines">34</td>
+</tr>
+</table></div></figure><p id="p-2165">Historically, it is interesting to note that Indian mathematicians were studying these types of numerical sequences well before Fibonacci. In particular, about fifty years before Fibonacci introduced his sequence, Acharya Hemachandra (sometimes spelled Hemchandra)  (1089 — 1173) considered the following problem, which is from the biography of Hemachandra in the <span class="booktitle">MacTutor History of Mathematics Archive</span> at <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Hemchandra/" target="_blank"><code class="code-inline tex2jax_ignore">mathshistory.st-andrews.ac.uk/Biographies/Hemchandra</code></a>. <blockquote class="blockquote" id="blockquote-158">Suppose we assume that lines are composed of syllables which are either short or long. Suppose also that each long syllable takes twice as long to articulate as a short syllable. A line of length \(n\) contains \(n\) units where each short syllable is one unit and each long syllable is two units. Clearly a line of length \(n\) units takes the same time to articulate regardless of how it is composed. Hemchandra asks: How many different combinations of short and long syllables are possible in a line of length \(n\text{?}\)</blockquote></p>
+<p id="p-2166">This is an important problem in the Sanskrit language since Sanskrit meters are based on duration rather than on accent as in the English Language. The answer to this question generates a sequence similar to the Fibonacci sequence. Suppose that \(h_n\) is the number of patterns of syllables of length \(n\text{.}\) We then see that \(h_1 = 1\) and \(h_2 = 2\text{.}\) Now let \(n\) be a natural number and consider pattern of length \(n + 2\text{.}\) This pattern either ends in a short syllable or a long syllable. If it ends in a short syllable and this syllable is removed, then there is a pattern of length \(n+1\text{,}\) and there are \(h_{n+1}\) such patterns. Similarly, if it ends in a long syllable and this syllable is removed, then there is a pattern of length \(n\text{,}\) and there are \(h_n\) such patterns. From this, we conclude that</p>
+<div class="displaymath">
+\begin{equation*}
+h_{n+2} = h_{n+1} + h_n\text{.}
+\end{equation*}
+</div>
+<p class="continuation">This actually generates the sequence 1, 2, 3, 5, 8, 13, 21, …. For more information about Hemachandra, see the article <span class="articletitle">“Math for Poets and Drummers”</span> by Rachel Wells Hall in the February 2008 issue of <span class="booktitle">Math Horizons</span>.</p>
+<p id="p-2167">We will continue to use the Fibonacci sequence in this book. This sequence may not seem all that important or interesting. However, it turns out that this sequence occurs in nature frequently and has applications in computer science. There is even a scholarly journal, <span class="booktitle">The Fibonacci Quarterly</span>,  devoted to the Fibonacci numbers.</p>
+<p id="p-2168">The sequence of Fibonacci numbers is one of the most studied sequences in mathematics, due mainly to the many beautiful patterns it contains. Perhaps one observation you made in <a href="S_recursion.html#PA_fibonaccinumbers" class="internal" title="Worksheet: Beginning Activity 2: The Fibonacci Numbers">Beginning Activity 2 </a> is that every third Fibonacci number is even. This can be written as a proposition as follows:</p>
+<div class="displaymath">
+\begin{equation*}
+\text{ For each natural number }  n, f_{3n} \text{ is an even natural number }\text{.}
+\end{equation*}
+</div>
+<p class="continuation">As with many propositions associated with definitions by recursion, we can prove this using mathematical induction. The first step is to define the appropriate open sentence. For this, we can let \(P(n)\) be, “\(f_{3n}\) is an even natural number.”</p>
+<p id="p-2169">Notice that \(P( 1 )\) is true since \(f_3 = 2\text{.}\) We now need to prove the inductive step. To do this, we need to prove that for each \(k \in \mathbb{N}\text{,}\) <blockquote class="blockquote" id="blockquote-159">if \(P( k )\) is true, then \(P( {k + 1} )\) is true.</blockquote> That is, we need to prove that for each \(k \in \mathbb{N}\text{,}\) if \(f_{3k}\) is even, then \(f_{3\left( {k + 1} \right)}\) is even.</p>
+<p id="p-2170">So let's analyze this conditional statement using a know-show table.</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="l m b2 r3 l0 t0 lines">Step</th>
+<th class="l m b2 r2 l0 t0 lines">Know</th>
+<th class="l m b2 r0 l0 t0 lines">Reason</th>
+</tr>
+<tr>
+<td class="l m b2 r3 l0 t0 lines">\(P\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(f_{3k}\)  is even.</td>
+<td class="l m b2 r0 l0 t0 lines">Inductive hypothesis</td>
+</tr>
+<tr>
+<td class="l m b2 r3 l0 t0 lines">\(P1\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(\left( {\exists m \in \mathbb{N}} \right)\left( {f_{3k}  = 2m} \right)\)</td>
+<td class="l m b2 r0 l0 t0 lines">Definition of “even integer”</td>
+</tr>
+<tr>
+<td class="l m b2 r3 l0 t0 lines">\(\vdots\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(\vdots\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(\vdots\)</td>
+</tr>
+<tr>
+<td class="l m b1 r3 l0 t0 lines">\(Q1\)</td>
+<td class="l m b1 r2 l0 t0 lines">\(\left( {\exists q \in \mathbb{N}} \right)
+\left( {f_{3\left( {k + 1} \right)}  = 2q} \right)\)</td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b2 r3 l0 t0 lines">\(Q\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(f_{3\left( {k + 1} \right)}\) is even.</td>
+<td class="l m b2 r0 l0 t0 lines">Definition of “even integer”</td>
+</tr>
+<tr>
+<td class="l m b0 r3 l0 t0 lines">Step</td>
+<td class="l m b0 r2 l0 t0 lines">Show</td>
+<td class="l m b0 r0 l0 t0 lines">Reason</td>
+</tr>
+</table></div>
+<p id="p-2171">The key question now is, “Is there any relation between \(f_{3\left( {k + 1} \right)}\) and \(f_{3k}\text{?}\)” We can use the recursion formula that defines the Fibonacci sequence to find such a relation.</p>
+<p id="p-2172">The recurrence relation for the Fibonacci sequence states that a Fibonacci number (except for the first two) is equal to the sum of the two previous Fibonacci numbers. If we write \(3\left( {k + 1} \right) = 3k + 3\text{,}\) then we get \(f_{3\left( {k + 1} \right)}  = f_{3k + 3}\text{.}\) For \(f_{3k + 3}\text{,}\) the two previous Fibonacci numbers are \(f_{3k + 2}\) and \(f_{3k + 1}\text{.}\) This means that</p>
+<div class="displaymath">
+\begin{equation*}
+f_{3k + 3}  = f_{3k + 2}  + f_{3k + 1}\!\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Using this and continuing to use the Fibonacci relation, we obtain the following:</p>
+<div class="displaymath">
+\begin{align*}
+f_{3\left( {k + 1} \right)} \amp = f_{3k + 3}\\
+\amp = f_{3k + 2}  + f_{3k + 1}\\
+\amp = \left( {f_{3k + 1}  + f_{3k} } \right) + f_{3k + 1}\text{.}
+\end{align*}
+</div>
+<p class="continuation">The preceding equation states that \(f_{3\left( {k + 1} \right)} = 2f_{3k + 1} + f_{3k}\text{.}\) This equation can be used to complete the proof of the induction step.</p>
+<article class="exercise exercise-like" id="prog_thirdfibonacci"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">4.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Every Third Fibonacci Number Is Even.</span>
+</h6>
+<p id="p-2173">Complete the proof of <a class="xref" data-knowl="./knowl/P_thirdfibonacci.html" title="Proposition 4.3.3">Proposition 4.3.3</a>. <article class="proposition theorem-like" id="P_thirdfibonacci"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">4.3.3</span><span class="period">.</span>
+</h6>
+<p id="p-2174">For each natural number \(n\text{,}\) the Fibonacci number \(f_{3n}\) is an even natural number.</p></article></p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-19" id="hint-19"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-19"><div class="hint solution-like"><p id="p-2175">We have already defined the predicate \(P\left( n \right)\) to be used in an induction proof and have proved the basis step. Use the information in and after the preceding know-show table to help prove that if \(f_{3k}\) is even, then \(f_{3\left( {k + 1} \right)}\) is even.</p></div></div>
+</div></article></section><section class="subsection" id="geomseq"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Geometric Sequences and Geometric Series</span>
+</h3>
+<p id="p-2176">Let \(a,r \in \mathbb{R}\text{.}\) The following sequence was introduced in <a href="S_recursion.html#PA_recursivesequences" class="internal" title="Worksheet: Beginning Activity 1: Recursively Defined Sequences">Beginning Activity 1 </a>.</p>
+<div class="displaymath">
+\begin{align*}
+\text{Initial condition:  } \amp a_1 = a\\
+\text{Recurrence relation:  } \amp \text{For each } n \in \N, a_{n + 1} = 
+r \cdot a_n\text{.}
+\end{align*}
+</div>
+<p id="p-2177">This is a recursive definition for a <dfn class="terminology">geometric sequence</dfn>  with <dfn class="terminology">initial term</dfn> \(a\) and (common) <dfn class="terminology">ratio</dfn> \(r\text{.}\) The basic idea is that the next term in the sequence is obtained by multiplying the previous term by the ratio \(r\text{.}\) The work in <a href="S_recursion.html#PA_recursivesequences" class="internal" title="Worksheet: Beginning Activity 1: Recursively Defined Sequences">Beginning Activity 1 </a> suggests that the following proposition is true. <article class="theorem theorem-like" id="P_geometricsequence"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.4</span><span class="period">.</span>
+</h6>
+<p id="p-2178">Let \(a, r \in \mathbb{R}\text{.}\) If a geometric sequence is defined by \(a_1 = a\) and for each \(n \in \mathbb{N}\text{,}\) \(a_{n + 1} = r \cdot a_n\text{,}\) then for each \(n \in \mathbb{N}\text{,}\) \(a_n = a \cdot r^{n - 1}\text{.}\)</p></article> The proof of this proposition is <a class="xref" data-knowl="./knowl/exer_geomseq.html" title="Exercise 6">Exercise 6</a>.</p>
+<p id="p-2179">Another sequence that was introduced in <a href="S_recursion.html#PA_recursivesequences" class="internal" title="Worksheet: Beginning Activity 1: Recursively Defined Sequences">Beginning Activity 1 </a> is related to geometric series and is defined as follows:</p>
+<div class="displaymath">
+\begin{align*}
+\text{Initial condition:  } \amp S_1 = a\\
+\text{Recurrence relation:  } \amp \text{For each } n \in \N, S_{n + 1} = 
+a + r \cdot S_n\text{.}
+\end{align*}
+</div>
+<p class="continuation">For each \(n \in \mathbb{N}\text{,}\) the term \(S_n\) is a (finite) <dfn class="terminology">geometric series</dfn>  with <dfn class="terminology">initial term</dfn> \(a\) and (common) <dfn class="terminology">ratio</dfn> \(r\text{.}\) The work in <a href="S_recursion.html#PA_recursivesequences" class="internal" title="Worksheet: Beginning Activity 1: Recursively Defined Sequences">Beginning Activity 1 </a> suggests that the following proposition is true.</p>
+<article class="theorem theorem-like" id="P_geometricseries"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.5</span><span class="period">.</span>
+</h6>
+<p id="p-2180">Let \(a, r \in \mathbb{R}\text{.}\) If the sequence \(S_1 ,S_2 , \ldots ,S_n , \ldots\) is defined by \(S_1 = a\) and for each \(n \in \mathbb{N}\text{,}\) \(S_{n + 1} = a + r \cdot S_n\text{,}\) then for each \(n \in \mathbb{N}\text{,}\) \(S_n = a + a \cdot r + a \cdot r^2 + \cdots + a \cdot r^{n - 1}\text{.}\) That is, the geometric series \(S_n\) is the sum of the first \(n\) terms of the corresponding geometric sequence.</p></article><p id="p-2181">The proof of <a class="xref" data-knowl="./knowl/P_geometricseries.html" title="Theorem 4.3.5">Theorem 4.3.5</a> is <a class="xref" data-knowl="./knowl/exer_geomser.html" title="Exercise 7">Exercise 7</a>. The recursive definition of a geometric series and <a class="xref" data-knowl="./knowl/P_geometricseries.html" title="Theorem 4.3.5">Theorem 4.3.5</a> give two different ways to look at geometric series. <a class="xref" data-knowl="./knowl/P_geometricseries.html" title="Theorem 4.3.5">Theorem 4.3.5</a> represents a geometric series as the sum of the first \(n\) terms of the corresponding geometric sequence. Another way to determine the sum of a geometric series is given in <a class="xref" data-knowl="./knowl/P_geometricseries2.html" title="Theorem 4.3.6">Theorem 4.3.6</a>, which gives a formula for the sum of a geometric series that does not use a summation. <article class="theorem theorem-like" id="P_geometricseries2"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.3.6</span><span class="period">.</span>
+</h6>
+<p id="p-2182">Let \(a, r \in \mathbb{R}\) and \(r \ne 1\text{.}\) If the sequence \(S_1 ,S_2 , \ldots ,S_n , \ldots\) is defined by \(S_1 = a\) and for each \(n \in \mathbb{N}\text{,}\) \(S_{n + 1} = a + r \cdot S_n\text{,}\) then for each \(n \in \mathbb{N}\text{,}\) \(S_n = a\left( {\dfrac{{1 - r^n }}{{1 - r}}} \right)\text{.}\)</p></article></p>
+<p id="p-2183">The proof of <a class="xref" data-knowl="./knowl/P_geometricseries2.html" title="Theorem 4.3.6">Theorem 4.3.6</a> is <a class="xref" data-knowl="./knowl/exer_geometricseries2.html" title="Exercise 8">Exercise 8</a>.</p></section><section class="exercises" id="exercises-15"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exer_sec51-factorial"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-2184">For the sequence \(a_{0}, a_1 ,a_2 , \ldots , a_n , \ldots\) , assume that \(a_0 = 1\) and that for each \(n \in \mathbb{N} \cup \left\{ 0 \right\}\text{,}\) \(a_{n + 1} = \left( {n + 1} \right)a_n\text{.}\) Use mathematical induction to prove that for each \(n \in \mathbb{N} \cup \left\{ 0 \right\}\text{,}\) \(a_n = n!\text{.}\)</p></article><article class="exercise exercise-like" id="exer_sec53-fib"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-2185">Assume that \(f_1 ,f_2 , \ldots ,f_n , \ldots\) are the Fibonacci numbers. Prove each of the following: <article class="task exercise-like" id="task-776"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2186">For each \(n \in \mathbb{N}\text{,}\) \(f_{4n}\) is a multiple of 3.</p></article> <article class="task exercise-like" id="task-777"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2187">For each \(n \in \mathbb{N}\text{,}\) \(f_{5n}\) is a multiple of 5.</p></article> <article class="task exercise-like" id="task-778"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2188">For each \(n \in \mathbb{N}\) with \(n \geq 2\text{,}\) \(f_1 + f_2 + \cdots + f_{n - 1} = f_{n + 1} - 1\text{.}\)</p></article> <article class="task exercise-like" id="task-779"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-2189">For each \(n \in \mathbb{N}\text{,}\) \(f_1 + f_3 + \cdots + f_{2n - 1} = f_{2n}\text{.}\)</p></article> <article class="task exercise-like" id="task-780"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-2190">For each \(n \in \mathbb{N}\text{,}\) \(f_2 + f_4 + \cdots + f_{2n} = f_{2n + 1} - 1\text{.}\)</p></article> <article class="task exercise-like" id="exer_sec53-fibf"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-2191">For each \(n \in \mathbb{N}\text{,}\) \(f_1^2 + f_2^2 + \cdots + f_n^2 = f_n f_{n + 1}\text{.}\)</p></article> <article class="task exercise-like" id="task-782"><h6 class="heading"><span class="codenumber">(g)</span></h6>
+<p id="p-2192">For each \(n \in \mathbb{N}\) such that \(n\not \equiv 0 \pmod 3\text{,}\) \(f_n\) is an odd integer.</p></article></p></article><article class="exercise exercise-like" id="exercise-383"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-2193">Use the result in <a class="xref" data-knowl="./knowl/exer_sec53-fibf.html" title="Task f">Task f</a> of <a class="xref" data-knowl="./knowl/exer_sec53-fib.html" title="Exercise 2">Exercise 2</a> to prove that</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{f_1^2  + f_2^2  +  \cdots  + f_n^2 + f_{n+1}^2}{f_1^2  + f_2^2  +  \cdots  
++ f_n^2} = 1 + \frac{f_{n+1}}{f_n}\text{.}
+\end{equation*}
+</div></article><article class="exercise exercise-like" id="exer_binet"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-2194">The quadratic formula can be used to show that \(\alpha = \dfrac{1 + \sqrt{5}}{2}\) and \(\beta = \dfrac{1 - \sqrt{5}}{2}\) are the two real number solutions of the quadratic equation \(x^2 - x - 1 = 0\text{.}\) Notice that this implies that</p>
+<div class="displaymath">
+\begin{align*}
+\alpha^2 \amp = \alpha + 1, \text{ and }\\
+\beta^2 \amp = \beta + 1\text{.}
+\end{align*}
+</div>
+<p class="continuation">It may be surprising to find out that these two irrational numbers are closely related to the Fibonacci numbers. <article class="task exercise-like" id="exer_bineta"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2195">Verify that \(f_1 = \dfrac{\alpha^1 - \beta^1}{\alpha - \beta}\) and that \(f_2 = \dfrac{\alpha^2 - \beta^2}{\alpha - \beta}\text{.}\)</p></article> <article class="task exercise-like" id="task-784"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2196">(This part is optional, but it may help with the induction proof in <a class="xref" data-knowl="./knowl/exer_binetc.html" title="Task c">Task c</a>.) Work with the relation \(f_3 = f_2 + f_1\) and substitute the expressions for \(f_1\) and \(f_2\) from <a class="xref" data-knowl="./knowl/exer_bineta.html" title="Task a">Task a</a> Rewrite the expression as a single fraction and then in the numerator use \(\alpha^2 + \alpha = \alpha ( \alpha + 1 )\) and a similar equation involving \(\beta\text{.}\) Now prove that \(f_3 = \dfrac{\alpha^3 - \beta^3}{\alpha - \beta}\text{.}\)</p></article> <article class="task exercise-like" id="exer_binetc"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2197">Use induction to prove that for each natural number \(n\text{,}\) if \(\alpha = \dfrac{1 + \sqrt{5}}{2}\) and \(\beta = \dfrac{1 - \sqrt{5}}{2}\text{,}\) then \(f_n = \dfrac{\alpha^n - \beta^n}{\alpha - \beta}\text{.}\)</p>
+<p id="p-2198">This formula for the \(n^{th}\) Fibonacci number is known as Binet's formula,  named after the French mathematician Jacques Binet (1786 — 1856).</p></article></p></article><article class="exercise exercise-like" id="exercise-385"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-2199">Is the following conjecture true or false? <article class="conjecture theorem-like" id="conjecture-3"><h6 class="heading">
+<span class="type">Conjecture</span><span class="space"> </span><span class="codenumber">4.3.7</span><span class="period">.</span>
+</h6>
+<p id="p-2200">Let \(f_1, f_2, \ldots,
+f_m, \ldots\) be the sequence of the Fibonacci numbers. For each natural number \(n\text{,}\) the numbers \(f_nf_{n+3}\text{,}\) \(2f_{n+1}f_{n+2}\text{,}\) and \(\left( f_{n+1}^2 + f_{n+2}^2 \right)\) form a Pythagorean triple.</p></article></p></article><article class="exercise exercise-like" id="exer_geomseq"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-2201">Prove <a class="xref" data-knowl="./knowl/P_geometricsequence.html" title="Theorem 4.3.4">Theorem 4.3.4</a>. Let \(a,r \in \mathbb{R}\text{.}\) If a geometric sequence is defined by \(a_1 = a\) and for each \(n \in \mathbb{N}\text{,}\) \(a_{n + 1} = r \cdot a_n\text{,}\) then for each \(n \in \mathbb{N}\text{,}\) \(a_n = a \cdot r^{n - 1}\text{.}\)</p></article><article class="exercise exercise-like" id="exer_geomser"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-2202">Prove <a class="xref" data-knowl="./knowl/P_geometricseries.html" title="Theorem 4.3.5">Theorem 4.3.5</a>. Let \(a,r \in \mathbb{R}\text{.}\) If the sequence \(S_1 ,S_2 , \ldots ,S_n , \ldots\) is defined by \(S_1 = a\) and for each \(n \in \mathbb{N}\text{,}\) \(S_{n + 1} = a + r \cdot S_n\text{,}\) then for each \(n \in \mathbb{N}\text{,}\) \(S_n = a + a \cdot r + a \cdot r^2 + \cdots + a \cdot r^{n - 1}\text{.}\) That is, the geometric series \(S_n\) is the sum of the first \(n\) terms of the corresponding geometric sequence.</p></article><article class="exercise exercise-like" id="exer_geometricseries2"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="p-2203">Prove <a class="xref" data-knowl="./knowl/P_geometricseries2.html" title="Theorem 4.3.6">Theorem 4.3.6</a>. Let \(a, r \in \mathbb{R}\) and \(r \ne 1\text{.}\) If the sequence \(S_1 ,S_2 , \ldots ,S_n , \ldots\) is defined by \(S_1 = a\) and for each \(n \in \mathbb{N}\text{,}\) \(S_{n + 1} = a + r \cdot S_n\text{,}\) then for each \(n \in \mathbb{N}\text{,}\) \(S_n = a\left( {\dfrac{{1 - r^n }}{{1 - r}}} \right)\text{.}\)</p></article><article class="exercise exercise-like" id="exer_sec53-arithexample"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="p-2204">For the sequence \(a_1 ,a_2 , \ldots ,a_n , \ldots\) , assume that \(a_1 = 2\) and that for each \(n \in \mathbb{N}\text{,}\) \(a_{n + 1} = a_n + 5\text{.}\) <article class="task exercise-like" id="task-786"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2205">Calculate \(a_2\) through \(a_6\text{.}\)</p></article> <article class="task exercise-like" id="exer_sec53-arithexampleb"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2206">Make a conjecture for a formula for \(a_n\) for each \(n \in \mathbb{N}\text{.}\)</p></article> <article class="task exercise-like" id="task-788"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2207">Prove that your conjecture in <a class="xref" data-knowl="./knowl/exer_sec53-arithexampleb.html" title="Task b">Task b</a> is correct.</p></article></p></article><article class="exercise exercise-like" id="exer_sec53-arith"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<p id="p-2208">The sequence in <a class="xref" data-knowl="./knowl/exer_sec53-arithexample.html" title="Exercise 9">Exercise 9</a> is an example of an <dfn class="terminology">arithmetic sequence</dfn>.  An arithmetic sequence is defined recursively as follows: <blockquote class="blockquote" id="blockquote-160">Let \(c\) and \(d\) be real numbers. Define the sequence \(a_1 ,a_2 , \ldots ,a_n , \ldots\) by \(a_1 = c\) and for each \(n \in \mathbb{N}\text{,}\) \(a_{n + 1} = a_n + d\text{.}\)</blockquote> <article class="task exercise-like" id="task-789"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2209">Determine formulas for \(a_3\) through \(a_8\text{.}\)</p></article> <article class="task exercise-like" id="exer_sec53-arithb"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2210">Make a conjecture for a formula for \(a_n\) for each \(n \in \mathbb{N}\text{.}\)</p></article> <article class="task exercise-like" id="task-791"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2211">Prove that your conjecture in <a class="xref" data-knowl="./knowl/exer_sec53-arithb.html" title="Task b">Task b</a> is correct.</p></article></p></article><article class="exercise exercise-like" id="exercise-391"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
+<p id="p-2212">For the sequence \(a_1 ,a_2 , \ldots ,a_n , \ldots\) , assume that \(a_1 = 1\text{,}\) \(a_2 = 5\text{,}\) and that for each \(n \in \mathbb{N}\) with \(n\geq 2\text{,}\) \(a_{n + 1} = a_n + 2a_{n-1}\text{.}\) Prove that for each natural number \(n\text{,}\) \(a_n = 2^n + (-1)^n\text{.}\)</p></article><article class="exercise exercise-like" id="exer_sec53-5"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
+<p id="p-2213">For the sequence \(a_1 ,a_2 , \ldots ,a_n , \ldots\) , assume that \(a_1 = 1\) and that for each \(n \in \mathbb{N}\text{,}\) \(a_{n + 1} = \sqrt {5 + a_n }\text{.}\) <article class="task exercise-like" id="task-792"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2214">Calculate, or approximate, \(a_2\) through \(a_6\text{.}\)</p></article> <article class="task exercise-like" id="task-793"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2215">Prove that for each \(n \in \mathbb{N}\text{,}\) \(a_n \lt 3\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exer_sec53-6"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
+<p id="p-2216">For the sequence \(a_1 ,a_2 , \ldots ,a_n , \ldots\) , assume that \(a_1 = 1\text{,}\) \(a_2 = 3\text{,}\) and that for each \(n \in \mathbb{N}\text{,}\) \(a_{n + 2} = 3a_{n + 1} - 2a_n\text{.}\) <article class="task exercise-like" id="task-794"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2217">Calculate \(a_3\) through \(a_6\text{.}\)</p></article> <article class="task exercise-like" id="exer_536b"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2218">Make a conjecture for a formula for \(a_n\) for each \(n \in \mathbb{N}\text{.}\)</p></article> <article class="task exercise-like" id="task-796"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2219">Prove that your conjecture in <a class="xref" data-knowl="./knowl/exer_536b.html" title="Task b">Task b</a> is correct.</p></article></p></article><article class="exercise exercise-like" id="exer_sec53-7"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
+<p id="p-2220">For the sequence \(a_1 ,a_2 , \ldots ,a_n , \ldots\) , assume that \(a_1 = 1\text{,}\) \(a_2 = 1\text{,}\) and that for each \(n \in \mathbb{N}\text{,}\) \(a_{n + 2} = \dfrac{1}{2}\left( {a_{n + 1} + \dfrac{2}{{a_n }}} \right)\text{.}\) <article class="task exercise-like" id="task-797"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2221">Calculate \(a_3\) through \(a_6\text{.}\)</p></article> <article class="task exercise-like" id="task-798"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2222">Prove that for each \(n \in \mathbb{N}\text{,}\) \(1 \leq a_n \leq 2\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exer_sec53-8"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
+<p id="p-2223">For the sequence   \(a_1 ,a_2 , \ldots ,a_n , \ldots\text{,}\) assume that \(a_1=1\text{,}\) \(a_2=1\text{,}\) \(a_3=1\text{,}\) and for that each natural number \(n\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+a_{n+3} = a_{n+2} + a_{n+1} + a_n\text{.}
+\end{equation*}
+</div>
+<p class="continuation"><article class="task exercise-like" id="task-799"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2224">Compute \(a_4\text{,}\) \(a_5\text{,}\) \(a_6\text{,}\) and \(a_7\text{.}\)</p></article> <article class="task exercise-like" id="task-800"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2225">Prove that for each natural number \(n\) with \(n&gt;1\text{,}\) \(a_n \leq 2^{n-2}\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exer_factorial"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
+<p id="p-2226">For the sequence \(a_1, a_2, \ldots, a_n, \ldots\text{,}\) assume that \(a_1 = 1\text{,}\) and that for each natural number \(n\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+a_{n + 1} = a_n + n \cdot n!\text{.}
+\end{equation*}
+</div>
+<p class="continuation"><article class="task exercise-like" id="task-801"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2227">Compute \(n!\) for the first 10 natural numbers.</p></article> <article class="task exercise-like" id="task-802"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2228">Compute \(a_n\) for the first 10 natural numbers.</p></article> <article class="task exercise-like" id="exer_factorialc"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2229">Make a conjecture about a formula for \(a_n\) in terms of \(n\) that does not involve a summation or a recursion.</p></article> <article class="task exercise-like" id="task-804"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-2230">Prove your conjecture in <a class="xref" data-knowl="./knowl/exer_factorialc.html" title="Task c">Task c</a>.</p></article></p></article><article class="exercise exercise-like" id="exercise-397"><h6 class="heading"><span class="codenumber">17<span class="period">.</span></span></h6>
+<p id="p-2231">For the sequence \(a_1, a_2, \ldots,
+a_n, \ldots\) , assume that \(a_1 = 1\text{,}\) \(a_2 = 1\text{,}\) and for each \(n \in \N\text{,}\) \(a_{n+2} = a_{n+1} + 3a_n\text{.}\) Determine which terms in this sequence are divisible by 4 and prove that your answer is correct.</p></article><article class="exercise exercise-like" id="exer_lucasnumbers"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
+<p id="p-2232">The <dfn class="terminology">Lucas numbers</dfn>  are a sequence of natural numbers \(L_1, L_2, L_3, \ldots, L_n, \ldots \text{,}\) which are defined recursively as follows:</p>
+<ul class="disc">
+<li id="li-311"><p id="p-2233">\(L_1 = 1\) and \(L_2 = 3\text{,}\) and</p></li>
+<li id="li-312"><p id="p-2234">For each natural number \(n\text{,}\) \(L_{n+2} = L_{n+1} + L_n\text{.}\)</p></li>
+</ul>
+<p class="continuation">List the first 10 Lucas numbers and the first ten Fibonacci numbers and then prove each of the following propositions. The Second Principle of Mathematical Induction may be needed to prove some of these propositions. <article class="task exercise-like" id="task-805"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2235">For each natural number \(n\text{,}\) \(L_n = 2f_{n+1} - f_n\text{.}\)</p></article> <article class="task exercise-like" id="task-806"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2236">For each \(n \in \mathbb{N}\) with \(n \geq 2\text{,}\) \(5f_n = L_{n - 1} + L_{n + 1}\text{.}\)</p></article> <article class="task exercise-like" id="task-807"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2237">For each \(n \in \mathbb{N}\) with \(n \geq 3\text{,}\) \(L_n = f_{n + 2} - f_{n - 2}\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exer_lucasnumbers2"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
+<p id="p-2238">There is a formula for the Lucas numbers similar to the formula for the Fibonacci numbers in <a class="xref" data-knowl="./knowl/exer_binet.html" title="Exercise 4">Exercise 4</a>. Let \(\alpha = \dfrac{1 + \sqrt{5}}{2}\) and \(\beta = \dfrac{1 - \sqrt{5}}{2}\text{.}\) Prove that for each \(n \in \N\text{,}\) \(L_n = \alpha^n + \beta^n\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-400"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>
+<p id="p-2239">Use the result in <a class="xref" data-knowl="./knowl/exer_lucasnumbers2.html" title="Exercise 19">Exercise 19</a>, previously proven results from <a class="xref" data-knowl="./knowl/exer_lucasnumbers.html" title="Exercise 18">Exercise 18</a>, or mathematical induction to prove each of the following results about Lucas numbers and Fibonacci numbers. <article class="task exercise-like" id="task-808"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2240">For each \(n \in \mathbb{N}\text{,}\) \(L_n = \dfrac{{f_{2n} }}{{f_n }}\text{.}\)</p></article> <article class="task exercise-like" id="task-809"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2241">For each \(n \in \mathbb{N}\text{,}\) \(f_{n+1} = \dfrac{f_n + L_n}{2}\text{.}\)</p></article> <article class="task exercise-like" id="task-810"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2242">For each \(n \in \mathbb{N}\text{,}\) \(L_{n+1} = \dfrac{L_n +5f_n}{2}\text{.}\)</p></article> <article class="task exercise-like" id="task-811"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-2243">For each \(n \in \mathbb{N}\) with \(n \geq 2\text{,}\) \(L_n = f_{n+1} + f_{n-1}\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exercise-401"><h6 class="heading">
+<span class="codenumber">21<span class="period">.</span></span><span class="space"> </span><span class="title">Evaluation of Proofs.</span>
+</h6>
+<div class="introduction" id="introduction-36"><p id="p-2244">See the instructions for <a class="xref" data-knowl="./knowl/exer_proofeval.html" title="Exercise 19: Evaluation of Proofs">Exercise 19</a> from <a href="S_directproof.html" class="internal" title="Section 3.1: Direct Proofs">Section 3.1</a>.</p></div>
+<article class="task exercise-like" id="task-812"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<dl id="p-2245" class="description-list narrow">
+<dt id="li-313">Proposition</dt>
+<dd><p id="p-2246">Let \(f_n\) be the \(n^\text{ th }\) Fibonacci number, and let \(\alpha\) be the positive solution of the equation \(x^2 = x + 1\text{.}\) So \(\alpha = \dfrac{1 + \sqrt{5}}{2}\text{.}\) For each natural number \(n\text{,}\) \(f_n \leq \alpha^{n-1}\text{.}\)</p></dd>
+<dt id="li-314">Proof</dt>
+<dd>
+<p id="p-2247">We will use a proof by mathematical induction. For each natural number \(n\text{,}\) we let \(P( n )\) be, “\(f_n \leq \alpha^{n-1}\text{.}\)”</p>
+<p id="p-2248">We first note that \(P( 1 )\) is true since \(f_1 = 1\) and \(\alpha^0 = 1\text{.}\) We also notice that \(P( 2 )\) is true since \(f_2 = 1\) and, hence, \(f_2 \leq \alpha^1\text{.}\)</p>
+<p id="p-2249">We now let \(k\) be a natural number with \(k \geq 2\) and assume that \(P ( 1 )\text{,}\) \(P( 2 )\text{,}\) … , \(P( k )\) are all true. We now need to prove that \(P \left( k + 1 \right)\) is true or that \(f_{k+1} \leq \alpha^k\text{.}\)</p>
+<p id="p-2250">Since \(P( k -1 )\) and \(P ( k )\) are true, we know that \(f_{k-1} \leq \alpha^{k-2}\) and \(f_k \leq \alpha^{k-1}\text{.}\) Therefore,</p>
+<div class="displaymath">
+\begin{align*}
+f_{k + 1} \amp = f_k + f_{k-1}\\
+f_{k + 1} \amp \leq \alpha^{k-1} + \alpha^{k-2}\\
+f_{k + 1} \amp \leq \alpha^{k-2} \left(\alpha + 1 \right)\!\text{.}
+\end{align*}
+</div>
+<p class="continuation">We now use the fact that \(\alpha + 1 = \alpha^2\) and the preceding inequality to obtain</p>
+<div class="displaymath">
+\begin{align*}
+f_{k+1} \amp \leq \alpha^{k-2} \alpha^2\\
+f_{k+1} \amp \leq \alpha^k
+\end{align*}
+</div>
+<p class="continuation">This proves that if \(P( 1 )\text{,}\) \(P( 2 )\text{,}\) … , \(P( k )\) are true, then \(P(k + 1 )\) is true. Hence, by the Second Principle of Mathematical Induction, we conclude that for each natural number \(n\text{,}\) \(f_n \leq \alpha^{n-1}\text{.}\)</p>
+</dd>
+</dl></article></article><article class="activity project-like" id="exer_compoundinterest"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">25</span><span class="period">.</span><span class="space"> </span><span class="title">Compound Interest.</span>
+</h6>
+<div class="introduction" id="introduction-37">
+<p id="p-2251">Assume that  \(R\)  dollars is deposited in an account that has an interest rate of  \(i\)  for each compounding period. A compounding period is some specified time period such as a month or a year. For each integer  \(n\)  with  \(n \geq 0\text{,}\) let  \(V_n\) be the amount of money in an account at the end of the \(n\)th compounding period. Then</p>
+<div class="displaymath">
+\begin{align*}
+V_1 \amp = R + i \cdot R \amp V_2 \amp = V_1 + i \cdot V_1\\
+\amp = R \left( 1 + i \right) \amp \amp = \left( {1 + i} \right) V_1\\
+\amp \amp \amp = \left( {1 + i} \right)^2 R\text{.}
+\end{align*}
+</div>
+</div>
+<article class="task exercise-like" id="task-813"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2252">Explain why \(V_3 = V_2 + i \cdot V_2\text{.}\) Then use the formula for \(V_2\) to determine a formula for \(V_3\) in terms of \(i\) and \(R\text{.}\)</p></article><article class="task exercise-like" id="A_compoundinterest2"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2253">Determine a recurrence relation for \(V_{n + 1}\) in terms of \(i\) and \(V_n\text{.}\)</p></article><article class="task exercise-like" id="task-815"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2254">Write the recurrence relation in <a class="xref" data-knowl="./knowl/A_compoundinterest2.html" title="Task 25.b">Task 25.b</a> so that it is in the form of a recurrence relation for a geometric sequence. What is the initial term of the geometric sequence and what is the common ratio?</p></article><article class="task exercise-like" id="task-816"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-2255">Use <a class="xref" data-knowl="./knowl/P_geometricsequence.html" title="Theorem 4.3.4">Theorem 4.3.4</a> to determine a formula for \(V_n\) in terms of \(I\text{,}\) \(R\text{,}\) and \(n\text{.}\)</p></article></article><article class="activity project-like" id="exer_annuity"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">26</span><span class="period">.</span><span class="space"> </span><span class="title">The Future Value of an Ordinary Annuity.</span>
+</h6>
+<div class="introduction" id="introduction-38">
+<p id="p-2256">For an <dfn class="terminology">ordinary annuity</dfn>,  \(R\) dollars is deposited in an account at the end of each compounding period. It is assumed that the interest rate, \(i\text{,}\) per compounding period for the account remains constant. Let \(S_t\) represent the amount in the account at the end of the \(t\)th compounding period. \(S_t\) is frequently called the <dfn class="terminology">future value</dfn>  of the ordinary annuity. So  \(S_1  = R\text{.}\) To determine the amount after two months, we first note that the amount after one month will gain interest and grow to \(( {1 + i} )S_1\text{.}\) In addition, a new deposit of  \(R\)  dollars will be made at the end of the second month. So</p>
+<div class="displaymath">
+\begin{equation*}
+S_2  = R + ( {1 + i} )S_1\text{.}
+\end{equation*}
+</div>
+</div>
+<article class="task exercise-like" id="task-817"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2257">For each \(n \in \mathbb{N}\text{,}\) use a similar argument to determine a recurrence relation for \(S_{n + 1}\) in terms of \(R\text{,}\) \(i\text{,}\) and \(S_n\text{.}\)</p></article><article class="task exercise-like" id="task-818"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2258">By recognizing this as a recursion formula for a geometric series, use <a class="xref" data-knowl="./knowl/P_geometricseries2.html" title="Theorem 4.3.6">Theorem 4.3.6</a> to determine a formula for  \(S_n\) in terms of  \(R\text{,}\) \(i\text{,}\) and  \(n\)  that does not use a summation. Then show that this formula can be written as</p>
+<div class="displaymath">
+\begin{equation*}
+S_n  = R\left( {\frac{{\left( {1 + i} \right)^n  - 1}}{i}} \right)\text{.}
+\end{equation*}
+</div></article><article class="task exercise-like" id="task-819"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2259">What is the future value of an ordinary annuity in 20 years if $200 dollars is deposited in an account at the end of each month where the interest rate for the account is 6% per year compounded monthly? What is the amount of interest that has accumulated in this account during the 20 years?</p></article></article></section></section></div></main>
+</div>
+</body>
+</html>

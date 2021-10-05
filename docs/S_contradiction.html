@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-10-05T14:48:43-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Proof by Contradiction</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\def\C{\JustCenter}
+\newcommand{\typeu}{Beginning }
+\def\C{\JustCenter}
+\newcommand{\typel}{beginning }
+\def\C{\JustCenter}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\
+\thechapter. #1}{}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\def\C{\JustCenter}
+\renewcommand{\theenumi}{\alph{enumi}}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\theenumi}{({\alph{enumi}})}
+\def\C{\JustCenter}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\mynot}{\neg}
+\newcommand{\card}{\mathbf{card}}
+\newcommand{\x}{:}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Mathematical Reasoning:</span> <span class="subtitle">Writing and Proof (Version 3)</span></a></h1>
+<p class="byline">Ted Sundstrom, Professor Emeritus</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_moremethods.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_proofs.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_cases.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_moremethods.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C_proofs.html" title="Up">Up</a><a class="next-button button toolbar-item" href="S_cases.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="fm-versions.html" data-scroll="fm-versions">Version 3 and Version 2.1</a></li>
+<li><a href="fm-student-note.html" data-scroll="fm-student-note">Note to Students</a></li>
+<li><a href="fm-preface.html" data-scroll="fm-preface">Preface</a></li>
+<li><a href="fm-imp-features.html" data-scroll="fm-imp-features">Important Features of the Book</a></li>
+<li><a href="fm-cont-org.html" data-scroll="fm-cont-org">Content and Organization</a></li>
+<li><a href="fm-inst-note.html" data-scroll="fm-inst-note">Supplementary Materials for the Instructor</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_1intro.html" data-scroll="C_1intro"><span class="codenumber">1</span> <span class="title">Introduction to Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_1prop.html" data-scroll="S_1prop">Statements and Conditional Statements</a></li>
+<li><a href="S_1direct.html" data-scroll="S_1direct">Constructing Direct Proofs</a></li>
+<li><a href="S_1summary.html" data-scroll="S_1summary">Chapter 1 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_2logic.html" data-scroll="C_2logic"><span class="codenumber">2</span> <span class="title">Logical Reasoning</span></a><ul>
+<li><a href="S_2logop.html" data-scroll="S_2logop">Statements and Logical Operators</a></li>
+<li><a href="S_logequiv.html" data-scroll="S_logequiv">Logically Equivalent Statements</a></li>
+<li><a href="S_2predicates.html" data-scroll="S_2predicates">Open Sentences and Sets</a></li>
+<li><a href="S_2quantifier.html" data-scroll="S_2quantifier">Quantifiers and Negations</a></li>
+<li><a href="S_2summary.html" data-scroll="S_2summary">Chapter 2 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_proofs.html" data-scroll="C_proofs"><span class="codenumber">3</span> <span class="title">Constructing and Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_directproof.html" data-scroll="S_directproof">Direct Proofs</a></li>
+<li><a href="S_moremethods.html" data-scroll="S_moremethods">More Methods of Proof</a></li>
+<li><a href="S_contradiction.html" data-scroll="S_contradiction" class="active">Proof by Contradiction</a></li>
+<li><a href="S_cases.html" data-scroll="S_cases">Using Cases in Proofs</a></li>
+<li><a href="S_divalgo.html" data-scroll="S_divalgo">Beginning Activity 1: The Division Algorithm and Congruence</a></li>
+<li><a href="S_reviewproofs.html" data-scroll="S_reviewproofs">Review of Proof Methods</a></li>
+<li><a href="S_3summary.html" data-scroll="S_3summary">Chapter 3 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_induction.html" data-scroll="C_induction"><span class="codenumber">4</span> <span class="title">Mathematical Induction</span></a><ul>
+<li><a href="S_mathinduction.html" data-scroll="S_mathinduction">The Principle of Mathematical Induction</a></li>
+<li><a href="S_otherinduction.html" data-scroll="S_otherinduction">Other Forms of Mathematical Induction</a></li>
+<li><a href="S_recursion.html" data-scroll="S_recursion">Induction and Recursion</a></li>
+<li><a href="S_4summary.html" data-scroll="S_4summary">Chapter 4 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_settheory.html" data-scroll="C_settheory"><span class="codenumber">5</span> <span class="title">Set Theory</span></a><ul>
+<li><a href="S_setoperations.html" data-scroll="S_setoperations">Sets and Operations on Sets</a></li>
+<li><a href="S_provingset.html" data-scroll="S_provingset">Proving Set Relationships</a></li>
+<li><a href="S_setproperties.html" data-scroll="S_setproperties">Properties of Set Operations</a></li>
+<li><a href="S_cartesian.html" data-scroll="S_cartesian">Cartesian Products</a></li>
+<li><a href="S_indexfamily.html" data-scroll="S_indexfamily">Indexed Families of Sets</a></li>
+<li><a href="S_5summary.html" data-scroll="S_5summary">Chapter 5 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_functions.html" data-scroll="C_functions"><span class="codenumber">6</span> <span class="title">Functions</span></a><ul>
+<li><a href="S_introfunctions.html" data-scroll="S_introfunctions">Introduction to Functions</a></li>
+<li><a href="S_moreaboutfunctions.html" data-scroll="S_moreaboutfunctions">More about Functions</a></li>
+<li><a href="S_typesoffunctions.html" data-scroll="S_typesoffunctions">Beginning Activity 1: Injections, Surjections, and Bijections</a></li>
+<li><a href="S_compositionoffunctions.html" data-scroll="S_compositionoffunctions">Composition of Functions</a></li>
+<li><a href="S_inversefunctions.html" data-scroll="S_inversefunctions">Inverse Functions</a></li>
+<li><a href="S_functionsonsets.html" data-scroll="S_functionsonsets">Functions Acting on Sets</a></li>
+<li><a href="S_6summary.html" data-scroll="S_6summary">Chapter 6 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_equivrelations.html" data-scroll="C_equivrelations"><span class="codenumber">7</span> <span class="title">Equivalence Relations</span></a><ul>
+<li><a href="S_relations.html" data-scroll="S_relations">Relations</a></li>
+<li><a href="S_equivrelations.html" data-scroll="S_equivrelations">Equivalence Relations</a></li>
+<li><a href="S_equivclasses.html" data-scroll="S_equivclasses">Equivalence Classes</a></li>
+<li><a href="S_modulararithmetic.html" data-scroll="S_modulararithmetic">Modular Arithmetic</a></li>
+<li><a href="section-37.html" data-scroll="section-37">Chapter 7 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_numbertheory.html" data-scroll="C_numbertheory"><span class="codenumber">8</span> <span class="title">Topics in Number Theory</span></a><ul>
+<li><a href="S_gcd.html" data-scroll="S_gcd">The Greatest Common Divisor</a></li>
+<li><a href="S_primefactorizations.html" data-scroll="S_primefactorizations">Prime Numbers and Prime Factorizations</a></li>
+<li><a href="S_diophantine.html" data-scroll="S_diophantine">Linear Diophantine Equations</a></li>
+<li><a href="section-41.html" data-scroll="section-41">Chapter 8 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_topicsinsets.html" data-scroll="C_topicsinsets"><span class="codenumber">9</span> <span class="title">Finite and Infinite Sets</span></a><ul>
+<li><a href="S_finitesets.html" data-scroll="S_finitesets">Finite Sets</a></li>
+<li><a href="S_infinitesets.html" data-scroll="S_infinitesets">Countable Sets</a></li>
+<li><a href="S_uncountablesets.html" data-scroll="S_uncountablesets">Uncountable Sets</a></li>
+<li><a href="section-45.html" data-scroll="section-45">Chapter 9 Summary</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="C_writingguides.html" data-scroll="C_writingguides"><span class="codenumber">A</span> <span class="title">Guidelines for Writing Mathematical Proofs</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="S_contradiction"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.3</span> <span class="title">Proof by Contradiction</span>
+</h2>
+<section class="worksheet" id="PA_contradicton"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Beginning Activity 1: Proof by Contradiction</span><div class="print-links">
+<a href="PA_contradicton-A4.html" class="a4">A4</a><a href="PA_contradicton-letter.html" class="us">US</a>
+</div>
+</h3>
+<p id="p-1290">In <a class="xref" data-knowl="./knowl/D_tautology.html" title="Definition 2.1.6">Definition 2.1.6</a> in <a href="S_2logop.html" class="internal" title="Section 2.1: Statements and Logical Operators">Section 2.1</a>, we defined a <dfn class="terminology">tautology</dfn>  to be a compound statement \(S\) that is true for all possible combinations of truth values of the component statements that are part of \(S\text{.}\) We also defined <dfn class="terminology">contradiction</dfn>  to be a compound statement that is false for all possible combinations of truth values of the component statements that are part of \(S\text{.}\)</p>
+<p id="p-1291">That is, a tautology is necessarily true in all circumstances, and a contradiction is necessarily false in all circumstances.</p>
+<article class="exercise exercise-like" id="exercise-205"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-1292">Use truth tables to explain why \(\left( {P \vee \mynot P} \right)\) is a tautology and \(\left( {P \wedge \mynot P} \right)\) is a contradiction.</p></article><p id="p-1293">Another method of proof that is frequently used in mathematics is a <dfn class="terminology">proof by contradiction.</dfn>  This method is based on the fact that a statement \(X\) can only be true or false (and not both). The idea is to prove that the statement \(X\) is true by showing that it cannot be false. This is done by assuming that \(X\) is false and proving that this leads to a contradiction. (The contradiction often has the form \(\left( {R \wedge \mynot R} \right)\text{,}\) where \(R\) is some statement.) When this happens, we can conclude that the assumption that the statement \(X\) is false is incorrect and hence \(X\) cannot be false. Since it cannot be false, then \(X\) must be true.</p>
+<p id="p-1294">A logical basis for the contradiction method of proof is the tautology</p>
+<div class="displaymath">
+\begin{equation*}
+\left[ \mynot  X \to C \right] \to X\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where \(X\) is a statement and \(C\) is a contradiction. The following truth table establishes this tautology. <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b3 r2 l0 t0 lines">\(X\)</td>
+<td class="c m b3 r3 l0 t0 lines">\(C\)</td>
+<td class="c m b3 r1 l0 t0 lines">\(\mynot X\)</td>
+<td class="c m b3 r2 l0 t0 lines">\(\mynot X \to C\)</td>
+<td class="c m b3 r0 l0 t0 lines">\((\mynot X \to C) \to X\)</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r3 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r3 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+</table></div> This tautology shows that if \(\mynot X\) leads to a contradiction, then \(X\) must be true. The previous truth table also shows that the statement \(\mynot X \to C\) is logically equivalent to \(X\text{.}\) This means that if we have proved that \(\mynot X\) leads to a contradiction, then we have proved statement \(X\text{.}\) So if we want to prove a statement \(X\) using a proof by contradiction, we assume that \(\mynot X\) is true and show that this leads to a contradiction.</p>
+<p id="p-1295">When we try to prove the conditional statement, “If \(P\) then \(Q\)” using a proof by contradiction, we must assume that \(P \to Q\) is false and show that this leads to a contradiction.</p>
+<article class="exercise exercise-like" id="exercise-206"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-1296">Use a truth table to show that \(\mynot \left( {P \to Q} \right)\) is logically equivalent to \(P \wedge \mynot Q\text{.}\)</p></article><p id="p-1297">The preceding logical equivalency shows that when we assume that \mbox{\(P \to Q\)} is false, we are assuming that \(P\) is true and \(Q\) is false. If we can prove that this leads to a contradiction, then we have shown that \(\mynot \left( {P \to Q} \right)\) is false and hence that \(P \to Q\) is true.</p>
+<article class="exercise exercise-like" id="LA_contradiction2-1"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-1298">Give a counterexample to show that the following statement is false. <blockquote class="blockquote" id="blockquote-104">For each real number \(x\text{,}\) \(\dfrac{1}{x(1 - x)} \geq 4\text{.}\)</blockquote></p></article><article class="exercise exercise-like" id="exercise-208"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-1299">When a statement is false, it is sometimes possible to add an assumption that will yield a true statement. This is usually done by using a conditional statement. So instead of working with the statement in <a class="xref" data-knowl="./knowl/LA_contradiction2-1.html" title="Exercise 3">Exercise 3</a>, we will work with a related statement that is obtained by adding an assumption (or assumptions) to the hypothesis. <blockquote class="blockquote" id="blockquote-105">For each real number \(x\text{,}\) if \(0 \lt x \lt 1\text{,}\) then \(\dfrac{1}{x(1 - x)} \geq 4\text{.}\)</blockquote> To begin a proof by contradiction for this statement, we need to assume the negation of the statement. To do this, we need to negate the entire statement, including the quantifier. Recall that the negation of a statement with a universal quantifier is a statement that contains an existential quantifier. (See <a class="xref" data-knowl="./knowl/T_negations.html" title="Theorem 2.4.5">Theorem 2.4.5</a>.) With this in mind, carefully write down all assumptions made at the beginning of a proof by contradiction for this statement.</p></article></section><section class="worksheet" id="LA_contradicton2"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Beginning Activity 2: Constructing a Proof by Contradiction</span><div class="print-links">
+<a href="LA_contradicton2-A4.html" class="a4">A4</a><a href="LA_contradicton2-letter.html" class="us">US</a>
+</div>
+</h3>
+<p id="p-1300">Consider the following proposition: <article class="proposition theorem-like" id="prop-contradictionba"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.3.1</span><span class="period">.</span>
+</h6>
+<p id="p-1301">For all real numbers \(x\) and \(y\text{,}\) if \(x \ne y\text{,}\) \(x &gt; 0,\text{ and } y &gt; 0\text{,}\) then \(\dfrac{x}{y} + \dfrac{y}{x} &gt; 2\text{.}\)</p></article> To start a proof by contradiction, we assume that this statement is false; that is, we assume the negation is true. Because this is a statement with a universal quantifier, we assume that there exist real numbers \(x\) and \(y\) such that \(x \ne y\text{,}\) \(x &gt; 0, y &gt; 0\) and that \(\dfrac{x}{y} + \dfrac{y}{x} \leq 2\text{.}\) (Notice that the negation of the conditional sentence is a conjunction.)</p>
+<p id="p-1302">For this proof by contradiction, we will only work with the know column of a know-show table. This is because we do not have a specific goal. The goal is to obtain some contradiction, but we do not know ahead of time what that contradiction will be. Using our assumptions, we can perform algebraic operations on the inequality</p>
+<div class="displaymath">
+\begin{equation}
+\frac{x}{y} + \frac{y}{x} \leq 2\label{LA_learn33-inequality}\tag{3.4}
+\end{equation}
+</div>
+<p class="continuation">until we obtain a contradiction.</p>
+<article class="exercise exercise-like" id="exercise-209"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-1303">Try the following algebraic operations on the inequality in <a class="xref" data-knowl="./knowl/LA_learn33-inequality.html" title="Equation 3.4">(3.4)</a>. First, multiply both sides of the inequality by \(xy\text{,}\) which is a positive real number since \(x &gt; 0\) and \(y &gt; 0\text{.}\) Then, subtract \(2xy\) from both sides of this inequality and finally, factor the left side of the resulting inequality.</p></article><article class="exercise exercise-like" id="exercise-210"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-1304">Explain why the last inequality you obtained leads to a contradiction.</p></article><p id="p-1305">By obtaining a contradiction, we have proved that the proposition cannot be false, and hence, must be true.</p></section><section class="subsection" id="subsection-49"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Writing Guidelines: Keep the Reader Informed</span>
+</h3>
+<p id="p-1306"></p>
+<p id="p-1307">A very important piece of information about a proof is the method of proof to be used. So when we are going to prove a result using the contrapositive or a proof by contradiction, we indicate this at the start of the proof.</p>
+<ul class="disc">
+<li id="li-183"><p id="p-1308">We will prove this result by proving the contrapositive of the statement.</p></li>
+<li id="li-184"><p id="p-1309">We will prove this statement using a proof by contradiction.</p></li>
+<li id="li-185"><p id="p-1310">We will use a proof by contradiction.</p></li>
+</ul>
+<p id="p-1311">We have discussed the logic behind a proof by contradiction in the beginning activities for this section. The basic idea for a proof by contradiction of a proposition is to assume the proposition is false and show that this leads to a contradiction. We can then conclude that the proposition cannot be false, and hence, must be true. When we assume a proposition is false, we are, in effect, assuming that its negation is true. This is one reason why it is so important to be able to write negations of propositions quickly and correctly. We will illustrate the process with the proposition discussed in <a href="S_contradiction.html#PA_contradicton" class="internal" title="Worksheet: Beginning Activity 1: Proof by Contradiction">Beginning Activity 2 </a>.</p>
+<article class="proposition theorem-like" id="proposition-11"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span>
+</h6>
+<p id="p-1312">For each real number \(x\text{,}\) if \(0 \lt x \lt 1\text{,}\) then \(\dfrac{1}{x(1 - x)} \geq 4\text{.}\)</p></article><article class="hiddenproof" id="proof-7"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-7"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-7"><article class="hiddenproof"><p id="p-1313">We will use a proof by contradiction. So we assume that the proposition is false, or that there exists a real number \(x\) such that \(0 \lt  x \lt  1\) and</p>
+<div class="displaymath">
+\begin{equation}
+\dfrac{1}{x(1 - x)} \lt  4\text{.}\label{eq_contradiction1}\tag{3.5}
+\end{equation}
+</div>
+<p id="p-1314">We note that since \(0 \lt  x \lt  1\text{,}\) we can conclude that \(x &gt; 0\) and that \((1 - x)&gt;0\text{.}\) Hence, \(x(1 - x) &gt;0\) and if we multiply both sides of inequality <a class="xref" data-knowl="./knowl/eq_contradiction1.html" title="Equation 3.5">(3.5)</a> by \(x(1 - x)\text{,}\) we obtain</p>
+<div class="displaymath">
+\begin{equation*}
+1 \lt  4x(1 - x)\text{.}
+\end{equation*}
+</div>
+<p id="p-1315">We can now use algebra to rewrite the last inequality as follows:</p>
+<div class="displaymath">
+\begin{align*}
+1 \amp \lt  4x - 4x^2\\
+4x^2 - 4x + 1 \amp \lt  0\\
+(2x - 1)^2 \amp \lt  0
+\end{align*}
+</div>
+<p id="p-1316">However, \((2x - 1)\) is a real number and the last inequality says that a real number squared is less than zero. This is a contradiction since the square of any real number must be greater than or equal to zero. Hence, the proposition cannot be false, and we have proved that for each real number \(x\text{,}\) if \(0 \lt x \lt 1\text{,}\) then \(\dfrac{1}{x(1 - x)} \geq 4\text{.}\)</p></article></div>
+<article class="exercise exercise-like" id="pr_start-con"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">3.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Starting a Proof by Contradiction.</span>
+</h6>
+<p id="p-1317">One of the most important parts of a proof by contradiction is the very first part, which is to state the assumptions that will be used in the proof by contradiction. This usually involves writing a clear negation of the proposition to be proven. Review De Morgan's Laws and the negation of a conditional statement in <a href="S_logequiv.html" class="internal" title="Section 2.2: Logically Equivalent Statements">Section 2.2</a>. (See <a class="xref" data-knowl="./knowl/T_logequiv.html" title="Theorem 2.2.8: Important Logical Equivalencies">Theorem 2.2.8</a>.) Also, review <a class="xref" data-knowl="./knowl/T_negations.html" title="Theorem 2.4.5">Theorem 2.4.5</a> and then write a negation of each of the following statements. (Remember that a real number is “not irrational” means that the real number is rational.) <article class="task exercise-like" id="task-506"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1318">For each real number \(x\text{,}\) if \(x\) is irrational, then \(\sqrt[3]{x}\) is irrational.</p></article> <article class="task exercise-like" id="task-507"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1319">For each real number \(x\text{,}\) \(\left(x + \sqrt{2} \right)\) is irrational or \(\left(-x + \sqrt{2} \right)\) is irrational.</p></article> <article class="task exercise-like" id="task-508"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1320">For all integers \(a\) and \(b\text{,}\) if 5 divides \(ab\text{,}\) then 5 divides \(a\) or 5 divides \(b\text{.}\)</p></article> <article class="task exercise-like" id="task-509"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-1321">For all real numbers \(a\) and \(b\text{,}\) if \(a &gt; 0\) and \(b &gt; 0\text{,}\) then \(\dfrac{2}{a} + \dfrac{2}{b} \ne \dfrac{4}{a + b}\text{.}\)</p></article></p></article></section><section class="subsection" id="subsection-50"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Important Note</span>
+</h3>
+<p id="p-1322">A proof by contradiction is often used to prove a conditional statement \(P \to Q\) when a direct proof has not been found and it is relatively easy to form the negation of the proposition. The advantage of a proof by contradiction is that we have an additional assumption with which to work (since we assume not only \(P\) but also \(\mynot Q\)). The disadvantage is that there is no well-defined goal to work toward. The goal is simply to obtain some contradiction. There usually is no way of telling beforehand what that contradiction will be, so we have to stay alert for a possible absurdity. Thus, when we set up a know-show table for a proof by contradiction, we really only work with the know portion of the table.</p>
+<article class="exercise exercise-like" id="pr_exploreproof"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">3.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Exploration and a Proof by Contradiction.</span>
+</h6>
+<p id="p-1323">Consider the following proposition: <blockquote class="blockquote" id="blockquote-106">For each integer \(n\text{,}\) if \(n \equiv 2 \pmod 4\text{,}\) then \(n\not \equiv 3 \pmod 6\text{.}\)</blockquote> <article class="task exercise-like" id="pr_exploreproof1"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1324">Determine at least five different integers that are congruent to 2 modulo 4, and determine at least five different integers that are congruent to 3 modulo 6. Are there any integers that are in both of these lists?</p></article> <article class="task exercise-like" id="task-511"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1325">For this proposition, why does it seem reasonable to try a proof by contradiction?</p></article> <article class="task exercise-like" id="task-512"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1326">For this proposition, state clearly the assumptions that need to be made at the beginning of a proof by contradiction, and then use a proof by contradiction to prove this proposition.</p></article></p></article></section><section class="subsection" id="subsection-51"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Proving that Something Does Not Exist</span>
+</h3>
+<p id="p-1327">In mathematics, we sometimes need to prove that something does not exist or that something is not possible. Instead of trying to construct a direct proof, it is sometimes easier to use a proof by contradiction so that we can assume that the something exists. For example, suppose we want to prove the following proposition:</p>
+<article class="proposition theorem-like" id="prop_persquare"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.3.5</span><span class="period">.</span>
+</h6>
+<p id="p-1328">For all integers \(x\) and \(y\text{,}\) if \(x\) and \(y\) are odd integers, then there does not exist an integer \(z\) such that \(x^2 + y^2 = z^2\text{.}\)</p></article><p id="p-1329">Notice that the conclusion involves trying to prove that an integer with a certain property does not exist. If we use a proof by contradiction, we can assume that such an integer \(z\) exists. This gives us more with which to work.</p>
+<article class="exercise exercise-like" id="prog_persquare"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">3.3.6</span><span class="period">.</span>
+</h6>
+<p id="p-1330">Complete the following proof of <a class="xref" data-knowl="./knowl/prop_persquare.html" title="Proposition 3.3.5">Proposition 3.3.5</a>: <article class="hiddenproof" id="proof-8"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-8"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-8"><article class="hiddenproof"><p id="p-1331">We will use a proof by contradiction. So we assume that there exist integers \(x\) and \(y\) such that \(x\) and \(y\) are odd and there exists an integer \(z\) such that \(x^2 + y^2 = z^2\text{.}\) Since \(x\) and \(y\) are odd, there exist integers \(m\) and \(n\) such that \(x = 2m + 1\) and \(y = 2n + 1\text{.}\)</p>
+<article class="task exercise-like" id="task-513"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1332">Use the assumptions that \(x\) and \(y\) are odd to prove that \(x^2 + y^2\) is even and hence, \(z^2\) is even. (See <a class="xref" data-knowl="./knowl/T_n2odd.html" title="Theorem 3.2.1">Theorem 3.2.1</a>.)</p></article><p id="p-1333">We can now conclude that \(z\) is even. (See <a class="xref" data-knowl="./knowl/T_n2odd.html" title="Theorem 3.2.1">Theorem 3.2.1</a>.) So there exists an integer \(k\) such that \(z = 2k\text{.}\) If we substitute for \(x\text{,}\) \(y\text{,}\) and \(z\) in the equation \(x^2 + y^2 = z^2\text{,}\) we obtain</p>
+<div class="displaymath">
+\begin{equation*}
+(2m + 1)^2 + (2n + 1)^2 = (2k)^2\text{.}
+\end{equation*}
+</div>
+<article class="task exercise-like" id="task-514"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1334">Use the previous equation to obtain a contradiction.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-5" id="hint-5"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-5"><div class="hint solution-like"><p id="p-1335">One way is to use algebra to obtain an equation where the left side is an odd integer and the right side is an even integer.</p></div></div>
+</div></article></article></div></p></article></section><section class="subsection" id="subsection-52"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Rational and Irrational Numbers</span>
+</h3>
+<p id="p-1336">One of the most important ways to classify real numbers is as a rational number or an irrational number. Following is the definition of rational (and irrational) numbers given in <a class="xref" data-knowl="./knowl/exer_rational.html" title="Exercise 9">Exercise 9</a> from <a href="S_moremethods.html" class="internal" title="Section 3.2: More Methods of Proof">Section 3.2</a>.</p>
+<article class="definition definition-like" id="D_rational"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.3.7</span><span class="period">.</span>
+</h6>
+<p id="p-1337">A real number \(x\) is defined to be a <dfn class="terminology">rational number</dfn>  provided that there exist integers \(m\) and \(n\) with \(n \ne 0\) such that \(x = \dfrac{m}{n}\text{.}\) A real number that is not a rational number is called an <dfn class="terminology">irrational number.</dfn> </p></article><p id="p-1338">This may seem like a strange distinction because most people are quite familiar with the rational numbers (fractions) but the irrational numbers seem a bit unusual. However, there are many irrational numbers such as \(\sqrt{2}\text{,}\) \(\sqrt{3}\text{,}\) \(\sqrt[3]{2}\text{,}\) \(\pi\text{,}\) and the number \(e\text{.}\) We are discussing these matters now because we will soon prove that \(\sqrt{2}\) is irrational in <a class="xref" data-knowl="./knowl/T_squareroot2.html" title="Theorem 3.3.9">Theorem 3.3.9</a>.</p>
+<p id="p-1339">We use the symbol \(\Q\) to stand for the set of rational numbers. There is no standard symbol for the set of irrational numbers. Perhaps one reason for this is because of the closure properties of the rational numbers. We introduced closure properties in <a href="S_1prop.html" class="internal" title="Section 1.1: Statements and Conditional Statements">Section 1.1</a>, and the rational numbers \(\Q\) are closed under addition, subtraction, multiplication, and division by nonzero rational numbers. This means that if \(x, y \in \Q\text{,}\) then</p>
+<ul class="disc">
+<li id="li-186"><p id="p-1340">\(x + y\text{,}\) \(x - y\text{,}\) and \(xy\) are in \(\Q\text{;}\) and</p></li>
+<li id="li-187"><p id="p-1341">If \(y \ne 0\text{,}\) then \(\dfrac{x}{y}\) is in \(\Q\text{.}\)</p></li>
+</ul>
+<p id="p-1342">The basic reasons for these facts are that if we add, subtract, multiply, or divide two fractions, the result is a fraction. One reason we do not have a symbol for the irrational numbers is that the irrational numbers are not closed under these operations. For example, we will prove that \(\sqrt{2}\) is irrational in <a class="xref" data-knowl="./knowl/T_squareroot2.html" title="Theorem 3.3.9">Theorem 3.3.9</a>. We then see that</p>
+<div class="displaymath">
+\begin{equation*}
+\sqrt{2} \sqrt{2} = 2  \text{ and }   \frac{\sqrt{2}}{\sqrt{2}} = 1\text{,}
+\end{equation*}
+</div>
+<p class="continuation">which shows that the product of irrational numbers can be rational and the quotient of irrational numbers can be rational.</p>
+<p id="p-1343">It is also important to realize that every integer is a rational number since any integer can be written as a fraction. For example, we can write \(3 = \dfrac{3}{1}\text{.}\) In general, if \(n \in \Z\text{,}\) then \(n = \dfrac{n}{1}\text{,}\) and hence, \(n \in \Q\text{.}\)</p>
+<p id="p-1344">Because the rational numbers are closed under the standard operations and the definition of an irrational number simply says that the number is not rational, we often use a proof by contradiction to prove that a number is irrational. This is illustrated in the next proposition.</p>
+<article class="proposition theorem-like" id="proposition-13"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.3.8</span><span class="period">.</span>
+</h6>
+<p id="p-1345">For all real numbers \(x\) and \(y\text{,}\) if \(x\) is rational and \(x \ne 0\) and \(y\) is irrational, then \(x \cdot y\) is irrational.</p></article><article class="hiddenproof" id="proof-9"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-9"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-9"><article class="hiddenproof"><p id="p-1346">We will use a proof by contradiction. So we assume that there exist real numbers \(x\) and \(y\) such that \(x\) is rational, \(x \ne 0\text{,}\) \(y\) is irrational, and \(x \cdot y\) is rational. Since \(x \ne 0\text{,}\) we can divide by \(x\text{,}\) and since the rational numbers are closed under division by nonzero rational numbers, we know that \(\dfrac{1}{x} \in \Q\text{.}\) We now know that \(x \cdot y\) and \(\dfrac{1}{x}\) are rational numbers and since the rational numbers are closed under multiplication, we conclude that</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{x} \cdot \left( xy \right) \in \Q\text{.}
+\end{equation*}
+</div>
+<p id="p-1347">However, \(\dfrac{1}{x} \cdot \left( xy \right) = y\) and hence, \(y\) must be a rational number. Since a real number cannot be both rational and irrational, this is a contradiction to the assumption that \(y\) is irrational. We have therefore proved that for all real numbers \(x\) and \(y\text{,}\) if \(x\) is rational and \(x \ne 0\) and \(y\) is irrational, then \(x \cdot y\) is irrational.</p></article></div></section><section class="subsection" id="subsection-53"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">The Square Root of 2 Is an Irrational Number</span>
+</h3>
+<p id="p-1348">The proof that the square root of 2 is an irrational number is one of the classic proofs in mathematics, and every mathematics student should know this proof. This is why we will be doing some preliminary work with rational numbers and integers before completing the proof. The theorem we will be proving can be stated as follows:</p>
+<article class="theorem theorem-like" id="T_squareroot2"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.9</span><span class="period">.</span>
+</h6>
+<p id="p-1349">If \(r\) is a real number such that \(r^2 = 2\text{,}\) then \(r\) is an irrational number.</p></article><p id="p-1350">This is stated in the form of a conditional statement, but it basically means that \(\sqrt 2\) is irrational (and that \(- \sqrt 2\) is irrational). That is, \(\sqrt 2\) cannot be written as a quotient of integers with the denominator not equal to zero.</p>
+<p id="p-1351">In order to complete this proof, we need to be able to work with some basic facts that follow about rational numbers and even integers.</p>
+<ol class="decimal">
+<li id="li-188"><p id="p-1352">Each integer \(m\) is a rational number since \(m\) can be written as \(m = \dfrac{m}{1}\text{.}\)</p></li>
+<li id="LA_learn33-eq2">
+<p id="p-1353">Notice that \(\dfrac{2}{3} = \dfrac{4}{6}\text{,}\) since</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{4}{6} = \frac{2 \cdot 2}{3 \cdot 2} = \frac{2}{2} \cdot \frac{2}{3} = 
+\frac{2}{3}
+\end{equation*}
+</div>
+<p class="continuation">We can also show that</p>
+<div class="displaymath">
+\begin{equation*}
+\dfrac{15}{12} = \dfrac{5}{4}, \dfrac{10}{-8} 
+= \dfrac{-5}{4}, \text{ and } \dfrac{-30}{-16} = \dfrac{15}{8}
+\end{equation*}
+</div>
+</li>
+<li id="li-190">
+<p id="p-1354"><a class="xref" data-knowl="./knowl/LA_learn33-eq2.html" title="Item 2">Item 2</a> was included to illustrate the fact that a rational number can be written as a fraction in “lowest terms” with a positive denominator. This means that any rational number can be written as a quotient \(\dfrac{m}{n}\text{,}\) where \(m\) and \(n\) are integers, \(n &gt; 0\text{,}\) and \(m\) and \(n\) have no common factor greater than 1.</p>
+<p id="p-1355">If \(n\) is an integer and \(n^2\) is even, what can be conclude about \(n\text{.}\) Refer to <a class="xref" data-knowl="./knowl/T_n2odd.html" title="Theorem 3.2.1">Theorem 3.2.1</a>.</p>
+</li>
+</ol>
+<p id="p-1356">In a proof by contradiction of a conditional statement \(P \to Q\text{,}\) we assume the negation of this statement or \(P \wedge \mynot Q\text{.}\) So in a proof by contradiction of <a class="xref" data-knowl="./knowl/T_squareroot2.html" title="Theorem 3.3.9">Theorem 3.3.9</a>, we will assume that \(r\) is a real number, \(r^2 = 2\text{,}\) and \(r\) is not irrational (that is, \(r\) is rational).</p>
+<article class="theorem theorem-like" id="theorem-15"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.10</span><span class="period">.</span>
+</h6>
+<p id="p-1357">If \(r\) is a real number such that \(r^2 = 2\text{,}\) then \(r\) is an irrational number.</p></article><article class="hiddenproof" id="proof-10"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-10"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-10"><article class="hiddenproof"><p id="p-1358">We will use a proof by contradiction. So we assume that the statement of the theorem is false. That is, we assume that <blockquote class="blockquote" id="blockquote-107">\(r\) is a real number, \(r^2 = 2\text{,}\) and \(r\) is a rational number.</blockquote></p>
+<p id="p-1359">Since \(r\) is a rational number, there exist integers \(m\) and \(n\) with \(n &gt; 0\) such that</p>
+<div class="displaymath">
+\begin{equation*}
+r = \frac{m}{n}
+\end{equation*}
+</div>
+<p class="continuation">and \(m\) and \(n\) have no common factor greater than 1. We will obtain a contradiction by showing that \(m\) and \(n\) must both be even. Squaring both sides of the last equation and using the fact that \(r^2 = 2\text{,}\) we obtain</p>
+<div class="displaymath">
+\begin{align}
+2 \amp = \frac{{m^2 }}{{n^2 }}\tag{3.6}\\
+m^2  \amp = 2n^2\text{.}\label{eq_3h}\tag{3.7}
+\end{align}
+</div>
+<p id="p-1360"><a class="xref" data-knowl="./knowl/eq_3h.html" title="Equation 3.7">(3.7)</a> implies that \(m^2\) is even, and hence, by <a class="xref" data-knowl="./knowl/T_n2odd.html" title="Theorem 3.2.1">Theorem 3.2.1</a>, \(m\) must be an even integer. This means that there exists an integer \(p\) such that \(m = 2p\text{.}\) We can now substitute this into <a class="xref" data-knowl="./knowl/eq_3h.html" title="Equation 3.7">(3.7)</a>, which gives</p>
+<div class="displaymath">
+\begin{align}
+\left( {2p} \right)^2  \amp = 2n^2\tag{3.8}\\
+4p^2  \amp = 2n^2\text{.}\label{eq_3i}\tag{3.9}
+\end{align}
+</div>
+<p id="p-1361">We can divide both sides of equation <a class="xref" data-knowl="./knowl/eq_3i.html" title="Equation 3.9">(3.9)</a> by 2 to obtain \(n^2 = 2p^2\text{.}\) Consequently, \(n^2\) is even and we can once again use <a class="xref" data-knowl="./knowl/T_n2odd.html" title="Theorem 3.2.1">Theorem 3.2.1</a> to conclude that \(n\) is an even integer.</p>
+<p id="p-1362">We have now established that both \(m\) and \(n\) are even. This means that 2 is a common factor of \(m\) and \(n\text{,}\) which contradicts the assumption that \(m\) and \(n\) have no common factor greater than 1. Consequently, the statement of the theorem cannot be false, and we have proved that if \(r\) is a real number such that \(r^2 = 2\text{,}\) then \(r\) is an irrational number.</p></article></div></section><section class="exercises" id="exercises-9"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exer_sec33-1"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-1363">This exercise is intended to provide another rationale as to why a proof by contradiction works. Suppose that we are trying to prove that a statement \(P\) is true. Instead of proving this statement, assume that we prove that the conditional statement “If \(\mynot P\text{,}\) then \(C\)” is true, where \(C\) is some contradiction. Recall that a contradiction is a statement that is always false. <article class="task exercise-like" id="exer_contradictionproof"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1364">In symbols, write a statement that is a disjunction and that is logically equivalent to \(\mynot P \to C\text{.}\)</p></article> <article class="task exercise-like" id="task-516"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1365">Since we have proven that \(\mynot P \to C\) is true, then the disjunction in <a class="xref" data-knowl="./knowl/exer_contradictionproof.html" title="Task a">Task a</a> must also be true. Use this to explain why the statement \(P\) must be true.</p></article> <article class="task exercise-like" id="task-517"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1366">Now explain why \(P\) must be true if we prove that the negation of \(P\) implies a contradiction.</p></article></p></article><article class="exercise exercise-like" id="exer_sec32-truefalse"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-1367">Are the following statements true or false? Justify each conclusion. <article class="task exercise-like" id="task-518"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1368">For all integers \(a\) and \(b\text{,}\) if \(a\) is even and \(b\) is odd, then \(4\) does not divide \(\left( a^2 + b^2 \right)\text{.}\)</p></article> <article class="task exercise-like" id="task-519"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1369">For all integers \(a\) and \(b\text{,}\) if \(a\) is even and \(b\) is odd, then \(6\) does not divide \(\left( a^2 + b^2 \right)\text{.}\)</p></article> <article class="task exercise-like" id="task-520"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1370">For all integers \(a\) and \(b\text{,}\) if \(a\) is even and \(b\) is odd, then \(4\) does not divide \(\left( a^2 + 2b^2 \right)\text{.}\)</p></article> <article class="task exercise-like" id="task-521"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-1371">For all integers \(a\) and \(b\text{,}\) if \(a\) is odd and \(b\) is odd, then \(4\) divides \(\left( a^2 + 3b^2 \right)\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exer_sec33-2"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-1372">Consider the following statement: <blockquote class="blockquote" id="blockquote-108">For each positive real number \(r\text{,}\) if \(r^2 = 18\text{,}\) then \(r\) is irrational.</blockquote> <article class="task exercise-like" id="task-522"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1373">If you were setting up a proof by contradiction for this statement, what would you assume? Carefully write down all conditions that you would assume.</p></article> <article class="task exercise-like" id="task-523"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1374">Complete a proof by contradiction for this statement.</p></article></p></article><article class="exercise exercise-like" id="exercise-217"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-1375">Prove that the cube root of 2 is an irrational number. That is, prove that if \(r\) is a real number such that \(r^3 = 2\text{,}\) then \(r\) is an irrational number.</p></article><article class="exercise exercise-like" id="exer_sec33-3"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-1376">Prove the following propositions: <article class="task exercise-like" id="task-524"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1377">For all real numbers \(x\) and \(y\text{,}\) if \(x\) is rational and \(y\) is irrational, then \(x + y\) is irrational.</p></article> <article class="task exercise-like" id="task-525"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1378">For all nonzero real numbers \(x\) and \(y\text{,}\) if \(x\) is rational and \(y\) is irrational, then \(xy\) is irrational.</p></article></p></article><article class="exercise exercise-like" id="exer_sec33-4"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-1379">Are the following statements true or false? Justify each conclusion. <article class="task exercise-like" id="task-526"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1380">For each positive real number \(x\text{,}\) if \(x\) is irrational, then \(x^2\) is irrational.</p></article> <article class="task exercise-like" id="task-527"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1381">For each positive real number \(x\text{,}\) if \(x\) is irrational, then \(\sqrt x\) is irrational.</p></article> <article class="task exercise-like" id="task-528"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1382">For every pair of real numbers \(x\) and \(y\text{,}\) if \(x + y\) is irrational, then \(x\) is irrational and \(y\) is irrational.</p></article> <article class="task exercise-like" id="task-529"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-1383">For every pair of real numbers \(x\) and \(y\text{,}\) if \(x + y\) is irrational, then \(x\) is irrational or \(y\) is irrational.</p></article></p></article><article class="exercise exercise-like" id="exercise-220"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<article class="task exercise-like" id="task-530"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1384">Give an example that shows that the sum of two irrational numbers can be a rational number.</p></article><article class="task exercise-like" id="task-531"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1385">Now explain why the following proof that \(\left( \sqrt{2} + \sqrt{5} \right)\) is an irrational number is not a valid proof: Since \(\sqrt{2}\) and \(\sqrt{5}\) are both irrational numbers, their sum is an irrational number. Therefore, \(\left( \sqrt{2} + \sqrt{5} \right)\) is an irrational number.</p>
+<p id="p-1386">Note: You may even assume that we have proven that \(\sqrt{5}\) is an irrational number. (We have not proven this.)</p></article><article class="task exercise-like" id="exer_sec33-10"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1387">Is the real number \(\sqrt 2 + \sqrt 5\) a rational number or an irrational number? Justify your conclusion.</p></article></article><article class="exercise exercise-like" id="exercise-221"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<article class="task exercise-like" id="task-533"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1388">Prove that for each real number \(x\text{,}\) \(\left(x + \sqrt{2} \right)\) is irrational or \(\left(-x + \sqrt{2} \right)\) is irrational.</p></article><article class="task exercise-like" id="task-534"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1389">Generalize the proposition in Part (a) for any irrational number (instead of just \(\sqrt{2}\)) and then prove the new proposition.</p></article></article><article class="exercise exercise-like" id="exercise-222"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="p-1390">Is the following statement true or false? <blockquote class="blockquote" id="blockquote-109">For all positive real numbers \(x\) and \(y\text{,}\) \(\sqrt {x + y} \leq \sqrt x + \sqrt y\text{.}\)</blockquote></p></article><article class="exercise exercise-like" id="exercise-223"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<p id="p-1391">Is the following proposition true or false? Justify your conclusion. <blockquote class="blockquote" id="blockquote-110">For each real number \(x\text{,}\) \(x \left( 1 - x \right) \leq \dfrac{1}{4}\text{.}\)</blockquote></p></article><article class="exercise exercise-like" id="exer_sec33-9"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
+<article class="task exercise-like" id="task-535"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1392">Is the base 2 logarithm of 32, \(\log_2 (32)\text{,}\) a rational number or an irrational number? Justify your conclusion.</p></article><article class="task exercise-like" id="task-536"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1393">Is the base 2 logarithm of 3, \(\log _2 (3)\text{,}\) a rational number or an irrational number? Justify your conclusion.</p></article></article><article class="exercise exercise-like" id="exer_sec33IVT"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
+<p id="p-1394">In <a class="xref" data-knowl="./knowl/exer_IVT.html" title="Exercise 15">Exercise 15</a> in <a href="S_moremethods.html" class="internal" title="Section 3.2: More Methods of Proof">Section 3.2</a>, we proved that there exists a real number solution to the equation \(x^3 - 4x^2 = 7\text{.}\) Prove that there is no integer \(x\) such that \(x^3 - 4x^2 = 7\text{.}\)</p></article><article class="exercise exercise-like" id="exer_sec33-11"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
+<p id="p-1395">Prove each of the following propositions: <article class="task exercise-like" id="task-537"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1396">For each real number \(\theta\text{,}\) if \(0 \lt \theta \lt \dfrac{\textstyle \pi }{\textstyle 2}\text{,}\) then \(\left[ {\sin (\theta) + \cos (\theta) } \right] &gt; 1\text{.}\)</p></article> <article class="task exercise-like" id="task-538"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1397">For all real numbers \(a\) and \(b\text{,}\) if \(a \ne 0\) and \(b \ne 0\text{,}\) then \(\sqrt{a^2 + b^2} \ne a + b\text{.}\)</p></article> <article class="task exercise-like" id="task-539"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1398">If \(n\) is an integer greater than 2, then for all integers \(m\text{,}\) \(n\) does not divide \(m\) or \(n + m \ne nm\text{.}\)</p></article> <article class="task exercise-like" id="task-540"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-1399">For all real numbers \(a\) and \(b\text{,}\) if \(a &gt; 0\) and \(b &gt; 0\text{,}\) then</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{2}{a} + \frac{2}{b} \ne \frac{4}{a + b}\text{.}
+\end{equation*}
+</div></article></p></article><article class="exercise exercise-like" id="exer_sec35-10"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
+<p id="p-1400">Prove that there do not exist three consecutive natural numbers such that the cube of the largest is equal to the sum of the cubes of the other two.</p></article><article class="exercise exercise-like" id="exercise-228"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
+<p id="p-1401">Three natural numbers \(a\text{,}\) \(b\text{,}\) and \(c\) with \(a \lt b \lt c\) are called a <dfn class="terminology">Pythagorean triple</dfn>  provided that \(a^2 + b^2 = c^2\text{.}\) For example, the numbers 3, 4, and 5 form a Pythagorean triple, and the numbers 5, 12, and 13 form a Pythagorean triple. <article class="task exercise-like" id="task-541"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1402">Verify that if \(a = 20\text{,}\) \(b = 21\text{,}\) and \(c = 29\text{,}\) then \(a^2 + b^2 = c^2\text{,}\) and hence, 20, 21, and 29 form a Pythagorean triple.</p></article> <article class="task exercise-like" id="task-542"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1403">Determine two other Pythagorean triples. That is, find integers \(a,
+b\text{,}\) and \(c\) such that \(a^2 + b^2 = c^2\text{.}\)</p></article> <article class="task exercise-like" id="task-543"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1404">Is the following proposition true or false? Justify your conclusion. For all integers \(a\text{,}\) \(b\text{,}\) and \(c\text{,}\) if \(a^2 + b^2 = c^2\text{,}\) then \(a\) is even or \(b\) is even.</p></article></p></article><article class="exercise exercise-like" id="exercise-229"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
+<p id="p-1405">Consider the following proposition: There are no integers \(a\) and \(b\) such that \(b^2 = 4a + 2\text{.}\) <article class="task exercise-like" id="exer-33-16a"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1406">Rewrite this statement in an equivalent form using a universal quantifier by completing the following: <blockquote class="blockquote" id="blockquote-111">For all integers \(a\) and \(b\text{,}\) ….</blockquote></p></article> <article class="task exercise-like" id="task-545"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1407">Prove the statement in <a class="xref" data-knowl="./knowl/exer-33-16a.html" title="Task a">Task a</a>.</p></article></p></article><article class="exercise exercise-like" id="exercise-230"><h6 class="heading"><span class="codenumber">17<span class="period">.</span></span></h6>
+<p id="p-1408">Is the following statement true or false? Justify your conclusion. <blockquote class="blockquote" id="blockquote-112">For each integer \(n\) that is greater than 1, if \(a\) is the smallest positive factor of \(n\) that is greater than 1, then \(a\) is prime.</blockquote> See <a class="xref" data-knowl="./knowl/exer_prime.html" title="Activity 8: Prime Numbers">Activity 8</a> in <a href="S_2quantifier.html" class="internal" title="Section 2.4: Quantifiers and Negations">Section 2.4</a> for the definition of a prime number and the definition of a composite number.</p></article><article class="exercise exercise-like" id="exercise-231"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
+<p id="p-1409">A <em class="emphasis">magic square</em>  is a square array of natural numbers whose rows, columns, and diagonals all sum to the same number. For example, the following is a 3 by 3 magic square since the sum of the 3 numbers in each row is equal to 15, the sum of the 3 numbers in each column is equal to 15, and the sum of the 3 numbers in each diagonal is equal to 15. <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r2 l2 t2 lines">8</td>
+<td class="c m b2 r2 l0 t2 lines">3</td>
+<td class="c m b2 r2 l0 t2 lines">4</td>
+</tr>
+<tr>
+<td class="c m b2 r2 l2 t0 lines">1</td>
+<td class="c m b2 r2 l0 t0 lines">5</td>
+<td class="c m b2 r2 l0 t0 lines">9</td>
+</tr>
+<tr>
+<td class="c m b2 r2 l2 t0 lines">6</td>
+<td class="c m b2 r2 l0 t0 lines">7</td>
+<td class="c m b2 r2 l0 t0 lines">2</td>
+</tr>
+</table></div> Prove that the following 4 by 4 square cannot be completed to form a magic square. <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r2 l2 t2 lines"></td>
+<td class="c m b2 r2 l0 t2 lines">1</td>
+<td class="c m b2 r2 l0 t2 lines"></td>
+<td class="c m b2 r2 l0 t2 lines">2</td>
+</tr>
+<tr>
+<td class="c m b2 r2 l2 t0 lines">3</td>
+<td class="c m b2 r2 l0 t0 lines">4</td>
+<td class="c m b2 r2 l0 t0 lines">5</td>
+<td class="c m b2 r2 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b2 r2 l2 t0 lines">6</td>
+<td class="c m b2 r2 l0 t0 lines">7</td>
+<td class="c m b2 r2 l0 t0 lines"></td>
+<td class="c m b2 r2 l0 t0 lines">8</td>
+</tr>
+<tr>
+<td class="c m b2 r2 l2 t0 lines">9</td>
+<td class="c m b2 r2 l0 t0 lines"></td>
+<td class="c m b2 r2 l0 t0 lines">10</td>
+<td class="c m b2 r2 l0 t0 lines"></td>
+</tr>
+</table></div></p></article><article class="exercise exercise-like" id="exercise-232"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
+<p id="p-1410">Using only the digits 1 through 9 one time each, is it possible to construct a 3 by 3 magic square with the digit 3 in the center square? That is, is it possible to construct a magic square of the form <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r2 l2 t2 lines">\(a\)</td>
+<td class="c m b2 r2 l0 t2 lines">\(b\)</td>
+<td class="c m b2 r2 l0 t2 lines">\(c\)</td>
+</tr>
+<tr>
+<td class="c m b2 r2 l2 t0 lines">\(d\)</td>
+<td class="c m b2 r2 l0 t0 lines">3</td>
+<td class="c m b2 r2 l0 t0 lines">\(e\)</td>
+</tr>
+<tr>
+<td class="c m b2 r2 l2 t0 lines">\(f\)</td>
+<td class="c m b2 r2 l0 t0 lines">\(g\)</td>
+<td class="c m b2 r2 l0 t0 lines">\(h\)</td>
+</tr>
+</table></div> where \(a, b, c, d, e, f, g, h\) are all distinct digits, none of which is equal to 3? Either construct such a magic square or prove that it is not possible.</p></article><article class="exercise exercise-like" id="exercise-233"><h6 class="heading">
+<span class="codenumber">20<span class="period">.</span></span><span class="space"> </span><span class="title">Evaluation of Proofs.</span>
+</h6>
+<div class="introduction" id="introduction-20"><p id="p-1411">See the instructions for <a class="xref" data-knowl="./knowl/exer_proofeval.html" title="Exercise 19: Evaluation of Proofs">Exercise 19</a> from <a href="S_directproof.html" class="internal" title="Section 3.1: Direct Proofs">Section 3.1</a>.</p></div>
+<article class="task exercise-like" id="task-546"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<dl id="p-1412" class="description-list narrow">
+<dt id="li-191">Proposition</dt>
+<dd><p id="p-1413">For each real number \(x\text{,}\) if \(x\) is irrational and \(m\) is an integer, then \(mx\) is irrational.</p></dd>
+<dt id="li-192">Proof</dt>
+<dd><p id="p-1414">We assume that \(x\) is a real number and is irrational. This means that for all integers \(a\) and \(b\) with \(b \ne 0\text{,}\) \(x \ne \dfrac{a}{b}\text{.}\) Hence, we may conclude that \(mx \ne \dfrac{ma}{b}\) and, therefore, \(mx\) is irrational.</p></dd>
+</dl></article><article class="task exercise-like" id="task-547"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<dl id="p-1415" class="description-list narrow">
+<dt id="li-193">Proposition</dt>
+<dd><p id="p-1416">For all real numbers \(x\) and \(y\text{,}\) if \(x\) is irrational and \(y\) is rational, then \(x + y\) is irrational.</p></dd>
+<dt id="li-194">Proof</dt>
+<dd>
+<p id="p-1417">We will use a proof by contradiction. So we assume that the proposition is false, which means that there exist real numbers \(x\) and \(y\) where \(x \notin \Q\text{,}\) \(y \in \Q\text{,}\) and \(x + y \in \Q\text{.}\) Since the rational numbers are closed under subtraction and \(x+y\) and \(y\) are rational, we see that</p>
+<div class="displaymath">
+\begin{equation*}
+\left(x + y \right) - y \in \Q\text{.}
+\end{equation*}
+</div>
+<p id="p-1418">However, \(\left( x + y \right) - y = x\text{,}\) and hence we can conclude that \(x \in \Q\text{.}\) This is a contradiction to the assumption that \(x \notin \Q\text{.}\) Therefore, the proposition is not false, and we have proven that for all real numbers \(x\) and \(y\text{,}\) if \(x\) is irrational and \(y\) is rational, then \(x + y\) is irrational.</p>
+</dd>
+</dl></article><article class="task exercise-like" id="task-548"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<dl id="p-1419" class="description-list narrow">
+<dt id="li-195">Proposition</dt>
+<dd><p id="p-1420">For each real number \(x\text{,}\) \(x (1 - x) \leq \dfrac{1}{4}\text{.}\)</p></dd>
+<dt id="li-196">Proof</dt>
+<dd>
+<p id="p-1421">A proof by contradiction will be used. So we assume the proposition is false. This means that there exists a real number \(x\) such that \(x (1 - x) &gt; \dfrac{1}{4}\text{.}\) If we multiply both sides of this inequality by 4, we obtain \(4x (1 - x) &gt; 1\text{.}\) However, if we let \(x = 3\text{,}\) we then see that</p>
+<div class="displaymath">
+\begin{align*}
+4x (1 - x) \amp &gt; 1\\
+4 \cdot 3 (1 - 3) \amp &gt; 1\\
+-12 \amp &gt; 1
+\end{align*}
+</div>
+<p id="p-1422">The last inequality is clearly a contradiction and so we have proved the proposition.</p>
+</dd>
+</dl></article></article><article class="activity project-like" id="activity-14"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">14</span><span class="period">.</span><span class="space"> </span><span class="title">A Proof by Contradiction.</span>
+</h6>
+<p id="p-1423">Consider the following proposition: <article class="proposition theorem-like" id="proposition-14"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.3.11</span><span class="period">.</span>
+</h6>
+<p id="p-1424">Let  \(a\text{,}\) \(b\text{,}\) and \(c\)  be integers. If  3  divides  \(a\text{,}\)  3  divides  \(b\text{,}\) and  \(c \equiv 1 \pmod 3\text{,}\) then the equation</p>
+<div class="displaymath">
+\begin{equation*}
+ax + by = c
+\end{equation*}
+</div>
+<p class="continuation">has no solution in which both  \(x\)  and  \(y\)  are integers.</p></article> Complete the following proof of this proposition: <article class="hiddenproof" id="proof-11"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-11"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-11"><article class="hiddenproof"><p id="p-1425">A proof by contradiction will be used. So we assume that the statement is false. That is, we assume that there exist integers \(a\text{,}\) \(b\text{,}\) and \(c\) such that 3  divides both  \(a\)  and  \(b\text{,}\) that  \(c \equiv 1 \pmod 3\text{,}\)  and that  the equation</p>
+<div class="displaymath">
+\begin{equation*}
+ax + by = c
+\end{equation*}
+</div>
+<p class="continuation">has a solution in which both  \(x\)  and  \(y\)  are integers. So there exist integers  \(m\)  and  \(n\)  such that</p>
+<div class="displaymath">
+\begin{equation*}
+am  + bn  = c\text{.}
+\end{equation*}
+</div></article></div> <a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-6" id="hint-6"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-6"><div class="hint solution-like"><p id="p-1426">Now use the facts that  3  divides  \(a\text{,}\) 3  divides  \(b\text{,}\) and \(c \equiv 1 \pmod 3\text{.}\)</p></div></div></p></article><article class="activity project-like" id="activity-15"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">15</span><span class="period">.</span><span class="space"> </span><span class="title">Exploring a Quadratic Equation.</span>
+</h6>
+<div class="introduction" id="introduction-21"><p id="p-1427">Consider the following proposition: <article class="proposition theorem-like" id="proposition-15"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.3.12</span><span class="period">.</span>
+</h6>
+<p id="p-1428">For all integers \(m\) and \(n\text{,}\) if \(n\) is odd, then the equation</p>
+<div class="displaymath">
+\begin{equation*}
+x^2+2mx+2n=0
+\end{equation*}
+</div>
+<p class="continuation">has no integer solution for \(x\text{.}\)</p></article></p></div>
+<article class="task exercise-like" id="task-549"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1429">What are the solutions of the equation when \(m = 1\) and \(n = - 1\text{?}\) That is, what are the solutions of the equation \(x^2 + 2x - 2 = 0\text{?}\)</p></article><article class="task exercise-like" id="task-550"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1430">What are the solutions of the equation when \(m = 2\) and \(n = 3\text{?}\) That is, what are the solutions of the equation \(x^2 + 4x + 6 = 0\text{?}\)</p></article><article class="task exercise-like" id="task-551"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1431">Solve the resulting quadratic equation for at least two more examples using values of \(m\) and \(n\) that satisfy the hypothesis of the proposition.</p></article><article class="task exercise-like" id="task-552"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-1432">For this proposition, why does it seem reasonable to try a proof by contradiction?</p></article><article class="task exercise-like" id="task-553"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-1433">For this proposition, state clearly the assumptions that need to be made at the beginning of a proof by contradiction.</p></article><article class="task exercise-like" id="task-554"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-1434">Use a proof by contradiction to prove this proposition.</p></article></article></section></section></div></main>
+</div>
+</body>
+</html>

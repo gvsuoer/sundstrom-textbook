@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-10-05T14:52:35-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The Greatest Common Divisor</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\def\C{\JustCenter}
+\newcommand{\typeu}{Beginning }
+\def\C{\JustCenter}
+\newcommand{\typel}{beginning }
+\def\C{\JustCenter}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\
+\thechapter. #1}{}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\def\C{\JustCenter}
+\renewcommand{\theenumi}{\alph{enumi}}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\theenumi}{({\alph{enumi}})}
+\def\C{\JustCenter}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\mynot}{\neg}
+\newcommand{\card}{\mathbf{card}}
+\newcommand{\x}{:}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Mathematical Reasoning:</span> <span class="subtitle">Writing and Proof (Version 3)</span></a></h1>
+<p class="byline">Ted Sundstrom, Professor Emeritus</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="C_numbertheory.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_numbertheory.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_primefactorizations.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="C_numbertheory.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C_numbertheory.html" title="Up">Up</a><a class="next-button button toolbar-item" href="S_primefactorizations.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="fm-versions.html" data-scroll="fm-versions">Version 3 and Version 2.1</a></li>
+<li><a href="fm-student-note.html" data-scroll="fm-student-note">Note to Students</a></li>
+<li><a href="fm-preface.html" data-scroll="fm-preface">Preface</a></li>
+<li><a href="fm-imp-features.html" data-scroll="fm-imp-features">Important Features of the Book</a></li>
+<li><a href="fm-cont-org.html" data-scroll="fm-cont-org">Content and Organization</a></li>
+<li><a href="fm-inst-note.html" data-scroll="fm-inst-note">Supplementary Materials for the Instructor</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_1intro.html" data-scroll="C_1intro"><span class="codenumber">1</span> <span class="title">Introduction to Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_1prop.html" data-scroll="S_1prop">Statements and Conditional Statements</a></li>
+<li><a href="S_1direct.html" data-scroll="S_1direct">Constructing Direct Proofs</a></li>
+<li><a href="S_1summary.html" data-scroll="S_1summary">Chapter 1 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_2logic.html" data-scroll="C_2logic"><span class="codenumber">2</span> <span class="title">Logical Reasoning</span></a><ul>
+<li><a href="S_2logop.html" data-scroll="S_2logop">Statements and Logical Operators</a></li>
+<li><a href="S_logequiv.html" data-scroll="S_logequiv">Logically Equivalent Statements</a></li>
+<li><a href="S_2predicates.html" data-scroll="S_2predicates">Open Sentences and Sets</a></li>
+<li><a href="S_2quantifier.html" data-scroll="S_2quantifier">Quantifiers and Negations</a></li>
+<li><a href="S_2summary.html" data-scroll="S_2summary">Chapter 2 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_proofs.html" data-scroll="C_proofs"><span class="codenumber">3</span> <span class="title">Constructing and Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_directproof.html" data-scroll="S_directproof">Direct Proofs</a></li>
+<li><a href="S_moremethods.html" data-scroll="S_moremethods">More Methods of Proof</a></li>
+<li><a href="S_contradiction.html" data-scroll="S_contradiction">Proof by Contradiction</a></li>
+<li><a href="S_cases.html" data-scroll="S_cases">Using Cases in Proofs</a></li>
+<li><a href="S_divalgo.html" data-scroll="S_divalgo">Beginning Activity 1: The Division Algorithm and Congruence</a></li>
+<li><a href="S_reviewproofs.html" data-scroll="S_reviewproofs">Review of Proof Methods</a></li>
+<li><a href="S_3summary.html" data-scroll="S_3summary">Chapter 3 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_induction.html" data-scroll="C_induction"><span class="codenumber">4</span> <span class="title">Mathematical Induction</span></a><ul>
+<li><a href="S_mathinduction.html" data-scroll="S_mathinduction">The Principle of Mathematical Induction</a></li>
+<li><a href="S_otherinduction.html" data-scroll="S_otherinduction">Other Forms of Mathematical Induction</a></li>
+<li><a href="S_recursion.html" data-scroll="S_recursion">Induction and Recursion</a></li>
+<li><a href="S_4summary.html" data-scroll="S_4summary">Chapter 4 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_settheory.html" data-scroll="C_settheory"><span class="codenumber">5</span> <span class="title">Set Theory</span></a><ul>
+<li><a href="S_setoperations.html" data-scroll="S_setoperations">Sets and Operations on Sets</a></li>
+<li><a href="S_provingset.html" data-scroll="S_provingset">Proving Set Relationships</a></li>
+<li><a href="S_setproperties.html" data-scroll="S_setproperties">Properties of Set Operations</a></li>
+<li><a href="S_cartesian.html" data-scroll="S_cartesian">Cartesian Products</a></li>
+<li><a href="S_indexfamily.html" data-scroll="S_indexfamily">Indexed Families of Sets</a></li>
+<li><a href="S_5summary.html" data-scroll="S_5summary">Chapter 5 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_functions.html" data-scroll="C_functions"><span class="codenumber">6</span> <span class="title">Functions</span></a><ul>
+<li><a href="S_introfunctions.html" data-scroll="S_introfunctions">Introduction to Functions</a></li>
+<li><a href="S_moreaboutfunctions.html" data-scroll="S_moreaboutfunctions">More about Functions</a></li>
+<li><a href="S_typesoffunctions.html" data-scroll="S_typesoffunctions">Beginning Activity 1: Injections, Surjections, and Bijections</a></li>
+<li><a href="S_compositionoffunctions.html" data-scroll="S_compositionoffunctions">Composition of Functions</a></li>
+<li><a href="S_inversefunctions.html" data-scroll="S_inversefunctions">Inverse Functions</a></li>
+<li><a href="S_functionsonsets.html" data-scroll="S_functionsonsets">Functions Acting on Sets</a></li>
+<li><a href="S_6summary.html" data-scroll="S_6summary">Chapter 6 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_equivrelations.html" data-scroll="C_equivrelations"><span class="codenumber">7</span> <span class="title">Equivalence Relations</span></a><ul>
+<li><a href="S_relations.html" data-scroll="S_relations">Relations</a></li>
+<li><a href="S_equivrelations.html" data-scroll="S_equivrelations">Equivalence Relations</a></li>
+<li><a href="S_equivclasses.html" data-scroll="S_equivclasses">Equivalence Classes</a></li>
+<li><a href="S_modulararithmetic.html" data-scroll="S_modulararithmetic">Modular Arithmetic</a></li>
+<li><a href="section-37.html" data-scroll="section-37">Chapter 7 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_numbertheory.html" data-scroll="C_numbertheory"><span class="codenumber">8</span> <span class="title">Topics in Number Theory</span></a><ul>
+<li><a href="S_gcd.html" data-scroll="S_gcd" class="active">The Greatest Common Divisor</a></li>
+<li><a href="S_primefactorizations.html" data-scroll="S_primefactorizations">Prime Numbers and Prime Factorizations</a></li>
+<li><a href="S_diophantine.html" data-scroll="S_diophantine">Linear Diophantine Equations</a></li>
+<li><a href="section-41.html" data-scroll="section-41">Chapter 8 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_topicsinsets.html" data-scroll="C_topicsinsets"><span class="codenumber">9</span> <span class="title">Finite and Infinite Sets</span></a><ul>
+<li><a href="S_finitesets.html" data-scroll="S_finitesets">Finite Sets</a></li>
+<li><a href="S_infinitesets.html" data-scroll="S_infinitesets">Countable Sets</a></li>
+<li><a href="S_uncountablesets.html" data-scroll="S_uncountablesets">Uncountable Sets</a></li>
+<li><a href="section-45.html" data-scroll="section-45">Chapter 9 Summary</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="C_writingguides.html" data-scroll="C_writingguides"><span class="codenumber">A</span> <span class="title">Guidelines for Writing Mathematical Proofs</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="S_gcd"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">8.1</span> <span class="title">The Greatest Common Divisor</span>
+</h2>
+<section class="worksheet" id="PA_gcd"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Beginning Activity 1: The Greatest Common Divisor</span><div class="print-links">
+<a href="PA_gcd-A4.html" class="a4">A4</a><a href="PA_gcd-letter.html" class="us">US</a>
+</div>
+</h3>
+<article class="exercise exercise-like" id="exercise-766"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-4347">Explain what it means to say that a nonzero integer \(m\) divides an integer \(n\text{.}\) Recall that we use the notation \(m \mid n\) to indicate that the nonzero integer \(m\) divides the integer \(n\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-767"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-4348">Let \(m\) and \(n\) be integers with \(m \ne 0\text{.}\) Explain what it means to say that \(m\) does not divide \(n\text{.}\)</p></article><article class="definition definition-like" id="gcd"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.1.1</span><span class="period">.</span>
+</h6>
+<p id="p-4349">Let \(a\) and \(b\) be integers, not both 0. A <dfn class="terminology">common divisor</dfn>  of \(a\) and \(b\) is any nonzero integer that divides both \(a\) and \(b\text{.}\) The <dfn class="terminology">largest</dfn> natural number that divides both \(a\) and \(b\) is called the <dfn class="terminology">greatest common divisor</dfn>  of \(a\) and \(b\text{.}\) The greatest common divisor of \(a\) and \(b\) is denoted by \(\gcd \left( {a, b} \right)\text{.}\)</p></article><article class="exercise exercise-like" id="PA_gcd1"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-4350">Use the roster method to list the elements of the set that contains all the natural numbers that are divisors of 48.</p></article><article class="exercise exercise-like" id="PA_gcd2"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-4351">Use the roster method to list the elements of the set that contains all the natural numbers that are divisors of 84.</p></article><article class="exercise exercise-like" id="exercise-770"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-4352">Determine the intersection of the two sets in <a class="xref" data-knowl="./knowl/PA_gcd1.html" title="Exercise 3">Exercise 3</a> and <a class="xref" data-knowl="./knowl/PA_gcd2.html" title="Exercise 4">Exercise 4</a>. This set contains all the natural numbers that are common divisors of 48 and 84.</p></article><article class="exercise exercise-like" id="PA_gcd4"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-4353">What is the greatest common divisor of 48 and 84?</p></article><article class="exercise exercise-like" id="PA_gcd5"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-4354">Use the method suggested in <a class="xref" data-knowl="./knowl/PA_gcd1.html" title="Exercise 3">Exercise 3</a> through <a class="xref" data-knowl="./knowl/PA_gcd4.html" title="Exercise 6">Exercise 6</a> to determine each of the following: \(\gcd( {8, - 12})\text{,}\) \(\gcd( {0, 5} )\text{,}\) \(\gcd( {8, 27} )\text{,}\) and \(\gcd( {14, 28})\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-773"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="p-4355">If \(a\) and \(b\) are integers, make a conjecture about how the common divisors of \(a\) and \(b\) are related to the greatest common divisor of \(a\) and \(b\text{.}\)</p></article></section><section class="worksheet" id="PA_gcdanddivalgo"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Beginning Acivity 2: The GCD and the Division Algorithm</span><div class="print-links">
+<a href="PA_gcdanddivalgo-A4.html" class="a4">A4</a><a href="PA_gcdanddivalgo-letter.html" class="us">US</a>
+</div>
+</h3>
+<p id="p-4356">When we speak of the quotient and the remainder when we “divide an integer \(a\) by the positive integer \(b\text{,}\)” we will always mean the quotient \(q\) and the remainder \(r\) guaranteed by the Division Algorithm. (See <a href="S_divalgo.html" class="internal" title="Section 3.5: Beginning Activity 1: The Division Algorithm and Congruence">Section 3.5</a>, <a href="S_divalgo.html#divalgorithm" class="internal" title="Subsection: The Division Algorithm">The Division Algorithm </a>.)</p>
+<article class="exercise exercise-like" id="PA_gcdanddivalgo2"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-4357">Each row in the following table contains values for the integers \(a\) and \(b\text{.}\) In this table, the value of \(r\) is the remainder (from the Division Algorithm) when \(a\) is divided by \(b\text{.}\) Complete each row in this table by determining \(\gcd( {a, b} )\text{,}\) \(r\text{,}\) and \(\gcd( {b, r} )\text{.}\) <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r2 l0 t0 lines">\(a\)</td>
+<td class="c m b2 r2 l0 t0 lines">\(b\)</td>
+<td class="c m b2 r2 l0 t0 lines">\(\gcd(a, b)\)</td>
+<td class="c m b2 r2 l0 t0 lines">Remainder \(r\)</td>
+<td class="c m b2 r0 l0 t0 lines">\(\gcd(b,r)\)</td>
+</tr>
+<tr>
+<td class="c m b2 r2 l0 t0 lines">44</td>
+<td class="c m b2 r2 l0 t0 lines">12</td>
+<td class="c m b2 r2 l0 t0 lines"></td>
+<td class="c m b2 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b2 r2 l0 t0 lines">75</td>
+<td class="c m b2 r2 l0 t0 lines">21</td>
+<td class="c m b2 r2 l0 t0 lines"></td>
+<td class="c m b2 r2 l0 t0 lines"></td>
+<td class="c m b2 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">50</td>
+<td class="c m b0 r2 l0 t0 lines">33</td>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r2 l0 t0 lines"></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></p></article><article class="exercise exercise-like" id="exercise-775"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-4358">Formulate a conjecture based on the results of the table in <a class="xref" data-knowl="./knowl/PA_gcdanddivalgo2.html" title="Exercise 1">Exercise 1</a>.</p></article></section><section class="subsection" id="subsection-149"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">The System of Integers</span>
+</h3>
+<p id="p-4359">Number theory is a study of the system of integers,  which consists of the set of integers, \(\mathbb{Z} = \left\{ {\, \ldots , - 3, - 2, - 1, 0, 1, 2, 3, \ldots \, } \right\}\) and the various properties of this set under the usual operations of addition and multiplication and under the usual ordering relation of “less than.” The properties of the integers in <a class="xref" data-knowl="./knowl/Ta_axiomsforintegers.html" title="Table 8.1.2: Axioms for the Integers">Table 8.1.2</a> will be considered axioms in this text.</p>
+<p id="p-4360">We will also assume the properties of the integers shown in <a class="xref" data-knowl="./knowl/Ta_propertiesofintegers.html" title="Table 8.1.3: Properties of the Integers">Table 8.1.3</a>. These properties can be proven from the properties in <a class="xref" data-knowl="./knowl/Ta_axiomsforintegers.html" title="Table 8.1.2: Axioms for the Integers">Table 8.1.2</a>. (However, we will not do so here.)</p>
+<figure class="table table-like" id="Ta_axiomsforintegers"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">8.1.2<span class="period">.</span></span><span class="space"> </span>Axioms for the Integers</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r2 l0 t0 lines"></td>
+<td class="l m b2 r0 l0 t0 lines">For all integers \(a, b,\) and \(c\text{:}\)</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">Closure Proporties for Addition and Multiplication</td>
+<td class="l m b2 r0 l0 t0 lines">\(a + b \in \mathbb{Z}\) and \(ab \in \mathbb{Z}\)</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">Commutative Properties for Addition and Multiplication</td>
+<td class="l m b2 r0 l0 t0 lines">\(a + b = b + a\text{,}\) and \(ab = ba\)</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">Associative Properties for Addition and Multiplication</td>
+<td class="l m b2 r0 l0 t0 lines">\(\left( {a + b} \right) + c = a + \left( {b + c} \right)\) and<br>\(\left( {ab} \right)c = a\left( {bc} \right)\)</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">Distributive Properties of Multiplication over Addition</td>
+<td class="l m b2 r0 l0 t0 lines">\(a\left( {b + c} \right) = ab + ac\text{,}\) and<br>\(\left( {b + c} \right)a = ba + ca\)</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">Additive and Multiplicative Identity Properties</td>
+<td class="l m b2 r0 l0 t0 lines">\(a + 0 = 0 + a = a\text{,}\) and<br>\(a \cdot 1 = 1 \cdot a = a\)</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">Additive Inverse Property</td>
+<td class="l m b0 r0 l0 t0 lines">\(a + \left( { - a} \right) = \left( { - a} \right) + a = 0\)</td>
+</tr>
+</table></div></figure><figure class="table table-like" id="Ta_propertiesofintegers"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">8.1.3<span class="period">.</span></span><span class="space"> </span>Properties of the Integers</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r2 l0 t0 lines">Zero Property of Multiplication</td>
+<td class="l m b2 r0 l0 t0 lines">If  \(a \in \mathbb{Z}\text{,}\) then  \(a \cdot 0 = 0 \cdot a = 0\text{.}\)</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">Cancellation Properties of<br>Addition and Multiplication</td>
+<td class="l m b0 r0 l0 t0 lines">If  \(a, b, c \in \mathbb{Z}\) and \(a + b = a + c\text{,}\) then  \(b = c\text{.}\)<br>If \(a, b, c \in \mathbb{Z}\text{,}\) \(a \ne 0\) and \(ac = bc\text{,}\) then \(b = c\text{.}\)</td>
+</tr>
+</table></div></figure><p id="p-4361">We have already studied a good deal of number theory in this text in our discussion of proof methods. In particular, we have studied even and odd integers, divisibility of integers, congruence, and the Division Algorithm. See the summary <a href="S_3summary.html" class="internal" title="Section 3.7: Chapter 3 Summary">Section 3.7</a> for a summary of results concerning even and odd integers as well as results concerning properties of divisors. We reviewed some of these properties and the Division Algorithm in the beginning activities.</p></section><section class="subsection" id="subsection-150"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">The Greatest Common Divisor</span>
+</h3>
+<p id="p-4362">One of the most important concepts in elementary number theory is that of the greatest common divisor of two integers. The definition for the greatest common divisor of two integers (not both zero) was given in <a href="S_gcd.html#PA_gcd" class="internal" title="Worksheet: Beginning Activity 1: The Greatest Common Divisor">Beginning Activity 1 </a>.</p>
+<ol class="decimal">
+<li id="li-602">
+<p id="p-4363">If \(a, b \in \mathbb{Z}\) and \(a\) and \(b\) are not both 0, and if \(d \in \mathbb{N}\text{,}\) then \(d = \gcd( {a, b} )\) provided that it satisfies all of the following properties:</p>
+<ul class="disc">
+<li id="li-603"><p id="p-4364">\(d \mid a\) and \(d \mid b\text{.}\) That is, \(d\) is a common divisor of \(a\) and \(b\text{.}\)</p></li>
+<li id="li-604"><p id="p-4365">If \(k\) is a natural number such that \(k \mid a\) and \(k \mid b\text{,}\) then \(k \leq d\text{.}\) That is, any other common divisor of \(a\) and \(b\) is less than or equal to \(d\text{.}\)</p></li>
+</ul>
+</li>
+<li id="li-605">
+<p id="p-4366">Consequently, a natural number \(d\) is not the greatest common divisor of \(a\) and \(b\) provided that it does not satisfy at least one of these properties. That is, \(d\) is not equal to \(\gcd( {a, b} )\) provided that</p>
+<ul class="disc">
+<li id="li-606"><p id="p-4367">\(d\) does not divide \(a\) or \(d\) does not divide \(b\text{;}\) or</p></li>
+<li id="li-607"><p id="p-4368">There exists a natural number \(k\) such that \(k \mid a\) and \(k \mid b\) and \(k &gt; d\text{.}\)</p></li>
+</ul>
+<p id="p-4369">This means that \(d\) is not the greatest common divisor of \(a\) and \(b\) provided that it is not a common divisor of \(a\) and \(b\) or that there exists a common divisor of \(a\) and \(b\) that is greater than \(d\text{.}\)</p>
+</li>
+</ol>
+<p id="p-4370">In the beginning activities, we determined the greatest common divisors for several pairs of integers. The process we used was to list all the divisors of both integers, then list all the common divisors of both integers and, finally, from the list of all common divisors, find the greatest (largest) common divisor. This method works reasonably well for small integers but can get quite cumbersome if the integers are large. Before we develop an efficient method for determining the greatest common divisor of two integers, we need to establish some properties of greatest common divisors.</p>
+<p id="p-4371">One property was suggested in <a href="S_gcd.html#PA_gcd" class="internal" title="Worksheet: Beginning Activity 1: The Greatest Common Divisor">Beginning Activity 1 </a>. If we look at the results in <a class="xref" data-knowl="./knowl/PA_gcd5.html" title="Exercise 7">Exercise 7</a> of that beginning activity, we should observe that any common divisor of \(a\) and \(b\) will divide \(\gcd( {a, b} )\text{.}\) In fact, the primary goals of the remainder of this section are</p>
+<ol class="decimal">
+<li id="li-608"><p id="p-4372">To find an efficient method for determining \(\gcd( {a, b} )\text{,}\) where \(a\) and \(b\) are integers.</p></li>
+<li id="li-609">
+<p id="p-4373">To prove that the natural number \(\gcd( {a, b} )\) is the only natural number \(d\) that satisfies the following properties:</p>
+<ul class="disc">
+<li id="li-610"><p id="p-4374">\(d\) divides \(a\) and \(d\) divides \(b\text{;}\) and</p></li>
+<li id="li-611"><p id="p-4375">if \(k\) is a natural number such that \(k \mid a\) and \(k \mid b\text{,}\) then \(k \mid d\text{.}\)</p></li>
+</ul>
+</li>
+</ol>
+<p id="p-4376">The second goal is only slightly different from the definition of the greatest common divisor. The only difference is in the second condition where \(k \leq d\) is replaced by \(k \mid d\text{.}\)</p>
+<p id="p-4377">We will first consider the case where \(a\) and \(b\) are integers with \(a \ne 0\) and \(b &gt; 0\text{.}\) The proof of the result stated in the second goal contains a method (called the Euclidean Algorithm) for determining the greatest common divisor of the two integers \(a\) and \(b\text{.}\) The main idea of the method is to keep replacing the pair of integers \(\left( {a, b} \right)\) with another pair of integers \(\left( {b, r} \right)\text{,}\) where \(0 \leq r \lt b\) and \(\gcd ( {b, r} ) = \gcd ( {a, b} )\text{.}\) This idea was explored in <a href="S_gcd.html#PA_gcdanddivalgo" class="internal" title="Worksheet: Beginning Acivity 2: The GCD and the Division Algorithm">Beginning Activity 2 </a>. <a class="xref" data-knowl="./knowl/L_gcdanddivalgo.html" title="Lemma 8.1.4">Lemma 8.1.4</a> is a conjecture that could have been formulated in <a href="S_gcd.html#PA_gcdanddivalgo" class="internal" title="Worksheet: Beginning Acivity 2: The GCD and the Division Algorithm">Beginning Activity 2 </a>.</p>
+<article class="lemma theorem-like" id="L_gcdanddivalgo"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">8.1.4</span><span class="period">.</span>
+</h6>
+<p id="p-4378">Let \(c\) and \(d\) be integers, not both equal to zero. If \(q\) and \(r\) are integers such that \(c = d \cdot q + r\text{,}\) then \(\gcd( {c, d} ) = \gcd( {d, r} )\text{.}\)</p></article><article class="hiddenproof" id="proof-49"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-49"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-49"><article class="hiddenproof"><p id="p-4379">Let \(c\) and \(d\) be integers, not both equal to zero. Assume that \(q\) and \(r\) are integers such that \(c = d \cdot q + r\text{.}\) For ease of notation, we will let</p>
+<div class="displaymath">
+\begin{equation*}
+m = \gcd( {c, d} )\text{  and  }  n = \gcd( {d, r} )\text{.}
+\end{equation*}
+</div>
+<p id="p-4380">Now, \(m\) divides \(c\) and \(m\) divides \(d\text{.}\) Consequently, there exist integers \(x\) and \(y\) such that \(c = mx\) and \(d = my\text{.}\) Hence,</p>
+<div class="displaymath">
+\begin{align*}
+r \amp = c - d \cdot q\\
+r \amp = mx - ( {my} )q\\
+r \amp = m ( {x - yq} )\text{.}
+\end{align*}
+</div>
+<p class="continuation">But this means that \(m\) divides \(r\text{.}\) Since \(m\) divides \(d\) and \(m\) divides \(r\text{,}\) \(m\) is less than or equal to \(\gcd( {d, r} )\text{.}\) Thus, \(m \leq n\text{.}\)</p>
+<p id="p-4381">Using a similar argument, we see that \(n\) divides \(d\) and \(n\) divides \(r\text{.}\) Since \(c = d \cdot q + r\text{,}\) we can prove that \(n\) divides \(c\text{.}\) Hence, \(n\) divides \(c\) and \(n\) divides \(d\text{.}\) Thus, \(n \leq \gcd( {c, d} )\) or \(n \leq m\text{.}\) We now have \(m \leq n\) and \(n \leq m\text{.}\) Hence, \(m = n\) and \(\gcd( {c, d} ) = \gcd( {d, r} )\text{.}\)</p></article></div>
+<article class="exercise exercise-like" id="prog_lemma81"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">8.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Illustrations of Lemma 8.1.4.</span>
+</h6>
+<div class="introduction" id="introduction-256"><p id="p-4382">We completed several examples illustrating <a class="xref" data-knowl="./knowl/L_gcdanddivalgo.html" title="Lemma 8.1.4">Lemma 8.1.4</a> in <a href="S_gcd.html#PA_gcdanddivalgo" class="internal" title="Worksheet: Beginning Acivity 2: The GCD and the Division Algorithm">Beginning Activity 2 </a>. For another example, let \(c = 56\) and \(d = 12\text{.}\) The greatest common divisor of 56 and 12 is 4.</p></div>
+<article class="task exercise-like" id="task-1630"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-4383">According to the Division Algorithm, what is the remainder \(r\) when 56 is divided by 12?</p></article><article class="task exercise-like" id="task-1631"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-4384">What is the greatest common divisor of 12 and the remainder \(r\text{?}\)</p></article><article class="task exercise-like" id="task-1632"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-4385">The key to finding the greatest common divisor (in more complicated cases) is to use the Division Algorithm again, this time with 12 and \(r\text{.}\) We now find integers \(q_2 \text{ and } r_2\) such that</p>
+<div class="displaymath">
+\begin{equation*}
+12 = r \cdot q_2  + r_2\text{.}
+\end{equation*}
+</div>
+<p id="p-4386">What is the greatest common divisor of \(r\) and \(r_2\text{?}\)</p></article></article></section><section class="subsection" id="subsection-151"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">The Euclidean Algorithm</span>
+</h3>
+<p id="p-4387">The example in <a class="xref" data-knowl="./knowl/prog_lemma81.html" title="Progress Check 8.1.5: Illustrations of Lemma 8.1.4">Progress Check 8.1.5</a> illustrates the main idea of the <dfn class="terminology">Euclidean Algorithm</dfn>  for finding \(\gcd( {a, b} )\text{,}\) which is explained in the proof of the following theorem.</p>
+<article class="theorem theorem-like" id="T_euclidalgo"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.1.6</span><span class="period">.</span>
+</h6>
+<p id="p-4388">Let \(a\) and \(b\) be integers with \(a \ne 0\) and \(b &gt; 0\text{.}\) Then \(\gcd( {a, b} )\) is the only natural number \(d\) such that</p>
+<ol class="lower-alpha">
+<li id="T_euclidalgo1"><p id="p-4389">\(d\) divides \(a\) and \(d\) divides \(b\text{,}\) and</p></li>
+<li id="T_euclidalgo2"><p id="p-4390">if \(k\) is an integer that divides both \(a\) and \(b\text{,}\) then \(k\) divides \(d\text{.}\)</p></li>
+</ol></article><article class="hiddenproof" id="proof-50"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-50"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-50"><article class="hiddenproof"><p id="p-4391">Let \(a\) and \(b\) be integers with \(a \ne 0\) and \(b &gt; 0\text{,}\) and let \(d = \gcd( {a, b} )\text{.}\) By the Division Algorithm, there exist integers \(q_1\) and \(r_1\) such that</p>
+<div class="displaymath">
+\begin{equation}
+a = b \cdot q_1  + r_1 \text{ ,  and  } 0 \leq r_1  \lt  b\text{.}\label{eq_euclidalgo1}\tag{8.1}
+\end{equation}
+</div>
+<p id="p-4392">If \(r_1 = 0\text{,}\) then equation <a class="xref" data-knowl="./knowl/eq_euclidalgo1.html" title="Equation 8.1">(8.1)</a> implies that \(b\) divides \(a\text{.}\) Hence, \(b = d = \gcd( {a, b} )\) and this number satisfies <a class="xref" data-knowl="./knowl/T_euclidalgo1.html" title="Item a">Condition a</a> and <a class="xref" data-knowl="./knowl/T_euclidalgo2.html" title="Item b">Condition b</a>.</p>
+<p id="p-4393">If \(r_1  &gt; 0\text{,}\) then by <a class="xref" data-knowl="./knowl/L_gcdanddivalgo.html" title="Lemma 8.1.4">Lemma 8.1.4</a>, \(\gcd( {a, b} ) = \gcd( {b, r_1 } )\text{.}\) We use the Division Algorithm again to obtain integers \(q_2\) and \(r_2\) such that</p>
+<div class="displaymath">
+\begin{equation}
+b = r_1  \cdot q_2  + r_2 \text{ ,  and  } 0 \leq r_2  \lt  r_1\text{.}\label{eq_euclidalgo2}\tag{8.2}
+\end{equation}
+</div>
+<p id="p-4394">If \(r_2 = 0\text{,}\) then equation <a class="xref" data-knowl="./knowl/eq_euclidalgo2.html" title="Equation 8.2">(8.2)</a> implies that \(r_1\) divides \(b\text{.}\) This means that \(r_1 = \gcd( {b, r_1 } )\text{.}\) But we have already seen that \(\gcd( {a, b} ) = \gcd( {b, r_1 } )\text{.}\) Hence, \(r_1 = \gcd( {a, b} )\text{.}\) In addition, if \(k\) is an integer that divides both \(a\) and \(b\text{,}\) then, using equation <a class="xref" data-knowl="./knowl/eq_euclidalgo1.html" title="Equation 8.1">(8.1)</a>, we see that \(r_1 = a - b \cdot q_1\) and, hence \(k\) divides \(r_1\text{.}\) This shows that \(r_1 = \gcd( {a, b} )\) satisfies <a class="xref" data-knowl="./knowl/T_euclidalgo1.html" title="Item a">Condition a</a> and <a class="xref" data-knowl="./knowl/T_euclidalgo2.html" title="Item b">Condition b</a>.</p>
+<p id="p-4395">If \(r_2 &gt; 0\text{,}\) then by <a class="xref" data-knowl="./knowl/L_gcdanddivalgo.html" title="Lemma 8.1.4">Lemma 8.1.4</a>, \(\gcd( {b, r_1 } ) = \gcd( {r_1 , r_2 } )\text{.}\) But we have already seen that \(\gcd( {a, b} ) = \gcd( {b, r_1 } )\text{.}\) Hence, \(\gcd( {a, b} ) = \gcd( {r_1 , r_2 } )\text{.}\) We now continue to apply the Division Algorithm to produce a sequence of pairs of integers (all of which have the same greatest common divisor). This is summarized in the following table:</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="l m b1 r2 l0 t0 lines">Original Pair</th>
+<th class="l m b1 r2 l0 t0 lines">Equation from<br>Division Algorithm</th>
+<th class="l m b1 r2 l0 t0 lines">Inequality from<br>Division Algorithm</th>
+<th class="l m b1 r0 l0 t0 lines">New Pair</th>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">\(\left( {a, b} \right)\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(a = b \cdot q_1  + r_1\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(0 \leq r_1  \lt  b\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(\left( {b, r_1 } \right)\)</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">\(\left( {b, r_1 } \right)\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(b = r_1  \cdot q_2  + r_2\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(0 \leq r_2  \lt  r_1\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(\left( {r_1 , r_2 } \right)\)</td>
+</tr>
+<tr>
+<td class="l m b1 r2 l0 t0 lines">\(\left( {r_1 , r_2 } \right)\)</td>
+<td class="l m b1 r2 l0 t0 lines">\(r_1  = r_2  \cdot q_3  + r_3\)</td>
+<td class="l m b1 r2 l0 t0 lines">\(0 \leq r_3  \lt  r_2\)</td>
+<td class="l m b1 r0 l0 t0 lines">\(\left( {r_2 , r_3 } \right)\)</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">\(\left( {r_2 , r_3 } \right)\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(r_2  = r_3  \cdot q_4  + r_4\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(0 \leq r_4  \lt  r_3\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(\left( {r_3 , r_4 } \right)\)</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">\(\left( {r_3 , r_4 } \right)\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(r_3  = r_4  \cdot q_5  + r_5\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(0 \leq r_5  \lt  r_4\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(\left( {r_4 , r_5 } \right)\)</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">\(\vdots\)</td>
+<td class="l m b0 r2 l0 t0 lines">\(\vdots\)</td>
+<td class="l m b0 r2 l0 t0 lines">\(\vdots\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(\vdots\)</td>
+</tr>
+</table></div>
+<p id="p-4396">From the inequalities in the third column of this table, we have a strictly decreasing sequence of nonnegative integers \(\left( {b &gt; r_1 &gt; r_2 &gt; r_3 &gt; r_4 \cdots } \right)\text{.}\) Consequently, a term in this sequence must eventually be equal to zero. Let \(p\) be the smallest natural number such that \(r_{p + 1} = 0\text{.}\) This means that the last two rows in the preceding table will be</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="l m b1 r2 l0 t0 lines">Original Pair</th>
+<th class="l m b1 r2 l0 t0 lines">Equation from<br>Division Algorithm</th>
+<th class="l m b1 r2 l0 t0 lines">Inequality from<br>Division Algorithm</th>
+<th class="l m b1 r0 l0 t0 lines">New Pair</th>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">\(\left( {r_{p - 2} , r_{p - 1} } \right)\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(r_{p - 2}  = r_{p - 1}  \cdot q_p  + r_p\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(0 \leq r_p  \lt  r_{p - 1}\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(\left( {r_{p - 1} , r_p } \right)\)</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">\(\left( {r_{p - 1} , r_p } \right)\)</td>
+<td class="l m b0 r2 l0 t0 lines">\(r_{p - 1}  = r_p  \cdot q_{p + 1}  + 0\)</td>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div>
+<p id="p-4397">Remember that this table was constructed by repeated use of <a class="xref" data-knowl="./knowl/L_gcdanddivalgo.html" title="Lemma 8.1.4">Lemma 8.1.4</a> and that the greatest common divisor of each pair of integers produced equals \(\gcd( {a, b} )\text{.}\) Also, the last row in the table indicates that \(r_p\) divides \(r_{p - 1}\text{.}\) This means that \(\gcd( {r_{p - 1} , r_p } ) = r_p\) and hence \(r_p = \gcd( {a, b} )\text{.}\)</p>
+<p id="p-4398">This proves that \(r_p = \gcd( {a, b} )\) satisfies <a class="xref" data-knowl="./knowl/T_euclidalgo1.html" title="Item a">Condition a</a> of this theorem. Now assume that \(k\) is an integer such that \(k\) divides \(a\) and \(k\) divides \(b\text{.}\) We proceed through the table row by row. First, since \(r_1 = a - b \cdot q\text{,}\) we see that \(k\) must divide \(r_1\text{.}\) The second row tells us that \(r_2 = b - r_1 \cdot q_2\text{.}\) Since \(k\) divides \(b\) and \(k\) divides \(r_1\text{,}\) we conclude that \(k\) divides \(r_2\text{.}\) Continuing with each row, we see that \(k\) divides each of the remainders \(r_1\text{,}\) \(r_2\text{,}\) \(r_3\text{,}\) \(\ldots, r_p\text{.}\) This means that \(r_p = \gcd( {a, b} )\) satisfies <a class="xref" data-knowl="./knowl/T_euclidalgo2.html" title="Item b">Condition b</a> of the theorem.</p></article></div>
+<article class="exercise exercise-like" id="prog_usingeuclid1"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">8.1.7</span><span class="period">.</span>
+</h6>
+<p id="p-4399">Use the Euclidean Algorithm to determine \(\gcd( {180, 126} )\text{.}\) Notice that we have deleted the third column (Inequality from Division Algorithm) from the following table. It is not needed in the computations. <div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="l m b2 r2 l0 t0 lines">Original Pair</th>
+<th class="l m b2 r2 l0 t0 lines">Equation from<br>Division Algorithm</th>
+<th class="l m b2 r0 l0 t0 lines">New Pair</th>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">\(\left( {180, 126} \right)\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(180 = 126 \cdot 1 + 54\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(\left( {126, 54} \right)\)</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">\(\left( {126, 54} \right)\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(126 =\)</td>
+<td class="l m b2 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></p>
+<p id="p-4400">Consequently, \(\gcd( {180, 126} ) = \) <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>.</p></article><article class="exercise exercise-like" id="prog_usingeuclid2"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">8.1.8</span><span class="period">.</span>
+</h6>
+<p id="p-4401">Use the Euclidean Algorithm to determine \(\gcd( {4208, 288} )\text{.}\) <div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="l m b2 r2 l0 t0 lines">Original Pair</th>
+<th class="l m b2 r2 l0 t0 lines">Equation from<br>Division Algorithm</th>
+<th class="l m b2 r0 l0 t0 lines">New Pair</th>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">\(\left( {4208, 288} \right)\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(4208 = 288 \cdot 14 + 176\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(\left( {288, \qquad} \right)\)</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="l m b0 r2 l0 t0 lines"></td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></p>
+<p id="p-4402">Consequently, \(\gcd( {4208, 288} ) = \) <span class="fillin" role="img" aria-label="10-character blank" style="width: 4.545454545454546em;"></span>.</p></article></section><section class="subsection" id="subsection-152"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Some Remarks about Theorem 8.1.6</span>
+</h3>
+<p id="p-4403"><a class="xref" data-knowl="./knowl/T_euclidalgo.html" title="Theorem 8.1.6">Theorem 8.1.6</a> was proven with the assumptions that \(a,
+b \in \mathbb{Z}\) with \(a \ne 0\) and \(b &gt; 0\text{.}\) A more general version of this theorem can be proven with \(a,
+b \in \mathbb{Z}\) and \(b \ne 0\text{.}\) This can be proven using <a class="xref" data-knowl="./knowl/T_euclidalgo.html" title="Theorem 8.1.6">Theorem 8.1.6</a> and the results in the following lemma.</p>
+<article class="lemma theorem-like" id="L_moregcd"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">8.1.9</span><span class="period">.</span>
+</h6>
+<p id="p-4404">Let \(a, b \in \mathbb{Z}\) with \(b \ne 0\text{.}\) Then</p>
+<ol class="decimal">
+<li id="li-614"><p id="p-4405">\(\gcd( {0, b} ) = \left| b \right|\text{.}\)</p></li>
+<li id="li-615"><p id="p-4406">If \(\gcd( {a, b} ) = d\text{,}\) then \(\gcd( {a, - b} ) = d\text{.}\)</p></li>
+</ol></article><p id="p-4407">The proofs of these results are in <a class="xref" data-knowl="./knowl/exer_sec81-props.html" title="Exercise 4">Exercise 4</a>. An application of this result is given in the next example.</p>
+<article class="example example-like" id="E_euclidalgo"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Using the Euclidean Algorithm.</span>
+</h6>
+<p id="p-4408">Let \(a = 234\) and \(b = - 42\text{.}\) We will use the Euclidean Algorithm to determine \(\gcd( {234, 42} )\text{.}\)</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="l m b2 r2 l0 t0 lines">Step</th>
+<th class="l m b2 r2 l0 t0 lines">Original Pair</th>
+<th class="l m b2 r2 l0 t0 lines">Equation from<br>Division Algorithm</th>
+<th class="l m b2 r0 l0 t0 lines">New Pair</th>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">1</td>
+<td class="l m b2 r2 l0 t0 lines">\(\left( {234, 42} \right)\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(234 = 42 \cdot 5 + 24\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(\left( {42, 24} \right)\)</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">2</td>
+<td class="l m b2 r2 l0 t0 lines">\(\left( {42, 24} \right)\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(42 = 24 \cdot 1 + 18\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(\left( {24, 18} \right)\)</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">3</td>
+<td class="l m b2 r2 l0 t0 lines">\(\left( {24, 18} \right)\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(24 = 18 \cdot 1 + 6\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(\left( {18, 6} \right)\)</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">4</td>
+<td class="l m b0 r2 l0 t0 lines">\(\left( {18, 6} \right)\)</td>
+<td class="l m b0 r2 l0 t0 lines">\(18 = 6 \cdot 3\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div>
+<p id="p-4409">So \(\gcd( {234, 42} ) = 6\) and hence \(\gcd( {234, - 42} ) = 6\text{.}\)</p></article></section><section class="subsection" id="subsection-153"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Writing \(\boldsymbol{\gcd (a, b)}\)  in Terms of \(a\) and \(b\)</span>
+</h3>
+<p id="p-4410">We will use <a class="xref" data-knowl="./knowl/E_euclidalgo.html" title="Example 8.1.10: Using the Euclidean Algorithm">Example 8.1.10</a> to illustrate another use of the Euclidean Algorithm. It is possible to use the steps of the Euclidean Algorithm in reverse order to write \(\gcd( {a, b} )\) in terms of \(a\) and \(b\text{.}\) We will use these steps in reverse order to find integers \(m\) and \(n\) such that \(\gcd( {234, 42} ) = 234m + 42n\text{.}\) The idea is to start with the row with the last nonzero remainder and work backward as shown in the following table:</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="l m b2 r2 l0 t0 lines">Explanation</th>
+<th class="l m b2 r0 l0 t0 lines">Result</th>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">First, use the equation in Step 3 to<br>write 6 in terms of  24  and  18.</td>
+<td class="l m b2 r0 l0 t0 lines">\(6 = 24 - 18 \cdot 1\)</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">Use the equation in Step 2 to write<br>\(18 = 42 - 24 \cdot 1\text{.}\) Substitute this into<br>the preceding result and simplify.</td>
+<td class="l m b2 r0 l0 t0 lines"><div class="displaymath">
+\begin{align*}
+6 \amp = 24 - 18 \cdot 1\\
+\amp = 24 - \left( {42 - 24 \cdot 1} \right)\\
+\amp = 42 \cdot \left( { - 1} \right) + 24 \cdot 2
+\end{align*}
+</div></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">We now have written  6  in terms of<br>42 and 24.  Use the equation in<br>Step 1 to write \(24 = 234 - 42 \cdot 5\text{.}\)<br>Substitute this into the preceding<br>result and simplify</td>
+<td class="l m b0 r0 l0 t0 lines"><div class="displaymath">
+\begin{align*}
+6 \amp = 42 \cdot \left( { - 1} \right) + 24 \cdot 2\\
+\amp = 42 \cdot \left( { - 1} \right) + \left( {234 - 42 \cdot 5} \right) \cdot 2\\
+\amp = 234 \cdot 2 + 42 \cdot \left( { - 11} \right)
+\end{align*}
+</div></td>
+</tr>
+</table></div>
+<p id="p-4411">Hence, we can write</p>
+<div class="displaymath">
+\begin{equation*}
+\gcd( {234, 42} ) = 234 \cdot 2 + 42 \cdot ( { - 11} )\text{.}
+\end{equation*}
+</div>
+<p id="p-4412">(Check this with a calculator.) In this case, we say that we have written \(\gcd( {234, 42} )\) as a linear combination of 234 and 42. More generally, we have the following definition.</p>
+<article class="definition definition-like" id="linearcombination"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.1.11</span><span class="period">.</span>
+</h6>
+<p id="p-4413">Let \(a\) and \(b\) be integers. A <dfn class="terminology">linear combination</dfn>  of \(a\) and \(b\) is an integer of the form \(ax + by\text{,}\) where \(x\) and \(y\) are integers.</p></article><article class="exercise exercise-like" id="prog_gcdaslincomb"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">8.1.12</span><span class="period">.</span><span class="space"> </span><span class="title">Writing the gcd as a Linear Combination.</span>
+</h6>
+<div class="introduction" id="introduction-257"><p id="p-4414">Use the results from <a class="xref" data-knowl="./knowl/prog_usingeuclid1.html" title="Progress Check 8.1.7">Progress Check 8.1.7</a> and <a class="xref" data-knowl="./knowl/prog_usingeuclid2.html" title="Progress Check 8.1.8">Progress Check 8.1.8</a> to</p></div>
+<article class="task exercise-like" id="task-1633"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-4415">Write \(\gcd( {180, 126} )\) as a linear combination of 180 and 126.</p></article><article class="task exercise-like" id="task-1634"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-4416">Write \(\gcd( {4208, 288} )\) as a linear combination of 4208 and 288.</p></article></article><p id="p-4417">The previous example and progress check illustrate the following important result in number theory, which will be used in the next section to help prove some other significant results.</p>
+<article class="theorem theorem-like" id="T_gcdaslincomb"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.1.13</span><span class="period">.</span>
+</h6>
+<p id="p-4418">Let \(a\) and \(b\) be integers, not both 0. Then \(\gcd( {a, b} )\) can be written as a linear combination of \(a\) and \(b\text{.}\) That is, there exist integers \(u\) and \(v\) such that \(\gcd( {a, b} ) = au + bv\text{.}\)</p></article><p id="p-4419">We will not give a formal proof of this theorem. Hopefully, the examples and activities provide evidence for its validity. The idea is to use the steps of the Euclidean Algorithm in reverse order to write \(\gcd( {a, b} )\) as a linear combination of \(a\) and \(b\text{.}\) For example, assume the completed table for the Euclidean Algorithm is</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="l m b2 r2 l0 t0 lines">Step</th>
+<th class="l m b2 r2 l0 t0 lines">Original Pair</th>
+<th class="l m b2 r2 l0 t0 lines">Equation from<br>Division Algorithm</th>
+<th class="l m b2 r0 l0 t0 lines">New Pair</th>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">1</td>
+<td class="l m b2 r2 l0 t0 lines">\(\left( {a, b} \right)\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(a = b \cdot q_1  + r_1\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(\left( {b, r_1 } \right)\)</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">2</td>
+<td class="l m b2 r2 l0 t0 lines">\(\left( {b, r_1 } \right)\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(b = r_1  \cdot q_2  + r_2\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(\left( {r_1 , r_2 } \right)\)</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">3</td>
+<td class="l m b2 r2 l0 t0 lines">\(\left( {r_1 , r_2 } \right)\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(r_1  = r_2  \cdot q_3  + r_3\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(\left( {r_2 , r_3 } \right)\)</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">4</td>
+<td class="l m b0 r2 l0 t0 lines">\(\left( {r_2 , r_3 } \right)\)</td>
+<td class="l m b0 r2 l0 t0 lines">\(r_2  = r_3  \cdot q_4  + 0\)</td>
+<td class="l m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div>
+<p id="p-4420">We can use Step 3 to write \(r_3 = \gcd( {a, b} )\) as a linear combination of \(r_1\) and \(r_2\text{.}\) We can then solve the equation in Step 2 for \(r_2\) and use this to write \(r_3 = \gcd( {a, b} )\) as a linear combination of \(r_1\) and \(b\text{.}\) We can then use the equation in Step 1 to solve for \(r_1\) and use this to write \(r_3 = \gcd( {a, b} )\) as a linear combination of \(a\) and \(b\text{.}\)</p>
+<p id="p-4421">In general, if we can write \(r_p = \gcd( {a, b} )\) as a linear combination of a pair in a given row, then we can use the equation in the preceding step to write \(r_p = \gcd( {a, b} )\) as a linear combination of the pair in this preceding row.</p>
+<p id="p-4422">The notational details of this induction argument get quite involved. Many mathematicians prefer to prove <a class="xref" data-knowl="./knowl/T_gcdaslincomb.html" title="Theorem 8.1.13">Theorem 8.1.13</a> using a property of the natural numbers called the Well-Ordering Principle. <dfn class="terminology">The Well-Ordering Principle</dfn>  for the natural numbers states that any nonempty set of natural numbers must contain a least element. It can be proven that the Well-Ordering Principle is equivalent to the Principle of Mathematical Induction.</p></section><section class="exercises" id="exercises-31"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exer_sec81-1"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-258"><p id="p-4423">Find each of the following greatest common divisors by listing all of the positive common divisors of each pair of integers.</p></div>
+<article class="task exercise-like" id="task-1635"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-4424">\(\gcd( {21, 28} )\)</p></article><article class="task exercise-like" id="task-1636"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-4425">\(\gcd( { - 21, 28} )\)</p></article><article class="task exercise-like" id="task-1637"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-4426">\(\gcd( {58, 63} )\)</p></article><article class="task exercise-like" id="task-1638"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-4427">\(\gcd( {0, 12} )\)</p></article><article class="task exercise-like" id="task-1639"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-4428">\(\gcd( {110, 215} )\)</p></article><article class="task exercise-like" id="task-1640"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-4429">\(\gcd( {110, - 215} )\)</p></article></article><article class="exercise exercise-like" id="exer_sec81-2"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-259"><p id="p-4430">Complete the following.</p></div>
+<article class="task exercise-like" id="task-1641"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-4431">Let \(a \in \Z\) and let \(k \in \Z\) with \(k \ne 0\text{.}\) Prove that if \(k \mid a\) and \(k \mid \left( {a + 1} \right)\text{,}\) then \(k \mid 1\text{,}\) and hence \(k = \pm 1\text{.}\)</p></article><article class="task exercise-like" id="task-1642"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-4432">Let \(a \in \mathbb{Z}\text{.}\) Find the greatest common divisor of the consecutive integers \(a\) and \(a + 1\text{.}\) That is, determine \(\gcd( {a, a + 1} )\text{.}\)</p></article></article><article class="exercise exercise-like" id="exercise-782"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-260"><p id="p-4433">Complete the following.</p></div>
+<article class="task exercise-like" id="task-1643"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-4434">Let \(a \in \Z\) and let \(k \in \Z\) with \(k \ne 0\text{.}\) Prove that if \(k \mid a\) and \(k \mid \left( {a + 2} \right)\text{,}\) then \(k \mid 2\text{.}\)</p></article><article class="task exercise-like" id="task-1644"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-4435">Let \(a \in \mathbb{Z}\text{.}\) What conclusions can be made about the greatest common divisor of \(a\) and \(a + 2\text{?}\)</p></article></article><article class="exercise exercise-like" id="exer_sec81-props"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-261"><p id="p-4436">Let \(a, b \in \mathbb{Z}\) with \(b \ne 0\text{.}\) Prove each of the following:</p></div>
+<article class="task exercise-like" id="task-1645"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-4437">\(\gcd( {0, b} ) = \left| b \right|\)</p></article><article class="task exercise-like" id="task-1646"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-4438">If \(\gcd( {a, b} ) = d\text{,}\) then \(\gcd( {a, - b} ) = d\text{.}\) That is, \(\gcd \left( {a, - b} \right) = \gcd( {a, b} )\text{.}\)</p></article></article><article class="exercise exercise-like" id="exer_sec81-4"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-262"><p id="p-4439">For each of the following pairs of integers, use the Euclidean Algorithm to find \(\gcd( {a, b} )\) and to write \(\gcd( {a, b} )\) as a linear combination of \(a\) and \(b\text{.}\) That is, find integers \(m\) and \(n\) such that \(d = am + bn\text{.}\)</p></div>
+<article class="task exercise-like" id="task-1647"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-4440">\(a = 36, b = 60\)</p></article><article class="task exercise-like" id="task-1648"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-4441">\(a = 901, b = 935\)</p></article><article class="task exercise-like" id="task-1649"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-4442">\(a = 72, b = 714\)</p></article><article class="task exercise-like" id="task-1650"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-4443">\(a = 12628, b = 21361\)</p></article><article class="task exercise-like" id="task-1651"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-4444">\(a = 901\text{,}\) \(b = -935\)</p></article><article class="task exercise-like" id="task-1652"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-4445">\(a = -36\text{,}\) \(b = -60\)</p></article></article><article class="exercise exercise-like" id="exer81_solvingeqn"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-263"><p id="p-4446">Complete the following.</p></div>
+<article class="task exercise-like" id="task-1653"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-4447">Find integers \(u\) and \(v\) such that \(9u + 14v = 1\) or explain why it is not possible to do so. Then find integers \(x\) and \(y\) such that \(9x + 14y = 10\) or explain why it is not possible to do so.</p></article><article class="task exercise-like" id="task-1654"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-4448">Find integers \(x\) and \(y\) such that \(9x + 15y = 10\) or explain why it is not possible to do so.</p></article><article class="task exercise-like" id="task-1655"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-4449">Find integers \(x\) and \(y\) such that \(9x + 15y = 3162\) or explain why it is not possible to do so.</p></article></article><article class="exercise exercise-like" id="exer_gcdandfractions"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-264"><p id="p-4450">Complete the following.</p></div>
+<article class="task exercise-like" id="exer_gcdanddena"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-4451">Notice that \(\gcd( {11, 17} ) = 1\text{.}\) Find integers \(x\) and \(y\) such that \(11x + 17y = 1\text{.}\)</p></article><article class="task exercise-like" id="exer_gcdanddenb"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-4452">Let \(m, n \in \mathbb{Z}\text{.}\) Write the sum \(\dfrac{m}{{11}} + \dfrac{n}{{17}}\) as a single fraction.</p></article><article class="task exercise-like" id="task-1658"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-4453">Find two rational numbers with denominators of  11  and  17, respectively , whose sum is equal to \(\dfrac{{10}}{{187}}\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-23" id="hint-23"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-23"><div class="hint solution-like">
+<p id="p-4454">Write the rational numbers in the form \(\dfrac{m}{{11}}\)  and  \(\dfrac{n}{{17}}\text{,}\) where  \(m, n \in \mathbb{Z}\text{.}\) Then write</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{m}{{11}} + \frac{n}{{17}} = \frac{{10}}{{187}}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Use <a class="xref" data-knowl="./knowl/exer_gcdanddena.html" title="Task 7.a">Task 7.a</a> and <a class="xref" data-knowl="./knowl/exer_gcdanddenb.html" title="Task 7.b">Task 7.b</a> to determine \(m\)  and  \(n\text{.}\)</p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-1659"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-4455">Find two rational numbers with denominators 17 and 21, respectively, whose sum is equal to \(\dfrac{326}{357}\) or explain why it is not possible to do so.</p></article><article class="task exercise-like" id="task-1660"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-4456">Find two rational numbers with denominators 9 and 15, respectively, whose sum is equal to \(\dfrac{10}{225}\) or explain why it is not possible to do so.</p></article></article><article class="activity project-like" id="exer81_lincomb"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">47</span><span class="period">.</span><span class="space"> </span><span class="title">Linear Combinations and the Greatest Common Divisor.</span>
+</h6>
+<article class="task exercise-like" id="task-1661"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-4457">Determine the greatest common divisor of 20 and 12.</p></article><article class="task exercise-like" id="task-1662"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-4458">Let \(d = \gcd( {20, 12} )\text{.}\) Write \(d\) as a linear combination of 20 and 12.</p></article><article class="task exercise-like" id="exer81_lincombc"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-4459">Generate at least six different linear combinations of 20 and 12. Are these linear combinations of 20 and 12 multiples of \(\gcd( {20, 12} )\text{?}\)</p></article><article class="task exercise-like" id="exer81_lincombd"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-4460">Determine the greatest common divisor of 21 and \(-6\) and then generate at least six different linear combinations of 21 and \(-6\text{.}\) Are these linear combinations of 21 and \(-6\) multiples of \(\gcd( {21, -6} )\text{?}\)</p></article><article class="task exercise-like" id="task-1665"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-4461">The following proposition was first introduced in <a class="xref" data-knowl="./knowl/exer52-choose.html" title="Activity 30: Using the Choose-an-Element Method in a Different Setting">Activity 30</a> in <a href="S_provingset.html" class="internal" title="Section 5.2: Proving Set Relationships">Section 5.2</a>. Complete the proof of this proposition if you have not already done so.</p>
+<p id="p-4462"><a class="xref" data-knowl="./knowl/P_divlinearcomb.html" title="Proposition 5.2.13">Proposition 5.2.13</a>: Let a, b, and t be integers with \(t \ne 0\text{.}\) If t divides a and t divides b, then for all integers x and y, t divides \text{(} ax + by\text{)} .</p>
+<p id="p-4463">Proof. Let \(a\text{,}\) \(b\text{,}\) and \(t\) be integers with \(t \ne 0\text{,}\) and assume that \(t\) divides \(a\) and \(t\) divides \(b\text{.}\) We will prove that for all integers \(x\) and \(y\text{,}\) \(t\) divides \((ax + by)\text{.}\) So let \(x \in \mathbb{Z}\) and let \(y \in \mathbb{Z}\text{.}\) Since \(t\) divides \(a\text{,}\) there exists an integer \(m\) such that \(\ldots \text{.}\)</p></article><article class="task exercise-like" id="task-1666"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-4464">Now let \(a\) and \(b\) be integers, not both zero, and let \(d = \gcd(a, b )\text{.}\) <a class="xref" data-knowl="./knowl/T_gcdaslincomb.html" title="Theorem 8.1.13">Theorem 8.1.13</a> states that \(d\) is a linear combination of \(a\) and \(b\text{.}\) In addition, let \(S\) and \(T\) be the following sets:</p>
+<div class="displaymath">
+\begin{equation*}
+S = \left\{ ax + by \mid x, y \in \Z \right\} \qquad \text{ and }  
+\qquad T = \left\{ kd \mid k \in \Z \right\}\!\text{.}
+\end{equation*}
+</div>
+<p class="continuation">That is, \(S\) is the set of all linear combinations of \(a\) and \(b\text{,}\) and \(T\) is the set of all multiples of the greatest common divisor of \(a\) and \(b\text{.}\) Does the set \(S\) equal the set \(T\text{?}\) If not, is one of these sets a subset of the other set? Justify your conclusions.</p>
+<p id="p-4465">In <a class="xref" data-knowl="./knowl/exer81_lincombc.html" title="Task 47.c">Task 47.c</a> and <a class="xref" data-knowl="./knowl/exer81_lincombd.html" title="Task 47.d">Task 47.d</a>, we were exploring special cases for these two sets.</p></article></article></section></section></div></main>
+</div>
+</body>
+</html>

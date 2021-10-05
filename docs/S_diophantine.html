@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-10-05T14:52:55-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Linear Diophantine Equations</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\def\C{\JustCenter}
+\newcommand{\typeu}{Beginning }
+\def\C{\JustCenter}
+\newcommand{\typel}{beginning }
+\def\C{\JustCenter}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\
+\thechapter. #1}{}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\def\C{\JustCenter}
+\renewcommand{\theenumi}{\alph{enumi}}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\theenumi}{({\alph{enumi}})}
+\def\C{\JustCenter}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\mynot}{\neg}
+\newcommand{\card}{\mathbf{card}}
+\newcommand{\x}{:}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Mathematical Reasoning:</span> <span class="subtitle">Writing and Proof (Version 3)</span></a></h1>
+<p class="byline">Ted Sundstrom, Professor Emeritus</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_primefactorizations.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_numbertheory.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-41.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_primefactorizations.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C_numbertheory.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-41.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="fm-versions.html" data-scroll="fm-versions">Version 3 and Version 2.1</a></li>
+<li><a href="fm-student-note.html" data-scroll="fm-student-note">Note to Students</a></li>
+<li><a href="fm-preface.html" data-scroll="fm-preface">Preface</a></li>
+<li><a href="fm-imp-features.html" data-scroll="fm-imp-features">Important Features of the Book</a></li>
+<li><a href="fm-cont-org.html" data-scroll="fm-cont-org">Content and Organization</a></li>
+<li><a href="fm-inst-note.html" data-scroll="fm-inst-note">Supplementary Materials for the Instructor</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_1intro.html" data-scroll="C_1intro"><span class="codenumber">1</span> <span class="title">Introduction to Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_1prop.html" data-scroll="S_1prop">Statements and Conditional Statements</a></li>
+<li><a href="S_1direct.html" data-scroll="S_1direct">Constructing Direct Proofs</a></li>
+<li><a href="S_1summary.html" data-scroll="S_1summary">Chapter 1 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_2logic.html" data-scroll="C_2logic"><span class="codenumber">2</span> <span class="title">Logical Reasoning</span></a><ul>
+<li><a href="S_2logop.html" data-scroll="S_2logop">Statements and Logical Operators</a></li>
+<li><a href="S_logequiv.html" data-scroll="S_logequiv">Logically Equivalent Statements</a></li>
+<li><a href="S_2predicates.html" data-scroll="S_2predicates">Open Sentences and Sets</a></li>
+<li><a href="S_2quantifier.html" data-scroll="S_2quantifier">Quantifiers and Negations</a></li>
+<li><a href="S_2summary.html" data-scroll="S_2summary">Chapter 2 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_proofs.html" data-scroll="C_proofs"><span class="codenumber">3</span> <span class="title">Constructing and Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_directproof.html" data-scroll="S_directproof">Direct Proofs</a></li>
+<li><a href="S_moremethods.html" data-scroll="S_moremethods">More Methods of Proof</a></li>
+<li><a href="S_contradiction.html" data-scroll="S_contradiction">Proof by Contradiction</a></li>
+<li><a href="S_cases.html" data-scroll="S_cases">Using Cases in Proofs</a></li>
+<li><a href="S_divalgo.html" data-scroll="S_divalgo">Beginning Activity 1: The Division Algorithm and Congruence</a></li>
+<li><a href="S_reviewproofs.html" data-scroll="S_reviewproofs">Review of Proof Methods</a></li>
+<li><a href="S_3summary.html" data-scroll="S_3summary">Chapter 3 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_induction.html" data-scroll="C_induction"><span class="codenumber">4</span> <span class="title">Mathematical Induction</span></a><ul>
+<li><a href="S_mathinduction.html" data-scroll="S_mathinduction">The Principle of Mathematical Induction</a></li>
+<li><a href="S_otherinduction.html" data-scroll="S_otherinduction">Other Forms of Mathematical Induction</a></li>
+<li><a href="S_recursion.html" data-scroll="S_recursion">Induction and Recursion</a></li>
+<li><a href="S_4summary.html" data-scroll="S_4summary">Chapter 4 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_settheory.html" data-scroll="C_settheory"><span class="codenumber">5</span> <span class="title">Set Theory</span></a><ul>
+<li><a href="S_setoperations.html" data-scroll="S_setoperations">Sets and Operations on Sets</a></li>
+<li><a href="S_provingset.html" data-scroll="S_provingset">Proving Set Relationships</a></li>
+<li><a href="S_setproperties.html" data-scroll="S_setproperties">Properties of Set Operations</a></li>
+<li><a href="S_cartesian.html" data-scroll="S_cartesian">Cartesian Products</a></li>
+<li><a href="S_indexfamily.html" data-scroll="S_indexfamily">Indexed Families of Sets</a></li>
+<li><a href="S_5summary.html" data-scroll="S_5summary">Chapter 5 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_functions.html" data-scroll="C_functions"><span class="codenumber">6</span> <span class="title">Functions</span></a><ul>
+<li><a href="S_introfunctions.html" data-scroll="S_introfunctions">Introduction to Functions</a></li>
+<li><a href="S_moreaboutfunctions.html" data-scroll="S_moreaboutfunctions">More about Functions</a></li>
+<li><a href="S_typesoffunctions.html" data-scroll="S_typesoffunctions">Beginning Activity 1: Injections, Surjections, and Bijections</a></li>
+<li><a href="S_compositionoffunctions.html" data-scroll="S_compositionoffunctions">Composition of Functions</a></li>
+<li><a href="S_inversefunctions.html" data-scroll="S_inversefunctions">Inverse Functions</a></li>
+<li><a href="S_functionsonsets.html" data-scroll="S_functionsonsets">Functions Acting on Sets</a></li>
+<li><a href="S_6summary.html" data-scroll="S_6summary">Chapter 6 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_equivrelations.html" data-scroll="C_equivrelations"><span class="codenumber">7</span> <span class="title">Equivalence Relations</span></a><ul>
+<li><a href="S_relations.html" data-scroll="S_relations">Relations</a></li>
+<li><a href="S_equivrelations.html" data-scroll="S_equivrelations">Equivalence Relations</a></li>
+<li><a href="S_equivclasses.html" data-scroll="S_equivclasses">Equivalence Classes</a></li>
+<li><a href="S_modulararithmetic.html" data-scroll="S_modulararithmetic">Modular Arithmetic</a></li>
+<li><a href="section-37.html" data-scroll="section-37">Chapter 7 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_numbertheory.html" data-scroll="C_numbertheory"><span class="codenumber">8</span> <span class="title">Topics in Number Theory</span></a><ul>
+<li><a href="S_gcd.html" data-scroll="S_gcd">The Greatest Common Divisor</a></li>
+<li><a href="S_primefactorizations.html" data-scroll="S_primefactorizations">Prime Numbers and Prime Factorizations</a></li>
+<li><a href="S_diophantine.html" data-scroll="S_diophantine" class="active">Linear Diophantine Equations</a></li>
+<li><a href="section-41.html" data-scroll="section-41">Chapter 8 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_topicsinsets.html" data-scroll="C_topicsinsets"><span class="codenumber">9</span> <span class="title">Finite and Infinite Sets</span></a><ul>
+<li><a href="S_finitesets.html" data-scroll="S_finitesets">Finite Sets</a></li>
+<li><a href="S_infinitesets.html" data-scroll="S_infinitesets">Countable Sets</a></li>
+<li><a href="S_uncountablesets.html" data-scroll="S_uncountablesets">Uncountable Sets</a></li>
+<li><a href="section-45.html" data-scroll="section-45">Chapter 9 Summary</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="C_writingguides.html" data-scroll="C_writingguides"><span class="codenumber">A</span> <span class="title">Guidelines for Writing Mathematical Proofs</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="S_diophantine"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">8.3</span> <span class="title">Linear Diophantine Equations</span>
+</h2>
+<section class="worksheet" id="PA_integersolutions"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Beginning Activity 1: Integer Solutions for Linear Equations in One Variable</span><div class="print-links">
+<a href="PA_integersolutions-A4.html" class="a4">A4</a><a href="PA_integersolutions-letter.html" class="us">US</a>
+</div>
+</h3>
+<article class="exercise exercise-like" id="exercise-814"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-4591">Does the linear equation \(6x = 42\) have a solution that is an integer? Explain.</p></article><article class="exercise exercise-like" id="exercise-815"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-4592">Does the linear equation \(7x = -21\) have a solution that is an integer? Explain.</p></article><article class="exercise exercise-like" id="exercise-816"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-4593">Does the linear equation \(4x = 9\) have a solution that is an integer? Explain.</p></article><article class="exercise exercise-like" id="exercise-817"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-4594">Does the linear equation \(-3x = 20\) have a solution that is an integer? Explain.</p></article><article class="exercise exercise-like" id="exercise-818"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-4595">Prove the following theorem:</p>
+<article class="theorem theorem-like" id="prop_lindiophone"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.3.1</span><span class="period">.</span>
+</h6>
+<p id="p-4596">Let \(a, b \in \mathbb{Z}\) with \(a \ne 0\text{.}\)</p>
+<ul class="disc">
+<li id="li-630"><p id="p-4597">If \(a\) divides \(b\text{,}\) then the equation \(ax = b\) has exactly one solution that is an integer.</p></li>
+<li id="li-631"><p id="p-4598">If \(a\) does not divide \(b\text{,}\) then the equation \(ax = b\) has no solution that is an integer.</p></li>
+</ul></article></article></section><section class="worksheet" id="exploringlinear"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Beginning Activity 2: Linear Equations in Two Variables</span><div class="print-links">
+<a href="exploringlinear-A4.html" class="a4">A4</a><a href="exploringlinear-letter.html" class="us">US</a>
+</div>
+</h3>
+<article class="exercise exercise-like" id="exercise-819"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-4599">Find integers \(x\) and \(y\) so that \(2x + 6y = 25\) or explain why it is not possible to find such a pair of integers.</p></article><article class="exercise exercise-like" id="exercise-820"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-4600">Find integers \(x\) and \(y\) so that \(6x - 9y = 100\) or explain why it is not possible to find such a pair of integers.</p></article><article class="exercise exercise-like" id="exercise-821"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-276"><p id="p-4601">Notice that \(x = 2\) and \(y = 1\) is a solution of the equation \(3x + 5y = 11\text{,}\) and that \(x = 7\) and \(y = -2\) is also a solution of the equation \(3x + 5y = 11\text{.}\)</p></div>
+<article class="task exercise-like" id="task-1697"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-4602">Find two pairs of integers \(x\) and \(y\) so that \(x &gt; 7\) and \(3x + 5y = 11\text{.}\) (Try to keep the integer values of \(x\) as small as possible.)</p></article><article class="task exercise-like" id="task-1698"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-4603">Find two pairs of integers \(x\) and \(y\) so that \(x \lt 2\) and \(3x + 5y = 11\text{.}\) (Try to keep the integer values of \(x\) as close to 2 as possible.)</p></article><article class="task exercise-like" id="task-1699"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-4604">Determine formulas (one for \(x\) and one for \(y\)) that will generate pairs of integers \(x\) and \(y\) so that \(3x + 5y = 11\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-30" id="hint-30"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-30"><div class="hint solution-like"><p id="p-4605">The two formulas can be written in the form \(x = 2 + km\) and \(y = 1 + kn\text{,}\) where \(k\) is an arbitrary integer and \(m\) and \(n\) are specific integers.</p></div></div>
+</div></article></article><article class="exercise exercise-like" id="exercise-822"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-277"><p id="p-4606">Notice that \(x = 4\) and \(y = 0\) is a solution of the equation \(4x + 6y = 16\text{,}\) and that \(x = 7\) and \(y = -2\) is a solution of the equation \(4x + 6y = 16\text{.}\)</p></div>
+<article class="task exercise-like" id="task-1700"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-4607">Find two pairs of integers \(x\) and \(y\) so that \(x &gt; 7\) and \(4x + 6y = 16\text{.}\) (Try to keep the integer values of \(x\) as small as possible.)</p></article><article class="task exercise-like" id="task-1701"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-4608">Find two pairs of integers \(x\) and \(y\) so that \(x \lt 4\) and \(4x + 6y = 16\text{.}\) (Try to keep the integer values of \(x\) as close to 4 as possible.)</p></article><article class="task exercise-like" id="task-1702"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-4609">Determine formulas (one for \(x\) and one for \(y\)) that will generate pairs of integers \(x\) and \(y\) so that \(4x + 6y = 16\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-31" id="hint-31"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-31"><div class="hint solution-like"><p id="p-4610">The two formulas can be written in the form \(x = 4 + km\) and \(y = 0 + kn\text{,}\) where \(k\) is an arbitrary integer and \(m\) and \(n\) are specific integers.</p></div></div>
+</div></article></article></section><p id="p-4611">In the two beginning activities, we were interested only in integer solutions for certain equations. In such instances, we give the equation a special name.</p>
+<article class="definition definition-like" id="diophantineequation"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.3.2</span><span class="period">.</span>
+</h6>
+<p id="p-4612">An equation whose solutions are required to be integers is called a <dfn class="terminology">Diophantine equation</dfn>. </p></article><p id="p-4613">Diophantine equations are named in honor of the Greek mathematician Diophantus of Alexandria  (third century <abbr class="abbreviation">C.E.</abbr>). Very little is known about Diophantus' life except that he probably lived in Alexandria in the early part of the fourth century <abbr class="abbreviation">C.E.</abbr> and was probably the first to use letters for unknown quantities in arithmetic problems. His most famous work, <span class="booktitle">Arithmetica</span>, consists of approximately 130 problems and their solutions. Most of these problems involved solutions of equations in various numbers of variables. It is interesting to note that Diophantus did not restrict his solutions to the integers but recognized rational number solutions as well. Today, however, the solutions for a so-called Diophantine equation must be integers.</p>
+<article class="definition definition-like" id="lineardiophantine-one"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.3.3</span><span class="period">.</span>
+</h6>
+<p id="p-4614">If \(a\) and \(b\) are integers with \(a \ne 0\text{,}\) then the equation \(ax = b\) is a <dfn class="terminology">linear Diophantine equation in one variable</dfn>. </p></article><p id="p-4615"><a class="xref" data-knowl="./knowl/prop_lindiophone.html" title="Theorem 8.3.1">Theorem 8.3.1</a> in <a href="S_diophantine.html#PA_integersolutions" class="internal" title="Worksheet: Beginning Activity 1: Integer Solutions for Linear Equations in One Variable">Beginning Activity 1 </a> provides us with results that allow us to determine which linear diophantine equations in one variable have solutions and which ones do not have a solution.</p>
+<p id="p-4616">A linear Diophantine equation in two variables can be defined in a manner similar to the definition for a linear Diophantine equation in one variable.</p>
+<article class="definition definition-like" id="lineardiophantine"><h6 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.3.4</span><span class="period">.</span>
+</h6>
+<p id="p-4617">Let \(a\text{,}\) \(b\text{,}\) and \(c\) be integers with \(a \ne 0\) and \(b \ne 0\text{.}\) The Diophantine equation \(ax + by = c\) is called a <dfn class="terminology">linear Diophantine equation in two variables</dfn>. </p></article><p id="p-4618">The equations that were investigated in <a href="S_diophantine.html#exploringlinear" class="internal" title="Worksheet: Beginning Activity 2: Linear Equations in Two Variables">Beginning Activity 2 </a> were linear Diophantine equations in two variables. The problem of determining all the solutions of a linear Diophantine equation has been completely solved. Before stating the general result, we will provide a few more examples.</p>
+<article class="example example-like" id="E_lineardioph"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">A Linear Diophantine Equation in Two Variables.</span>
+</h6>
+<p id="p-4619">The following example is similar to the examples studied in <a href="S_diophantine.html#exploringlinear" class="internal" title="Worksheet: Beginning Activity 2: Linear Equations in Two Variables">Beginning Activity 2 </a>.</p>
+<p id="p-4620">We can use substitution to verify that \(x = 2\) and \(y = -1\) is a solution of the linear Diophantine equation</p>
+<div class="displaymath">
+\begin{equation*}
+4x + 3y = 5\text{.}
+\end{equation*}
+</div>
+<p id="p-4621">The following table shows other solutions of this Diophantine equation.</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel fixed-width top" style="width:50%;"><table class="tabular">
+<tr>
+<td class="c m b2 r2 l0 t0 lines">\(x\)</td>
+<td class="c m b2 r0 l0 t0 lines">\(y\)</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">2</td>
+<td class="c m b0 r0 l0 t0 lines">\(-1\)</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">5</td>
+<td class="c m b0 r0 l0 t0 lines">\(-5\)</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+<td class="c m b0 r0 l0 t0 lines">\(-9\)</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">11</td>
+<td class="c m b0 r0 l0 t0 lines">\(-13\)</td>
+</tr>
+</table></div>
+<div class="sbspanel fixed-width top" style="width:50%;"><table class="tabular">
+<tr>
+<td class="c m b2 r2 l0 t0 lines">\(x\)</td>
+<td class="c m b2 r0 l0 t0 lines">\(y\)</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">\(-1\)</td>
+<td class="c m b0 r0 l0 t0 lines">3</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">\(-4\)</td>
+<td class="c m b0 r0 l0 t0 lines">7</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">\(-7\)</td>
+<td class="c m b0 r0 l0 t0 lines">11</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">\(-10\)</td>
+<td class="c m b0 r0 l0 t0 lines">15</td>
+</tr>
+</table></div>
+</div></div>
+<p id="p-4622">It would be nice to determine the pattern that these solutions exhibit. If we consider the solution \(x = 2\) and \(y =-1\) to be the “starting point,” then we can see that the other solutions are obtained by adding 3 to \(x\) and subtracting 4 from \(y\) in the previous solution. So we can write these solutions to the equation as</p>
+<div class="displaymath">
+\begin{equation*}
+x = 2 + 3k \qquad \text{ and }  \qquad y = -1 - 4k\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where \(k\) is an integer. We can use substitution and algebra to verify that these expressions for \(x\) and \(y\) give solutions of this equation as follows:</p>
+<div class="displaymath">
+\begin{align*}
+4x + 3y \amp = 4 \left( 2+3k \right) + 3 \left( -1-4k \right)\\
+\amp = \left( 8 + 12k \right) + \left( -3 - 12k \right)\\
+\amp = 5\text{.}
+\end{align*}
+</div>
+<p id="p-4623">We should note that we have not yet proved that these solutions are all of the solutions of the Diophantine equation \(4x + 3y = 5\text{.}\) This will be done later.</p>
+<p id="p-4624">If the general form for a linear Diophantine equation is \(ax + by = c\text{,}\) then for this example, \(a = 4\) and \(b = 3\text{.}\) Notice that for this equation, we started with one solution and obtained other solutions by adding \(b = 3\) to \(x\) and subtracting \(a = 4\) from \(y\) in the previous solution. Also, notice that \(\gcd( 3, 4 ) = 1\text{.}\)</p></article><article class="exercise exercise-like" id="prog_lineardioph"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">8.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">An Example of a Linear Diophantine Equation.</span>
+</h6>
+<article class="task exercise-like" id="task-1703"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-4625">Verify that the following table shows some solutions of the linear Diophantine equation \(6x + 9y = 12\text{.}\) <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel fixed-width top" style="width:50%;"><table class="tabular">
+<tr>
+<td class="c m b2 r2 l0 t0 lines">\(x\)</td>
+<td class="c m b2 r0 l0 t0 lines">\(y\)</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">2</td>
+<td class="c m b0 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">5</td>
+<td class="c m b0 r0 l0 t0 lines">\(-2\)</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">8</td>
+<td class="c m b0 r0 l0 t0 lines">\(-4\)</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">11</td>
+<td class="c m b0 r0 l0 t0 lines">\(-6\)</td>
+</tr>
+</table></div>
+<div class="sbspanel fixed-width top" style="width:50%;"><table class="tabular">
+<tr>
+<td class="c m b2 r2 l0 t0 lines">\(x\)</td>
+<td class="c m b2 r0 l0 t0 lines">\(y\)</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">\(-1\)</td>
+<td class="c m b0 r0 l0 t0 lines">2</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">\(-4\)</td>
+<td class="c m b0 r0 l0 t0 lines">4</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">\(-7\)</td>
+<td class="c m b0 r0 l0 t0 lines">6</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">\(-10\)</td>
+<td class="c m b0 r0 l0 t0 lines">8</td>
+</tr>
+</table></div>
+</div></div></p></article><article class="task exercise-like" id="task-1704"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-4626">Follow the pattern in this table to determine formulas for \(x\) and \(y\) that will generate integer solutions of the equation \(6x + 9y = 12\text{.}\) Verify that the formulas actually produce solutions for the equation \(6x + 9y = 12\text{.}\)</p></article></article><article class="exercise exercise-like" id="prog_prevact2"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">8.3.7</span><span class="period">.</span><span class="space"> </span><span class="title">Revisiting Beginning Activity 2 .</span>
+</h6>
+<p id="p-4627">Do the solutions for the linear Diophantine equations in <a href="S_diophantine.html#exploringlinear" class="internal" title="Worksheet: Beginning Activity 2: Linear Equations in Two Variables">Beginning Activity 2 </a> show the same type of pattern as the solutions for the linear Diophantine equations in <a class="xref" data-knowl="./knowl/E_lineardioph.html" title="Example 8.3.5: A Linear Diophantine Equation in Two Variables">Example 8.3.5</a> and <a class="xref" data-knowl="./knowl/prog_lineardioph.html" title="Progress Check 8.3.6: An Example of a Linear Diophantine Equation">Progress Check 8.3.6</a>? Explain.</p></article><p id="p-4628">The solutions for the linear Diophantine equations in <a href="S_diophantine.html#exploringlinear" class="internal" title="Worksheet: Beginning Activity 2: Linear Equations in Two Variables">Beginning Activty 2 </a>, <a class="xref" data-knowl="./knowl/E_lineardioph.html" title="Example 8.3.5: A Linear Diophantine Equation in Two Variables">Example 8.3.5</a>, and <a class="xref" data-knowl="./knowl/prog_lineardioph.html" title="Progress Check 8.3.6: An Example of a Linear Diophantine Equation">Progress Check 8.3.6</a> provide examples for the second part of <a class="xref" data-knowl="./knowl/T_lindioph2.html" title="Theorem 8.3.8">Theorem 8.3.8</a>.</p>
+<article class="theorem theorem-like" id="T_lindioph2"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.3.8</span><span class="period">.</span>
+</h6>
+<p id="p-4629">Let \(a\text{,}\) \(b\text{,}\) and \(c\) be integers with \(a \ne 0\) and \(b \ne 0\text{,}\) and let \(d = \gcd( a, b )\text{.}\)</p>
+<ol class="decimal">
+<li id="T_lindiop2-1"><p id="p-4630">If \(d\) does not divide \(c\text{,}\) then the linear Diophantine equation \(ax + by = c\) has no solution.</p></li>
+<li id="T_lindiop2-2">
+<p id="p-4631">If \(d\) divides \(c\text{,}\) then the linear Diophantine equation \(ax + by = c\) has infinitely many solutions. In addition, if  \(\left( x_0, y_0 \right)\) is a particular solution of this equation, then all the solutions of this equation can be written in the form</p>
+<div class="displaymath">
+\begin{equation*}
+x = x_0 + \frac{b}{d} k   \text{ and }    y = y_0 - \frac{a}{d} k\text{,}
+\end{equation*}
+</div>
+<p class="continuation">for some integer  \(k\text{.}\)</p>
+</li>
+</ol></article><article class="hiddenproof" id="proof-54"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-54"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-54"><article class="hiddenproof"><p id="p-4632">The proof of <a class="xref" data-knowl="./knowl/T_lindiop2-1.html" title="Item 1">Item 1</a> is <a class="xref" data-knowl="./knowl/exer_lindioph2.html" title="Exercise 8.3.1">Exercise 8.3.1</a>. For <a class="xref" data-knowl="./knowl/T_lindiop2-2.html" title="Item 2">Item 2</a>, we let \(a\text{,}\) \(b\text{,}\) and \(c\) be integers with \(a \ne 0\) and \(b \ne 0\text{,}\) and let \(d = \gcd( a,b )\text{.}\) We also assume that \(d \mid c\text{.}\) Since \(d = \gcd( a,b )\text{,}\) <a class="xref" data-knowl="./knowl/T_gcdaslincomb.html" title="Theorem 8.1.13">Theorem 8.1.13</a> tells us that \(d\) is a linear combination of \(a\) and \(b\text{.}\) So there exist integers \(s\) and \(t\) such that</p>
+<div class="displaymath">
+\begin{equation}
+d = as + bt\text{.}\label{eq_lindioph1}\tag{8.10}
+\end{equation}
+</div>
+<p id="p-4633">Since \(d \mid c\text{,}\) there exists an integer \(m\) such that \(c = dm\text{.}\) We can now multiply both sides of equation <a class="xref" data-knowl="./knowl/eq_lindioph1.html" title="Equation 8.10">(8.10)</a> by \(m\) and obtain</p>
+<div class="displaymath">
+\begin{align*}
+dm \amp = ( {as + bt} ) m\\
+c \amp a( sm ) + b( tm )\text{.}
+\end{align*}
+</div>
+<p class="continuation">This means that \(x = sm\text{,}\) \(y = tm\) is a solution of \(ax + by = c\text{,}\) and we have proved that the Diophantine equation \(ax + by = c\) has at least one solution.</p>
+<p id="p-4634">Now let \(x = x_0\text{,}\) \(y = y_0\) be any particular solution of \(ax + by = c\text{,}\) let \(k \in \mathbb{Z}\text{,}\) and let</p>
+<div class="displaymath">
+\begin{equation}
+x = x_0 + \frac{b}{d} k  \qquad  y = y_0 - \frac{a}{d} k\text{.}\label{eq_x0andy0}\tag{8.11}
+\end{equation}
+</div>
+<p id="p-4635">We now verify that for each \(k \in \mathbb{Z}\text{,}\) the equations in <a class="xref" data-knowl="./knowl/eq_x0andy0.html" title="Equation 8.11">(8.11)</a> produce a solution of \(ax + by = c\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+ax + by \amp = a \!\left( {x_0 + \frac{b}{d} k } \right) + b 
+\!\left( {y_0 - \frac{a}{d} k} \right )\\
+\amp = a x_0 + \frac{ab}{d} k + b y_0 - \frac{ab}{d} k\\
+\amp = a x_0 + b y_0\\
+\amp = c\text{.}
+\end{align*}
+</div>
+<p class="continuation">This proves that the Diophantine equation \(ax + by = c\) has infinitely many solutions.</p>
+<p id="p-4636">We now show that every solution of this equation can be written in the form described in <a class="xref" data-knowl="./knowl/eq_x0andy0.html" title="Equation 8.11">(8.11)</a>. So suppose that \(x\) and \(y\) are integers such that \(ax + by = c\text{.}\) Then</p>
+<div class="displaymath">
+\begin{equation*}
+( {ax + by} ) - ( {ax_0 + by_0} ) = c - c = 0\text{,}
+\end{equation*}
+</div>
+<p class="continuation">and this equation can be rewritten in the following form:</p>
+<div class="displaymath">
+\begin{equation}
+a( {x - x_0} ) = b( {y_0 - y} )\text{.}\label{eq_dioph3}\tag{8.12}
+\end{equation}
+</div>
+<p id="p-4637">Dividing both sides of this equation by \(d\text{,}\) we obtain</p>
+<div class="displaymath">
+\begin{equation*}
+\left( \frac{a}{d} \right) \left( {x - x_0} \right ) = \left( \frac{b}{d} \right) 
+\left( {y_0 - y} \right)\text{.}
+\end{equation*}
+</div>
+<p id="p-4638">This implies that</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{a}{d} \text{ divides }  \left( \frac{b}{d} \right) ( {y_0 - y} )\text{.}
+\end{equation*}
+</div>
+<p id="p-4639">However, by <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "exer_dividebygcd" missing or not unique]</code> in <a href="S_primefactorizations.html" class="internal" title="Section 8.2: Prime Numbers and Prime Factorizations">Section 8.2</a>, \(\gcd \!\left( \dfrac{a}{d}, \dfrac{b}{d} \right) = 1\text{,}\) and so by <a class="xref" data-knowl="./knowl/T_relativelyprimeprop.html" title="Theorem 8.2.6">Theorem 8.2.6</a>, we can conclude that \(\dfrac{a}{d}\) divides \(\left( {y_0 - y} \right)\text{.}\) This means that there exists an integer \(k\) such that \(y_0 - y = \dfrac{a}{d} k\text{,}\) and solving for \(y\) gives</p>
+<div class="displaymath">
+\begin{equation*}
+y = y_0 - \frac{a}{d} k\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Substituting this value for \(y\) in <a class="xref" data-knowl="./knowl/eq_dioph3.html" title="Equation 8.12">equation (8.12)</a> and solving for \(x\) yields</p>
+<div class="displaymath">
+\begin{equation*}
+x = x_0 + \frac{b}{d} k\text{.}
+\end{equation*}
+</div>
+<p class="continuation">This proves that every solution of the Diophantine equation \(ax + by = c\) can be written in the form prescribed in <a class="xref" data-knowl="./knowl/eq_x0andy0.html" title="Equation 8.11">(8.11)</a>.</p></article></div>
+<p id="p-4640">The proof of the following corollary to <a class="xref" data-knowl="./knowl/T_lindioph2.html" title="Theorem 8.3.8">Theorem 8.3.8</a> is <a class="xref" data-knowl="./knowl/exer_cor-lindioph2.html" title="Exercise 8.3.2">Exercise 8.3.2</a>.</p>
+<article class="corollary theorem-like" id="C_lindioph2"><h6 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">8.3.9</span><span class="period">.</span>
+</h6>
+<p id="p-4641">Let \(a\text{,}\) \(b\text{,}\) and \(c\) be integers with \(a \ne 0\) and \(b \ne 0\text{.}\) If \(a\) and \(b\) are relatively prime, then the linear Diophantine equation \(ax + by = c\) has infinitely many solutions. In addition, if \(x_0\text{,}\) \(y_0\) is a particular solution of this equation, then all the solutions of the equation are given by</p>
+<div class="displaymath">
+\begin{equation*}
+x = x_0 + b k  \qquad y = y_0 - a k
+\end{equation*}
+</div>
+<p class="continuation">where \(k \in \mathbb{Z}\text{.}\)</p></article><article class="exercise exercise-like" id="prog_lindiophequations"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">8.3.10</span><span class="period">.</span><span class="space"> </span><span class="title">Linear Diophantine Equations.</span>
+</h6>
+<article class="task exercise-like" id="task-1705"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-4642">Use the Euclidean Algorithm to verify that \(\gcd ({63, 336} ) = 21\text{.}\) What conclusion can be made about linear Diophantine equation \(63x + 336y = 40\) using <a class="xref" data-knowl="./knowl/T_lindioph2.html" title="Theorem 8.3.8">Theorem 8.3.8</a>? If this Diophantine equation has solutions, write formulas that will generate the solutions.</p></article><article class="task exercise-like" id="task-1706"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-4643">Use the Euclidean Algorithm to verify that \(\gcd( {144, 225} ) = 9\text{.}\) What conclusion can be made about linear Diophantine equation \(144x + 225y = 27\) using <a class="xref" data-knowl="./knowl/T_lindioph2.html" title="Theorem 8.3.8">Theorem 8.3.8</a>? If this Diophantine equation has solutions, write formulas that will generate the solutions.</p></article></article><section class="exercises" id="exercises-33"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exer_lindioph2"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-4644">Prove <a class="xref" data-knowl="./knowl/T_lindiop2-1.html" title="Item 1">Item 1</a> of <a class="xref" data-knowl="./knowl/T_lindioph2.html" title="Theorem 8.3.8">Theorem 8.3.8</a>: <blockquote class="blockquote" id="blockquote-244">Let \(a\text{,}\) \(b\text{,}\) and \(c\) be integers with \(a \ne 0\) and \(b \ne 0\text{,}\) and let \(d = \gcd( a,b )\text{.}\) If \(d\) does not divide \(c\text{,}\) then the linear Diophantine equation \(ax + by = c\) has no solution.</blockquote></p></article><article class="exercise exercise-like" id="exer_cor-lindioph2"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-4645">Prove <a class="xref" data-knowl="./knowl/C_lindioph2.html" title="Corollary 8.3.9">Corollary 8.3.9</a>. <blockquote class="blockquote" id="blockquote-245">Let \(a\text{,}\) \(b\text{,}\) and \(c\) be integers with \(a \ne 0\) and \(b \ne 0\text{.}\) If \(a\) and \(b\) are relatively prime, then the linear Diophantine equation \(ax + by = c\) has infinitely many solutions. In addition, if  \(\left( x_0, y_0 \right)\) is a particular solution of this equation, then all the solutions of the equation are given by<div class="displaymath">
+\begin{equation*}
+x = x_0 + b k  \qquad y = y_0 - a k\!\text{,}
+\end{equation*}
+</div>where \(k \in \mathbb{Z}\text{.}\)</blockquote></p></article><article class="exercise exercise-like" id="exer_sec83-2"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-278"><p id="p-4646">Determine all solutions of the following linear Diophantine equations.</p></div>
+<article class="task exercise-like" id="task-1707"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-4647">\(9x + 14y = 1\)</p></article><article class="task exercise-like" id="task-1708"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-4648">\(18x + 22y = 4\)</p></article><article class="task exercise-like" id="task-1709"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-4649">\(48x - 18y = 15\)</p></article><article class="task exercise-like" id="task-1710"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-4650">\(12x + 9y = 6\)</p></article><article class="task exercise-like" id="task-1711"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-4651">\(200x + 49y = 10\)</p></article><article class="task exercise-like" id="task-1712"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-4652">\(200x + 54y = 21\)</p></article><article class="task exercise-like" id="task-1713"><h6 class="heading"><span class="codenumber">(g)</span></h6>
+<p id="p-4653">\(10x - 7y = 31\)</p></article><article class="task exercise-like" id="task-1714"><h6 class="heading"><span class="codenumber">(h)</span></h6>
+<p id="p-4654">\(12x + 18y = 6\)</p></article></article><article class="exercise exercise-like" id="exer_balancing"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-4655">A certain rare artifact is supposed to weigh exactly 25 grams. Suppose that you have an accurate balance scale and 500 each of 27 gram weights and 50 gram weights. Explain how to use <a class="xref" data-knowl="./knowl/T_lindioph2.html" title="Theorem 8.3.8">Theorem 8.3.8</a> to devise a plan to check the weight of this artifact.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-32" id="hint-32"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-32"><div class="hint solution-like"><p id="p-4656">Notice that \(\gcd( {50, 27} ) = 1\text{.}\) Start by writing 1 as a linear combination of 50 and 27.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exer_sec83-5"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-4657">On the night of a certain banquet, a caterer offered the choice of two dinners, a steak dinner for $25 and a vegetarian dinner for $16. At the end of the evening, the caterer presented the host with a bill (before tax and tips) for $1461. What is the minimum number of people who could have attended the banquet? What is the maximum number of people who could have attended the banquet?</p></article><article class="exercise exercise-like" id="exer_lindioph3"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-279"><p id="p-4658">The goal of this exercise is to determine all (integer) solutions of the linear Diophantine equation in three variables \(12x_1 + 9x_2 + 16x_3 = 20\text{.}\)</p></div>
+<article class="task exercise-like" id="exer_lindioph3a"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-4659">First, notice that \(\gcd( {12, 9} ) = 3\text{.}\) Determine formulas that will generate all solutions for the linear Diophantine equation \(3y + 16x_3 = 20\text{.}\)</p></article><article class="task exercise-like" id="task-1716"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-4660">Explain why the solutions (for \(x_1\) and \(x_2\)) of the Diophantine equation \(12x_1 + 9x_2 = 3y\) can be used to generate solutions for \(12x_1 + 9x_2 + 16x_3 = 20\text{.}\)</p></article><article class="task exercise-like" id="exer_lindioph3c"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-4661">Use the general value for \(y\) from <a class="xref" data-knowl="./knowl/exer_lindioph3a.html" title="Task 8.3.6.a">Task 8.3.6.a</a> to determine the solutions of \(12x_1 + 9x_2 = 3y\text{.}\)</p></article><article class="task exercise-like" id="exer_lindioph3d"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-4662">Use the results from <a class="xref" data-knowl="./knowl/exer_lindioph3a.html" title="Task 8.3.6.a">Task 8.3.6.a</a> and <a class="xref" data-knowl="./knowl/exer_lindioph3c.html" title="Task 8.3.6.c">Task 8.3.6.c</a> to determine formulas that will generate all solutions for the Diophantine equation \(12x_1 + 9x_2 + 16x_3 = 20\text{.}\)</p>
+<p id="p-4663">Note: These formulas will involve two arbitrary integer parameters. Substitute specific values for these integers and then check the resulting solution in the original equation. Repeat this at least three times.</p></article><article class="task exercise-like" id="task-1719"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-4664">Check the general solution for \(12x_1 + 9x_2 + 16x_3 = 20\) from <a class="xref" data-knowl="./knowl/exer_lindioph3d.html" title="Task 8.3.6.d">Task 8.3.6.d</a>.</p></article></article><article class="exercise exercise-like" id="exercise-832"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-4665">Use the method suggested in <a class="xref" data-knowl="./knowl/exer_lindioph3.html" title="Exercise 8.3.6">Exercise 8.3.6</a> to determine formulas that will generate all solutions of the Diophantine equation \(8x_1 +4x_2 - 6x_3 = 6\text{.}\) Check the general solution.</p></article><article class="exercise exercise-like" id="exercise-833"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="p-4666">Explain why the Diophantine equation \(24x_1 - 18x_2 + 60x_3 = 21\) has no solution.</p></article><article class="exercise exercise-like" id="exer_nonlineardioph"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-280"><p id="p-4667">The purpose of this exercise will be to prove that the nonlinear Diophantine equation \(3x^2 - y^2 = -2\) has no solution.</p></div>
+<article class="task exercise-like" id="task-1720"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-4668">Explain why if there is a solution of the Diophantine equation \(3x^2 - y^2 = -2\text{,}\) then that solution must also be a solution of the congruence \(3x^2 - y^2 \equiv -2 \pmod 3\text{.}\)</p></article><article class="task exercise-like" id="task-1721"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-4669">If there is a solution to the congruence \(3x^2 - y^2 \equiv -2 \pmod 3\text{,}\) explain why there then must be an integer \(y\) such that \(y^2 \equiv 2 \pmod 3\text{.}\)</p></article><article class="task exercise-like" id="task-1722"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-4670">Use a proof by contradiction to prove that the Diophantine equation \(3x^2 - y^2 = -2\) has no solution.</p></article></article><article class="exercise exercise-like" id="exercise-835"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<p id="p-4671">Use the method suggested in <a class="xref" data-knowl="./knowl/exer_nonlineardioph.html" title="Exercise 8.3.9">Exercise 8.3.9</a> to prove that the Diophantine equation \(7x^2 + 2 = y^3\) has no solution.</p></article><article class="activity project-like" id="A_lincongruence"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">49</span><span class="period">.</span><span class="space"> </span><span class="title">Linear Congruences in One Variable.</span>
+</h6>
+<div class="introduction" id="introduction-281">
+<p id="p-4672">Let \(n\) be a natural number and let \(a,
+b \in \mathbb{Z}\) with \(a \ne 0\text{.}\) A congruence of the form \(ax \equiv b \pmod n\) is called a <dfn class="terminology">linear congruence in one variable</dfn>.  This is called a linear congruence since the variable \(x\) occurs to the first power.</p>
+<p id="p-4673">A <dfn class="terminology">solution of a linear congruence in one variable</dfn> is defined similarly to the solution of an equation. A solution is an integer that makes the resulting congruence true when the integer is substituted for the variable \(x\text{.}\) For example,</p>
+<ul class="disc">
+<li id="li-634"><p id="p-4674">The integer \(x = 3\) is a solution for the congruence \(2x \equiv 1 \pmod 5\) since \(2 \cdot 3 \equiv 1 \pmod 5\) is a true congruence.</p></li>
+<li id="li-635"><p id="p-4675">The integer \(x = 7\) is not a solution for the congruence \(3x \equiv 1 \pmod 6\) since \(3 \cdot 7 \equiv 1 \pmod 6\) is a not a true congruence.</p></li>
+</ul>
+</div>
+<article class="task exercise-like" id="task-1723"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-4676">Verify that \(x = 2\) and \(x = 5\) are the only solutions the linear congruence \(4x \equiv 2 \pmod 6\) with \(0 \leq x \lt 6\text{.}\)</p></article><article class="task exercise-like" id="lincongruence2"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-4677">Show that the linear congruence \(4x \equiv 3 \pmod 6\) has no solutions with \(0 \leq x \lt 6\text{.}\)</p></article><article class="task exercise-like" id="task-1725"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-4678">Determine all solutions of the linear congruence \(3x \equiv 7 \pmod 8\) with \(0 \leq x \lt 8\text{.}\)</p></article><article class="task exercise-like" id="lincongruence1"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-4679">The following parts of this activity show that we can use the results of <a class="xref" data-knowl="./knowl/T_lindioph2.html" title="Theorem 8.3.8">Theorem 8.3.8</a> to help find all solutions of the linear congruence \(6x \equiv 4 \pmod 8\text{.}\)</p>
+<p id="p-4680">Verify that \(x = 2\) and \(x = 6\) are the only solutions for the linear congruence \(6x \equiv 4 \pmod 8\) with \(0 \leq x \lt 8\text{.}\)</p></article><article class="task exercise-like" id="lincongruencee"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-4681">Use the definition of “congruence” to rewrite the congruence \(6x \equiv 4 \pmod 8\) in terms of “divides.”</p></article><article class="task exercise-like" id="lincongruencef"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-4682">Use the definition of “divides” to rewrite the result in <a class="xref" data-knowl="./knowl/lincongruencee.html" title="Task 49.e">Task 49.e</a> in the form of an equation. (An existential quantifier must be used.)</p></article><article class="task exercise-like" id="task-1729"><h6 class="heading"><span class="codenumber">(g)</span></h6>
+<p id="p-4683">Use the results of <a class="xref" data-knowl="./knowl/lincongruence1.html" title="Task 49.d">Task 49.d</a> and <a class="xref" data-knowl="./knowl/lincongruencef.html" title="Task 49.f">Task 49.f</a> to write an equation that will generate all the solutions of the linear congruence \(6x \equiv 4 \pmod 8\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-33" id="hint-33"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-33"><div class="hint solution-like"><p id="p-4684">Use <a class="xref" data-knowl="./knowl/T_lindioph2.html" title="Theorem 8.3.8">Theorem 8.3.8</a>. This can be used to generate solutions for \(x\) and the variable introduced in <a class="xref" data-knowl="./knowl/lincongruencef.html" title="Task 49.f">Task 49.f</a>. In this case, we are interested only in the solutions for \(x\text{.}\)</p></div></div>
+</div></article><article class="task exercise-like" id="lincongruence5"><h6 class="heading"><span class="codenumber">(h)</span></h6>
+<p id="p-4685">Now let \(n\) be a natural number and let \(a, c \in \mathbb{Z}\) with \(a \ne 0\text{.}\) A general linear congruence of the form \(ax \equiv c \pmod n\) can be handled in the same way that we handled in \(6x \equiv 4 \pmod 8\text{.}\)</p>
+<p id="p-4686">Use the definition of “congruence” to rewrite \(ax \equiv c \pmod n\) in terms of “divides.”</p></article><article class="task exercise-like" id="lincongruence6"><h6 class="heading"><span class="codenumber">(i)</span></h6>
+<p id="p-4687">Use the definition of “divides” to rewrite the result in <a class="xref" data-knowl="./knowl/lincongruence5.html" title="Task 49.h">Task 49.h</a> in the form of an equation. (An existential quantifier must be used.)</p></article><article class="task exercise-like" id="task-1732"><h6 class="heading"><span class="codenumber">(j)</span></h6>
+<p id="p-4688">Let \(d = \gcd( {a, n} )\text{.}\) State and prove a theorem about the solutions of the linear congruence \(ax \equiv c \pmod n\) in the case where \(d\) does not divide \(c\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-34" id="hint-34"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-34"><div class="hint solution-like"><p id="p-4689">Use <a class="xref" data-knowl="./knowl/T_lindioph2.html" title="Theorem 8.3.8">Theorem 8.3.8</a>.</p></div></div>
+</div></article><article class="task exercise-like" id="task-1733"><h6 class="heading"><span class="codenumber">(k)</span></h6>
+<p id="p-4690">Let \(d = \gcd( {a, n} )\text{.}\) State and prove a theorem about the solutions of the linear congruence \(ax \equiv c \pmod n\) in the case where \(d\) divides \(c\text{.}\)</p></article></article></section></section></div></main>
+</div>
+</body>
+</html>

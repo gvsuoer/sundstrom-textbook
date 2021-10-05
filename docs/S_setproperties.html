@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-10-05T14:50:19-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Properties of Set Operations</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\def\C{\JustCenter}
+\newcommand{\typeu}{Beginning }
+\def\C{\JustCenter}
+\newcommand{\typel}{beginning }
+\def\C{\JustCenter}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\
+\thechapter. #1}{}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\def\C{\JustCenter}
+\renewcommand{\theenumi}{\alph{enumi}}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\C{\JustCenter}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\def\L{\JustLeft}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\theenumi}{({\alph{enumi}})}
+\def\C{\JustCenter}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{\textbf{\arabic{enumi}.}}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\renewcommand{\labelenumi}{(\textbf{\alph{enumi}})}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\mynot}{\neg}
+\newcommand{\card}{\mathbf{card}}
+\newcommand{\x}{:}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Mathematical Reasoning:</span> <span class="subtitle">Writing and Proof (Version 3)</span></a></h1>
+<p class="byline">Ted Sundstrom, Professor Emeritus</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_provingset.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_settheory.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_cartesian.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_provingset.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C_settheory.html" title="Up">Up</a><a class="next-button button toolbar-item" href="S_cartesian.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="fm-versions.html" data-scroll="fm-versions">Version 3 and Version 2.1</a></li>
+<li><a href="fm-student-note.html" data-scroll="fm-student-note">Note to Students</a></li>
+<li><a href="fm-preface.html" data-scroll="fm-preface">Preface</a></li>
+<li><a href="fm-imp-features.html" data-scroll="fm-imp-features">Important Features of the Book</a></li>
+<li><a href="fm-cont-org.html" data-scroll="fm-cont-org">Content and Organization</a></li>
+<li><a href="fm-inst-note.html" data-scroll="fm-inst-note">Supplementary Materials for the Instructor</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_1intro.html" data-scroll="C_1intro"><span class="codenumber">1</span> <span class="title">Introduction to Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_1prop.html" data-scroll="S_1prop">Statements and Conditional Statements</a></li>
+<li><a href="S_1direct.html" data-scroll="S_1direct">Constructing Direct Proofs</a></li>
+<li><a href="S_1summary.html" data-scroll="S_1summary">Chapter 1 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_2logic.html" data-scroll="C_2logic"><span class="codenumber">2</span> <span class="title">Logical Reasoning</span></a><ul>
+<li><a href="S_2logop.html" data-scroll="S_2logop">Statements and Logical Operators</a></li>
+<li><a href="S_logequiv.html" data-scroll="S_logequiv">Logically Equivalent Statements</a></li>
+<li><a href="S_2predicates.html" data-scroll="S_2predicates">Open Sentences and Sets</a></li>
+<li><a href="S_2quantifier.html" data-scroll="S_2quantifier">Quantifiers and Negations</a></li>
+<li><a href="S_2summary.html" data-scroll="S_2summary">Chapter 2 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_proofs.html" data-scroll="C_proofs"><span class="codenumber">3</span> <span class="title">Constructing and Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_directproof.html" data-scroll="S_directproof">Direct Proofs</a></li>
+<li><a href="S_moremethods.html" data-scroll="S_moremethods">More Methods of Proof</a></li>
+<li><a href="S_contradiction.html" data-scroll="S_contradiction">Proof by Contradiction</a></li>
+<li><a href="S_cases.html" data-scroll="S_cases">Using Cases in Proofs</a></li>
+<li><a href="S_divalgo.html" data-scroll="S_divalgo">Beginning Activity 1: The Division Algorithm and Congruence</a></li>
+<li><a href="S_reviewproofs.html" data-scroll="S_reviewproofs">Review of Proof Methods</a></li>
+<li><a href="S_3summary.html" data-scroll="S_3summary">Chapter 3 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_induction.html" data-scroll="C_induction"><span class="codenumber">4</span> <span class="title">Mathematical Induction</span></a><ul>
+<li><a href="S_mathinduction.html" data-scroll="S_mathinduction">The Principle of Mathematical Induction</a></li>
+<li><a href="S_otherinduction.html" data-scroll="S_otherinduction">Other Forms of Mathematical Induction</a></li>
+<li><a href="S_recursion.html" data-scroll="S_recursion">Induction and Recursion</a></li>
+<li><a href="S_4summary.html" data-scroll="S_4summary">Chapter 4 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_settheory.html" data-scroll="C_settheory"><span class="codenumber">5</span> <span class="title">Set Theory</span></a><ul>
+<li><a href="S_setoperations.html" data-scroll="S_setoperations">Sets and Operations on Sets</a></li>
+<li><a href="S_provingset.html" data-scroll="S_provingset">Proving Set Relationships</a></li>
+<li><a href="S_setproperties.html" data-scroll="S_setproperties" class="active">Properties of Set Operations</a></li>
+<li><a href="S_cartesian.html" data-scroll="S_cartesian">Cartesian Products</a></li>
+<li><a href="S_indexfamily.html" data-scroll="S_indexfamily">Indexed Families of Sets</a></li>
+<li><a href="S_5summary.html" data-scroll="S_5summary">Chapter 5 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_functions.html" data-scroll="C_functions"><span class="codenumber">6</span> <span class="title">Functions</span></a><ul>
+<li><a href="S_introfunctions.html" data-scroll="S_introfunctions">Introduction to Functions</a></li>
+<li><a href="S_moreaboutfunctions.html" data-scroll="S_moreaboutfunctions">More about Functions</a></li>
+<li><a href="S_typesoffunctions.html" data-scroll="S_typesoffunctions">Beginning Activity 1: Injections, Surjections, and Bijections</a></li>
+<li><a href="S_compositionoffunctions.html" data-scroll="S_compositionoffunctions">Composition of Functions</a></li>
+<li><a href="S_inversefunctions.html" data-scroll="S_inversefunctions">Inverse Functions</a></li>
+<li><a href="S_functionsonsets.html" data-scroll="S_functionsonsets">Functions Acting on Sets</a></li>
+<li><a href="S_6summary.html" data-scroll="S_6summary">Chapter 6 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_equivrelations.html" data-scroll="C_equivrelations"><span class="codenumber">7</span> <span class="title">Equivalence Relations</span></a><ul>
+<li><a href="S_relations.html" data-scroll="S_relations">Relations</a></li>
+<li><a href="S_equivrelations.html" data-scroll="S_equivrelations">Equivalence Relations</a></li>
+<li><a href="S_equivclasses.html" data-scroll="S_equivclasses">Equivalence Classes</a></li>
+<li><a href="S_modulararithmetic.html" data-scroll="S_modulararithmetic">Modular Arithmetic</a></li>
+<li><a href="section-37.html" data-scroll="section-37">Chapter 7 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_numbertheory.html" data-scroll="C_numbertheory"><span class="codenumber">8</span> <span class="title">Topics in Number Theory</span></a><ul>
+<li><a href="S_gcd.html" data-scroll="S_gcd">The Greatest Common Divisor</a></li>
+<li><a href="S_primefactorizations.html" data-scroll="S_primefactorizations">Prime Numbers and Prime Factorizations</a></li>
+<li><a href="S_diophantine.html" data-scroll="S_diophantine">Linear Diophantine Equations</a></li>
+<li><a href="section-41.html" data-scroll="section-41">Chapter 8 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_topicsinsets.html" data-scroll="C_topicsinsets"><span class="codenumber">9</span> <span class="title">Finite and Infinite Sets</span></a><ul>
+<li><a href="S_finitesets.html" data-scroll="S_finitesets">Finite Sets</a></li>
+<li><a href="S_infinitesets.html" data-scroll="S_infinitesets">Countable Sets</a></li>
+<li><a href="S_uncountablesets.html" data-scroll="S_uncountablesets">Uncountable Sets</a></li>
+<li><a href="section-45.html" data-scroll="section-45">Chapter 9 Summary</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="C_writingguides.html" data-scroll="C_writingguides"><span class="codenumber">A</span> <span class="title">Guidelines for Writing Mathematical Proofs</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="S_setproperties"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5.3</span> <span class="title">Properties of Set Operations</span>
+</h2>
+<section class="worksheet" id="PA_workingwithvenn2"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Beginning Activity 1: Exploring a Relationship between Two Sets</span><div class="print-links">
+<a href="PA_workingwithvenn2-A4.html" class="a4">A4</a><a href="PA_workingwithvenn2-letter.html" class="us">US</a>
+</div>
+</h3>
+<p id="p-2610">Let \(A\) and \(B\) be subsets of some universal set \(U\text{.}\)</p>
+<article class="exercise exercise-like" id="PA_workingwithvenn2-1"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-2611">Draw two general Venn diagrams for the sets \(A\) and \(B\text{.}\) On one, shade the region that represents \(\left( {A \cup B} \right)^c\text{,}\) and on the other, shade the region that represents \(A^c \cap B^c\text{.}\) Explain carefully how you determined these regions.</p></article><article class="exercise exercise-like" id="exercise-460"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-2612">Based on the Venn diagrams in <a class="xref" data-knowl="./knowl/PA_workingwithvenn2-1.html" title="Exercise 1">Exercise 1</a>, what appears to be the relationship between the sets \(\left( {A \cup B} \right)^c\) and \(A^c \cap B^c\text{?}\)</p></article><p id="p-2613">Some of the properties of set operations are closely related to some of the logical operators we studied in <a href="S_2logop.html" class="internal" title="Section 2.1: Statements and Logical Operators">Section 2.1</a>. This is due to the fact that set intersection is defined using a conjunction (and), and set union is defined using a disjunction (or). For example, if \(A\) and \(B\) are subsets of some universal set \(U\text{,}\) then an element \(x\) is in \(A \cup B\) if and only if \(x \in A\) or \(x \in B\text{.}\)</p>
+<article class="exercise exercise-like" id="part1PA1"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-2614">Use one of De Morgan's Laws (<a class="xref" data-knowl="./knowl/T_logequiv.html" title="Theorem 2.2.8: Important Logical Equivalencies">Theorem 2.2.8</a> to explain carefully what it means to say that an element \(x\) is not in \(A \cup B\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-462"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-2615">What does it mean to say that an element \(x\) is in \(A^c\text{?}\) What does it mean to say that an element \(x\) is in \(B^c\text{?}\)</p></article><article class="exercise exercise-like" id="part3PA1"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-2616">Explain carefully what it means to say that an element \(x\) is in \(A^c \cap B^c\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-464"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-2617">Compare your response in <a class="xref" data-knowl="./knowl/part1PA1.html" title="Exercise 3">Exercise 3</a> to your response in <a class="xref" data-knowl="./knowl/part3PA1.html" title="Exercise 5">Exercise 5</a>. Are they equivalent? Explain.</p></article><article class="exercise exercise-like" id="exercise-465"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-2618">How do you think the sets \(\left( {A \cup B} \right)^c\) and \(A^c \cap B^c\) are related? Is this consistent with the Venn diagrams from <a class="xref" data-knowl="./knowl/PA_workingwithvenn2-1.html" title="Exercise 1">Exercise 1</a>?</p></article></section><section class="worksheet" id="PA_provingequiv"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Beginning Activity 2: Proving that Statements Are Equivalent</span><div class="print-links">
+<a href="PA_provingequiv-A4.html" class="a4">A4</a><a href="PA_provingequiv-letter.html" class="us">US</a>
+</div>
+</h3>
+<article class="exercise exercise-like" id="exercise-466"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-2619">Let \(X\text{,}\) \(Y\text{,}\) and \(Z\) be statements. Complete a truth table for \(\left[ {\left( {X \to Y} \right) \wedge \left( {Y \to Z} \right)} \right] \to 
+\left( {X \to Z} \right)\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-467"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-73">
+<p id="p-2620">Assume that \(P\text{,}\) \(Q\text{,}\) and \(R\) are statements and that we have proven that the following conditional statements are true:</p>
+<ul class="disc cols2">
+<li id="li-350"><p id="p-2621">If \(P\) then \(Q\) \(\left( {P \to Q} \right)\text{.}\)</p></li>
+<li id="li-351"><p id="p-2622">If \(Q\) then \(R\) \(\left( {Q \to R} \right)\text{.}\)</p></li>
+<li id="li-352"><p id="p-2623">If \(R\) then \(P\) \(\left( {R \to P} \right)\text{.}\)</p></li>
+</ul>
+<p class="continuation">Explain why each of the following statements is true.</p>
+</div>
+<article class="task exercise-like" id="task-984"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2624">\(P\) if and only if \(Q\) \(\left( {P \leftrightarrow Q} \right)\text{.}\)</p></article><article class="task exercise-like" id="task-985"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2625">\(Q\) if and only if \(R\) \(\left( {Q \leftrightarrow R} \right)\text{.}\)</p></article><article class="task exercise-like" id="task-986"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2626">\(R\) if and only if \(P\) \(\left( {R \leftrightarrow P} \right)\text{.}\)</p></article><div class="conclusion" id="conclusion-4"><p id="p-2627">Remember that \(X \leftrightarrow Y\) is logically equivalent to \(\left( {X \to Y} \right) \wedge \left( {Y \to X} \right)\text{.}\)</p></div></article></section><section class="subsection" id="subsection-94"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Algebra of Sets — Part 1</span>
+</h3>
+<p id="p-2628">This section contains many results concerning the properties of the set operations. We have already proved some of the results. Others will be proved in this section or in the exercises. The primary purpose of this section is to have in one place many of the properties of set operations that we may use in later proofs. These results are part of what is known as the <dfn class="terminology">algebra of sets</dfn>  or as <dfn class="terminology">set theory</dfn>. </p>
+<article class="theorem theorem-like" id="T_intersectandunion"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.3.1</span><span class="period">.</span>
+</h6>
+<p id="p-2629">Let \(A\text{,}\) \(B\text{,}\) and \(C\) be subsets of some universal set \(U\text{.}\) Then</p>
+<ul class="disc">
+<li id="li-353"><p id="p-2630">\(A \cap B \subseteq A\text{ and } A \subseteq A \cup B\text{.}\)</p></li>
+<li id="li-354"><p id="p-2631">If \(A \subseteq B\text{,}\) then \(A \cap C \subseteq B \cap C\) and \(A \cup C \subseteq B \cup C\text{.}\)</p></li>
+</ul></article><article class="hiddenproof" id="proof-31"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-31"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-31"><article class="hiddenproof"><p id="p-2632">The first part of this theorem was included in <a class="xref" data-knowl="./knowl/exer_intersectandunion.html" title="Exercise 7">Exercise 7</a> from <a href="S_provingset.html" class="internal" title="Section 5.2: Proving Set Relationships">Section 5.2</a>. The second part of the theorem was <a class="xref" data-knowl="./knowl/exer_unionandintersect.html" title="Exercise 12">Exercise 12</a> from <a href="S_provingset.html" class="internal" title="Section 5.2: Proving Set Relationships">Section 5.2</a>.</p></article></div>
+<p id="p-2633">The next theorem provides many of the properties of set operations dealing with intersection and union. Many of these results may be intuitively obvious, but to be complete in the development of set theory, we should prove all of them. We choose to prove only some of them and leave some as exercises.</p>
+<article class="theorem theorem-like" id="T_algebraofsets"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Algebra of Set Operations.</span>
+</h6>
+<p id="p-2634">Let \(A\text{,}\) \(B\text{,}\) and \(C\) be subsets of some universal set \(U\text{.}\) Then all of the following equalities hold.</p>
+<dl class="description-list">
+<dt id="li-355">Properties of the Empty Set and the Universal Set</dt>
+<dd><div class="displaymath" id="p-2635">
+\begin{align*}
+A \cap \emptyset \amp = \emptyset \amp A \cap U \amp = A\\
+A \cup \emptyset \amp = A \amp A \cup U \amp = U
+\end{align*}
+</div></dd>
+<dt id="li-356">Idempotent Laws</dt>
+<dd><div class="displaymath" id="p-2636">
+\begin{align*}
+A \cap A \amp = A \amp A \cup A \amp = A
+\end{align*}
+</div></dd>
+<dt id="li-357">Commutative Laws</dt>
+<dd><div class="displaymath" id="p-2637">
+\begin{align*}
+A \cap B \amp = B \cap A \amp A \cup B \amp = B \cup A
+\end{align*}
+</div></dd>
+<dt id="li-358">Associative Laws</dt>
+<dd><div class="displaymath" id="p-2638">
+\begin{align*}
+\left( A \cap B \right) \cap C \amp = A \cap \left(B \cap C \right)\\
+\left( A \cup B \right) \cup C \amp = A \cup \left(B \cup C \right)
+\end{align*}
+</div></dd>
+<dt id="li-359">Distributive Laws</dt>
+<dd><div class="displaymath" id="p-2639">
+\begin{align*}
+A \cap \left( B \cup C \right) \amp = \left( A \cap B \right) \cup 
+\left( A \cap C \right)\\
+A \cup \left( B \cap C \right) \amp = \left( A \cup B \right) \cap 
+\left( A \cup C \right)
+\end{align*}
+</div></dd>
+</dl></article><p id="p-2640">Before proving some of these properties, we note that in <a href="S_provingset.html" class="internal" title="Section 5.2: Proving Set Relationships">Section 5.2</a>, we learned that we can prove that two sets are equal by proving that each one is a subset of the other one. However, we also know that if \(S\) and \(T\) are both subsets of a universal set \(U\text{,}\) then <blockquote class="blockquote" id="blockquote-179">\(S = T\) if and only if for each \(x \in U\text{,}\) \({x \in S\text{ if and only if } x \in T}\text{.}\)</blockquote></p>
+<p id="p-2641">We can use this to prove that two sets are equal by choosing an element from one set and chasing the element to the other set through a sequence of “if and only if” statements. We now use this idea to prove one of the commutative laws.</p></section><section class="subsection" id="subsection-95"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Proof of One of the Commutative Laws in Theorem 5.3.2</span>
+</h3>
+<article class="hiddenproof" id="proof-32"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-32"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-32"><article class="hiddenproof"><p id="p-2642">We will prove that \(A \cap B = B \cap A\text{.}\) Let \(x \in U\text{.}\) Then</p>
+<div class="displaymath">
+\begin{equation}
+x \in A \cap B\text{  if and only if  } x \in A\text{  and  } x \in B\text{.}\label{eq_4a}\tag{5.4}
+\end{equation}
+</div>
+<p class="continuation">However, we know that if \(P\) and \(Q\) are statements, then \(P \wedge Q\) is logically equivalent to \(Q \wedge P\text{.}\) Consequently, we can conclude that</p>
+<div class="displaymath">
+\begin{equation}
+x \in A\text{ and } x \in B\text{  if and only if } \;x \in B\text{ and } x \in A\text{.}\label{eq_4b}\tag{5.5}
+\end{equation}
+</div>
+<p class="continuation">Now we know that</p>
+<div class="displaymath">
+\begin{equation}
+x \in B\text{ and } x \in A\text{  if and only if  } x \in B \cap A\text{.}\label{eq_4c}\tag{5.6}
+\end{equation}
+</div>
+<p class="continuation">This means that we can use <a class="xref" data-knowl="./knowl/eq_4a.html" title="Equation 5.4">(5.4)</a>, <a class="xref" data-knowl="./knowl/eq_4b.html" title="Equation 5.5">(5.5)</a>, and <a class="xref" data-knowl="./knowl/eq_4c.html" title="Equation 5.6">(5.6)</a> to conclude that</p>
+<div class="displaymath">
+\begin{equation*}
+x \in A \cap B\text{  if and only if  } x \in B \cap A\text{,}
+\end{equation*}
+</div>
+<p class="continuation">and, hence, we have proved that \(A \cap B = B \cap A\text{.}\)</p></article></div>
+<article class="exercise exercise-like" id="prog_workingvenn3"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">5.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Exploring a Distributive Property.</span>
+</h6>
+<div class="introduction" id="introduction-74"><p id="p-2643">We can use Venn diagrams to explore the more complicated properties in <a class="xref" data-knowl="./knowl/T_algebraofsets.html" title="Theorem 5.3.2: Algebra of Set Operations">Theorem 5.3.2</a>, such as the associative and distributive laws. To that end, let \(A\text{,}\) \(B\text{,}\) and \(C\) be subsets of some universal set \(U\text{.}\)</p></div>
+<article class="task exercise-like" id="A_workingvenn3-1"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2644">Draw two general Venn diagrams for the sets \(A\text{,}\) \(B\text{,}\) and \(C\text{.}\) On one, shade the region that represents \(A \cup \left( {B \cap C} \right)\text{,}\) and on the other, shade the region that represents \(\left( {A \cup B} \right) \cap \left( {A \cup C} \right)\text{.}\) Explain carefully how you determined these regions.</p></article><article class="task exercise-like" id="task-988"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2645">Based on the Venn diagrams in <a class="xref" data-knowl="./knowl/A_workingvenn3-1.html" title="Task 5.3.3.a">Task 5.3.3.a</a>, what appears to be the relationship between the sets \(A \cup \left( {B \cap C} \right)\) and \(\left( {A \cup B} \right) \cap \left( {A \cup C} \right)\text{?}\)</p></article></article></section><section class="subsection" id="subsection-96"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Proof of One of the Distributive Laws in Theorem 5.3.2</span>
+</h3>
+<p id="p-2646">We will now prove the distributive law explored in <a class="xref" data-knowl="./knowl/prog_workingvenn3.html" title="Progress Check 5.3.3: Exploring a Distributive Property">Progress Check 5.3.3</a>. Notice that we will prove two subset relations, and that for each subset relation, we will begin by choosing an arbitrary element from a set. Also notice how nicely a proof dealing with the union of two sets can be broken into cases.</p>
+<article class="hiddenproof" id="proof-33"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-33"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-33"><article class="hiddenproof"><p id="p-2647">Let \(A\text{,}\) \(B\text{,}\) and \(C\) be subsets of some universal set \(U\text{.}\) We will prove that \(A \cup \left( {B \cap C} \right) = \left( {A \cup B} \right) 
+\cap \left( {A \cup C} \right)\) by proving that each set is a subset of the other set.</p>
+<p id="p-2648">We will first prove that \(A \cup \left( {B \cap C} \right) \subseteq \left( {A \cup B} 
+\right) \cap \left( {A \cup C} \right)\text{.}\) We let \(x \in A \cup \left( {B \cap C} \right)\text{.}\) Then \(x \in A\text{ or } x \in B \cap C\text{.}\)</p>
+<p id="p-2649">So in one case, if \(x \in A\text{,}\) then \(x \in A \cup B\) and \(x \in A \cup C\text{.}\) This means that \(x \in \left( {A \cup B} \right) \cap \left( {A \cup C} \right)\text{.}\)</p>
+<p id="p-2650">On the other hand, if \(x \in B \cap C\text{,}\) then \(x \in B\) and \(x \in C\text{.}\) But \(x \in B\) implies that \(x \in A \cup B\text{,}\) and \(x \in C\) implies that \(x \in A \cup C\text{.}\) Since \(x\) is in both sets, we conclude that \(x \in \left( {A \cup B} \right) \cap \left( {A \cup C} \right)\text{.}\) So in both cases, we see that \(x \in \left( {A \cup B} \right) \cap \left( {A \cup C} \right)\text{,}\) and this proves that \(A \cup \left( {B \cap C} \right) \subseteq \left( {A \cup B} \right) 
+\cap \left( {A \cup C} \right)\text{.}\)</p>
+<p id="p-2651">We next prove that \(\left( {A \cup B} \right) \cap \left( {A \cup C} \right) 
+\subseteq A \cup \left( {B \cap C} \right)\text{.}\) So let \(y \in \left( {A \cup B} \right) \cap \left( {A \cup C} \right)\text{.}\) Then, \(y \in A \cup B\text{ and } y \in A \cup C\text{.}\) We must prove that \(y \in A \cup \left( {B \cap C} \right)\text{.}\) We will consider the two cases where \(y \in A\) or \(y \notin A\text{.}\) In the case where \(y \in A\text{,}\) we see that \(y \in A \cup \left( {B \cap C} \right)\text{.}\)</p>
+<p id="p-2652">So we consider the case that \(y \notin A\text{.}\) It has been established that \(y \in A \cup B\) and \(y \in A \cup C\text{.}\) Since \(y \notin A\) and \(y \in A \cup B\text{,}\) \(y\) must be an element of \(B\text{.}\) Similarly, since \(y \notin A\) and \(y \in A \cup C\text{,}\) \(y\) must be an element of \(C\text{.}\) Thus, \(y \in B \cap C\) and, hence, \(y \in A \cup \left( {B \cap C} \right)\text{.}\)</p>
+<p id="p-2653">In both cases, we have proved that \(y \in A \cup \left( {B \cap C} \right)\text{.}\) This proves that \(\left( {A \cup B} \right) \cap \left( {A \cup C} \right) 
+\subseteq A \cup \left( {B \cap C} \right)\text{.}\) The two subset relations establish the equality of the two sets. Thus, \(A \cup \left( {B \cap C} \right) = \left( {A \cup B} \right) 
+\cap \left( {A \cup C} \right)\text{.}\)</p></article></div></section><section class="subsection" id="subsection-97"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Important Properties of Set Complements</span>
+</h3>
+<p id="p-2654">The three main set operations are union, intersection, and complementation. <a class="xref" data-knowl="./knowl/T_algebraofsets.html" title="Theorem 5.3.2: Algebra of Set Operations">Theorems 5.3.2</a> and <a class="xref" data-knowl="./knowl/T_intersectandunion.html" title="Theorem 5.3.1">Theorem 5.3.1</a> deal with properties of unions and intersections. The next theorem states some basic properties of complements and the important relations dealing with complements of unions and complements of intersections. Two relationships in the next theorem are known as <dfn class="terminology">De Morgan's Laws</dfn> for sets and are closely related to De Morgan's Laws for statements.</p>
+<article class="theorem theorem-like" id="T_propsofcomplements"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.3.4</span><span class="period">.</span>
+</h6>
+<p id="p-2655">Let \(A\) and \(B\) be subsets of some universal set \(U\text{.}\) Then the following are true:</p>
+<dl class="description-list">
+<dt id="li-360">Basic Properties</dt>
+<dd>
+<p id="p-2656">\(\left( A^c \right)^c = A\)</p>
+<p id="p-2657">\(A - B = A \cap B^c\)</p>
+</dd>
+<dt id="li-361">Empty Set and Universal Set</dt>
+<dd>
+<p id="p-2658">\(A - \emptyset = A\) and \(A - U = \emptyset\)</p>
+<p id="p-2659">\({\emptyset}^c = U\) and \(U^c = \emptyset\)</p>
+</dd>
+<dt id="li-362">De Morgan's Laws</dt>
+<dd>
+<p id="p-2660">\(\left ({A \cap B} \right)^c = A^c \cup B^c\)</p>
+<p id="p-2661">\(\left ({A \cup B} \right)^c = A^c \cap B^c\)</p>
+</dd>
+<dt id="li-363">Subsets and Complements</dt>
+<dd><p id="p-2662">\(\displaystyle A \subseteq B \text{ if and only if } B^c \subseteq A^c\)</p></dd>
+</dl></article><article class="hiddenproof" id="proof-34"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-34"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-34"><article class="hiddenproof"><p id="p-2663">We will only prove one of De Morgan's Laws, namely, the one that was explored in <a href="S_setproperties.html#PA_workingwithvenn2" class="internal" title="Worksheet: Beginning Activity 1: Exploring a Relationship between Two Sets">Beginning Activty 1 </a>. The proofs of the other parts are left as exercises. Let \(A\) and \(B\) be subsets of some universal set \(U\text{.}\) We will prove that \(\left( {A \cup B} \right)^c  = A^c  \cap B^c\) by proving that an element is in \(\left( {A \cup B} \right)^c\) if and only if it is in \(A^c  \cap B^c\text{.}\) So let \(x\) be in the universal set \(U\text{.}\) Then</p>
+<div class="displaymath">
+\begin{equation}
+x \in \left( {A \cup B} \right)^c \text{  if and only if  }  x \notin A \cup B\text{,}\label{eq_4d}\tag{5.7}
+\end{equation}
+</div>
+<p class="continuation">and</p>
+<div class="displaymath">
+\begin{equation}
+x \notin A \cup B\text{  if and only if  } x \notin A\text{  and  } x \notin B\text{.}\label{eq_4e}\tag{5.8}
+\end{equation}
+</div>
+<p class="continuation">Combining <a class="xref" data-knowl="./knowl/eq_4d.html" title="Equation 5.7">(5.7)</a> and <a class="xref" data-knowl="./knowl/eq_4e.html" title="Equation 5.8">(5.8)</a>, we see that</p>
+<div class="displaymath">
+\begin{equation}
+x \in \left( {A \cup B} \right)^c \text{  if and only if  } x \notin A\text{  and  } x \notin B\text{.}\label{eq_4f}\tag{5.9}
+\end{equation}
+</div>
+<p class="continuation">In addition, we know that</p>
+<div class="displaymath">
+\begin{equation}
+x \notin A \text{  and  }  x \notin B \text{  if and only if  }  x \in A^c \text{  and  }  x \in B^c\text{,}\label{eq_4g}\tag{5.10}
+\end{equation}
+</div>
+<p class="continuation">and this is true if and only if \(x \in A^c  \cap B^c\text{.}\) So we can use <a class="xref" data-knowl="./knowl/eq_4f.html" title="Equation 5.9">(5.9)</a> and <a class="xref" data-knowl="./knowl/eq_4g.html" title="Equation 5.10">(5.10)</a> to conclude that</p>
+<div class="displaymath">
+\begin{equation*}
+x \in \left( {A \cup B} \right)^c \text{  if and only if  } x \in A^c  \cap B^c\text{,}
+\end{equation*}
+</div>
+<p class="continuation">and, hence, that \(\left( {A \cup B} \right)^c  = A^c  \cap B^c\text{.}\)</p></article></div>
+<article class="exercise exercise-like" id="A_usingalgebrasets1"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">5.3.5</span><span class="period">.</span>
+</h6>
+<p id="p-2664">Draw two general Venn diagrams for the sets \(A\text{,}\) \(B\text{,}\) and \(C\text{.}\) On one, shade the region that represents \(\left( {A \cup B} \right) - C\text{,}\) and on the other, shade the region that represents \(\left( {A - C} \right) \cup \left( {B - C} \right)\text{.}\) Explain carefully how you determined these regions and why they indicate that \(\left( {A \cup B} \right) - C = \left( {A - C} \right) \cup \left( {B - C} \right)\text{.}\)</p></article><p id="p-2665">It is possible to prove the relationship suggested in <a class="xref" data-knowl="./knowl/A_usingalgebrasets1.html" title="Progress Check 5.3.5">Progress Check 5.3.5</a> by proving that each set is a subset of the other set. However, the results in <a class="xref" data-knowl="./knowl/T_algebraofsets.html" title="Theorem 5.3.2: Algebra of Set Operations">Theorems 5.3.2</a> and <a class="xref" data-knowl="./knowl/T_propsofcomplements.html" title="Theorem 5.3.4">Theorem 5.3.4</a> can be used to prove other results about set operations. When we do this, we say that we are using the algebra of sets to prove the result. For example, we can start by using one of the basic properties in <a class="xref" data-knowl="./knowl/T_propsofcomplements.html" title="Theorem 5.3.4">Theorem 5.3.4</a> to write</p>
+<div class="displaymath">
+\begin{equation*}
+\left( {A \cup B} \right) - C = \left( {A \cup B} \right) \cap C^c\text{.}
+\end{equation*}
+</div>
+<p id="p-2666">We can then use one of the commutative properties to write</p>
+<div class="displaymath">
+\begin{align*}
+\left( {A \cup B} \right) - C \amp = \left( {A \cup B} \right) \cap C^c\\
+\amp = C^c  \cap \left( {A \cup B} \right)\text{.}
+\end{align*}
+</div>
+<article class="exercise exercise-like" id="A_usingalgebrasets2"><h6 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">5.3.6</span><span class="period">.</span>
+</h6>
+<p id="p-2667">Determine which properties from <a class="xref" data-knowl="./knowl/T_algebraofsets.html" title="Theorem 5.3.2: Algebra of Set Operations">Theorem 5.3.2</a> and <a class="xref" data-knowl="./knowl/T_propsofcomplements.html" title="Theorem 5.3.4">Theorem 5.3.4</a> justify each of the last three steps in the following outline of the proof that \(\left( {A \cup B} \right) - C = \left( {A - C} \right) \cup \left( {B - C} 
+\right)\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+\left( {A \cup B} \right) - C \amp = \left( {A \cup B} \right) \cap C^c \amp  \knowl{./knowl/T_propsofcomplements.html}{\text{Theorem 5.3.4}}\\
+\amp = C^c  \cap \left( {A \cup B} \right) \amp \text{ (Commutative Property) }\\
+\amp = \left( C^c \cap A \right) \cup \left( C^c \cap B \right)\\
+\amp = \left( A \cap C^c \right) \cup \left( B \cap C^c \right)\\
+\amp = \left( A - C \right) \cup \left( B - C \right)
+\end{align*}
+</div>
+<p id="p-2668">Note: It is sometimes difficult to use the properties in the theorems when the theorems use the same letters to represent the sets as those being used in the current problem. For example, one of the distributive properties from <a class="xref" data-knowl="./knowl/T_algebraofsets.html" title="Theorem 5.3.2: Algebra of Set Operations">Theorem 5.3.2</a> can be written as follows: For all sets \(X\text{,}\) \(Y\text{,}\) and \(Z\) that are subsets of a universal set \(U\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+X \cap \left( Y \cup Z \right) = \left( X \cap Y \right) \cup \left( X \cap Z \right)\text{.}
+\end{equation*}
+</div></article></section><section class="subsection" id="subsection-98"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Proving that Statements Are Equivalent</span>
+</h3>
+<p id="p-2669">When we have a list of three statements \(P\text{,}\) \(Q\text{,}\) and \(R\) such that each statement in the list is equivalent to the other two statements in the list, we say that the three statements are equivalent. This means that each of the statements in the list implies each of the other statements in the list.</p>
+<p id="p-2670">The purpose of <a href="S_setproperties.html#PA_provingequiv" class="internal" title="Worksheet: Beginning Activity 2: Proving that Statements Are Equivalent">Beginning Activity 2 </a> was to provide one way to prove that three (or more) statements are equivalent. The basic idea is to prove a sequence of conditional statements so that there is an unbroken chain of conditional statements from each statement to every other statement. This method of proof will be used in <a class="xref" data-knowl="./knowl/T_subsetequivs.html" title="Theorem 5.3.7">Theorem 5.3.7</a>.</p>
+<article class="theorem theorem-like" id="T_subsetequivs"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.3.7</span><span class="period">.</span>
+</h6>
+<p id="p-2671">Let \(A\) and \(B\) be subsets of some universal set \(U\text{.}\) The following are equivalent:</p>
+<ol class="decimal cols3">
+<li id="T_subsetitem1"><p id="p-2672">\(\displaystyle A \subseteq B\)</p></li>
+<li id="T_subsetitem2"><p id="p-2673">\(\displaystyle A \cap B^c = \emptyset\)</p></li>
+<li id="T_subsetitem3"><p id="p-2674">\(\displaystyle A^c \cup B = U\)</p></li>
+</ol></article><article class="hiddenproof" id="proof-35"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-35"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-35"><article class="hiddenproof"><p id="p-2675">To prove that these are equivalent conditions, we will prove that <a class="xref" data-knowl="./knowl/T_subsetitem1.html" title="Item 1">Item 1</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem2.html" title="Item 2">Item 2</a>, that <a class="xref" data-knowl="./knowl/T_subsetitem2.html" title="Item 2">Item 2</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem3.html" title="Item 3">Item 3</a>, and that <a class="xref" data-knowl="./knowl/T_subsetitem3.html" title="Item 3">Item 3</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem1.html" title="Item 1">Item 1</a>.</p>
+<p id="p-2676">Let \(A\) and \(B\) be subsets of some universal set \(U\text{.}\) We have proved that <a class="xref" data-knowl="./knowl/T_subsetitem1.html" title="Item 1">Item 1</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem2.html" title="Item 2">Item 2</a> in <a class="xref" data-knowl="./knowl/P_subsetprop.html" title="Proposition 5.2.11">Proposition 5.2.11</a>.</p>
+<p id="p-2677">To prove that <a class="xref" data-knowl="./knowl/T_subsetitem2.html" title="Item 2">Item 2</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem3.html" title="Item 3">Item 3</a>, we will assume that \(A \cap B^c  = \emptyset\) and use the fact that \(\emptyset^c = U\text{.}\) We then see that</p>
+<div class="displaymath">
+\begin{equation*}
+\left( {A \cap B^c} \right)^c  = \emptyset^c\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Then, using one of De Morgan's Laws, we obtain</p>
+<div class="displaymath">
+\begin{align*}
+A^c \cup \left(B^c \right)^c \amp = U\\
+A^c \cup B \amp  = U
+\end{align*}
+</div>
+<p id="p-2678">This completes the proof that <a class="xref" data-knowl="./knowl/T_subsetitem2.html" title="Item 2">Item 2</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem3.html" title="Item 3">Item 3</a>.</p>
+<p id="p-2679">We now need to prove that <a class="xref" data-knowl="./knowl/T_subsetitem3.html" title="Item 3">Item 3</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem1.html" title="Item 1">Item 1</a>. We assume that \(A^c \cup B = U\) and will prove that \(A \subseteq B\) by proving that every element of \(A\) must be in \(B\text{.}\)</p>
+<p id="p-2680">So let \(x \in A\text{.}\) Then we know that \(x \notin A^c\text{.}\) However, \(x \in U\) and since \(A^c \cup B = U\text{,}\) we can conclude that \(x \in A^c \cup B\text{.}\) Since \(x \notin A^c\text{,}\) we conclude that \(x \in B\text{.}\) This proves that \(A \subseteq B\) and hence that <a class="xref" data-knowl="./knowl/T_subsetitem3.html" title="Item 3">Item 3</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem1.html" title="Item 1">Item 1</a>.</p>
+<p id="p-2681">Since we have now proved that <a class="xref" data-knowl="./knowl/T_subsetitem1.html" title="Item 1">Item 1</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem2.html" title="Item 2">Item 2</a>, that <a class="xref" data-knowl="./knowl/T_subsetitem2.html" title="Item 2">Item 2</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem3.html" title="Item 3">Item 3</a>, and that <a class="xref" data-knowl="./knowl/T_subsetitem3.html" title="Item 3">Item 3</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem1.html" title="Item 1">Item 1</a>, we have proved that the three conditions are equivalent.</p></article></div></section><section class="exercises" id="exercises-18"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exer_sec43-1"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-75"><p id="p-2682">Let \(A\) be a subset of some universal set \(U\text{.}\) Prove each of the following (from <a class="xref" data-knowl="./knowl/T_propsofcomplements.html" title="Theorem 5.3.4">Theorem 5.3.4</a>):</p></div>
+<article class="task exercise-like" id="task-989"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2683">\(\left( A^c \right)^c = A\)</p></article><article class="task exercise-like" id="task-990"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2684">\(A - \emptyset = A\)</p></article><article class="task exercise-like" id="task-991"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2685">\(\emptyset^c = U\)</p></article><article class="task exercise-like" id="task-992"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-2686">\(U^c = \emptyset\)</p></article></article><article class="exercise exercise-like" id="exer_distributive"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-2687">Let  \(A\text{,}\) \(B\text{,}\) and  \(C\)  be subsets of some universal set  \(U\text{.}\) As part of <a class="xref" data-knowl="./knowl/T_algebraofsets.html" title="Theorem 5.3.2: Algebra of Set Operations">Theorem 5.3.2</a>, we proved one of the distributive laws. Prove the other one. That is, prove that</p>
+<div class="displaymath">
+\begin{equation*}
+A \cap \left( {B \cup C} \right) = \left( {A \cap B} \right) \cup 
+\left( {A \cap C} \right)\!\text{.}
+\end{equation*}
+</div></article><article class="exercise exercise-like" id="exer_demorgan"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-2688">Let \(A\text{,}\) \(B\text{,}\) and \(C\)  be subsets of some universal set  \(U\text{.}\) As part of <a class="xref" data-knowl="./knowl/T_propsofcomplements.html" title="Theorem 5.3.4">Theorem 5.3.4</a>, we proved one of De Morgan's Laws. Prove the other one. That is, prove that</p>
+<div class="displaymath">
+\begin{equation*}
+\left( {A \cap B} \right)^c  = A^c  \cup B^c\text{.}
+\end{equation*}
+</div></article><article class="exercise exercise-like" id="exer_sec43-5"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-76"><p id="p-2689">Let \(A\text{,}\) \(B\text{,}\) and \(C\) be subsets of some universal set \(U\text{.}\)</p></div>
+<article class="task exercise-like" id="exer_sec43-setdiff"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2690">Draw two general Venn diagrams for the sets \(A\text{,}\) \(B\text{,}\) and \(C\text{.}\) On one, shade the region that represents \(A - \left( {B \cup C} \right)\text{,}\) and on the other, shade the region that represents \(\left( {A - B} \right) \cap \left( {A - C} \right)\text{.}\) Based on the Venn diagrams, make a conjecture about the relationship between the sets \(A - \left( {B \cup C} \right)\) and \(\left( {A - B} \right) \cap \left( {A - C} \right)\text{.}\)</p></article><article class="task exercise-like" id="task-994"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2691">Use the choose-an-element method to prove the conjecture from <a class="xref" data-knowl="./knowl/exer_sec43-setdiff.html" title="Task 4.a">Task 4.a</a>.</p></article><article class="task exercise-like" id="task-995"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2692">Use the algebra of sets to prove the conjecture from <a class="xref" data-knowl="./knowl/exer_sec43-setdiff.html" title="Task 4.a">Task 4.a</a>.</p></article></article><article class="exercise exercise-like" id="exer_sec43-6"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-77"><p id="p-2693">Let \(A\text{,}\) \(B\text{,}\) and \(C\) be subsets of some universal set \(U\text{.}\)</p></div>
+<article class="task exercise-like" id="exer_sec43-setdiff2"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2694">Draw two general Venn diagrams for the sets \(A\text{,}\) \(B\text{,}\) and \(C\text{.}\) On one, shade the region that represents \(A - \left( {B \cap C} \right)\text{,}\) and on the other, shade the region that represents \(\left( {A - B} \right) \cup \left( {A - C} \right)\text{.}\) Based on the Venn diagrams, make a conjecture about the relationship between the sets \(A - \left( {B \cap C} \right)\) and \(\left( {A - B} \right) \cup \left( {A - C} \right)\text{.}\)</p></article><article class="task exercise-like" id="task-997"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2695">Use the choose-an-element method to prove the conjecture from <a class="xref" data-knowl="./knowl/exer_sec43-setdiff2.html" title="Task 5.a">Task 5.a</a>.</p></article><article class="task exercise-like" id="task-998"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2696">Use the algebra of sets to prove the conjecture from <a class="xref" data-knowl="./knowl/exer_sec43-setdiff2.html" title="Task 5.a">Task 5.a</a>.</p></article></article><article class="exercise exercise-like" id="exer53_exer6"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-78"><p id="p-2697">Let \(A\text{,}\) \(B\text{,}\) and \(C\) be subsets of some universal set \(U\text{.}\) Prove or disprove each of the following:</p></div>
+<article class="task exercise-like" id="task-999"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2698">\(\left( A \cap B \right) - C = \left( A - C \right) \cap \left( B - C \right)\)</p></article><article class="task exercise-like" id="task-1000"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2699">\(\left( A \cup B \right) - \left( A \cap B \right) = \left( A - B \right) \cup 
+\left(B - A \right)\)</p></article></article><article class="exercise exercise-like" id="exer_sec43-setdiff3x"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-79"><p id="p-2700">Let \(A\text{,}\) \(B\text{,}\) and \(C\) be subsets of some universal set \(U\text{.}\)</p></div>
+<article class="task exercise-like" id="exer_sec43-setdiff3"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2701">Draw two general Venn diagrams for the sets \(A\text{,}\) \(B\text{,}\) and \(C\text{.}\) On one, shade the region that represents \(A - \left( {B - C} \right)\text{,}\) and on the other, shade the region that represents \(\left( {A - B} \right) - C\text{.}\) Based on the Venn diagrams, make a conjecture about the relationship between the sets \(A - \left( {B - C} \right)\) and \(\left( {A - B} \right) - C\text{.}\) (Are the two sets equal? If not, is one of the sets a subset of the other set?)</p></article><article class="task exercise-like" id="task-1002"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2702">Prove the conjecture from <a class="xref" data-knowl="./knowl/exer_sec43-setdiff3.html" title="Task 7.a">Task 7.a</a>.</p></article></article><article class="exercise exercise-like" id="exer_sec43-setdiff3x-2"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-80"><p id="p-2703">Let \(A\text{,}\) \(B\text{,}\) and \(C\) be subsets of some universal set \(U\text{.}\)</p></div>
+<article class="task exercise-like" id="exer_sec43-setdiff3a"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2704">Draw two general Venn diagrams for the sets \(A\text{,}\) \(B\text{,}\) and \(C\text{.}\) On one, shade the region that represents \(A - \left( {B - C} \right)\text{,}\) and on the other, shade the region that represents \(\left( {A - B} \right) \cup \left( A - C^c \right)\text{.}\) Based on the Venn diagrams, make a conjecture about the relationship between the sets \(A - \left( {B - C} \right)\) and \(\left( {A - B} \right) \cup \left( A - C^c \right)\text{.}\) (Are the two sets equal? If not, is one of the sets a subset of the other set?)</p></article><article class="task exercise-like" id="task-1004"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2705">Prove the conjecture from <a class="xref" data-knowl="./knowl/exer_sec43-setdiff3a.html" title="Task 8.a">Task 8.a</a>.</p></article></article><article class="exercise exercise-like" id="exer_sec43-7"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-81"><p id="p-2706">Let \(A\) and \(B\) be subsets of some universal set \(U\text{.}\)</p></div>
+<article class="task exercise-like" id="task-1005"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2707">Prove that \(A\) and \(B - A\) are disjoint sets.</p></article><article class="task exercise-like" id="task-1006"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2708">Prove that \(A \cup B = A \cup \left( {B - A} \right)\text{.}\)</p></article></article><article class="exercise exercise-like" id="exer_sec43-8"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-82"><p id="p-2709">Let \(A\) and \(B\) be subsets of some universal set \(U\text{.}\)</p></div>
+<article class="task exercise-like" id="task-1007"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2710">Prove that \(A - B\) and \(A \cap B\) are disjoint sets.</p></article><article class="task exercise-like" id="task-1008"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2711">Prove that \(A = \left( {A - B} \right) \cup \left( {A \cap B} \right)\text{.}\)</p></article></article><article class="exercise exercise-like" id="exercise-481"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-83"><p id="p-2712">Let \(A\) and \(B\) be subsets of some universal set \(U\text{.}\) Prove or disprove each of the following:</p></div>
+<article class="task exercise-like" id="task-1009"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2713">\(A - \left(A \cap B^c \right) = A \cap B\)</p></article><article class="task exercise-like" id="task-1010"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2714">\(\left( A^c \cup B \right)^c \cap A = A - B\)</p></article><article class="task exercise-like" id="task-1011"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2715">\(\left( A \cup B \right) - A = B - A\)</p></article><article class="task exercise-like" id="task-1012"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-2716">\(\left( A \cup B \right) - B = A - \left( A \cap B \right)\)</p></article></article><article class="exercise exercise-like" id="exercise-482"><h6 class="heading">
+<span class="codenumber">12<span class="period">.</span></span><span class="space"> </span><span class="title">Evaluation of Proofs.</span>
+</h6>
+<div class="introduction" id="introduction-84"><p id="p-2717">See the instructions for <a class="xref" data-knowl="./knowl/exer_proofeval.html" title="Exercise 19: Evaluation of Proofs">Exercise 19</a> from <a href="S_directproof.html" class="internal" title="Section 3.1: Direct Proofs">Section 3.1</a>.</p></div>
+<article class="task exercise-like" id="task-1013"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<dl id="p-2718" class="description-list narrow">
+<dt id="li-367">Proposition</dt>
+<dd><p id="p-2719">If \(A\text{,}\) \(B\text{,}\) and \(C\) are subsets of some universal set \(U\text{,}\) then \(A - \left( B - C \right) = A - \left(B \cup C \right)\text{.}\)</p></dd>
+<dt id="li-368">Proof</dt>
+<dd><div class="displaymath" id="p-2720">
+\begin{align*}
+A - \left( B - C \right) \amp = \left(A - B \right) - \left( A - C \right)\\
+\amp = \left( A \cap B^c \right) \cap \left(A \cap C^c \right)\\
+\amp = A \cap \left( B^c \cap C^c\right)\\
+\amp = A \cap \left( B \cup C \right)^c\\
+\amp 
+\end{align*}
+</div></dd>
+</dl></article><article class="task exercise-like" id="task-1014"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<dl id="p-2721" class="description-list narrow">
+<dt id="li-369">Proposition</dt>
+<dd><p id="p-2722">If \(A\text{,}\) \(B\text{,}\) and \(C\) are subsets of some universal set \(U\text{,}\) then \(A - \left(B \cup C \right) = \left(A - B \right) \cap \left(A - C \right)\text{.}\)</p></dd>
+<dt id="li-370">Proof</dt>
+<dd>
+<p id="p-2723">We first write \(A - \left(B \cup C \right) = A \cap \left(B \cup C \right)^c\) and then use one of De Morgan's Laws to obtain</p>
+<div class="displaymath">
+\begin{equation*}
+A - \left(B \cup C \right)= A \cap \left(B^c \cap C^c \right)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We now use the fact that \(A = A \cap A\) and obtain</p>
+<p id="p-2724">\(A - \left(B \cup C \right)= A \cap A \cap B^c \cap C^c = \left(A \cap B^c \right) 
+\cap \left(A \cap C^c \right) = \left(A - B \right) \cap \left(A - C \right)\text{.}\)</p>
+</dd>
+</dl></article></article><article class="activity project-like" id="activity-31"><h6 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">31</span><span class="period">.</span><span class="space"> </span><span class="title">Comparison to Properties of the Real Numbers.</span>
+</h6>
+<div class="introduction" id="introduction-85">
+<p id="p-2725">The following are some of the basic properties of addition and multiplication of real numbers.</p>
+<dl class="description-list">
+<dt id="li-371">Commutative Laws:</dt>
+<dd>
+<p id="p-2726">\(a+b=b+a\text{,}\) for all \(a,b \in \mathbb{R}\text{.}\)</p>
+<p id="p-2727">\(a \cdot b=b \cdot a\text{,}\) for all \(a,b \in \mathbb{R}\text{.}\)</p>
+</dd>
+<dt id="li-372">Associative Laws:</dt>
+<dd>
+<p id="p-2728">\(\left( {a + b} \right) + c = a + \left( {b + c} \right)\text{,}\) for all \(a,b,c \in \mathbb{R}\text{.}\)</p>
+<p id="p-2729">\(\left( {a \cdot b} \right) \cdot c = a \cdot \left( {b \cdot c} \right)\text{,}\) for all \(a,b,c \in \mathbb{R}\text{.}\)</p>
+</dd>
+<dt id="li-373">Distributive Law:</dt>
+<dd><p id="p-2730">\(a \cdot \left( {b + c} \right) = a \cdot b + a \cdot c\text{,}\) for all \(a,b,c \in \mathbb{R}\text{.}\)</p></dd>
+<dt id="li-374">Additive Identity</dt>
+<dd><p id="p-2731">For all \(a \in \mathbb{R}\text{,}\) \(a + 0 = a = 0 + a\text{.}\)</p></dd>
+<dt id="li-375">Multiplicative Identity:</dt>
+<dd><p id="p-2732">For all \(a \in \mathbb{R}\text{,}\) \(a \cdot 1 = a = 1 \cdot a\text{.}\)</p></dd>
+<dt id="li-376">Additive Inverses:</dt>
+<dd><p id="p-2733">For all \(a \in \mathbb{R}\text{,}\) \(a + ( - a) = 0 = ( - a) + a\text{.}\)</p></dd>
+<dt id="li-377">Multiplicative Inverses:</dt>
+<dd><p id="p-2734">For all \(a \in \mathbb{R}\) with \(a \ne 0\text{,}\) \(a \cdot a^{ - 1} = 1 = a^{ - 1} \cdot a\text{.}\)</p></dd>
+</dl>
+<p class="continuation">Discuss the similarities and differences among the properties of addition and multiplication of real numbers and the properties of union and intersection of sets.</p>
+</div></article></section></section></div></main>
+</div>
+</body>
+</html>

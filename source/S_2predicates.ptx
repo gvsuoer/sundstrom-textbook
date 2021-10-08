@@ -357,7 +357,8 @@
     </p>
 
     <exercise xml:id="pr_setnotation">
-      
+      <title>Set Notation</title>
+      <task>
       <statement>
         <p>
           Let <m>A = \{ -4, -2, 0, 2, 4, 6, 8, \ldots \}</m>.
@@ -370,11 +371,17 @@
           </me>
         </p>
       </statement>
-    </exercise>
-    <exercise>
-      <statement>
+      <solution>
         <p>
-           Use correct set notation
+          <m>10 \in A</m>, <m>22 \in A</m>, <m>13 \notin A</m>,
+          <m>-3 \notin A</m>, <m>0 \in A</m>, <m>-12 \notin A</m>
+        </p>
+      </solution>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Use correct set notation
             (using <m>=</m> or <m>\subseteq</m>)
             to indicate which of the following sets are equal and which are subsets of one of 
             the other sets.
@@ -383,8 +390,16 @@
               <mrow>C \amp = \{3, 6, 9, \ldots \} \amp  D \amp = \{ 3, 6, 7, 9 \}</mrow>
               <mrow>E \amp = \{9, 12, 15, \ldots \} \amp  F \amp = \{9, 7, 6, 2 \}</mrow>
             </md>
-        </p>
-      </statement>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            <m>A = B</m>, <m>A \subseteq B</m>,
+            <m>B \subseteq A</m>, <m>A \subseteq C</m>,
+            <m>A \subseteq D</m>, <m>B \subseteq C</m>, <m>B \subseteq D</m>
+          </p>
+        </solution>
+      </task>
     </exercise>
   </subsection>
 
@@ -477,58 +492,97 @@
 
     <exercise xml:id="pr_predicates">
 
-        
-        <statement>
+      <task>
+        <introduction>
           <p>
             Assume the universal set for all variables is <m>\Z</m> and let <m>P( x )</m> be the 
             predicate<npsp/>
             <q><m>x^2 \leq 4</m>.</q>
           </p>
+        </introduction>
           
           <task>
+            <statement>
             <p>
               Find two values of <m>x</m> for which <m>P( x )</m> is false.
             </p>
+            </statement>
+            <solution>
+              <p>
+                Two values of <m>x</m> for which <m>P( x )</m> is false are <m>x = 3</m> and 
+                <m>x = -4</m>.
+              </p>
+            </solution>
           </task>
           <task>
+            <statement>
             <p>
               Find two values of <m>x</m> for which <m>P( x )</m> is true.
             </p>
+            </statement>
+            <solution>
+              <p>
+                The set of all <m>x</m> for which <m>P( x )</m> is true is the set 
+                <m>\left\{ -2, -1, 0, 1, 2 \right\}</m>.
+              </p>
+            </solution>
           </task>
           <task>
+            <statement>
             <p>
               Use the roster method to specify the set of all <m>x</m> for which <m>P( x )</m> is true.
             </p>
-            </task> 
             </statement>
-        </exercise>
+            </task> 
+      </task>
 
-        <exercise xml:id="pr_predicates2">
-        <statement>
+      <task>
+        <introduction>
           <p>
             Assume the universal set for all variables is <m>\mathbb{Z}</m>,
             and let <m>R( {x,\;y,\;z} )</m> be the predicate
             <q><m>x^2 + y^2 = z^2</m>.</q>
           </p>
+        </introduction>
 
             <task>
+            <statement>
             <p>
               Find two different examples for which <m>R( {x, y, z})</m> is false.
             </p>
+            </statement>
+            <solution>
+              <p>
+                Two examples for which <m>R( {x, y, z} )</m> is false are:
+                <m>x = 1</m>, <m>y = 1</m>,
+                <m>z = 1</m> and <m>x = 3</m>,
+                <m>y = - 1</m>, <m>z = 5</m>.
+              </p>
+            </solution>
             </task>
             
             <task>
+            <statement>
             <p>
               Find two different examples for which <m>R( {x, y, z})</m> is true.
             </p>
-            </task>
-          </statement>
+            </statement>
+            <solution>
+              <p>
+                Two examples for which <m>R( {x, y, z} )</m> is true are:
+                <m>x = 3</m>, <m>y = 4</m>,
+                <m>z = 5</m> and <m>x = 5</m>,
+                <m>y = 12</m>, <m>z = 13</m>.
+              </p>
+            </solution>
+            </task>  
+    </task>
      
     </exercise>
 
     <p>
-      Without using the term, <xref ref="E_exam21"></xref>,
-      <xref ref="pr_predicates"></xref>, and <xref ref="pr_predicates2"></xref>
+      Without using the term, <xref ref="E_exam21"></xref> and
+      <xref ref="pr_predicates"></xref>
       (and <xref ref="PA_variable">Beginning Activity 2</xref>)
       dealt with a concept called the <term>truth set of a predicate</term>.
 
@@ -652,34 +706,63 @@
 
     <exercise xml:id="pr_truthset">
       <title>Working with Truth Sets</title>
-      <statement>
+      <introduction>
       <p>
         Let <m>P( x )</m> be the predicate
         <q><m>x^2 \leq 9</m>.</q>
+      </p>
+      </introduction>
 
         <task xml:id="truthset-1">
+          <statement>
             <p>
               If the universal set is <m>\mathbb{R}</m>,
               describe the truth set of <m>P(x)</m> using English and write the truth set of 
               <m>P( x )</m> using set builder notation.
             </p>
+          </statement>
+          <solution>
+            <p>
+              The truth set is the set of all real numbers whose square is less than or equal to 9.
+              The truth set is <m>\left\{ {\left. {x \in \mathbb{R} } \right| x^2 \leq 9} \right\} 
+              = \left\{ \left. x \in \R \right| -3 \leq x \leq 3 \right\}</m>.
+            </p>
+          </solution>
           </task>
+
           <task xml:id="truthset-2">
+            <statement>
             <p>
               If the universal set is <m>\mathbb{Z}</m>,
               then what is the truth set of <m>P( x )</m>?
               Describe this set using English and then use the roster method to specify all the 
               elements of this truth set.
             </p>
+            </statement>
+            <solution>
+              <p>
+                The truth set is the set of all integers whose square is less than or equal to 9.
+                The truth set is <m>\left\{ { - 3, - 2, - 1, 0, 1, 2, 3} \right\}</m>.
+              </p>
+            </solution>
           </task>
+
           <task>
+            <statement>
             <p>
               Are the truth sets in <xref ref="truthset-1"/> and <xref ref="truthset-2"/> equal?
               Explain.
             </p>
+            </statement>
+            <solution>
+              <p>
+                The truth sets in Parts (1) and (2) equal are not equal.
+                One purpose of this progress check is to show that the truth set of a predicate 
+                depends on the predicate and on the universal set.
+              </p>
+            </solution>
           </task>
-        </p>
-        </statement>
+
     </exercise>
 
     <p>
@@ -733,7 +816,7 @@
 
     <exercise xml:id="pr_setbuilder">
       <title>Set Builder Notation</title>
-      <statement>
+      <introduction>
       <p>
         Each of the following sets is defined using the roster method.
         <md>
@@ -746,19 +829,37 @@
 
         <mrow>D \amp = \left\{1, 3, 9, 27, \ldots \right\}</mrow>
         </md>
+      </p>
+      </introduction>
  
         <task>
+          <statement>
             <p>
               Determine four elements of each set other than the ones listed using the roster method.
             </p>
+          </statement>
         </task>
-          <task>
+
+        <task>
+          <statement>
+          <p>
+            Use set builder notation to describe each set.
+          </p>
+          </statement>
+          <solution>
             <p>
-              Use set builder notation to describe each set.
+              <md>
+                <mrow>A \amp =  \left\{ 4n - 3 \mid n \in \N \right\}
+                = \left\{ x \in \N \mid x = 4n - 3 \text{ for some natural number }  n \right\}.</mrow>
+                <mrow>B \amp =  \left\{ -2n \mid n \text{ is a nonnegative integer }  \right\}.</mrow>
+                <mrow>C \amp = \left\{ \left( \sqrt{2} \right)^{2m - 1} \mid m \in \N \right\}
+                = \left\{ \left( \sqrt{2} \right)^{n} \mid n \text{ is an odd natural number } \right\}.</mrow>
+                <mrow>D \amp = \left\{ 3^n \mid n \text{ is a nonnegative integer }  \right\}</mrow>
+              </md>.
             </p>
-          </task>
-        </p>
-        </statement>
+          </solution>
+        </task>
+
     </exercise>
   </subsection>
 

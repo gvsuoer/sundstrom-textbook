@@ -6,7 +6,7 @@
     <worksheet xml:id="PA_contradicton">
       <title>Beginning Activity 1: Proof by Contradiction</title>
       <idx><h>proof</h><h>by contradiction</h></idx>
-
+ 
       <p>
         In <xref ref="D_tautology"></xref>
         in <xref ref="S_2logop"></xref>,
@@ -310,7 +310,7 @@
 
     <exercise xml:id="pr_start-con">
       <title>Starting a Proof by Contradiction</title>
-      <statement>
+      <introduction>
       <p>
         One of the most important parts of a proof by contradiction is the very first part,
         which is to state the assumptions that will be used in the proof by contradiction.
@@ -323,35 +323,72 @@
         (Remember that a real number is
         <q>not irrational</q>
         means that the real number is rational.)
+      </p>
+      </introduction>
       
       <task>
+        <statement>
         <p>
           For each real number <m>x</m>,
           if <m>x</m> is irrational, then <m>\sqrt[3]{x}</m> is irrational.
         </p>
+        </statement>
+        <solution>
+          <p>
+            There exists a real number <m>x</m> such that <m>x</m> is irrational and 
+            <m>\sqrt[3]{x}</m> is rational.
+          </p>
+        </solution>
       </task>
+
       <task>
+        <statement>
         <p>
           For each real number <m>x</m>,
           <m>\left(x + \sqrt{2} \right)</m> is irrational or <m>\left(-x + \sqrt{2} \right)</m> 
           is irrational.
         </p>
+        </statement>
+        <solution>
+          <p>
+            There exists a real number <m>x</m> such that
+            <m>\left(x + \sqrt{2} \right)</m> is rational and <m>\left(-x + \sqrt{2} \right)</m> 
+            is rational.
+          </p>
+        </solution>
       </task>
+
       <task>
+        <statement>
         <p>
           For all integers <m>a</m> and <m>b</m>,
           if 5 divides <m>ab</m>, then 5 divides <m>a</m> or 5 divides <m>b</m>.
         </p>
+        </statement>
+        <solution>
+          <p>
+            There exist integers <m>a</m> and <m>b</m> such that 5 divides <m>ab</m> and 5 does 
+            not divide <m>a</m> and 5 does not divide <m>b</m>.
+          </p>
+        </solution>
       </task>
+
       <task>
+        <statement>
         <p>
           For all real numbers <m>a</m> and <m>b</m>,
           if <m>a > 0</m> and <m>b > 0</m>,
           then <m>\dfrac{2}{a} + \dfrac{2}{b} \ne \dfrac{4}{a + b}</m>.
         </p>
+        </statement>
+        <solution>
+          <p>
+            There exist real numbers <m>a</m> and <m>b</m> such that <m>a > 0</m> and <m>b > 0</m> 
+            and <m>\dfrac{2}{a} + \dfrac{2}{b} = \dfrac{4}{a + b}</m>.
+          </p>
+        </solution>
       </task>
-      </p>
-      </statement>
+
 
     </exercise>
   </subsection>
@@ -375,36 +412,101 @@
 
     <exercise xml:id="pr_exploreproof">
       <title>Exploration and a Proof by Contradiction</title>
-      <statement>
+      <introduction>
       <p>
         Consider the following proposition:
         <blockquote>
           For each integer <m>n</m>, if <m>n \equiv 2 \pmod 4</m>, then <m>n\not \equiv 3 \pmod 6</m>.
         </blockquote>
+      </p>
+      </introduction>
 
       <task xml:id="pr_exploreproof1">
+        <statement>
         <p>
           Determine at least five different integers that are congruent to 2 modulo 4, and 
           determine at least five different integers that are congruent to 3 modulo 6.
           Are there any integers that are in both of these lists?
         </p>
+        </statement>
+        <solution>
+          <p>
+            Some integers that are congruent to 2 modulo 4 are <m>-6, -2, 2, 6, 10</m>,
+            and some integers that are congruent to 3 modulo 6 are:
+            <m>-9, -3, 3, 9, 15</m>.
+            There are no integers that are in both of the lists.
+          </p>
+        </solution>
       </task>
+
       <task>
+        <statement>
         <p>
           For this proposition,
           why does it seem reasonable to try a proof by contradiction?
         </p>
+        </statement>
+        <solution>
+          <p>
+            For this proposition,
+            it is reasonable to try a proof by contradiction since the conclusion is stated as a negation.
+          </p>
+        </solution>
       </task>
+
       <task>
+        <statement>
         <p>
           For this proposition,
           state clearly the assumptions that need to be made at the beginning of a proof by 
           contradiction,
           and then use a proof by contradiction to prove this proposition.
         </p>
+        </statement>
+        <solution>
+          <p>
+            We will use a proof by contradiction.
+            Let <m>n \in \mathbb{Z}</m> and assume that
+            <m>n \equiv 2 \pmod 4</m> and that <m>n \equiv 3 \pmod 6</m>.
+            Since <m>n \equiv 2 \pmod 4</m>,
+            we know that 4 divides <m>n - 2</m>.
+            Hence, there exists an integer <m>k</m> such that
+            <men xml:id="eq_exploreproof1">
+              n - 2 = 4k
+            </men>.
+          </p>
+          <p>
+            We can also use the assumption that
+            <m>n \equiv 3 \pmod 6</m> to conclude that 6 divides <m>n - 3</m> and that there 
+            exists an integer <m>m</m> such that
+            <men xml:id="eq_exploreproof2">
+              n - 3 = 6m
+            </men>.
+          </p>
+          <p>
+            If we now solve equation <xref ref="eq_exploreproof1"/> and equation
+            <xref ref="eq_exploreproof2"/> for <m>n</m> and set the two expressions equal to each other,
+            we obtain
+            <me>
+              4k + 2 = 6m + 3
+            </me>.
+          </p>
+          <p>
+            However, this equation can be rewritten as
+            <me>
+              2\left( {2k + 1} \right) = 2\left( {3m + 1} \right) + 1
+            </me>.
+          </p>
+          <p>
+            Since <m>2k + 1</m> is an integer and <m>3m + 1</m> is an integer,
+            this last equation is a contradiction since the left side is an even integer and the 
+            right side is an odd integer.
+            Hence, we have proven that if <m>n \equiv 2 \pmod 4</m>,
+            then <m>n\not \equiv 3 \pmod 6</m>.
+          </p>
+        </solution>
       </task>
-      </p>
-      </statement>
+
     </exercise>
   </subsection>
 
@@ -435,28 +537,39 @@
       we can assume that such an integer <m>z</m> exists.
       This gives us more with which to work.
     </p>
+
     <exercise xml:id="prog_persquare">
-      <statement>
+      <introduction>
       <p>
         Complete the following proof of <xref ref="prop_persquare"></xref>:
-
-      <proof>
-        <p>
-          We will use a proof by contradiction.
-          So we assume that there exist integers <m>x</m> and <m>y</m> such that <m>x</m> and <m>y</m> are odd and there exists an integer <m>z</m> such that <m>x^2 + y^2 = z^2</m>.
-          Since <m>x</m> and <m>y</m> are odd,
-          there exist integers <m>m</m> and <m>n</m> such that
-          <m>x = 2m + 1</m> and <m>y = 2n + 1</m>.
-        </p>
+      </p>
+      <p>
+        Proof: We will use a proof by contradiction.
+        So we assume that there exist integers <m>x</m> and <m>y</m> such that <m>x</m> and 
+        <m>y</m> are odd and there exists an integer <m>z</m> such that <m>x^2 + y^2 = z^2</m>.
+        Since <m>x</m> and <m>y</m> are odd,
+        there exist integers <m>m</m> and <m>n</m> such that
+        <m>x = 2m + 1</m> and <m>y = 2n + 1</m>.
+      </p>
+      </introduction>
       
       <task>
+        <statement>
         <p>
           Use the assumptions that <m>x</m> and <m>y</m> are odd to prove that
           <m>x^2 + y^2</m> is even and hence, <m>z^2</m> is even.
           (See <xref ref="T_n2odd"></xref>.)
         </p>
+        </statement>
+        <solution>
+          <p>
+            <m>x^2 + y^2 = (2m + 1)^2 + (2n + 1)^2 = 2 \left( 2m^2 + 2m + 2n^2 + 2n + 1 \right)</m>.
+          </p>
+        </solution>
       </task>
       
+      <task>
+        <statement>
         <p>
           We can now conclude that <m>z</m> is even.
           (See <xref ref="T_n2odd"></xref>.)
@@ -467,8 +580,6 @@
             (2m + 1)^2 + (2n + 1)^2 = (2k)^2
           </me>.
         </p>
-        <task>
-        <statement>
         <p>
           Use the previous equation to obtain a contradiction. 
         </p>
@@ -479,10 +590,26 @@
             and the right side is an even integer.
           </p>
         </hint>
+        <solution>
+          <p>
+            Using algebra to rewrite the last equation, we obtain
+            <me>
+              4m^2 + 4m + 4n^2 + 4n + 2 = 4k^2
+            </me>.
+            If we divide both sides of this equation by 2, we see that 
+            <m>2m^2 + 2m + 2n^2 + 2n + 1 = 2k^2</m> or
+            <me>
+              2 \left(m^2 + m + n^2 + n \right) + 1 = 2k^2
+            </me>.
+            However, the left side of the last equation is an odd integer and the right side 
+            is an even integer.
+            This is a contradiction,
+            and so we have proved that for all integers <m>x</m> and <m>y</m>,
+            if <m>x</m> and <m>y</m> are odd integers,
+            then there does not exist an integer <m>z</m> such that <m>x^2 + y^2 = z^2</m>.
+          </p>
+        </solution>
       </task>
-      </proof>
-      </p>
-      </statement>
     
     </exercise>
   </subsection>

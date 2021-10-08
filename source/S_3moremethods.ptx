@@ -377,14 +377,26 @@
 
     <exercise xml:id="pr_contrapositive">
       <title>Using Another Logical Equivalency</title>
-      <statement>
-      <p>
+      
       <task xml:id="pr_contrapositive1">
+        <statement>
         <p>
           In English, write the contrapositive of,
           <q>For all real numbers <m>a</m> and <m>b</m>,
           if <m>a \ne 0</m> and <m>b \ne 0</m>, then <m>ab \ne 0</m>.</q>
         </p>
+        </statement>
+        <solution>
+          <p>
+            For all real numbers <m>a</m> and <m>b</m>,
+            if <m>ab = 0</m>, then <m>a = 0\text{ or } b = 0</m>.
+          </p>
+        </solution>
+      </task>
+          
+
+      <task xml:id="pr_contrapositive2">
+        <statement>
         <p>
           The contrapositive is a conditional statement in the form 
           <m>X \to \left( {Y \vee Z} \right)</m>.
@@ -395,78 +407,102 @@
           then we could multiply both sides of the equation <m>ab = 0</m> by <m>\dfrac{1}{a}</m>.
           This suggests that we consider using the following logical equivalency based on a
           result in <xref ref="T_logequiv"></xref>:
-        <me>
-          X \to \left( {Y \vee Z} \right) \equiv \left( {X \wedge \mynot  Y} \right) \to Z
-        </me>.
+          <me>
+            X \to \left( {Y \vee Z} \right) \equiv \left( {X \wedge \mynot  Y} \right) \to Z
+          </me>.
         </p>
-      </task>
-      <task xml:id="pr_contrapositive2">
         <p>
           In English, use this logical equivalency to write a statement that is logically 
           equivalent to the contrapositive from <xref ref="pr_contrapositive1"/>.
         </p>
-        
+        </statement>
+        <solution>
+          <p>
+            For all real numbers <m>a</m> and <m>b</m>,
+            if <m>ab = 0</m> and <m>a \ne 0</m>, <m>b = 0</m>.
+          </p>
+        </solution>
       </task>
-      <p>
+
+      <task>
+        <statement>
+        <p>
           The logical equivalency in <xref ref="pr_contrapositive2"/> makes sense 
           because if we are trying to prove <m>Y \vee Z</m>,
           we only need to prove that at least one of <m>Y</m> or <m>Z</m> is true.
           So the idea is to prove that if <m>Y</m> is false,
           then <m>Z</m> must be true.
-      </p>
-      <task>
+        </p>
         <p>
           Use the ideas presented in the progress check to complete the proof of the following 
           proposition.
-              <proposition xml:id="P_abnotzero">
-                <statement>
-                  <p>
-                    For all real numbers <m>a</m> and <m>b</m>,
-                    if <m>a \ne 0</m> and <m>b \ne 0</m>, then <m>ab \ne 0</m>.
-                  </p>
-                </statement>
-                <proof>
-                  <p>
-                    We will prove the contrapositive of this proposition,
-                    which is 
-                    <blockquote>
-                      For all real numbers <m>a</m> and <m>b</m>,
-                      if <m>ab = 0</m>, then <m>a = 0\text{ or } b = 0</m>.
-                    </blockquote>
-                  </p>
-                  <p>
-                    This contrapositive, however,
-                    is logically equivalent to the following: 
-                    <blockquote>
-                      For all real numbers <m>a</m> and <m>b</m>,
-                      if <m>ab = 0</m> and <m>a \ne 0</m>, then <m>b = 0</m>.
-                    </blockquote>
-                    To prove this,
-                    we let <m>a</m> and <m>b</m> be real numbers and assume that 
-                    <m>ab = 0</m> and <m>a \ne 0</m>.
-                    We can then multiply both sides of the equation <m>ab = 0</m> by <m>\dfrac{1}{a}</m>.
-                    This gives 
-                    <me>
-                      \text{Now complete the proof.}
-                    </me>
-                    <me>
-                      \vdots
-                    </me>
-                  </p>
-                  
-                  <p>
-                    Therefore, <m>b = 0</m>.
-                    This completes the proof of a statement that is logically equivalent to the 
-                    contrapositive,
-                    and hence,
-                    we have proven the proposition. 
-                 </p>
-                </proof>
-              </proposition>
+          <proposition xml:id="P_abnotzero">
+            <statement>
+              <p>
+                For all real numbers <m>a</m> and <m>b</m>,
+                if <m>a \ne 0</m> and <m>b \ne 0</m>, then <m>ab \ne 0</m>.
+              </p>
+            </statement>
+            <proof>
+              <p>
+                We will prove the contrapositive of this proposition,
+                which is 
+                <blockquote>
+                  For all real numbers <m>a</m> and <m>b</m>,
+                  if <m>ab = 0</m>, then <m>a = 0\text{ or } b = 0</m>.
+                </blockquote>
+              </p>
+              <p>
+                This contrapositive, however,
+                is logically equivalent to the following: 
+                <blockquote>
+                  For all real numbers <m>a</m> and <m>b</m>,
+                  if <m>ab = 0</m> and <m>a \ne 0</m>, then <m>b = 0</m>.
+                </blockquote>
+                To prove this,
+                we let <m>a</m> and <m>b</m> be real numbers and assume that 
+                <m>ab = 0</m> and <m>a \ne 0</m>.
+                We can then multiply both sides of the equation <m>ab = 0</m> by <m>\dfrac{1}{a}</m>.
+                This gives 
+                <me>
+                  \text{Now complete the proof.}
+                </me>
+                <me>
+                  \vdots
+                </me>
+              </p>
+              
+              <p>
+                Therefore, <m>b = 0</m>.
+                This completes the proof of a statement that is logically equivalent to the 
+                contrapositive,
+                and hence,
+                we have proven the proposition. 
+             </p>
+            </proof>
+          </proposition>
         </p>
+        </statement>
+        <solution>
+          <p>
+            This gives
+            <me>
+              \frac{1}{a} (ab) = \frac{1}{a} \cdot 0
+            </me>.
+            We now use the associative property on the left side of this equation and simplify 
+            both sides of the equation to obtain
+            <md>
+              <mrow>\left( \frac{1}{a} \cdot a \right)b \amp = 0</mrow>
+              <mrow>1 \cdot b \amp = 0</mrow>
+              <mrow>b \amp = 0</mrow>
+            </md>
+            Therefore, <m>b = 0</m> and this completes the proof of a statement that is 
+            logically equivalent to the contrapositive.
+            Hence, we have proved the proposition.
+          </p>
+        </solution>
       </task>
-      </p>
-      </statement>
+
     </exercise>
   </subsection>
 

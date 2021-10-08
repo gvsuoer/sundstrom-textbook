@@ -273,29 +273,67 @@
       <statement>
       <p>
         Complete the proof of the following proposition:
-        <proposition>
-          <statement>
-            <p>
-              For each integer <m>n</m>,
-              <m>n^2 - 5n + 7</m> is an odd integer.
-            </p>
-          </statement>
-          <proof>
-            <p>
-              Let <m>n</m> be an integer.
-              We will prove that <m>n^2 - 5n + 7</m> is an odd integer by examining the case where 
-              <m>n</m> is even and the case where <m>n</m> is odd.
-            </p>
-            <p>
-              Case 1: The integer <m>n</m> is even.
-              In this case,
-              there exists an integer <m>m</m> such that <m>n = 2m</m>.
-              Therefore, <ellipsis/> .
-            </p>
-          </proof>
-        </proposition>
+      </p>
+      <p>
+        Proposition: For each integer <m>n</m>,
+        <m>n^2 - 5n + 7</m> is an odd integer.
+      </p>
+    
+      <p>
+        Proof: Let <m>n</m> be an integer.
+        We will prove that <m>n^2 - 5n + 7</m> is an odd integer by examining the case where 
+        <m>n</m> is even and the case where <m>n</m> is odd.
+      </p>
+      <p>
+        Case 1: The integer <m>n</m> is even.
+        In this case,
+        there exists an integer <m>m</m> such that <m>n = 2m</m>.
+        Therefore, <ellipsis/> .
       </p>
       </statement>
+      <solution>
+        <p>
+          Proposition: For each integer <m>n</m>,
+          <m>n^2 - 5n + 7</m> is an odd integer.
+        </p>
+        <p>
+          Proof: Let <m>n</m> be an integer.
+          We will prove that <m>n^2 - 5n + 7</m> is an odd integer by examining the case where <m>n</m> is even and the case where <m>n</m> is odd.
+        </p>
+        <p>
+          In the case where <m>n</m> is even,
+          there exists an integer <m>m</m> such that <m>n = 2m</m>.
+          So in this case,
+          <md>
+            <mrow>n^2 - 5n + 7 \amp = \left( 2m \right)^2 - 5 \left( 2m \right) + 7</mrow>
+            <mrow> \amp = 4m^2 - 10m + 6 + 1</mrow>
+            <mrow> \amp = 2 \left(2m^2 - 5m + 3 \right) + 1</mrow>
+          </md>.
+        </p>
+        <p>
+          Since <m>\left( 2m^2 - 5m + 3 \right)</m> is an integer,
+          the last equation shows that if <m>n</m> is even,
+          then <m>n^2 - 5n + 7</m> is odd.
+        </p>
+        <p>
+          In the case where <m>n</m> is odd,
+          there exists an integer <m>m</m> such that <m>n = 2m +1</m>.
+          So in this case,
+          <md>
+            <mrow>n^2 - 5n + 7 \amp = \left( 2m + 1 \right)^2 - 5 \left( 2m + 1 \right) + 7</mrow>
+            <mrow> \amp = 4m^2 - 6m + 3 </mrow>
+            <mrow> \amp = 2 \left(2m^2 - 3m + 1 \right) + 1</mrow>
+          </md>.
+        </p>
+        <p>
+          Since <m>\left( 2m^2 - 3m + 1 \right)</m> is an integer,
+          the last equation shows that if <m>n</m> is odd,
+          then <m>n^2 - 5n + 7</m> is odd.
+          Hence, by using these two cases,
+          we have shown that for each integer <m>n</m>,
+          <m>n^2 - 5n + 7</m> is an odd integer.
+        </p>
+      </solution>
     </exercise>
 
     <p>
@@ -469,43 +507,83 @@
     </theorem>
 
     <exercise xml:id="pr_absvalue1">
-      
-
+      <task>
       <statement>
         <p>
           What is <m>\left| 4.3 \right|</m> and what is <m>\left| - \pi \right|</m>?
         </p>
       </statement>
-    </exercise>
-    <exercise xml:id="pr_absvalue2">
-      <statement>
+      <solution>
+        <p>
+          <m>|4.3| = 4.3</m> and <m>|-\pi| = \pi</m>
+        </p>
+      </solution>
+      </task>
+
+    <task>
+      <introduction>
         <p>
           Use the properties of absolute value in <xref ref="P_absvalue"></xref>
           to help solve the following equations for <m>t</m>,
           where <m>t</m> is a real number.
+        </p>
+      </introduction>
+
           <task>
+            <statement>
             <p>
               <m>\left| t \right| = 12</m>.
             </p>
+            </statement>
+            <solution>
+              <p>
+                <m>t = 12</m> or <m>t = -12</m>.
+              </p>
+            </solution>
           </task>
+
           <task>
+            <statement>
             <p>
               <m>\left| t + 3 \right| = 5</m>.
             </p>
+            </statement>
+            <solution>
+              <p>
+                <m>t + 3 = 5</m> or <m>t + 3 = -5</m>.
+                So <m>t = 2</m> or <m>t = -8</m>.
+              </p>
+            </solution>
           </task>
           <task>
+            <statement>
             <p>
               <m>\left| t -4 \right| = \dfrac{1}{5}</m>.
             </p>
+            </statement>
+            <solution>
+              <p>
+                <m>t - 4 = \dfrac{1}{5}</m> or <m>t - 4 = -\dfrac{1}{5}</m>.
+                So <m>t = \dfrac{21}{5}</m> or <m>t = \dfrac{19}{5}</m>.
+              </p>
+            </solution>
           </task>
           <task>
+            <statement>
             <p>
               <m>\left| 3t - 4 \right| = 8</m>.
             </p>
+            </statement>
+            <solution>
+              <p>
+                <m>3t - 4 = 8</m> or <m>3t - 4 = -8</m>.
+                So <m>t = 4</m> or <m>t = -\dfrac{4}{3}</m>.
+              </p>
+            </solution>
           </task>
-        </p>
-      </statement>
+      </task>
     </exercise>
+
     <p>
       Although solving equations involving absolute values may not seem to have anything to do 
       with writing proofs,

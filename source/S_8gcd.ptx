@@ -450,17 +450,32 @@
       </introduction>
        
           <task>
+            <statement>
             <p>
               According to the Division Algorithm,
               what is the remainder <m>r</m> when 56 is divided by 12?
             </p>
+            </statement>
+            <solution>
+              <p>
+                The remainder is 8.
+              </p>
+            </solution>
           </task>
           <task>
+            <statement>
             <p>
               What is the greatest common divisor of 12 and the remainder <m>r</m>?
             </p>
+            </statement>
+            <solution>
+              <p>
+                <m>\gcd(12, 8) = 4</m>
+              </p>
+            </solution>
           </task>
           <task>
+            <statement>
             <p>
               The key to finding the greatest common divisor
               (in more complicated cases)
@@ -474,7 +489,14 @@
             <p>
               What is the greatest common divisor of <m>r</m> and <m>r_2</m>?
             </p>
+            </statement>
+            <solution>
+              <p>
+                <m>12 = 8 \cdot 1 + 4</m> and <m>\gcd(r, r_2) = \gcd(8, 4) = 4</m>
+              </p>
+            </solution>
           </task>
+        
     </exercise>
 
   </subsection>
@@ -683,9 +705,10 @@
     </proof>
     </theorem>
 
-    <exercise xml:id="prog_usingeuclid1">
+    <exercise xml:id="prog_usingeuclid">
      
-        <statement>
+        <task>
+          <statement>
           <p>
             Use the Euclidean Algorithm to determine <m>\gcd( {180, 126} )</m>.
             Notice that we have deleted the third column (Inequality from Division Algorithm) 
@@ -724,9 +747,44 @@
             <m>\gcd( {180, 126} ) = </m> <fillin/>.
           </p>
         </statement>
-      </exercise>
+        <solution>
+          <p>
+            <tabular>
+              <row header="yes" bottom="medium">
+          
+                <cell right="medium">Original Pair</cell>
+                <cell right="medium"><line>Equation from</line><line>Division Algorithm</line></cell>
+                <cell>New Pair</cell>
 
-      <exercise xml:id="prog_usingeuclid2">
+              </row>
+              <row bottom="medium">
+                <cell right="medium"><m>\left( {180, 126} \right)</m></cell>
+                <cell right="medium"><m>180 = 126 \cdot 1 + 54</m></cell>
+                <cell><m>\left( {126, 54} \right)</m></cell>
+              </row>
+              
+              <row bottom="medium"> 
+                <cell right="medium"><m>\left( {126, 54} \right)</m></cell>
+                <cell right="medium"><m>126 = 54 \cdot 2 + 18</m></cell>
+                <cell><m>\left( {54, 18} \right)</m></cell>
+              </row>
+              
+              <row>
+                <cell right="medium"><m>\left( {54, 18} \right)</m></cell>
+                <cell right="medium"><m>54 = 18 \cdot 3 + 0</m></cell>
+                <cell></cell>
+              </row>
+              
+            </tabular>
+          </p>
+          <p>
+            Consequently,
+            <m>\gcd( {180, 126} ) = 18</m>.
+          </p>
+        </solution>
+      </task>
+
+      <task>
         <statement>
           <p>
             Use the Euclidean Algorithm to determine <m>\gcd( {4208, 288} )</m>.
@@ -758,7 +816,51 @@
             <m>\gcd( {4208, 288} ) = </m> <fillin/>.
           </p>
         </statement>
-      
+        <solution>
+          <p>
+            <tabular>
+              <row header="yes" bottom="medium">
+          
+                <cell right="medium">Original Pair</cell>
+                <cell right="medium"><line>Equation from</line><line>Division Algorithm</line></cell>
+                <cell>New Pair</cell>
+
+              </row>
+              
+              <row bottom="medium">
+                <cell right="medium"><m>\left( {4208, 288} \right)</m></cell>
+                <cell right="medium"><m>4208 = 288 \cdot 14 + 176</m></cell>
+                <cell><m>\left( {288, 176} \right)</m></cell>
+              </row>
+             
+              <row bottom="medium">
+                <cell right="medium"><m>\left( {288, 176} \right)</m></cell>
+                <cell right="medium"><m>288 = 176 \cdot 1 + 112</m></cell>
+                <cell><m>\left( {112, 64} \right)</m></cell>
+              </row>
+              <row bottom="medium">
+                <cell right="medium"><m>\left( {112, 64} \right)</m></cell>
+                <cell right="medium"><m>112 = 64 \cdot 1 + 48</m></cell>
+                <cell><m>\left( {64, 48} \right)</m></cell>
+              </row>
+              <row bottom="medium">
+                <cell right="medium"><m>\left( {64, 48} \right)</m></cell>
+                <cell right="medium"><m>64 = 48 \cdot 1 + 16</m></cell>
+                <cell><m>\left( {48, 16} \right)</m></cell>
+              </row>
+              <row>
+                <cell right="medium"><m>\left( {48, 16} \right)</m></cell>
+                <cell right="medium"><m>48 = 16 \cdot 3 + 0</m></cell>
+                <cell></cell>
+              </row>
+              
+            </tabular>
+          </p>
+          <p>
+            Consequently, <m>\gcd( {4208, 288} ) = 16</m>
+          </p>
+        </solution>
+      </task>
     </exercise>
 
   </subsection>
@@ -943,14 +1045,47 @@
       </introduction>
         
           <task>
+            <statement>
             <p>
               Write <m>\gcd( {180, 126} )</m> as a linear combination of 180 and 126.
             </p>
+            </statement>
+            <solution>
+              <p>
+                From <xref ref="prog_usingeuclid"></xref>,
+                <m>\gcd ( {180, 126} ) = 18</m>.
+                <md>
+                  <mrow>18 \amp = 126 - 54 \cdot 2</mrow>
+                  <mrow> \amp = 126 - ( {180 - 126} ) \cdot 2</mrow>
+                  <mrow> \amp = 126 \cdot 3 + 180 \cdot ( { - 2} )</mrow>
+                </md>.
+                So <m>\gcd ( {180, 126} ) = 18</m>,
+                and <m>18 = 126 \cdot 3 + 180 \cdot ( { - 2} )</m>.
+              </p>
+            </solution>
           </task>
           <task>
+            <statement>
             <p>
               Write <m>\gcd( {4208, 288} )</m> as a linear combination of 4208 and 288.
             </p>
+            </statement>
+            <solution>
+              <p>
+                From <xref ref="prog_usingeuclid"></xref>,
+                <m>\gcd ( {4208, 288} ) = 16</m>.
+                <md>
+                  <mrow>16 \amp = 64 - 48</mrow>
+                  <mrow> \amp = 64 - ( {112 - 64} ) = 64 \cdot 2 - 112</mrow>
+                  <mrow> \amp = ( {176 - 112} ) \cdot 2 - 112 = 176 \cdot 2 - 112 \cdot 3</mrow>
+                  <mrow> \amp = 176 \cdot 2 - ( {288 - 176} ) \cdot 3 = 176 \cdot 5 - 288 \cdot 3</mrow>
+                  <mrow> \amp = ( {4208 - 288 \cdot 14} ) \cdot 5 - 288 \cdot 3</mrow>
+                  <mrow> \amp = 4208 \cdot 5 + 288 \cdot ( { - 73} )</mrow>
+                </md>.
+                So <m>\gcd ( {4208, 288} ) = 16</m>,
+                and <m>16 = 4208 \cdot 5 + 288 \cdot ( { - 73} )</m>.
+              </p>
+            </solution>
           </task>
 
     </exercise>

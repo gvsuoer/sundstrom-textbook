@@ -424,65 +424,124 @@
     </subsubsection>
     
     
-    <exercise>
-      
-      <statement>
+    <exercise xml:id="pr_usingdivalgo">
+      <title>Using the Division Algorithm</title>
+      <task>
+        <introduction>
         <p>
           What are the possible remainders
           (according to the Division Algorithm)
           when an integer is
+        </p>
+        </introduction>
           <task>
+            <statement>
             <p>
               Divided by 4?
             </p>
+            </statement>
+            <solution>
+              <p>
+                The possible remainders are 0, 1, 2, and 3.
+              </p>
+            </solution>
           </task>
           <task>
+            <statement>
             <p>
               Divided by 9?
             </p>
+            </statement>
+            <solution>
+              <p>
+                The possible remainders are 0, 1, 2, 3, 4, 5, 6, 7, and 8.
+              </p>
+            </solution>
           </task>
-        </p>
-      </statement>
-    </exercise>
-    <exercise>
-      <statement>
+      </task>
+      <task>
+        <introduction>
         <p>
           For each of the following, find the quotient and remainder
-            (guaranteed by the Division Algorithm)
-            and then summarize the results by writing an equation of the form <m>a = bq + r</m>,
-            where <m>0 \leq r \lt b</m>.
+          (guaranteed by the Division Algorithm)
+          and then summarize the results by writing an equation of the form <m>a = bq + r</m>,
+          where <m>0 \leq r \lt b</m>.
+        </p>
+        </introduction>
+
             <task>
+              <statement>
               <p>
                 When 17 is divided by 3.
               </p>
+              </statement>
+              <solution>
+                <p>
+                  <m>17 = 5 \cdot 3 + 2</m>
+                </p>
+              </solution>
             </task>
             <task>
+              <statement>
               <p>
                 When <m>-17</m> is divided by 3.
               </p>
+              </statement>
+              <solution>
+                <p>
+                  <m>-17 = \left( -6 \right) \cdot 3 + 1</m>
+                </p>
+              </solution>
             </task>
             <task>
+              <statement>
               <p>
                 When 73 is divded by 7.
               </p>
+              </statement>
+              <solution>
+                <p>
+                  <m>73 = 10 \cdot 7 + 3</m>
+                </p>
+              </solution>
             </task>
             <task>
+              <statement>
               <p>
                 When <m>-73</m> is divided by 7.
               </p>
+              </statement>
+              <solution>
+                <p>
+                  <m>-73 = \left( -11 \right) \cdot 7 + 4</m>
+                </p>
+              </solution>
             </task>
             <task>
+              <statement>
               <p>
                 When 436 is divided by 27.
               </p>
+              </statement>
+              <solution>
+                <p>
+                  <m>436 = 16 \cdot 27 + 4</m>
+                </p>
+              </solution>
             </task>
             <task>
+              <statement>
               <p>
                 When 539 is divided by 110.
               </p>
+              </statement>
+              <solution>
+                <p>
+                  <m>539 = 4 \cdot 110 + 99</m>
+                </p>
+              </solution>
             </task>
-        </p>
-      </statement>
+        </task>
     </exercise>
  
   </subsection>
@@ -703,6 +762,36 @@
         Prove <xref ref="T_propsofcong1"/> of <xref ref="T_propsofcong"></xref>.
       </p>
       </statement>
+      <solution>
+        <p>
+          Let <m>n</m> be a natural number and let <m>a,
+          b, c, \text{ and }   d</m> be integers.
+          We assume that <m>a \equiv b \pmod n</m> and
+          <m>c \equiv d \pmod n</m> and will prove that <m>\mod{(a + c)}{(b + d)}{n}</m>.
+          Since <m>\mod{a}{b}{n}</m> and <m>\mod{c}{d}{n}</m>,
+          <m>n</m> divides <m>(a - b)</m> and <m>(c - d)</m> and so there exist integers 
+          <m>k</m> and <m>q</m> such that
+          <m>a - b = nk</m> and <m>c - d = nq</m>.
+          We can then write <m>a = b + nk</m> and <m>c = d + nq</m> and obtain
+          <md>
+            <mrow>a + c \amp = (b + nk) + (d + nq)</mrow>
+            <mrow>\amp = (b + d) + n(k + q)</mrow>
+          </md>
+        </p>
+        <p>
+          By subtracting <m>(b + d)</m> from both sides of the last equation,
+          we see that
+          <me>
+            (a + c) - (b + d) = n(k + q)
+          </me>.
+        </p>
+        <p>
+          Since <m>(k + q)</m> is an integer,
+          this proves that <m>n</m> divides <m>(a + c) - (b + d)</m>,
+          and hence,
+          we can conclude that <m>\mod{(a + c)}{(b + d)}{n}</m>.
+        </p>
+      </solution>
     </exercise>
 
     <p>
@@ -963,6 +1052,7 @@
     </proposition>
     
     <exercise xml:id="prog_propertiesofcong">
+      <title>Using Properties of Congruence</title>
       <statement>
       <p>
         Complete a proof of <xref ref="prop_congmod5"></xref>
@@ -977,7 +1067,41 @@
         complicated algebra in which it is easy to make mistakes.
       </p>
     </statement>
+    <solution>
+      <p>
+        Case 2.
+        <m>\left( \mod{a}{2}{5} \right)</m>.
+        In this case,
+        we use <xref ref="T_propsofcong"></xref> to conclude that
+        <me>
+          \mod{a^2}{2^2}{5}  \text{ or }   \mod{a^2}{4}{5}
+        </me>.
+      </p>
+      <p>
+        This proves that if <m>\mod{a}{2}{5}</m>,
+        then <m>\mod{a^2}{4}{5}</m>.
+      </p>
+      <p>
+        Case 3.
+        <m>\left( \mod{a}{3}{5} \right)</m>.
+        In this case,
+        we use <xref ref="T_propsofcong"></xref> to conclude that
+        <me>
+          \mod{a^2}{3^2}{5}  \text{ or }   \mod{a^2}{9}{5}
+        </me>.
+      </p>
+      <p>
+        We also know that <m>\mod{9}{4}{5}</m>.
+        So we have <m>\mod{a^2}{9}{5}</m> and <m>\mod{9}{4}{5}</m>,
+        and we can now use the transitive property of congruence
+        (<xref ref="T_modprops"></xref>)
+        to conclude that <m>\mod{a^2}{4}{5}</m>.
+        This proves that if <m>\mod{a}{3}{5}</m>,
+        then <m>\mod{a^2}{4}{5}</m>.
+      </p>
+    </solution>
     </exercise>
+
     <p>
       In the proof of <xref ref="prop_congmod5"></xref>,
       we used four cases.
@@ -991,7 +1115,8 @@
     </p>
 
     <exercise xml:id="prog_casesmod6">
-      <statement>
+      <title>Using Cases Modulo 6</title>
+      <introduction>
       <p>
         Suppose we want to determine the possible values for <m>a^2</m> modulo 6 for odd integers 
         that are not multiples of 3.
@@ -1023,7 +1148,8 @@
             </p>
           </li>
         </ul>
-      
+      </p>
+      </introduction>
         <task>
           <p>
             Prove that if <m>a</m> is an odd integer,
@@ -1052,8 +1178,7 @@
             </proposition>
           </p>
         </task>
-      </p>
-    </statement>
+
     </exercise>
   </subsection>
 

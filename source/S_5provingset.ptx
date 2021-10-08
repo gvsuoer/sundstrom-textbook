@@ -351,16 +351,41 @@
       </introduction>
         
           <task>
+            <statement>
             <p>
               Is the set <m>A</m> a subset of <m>B</m>?
               Justify your conclusion.
             </p>
+            </statement>
+            <solution>
+              <p>
+                The set <m>A</m> is a subset of <m>B</m>.
+                To prove this, we let <m>x \in A</m>.
+                Then there exists an integer <m>m</m> such that <m>x = 9m</m>,
+                which can be written as
+                <me>
+                  x = 3 \left( 3m \right)\!
+                </me>.
+                Since <m>3m \in \Z</m>,
+                the last equation proves that <m>x</m> is a multiple of 3 and so <m>x \in B</m>.
+                Therefore, <m>A \subseteq B</m>.
+              </p>
+            </solution>
           </task>
           <task>
+            <statement>
             <p>
               Is the set <m>A</m> equal to the set <m>B</m>?
               Justify your conclusion.
             </p>
+            </statement>
+            <solution>
+              <p>
+                The set <m>A</m> is not equal to the set <m>B</m>.
+                We note that <m>3 \in B</m> but <m>3 \notin A</m>.
+                Therefore, <m>B \not \subseteq A</m> and, hence, <m>A \ne B</m>.
+              </p>
+            </solution>
           </task>
 
     </exercise>
@@ -391,6 +416,7 @@
           </p>
         </task>
         <task>
+          <statement>
           <p>
             Complete the following know-show table for this proposition and explain exactly 
             where the choose-an-element method is used.
@@ -457,6 +483,83 @@
               </row>
             </tabular>
           </p>
+          </statement>
+          <solution>
+            <p>
+              <tabular>
+                <row bottom="minor">
+
+                  <cell right="medium">Step</cell>
+                  <cell right="medium">Know</cell>
+                  <cell>Reason</cell>
+
+                </row>
+                <row bottom="medium">
+
+                  <cell right="medium"><m>P</m></cell>
+                  <cell right="medium"><m>A \subseteq B</m></cell>
+                  <cell>Hypothesis</cell>
+
+                </row>
+                <row bottom="minor">
+
+                  <cell right="medium"><m>P1</m></cell>
+                  <cell right="medium">Let <m>x \in B^c</m>.</cell>
+                  <cell><line>Choose an arbitrary element</line> <line>of <m>B^c</m>.</line></cell>
+
+                </row>
+                <row bottom="minor">
+
+                  <cell right="medium"><m>P2</m></cell>
+                  <cell right="medium">If <m>x \in A</m>, then <m>x \in B</m>.</cell>
+                  <cell>Definition of
+                    <q>subset</q>
+                  </cell>
+
+                </row>
+                <row halign="center" bottom="medium">
+
+                  <cell right="medium"><m>P3</m></cell>
+                  <cell right="medium">If <m>x \notin B</m>, then <m>x \notin A</m>.</cell>
+                  <cell>Contrapositive</cell>
+
+                </row>
+
+                <row halign="center" bottom="medium">
+
+                  <cell right="medium"><m>P4</m></cell>
+                  <cell right="medium">If <m>x \in B^c</m>, then <m>x \in A^c</m>.</cell>
+                  <cell>Step <m>P3</m> and definition of <q>complement</q></cell>
+
+                </row>
+
+                <row halign="center" bottom="medium">
+
+                  <cell right="medium"><m>Q2</m></cell>
+                  <cell right="medium">The element <m>x</m> is in <m>A^c</m>.</cell>
+                  <cell>Steps <m>P1</m> and <m>P4</m></cell>
+
+                </row>
+
+                <row bottom="medium">
+
+                  <cell right="medium"><m>Q1</m></cell>
+                  <cell right="medium">Every element of <m>B^c</m> is an element of <m>A^c</m>.</cell>
+                  <cell>The choose-an-element method with Steps <m>P1</m> and <m>Q2</m></cell>
+
+                </row>
+                <row>
+
+                  <cell right="medium"><m>Q</m></cell>
+                  <cell right="medium"><m>B^c \subseteq A^c</m></cell>
+                  <cell>Definition of
+                    <q>subset</q>
+                  </cell>
+
+                </row>
+              </tabular>
+            </p>
+          </solution>
         </task>
       
     </exercise>
@@ -544,13 +647,13 @@
     </proposition>
     <exercise xml:id="prog_setequality2">
       <title>Set Equality</title>
-      <introduction>
+      <statement>
       <p>
         Prove the following proposition.
         To do so, prove each set is a subset of the other set by using the choose-an-element 
         method.
       </p>
-      </introduction>
+      
       <proposition xml:id="P_setequality">
         <statement>
           <p>
@@ -559,6 +662,31 @@
           </p>
         </statement>
       </proposition>
+      </statement>
+
+      <solution>
+        <p>
+          Let <m>A</m> and <m>B</m> be subsets of some universal set.
+          We will prove that <m>A - B = A \cap B^c</m> by proving that each set is a subset of 
+          the other set.
+          We will first prove that <m>A - B \subseteq A \cap B^c</m>.
+          Let <m>x \in A - B</m>.
+          We then know that <m>x \in A</m> and <m>x \notin B</m>.
+          However, <m>x \notin B</m> implies that <m>x \in B^c</m>.
+          Hence, <m>x \in A</m> and <m>x \in B^c</m>,
+          which means that <m>x \in A \cap B^c</m>.
+          This proves that <m>A - B \subseteq A \cap B^c</m>.
+        </p>
+        <p>
+          To prove that <m>A \cap B^c \subseteq A - B</m>,
+          we let <m>y \in A \cap B^c</m>.
+          This means that <m>y \in A</m> and <m>y \in B^c</m>, and hence,
+          <m>y \in A</m> and <m>y \notin B</m>.
+          Therefore, <m>y \in A - B</m> and this proves that <m>A \cap B^c \subseteq A - B</m>.
+          Since we have proved that each set is a subset of the other set,
+          we have proved that <m>A - B = A \cap B^c</m>.
+        </p>
+      </solution>
     </exercise>
   </subsection>
 
@@ -701,8 +829,9 @@
     </proposition>
     <exercise xml:id="prog_disjointsets">
       <title>Proving Two Sets Are Disjoint</title>
+      <statement>
       <p>
-        It has been noted that it is often possible to prove that two sets are disjoint by 
+        Proof: It has been noted that it is often possible to prove that two sets are disjoint by 
         using a proof by contradiction.
         In this case,
         we assume that the two sets are not disjoint and hence,
@@ -713,6 +842,27 @@
           B = \{ y \in \Z \mid y \equiv 2 \pmod 8 \}
         </me>.
       </p>
+      </statement>
+      <solution>
+        <p>
+          Proof: Let <m>A = \{ x \in \Z \mid x \equiv 3 \pmod 12 \}</m> and 
+          <m>B = \{ y \in \Z \mid y \equiv 2 \pmod 8 \}</m>.
+          We will use a proof by contradiction to prove that <m>A \cap B = \emptyset</m>.
+          So we assume that <m>A \cap B \ne \emptyset</m> and let <m>x \in A \cap B</m>.
+          We can then conclude that <m>x \equiv 3 \pmod 12</m> and that <m>y \equiv 2 \pmod 8</m>.
+          This means that there exist integers <m>m</m> and <m>n</m> such that
+          <me>
+            x = 3 + 12m  \text{ and }   x = 2 + 8n
+          </me>.
+        </p>
+        <p>
+          By equating these two expressions for <m>x</m>,
+          we obtain <m>3 + 12m = 2 + 8n</m>,
+          and this equation can be rewritten as <m>1 = 8n - 12m</m>.
+          This is a contradiction since 1 is an odd integer and <m>8n - 12m</m> is an even integer.
+          We have therefore proved that <m>A \cap B = \emptyset</m>.
+        </p>
+      </solution>
     </exercise>
   </subsection>
 

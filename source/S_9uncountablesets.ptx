@@ -14,13 +14,20 @@
 
       <p>
         Dodge Ball is a game for two players.
-        It is played on a game board such as the one shown in <xref ref="fig_dodgeball"></xref>.
+        It is played on a game board such as the one shown in <xref ref="fig_dodgeball1"></xref>
+        and <xref ref="fig_dodgeball2"/>.
       </p>
-
-      <figure xml:id="fig_dodgeball">
-        <caption>Game Board for Dodge Ball</caption>
-        <image source="7536aeedb9b0b30a6cff9a8ffe8167c2cb2a9302.svg"/>
+      
+      <figure xml:id="fig_dodgeball1">
+        <caption>Game Board for Dodge Ball: Player 1</caption>
+        <image width="80%" source="figps-sec93-dodgeball-player1.png"/>
       </figure>
+      <figure xml:id="fig_dodgeball2">
+        <caption>Game Board for Dodge Ball: Player 2</caption>
+        <image width="80%" source="figps-sec93-dodgeball-player2.png"/>
+      </figure>
+      
+
       <p>
         Player One has a 6 by 6 array to complete and Player Two has a 1 by 6 row to complete.
         Each player has six turns as described next.
@@ -468,6 +475,28 @@
         using Cantor's diagonal argument.
       </p>
       </statement>
+      <solution>
+        <p>
+          Player Two has a winning strategy.
+          On the <m>k</m>th turn,
+          whatever symbol Player One puts in the <m>k</m>th position of the <m>k</m>th row, 
+          Player Two must put the other symbol in the <m>k</m>th position of his or her row.
+          This guarantees that the row of symbols produced by Player Two will be different than 
+          any of the rows produced by Player One.
+        </p>
+        <p>
+          This is the same idea used in Cantor's Diagonal Argument.
+          Once we have a
+          <q>list</q>
+          of real numbers in normalized form,
+          we create a real number that is not in the list by making sure that its <m>k</m>th 
+          decimal place is different than the <m>k</m>th decimal place for the <m>k</m>th number 
+          in the list.
+          The one complication is that we must make sure that our new real number does not have 
+          a decimal expression that ends in all 9's.
+          This was done by using only 3's and 5's.
+        </p>
+      </solution>
     </exercise>
 
     <p>
@@ -533,13 +562,60 @@
               Make sure you prove that this function <m>f</m> is a bijection.
             </p>
           </hint>
+          <solution>
+            <p>
+              Proof: In order to find a bijection <m>f\x  ( 0, 1 ) \to ( a, b )</m>,
+              we will use the linear function through the points <m>( 0, a )</m> and <m>( 1, b )</m>.
+              The slope is <m>( b - a)</m> and the <m>y</m>-intercept is <m>( 0, a )</m>.
+              So define <m>f\x  ( 0, 1 ) \to ( a, b )</m> by <m>f ( x ) = ( b - a )x + a</m>,
+              for each <m>x \in ( 0, 1 )</m>.
+              Now, if <m>x,
+              t \in ( 0, 1 )</m> and <m>f ( x ) = f ( t )</m>, then
+              <me>
+                ( b - a )x + a = ( b - a )t + a
+              </me>.
+            </p>
+            <p>
+              This implies that <m>( b - a )x = ( b - a )t</m>,
+              and since <m>b - a \ne 0</m>,
+              we can conclude that <m>x = t</m>.
+              Therefore, <m>f</m> is an injection.
+            </p>
+            <p>
+              To prove that <m>f</m> is a surjection,
+              we let <m>y \in ( a, b )</m>.
+              If <m>x = \dfrac{y - a}{b - a}</m>, then
+              <md>
+                <mrow>f ( x ) \amp = f \!\left( \frac{y - a}{b - a} \right)</mrow>
+                <mrow> \amp = ( b - a ) \!\left( \frac{y - a}{b - a} \right) + a</mrow>
+                <mrow> \amp = ( y - a ) + a</mrow>
+                <mrow> \amp = y</mrow>
+              </md>.
+            </p>
+            <p>
+              This proves that <m>f</m> is a surjection.
+              Hence, <m>f</m> is a bijection and <m>( 0, 1 ) \approx ( a, b )</m>.
+              Therefore, <m>( a, b )</m> is uncountable and has cardinality <m>\boldsymbol{c}</m>.
+            </p>
+          </solution>
         </task>
         <task>
+          <statement>
           <p>
             Let <m>a, b, c, d</m> be real numbers with <m>a \lt b</m> and <m>c \lt d</m>.
             Prove that the open interaval
             <m>( a, b )</m> is equivalent to the open interval <m>( c, d )</m>.
           </p>
+          </statement>
+          <solution>
+            <p>
+              Now, if <m>a,
+              b, c, d</m> are real numbers with <m>a \lt b</m> and <m>c \lt d</m>,
+              then we know that <m>( a, b ) \approx ( 0, 1 )</m> and <m>( c, d ) \approx ( 0, 1 )</m>.
+              Since <m>\approx</m> is an equivalence relation,we can conclude that 
+              <m>( a, b ) \approx ( c, d )</m>.
+            </p>
+          </solution>
         </task>
 
     </exercise>

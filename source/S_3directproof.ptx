@@ -775,23 +775,34 @@
 
     <exercise xml:id="pr_divisors">
       <title>A Property of Divisors</title>
-      <statement>
-      <p>
+
       <task xml:id="pr_divisors1">
+        <statement>
         <p>
           Give at least four different examples of integers <m>a</m>,
           <m>b</m>,
           and <m>c</m> with <m>a \ne 0</m> such that <m>a</m> divides <m>b</m> and <m>a</m> 
           divides <m>c</m>.
         </p>
+        </statement>
       </task>
       <task xml:id="pr_divisors2">
+        <statement>
         <p>
           For each example in <xref ref="pr_divisors1"/>, calculate the sum <m>b + c</m>.
           Does the integer <m>a</m> divide the sum <m>b + c</m>?
         </p>
+        </statement>
+        <solution>
+          <p>
+            For each example in Part (1),
+            the integer <m>a</m> divides the sum <m>b + c</m>.
+          </p>
+        </solution>
       </task>
+
       <task xml:id="pr_divisors3">
+        <statement>
         <p>
           Construct a know-show table for the following proposition: For all integers <m>a</m>,
           <m>b</m>,
@@ -799,9 +810,76 @@
           if <m>a</m> divides <m>b</m> and <m>a</m> divides <m>c</m>,
           then <m>a</m> divides <m>(b + c)</m>.
         </p>
+        </statement>
+        <solution>
+          <p>
+            Conjecture: For all integers <m>a</m>, <m>b</m>,
+            and <m>c</m> with <m>a \ne 0</m>,
+            if <m>a</m> divides <m>b</m> and <m>a</m> divides <m>c</m>,
+            then <m>a</m> divides <m>b + c</m>.
+          </p>
+          <p>
+            A Know-show table for a proof of the conjecture in Part (3).
+            <tabular>
+
+              <row header="yes" bottom="minor">
+                <cell right="medium">Step</cell>
+                <cell right="medium">Know</cell>
+                <cell>Reason</cell>
+              </row>
+
+              <row bottom="medium">
+                <cell right="medium"><m>P</m></cell>
+                <cell right="medium"><m>a \mid b</m> and <m>a \mid c</m></cell>
+                <cell>Hypothesis</cell>
+              </row>
+
+              <row bottom="medium">
+                <cell right="medium"><m>P1</m></cell>
+                <cell right="medium"><m>\left( {\exists s \in \mathbb{Z}} \right)
+                  \left( {b = a \cdot s} \right)</m> <m>\left( {\exists t \in \mathbb{Z}} 
+                  \right)\left( {c = a \cdot t} \right)</m></cell>
+                <cell>Definition of
+                  <q>divides</q>
+                </cell>
+              </row>
+
+              <row bottom="medium">
+                <cell right="medium"><m>P2</m></cell>
+                <cell right="medium"><m>b + c = as + at</m></cell>
+                <cell>Substituting for <m>b</m> and <m>c</m></cell>
+              </row>
+
+              <row bottom="medium">
+                <cell right="medium"><m>P3</m></cell>
+                <cell right="medium"><m>b + c = a\left( {s + t} \right)</m></cell>
+                <cell>Distributive property</cell>
+              </row>
+
+              <row bottom="medium">
+                <cell right="medium"><m>Q1</m></cell>
+                <cell right="medium"><m>s + t</m> is an integer</cell>
+                <cell><m>\mathbb{Z}</m> is closed under addition</cell>
+              </row>
+
+              <row bottom="minor">
+                <cell right="medium"><m>Q</m></cell>
+                <cell right="medium"><m>\left. {a } \right| \left( {b + c} \right)</m></cell>
+                <cell>Definition of
+                  <q>divides</q>
+                </cell>
+              </row>
+
+              <row>
+                <cell right="medium">Step</cell>
+                <cell right="medium">Show</cell>
+                <cell>Reason</cell>
+              </row>
+
+            </tabular>
+          </p>
+        </solution>
       </task>
-      </p>
-      </statement>
 
     </exercise>
   </subsection>
@@ -947,6 +1025,17 @@
         </blockquote>
       </p>
       </statement>
+      <solution>
+        <p>
+          A counterexample for this statement will be values of <m>a</m> and <m>b</m> for which 
+          5 divides <m>a</m> or 5 divides <m>b</m>,
+          and 5 does not divide <m>5a + b</m>.
+          One counterexample for the statement is <m>a = 5</m> and <m>b = 1</m>.
+          For these values,
+          the hyothesis is true since 5 divides <m>a</m> and the conclusion is false since
+          <m>5a + b = 26</m> and 5 does not divide 26.
+        </p>
+      </solution>
     </exercise>
 
   </subsection>
@@ -1043,34 +1132,69 @@
 
     <exercise xml:id="pr_congruence">
       <title>Congruence Modulo 8</title>
-        <statement>
-        <p>
+
         <task>
+          <statement>
           <p>
             Determine at least eight different integers that are congruent to 5 modulo 8.
           </p>
+          </statement>
+          <solution>
+            <p>
+              Some integers that are congruent to 5 modulo 8 are <m>-11, -3, 5, 13</m>, and 21.
+            </p>
+          </solution>
         </task>
+
         <task>
+          <statement>
           <p>
             Use set builder notation and the roster method to specify the set of all integers 
             that are congruent to 5 modulo 8.
           </p>
+          </statement>
+          <solution>
+            <p>
+              <m>\left\{ \left. x \in \Z \right| x \equiv 5 \pmod 8 \right\} = 
+              \left\{ \ldots, -19, -11, -3, 5, 13, 21, 29, \ldots \right\}</m>.
+            </p>
+          </solution>
         </task>
+
         <task xml:id="pr_congruence3">
+          <statement>
           <p>
             Choose two integers that are congruent to 5 modulo 8 and add them.
             Then repeat this for at least five other pairs of integers that are congruent to 5 
             modulo 8.
           </p>
+          </statement>
+          <solution xml:id="pr_congans3">
+            <p>
+              For example, <m>-3 + 5 = 2</m>,
+              <m>-11 + 29 = 18</m>, <m>13 + 21 = 34</m>.
+            </p>
+          </solution>
         </task>
+
         <task>
+          <statement>
           <p>
             Explain why all of the sums that were obtained in <xref ref="pr_congruence3"/> 
             are congruent to 2 modulo 8.
           </p>
+          </statement>
+          <solution>
+            <p>
+              If we subtract 2 from any of the sums obtained in <xref ref="pr_congans3"/>, 
+              the result will be a multiple of 8.
+              This means that the sum is congruent to 2 modulo 8.
+              For example, <m>2 - 2 = 0</m>,
+              <m>18 - 2 = 16</m>, <m>34 - 2 = 32</m>.
+            </p>
+          </solution>
         </task>
-        </p>
-        </statement>
+
     </exercise>
 
     <p>
@@ -1093,7 +1217,7 @@
 
     <exercise xml:id="pr_congruence2">
       <title>Proving <xref ref="prop_congruenceproof"></xref></title>
-      <statement>
+      <introduction>
       <p>
         We will use
         <q>backward questions</q>
@@ -1104,45 +1228,105 @@
         <q>How do we prove that <m>\left( a + b \right) \equiv 2 \pmod 8</m>?</q>
         One way to answer this is to use the definition of congruence and state that
         <m>\left( a + b \right) \equiv 2 \pmod 8</m> provided that 8 divides <m>(a + b - 2)</m>.
+      </p>
+      </introduction>
 
       <task>
+        <statement>
         <p>
           Use <xref ref="divides"/> to determine a way to prove that 8 divides <m>(a + b - 2)</m>.
         </p>
+        </statement>
+        <solution>
+          <p>
+            To prove that 8 divides <m>(a + b - 2)</m>,
+            we can prove that there exists an integer <m>q</m> such that <m>(a + b - 2) = 8q</m>.
+          </p>
+        </solution>
       </task>
-      <!-- How to include this?? -->
-
-      <p>
-        We now turn to what we know and ask,
-        <q>What can we conclude from the assumptions that
-        <m>a \equiv 5 \pmod(8)</m> and <m>b \equiv 5 \pmod 8</m>?</q>
-        We can again use the definition of congruence and conclude that 8 divides <m>(a - 5)</m> 
-        and 8 divides <m>(b - 5)</m>.
-      </p>
 
       <task xml:id="congruenceb">
+        <statement>
+        <p>
+          We now turn to what we know and ask,
+          <q>What can we conclude from the assumptions that
+          <m>a \equiv 5 \pmod(8)</m> and <m>b \equiv 5 \pmod 8</m>?</q>
+          We can again use the definition of congruence and conclude that 8 divides <m>(a - 5)</m> 
+          and 8 divides <m>(b - 5)</m>.
+        </p>
         <p>
           Use <xref ref="divides"/> to make conclusions based on the facts that 8 divides 
           <m>(a - 5)</m> and 8 divides <m>(b - 5)</m>.
         </p>
+        </statement>
+        <solution>
+          <p>
+            Since 8 divides <m>(a - 5)</m> and <m>(b - 5)</m>,
+            there exist integers <m>k</m> and <m>m</m> such that
+            <m>a - 5 = 8k</m> and <m>b - 5 = 8m</m>.
+          </p>
+        </solution>
       </task>
+
       <task xml:id="congruencec">
+        <statement>
         <p>
           Solve an equation from <xref ref="congruenceb"/> for <m>a</m> and for <m>b</m>.
         </p>
+        </statement>
+        <solution>
+          <p>
+            <m>a = 5 + 8k</m> and <m>b = 5 + 8m</m>.
+          </p>
+        </solution>
       </task>
+
       <task>
+        <statement>
         <p>
            Use the results from <xref ref="congruencec"/>) to prove that 8 divides <m>(a + b - 2)</m>.
         </p>
+        </statement>
+        <solution>
+          <p>
+            <m>a + b - 2 = (5 + 8k) + (5 + 8m) - 2 = 8 + 8k + 8m = 8(1 + k + m)</m>.
+          </p>
+        </solution>
       </task>
+
       <task>
+        <statement>
         <p>
           Write a proof for <xref ref="prop_congruenceproof"></xref>.
         </p>
+        </statement>
+        <solution>
+          
+              <p>
+                Let <m>a</m> and <m>b</m> be integers and assume that
+                <m>\mod{a}{5}{8}</m> and <m>\mod{b}{5}{8}</m>.
+                We will prove that <m>\mod{(a + b)}{2}{8}</m>.
+                Since 8 divides <m>(a - 5)</m> and <m>(b - 5)</m>,
+                there exist integers <m>k</m> and <m>m</m> such that
+                <m>a - 5 = 8k</m> and <m>b - 5 = 8m</m>.
+                We then see that
+                <md>
+                  <mrow>a + b - 2 \amp = (5 + 8k) + (5 + 8m) - 2</mrow>
+                  <mrow>\amp = 8 + 8k + 8m</mrow>
+                  <mrow>\amp = 8(1 + k + m)</mrow>
+                </md>
+              </p>
+              <p>
+                By the closure properties of the integers,
+                <m>(1 + k + m)</m> is an integer and so the last equation proves that 8 divides <m>(a + b - 2)</m> and hence,
+                <m>\mod{(a + b)}{2}{8}</m>.
+                This proves that if <m>\mod{a}{5}{8}</m> and <m>\mod{b}{5}{8}</m>,
+                then <m>\mod{(a + b)}{2}{8}</m>.
+              </p>
+           
+        </solution>
       </task>
-      </p>
-      </statement>
+
     </exercise>
 
   </subsection>

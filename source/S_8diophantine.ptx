@@ -408,11 +408,20 @@
           </p>
         </task>
         <task>
+          <statement>
           <p>
             Follow the pattern in this table to determine formulas for <m>x</m> and <m>y</m> 
             that will generate integer solutions of the equation <m>6x + 9y = 12</m>.
             Verify that the formulas actually produce solutions for the equation <m>6x + 9y = 12</m>.
           </p>
+          </statement>
+          <solution>
+            <p>
+              <m>x = 2 + 3k</m> and <m>y = 0 - 2k</m>,
+              where <m>k</m> can be any integer.
+              Again, this does not prove that these are the only solutions.
+            </p>
+          </solution>
         </task>
 
     </exercise>
@@ -429,10 +438,50 @@
         Explain.
       </p>
       </statement>
+      <solution>
+        <p>
+          One of the Diophantine equations in <xref ref="exploringlinear">Beginning Activity 2</xref> 
+          was <m>3x + 5y = 11</m>.
+          We were able to write the solutions of this Diophantine equation in the form
+          <me>
+            x = 2 + 5k  \text{ and }   y = 1 - 3k
+          </me>,
+          where <m>k</m> is an integer.
+          Notice that <m>x = 2</m> and <m>y = 1</m> is a solution of this equation.
+          If we consider this equation to be in the form <m>ax + by = c</m>,
+          then we see that <m>a = 3</m>,
+          <m>b = 5</m>, and <m>c = 11</m>.
+          Solutions for this equation can be written in the form
+          <me>
+            x = 2 + bk  \text{ and }   y = 1 - ak
+          </me>,
+          where <m>k</m> is an integer.
+        </p>
+        <p>
+          The other equation was <m>4x + 6y = 16</m>.
+          So in this case, <m>a = 4</m>,
+          <m>b = 6</m>, and <m>c = 16</m>.
+          Also notice that <m>d = \gcd ( 4, 6 ) = 2</m>.
+          We note that <m>x = 4</m> and <m>y = 0</m> is one solution of this Diophantine 
+          equation and solutions can be written in the form
+          <me>
+            x = 4 + 3k  \text{ and }   y = 0 - 2k
+          </me>,
+          where <m>k</m> is an integer.
+          Using the values of <m>a</m>,
+          <m>b</m>, and <m>d</m> given above,
+          we see that the solutions can be written in the form
+          <me>
+            x = 2 + \frac{b}{d} k  \text{ and }   y = 0 - \frac{a}{d}
+          </me>,
+          where <m>k</m> is an integer.
+        </p>
+      </solution>
     </exercise>
 
     <p>
-      The solutions for the linear Diophantine equations in <xref ref="exploringlinear">Beginning Activty 2</xref>,
+      The solutions for the linear Diophantine equations in 
+      <xref ref="exploringlinear">Beginning Activty 2</xref>,
       <xref ref="E_lineardioph"></xref>,
       and <xref ref="prog_lineardioph"></xref>
       provide examples for the second part of <xref ref="T_lindioph2"></xref>.
@@ -599,6 +648,7 @@
       <title>Linear Diophantine Equations</title>
       
         <task>
+          <statement>
           <p>
             Use the Euclidean Algorithm to verify that <m>\gcd ({63, 336} ) = 21</m>.
             What conclusion can be made about linear Diophantine equation
@@ -606,8 +656,28 @@
             If this Diophantine equation has solutions,
             write formulas that will generate the solutions.
           </p>
+          </statement>
+          <solution>
+            <p>
+              Since 21 does not divide 40,
+              <xref ref="T_lindioph2"></xref>
+              tells us that the Diophantine equation <m>63x + 336y = 40</m> has no solutions.
+              Remember that this means there is no ordered pair of integers
+              <m>( x, y )</m> such that <m>63x + 336y = 40</m>.
+              However, if we allow <m>x</m> and <m>y</m> to be real numbers,
+              then there are real number solutions.
+              In fact, we can graph the straight line whose equation is
+              <m>63x + 336y = 40</m> in the Cartesian plane.
+              From the fact that there is no pair of integers
+              <m>x,
+              y</m> such that <m>63x + 336y = 40</m>,
+              we can conclude that there is no point on the graph of this line in which both 
+              coordinates are integers.
+            </p>
+          </solution>
         </task>
         <task>
+          <statement>
           <p>
             Use the Euclidean Algorithm to verify that <m>\gcd( {144, 225} ) = 9</m>.
             What conclusion can be made about linear Diophantine equation
@@ -615,6 +685,50 @@
             If this Diophantine equation has solutions,
             write formulas that will generate the solutions.
           </p>
+          </statement>
+          <solution>
+            <p>
+              To write formulas that will generate all the solutions,
+              we first need to find one solution for <m>144x + 225y = 27</m>.
+              This can sometimes be done by trial and error,
+              but there is a systematic way to find a solution.
+              The first step is to use the Euclidean Algorithm in reverse to write
+              <m>\gcd ( {144, 225} )</m> as a linear combination of 144 and 225.
+              See <xref ref="S_gcd"></xref> to review how to do this.
+              The result from using the Euclidean Algorithm in reverse for this situation is
+              <me>
+                144 \cdot 11 + 225 \cdot ( {-7} ) = 9
+              </me>.
+              If we multiply both sides of this equation by 3, we obtain
+              <me>
+                144 \cdot 33 + 225 \cdot ( {-21} ) = 27
+              </me>.
+              This means that <m>x_0 = 33,
+              y_0 = -21</m> is a solution of the linear Diophantine equation <m>144x + 225y = 27</m>.
+              We can now use <xref ref="T_lindioph2"></xref>
+              to conclude that all solutions of this Diophantine equation can be written in the form
+              <me>
+                x = 33 + \frac{225}{9} k \qquad y = -21 -\frac{144}{9} k
+              </me>,
+              where <m>k \in \mathbb{Z}</m>.
+              Simplifying,
+              we see that all solutions can be written in the form
+              <me>
+                x = 33 + 25 k \qquad y = -21 -16 k
+              </me>,
+              where <m>k \in \mathbb{Z}</m>. 
+            </p>
+            <p>
+              We can check this general solution as 
+              follows:  Let <m>k \in \mathbb{Z}</m>.
+              Then
+              <md>
+                <mrow>144x + 225y \amp = 144 ( {33 + 25k} ) + 225 ( {-21 - 16k} )</mrow>
+                <mrow> \amp = ( {4752 + 3600k} ) + ( {-4725 - 3600k} )</mrow>
+                <mrow> \amp = 27</mrow>
+              </md>.
+            </p>
+          </solution>
         </task>
 
     </exercise>

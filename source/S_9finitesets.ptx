@@ -210,6 +210,7 @@
       </introduction>
 
           <task>
+            <statement>
             <p>
               Let <m>A = \left\{ 1, 2, 3, \ldots, 99, 100 \right\}</m> and let 
               <m>B = \left\{ 351, 352, 353, \ldots, 449, 450 \right\}</m>.
@@ -219,8 +220,25 @@
               <m>B</m> and hence,
               <m>A \approx B</m>.
             </p>
+            </statement>
+            <solution>
+              <p>
+                We first prove that <m>f\x A \to B</m> is an injection.
+                So let <m>x, y \in A</m> and assume that <m>f(x) = f(y)</m>.
+                Then <m>x + 350 = y + 350</m> and we can conclude that <m>x = y</m>.
+                Hence, <m>f</m> is an injection.
+                To prove that <m>f</m> is a surjection, let <m>b \in B</m>.
+                Then <m>351 \leq b \leq 450</m> and hence,
+                <m>1 \leq b - 350 \leq 100</m> and so <m>b - 350 \in A</m>.
+                In addition, <m>f(b - 350) = (b - 350) + 350 = b</m>.
+                This proves that <m>f</m> is a surjection.
+                Hence, the function <m>f</m> is a bijection,
+                and so, <m>A \approx B</m>.
+              </p>
+            </solution>
           </task>
           <task>
+            <statement>
             <p>
               Let <m>E</m> be the set of all even integers and let <m>D</m> be the set of all 
               odd integers.
@@ -228,8 +246,26 @@
               where <m>F \left( x \right) = x + 1</m>,
               for all <m>x \in E</m>, is a bijection.
             </p>
+            </statement>
+            <solution>
+              <p>
+                If <m>x</m> and <m>t</m> are even integers and <m>F ( x ) = F ( t )</m>,
+                then <m>x + 1 = t + 1</m> and, hence, <m>x = t</m>.
+                Therefore, <m>F</m> is an injection.
+                To prove that <m>F</m> is a surjection, let <m>y \in D</m>.
+                This means that <m>y</m> is an odd integer and, hence,
+                <m>y - 1</m> is an even integer.
+                In addition,
+                <me>
+                  F ( y - 1 ) = ( y - 1 ) + 1 = y
+                </me>.
+                Therefore, <m>F</m> is a surjection and hence, <m>F</m> is a bijection.
+                We conclude that <m>E \approx D</m>.
+              </p>
+            </solution>
           </task>
           <task xml:id="A_equivsets4">
+            <statement>
             <p>
               Let <m>\left( 0, 1 \right)</m> be the open interval of real numbers between 0 and 1.
               Similarly, if <m>b \in \mathbb{R}</m> with <m>b > 0</m>,
@@ -239,6 +275,23 @@
               for all <m>x \in \left( 0, 1 \right)</m>,
               is a bijection and hence <m>\left( 0, 1 \right) \approx \left( 0, b \right)</m>.
             </p>
+            </statement>
+            <solution>
+              <p>
+                Let <m>x, t \in ( 0, 1 )</m> and assume that <m>f ( x ) = f ( t )</m>.
+                Then <m>bx = bt</m> and, hence, <m>x = t</m>.
+                Therefore, <m>f</m> is an injection.
+                To prove that <m>f</m> is a surjection,
+                let <m>y \in ( 0, b )</m>.
+                Since <m>0 \lt  y \lt  b</m>,
+                we conclude that <m>0 \lt  \dfrac{y}{b} \lt  1</m> and that
+                <me>
+                  f \!\left( \dfrac{y}{b} \right) = b \!\left( \dfrac{y}{b} \right) = y
+                </me>.
+                Therefore, <m>f</m> is a surjection and hence <m>f</m> is a bijection.
+                Thus, <m>( 0, 1 ) \approx ( 0, b )</m>.
+              </p>
+            </solution>
           </task>
 
     </exercise>

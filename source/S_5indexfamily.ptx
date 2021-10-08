@@ -322,6 +322,7 @@
 
     <exercise xml:id="prog_infinitefamily">
       <title>An Infinite Family of Sets</title>
+      <introduction>
       <p>
         For each natural number <m>n</m>,
         let <m>A_n = \left\{ 1, n, n^2 \right\}</m>.
@@ -337,45 +338,83 @@
           \bigcap\limits_{j=1}^{3}A_j = \left\{1 \right\}
         </me>
       </p>
-
-      <task>
-        <introduction>
-          <p>
-            Determine each of the following sets:
-          </p>
-        </introduction>
+      <p>
+        Determine each of the following sets:
+      </p>
+      </introduction>
 
         <task>
+          <statement>
           <p>
              <m>\bigcup\limits_{j=1}^{6}A_j</m>
           </p>
+          </statement>
+          <solution>
+            <p>
+              <m>\bigcup\limits_{j=1}^{6}A_j = \{1, 2, 3, 4, 5, 6, 9, 16, 25, 36 \}</m>
+            </p>
+          </solution>
         </task>
         <task>
+          <statement>
           <p>
             <m>\bigcap\limits_{j=1}^{6}A_j</m>
           </p>
+          </statement>
+          <solution>
+            <p>
+              <m>\bigcap\limits_{j=1}^{6}A_j = \{ 1 \}</m>
+            </p>
+          </solution>
         </task>
         <task>
+          <statement>
           <p>
             <m>\bigcup\limits_{j=3}^{6}A_j</m>
           </p>
+          </statement>
+          <solution>
+            <p>
+              <m>\bigcup\limits_{j=3}^{6}A_j = \{3, 4, 5, 6, 9, 16, 25, 36 \}</m>
+            </p>
+          </solution>
         </task>
         <task>
+          <statement>
           <p>
             <m>\bigcap\limits_{j=3}^{6}A_j</m>
           </p>
+          </statement>
+          <solution>
+            <p>
+              <m>\bigcap\limits_{j=3}^{6}A_j = \{ 1 \}</m>
+            </p>
+          </solution>
         </task>
         <task>
+          <statement>
           <p>
             <m>\bigcup\limits_{j=1}^{\infty}A_j</m>
           </p>
+          </statement>
+          <solution>
+            <p>
+               <m>\bigcup\limits_{j=1}^{\infty}A_j = \N</m>
+            </p>
+          </solution>
         </task>
         <task>
+          <statement>
           <p>
             <m>\bigcap\limits_{j=1}^{\infty}A_j</m>
           </p>
+          </statement>
+          <solution>
+            <p>
+              <m>\bigcap\limits_{j=1}^{\infty}A_j = \{ 1 \}</m>
+            </p>
+          </solution>
         </task>
-      </task>
 
     </exercise>
 
@@ -430,6 +469,7 @@
       </introduction>
         
           <task>
+            <statement>
             <p>
               Let <m>\Lambda = \left\{ 1, 2, 3, 4 \right\}</m>,
               and for each <m>n \in \Lambda</m>,
@@ -438,8 +478,15 @@
               Determine <m>A_1</m>, <m>A_2</m>,
               <m>A_3</m>, and <m>A_4</m>.
             </p>
+            </statement>
+            <solution>
+              <p>
+                <m>A_1 = \{7, 14 \}, A_2 = \{10, 12 \}, A_3 = \{10, 12 \}, A_4 = \{8, 14 \}</m>.
+              </p>
+            </solution>
           </task>
           <task>
+            <statement>
             <p>
               Is the following statement true or false for the indexed family 
               <m>\mathscr{A}</m> in<nbsp/>(1)?
@@ -447,8 +494,16 @@
                 For all <m>m, n \in \Lambda</m>, if <m>m \ne n</m>, then <m>A_m \ne A_n</m>.
               </blockquote>
             </p>
+            </statement>
+            <solution>
+              <p>
+                The statement is false.
+                For example, <m>2 \ne 3</m> and <m>A_2 = A_3</m>.
+              </p>
+            </solution>
           </task>
           <task>
+            <statement>
             <p>
               Now let <m>\Lambda = \R</m>.
               For each <m>x \in \R</m>, define <m>B_x = \left\{ 0, x^2, x^4 \right\}</m>.
@@ -458,6 +513,13 @@
                 For all <m>x, y \in \R</m>, if <m>x \ne y</m>, then <m>B_x \ne B_y</m>.
               </blockquote>
             </p>
+            </statement>
+            <solution>
+              <p>
+                The statement is false.
+                For example, <m>1 \ne -1</m> and <m>B_1 = B_{-1}</m>.
+              </p>
+            </solution>
           </task>
   
     </exercise>
@@ -576,27 +638,58 @@
         For each set,
         use either interval notation or set builder notation.
       </p>
-        </introduction>
+      </introduction>
         
           <task>
+            <statement>
             <p>
               <m>\left( \bigcup\limits_{\alpha \in \R^+}^{}A_\alpha \right)^c</m>
             </p>
+            </statement>
+            <solution>
+              <p>
+                Since <m>\bigcup\limits_{\alpha \in \R^+}^{}A_\alpha = \left( -1, \infty \right)</m>,
+                <m>\left( \bigcup\limits_{\alpha \in \R^+}^{}A_\alpha \right)^c = (-\infty, 1 ]</m>.
+              </p>
+            </solution>
           </task>
           <task>
+            <statement>
             <p>
               <m>\bigcap\limits_{\alpha \in \R^+}^{}A_{\alpha}^c</m>
             </p>
+            </statement>
+            <solution>
+              <p>
+                <m>\bigcap\limits_{\alpha \in \R^+}^{}A_{\alpha}^c = (-\infty, -1]</m>.
+              </p>
+            </solution>
           </task>
           <task>
+            <statement>
             <p>
               <m>\left( \bigcap\limits_{\alpha \in \R^+}^{}A_\alpha \right)^c</m>
             </p>
+            </statement>
+            <solution>
+              <p>
+                Since <m>\bigcap\limits_{\alpha \in \R^+}^{}A_\alpha = \left( -1, 0 \right]</m>,
+                <m>\left( \bigcap\limits_{\alpha \in \R^+}^{}A_\alpha \right)^c = (-\infty, -1] 
+                \cup (0, \infty)</m>.
+              </p>
+            </solution>
           </task>
           <task>
+            <statement>
             <p>
               <m>\bigcup\limits_{\alpha \in \R^+}^{}A_{\alpha}^c</m>
             </p>
+            </statement>
+            <solution>
+              <p>
+                <m>\bigcup\limits_{\alpha \in \R^+}^{}A_{\alpha}^c = (-\infty, -1] \cup (0, \infty)</m>.
+              </p>
+            </solution>
           </task>
 
     </exercise>
@@ -821,18 +914,29 @@
           Is the family of sets <m>\mathscr{B}</m> a disjoint family of sets?
           A pairwise disjoint family of sets?
         </p>
+      </task>
+      <task>
+        <statement>
         <p>
           Now let the universal set be <m>\R</m>.
           For each <m>n \in \N</m>, let <m>C_n = \left( n, \infty \right)</m>, and let
           <m>\mathscr{C} = \left\{ C_n \mid n \in \N \right\}</m>.
         </p>
-      </task>
-      <task>
         <p>
           Is the family of sets <m>\mathscr{C}</m> a disjoint family of sets?
           A pairwise disjoint family of sets?
         </p>
+        </statement>
+        <solution>
+        <p>
+          All three families of sets
+          <m>\left( \mathscr{A}, \mathscr{B}, \text{ and } \mathscr{C} \right)</m> are disjoint 
+          families of sets.
+          Only the family <m>\mathscr{A}</m> is a pairwise disjoint family of sets.
+        </p>
+        </solution>
       </task>
+      
     </exercise>
   </subsection>
 

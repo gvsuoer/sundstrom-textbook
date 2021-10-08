@@ -276,8 +276,8 @@
       </statement>
     </example>
 
-    <exercise xml:id="A_relationexamples1">
-
+    <exercise xml:id="A_relationexamples">
+      <task>
         <introduction>
           <p>
             Let <m>T = \left\{ {\left( {x, y} \right) \in \mathbb{R} \times \mathbb{R} 
@@ -286,76 +286,150 @@
         </introduction>
             
               <task>
+                <statement>
                 <p>
                   Explain why <m>T</m> is a relation on <m>\mathbb{R}</m>.
                 </p>
+                </statement>
+                <solution>
+                  <p>
+                    <m>T</m> is a relation on <m>\mathbb{R}</m> since <m>S</m> is a subset of 
+                    <m>\mathbb{R} \times \mathbb{R}</m>.
+                  </p>
+                </solution>
               </task>
               <task>
+                <statement>
                 <p>
                   Find all values of <m>x</m> such that <m>\left( {x, 4} \right) \in T</m>.
                   Find all values of <m>x</m> such that <m>\left( {x, 9} \right) \in T</m>.
                 </p>
+                </statement>
+                <solution>
+                  <p>
+                    Solve the equation <m>x^2 + 4^2 = 64</m>.
+                    This gives <m>x = \pm \sqrt {48}</m>.
+                    Solve the equation <m>x^2 + 9^2 = 64</m>.
+                    There are no real number solutions.
+                    So there does not exist an
+                    <m>x \in \mathbb{R}</m> such that <m>\left( {x, 9} \right) \in S</m>.
+                  </p>
+                </solution>
               </task>
               <task>
+                <statement>
                 <p>
                   What is the domain of the relation <m>T</m>?
                   What is the range of <m>T</m>?
                 </p>
+                </statement>
+                <solution>
+                  <p>
+                    <m>\text{ dom} ( T ) = \left\{ {\left. {x \in \mathbb{R} } \right| - 8 
+                    \leq x \leq 8} \right\}</m> <m>\text{ range} ( T ) = \left\{ {\left. 
+                    {y \in \mathbb{R} } \right| - 8 \leq y \leq 8} \right\}</m>
+                  </p>
+                </solution>
               </task>
               <task>
+                <statement>
                 <p>
                   Since <m>T</m> is a relation on <m>\mathbb{R}</m>,
                   its elements can be graphed in the coordinate plane.
                   Describe the graph of the relation <m>T</m>.
                 </p>
+                </statement>
+                <solution>
+                  <p>
+                    The graph is a circle of radius 8 whose center is at the origin.
+                  </p>
+                </solution>
               </task>
-            </exercise>
-    <exercise xml:id="A_relationexamples2">
+           
+      </task>
+      <task>
+      <introduction>
+        <p>
+          From <xref ref="PA_USA">Beginning Activity 1</xref>,
+          <m>A</m> is the set of all states in the United States, and
+          <me>
+            R = \left\{ { {\left( {x, y} \right) \in A \times A } \mid x\text{  and  } y 
+            \text{  have a land border in common } } \right\}\!
+          </me>.
+        </p>
+      </introduction>
+        
+          <task>
+            <statement>
+            <p>
+              Explain why <m>R</m> is a relation on <m>A</m>.
+            </p>
+            </statement>
+            <solution>
+              <p>
+                <m>R</m> is a relation on <m>A</m> since <m>R</m> is a subset of <m>A \times A</m>.
+              </p>
+            </solution>
+          </task>
+          <task>
+            <statement>
+            <p>
+              What is the domain of the relation <m>R</m>?
+              What is the range of the relation <m>R</m>?
+            </p>
+            </statement>
+            <solution>
+              <p>
+                If we assume that each state except Hawaii has a land border in common with itself,
+                then the domain and range of <m>R</m> are the set of all states except Hawaii.
+                If we do not make this assumption,
+                then the domain and range are the set of all states except Hawaii and Alaska.
+              </p>
+            </solution>
+          </task>
+      <task>
         <introduction>
-          <p>
-            From <xref ref="PA_USA">Beginning Activity 1</xref>,
-            <m>A</m> is the set of all states in the United States, and
-            <me>
-              R = \left\{ { {\left( {x, y} \right) \in A \times A } \mid x\text{  and  } y 
-              \text{  have a land border in common } } \right\}\!
-            </me>.
-          </p>
+        <p>
+          Are the following statements true or false?
+          Justify your conclusions.
+        </p>
         </introduction>
-          
-            <task>
+        
+          <task>
+            <statement>
+            <p>
+              For all <m>x, y \in A</m>, if
+              <m>(x, y) \in R</m>, then <m>(y, x) \in R</m>.
+            </p>
+            </statement>
+            <solution>
               <p>
-                Explain why <m>R</m> is a relation on <m>A</m>.
+                The first statement is true.
+                If <m>x</m> has a land border with <m>y</m>,
+                then <m>y</m> has a land border with <m>x</m>.
               </p>
-            </task>
-            <task>
+            </solution>
+          </task>
+          <task>
+            <statement>
+            <p>
+              For all <m>x, y, z \in A</m>,
+              if <m>(x, y) \in R</m> and
+              <m>(y, z) \in R</m>, then <m>(x, z) \in R</m>.
+            </p>
+            </statement>
+            <solution>
               <p>
-                What is the domain of the relation <m>R</m>?
-                What is the range of the relation <m>R</m>?
+                The second statement is false.
+                Following is a counterexample:
+                <m>\left( {\text{ Michigan, } \text{ Indiana } } \right) \in R</m>,
+                <m>\left( {\text{ Indiana,Illinois } } \right) \in R</m>,
+                but <m>\left( {\text{ Michigan, } \text{ Illinois } } \right) \notin R</m>.
               </p>
-            </task>
-            <task>
-              <introduction>
-              <p>
-                Are the following statements true or false?
-                Justify your conclusions.
-              </p>
-              </introduction>
-              
-                <task>
-                  <p>
-                    For all <m>x, y \in A</m>, if
-                    <m>(x, y) \in R</m>, then <m>(y, x) \in R</m>.
-                  </p>
-                </task>
-                <task>
-                  <p>
-                    For all <m>x, y, z \in A</m>,
-                    if <m>(x, y) \in R</m> and
-                    <m>(y, z) \in R</m>, then <m>(x, z) \in R</m>.
-                  </p>
-                </task>
-
-            </task>
+            </solution>
+          </task>
+        </task>
+      </task>
     </exercise>
   </subsection>
 
@@ -518,6 +592,7 @@
       </introduction>
       
         <task>
+          <statement>
           <p>
             What is the domain of the
             <q>divides</q>
@@ -526,6 +601,13 @@
             <q>divides</q>
             relation?
           </p>
+          </statement>
+          <solution>
+            <p>
+              The domain of the divides relation is the set of all nonzero integers.
+              The range of the divides relation is the set of all integers.
+            </p>
+          </solution>
         </task>
         <task>
           <introduction>
@@ -536,21 +618,44 @@
           </introduction>
           
             <task>
+              <statement>
               <p>
                 For every nonzero integer <m>a</m>, <m>a \mid a</m>.
               </p>
+              </statement>
+              <solution>
+                <p>
+                  This statement is true since for each
+                  <m>a \in \mathbb{Z}</m>, <m>a = a \cdot 1</m>.
+                </p>
+              </solution>
             </task>
             <task>
+              <statement>
               <p>
                 For all nonzero integers <m>a</m> and <m>b</m>,
                 if <m>a \mid b</m>, then <m>b \mid a</m>.
               </p>
+              </statement>
+              <solution>
+                <p>
+                  This statement is false: For example, 2 divides 4 but 4 does not divide 2.
+                </p>
+              </solution>
             </task>
             <task>
+              <statement>
               <p>
                 For all nonzero integers <m>a</m>, <m>b</m>, and <m>c</m>,
                 if <m>a \mid b</m> and <m>b \mid c</m>, then <m>a \mid c</m>.
               </p>
+              </statement>
+              <solution>
+                <p>
+                  This statement is true by <xref ref="T_transdivide"></xref>
+                  on <xref ref="T_transdivide"></xref>.
+                </p>
+              </solution>
             </task>
 
         </task>
@@ -624,10 +729,19 @@
       </introduction>
       
         <task>
+          <statement>
           <p>
             List five different ordered pairs that are in the set <m>F</m>.
           </p>
+          </statement>
+          <solution>
+            <p>
+              Each element in the set <m>F</m> is an ordered pair of the form <m>(x, y)</m> 
+              where <m>y = x^2</m>.
+            </p>
+          </solution>
         </task>
+
         <task>
           <introduction>
           <p>
@@ -635,34 +749,69 @@
           </p>
           </introduction>
          
-            <task>
+            <task> 
+              <statement>
               <p>
                 <m>A = \left\{ x \in \R \mid (x, 4) \in F \right\}</m>
               </p>
+              </statement>
+              <solution>
+                <p>
+                  <m>A = \{ -2, 2 \}</m>
+                </p>
+              </solution>
             </task>
             <task>
+              <statement>
               <p>
                 <m>B = \left\{ x \in \R \mid (x, 10) \in F \right\}</m>
               </p>
+              </statement>
+              <solution>
+                <p>
+                  <m>B = \{ -\sqrt{10}, \sqrt{10} \}</m>
+                </p>
+              </solution>
             </task>
             <task>
+              <statement>
               <p>
                 <m>C = \left\{ y \in \R \mid (5, y) \in F \right\}</m>
               </p>
+              </statement>
+              <solution>
+                <p>
+                  <m>C = \{25 \}</m>
+                </p>
+              </solution>
             </task>
             <task>
+              <statement>
               <p>
                 <m>D = \left\{ y \in \R \mid (-3, y) \in F \right\}</m>
               </p>
+              </statement>
+              <solution>
+                <p>
+                  <m>D = \{ 9 \}</m>
+                </p>
+              </solution>
             </task>
      
         </task>
         <task>
+          <statement>
           <p>
             Since each real number <m>x</m> produces only one value of <m>y</m> for which <m>y = x^2</m>,
             the set <m>F</m> can be used to define a function from the set <m>\R</m> to <m>\R</m>.
             Draw a graph of this function.
           </p>
+          </statement>
+          <solution>
+            <p>
+              The graph of <m>y = x^2</m> is a parabola with vertex at the origin that is concave up.
+            </p>
+          </solution>
         </task>
      
     </exercise>
@@ -753,6 +902,7 @@
 
     <exercise xml:id="prog_directedgraph">
       <title>The Directed Graph of a Relation</title>
+      <statement>
       <p>
         Let <m>A = \{ 1, 2, 3, 4, 5, 6 \}</m>.
         Draw a directed graph for the following two relations on the set <m>A</m>.
@@ -767,6 +917,17 @@
         <caption>Vertices for <m>A</m></caption>
         <image width="50%" source="figps-sec71-dirgraph.svg"/>
       </figure>
+      </statement>
+      <solution>
+        <p>
+          The directed graph for <m>R</m> is on the left and the directed graph for <m>T</m> 
+          is on the right.
+          <sidebyside width="45%">
+            <image source="figps-sec71-dirgraph-a.svg"/>
+            <image source="figps-sec71-dirgraph-b.svg"/>
+          </sidebyside>
+        </p>
+      </solution>
     </exercise>
   
   </subsection>

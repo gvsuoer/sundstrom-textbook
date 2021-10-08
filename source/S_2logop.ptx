@@ -129,13 +129,13 @@
         <statement>
           <p>
             For the statements
-              <sidebyside>
+              
               <blockquote>
                 <m>P</m>: 15 is odd
               </blockquote>
               <blockquote><m>Q</m>: 15 is prime 
               </blockquote>
-              </sidebyside>
+              
               
               write each of the following statements as English sentences and determine 
               whether they are true or false.
@@ -168,14 +168,14 @@
         <statement>
           <p>
               For the statements 
-              <sidebyside>
+              
               <blockquote>
                 <m>P</m>: 15 is odd
               </blockquote>
               <blockquote>
                 <m>R</m>: <m>15 \lt 17</m>
               </blockquote>
-              </sidebyside>
+             
               write each of the following statements in symbolic form using 
               the operators <m>\wedge</m>,
               <m>\vee</m>, and <m>\mynot</m>.
@@ -257,7 +257,7 @@
         <p>
           Which of the four statements [(a) through (d)] are true and which are 
           false in each of the following four situations?
-        </p>
+        </p> 
 
         <exercise>
           <statement>
@@ -551,7 +551,7 @@
 
     <exercise xml:id="pr_onlyif">
       <title>The <q>Only If</q> Statement</title>
-      <statement>
+      <introduction>
       <p>
         Recall that a quadrilateral is a four-sided polygon.
         Let <m>S</m> represent the following true conditional statement: 
@@ -562,29 +562,59 @@
       </p>
       <p>
         Write this conditional statement in English using
+      </p>
+      </introduction>
 
       <task>
+        <statement>
         <p>
           the word <q>whenever</q>
         </p>
+        </statement>
+        <solution>
+          <p>
+            Whenever a quadrilateral is a square, it is a rectangle,
+            or a quadrilateral is a rectangle whenever it is a square.
+          </p>
+        </solution>
       </task>
       <task>
+        <statement>
         <p>
           the phrase <q>only if</q>
         </p>
+        </statement>
+        <solution>
+          <p>
+            A quadrilateral is a square only if it is a rectangle.
+          </p>
+        </solution>
       </task>
       <task>
+        <statement>
         <p>
           the phrase <q>is necessary for</q>
         </p>
+        </statement>
+        <solution>
+          <p>
+            Being a rectangle is necessary for a quadrilateral to be a square.
+          </p>
+        </solution>
       </task>
       <task>
+        <statement>
         <p>
           the phrase <q>is sufficient for</q>
         </p>
+        </statement>
+        <solution>
+          <p>
+            Being a square is sufficient for a quadrilateral to be a rectangle.
+          </p>
+        </solution>
       </task>
-      </p>
-      </statement>
+
     </exercise>
   </subsection>
 
@@ -768,15 +798,18 @@
 
     <exercise xml:id="pr_truthtables">
       <title>Constructing Truth Tables</title>
-      <statement>
+      <introduction>
         <p>
           Construct a truth table for each of the following statements:
-
+        </p>
+      </introduction>
 
       <task>
+        <statement>
         <p>
           <m>P \wedge \mynot Q</m>
         </p>
+        </statement>
       </task>
       <task>
         <p>
@@ -789,15 +822,80 @@
         </p>
       </task>
       <task>
+        <statement>
         <p>
           <m>\mynot P \vee \mynot Q</m>
         </p>
+        </statement>
+        <solution>
+          <p>
+            <tabular halign="center">
+              <row bottom="medium">
+
+                <cell right="minor"><m>P</m></cell>
+                <cell right="major"><m>Q</m></cell>
+                <cell right="minor"><m>P \wedge \mynot Q</m></cell>
+                <cell right="minor"><m>\mynot \left( P \wedge Q \right)</m></cell>
+                <cell right="minor"><m>\mynot P \wedge \mynot Q</m></cell>
+                <cell><m>\mynot P \vee \mynot Q</m></cell>
+
+              </row>
+              <row>
+
+                <cell right="minor">T</cell>
+                <cell right="major">T</cell>
+                <cell right="minor">F</cell>
+                <cell right="minor">F</cell>
+                <cell right="minor">F</cell>
+                <cell>F</cell>
+
+              </row>
+              <row>
+
+                <cell right="minor">T</cell>
+                <cell right="major">F</cell>
+                <cell right="minor">T</cell>
+                <cell right="minor">T</cell>
+                <cell right="minor">F</cell>
+                <cell>T</cell>
+
+              </row>
+              <row>
+
+                <cell right="minor">F</cell>
+                <cell right="major">T</cell>
+                <cell right="minor">F</cell>
+                <cell right="minor">T</cell>
+                <cell right="minor">F</cell>
+                <cell>T</cell>
+
+              </row>
+              <row>
+
+                <cell right="minor">F</cell>
+                <cell right="major">F</cell>
+                <cell right="minor">F</cell>
+                <cell right="minor">T</cell>
+                <cell right="minor">T</cell>
+                <cell>T</cell>
+
+              </row>
+            </tabular>
+          </p>
+          <p>
+            Statements (2) and (4) have the same truth table.
+          </p>
+        </solution>
       </task>
-      </p>
+
+      <conclusion>
         <p>
           Do any of these statements have the same truth table?
         </p>
-      </statement>
+      </conclusion>
+
+      
+ 
     </exercise>
 
   </subsection>
@@ -888,15 +986,16 @@
     </p>
     <exercise xml:id="pr_tautology">
       <title>Tautologies and Contradictions</title>
-      <statement>
+      <introduction>
       <p>
         For statements <m>P</m> and <m>Q</m>:
-
-      <task>
-            <p>
-              Use a truth table to show that <m>\left( {P \vee \mynot P} \right)</m> is a tautology.
-            </p>
-      </task>
+      </p>
+      </introduction>
+        <task>
+          <p>
+            Use a truth table to show that <m>\left( {P \vee \mynot P} \right)</m> is a tautology.
+          </p>
+        </task>
       <task>
         <p>
           Use a truth table to show that <m>\left( {P \wedge \mynot P} \right)</m> 
@@ -904,13 +1003,93 @@
         </p>
       </task>
       <task>
+        <statement>
         <p>
           Use a truth table to determine if <m>P \to (P \vee Q)</m> is a tautology,
           a contradiction, or neither.
         </p>
+        </statement>
+      
+
+      <solution>
+        <p>
+          <tabular halign="center">
+            <row bottom="medium">
+              
+              <cell right="minor"><m>P</m></cell>
+              <cell right="major"><m>\mynot P</m></cell>
+              <cell right="minor"><m>P \vee \mynot P</m></cell>
+              <cell><m>P \wedge \mynot P</m></cell>
+              
+            </row>
+            <row>
+              
+              <cell right="minor">T</cell>
+              <cell right="major">F</cell>
+              <cell right="minor">T</cell>
+              <cell>F</cell>
+              
+            </row>
+            <row>
+              
+              <cell right="minor">F</cell>
+              <cell right="major">T</cell>
+              <cell right="minor">T</cell>
+              <cell>F</cell>
+              
+            </row>
+          </tabular>
+        </p>
+        <p>
+          <tabular halign="center">
+            <row bottom="major">
+              
+              <cell right="minor"><m>P</m></cell>
+              <cell right="major"><m>Q</m></cell>
+              <cell right="minor"><m>P \vee Q</m></cell>
+              <cell><m>P \to (P \vee Q)</m></cell>
+              
+            </row>
+            <row>
+              
+              <cell right="minor">T</cell>
+              <cell right="major">T</cell>
+              <cell right="minor">T</cell>
+              <cell>T</cell>
+             
+            </row>
+            <row>
+              
+              <cell right="minor">T</cell>
+              <cell right="major">F</cell>
+              <cell right="minor">T</cell>
+              <cell>T</cell>
+              
+            </row>
+            <row>
+              
+              <cell right="minor">F</cell>
+              <cell right="major">T</cell>
+              <cell right="minor">T</cell>
+              <cell>T</cell>
+              
+            </row>
+            <row>
+              
+              <cell right="minor">F</cell>
+              <cell right="major">F</cell>
+              <cell right="minor">F</cell>
+              <cell>T</cell>
+              
+            </row>
+          </tabular>
+          <me>
+            P \to (P \vee Q) \text{ is a tautology }
+          </me>.
+        </p>
+      </solution>
       </task>
-      </p>
-      </statement>
+
     </exercise>
   </subsection>
 

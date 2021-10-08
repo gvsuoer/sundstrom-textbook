@@ -378,31 +378,56 @@
 
     <exercise xml:id="prog_extendedind">
       <title>Formulating Conjectures</title>
-      <statement>
+      <introduction>
         <p>
         Formulate a conjecture
         (with an appropriate quantifier)
         that can be used as an answer to each of the following questions.
+        </p>
+      </introduction>
         
           <task>
+            <statement>
             <p>
               For which natural numbers <m>n</m> is <m>3^n</m> greater than <m>1 + 2^n</m>?
             </p>
+            </statement>
+            <solution>
+              <p>
+                For each natural number <m>n</m>,
+                if <m>n \geq 2</m>, then <m>3^n > 1 + 2^n</m>.
+              </p>
+            </solution>
           </task>
           <task>
+            <statement>
             <p>
               For which natural numbers <m>n</m> is <m>2^n</m> greater than 
               <m>\left(n + 1 \right)^2</m>?
             </p>
+            </statement>
+            <solution>
+              <p>
+                For each natural number <m>n</m>,
+                if <m>n \geq 6</m>, then <m>2^n > (n + 1 )^2</m>.
+              </p>
+            </solution>
           </task>
           <task>
+            <statement>
             <p>
               For which natural numbers <m>n</m> is <m>\left( 1 + \dfrac{1}{n} \right)^n</m> 
               greater than 2.5?
             </p>
+            </statement>
+            <solution>
+              <p>
+                For each natural number <m>n</m>, if <m>n \geq 6</m>,
+                then <m>\left( 1 + \dfrac{1}{n} \right)^n > 2.5</m>.
+              </p>
+            </solution>
           </task>
-        </p>
-      </statement>
+
     </exercise>
   </subsection>
 
@@ -612,7 +637,7 @@
     </p>
     
     <exercise xml:id="A_lincomb3and5-a">
-      <statement>
+      <introduction>
       <p>
         Consider the following question:
         <blockquote>
@@ -630,6 +655,8 @@
         Also notice that <m>P(6)</m> is true since
         <m>6 = 3 \cdot 2 + 5 \cdot 0</m> and <m>P(8)</m> is true since 
         <m>8 = 3 \cdot 1 + 5 \cdot 1</m>.
+      </p>
+      </introduction>
         
           <task>
             <p>
@@ -637,16 +664,73 @@
               and <m>P(7)</m> are false and why <m>P(3)</m> and <m>P(5)</m> are true.
             </p>
           </task>
+
           <task>
+            <statement>
             <p>
               Explain why <m>P(9)</m>,
               <m>P(10)</m>, <m>P(11)</m>, and <m>P(12)</m> are true.
             </p>
+            </statement>
+            <solution>
+              <p>
+                Construct the following table and use it to answer the first two questions.
+                The table shows that <m>P\left( 3 \right)</m>,
+                <m>P\left( 5 \right)</m>, and <m>P\left( 6 \right)</m> are true.
+                We can also see that <m>P(2)</m>,
+                <m>P(4)</m>, and <m>P(7)</m> are false.
+                It also appears that if <m>n \in \mathbb{N}</m> and <m>n \geq 8</m>,
+                then <m>P\left( n \right)</m> is true.
+                
+                <tabular halgin="center">
+                  <row bottom="medium">
+                    <cell right="medium"><m>x</m></cell>
+                    <cell right="medium">0</cell>
+                    <cell right="medium">1</cell>
+                    <cell right="medium">2</cell>
+                    <cell right="medium">3</cell>
+                    <cell right="medium">4</cell>
+                    <cell right="medium">0</cell>
+                    <cell right="medium">1</cell>
+                    <cell right="medium">2</cell>
+                    <cell right="medium">0</cell>
+                    <cell right="medium">1</cell>
+                    <cell>1</cell>
+                  </row>
+                  <row bottom="medium">
+                    <cell right="medium"><m>y</m></cell>
+                    <cell right="medium">0</cell>
+                    <cell right="medium">0</cell>
+                    <cell right="medium">0</cell>
+                    <cell right="medium">0</cell>
+                    <cell right="medium">0</cell>
+                    <cell right="medium">1</cell>
+                    <cell right="medium">1</cell>
+                    <cell right="medium">1</cell>
+                    <cell right="medium">2</cell>
+                    <cell right="medium">3</cell>
+                    <cell>3</cell>
+                  </row>
+                  <row>
+                    <cell right="medium"><m>3x + 5y</m></cell>
+                    <cell right="medium">0</cell>
+                    <cell right="medium">3</cell>
+                    <cell right="medium">6</cell>
+                    <cell right="medium">9</cell>
+                    <cell right="medium">12</cell>
+                    <cell right="medium">5</cell>
+                    <cell right="medium">8</cell>
+                    <cell right="medium">11</cell>
+                    <cell right="medium">10</cell>
+                    <cell right="medium">13</cell>
+                    <cell>18</cell>
+                  </row>
+                </tabular>
+              </p>
+            </solution>
           </task>
-        </p>
-      </statement>
-    </exercise>
-    <exercise xml:id="A_lincomb3and5-b">
+
+      <task xml:id="A_lincombc">
       <statement>
       <p>
         We could continue trying to determine other values of <m>n</m> for which 
@@ -656,9 +740,8 @@
         Notice that <m>13 = 3 + 10</m> and we know that <m>P(10)</m> is true.
         We should be able to use this to prove that <m>P(13)</m> is true.
         This is formalized in the next part.
-        
-          <task>
-            <statement>
+      </p>
+
             <p>
               Let <m>k \in \mathbb{N}</m> with <m>k \geq 10</m>.
               Prove that if <m>P( 8 )</m>,
@@ -672,13 +755,15 @@
               </p>
             </hint>
           </task>
+
           <task>
+            <statement>
             <p>
               Prove the following proposition using mathematical induction.
               Use the Second Principle of Induction and have the basis step be a proof that 
               <m>P(8)</m>,
               <m>P(9)</m>,
-              and <m>P(10)</m> are true. (The inductive step is part<nbsp/>(3).)
+              and <m>P(10)</m> are true. (The inductive step is <xref ref="A_lincombc"/>.)
               <proposition xml:id="prop_lincomb">
                 <statement>
                   <p>
@@ -689,9 +774,61 @@
                 </statement>
               </proposition>
             </p>
+            </statement>
+            <solution>
+              <p>
+                The following proposition provides answers for Problems (3) and (4).
+              </p>
+              <p>
+                Proposition: For all natural numbers <m>n</m> with <m>n \geq 8</m>,
+                there exist non-negative integers <m>x</m> and <m>y</m> such that <m>n = 3x + 5y</m>.
+              </p>
+              <p>
+                Proof: (by mathematical induction) Let <m>\mathbb{Z}^* = \left\{ {x \in 
+                \mathbb{Z}\left. \right| x \geq 0} \right\}</m>,
+                and for each natural number <m>n</m>,
+                let <m>P\left( n \right)</m> be,
+                <q>there exist <m>x,
+                y \in \mathbb{Z}^*</m> such that <m>n = 3x + 5y</m>.</q>
+              </p>
+              <p>
+                Basis Step: Using the table above,
+                we see that <m>P\left( 8 \right)</m>,
+                <m>P\left( 9 \right)</m>, and <m>P\left( {10} \right)</m> are true.
+              </p>
+              <p>
+                Inductive Step: Let
+                <m>k \in \mathbb{N}</m> with <m>k \geq 10</m>.
+                Assume that <m>P\left( 8 \right)</m>,
+                <m>P\left( 9 \right)</m>, <ellipsis/> , <m>P\left( k \right)</m> are true.
+                Now, notice that
+                <me>
+                  k + 1 = 3 + \left( {k - 2} \right)
+                </me>.
+              </p>
+              <p>
+                Since <m>k \geq 10</m>, we can conclude that
+                <m>k - 2 \geq 8</m> and hence <m>P\left( {k - 2} \right)</m> is true.
+                Therefore, there exist non-negative integers <m>u</m> and <m>v</m> such that 
+                <m>k - 2 = \left( {3u + 5v} \right)</m>.
+                Using this equation, we see that
+                <md>
+                  <mrow>k + 1 \amp = 3  + \left( {3u + 5v} \right)</mrow>
+                  <mrow> \amp = 3\left( {1 + u} \right) + 5v</mrow>
+                </md>.
+              </p>
+              <p>
+                Hence, we can conclude that <m>P\left( {k + 1} \right)</m> is true.
+                This proves that if <m>P\left( 8 \right)</m>, <m>P\left( 9 \right)</m>,
+                <ellipsis/> , <m>P\left( k \right)</m> are true,
+                then <m>P\left( {k + 1} \right)</m> is true.
+                Hence, by the Second Principle of Mathematical Induction,
+                for all natural numbers <m>n</m> with <m>n \geq 8</m>,
+                there exist nonnegative integers <m>x</m> and <m>y</m> such that <m>n = 3x + 5y</m>.
+              </p>
+            </solution>
           </task>
-        </p>
-      </statement>
+
     </exercise>
   </subsection>
 

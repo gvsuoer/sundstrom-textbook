@@ -535,7 +535,7 @@
     <exercise xml:id="prog_modulararithmetic5-6">
       <title>Modular Arithmetic in <m>\boldsymbol{\Z_2}</m>, <m>\boldsymbol{\Z_5}</m>, and 
       <m>\boldsymbol{\Z_6}</m></title>
-      <!-- Change these to <task>! -->
+
       <task>
         <statement>
           <p>
@@ -543,7 +543,53 @@
             the integers modulo 2.
           </p>
         </statement>
+        <solution>
+          <p>
+            <sidebyside>
+              <tabular>
+                <row bottom="medium">
+                  <cell right="minor"><m>\oplus</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 1 ]</m></cell>
+                  
+                  
+                </row>
+                <row>
+                  <cell right="minor"><m>[ 0 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 1 ]</m></cell>
+                  
+                </row>
+                <row>
+                  <cell right="minor"><m>[ 1 ]</m></cell>
+                  <cell><m>[ 1 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  
+                </row>
+              </tabular>
+
+              <tabular>
+                <row bottom="medium">
+                  <cell right="medium"><m>\odot</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 1 ]</m></cell>
+                </row>
+                <row>
+                  <cell right="medium"><m>[ 0 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                </row>
+                <row>
+                  <cell right="medium"><m>[ 1 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 1 ]</m></cell>
+                </row>
+              </tabular>
+            </sidebyside>
+          </p>
+        </solution>
       </task>
+
       <task xml:id="exam_sec74-tables">
         <statement>
           <p>
@@ -666,13 +712,165 @@
           </p>
         </statement>
         </task>
+
         <task>
         <statement>
           <p>
             Construct complete addition and multiplication tables for <m>\Z_6</m>.
           </p>
         </statement>
+        <solution>
+          <p>
+            <sidebyside>
+              <tabular halign="center">
+                <row bottom="medium">
+                  <cell right="medium"><m>\oplus</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 1 ]</m></cell>
+                  <cell><m>[ 2 ]</m></cell>
+                  <cell><m>[ 3 ]</m></cell>
+                  <cell><m>[ 4 ]</m></cell>
+                  <cell><m>[ 5 ]</m></cell>
+                </row>
+
+                <row>
+                  <cell right="medium"><m>[ 0 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 1 ]</m></cell>
+                  <cell><m>[ 2 ]</m></cell>
+                  <cell><m>[ 3 ]</m></cell>
+                  <cell><m>[ 4 ]</m></cell>
+                  <cell><m>[ 5 ]</m></cell>
+                </row>
+
+                <row>
+                  <cell right="medium"><m>[ 1 ]</m></cell>
+                  <cell><m>[ 1 ]</m></cell>
+                  <cell><m>[ 2 ]</m></cell>
+                  <cell><m>[ 3 ]</m></cell>
+                  <cell><m>[ 4 ]</m></cell>
+                  <cell><m>[ 5 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                </row>
+
+                <row>
+                  <cell right="medium"><m>[ 2 ]</m></cell>
+                  <cell><m>[ 2 ]</m></cell>
+                  <cell><m>[ 3 ]</m></cell>
+                  <cell><m>[ 4 ]</m></cell>
+                  <cell><m>[ 5 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 1 ]</m></cell>
+                </row>
+
+                <row>
+                  <cell right="medium"><m>[ 3 ]</m></cell>
+                  <cell><m>[ 3 ]</m></cell>
+                  <cell><m>[ 4 ]</m></cell>
+                  <cell><m>[ 5 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 1 ]</m></cell>
+                  <cell><m>[ 2 ]</m></cell>
+                </row>
+
+                <row>
+                  <cell right="medium"><m>[ 4 ]</m></cell>
+                  <cell><m>[ 4 ]</m></cell>
+                  <cell><m>[ 5 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 1 ]</m></cell>
+                  <cell><m>[ 2 ]</m></cell>
+                  <cell><m>[ 3 ]</m></cell>
+                </row>
+                
+                <row>
+                  <cell right="medium"><m>[ 5 ]</m></cell>
+                  <cell><m>[ 5 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 1 ]</m></cell>
+                  <cell><m>[ 2 ]</m></cell>
+                  <cell><m>[ 3 ]</m></cell>
+                  <cell><m>[ 4 ]</m></cell>
+                </row>
+              </tabular>
+
+              <tabular halign="center">
+                <row bottom="medium">
+                  <cell right="medium"><m>\odot</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 1 ]</m></cell>
+                  <cell><m>[ 2 ]</m></cell>
+                  <cell><m>[ 3 ]</m></cell>
+                  <cell><m>[ 4 ]</m></cell>
+                  <cell><m>[ 5 ]</m></cell>
+                </row>
+
+                <row>
+                  <cell right="medium"><m>[ 0 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                </row>
+
+                <row>
+                  <cell right="medium"><m>[ 1 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 1 ]</m></cell>
+                  <cell><m>[ 2 ]</m></cell>
+                  <cell><m>[ 3 ]</m></cell>
+                  <cell><m>[ 4 ]</m></cell>
+                  <cell><m>[ 5 ]</m></cell>
+                </row>
+
+                <row>
+                  <cell right="medium"><m>[ 2 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 2 ]</m></cell>
+                  <cell><m>[ 4 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 2 ]</m></cell>
+                  <cell><m>[ 4 ]</m></cell>
+                </row>
+
+                <row>
+                  <cell right="medium"><m>[ 3 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 3 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 3 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 3 ]</m></cell>
+                </row>
+
+                <row>
+                  <cell right="medium"><m>[ 4 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 4 ]</m></cell>
+                  <cell><m>[ 2 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 4 ]</m></cell>
+                  <cell><m>[ 2 ]</m></cell>
+                </row>
+
+                <row>
+                  <cell right="medium"><m>[ 5 ]</m></cell>
+                  <cell><m>[ 0 ]</m></cell>
+                  <cell><m>[ 5 ]</m></cell>
+                  <cell><m>[ 4 ]</m></cell>
+                  <cell><m>[ 3 ]</m></cell>
+                  <cell><m>[ 2 ]</m></cell>
+                  <cell><m>[ 1 ]</m></cell>
+                </row>
+              </tabular>
+            </sidebyside>
+            
+          </p>
+        </solution>
         </task>
+
         <task>
         <statement>
           <p>
@@ -685,6 +883,12 @@
           Write the contrapositive of the conditional statement in this property.
           </p>
         </statement>
+        <solution>
+          <p>
+            For all <m>a, b \in \Z</m>,
+            if <m>a \ne 0</m> and <m>b \ne 0</m>, then <m>ab \ne 0</m>.
+          </p>
+        </solution>
         </task>
         <task>
         <introduction>
@@ -695,18 +899,33 @@
         </introduction>
             
               <task>
+                <statement>
                 <p>
                   For all <m>[ a ], [ b ] \in \Z_5</m>,
                   if <m>[ a ] \odot [ b ] = [ 0 ]</m>,
                   then <m>[ a ] = [ 0 ]</m> or <m>[ b ] = [ 0 ]</m>.
                 </p>
+                </statement>
+                <solution>
+                  <p>
+                    The statement in (i) is true.
+                  </p>
+                </solution>
               </task>
               <task>
+                <statement>
                 <p>
                   For all <m>[ a ], [ b ] \in \Z_6</m>,
                   if <m>[ a ] \odot [ b ] = [ 0 ]</m>,
                   then <m>[ a ] = [ 0 ]</m> or <m>[ b ] = [ 0 ]</m>.
                 </p>
+                </statement>
+                <solution>
+                  <p>
+                    The statement in (ii) is false. For example, in <m>\Z_6</m>, 
+                    <m>[ 2 ] \odot [ 3 ] = [ 0 ]</m>.
+                  </p>
+                </solution>
               </task>
 
         </task>

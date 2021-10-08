@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <section xml:id="S_typesoffunctions">
-  <title>Beginning Activity 1: Injections, Surjections, and Bijections</title>
+  <title>Injections, Surjections, and Bijections</title>
   <introduction>
     <p>
       Functions are frequently used in mathematics to define and describe certain relationships 
@@ -18,7 +18,7 @@
   </introduction>
   
     <worksheet xml:id="PA_functionswithfinitedom">
-      <title>Functions with Finite Domains</title>
+      <title>Beginning Activity 1: Functions with Finite Domains</title>
       <p>
         Let <m>A</m> and <m>B</m> be sets.
         Given a function <m>f\x A \to B</m>, we know the following:
@@ -371,10 +371,19 @@
             </p>
           </task>
           <task>
+            <statement>
             <p>
               <m>R_5 = \{0, 1, 2, 3, 4 \}</m> and <m>s:R_5 \to R_5</m> defined by
               <m>s ( x ) = x^3 \pmod 5</m> for all <m>x \in R_5</m>.
             </p>
+            </statement>
+            <solution>
+              <p>
+                The functions <m>k</m>, <m>F</m>,
+                and <m>s</m> are injections.
+                The functions <m>f</m> and <m>h</m> are not injections.
+              </p>
+            </solution>
           </task>
 
     </exercise>
@@ -521,10 +530,18 @@
             </p>
           </task>
           <task>
+            <statement>
             <p>
               <m>s:R_5 \to R_5</m> defined by
               <m>s ( x ) = x^3 \pmod 5</m> for all <m>x \in R_5</m>.
             </p>
+            </statement>
+            <solution>
+              <p>
+                The functions <m>f</m> and <m>s</m> are surjections.
+                The functions <m>k</m> and <m>F</m> are not surjections.
+              </p>
+            </solution>
           </task>
 
     </exercise>
@@ -778,6 +795,28 @@
       which will still need proof.
     </p>
     </statement>
+    <solution>
+      <p>
+        The function <m>f</m> is an injection but not a surjection.
+        To see that it is an injection,
+        let <m>a, b \in \R</m> and assume that <m>f(a) = f(b)</m>.
+        This implies that <m>e^{-a} = e^{-b}</m>.
+        Now use the natural logarithm function to prove that <m>a = b</m>.
+        Since <m>e^{-x} > 0</m> for each real number <m>x</m>,
+        there is no <m>x \in \R</m> such that <m>f(x) = -1</m>.
+        So <m>f</m> is not a surjection.
+      </p>
+      <p>
+        The function <m>g</m> is an injection and is a surjection.
+        The proof that <m>g</m> is an injection is basically the same as the proof that 
+        <m>f</m> is an injection.
+        To prove that <m>g</m> is a surjection, let <m>b \in \R^+</m>.
+        To construct the real number <m>a</m> such that <m>g(a) = b</m>,
+        solve the equation <m>e^{-a} = b</m> for <m>a</m>.
+        The solution is <m>a = -\ln b</m>.
+        It can then be verified that <m>g(a) = b</m>.
+      </p>
+    </solution>
     </exercise>
   </subsection>
 
@@ -904,6 +943,7 @@
       </introduction>
         
           <task>
+            <statement>
             <p>
               Notice that the ordered pair <m>(1, 0) \in \R \times \R</m>.
               That is, <m>(1, 0)</m> is in the domain of <m>g</m>.
@@ -911,20 +951,46 @@
               Is it possible to find another ordered pair
               <m>(a, b) \in \R \times \R</m> such that <m>g(a, b) = 2</m>?
             </p>
+            </statement>
+            <solution>
+              <p>
+                There are several ordered pairs
+                <m>(a, b) \in \R \times \R</m> such that <m>g(a, b) = 2</m>.
+                For example, <m>g(0, 2) = 2</m>,
+                <m>g(-1, 4) = 2</m>, and <m>g(2, -2) = 2</m>.
+              </p>
+            </solution>
           </task>
           <task>
+            <statement>
             <p>
               Let <m>z \in \R</m>.
               Then <m>(0, z) \in \R \times \R</m> and so <m>(0, z) \in \text{ dom} (g)</m>.
               Now determine <m>g(0, z)</m>.
             </p>
+            </statement>
+            <solution>
+              <p>
+                For each <m>z \in \R</m>, <m>g(0, z) = z</m>.
+              </p>
+            </solution>
           </task>
           <task>
+            <statement>
             <p>
               Is the function <m>g</m> an injection?
               Is the function <m>g</m> a surjection?
               Justify your conclusions.
             </p>
+            </statement>
+            <solution>
+              <p>
+                Part<nbsp/>(1) implies that the function <m>g</m> is not an injection.
+                Part<nbsp/>(2) implies that the function <m>g</m> is a surjection since for 
+                each <m>z \in \R</m>,
+                <m>(0, z)</m> is in the domain of <m>g</m> and <m>g(0, z) = z</m>.
+              </p>
+            </solution>
           </task>
 
     </exercise>

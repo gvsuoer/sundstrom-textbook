@@ -312,58 +312,136 @@
 
     <exercise xml:id="prog_inductivesets">
       <title>Inductive Sets</title>
-      <statement>
+      <introduction>
       <p>
         Suppose that <m>T</m> is an inductive subset of the integers.
         Which of the following statements are true,
         which are false, and for which ones is it not possible to tell?
+      </p>
+      </introduction>
         
           <task>
+            <statement>
             <p>
               <m>1 \in T</m> and <m>5 \in T</m>.
             </p>
+            </statement>
+            <solution>
+              <p>
+                It is not possible to tell if <m>1 \in T</m> and <m>5 \in T</m>.
+              </p>
+            </solution>
           </task>
+
           <task>
+            <statement>
             <p>
               If <m>1 \in T</m>, then <m>5 \in T</m>.
             </p>
+            </statement>
+            <solution>
+              <p>
+                True.
+              </p>
+            </solution>
           </task>
+
           <task>
+            <statement>
             <p>
               If <m>5 \notin T</m>, then <m>2 \notin T</m>.
             </p>
+            </statement>
+            <solution>
+              <p>
+                True.
+                The contrapositive is,
+                <q>If <m>2 \in T</m>, then <m>5 \in T</m>,</q>
+                which is true.
+              </p>
+            </solution>
           </task>
+
           <task>
+            <statement>
             <p>
               For each integer <m>k</m>, if <m>k \in T</m>, then <m>k + 7 \in T</m>.
             </p>
+            </statement>
+            <solution>
+              <p>
+                True.
+              </p>
+            </solution>
           </task>
+
           <task>
+            <statement>
             <p>
               For each integer <m>k</m>,
               <m>k \notin T</m> or <m>k + 1 \in T</m>.
             </p>
+            </statement>
+            <solution>
+              <p>
+                True, since
+                <q><m>k \notin T</m> or <m>k + 1 \in T</m></q>
+                is logically equivalent to
+                <q>If <m>k \in T</m>, then <m>k + 1 \in T</m>.</q>
+              </p>
+            </solution>
           </task>
+
           <task>
+            <statement>
             <p>
               There exists an integer <m>k</m> such that <m>k \in T</m> and <m>k + 1 \notin T</m>.
             </p>
+            </statement>
+            <solution>
+              <p>
+                False.
+                If <m>k \in T</m>, then <m>k + 1 \in T</m>.
+              </p>
+            </solution>
           </task>
+
           <task>
+            <statement>
             <p>
               For each integer <m>k</m>, if
               <m>k + 1 \in T</m>, then <m>k \in T</m>.
             </p>
+            </statement>
+            <solution>
+              <p>
+                It is not possible to tell if this is true.
+                It is the converse of the conditional statement,
+                <q>For each integer <m>k</m>,
+                if <m>k \in T</m>, then <m>k + 1 \in T</m>.</q>
+              </p>
+            </solution>
           </task>
+
           <task>
+            <statement>
             <p>
               For each integer <m>k</m>, if
               <m>k + 1 \notin T</m>, then <m>k \notin T</m>.
             </p>
+            </statement>
+            <solution>
+              <p>
+                True.
+                This is the contrapositive of the conditional statement,
+                <q>For each integer <m>k</m>,
+                if <m>k \in T</m>, then <m>k + 1 \in T</m>.</q>
+              </p>
+            </solution>
           </task>
-        </p>
-      </statement>
+
     </exercise>
+
   </subsection>
 
   <subsection>
@@ -638,20 +716,19 @@
         \sum\limits_{j = 1}^{k + 1} {j^2 }  = \left( {\sum\limits_{j = 1}^k {j^2 } } \right) + \left( {k + 1} \right)^2
       </me>.
     </p>
-    <exercise >
-      
+    <exercise xml:id="prog_indexample">
+      <title>An Example of a Proof by Induction</title>
+      <task>
       <statement>
-        
           <p>
             Calculate <m>1 + 2 + 3 + \cdots + n</m> and
             <m>\dfrac{n(n + 1)}{2}</m> for several natural numbers <m>n</m>.
             What do you observe?
           </p>
         </statement>
-    </exercise>
-    <exercise xml:id="prog_indexample2"> 
+      </task>
+    <task> 
       <statement>
-        
           <p>
             Use mathematical induction to prove that 
             <m>1 + 2 + 3 +  \cdots  + n = \dfrac{n \left( n + 1 \right)}{2}</m>.
@@ -667,6 +744,47 @@
             and complete the proof.
           </p>
         </statement>
+        <solution>
+          <p>
+            Let <m>P( n )</m> be the predicate,
+            <q><m>1 + 2 + 3 +  \cdots  + n = \dfrac{n \left( n + 1 \right)}{2}</m>.</q>
+            For the basis step, notice that the equation
+            <m>1 = \dfrac{1 \left( 1 + 1 \right)}{2}</m> shows that <m>P( 1 )</m> is true.
+            Now let <m>k</m> be a natural number and assume that <m>P(k )</m> is true.
+            That is, assume that
+            <men xml:id="prog_indexample1">
+              1 + 2 + 3 +  \cdots  + k = \frac{k \left( k + 1 \right)}{2}
+            </men>.
+          </p>
+          <p>
+            We now need to prove that <m>P(k +1 )</m> is true or that
+            <men xml:id="prog_indexample2">
+              1 + 2 + 3 +  \cdots  + k + \left( k + 1 \right) = \frac{\left( k + 1 \right) 
+              \left(k + 2 \right)}{2}
+            </men>.
+          </p>
+          <p>
+            By adding <m>\left(k + 1 \right)</m> to both sides of equation<nbsp/>
+            <xref ref="prog_indexample1"/>, we see that
+            <md>
+              <mrow>1 + 2 + 3 +  \cdots  + k + \left( k + 1 \right) 
+              \amp = \frac{k \left( k + 1 \right)}{2} + \left( k + 1 \right)</mrow>
+              <mrow> \amp = \frac{k \left( k + 1 \right) + 2 \left( k + 1 \right)}{2}</mrow>
+              <mrow> \amp = \frac{k^2 + 3k + 2}{2}</mrow>
+              <mrow> \amp = \frac{ \left(k + 1 \right) \left( k + 2 \right)}{2}</mrow>
+            </md>
+          </p>
+          <p>
+            By comparing the last equation to equation<nbsp/><xref ref="prog_indexample2"/>,
+            we see that we have proved that if <m>P(k )</m> is true,
+            then <m>P( k + 1 )</m> is true,
+            and the inductive step has been established.
+            Hence, by the Principle of Mathematical Induction,
+            we have proved that for each integer <m>n</m>,
+            <m>1 + 2 + 3 + \cdots + n = \dfrac{n \left( n + 1 \right)}{2}</m>.
+          </p>
+        </solution>
+      </task>
       </exercise>
     
   </subsection>
@@ -837,9 +955,9 @@
       This will be done in the next progress check.
     </p>
 
-    <exercise>
+    <exercise xml:id="pr_congruenceinduction">
       <title>Proof of <xref ref="P_congruenceinduction"></xref></title>
-      <statement>
+      <introduction>
       <p>
         To prove <xref ref="P_congruenceinduction"></xref>,
         we let <m>P(n)</m> be <m>5^n \equiv 1 \pmod 4</m> and notice that <m>P(1)</m> is 
@@ -847,38 +965,71 @@
         For the inductive step,
         let <m>k</m> be a natural number and assume that <m>P(k)</m> is true.
         That is, assume that <m>5^k \equiv 1 \pmod 4</m>.
+      </p>
+      </introduction>
         
           <task>
+            <statement>
             <p>
               What must be proved in order to prove that <m>P(k+1)</m> is true?
             </p>
+            </statement>
+            <solution>
+              <p>
+                To prove that <m>P(k+1)</m> is true,
+                we must prove <m>5^{k+1} \equiv 1 \pmod 4</m>.
+              </p>
+            </solution>
           </task>
           <task>
+            <statement>
             <p>
               Since <m>5^{k+1} = 5 \cdot 5^k</m>,
               multiply both sides of the congruence <m>5^k \equiv 1 \pmod 4</m> by 5.
               The results in <xref ref="T_propsofcong"></xref>
               justify this step.
             </p>
+            </statement>
+            <solution>
+              <p>
+                Since <m>5^{k+1} = 5 \cdot 5^k</m>,
+                we multiply both sides of the congruence <m>5^{k} \equiv 1 \pmod 4</m> by 5 and obtain
+                <me>
+                  5 \cdot 5^{k+1} \equiv 5 \cdot 1 \pmod 4  \text{ or } 5^{k+1} \equiv 5 \pmod 4
+                </me>.
+              </p>
+            </solution>
           </task>
           <task>
+            <statement>
             <p>
               Now complete the proof that for each
               <m>k \in \N</m>, if <m>P(k)</m> is true,
               then <m>P(k+1)</m> is true and complete the induction proof of 
               <xref ref="P_congruenceinduction"></xref>.
             </p>
+            </statement>
+            <solution>
+              <p>
+                Since <m>5^{k+1} \equiv 5 \pmod 4</m> and we know that <m>5 \equiv 1 \pmod 4</m>,
+                we can use the transitive property of congruence to obtain <m>5^{k+1} \equiv 1 \pmod 4</m>.
+                This proves that if <m>P(k)</m> is true,
+                then <m>P(k+1)</m> is true,
+                and hence, by the Principle of Mathematical Induction,
+                we have proved that for each natural number <m>n</m>, <m>5^{n} \equiv 1 \pmod 4</m>.
+              </p>
+            </solution>
           </task>
-        
       
-      </p>
+      <conclusion>
       <p>
         It might be nice to compare the proofs of 
         <xref ref="P_divideinduction"></xref>
         and <xref ref="P_congruenceinduction"></xref>
         and decide which one is easier to understand.
       </p>
-      </statement>
+      </conclusion>
+
     </exercise>
   </subsection>
 

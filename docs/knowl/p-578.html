@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-05T15:18:57-04:00       *-->
+<!--*       on 2021-10-08T18:41:42-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,8 +15,16 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">If \(P\) and \(Q\) are statements, is the statement \(\left( P \vee Q \right) \wedge \mynot \left( P \wedge Q \right)\) logically equivalent to the statement \(\left( P \wedge \mynot Q \right) \vee \left( Q 
-\wedge \mynot P \right)\text{?}\) Justify your conclusion.</p>
+<p>Starting with the suggested equivalency, we obtain</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\left( {P \wedge \mynot  Q} \right) \to R \amp \equiv \mynot \left( P 
+\wedge \mynot Q \right) \vee R\\
+\amp \equiv \left( \mynot P \vee \mynot \left( \mynot Q \right) \right) \vee R\\
+\amp \equiv \mynot P \vee \left( Q \vee R \right)\\
+\amp \equiv P \to \left( Q \vee R \right)
+\end{align*}
+</div>
 <span class="incontext"><a href="S_logequiv.html#p-578">in-context</a></span>
 </body>
 </html>

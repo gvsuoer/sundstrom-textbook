@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-05T15:21:46-04:00       *-->
+<!--*       on 2021-10-08T18:44:25-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,40 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Suppose we would like to use induction to prove that \(P( n )\) is true for all natural numbers greater than 1. We have seen that the idea of the inductive step in a proof by induction is to prove that if one statement in an infinite list of statements is true, then the next statement must also be true. The problem here is that when we factor a composite number, we do not get to the previous case. For example, if assume that \(P(39)\) is true and we want to prove that \(P(40)\) is true, we could factor 40 as \(40 = 2 \cdot 20\text{.}\) However, the assumption that \(P(39)\) is true does not help us prove that \(P(40)\) is true.</p>
-<span class="incontext"><a href="S_otherinduction.html#p-2061">in-context</a></span>
+<p>For the inductive step, we prove that for all \(k \in \mathbb{N}\text{,}\) if \(P \left( k \right)\) is true, then \(P \left( k + 1 \right)\) is true. So let \(k\) be a natural number and assume that \(P(  k )\) is true. That is, assume that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+4\text{  divides  } \left( {5^k  - 1} \right)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">This means that there exists an integer \(m\) such that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+5^k  - 1 = 4m\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Thus,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+5^k  = 4m + 1\text{.}\tag{4.8}
+\end{equation}
+</div>
+<p class="continuation">In order to prove that \(P( k + 1 )\) is true, we must show that 4 divides \(\left( {5^{k + 1}  - 1} \right)\text{.}\) Since \(5^{k + 1}  = 5 \cdot 5^k\text{,}\) we can write</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+5^{k + 1}  - 1 = 5 \cdot 5^k  - 1\text{.}\tag{4.9}
+\end{equation}
+</div>
+<p class="continuation">We now substitute the expression for \(5^k\) from equation <a class="xref" data-knowl="./knowl/eq_5c.html" title="Equation 4.8">(4.8)</a> into equation <a class="xref" data-knowl="./knowl/eq_5d.html" title="Equation 4.9">(4.9)</a>. This gives</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align}
+5^{k + 1}  - 1 \amp = 5 \cdot 5^k  - 1\notag\\
+\amp = 5( {4m + 1} ) - 1\notag\\
+\amp = ( {20m + 5} ) - 1\notag\\
+\amp = 20m + 4\notag\\
+\amp = 4( {5m + 1} )\tag{4.10}
+\end{align}
+</div>
+<span class="incontext"><a href="S_mathinduction.html#p-2061">in-context</a></span>
 </body>
 </html>

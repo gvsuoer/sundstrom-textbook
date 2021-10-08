@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-05T15:24:17-04:00       *-->
+<!--*       on 2021-10-08T18:47:17-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,8 +15,69 @@
 </head>
 <body>
 <article class="exercise exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">10<span class="period">.</span></span>
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">17<span class="period">.</span></span><span class="space"> </span><span class="title">Evaluation of Proofs.</span>
 </h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Let \(f\x\R \times \R \to \R\) be the function defined by \(f (x, y ) = -x^2y+3y\text{,}\) for all \((x, y ) \in \R \times \R\text{.}\) Is the function \(f\) an injection? Is the function \(f\) a surjection? Justify your conclusions.</p></article><span class="incontext"><a href="S_typesoffunctions.html#exercise-589">in-context</a></span>
+<div class="introduction"><p xmlns:svg="http://www.w3.org/2000/svg">See the instructions for <a class="xref" data-knowl="./knowl/exer_proofeval.html" title="Exercise 19: Evaluation of Proofs">Exercise 19</a> from <a href="S_directproof.html" class="internal" title="Section 3.1: Direct Proofs">Section 3.1</a>.</p></div>
+<article class="task exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="codenumber">(a)</span></h6>
+<dl xmlns:svg="http://www.w3.org/2000/svg" class="description-list narrow">
+<dt>Proposition</dt>
+<dd><p>Propostion: The function \(f\x\R \times \R \to \R \times \R\) defined by \(f( {x, y} ) = ( {2x + y, x - y} )\) is an injection.</p></dd>
+<dt>Proof</dt>
+<dd>
+<p>For each \((a, b)\) and \((c, d)\) in \(\R \times \R\text{,}\) if \(f(a, b) = f(c, d)\text{,}\) then</p>
+<div class="displaymath">
+\begin{equation*}
+(2a + b, a - b) = (2c + d, c - d)\text{.}
+\end{equation*}
+</div>
+<p>We will use systems of equations to prove that \(a = c\) and \(b = d\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+2a + b \amp = 2c + d\\
+a - b \amp =  c - d\\
+3a  \amp = 3c\\
+a  \amp = c
+\end{align*}
+</div>
+<p>Since \(a = c\text{,}\) we see that</p>
+<div class="displaymath">
+\begin{equation*}
+(2c + b, c - b) = (2c + d, c - d)\text{.}
+\end{equation*}
+</div>
+<p>So \(b = d\text{.}\) Therefore, we have proved that the function \(f\) is an injection.</p>
+</dd>
+</dl></article><article class="task exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="codenumber">(b)</span></h6>
+<dl xmlns:svg="http://www.w3.org/2000/svg" class="description-list narrow">
+<dt>Proposition</dt>
+<dd><p>The function \(f\x\R \times \R \to \R \times \R\) defined by \(f( {x, y} ) = ( {2x + y, x - y} )\) is a surjection.</p></dd>
+<dt>Proof</dt>
+<dd>
+<p>We need to find an ordered pair such that \(f(x, y) = (a, b)\) for each \((a, b)\) in \(\R \times \R\text{.}\) That is, we need \((2x + y, x - y) = (a, b)\text{,}\) or</p>
+<div class="displaymath">
+\begin{equation*}
+2x + y = a \qquad \text{ and }  \qquad x - y = b\text{.}
+\end{equation*}
+</div>
+<p>Treating these two equations as a system of equations and solving for \(x\) and \(y\text{,}\) we find that</p>
+<div class="displaymath">
+\begin{equation*}
+x = \frac{a + b}{3} \qquad \text{ and }  \qquad y = \frac{a - 2b}{3}\text{.}
+\end{equation*}
+</div>
+<p>Hence, \(x\) and \(y\) are real numbers, \((x, y) \in \R \times \R\text{,}\) and</p>
+<div class="displaymath">
+\begin{align*}
+f(x, y) \amp = f \left( \frac{a + b}{3}, \frac{a - 2b}{3} \right)\\
+\amp = \left(2 \left( \frac{a + b}{3} \right) + \frac{a - 2b}{3}, 
+\frac{a + b}{3} - \frac{a - 2b}{3} \right)\\
+\amp = \left( \frac{2a + 2b + a - 2b}{3}, \frac{a + b - a + 2b}{3} \right)\\
+\amp = \left( \frac{3a}{3}, \frac{3b}{3} \right)\\
+\amp = (a, b)\text{.}
+\end{align*}
+</div>
+<p>Therefore, we have proved that for every \((a, b) \in \R \times \R\text{,}\) there exists an \((x, y) \in \R \times \R\) such that \(f(x, y) = (a, b)\text{.}\) This proves that the function \(f\) is a surjection.</p>
+</dd>
+</dl></article></article><span class="incontext"><a href="S_typesoffunctions.html#exercise-589">in-context</a></span>
 </body>
 </html>

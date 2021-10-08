@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-05T15:22:03-04:00       *-->
+<!--*       on 2021-10-08T18:44:42-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,10 +15,17 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">The sequence in <a class="xref" data-knowl="./knowl/exer_sec53-arithexample.html" title="Exercise 9">Exercise 9</a> is an example of an <dfn class="terminology">arithmetic sequence</dfn>.  An arithmetic sequence is defined recursively as follows: <blockquote class="blockquote">Let \(c\) and \(d\) be real numbers. Define the sequence \(a_1 ,a_2 , \ldots ,a_n , \ldots\) by \(a_1 = c\) and for each \(n \in \mathbb{N}\text{,}\) \(a_{n + 1} = a_n + d\text{.}\)</blockquote> <article class="task exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p>Determine formulas for \(a_3\) through \(a_8\text{.}\)</p></article> <article class="task exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p>Make a conjecture for a formula for \(a_n\) for each \(n \in \mathbb{N}\text{.}\)</p></article> <article class="task exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p>Prove that your conjecture in <a class="xref" data-knowl="./knowl/exer_sec53-arithb.html" title="Task b">Task b</a> is correct.</p></article></p>
-<span class="incontext"><a href="S_recursion.html#p-2208">in-context</a></span>
+<p>The primary use of mathematical induction is to prove statements of the form</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\left( {\forall n \in \mathbb{Z},\text{ with } n \geq M} \right)\left( {P( n )} \right)\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where \(M\) is an integer and \(P( n )\) is some predicate. So our goal is to prove that the truth set \(T\) of the predicate \(P( n )\) contains all integers greater than or equal to \(M\text{.}\) To use the Second Principle of Mathematical Induction, we must</p>
+<ol class="decimal">
+<li><p xmlns:svg="http://www.w3.org/2000/svg">Prove that \(M \in T\text{.}\) That is, prove that \(P( M )\) is true.</p></li>
+<li><p xmlns:svg="http://www.w3.org/2000/svg">Prove that for every \(k \in \mathbb{N}\text{,}\) if \(k \geq M\) and \(\left\{ {M,M + 1, \ldots ,k} \right\} \subseteq T\text{,}\) then \(\left( {k + 1} \right) \in T\text{.}\) That is, prove that if \(P( M ),P( {M + 1} ), \ldots ,P( k )\) are true, then \(P( {k + 1} )\) is true.</p></li>
+</ol>
+<span class="incontext"><a href="S_otherinduction.html#p-2208">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-05T15:20:24-04:00       *-->
+<!--*       on 2021-10-08T18:43:15-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,16 +13,27 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="hiddenproof"><p>A proof by contradiction will be used. So we assume that the statement is false. That is, we assume that there exist integers \(a\text{,}\) \(b\text{,}\) and \(c\) such that 3  divides both  \(a\)  and  \(b\text{,}\) that  \(c \equiv 1 \pmod 3\text{,}\)  and that  the equation</p>
+<body><article class="hiddenproof"><p xmlns:svg="http://www.w3.org/2000/svg">We will use a proof by contradiction. So we assume that the statement of the theorem is false. That is, we assume that <blockquote class="blockquote">\(r\) is a real number, \(r^2 = 2\text{,}\) and \(r\) is a rational number.</blockquote></p>
+<p>Since \(r\) is a rational number, there exist integers \(m\) and \(n\) with \(n &gt; 0\) such that</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-ax + by = c
+r = \frac{m}{n}
 \end{equation*}
 </div>
-<p class="continuation">has a solution in which both  \(x\)  and  \(y\)  are integers. So there exist integers  \(m\)  and  \(n\)  such that</p>
+<p class="continuation">and \(m\) and \(n\) have no common factor greater than 1. We will obtain a contradiction by showing that \(m\) and \(n\) must both be even. Squaring both sides of the last equation and using the fact that \(r^2 = 2\text{,}\) we obtain</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-am  + bn  = c\text{.}
-\end{equation*}
-</div></article></body>
+\begin{align}
+2 \amp = \frac{{m^2 }}{{n^2 }}\tag{3.8}\\
+m^2  \amp = 2n^2\text{.}\tag{3.9}
+\end{align}
+</div>
+<p><a class="xref" data-knowl="./knowl/eq_3h.html" title="Equation 3.9">(3.9)</a> implies that \(m^2\) is even, and hence, by <a class="xref" data-knowl="./knowl/T_n2odd.html" title="Theorem 3.2.1">Theorem 3.2.1</a>, \(m\) must be an even integer. This means that there exists an integer \(p\) such that \(m = 2p\text{.}\) We can now substitute this into <a class="xref" data-knowl="./knowl/eq_3h.html" title="Equation 3.9">(3.9)</a>, which gives</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align}
+\left( {2p} \right)^2  \amp = 2n^2\tag{3.10}\\
+4p^2  \amp = 2n^2\text{.}\tag{3.11}
+\end{align}
+</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">We can divide both sides of equation <a class="xref" data-knowl="./knowl/eq_3i.html" title="Equation 3.11">(3.11)</a> by 2 to obtain \(n^2 = 2p^2\text{.}\) Consequently, \(n^2\) is even and we can once again use <a class="xref" data-knowl="./knowl/T_n2odd.html" title="Theorem 3.2.1">Theorem 3.2.1</a> to conclude that \(n\) is an even integer.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">We have now established that both \(m\) and \(n\) are even. This means that 2 is a common factor of \(m\) and \(n\text{,}\) which contradicts the assumption that \(m\) and \(n\) have no common factor greater than 1. Consequently, the statement of the theorem cannot be false, and we have proved that if \(r\) is a real number such that \(r^2 = 2\text{,}\) then \(r\) is an irrational number.</p></article></body>
 </html>

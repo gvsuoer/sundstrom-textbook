@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-05T15:20:14-04:00       *-->
+<!--*       on 2021-10-08T18:42:59-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,16 +15,20 @@
 </head>
 <body>
 <article class="hiddenproof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">We will use a proof by contradiction. So we assume that there exist integers \(x\) and \(y\) such that \(x\) and \(y\) are odd and there exists an integer \(z\) such that \(x^2 + y^2 = z^2\text{.}\) Since \(x\) and \(y\) are odd, there exist integers \(m\) and \(n\) such that \(x = 2m + 1\) and \(y = 2n + 1\text{.}\)</p>
-<article class="task exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="codenumber">(a)</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Use the assumptions that \(x\) and \(y\) are odd to prove that \(x^2 + y^2\) is even and hence, \(z^2\) is even. (See <a class="xref" data-knowl="./knowl/T_n2odd.html" title="Theorem 3.2.1">Theorem 3.2.1</a>.)</p></article><p>We can now conclude that \(z\) is even. (See <a class="xref" data-knowl="./knowl/T_n2odd.html" title="Theorem 3.2.1">Theorem 3.2.1</a>.) So there exists an integer \(k\) such that \(z = 2k\text{.}\) If we substitute for \(x\text{,}\) \(y\text{,}\) and \(z\) in the equation \(x^2 + y^2 = z^2\text{,}\) we obtain</p>
+<p>Assume that \(a\text{,}\) \(b\text{,}\) and \(c\) are real numbers with \(a \ne 0\text{.}\) We can solve the linear equation \(ax + b = c\) by adding \(-b\) to both sides of the equation and then dividing both sides of the resulting equation by \(a\) \(\left( \text{ since }  a \ne 0 \right)\text{,}\) to obtain</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-(2m + 1)^2 + (2n + 1)^2 = (2k)^2\text{.}
+x = \frac{c - b}{a}\text{.}
 \end{equation*}
 </div>
-<article class="task exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="codenumber">(b)</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Use the previous equation to obtain a contradiction.</p>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-5-hidden.html" title="Hint 1.b.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Hint.</span> </a></div></article></article><span class="incontext"><a href="S_contradiction.html#proof-8">in-context</a></span>
+<p class="continuation">This shows that if there is a solution, then it must be \(x = \dfrac{c - b}{a}\text{.}\) We also see that if \(x = \dfrac{c - b}{a}\text{,}\) then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+ax + b \amp = a \left( \frac{c - b}{a} \right) + b\\
+\amp = \left( c - b \right) + b\\
+\amp = c\text{.}
+\end{align*}
+</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">Therefore, the linear equation \(ax + b = c\) has exactly one real number solution and the solution is \(x = \dfrac{c - b}{a}\text{.}\)</p></article><span class="incontext"><a href="S_moremethods.html#proof-8">in-context</a></span>
 </body>
 </html>

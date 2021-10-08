@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-05T15:21:33-04:00       *-->
+<!--*       on 2021-10-08T18:44:33-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,8 +15,93 @@
 </head>
 <body>
 <article class="exercise exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">12<span class="period">.</span></span>
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">18<span class="period">.</span></span><span class="space"> </span><span class="title">Evaluation of Proofs.</span>
 </h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Let \(x\) and \(y\) be distinct integers. Prove that for each natural number \(n\text{,}\) \(\left( x - y \right)\) divides \(\left( x^n - y^n \right)\text{.}\) Explain why your conjecture in <a class="xref" data-knowl="./knowl/exer_sec51-8.html" title="Exercise 11">Exercise 11</a> is a special case of this result.</p></article><span class="incontext"><a href="S_mathinduction.html#exercise-330">in-context</a></span>
+<div class="introduction"><p xmlns:svg="http://www.w3.org/2000/svg">See the instructions for <a class="xref" data-knowl="./knowl/exer_proofeval.html" title="Exercise 19: Evaluation of Proofs">Exercise 19</a> on from <a href="S_directproof.html" class="internal" title="Section 3.1: Direct Proofs">Section 3.1</a>.</p></div>
+<article class="task exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="codenumber">(a)</span></h6>
+<dl xmlns:svg="http://www.w3.org/2000/svg" class="description-list narrow">
+<dt>Proposition</dt>
+<dd><p>For each natural number \(n\text{,}\) \(1 + 4 + 7 + \cdots + \left( 3n - 2 \right) = \dfrac{n \left(3n - 1 
+\right)}{2}\text{.}\)</p></dd>
+<dt>Proof</dt>
+<dd>
+<p>We will prove this proposition using mathematical induction. So we let \(P ( n )\) be the open sentence</p>
+<div class="displaymath">
+\begin{equation*}
+1 + 4 + 7 + \cdots + \left( 3n - 2 \right)\!\text{.}
+\end{equation*}
+</div>
+<p>Using \(n = 1\text{,}\) we see that \(3n - 2 = 1\) and hence, \(P \left( 1 \right)\) is true.</p>
+<p>We now assume that \(P( k )\) is true. That is,</p>
+<div class="displaymath">
+\begin{equation*}
+1 + 4 + 7 + \cdots + \left( 3k - 2 \right) = \frac{k \left(3k -1 \right)}{2}\text{.}
+\end{equation*}
+</div>
+<p>We then see that</p>
+<div class="displaymath">
+\begin{align*}
+1 + 4 + 7 + \cdots + \left( 3k - 2 \right) + \left( 3 (k + 1) - 2 \right)
+\amp = \frac{\left(k + 1 \right) \left(3k + 2 \right)}{2}\\
+\frac{k \left(3k -1 \right)}{2} + \left(3k + 1 \right)
+\amp = \frac{\left(k + 1 \right) \left(3k + 2 \right)}{2}\\
+\frac{\left(3k^2 - k \right) + \left(6k + 2 \right) }{2} 
+\amp = \frac{3k^2 + 5k + 2}{2}\\
+\frac{3k^2 +5k + 2}{2} \amp = \frac{3k^2 + 5k + 2}{2}\text{.}
+\end{align*}
+</div>
+<p>We have thus proved that \(P( k + 1 )\) is true, and hence, we have proved the proposition.</p>
+</dd>
+</dl></article><article class="task exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="codenumber">(b)</span></h6>
+<dl xmlns:svg="http://www.w3.org/2000/svg" class="description-list narrow">
+<dt>Proposition</dt>
+<dd><p>For each natural number \(n\text{,}\) \(1 + 4 + 7 + \cdots + \left( 3n - 2 \right) = \dfrac{n \left(3n - 1 \right)}{2}\text{.}\)</p></dd>
+<dt>Proof</dt>
+<dd>
+<p>We will prove this proposition using mathematical induction. So we let</p>
+<div class="displaymath">
+\begin{equation*}
+P( n ) = 1 + 4 + 7 + \cdots + \left( 3n - 2 \right)\!\text{.}
+\end{equation*}
+</div>
+<p>Using \(n = 1\text{,}\) we see that \(P( 1 ) = 1\) and hence, \(P( 1 )\) is true.</p>
+<p>We now assume that \(P( k )\) is true. That is,</p>
+<div class="displaymath">
+\begin{equation*}
+1 + 4 + 7 + \cdots + \left( 3k - 2 \right) = \frac{k \left(3k -1 \right)}{2}\text{.}
+\end{equation*}
+</div>
+<p>We then see that</p>
+<div class="displaymath">
+\begin{align*}
+P( k + 1 ) \amp = 1 + 4 + 7 + \cdots + \left( 3k - 2 \right) + 
+\left( 3 (k + 1) - 2 \right)\\
+\amp = \frac{k \left( 3k - 1 \right)}{2} + 3 \left(k + 1 \right) - 2\\
+\amp = \frac{3k^2 - k + 6k + 6 - 4}{2}\\
+\amp = \frac{3k^2 + 5k + 2}{2}\\
+\amp = \frac{\left(k + 1 \right) \left(3k + 2 \right)}{2}\text{.}
+\end{align*}
+</div>
+<p>We have thus proved that \(P( k + 1 )\) is true, and hence, we have proved the proposition.</p>
+</dd>
+</dl></article><article class="task exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="codenumber">(c)</span></h6>
+<dl xmlns:svg="http://www.w3.org/2000/svg" class="description-list narrow">
+<dt>Proposition</dt>
+<dd><p>All dogs are the same breed.</p></dd>
+<dt>Proof</dt>
+<dd>
+<p>We will prove this proposition using mathematical induction. For each natural number \(n\text{,}\) we let \(P( n )\) be</p>
+<p>Any set of \(n\) dogs consists entirely of dogs of the same breed.</p>
+<p>We will prove that for each natural number \(n\text{,}\) \(P( n )\) is true, which will prove that all dogs are the same breed. A set with only one dog consists entirely of dogs of the same breed and, hence, \(P( 1 )\) is true.</p>
+<p>So we let \(k\) be a natural number and assume that \(P( k )\) is true, that is, that every set of \(k\) dogs consists of dogs of the same breed. Now consider a set \(D\) of \(k + 1\) dogs, where</p>
+<div class="displaymath">
+\begin{equation*}
+D = \left\{ d_1, d_2, \ldots, d_k, d_{k+1} \right\}\!\text{.}
+\end{equation*}
+</div>
+<p>If we remove the dog \(d_1\) from the set \(D\text{,}\) we then have a set \(D_1\) of \(k\) dogs, and using the assumption that \(P( k )\) is true, these dogs must all be of the same breed. Similarly, if we remove \(d_{k+1}\) from the set \(D\text{,}\) we again have a set \(D_2\) of \(k\) dogs, and these dogs must all be of the same breed. Since \(D = D_1 \cup D_2\text{,}\) we have proved that all of the dogs in \(D\) must be of the same breed.</p>
+<p>This proves that if \(P( k )\) is true, then \(P( k + 1 )\) is true and, hence, by mathematical induction, we have proved that for each natural number \(n\text{,}\) any set of \(n\) dogs consists entirely of dogs of the same breed.</p>
+</dd>
+</dl></article></article><span class="incontext"><a href="S_mathinduction.html#exercise-330">in-context</a></span>
 </body>
 </html>

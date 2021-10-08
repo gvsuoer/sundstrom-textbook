@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-05T15:13:47-04:00       *-->
+<!--*       on 2021-10-08T18:35:20-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -193,7 +193,7 @@
 <a href="C_functions.html" data-scroll="C_functions"><span class="codenumber">6</span> <span class="title">Functions</span></a><ul>
 <li><a href="S_introfunctions.html" data-scroll="S_introfunctions">Introduction to Functions</a></li>
 <li><a href="S_moreaboutfunctions.html" data-scroll="S_moreaboutfunctions">More about Functions</a></li>
-<li><a href="S_typesoffunctions.html" data-scroll="S_typesoffunctions">Beginning Activity 1: Injections, Surjections, and Bijections</a></li>
+<li><a href="S_typesoffunctions.html" data-scroll="S_typesoffunctions">Injections, Surjections, and Bijections</a></li>
 <li><a href="S_compositionoffunctions.html" data-scroll="S_compositionoffunctions">Composition of Functions</a></li>
 <li><a href="S_inversefunctions.html" data-scroll="S_inversefunctions">Inverse Functions</a></li>
 <li><a href="S_functionsonsets.html" data-scroll="S_functionsonsets">Functions Acting on Sets</a></li>
@@ -227,6 +227,7 @@
 </li>
 <li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
 <li class="link"><a href="C_writingguides.html" data-scroll="C_writingguides"><span class="codenumber">A</span> <span class="title">Guidelines for Writing Mathematical Proofs</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="solutions-1"><span class="codenumber">B</span> <span class="title">Answers for the Progress Checks</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="S_directproof"><h2 class="heading hide-type">
@@ -237,76 +238,76 @@
 <a href="PA_divisor-A4.html" class="a4">A4</a><a href="PA_divisor-letter.html" class="us">US</a>
 </div>
 </h3>
-<p id="p-944">In <a href="S_1direct.html" class="internal" title="Section 1.2: Constructing Direct Proofs">Section 1.2</a>, we studied the concepts of even integers  and odd integers.  The definition of an even integer was a formalization of our concept of an even integer as being one that is “divisible by 2,” or a “multiple of 2.” We could also say that if “2 divides an integer,” then that integer is an even integer. We will now extend this idea to integers other than 2. Following is a formal definition of what it means to say that a nonzero integer \(m\) divides an integer \(n\text{.}\)</p>
+<p id="p-1015">In <a href="S_1direct.html" class="internal" title="Section 1.2: Constructing Direct Proofs">Section 1.2</a>, we studied the concepts of even integers  and odd integers.  The definition of an even integer was a formalization of our concept of an even integer as being one that is “divisible by 2,” or a “multiple of 2.” We could also say that if “2 divides an integer,” then that integer is an even integer. We will now extend this idea to integers other than 2. Following is a formal definition of what it means to say that a nonzero integer \(m\) divides an integer \(n\text{.}\)</p>
 <article class="definition definition-like" id="divides"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span>
 </h6>
-<p id="p-945">A nonzero integer \(m\) <dfn class="terminology">divides</dfn>  an integer \(n\) provided that there is an integer \(q\) such that \(n = m \cdot q\text{.}\) We also say that \(m\) is a <dfn class="terminology">divisor</dfn>  of \(n\text{,}\) \(m\) is a <dfn class="terminology">factor</dfn>  of \(n\text{,}\) and \(n\) is a <dfn class="terminology">multiple</dfn>  of \(m\text{.}\) The integer 0 is not a divisor of any integer. If \(a\) and \(b\) are integers and \(a \ne 0\text{,}\) we frequently use the notation \(a \mid b\) as a shorthand for “\(a\) divides \(b\text{.}\)”</p></article><section class="paragraphs" id="paragraphs-29"><h5 class="heading"><span class="title">A Note about Notation.</span></h5>
-<p id="p-946">Be careful with the notation \(a \mid b\text{.}\) This does not represent the rational number \(\dfrac{a}{b}\text{.}\) The notation \(a \mid b\) represents a relationship between the integers \(a\) and \(b\) and is simply a shorthand for “\(a\) divides \(b\text{.}\)”</p></section><section class="paragraphs" id="paragraphs-30"><h5 class="heading"><span class="title">A Note about Definitions.</span></h5>
-<p id="p-947">Technically, a definition in mathematics should almost always be written using “if and only if.” It is not clear why, but the convention in mathematics is to replace the phrase “if and only if” with “if” or an equivalent. Perhaps this is a bit of laziness or the “if and only if” phrase can be a bit cumbersome. In this text, we will often use the phrase “provided that” instead.</p></section><p id="p-948">The definition for “divides” can be written in symbolic form using appropriate quantifiers as follows: A nonzero integer \(m\) <dfn class="terminology">divides</dfn> an integer \(n\) provided that \(\left( {\exists q \in \mathbb{Z}} \right)\left( {n = m \cdot q} \right)\text{.}\)</p>
-<article class="exercise exercise-like" id="exercise-140"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-949">Use the definition of divides to explain why 4 divides 32 and to explain why 8 divides \(-96\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-141"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-950">Give several examples of two integers where the first integer does not divide the second integer.</p></article><article class="exercise exercise-like" id="exercise-142"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-951">According to the definition of “divides,” does the integer 10 divide the integer 0? That is, is 10 a divisor of 0? Explain.</p></article><article class="exercise exercise-like" id="exercise-143"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
-<p id="p-952">Use the definition of “divides” to complete the following sentence in symbolic form: “The nonzero integer \(m\) does not divide the integer \(n\) means that … .”</p></article><article class="exercise exercise-like" id="exercise-144"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="p-953">Use the definition of “divides” to complete the following sentence without using the symbols for quantifiers: “The nonzero integer \(m\) does not divide the integer \(n \ldots \text{.}\)”</p></article><article class="exercise exercise-like" id="PA_divisor1"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
-<p id="p-954">Give three different examples of three integers where the first integer divides the second integer and the second integer divides the third integer.</p></article><p id="p-955">As we have seen in <a href="S_1direct.html" class="internal" title="Section 1.2: Constructing Direct Proofs">Section 1.2</a>, a definition is frequently used when constructing and writing mathematical proofs. Consider the following conjecture: <article class="conjecture theorem-like" id="conj-divides"><h6 class="heading">
+<p id="p-1016">A nonzero integer \(m\) <dfn class="terminology">divides</dfn>  an integer \(n\) provided that there is an integer \(q\) such that \(n = m \cdot q\text{.}\) We also say that \(m\) is a <dfn class="terminology">divisor</dfn>  of \(n\text{,}\) \(m\) is a <dfn class="terminology">factor</dfn>  of \(n\text{,}\) and \(n\) is a <dfn class="terminology">multiple</dfn>  of \(m\text{.}\) The integer 0 is not a divisor of any integer. If \(a\) and \(b\) are integers and \(a \ne 0\text{,}\) we frequently use the notation \(a \mid b\) as a shorthand for “\(a\) divides \(b\text{.}\)”</p></article><section class="paragraphs" id="paragraphs-29"><h5 class="heading"><span class="title">A Note about Notation.</span></h5>
+<p id="p-1017">Be careful with the notation \(a \mid b\text{.}\) This does not represent the rational number \(\dfrac{a}{b}\text{.}\) The notation \(a \mid b\) represents a relationship between the integers \(a\) and \(b\) and is simply a shorthand for “\(a\) divides \(b\text{.}\)”</p></section><section class="paragraphs" id="paragraphs-30"><h5 class="heading"><span class="title">A Note about Definitions.</span></h5>
+<p id="p-1018">Technically, a definition in mathematics should almost always be written using “if and only if.” It is not clear why, but the convention in mathematics is to replace the phrase “if and only if” with “if” or an equivalent. Perhaps this is a bit of laziness or the “if and only if” phrase can be a bit cumbersome. In this text, we will often use the phrase “provided that” instead.</p></section><p id="p-1019">The definition for “divides” can be written in symbolic form using appropriate quantifiers as follows: A nonzero integer \(m\) <dfn class="terminology">divides</dfn> an integer \(n\) provided that \(\left( {\exists q \in \mathbb{Z}} \right)\left( {n = m \cdot q} \right)\text{.}\)</p>
+<article class="exercise exercise-like" id="exercise-137"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-1020">Use the definition of divides to explain why 4 divides 32 and to explain why 8 divides \(-96\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-138"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-1021">Give several examples of two integers where the first integer does not divide the second integer.</p></article><article class="exercise exercise-like" id="exercise-139"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-1022">According to the definition of “divides,” does the integer 10 divide the integer 0? That is, is 10 a divisor of 0? Explain.</p></article><article class="exercise exercise-like" id="exercise-140"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-1023">Use the definition of “divides” to complete the following sentence in symbolic form: “The nonzero integer \(m\) does not divide the integer \(n\) means that … .”</p></article><article class="exercise exercise-like" id="exercise-141"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-1024">Use the definition of “divides” to complete the following sentence without using the symbols for quantifiers: “The nonzero integer \(m\) does not divide the integer \(n \ldots \text{.}\)”</p></article><article class="exercise exercise-like" id="PA_divisor1"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-1025">Give three different examples of three integers where the first integer divides the second integer and the second integer divides the third integer.</p></article><p id="p-1026">As we have seen in <a href="S_1direct.html" class="internal" title="Section 1.2: Constructing Direct Proofs">Section 1.2</a>, a definition is frequently used when constructing and writing mathematical proofs. Consider the following conjecture: <article class="conjecture theorem-like" id="conj-divides"><h6 class="heading">
 <span class="type">Conjecture</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span>
 </h6>
-<p id="p-956">Let \(a\text{,}\) \(b\text{,}\) and \(c\) be integers with \(a \ne 0\) and \(b \ne 0\text{.}\) If \(a\) divides \(b\) and \(b\) divides \(c\text{,}\) then \(a\) divides \(c\text{.}\)</p></article></p>
-<article class="exercise exercise-like" id="exercise-146"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
-<p id="p-957">Explain why the examples you generated in <a class="xref" data-knowl="./knowl/PA_divisor1.html" title="Exercise 6">Exercise 6</a> provide evidence that this conjecture is true.</p></article><p id="p-958">In <a href="S_1direct.html" class="internal" title="Section 1.2: Constructing Direct Proofs">Section 1.2</a>, we also learned how to use a <dfn class="terminology">know-show table</dfn> to help organize our thoughts when trying to construct a proof of a statement. If necessary, review the appropriate material in <a href="S_1direct.html" class="internal" title="Section 1.2: Constructing Direct Proofs">Section 1.2</a>.</p>
+<p id="p-1027">Let \(a\text{,}\) \(b\text{,}\) and \(c\) be integers with \(a \ne 0\) and \(b \ne 0\text{.}\) If \(a\) divides \(b\) and \(b\) divides \(c\text{,}\) then \(a\) divides \(c\text{.}\)</p></article></p>
+<article class="exercise exercise-like" id="exercise-143"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-1028">Explain why the examples you generated in <a class="xref" data-knowl="./knowl/PA_divisor1.html" title="Exercise 6">Exercise 6</a> provide evidence that this conjecture is true.</p></article><p id="p-1029">In <a href="S_1direct.html" class="internal" title="Section 1.2: Constructing Direct Proofs">Section 1.2</a>, we also learned how to use a <dfn class="terminology">know-show table</dfn> to help organize our thoughts when trying to construct a proof of a statement. If necessary, review the appropriate material in <a href="S_1direct.html" class="internal" title="Section 1.2: Constructing Direct Proofs">Section 1.2</a>.</p>
 <article class="exercise exercise-like" id="PA_divisor2"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
-<p id="p-959">State precisely what we would assume if we were trying to write a proof of <a class="xref" data-knowl="./knowl/conj-divides.html" title="Conjecture 3.1.2">Conjecture 3.1.2</a>.</p></article><article class="exercise exercise-like" id="exercise-148"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
-<p id="p-960">Use the definition of “divides” to make some conclusions based on your assumptions in <a class="xref" data-knowl="./knowl/PA_divisor2.html" title="Exercise 8">Exercise 8</a>.</p></article><article class="exercise exercise-like" id="PA_divisor3"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
-<p id="p-961">State precisely what we would be trying to prove if we were trying to write a proof of the conjecture.</p></article><article class="exercise exercise-like" id="exercise-150"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
-<p id="p-962">Use the definition of divides to write an answer to the question, “How can we prove what we stated in<a class="xref" data-knowl="./knowl/PA_divisor3.html" title="Exercise 10">Exercise 10</a>?”</p></article></section><section class="worksheet" id="PA_calender"><h3 class="heading hide-type">
+<p id="p-1030">State precisely what we would assume if we were trying to write a proof of <a class="xref" data-knowl="./knowl/conj-divides.html" title="Conjecture 3.1.2">Conjecture 3.1.2</a>.</p></article><article class="exercise exercise-like" id="exercise-145"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="p-1031">Use the definition of “divides” to make some conclusions based on your assumptions in <a class="xref" data-knowl="./knowl/PA_divisor2.html" title="Exercise 8">Exercise 8</a>.</p></article><article class="exercise exercise-like" id="PA_divisor3"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<p id="p-1032">State precisely what we would be trying to prove if we were trying to write a proof of the conjecture.</p></article><article class="exercise exercise-like" id="exercise-147"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
+<p id="p-1033">Use the definition of divides to write an answer to the question, “How can we prove what we stated in<a class="xref" data-knowl="./knowl/PA_divisor3.html" title="Exercise 10">Exercise 10</a>?”</p></article></section><section class="worksheet" id="PA_calender"><h3 class="heading hide-type">
 <span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Beginning Activity 2: Calendars and Clocks</span><div class="print-links">
 <a href="PA_calender-A4.html" class="a4">A4</a><a href="PA_calender-letter.html" class="us">US</a>
 </div>
 </h3>
-<p id="p-963">This activity is intended to help with understanding the concept of congruence, which will be studied at the end of this section.</p>
+<p id="p-1034">This activity is intended to help with understanding the concept of congruence, which will be studied at the end of this section.</p>
 <article class="exercise exercise-like" id="PA_calender1"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-964">Suppose that it is currently Tuesday. <article class="task exercise-like" id="task-380"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-965">What day will it be 3 days from now?</p></article> <article class="task exercise-like" id="task-381"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-966">What day will it be 10 days from now?</p></article> <article class="task exercise-like" id="task-382"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-967">What day will it be 17 days from now? What day will it be 24 days from now?</p></article> <article class="task exercise-like" id="PA_calender1d"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<p id="p-968">Find several other natural numbers \(x\) such that it will be Friday \(x\) days from now.</p></article> <article class="task exercise-like" id="PA_calender1e"><h6 class="heading"><span class="codenumber">(e)</span></h6>
-<p id="p-969">Create a list (increasing order) of the numbers 3, 10, 17, 24, and the numbers you generated in <a class="xref" data-knowl="./knowl/PA_calender1d.html" title="Task d">Task d</a>. Pick any two numbers from this list and subtract one from the other. Repeat this several times.</p></article> <article class="task exercise-like" id="task-385"><h6 class="heading"><span class="codenumber">(f)</span></h6>
-<p id="p-970">What do the numbers you obtained in <a class="xref" data-knowl="./knowl/PA_calender1e.html" title="Task e">Task e</a> have in common?</p></article></p></article><article class="exercise exercise-like" id="exercise-152"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-971">Suppose that we are using a twelve-hour clock with no distinction between A.M. and P.M. Also, suppose that the current time is 5:00. <article class="task exercise-like" id="task-386"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-972">What time will it be 4 hours from now?</p></article> <article class="task exercise-like" id="task-387"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-973">What time will it be 16 hours from now? What time will it be 28 hours from now?</p></article> <article class="task exercise-like" id="PA_calender2c"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-974">Find several other natural numbers \(x\) such that it will be 9:00 \(x\) hours from now.</p></article> <article class="task exercise-like" id="PA_calender2e"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<p id="p-975">Create a list (in increasing order) of the numbers \(4, 16, 28\text{,}\) and the numbers you generated in <a class="xref" data-knowl="./knowl/PA_calender2c.html" title="Task c">Task c</a>. Pick any two numbers from this list and subtract one from the other. Repeat this several times.</p></article> <article class="task exercise-like" id="task-390"><h6 class="heading"><span class="codenumber">(e)</span></h6>
-<p id="p-976">What do the numbers you obtained in <a class="xref" data-knowl="./knowl/PA_calender2e.html" title="Task d">Task d</a> have in common?</p></article></p></article><article class="exercise exercise-like" id="exercise-153"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-977">This is a continuation of <a class="xref" data-knowl="./knowl/PA_calender1.html" title="Exercise 1">Exercise 1</a>. Suppose that it is currently Tuesday. <article class="task exercise-like" id="task-391"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-978">What day was it 4 days ago?</p></article> <article class="task exercise-like" id="task-392"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-979">What day was it 11 days ago? What day was it 18 days ago?</p></article> <article class="task exercise-like" id="PA_calender3c"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-980">Find several other natural numbers \(x\) such that it was Friday \(x\) days ago.</p></article> <article class="task exercise-like" id="PA_calender3d"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<p id="p-981">Create a list (in increasing order) consisting of the numbers \(-18, -11, -4\text{,}\) the opposites of the numbers you generated in <a class="xref" data-knowl="./knowl/PA_calender3c.html" title="Task c">Exercise 3.c</a> and the positive numbers in the list from <a class="xref" data-knowl="./knowl/PA_calender1e.html" title="Task e">Exercise 1.e</a>. Pick any two numbers from this list and subtract one from the other. Repeat this several times.</p></article> <article class="task exercise-like" id="task-395"><h6 class="heading"><span class="codenumber">(e)</span></h6>
-<p id="p-982">What do the numbers you obtained in <a class="xref" data-knowl="./knowl/PA_calender3d.html" title="Task d">Exercise 3.d</a> have in common?</p></article></p></article></section><section class="subsection" id="proof"><h3 class="heading hide-type">
+<p id="p-1035">Suppose that it is currently Tuesday. <article class="task exercise-like" id="task-389"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1036">What day will it be 3 days from now?</p></article> <article class="task exercise-like" id="task-390"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1037">What day will it be 10 days from now?</p></article> <article class="task exercise-like" id="task-391"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1038">What day will it be 17 days from now? What day will it be 24 days from now?</p></article> <article class="task exercise-like" id="PA_calender1d"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-1039">Find several other natural numbers \(x\) such that it will be Friday \(x\) days from now.</p></article> <article class="task exercise-like" id="PA_calender1e"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-1040">Create a list (increasing order) of the numbers 3, 10, 17, 24, and the numbers you generated in <a class="xref" data-knowl="./knowl/PA_calender1d.html" title="Task d">Task d</a>. Pick any two numbers from this list and subtract one from the other. Repeat this several times.</p></article> <article class="task exercise-like" id="task-394"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-1041">What do the numbers you obtained in <a class="xref" data-knowl="./knowl/PA_calender1e.html" title="Task e">Task e</a> have in common?</p></article></p></article><article class="exercise exercise-like" id="exercise-149"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-1042">Suppose that we are using a twelve-hour clock with no distinction between A.M. and P.M. Also, suppose that the current time is 5:00. <article class="task exercise-like" id="task-395"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1043">What time will it be 4 hours from now?</p></article> <article class="task exercise-like" id="task-396"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1044">What time will it be 16 hours from now? What time will it be 28 hours from now?</p></article> <article class="task exercise-like" id="PA_calender2c"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1045">Find several other natural numbers \(x\) such that it will be 9:00 \(x\) hours from now.</p></article> <article class="task exercise-like" id="PA_calender2e"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-1046">Create a list (in increasing order) of the numbers \(4, 16, 28\text{,}\) and the numbers you generated in <a class="xref" data-knowl="./knowl/PA_calender2c.html" title="Task c">Task c</a>. Pick any two numbers from this list and subtract one from the other. Repeat this several times.</p></article> <article class="task exercise-like" id="task-399"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-1047">What do the numbers you obtained in <a class="xref" data-knowl="./knowl/PA_calender2e.html" title="Task d">Task d</a> have in common?</p></article></p></article><article class="exercise exercise-like" id="exercise-150"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-1048">This is a continuation of <a class="xref" data-knowl="./knowl/PA_calender1.html" title="Exercise 1">Exercise 1</a>. Suppose that it is currently Tuesday. <article class="task exercise-like" id="task-400"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1049">What day was it 4 days ago?</p></article> <article class="task exercise-like" id="task-401"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1050">What day was it 11 days ago? What day was it 18 days ago?</p></article> <article class="task exercise-like" id="PA_calender3c"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1051">Find several other natural numbers \(x\) such that it was Friday \(x\) days ago.</p></article> <article class="task exercise-like" id="PA_calender3d"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-1052">Create a list (in increasing order) consisting of the numbers \(-18, -11, -4\text{,}\) the opposites of the numbers you generated in <a class="xref" data-knowl="./knowl/PA_calender3c.html" title="Task c">Exercise 3.c</a> and the positive numbers in the list from <a class="xref" data-knowl="./knowl/PA_calender1e.html" title="Task e">Exercise 1.e</a>. Pick any two numbers from this list and subtract one from the other. Repeat this several times.</p></article> <article class="task exercise-like" id="task-404"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-1053">What do the numbers you obtained in <a class="xref" data-knowl="./knowl/PA_calender3d.html" title="Task d">Exercise 3.d</a> have in common?</p></article></p></article></section><section class="subsection" id="proof"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Some Mathematical Terminology</span>
 </h3>
-<p id="p-983">In <a href="S_1direct.html" class="internal" title="Section 1.2: Constructing Direct Proofs">Section 1.2</a>, we introduced the idea of a direct proof. Since then, we have used some common terminology in mathematics without much explanation. Before we proceed further, we will discuss some frequently used mathematical terms.</p>
-<p id="p-984">A <dfn class="terminology">proof</dfn>  in mathematics is a convincing argument that some mathematical statement is true. A proof should contain enough mathematical detail to be convincing to the person(s) to whom the proof is addressed. In essence, a proof is an argument that communicates a mathematical truth to another person (who has the appropriate mathematical background). A proof must use correct, logical reasoning and be based on previously established results. These previous results can be axioms, definitions, or previously proven theorems. These terms are discussed below.</p>
-<p id="p-985">Surprising to some is the fact that in mathematics, there are always <dfn class="terminology">undefined terms</dfn>.  This is because if we tried to define everything, we would end up going in circles. Simply put, we must start somewhere. For example, in Euclidean geometry, the terms “point,” “line,” and “contains” are undefined terms. In this text, we are using our number systems such as the natural numbers and integers as undefined terms. We often assume that these undefined objects satisfy certain properties. These assumed relationships are accepted as true without proof and are called axioms (or postulates). An <dfn class="terminology">axiom</dfn>  is a mathematical statement that is accepted without proof. Euclidean geometry starts with undefined terms and a set of postulates and axioms. For example, the following statement is an axiom of Euclidean geometry:</p>
+<p id="p-1054">In <a href="S_1direct.html" class="internal" title="Section 1.2: Constructing Direct Proofs">Section 1.2</a>, we introduced the idea of a direct proof. Since then, we have used some common terminology in mathematics without much explanation. Before we proceed further, we will discuss some frequently used mathematical terms.</p>
+<p id="p-1055">A <dfn class="terminology">proof</dfn>  in mathematics is a convincing argument that some mathematical statement is true. A proof should contain enough mathematical detail to be convincing to the person(s) to whom the proof is addressed. In essence, a proof is an argument that communicates a mathematical truth to another person (who has the appropriate mathematical background). A proof must use correct, logical reasoning and be based on previously established results. These previous results can be axioms, definitions, or previously proven theorems. These terms are discussed below.</p>
+<p id="p-1056">Surprising to some is the fact that in mathematics, there are always <dfn class="terminology">undefined terms</dfn>.  This is because if we tried to define everything, we would end up going in circles. Simply put, we must start somewhere. For example, in Euclidean geometry, the terms “point,” “line,” and “contains” are undefined terms. In this text, we are using our number systems such as the natural numbers and integers as undefined terms. We often assume that these undefined objects satisfy certain properties. These assumed relationships are accepted as true without proof and are called axioms (or postulates). An <dfn class="terminology">axiom</dfn>  is a mathematical statement that is accepted without proof. Euclidean geometry starts with undefined terms and a set of postulates and axioms. For example, the following statement is an axiom of Euclidean geometry:</p>
 <article class="axiom theorem-like" id="axiom-line"><h6 class="heading">
 <span class="type">Axiom</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span>
 </h6>
-<p id="p-986">Given any two distinct points, there is exactly one line that contains these two points.</p></article><article class="note remark-like" id="note-3"><h6 class="heading">
+<p id="p-1057">Given any two distinct points, there is exactly one line that contains these two points.</p></article><article class="note remark-like" id="note-3"><h6 class="heading">
 <span class="type">Note</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span>
 </h6>
-<p id="p-987">The closure properties of the number systems discussed in <a href="S_1prop.html" class="internal" title="Section 1.1: Statements and Conditional Statements">Section 1.1</a> and the properties of the number systems in <a class="xref" data-knowl="./knowl/Ta_propertiesofreals.html" title="Table 1.2.4: Properties of the Real Numbers">Table 1.2.4</a> are being used as axioms in this text.</p></article><p id="p-988">A <dfn class="terminology">definition</dfn>  is simply an agreement as to the meaning of a particular term. For example, in this text, we have defined the terms “even integer” and “odd integer.” Definitions are not made at random, but rather, a definition is usually made because a certain property is observed to occur frequently. As a result, it becomes convenient to give this property its own special name. Definitions that have been made can be used in developing mathematical proofs. In fact, most proofs require the use of some definitions.</p>
-<p id="p-989">In dealing with mathematical statements, we frequently use the terms “conjecture,” “theorem,” “proposition,” “lemma,” and “corollary.” A <dfn class="terminology">conjecture</dfn>  is a statement that we believe is plausible. That is, we think it is true, but we have not yet developed a proof that it is true. A <dfn class="terminology">theorem</dfn>  is a mathematical statement for which we have a proof. A term that is often considered to be synonymous with “theorem” is <dfn class="terminology">proposition</dfn>.  Often the proof of a theorem can be quite long. In this case, it is often easier to communicate the proof in smaller “pieces.” These supporting pieces are often called lemmas. A <dfn class="terminology">lemma</dfn>  is a true mathematical statement that was proven mainly to help in the proof of some theorem. Once a given theorem has been proven, it is often the case that other propositions follow immediately from the fact that the theorem is true. These are called corollaries of the theorem. The term <dfn class="terminology">corollary</dfn>  is used to refer to a theorem that is easily proven once some other theorem has been proven.</p></section><section class="subsection" id="subsection-36"><h3 class="heading hide-type">
+<p id="p-1058">The closure properties of the number systems discussed in <a href="S_1prop.html" class="internal" title="Section 1.1: Statements and Conditional Statements">Section 1.1</a> and the properties of the number systems in <a class="xref" data-knowl="./knowl/Ta_propertiesofreals.html" title="Table 1.2.4: Properties of the Real Numbers">Table 1.2.4</a> are being used as axioms in this text.</p></article><p id="p-1059">A <dfn class="terminology">definition</dfn>  is simply an agreement as to the meaning of a particular term. For example, in this text, we have defined the terms “even integer” and “odd integer.” Definitions are not made at random, but rather, a definition is usually made because a certain property is observed to occur frequently. As a result, it becomes convenient to give this property its own special name. Definitions that have been made can be used in developing mathematical proofs. In fact, most proofs require the use of some definitions.</p>
+<p id="p-1060">In dealing with mathematical statements, we frequently use the terms “conjecture,” “theorem,” “proposition,” “lemma,” and “corollary.” A <dfn class="terminology">conjecture</dfn>  is a statement that we believe is plausible. That is, we think it is true, but we have not yet developed a proof that it is true. A <dfn class="terminology">theorem</dfn>  is a mathematical statement for which we have a proof. A term that is often considered to be synonymous with “theorem” is <dfn class="terminology">proposition</dfn>.  Often the proof of a theorem can be quite long. In this case, it is often easier to communicate the proof in smaller “pieces.” These supporting pieces are often called lemmas. A <dfn class="terminology">lemma</dfn>  is a true mathematical statement that was proven mainly to help in the proof of some theorem. Once a given theorem has been proven, it is often the case that other propositions follow immediately from the fact that the theorem is true. These are called corollaries of the theorem. The term <dfn class="terminology">corollary</dfn>  is used to refer to a theorem that is easily proven once some other theorem has been proven.</p></section><section class="subsection" id="subsection-36"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Constructing Mathematical Proofs</span>
 </h3>
-<p id="p-990">To create a proof of a theorem, we must use correct logical reasoning and mathematical statements that we already accept as true. These statements include axioms, definitions, theorems, lemmas, and corollaries.</p>
-<p id="p-991">In <a href="S_1direct.html" class="internal" title="Section 1.2: Constructing Direct Proofs">Section 1.2</a>, we introduced the use of a <dfn class="terminology">know-show table</dfn>  to help us organize our work when we are attempting to prove a statement. We also introduced some guidelines for writing mathematical proofs once we have created the proof. These guidelines should be reviewed before proceeding.</p>
-<p id="p-992">Please remember that when we start the process of writing a proof, we are essentially “reporting the news.” That is, we have already discovered the proof, and now we need to report it. This reporting often does not describe the process of discovering the news (the investigative portion of the process).</p>
-<p id="p-993">Quite often, the first step is to develop a conjecture. This is often done after working within certain objects for some time. This is what we did in <a href="S_directproof.html#PA_divisor" class="internal" title="Worksheet: Beginning Activity 1: Definition of Divides, Divisor, Multiple">Beginning Activity 1 </a> when we used examples to provide evidence that <a class="xref" data-knowl="./knowl/conj-divides.html" title="Conjecture 3.1.2">Conjecture 3.1.2</a> is true.</p>
-<p id="p-994">Before we try to prove a conjecture, we should make sure we have explored some examples. This simply means to construct some specific examples where the integers \(a\text{,}\) \(b\text{,}\) and \(c\) satisfy the hypothesis of the conjecture in order to see if they also satisfy the conclusion. We did this for this conjecture in <a href="S_directproof.html#PA_divisor" class="internal" title="Worksheet: Beginning Activity 1: Definition of Divides, Divisor, Multiple">Beginning Activity 1 </a>.</p>
-<p id="p-995">We will now start a know-show table for this conjecture.</p>
+<p id="p-1061">To create a proof of a theorem, we must use correct logical reasoning and mathematical statements that we already accept as true. These statements include axioms, definitions, theorems, lemmas, and corollaries.</p>
+<p id="p-1062">In <a href="S_1direct.html" class="internal" title="Section 1.2: Constructing Direct Proofs">Section 1.2</a>, we introduced the use of a <dfn class="terminology">know-show table</dfn>  to help us organize our work when we are attempting to prove a statement. We also introduced some guidelines for writing mathematical proofs once we have created the proof. These guidelines should be reviewed before proceeding.</p>
+<p id="p-1063">Please remember that when we start the process of writing a proof, we are essentially “reporting the news.” That is, we have already discovered the proof, and now we need to report it. This reporting often does not describe the process of discovering the news (the investigative portion of the process).</p>
+<p id="p-1064">Quite often, the first step is to develop a conjecture. This is often done after working within certain objects for some time. This is what we did in <a href="S_directproof.html#PA_divisor" class="internal" title="Worksheet: Beginning Activity 1: Definition of Divides, Divisor, Multiple">Beginning Activity 1 </a> when we used examples to provide evidence that <a class="xref" data-knowl="./knowl/conj-divides.html" title="Conjecture 3.1.2">Conjecture 3.1.2</a> is true.</p>
+<p id="p-1065">Before we try to prove a conjecture, we should make sure we have explored some examples. This simply means to construct some specific examples where the integers \(a\text{,}\) \(b\text{,}\) and \(c\) satisfy the hypothesis of the conjecture in order to see if they also satisfy the conclusion. We did this for this conjecture in <a href="S_directproof.html#PA_divisor" class="internal" title="Worksheet: Beginning Activity 1: Definition of Divides, Divisor, Multiple">Beginning Activity 1 </a>.</p>
+<p id="p-1066">We will now start a know-show table for this conjecture.</p>
 <div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
 <th class="l m b2 r2 l0 t0 lines">Step</th>
@@ -344,10 +345,10 @@
 <td class="c m b0 r0 l0 t0 lines">Reason</td>
 </tr>
 </table></div>
-<p id="p-996">The backward question we ask is, “How can we prove that \(a\) divides \(c\text{?}\)” One answer is to use the definition and show that there exists an integer \(q\) such that \(c = a \cdot q\text{.}\) This could be step \(Q1\) in the know-show table.</p>
-<p id="p-997">We now have to prove that a certain integer \(q\) exists, so we ask the question, “How do we prove that this integer exists?” When we are at such a stage in the backward process of a proof, we usually turn to what is known in order to prove that the object exists or to find or construct the object we are trying to prove exists. We often say that we try to “construct” the object or at least prove it exists from the known information. So at this point, we go to the forward part of the proof to try to prove that there exists an integer \(q\) such that \(c = a \cdot q\text{.}\)</p>
-<p id="p-998">The forward question we ask is, “What can we conclude from the facts that \(a \mid b\) and \(b \mid c\text{?}\)” Again, using the definition, we know that there exist integers \(s\) and \(t\) such that \(b = a \cdot s\) and \(c = b \cdot t\text{.}\) This could be step \(P1\) in the know-show table.</p>
-<p id="p-999">The key now is to determine how to get from \(P1\) to \(Q1\text{.}\) That is, can we use the conclusions that the integers \(s\) and \(t\) exist in order to prove that the integer \(q\) (from the backward process) exists. Using the equation \(b = a \cdot s\text{,}\) we can substitute \(a \cdot s\) for \(b\) in the second equation, \(c = b \cdot t\text{.}\) This gives</p>
+<p id="p-1067">The backward question we ask is, “How can we prove that \(a\) divides \(c\text{?}\)” One answer is to use the definition and show that there exists an integer \(q\) such that \(c = a \cdot q\text{.}\) This could be step \(Q1\) in the know-show table.</p>
+<p id="p-1068">We now have to prove that a certain integer \(q\) exists, so we ask the question, “How do we prove that this integer exists?” When we are at such a stage in the backward process of a proof, we usually turn to what is known in order to prove that the object exists or to find or construct the object we are trying to prove exists. We often say that we try to “construct” the object or at least prove it exists from the known information. So at this point, we go to the forward part of the proof to try to prove that there exists an integer \(q\) such that \(c = a \cdot q\text{.}\)</p>
+<p id="p-1069">The forward question we ask is, “What can we conclude from the facts that \(a \mid b\) and \(b \mid c\text{?}\)” Again, using the definition, we know that there exist integers \(s\) and \(t\) such that \(b = a \cdot s\) and \(c = b \cdot t\text{.}\) This could be step \(P1\) in the know-show table.</p>
+<p id="p-1070">The key now is to determine how to get from \(P1\) to \(Q1\text{.}\) That is, can we use the conclusions that the integers \(s\) and \(t\) exist in order to prove that the integer \(q\) (from the backward process) exists. Using the equation \(b = a \cdot s\text{,}\) we can substitute \(a \cdot s\) for \(b\) in the second equation, \(c = b \cdot t\text{.}\) This gives</p>
 <div class="displaymath">
 \begin{align*}
 c \amp = b \cdot t\\
@@ -355,7 +356,7 @@ c \amp = b \cdot t\\
 \amp = a( {s \cdot t})
 \end{align*}
 </div>
-<p id="p-1000">The last step used the associative property of multiplication. (See <a class="xref" data-knowl="./knowl/Ta_propertiesofreals.html" title="Table 1.2.4: Properties of the Real Numbers">Table 1.2.4</a>.) This shows that \(c\) is equal to \(a\) times some integer. (This is because \(s \cdot t\) is an integer by the closure property for integers.) So although we did not use the letter \(q\text{,}\) we have arrived at step \(Q1\text{.}\) The completed know-show table follows.</p>
+<p id="p-1071">The last step used the associative property of multiplication. (See <a class="xref" data-knowl="./knowl/Ta_propertiesofreals.html" title="Table 1.2.4: Properties of the Real Numbers">Table 1.2.4</a>.) This shows that \(c\) is equal to \(a\) times some integer. (This is because \(s \cdot t\) is an integer by the closure property for integers.) So although we did not use the letter \(q\text{,}\) we have arrived at step \(Q1\text{.}\) The completed know-show table follows.</p>
 <div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
 <th class="l m b1 r2 l0 t0 lines">Step</th>
@@ -395,65 +396,117 @@ c \amp = b \cdot t\\
 <td class="l m b0 r0 l0 t0 lines">Definition of “divides”</td>
 </tr>
 </table></div>
-<p id="p-1001">Notice the similarities between what we did for this proof and many of the proofs about even and odd integers we constructed in <a href="S_1direct.html" class="internal" title="Section 1.2: Constructing Direct Proofs">Section 1.2</a>. When we try to prove that a certain object exists, we often use what is called the <dfn class="terminology">construction method for a proof</dfn>.  The appearance of an existential quantifier in the show (or backward) portion of the proof is usually the indicator to go to what is known in order to prove the object exists.</p>
-<p id="p-1002">We can now report the news by writing a formal proof.</p>
+<p id="p-1072">Notice the similarities between what we did for this proof and many of the proofs about even and odd integers we constructed in <a href="S_1direct.html" class="internal" title="Section 1.2: Constructing Direct Proofs">Section 1.2</a>. When we try to prove that a certain object exists, we often use what is called the <dfn class="terminology">construction method for a proof</dfn>.  The appearance of an existential quantifier in the show (or backward) portion of the proof is usually the indicator to go to what is known in order to prove the object exists.</p>
+<p id="p-1073">We can now report the news by writing a formal proof.</p>
 <article class="theorem theorem-like" id="T_transdivide"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.1.5</span><span class="period">.</span>
 </h6>
-<p id="p-1003">Let \(a\text{,}\) \(b\text{,}\) and \(c\) be integers with \(a \ne 0\) and \(b \ne 0\text{.}\) If \(a\) divides \(b\) and \(b\) divides \(c\text{,}\) then \(a\) divides \(c\text{.}\)</p></article><article class="hiddenproof" id="proof-2"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-2"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-2"><article class="hiddenproof"><p id="p-1004">We assume that \(a\text{,}\) \(b\text{,}\) and \(c\) are integers with \(a \ne 0\) and \(b \ne 0\text{.}\) We further assume that \(a\) divides \(b\) and that \(b\) divides \(c\text{.}\) We will prove that \(a\) divides \(c\text{.}\)</p>
-<p id="p-1005">Since \(a\) divides \(b\) and \(b\) divides \(c\text{,}\) there exist integers \(s\) and \(t\) such that</p>
+<p id="p-1074">Let \(a\text{,}\) \(b\text{,}\) and \(c\) be integers with \(a \ne 0\) and \(b \ne 0\text{.}\) If \(a\) divides \(b\) and \(b\) divides \(c\text{,}\) then \(a\) divides \(c\text{.}\)</p></article><article class="hiddenproof" id="proof-4"><a data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-4"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-4"><article class="hiddenproof"><p id="p-1075">We assume that \(a\text{,}\) \(b\text{,}\) and \(c\) are integers with \(a \ne 0\) and \(b \ne 0\text{.}\) We further assume that \(a\) divides \(b\) and that \(b\) divides \(c\text{.}\) We will prove that \(a\) divides \(c\text{.}\)</p>
+<p id="p-1076">Since \(a\) divides \(b\) and \(b\) divides \(c\text{,}\) there exist integers \(s\) and \(t\) such that</p>
 <div class="displaymath">
 \begin{align}
 b \amp = a \cdot s, \text{ and }\label{eq_3a}\tag{3.1}\\
 c \amp = b \cdot t\text{.}\label{eq_3b}\tag{3.2}
 \end{align}
 </div>
-<p id="p-1006">We can now substitute the expression for \(b\) from equation <a class="xref" data-knowl="./knowl/eq_3a.html" title="Equation 3.1">(3.1)</a> into equation <a class="xref" data-knowl="./knowl/eq_3b.html" title="Equation 3.2">(3.2)</a>. This gives</p>
+<p id="p-1077">We can now substitute the expression for \(b\) from equation <a class="xref" data-knowl="./knowl/eq_3a.html" title="Equation 3.1">(3.1)</a> into equation <a class="xref" data-knowl="./knowl/eq_3b.html" title="Equation 3.2">(3.2)</a>. This gives</p>
 <div class="displaymath">
 \begin{equation*}
 c = ( {a \cdot s}) \cdot t\text{.}
 \end{equation*}
 </div>
-<p id="p-1007">Using the associate property for multiplication, we can rearrange the right side of the last equation to obtain</p>
+<p id="p-1078">Using the associate property for multiplication, we can rearrange the right side of the last equation to obtain</p>
 <div class="displaymath">
 \begin{equation*}
 c = a \cdot ( {s \cdot t} )\text{.}
 \end{equation*}
 </div>
-<p id="p-1008">Because both \(s\) and \(t\) are integers, and since the integers are closed under multiplication, we know that \(s \cdot t \in \mathbb{Z}\text{.}\) Therefore, the previous equation proves that \(a\) divides \(c\text{.}\) Consequently, we have proven that whenever \(a\text{,}\) \(b\text{,}\) and \(c\) are integers with \(a \ne 0\) and \(b \ne 0\) such that \(a\) divides \(b\) and \(b\) divides \(c\text{,}\) then \(a\) divides \(c\text{.}\)</p></article></div></section><section class="subsection" id="subsection-37"><h3 class="heading hide-type">
+<p id="p-1079">Because both \(s\) and \(t\) are integers, and since the integers are closed under multiplication, we know that \(s \cdot t \in \mathbb{Z}\text{.}\) Therefore, the previous equation proves that \(a\) divides \(c\text{.}\) Consequently, we have proven that whenever \(a\text{,}\) \(b\text{,}\) and \(c\) are integers with \(a \ne 0\) and \(b \ne 0\) such that \(a\) divides \(b\) and \(b\) divides \(c\text{,}\) then \(a\) divides \(c\text{.}\)</p></article></div></section><section class="subsection" id="subsection-37"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Writing Guidelines for Equation Numbers</span>
 </h3>
-<p id="p-1009">We wrote the proof for <a class="xref" data-knowl="./knowl/T_transdivide.html" title="Theorem 3.1.5">Theorem 3.1.5</a> according to the guidelines introduced in <a href="S_1direct.html" class="internal" title="Section 1.2: Constructing Direct Proofs">Section 1.2</a>, but a new element that appeared in this proof was the use of equation numbers. Following are some guidelines that can be used for <dfn class="terminology">equation numbers</dfn>. </p>
-<p id="p-1010">If it is necessary to refer to an equation later in a proof, that equation should be centered and displayed. It should then be given a number. The number for the equation should be written in parentheses on the same line as the equation at the right-hand margin as in shown in the following example. <blockquote class="blockquote" id="blockquote-77">Since \(x\) is an odd integer, there exists an integer \(n\) such that</blockquote></p>
+<p id="p-1080">We wrote the proof for <a class="xref" data-knowl="./knowl/T_transdivide.html" title="Theorem 3.1.5">Theorem 3.1.5</a> according to the guidelines introduced in <a href="S_1direct.html" class="internal" title="Section 1.2: Constructing Direct Proofs">Section 1.2</a>, but a new element that appeared in this proof was the use of equation numbers. Following are some guidelines that can be used for <dfn class="terminology">equation numbers</dfn>. </p>
+<p id="p-1081">If it is necessary to refer to an equation later in a proof, that equation should be centered and displayed. It should then be given a number. The number for the equation should be written in parentheses on the same line as the equation at the right-hand margin as in shown in the following example. <blockquote class="blockquote" id="blockquote-78">Since \(x\) is an odd integer, there exists an integer \(n\) such that</blockquote></p>
 <div class="displaymath">
 \begin{equation}
 x = 2n + 1\text{.}\label{eq_3e}\tag{3.3}
 \end{equation}
 </div>
-<p class="continuation">Later in the proof, there may be a line such as <blockquote class="blockquote" id="blockquote-78">Then, using the result in equation <a class="xref" data-knowl="./knowl/eq_3e.html" title="Equation 3.3">(3.3)</a>, we obtain ….</blockquote> Notice that we did not number every equation in <a class="xref" data-knowl="./knowl/T_transdivide.html" title="Theorem 3.1.5">Theorem 3.1.5</a>. We should only number those equations we will be referring to later in the proof, and we should only number equations when it is necessary.  For example, instead of numbering an equation, it is often better to use a phrase such as, “the previous equation proves that …” or “we can rearrange the terms on the right side of the previous equation.” Also, note that the word “equation” is not capitalized when we are referring to an equation by number.  Although it may be appropriate to use a capital “E,” the usual convention in mathematics is not to capitalize.</p>
+<p class="continuation">Later in the proof, there may be a line such as <blockquote class="blockquote" id="blockquote-79">Then, using the result in equation <a class="xref" data-knowl="./knowl/eq_3e.html" title="Equation 3.3">(3.3)</a>, we obtain ….</blockquote> Notice that we did not number every equation in <a class="xref" data-knowl="./knowl/T_transdivide.html" title="Theorem 3.1.5">Theorem 3.1.5</a>. We should only number those equations we will be referring to later in the proof, and we should only number equations when it is necessary.  For example, instead of numbering an equation, it is often better to use a phrase such as, “the previous equation proves that …” or “we can rearrange the terms on the right side of the previous equation.” Also, note that the word “equation” is not capitalized when we are referring to an equation by number.  Although it may be appropriate to use a capital “E,” the usual convention in mathematics is not to capitalize.</p>
 <article class="exercise exercise-like" id="pr_divisors"><h6 class="heading">
 <span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">3.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">A Property of Divisors.</span>
 </h6>
-<p id="p-1011"><article class="task exercise-like" id="pr_divisors1"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1012">Give at least four different examples of integers \(a\text{,}\) \(b\text{,}\) and \(c\) with \(a \ne 0\) such that \(a\) divides \(b\) and \(a\) divides \(c\text{.}\)</p></article> <article class="task exercise-like" id="pr_divisors2"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1013">For each example in <a class="xref" data-knowl="./knowl/pr_divisors1.html" title="Task a">Task a</a>, calculate the sum \(b + c\text{.}\) Does the integer \(a\) divide the sum \(b + c\text{?}\)</p></article> <article class="task exercise-like" id="pr_divisors3"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-1014">Construct a know-show table for the following proposition: For all integers \(a\text{,}\) \(b\text{,}\) and \(c\) with \(a \ne 0\text{,}\) if \(a\) divides \(b\) and \(a\) divides \(c\text{,}\) then \(a\) divides \((b + c)\text{.}\)</p></article></p></article></section><section class="subsection" id="subsection-38"><h3 class="heading hide-type">
+<article class="task exercise-like" id="pr_divisors1"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1082">Give at least four different examples of integers \(a\text{,}\) \(b\text{,}\) and \(c\) with \(a \ne 0\) such that \(a\) divides \(b\) and \(a\) divides \(c\text{.}\)</p></article><article class="task exercise-like" id="pr_divisors2"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1083">For each example in <a class="xref" data-knowl="./knowl/pr_divisors1.html" title="Task 3.1.6.a">Task 3.1.6.a</a>, calculate the sum \(b + c\text{.}\) Does the integer \(a\) divide the sum \(b + c\text{?}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-55" id="solution-55"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-55"><div class="solution solution-like"><p id="p-1084">For each example in Part (1), the integer \(a\) divides the sum \(b + c\text{.}\)</p></div></div>
+</div></article><article class="task exercise-like" id="pr_divisors3"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1085">Construct a know-show table for the following proposition: For all integers \(a\text{,}\) \(b\text{,}\) and \(c\) with \(a \ne 0\text{,}\) if \(a\) divides \(b\) and \(a\) divides \(c\text{,}\) then \(a\) divides \((b + c)\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-56" id="solution-56"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-56"><div class="solution solution-like">
+<p id="p-1086">Conjecture: For all integers \(a\text{,}\) \(b\text{,}\) and \(c\) with \(a \ne 0\text{,}\) if \(a\) divides \(b\) and \(a\) divides \(c\text{,}\) then \(a\) divides \(b + c\text{.}\)</p>
+<p id="p-1087">A Know-show table for a proof of the conjecture in Part (3). <div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th class="l m b1 r2 l0 t0 lines">Step</th>
+<th class="l m b1 r2 l0 t0 lines">Know</th>
+<th class="l m b1 r0 l0 t0 lines">Reason</th>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">\(P\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(a \mid b\) and \(a \mid c\)</td>
+<td class="l m b2 r0 l0 t0 lines">Hypothesis</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">\(P1\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(\left( {\exists s \in \mathbb{Z}} \right)
+\left( {b = a \cdot s} \right)\) \(\left( {\exists t \in \mathbb{Z}} 
+\right)\left( {c = a \cdot t} \right)\)</td>
+<td class="l m b2 r0 l0 t0 lines">Definition of “divides”</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">\(P2\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(b + c = as + at\)</td>
+<td class="l m b2 r0 l0 t0 lines">Substituting for \(b\) and \(c\)</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">\(P3\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(b + c = a\left( {s + t} \right)\)</td>
+<td class="l m b2 r0 l0 t0 lines">Distributive property</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">\(Q1\)</td>
+<td class="l m b2 r2 l0 t0 lines">\(s + t\) is an integer</td>
+<td class="l m b2 r0 l0 t0 lines">\(\mathbb{Z}\) is closed under addition</td>
+</tr>
+<tr>
+<td class="l m b1 r2 l0 t0 lines">\(Q\)</td>
+<td class="l m b1 r2 l0 t0 lines">\(\left. {a } \right| \left( {b + c} \right)\)</td>
+<td class="l m b1 r0 l0 t0 lines">Definition of “divides”</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">Step</td>
+<td class="l m b0 r2 l0 t0 lines">Show</td>
+<td class="l m b0 r0 l0 t0 lines">Reason</td>
+</tr>
+</table></div></p>
+</div></div>
+</div></article></article></section><section class="subsection" id="subsection-38"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Using Counterexamples</span>
 </h3>
-<p id="p-1015"> In <a href="S_1direct.html" class="internal" title="Section 1.2: Constructing Direct Proofs">Section 1.2</a> and so far in this section, our focus has been on proving statements that involve universal quantifiers. However, another important skill for mathematicians is to be able to recognize when a statement is false and then to be able to prove that it is false. For example, suppose we want to know if the following proposition is true or false. <blockquote class="blockquote" id="blockquote-79">For each integer \(n\text{,}\) if 5 divides \(\left(n^2 - 1 \right)\text{,}\) then 5 divides \(\left( n - 1 \right)\text{.}\)</blockquote></p>
-<p id="p-1016">Suppose we start trying to prove this proposition. In the backward process, we would say that in order to prove that 5 divides \(\left( n - 1 \right)\text{,}\) we can show that there exists an integer \(k\) such that</p>
+<p id="p-1088"> In <a href="S_1direct.html" class="internal" title="Section 1.2: Constructing Direct Proofs">Section 1.2</a> and so far in this section, our focus has been on proving statements that involve universal quantifiers. However, another important skill for mathematicians is to be able to recognize when a statement is false and then to be able to prove that it is false. For example, suppose we want to know if the following proposition is true or false. <blockquote class="blockquote" id="blockquote-80">For each integer \(n\text{,}\) if 5 divides \(\left(n^2 - 1 \right)\text{,}\) then 5 divides \(\left( n - 1 \right)\text{.}\)</blockquote></p>
+<p id="p-1089">Suppose we start trying to prove this proposition. In the backward process, we would say that in order to prove that 5 divides \(\left( n - 1 \right)\text{,}\) we can show that there exists an integer \(k\) such that</p>
 <div class="displaymath">
 \begin{equation*}
 Q_1:  n - 1 = 5k  \text{ or }   n = 5k + 1\text{.}
 \end{equation*}
 </div>
-<p id="p-1017">For the forward process, we could say that since 5 divides \(\left(n^2 - 1 \right)\text{,}\) we know that there exists an integer \(m\) such that</p>
+<p id="p-1090">For the forward process, we could say that since 5 divides \(\left(n^2 - 1 \right)\text{,}\) we know that there exists an integer \(m\) such that</p>
 <div class="displaymath">
 \begin{equation*}
 P_1:  n^2 - 1 = 5m  \text{ or }   n^2 = 5m + 1\text{.}
 \end{equation*}
 </div>
-<p id="p-1018">The problem is that there is no straightforward way to use \(P_1\) to prove \(Q_1\text{.}\) At this point, it would be a good idea to try some examples for \(n\) and try to find situations in which the hypothesis of the proposition is true. (In fact, this should have been done before we started trying to prove the proposition.) The following table summarizes the results of some of these explorations with values for \(n\text{.}\)</p>
+<p id="p-1091">The problem is that there is no straightforward way to use \(P_1\) to prove \(Q_1\text{.}\) At this point, it would be a good idea to try some examples for \(n\) and try to find situations in which the hypothesis of the proposition is true. (In fact, this should have been done before we started trying to prove the proposition.) The following table summarizes the results of some of these explorations with values for \(n\text{.}\)</p>
 <div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
 <th class="c m b2 r2 l0 t0 lines">\(n\)</th>
@@ -491,26 +544,29 @@ P_1:  n^2 - 1 = 5m  \text{ or }   n^2 = 5m + 1\text{.}
 <td class="c m b0 r0 l0 t0 lines">no</td>
 </tr>
 </table></div>
-<p id="p-1019">We can stop exploring examples now since the last row in the table provides an example where the hypothesis is true and the conclusion is false. Recall from <a href="S_2quantifier.html" class="internal" title="Section 2.4: Quantifiers and Negations">Section 2.4</a> (see <a href="S_2quantifier.html#D_counterexample2" class="internal" title="Subsection: Counterexamples and Negations of Conditional Statements">Counterexamples and Negations of Conditional Statements </a>) that a <dfn class="terminology">counterexample</dfn> for a statement of the form \(\left( \forall x \in U \right) \left( P(x) \right)\) is an element \(a\) in the universal set for which \(P(a)\) is false. So we have actually proved that the negation of the proposition is true.</p>
-<p id="p-1020">When using a counterexample to prove a statement is false, we do not use the term “proof” since we reserve a proof for proving a proposition is true. We could summarize our work as follows: <article class="conjecture theorem-like" id="conj-divides2"><h6 class="heading">
+<p id="p-1092">We can stop exploring examples now since the last row in the table provides an example where the hypothesis is true and the conclusion is false. Recall from <a href="S_2quantifier.html" class="internal" title="Section 2.4: Quantifiers and Negations">Section 2.4</a> (see <a href="S_2quantifier.html#D_counterexample2" class="internal" title="Subsection: Counterexamples and Negations of Conditional Statements">Counterexamples and Negations of Conditional Statements </a>) that a <dfn class="terminology">counterexample</dfn> for a statement of the form \(\left( \forall x \in U \right) \left( P(x) \right)\) is an element \(a\) in the universal set for which \(P(a)\) is false. So we have actually proved that the negation of the proposition is true.</p>
+<p id="p-1093">When using a counterexample to prove a statement is false, we do not use the term “proof” since we reserve a proof for proving a proposition is true. We could summarize our work as follows: <article class="conjecture theorem-like" id="conj-divides2"><h6 class="heading">
 <span class="type">Conjecture</span><span class="space"> </span><span class="codenumber">3.1.7</span><span class="period">.</span>
 </h6>
-<p id="p-1021">For each integer \(n\text{,}\) if 5 divides \(\left(n^2 - 1 \right)\text{,}\) then 5 divides \(\left( n - 1 \right)\text{.}\)</p>
-<p id="p-1022">The integer \(n = 4\) is a counterexample that proves this conjecture is false. Notice that when \(n = 4\text{,}\) \(n^2 - 1 = 15\) and 5 divides 15. Hence, the hypothesis of the conjecture is true in this case. In addition, \(n - 1 = 3\) and 5 does not divide 3 and so the conclusion of the conjecture is false in this case. Since this is an example where the hypothesis is true and the conclusion is false, the conjecture is false.</p></article> As a general rule of thumb, anytime we are trying to decide if a proposition is true or false, it is a good idea to try some examples first. The examples that are chosen should be ones in which the hypothesis of the proposition is true. If one of these examples makes the conclusion false, then we have found a counterexample and we know the proposition is false. If all of the examples produce a true conclusion, then we have evidence that the proposition is true and can try to write a proof.</p>
+<p id="p-1094">For each integer \(n\text{,}\) if 5 divides \(\left(n^2 - 1 \right)\text{,}\) then 5 divides \(\left( n - 1 \right)\text{.}\)</p>
+<p id="p-1095">The integer \(n = 4\) is a counterexample that proves this conjecture is false. Notice that when \(n = 4\text{,}\) \(n^2 - 1 = 15\) and 5 divides 15. Hence, the hypothesis of the conjecture is true in this case. In addition, \(n - 1 = 3\) and 5 does not divide 3 and so the conclusion of the conjecture is false in this case. Since this is an example where the hypothesis is true and the conclusion is false, the conjecture is false.</p></article> As a general rule of thumb, anytime we are trying to decide if a proposition is true or false, it is a good idea to try some examples first. The examples that are chosen should be ones in which the hypothesis of the proposition is true. If one of these examples makes the conclusion false, then we have found a counterexample and we know the proposition is false. If all of the examples produce a true conclusion, then we have evidence that the proposition is true and can try to write a proof.</p>
 <article class="exercise exercise-like" id="pr_counterexample"><h6 class="heading">
 <span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">3.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Using a Counterexample.</span>
 </h6>
-<p id="p-1023">Use a counterexample to prove the following statement is false. <blockquote class="blockquote" id="blockquote-80">For all integers \(a\) and \(b\text{,}\) if 5 divides \(a\) or 5 divides \(b\text{,}\) then 5 divides \((5a + b)\text{.}\)</blockquote></p></article></section><section class="subsection" id="subsection-39"><h3 class="heading hide-type">
+<p id="p-1096">Use a counterexample to prove the following statement is false. <blockquote class="blockquote" id="blockquote-81">For all integers \(a\) and \(b\text{,}\) if 5 divides \(a\) or 5 divides \(b\text{,}\) then 5 divides \((5a + b)\text{.}\)</blockquote></p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-57" id="solution-57"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-57"><div class="solution solution-like"><p id="p-1097">A counterexample for this statement will be values of \(a\) and \(b\) for which 5 divides \(a\) or 5 divides \(b\text{,}\) and 5 does not divide \(5a + b\text{.}\) One counterexample for the statement is \(a = 5\) and \(b = 1\text{.}\) For these values, the hyothesis is true since 5 divides \(a\) and the conclusion is false since \(5a + b = 26\) and 5 does not divide 26.</p></div></div>
+</div></article></section><section class="subsection" id="subsection-39"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Congruence</span>
 </h3>
-<p id="p-1024">What mathematicians call congruence is a concept used to describe cycles in the world of the integers. For example, the day of the week is a cyclic phenomenon in that the day of the week repeats every seven days. The time of the day is a cyclic phenomenon because it repeats every 12 hours if we use a 12-hour clock or every 24 hours if we use a 24-hour clock. We explored these two cyclic phenomena in <a href="S_directproof.html#PA_calender" class="internal" title="Worksheet: Beginning Activity 2: Calendars and Clocks">Beginning Activity 2 </a>.</p>
-<p id="p-1025">Similar to what we saw in <a href="S_directproof.html#PA_calender" class="internal" title="Worksheet: Beginning Activity 2: Calendars and Clocks">Beginning Activity 2 </a>, if it is currently Monday, then it will be Wednesday 2 days from now, 9 days from now, 16 days from now, 23 days from now, and so on. In addition, it was Wednesday 5 days ago, 12 days ago, 19 days ago, and so on. Using negative numbers for time in the past, we generate the following list of numbers:</p>
+<p id="p-1098">What mathematicians call congruence is a concept used to describe cycles in the world of the integers. For example, the day of the week is a cyclic phenomenon in that the day of the week repeats every seven days. The time of the day is a cyclic phenomenon because it repeats every 12 hours if we use a 12-hour clock or every 24 hours if we use a 24-hour clock. We explored these two cyclic phenomena in <a href="S_directproof.html#PA_calender" class="internal" title="Worksheet: Beginning Activity 2: Calendars and Clocks">Beginning Activity 2 </a>.</p>
+<p id="p-1099">Similar to what we saw in <a href="S_directproof.html#PA_calender" class="internal" title="Worksheet: Beginning Activity 2: Calendars and Clocks">Beginning Activity 2 </a>, if it is currently Monday, then it will be Wednesday 2 days from now, 9 days from now, 16 days from now, 23 days from now, and so on. In addition, it was Wednesday 5 days ago, 12 days ago, 19 days ago, and so on. Using negative numbers for time in the past, we generate the following list of numbers:</p>
 <div class="displaymath">
 \begin{equation*}
 \ldots ,\; - 19,  - 12,  - 5, 2, 9, 16, 23,  \ldots\text{.}
 \end{equation*}
 </div>
-<p id="p-1026">Notice that if we subtract any number in the list above from any other number in that list, we will obtain a multiple of 7. For example,</p>
+<p id="p-1100">Notice that if we subtract any number in the list above from any other number in that list, we will obtain a multiple of 7. For example,</p>
 <div class="displaymath">
 \begin{align*}
 16 - 2 \amp = 14 = 7 \cdot 2\\
@@ -518,10 +574,10 @@ P_1:  n^2 - 1 = 5m  \text{ or }   n^2 = 5m + 1\text{.}
 16 - \left( { - 12} \right) \amp = 28 = 7 \cdot 4\text{.}
 \end{align*}
 </div>
-<p id="p-1027">Using the concept of congruence, we would say that all the numbers in this list are congruent modulo 7, but we first have to define when two numbers are congruent modulo some natural number \(n\text{.}\) <article class="definition definition-like" id="congruence"><h6 class="heading">
+<p id="p-1101">Using the concept of congruence, we would say that all the numbers in this list are congruent modulo 7, but we first have to define when two numbers are congruent modulo some natural number \(n\text{.}\) <article class="definition definition-like" id="congruence"><h6 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.9</span><span class="period">.</span>
 </h6>
-<p id="p-1028">Let \(n \in \mathbb{N}\text{.}\) If \(a\) and \(b\) are integers, then we say that <dfn class="terminology">\(a\) is congruent to \(b\) modulo \(n\)</dfn>  provided that \(n\) divides \(a - b\text{.}\) A standard notation for this is \(a \equiv b \pmod n\text{.}\) This is read as “\(a\) is congruent to \(b\) modulo \(n\)” or “\(a\) is congruent to \(b\) mod \(n\text{.}\)”</p></article> Notice that we can use the definition of divides to say that \(n\) divides \((a - b)\) if and only if there exists an integer \(k\) such that \(a - b = nk\text{.}\) So we can write</p>
+<p id="p-1102">Let \(n \in \mathbb{N}\text{.}\) If \(a\) and \(b\) are integers, then we say that <dfn class="terminology">\(a\) is congruent to \(b\) modulo \(n\)</dfn>  provided that \(n\) divides \(a - b\text{.}\) A standard notation for this is \(a \equiv b \pmod n\text{.}\) This is read as “\(a\) is congruent to \(b\) modulo \(n\)” or “\(a\) is congruent to \(b\) mod \(n\text{.}\)”</p></article> Notice that we can use the definition of divides to say that \(n\) divides \((a - b)\) if and only if there exists an integer \(k\) such that \(a - b = nk\text{.}\) So we can write</p>
 <div class="displaymath">
 \begin{align*}
 a \amp \equiv b \pmod n \text{  means  } \left( {\exists k \in \mathbb{Z}} \right)
@@ -530,13 +586,13 @@ a \amp \equiv b \pmod n \text{  means  } \left( {\exists k \in \mathbb{Z}} \righ
 \left( {a = b + nk} \right)\text{.}
 \end{align*}
 </div>
-<p id="p-1029">This means that in order to find integers that are congruent to \(b\) modulo \(n\text{,}\) we only need to add multiples of \(n\) to \(b\text{.}\) For example, to find integers that are congruent to 2 modulo 5, we add multiples of 5 to 2. This gives the following list:</p>
+<p id="p-1103">This means that in order to find integers that are congruent to \(b\) modulo \(n\text{,}\) we only need to add multiples of \(n\) to \(b\text{.}\) For example, to find integers that are congruent to 2 modulo 5, we add multiples of 5 to 2. This gives the following list:</p>
 <div class="displaymath">
 \begin{equation*}
 \ldots, -13, -8, -3, 2, 7, 12, 17, \ldots\text{.}
 \end{equation*}
 </div>
-<p id="p-1030">We can also write this using set notation and say that</p>
+<p id="p-1104">We can also write this using set notation and say that</p>
 <div class="displaymath">
 \begin{equation*}
 \left\{ \left. a \in \Z \right| a \equiv 2 \pmod 5 \right\} = \left\{ \ldots, 
@@ -546,39 +602,79 @@ a \amp \equiv b \pmod n \text{  means  } \left( {\exists k \in \mathbb{Z}} \righ
 <article class="exercise exercise-like" id="pr_congruence"><h6 class="heading">
 <span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">3.1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Congruence Modulo 8.</span>
 </h6>
-<p id="p-1031"><article class="task exercise-like" id="task-399"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1032">Determine at least eight different integers that are congruent to 5 modulo 8.</p></article> <article class="task exercise-like" id="task-400"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1033">Use set builder notation and the roster method to specify the set of all integers that are congruent to 5 modulo 8.</p></article> <article class="task exercise-like" id="pr_congruence3"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-1034">Choose two integers that are congruent to 5 modulo 8 and add them. Then repeat this for at least five other pairs of integers that are congruent to 5 modulo 8.</p></article> <article class="task exercise-like" id="task-402"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<p id="p-1035">Explain why all of the sums that were obtained in <a class="xref" data-knowl="./knowl/pr_congruence3.html" title="Task c">Task c</a> are congruent to 2 modulo 8.</p></article></p></article><p id="p-1036">We will study the concept of congruence modulo \(n\) in much more detail later in the text. For now, we will work with the definition of congruence modulo \(n\) in the context of proofs. For example, all of the examples used in <a class="xref" data-knowl="./knowl/pr_congruence.html" title="Progress Check 3.1.10: Congruence Modulo 8">Progress Check 3.1.10</a> should provide evidence that the following proposition is true.</p>
+<article class="task exercise-like" id="task-408"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1105">Determine at least eight different integers that are congruent to 5 modulo 8.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-58" id="solution-58"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-58"><div class="solution solution-like"><p id="p-1106">Some integers that are congruent to 5 modulo 8 are \(-11, -3, 5, 13\text{,}\) and 21.</p></div></div>
+</div></article><article class="task exercise-like" id="task-409"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1107">Use set builder notation and the roster method to specify the set of all integers that are congruent to 5 modulo 8.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-59" id="solution-59"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-59"><div class="solution solution-like"><p id="p-1108">\(\left\{ \left. x \in \Z \right| x \equiv 5 \pmod 8 \right\} = 
+\left\{ \ldots, -19, -11, -3, 5, 13, 21, 29, \ldots \right\}\text{.}\)</p></div></div>
+</div></article><article class="task exercise-like" id="pr_congruence3"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1109">Choose two integers that are congruent to 5 modulo 8 and add them. Then repeat this for at least five other pairs of integers that are congruent to 5 modulo 8.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-pr_congans3" id="pr_congans3"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-pr_congans3"><div class="solution solution-like"><p id="p-1110">For example, \(-3 + 5 = 2\text{,}\) \(-11 + 29 = 18\text{,}\) \(13 + 21 = 34\text{.}\)</p></div></div>
+</div></article><article class="task exercise-like" id="task-411"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-1111">Explain why all of the sums that were obtained in <a class="xref" data-knowl="./knowl/pr_congruence3.html" title="Task 3.1.10.c">Task 3.1.10.c</a> are congruent to 2 modulo 8.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-61" id="solution-61"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-61"><div class="solution solution-like"><p id="p-1112">If we subtract 2 from any of the sums obtained in <a class="xref" data-knowl="./knowl/pr_congans3.html" title="Solution 3.1.10.c.1">Solution 3.1.10.c.1</a>, the result will be a multiple of 8. This means that the sum is congruent to 2 modulo 8. For example, \(2 - 2 = 0\text{,}\) \(18 - 2 = 16\text{,}\) \(34 - 2 = 32\text{.}\)</p></div></div>
+</div></article></article><p id="p-1113">We will study the concept of congruence modulo \(n\) in much more detail later in the text. For now, we will work with the definition of congruence modulo \(n\) in the context of proofs. For example, all of the examples used in <a class="xref" data-knowl="./knowl/pr_congruence.html" title="Progress Check 3.1.10: Congruence Modulo 8">Progress Check 3.1.10</a> should provide evidence that the following proposition is true.</p>
 <article class="proposition theorem-like" id="prop_congruenceproof"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.1.11</span><span class="period">.</span>
 </h6>
-<p id="p-1037">For all integers \(a\) and \(b\text{,}\) if \(a \equiv 5 \pmod 8\) and \(b \equiv 5 \pmod 8\text{,}\) then \(\left( a + b \right) \equiv 2 \pmod 8\text{.}\)</p></article><article class="exercise exercise-like" id="pr_congruence2"><h6 class="heading">
+<p id="p-1114">For all integers \(a\) and \(b\text{,}\) if \(a \equiv 5 \pmod 8\) and \(b \equiv 5 \pmod 8\text{,}\) then \(\left( a + b \right) \equiv 2 \pmod 8\text{.}\)</p></article><article class="exercise exercise-like" id="pr_congruence2"><h6 class="heading">
 <span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">3.1.12</span><span class="period">.</span><span class="space"> </span><span class="title">Proving Proposition 3.1.11.</span>
 </h6>
-<p id="p-1038">We will use “backward questions” and “forward questions” to help construct a proof for <a class="xref" data-knowl="./knowl/prop_congruenceproof.html" title="Proposition 3.1.11">Proposition 3.1.11</a>. So, we might ask, “How do we prove that \(\left( a + b \right) \equiv 2 \pmod 8\text{?}\)” One way to answer this is to use the definition of congruence and state that \(\left( a + b \right) \equiv 2 \pmod 8\) provided that 8 divides \((a + b - 2)\text{.}\) <article class="task exercise-like" id="task-403"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1039">Use <a class="xref" data-knowl="./knowl/divides.html" title="Definition 3.1.1">Definition 3.1.1</a> to determine a way to prove that 8 divides \((a + b - 2)\text{.}\)</p></article>  <p id="p-1040">We now turn to what we know and ask, “What can we conclude from the assumptions that \(a \equiv 5 \pmod(8)\) and \(b \equiv 5 \pmod 8\text{?}\)” We can again use the definition of congruence and conclude that 8 divides \((a - 5)\) and 8 divides \((b - 5)\text{.}\)</p> <article class="task exercise-like" id="congruenceb"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1041">Use <a class="xref" data-knowl="./knowl/divides.html" title="Definition 3.1.1">Definition 3.1.1</a> to make conclusions based on the facts that 8 divides \((a - 5)\) and 8 divides \((b - 5)\text{.}\)</p></article> <article class="task exercise-like" id="congruencec"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-1042">Solve an equation from <a class="xref" data-knowl="./knowl/congruenceb.html" title="Task b">Task b</a> for \(a\) and for \(b\text{.}\)</p></article> <article class="task exercise-like" id="task-406"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<p id="p-1043">Use the results from <a class="xref" data-knowl="./knowl/congruencec.html" title="Task c">Task c</a>) to prove that 8 divides \((a + b - 2)\text{.}\)</p></article> <article class="task exercise-like" id="task-407"><h6 class="heading"><span class="codenumber">(e)</span></h6>
-<p id="p-1044">Write a proof for <a class="xref" data-knowl="./knowl/prop_congruenceproof.html" title="Proposition 3.1.11">Proposition 3.1.11</a>.</p></article></p></article></section><section class="subsection" id="subsection-40"><h3 class="heading hide-type">
+<div class="introduction" id="introduction-32"><p id="p-1115">We will use “backward questions” and “forward questions” to help construct a proof for <a class="xref" data-knowl="./knowl/prop_congruenceproof.html" title="Proposition 3.1.11">Proposition 3.1.11</a>. So, we might ask, “How do we prove that \(\left( a + b \right) \equiv 2 \pmod 8\text{?}\)” One way to answer this is to use the definition of congruence and state that \(\left( a + b \right) \equiv 2 \pmod 8\) provided that 8 divides \((a + b - 2)\text{.}\)</p></div>
+<article class="task exercise-like" id="task-412"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1116">Use <a class="xref" data-knowl="./knowl/divides.html" title="Definition 3.1.1">Definition 3.1.1</a> to determine a way to prove that 8 divides \((a + b - 2)\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-62" id="solution-62"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-62"><div class="solution solution-like"><p id="p-1117">To prove that 8 divides \((a + b - 2)\text{,}\) we can prove that there exists an integer \(q\) such that \((a + b - 2) = 8q\text{.}\)</p></div></div>
+</div></article><article class="task exercise-like" id="congruenceb"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1118">We now turn to what we know and ask, “What can we conclude from the assumptions that \(a \equiv 5 \pmod(8)\) and \(b \equiv 5 \pmod 8\text{?}\)” We can again use the definition of congruence and conclude that 8 divides \((a - 5)\) and 8 divides \((b - 5)\text{.}\)</p>
+<p id="p-1119">Use <a class="xref" data-knowl="./knowl/divides.html" title="Definition 3.1.1">Definition 3.1.1</a> to make conclusions based on the facts that 8 divides \((a - 5)\) and 8 divides \((b - 5)\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-63" id="solution-63"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-63"><div class="solution solution-like"><p id="p-1120">Since 8 divides \((a - 5)\) and \((b - 5)\text{,}\) there exist integers \(k\) and \(m\) such that \(a - 5 = 8k\) and \(b - 5 = 8m\text{.}\)</p></div></div>
+</div></article><article class="task exercise-like" id="congruencec"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1121">Solve an equation from <a class="xref" data-knowl="./knowl/congruenceb.html" title="Task 3.1.12.b">Task 3.1.12.b</a> for \(a\) and for \(b\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-64" id="solution-64"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-64"><div class="solution solution-like"><p id="p-1122">\(a = 5 + 8k\) and \(b = 5 + 8m\text{.}\)</p></div></div>
+</div></article><article class="task exercise-like" id="task-415"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-1123">Use the results from <a class="xref" data-knowl="./knowl/congruencec.html" title="Task 3.1.12.c">Task 3.1.12.c</a>) to prove that 8 divides \((a + b - 2)\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-65" id="solution-65"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-65"><div class="solution solution-like"><p id="p-1124">\(a + b - 2 = (5 + 8k) + (5 + 8m) - 2 = 8 + 8k + 8m = 8(1 + k + m)\text{.}\)</p></div></div>
+</div></article><article class="task exercise-like" id="task-416"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-1125">Write a proof for <a class="xref" data-knowl="./knowl/prop_congruenceproof.html" title="Proposition 3.1.11">Proposition 3.1.11</a>.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-66" id="solution-66"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-66"><div class="solution solution-like">
+<p id="p-1126">Let \(a\) and \(b\) be integers and assume that \(\mod{a}{5}{8}\) and \(\mod{b}{5}{8}\text{.}\) We will prove that \(\mod{(a + b)}{2}{8}\text{.}\) Since 8 divides \((a - 5)\) and \((b - 5)\text{,}\) there exist integers \(k\) and \(m\) such that \(a - 5 = 8k\) and \(b - 5 = 8m\text{.}\) We then see that</p>
+<div class="displaymath">
+\begin{align*}
+a + b - 2 \amp = (5 + 8k) + (5 + 8m) - 2\\
+\amp = 8 + 8k + 8m\\
+\amp = 8(1 + k + m)
+\end{align*}
+</div>
+<p id="p-1127">By the closure properties of the integers, \((1 + k + m)\) is an integer and so the last equation proves that 8 divides \((a + b - 2)\) and hence, \(\mod{(a + b)}{2}{8}\text{.}\) This proves that if \(\mod{a}{5}{8}\) and \(\mod{b}{5}{8}\text{,}\) then \(\mod{(a + b)}{2}{8}\text{.}\)</p>
+</div></div>
+</div></article></article></section><section class="subsection" id="subsection-40"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Additional Writing Guidelines</span>
 </h3>
-<p id="p-1045"> We will now be writing many proofs, and it is important to make sure we write according to accepted guidelines so that our proofs may be understood by others. Some writing guidelines were introduced in <a href="C_1intro.html" class="internal" title="Chapter 1: Introduction to Writing Proofs in Mathematics">Chapter 1</a>. The first four writing guidelines given below can be considered general guidelines, and the last three can be considered as technical guidelines specific to writing in mathematics.</p>
+<p id="p-1128"> We will now be writing many proofs, and it is important to make sure we write according to accepted guidelines so that our proofs may be understood by others. Some writing guidelines were introduced in <a href="C_1intro.html" class="internal" title="Chapter 1: Introduction to Writing Proofs in Mathematics">Chapter 1</a>. The first four writing guidelines given below can be considered general guidelines, and the last three can be considered as technical guidelines specific to writing in mathematics.</p>
 <dl class="description-list">
 <dt id="writing_know">Know Your Audience</dt>
-<dd><p id="p-1046">Every writer should have a clear idea of the intended audience for a piece of writing. In that way, the writer can give the right amount of information at the proper level of sophistication to communicate effectively. This is especially true for mathematical writing. For example, if a mathematician is writing a solution to a textbook problem for a solutions manual for instructors, the writing would be brief with many details omitted. However, if the writing was for a students' solution manual, more details would be included.</p></dd>
-<dt id="li-145">Use complete sentences and proper paragraph structure</dt>
-<dd><p id="p-1047">Good grammar is an important part of any writing. Therefore, conform to the accepted rules of grammar. Pay careful attention to the structure of sentences. Write proofs using <em class="emphasis">complete sentences</em> but avoid run-on sentences. Also, do not forget punctuation, and always use a spell checker when using a word processor.</p></dd>
-<dt id="li-146">Keep it simple</dt>
-<dd><p id="p-1048">It is often difficult to understand a mathematical argument no matter how well it is written. Do not let your writing help make it more difficult for the reader. Use simple, declarative sentences and short paragraphs, each with a simple point.</p></dd>
-<dt id="li-147">Write a first draft of your proof and then revise it</dt>
-<dd><p id="p-1049">Remember that a proof is written so that readers are able to read and understand the reasoning in the proof. Be clear and concise. Include details but do not ramble. Do not be satisfied with the first draft of a proof. Read it over and refine it. Just like any worthwhile activity, learning to write mathematics well takes practice and hard work. This can be frustrating. Everyone can be sure that there will be some proofs that are difficult to construct, but remember that proofs are a very important part of mathematics. So work hard and have fun.</p></dd>
-<dt id="li-148">Do not use \(*\) for multiplication or ^ for exponents</dt>
+<dd><p id="p-1129">Every writer should have a clear idea of the intended audience for a piece of writing. In that way, the writer can give the right amount of information at the proper level of sophistication to communicate effectively. This is especially true for mathematical writing. For example, if a mathematician is writing a solution to a textbook problem for a solutions manual for instructors, the writing would be brief with many details omitted. However, if the writing was for a students' solution manual, more details would be included.</p></dd>
+<dt id="li-160">Use complete sentences and proper paragraph structure</dt>
+<dd><p id="p-1130">Good grammar is an important part of any writing. Therefore, conform to the accepted rules of grammar. Pay careful attention to the structure of sentences. Write proofs using <em class="emphasis">complete sentences</em> but avoid run-on sentences. Also, do not forget punctuation, and always use a spell checker when using a word processor.</p></dd>
+<dt id="li-161">Keep it simple</dt>
+<dd><p id="p-1131">It is often difficult to understand a mathematical argument no matter how well it is written. Do not let your writing help make it more difficult for the reader. Use simple, declarative sentences and short paragraphs, each with a simple point.</p></dd>
+<dt id="li-162">Write a first draft of your proof and then revise it</dt>
+<dd><p id="p-1132">Remember that a proof is written so that readers are able to read and understand the reasoning in the proof. Be clear and concise. Include details but do not ramble. Do not be satisfied with the first draft of a proof. Read it over and refine it. Just like any worthwhile activity, learning to write mathematics well takes practice and hard work. This can be frustrating. Everyone can be sure that there will be some proofs that are difficult to construct, but remember that proofs are a very important part of mathematics. So work hard and have fun.</p></dd>
+<dt id="li-163">Do not use \(*\) for multiplication or ^ for exponents</dt>
 <dd>
-<p id="p-1050">Leave this type of notation for writing computer code. The use of this notation makes it difficult for humans to read. In addition, avoid using \(/\) for division when using a complex fraction.</p>
-<p id="p-1051">For example, it is very difficult to read \(\left(x^3 -3x^2 + 1/2 \right)\!/\!\left(2x/3 - 7\right)\text{;}\) the fraction</p>
+<p id="p-1133">Leave this type of notation for writing computer code. The use of this notation makes it difficult for humans to read. In addition, avoid using \(/\) for division when using a complex fraction.</p>
+<p id="p-1134">For example, it is very difficult to read \(\left(x^3 -3x^2 + 1/2 \right)\!/\!\left(2x/3 - 7\right)\text{;}\) the fraction</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{x^3 - 3x^2 +\dfrac{1}{2}}{\dfrac{2x}{3} - 7}
@@ -586,80 +682,80 @@ a \amp \equiv b \pmod n \text{  means  } \left( {\exists k \in \mathbb{Z}} \righ
 </div>
 <p class="continuation">is much easier to read.</p>
 </dd>
-<dt id="li-149">Do not use a mathematical symbol at the beginning of a sentence.</dt>
-<dd><p id="p-1052">For example, we should not write, “Let \(n\) be an integer. \(n\) is an odd integer provided that … .” Many people find this hard to read and often have to re-read it to understand it. It would be better to write, “An integer \(n\) is an odd integer provided that … .”</p></dd>
-<dt id="li-150">Use English and minimize the use of cumbersome notation</dt>
+<dt id="li-164">Do not use a mathematical symbol at the beginning of a sentence.</dt>
+<dd><p id="p-1135">For example, we should not write, “Let \(n\) be an integer. \(n\) is an odd integer provided that … .” Many people find this hard to read and often have to re-read it to understand it. It would be better to write, “An integer \(n\) is an odd integer provided that … .”</p></dd>
+<dt id="li-165">Use English and minimize the use of cumbersome notation</dt>
 <dd>
-<p id="p-1053">Do not use the special symbols for quantifiers \(\forall\) (for all), \(\exists\) (there exists), \(\mathrel\backepsilon\) (such that), or \(\therefore\) (therefore) in formal mathematical writing. It is often easier to write, and usually easier to read, if the English words are used instead of the symbols. For example, why make the reader interpret</p>
+<p id="p-1136">Do not use the special symbols for quantifiers \(\forall\) (for all), \(\exists\) (there exists), \(\mathrel\backepsilon\) (such that), or \(\therefore\) (therefore) in formal mathematical writing. It is often easier to write, and usually easier to read, if the English words are used instead of the symbols. For example, why make the reader interpret</p>
 <div class="displaymath">
 \begin{equation*}
 \left( \forall x \in \R \right) \left( \exists y \in \R \right)\left( x + y = 0 \right)
 \end{equation*}
 </div>
-<p class="continuation">when it is possbile to write <blockquote class="blockquote" id="blockquote-81">For each real number \(x\text{,}\) there exists a real number \(y\) such that \(x + y = 0\text{,}\)</blockquote> or, more succinctly (if appropriate), <blockquote class="blockquote" id="blockquote-82">Every real number has an additive inverse.</blockquote></p>
+<p class="continuation">when it is possbile to write <blockquote class="blockquote" id="blockquote-82">For each real number \(x\text{,}\) there exists a real number \(y\) such that \(x + y = 0\text{,}\)</blockquote> or, more succinctly (if appropriate), <blockquote class="blockquote" id="blockquote-83">Every real number has an additive inverse.</blockquote></p>
 </dd>
 </dl></section><section class="exercises" id="exercises-7"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="exer_sec31-prove"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="p-1054">Prove each of the following statements: <article class="task exercise-like" id="exer_sec31-provea"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1055">For all integers \(a\text{,}\) \(b\text{,}\) and \(c\) with \(a \ne 0\text{,}\) if \(a \mid b\) and \(a \mid c\text{,}\) then \(a \mid \left(b-c \right)\text{.}\)</p></article> <article class="task exercise-like" id="task-409"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1056">For each \(n \in \Z\text{,}\) if \(n\) is an odd integer, then \(n^3\) is an odd integer.</p></article> <article class="task exercise-like" id="task-410"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-1057">For each integer \(a\text{,}\) if 4 divides \((a - 1)\text{,}\) then 4 divides \(\left( a^2 - 1 \right)\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exercise-159"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-1058">For each of the following, use a counterexample to prove the statement is false. <article class="task exercise-like" id="task-411"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1059">For each odd natural number \(n\text{,}\) if \(n &gt; 3\text{,}\) then 3 divides \(\left( n^2 - 1 \right)\text{.}\)</p></article> <article class="task exercise-like" id="task-412"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1060">For each natural number \(n\text{,}\) \(\left( 3 \cdot 2^n + 2 \cdot 3^n + 1 \right)\) is a prime number.</p></article> <article class="task exercise-like" id="task-413"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-1061">For all real numbers \(x\) and \(y\text{,}\) \(\sqrt{x^2 + y^2} &gt; 2xy\text{.}\)</p></article> <article class="task exercise-like" id="task-414"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<p id="p-1062">For each integer \(a\text{,}\) if 4 divides \(\left( a^2 - 1 \right)\text{,}\) then 4 divides \((a - 1)\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exer_3truefalse"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="p-1063">Determine if each of the following statements is true or false. If a statement is true, then write a formal proof of that statement, and if it is false, then provide a counterexample that shows it is false. <article class="task exercise-like" id="exer_divprod"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1064">For all integers \(a\text{,}\) \(b\text{,}\) and \(c\) with \(a \ne 0\text{,}\) if \(a \mid b\text{,}\) then \(a \mid \left(bc \right)\text{.}\)</p></article> <article class="task exercise-like" id="task-416"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1065">For all integers \(a\) and \(b\) with \(a \ne 0\text{,}\) if \(6 \mid \left(ab \right)\text{,}\) then \(6 \mid a\) or \(6 \mid b\text{.}\)</p></article> <article class="task exercise-like" id="task-417"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-1066">For all integers \(a\text{,}\) \(b\text{,}\) and \(c\) with \(a \ne 0\text{,}\) if \(a\) divides \((b - 1)\) and \(a\) divides \((c - 1)\text{,}\) then \(a\) divides \((bc - 1)\text{.}\)</p></article> <article class="task exercise-like" id="task-418"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<p id="p-1067">For each integer \(n\text{,}\) if 7 divides \(\left( n^2 - 4 \right)\text{,}\) then 7 divides \((n - 2)\text{.}\)</p></article> <article class="task exercise-like" id="task-419"><h6 class="heading"><span class="codenumber">(e)</span></h6>
-<p id="p-1068">For every integer \(n\text{,}\) \(4n^2 + 7n + 6\) is an odd integer.</p></article> <article class="task exercise-like" id="task-420"><h6 class="heading"><span class="codenumber">(f)</span></h6>
-<p id="p-1069">For every odd integer \(n\text{,}\) \(4n^2 + 7n + 6\) is an odd integer.</p></article> <article class="task exercise-like" id="task-421"><h6 class="heading"><span class="codenumber">(g)</span></h6>
-<p id="p-1070">For all integers \(a\text{,}\) \(b\text{,}\) and \(d\) with \(d \ne 0\text{,}\) if \(d\) divides both \(a-b\) and \(a+b\text{,}\) then \(d\) divides \(a\text{.}\)</p></article> <article class="task exercise-like" id="task-422"><h6 class="heading"><span class="codenumber">(h)</span></h6>
-<p id="p-1071">For all integers \(a\text{,}\) \(b\text{,}\) and \(c\) with \(a \ne 0\text{,}\) if \(a \mid (bc)\text{,}\) then \(a \mid b\) or \(a \mid c\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exer_diveach"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
-<article class="task exercise-like" id="task-423"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1072">If \(x\) and \(y\) are integers and \(xy=1\text{,}\) explain why \(x=1\) or \(x=-1\text{.}\)</p></article><article class="task exercise-like" id="task-424"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1073">Is the following proposition true or false? <blockquote class="blockquote" id="blockquote-83">For all nonzero integers \(a\) and \(b\text{,}\) if \(a \mid b\) and \(b \mid a\text{,}\) then \(a = \pm b\text{.}\)</blockquote></p></article></article><article class="exercise exercise-like" id="exer_sec31-10"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="p-1074">Prove the following proposition: <blockquote class="blockquote" id="blockquote-84">Let \(a\) be an integer. If there exists an integer \(n\) such that \(a \mid \left(4n+3 \right)\) and \(a \mid \left( 2n+1 \right)\text{,}\) then \(a = 1\) or \(a = - 1\text{.}\)</blockquote></p>
+<p id="p-1137">Prove each of the following statements: <article class="task exercise-like" id="exer_sec31-provea"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1138">For all integers \(a\text{,}\) \(b\text{,}\) and \(c\) with \(a \ne 0\text{,}\) if \(a \mid b\) and \(a \mid c\text{,}\) then \(a \mid \left(b-c \right)\text{.}\)</p></article> <article class="task exercise-like" id="task-418"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1139">For each \(n \in \Z\text{,}\) if \(n\) is an odd integer, then \(n^3\) is an odd integer.</p></article> <article class="task exercise-like" id="task-419"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1140">For each integer \(a\text{,}\) if 4 divides \((a - 1)\text{,}\) then 4 divides \(\left( a^2 - 1 \right)\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exercise-156"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-1141">For each of the following, use a counterexample to prove the statement is false. <article class="task exercise-like" id="task-420"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1142">For each odd natural number \(n\text{,}\) if \(n &gt; 3\text{,}\) then 3 divides \(\left( n^2 - 1 \right)\text{.}\)</p></article> <article class="task exercise-like" id="task-421"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1143">For each natural number \(n\text{,}\) \(\left( 3 \cdot 2^n + 2 \cdot 3^n + 1 \right)\) is a prime number.</p></article> <article class="task exercise-like" id="task-422"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1144">For all real numbers \(x\) and \(y\text{,}\) \(\sqrt{x^2 + y^2} &gt; 2xy\text{.}\)</p></article> <article class="task exercise-like" id="task-423"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-1145">For each integer \(a\text{,}\) if 4 divides \(\left( a^2 - 1 \right)\text{,}\) then 4 divides \((a - 1)\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exer_3truefalse"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-1146">Determine if each of the following statements is true or false. If a statement is true, then write a formal proof of that statement, and if it is false, then provide a counterexample that shows it is false. <article class="task exercise-like" id="exer_divprod"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1147">For all integers \(a\text{,}\) \(b\text{,}\) and \(c\) with \(a \ne 0\text{,}\) if \(a \mid b\text{,}\) then \(a \mid \left(bc \right)\text{.}\)</p></article> <article class="task exercise-like" id="task-425"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1148">For all integers \(a\) and \(b\) with \(a \ne 0\text{,}\) if \(6 \mid \left(ab \right)\text{,}\) then \(6 \mid a\) or \(6 \mid b\text{.}\)</p></article> <article class="task exercise-like" id="task-426"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1149">For all integers \(a\text{,}\) \(b\text{,}\) and \(c\) with \(a \ne 0\text{,}\) if \(a\) divides \((b - 1)\) and \(a\) divides \((c - 1)\text{,}\) then \(a\) divides \((bc - 1)\text{.}\)</p></article> <article class="task exercise-like" id="task-427"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-1150">For each integer \(n\text{,}\) if 7 divides \(\left( n^2 - 4 \right)\text{,}\) then 7 divides \((n - 2)\text{.}\)</p></article> <article class="task exercise-like" id="task-428"><h6 class="heading"><span class="codenumber">(e)</span></h6>
+<p id="p-1151">For every integer \(n\text{,}\) \(4n^2 + 7n + 6\) is an odd integer.</p></article> <article class="task exercise-like" id="task-429"><h6 class="heading"><span class="codenumber">(f)</span></h6>
+<p id="p-1152">For every odd integer \(n\text{,}\) \(4n^2 + 7n + 6\) is an odd integer.</p></article> <article class="task exercise-like" id="task-430"><h6 class="heading"><span class="codenumber">(g)</span></h6>
+<p id="p-1153">For all integers \(a\text{,}\) \(b\text{,}\) and \(d\) with \(d \ne 0\text{,}\) if \(d\) divides both \(a-b\) and \(a+b\text{,}\) then \(d\) divides \(a\text{.}\)</p></article> <article class="task exercise-like" id="task-431"><h6 class="heading"><span class="codenumber">(h)</span></h6>
+<p id="p-1154">For all integers \(a\text{,}\) \(b\text{,}\) and \(c\) with \(a \ne 0\text{,}\) if \(a \mid (bc)\text{,}\) then \(a \mid b\) or \(a \mid c\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exer_diveach"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<article class="task exercise-like" id="task-432"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1155">If \(x\) and \(y\) are integers and \(xy=1\text{,}\) explain why \(x=1\) or \(x=-1\text{.}\)</p></article><article class="task exercise-like" id="task-433"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1156">Is the following proposition true or false? <blockquote class="blockquote" id="blockquote-84">For all nonzero integers \(a\) and \(b\text{,}\) if \(a \mid b\) and \(b \mid a\text{,}\) then \(a = \pm b\text{.}\)</blockquote></p></article></article><article class="exercise exercise-like" id="exer_sec31-10"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="p-1157">Prove the following proposition: <blockquote class="blockquote" id="blockquote-85">Let \(a\) be an integer. If there exists an integer \(n\) such that \(a \mid \left(4n+3 \right)\) and \(a \mid \left( 2n+1 \right)\text{,}\) then \(a = 1\) or \(a = - 1\text{.}\)</blockquote></p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-1075">Use the fact that the only divisors of 1 are 1 and \(-1\text{.}\)</p></div></div>
-</div></article><article class="exercise exercise-like" id="exercise-163"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
-<p id="p-1076">Determine if each of the following statements is true or false. If a statement is true, then write a formal proof of that statement, and if it is false, then provide a counterexample that shows it is false. <article class="task exercise-like" id="task-425"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1077">For each integer \(a\text{,}\) if there exists an integer \(n\) such that \(a\) divides \((8n + 7)\) and \(a\) divides \((4n + 1)\text{,}\) then \(a\) divides 5.</p></article> <article class="task exercise-like" id="task-426"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1078">For each integer \(a\text{,}\) if there exists an integer \(n\) such that \(a\) divides \((9n + 5)\) and \(a\) divides \((6n + 1)\text{,}\) then \(a\) divides 7.</p></article> <article class="task exercise-like" id="task-427"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-1079">For each integer \(n\text{,}\) if \(n\) is odd, then 8 divides \(\left( n^4 + 4n^2 + 11 \right)\text{.}\)</p></article> <article class="task exercise-like" id="task-428"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<p id="p-1080">For each integer \(n\text{,}\) if \(n\) is odd, then 8 divides \(\left( n^4 + n^2 + 2n \right)\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exercise-164"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
-<p id="p-1081">Let \(a\) be an integer and let \(n \in \mathbb{N}\text{.}\) <article class="task exercise-like" id="task-429"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1082">Prove that if \(a \equiv 0 \pmod n\text{,}\) then \(n \mid a\text{.}\)</p></article> <article class="task exercise-like" id="task-430"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1083">Prove that if \(n \mid a\text{,}\) then \(a \equiv 0 \pmod n\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exer_congmod3"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
-<p id="p-1084">Let \(a\) and \(b\) be integers. Prove that if \(a \equiv 2 \pmod 3\) and \(b \equiv 2 \pmod 3\text{,}\) then <article class="task exercise-like" id="task-431"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1085">\(a + b \equiv 1 \pmod 3\text{.}\)</p></article> <article class="task exercise-like" id="task-432"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1086">\(a \cdot b \equiv 1 \pmod 3\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exercise-166"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
-<p id="p-1087">Let \(a\) and \(b\) be integers. Prove that if \(a \equiv 7 \pmod 8\) and \(b \equiv 3 \pmod 8\text{,}\) then: <article class="task exercise-like" id="task-433"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1088">\(a + b \equiv 2 \pmod 8\text{.}\)</p></article> <article class="task exercise-like" id="task-434"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1089">\(a \cdot b \equiv 5 \pmod 8\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exercise-167"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
-<p id="p-1090">Determine if each of the following propositions is true or false. Justify each conclusion. <article class="task exercise-like" id="task-435"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1091">For all integers \(a\) and \(b\text{,}\) if \(ab \equiv 0 \pmod 6\text{,}\) then \(a \equiv 0 \pmod 6\) or \(b \equiv 0 \pmod 6\text{.}\)</p></article> <article class="task exercise-like" id="task-436"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1092">For each integer \(a\text{,}\) if \(a \equiv 2 \pmod 8\text{,}\) then \(a^2 \equiv 4 \pmod 8\text{.}\)</p></article> <article class="task exercise-like" id="task-437"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-1093">For each integer \(a\text{,}\) if \(a^2 \equiv 4 \pmod 8\text{,}\) then \(a \equiv 2 \pmod 8\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exer_cong-props"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
-<p id="p-1094">Let \(n\) be a natural number. Prove each of the following: <article class="task exercise-like" id="exer_cong-reflexive"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1095">For every integer \(a\text{,}\) \(a \equiv a \pmod n\text{.}\)</p>
-<p id="p-1096">This is called the <dfn class="terminology">reflexive property</dfn>  of congruence modulo \(n\text{.}\)</p></article> <article class="task exercise-like" id="exer_cong-symmetry"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1097">For all integers \(a\) and \(b\text{,}\) if \(a \equiv b \pmod n\text{,}\) then \(b \equiv a \pmod n\text{.}\)</p>
-<p id="p-1098">This is called the <dfn class="terminology">symmetric property</dfn>  of congruence modulo \(n\text{.}\)</p></article> <article class="task exercise-like" id="task-440"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-1099">For all integers \(a\text{,}\) \(b\text{,}\) and \(c\text{,}\) if \(a \equiv b \pmod n\) and \(b \equiv c \pmod n\text{,}\) then \(a \equiv c \pmod n\text{.}\)</p>
-<p id="p-1100">This is called the <dfn class="terminology">transitive property</dfn>  of congruence modulo \(n\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exer_sec31-11"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
-<p id="p-1101">Let \(n\) be a natural number and let \(a\text{,}\) \(b\text{,}\) \(c\text{,}\) and \(d\) be integers. Prove each of the following. <article class="task exercise-like" id="task-441"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1102">If \(a \equiv b \pmod n\) and \(c \equiv d \pmod n\text{,}\) then \(\left( {a + c} \right) \equiv \left( {b + d} \right) \pmod n\text{.}\)</p></article> <article class="task exercise-like" id="exer_congprops"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1103">If \(a \equiv b \pmod n\) and \(c \equiv d \pmod n\text{,}\) then \(ac \equiv bd \pmod n\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exer_quadformula2"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
-<p id="p-1104"><article class="task exercise-like" id="task-443"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1105">Let \(a\text{,}\) \(b\text{,}\) and \(c\) be real numbers with \(a \ne 0\text{.}\) Explain how to use a part of the quadratic formula (called the discriminant) to determine if the quadratic equation  \(ax^2 + bx + c = 0\) has two real number solutions, one real number solution, or no real number solutions. (See <a class="xref" data-knowl="./knowl/exer_sec12-11.html" title="Exercise 11">Exercise 11</a> for a statement of the quadratic formula.)</p></article> <article class="task exercise-like" id="task-444"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1106">Prove that if \(a\text{,}\) \(b\text{,}\) and \(c\) are real numbers for which \(a&gt;0\) and \(c\lt 0\text{,}\) then one solution of the quadratic equation \(ax^2+bx+c=0\) is a positive real number.</p></article> <article class="task exercise-like" id="task-445"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-1107">Prove that if \(a\text{,}\) \(b\text{,}\) and \(c\) are real numbers, if \(a \ne 0\text{,}\) \(b &gt; 0\) and \(\dfrac{b}{2} \lt \sqrt {ac}\text{,}\) then the quadratic equation \(ax^2 + bx + c = 0\) has no real number solution.</p></article></p></article><article class="exercise exercise-like" id="exer_circle-31"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
-<p id="p-1108">Let \(h\) and \(k\) be real numbers and let \(r\) be a positive number. The equation for a circle whose center is at the point \(\left( h, k \right)\) and whose radius is \(r\) is</p>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-1" id="hint-1"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-1"><div class="hint solution-like"><p id="p-1158">Use the fact that the only divisors of 1 are 1 and \(-1\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-160"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="p-1159">Determine if each of the following statements is true or false. If a statement is true, then write a formal proof of that statement, and if it is false, then provide a counterexample that shows it is false. <article class="task exercise-like" id="task-434"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1160">For each integer \(a\text{,}\) if there exists an integer \(n\) such that \(a\) divides \((8n + 7)\) and \(a\) divides \((4n + 1)\text{,}\) then \(a\) divides 5.</p></article> <article class="task exercise-like" id="task-435"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1161">For each integer \(a\text{,}\) if there exists an integer \(n\) such that \(a\) divides \((9n + 5)\) and \(a\) divides \((6n + 1)\text{,}\) then \(a\) divides 7.</p></article> <article class="task exercise-like" id="task-436"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1162">For each integer \(n\text{,}\) if \(n\) is odd, then 8 divides \(\left( n^4 + 4n^2 + 11 \right)\text{.}\)</p></article> <article class="task exercise-like" id="task-437"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-1163">For each integer \(n\text{,}\) if \(n\) is odd, then 8 divides \(\left( n^4 + n^2 + 2n \right)\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exercise-161"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-1164">Let \(a\) be an integer and let \(n \in \mathbb{N}\text{.}\) <article class="task exercise-like" id="task-438"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1165">Prove that if \(a \equiv 0 \pmod n\text{,}\) then \(n \mid a\text{.}\)</p></article> <article class="task exercise-like" id="task-439"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1166">Prove that if \(n \mid a\text{,}\) then \(a \equiv 0 \pmod n\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exer_congmod3"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="p-1167">Let \(a\) and \(b\) be integers. Prove that if \(a \equiv 2 \pmod 3\) and \(b \equiv 2 \pmod 3\text{,}\) then <article class="task exercise-like" id="task-440"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1168">\(a + b \equiv 1 \pmod 3\text{.}\)</p></article> <article class="task exercise-like" id="task-441"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1169">\(a \cdot b \equiv 1 \pmod 3\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exercise-163"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="p-1170">Let \(a\) and \(b\) be integers. Prove that if \(a \equiv 7 \pmod 8\) and \(b \equiv 3 \pmod 8\text{,}\) then: <article class="task exercise-like" id="task-442"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1171">\(a + b \equiv 2 \pmod 8\text{.}\)</p></article> <article class="task exercise-like" id="task-443"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1172">\(a \cdot b \equiv 5 \pmod 8\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exercise-164"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<p id="p-1173">Determine if each of the following propositions is true or false. Justify each conclusion. <article class="task exercise-like" id="task-444"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1174">For all integers \(a\) and \(b\text{,}\) if \(ab \equiv 0 \pmod 6\text{,}\) then \(a \equiv 0 \pmod 6\) or \(b \equiv 0 \pmod 6\text{.}\)</p></article> <article class="task exercise-like" id="task-445"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1175">For each integer \(a\text{,}\) if \(a \equiv 2 \pmod 8\text{,}\) then \(a^2 \equiv 4 \pmod 8\text{.}\)</p></article> <article class="task exercise-like" id="task-446"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1176">For each integer \(a\text{,}\) if \(a^2 \equiv 4 \pmod 8\text{,}\) then \(a \equiv 2 \pmod 8\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exer_cong-props"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
+<p id="p-1177">Let \(n\) be a natural number. Prove each of the following: <article class="task exercise-like" id="exer_cong-reflexive"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1178">For every integer \(a\text{,}\) \(a \equiv a \pmod n\text{.}\)</p>
+<p id="p-1179">This is called the <dfn class="terminology">reflexive property</dfn>  of congruence modulo \(n\text{.}\)</p></article> <article class="task exercise-like" id="exer_cong-symmetry"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1180">For all integers \(a\) and \(b\text{,}\) if \(a \equiv b \pmod n\text{,}\) then \(b \equiv a \pmod n\text{.}\)</p>
+<p id="p-1181">This is called the <dfn class="terminology">symmetric property</dfn>  of congruence modulo \(n\text{.}\)</p></article> <article class="task exercise-like" id="task-449"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1182">For all integers \(a\text{,}\) \(b\text{,}\) and \(c\text{,}\) if \(a \equiv b \pmod n\) and \(b \equiv c \pmod n\text{,}\) then \(a \equiv c \pmod n\text{.}\)</p>
+<p id="p-1183">This is called the <dfn class="terminology">transitive property</dfn>  of congruence modulo \(n\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exer_sec31-11"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
+<p id="p-1184">Let \(n\) be a natural number and let \(a\text{,}\) \(b\text{,}\) \(c\text{,}\) and \(d\) be integers. Prove each of the following. <article class="task exercise-like" id="task-450"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1185">If \(a \equiv b \pmod n\) and \(c \equiv d \pmod n\text{,}\) then \(\left( {a + c} \right) \equiv \left( {b + d} \right) \pmod n\text{.}\)</p></article> <article class="task exercise-like" id="exer_congprops"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1186">If \(a \equiv b \pmod n\) and \(c \equiv d \pmod n\text{,}\) then \(ac \equiv bd \pmod n\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exer_quadformula2"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
+<p id="p-1187"><article class="task exercise-like" id="task-452"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1188">Let \(a\text{,}\) \(b\text{,}\) and \(c\) be real numbers with \(a \ne 0\text{.}\) Explain how to use a part of the quadratic formula (called the discriminant) to determine if the quadratic equation  \(ax^2 + bx + c = 0\) has two real number solutions, one real number solution, or no real number solutions. (See <a class="xref" data-knowl="./knowl/exer_sec12-11.html" title="Exercise 11">Exercise 11</a> for a statement of the quadratic formula.)</p></article> <article class="task exercise-like" id="task-453"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1189">Prove that if \(a\text{,}\) \(b\text{,}\) and \(c\) are real numbers for which \(a&gt;0\) and \(c\lt 0\text{,}\) then one solution of the quadratic equation \(ax^2+bx+c=0\) is a positive real number.</p></article> <article class="task exercise-like" id="task-454"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1190">Prove that if \(a\text{,}\) \(b\text{,}\) and \(c\) are real numbers, if \(a \ne 0\text{,}\) \(b &gt; 0\) and \(\dfrac{b}{2} \lt \sqrt {ac}\text{,}\) then the quadratic equation \(ax^2 + bx + c = 0\) has no real number solution.</p></article></p></article><article class="exercise exercise-like" id="exer_circle-31"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
+<p id="p-1191">Let \(h\) and \(k\) be real numbers and let \(r\) be a positive number. The equation for a circle whose center is at the point \(\left( h, k \right)\) and whose radius is \(r\) is</p>
 <div class="displaymath">
 \begin{equation*}
 \left( x - h \right)^2 + \left( y - k \right)^2 = r^2\text{.}
@@ -667,82 +763,82 @@ a \amp \equiv b \pmod n \text{  means  } \left( {\exists k \in \mathbb{Z}} \righ
 </div>
 <p class="continuation">We also know that if \(a\) and \(b\) are real numbers, then</p>
 <ul class="disc">
-<li id="li-151"><p id="p-1109">The point \(\left( a, b \right)\) is inside the circle if \(\left( a - h \right)^2 + \left( b - k \right)^2 \lt r^2\text{.}\)</p></li>
-<li id="li-152"><p id="p-1110">The point \(\left( a, b \right)\) is on the circle if \(\left( a - h \right)^2 + \left( b - k \right)^2 = r^2\text{.}\)</p></li>
-<li id="li-153"><p id="p-1111">The point \(\left( a, b \right)\) is outside the circle if \(\left( a - h \right)^2 + \left( b - k \right)^2 &gt; r^2\text{.}\)</p></li>
+<li id="li-166"><p id="p-1192">The point \(\left( a, b \right)\) is inside the circle if \(\left( a - h \right)^2 + \left( b - k \right)^2 \lt r^2\text{.}\)</p></li>
+<li id="li-167"><p id="p-1193">The point \(\left( a, b \right)\) is on the circle if \(\left( a - h \right)^2 + \left( b - k \right)^2 = r^2\text{.}\)</p></li>
+<li id="li-168"><p id="p-1194">The point \(\left( a, b \right)\) is outside the circle if \(\left( a - h \right)^2 + \left( b - k \right)^2 &gt; r^2\text{.}\)</p></li>
 </ul>
 <p class="continuation">Prove that all points on or inside the circle whose equation is \(\left( x - 1 \right)^2 + \left( y - 2 \right)^2 = 4\) are inside the circle whose equation is \(x^2 + y^2 = 26\text{.}\)</p></article><article class="exercise exercise-like" id="exer_insidecircle"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
-<p id="p-1112">Let \(r\) be a positive real number. The equation for a circle of radius \(r\) whose center is the origin is \(x^2 + y^2 = r^2\text{.}\) <article class="task exercise-like" id="task-446"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1113">Use implicit differentiation to determine \(\dfrac{dy}{dx}\text{.}\)</p></article> <article class="task exercise-like" id="task-447"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1114">Let \(\left(a, b \right)\) be a point on the circle with \(a \ne 0\) and \(b \ne 0\text{.}\) Determine the slope of the line tangent to the circle at the point \(\left(a, b \right)\text{.}\)</p></article> <article class="task exercise-like" id="task-448"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-1115">Prove that the radius of the circle to the point \(\left(a, b \right)\) is perpendicular to the line tangent to the circle at the point \(\left(a, b \right)\text{.}\)</p>
+<p id="p-1195">Let \(r\) be a positive real number. The equation for a circle of radius \(r\) whose center is the origin is \(x^2 + y^2 = r^2\text{.}\) <article class="task exercise-like" id="task-455"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1196">Use implicit differentiation to determine \(\dfrac{dy}{dx}\text{.}\)</p></article> <article class="task exercise-like" id="task-456"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1197">Let \(\left(a, b \right)\) be a point on the circle with \(a \ne 0\) and \(b \ne 0\text{.}\) Determine the slope of the line tangent to the circle at the point \(\left(a, b \right)\text{.}\)</p></article> <article class="task exercise-like" id="task-457"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1198">Prove that the radius of the circle to the point \(\left(a, b \right)\) is perpendicular to the line tangent to the circle at the point \(\left(a, b \right)\text{.}\)</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-2" id="hint-2"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-2"><div class="hint solution-like">Two lines (neither of which is horizontal) are perpendicular if and only if the products of their slopes is equal to \(-1\text{.}\)</div></div>
 </div></article></p></article><article class="exercise exercise-like" id="exer_AGM"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
-<p id="p-1116">Determine if each of the following statements is true or false. Provide a counterexample for statements that are false and provide a complete proof for those that are true. <article class="task exercise-like" id="task-449"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1117">For all real numbers \(x\) and \(y\text{,}\) \(\sqrt{xy} \leq \dfrac{x + y}{2}\text{.}\)</p></article> <article class="task exercise-like" id="task-450"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1118">For all real numbers \(x\) and \(y\text{,}\) \(xy \leq \left( \dfrac{x + y}{2} \right)^2\text{.}\)</p></article> <article class="task exercise-like" id="task-451"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-1119">For all nonnegative real numbers \(x\) and \(y\text{,}\) \(\sqrt{xy} \leq \dfrac{x + y}{2}\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exercise-174"><h6 class="heading"><span class="codenumber">17<span class="period">.</span></span></h6>
-<p id="p-1120">Use one of the true inequalities in <a class="xref" data-knowl="./knowl/exer_AGM.html" title="Exercise 16">Exercise 16</a> to prove the following proposition. <blockquote class="blockquote" id="blockquote-85">For each real number \(a\text{,}\) the value of \(x\) that gives the maximum value of \(y = x \left( a - x \right)\) is \(x = \dfrac{a}{2}\text{.}\)</blockquote></p></article><article class="exercise exercise-like" id="exer_sec31-pythag"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
-<p id="p-1121"><figure class="figure figure-like" id="fig_for-exer-pythag"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/figps-pythag-triangle.svg" class="contained" alt=""></div>
+<p id="p-1199">Determine if each of the following statements is true or false. Provide a counterexample for statements that are false and provide a complete proof for those that are true. <article class="task exercise-like" id="task-458"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1200">For all real numbers \(x\) and \(y\text{,}\) \(\sqrt{xy} \leq \dfrac{x + y}{2}\text{.}\)</p></article> <article class="task exercise-like" id="task-459"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1201">For all real numbers \(x\) and \(y\text{,}\) \(xy \leq \left( \dfrac{x + y}{2} \right)^2\text{.}\)</p></article> <article class="task exercise-like" id="task-460"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1202">For all nonnegative real numbers \(x\) and \(y\text{,}\) \(\sqrt{xy} \leq \dfrac{x + y}{2}\text{.}\)</p></article></p></article><article class="exercise exercise-like" id="exercise-171"><h6 class="heading"><span class="codenumber">17<span class="period">.</span></span></h6>
+<p id="p-1203">Use one of the true inequalities in <a class="xref" data-knowl="./knowl/exer_AGM.html" title="Exercise 16">Exercise 16</a> to prove the following proposition. <blockquote class="blockquote" id="blockquote-86">For each real number \(a\text{,}\) the value of \(x\) that gives the maximum value of \(y = x \left( a - x \right)\) is \(x = \dfrac{a}{2}\text{.}\)</blockquote></p></article><article class="exercise exercise-like" id="exer_sec31-pythag"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
+<p id="p-1204"><figure class="figure figure-like" id="fig_for-exer-pythag"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/figps-pythag-triangle.svg" class="contained" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.1.13<span class="period">.</span></span><span class="space"> </span>Diagrams for <a class="xref" data-knowl="./knowl/exer_sec31-pythag.html" title="Exercise 18">Exercise 18</a></figcaption></figure> <article class="task exercise-like" id="exer-31-pythag-a"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1122">State the Pythagorean Theorem for right triangles.</p>
-<p id="p-1123">The diagrams in <a class="xref" data-knowl="./knowl/fig_for-exer-pythag.html" title="Figure 3.1.13">Figure 3.1.13</a> will be used for the problems in this exercise.</p></article> <article class="task exercise-like" id="exer-31-pythag-b"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1124">In the diagram on the left of <a class="xref" data-knowl="./knowl/fig_for-exer-pythag.html" title="Figure 3.1.13">Figure 3.1.13</a>, \(x\) is the length of a side of the equilateral triangle and \(h\) is the length of an altitude of the equilateral triangle. The labeling in the diagram shows the fact that the altitude intersects the base of the equilateral triangle at the midpoint of the base. Use the Pythagorean Theorem to prove that the area of this equilateral triangle is \(\dfrac{\sqrt{3}}{4}x^2\text{.}\)</p></article> <article class="task exercise-like" id="exer-31-pythag-c"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-1125">In the diagram on the right of <a class="xref" data-knowl="./knowl/fig_for-exer-pythag.html" title="Figure 3.1.13">Figure 3.1.13</a>, \(\triangle ABC\) is a right triangle. In addition, there has been an equilateral triangle constructed on each side of this right triangle. Prove that the area of the equilateral triangle on the hypotenuse is equal to the sum of the areas of the equilateral triangles constructed on the other two sides of the right triangle.</p></article></p></article><article class="exercise exercise-like" id="exer_proofeval"><h6 class="heading">
+<p id="p-1205">State the Pythagorean Theorem for right triangles.</p>
+<p id="p-1206">The diagrams in <a class="xref" data-knowl="./knowl/fig_for-exer-pythag.html" title="Figure 3.1.13">Figure 3.1.13</a> will be used for the problems in this exercise.</p></article> <article class="task exercise-like" id="exer-31-pythag-b"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1207">In the diagram on the left of <a class="xref" data-knowl="./knowl/fig_for-exer-pythag.html" title="Figure 3.1.13">Figure 3.1.13</a>, \(x\) is the length of a side of the equilateral triangle and \(h\) is the length of an altitude of the equilateral triangle. The labeling in the diagram shows the fact that the altitude intersects the base of the equilateral triangle at the midpoint of the base. Use the Pythagorean Theorem to prove that the area of this equilateral triangle is \(\dfrac{\sqrt{3}}{4}x^2\text{.}\)</p></article> <article class="task exercise-like" id="exer-31-pythag-c"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1208">In the diagram on the right of <a class="xref" data-knowl="./knowl/fig_for-exer-pythag.html" title="Figure 3.1.13">Figure 3.1.13</a>, \(\triangle ABC\) is a right triangle. In addition, there has been an equilateral triangle constructed on each side of this right triangle. Prove that the area of the equilateral triangle on the hypotenuse is equal to the sum of the areas of the equilateral triangles constructed on the other two sides of the right triangle.</p></article></p></article><article class="exercise exercise-like" id="exer_proofeval"><h6 class="heading">
 <span class="codenumber">19<span class="period">.</span></span><span class="space"> </span><span class="title">Evaluation of Proofs.</span>
 </h6>
-<div class="introduction" id="introduction-16">
-<p id="p-1126">This type of exercise will appear frequently in the book. In each case, there is a proposed proof of a proposition. However, the proposition may be true or may be false.</p>
+<div class="introduction" id="introduction-33">
+<p id="p-1209">This type of exercise will appear frequently in the book. In each case, there is a proposed proof of a proposition. However, the proposition may be true or may be false.</p>
 <ul class="disc">
-<li id="li-154"><p id="p-1127">If a proposition is false, the proposed proof is, of course, incorrect. In this situation, you are to find the error in the proof and then provide a counterexample showing that the proposition is false.</p></li>
-<li id="li-155"><p id="p-1128">If a proposition is true, the proposed proof may still be incorrect. In this case, you are to determine why the proof is incorrect and then write a correct proof using the writing guidelines that have been presented in this book.</p></li>
-<li id="li-156"><p id="p-1129">If a proposition is true and the proof is correct, you are to decide if the proof is well written or not. If it is well written, then you simply must indicate that this is an excellent proof and needs no revision. On the other hand, if the proof is not well written, then you must then revise the proof by writing it according to the guidelines presented in this text.</p></li>
+<li id="li-169"><p id="p-1210">If a proposition is false, the proposed proof is, of course, incorrect. In this situation, you are to find the error in the proof and then provide a counterexample showing that the proposition is false.</p></li>
+<li id="li-170"><p id="p-1211">If a proposition is true, the proposed proof may still be incorrect. In this case, you are to determine why the proof is incorrect and then write a correct proof using the writing guidelines that have been presented in this book.</p></li>
+<li id="li-171"><p id="p-1212">If a proposition is true and the proof is correct, you are to decide if the proof is well written or not. If it is well written, then you simply must indicate that this is an excellent proof and needs no revision. On the other hand, if the proof is not well written, then you must then revise the proof by writing it according to the guidelines presented in this text.</p></li>
 </ul>
 </div>
 <article class="task exercise-like" id="prop-exer-even"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<dl id="p-1130" class="description-list narrow">
-<dt id="li-157">Proposition</dt>
-<dd><p id="p-1131">If \(m\) is an even integer, then \(\left(5m + 4\right)\) is an even integer.</p></dd>
-<dt id="li-158">Proof</dt>
-<dd><p id="p-1132">We see that \(5m + 4 = 10n + 4 = 2 \left(5n + 2 \right)\text{.}\) Therefore, \(\left(5m + 4 \right)\) is an even integer.</p></dd>
+<dl id="p-1213" class="description-list narrow">
+<dt id="li-172">Proposition</dt>
+<dd><p id="p-1214">If \(m\) is an even integer, then \(\left(5m + 4\right)\) is an even integer.</p></dd>
+<dt id="li-173">Proof</dt>
+<dd><p id="p-1215">We see that \(5m + 4 = 10n + 4 = 2 \left(5n + 2 \right)\text{.}\) Therefore, \(\left(5m + 4 \right)\) is an even integer.</p></dd>
 </dl></article><article class="task exercise-like" id="prop-exer-recipadd"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<dl id="p-1133" class="description-list narrow">
-<dt id="li-159">Proposition</dt>
-<dd><p id="p-1134">For all real numbers \(x\) and \(y\text{,}\) if \(x \ne y\text{,}\) \(x &gt; 0\text{,}\) and \(y &gt;0\text{,}\) then \(\dfrac{x}{y} + \dfrac{y}{x} &gt; 2\text{.}\)</p></dd>
-<dt id="li-160">Proof</dt>
+<dl id="p-1216" class="description-list narrow">
+<dt id="li-174">Proposition</dt>
+<dd><p id="p-1217">For all real numbers \(x\) and \(y\text{,}\) if \(x \ne y\text{,}\) \(x &gt; 0\text{,}\) and \(y &gt;0\text{,}\) then \(\dfrac{x}{y} + \dfrac{y}{x} &gt; 2\text{.}\)</p></dd>
+<dt id="li-175">Proof</dt>
 <dd>
-<p id="p-1135">Since \(x\) and \(y\) are positive real numbers, \(xy\) is positive and we can multiply both sides of the inequality by \(xy\) to obtain</p>
+<p id="p-1218">Since \(x\) and \(y\) are positive real numbers, \(xy\) is positive and we can multiply both sides of the inequality by \(xy\) to obtain</p>
 <div class="displaymath">
 \begin{align*}
 \left( \frac{x}{y} + \frac{y}{x} \right) \cdot xy \amp &gt; 2 \cdot xy\\
 x^2 + y^2 \amp &gt; 2xy\text{.}
 \end{align*}
 </div>
-<p id="p-1136">By combining all terms on the left side of the inequality, we see that \(x^2 - 2xy + y^2 &gt; 0\) and then by factoring the left side, we obtain \(\left( x - y \right)^2 &gt; 0\text{.}\) Since \(x \ne y\text{,}\) \(\left(x - y \right) \ne 0\) and so \(\left( x - y \right)^2 &gt; 0\text{.}\) This proves that if \(x \ne y\text{,}\) \(x &gt; 0\text{,}\) and \(y &gt;0\text{,}\) then \(\dfrac{x}{y} + \dfrac{y}{x} &gt; 2\text{.}\)</p>
+<p id="p-1219">By combining all terms on the left side of the inequality, we see that \(x^2 - 2xy + y^2 &gt; 0\) and then by factoring the left side, we obtain \(\left( x - y \right)^2 &gt; 0\text{.}\) Since \(x \ne y\text{,}\) \(\left(x - y \right) \ne 0\) and so \(\left( x - y \right)^2 &gt; 0\text{.}\) This proves that if \(x \ne y\text{,}\) \(x &gt; 0\text{,}\) and \(y &gt;0\text{,}\) then \(\dfrac{x}{y} + \dfrac{y}{x} &gt; 2\text{.}\)</p>
 </dd>
 </dl></article><article class="task exercise-like" id="prop-exer-divides"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<dl id="p-1137" class="description-list narrow">
-<dt id="li-161">Proposition</dt>
-<dd><p id="p-1138">For all integers \(a\text{,}\) \(b\text{,}\) and \(c\text{,}\) if \(a \mid \left( bc \right)\text{,}\) then \(a \mid b\) or \(a \mid c\text{.}\)</p></dd>
-<dt id="li-162">Proof</dt>
+<dl id="p-1220" class="description-list narrow">
+<dt id="li-176">Proposition</dt>
+<dd><p id="p-1221">For all integers \(a\text{,}\) \(b\text{,}\) and \(c\text{,}\) if \(a \mid \left( bc \right)\text{,}\) then \(a \mid b\) or \(a \mid c\text{.}\)</p></dd>
+<dt id="li-177">Proof</dt>
 <dd>
-<p id="p-1139">We assume that \(a\text{,}\) \(b\text{,}\) and \(c\) are integers and that \(a\) divides \(bc\text{.}\) So, there exists an integer \(k\) such that \(bc = ka\text{.}\)</p>
-<p id="p-1140">We now factor \(k\) as \(k = mn\text{,}\) where \(m\) and \(n\) are integers. We then see that</p>
+<p id="p-1222">We assume that \(a\text{,}\) \(b\text{,}\) and \(c\) are integers and that \(a\) divides \(bc\text{.}\) So, there exists an integer \(k\) such that \(bc = ka\text{.}\)</p>
+<p id="p-1223">We now factor \(k\) as \(k = mn\text{,}\) where \(m\) and \(n\) are integers. We then see that</p>
 <div class="displaymath">
 \begin{equation*}
 bc = mna\text{.}
 \end{equation*}
 </div>
-<p id="p-1141">This means that \(b = ma\) or \(c = na\) and hence, \(a \mid b\) or \(a \mid c\text{.}\)</p>
+<p id="p-1224">This means that \(b = ma\) or \(c = na\) and hence, \(a \mid b\) or \(a \mid c\text{.}\)</p>
 </dd>
 </dl></article><article class="task exercise-like" id="prop-exer-expo"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<dl id="p-1142" class="description-list narrow">
-<dt id="li-163">Proposition</dt>
-<dd><p id="p-1143">For all positive integers \(a\text{,}\) \(b\text{,}\) and \(c\text{,}\) \(\left( a^b \right)^c = a^{\left( b^c \right)}\text{.}\)</p></dd>
-<dt id="li-164">Proof</dt>
+<dl id="p-1225" class="description-list narrow">
+<dt id="li-178">Proposition</dt>
+<dd><p id="p-1226">For all positive integers \(a\text{,}\) \(b\text{,}\) and \(c\text{,}\) \(\left( a^b \right)^c = a^{\left( b^c \right)}\text{.}\)</p></dd>
+<dt id="li-179">Proof</dt>
 <dd>
-<p id="p-1144">This proposition is false as is shown by the following counterexample: If we let \(a = 2\text{,}\) \(b = 3\text{,}\) and \(c = 2\text{,}\) then</p>
+<p id="p-1227">This proposition is false as is shown by the following counterexample: If we let \(a = 2\text{,}\) \(b = 3\text{,}\) and \(c = 2\text{,}\) then</p>
 <div class="displaymath">
 \begin{align*}
 \left( a^b \right)^c \amp = a^{\left( b^c \right)}\\
@@ -756,16 +852,16 @@ bc = mna\text{.}
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">11</span><span class="period">.</span><span class="space"> </span><span class="title">Congruence Modulo 6.</span>
 </h6>
 <article class="task exercise-like" id="A_mod6-1"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1145">Find several integers that are congruent to 5 modulo 6 and then square each of these integers.</p></article><article class="task exercise-like" id="A_mod6-2"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1146">For each integer \(m\) from <a class="xref" data-knowl="./knowl/A_mod6-1.html" title="Task 11.a">Task 11.a</a>, determine an integer \(k\) so that \(0 \leq k \lt 6\) and \(m^2 \equiv k \pmod 6\text{.}\) What do you observe?</p></article><article class="task exercise-like" id="A_mod6-3"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p id="p-1147">Based on the work in <a class="xref" data-knowl="./knowl/A_mod6-2.html" title="Task 11.b">Task 11.b</a>, complete the following conjecture: <blockquote class="blockquote" id="blockquote-86">For each integer \(m\text{,}\) if \(m \equiv 5 \pmod 6\text{,}\) then … .</blockquote></p></article><article class="task exercise-like" id="task-462"><h6 class="heading"><span class="codenumber">(d)</span></h6>
-<p id="p-1148">Complete a know-show table for the conjecture in <a class="xref" data-knowl="./knowl/A_mod6-3.html" title="Task 11.c">Task 11.c</a> or write a proof of the conjecture.</p></article></article><article class="activity project-like" id="activity-12"><h6 class="heading">
+<p id="p-1228">Find several integers that are congruent to 5 modulo 6 and then square each of these integers.</p></article><article class="task exercise-like" id="A_mod6-2"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1229">For each integer \(m\) from <a class="xref" data-knowl="./knowl/A_mod6-1.html" title="Task 11.a">Task 11.a</a>, determine an integer \(k\) so that \(0 \leq k \lt 6\) and \(m^2 \equiv k \pmod 6\text{.}\) What do you observe?</p></article><article class="task exercise-like" id="A_mod6-3"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-1230">Based on the work in <a class="xref" data-knowl="./knowl/A_mod6-2.html" title="Task 11.b">Task 11.b</a>, complete the following conjecture: <blockquote class="blockquote" id="blockquote-87">For each integer \(m\text{,}\) if \(m \equiv 5 \pmod 6\text{,}\) then … .</blockquote></p></article><article class="task exercise-like" id="task-471"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-1231">Complete a know-show table for the conjecture in <a class="xref" data-knowl="./knowl/A_mod6-3.html" title="Task 11.c">Task 11.c</a> or write a proof of the conjecture.</p></article></article><article class="activity project-like" id="activity-12"><h6 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">12</span><span class="period">.</span><span class="space"> </span><span class="title">Pythagorean Triples.</span>
 </h6>
-<div class="introduction" id="introduction-17"><p id="p-1149">Three natural numbers \(a\text{,}\) \(b\text{,}\) and \(c\) with \(a \lt b \lt c\) are called a Pythagorean triple  provided that \(a^2 + b^2 = c^2\text{.}\) See <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "exer31_pythagorean" missing or not unique]</code> in <a href="S_1direct.html" class="internal" title="Section 1.2: Constructing Direct Proofs">Section 1.2</a>. Three natural numbers are called <dfn class="terminology">consecutive natural numbers</dfn>  if they can be written in the form \(m\text{,}\) \(m + 1\text{,}\) and \(m + 2\text{,}\) where \(m\) is a natural number.</p></div>
-<article class="task exercise-like" id="task-463"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p id="p-1150">Determine all Pythagorean triples consisting of three consecutive natural numbers. (State a theorem and prove it.)</p></article><article class="task exercise-like" id="task-464"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-1151">Determine all Pythagorean triples that can be written in the form \(m\text{,}\) \(m + 7\text{,}\) and \(m + 8\text{,}\) where \(m\) is a natural number. State a theorem and prove it.</p></article></article></section></section></div></main>
+<div class="introduction" id="introduction-34"><p id="p-1232">Three natural numbers \(a\text{,}\) \(b\text{,}\) and \(c\) with \(a \lt b \lt c\) are called a Pythagorean triple  provided that \(a^2 + b^2 = c^2\text{.}\) See <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "exer31_pythagorean" missing or not unique]</code> in <a href="S_1direct.html" class="internal" title="Section 1.2: Constructing Direct Proofs">Section 1.2</a>. Three natural numbers are called <dfn class="terminology">consecutive natural numbers</dfn>  if they can be written in the form \(m\text{,}\) \(m + 1\text{,}\) and \(m + 2\text{,}\) where \(m\) is a natural number.</p></div>
+<article class="task exercise-like" id="task-472"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-1233">Determine all Pythagorean triples consisting of three consecutive natural numbers. (State a theorem and prove it.)</p></article><article class="task exercise-like" id="task-473"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-1234">Determine all Pythagorean triples that can be written in the form \(m\text{,}\) \(m + 7\text{,}\) and \(m + 8\text{,}\) where \(m\) is a natural number. State a theorem and prove it.</p></article></article></section></section></div></main>
 </div>
 </body>
 </html>

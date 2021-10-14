@@ -956,9 +956,16 @@
       </introduction>
 
       <task>
+        <statement>
         <p>
           <m>y \in f ( A \cap B )</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            There exists an <m>x \in A \cap B</m> such that <m>f ( x ) = y</m>.
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -971,9 +978,17 @@
         </p>
       </task>
       <task>
+        <statement>
         <p>
           <m>y \in f ( A ) \cup f ( B )</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            There exists an <m>a \in A</m> such that <m>f ( a ) = y</m> or there exists a
+            <m>b \in B</m> such that <m>f ( b ) = y</m>.
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -981,9 +996,16 @@
         </p>
       </task>
       <task>
+        <statement>
         <p>
           <m>x \in f^{-1} ( C \cup D )</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>f ( x ) \in C \cup D</m>
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -991,9 +1013,16 @@
         </p>
       </task>
       <task>
+        <statement>
         <p>
           <m>x \in f^{-1} ( C ) \cup f^{-1} ( D )</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>f ( x ) \in C</m> or <m>f ( x ) \in D</m>
+          </p>
+        </answer>
       </task>
     </exercise>
 
@@ -1013,9 +1042,16 @@
         </p>
       </task>
       <task>
+        <statement>
         <p>
           <m>f^{-1} ( f ( A ) )</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>f^{-1} \left( f ( A ) \right) = \left[ 2, 5 \right]</m>.
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -1023,19 +1059,40 @@
         </p>
       </task>
       <task>
+        <statement>
         <p>
           <m>f ( f^{-1} ( C ) )</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>f ( f^{-1} ( C ) ) = \left[ -2, 3 \right]</m>
+          </p>
+        </answer>
       </task>
       <task>
+        <statement>
         <p>
           <m>f ( A \cap B )</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>f ( A \cap B ) = \left[ -5, -3 \right]</m>
+          </p>
+        </answer>
       </task>
       <task>
+        <statement>
         <p>
           <m>f ( A ) \cap f ( B )</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>f ( A ) \cap f ( B ) = \left[ -5, -3 \right]</m>
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -1059,14 +1116,29 @@
       </introduction>
       
       <task>
+        <statement>
         <p>
           <m>g ( A \times A )</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>g ( A \times A ) = \left\{6, 12, 18, 24, 36, 54, 72, 108, 216 \right\}</m>
+          </p>
+        </answer>
       </task>
       <task>
+        <statement>
         <p>
           <m>g^{-1} ( C )</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>g^{-1} ( C ) = \left\{ ( 1, 1 ), ( 2, 1 ),
+            ( 1, 2 ) \right\}</m>
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -1087,12 +1159,19 @@
         </p>
       </introduction>
       <task>
+        <statement>
         <p>
           Define <m>F\x S \to \mathbb{N}</m> by
           <m>F ( x ) = x^2</m> for each <m>x \in S</m>.
           What is the range of the function <m>F</m> and what is <m>F ( S )</m>?
           How do these two sets compare?
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>\text{ range}  ( F ) = F ( S ) = \left\{1, 4, 9, 16 \right\}</m>
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -1120,6 +1199,28 @@
           Then <m>f ( A \cup B ) = f ( A ) \cup f ( B )</m>.
         </p>
       </statement>
+      <answer>
+        <p>
+          To prove <m>f \left( A \cup B \right) \subseteq f \left( A \right) \cup f \left( B \right)</m>, 
+          let <m>y \in f \left( A \cup B \right)</m>.  Then there exists an <m>x \in A \cup B</m> such 
+          that <m>f \left( x \right) = y</m>.  Since <m>x \in A \cup B</m>, <m>x \in A</m> or 
+          <m>x \in B</m>.  We first note that if <m>x \in A</m>, then <m>y = f \left( x \right)</m> is 
+          in <m>f \left( A \right)</m>.  In addition, if <m>x \in B</m>, then 
+          <m>y = f \left( x \right)</m> is in <m>f \left( B \right)</m>.
+          In both cases, <m>y = f \left( x \right) \in f \left( A \right) \cup f \left( B \right)</m> 
+          and hence,
+          <m>f \left( A \cup B \right) \subseteq f \left( A \right) \cup f \left( B \right)</m>.
+        </p>
+        <p>
+          Now let <m>y \in f \left( A \right) \cup f \left( B \right)</m>. If 
+          <m>y \in f \left( A \right)</m>, then there exists an <m>x \in A</m> such that 
+          <m>y = f \left( x \right)</m>.  Since <m>A \subseteq A \cup B</m>, this implies that 
+          <m>y = f \left( x \right) \in f \left( A \cup B \right)</m>.  In a similar manner, we 
+          can prove that if <m>y \in f \left( B \right)</m>, then 
+          <m>y \in f \left( A \cup B \right)</m>. Therefore,
+          <m>f \left( A \right) \cup f \left( B \right) \subseteq f \left( A \cup B \right)</m>.
+        </p>
+      </answer>
     </exercise>
 
     <exercise xml:id="exer_sec91-6">
@@ -1130,6 +1231,15 @@
           Then <m>f^{-1} ( C \cap D ) = f^{-1} ( C ) \cap f^{-1} ( D )</m>.
         </p>
       </statement>
+      <answer>
+        <p>
+          To prove that
+          <m>f^{-1} ( C \cap D ) \subseteq f^{-1} ( C ) \cap f^{-1} ( D )</m>, 
+          let <m>x \in f^{-1} ( C \cap D )</m>.  Then <m>f(x) \in C \cap D</m>. 
+          How do we prove that
+          <m>x \in f^{-1} ( C ) \cap f^{-1} ( D )</m>?
+        </p>
+      </answer>
     </exercise>
 
     <exercise xml:id="exer_sec91-7">
@@ -1140,14 +1250,6 @@
           Then <m>f \!\left( f^{-1} ( C ) \right) \subseteq C</m>.
         </p>
       </statement>
-    </exercise>
-
-    <exercise>
-      <introduction>
-        <p>
-          
-        </p>
-      </introduction>
     </exercise>
 
     <exercise>
@@ -1180,15 +1282,29 @@
       </introduction>
 
       <task>
+        <statement>
         <p>
           If <m>C \subseteq D</m>, then <m>f^{-1} ( C ) \subseteq f^{-1} (D )</m>.
         </p>
+        </statement>
+        <answer>
+          <p>
+            This statement is true.
+          </p>
+        </answer>
       </task>
       <task>
+        <statement>
         <p>
           If <m>f^{-1} ( C ) \subseteq f^{-1} (D )</m>,
           then <m>C \subseteq D</m>.
         </p>
+        </statement>
+        <answer>
+          <p>
+            This statement is false.
+          </p>
+        </answer>
       </task>
     </exercise>
 

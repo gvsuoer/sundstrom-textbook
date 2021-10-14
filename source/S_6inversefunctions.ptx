@@ -977,11 +977,18 @@
         </p>
       </task>
       <task>
+        <statement>
         <p>
           Write the inverse of <m>f</m> as a set of ordered pairs.
           Is <m>f^{ - 1}</m> a function?
           Explain.
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>f^{ - 1}  = \left\{ {( {c,a} ),( {b,b} ),( {d,c} ),( {a,d} )} \right\}</m>
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -990,11 +997,20 @@
         </p>
       </task>
       <task>
+        <statement>
         <p>
           Compute <m>\left( {f^{ - 1} \circ f} \right)( x )</m> and
           <m>\left( {f \circ f^{ - 1} } \right)( x )</m> for each <m>x</m> in <m>S</m>.
           What theorem does this illustrate?
         </p>
+        </statement>
+        <answer>
+          <p>
+            For each <m>x \in S</m>, <m>\left( {f^{ - 1}  \circ f} \right)( x ) = x 
+            = ( {f \circ f^{ - 1} } )( x )</m>.  This illustrates
+            <xref ref="C_inversecomposition"></xref>.
+          </p>
+        </answer>
       </task>
     </exercise>
 
@@ -1007,6 +1023,7 @@
       </introduction>
 
       <task xml:id="exer_solveequationa">
+        <statement>
         <p>
           Since the cube root function and the cubing function are inverses of each other,
           we can often use the cube root function to help solve an equation involving a cube.
@@ -1023,8 +1040,17 @@
           Explain how this step in solving the equation is a use of 
           <xref ref="C_inversecomposition"></xref>.
         </p>
+        </statement>
+        <answer>
+          <p>
+            This is a use of <xref ref="C_inversecomposition"></xref>
+            since the cube root function and the cubing function are inverse functions of each other and consequently,
+            the composition of the cubing function with the cube root function is the identity function.
+          </p>
+        </answer>
       </task>
       <task xml:id="exer_solveequationb">
+        <statement>
         <p>
           A main step in solving the equation
           <m>e^{2t - 1} = 20</m> is to take the natural logarithm of both sides of this equation.
@@ -1032,12 +1058,31 @@
           and then solve the resulting equation to obtain a solution for <m>t</m> in terms of the 
           natural logarithm function.
         </p>
+        </statement>
+        <answer>
+          <p>
+            This is a use of <xref ref="C_inversecomposition"></xref>
+            since the natural logarithm function and the exponential function with base <m>e</m> 
+            are inverse functions of each other and consequently,
+            the composition of the natural logarithm function with the exponential function with 
+            base <m>e</m> is the identity function.
+          </p>
+        </answer>
       </task>
       <task>
+        <statement>
         <p>
           How are the methods of solving the equations in <xref ref="exer_solveequationa"/> 
           and <xref ref="exer_solveequationb"/> similar?
         </p>
+        </statement>
+        <answer>
+          <p>
+            They are similar because they both use the concept of an inverse function to
+            <q>undo</q>
+            one side of the equation.
+          </p>
+        </answer>
       </task>
     </exercise>
 
@@ -1050,6 +1095,17 @@
           <m>\left( f \circ f^{ - 1}\right)(y) = y</m>.
         </p>
       </statement>
+      <answer>
+        <p>
+          Using the notation from <xref ref="C_inversecomposition"></xref>, if <m>y = f(x)</m> and
+          <m>x = f^{-1}(y)</m>, then
+          <md>
+            <mrow>\left(f \circ f^{-1} \right) (y) \amp = f ( f^{-1} ( y ) )</mrow>
+            <mrow>\amp = f ( x )</mrow>
+            <mrow>\amp = y</mrow>
+          </md>
+        </p>
+      </answer>
     </exercise>
 
     <exercise xml:id="sym_idfunc1">
@@ -1079,14 +1135,33 @@
       </introduction>
 
       <task>
+        <statement>
         <p>
           If <m>g \circ f = I_A</m>, then <m>f</m> is an injection.
         </p>
+        </statement>
+        <answer>
+          <p>
+            Let <m>x, y \in A</m> and assume that
+            <m>f ( x ) = f ( y )</m>.  Apply <m>g</m> to both sides of this equation to prove that
+            <m>( g \circ f ) ( x ) = ( g \circ f ) ( y )</m>.
+            Since <m>g \circ f = I_A</m>, this implies that <m>x = y</m> and hence that <m>f</m> 
+            is an injection.
+          </p>
+        </answer>
       </task>
       <task>
+        <statement>
         <p>
           If <m>f \circ g = I_B</m>, then <m>f</m> is a surjection.
         </p>
+        </statement>
+        <answer>
+          <p>
+            Start by assuming that <m>f \circ g = I_B</m>, and then let <m>y \in B</m>. 
+            You need to prove there exists an <m>x \in A</m> such that <m>f ( x ) = y</m>.
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -1104,17 +1179,46 @@
       </introduction>
 
       <task>
+        <statement>
         <p>
           Define <m>f\x \mathbb{R} \to \mathbb{R}</m> by <m>f( x ) = e^{ - x^2 }</m>.
           Is the inverse of <m>f</m> a function?
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>f:\mathbb{R} \to \mathbb{R}</m> is defined by <m>f\left( x \right) = e^{ - x^2 }</m>.
+            Since this function is not an injection,
+            the inverse of <m>f</m> is not a function.
+          </p>
+        </answer>
       </task>
       <task>
+        <statement>
         <p>
           Let <m>\mathbb{R}^* = \left\{ { {x \in \mathbb{R} } \mid x \geq 0} \right\}</m>.
           Define <m>g\x \mathbb{R}^* \to ( {0, 1} ]</m> by <m>g( x ) = e^{ - x^2 }</m>.
           Is the inverse of <m>g</m> a function?
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>g:\mathbb{R}^* \to \left( {0, 1} \right]</m> is defined by 
+            <m>g\left( x \right) = e^{ - x^2 }</m>.
+            In this case, <m>g</m> is a bijection and hence,
+            the inverse of <m>g</m> is a function.
+            To see that <m>g</m> is an injection, assume that
+            <m>x,
+            y \in \mathbb{R}^*</m> and that <m>e^{-x^2} = e^{-y^2}</m>.
+            Then, <m>x^2 = y^2</m> and since
+            <m>x,
+            y \geq 0</m>, we see that <m>x = y</m>.
+            To see that <m>g</m> is a surjection,
+            let <m>y \in \left( 0, 1 \right]</m>.
+            Then, <m>\ln y \lt 0</m> and <m>- \ln y > 0</m>,
+            and <m>g \left( \sqrt{-\ln y} \right) = y</m>.
+          </p>
+        </answer>
       </task>
     </exercise>
 

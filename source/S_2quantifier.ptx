@@ -1163,45 +1163,93 @@
   <exercises>
 
     <exercise xml:id="exer_sec24-1">
-      <statement>
+      <introduction>
         <p>
           For each of the following,
           write the statement as an English sentence and then explain why the statement is false.
+        </p>
+      </introduction>
           <task>
+            <statement>
             <p>
               <m>\left(\exists x \in \mathbb{Q} \right) \left( x^2 - 3x - 7 = 0 \right)</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                There exists a rational number <m>x</m> such that <m>x^2 - 3x - 7 = 0</m>.
+                This statement is false since the solutions of the equation are 
+                <m>x = \dfrac{3 \pm \sqrt{37}}{2}</m>,
+                which are irrational numbers.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               <m>\left( \exists x \in \mathbb{R} \right) \left( x^2 + 1 = 0 \right)</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                There exists a real number <m>x</m> such that <m>x^2 + 1 = 0</m>.
+                This statement is false since the only solutions of the equation are <m>i</m> and <m>-i</m>,
+                which are not real numbers.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               <m>\left( \exists m \in \N \right) \left( m^2 \lt 1 \right)</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                There exists a natural number <m>m</m> such that <m>m^2 \lt 1</m>.
+                This statement is false because if <m>m</m> is a natural number,
+                then <m>m \geq 1</m> and hence, <m>m^2 \geq 1</m>.
+              </p>
+            </answer>
           </task>
-        </p>
-      </statement>
+ 
     </exercise>
 
     <exercise xml:id="exer_sec24-2new">
-      <statement>
+      <introduction>
         <p>
           For each of the following,
           use a counterexample to show that the statement is false.
           Then write the negation of the statement in English,
           without using symbols for quantifiers.
+        </p>
+      </introduction>
           <task>
+            <statement>
             <p>
               <m>\left( {\forall m \in \mathbb{Z}} \right)\left( {m^2 \text{ is even } } \right)</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                <m>m = 1</m> is a counterexample.
+                The negation is: There exists a natural number <m>m</m> such that <m>m^2</m> is 
+                not even or there exists a natural number <m>m</m> such that <m>m^2</m> is odd.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               <m>\left( {\forall x \in \mathbb{R}} \right)\left( {x^2 > 0} \right)</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                <m>x = 0</m> is a counterexample.
+                The negation is: There exists a real number <m>x</m> such that <m>x^2 \leq 0</m>.
+              </p>
+            </answer>
           </task>
           <task>
             <p>
@@ -1219,17 +1267,25 @@
             </p>
           </task>
           <task>
+            <statement>
             <p>
               <m>\left( {\forall x \in \mathbb{R}} \right)\left( {\tan ^2 x + 1 = \sec ^2 x} 
               \right)</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                <m>x = \dfrac{\pi}{2}</m> is a counterexample.
+                The negation is: There exists a real number <m>x</m> such that 
+                <m>\tan^2 x + 1 \ne \sec^2 x</m>.
+              </p>
+            </answer>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_sec24-2">
-      <statement>
+      <introduction>
         <p>
           For each of the following statements
 
@@ -1250,10 +1306,22 @@
               </p>
             </li>
           </ul>
+        </p>
+      </introduction>
           <task>
+            <statement>
             <p>
               <m>\left( {\exists x \in \mathbb{Q}} \right)\left( {x > \sqrt 2 } \right)</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                There exists a rational number <m>x</m> such that <m>x > \sqrt{2}</m>.
+                The negation is <m>\left( {\forall x \in \mathbb{Q}} \right)
+                \left( {x \leq \sqrt 2 } \right)</m>, which is, For each rational number <m>x</m>, 
+                <m>x \le \sqrt{2}</m>.
+              </p>
+            </answer>
           </task>
           <task>
             <p>
@@ -1261,10 +1329,20 @@
             </p>
           </task>
           <task>
+            <statement>
             <p>
               <m>\left( {\forall x \in \mathbb{Z}} \right)\left( {x\text{ is even or } x\text{ is odd } } 
             \right)</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                For each integer <m>x</m>, <m>x</m> is even or <m>x</m> is odd.
+                The negation is <m>\left( \exists x \in \mathbb{Z} \right) \left( x 
+                \text{ is odd and \(x\) is even }  \right)</m>, which is, There exists an 
+                integer <m>x</m> such that <m>x</m> is odd and <m>x</m> is even.
+              </p>
+            </answer>
           </task>
           <task>
             <p>
@@ -1279,10 +1357,20 @@
             </p>
           </task>
           <task>
+            <statement>
             <p>
               <m>\left( {\forall x \in \mathbb{Z}} \right)\left( {\text{ If } x^2 \text{ is odd,
                 then } x\text{ is odd } } \right)</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                For each integer <m>x</m>, if <m>x^2</m> is odd, then <m>x</m> is odd.
+                The negation is <m>\left( \exists x \in \mathbb{Z} \right) \left( x^2 
+                \text{ is odd and \(x\) is even }  \right)</m>, which is, There exists an 
+                integer <m>x</m> such that <m>x^2</m> is odd and <m>x</m> is even.
+              </p>
+            </answer>
           </task>
           <task>
             <p>
@@ -1297,25 +1385,40 @@
             </p>
           </task>
           <task>
+            <statement>
             <p>
               <m>\left( {\exists x \in \mathbb{R}} \right) \left( {\cos ( {2x} ) = 2( {\cos x} )} 
               \right)</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                There exists a real number <m>x</m> such that <m>\cos \left( 2x \right) = 2 \left( \cos x \right)</m>.
+                The negation is <m>\left( {\forall x \in \mathbb{R}} \right) \left( \cos \left( 2x \right) \ne 2 \left( \cos x \right) \right)</m>, which is, For each real number <m>x</m>, <m>\cos \left( 2x \right) \ne 2 \left( \cos x \right)</m>.
+              </p>
+            </answer>
           </task>
-        </p>
-      </statement>
     </exercise>
 
     <exercise xml:id="exer_sec24-3">
-      <statement>
+      <introduction>
         <p>
           Write each of the following statements as an English sentence that does not use the 
            symbols for quantifiers.
+        </p>
+      </introduction>
            <task>
+            <statement>
              <p>
                <m>\left( {\exists m} \in \Z \right)\left( {\exists n} \in \Z \right)\left( {m > n} 
                \right)</m>
              </p>
+             </statement>
+             <answer>
+               <p>
+                 There exist integers <m>m</m> and <m>n</m> such that <m>m > n</m>.
+               </p>
+             </answer>
            </task>
            <task>
              <p>
@@ -1336,10 +1439,17 @@
              </p>
            </task>
            <task>
+             <statement>
              <p>
                <m>\left( {\exists n} \in \Z \right)\left( {\forall m} \in \Z \right)\left( {m^2 > n} 
               \right)</m>
              </p>
+             </statement>
+             <answer>
+               <p>
+                 There exists an integer <m>n</m> such that for each integer <m>m</m>, <m>m^2 > n</m>.
+               </p>
+             </answer>
            </task>
            <task>
              <p>
@@ -1347,8 +1457,7 @@
               \right)</m>
              </p>
            </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_sec24-4">
@@ -1358,50 +1467,96 @@
           an English sentence that does not use the symbols for quantifiers.
         </p>
       </statement>
+      <answer>
+        <p>
+          (a): <m>\left( \forall m \right) \left( \forall n \right) \left( m \le n \right)</m>.
+          For all integers <m>m</m> and <m>n</m>, <m>m \le n</m>.
+        </p>
+        <p>
+          (e): <m>\left( \forall n \right) \left( \exists m \right) \left( m^2 \le n \right)</m>.
+          For each integer <m>n</m>, there exists an integer <m>m</m> such that  <m>m^2 \le n</m>.
+        </p>
+      </answer>
     </exercise>
 
     <exercise xml:id="Exer_quantifier1">
-      <statement>
+      <introduction>
         <p>
           Assume that the universal set is  <m>\mathbb{Z}</m>.
           Consider the following sentence:
+        </p>
           <me>
             \left( {\exists t \in \mathbb{Z}} \right)\left( {t \cdot x = 20} \right)
           </me>.
+      </introduction>
           <task>
+            <statement>
             <p>
               Explain why this sentence is an open sentence and not a statement.
             </p>
+            </statement>
+            <answer>
+              <p>
+                It is not a statement since <m>x</m> is an unquantified variable.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               If 5 is substituted for <m>x</m>,
             is the resulting sentence a statement?
             If it is a statement, is the statement true or false?
             </p>
+            </statement>
+            <answer>
+              <p>
+                It is a true statement.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               If 8 is substituted for <m>x</m>,
             is the resulting sentence a statement?
             If it is a statement, is the statement true or false?
             </p>
+            </statement>
+            <answer>
+              <p>
+                It is a false statement.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               If <m>-2</m> is substituted for <m>x</m>,
             is the resulting sentence a statement?
             If it is a statement, is the statement true or false?
             </p>
+            </statement>
+            <answer>
+              <p>
+                It is a true statement.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               What is the truth set of the open sentence <m>\left( {\exists t \in \mathbb{Z}} 
             \right)\left( {t \cdot x = 20} \right)</m>?
             </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\left\{ -20, -10, -5, -4, -2, -1, 1, 2, 4, 5, 10, 20 \right\}</m>
+              </p>
+            </answer>
           </task>
-        </p>
-      </statement>
+  
     </exercise>
 
     <exercise xml:id="Exer_quantifier">
@@ -1514,7 +1669,7 @@
     </exercise>
 
     <exercise xml:id="exer_24-increasing">
-      <statement>
+      <introduction>
         <p>
           In calculus,
           we define a function <m>f</m> with domain <m>\mathbb{R}</m> to be
@@ -1524,11 +1679,21 @@
           <m>f\left( x \right) \lt f\left( y \right)</m> whenever <m>x \lt y</m>.
           Complete each of the following sentences using the appropriate symbols for quantifiers:
         </p>
+      </introduction>
         <task>
+          <statement>
           <p>
             A function <m>f</m> with domain
             <m>\mathbb{R}</m> is strictly increasing provided that <m>\ldots </m>.
           </p>
+          </statement>
+          <answer>
+            <p>
+              A function <m>f</m> with domain <m>\R</m> is strictly increasing provided that
+              <m>\left( \forall x, y \in \R \right) \left[ \left( x \lt  y \right) \to 
+              \left( f(x) \lt  f(y) \right) \right]</m>.
+            </p>
+          </answer>
         </task>
         <task>
           <p>
@@ -1545,7 +1710,7 @@
             <m>\mathbb{R}</m> is not strictly increasing provided that <m>\ldots </m>.
           </p>
         </task>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_24-continuous">

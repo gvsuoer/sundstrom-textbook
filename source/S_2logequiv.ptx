@@ -614,32 +614,65 @@
   <exercises xml:id="exercises-2_2">
 
     <exercise xml:id="exer_sec23-1">
-      <statement>
+      <introduction>
         <p>
           Write the converse and contrapositive of each of the following conditional statements.
+        </p>
+      </introduction>
           <task>
+            <statement>
             <p>
               If <m>a = 5</m>, then <m>a^2 = 25</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                Converse: If <m>a^2 = 25</m>, then <m>a = 5</m>. 
+                Contrapositive: If <m>a^2 \ne 25</m>, then <m>a \ne 5</m>.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               If it is not raining, then Laura is playing golf.
             </p>
+            </statement>
+            <answer>
+              <p>
+                Converse: If Laura is playing golf, then it is not raining. 
+                Contrapositive: If Laura is not playing golf, then it is raining.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               If <m>a \ne b</m>, then <m>a^4 \ne b^4</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                Converse: If <m>a^4 \ne b^4</m>, then <m>a \ne b</m>. 
+                Contrapositive: If <m>a^4 = b^4</m>, then <m>a = b</m>.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               If <m>a</m> is an odd integer,
               then <m>3a</m> is an odd integer.
             </p>
+            </statement>
+            <answer>
+              <p>
+                Converse: If <m>3a</m> is an odd integer, then <m>a</m> is an odd integer. 
+                Contrapositive: If <m>3a</m> is an even integer, then <m>a</m> is an even integer.
+              </p>
+            </answer>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_sec23-2">
@@ -651,10 +684,28 @@
           <xref ref="exer_sec23-1"/> as a conjunction.
         </p>
       </statement>
+      <answer>
+        <p>
+          Part (a). Disjunction: <m>a \ne 5</m> or <m>a^2 = 25</m>.  
+          Negation: <m>a = 5</m> and <m>a^2 \ne 25</m>.
+        </p>
+        <p>
+          Part (b). Disjunction: It is raining or Laura is playing golf.
+          Negation: It is not raining and Laura is not playing golf.
+        </p>
+        <p>
+          Part (c). Disjunction: <m>a = b</m> or <m>a^4 \ne b^4</m>.  
+          Negation: <m>a \ne b</m> and <m>a^4 = b^4</m>.
+        </p>
+        <p>
+          Part (d). Disjunction: <m>a</m> is an even integer or <m>3a</m> is an odd integer.
+          Negation: <m>a</m> is an odd integer and <m>3a</m> is an even integer.
+        </p>
+      </answer>
     </exercise>
 
     <exercise xml:id="exer_sec23-3">
-      <statement>
+      <introduction>
         <p>
           Write a useful negation of each of the following statements.
           Do not leave a negation as a prefix of a statement.
@@ -662,31 +713,68 @@
           <q>I will play golf and I will mow the lawn</q>
           as
           <q>I will not play golf or I will not mow the lawn.</q>
+        </p>
+      </introduction>
           <task>
+            <statement>
             <p>
               We will win the first game and we will win the second game.
             </p>
+            </statement>
+            <answer>
+              <p>
+                We will not win the first game or we will not win the second game.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               They will lose the first game or they will lose the second game.
             </p>
+            </statement>
+            <answer>
+              <p>
+                They will not lose the first game and they will not lose the second game.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               If you mow the lawn, then I will pay you $20.
             </p>
+            </statement>
+            <answer>
+              <p>
+                You mow the lawn and I will not pay you $20.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               If we do not win the first game,
               then we will not play a second game.
             </p>
+            </statement>
+            <answer>
+              <p>
+                We do not win the first game and we will play a second game.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               I will wash the car or I will mow the lawn.
             </p>
+            </statement>
+            <answer>
+              <p>
+                I will not wash the car and I will not mow the lawn.
+              </p>
+            </answer>
           </task>
           <task>
             <p>
@@ -710,8 +798,7 @@
               It is warm outside and if it does not rain, then I will play golf.
             </p>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_sec23-bicond">
@@ -777,25 +864,57 @@
     </exercise>
 
     <exercise xml:id="exer_sec23-7">
-      <statement>
+      <introduction>
         <p>
           Use previously proven logical equivalencies to prove each of the following logical 
           equivalencies about
           <term>conditionals with conjunctions:</term>
+        </p>
+      </introduction>
           <task>
+            <statement>
             <p>
               <m>\left[ {\left( {P \wedge Q} \right) \to R} \right] \equiv \left( {P \to R} \right) 
-            \vee \left( {Q \to R} \right)</m>
+              \vee \left( {Q \to R} \right)</m>
             </p>
+            </statement>
+            <answer>
+              <p>
+                In this case, it may be better to work with the right side first.
+                <md>
+                  <mrow>\left( {P \to R} \right) \vee \left( {Q \to R} \right) \amp \equiv
+                  \left( \mynot P \vee R \right) \vee \left( \mynot Q \vee R \right)</mrow>
+                  <mrow>\amp \equiv
+                  \left( \mynot P \vee \mynot Q \right) \vee \left( R \vee R \right)</mrow>
+                  <mrow>\amp \equiv
+                  \left( \mynot P \vee \mynot Q \right) \vee R</mrow>
+                  <mrow>\amp \equiv
+                  \mynot \left( P \wedge Q \right) \vee R</mrow>
+                  <mrow>\amp \equiv \left( P \wedge Q \right) \to R</mrow>
+                </md>.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               <m>\left[ {P \to \left( {Q \wedge R} \right)} \right] \equiv \left( {P \to Q} \right) 
-            \wedge \left( {P \to R} \right)</m>
+              \wedge \left( {P \to R} \right)</m>
             </p>
+            </statement>
+            <answer>
+              <p>
+                In this case, we start with the left side.
+                <md>
+                  <mrow>\left[ P \to \left( Q \wedge R \right) \right] \amp \equiv \mynot P \vee 
+                  \left( Q \wedge R \right)</mrow>
+                  <mrow>\amp \equiv \left( \mynot P \vee Q \right) \wedge \left( \mynot P \vee R \right)</mrow>
+                  <mrow>\amp \equiv \left( P \to Q \right) \wedge \left( P \to R \right)</mrow>
+                </md>.
+              </p>
+            </answer>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_sec23-9">
@@ -873,7 +992,7 @@
     </exercise>
 
     <exercise xml:id="exer_diffimpliescont">
-      <statement>
+      <introduction>
         <p>
           Let <m>a</m> be a real number and let <m>f</m> be a real-valued function defined on an 
           interval containing <m>x = a</m>.
@@ -883,21 +1002,20 @@
           </blockquote>
           Which of the following statements have the same meaning as this conditional statement and 
           which ones are negations of this conditional statement? 
-        
-        <note xml:id="note_diffimpliescont">
-          <p>
-          This is not asking which 
+        </p>
+        <p>
+          Note: This is not asking which 
           statements are true and which are false. It is asking which statements are logically 
           equivalent to the given statement. It might be helpful to let <m>P</m> represent the 
           hypothesis of the given statement, <m>Q</m> represent the conclusion, and then determine 
           a symbolic representation for each statement. Instead of using truth tables, try to use 
           already established logical equivalencies to justify your conclusions.
-          </p>
-        </note>
+        </p>
+        </introduction>
           <task xml:id="exer_diffa">
             <p>
               If <m>f</m> is continuous at <m>x = a</m>,
-            then <m>f</m> is differentiable at <m>x = a</m>.
+              then <m>f</m> is differentiable at <m>x = a</m>.
             </p>
           </task>
           <task xml:id="exer_diffb">
@@ -907,15 +1025,29 @@
             </p>
           </task>
           <task xml:id="exer_diffc">
+            <statement>
             <p>
               If <m>f</m> is not continuous at <m>x = a</m>,
             then <m>f</m> is not differentiable at <m>x = a</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                This statement is logically equivalent to the given conditional statement.
+              </p>
+            </answer>
           </task>
           <task xml:id="exer_diffd">
+            <statement>
             <p>
               <m>f</m> is not differentiable at <m>x = a</m> or <m>f</m> is continuous at <m>x = a</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                This statement is logically equivalent to the given conditional statement.
+              </p>
+            </answer>
           </task>
           <task xml:id="exer_diffe">
             <p>
@@ -923,16 +1055,22 @@
             </p>
           </task>
           <task xml:id="exer_difff">
+            <statement>
             <p>
               <m>f</m> is differentiable at <m>x = a</m> and <m>f</m> is not continuous at <m>x = a</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                This statement is the negation of the given conditional statement.
+              </p>
+            </answer>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_sec23-10">
-      <statement>
+      <introduction>
         <p>
           Let <m>a, b</m>, and <m>c</m> be integers.
           Consider the following conditional statement:
@@ -941,8 +1079,10 @@
           </blockquote>
           Which of the following statements have the same meaning as this conditional statement and 
           which ones are negations of this conditional statement? 
-          <xref ref="note_diffimpliescont"/> also applies to this exercise OR The note for 
+          The note for 
           <xref ref="exer_diffimpliescont"/> also applies to this exercise.
+        </p>
+      </introduction>
           <task>
             <p>
               If <m>a</m> divides <m>b</m> or <m>a</m> divides <m>c</m>,
@@ -963,10 +1103,18 @@
             </p>
           </task>
           <task>
+            <statement>
             <p>
               If <m>a</m> does not divide <m>b</m> and <m>a</m> does not divide <m>c</m>,
             then <m>a</m> does not divide <m>bc</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                This is the contrapositive of the given statement and hence, it is 
+                logically equivalent to the given statement.
+              </p>
+            </answer>
           </task>
           <task>
             <p>
@@ -986,8 +1134,6 @@
             then <m>a</m> divides <m>c</m>.
             </p>
           </task>
-        </p>
-      </statement>
     </exercise>
 
    <exercise xml:id="exer_sec23-11">
@@ -1002,7 +1148,7 @@
           Which of the following statements have the same meaning as this conditional statement 
           and which ones are negations of this conditional statement?
           Explain each conclusion.
-          (See <xref ref="note_diffimpliescont"/>.)
+          (See the note in the instruction for <xref ref="exer_diffimpliescont"/>.)
           <task>
             <p>
               If <m>x \ne - 2</m> and <m>x \ne 3</m>,

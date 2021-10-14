@@ -951,9 +951,16 @@
         </p>
       </introduction>
       <task>
+        <statement>
         <p>
           <m>\bigcap\limits_{j=1}^{3}A_j</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>\left\{ 3, 4 \right\}</m>
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -966,9 +973,16 @@
         </p>
       </task>
       <task>
+        <statement>
         <p>
           <m>\bigcup\limits_{j=3}^{7}A_j</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>\left\{ 3, 4, 5, 6, 7, 8, 9, 10 \right\}</m>
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -992,9 +1006,16 @@
         </p>
       </introduction>
       <task>
+        <statement>
         <p>
           <m>\bigcap\limits_{j=1}^{5}A_j</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>\left\{ 5, 6, 7, \ldots \,\right\}</m>
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -1002,14 +1023,28 @@
         </p>
       </task>
       <task>
+        <statement>
         <p>
           <m>\bigcap\limits_{j=1}^{5}A_j^c</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>\emptyset</m>
+          </p>
+        </answer>
       </task>
       <task>
+        <statement>
         <p>
           <m>\bigcup\limits_{j=1}^{5}A_j^c</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>\left\{1, 2, 3, 4 \right\}</m>
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -1017,9 +1052,16 @@
         </p>
       </task>
       <task>
+        <statement>
         <p>
           <m>\left(\: \bigcup\limits_{j=1}^{5}A_j \right)^c</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>\emptyset</m>
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -1047,14 +1089,28 @@
         </p>
       </introduction>
       <task>
+        <statement>
         <p>
           <m>\bigcup\limits_{k \in \Lambda}^{}T_k</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>\left\{ x \in \R \left| -100 \leq x \leq 100 \right. \right\}</m>
+          </p>
+        </answer>
       </task>
       <task>
+        <statement>
         <p>
           <m>\bigcap\limits_{k \in \Lambda}^{}T_k</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>\left\{ x \in \R \left| -1 \leq x \leq 1 \right. \right\}</m>
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -1090,10 +1146,21 @@
       </introduction>
 
       <task>
+        <statement>
         <p>
           For each <m>\beta \in \Lambda</m>,
           <m>A_\beta \subseteq \bigcup\limits_{\alpha \in \Lambda}^{}A_\alpha</m>.
         </p>
+        </statement>
+        <answer>
+          <p>
+            We let <m>\beta \in \Lambda</m> and let <m>x \in A_\beta</m>. 
+            Then <m>x \in A_\alpha</m>, for at least one
+            <m>\alpha \in \Lambda</m> and, hence,
+            <m>x \in \bigcup\limits_{\alpha \in \Lambda}^{}A_\alpha</m>.  This proves that
+            <m>A_\beta \subseteq \bigcup\limits_{\alpha \in \Lambda}^{}A_\alpha</m>.
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -1116,10 +1183,37 @@
       </introduction>
 
       <task>
+        <statement>
         <p>
           <m>B \cap \left(\:\bigcup\limits_{\alpha \in \Lambda}^{}A_{\alpha} \right) = 
           \bigcup\limits_{\alpha \in \Lambda}^{} \left( B \cap A_{\alpha} \right)</m>, and
         </p>
+        </statement>
+        <answer>
+          <p>
+            We first let
+            <m>x \in B \cap \left(\:\bigcup\limits_{\alpha \in \Lambda}^{}A_{\alpha} \right)</m>. 
+            Then <m>x \in B</m> and <m>x \in \bigcup\limits_{\alpha \in \Lambda}^{}A_{\alpha}</m>. 
+            This means that there exists an <m>\alpha \in \Lambda</m> such that <m>x \in A_\alpha</m>. Hence,
+            <m>x \in B \cap A_\alpha</m>, which implies that
+            <m>x \in \bigcup\limits_{\alpha \in \Lambda}^{} \left( B \cap A_{\alpha} \right)</m>. 
+            This proves that
+            <m>B \cap \left(\bigcup\limits_{\alpha \in \Lambda}^{}A_{\alpha} \right)
+            \subseteq \bigcup\limits_{\alpha \in \Lambda}^{} \left( B \cap A_{\alpha} \right)</m>.
+          </p>
+          <p>
+            We now let
+            <m>y \in \bigcup\limits_{\alpha \in \Lambda}^{} \left( B \cap A_{\alpha} \right)</m>. 
+            So there exists an <m>\alpha \in \Lambda</m> such that <m>y \in B \cap A_{\alpha}</m>. 
+            Then <m>y \in B</m> and
+            <m>y \in A_{\alpha}</m>, which implies that <m>y \in B</m> and
+            <m>y \in \bigcup\limits_{\alpha \in \Lambda}^{}A_{\alpha}</m>.  Therefore,
+            <m>y \in B \cap \left(\:\bigcup\limits_{\alpha \in \Lambda}^{}A_{\alpha} \right)</m>, 
+            and this proves that
+            <m>\bigcup\limits_{\alpha \in \Lambda}^{} \left( B \cap A_{\alpha} \right) 
+            \subseteq B \cap \left(\bigcup\limits_{\alpha \in \Lambda}^{}A_{\alpha} \right)</m>.
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -1190,11 +1284,22 @@
       </introduction>
       
       <task>
+        <statement>
         <p>
           Prove that if <m>B</m> is a set such that
           <m>B \subseteq A_\alpha</m> for every <m>\alpha \in \Lambda</m>,
           then <m>B \subseteq \bigcap\limits_{\alpha \in \Lambda}^{}A_\alpha</m>.
         </p>
+        </statement>
+        <answer>
+          <p>
+            Let <m>x \in B</m>. For each <m>\alpha \in \Lambda</m>, <m>B \subseteq A_\alpha</m> and, hence,
+            <m>x \in A_\alpha</m>. This means that for each
+            <m>\alpha \in \Lambda</m>, <m>x \in A_\alpha</m>  and, hence,
+            <m>x \in \bigcap\limits_{\alpha \in \Lambda}^{}A_\alpha</m>. Therefore,
+            <m>B \subseteq \bigcap\limits_{\alpha \in \Lambda}^{}A_\alpha</m>.
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -1282,10 +1387,23 @@
       </introduction>
 
       <task>
+        <statement>
         <p>
           <m>\left(\:\bigcup\limits_{\alpha \in \Lambda}^{}A_{\alpha} \right) - B = 
           \bigcup\limits_{\alpha \in \Lambda}^{} \left( A_{\alpha} - B \right)</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            We first rewrite the set difference and then use a distributive law.
+            <md>
+              <mrow>\left(\bigcup\limits_{\alpha \in \Lambda}^{}A_{\alpha} \right) - B
+              \amp = \left(\bigcup\limits_{\alpha \in \Lambda}^{}A_{\alpha} \right) \cap B^c</mrow>
+              <mrow>\amp = \bigcup\limits_{\alpha \in \Lambda}^{}\left( A_\alpha \cap B^c \right)</mrow>
+              <mrow>\amp =\bigcup\limits_{\alpha \in \Lambda}^{} \left( A_{\alpha} - B \right)</mrow>
+            </md>
+          </p>
+        </answer>
       </task>
       <task>
         <p>

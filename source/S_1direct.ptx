@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?> 
 <section xml:id="S_1direct">
   <title>Constructing Direct Proofs</title>
 
@@ -1194,18 +1194,58 @@
     </exercise>
   </subsection>
 
-  <exercises xml:id="exercises-1_2">
+  <exercises>
 
     <exercise xml:id="exer_evenodd">
-      <statement>
+      <introduction>
         <p>
           Construct a know-show table for each of the following statements and then write a formal 
           proof for one of the statements.
+        </p>
+      </introduction>
           <task>
+            <statement>
             <p>
               If <m>m</m> is an even integer,
               then <m>m + 1</m> is an odd integer.
             </p>
+            </statement>
+            <answer>
+              <p>
+                <tabular>
+                  <row bottom="medium" header="yes">
+                    <cell right="medium">Step</cell>
+                    <cell right="medium">Know</cell>
+                    <cell>Reason</cell>
+                  </row>
+                  <row bottom="medium">
+                    <cell right="medium"><m>P</m></cell>
+                    <cell right="medium"><m>m</m> is an even integer.</cell>
+                    <cell>Hypothesis</cell>
+                  </row>
+                  <row bottom="medium">
+                    <cell right="medium"><m>P1</m></cell>
+                    <cell right="medium">There exists an integer <m>k</m> such that <m>m = 2k</m>.</cell>
+                    <cell>Definition of an even integer</cell>
+                  </row>
+                  <row bottom="medium">
+                    <cell right="medium"><m>P2</m></cell>
+                    <cell right="medium"><m>m + 1 = 2k + 1</m></cell>
+                    <cell>Algebra</cell>
+                  </row>
+                  <row bottom="medium">
+                    <cell right="medium"><m>Q1</m></cell>
+                    <cell right="medium">There exists an integer <m>q</m> such that <m>m +1 = 2q+1</m>.</cell>
+                    <cell>Substitution of <m>k = q</m></cell>
+                  </row>
+                  <row>
+                    <cell right="medium"><m>Q</m></cell>
+                    <cell right="medium"><m>m + 1</m> is an odd integer.</cell>
+                    <cell>Definition of an odd integer</cell>
+                  </row>
+                </tabular>
+              </p>
+            </answer>
           </task>
           <task>
             <p>
@@ -1213,53 +1253,130 @@
               then <m>m + 1</m> is an even integer.
             </p>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_evenoddadd">
-      <statement>
+      <introduction>
         <p>
           Construct a know-show table for each of the following statements and then write a 
           formal proof for one of the statements.
-          <task>
+        </p>
+      </introduction>
+          <task xml:id="exer_evenoddadda">
             <p>
               If <m>x</m> is an even integer and <m>y</m> is an even integer,
               then <m>x + y</m> is an even integer.
             </p>
           </task>
-          <task>
+          <task xml:id="exer_evenoddaddb">
             <p>
               If <m>x</m> is an even integer and <m>y</m> is an odd integer,
               then <m>x + y</m> is an odd integer.
             </p>
           </task>
           <task>
+            <statement>
             <p>
               If <m>x</m> is an odd integer and <m>y</m> is an odd integer,
               then <m>x + y</m> is an even integer.
             </p>
+            </statement>
+            <answer>
+              <p>
+                We assume that <m>x</m> and <m>y</m> are odd integers and will prove that 
+                <m>x+y</m> is an even integer.  Since <m>x</m> and <m>y</m> are odd, there exist 
+                integers <m>m</m> and <m>n</m> such that
+                <m>x = 2m + 1</m> and <m>y = 2n+1</m>. Then
+                <md>
+                  <mrow>x + y \amp = \left( 2m + 1 \right) + \left( 2n + 1 \right)</mrow>
+                  <mrow>\amp = 2m + 2n + 2</mrow>
+                  <mrow>\amp = 2 \left( m + n + 1 \right)</mrow>
+                </md>.
+                Since the integers are closed under addition, <m>\left( m + n + 1 \right)</m> is 
+                an integer, and hence the last equation shows that <m>x + y</m> is even. 
+                Therefore, we have proven that if <m>x</m> and <m>y</m> are odd integers, 
+                then <m>x+y</m> is an even integer.
+              </p>
+            </answer>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_evenoddmult">
-      <statement>
+      <introduction>
         <p>
           Construct a know-show table for each of the following statements and then write a 
           formal proof for one of the statements.
-          <task>
+        </p>
+      </introduction>
+          <task xml:id="exer_evenoddmulta">
+            <statement>
             <p>
               If <m>m</m> is an even integer and <m>n</m> is an integer,
               then <m>m \cdot n</m> is an even integer.
             </p>
+            </statement>
+            <answer>
+              <p>
+                <tabular>
+                  <row bottom="medium" header="yes">
+                    <cell right="medium">Step</cell>
+                    <cell right="medium">Know</cell>
+                    <cell>Know</cell>
+                  </row>
+                  <row bottom="medium">
+                    <cell right="medium"><m>P</m></cell>
+                    <cell right="medium"><m>m</m> is an even integer and <m>n</m> is an integer.</cell>
+                    <cell>Hypothesis</cell>
+                  </row>
+                  <row bottom="medium">
+                    <cell right="medium"><m>P1</m></cell>
+                    <cell right="medium">There exists an integer <m>k</m> <m>m = 2k</m>.</cell>
+                    <cell>Definition of an even integer.</cell>
+                  </row>
+                  <row bottom="medium">
+                    <cell right="medium"><m>P2</m></cell>
+                    <cell right="medium"><m>m \cdot n = \left( 2k \right) n</m></cell>
+                    <cell>Substitution</cell>
+                  </row>
+                  <row bottom="medium">
+                    <cell right="medium"><m>P3</m></cell>
+                    <cell right="medium"><m>m \cdot n = 2 \left( {kn} \right)</m></cell>
+                    <cell>Algebra</cell>
+                  </row>
+                  <row bottom="medium">
+                    <cell right="medium"><m>P4</m></cell>
+                    <cell right="medium"><m>\left( {kn} \right)</m> is an integer</cell>
+                    <cell>Closure properties of the integers</cell>
+                  </row>
+                  <row bottom="medium">
+                    <cell right="medium"><m>Q1</m></cell>
+                    <cell right="medium">There exists an integer <m>q</m> such that 
+                    <m>m \cdot n = 2q</m></cell>
+                    <cell><m>q = kn</m>.</cell>
+                  </row>
+                  <row>
+                    <cell right="medium"><m>Q</m></cell>
+                    <cell right="medium"><m>m \cdot n</m> is an even integer.</cell>
+                    <cell>Definition of an even integer.</cell>
+                  </row>
+                </tabular>
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               If <m>n</m> is an even integer,
               then <m>n^2</m> is an even integer.
             </p>
+            </statement>
+            <answer>
+              <p>
+                Use <xref ref="exer_evenoddmulta"/> to answer this.
+              </p>
+            </answer>
           </task>
           <task xml:id="exer_x2odd">
             <p>
@@ -1267,19 +1384,42 @@
               then <m>n^2</m> is an odd integer.
             </p>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_5m_7">
-      <statement>
+      <introduction>
         <p>
           Construct a know-show table and write a complete proof for each of the following statements:
+        </p>
+      </introduction>
           <task>
+            <statement>
             <p>
               If <m>m</m> is an even integer,
               then <m>5m + 7</m> is an odd integer.
             </p>
+            </statement>
+            <answer>
+              <p>
+                We assume that <m>m</m> is an even integer and will prove that <m>5m + 7</m> 
+                is an odd integer.  Since <m>m</m> is an even integer, there exists an 
+                integer <m>k</m> such that <m>m = 2k</m>.  Using substitution and algebra, 
+                we see that
+                <md>
+                  <mrow>5m + 7 \amp = 5(2k) + 7</mrow>
+                  <mrow>\amp = 10k + 6 + 1</mrow>
+                  <mrow>\amp = 2(5k + 3) + 1</mrow>
+                </md>
+                By the closure properties of the integers, we conclude that <m>5k + 3</m> is 
+                an integer, and so the last equation proves that <m>5m + 7</m> is an odd integer.
+              </p>
+              <p>
+                Another proof. By <xref ref="exer_evenoddadda"/> of <xref ref="exer_evenoddadd"></xref>, 
+                <m>5m</m> is an even integer.  Hence, by <xref ref="exer_evenoddaddb"/> of
+                <xref ref="exer_evenoddadd"></xref>, <m>5m + 7</m> is an even integer.
+              </p>
+            </answer>
           </task>
           <task>
             <p>
@@ -1293,14 +1433,14 @@
               then <m>mn + 7</m> is an even integer.
             </p>
           </task>
-        </p>
-      </statement>
     </exercise>
 
     <exercise xml:id="exer_3m2">
-      <statement>
+      <introduction>
         <p>
           Construct a know-show table and write a complete proof for each of the following statements:
+        </p>
+      </introduction>
           <task>
             <p>
               If <m>m</m> is an even integer,
@@ -1308,17 +1448,33 @@
             </p>
           </task>
           <task>
+            <statement>
             <p>
               If <m>m</m> is an odd integer,
               then <m>3m^2 + 7m + 12</m> is an even integer.
             </p>
+            </statement>
+            <answer>
+              <p>
+                We assume that <m>m</m> is an odd integer and will prove that 
+                <m>3m^2 + 7m + 12</m> is an even integer.  Since <m>m</m> is odd, there exists 
+                an integer <m>k</m> such that <m>m = 2k +1</m>. Hence,
+                <md>
+                  <mrow>3m^2 + 7m + 12 \amp = 3 \left( 2k + 1 \right)^2 + 7 \left( 2k + 1 \right) + 12</mrow>
+                  <mrow>\amp = 12k^2 + 26k + 22</mrow>
+                  <mrow>\amp = 2 \left( 6k^2 + 13k + 11 \right)</mrow>
+                </md>
+                By the closure properties of the integers, <m>\left( 6k^2 + 13k + 11 \right)</m> 
+                is an integer. Hence, this proves that if <m>m</m> is odd, then 
+                <m>3m^2 + 7m + 12</m> is an even integer.
+              </p>
+            </answer>
           </task>
-        </p>
-      </statement>
+ 
     </exercise>
 
     <exercise xml:id="exer_sec12-7">
-      <statement>
+      <introduction>
         <p>
           In this section,
           it was noted that there is often more than one way to answer a backward question.
@@ -1327,11 +1483,20 @@
           that their difference equals 0.
           Another possible answer is to prove that the first is less than or equal to the second and 
           that the second is less than or equal to the first.
+        </p>
+      </introduction>
           <task>
+            <statement>
             <p>
               Give at least one more answer to the backward question,
               <q>How can we prove that two real numbers are equal?</q>
             </p>
+            </statement>
+            <answer>
+              <p>
+                Prove that they are not zero and their quotient is equal to 1.
+              </p>
+            </answer>
           </task>
           <task>
             <p>
@@ -1346,13 +1511,21 @@
             </p>
           </task>
           <task>
+            <statement>
             <p>
               List as many answers as you can for the backward question,
               <q>How can we prove that a triangle is isosceles?</q>
             </p>
+            </statement>
+            <answer>
+              <p>
+                Prove that two of the sides have the same length. Prove that the triangle has 
+                two congruent angles.  Prove that an altitude of the triangle is a perpendicular 
+                bisector of a side of the triangle.
+              </p>
+            </answer>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_sec12-new7">
@@ -1394,7 +1567,7 @@
     </exercise>
 
     <exercise xml:id="exer_sec12-type">
-      <statement>
+      <introduction>
         <p>
           An integer <m>a</m> is said to be a <term>type 0 integer</term>
           if there exists an integer <m>n</m> such that <m>a=3n</m>.
@@ -1405,10 +1578,19 @@
           <idx><h>type 0 integer</h></idx>
           <idx><h>type 1 integer</h></idx>
           <idx><h>type 2 integer</h></idx>
+        </p>
+      </introduction>
           <task xml:id="exer_mod3a">
+            <statement>
             <p>
               Give examples of at least four different integers that are type 1 integers.
             </p>
+            </statement>
+            <answer>
+              <p>
+                Some examples of type 1 integers are <m>-5</m>, <m>-2</m>, 1, 4, 7, 10.
+              </p>
+            </answer>
           </task>
           <task>
             <p>
@@ -1416,6 +1598,7 @@
             </p>
           </task>
           <task>
+            <statement>
             <p>
               By multiplying pairs of integers from the list in <xref ref="exer_mod3a"></xref>,
             does it appear that the following statement is true or false?
@@ -1424,21 +1607,44 @@
               type 1 integer.
             </blockquote>
             </p>
+            </statement>
+            <answer>
+              <p>
+                All examples should indicate the proposition is true.
+              </p>
+            </answer>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_sec12-typeproof">
-      <statement>
+      <introduction>
         <p>
           Use the definitions in <xref ref="exer_sec12-type"></xref> to help write a 
           proof for each of the following statements:
+        </p>
+      </introduction>
           <task>
+            <statement>
             <p>
               If <m>a</m> and <m>b</m> are both type 1 integers,
               then <m>a + b</m> is a type 2 integer.
             </p>
+            </statement>
+            <answer>
+              <p>
+                Let <m>a</m> and <m>b</m> be integers and assume that <m>a</m> and <m>b</m> are 
+                both type 1 integers.  Then, there exist integers <m>m</m> and <m>n</m> such 
+                that <m>a = 3m + 1</m> and <m>b = 3n + 1</m>.  Now show that
+                <me>
+                  a + b = 3 \left( m + n \right) + 2
+                </me>.
+                The closure properties of the integers imply that <m>m + n</m> is an integer. 
+                Therefore, the last equation tells us that <m>a + b</m> is a type 2 integer. 
+                Hence, we have proved that if <m>a</m> and <m>b</m> are both type 1 integers, 
+                then <m>a + b</m> is a type 2 integer.
+              </p>
+            </answer>
           </task>
           <task>
             <p>
@@ -1458,8 +1664,7 @@
               then <m>a \cdot b</m> is type 1 integer.
             </p>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_sec12-11">

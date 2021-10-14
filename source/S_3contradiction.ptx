@@ -878,7 +878,7 @@
 
     <exercises>
       <exercise xml:id="exer_sec33-1">
-        <statement>
+        <introduction>
           <p>
             This exercise is intended to provide another rationale as to why a proof by contradiction works.
             Suppose that we are trying to prove that a statement <m>P</m> is true.
@@ -887,11 +887,20 @@
             <q>If <m>\mynot P</m>, then <m>C</m></q>
             is true, where <m>C</m> is some contradiction.
             Recall that a contradiction is a statement that is always false.
+          </p>
+        </introduction>
             <task xml:id="exer_contradictionproof">
+              <statement>
               <p>
                 In symbols, write a statement that is a disjunction and that is logically 
                 equivalent to <m>\mynot P \to C</m>.
               </p>
+              </statement>
+              <answer>
+                <p>
+                  <m>P \vee C</m>
+                </p>
+              </answer>
             </task>
             <task>
               <p>
@@ -906,28 +915,69 @@
                 implies a contradiction.
               </p>
             </task>
-          </p>
-        </statement>
+
       </exercise>
 
       <exercise xml:id="exer_sec32-truefalse">
-        <statement>
+        <introduction>
           <p>
             Are the following statements true or false?
             Justify each conclusion.
+          </p>
+        </introduction>
             <task>
+              <statement>
               <p>
                 For all integers <m>a</m> and <m>b</m>,
                 if <m>a</m> is even and <m>b</m> is odd,
                 then <m>4</m> does not divide <m>\left( a^2 + b^2 \right)</m>.
               </p>
+              </statement>
+              <answer>
+                <p>
+                  This statement is true.
+                  Use a proof by contradiction.
+                  So assume that there exist integers  <m>a</m> and <m>b</m> such that <m>a</m> 
+                  is even,
+                  <m>b</m> is odd,
+                  and 4 divides <m>a^2 + b^2</m>.
+                  So there exist integers <m>m</m> and <m>n</m> such that
+                  <me>
+                    a = 2m \qquad \text{ and }  \qquad a^2 + b^2 = 4n
+                  </me>.
+                  Substitute <m>a = 2m</m> into the second equation and use algebra to rewrite 
+                  in the form <m>b^2 = 4(n - m^2)</m>.
+                  This means that <m>b^2</m> is even and hence, that <m>b</m> is even.
+                  This is a contradiction to the assumption that <m>b</m> is odd.
+                </p>
+              </answer>
             </task>
             <task>
+              <statement>
               <p>
                 For all integers <m>a</m> and <m>b</m>,
                 if <m>a</m> is even and <m>b</m> is odd,
                 then <m>6</m> does not divide <m>\left( a^2 + b^2 \right)</m>.
               </p>
+              </statement>
+              <answer>
+                <p>
+                  This statement is true.
+                  Use a proof by contradiction.
+                  So assume that there exist integers <m>a</m> and <m>b</m> such that 
+                  <m>a</m> is even,
+                  <m>b</m> is odd,
+                  and 6 divides <m>a^2 + b^2</m>.
+                  So there exist integers <m>m</m> and <m>n</m> such that
+                  <me>
+                    a = 2m \qquad \text{ and }  \qquad a^2 + b^2 = 6n
+                  </me>.
+                  Substitute <m>a = 2m</m> into the second equation and use algebra to 
+                  rewrite in the form <m>b^2 = 2(3n - 2m^2)</m>.
+                  This means that <m>b^2</m> is even and hence, that <m>b</m> is even.
+                  This is a contradiction.
+                </p>
+              </answer>
             </task>
             <task>
               <p>
@@ -937,36 +987,79 @@
               </p>
             </task>
             <task>
+              <statement>
               <p>
                 For all integers <m>a</m> and <m>b</m>,
                 if <m>a</m> is odd and <m>b</m> is odd,
                 then <m>4</m> divides <m>\left( a^2 + 3b^2 \right)</m>.
               </p>
+              </statement>
+              <answer>
+                <p>
+                  This statement is true.
+                  Use a direct proof.
+                  Let <m>a</m> and <m>b</m> be integers and assume they are odd.
+                  So there exist integers <m>m</m> and <m>n</m> such that
+                  <me>
+                    a = 2m + 1 \qquad \text{ and }  \qquad b = 2n + 1
+                  </me>.
+                  We then see that
+                  <md>
+                    <mrow>a^2 + 3b^2 \amp = 4m^2 + 4m + 1 + 12n^2 + 12n + 3</mrow>
+                    <mrow>\amp = 4\left( m^2 + m + 3n^2 + 3n + 1 \right)</mrow>
+                  </md>.
+                  This shows that 4 divides <m>a^2 + 3b^2</m>.
+                </p>
+              </answer>
             </task>
-          </p>
-        </statement>
+
       </exercise>
+
       <exercise xml:id="exer_sec33-2">
-        <statement>
+        <introduction>
           <p>
             Consider the following statement:
+        
           <blockquote>
             For each positive real number <m>r</m>, if <m>r^2 = 18</m>, then <m>r</m> is irrational.
           </blockquote>
+          </p>
+        </introduction>
           <task>
+            <statement>
             <p>
               If you were setting up a proof by contradiction for this statement,
               what would you assume?
               Carefully write down all conditions that you would assume.
             </p>
+            </statement>
+            <answer>
+              <p>
+                We would assume that there exists a positive real number <m>r</m> such that 
+                <m>r^2 = 18</m> and <m>r</m> is a rational number.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               Complete a proof by contradiction for this statement.
             </p>
+            </statement>
+            <answer>
+              <p>
+                Do not attempt to mimic the proof that the square root of 2 is irrational
+                (<xref ref="T_squareroot2"></xref>). You should still use the definition of a 
+                rational number but then use the fact that 
+                <m>\sqrt {18}  = \sqrt {9 \cdot 2}  = \sqrt 9 \sqrt 2  = 3\sqrt 2</m>. 
+                So, if we assume that <m>r = \sqrt{18} = 3 \sqrt{2}</m> is rational, then 
+                <m>\dfrac{r}{3} = \dfrac{\sqrt{18}}{3}</m> is rational since the rational 
+                numbers are closed under division.  Hence, <m>\sqrt{2}</m> is rational and this 
+                is a contradiction to <xref ref="T_squareroot2"></xref>.
+              </p>
+            </answer>
           </task>
-          </p>
-        </statement>
+
       </exercise>
 
       <exercise>
@@ -980,43 +1073,99 @@
       </exercise>
 
       <exercise xml:id="exer_sec33-3">
-        <statement>
+        <introduction>
           <p>
             Prove the following propositions:
+          </p>
+        </introduction>
             <task>
+              <statement>
               <p>
                 For all real numbers <m>x</m> and <m>y</m>,
                 if <m>x</m> is rational and <m>y</m> is irrational,
                 then <m>x + y</m> is irrational.
               </p>
+              </statement>
+              <answer>
+                <p>
+                  Use a proof by contradiction.
+                  So, we assume that there exist real numbers <m>x</m> and <m>y</m> such that 
+                  <m>x</m> is rational,
+                  <m>y</m> is irrational, and <m>x + y</m> is rational.
+                  Since the rational numbers are closed under addition,
+                  this implies that <m>\left( x + y \right) - x</m> is a rational number.
+                  Since <m>\left( x + y \right) - x = y</m>,
+                  we conclude that <m>y</m> is a rational number and this contradicts the 
+                  assumption that <m>y</m> is irrational.
+                </p>
+              </answer>
             </task>
             <task>
+              <statement>
               <p>
                 For all nonzero real numbers <m>x</m> and <m>y</m>,
                 if <m>x</m> is rational and <m>y</m> is irrational,
                 then <m>xy</m> is irrational.
               </p>
+              </statement>
+              <answer>
+                <p>
+                  Use a proof by contradiction.
+                  So, we assume that there exist nonzero real numbers <m>x</m> and <m>y</m> 
+                  such that <m>x</m> is rational,
+                  <m>y</m> is irrational, and <m>xy</m> is rational.
+                  Since the rational numbers are closed under division by nonzero rational numbers,
+                  this implies that <m>\dfrac{xy}{x}</m> is a rational number.
+                  Since <m>\dfrac{xy}{x} = y</m>,
+                  we conclude that <m>y</m> is a rational number and this contradicts the 
+                  assumption that <m>y</m> is irrational.
+                </p>
+              </answer>
             </task>
-          </p>
-        </statement>
+ 
       </exercise>
 
       <exercise xml:id="exer_sec33-4">
-        <statement>
+        <introduction>
           <p>
             Are the following statements true or false?
             Justify each conclusion.
+          </p>
+        </introduction>
             <task>
+              <statement>
               <p>
                 For each positive real number <m>x</m>,
                 if <m>x</m> is irrational, then <m>x^2</m> is irrational.
               </p>
+              </statement>
+              <answer>
+                <p>
+                  This statement is false.
+                  A counterexample is <m>x = \sqrt{2}</m>.
+                </p>
+              </answer>
             </task>
             <task>
+              <statement>
               <p>
                 For each positive real number <m>x</m>,
                 if <m>x</m> is irrational, then <m>\sqrt x</m> is irrational.
               </p>
+              </statement>
+              <answer>
+                <p>
+                  This statement is true since the contrapositive is true.
+                  The contrapositive is:
+                    <blockquote>
+                      For any real number <m>x</m>, if <m>\sqrt{x}</m> is rational, then 
+                      <m>x</m> is rational.
+                    </blockquote>
+                  If there exist integers <m>a</m> and <m>b</m> with <m>b \ne 0</m> such that 
+                  <m>\sqrt{x} = \dfrac{a}{b}</m>,
+                  then <m>x^2 = \dfrac{a^2}{b^2}</m> and hence, <m>x^2</m> is rational.
+                </p>
+              </answer>
             </task>
             <task>
               <p>
@@ -1032,8 +1181,7 @@
                 then <m>x</m> is irrational or <m>y</m> is irrational.
               </p>
             </task>
-          </p>
-        </statement>
+
       </exercise>
 
       <exercise>
@@ -1106,21 +1254,36 @@
       </exercise>
 
       <exercise xml:id="exer_sec33-9">
+        <introduction>
+          <p>
+            Justify your conclusion for each of the following.
+          </p>
+        </introduction>
         <task>
+          <statement>
           <p>
             Is the base 2 logarithm of 32,
             <m>\log_2 (32)</m>, a rational number or an irrational number?
-            Justify your conclusion.
           </p>
+          </statement>
+          <answer>
+            <p>
+              Recall that <m>\log _2 (32)</m> is the real number <m>a</m> such that 
+              <m>2^a  = 32</m>.  That is,
+              <m>a = \log _2 (32)</m>  means that <m>2^a  = 32</m>. If we assume that <m>a</m> 
+              is rational, then there exist integers <m>m</m> and <m>n</m>, with <m>n \ne 0</m>, 
+              such that <m>a = \dfrac{m}{n}</m>.
+            </p>
+          </answer>
         </task>
         <task>
           <p>
             Is the base 2 logarithm of 3, <m>\log _2 (3)</m>,
             a rational number or an irrational number?
-            Justify your conclusion.
           </p>
         </task>
       </exercise>
+
       <exercise xml:id="exer_sec33IVT">
         <statement>
           <p>
@@ -1129,18 +1292,33 @@
             Prove that there is no integer <m>x</m> such that <m>x^3 - 4x^2 = 7</m>.
           </p>
         </statement>
+        <hint>
+          <p>
+            The only factors of 7 are <m>-1, 1, -7</m>, and <m>7</m>.
+          </p>
+        </hint>
       </exercise>
 
       <exercise xml:id="exer_sec33-11">
-        <statement>
+        <introduction>
           <p>
             Prove each of the following propositions:
+          </p>
+        </introduction>
             <task>
+              <statement>
               <p>
                 For each real number <m>\theta</m>,
                 if <m>0 \lt \theta \lt \dfrac{\textstyle \pi }{\textstyle 2}</m>,
                 then <m>\left[ {\sin (\theta) + \cos (\theta) } \right] > 1</m>.
               </p>
+              </statement>
+              <hint>
+                <p>
+                  What happens if you expand <m>[ {\sin (\theta) + \cos (\theta) } ]^2</m>?  
+                  Don't forget your trigonometric identities.
+                </p>
+              </hint>
             </task>
             <task>
               <p>
@@ -1164,8 +1342,7 @@
                 </me>.
               </p>
             </task>
-          </p>
-        </statement>
+
       </exercise>
 
       <exercise xml:id="exer_sec35-10">
@@ -1175,6 +1352,14 @@
             the largest is equal to the sum of the cubes of the other two.
           </p>
         </statement>
+        <hint>
+          <p>
+            Three consecutive natural numbers can be represented by <m>n</m>, <m>n + 1</m>, and
+            <m>n + 2</m>, where <m>n \in \mathbb{N}</m>, or three consecutive natural numbers 
+            can be represented by
+            <m>m - 1</m>, <m>m</m>, and <m>m + 1</m>, where <m>m \in \mathbb{N}</m>.
+          </p>
+        </hint>
       </exercise>
 
       <exercise>

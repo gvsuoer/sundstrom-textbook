@@ -925,6 +925,15 @@
           and determine all of the equivalence classes determined by this equivalence relation.
         </p>
       </statement>
+      <answer>
+        <p>
+          Use the directed graph to examine all the cases necessary to prove that <m>\sim</m> 
+          is reflexive, symmetric, and transitive.  The distinct equivalence classes are: 
+          <m>\left[ a \right] = \left[ b \right] = \left\{ a,b \right\}</m>;
+          <m>\left[ c \right] = \left\{ c \right\}</m>;
+          <m>\left[ d \right] = \left[ e \right] = \left\{ d,e \right\}</m>
+        </p>
+      </answer>
     </exercise>
 
     <exercise xml:id="exer_drawdirgraph">
@@ -942,6 +951,18 @@
           and then determine all of the equivalence classes for this equivalence relation.
         </p>
       </statement>
+      <answer>
+        <p>
+          The equivalence class are
+          <me>
+            [a] = [b] = [d] = \{a, b, d \},  [c] = \{ c \},  [e] = [f] = \{ e, f \}
+          </me>.
+          Following is the directed graph for this equivalence relation.
+          <figure>
+            <image width="50%" source="figps-exer2-73.svg"/>
+          </figure>
+        </p>
+      </answer>
     </exercise>
 
     <exercise xml:id="exer_sec73-2">
@@ -958,6 +979,27 @@
         the distinct equivalence classes determined by <m>R</m>.
         </p>
       </statement>
+      <answer>
+        <p>
+          Let <m>x \in A</m>. Since <m>x</m> has the same number of digits as itself, the 
+          relation <m>\mathrel{R}</m> is reflexive. Now let <m>x, y, z \in A</m>.  
+          If <m>x \mathrel{R} y</m>, then <m>x</m> and <m>y</m> have the same number of digits.  
+          Hence, <m>y</m> and <m>x</m> have the same number of digits and <m>y \mathrel{R} x</m>, 
+          and so <m>\mathrel{R}</m> is symmetric.
+        </p>
+        <p>
+          If <m>x \mathrel{R} y</m> and <m>y \mathrel{R} z</m>,then <m>x</m> and <m>y</m>  
+          have the same number of digits and
+          <m>y</m>  and  <m>z</m> have the same number of digits. Hence, <m>x</m> and <m>z</m> 
+          have the same number of digits, and so <m>x \mathrel{R} z</m>. 
+          Therefore, <m>\mathrel{R}</m> is transitive.
+        </p>
+        <p>
+          The equivalence classes are:
+          <m>\left\{ 0, 1, 2, \ldots , 9 \right\}</m>, <m>\left\{ 10, 11, 12, \ldots , 99 \right\}</m>,
+          <m>\left\{ 100, 101, 102, \ldots , 999 \right\}</m>, <m>\left\{ 1000 \right\}</m>.
+        </p>
+      </answer>
     </exercise>
 
     <exercise xml:id="exer_sec73-congclass">
@@ -967,6 +1009,19 @@
           set of integers.
         </p>
       </statement>
+      <answer>
+        <p>
+          The congruence classes for the relation of congruence modulo 5 on the set of integers 
+          are
+          <md>
+          <mrow>\left[ 0 \right] \amp = \left\{ 5n \mid n \in \mathbb{Z} \right\}</mrow>
+          <mrow>\left[ 1 \right] \amp = \left\{ 5n +1 \mid n \in \mathbb{Z} \right\}</mrow>
+          <mrow>\left[ 2 \right] \amp = \left\{ 5n + 2 \mid n \in \mathbb{Z} \right\}</mrow>
+          <mrow>\left[ 3 \right] \amp = \left\{ 5n + 3 \mid n \in \mathbb{Z} \right\}</mrow>
+          <mrow>\left[ 4 \right] \amp = \left\{ 5n + 4 \mid n \in \mathbb{Z} \right\}</mrow>.
+          </md>
+        </p>
+      </answer>
     </exercise>
 
     <exercise xml:id="exer_modpowers">
@@ -977,6 +1032,7 @@
       </introduction>
 
       <task>
+        <statement>
         <p>
           Define the relation <m>\sim</m> on <m>\Z_{9}</m> as follows: For all <m>a,
           b \in \Z_{9}</m>,
@@ -984,6 +1040,22 @@
           Prove that <m>\sim</m> is an equivalence relation on <m>\Z_{9}</m> and determine all 
           of the distinct equivalence classes of this equivalence relation.
         </p>
+        </statement>
+        <answer>
+          <p>
+            Let <m>a, b, c \in \Z_9</m>. Since <m>a^2 \equiv a^2 \pmod 9</m>, we see that 
+            <m>a \sim a</m> and <m>\sim</m> is reflexive. Let <m>a, b, c \in \Z_9</m>. 
+            If <m>a \sim b</m>, then <m>a^2 \equiv b^2 \pmod 9</m> and hence, by the symmetric 
+            property of congruence, <m>b^2 \equiv a^2 \pmod 9</m>. This proves that <m>\sim</m> 
+            is symmetric.  Finally, if <m>a \sim b</m> and <m>b \sim c</m>, then
+            <m>a^2 \equiv b^2 \pmod 9</m> and <m>b^2 \equiv c^2 \pmod 9</m>. By the transitive 
+            property of congruence, we conclude that <m>a^2 \equiv c^2 \pmod 9</m> and hence, 
+            <m>a \sim c</m>. This proves that <m>\sim</m> is transitive. 
+            The distinct equivalence classes are <m>\left\{0, 3, 6 \right\}</m>, 
+            <m>\left\{1, 8 \right\}</m>,
+            <m>\left\{ 2, 7 \right\}</m>, and <m>\left\{ 4, 5 \right\}</m>.
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -1009,10 +1081,25 @@
         </p>
       </introduction>
       <task>
+        <statement>
         <p>
           Prove that <m>\left[ \dfrac{5}{7} \right] = \left\{ \left. m + \dfrac{5}{7} \right| m 
           \in \Z \right\}</m>.
         </p>
+        </statement>
+        <answer>
+          <p>
+            Let <m>x \in \left[ \dfrac{5}{7} \right]</m>. Then <m>x - \dfrac{5}{7} \in \Z</m>, 
+            which means that there is an integer <m>m</m> such that <m>x - \dfrac{5}{7} = m</m>, 
+            or <m>x = \dfrac{5}{7} + m</m>. This proves that
+            <m>x \in \left\{ \left. m + \dfrac{5}{7} \right| m \in \Z \right\}</m> and, hence, 
+            that
+            <m>\left[ \dfrac{5}{7} \right] \subseteq \left\{ \left. m + \dfrac{5}{7} \right| m 
+            \in \Z \right\}</m>. We still need to prove that
+            <m>\left\{ \left. m + \dfrac{5}{7} \right| m \in \Z \right\} \subseteq \left[ 
+            \dfrac{5}{7} \right]</m>.
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -1094,9 +1181,18 @@
       </introduction>
 
       <task>
+        <statement>
         <p>
           Prove that <m>\approx</m> is an equivalence relation on <m>A</m>.
         </p>
+        </statement>
+        <answer>
+          <p>
+            To prove the relation is symmetric, note that if <m>(a, b) \approx (c, d)</m>, then
+            <m>ad = bc</m>. This implies that <m>cb = da</m> and, hence, 
+            <m>(c, d) \approx (a, b)</m>.
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -1105,10 +1201,17 @@
         </p>
       </task>
       <task>
+        <statement>
         <p>
           Determine an equation that gives a relation between <m>a</m> and <m>b</m> if
           <m>\left( {a, b} \right) \in A</m> and <m>\left( {a, b} \right) \approx \left( {2, 3} \right)</m>.
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>3a = 2b</m>
+          </p>
+        </answer>
       </task>
       <task>
         <p>

@@ -879,19 +879,35 @@
     </introduction>
 
     <task>
+      <statement>
       <p>
         Let <m>a</m> be a nonzero integer,
         and let <m>p</m> be a prime number.
         If <m>p \mid a</m>, then <m>\gcd( {a, p} ) = p</m>.
       </p>
+      </statement>
+      <hint>
+        <p>
+          Use the fact that the only natural number divisors of a prime number <m>p</m> 
+          are 1 and <m>p</m>.
+        </p>
+      </hint>
     </task>
     <task>
+      <statement>
       <p>
         Let <m>a</m> be a nonzero integer,
         and let <m>p</m> be a prime number.
         If <m>p</m> does not divide <m>a</m>,
         then <m>\gcd( {a, p} ) = 1</m>.
       </p>
+      </statement>
+      <hint>
+        <p>
+          Use the fact that the only natural number divisors of a prime number <m>p</m> 
+          are 1 and <m>p</m>.
+        </p>
+      </hint>
     </task>
   </exercise>
 
@@ -911,6 +927,16 @@
         and (2) <m>p</m> does not divide <m>a</m>.
       </p>
     </hint>
+    <answer>
+      <p>
+        Use cases: (1) <m>p</m> divides <m>a</m>; (2) <m>p</m> does not divide <m>a</m>. 
+        In the first case, the conclusion is automatically true. 
+        For the second case, use the fact that <m>\gcd ( p, a ) = 1</m> and so we can use 
+        <xref ref="T_relativelyprimeprop"></xref> to conclude that <m>p</m> divides <m>b</m>. 
+        Another option is to write the number 1 as a linear combination of <m>a</m> and <m>p</m> 
+        and then multiply both sides of the equation by <m>b</m>.
+      </p>
+    </answer>
   </exercise>
 
   <exercise xml:id="exer_sec82-3">
@@ -925,6 +951,13 @@
         <m>1 \leq k \leq n</m> such that <m>p \mid a_k</m>.
       </p>
     </statement>
+    <hint>
+      <p>
+        A hint for the inductive step: Write <m>p \mid ( {a_1 a_2  \cdots a_m } )a_{m + 1}</m>. 
+        Then look at two cases: (1) <m>p \mid a_{m + 1}</m>; (2) <m>p</m> does not divide 
+        <m>a_{m + 1}</m>.
+      </p>
+    </hint>
   </exercise>
 
   <exercise xml:id="exer_lincombequalone">
@@ -935,18 +968,32 @@
     </introduction>
 
     <task>
+      <statement>
       <p>
         If there exist integers <m>x</m> and <m>y</m> such that <m>ax + by = 1</m>,
         what conclusion can be made about <m>\gcd( {a, b} )</m>?
         Explain.
       </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\gcd ( a, b ) = 1</m>. Why?
+        </p>
+      </answer>
     </task>
     <task>
+      <statement>
       <p>
         If there exist integers <m>x</m> and <m>y</m> such that <m>ax + by = 2</m>,
         what conclusion can be made about <m>\gcd( {a, b} )</m>?
         Explain.
       </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\gcd ( a, b ) = 1</m> or <m>\gcd ( a, b ) = 2</m>. Why?
+        </p>
+      </answer>
     </task>
   </exercise>
 
@@ -1007,16 +1054,34 @@
     </introduction>
 
     <task xml:id="exer_gcd-divbyda">
+      <statement>
       <p>
         Let <m>a = 16</m> and <m>b = 28</m>.
         Determine the value of <m>d = \gcd( a, b )</m>,
         and then determine the value of <m>\gcd \!\left( {\dfrac{a}{d}, \dfrac{b}{d}} \right )</m>.
       </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\gcd \left( 16, 28 \right) = 4</m>.
+          Also, <m>\dfrac{16}{4} = 4</m>,
+          <m>\dfrac{28}{4} = 7</m>, and <m>\gcd \left( 4, 7 \right) = 1</m>.
+        </p>
+      </answer>
     </task>
     <task>
+      <statement>
       <p>
         Repeat <xref ref="exer_gcd-divbyda"/> with <m>a = 10</m> and <m>b = 45</m>.
       </p>
+      </statement>
+      <answer>
+        <p>
+          <m>\gcd \left( 10, 45 \right) = 5</m>.
+          Also, <m>\dfrac{10}{5} = 2</m>,
+          <m>\dfrac{45}{5} = 9</m>, and <m>\gcd \left( 2, 9 \right) = 1</m>.
+        </p>
+      </answer>
     </task>
     <task>
       <statement>
@@ -1054,7 +1119,7 @@
         then <m>\left( {ab} \right) \mid c</m>.
       </p>
     </task>
-    <task>
+    <task xml:id="exer_sec82-truefalseb">
       <p>
         For all integers <m>a, b, \text{ and } c</m>, if <m>a \mid c</m>,
         <m>b \mid c</m> and <m>\gcd( {a, b} ) = 1</m>,
@@ -1078,6 +1143,11 @@
         </blockquote>
       </p>
     </statement>
+    <hint>
+      <p>
+        <xref ref="exer_sec82-truefalseb"/> of <xref ref="exer_sec82-truefalse"/> can be helpful.
+      </p>
+    </hint>
   </exercise>
 
   <exercise xml:id="exer_82_10">
@@ -1116,6 +1186,13 @@
           </blockquote>
       </p>
     </statement>
+    <answer>
+      <p>
+        The statement is true. Start of a proof: If  <m>\gcd ( {a, b} ) = 1</m> and
+        <m>c \mid ( {a + b} )</m>, then there exist integers <m>x</m> and <m>y</m> such that
+        <m>ax + by = 1</m> and there exists an integer <m>m</m> such that <m>a + b = cm</m>.
+      </p>
+    </answer>
   </exercise>
 
   <exercise>

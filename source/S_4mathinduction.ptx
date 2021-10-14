@@ -1035,63 +1035,143 @@
 
   <exercises>
     <exercise xml:id="exer_sec51-1">
-      <statement>
+      <introduction>
         <p>
           Which of the following sets are inductive sets?
           Explain.
+        </p>
+      </introduction>
           <task>
+            <statement>
             <p>
               <m>\mathbb{Z}</m>
             </p>
+            </statement>
+            <answer>
+              <p>
+                This set is inductive.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               <m>\left\{ {x \in \mathbb{N} \mid x \geq 4} \right\}</m>
             </p>
+            </statement>
+            <answer>
+              <p>
+                This set is inductive.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               <m>\left\{ {x \in \mathbb{Z} \mid x \leq 10} \right\}</m>
             </p>
+            </statement>
+            <answer>
+              <p>
+                This set is not inductive.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               <m>\left\{ {1,2,3, \ldots ,500} \right\}</m>
             </p>
+            </statement>
+            <answer>
+              <p>
+                This set is not inductive.
+              </p>
+            </answer>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_sec51-2">
-      <statement>
+      <introduction>
         <p>
+          Explain the following.
+        </p>
+      </introduction>
           <task>
+            <statement>
             <p>
               Can a finite, nonempty set be inductive?
-              Explain.
             </p>
+            </statement>
+            <answer>
+              <p>
+                A finite nonempty set is not inductive (why?).
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               Is the empty set inductive?
-              Explain.
             </p>
+            </statement>
+            <answer>
+              <p>
+                The empty set is inductive (why?).
+              </p>
+            </answer>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_sec51-3">
-      <statement>
+      <introduction>
         <p>
           Use mathematical induction to prove each of the following:
+        </p>
+      </introduction>
           <task xml:id="exer_inductionsum-a">
+            <statement>
             <p>
               For each natural number <m>n</m>,
               <m>2 + 5 + 8 + \cdots + \left( {3n - 1} \right) = \dfrac{{n\left( {3n + 1} 
               \right)}}{2}</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                For each  <m>n \in \mathbb{N}</m>, let  <m>P( n )</m> be,
+                <m>2 + 5 + 8 +  \cdots  + (3n - 1) = \dfrac{{n( {3n + 1} )}}{2}</m>. 
+                When we use <m>n = 1</m>, the summation on the left side of the equation is 2, 
+                and the right side is <m>\dfrac{1(3 \cdot 1 + 1)}{2} = 2</m>.  Therefore, 
+                <m>P( 1 )</m>  is true.   For the inductive step, let <m>k \in \mathbb{N}</m> 
+                and assume that
+                <m>P \left( k \right)</m> is true.  Then,
+                <me>
+                  2 + 5 + 8 + \cdots  + \left( {3k - 1} \right) = \frac{{k \left( {3k + 1} \right)}}{2}
+                </me>.
+                We now add <m>3 \left( k + 1 \right) - 1</m> to both sides of this equation. 
+                This gives
+                <md>
+                  <mrow>2 + 5 + 8 + \cdots  + (3k - 1) \amp</mrow>
+                  <mrow>+ 3 \left( {k + 1} \right)-1 \amp =
+                  \frac{{k \left( {3k + 1} \right)}}{2} + \left( 3 \left( k + 1 \right) - 1 \right)</mrow>
+                  <mrow>\amp = \frac{{k \left( {3k + 1} \right)}}{2} + \left( {3k + 2} \right)</mrow>
+                </md>
+                If we now combine the terms on the right side of the equation into a single 
+                fraction, we obtain
+                <md>
+                  <mrow>2 + 5 +  \cdots  + \left( {3k - 1} \right) + 3 \left( {k + 1} \right)-1 
+                  \amp = \frac{k \left( 3k + 1 \right) + 6k+4}{2}</mrow>
+                  <mrow>\amp = \frac{ 3k^2 + 7k + 4}{2}</mrow>
+                  <mrow>\amp = \frac{ \left( k + 1 \right) \left( 3k + 4 \right)}{2}</mrow>
+                  <mrow>\amp = \frac{ \left( k + 1 \right) \left( 3 \left( k + 1 \right) + 1 \right)}{2}</mrow>
+                </md>
+                This proves that if  <m>P\left( k \right)</m> is true, then 
+                <m>P\left( {k + 1} \right)</m> is true.
+              </p>
+            </answer>
           </task>
           <task>
             <p>
@@ -1106,8 +1186,7 @@
               \right]^2</m>.
             </p>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise>
@@ -1155,8 +1234,11 @@
     </exercise>
 
     <exercise xml:id="exer_sec51-5">
-      <statement>
+      <introduction>
         <p>
+          Complete the following.
+        </p>
+      </introduction>
           <task xml:id="exer_515a">
             <p>
               Calculate <m>1 + 3 + 5 + \cdots + \left( {2n - 1} \right)</m> for several 
@@ -1164,24 +1246,44 @@
             </p>
           </task>
           <task xml:id="exer_515b">
+            <statement>
             <p>
               Based on your work in <xref ref="exer_515a"/>, if <m>n \in \mathbb{N}</m>,
               make a conjecture about the value of the sum 
               <m>1 + 3 + 5 + \cdots + \left( {2n - 1} \right) = 
               \sum\limits_{j = 1}^n {\left( {2j - 1} \right)}</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                The conjecture is that  for each  <m>n \in \mathbb{N}</m>,  
+                <m>1 + 3 + 5 + \cdots + (2n - 1) = n^2</m>.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               Use mathematical induction to prove your conjecture in <xref ref="exer_515b"/>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                The key to the inductive step is that
+                <md>
+                  <mrow>1 + 3 + 5 + \cdots + (2k - 1) \amp</mrow>
+                  <mrow>+ (2(k+1) - 1)  \amp = \left[1 + 3 + 5 + \cdots + (2k - 1) \right] + (2(k+1) - 1)</mrow>
+                  <mrow>\amp = k^2 + (2k + 1)</mrow>
+                  <mrow>\amp = (k + 1)^2</mrow>
+                </md>
+              </p>
+            </answer>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_mod3conjecture">
-      <statement>
+      <introduction>
         <p>
           In <xref ref="S_directproof"></xref>,
           we defined congruence modulo <m>n</m> for a natural number <m>n</m>,
@@ -1190,6 +1292,8 @@
           modulo <m>n</m>,
           to precisely one of the integers <m>0,1,2, \ldots ,n - 1</m>
           (<xref ref="C_congtorem"></xref>).
+        </p>
+      </introduction>
           <task>
             <p>
               Find the value of <m>r</m> so that
@@ -1216,6 +1320,7 @@
             </p>
           </task>
           <task>
+            <statement>
             <p>
               If <m>n \in \mathbb{N}</m>,
               make a conjecture concerning the value of <m>r</m> where
@@ -1223,32 +1328,74 @@
               This conjecture should be written as a self-contained proposition including 
               an appropriate quantifier.
             </p>
+            </statement>
+            <answer>
+              <p>
+                For each natural number <m>n</m>,
+                <m>4^n \equiv 1 \pmod 3</m>.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               Use mathematical induction to prove your conjecture.
             </p>
+            </statement>
+            <answer>
+              <p>
+                For each natural number <m>n</m>, let <m>P(n)</m> be,
+                <q><m>4^n \equiv 1 \pmod 3</m>.</q>
+                Since <m>4^1 \equiv 1 \pmod 3</m>,
+                we see that <m>P(1)</m> is true.
+                Now let <m>k \in \N</m> and assume that <m>P(k)</m> is true.
+                That is, assume that
+                <me>
+                  4^k \equiv 1 \pmod 3
+                </me>.
+                Multiplying both sides of this congruence by 4 gives
+                <me>
+                  4^{k+1} \equiv 4 \pmod 3
+                </me>.
+                However, <m>4 \equiv 1 \pmod 3</m> and so by using the transitive property of 
+                congruence,
+                we see that <m>4^{k+1} \equiv 1 \pmod 3</m>.
+                This proves that if <m>P(k)</m> is true,
+                then <m>P(k+1)</m> is true.
+              </p>
+            </answer>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_sec51-6">
-      <statement>
+      <introduction>
         <p>
           Use mathematical induction to prove each of the following:
+        </p>
+      </introduction>
           <task xml:id="exer_516a">
+            <statement>
             <p>
               For each natural number <m>n</m>, 3 divides <m>\left( {4^n - 1} \right)</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                The key to the inductive step is that if <m>4^k = 1 + 3m</m>, then
+                <m>4^k \cdot 4 = 4 ( 1 + 3m )</m>, which implies that
+                <me>
+                  4^{k+1} - 1 = 3 (1 + 4m )
+                </me>.
+              </p>
+            </answer>
           </task>
           <task>
             <p>
               For each natural number <m>n</m>, 6 divides <m>\left( {n^3 - n} \right)</m>.
             </p>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise>
@@ -1323,6 +1470,14 @@
           then <m>a^m \equiv b^m \pmod n</m>.
         </p>
       </statement>
+      <answer>
+        <p>
+          Let <m>k</m> be a natural number.  If <m>a^k \equiv b^k \pmod n</m>, then since we 
+          are also assuming that <m>a \equiv b \pmod n</m>, we can use Part<nbsp/>(2) of 
+          <xref ref="T_propsofcong"></xref> to conclude that
+          <m>a \cdot a^k \equiv b \cdot b^k \pmod n</m>.
+        </p>
+      </answer>
     </exercise>
 
     <exercise xml:id="exer_sec51-13">
@@ -1332,6 +1487,14 @@
           consecutive natural numbers is a multiple of 9.
         </p>
       </statement>
+      <answer>
+        <p>
+          Three consecutive natural numbers may be represent by <m>n</m>, <m>n + 1</m>, and 
+          <m>n + 2</m>, where <m>n</m> is a natural number.  For the inductive step, think 
+          before you try to do a lot of algebra. You should be able to complete a proof of the 
+          inductive step by expanding the cube of only one expression.
+        </p>
+      </answer>
     </exercise>
 
     <exercise xml:id="exer_derivatives">

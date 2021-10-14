@@ -747,9 +747,19 @@
       </introduction>
       
       <task>
+        <statement>
         <p>
           <m>\left( A^c \right)^c = A</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            Let  <m>x \in ( A^c )^c</m>. Then  <m>x \notin A^c</m>, which means <m>x \in A</m>. Hence,
+            <m>( A^c )^c \subseteq A</m>. Now let <m>y \in A</m>. Then,
+            <m>y \notin A^c</m> and hence, <m>y \in \left( A^c \right)^c</m>. Therefore,
+            <m>A \subseteq \left( A^c \right)^c</m>.
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -757,9 +767,19 @@
         </p>
       </task>
       <task>
+        <statement>
         <p>
           <m>\emptyset^c = U</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            Let <m>x \in U</m>. Then <m>x \notin \emptyset</m> and so <m>x \in \emptyset^c</m>. 
+            Therefore, <m>U \subseteq \emptyset^c</m>.  Also, since every set we deal with is a 
+            subset of the universal set,
+            <m>\emptyset^c \subseteq U</m>.
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -783,6 +803,34 @@
           </me>.
         </p>
       </statement>
+      <answer>
+        <p>
+          To prove that <m>A \cap ( B \cup C ) \subseteq ( A \cap B )
+          \cup ( A \cap C )</m>, we let <m>x \in A \cap ( B \cup C )</m>.  Then <m>x \in A</m> and
+          <m>x \in B \cup C</m>.  So we will use two cases:
+          (1) <m>x \in B</m>; (2) <m>x \in C</m>.
+        </p>
+        <p>
+          In Case<nbsp/>(1), <m>x \in A \cap B</m> and, hence, 
+          <m>x \in ( A \cap B ) \cup ( A \cap C )</m>.  In Case<nbsp/>(2),
+          <m>x \in  A \cap C</m> and, hence, <m>x \in ( A \cap B ) \cup ( A \cap C )</m>. 
+          This proves that <m>A \cap ( B \cup C ) \subseteq ( A \cap B ) \cup ( A \cap C )</m>.
+        </p>
+        <p>
+          To prove that <m>\left( A \cap B \right) \cup \left( A \cap C \right) \subseteq
+          A \cap \left( B \cup C \right)</m>,
+          let <m>y \in \left( A \cap B \right) \cup \left( A \cap C \right)</m>. Then, 
+          <m>y \in A \cap B</m> or
+          <m>y \in A \cap C</m>.  If <m>y \in A \cap B</m>, then <m>y \in A</m> and <m>y \in B</m>. 
+          Therefore, <m>y \in A</m> and
+          <m>y \in B \cup C</m>.  So, we may conclude that 
+          <m>y \in A \cap \left( B \cup C \right)</m>. In a similar manner, we can prove that if 
+          <m>y \in A \cap C</m>, then <m>y \in A \cap \left( B \cup C \right)</m>. This proves 
+          that <m>\left( A \cap B \right) \cup \left( A \cap C \right) \subseteq
+          A \cap \left( B \cup C \right)</m>, and hence that 
+          <m>A \cap \left( B \cup C \right) = \left( A \cap B \right) \cup \left( A \cap C \right)</m>.
+        </p>
+      </answer>
     </exercise>
 
     <exercise xml:id="exer_demorgan">
@@ -810,6 +858,7 @@
       </introduction>
 
       <task xml:id="exer_sec43-setdiff">
+        <statement>
         <p>
           Draw two general Venn diagrams for the sets <m>A</m>, <m>B</m>,
           and <m>C</m>.
@@ -821,6 +870,12 @@
           <m>A - \left( {B \cup C} \right)</m> and 
           <m>\left( {A - B} \right) \cap \left( {A - C} \right)</m>.
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>A - ( {B \cup C} ) = ( {A - B} ) \cap ( {A - C} )</m>.
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -829,9 +884,22 @@
         </p>
       </task>
       <task>
+        <statement>
         <p>
           Use the algebra of sets to prove the conjecture from <xref ref="exer_sec43-setdiff"/>.
         </p>
+        </statement>
+        <answer>
+          <p>
+            Using the algebra of sets, we obtain
+            <md>
+              <mrow>( A - B ) \cap ( A - C ) \amp = ( A \cap B^c ) \cap ( A \cap C^c )</mrow>
+              <mrow>\amp = ( A \cap A ) \cap ( B^c \cap C^c )</mrow>
+              <mrow>\amp = A \cap ( B \cup C )^c</mrow>
+              <mrow>\amp = A - ( B \cup C )</mrow>
+            </md>.
+          </p>
+        </answer>
       </task>
     </exercise>
 
@@ -879,9 +947,22 @@
       </introduction>
 
       <task>
+        <statement>
         <p>
           <m>\left( A \cap B \right) - C = \left( A - C \right) \cap \left( B - C \right)</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            Using the algebra of sets, we see that
+            <md>
+              <mrow>(A - C) \cap (B - C) \amp = (A \cap C^c) \cap (B \cap C^c)</mrow>
+              <mrow>\amp = (A \cap B) \cap (C^c \cap C^c)</mrow>
+              <mrow>\amp = (A \cap B) \cap C^c</mrow>
+              <mrow>\amp = (A \cap B) - C</mrow>
+            </md>.
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -956,9 +1037,19 @@
       </introduction>
       
       <task>
+        <statement>
         <p>
           Prove that <m>A</m> and <m>B - A</m> are disjoint sets.
         </p>
+        </statement>
+        <answer>
+          <p>
+            Use a proof by contradiction.  Assume the sets are not disjoint and let
+            <m>x \in A \cap ( B - A )</m>.  Then <m>x \in A</m> and <m>x \in B - A</m>, 
+            which implies that
+            <m>x \notin A</m>.
+          </p>
+        </answer>
       </task>
       <task>
         <p>

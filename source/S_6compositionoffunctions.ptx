@@ -688,6 +688,19 @@
           What does this tell you about the operation of composition of functions?
         </p>
       </statement>
+      <answer>
+        <p>
+          <m>( {g \circ h} ):\mathbb{R} \to \mathbb{R}</m>  by
+          <m>( {g \circ h} )( x ) = g( {h( x )} ) = g\!\left( {x^3 } \right) = 3x^3  + 2</m>.
+        </p>
+        <p>
+          <m>( {h \circ g} ):\mathbb{R} \to \mathbb{R}</m>  by
+          <m>( {h \circ g} )( x ) = h( {g( x )} ) = h( {3x + 2} ) = ( {3x + 2} )^3</m>.
+        </p>
+        <p>
+          This shows that <m>h \circ g \ne g \circ h</m> or that composition of functions is not commutative.
+        </p>
+      </answer>
     </exercise>
 
     <exercise xml:id="exer_sec64-2">
@@ -700,24 +713,58 @@
       </introduction>
 
       <task>
+        <statement>
         <p>
           <m>F( x ) = \cos ( {e^x } )</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>F\left( x \right) = \left( {g \circ f} \right)\left( x \right)</m>,
+            where <m>f\left( x \right) = e^x</m> and <m>g\left( x \right) = \cos x</m>.
+          </p>
+        </answer>
       </task>
       <task>
+        <statement>
         <p>
           <m>G( x ) = e^{\cos ( x )}</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>G\left( x \right) = \left( {g \circ f} \right)\left( x \right)</m> where
+            <m>f\left( x \right) = \cos x</m> and <m>g\left( x \right) = e^x</m>.
+          </p>
+        </answer>
       </task>
       <task>
+        <statement>
         <p>
           <m>H( x ) = \dfrac{1}{{\sin x}}</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>H\left( x \right) = \left( {g \circ f} \right)\left( x \right)</m>,
+            <m>f\left( x \right) = \sin x</m>,
+            <m>g\left( x \right) = \frac{1}{x}</m>.
+          </p>
+        </answer>
       </task>
       <task>
+        <statement>
         <p>
           <m>K( x ) = \cos \!\left( {e^{ - x^2 } } \right)</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>K\left( x \right) = \left( {g \circ f} \right)\left( x \right)</m>,
+            <m>f\left( x \right) = e^{-x^2}</m>,
+            <m>g\left( x \right) = \cos x</m>.
+          </p>
+        </answer>
       </task>
     </exercise>
 
@@ -733,10 +780,19 @@
       </introduction>
 
       <task>
+        <statement>
         <p>
           For each <m>x \in A</m>,
           determine <m>( {f \circ I_A } )( x )</m> and use this to prove that <m>f \circ I_A = f</m>.
         </p>
+        </statement>
+        <answer>
+          <p>
+            For each  <m>x \in A</m>, <m>( {f \circ I_A } )( x ) = f( {I_A ( x )} ) = f( x )</m>. 
+            Therefore,
+            <m>f \circ I_A  = f</m>.
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -753,6 +809,7 @@
       </introduction>
 
       <task>
+        <statement>
         <p>
           Let <m>f\x \mathbb{R} \to \mathbb{R}</m> be defined by <m>f( x ) = x^2</m>,
           let <m>g\x \mathbb{R} \to \mathbb{R}</m> be defined by <m>g( x ) = \sin x</m>,
@@ -769,6 +826,15 @@
           <m>( {h \circ g} ) \circ f = h \circ ( {g \circ f} )</m> for these particular functions?
           Explain.
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>\left[ {( {h \circ g} ) \circ f} \right]( x ) = \sqrt[3]{{\sin ( {x^2 } )}}</m>;
+            <m>\left[ {h \circ ( {g \circ f} )} \right]( x ) = \sqrt[3]{{\sin ( {x^2 } )}}</m>. 
+            This proves that <m>(h \circ g) \circ f = h \circ (g \circ f)</m> for these particular 
+            functions.
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -793,6 +859,15 @@
           then <m>g \circ f</m> is an injection.
         </p>
       </statement>
+      <answer>
+        <p>
+          Start of a proof: Let <m>A</m>, <m>B</m>, and <m>C</m> be nonempty sets and let 
+          <m>f\x A \to B</m> and
+          <m>g\x B \to C</m>. Assume that
+          <m>f</m> and <m>g</m> are both injections. Let <m>x, y \in A</m> and assume that
+          <m>( {g \circ f} )( x ) = ( {g \circ f} )( y )</m>.
+        </p>
+      </answer>
     </exercise>
 
     <exercise xml:id="exer_sec64-8">
@@ -806,16 +881,36 @@
       </introduction>
 
       <task>
+        <statement>
         <p>
           The function <m>f</m> is a surjection,
           but the function <m>g \circ f</m> is not a surjection.
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>f\x \mathbb{R} \to \mathbb{R}</m> by <m>f ( x ) = x</m>,
+            <m>g: \mathbb{R} \to \mathbb{R}</m> by <m>g ( x ) = x^2</m>. Then
+            <m>g \circ f: \R \to \R</m> by <m>(g \circ f)(x) = x^2</m>. The function <m>f</m> is 
+            a surjection, but <m>g \circ f</m> is not a surjection.
+          </p>
+        </answer>
       </task>
       <task>
+        <statement>
         <p>
           The function <m>f</m> is an injection,
           but the function <m>g \circ f</m> is not an injection.
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>f: \mathbb{R} \to \mathbb{R}</m> by <m>f \left( x \right) = x</m>,
+            <m>g: \mathbb{R} \to \mathbb{R}</m> by <m>g \left( x \right) = x^2</m>. Then
+            <m>g \circ f: \R \to \R</m> by <m>(g \circ f)(x) = x^2</m>. The function <m>f</m> 
+            is an injection, but <m>g \circ f</m> is not an injection.
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -836,10 +931,19 @@
         </p>
       </task>
       <task>
+        <statement>
         <p>
           The function <m>f</m> is not an injection,
           but the function <m>g \circ f</m> is an injection.
         </p>
+        </statement>
+        <answer>
+          <p>
+            By <xref ref="T_morecompositefunctions1"/> of 
+            <xref ref="T_morecompositefunctions"></xref>, this is not possible since if 
+            <m>g \circ f</m> is an injection, then <m>f</m> is an injection.
+          </p>
+        </answer>
       </task>
       <task>
         <p>

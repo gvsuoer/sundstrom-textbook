@@ -1105,33 +1105,60 @@
           Support your conclusion.
         </p>
       </statement>
+      <answer>
+        <p>
+          The statement was true. When the hypothesis is false, the conditional statement is true.
+        </p>
+      </answer>
     </exercise>
 
     <exercise xml:id="exer_sec22-2">
-      <statement>
+      <introduction>
         <p>
           Suppose that <m>P</m> and <m>Q</m> are statements for which <m>P \to Q</m> is true 
           and for which <m>\mynot Q</m> is true.
           What conclusion
           (if any)
           can be made about the truth value of each of the following statements?
+        </p>
+      </introduction>
           <task>
+            <statement>
             <p>
               <m>P</m>
             </p>
+            </statement>
+            <answer>
+              <p>
+                <m>P</m> is false.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               <m>P \wedge Q</m>
             </p>
+            </statement>
+            <answer>
+              <p>
+                <m>P \wedge Q</m> is false.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               <m>P \vee Q</m>
             </p>
+            </statement>
+            <answer>
+              <p>
+                <m>P \vee Q</m> is false.
+              </p>
+            </answer>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_sec22-3">
@@ -1161,7 +1188,7 @@
     </exercise>
 
     <exercise xml:id="exer_statements4">
-      <statement>
+      <introduction>
         <p>
           Suppose that <m>P</m> and <m>Q</m> are statements for which <m>Q</m> is false and 
           <m>\mynot P \to Q</m> is true
@@ -1169,6 +1196,8 @@
           What conclusion
           (if any)
           can be made about the truth value of each of the following statements?
+        </p>
+      </introduction>
           <task>
             <p>
               <m>\mynot Q \to P</m>
@@ -1180,46 +1209,200 @@
             </p>
           </task>
           <task>
+            <statement>
             <p>
               <m>P \wedge R</m>
             </p>
+            </statement>
+            <answer>
+              <p>
+                Statement <m>P</m> is true but since we do not know if <m>R</m> is true or 
+                false, we cannot tell if <m>P \wedge R</m> is true or false.
+              </p>
+            </answer>
           </task>
           <task>
             <p>
               <m>R \to \mynot P</m>
             </p>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_sec22-5">
-      <statement>
+      <introduction>
         <p>
           Construct a truth table for each of the following statements:
+        </p>
+      </introduction>
           <task>
+            <statement>
             <p>
               <m>P \to Q</m>
             </p>
+            </statement>
+            <answer>
+              <p>
+                <tabular halign="center">
+                  <row bottom="major">
+                    <cell right="medium"><m>P</m></cell>
+                    <cell right="major"><m>Q</m></cell>
+                    <cell><m>P \to Q</m></cell>
+                  </row>
+                  <row>
+                    <cell right="medium">T</cell>
+                    <cell right="major">T</cell>
+                    <cell>T</cell>
+                  </row>
+                  <row>
+                    <cell right="medium">T</cell>
+                    <cell right="major">F</cell>
+                    <cell>F</cell>
+                  </row>
+                  <row>
+                    <cell right="medium">F</cell>
+                    <cell right="major">T</cell>
+                    <cell>T</cell>
+                  </row>
+                  <row>
+                    <cell right="medium">F</cell>
+                    <cell right="major">T</cell>
+                    <cell>T</cell>
+                  </row>
+                </tabular>
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               <m>Q \to P</m>
             </p>
+            </statement>
+            <answer>
+              <p>
+                <tabular halign="center">
+                  <row bottom="major">
+                    <cell right="medium"><m>P</m></cell>
+                    <cell right="major"><m>Q</m></cell>
+                    <cell><m>Q \to P</m></cell>
+                  </row>
+                  <row>
+                    <cell right="medium">T</cell>
+                    <cell right="major">T</cell>
+                    <cell>T</cell>
+                  </row>
+                  <row>
+                    <cell right="medium">T</cell>
+                    <cell right="major">F</cell>
+                    <cell>T</cell>
+                  </row>
+                  <row>
+                    <cell right="medium">F</cell>
+                    <cell right="major">T</cell>
+                    <cell>F</cell>
+                  </row>
+                  <row>
+                    <cell right="medium">F</cell>
+                    <cell right="major">F</cell>
+                    <cell>T</cell>
+                  </row>
+                </tabular>
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               <m>\mynot P \to \mynot Q</m>
             </p>
+            </statement>
+            <answer>
+              <p>
+                <tabular halign="center">
+                  <row bottom="major">
+                    <cell right="medium"><m>P</m></cell>
+                    <cell right="major"><m>Q</m></cell>
+                    <cell><m>Q \to P</m></cell>
+                  </row>
+                  <row>
+                    <cell right="medium">T</cell>
+                    <cell right="major">T</cell>
+                    <cell>T</cell>
+                  </row>
+                  <row>
+                    <cell right="medium">T</cell>
+                    <cell right="major">F</cell>
+                    <cell>T</cell>
+                  </row>
+                  <row>
+                    <cell right="medium">F</cell>
+                    <cell right="major">T</cell>
+                    <cell>F</cell>
+                  </row>
+                  <row>
+                    <cell right="medium">F</cell>
+                    <cell right="major">F</cell>
+                    <cell>T</cell>
+                  </row>
+                </tabular>
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               <m>\mynot Q \to \mynot P</m>
             </p>
+            </statement>
+            <answer>
+              <p>
+                <tabular halign="center">
+                  <row bottom="major">
+                    <cell right="medium"><m>P</m></cell>
+                    <cell right="major"><m>Q</m></cell>
+                    <cell><m>P \to Q</m></cell>
+                  </row>
+                  <row>
+                    <cell right="medium">T</cell>
+                    <cell right="major">T</cell>
+                    <cell>T</cell>
+                  </row>
+                  <row>
+                    <cell right="medium">T</cell>
+                    <cell right="major">F</cell>
+                    <cell>F</cell>
+                  </row>
+                  <row>
+                    <cell right="medium">F</cell>
+                    <cell right="major">T</cell>
+                    <cell>T</cell>
+                  </row>
+                  <row>
+                    <cell right="medium">F</cell>
+                    <cell right="major">T</cell>
+                    <cell>T</cell>
+                  </row>
+                </tabular>
+              </p>
+            </answer>
           </task>
-          Do any of these statements have the same truth table?
-        </p>
-      </statement>
+          <!-- added this as a task (and kind of restructured the answers) -->
+          <task>
+            <statement>
+              <p>
+                Do any of these statements have the same truth table?
+              </p>
+            </statement>
+            <answer>
+              <p>
+                Statements (a) and (d) have the same truth table.
+                Statements (b) and (c) have the same truth table.
+              </p>
+            </answer>
+          </task>
+          
+
     </exercise>
 
     <exercise xml:id="exer_sec22-4">
@@ -1260,6 +1443,96 @@
           What do you observe?
         </p>
       </statement>
+      <answer>
+        <p>
+          <tabular halign="center">
+            <row bottom="major">
+              
+              <cell right="medium"><m>P</m></cell>
+              <cell right="medium"><m>Q</m></cell>
+              <cell right="major"><m>R</m></cell>
+              <cell right="medium"><m>P \wedge (Q \vee R)</m></cell>
+              <cell><m>(P \wedge Q) \vee (P \wedge R)</m></cell>
+              
+            </row>
+            <row>
+        
+              <cell right="medium">T</cell>
+              <cell right="medium">T</cell>
+              <cell right="major">T</cell>
+              <cell right="medium">T</cell>
+              <cell>T</cell>
+
+            </row>
+            <row>
+
+              <cell right="medium">T</cell>
+              <cell right="medium">T</cell>
+              <cell right="major">F</cell>
+              <cell right="medium">T</cell>
+              <cell>T</cell>
+
+            </row>
+            <row>
+
+              <cell right="medium">T</cell>
+              <cell right="medium">F</cell>
+              <cell right="major">T</cell>
+              <cell right="medium">T</cell>
+              <cell>T</cell>
+
+            </row>
+            <row>
+
+              <cell right="medium">T</cell>
+              <cell right="medium">F</cell>
+              <cell right="major">F</cell>
+              <cell right="medium">F</cell>
+              <cell>F</cell>
+
+            </row>
+            <row>
+
+              <cell right="medium">F</cell>
+              <cell right="medium">T</cell>
+              <cell right="major">T</cell>
+              <cell right="medium">F</cell>
+              <cell>F</cell>
+
+            </row>
+            <row>
+
+              <cell right="medium">F</cell>
+              <cell right="medium">T</cell>
+              <cell right="major">F</cell>
+              <cell right="medium">F</cell>
+              <cell>F</cell>
+
+            </row>
+            <row>
+
+              <cell right="medium">F</cell>
+              <cell right="medium">F</cell>
+              <cell right="major">T</cell>
+              <cell right="medium">F</cell>
+              <cell>F</cell>
+
+            </row>
+            <row>
+
+              <cell right="medium">F</cell>
+              <cell right="medium">F</cell>
+              <cell right="major">F</cell>
+              <cell right="medium">F</cell>
+              <cell>F</cell>
+
+            </row>
+          </tabular>
+        </p>
+        <p>
+          The two statements have the same truth table.
+        </p>
+      </answer>
     </exercise>
 
     <exercise xml:id="exer_sec22-7">
@@ -1306,13 +1579,15 @@
     </exercise>
 
     <exercise xml:id="exer_sec22-8">
-      <statement>
+      <introduction>
         <p>
           Let <m>P</m> stand for
           <q>the integer <m>x</m> is even,</q>
           and let <m>Q</m> stand for
           <q><m>x^2</m> is even.</q>
           Express the conditional statement <m>P \to Q</m> in English using
+        </p>
+      </introduction>
           <task>
             <p>
               The <q>if then</q>
@@ -1325,24 +1600,37 @@
             </p>
           </task>
           <task>
+            <statement>
             <p>
               The
             <q>only if</q>
             form of the conditional statement
             </p>
+            </statement>
+            <answer>
+              <p>
+                The integer <m>x</m> is even only if <m>x^2</m>  is even.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               The phrase <q>is necessary for</q>
             </p>
+            </statement>
+            <answer>
+              <p>
+                For the integer <m>x</m> to be even, it is necessary that <m>x^2</m> be even.
+              </p>
+            </answer>
           </task>
           <task>
             <p>
               The phrase <q>is sufficient for</q>
             </p>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_sec22-9">
@@ -1354,33 +1642,62 @@
     </exercise>
 
     <exercise xml:id="exer_tautology-contra">
-      <statement>
+      <introduction>
         <p>
           For statements <m>P</m> and <m>Q</m>,
           use truth tables to determine if each of the following statements is a tautology,
           a contradiction, or neither.
+        </p>
+      </introduction>
           <task>
+            <statement>
             <p>
               <m>\mynot Q \vee (P \to Q)</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\mynot Q \vee (P \to Q)</m> is a tautology.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               <m>Q \wedge (P \wedge \mynot Q)</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                <m>Q \wedge (P \wedge \mynot Q)</m> is a contradiction.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               <m>(Q \wedge P) \wedge (P \to \mynot Q)</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                <m>(Q \wedge P) \wedge (P \to \mynot Q)</m> is a contradiction.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               <m>\mynot Q \to (P \wedge \mynot P)</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                <m>\mynot Q \to (P \wedge \mynot P)</m> is neither a tautology nor a contradiction.
+              </p>
+            </answer>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_sec22-10">

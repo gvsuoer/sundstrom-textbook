@@ -1190,24 +1190,56 @@
         </p>
       </introduction>
       <task>
+        <statement>
         <p>
           <m>\gcd( {21, 28} )</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            The set of positive common divisors of 21 and 28 is <m>\{1, 7\}</m>.
+            So <m>\gcd ( {21, 28} ) = 7</m>.
+          </p>
+        </answer>
       </task>
       <task>
+        <statement>
         <p>
           <m>\gcd( { - 21, 28} )</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            The set of positive common divisors of <m>-21</m> and 28 is <m>\{1, 7\}</m>.
+            So <m>\gcd ( { - 21, 28} ) = 7</m>.
+          </p>
+        </answer>
       </task>
       <task>
+        <statement>
         <p>
           <m>\gcd( {58, 63} )</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            The set of positive common divisors of 58 and 63 is <m>\{1 \}</m>.
+            So <m>\gcd ( {58, 63} ) = 1</m>.
+          </p>
+        </answer>
       </task>
       <task>
+        <statement>
         <p>
           <m>\gcd( {0, 12} )</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            The set of positive common divisors of 0 and 12 is <m>\{1, 2, 3, 4, 6, 12 \}</m>.
+            So <m>\gcd ( {0, 12} ) = 12</m>.
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -1229,11 +1261,18 @@
       </introduction>
 
       <task>
+        <statement>
         <p>
           Let <m>a \in \Z</m> and let <m>k \in \Z</m> with <m>k \ne 0</m>.
           Prove that if <m>k \mid a</m> and <m>k \mid \left( {a + 1} \right)</m>,
           then <m>k \mid 1</m>, and hence <m>k = \pm 1</m>.
         </p>
+        </statement>
+        <hint>
+          <p>
+            Prove that <m>k \mid \left[ ( {a+1} ) - a \right]</m>.
+          </p>
+        </hint>
       </task>
       <task>
         <p>
@@ -1275,16 +1314,31 @@
       </introduction>
 
       <task>
+        <statement>
         <p>
           <m>\gcd( {0, b} ) = \left| b \right|</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>|b|</m> is the largest natural number that divides 0 and <m>b</m>.
+          </p>
+        </answer>
       </task>
       <task>
+        <statement>
         <p>
           If <m>\gcd( {a, b} ) = d</m>,
           then <m>\gcd( {a, - b} ) = d</m>.
           That is, <m>\gcd \left( {a, - b} \right) = \gcd( {a, b} )</m>.
         </p>
+        </statement>
+        <answer>
+          <p>
+            The integers <m>b</m> and <m>-b</m> have the same divisors.  Therefore,
+            <m>\gcd ( a, -b ) = \gcd ( a, b )</m>.
+          </p>
+        </answer>
       </task>
     </exercise>
 
@@ -1299,14 +1353,28 @@
       </introduction>
 
       <task>
+        <statement>
         <p>
           <m>a = 36, b = 60</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>\gcd ( {36, 60} ) = 12</m>, <m>12 = 36 \cdot 2 + 60 \cdot ( { - 1} )</m>
+          </p>
+        </answer>
       </task>
       <task>
+        <statement>
         <p>
           <m>a = 901, b = 935</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>\gcd ( {901, 935} ) = 17</m>, <m>17 = 901 \cdot 27 + 935 \cdot ( { - 26} )</m>
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -1319,9 +1387,16 @@
         </p>
       </task>
       <task>
+        <statement>
         <p>
           <m>a = 901</m>, <m>b = -935</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>\gcd ( {901, -935} ) = 17</m>, <m>17 = 901 \cdot 27 + (-935) \cdot ( { 26} )</m>
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -1338,12 +1413,24 @@
       </introduction>
 
       <task>
+        <statement>
         <p>
           Find integers <m>u</m> and <m>v</m> such that
           <m>9u + 14v = 1</m> or explain why it is not possible to do so.
           Then find integers <m>x</m> and <m>y</m> such that
           <m>9x + 14y = 10</m> or explain why it is not possible to do so.
         </p>
+        </statement>
+        <answer>
+          <p>
+            One possibility is <m>u = -3</m> and <m>v = 2</m>.  In this case, <m>9u + 14v = 1</m>.  
+            We then multiply both sides of this equation by 10 to obtain
+            <me>
+              9 \cdot (-30) + 14 \cdot 20 = 10
+            </me>.
+            So we can use <m>x = -30</m> and <m>y = 20</m>.
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -1367,16 +1454,30 @@
       </introduction>
 
       <task xml:id="exer_gcdanddena">
+        <statement>
         <p>
           Notice that <m>\gcd( {11, 17} ) = 1</m>.
           Find integers <m>x</m> and <m>y</m> such that <m>11x + 17y = 1</m>.
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>11 \cdot (-3) + 17 \cdot 2 = 1</m>
+          </p>
+        </answer>
       </task>
       <task xml:id="exer_gcdanddenb">
+        <statement>
         <p>
           Let <m>m, n \in \mathbb{Z}</m>.
           Write the sum <m>\dfrac{m}{{11}} + \dfrac{n}{{17}}</m> as a single fraction.
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>\dfrac{m}{11} + \dfrac{n}{17} = \dfrac{17m +11n}{187}</m>
+          </p>
+        </answer>
       </task>
       <task>
         <statement>

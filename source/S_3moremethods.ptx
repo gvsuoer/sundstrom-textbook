@@ -819,43 +819,77 @@
 
   <exercises>
     <exercise xml:id="exer_ncubed">
-      <statement>
+      <introduction>
         <p>
           Let <m>n</m> be an integer.
           Prove each of the following:
-          <task>
+        </p>
+      </introduction>
+          <task xml:id="exer_ncubeda">
+            <statement>
             <p>
               If <m>n</m> is even, then <m>n^3</m> is even.
             </p>
+            </statement>
+            <hint>
+              <p>
+                Let <m>n</m> be an even integer. Since <m>n</m> is even, there exists an integer 
+                <m>k</m> such that
+                <m>n = 2k</m>. Now use this to prove that <m>n^3</m> must be even.
+              </p>
+            </hint>
           </task>
-          <task>
+          <task xml:id="exer_ncubedb">
+            <statement>
             <p>
               If <m>n^3</m> is even, then <m>n</m> is even.
             </p>
+            </statement>
+            <hint>
+              <p>
+                Prove the contrapositive.
+              </p>
+            </hint>
           </task>
           <task>
+            <statement>
             <p>
               The integer <m>n</m> is even if and only if <m>n^3</m> is an even integer.
             </p>
+            </statement>
+            <hint>
+              <p>
+                Explain why <xref ref="exer_ncubeda"/> and <xref ref="exer_ncubedb"/> prove this.
+              </p>
+            </hint>
           </task>
           <task>
+            <statement>
             <p>
               The integer <m>n</m> is odd if and only if <m>n^3</m> is an odd integer.
             </p>
+            </statement>
+            <hint>
+              <p>
+                Explain why <xref ref="exer_ncubeda"/> and <xref ref="exer_ncubedb"/> prove this.
+              </p>
+            </hint>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_sec32-2">
-      <statement>
+      <introduction>
         <p>
           In <xref ref="S_directproof"></xref>,
           we defined congruence modulo <m>n</m> where <m>n</m> is a natural number.
           If <m>a</m> and <m>b</m> are integers,
           we will use the notation <m>a \not\equiv b \pmod n</m> to mean that 
           <m>a</m> is not congruent to <m>b</m> modulo <m>n</m>.
+        </p>
+      </introduction>
           <task>
+            <statement>
             <p>
               Write the contrapositive of the following conditional statement:
                 <blockquote>
@@ -863,6 +897,14 @@
                   <m>b \not\equiv 0 \pmod 6</m>, then <m>ab \not\equiv 0 \pmod 6</m>.
                 </blockquote>
             </p>
+            </statement>
+            <answer>
+              <p>
+                The contrapositive is, For all integers <m>a</m> and <m>b</m>, if 
+                <m>ab \equiv 0 \pmod 6</m>,
+                then <m>a \equiv 0 \pmod 6</m> or <m>b \equiv 0 \pmod 6</m>.
+              </p>
+            </answer>
           </task>
           <task>
             <p>
@@ -870,56 +912,109 @@
               Explain.
             </p>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise>
-      <statement>
+      <introduction>
         <p>
+          Complete the following.
+        </p>
+      </introduction>
           <task>
+            <statement>
             <p>
               Write the contrapositive of the following statement: For all positive real numbers 
               <m>a</m> and <m>b</m>,
               if <m>\sqrt {ab} \ne \dfrac{{a + b}}{2}</m>, then <m>a \ne b</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                The contrapositive is: For all positive real numbers <m>a</m> and <m>b</m>,
+                if <m>a = b</m>, then <m>\sqrt{ab} = \dfrac{a + b}{2}</m>.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               Is this statement true or false?
               Prove the statement if it is true or provide a counterexample if it is false.
             </p>
+            </statement>
+            <answer>
+              <p>
+                The statement is true.
+                If <m>a = b</m>, then <m>\dfrac{a + b}{2} = \dfrac{2a}{2} = a</m>,
+                and <m>\sqrt{ab} = \sqrt{a^2} = a</m>.
+                This proves the contrapositive.
+              </p>
+            </answer>
           </task>
-        </p>
-      </statement>
+
     </exercise>
+
     <exercise xml:id="exer_sec32-4">
-      <statement>
+      <introduction>
         <p>
           Are the following statements true or false?
           Justify your conclusions.
+        </p>
+      </introduction>
           <task>
+            <statement>
             <p>
               For each <m>a \in \Z</m>,
               if <m>a \equiv 2 \pmod 5</m>,
               then <m>a^2 \equiv 4 \pmod 5</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                True.
+                If <m>a \equiv 2 \pmod 5</m>,
+                then there exists an integer <m>k</m> such that <m>a - 2 = 5k</m>.
+                Then,
+                <me>
+                  a^2 - 4  = \left( 2 + 5k \right)^2 - 4  = 20k + 25k^2
+                </me>.
+                This means that <m>a^2 - 4 = 5 \left( 4k + 5k^2 \right)</m>,
+                and hence, <m>a^2 \equiv 4 \pmod 5</m>.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               For each <m>a \in \Z</m>,
               if <m>a^2 \equiv 4 \pmod 5</m>,
               then <m>a \equiv 2 \pmod 5</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                False.
+                A counterexample is <m>a = 3</m> since
+                <m>3^2 \equiv 4 \pmod 5</m> and <m>3 \not \equiv 2 \pmod 5</m>.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               For each <m>a \in \Z</m>,
               <m>a \equiv 2 \pmod 5</m> if and only if <m>a^2 \equiv 4 \pmod 5</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                False.
+                Part<nbsp/>(b) shows this is false.
+              </p>
+            </answer>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_sec32-abeven">
@@ -937,38 +1032,82 @@
     </exercise>
 
     <exercise xml:id="exer_sec32-congmod7">
-      <statement>
+      <introduction>
         <p>
           Consider the following proposition: For each integer <m>a</m>,
           <m>a \equiv 3 \pmod 7</m> if and only if <m>\left( a^2 + 5a \right) \equiv 3 \pmod 7</m>.
+        </p>
+      </introduction>
           <task xml:id="exer_sec32-congmod7a">
+            <statement>
             <p>
               Write the proposition as the conjunction of two conditional statements.
             </p>
+            </statement>
+            <answer>
+              <p>
+                For each integer <m>a</m>, if <m>a \equiv 3 \pmod 7</m>,
+                then <m>(a^2 + 5a) \equiv 3 \pmod 7</m>,
+                and for each integer <m>a</m>,
+                if <m>(a^2 + 5a) \equiv 3 \pmod 7</m>,
+                then <m>a \equiv 3 \pmod 7</m>.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               Determine if the two conditional statements in <xref ref="exer_sec32-congmod7a"/> 
               are true or false.
               If a conditional statement is true,
               write a proof, and if it is false, provide a counterexample.
             </p>
+            </statement>
+            <answer>
+              <p>
+                For each integer <m>a</m>,
+                if <m>a \equiv 3 \pmod 7</m>,
+                then <m>(a^2 + 5a) \equiv 3 \pmod 7</m> is true.
+                To prove this, if <m>a \equiv 3 \pmod 7</m>,
+                then there exists an integer <m>k</m> such that <m>a = 3 + 7k</m>.
+                We can then prove that
+                <me>
+                  \left( a^2 + 5a \right) - 3 = 21 + 77k + 49k^2 = 7(3 + 11k + 7k^2)
+                </me>.
+                This shows that <m>(a^2 + 5a) \equiv 3 \pmod 7</m>.
+                For each integer <m>a</m>,
+                if <m>(a^2 + 5a) \equiv 3 \pmod 7</m>,
+                then <m>a \equiv 3 \pmod 7</m> is false.
+                A counterexample is <m>a = 6</m>.
+                When <m>a = 6</m>, <m>a^2 + 5a = 66</m> and
+                <m>66 \equiv 3 \pmod 7</m> and <m>6 \not \equiv 3 \pmod 7</m>.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               Is the given proposition true or false?
               Explain.
             </p>
+            </statement>
+            <answer>
+              <p>
+                Since one of the two conditional statements in Part<nbsp/>(b) is false,
+                the given proposition is false.
+              </p>
+            </answer>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_sec32-congmod8">
-      <statement>
+      <introduction>
         <p>
           Consider the following proposition: For each integer <m>a</m>,
           <m>a \equiv 2 \pmod 8</m> if and only if <m>\left(a^2 + 4a \right) \equiv 4 \pmod 8</m>.
+        </p>
+      </introduction>
           <task>
             <p>
               Write the proposition as the conjunction of two conditional statements.
@@ -987,16 +1126,17 @@
               Explain.
             </p>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_sec32-6">
-      <statement>
+      <introduction>
         <p>
           For a right triangle,
           suppose that the hypotenuse has length <m>c</m> feet and the lengths of the sides are 
           <m>a</m> feet and <m>b</m> feet.
+        </p>
+      </introduction>
           <task>
             <p>
               What is a formula for the area of this right triangle?
@@ -1009,13 +1149,22 @@
             </p>
           </task>
           <task>
+            <statement>
             <p>
               Prove that the right triangle described above is an isosceles triangle if and only if 
               the area of the right triangle is <m>\dfrac{1}{4} c^2</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                Prove both of the conditional statements: (1) If the area of the right triangle is
+                <m>c^2/4</m>, then the right triangle is an isosceles triangle. 
+                (2) If the right triangle is an isosceles triange, then the area of the right 
+                triangle is <m>c^2/4</m>.
+              </p>
+            </answer>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_rational">
@@ -1043,6 +1192,18 @@
           </blockquote>
         </p>
       </statement>
+      <answer>
+        <p>
+          The statement is true.  It is easier to prove the contrapositive, which is:
+          <blockquote>
+            For each positive real number <m>x</m>, if <m>\sqrt{x}</m> is rational, then <m>x</m> 
+            is rational.
+          </blockquote>
+          Let <m>x</m> be a positive real number. If there exist positive integers <m>m</m> 
+          and <m>n</m> such that <m>\sqrt{x} = \dfrac{m}{n}</m>, then
+          <m>x = \dfrac{m^2}{n^2}</m>.
+        </p>
+      </answer>
     </exercise>
 
     <exercise xml:id="exer_sec32-8">
@@ -1055,6 +1216,13 @@
           </blockquote>
         </p>
       </statement>
+      <hint>
+        <p>
+          Remember that there are two conditional statements associated with this biconditional 
+          statement. Be willing to consider the contrapositive of one of these conditional 
+          statements.
+        </p>
+      </hint>
     </exercise>
 
     <exercise>
@@ -1116,6 +1284,11 @@
           Prove that there exists a real number <m>x</m> such that <m>x^3 - 4x^2 = 7</m>.
         </p>
       </statement>
+      <hint>
+        <p>
+          Define an appropriate function and use the Intermediate Value Theorem.
+        </p>
+      </hint>
     </exercise>
 
     <exercise>
@@ -1141,20 +1314,33 @@
     </exercise>
 
     <exercise xml:id="exer_sec32-16">
-      <statement>
+      <introduction>
         <p>
           Let <m>a</m> and <m>b</m> be natural numbers such that <m>a^2 = b^3</m>.
           Prove each of the propositions in Parts (a) through (d). (The results of 
           <xref ref="exer_ncubed"/> and <xref ref="T_n2isodd"></xref> may be helpful.)
+        </p>
+      </introduction>
           <task xml:id="exer_a2equalb3-a">
             <p>
               If <m>a</m> is even, then 4 divides <m>a</m>.
             </p>
           </task>
           <task>
+            <statement>
             <p>
               If 4 divides <m>a</m>, then 4 divides <m>b</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                Since 4 divides <m>a</m>, there exist an integer <m>n</m> such that <m>a = 4n</m>. 
+                Using this, we see that <m>b^3 = 16n^2</m>. This means that <m>b^3</m> is even 
+                and hence by Exercise<nbsp/>(1), <m>b</m> is even. So there exists an integer 
+                <m>m</m> such that <m>b = 2m</m>. Use this to prove that <m>m^3</m> must be even 
+                and hence by <xref ref="exer_ncubed"/>, <m>m</m> is even.
+              </p>
+            </answer>
           </task>
           <task>
             <p>
@@ -1173,8 +1359,7 @@
               but <m>b</m> is not divisible by 8.
             </p>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_sec32-equation17">

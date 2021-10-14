@@ -998,7 +998,7 @@
 
   <exercises>
     
-    <exercise>
+    <exercise> 
       <introduction>
         <p>
           Draw an arrow diagram that
@@ -1042,10 +1042,19 @@
         </p>
       </introduction>
       <task>
+        <statement>
         <p>
           <m>f\x R_5 \to R_5</m> by <m>f( x ) = x^2 + 4 \pmod 5</m>,
           for all <m>x \in R_5</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            Notice that <m>f(0) = 4</m>, <m>f(1) = 0</m>, <m>f(2) = 3</m>, <m>f(3) = 3</m>, 
+            and <m>f(4) = 0</m>.  So the function <m>f</m> is not an injection and is not a 
+            surjection.
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -1054,10 +1063,18 @@
         </p>
       </task>
       <task>
+        <statement>
         <p>
           <m>F\x R_5 \to R_5</m> by <m>F( x ) = x^3 + 4 \pmod 5</m>,
           for all <m>x \in R_5</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            Notice that <m>F(0) = 4</m>, <m>F(1) = 0</m>, <m>F(2) = 2</m>, <m>F(3) = 1</m>, 
+            and <m>F(4) = 3</m>.  So the function <m>F</m> is an injection and is a surjection.
+          </p>
+        </answer>
       </task>
     </exercise>
 
@@ -1070,16 +1087,45 @@
         </p>
       </introduction>
       <task>
+        <statement>
         <p>
           <m>f\x\mathbb{Z} \to \mathbb{Z}</m> defined by
           <m>f( x ) = 3x + 1</m>, for all <m>x \in \Z</m>.
         </p>
+        </statement>
+        <answer>
+          <p>
+            The function <m>f</m> is an injection.  To prove this, let 
+            <m>x_1, x_2 \in \mathbb{Z}</m> and assume that <m>f ( x_1 ) = f ( x_2 )</m>.  Then,
+            <md>
+              <mrow>3x_1 + 1 \amp = 3x_2 + 1</mrow>
+              <mrow>3x_1 \amp = 3x_2</mrow>
+              <mrow>x_1 \amp = x_2</mrow>
+            </md>.
+            Hence, <m>f</m> is an injection.  Now, for each <m>x \in \mathbb{Z}</m>, 
+            <m>3x + 1 \equiv 1 \pmod 3</m>, and hence
+            <m>f ( x ) \equiv 1 \pmod 3</m>.  This means that there is no integer <m>x</m> 
+            such that
+            <m>f ( x ) = 0</m>. Therefore, <m>f</m> is not a surjection.
+          </p>
+        </answer>
       </task>
       <task>
+        <statement>
         <p>
           <m>F\x\mathbb{Q} \to \mathbb{Q}</m> defined by
           <m>F( x ) = 3x + 1</m>, for all <m>x \in \Q</m>.
         </p>
+        </statement>
+        <answer>
+          <p>
+            The proof that <m>F</m> is an injection is similar to the proof in Part<nbsp/>(a) 
+            that <m>f</m> is an injection.  To prove that <m>F</m> is a surjection, let 
+            <m>y \in \mathbb{Q}</m>.  Then,
+            <m>\dfrac{y-1}{3} \in \mathbb{Q}</m> and <m>F \left( \dfrac{y-1}{3} \right) = y</m> 
+            and hence, <m>F</m> is a surjection.
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -1116,10 +1162,29 @@
         </p>
       </task>
       <task>
+        <statement>
         <p>
           <m>h \x\R \to \R</m> defined by
           <m>h ( x ) = \dfrac{2x}{x^2 + 4}</m>, for all <m>x \in \R</m>.
         </p>
+        </statement>
+        <answer>
+          <p>
+            Since <m>h(1) = h(4)</m>, the function <m>h</m> is not an injection.  Using calculus, 
+            we can see that the function <m>h</m> has a maximum when <m>x = 2</m> and a minimum 
+            when <m>x = -2</m>, and so for each <m>x \in \R</m>, <m>h(-2) \leq h(x) \leq h(2)</m> or
+            <me>
+              -\frac{1}{2} \leq h(x) \leq \frac{1}{2}
+            </me>.
+            This can be used to prove that <m>h</m> is not a surjection.
+            We can also prove that there is no <m>x \in \R</m> such that <m>h(x) = 1</m> using a 
+            proof by contradiction. If such an <m>x</m> were to exist, then 
+            <m>\dfrac{2x}{x^2 + 4} = 1</m> or <m>2x = x^2 + 4</m>.  Hence, <m>x^2 - 2x + 4 = 0</m>.  
+            We can then use the quadratic formula to prove that <m>x</m> is not a real number. 
+            Hence, there is no real number <m>x</m> such that <m>h(x) = 1</m> and so <m>h</m> is 
+            not a surjection.
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -1140,16 +1205,38 @@
         </p>
       </introduction>
       <task>
+        <statement>
         <p>
           <m>F\x\mathbb{R} \to \mathbb{R}</m> defined by <m>F( x ) = 5x + 3</m>,
           for all <m>x \in \mathbb{R}</m>.
         </p>
+        </statement>
+        <answer>
+          <p>
+            Let <m>F\x \mathbb{R} \to \mathbb{R}</m> be defined by <m>F( x ) = 5x + 3</m> for all
+            <m>x \in \mathbb{R}</m>. Let <m>x_1, x_2 \in \mathbb{R}</m> and assume that
+            <m>F( x_1 ) = F( x_2 )</m>. Then <m>5x_1 + 3 = 5x_2 + 3</m>. Show that this implies 
+            that <m>x_1 = x_2</m> and, hence, <m>F</m> is an injection.
+            Now let <m>y \in \mathbb{R}</m>. Then <m>\dfrac{y - 3}{5} \in \mathbb{R}</m>. Prove that
+            <m>F \!\left( \dfrac{y - 3}{5} \right) = y</m>. Thus, <m>F</m> is a surjection and 
+            hence <m>F</m> is a bijection.
+          </p>
+        </answer>
       </task>
       <task>
+        <statement>
         <p>
           <m>G\x\Z \to \Z</m> defined by
           <m>G( x ) = 5x + 3</m>, for all <m>x \in \Z</m>.
         </p>
+        </statement>
+        <answer>
+          <p>
+            The proof that <m>G</m> is an injection is similar to the proof in Part<nbsp/>(a) 
+            that <m>F</m> is an injection. Notice that for each <m>x \in \Z</m>, 
+            <m>G(x) \equiv 3 \pmod 5</m>. Now explain why <m>G</m> is not a surjection.
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -1211,6 +1298,13 @@
           Justify your conclusions.
         </p>
       </statement>
+      <answer>
+        <p>
+          The birthday function is not an injection since there are two different people with 
+          the same birthday. The birthday function is a surjection since for each day of the 
+          year, there is a person that was born on that day.
+        </p>
+      </answer>
     </exercise>
 
     <exercise xml:id="exer_sec63-10">
@@ -1245,20 +1339,89 @@
       </introduction>
 
       <task>
+        <statement>
         <p>
           Let <m>f\x\mathbb{R} \times \mathbb{R} \to \mathbb{R} \times \mathbb{R}</m> 
           be defined by <m>f( {x, y} ) = ( {2x, x + y} )</m>.
           Is the function <m>f</m> an injection?
           Is the function <m>f</m> a surjection?
         </p>
+        </statement>
+        <answer>
+          <p>
+            The function <m>f</m> is an injection and a surjection. To prove that <m>f</m> is an 
+            injection, we assume that
+            <m>( {a, b} ) \in \mathbb{R} \times \mathbb{R}</m>,
+            <m>( {c, d} ) \in \mathbb{R} \times \mathbb{R}</m>, and that
+            <m>f( {a, b} ) = f( {c, d} )</m>. This means that
+            <me>
+            ( {2a, a + b} ) = ( {2c, c + d} )
+            </me>.
+            Since this equation is an equality of ordered pairs, we see that
+            <md>
+              <mrow>2a \amp = 2c \text{ , and }</mrow>
+              <mrow>a + b \amp = c + d</mrow>
+            </md>
+            The first equation implies that <m>a = c</m>. Substituting this into the second 
+            equation shows that
+            <m>b = d</m>. Hence,
+            <me>
+            ( {a, b} ) = ( {c, d} )
+            </me>,
+            and we have shown that if <m>f( {a, b} ) = f( {c, d} )</m>, then
+            <m>( {a, b} ) = ( {c, d} )</m>. Therefore, <m>f</m> is an injection.
+          </p>
+          <p>
+            Now, to determine if <m>f</m> is a surjection, we let
+            <m>( {r, s} ) \in \mathbb{R} \times \mathbb{R}</m>. To find an ordered pair
+            <m>( {a, b} ) \in \mathbb{R} \times \mathbb{R}</m> such that
+            <m>f( {a, b} ) = ( {r, s} )</m>, we need
+            <me>
+            ( {2a, a + b} ) = ( {r, s} )
+            </me>.
+            That is, we need
+            <md>
+              <mrow>2a \amp = r\text{ , and }</mrow>
+              <mrow>a + b \amp = s</mrow>
+            </md>.
+            Solving this system for <m>a</m> and <m>b</m> yields
+            <me>
+            a = \frac{{r}}{2} \text{ and } b = \frac{{2s - r}}{2}
+            </me>.
+            Since <m>r, s \in \mathbb{R}</m>, we can conclude that <m>a \in \mathbb{R}</m> and
+            <m>b \in \mathbb{R}</m> and hence that
+            <m>( {a, b} ) \in \mathbb{R} \times \mathbb{R}</m> . So,
+            <md>
+              <mrow>f( {a, b} ) \amp = f\left( {\frac{{r}}{2}, \frac{{2s - r}}{2}} \right)</mrow>
+              <mrow> \amp = \left( {2\left( {\frac{{r}}{2}} \right),\frac{{r}}{2} + 
+              \frac{{2s - r}}{2}} \right)</mrow>
+              <mrow> \amp = ( {r, s} )</mrow>
+            </md>
+
+            This proves that for all <m>( {r, s} ) \in \mathbb{R} \times \mathbb{R}</m>, 
+            there exists <m>( {a, b} ) \in \mathbb{R} \times \mathbb{R}</m> such that
+            <m>f( {a, b} ) = ( {r, s} )</m>. Hence, the function <m>f</m> is a surjection. 
+            Since <m>f</m> is both an injection and a surjection, it is a bijection.
+          </p>
+        </answer>
       </task>
       <task>
+        <statement>
         <p>
           Let <m>g\x\mathbb{Z} \times \mathbb{Z} \to \mathbb{Z} \times \mathbb{Z}</m> be 
           defined by <m>g( {x, y} ) = ( {2x, x + y} )</m>.
           Is the function <m>g</m> an injection?
           Is the function <m>g</m> a surjection?
         </p>
+        </statement>
+        <answer>
+          <p>
+            The proof that the function <m>g</m> is an injection is similar to the proof that 
+            <m>f</m> is an injection in Part<nbsp/>(a). Now use the fact that the first 
+            coordinate of <m>g(x, y)</m> is an even integer to explain why the function 
+            <m>g</m> is not a surjection.
+          </p>
+        </answer>
       </task>
     </exercise>
 

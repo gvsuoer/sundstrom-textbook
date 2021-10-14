@@ -1462,44 +1462,93 @@
   <exercises>
 
     <exercise xml:id="exer_sec31-prove">
-      <statement>
+      <introduction>
         <p>
           Prove each of the following statements:
+        </p>
+      </introduction>
+
           <task xml:id="exer_sec31-provea">
+            <statement>
             <p>
               For all integers <m>a</m>, <m>b</m>,
             and <m>c</m> with <m>a \ne 0</m>,
             if <m>a \mid b</m> and <m>a \mid c</m>,
             then <m>a \mid \left(b-c \right)</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                Since <m>a \mid b</m> and <m>a \mid c</m>, there exist integers <m>m</m> and 
+                <m>n</m> such that <m>b = am</m> and <m>c = an</m>. Hence,
+                <md>
+                  <mrow>b - c \amp = am - an</mrow>
+                  <mrow>\amp = a(m - n)</mrow>
+                </md>
+                Since <m>m - n</m> is an integer (by the closure properties of the integers), 
+                the last equation implies that <m>a</m> divides <m>b - c</m>.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               For each <m>n \in \Z</m>,
               if <m>n</m> is an odd integer,
               then <m>n^3</m> is an odd integer.
             </p>
+            </statement>
+            <hint>
+              <p>
+                What do you need to do in order to prove that <m>n^3</m> is odd?  Notice that 
+                if <m>n</m> is an odd integer, then there exists an integer <m>k</m> such that 
+                <m>n = 2k + 1</m>.  Remember that to prove that <m>n^3</m> is an odd integer, 
+                you need to prove that there exists an integer <m>q</m> such that <m>n^3 = 2q + 1</m>.
+                This can also be approached as follows:  If <m>n</m> is odd, then  by 
+                <xref ref="T_xyodd"></xref>, <m>n^2</m> is odd. Now use the fact that 
+                <m>n^3 = n \cdot n^2</m>.
+              </p>
+            </hint>
           </task>
           <task>
+            <statement>
             <p>
               For each integer <m>a</m>,
               if 4 divides <m>(a - 1)</m>, then 4 divides <m>\left( a^2 - 1 \right)</m>.
             </p>
+            </statement>
+            <hint>
+              <p>
+                If 4 divides <m>(a - 1)</m>, then there exists an integer <m>k</m> such 
+                that <m>a - 1 = 4k</m> and so
+                <m>a = 4k + 1</m>.  Use algebra to rewrite 
+                <m>\left( a^2 - 1 \right) = (4k + 1)^2 - 1</m>.
+              </p>
+            </hint>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise>
-      <statement>
+      <introduction>
         <p>
           For each of the following,
           use a counterexample to prove the statement is false.
+        </p>
+      </introduction>
           <task>
+            <statement>
             <p>
               For each odd natural number <m>n</m>,
               if <m>n > 3</m>, then 3 divides <m>\left( n^2 - 1 \right)</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                The natural number <m>n = 9</m> is a counterexample since <m>n</m> is odd,
+                <m>n > 3</m>, <m>n^2 - 1 = 80</m> and 3 does not divide 80.
+              </p>
+            </answer>
           </task>
           <task>
             <p>
@@ -1514,23 +1563,34 @@
             </p>
           </task>
           <task>
+            <statement>
             <p>
               For each integer <m>a</m>,
               if 4 divides <m>\left( a^2 - 1 \right)</m>,
               then 4 divides <m>(a - 1)</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                The integer <m>a = 3</m> is a counterexample since
+                <m>a^2 - 1 = 8</m> and <m>a - 1 = 2</m>.
+                Since 4 divides 8 and 4 does not divide 2, this is an example where the hypothesis of 
+                the conditional statement is true and the conclusion is false.
+              </p>
+            </answer>
           </task>
-        </p>
-      </statement>
+
     </exercise>
     
     <exercise xml:id="exer_3truefalse">
-      <statement>
+      <introduction>
         <p>
           Determine if each of the following statements is true or false.
           If a statement is true,
           then write a formal proof of that statement, and if it is false,
           then provide a counterexample that shows it is false.
+        </p>
+      </introduction>
           <task xml:id="exer_divprod">
             <p>
               For all integers <m>a</m>, <m>b</m>,
@@ -1539,11 +1599,20 @@
             </p>
           </task>
           <task>
+            <statement>
             <p>
               For all integers <m>a</m> and <m>b</m> with <m>a \ne 0</m>,
               if <m>6 \mid \left(ab \right)</m>,
               then <m>6 \mid a</m> or <m>6 \mid b</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                This statement is false.
+                One counterexample is <m>a = 3</m> and <m>b = 2</m> since this is an example 
+                where the hypothesis is true and the conclusion is false.
+              </p>
+            </answer>
           </task>
           <task>
             <p>
@@ -1554,30 +1623,69 @@
             </p>
           </task>
           <task>
+            <statement>
             <p>
               For each integer <m>n</m>,
               if 7 divides <m>\left( n^2 - 4 \right)</m>,
               then 7 divides <m>(n - 2)</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                This statement is false.
+                One counterexample is <m>n = 5</m>.
+                Since <m>n^2 - 4 = 21</m> and <m>n - 2 = 3</m>,
+                this is an example where the hypothesis of the conditional statement is true 
+                and the conclusion is false.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               For every integer <m>n</m>, <m>4n^2 + 7n + 6</m> is an odd integer.
             </p>
+            </statement>
+            <hint>
+              <p>
+                Make sure you first try some examples.
+                How do you prove that an integer is an odd integer?
+              </p>
+            </hint>
           </task>
           <task>
+            <statement>
             <p>
               For every odd integer <m>n</m>,
               <m>4n^2 + 7n + 6</m> is an odd integer.
             </p>
+            </statement>
+            <hint>
+              <p>
+                The following algebra may be useful.
+                <me>
+                  4 \left( 2m + 1 \right)^2 + 7 \left( 2m + 1 \right) + 6 = 16m^2 + 30m + 17
+                </me>.
+              </p>
+            </hint>
           </task>
           <task>
+            <statement>
             <p>
               For all integers <m>a</m>, <m>b</m>,
               and <m>d</m> with <m>d \ne 0</m>,
               if <m>d</m> divides both <m>a-b</m> and <m>a+b</m>,
               then <m>d</m> divides <m>a</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                This statement is false.
+                One counterexample is <m>a = 7</m>,
+                <m>b = 1</m>, and <m>d = 2</m>.
+                Why is this a counterexample?
+              </p>
+            </answer>
           </task>
           <task>
             <p>
@@ -1586,18 +1694,31 @@
               if <m>a \mid (bc)</m>, then <m>a \mid b</m> or <m>a \mid c</m>.
             </p>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_diveach">
-      <task>
+      <introduction>
+        <p>
+          Complete the following.
+        </p>
+      </introduction>
+      <task xml:id="exer_diveacha">
+        <statement>
         <p>
           If <m>x</m> and <m>y</m> are integers and <m>xy=1</m>,
             explain why <m>x=1</m> or <m>x=-1</m>.
         </p>
+        </statement>
+        <answer>
+          <p>
+            If <m>xy = 1</m>, then <m>x</m> and <m>y</m> are both divisors of <m>1</m>, and 
+            the only divisors of <m>1</m> are <m>-1</m> and <m>1</m>.
+          </p>
+        </answer>
       </task>
       <task>
+        <statement>
         <p>
           Is the following proposition true or false?
             <blockquote>
@@ -1605,6 +1726,12 @@
               then <m>a = \pm b</m>.
             </blockquote>
         </p>
+        </statement>
+        <hint>
+          <p>
+            <xref ref="exer_diveacha"/> is useful in proving this.
+          </p>
+        </hint>
       </task>
     </exercise>
 
@@ -1622,6 +1749,11 @@
       <hint>
         <p>
           Use the fact that the only divisors of 1 are 1 and <m>-1</m>.
+        </p>
+      </hint>
+      <hint>
+        <p>
+          <m>\left( 4n + 3 \right) - 2 \left( 2n + 1 \right) = 1</m>.
         </p>
       </hint>
     </exercise>
@@ -1685,22 +1817,51 @@
     </exercise>
 
     <exercise xml:id="exer_congmod3">
-      <statement>
+      <introduction>
         <p>
           Let <m>a</m> and <m>b</m> be integers.
           Prove that if <m>a \equiv 2 \pmod 3</m> and <m>b \equiv 2 \pmod 3</m>, then
+        </p>
+      </introduction>
           <task>
+            <statement>
             <p>
               <m>a + b \equiv 1 \pmod 3</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                Assuming <m>a</m> and <m>b</m> are both congruent to 2 modulo 3, there exist 
+                integers <m>m</m> and <m>n</m> such that <m>a = 3m + 2</m> and <m>b = 3n + 2</m>.
+                Show that
+                <me>
+                  a + b - 1 = 3 \left( m + n + 1 \right)
+                </me>.
+                We can then conclude that 3 divides <m>(a + b) - 1</m> and this proves that 
+                <m>\mod{a+b}{1}{3}</m>.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               <m>a \cdot b \equiv 1 \pmod 3</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                Assuming <m>a</m> and <m>b</m> are both congruent to 2 modulo 3, there exist 
+                integers <m>m</m> and <m>n</m> such that <m>a = 3m + 2</m> and <m>b = 3n + 2</m>.
+                Show that
+                <me>
+                  a \cdot b - 1 = 3(3mn + 2m + 2n + 1)
+                </me>.
+                We can then conclude that 3 divides <m>a \cdot b- 1</m> and this proves that 
+                <m>a \cdot b \equiv 1 \pmod 3</m>.
+              </p>
+            </answer>
           </task>
-        </p>
-      </statement>
+   
     </exercise>
 
     <exercise>
@@ -1753,11 +1914,14 @@
     </exercise>
 
     <exercise xml:id="exer_cong-props">
-      <statement>
+      <introduction>
         <p>
           Let <m>n</m> be a natural number.
           Prove each of the following:
+        </p>
+      </introduction>
           <task xml:id="exer_cong-reflexive">
+            <statement>
             <p>
               For every integer <m>a</m>, <m>a \equiv a \pmod n</m>.
             </p>
@@ -1766,8 +1930,18 @@
               <idx><h>congruence</h><h>reflexive property</h></idx>
               of congruence modulo <m>n</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                Let <m>n \in \N</m>.
+                If <m>a</m> is an integer, then
+                <m>a - a = 0</m> and <m>n</m> divides 0.
+                Therefore, <m>\mod{a}{a}{n}</m>.
+              </p>
+            </answer>
           </task>
           <task xml:id="exer_cong-symmetry">
+            <statement>
             <p>
               For all integers <m>a</m> and <m>b</m>,
               if <m>a \equiv b \pmod n</m>,
@@ -1778,6 +1952,22 @@
               <idx><h>congruence</h><h>symmetric property</h></idx>
               of congruence modulo <m>n</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                Let <m>n \in \mathbb{N}</m>, let
+                <m>a,
+                b \in \mathbb{Z}</m> and assume that <m>a \equiv b \pmod n</m>.
+                We will prove that <m>b \equiv a \pmod n</m>.
+                Since <m>a \equiv b \pmod n</m>,
+                <m>n</m> divides <m>(a - b)</m> and so there exists an integer <m>k</m> such 
+                that <m>a - b = nk</m>.
+                From this, we can show that
+                <m>b - a = n(-k)</m> and so <m>n</m> divides <m>(b - a)</m>.
+                Hence, if <m>a \equiv b \pmod n</m>,
+                then <m>b \equiv a \pmod n</m>.
+              </p>
+            </answer>
           </task>
           <task>
             <p>
@@ -1791,16 +1981,17 @@
               of congruence modulo <m>n</m>.
             </p>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_sec31-11">
-      <statement>
+      <introduction>
         <p>
           Let <m>n</m> be a natural number and let <m>a</m>, <m>b</m>,
           <m>c</m>, and <m>d</m> be integers.
           Prove each of the following.
+        </p>
+      </introduction>
           <task>
             <p>
               If <m>a \equiv b \pmod n</m> and <m>c \equiv d \pmod n</m>,
@@ -1808,13 +1999,23 @@
             </p>
           </task>
           <task xml:id="exer_congprops">
+            <statement>
             <p>
               If <m>a \equiv b \pmod n</m> and <m>c \equiv d \pmod n</m>,
               then <m>ac \equiv bd \pmod n</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                The assumptions mean that <m>n \mid \left( a-b \right)</m> and that
+                <m>n \mid \left( c-d \right)</m>. Use these divisibility relations to obtain an 
+                expression that is equal to  <m>a</m>  and to obtain an expression that is equal 
+                to  <m>c</m>. Then use algebra to rewrite the resulting expressions for 
+                <m>a + c</m> and <m>a \cdot c</m>.
+              </p>
+            </answer>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_quadformula2">

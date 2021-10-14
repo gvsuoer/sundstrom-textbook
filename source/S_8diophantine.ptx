@@ -783,24 +783,52 @@
       </introduction>
 
       <task>
+        <statement>
         <p>
           <m>9x + 14y = 1</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>x = -3 + 14k</m>, <m>y = 2 - 9k</m>
+          </p>
+        </answer>
       </task>
       <task>
+        <statement>
         <p>
           <m>18x + 22y = 4</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>x = -1 + 11k</m>, <m>y = 1 - 9k</m>
+          </p>
+        </answer>
       </task>
       <task>
+        <statement>
         <p>
           <m>48x - 18y = 15</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            No solution
+          </p>
+        </answer>
       </task>
       <task>
+        <statement>
         <p>
           <m>12x + 9y = 6</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>x = 2+3k</m>, <m>y = -2-4k</m>
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -840,6 +868,13 @@
           Start by writing 1 as a linear combination of 50 and 27.
         </p>
       </hint>
+      <answer>
+        <p>
+          There are several possible solutions to this problem, each of which can be generated 
+          from the solutions of the Diophantine equation
+          <m>27x + 50y = 25</m>.
+        </p>
+      </answer>
     </exercise>
 
     <exercise xml:id="exer_sec83-5">
@@ -855,6 +890,13 @@
           What is the maximum number of people who could have attended the banquet?
         </p>
       </statement>
+      <answer>
+        <p>
+          This problem can be solved by finding all solutions of a linear Diophantine equation 
+          <m>25x + 16y = 1461</m>, where both <m>x</m> and <m>y</m> are positive. The mininum 
+          number of people attending the banquet is 66.
+        </p>
+      </answer>
     </exercise>
 
     <exercise xml:id="exer_lindioph3">
@@ -866,13 +908,21 @@
       </introduction>
 
       <task xml:id="exer_lindioph3a">
+        <statement>
         <p>
           First, notice that <m>\gcd( {12, 9} ) = 3</m>.
           Determine formulas that will generate all solutions for the linear Diophantine 
           equation <m>3y + 16x_3 = 20</m>.
         </p>
+        </statement>
+        <answer>
+          <p>
+            <m>y = 12 + 16k, x_3 = -1 - 3k</m>
+          </p>
+        </answer>
       </task>
       <task>
+        <statement>
         <p>
           Explain why the solutions
           (for <m>x_1</m> and <m>x_2</m>)
@@ -880,12 +930,31 @@
           <m>12x_1 + 9x_2 = 3y</m> can be used to generate solutions for 
           <m>12x_1 + 9x_2 + 16x_3 = 20</m>.
         </p>
+        </statement>
+        <answer>
+          <p>
+            If <m>3y = 12x_1 + 9x_2</m> and <m>3y + 16x_3 = 20</m>,
+            we can substitute for <m>3y</m> and obtain <m>12x_1 + 9x_2 + 16x_3 = 20</m>.
+          </p>
+        </answer>
       </task>
       <task xml:id="exer_lindioph3c">
+        <statement>
         <p>
           Use the general value for <m>y</m> from <xref ref="exer_lindioph3a"/> to determine the 
           solutions of <m>12x_1 + 9x_2 = 3y</m>.
         </p>
+        </statement>
+        <answer>
+          <p>
+            Rewrite the equation <m>12x_1 + 9x_2 = 3y</m> as <m>4x_1 + 3x_2 = y</m>.
+            A general solution for this linear Diophantine equation is
+            <md>
+             <mrow>x_1 \amp = y + 3n</mrow>
+             <mrow>x_2 \amp = -y - 4n</mrow>
+            </md>.
+          </p>
+        </answer>
       </task>
       <task xml:id="exer_lindioph3d">
         <p>

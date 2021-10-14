@@ -897,7 +897,7 @@
       <m>A \cup B</m>.
     </p>
 
-    <figure xml:id="fig_functionNtoZ">
+    <figure xml:id="fig_functionNtoAorB">
         <caption>A Function from <m>\N</m> to <m>A \cup B</m></caption>
         <tabular halign="center">
           <row>
@@ -1100,28 +1100,56 @@
       </introduction>
 
       <task>
+        <statement>
         <p>
           If a set <m>A</m> is countably infinite,
           then <m>A</m> is infinite.
         </p>
+        </statement>
+        <answer>
+          <p>
+            True.
+          </p>
+        </answer>
       </task>
       <task>
+        <statement>
         <p>
           If a set <m>A</m> is countably infinite,
           then <m>A</m> is countable.
         </p>
+        </statement>
+        <answer>
+          <p>
+            True.
+          </p>
+        </answer>
       </task>
       <task>
+        <statement>
         <p>
           If a set <m>A</m> is uncountable,
           then <m>A</m> is not countably infinite.
         </p>
+        </statement>
+        <answer>
+          <p>
+            True.
+          </p>
+        </answer>
       </task>
       <task>
+        <statement>
         <p>
           If <m>A \approx \mathbb{N}_k</m> for some <m>k \in \mathbb{N}</m>,
           then <m>A</m> is not countable.
         </p>
+        </statement>
+        <answer>
+          <p>
+            False.
+          </p>
+        </answer>
       </task>
     </exercise>
 
@@ -1133,9 +1161,17 @@
       </introduction>
 
       <task>
+        <statement>
         <p>
           The set <m>F^+</m> of all natural numbers that are multiples of 5
         </p>
+        </statement>
+        <answer>
+          <p>
+            Prove that the function <m>f: \mathbb{N} \to F^+</m> defined by
+            <m>f \left( n \right) = 5n</m> for all <m>n \in \mathbb{N}</m> is a bijection.
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -1153,14 +1189,45 @@
         </p>
       </task>
       <task>
+        <statement>
         <p>
           <m>\mathbb{N} - \left\{ 4, 5, 6 \right\}</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            One way is to define <m>f\x \N \to \N -\{4, 5, 6 \}</m> by
+            <men>
+             f( n ) = \begin{cases}n \amp \text{ if \(n = 1\), \(n = 2\), or \(n = 3\) } \\ 
+             f ( n + 3 )  \amp \text{ if \(n \geq 4\) } . \end{cases}
+            </men>
+            and then prove that the function <m>f</m> is a bijection.
+            It is also possible to use <xref ref="C_subsetofcountable"></xref>
+            to conclude that <m>\mathbb{N} - \left\{ 4, 5, 6 \right\}</m> is countable,
+            but it must also be proved that <m>\mathbb{N} - \left\{ 4, 5, 6 \right\}</m> cannot 
+            be finite.
+            To do this, assume that <m>\mathbb{N} - \left\{ 4, 5, 6 \right\}</m> is finite and 
+            then prove that <m>\N</m> is finite,
+            which is a contradiction.
+          </p>
+        </answer>
       </task>
       <task>
+        <statement>
         <p>
           <m>\left\{ m \in \mathbb{Z} \mid m \equiv 2 \pmod 3 \right\}</m>
         </p>
+        </statement>
+        <answer>
+          <p>
+            Let <m>A = \left\{ m \in \mathbb{Z} \mid m \equiv 2 \pmod 3 \right\} 
+            = \left\{ 3k + 2 \mid k \in \mathbb{Z} \right\}</m>.
+            Prove that the function <m>f: \mathbb{Z} \to A</m> is a bijection,
+            where <m>f \left( x \right) = 3x + 2</m> for all <m>x \in \mathbb{Z}</m>.
+            This proves that <m>\mathbb{Z} \approx A</m> and hence,
+            <m>\mathbb{N} \approx A</m>.
+          </p>
+        </answer>
       </task>
     </exercise>
 
@@ -1169,11 +1236,25 @@
         <p>
           Prove <xref ref="T_subsetisinfinite2"/> of <xref ref="T_subsetisinfinite"></xref>.
         </p>
+      </statement>
+      <hint>
         <p>
           Let <m>A</m> and <m>B</m> be sets. If <m>A</m> is infinite and <m>A \subseteq B</m>,
           then <m>B</m> is infinite.
         </p>
-      </statement>
+      </hint>
+      <answer>
+        <p>
+          For each <m>n \in \mathbb{N}</m>, let <m>P ( n )</m> be
+          <q>If
+          <m>\text{ card} ( B ) = n</m>, then <m>A \cup B</m> is a countably infinite set.</q>
+        </p>
+        <p>
+          Note that if <m>\text{ card} ( B ) = k+1</m> and <m>x \in B</m>, then
+          <m>\text{ card} ( B - \left\{ x \right\} ) = k</m>. Apply the inductive assumption to
+          <m>B - \left\{ x \right\}</m>.
+        </p>
+      </answer>
     </exercise>
 
     <exercise xml:id="exer_addonetocountable">
@@ -1226,6 +1307,39 @@
           Then the function <m>h</m> is a bijection.
         </p>
       </statement>
+      <answer>
+        <p>
+          Let <m>m, n \in \mathbb{N}</m> and assume that 
+          <m>h \left( n \right) = h \left( m \right)</m>. Then since <m>A</m> and <m>B</m> are 
+          disjoint, either <m>h \left( n \right)</m> and <m>h \left( m \right)</m> are both in 
+          <m>A</m> or are both in <m>B</m>. If they are both in <m>A</m>, then both <m>m</m> 
+          and <m>n</m> are odd and
+          <me>
+           f \left( \frac{n + 1}{2} \right) = h \left( n \right) = h \left( m \right) = f \left( \frac{m + 1}{2} \right)
+          </me>.
+          Since <m>f</m> is an injection, this implies that 
+          <m>\dfrac{n + 1}{2} = \dfrac{m + 1}{2}</m> and hence that <m>n = m</m>. Similary, if 
+          both <m>h \left( n \right)</m> and <m>h \left( m \right)</m> are in <m>B</m>, then 
+          <m>m</m> and <m>n</m> are even and 
+          <m>g \left( \dfrac{n}{2} \right) = g \left( \dfrac{m}{2} \right)</m>, and since 
+          <m>g</m> is an injection, <m>\dfrac{n}{2} = \dfrac{m}{2}</m> and <m>n = m</m>. 
+          Therefore, <m>h</m> is an injection.
+        </p>
+        <p>
+          Now let <m>y \in A \cup B</m>. There are only two cases to consider: <m>y \in A</m> 
+          or <m>y \in B</m>. If
+          <m>y \in A</m>, then since <m>f</m> is a surjection, there exists an 
+          <m>m \in \mathbb{N}</m> such that
+          <m>f \left( m \right) = y</m>. Let <m>n = 2m - 1</m>. Then <m>n</m> is an odd natural number,
+          <m>m = \dfrac{n + 1}{2}</m>, and
+          <me>
+           h \left( n \right) = f \left( \frac{n + 1}{2} \right) = f \left( m \right) = y
+          </me>.
+          Now assume <m>y \in B</m> and use the fact that <m>g</m> is a surjection to help 
+          prove that there exists a natural number <m>n</m> such that <m>h(n) = y</m>.
+          We can then conclude that <m>h</m> is a surjection.
+        </p>
+      </answer>
     </exercise>
 
     <exercise xml:id="exer_Qiscountable">
@@ -1243,6 +1357,16 @@
           and <xref ref="T_unionofcountable"></xref>.
         </p>
       </hint>
+      <answer>
+        <p>
+          By <xref ref="T_positiverationals"></xref>, the set <m>\mathbb{Q}^+</m> of positive 
+          rational numbers is countably infinite. So by <xref ref="T_addonetocountable"></xref>,
+          <m>\mathbb{Q}^+ \cup \left\{ 0 \right\}</m> is countably infinite. Now prove that the 
+          set <m>\mathbb{Q}^-</m> of all negative rational numbers is countably infinite and then 
+          use <xref ref="T_unionofcountable"></xref> to prove that <m>\mathbb{Q}</m> is countably 
+          infinite.
+        </p>
+      </answer>
     </exercise>
 
     <exercise xml:id="exer_countinf-finite">
@@ -1252,6 +1376,12 @@
           then <m>A - B</m> is countably infinite.
         </p>
       </statement>
+      <answer>
+        <p>
+          Since <m>A - B \subseteq A</m>, the set <m>A - B</m> is countable. Now assume 
+          <m>A - B</m> is finite and show that this leads to a contradiction.
+        </p>
+      </answer>
     </exercise>
 
     <exercise xml:id="exer_NxNbijection">

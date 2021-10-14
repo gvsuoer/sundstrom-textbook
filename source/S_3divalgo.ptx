@@ -1192,24 +1192,60 @@
     </exercise>
 
     <exercise>
-      <statement>
+      <introduction>
         <p>
+          Complete the following.
+        </p>
+      </introduction>
           <task xml:id="exer-cases3-a">
+            <statement>
             <p>
               Use cases based on congruence modulo 3 and properties of congruence to prove that 
               for each integer <m>n</m>,
               <m>n^3 \equiv n \pmod 3</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                The first case is when <m>n \equiv 0 \pmod 3</m>.
+                We can then use <xref ref="T_propsofcong"></xref>
+                to conclude that <m>n^3 \equiv 0^3 \pmod 3</m> or that <m>n^3 \equiv 0 \pmod 3</m>.
+                So in this case, <m>n^3 \equiv n \pmod 3</m>.
+              </p>
+              <p>
+                For the second case, <m>n \equiv 1 \pmod 3</m>.
+                We can then use <xref ref="T_propsofcong"></xref>
+                to conclude that <m>n^3 \equiv 1^3 \pmod 3</m> or that <m>n^3 \equiv 1 \pmod 3</m>.
+                So in this case, <m>n^3 \equiv n \pmod 3</m>.
+              </p>
+              <p>
+                The last case is when <m>n \equiv 2 \pmod 3</m>.
+                We then get <m>n^3 \equiv 2^3 \pmod 3</m> or <m>n^3 \equiv 8 \pmod 3</m>.
+                Since <m>8 \equiv 2 \pmod 3</m>,
+                we can use the transitive property to conclude that <m>n^3 \equiv 2 \pmod 3</m>,
+                and so <m>n^3 \equiv n \pmod 3</m>.
+                Since we have proved it in all three cases,
+                we conclude that for each integer <m>n</m>, <m>n^3 \equiv n \pmod 3</m>.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               Explain why the result in <xref ref="exer-cases3-a"/> proves that for each integer <m>n</m>, 
               3 divides <m>\left(n^3 - n \right)</m>.
               Compare this to the proof of the same result in <xref ref="P_3divides"></xref>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                Since <m>n^3 \eqeuiv n \pmod 3</m>,
+                we use the definition of congruence to conclude that 3 divides 
+                <m>\left( n^3 - n \right)</m>.
+              </p>
+            </answer>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_cong-symm">
@@ -1218,17 +1254,38 @@
           Prove the symmetric property of congruence stated in <xref ref="T_modprops"></xref>.
         </p>
       </statement>
+      <answer>
+        <p>
+          For  <m>a, b \in \mathbb{Z}</m>, you need to prove that if
+          <m>a \equiv b \pmod n</m>,  then  <m>b \equiv a \pmod n</m>.  So let  
+          <m>a, b \in \mathbb{Z}</m> and assume that
+          <m>a \equiv b \pmod n</m>.  So <m>n \mid \left( a - b \right)</m> and there exists an 
+          integer <m>k</m> such that
+          <m>a - b = nk</m>.  Then, <m>b - a = n ( -k )</m> and <m>b \equiv a \pmod n</m>.
+        </p>
+      </answer>
     </exercise>
 
     <exercise xml:id="exer_sec35-a2mod3">
-      <statement>
+      <introduction>
         <p>
           Consider the following proposition: For each integer <m>a</m>,
           if 3 divides <m>a^2</m>, then 3 divides <m>a</m>.
+        </p>
+      </introduction>
           <task>
+            <statement>
             <p>
               Write the contrapositive of this proposition.
             </p>
+            </statement>
+            <answer>
+              <p>
+                The contrapositive is: For each integer <m>a</m>,
+                if 3 does not divide <m>a</m>,
+                then 3 divides <m>a^2</m>.
+              </p>
+            </answer>
           </task>
           <task>
             <statement>
@@ -1244,28 +1301,65 @@
               There will be two cases.
             </p>
             </hint>
+            <answer>
+              <p>
+                To prove the contrapositive,
+                let <m>a \in \Z</m> and assume that 3 does not divide <m>a</m>.
+                So using the Division Algorithm,
+                we can consider two cases: (1) There exists a unique integer <m>q</m> such that
+                <m>a = 3q + 1</m>. (2) There exists a unique integer <m>q</m> such that 
+                <m>a = 3q + 2</m>.
+                For the first case,
+                show that <m>a^2 = 3 \left( 3q^2 + 2q \right) + 1</m>.
+                For the second case,
+                show that <m>a^2 = 3 \left( 3q^2 + 4q + 1 \right) + 1</m>.
+                Since the Division Algorithm states that the remainder is unique,
+                this shows that in both cases,
+                the remainder is 1 and so 3 does not divide <m>a^2</m>.
+              </p>
+            </answer>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_sec34-4">
-      <statement>
+      <introduction>
         <p>
+          Complete the following.
+        </p>
+      </introduction>
           <task>
+            <statement>
             <p>
               Let <m>n \in \mathbb{N}</m> and let <m>a \in \mathbb{Z}</m>.
               Explain why <m>n</m> divides <m>a</m> if and only if <m>a \equiv 0 \pmod n</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                <m>a \equiv 0 \pmod n</m> if and only if <m>n \mid \left( a - 0 \right)</m>.
+              </p>
+            </answer>
           </task>
-          <task>
+          <task xml:id="exer_sec34-4b">
+            <statement>
             <p>
               Let <m>a \in \mathbb{Z}</m>.
               Explain why if <m>a \not \equiv 0 \pmod 3</m>,
               then <m>a \equiv 1\pmod 3</m> or <m>a \equiv 2 \pmod 3</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                Let <m>a \in \mathbb{Z}</m>.
+                <xref ref="C_congtorem"></xref>
+                tell us that if <m>\notmod{a}{0}{3}</m>,
+                then <m>a \equiv 1 \pmod 3</m> or <m>a \equiv 2 \pmod 3</m>.
+              </p>
+            </answer>
           </task>
-          <task>
+          <task xml:id="exer_sec34-4c">
+            <statement>
             <p>
               Is the following proposition true or false?
               Justify your conclusion.
@@ -1274,9 +1368,26 @@
                 <m>a^2 \equiv 1 \pmod 3</m>.
               </blockquote>
             </p>
+            </statement>
+            <answer>
+              <p>
+                <xref ref="exer_sec34-4b"/> tells us we can use a proof by cases using the 
+                following two cases: (1)
+                <m>a \equiv 1 \pmod 3</m>; (2) <m>a \equiv 2 \pmod 3</m>.
+                So, if <m>a \equiv 1 \pmod 3</m>,
+                then by <xref ref="T_propsofcong"></xref>,
+                <m>a \cdot a \equiv 1 \cdot 1 \pmod 3</m>, and hence,
+                <m>a^2 \equiv 1 \pmod 3</m>.
+                If <m>a \equiv 2 \pmod 3</m>,
+                then by <xref ref="T_propsofcong"></xref>,
+                <m>a \cdot a \equiv 2 \cdot 2 \pmod 3</m>, and hence,
+                <m>a^2 \equiv 4 \pmod 3</m>.
+                Since <m>4 \equiv 1 \pmod 3</m>,
+                this implies that <m>a^2 \equiv 1 \pmod 3</m>.
+              </p>
+            </answer>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_congto3">
@@ -1294,34 +1405,90 @@
           There are several cases.
         </p>
       </hint>
+      <answer>
+        <p>
+          The contrapositive is:  Let <m>a</m> and <m>b</m> be integers. 
+          If <m>a \not\equiv 0 \pmod3</m> and
+          <m>b \not\equiv 0 \pmod 3</m>, then <m>ab \not\equiv 0 \pmod 3</m>.
+          Using <xref ref="exer_sec34-4b"></xref>, we can use the following four cases:
+          <ol label="(1)">
+            <li>
+              <p>
+                <m>a \equiv 1 \pmod 3</m> and <m>b \equiv 1 \pmod 3</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>a \equiv 1 \pmod 3</m> and <m>b \equiv 2 \pmod 3</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>a \equiv 2 \pmod 3</m> and <m>b \equiv 1 \pmod 3</m>;
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>a \equiv 2 \pmod 3</m> and <m>b \equiv 2 \pmod 3</m>.
+              </p>
+            </li>
+          </ol>
+
+          In all four cases, we use <xref ref="T_propsofcong"></xref> to conclude that
+          <m>ab \not\equiv 0 \pmod 3</m>.  For example, for the third case, we see that 
+          <m>ab \equiv 2 \cdot 1 \pmod 3</m>.  That is, <m>ab\ equiv 2 \pmod 3</m>.
+        </p>
+      </answer>
     </exercise>
 
     <exercise xml:id="exer_3divprod">
-      <statement>
+      <introduction>
         <p>
-          <task>
+          Complete the following.
+        </p>
+      </introduction>
+          <task xml:id="exer_3divproda">
+            <statement>
             <p>
-              Explain why the following proposition is equivalent to the proposition in <xref ref="exer_congto3"/>.
+              Explain why the following proposition is equivalent to the proposition in 
+              <xref ref="exer_congto3"/>.
               <blockquote>
                 For all integers <m>a</m> and <m>b</m>, if <m>3 \mid ab</m> , then 
                 <m>3 \mid a</m> or <m>3 \mid b</m>.
               </blockquote>
             </p>
+            </statement>
+            <answer>
+              <p>
+                This follows from <xref ref="exer_sec34-4"></xref> and the fact that
+                <m>3 \mid k</m> if and only if <m>k \equiv 0 \pmod 3</m>.
+              </p>
+            </answer>
           </task>
           <task>
+            <statement>
             <p>
               Prove that for each integer <m>a</m>,
               if 3 divides <m>a^2</m>, then 3 divides <m>a</m>.
             </p>
+            </statement>
+            <answer>
+              <p>
+                This follows directly from <xref ref="exer_3divproda"/> using <m>a = b</m>.
+              </p>
+            </answer>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_sqrt3">
-      <statement>
+      <introduction>
         <p>
+          Complete the following.
+        </p>
+      </introduction>
           <task>
+            <statement>
             <p>
               Prove that the real number
               <m>\sqrt{3}</m> is an irrational number.
@@ -1331,6 +1498,13 @@
                 <m>r</m> is irrational.
               </blockquote>
             </p>
+            </statement>
+            <hint>
+              <p>
+                Use a proof similar to the proof of <xref ref="T_squareroot2"></xref>. 
+                The result of <xref ref="exer_3divprod"/> may be helpful.
+              </p>
+            </hint>
           </task>
           <task>
             <p>
@@ -1338,8 +1512,7 @@
               <m>\sqrt{12}</m> is an irrational number.
             </p>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise xml:id="exer_notperfectsquare">
@@ -1349,15 +1522,23 @@
           <m>\sqrt{3n + 2}</m> is not a natural number.
         </p>
       </statement>
+      <hint>
+        <p>
+          The result in <xref ref="exer_sec34-4c"/> may be helpful in a proof by 
+          contradiction.
+        </p>
+      </hint>
     </exercise>
 
     <exercise xml:id="exer_sec34-2">
-      <statement>
+      <introduction>
         <p>
           Extending the idea in <xref ref="exer_consecutive"/> of <xref ref="S_cases"></xref>,
           we can represent three consecutive integers as <m>m</m>,
           <m>m + 1</m>, and <m>m + 2</m>,
           where <m>m</m> is an integer.
+        </p>
+      </introduction>
           <task>
             <p>
               Explain why we can also represent three consecutive integers as <m>k - 1</m>,
@@ -1365,18 +1546,31 @@
             </p>
           </task>
           <task>
+            <statement>
             <p>
               Explain why <xref ref="P_3divides"></xref>
               proves that the product of any three consecutive integers is divisible by 3.
             </p>
+            </statement>
+            <hint>
+              <p>
+                Factor <m>n^3 - n</m>.
+              </p>
+            </hint>
           </task>
           <task>
+            <statement>
             <p>
               Prove that the product of three consecutive integers is divisible by 6.
             </p>
+            </statement>
+            <hint>
+              <p>
+                Consider using cases based on congruence modulo 6.
+              </p>
+            </hint>
           </task>
-        </p>
-      </statement>
+
     </exercise>
 
     <exercise>

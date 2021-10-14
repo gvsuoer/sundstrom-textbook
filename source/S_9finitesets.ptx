@@ -772,6 +772,13 @@
           then <m>A \times \left\{ x \right\} \approx A</m>.
         </p>
       </statement>
+      <answer>
+        <p>
+          One way to do this is to prove that the following function is a bijection: 
+          <m>f\x A \times \left\{ x \right\} \to A</m> by <m>f ( a, x ) = a</m>, for all
+          <m>( a, x ) \in A \times \left\{ x \right\}</m>.
+        </p>
+      </answer>
     </exercise>
 
     <exercise xml:id="exer91_evennaturals">
@@ -781,6 +788,14 @@
           Prove that <m>\mathbb{N} \approx E^+</m>.
         </p>
       </statement>
+      <answer>
+        <p>
+          One way to prove that <m>\N \approx E^+</m> is to find a bijection from <m>\N</m> to 
+          <m>E^+</m>. One possibility is <m>f: \mathbb{N} \to E^+</m> by 
+          <m>f \left( n \right) = 2n</m> for all <m>n \in \mathbb{N}</m>. 
+          (We must prove that this is a bijection.)
+        </p>
+      </answer>
     </exercise>
 
     <exercise xml:id="exer_sec92corollary">
@@ -800,6 +815,14 @@
           \left\{x \right\}</m>.
         </p>
       </hint>
+      <answer>
+        <p>
+          Notice that <m>A = ( A - \left\{ x \right\} ) \cup \left\{x \right\}</m>. Use
+          <xref ref="T_finitesubsets"></xref> to conclude that <m>A - \left\{ x \right\}</m> 
+          is finite. Then use
+          <xref ref="L_addone"></xref>.
+        </p>
+      </answer>
     </exercise>
 
     <exercise xml:id="exer_sec92-finitesets">
@@ -811,15 +834,33 @@
       </introduction>
 
       <task>
+        <statement>
         <p>
           If <m>A</m> is a finite set, then <m>A \cap B</m> is a finite set.
         </p>
+        </statement>
+        <answer>
+          <p>
+            Since <m>A \cap B \subseteq A</m>, if <m>A</m> is finite,
+            then <xref ref="T_finitesubsets"></xref>
+            implies that <m>A \cap B</m> is finite.
+          </p>
+        </answer>
       </task>
       <task>
+        <statement>
         <p>
           If <m>A \cup B</m> is a finite set,
           then <m>A</m> and <m>B</m> are finite sets.
         </p>
+        </statement>
+        <answer>
+          <p>
+            The sets <m>A</m> and <m>B</m> are subsets of <m>A \cup B</m>.
+            So if <m>A \cup B</m> is finite,
+            then <m>A</m> and <m>B</m> are finite.
+          </p>
+        </answer>
       </task>
       <task>
         <p>
@@ -871,6 +912,26 @@
             <m>( a, c ) \in A \times C</m>.
           </p>
         </hint>
+        <answer>
+          <p>
+            Remember that two ordered pairs are equal if and only if their corresponding 
+            coordinates are equal. So if <m>\left( a_1, c_1 \right) , \left( a_2, c_2 \right) 
+            \in A \times C</m> and <m>h \left( a_1, c_1 \right) = h \left( a_2, c_2 \right)</m>, then
+            <m>\left( f \left( a_1 \right), g \left( c_1 \right) \right) =
+            \left( f \left( a_2 \right), g \left( c_2 \right) \right)</m>. We can then conclude that
+            <m>f \left( a_1 \right) = f \left( a_2 \right)</m> and 
+            <m>g \left( c_1 \right) = g \left( c_2 \right)</m>. Since <m>f</m> and <m>g</m> are 
+            both injections, this means that <m>a_1 = a_2</m> and <m>c_1 = c_2</m> and therefore,
+            <m>\left( a_1, c_1 \right) = \left( a_2, c_2 \right)</m>. This proves that <m>f</m> 
+            is an injection.
+            Now let <m>\left( b, d \right) \in B \times D</m>. Since <m>f</m> and <m>g</m> are 
+            surjections, there exists
+            <m>a \in A</m> and <m>c \in C</m> such that <m>f \left( a \right) = b</m> and 
+            <m>g \left( c \right) = d</m>. Therefore, 
+            <m>h \left( a, c \right) = \left( b, d \right)</m>. This proves that <m>f</m> is a 
+            surjection.
+          </p>
+        </answer>
       </task>
       <task xml:id="exer_equivunion">
         <p>
@@ -891,9 +952,19 @@
       </introduction>
 
       <task>
+        <statement>
         <p>
           Construct a function <m>f:\mathbb{N}_5 \to A</m> such that <m>f</m> is a surjection.
         </p>
+        </statement>
+        <answer>
+          <p>
+            If we define the function <m>f</m> by <m>f ( 1 ) = a</m>, <m>f ( 2 ) = b</m>,
+            <m>f ( 3 ) = c</m>, <m>f ( 4 ) = a</m>, and <m>f ( 5 ) = b</m>, then we can use
+            <m>g ( a ) = 1</m>, <m>g ( b ) = 2</m>, and <m>g ( 3 ) = c</m>. The function <m>g</m> 
+            is an injection.
+          </p>
+        </answer>
       </task>
       <task>
         <p>

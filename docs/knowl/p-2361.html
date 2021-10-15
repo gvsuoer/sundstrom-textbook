@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-08T18:44:59-04:00       *-->
+<!--*       on 2021-10-15T16:15:33-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,10 +15,38 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">For the sequence \(a_1 ,a_2 , \ldots ,a_n , \ldots\) , assume that \(a_1 = 2\) and that for each \(n \in \mathbb{N}\text{,}\) \(a_{n + 1} = a_n + 5\text{.}\) <article class="task exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<p>Calculate \(a_2\) through \(a_6\text{.}\)</p></article> <article class="task exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p>Make a conjecture for a formula for \(a_n\) for each \(n \in \mathbb{N}\text{.}\)</p></article> <article class="task exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<p>Prove that your conjecture in <a class="xref" data-knowl="./knowl/exer_sec53-arithexampleb.html" title="Task b">Task b</a> is correct.</p></article></p>
-<span class="incontext"><a href="S_recursion.html#p-2361">in-context</a></span>
+<dl xmlns:svg="http://www.w3.org/2000/svg" class="description-list narrow">
+<dt>Proposition</dt>
+<dd><p>For each natural number \(n\text{,}\) \(1 + 4 + 7 + \cdots + \left( 3n - 2 \right) = \dfrac{n \left(3n - 1 \right)}{2}\text{.}\)</p></dd>
+<dt>Proof</dt>
+<dd>
+<p>We will prove this proposition using mathematical induction. So we let</p>
+<div class="displaymath">
+\begin{equation*}
+P( n ) = 1 + 4 + 7 + \cdots + \left( 3n - 2 \right)\!\text{.}
+\end{equation*}
+</div>
+<p>Using \(n = 1\text{,}\) we see that \(P( 1 ) = 1\) and hence, \(P( 1 )\) is true.</p>
+<p>We now assume that \(P( k )\) is true. That is,</p>
+<div class="displaymath">
+\begin{equation*}
+1 + 4 + 7 + \cdots + \left( 3k - 2 \right) = \frac{k \left(3k -1 \right)}{2}\text{.}
+\end{equation*}
+</div>
+<p>We then see that</p>
+<div class="displaymath">
+\begin{align*}
+P( k + 1 ) \amp = 1 + 4 + 7 + \cdots + \left( 3k - 2 \right) + 
+\left( 3 (k + 1) - 2 \right)\\
+\amp = \frac{k \left( 3k - 1 \right)}{2} + 3 \left(k + 1 \right) - 2\\
+\amp = \frac{3k^2 - k + 6k + 6 - 4}{2}\\
+\amp = \frac{3k^2 + 5k + 2}{2}\\
+\amp = \frac{\left(k + 1 \right) \left(3k + 2 \right)}{2}\text{.}
+\end{align*}
+</div>
+<p>We have thus proved that \(P( k + 1 )\) is true, and hence, we have proved the proposition.</p>
+</dd>
+</dl>
+<span class="incontext"><a href="S_mathinduction.html#p-2361">in-context</a></span>
 </body>
 </html>

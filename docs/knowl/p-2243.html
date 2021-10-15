@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-08T18:44:46-04:00       *-->
+<!--*       on 2021-10-15T16:15:16-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,24 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">For each natural number \(n\) with \(n \geq 6\text{,}\) \(2^n &gt; \left( n + 1 \right)^2\text{.}\)</p>
-<span class="incontext"><a href="S_otherinduction.html#p-2243">in-context</a></span>
+<p>The primary use of the Principle of Mathematical Induction is to prove statements of the form</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\left( {\forall n \in \mathbb{N}} \right)\left( {P\left( n \right)} \right)\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where \(P( n )\) is some open sentence. Recall that a universally quantified statement like the preceding one is true if and only if the truth set \(T\) of the open sentence \(P( n )\) is the set \(\N\text{.}\) So our goal is to prove that \(T = \N\text{,}\) which is the conclusion of <a class="xref" data-knowl="./knowl/principle-math-induction.html" title="Principle 4.1.3: The Principle of Mathematical Induction">Principle 4.1.3</a> To verify the hypothesis of the <a class="xref" data-knowl="./knowl/principle-math-induction.html" title="Principle 4.1.3: The Principle of Mathematical Induction">Principle 4.1.3</a>, we must</p>
+<ol class="decimal">
+<li><p xmlns:svg="http://www.w3.org/2000/svg">Prove that \(1 \in T\text{.}\) That is, prove that \(P( 1 )\) is true.</p></li>
+<li><p xmlns:svg="http://www.w3.org/2000/svg">Prove that if \(k \in T\text{,}\) then \(\left( {k + 1} \right) \in T\text{.}\) That is, prove that if \(P( k )\) is true, then \(P( {k + 1} )\) is true.</p></li>
+</ol>
+<p class="continuation">The first step is called the <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">basis step</dfn>  or the <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">initial step</dfn>, and the second step is called the <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">inductive step</dfn>.  This means that a proof by mathematical induction will have the following form: <article class="observation remark-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Procedure</span><span class="space"> </span><span class="codenumber">4.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Procedure for a Proof by Mathematical Induction.</span>
+</h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">To prove: \(\left( {\forall n \in \mathbb{N}} \right)\left( {P\left( n \right)} \right)\)</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Basis step: Prove  \(P( 1 )\text{.}\)</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Inductive step: Prove that for each  \(k \in \mathbb{N}\text{,}\) if \(P( k )\) is true, then \(P( {k + 1} )\) is true.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">We can then conclude that \(P( n )\) is true for all \(n \in \mathbb{N}\text{.}\)</p></article></p>
+<span class="incontext"><a href="S_mathinduction.html#p-2243">in-context</a></span>
 </body>
 </html>

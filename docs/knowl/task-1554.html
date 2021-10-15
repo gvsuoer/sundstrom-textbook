@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-08T18:48:39-04:00       *-->
+<!--*       on 2021-10-15T16:21:13-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,8 +15,35 @@
 </head>
 <body>
 <article class="task exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Task</span><span class="space"> </span><span class="codenumber">43.b</span><span class="period">.</span>
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">16.b</span><span class="period">.</span>
 </h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Let \(A = \{ 1, 2, 3 \}\text{.}\) Draw a directed graph of a relation on \(A\) that is circular and draw a directed graph of a relation on \(A\) that is not circular.</p></article><span class="incontext"><a href="S_equivrelations.html#task-1554">in-context</a></span>
+<dl xmlns:svg="http://www.w3.org/2000/svg" class="description-list narrow">
+<dt>Proposition</dt>
+<dd><p>Let \(\sim\) be a relation on \(\Z\) where for all \(a,
+b \in \Z\text{,}\) \(a \sim b\) if and only if \(\left( a + 2b \right) \equiv 0 \pmod 3\text{.}\) The relation \(\sim\) is an equivalence relation on \(\Z\text{.}\)</p></dd>
+<dt>Proof</dt>
+<dd>
+<p>Assume \(a \sim a\text{.}\) Then \(\left( a + 2a \right) \equiv 0 \pmod 3\) since</p>
+<p>\(\left( 3a \right) \equiv 0 \pmod 3\text{.}\) Therefore, \(\sim\) is reflexive on \(\Z\text{.}\) In addition, if \(a \sim b\text{,}\) then \(\left( a + 2b \right) \equiv 0 \pmod 3\text{,}\) and if we multiply both sides of this congruence by 2, we get</p>
+<div class="displaymath">
+\begin{align*}
+2\left( a + 2b \right) \amp \equiv 2 \cdot 0 \pmod 3\\
+\left( 2a + 4b \right) \amp \equiv 0 \pmod 3\\
+\left( 2a + b \right) \amp \equiv 0 \pmod 3\\
+\left( b + 2a \right) \amp \equiv 0 \pmod 3\text{.}
+\end{align*}
+</div>
+<p>This means that \(b \sim a\) and hence, \(\sim\) is symmetric.</p>
+<p>We now assume that \(\left( a + 2b \right) \equiv 0\pmod 3\) and \(\left( b + 2c \right) \equiv 0\pmod 3\text{.}\) By adding the corresponding sides of these two congruences, we obtain</p>
+<div class="displaymath">
+\begin{align*}
+\left( a + 2b \right) + \left( b + 2c \right) \amp \equiv 0 + 0 \pmod 3\\
+\left( a + 3b + 2c \right) \amp \equiv 0 \pmod 3\\
+\left( a + 2c \right) \amp \equiv 0 \pmod 3\text{.}
+\end{align*}
+</div>
+<p>Hence, the relation \(\sim\) is transitive and we have proved that \(\sim\) is an equivalence relation on \(\Z\text{.}\)</p>
+</dd>
+</dl></article><span class="incontext"><a href="S_equivrelations.html#task-1554">in-context</a></span>
 </body>
 </html>

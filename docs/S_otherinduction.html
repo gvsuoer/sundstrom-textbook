@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-15T16:05:18-04:00       *-->
+<!--*       on 2021-10-15T19:41:27-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -125,7 +125,9 @@
 </div></div>
 <nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_mathinduction.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_induction.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_recursion.html" title="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_mathinduction.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_induction.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_recursion.html" title="Next">Next</a></span>
+</div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
 <button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_mathinduction.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C_induction.html" title="Up">Up</a><a class="next-button button toolbar-item" href="S_recursion.html" title="Next">Next</a>
@@ -229,6 +231,8 @@
 <li class="link"><a href="C_writingguides.html" data-scroll="C_writingguides"><span class="codenumber">A</span> <span class="title">Guidelines for Writing Mathematical Proofs</span></a></li>
 <li class="link"><a href="prog-answers.html" data-scroll="prog-answers"><span class="codenumber">B</span> <span class="title">Answers for the Progress Checks</span></a></li>
 <li class="link"><a href="exer-answers.html" data-scroll="exer-answers"><span class="codenumber">C</span> <span class="title">Answers and Hints for Selected Exercises</span></a></li>
+<li class="link"><a href="C_symbols.html" data-scroll="C_symbols"><span class="codenumber">D</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="S_otherinduction"><h2 class="heading hide-type">
@@ -290,7 +294,7 @@
 P( 1 ),P( 2 ),P( 3 ), \ldots\label{eq_5g}\tag{4.15}
 \end{equation}
 </div>
-<p id="p-2403">The inductive step in a proof by induction is to prove that if one statement in this infinite list of statements is true, then the next statement in the list must be true. Now imagine that each statement in <a class="xref" data-knowl="./knowl/eq_5g.html" title="Equation 4.15">(4.15)</a> is a domino in a chain of dominoes. When we prove the inductive step, we are proving that if one domino is knocked over, then it will knock over the next one in the chain. Even if the dominoes are set up so that when one falls, the next one will fall, no dominoes will fall unless we start by knocking one over. This is why we need the basis step in an induction proof. The basis step guarantees that we knock over the first domino. The inductive step, then, guarantees that all dominoes after the first one will also fall.</p>
+<p id="p-2403">The inductive step in a proof by induction is to prove that if one statement in this infinite list of statements is true, then the next statement in the list must be true. Now imagine that each statement in <a class="xref" data-knowl="./knowl/eq_5g.html" title="Equation 4.15">equation (4.15)</a> is a domino in a chain of dominoes. When we prove the inductive step, we are proving that if one domino is knocked over, then it will knock over the next one in the chain. Even if the dominoes are set up so that when one falls, the next one will fall, no dominoes will fall unless we start by knocking one over. This is why we need the basis step in an induction proof. The basis step guarantees that we knock over the first domino. The inductive step, then, guarantees that all dominoes after the first one will also fall.</p>
 <p id="p-2404">Now think about what would happen if instead of knocking over the first domino, we knock over the sixth domino. If we also prove the inductive step, then we would know that every domino after the sixth domino would also fall. This is the idea of the <dfn class="terminology">Extended Principle of Mathematical Induction</dfn>. It is not necessary for the basis step to be the proof that \(P( 1 )\) is true. We can make the basis step be the proof that \(P( M )\) is true, where \(M\) is some natural number. The Extended Principle of Mathematical Induction can be generalized somewhat by allowing \(M\) to be any integer. We are still only concerned with those integers that are greater than or equal to \(M\text{.}\) <article class="principle theorem-like" id="principle-math-induct"><h6 class="heading">
 <span class="type">Principle</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">The Extended Principle of Mathematical Induction.</span>
 </h6>
@@ -323,7 +327,7 @@ P( 1 ),P( 2 ),P( 3 ), \ldots\label{eq_5g}\tag{4.15}
 <dt id="li-319">Inductive step:</dt>
 <dd><p id="p-2414">Prove that for every \(k \in \mathbb{Z}\) with \(k \geq M\text{,}\) if \(P( k )\) is true, then \(P( {k + 1} )\) is true.</p></dd>
 </dl>
-<p class="continuation">We can then conclude that \(P( n )\) is true for all \(n \in \mathbb{Z}\) with \(n \geq M\text{.}\)</p></section><p id="p-2415">This is basically the same procedure as the one for using the Principle of Mathematical Induction. The only difference is that the basis step uses an integer \(M\) other than 1. For this reason, when we write a proof that uses the Extended Principle of Mathematical Induction, we often simply say we are going to use a proof by mathematical induction. We will use the work from <a href="S_otherinduction.html#PA_factorials" class="internal" title="Worksheet: Beginning Activity 1: Exploring a Proposition about Factorials">Beginning Activity 1 </a> to illustrate such a proof.</p>
+<p class="continuation">We can then conclude that \(P( n )\) is true for all \(n \in \mathbb{Z}\) with \(n \geq M\text{.}\)</p></section><p id="p-2415">This is basically the same procedure as the one for using the Principle of Mathematical Induction. The only difference is that the basis step uses an integer \(M\) other than 1. For this reason, when we write a proof that uses the Extended Principle of Mathematical Induction, we often simply say we are going to use a proof by mathematical induction. We will use the work from <a href="S_otherinduction.html#PA_factorials" class="internal" title="Worksheet: Beginning Activity 1: Exploring a Proposition about Factorials">Beginning Activity 1</a> to illustrate such a proof.</p>
 <article class="proposition theorem-like" id="P_factorialinduction"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span>
 </h6>
@@ -374,7 +378,7 @@ k! &gt; 2^k\text{.}\label{eq_5h}\tag{4.16}
 </div></article></article></section><section class="subsection" id="subsection-78"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">The Second Principle of Mathematical Induction</span>
 </h3>
-<p id="p-2429">Let \(P( n )\) be <blockquote class="blockquote" id="blockquote-147">\(n\) is a prime number or \(n\) is a product of prime numbers.</blockquote> (This is related to the work in <a href="S_otherinduction.html#PA_primefactors" class="internal" title="Worksheet: Beginning Activity 2: Prime Factors of a Natural Number">Beginning Activity 2 </a>.)</p>
+<p id="p-2429">Let \(P( n )\) be <blockquote class="blockquote" id="blockquote-147">\(n\) is a prime number or \(n\) is a product of prime numbers.</blockquote> (This is related to the work in <a href="S_otherinduction.html#PA_primefactors" class="internal" title="Worksheet: Beginning Activity 2: Prime Factors of a Natural Number">Beginning Activity 2</a>.)</p>
 <p id="p-2430">Suppose we would like to use induction to prove that \(P( n )\) is true for all natural numbers greater than 1. We have seen that the idea of the inductive step in a proof by induction is to prove that if one statement in an infinite list of statements is true, then the next statement must also be true. The problem here is that when we factor a composite number, we do not get to the previous case. For example, if assume that \(P(39)\) is true and we want to prove that \(P(40)\) is true, we could factor 40 as \(40 = 2 \cdot 20\text{.}\) However, the assumption that \(P(39)\) is true does not help us prove that \(P(40)\) is true.</p>
 <p id="p-2431">This work is intended to show the need for another principle of induction. In the inductive step of a proof by induction, we assume one statement is true and prove the next one is true. The idea of this new principle is to assume that <em class="emphasis">all</em> of the previous statements are true and use this assumption to prove the next statement is true. This is stated formally in terms of subsets of natural numbers in the <dfn class="terminology">Second Principle of Mathematical Induction</dfn>. Rather than stating this principle in two versions, we will state the extended version of the Second Principle. In many cases, we will use \(M = 1\) or \(M = 0\text{.}\)</p>
 <article class="principle theorem-like" id="principle-math-induct2"><h6 class="heading">
@@ -409,7 +413,7 @@ k! &gt; 2^k\text{.}\label{eq_5h}\tag{4.16}
 <dt id="li-325">Inductive step:</dt>
 <dd><p id="p-2441">Let \(k \in \mathbb{Z}\) with \(k \geq M\text{.}\) Prove that if \(P( M ),P( {M + 1} ), \ldots ,P( k )\) are true, then \(P( {k + 1} )\) is true.</p></dd>
 </dl>
-<p class="continuation">We can then conclude that \(P( n )\) is true for all \(n \in \mathbb{Z}\) with \(n \geq M\text{.}\)</p></section><p id="p-2442">We will use this procedure to prove the proposition suggested in <a href="S_otherinduction.html#PA_primefactors" class="internal" title="Worksheet: Beginning Activity 2: Prime Factors of a Natural Number">Beginning Activity 2 </a>.</p>
+<p class="continuation">We can then conclude that \(P( n )\) is true for all \(n \in \mathbb{Z}\) with \(n \geq M\text{.}\)</p></section><p id="p-2442">We will use this procedure to prove the proposition suggested in <a href="S_otherinduction.html#PA_primefactors" class="internal" title="Worksheet: Beginning Activity 2: Prime Factors of a Natural Number">Beginning Activity 2</a>.</p>
 <article class="theorem theorem-like" id="T_primefactors"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.6</span><span class="period">.</span>
 </h6>

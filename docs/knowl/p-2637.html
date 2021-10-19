@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-15T19:52:11-04:00       *-->
+<!--*       on 2021-10-19T10:15:02-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,12 +15,15 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>The <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">Lucas numbers</dfn>  are a sequence of natural numbers \(L_1, L_2, L_3, \ldots, L_n, \ldots \text{,}\) which are defined recursively as follows:</p>
-<ul class="disc">
-<li><p xmlns:svg="http://www.w3.org/2000/svg">\(L_1 = 1\) and \(L_2 = 3\text{,}\) and</p></li>
-<li><p xmlns:svg="http://www.w3.org/2000/svg">For each natural number \(n\text{,}\) \(L_{n+2} = L_{n+1} + L_n\text{.}\)</p></li>
-</ul>
-<p class="continuation">List the first 10 Lucas numbers and the first ten Fibonacci numbers and then prove each of the following propositions. The Second Principle of Mathematical Induction may be needed to prove some of these propositions.</p>
+<p>Let \(P(n)\) be, “\(L_n = 2f_{n+1} - f_n\text{.}\)” First, verify that \(P(1)\) and \(P(2)\) are true.  Now let \(k\) be a natural number with \(k \geq 2\) and assume that \(P(1)\text{,}\) \(P(2)\text{,}\) …, \(P(k)\) are all true. Since \(P(k)\) and \(P(k-1)\) are both assumed to be true, we can use them to help prove that \(P(k+1)\) must then be true as follows:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+L_{k+1} \amp = L_k + L_{k-1}\\
+\amp = \left( 2f_{k+1} - f_k \right) + \left( 2f_k - f_{k-1} \right)\\
+\amp = 2 \left( f_{k+1} + f_k \right) - \left( f_k + f_{k-1} \right)\\
+\amp = 2f_{k+2} - f_{k+1}\text{.}
+\end{align*}
+</div>
 <span class="incontext"><a href="S_recursion.html#p-2637">in-context</a></span>
 </body>
 </html>

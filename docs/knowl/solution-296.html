@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-15T19:59:15-04:00       *-->
+<!--*       on 2021-10-19T10:22:23-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,10 +16,27 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">9.2.6.a.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">9.3.9.a.1</span><span class="period">.</span>
 </h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Use the definition of a countably infinite set.</p>
+<p>Proof: In order to find a bijection \(f\x  ( 0, 1 ) \to ( a, b )\text{,}\) we will use the linear function through the points \(( 0, a )\) and \(( 1, b )\text{.}\) The slope is \(( b - a)\) and the \(y\)-intercept is \(( 0, a )\text{.}\) So define \(f\x  ( 0, 1 ) \to ( a, b )\) by \(f ( x ) = ( b - a )x + a\text{,}\) for each \(x \in ( 0, 1 )\text{.}\) Now, if \(x,
+t \in ( 0, 1 )\) and \(f ( x ) = f ( t )\text{,}\) then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+( b - a )x + a = ( b - a )t + a\text{.}
+\end{equation*}
 </div>
-<span class="incontext"><a href="S_infinitesets.html#solution-296">in-context</a></span>
+<p xmlns:svg="http://www.w3.org/2000/svg">This implies that \(( b - a )x = ( b - a )t\text{,}\) and since \(b - a \ne 0\text{,}\) we can conclude that \(x = t\text{.}\) Therefore, \(f\) is an injection.</p>
+<p>To prove that \(f\) is a surjection, we let \(y \in ( a, b )\text{.}\) If \(x = \dfrac{y - a}{b - a}\text{,}\) then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+f ( x ) \amp = f \!\left( \frac{y - a}{b - a} \right)\\
+\amp = ( b - a ) \!\left( \frac{y - a}{b - a} \right) + a\\
+\amp = ( y - a ) + a\\
+\amp = y\text{.}
+\end{align*}
+</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">This proves that \(f\) is a surjection. Hence, \(f\) is a bijection and \(( 0, 1 ) \approx ( a, b )\text{.}\) Therefore, \(( a, b )\) is uncountable and has cardinality \(\boldsymbol{c}\text{.}\)</p>
+</div>
+<span class="incontext"><a href="S_uncountablesets.html#solution-296">in-context</a></span>
 </body>
 </html>

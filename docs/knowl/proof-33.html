@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-15T19:53:13-04:00       *-->
+<!--*       on 2021-10-19T10:16:05-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,18 +15,36 @@
 </head>
 <body>
 <article class="hiddenproof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Let \(A\text{,}\) \(B\text{,}\) and \(C\) be subsets of some universal set \(U\text{.}\) We will prove that \(A \cup \left( {B \cap C} \right) = \left( {A \cup B} \right) 
-\cap \left( {A \cup C} \right)\) by proving that each set is a subset of the other set.</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">We will first prove that \(A \cup \left( {B \cap C} \right) \subseteq \left( {A \cup B} 
-\right) \cap \left( {A \cup C} \right)\text{.}\) We let \(x \in A \cup \left( {B \cap C} \right)\text{.}\) Then \(x \in A\text{ or } x \in B \cap C\text{.}\)</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">So in one case, if \(x \in A\text{,}\) then \(x \in A \cup B\) and \(x \in A \cup C\text{.}\) This means that \(x \in \left( {A \cup B} \right) \cap \left( {A \cup C} \right)\text{.}\)</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">On the other hand, if \(x \in B \cap C\text{,}\) then \(x \in B\) and \(x \in C\text{.}\) But \(x \in B\) implies that \(x \in A \cup B\text{,}\) and \(x \in C\) implies that \(x \in A \cup C\text{.}\) Since \(x\) is in both sets, we conclude that \(x \in \left( {A \cup B} \right) \cap \left( {A \cup C} \right)\text{.}\) So in both cases, we see that \(x \in \left( {A \cup B} \right) \cap \left( {A \cup C} \right)\text{,}\) and this proves that \(A \cup \left( {B \cap C} \right) \subseteq \left( {A \cup B} \right) 
-\cap \left( {A \cup C} \right)\text{.}\)</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">We next prove that \(\left( {A \cup B} \right) \cap \left( {A \cup C} \right) 
-\subseteq A \cup \left( {B \cap C} \right)\text{.}\) So let \(y \in \left( {A \cup B} \right) \cap \left( {A \cup C} \right)\text{.}\) Then, \(y \in A \cup B\text{ and } y \in A \cup C\text{.}\) We must prove that \(y \in A \cup \left( {B \cap C} \right)\text{.}\) We will consider the two cases where \(y \in A\) or \(y \notin A\text{.}\) In the case where \(y \in A\text{,}\) we see that \(y \in A \cup \left( {B \cap C} \right)\text{.}\)</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">So we consider the case that \(y \notin A\text{.}\) It has been established that \(y \in A \cup B\) and \(y \in A \cup C\text{.}\) Since \(y \notin A\) and \(y \in A \cup B\text{,}\) \(y\) must be an element of \(B\text{.}\) Similarly, since \(y \notin A\) and \(y \in A \cup C\text{,}\) \(y\) must be an element of \(C\text{.}\) Thus, \(y \in B \cap C\) and, hence, \(y \in A \cup \left( {B \cap C} \right)\text{.}\)</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">In both cases, we have proved that \(y \in A \cup \left( {B \cap C} \right)\text{.}\) This proves that \(\left( {A \cup B} \right) \cap \left( {A \cup C} \right) 
-\subseteq A \cup \left( {B \cap C} \right)\text{.}\) The two subset relations establish the equality of the two sets. Thus, \(A \cup \left( {B \cap C} \right) = \left( {A \cup B} \right) 
-\cap \left( {A \cup C} \right)\text{.}\)</p></article><span class="incontext"><a href="S_setproperties.html#proof-33">in-context</a></span>
+<p>We will only prove one of De Morgan's Laws, namely, the one that was explored in <a href="S_setproperties.html#PA_workingwithvenn2" class="internal" title="Beginning Activity: Beginning Activity 1: Exploring a Relationship between Two Sets">Beginning Activty 1</a>. The proofs of the other parts are left as exercises. Let \(A\) and \(B\) be subsets of some universal set \(U\text{.}\) We will prove that \(\left( {A \cup B} \right)^c  = A^c  \cap B^c\) by proving that an element is in \(\left( {A \cup B} \right)^c\) if and only if it is in \(A^c  \cap B^c\text{.}\) So let \(x\) be in the universal set \(U\text{.}\) Then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+x \in \left( {A \cup B} \right)^c \text{  if and only if  }  x \notin A \cup B\text{,}\tag{5.7}
+\end{equation}
+</div>
+<p class="continuation">and</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+x \notin A \cup B\text{  if and only if  } x \notin A\text{  and  } x \notin B\text{.}\tag{5.8}
+\end{equation}
+</div>
+<p class="continuation">Combining <a class="xref" data-knowl="./knowl/eq_4d.html" title="Equation 5.7">(5.7)</a> and <a class="xref" data-knowl="./knowl/eq_4e.html" title="Equation 5.8">(5.8)</a>, we see that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+x \in \left( {A \cup B} \right)^c \text{  if and only if  } x \notin A\text{  and  } x \notin B\text{.}\tag{5.9}
+\end{equation}
+</div>
+<p class="continuation">In addition, we know that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+x \notin A \text{  and  }  x \notin B \text{  if and only if  }  x \in A^c \text{  and  }  x \in B^c\text{,}\tag{5.10}
+\end{equation}
+</div>
+<p class="continuation">and this is true if and only if \(x \in A^c  \cap B^c\text{.}\) So we can use <a class="xref" data-knowl="./knowl/eq_4f.html" title="Equation 5.9">(5.9)</a> and <a class="xref" data-knowl="./knowl/eq_4g.html" title="Equation 5.10">(5.10)</a> to conclude that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x \in \left( {A \cup B} \right)^c \text{  if and only if  } x \in A^c  \cap B^c\text{,}
+\end{equation*}
+</div>
+<p class="continuation">and, hence, that \(\left( {A \cup B} \right)^c  = A^c  \cap B^c\text{.}\)</p></article><span class="incontext"><a href="S_setproperties.html#proof-33">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-15T19:55:23-04:00       *-->
+<!--*       on 2021-10-19T10:18:13-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,30 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Let \(A = \{ a, b, c, d \}\) and \(B = \{ 1, 2, 3 \}\text{.}\) Define the functions \(f\) and \(g\) as follows: <blockquote class="blockquote">\(f \x A \to B\) defined by \(f(a) = 2\text{,}\) \(f(b) = 3\text{,}\) \(f(c) = 1\text{,}\) and \(f(d) = 2\text{.}\)</blockquote> <blockquote class="blockquote">\(g \x B \to B\) defined by \(g(1) = 3\text{,}\) \(g(2) = 1\text{,}\) and \(g(3) = 2\text{.}\)</blockquote></p>
+<p>We use the <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">chain rule</dfn>  in calculus to find the derivative of a composite function. The first step in the process is to recognize a given function as a composite function. This can be done in many ways, but the work in <a href="S_compositionoffunctions.html#PA_verbaldescriptions" class="internal" title="Beginning Activity: Beginning Activity 2: Verbal Descriptions of Functions">Beginning Activity 2</a> can be used to decompose a function in a way that works well with the chain rule. The use of the terms “inner function” and “outer function” can also be helpful. The idea is that we use the last step in the process to represent the outer function, and the steps prior to that to represent the inner function. So for the function,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+f\x \mathbb{R} \to \mathbb{R}\text{  by  } f( x ) = ( {3x + 2} )^3\text{,}
+\end{equation*}
+</div>
+<p class="continuation">the last step in the verbal description table was to cube the result. This means that we will use the function \(g\) (the cubing function) as the outer function and will use the prior steps as the inner function. We will denote the inner function by \(h\text{.}\) So we let \(h\x \R \to \R\) by \(h( x ) = 3x + 2\) and \(g\x \R \to \R\) by \(g( x ) = x^3\text{.}\) Then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+( {g \circ h} )( x ) \amp = g\left( {h( x )} \right)\\
+\amp = g( {3x + 2} )\\
+\amp = ( {3x + 2} )^3\\
+\amp = f( x )\text{.}
+\end{align*}
+</div>
+<p class="continuation">We see that \(g \circ h = f\) and, hence, we have “decomposed” the function \(f\text{.}\) It should be noted that there are other ways to write the function \(f\) as a composition of two functions, but the way just described is the one that works well with the chain rule. In this case, the chain rule gives</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+f'(x) \amp = ( g \circ h )'(x)\\
+\amp = g'(h(x))\; h'(x)\\
+\amp = 3(h(x))^2 \cdot 3\\
+\amp = 9 (3x + 2)^2
+\end{align*}
+</div>
 <span class="incontext"><a href="S_compositionoffunctions.html#p-4079">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-15T19:58:21-04:00       *-->
+<!--*       on 2021-10-19T10:21:25-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,23 +13,73 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="hiddenproof"><p>We will use a proof by contradiction. We assume that there are only finitely many primes, and let</p>
+<body><article class="hiddenproof"><p>The proof of <a class="xref" data-knowl="./knowl/T_lindiop2-1.html" title="Item 1">Item 1</a> is <a class="xref" data-knowl="./knowl/exer_lindioph2.html" title="Exercise 8.3.1">Exercise 8.3.1</a>. For <a class="xref" data-knowl="./knowl/T_lindiop2-2.html" title="Item 2">Item 2</a>, we let \(a\text{,}\) \(b\text{,}\) and \(c\) be integers with \(a \ne 0\) and \(b \ne 0\text{,}\) and let \(d = \gcd( a,b )\text{.}\) We also assume that \(d \mid c\text{.}\) Since \(d = \gcd( a,b )\text{,}\) <a class="xref" data-knowl="./knowl/T_gcdaslincomb.html" title="Theorem 8.1.12">Theorem 8.1.12</a> tells us that \(d\) is a linear combination of \(a\) and \(b\text{.}\) So there exist integers \(s\) and \(t\) such that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+d = as + bt\text{.}\tag{8.13}
+\end{equation}
+</div>
+<p>Since \(d \mid c\text{,}\) there exists an integer \(m\) such that \(c = dm\text{.}\) We can now multiply both sides of <a class="xref" data-knowl="./knowl/eq_lindioph1.html" title="Equation 8.13">equation (8.13)</a> by \(m\) and obtain</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+dm \amp = ( {as + bt} ) m\\
+c \amp a( sm ) + b( tm )\text{.}
+\end{align*}
+</div>
+<p class="continuation">This means that \(x = sm\text{,}\) \(y = tm\) is a solution of \(ax + by = c\text{,}\) and we have proved that the Diophantine equation \(ax + by = c\) has at least one solution.</p>
+<p>Now let \(x = x_0\text{,}\) \(y = y_0\) be any particular solution of \(ax + by = c\text{,}\) let \(k \in \mathbb{Z}\text{,}\) and let</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+x = x_0 + \frac{b}{d} k  \qquad  y = y_0 - \frac{a}{d} k\text{.}\tag{8.14}
+\end{equation}
+</div>
+<p>We now verify that for each \(k \in \mathbb{Z}\text{,}\) the equations in<a class="xref" data-knowl="./knowl/eq_x0andy0.html" title="Equation 8.14">equation (8.14)</a> produce a solution of \(ax + by = c\text{.}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+ax + by \amp = a \!\left( {x_0 + \frac{b}{d} k } \right) + b 
+\!\left( {y_0 - \frac{a}{d} k} \right )\\
+\amp = a x_0 + \frac{ab}{d} k + b y_0 - \frac{ab}{d} k\\
+\amp = a x_0 + b y_0\\
+\amp = c\text{.}
+\end{align*}
+</div>
+<p class="continuation">This proves that the Diophantine equation \(ax + by = c\) has infinitely many solutions.</p>
+<p>We now show that every solution of this equation can be written in the form described in <a class="xref" data-knowl="./knowl/eq_x0andy0.html" title="Equation 8.14">equation (8.14)</a>. So suppose that \(x\) and \(y\) are integers such that \(ax + by = c\text{.}\) Then</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-p_1 , p_2 ,  \ldots , p_m
+( {ax + by} ) - ( {ax_0 + by_0} ) = c - c = 0\text{,}
 \end{equation*}
 </div>
-<p class="continuation">be the list of all the primes. Let</p>
+<p class="continuation">and this equation can be rewritten in the following form:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
-M = p_1 p_2  \cdots p_m  + 1\text{.}\tag{8.10}
+a( {x - x_0} ) = b( {y_0 - y} )\text{.}\tag{8.15}
 \end{equation}
 </div>
-<p>Notice that \(M \ne 1\text{.}\) So \(M\) is either a prime number or, by the Fundamental Theorem of Arithmetic, \(M\) is a product of prime numbers. In either case, \(M\) has a factor that is a prime number. Since we have listed all the prime numbers, this means that there exists a natural number \(j\) with \(1 \leq j \leq m\) such that \(p_j \mid  M\text{.}\) Now, we can rewrite <a class="xref" data-knowl="./knowl/T_infiniteprimes1.html" title="Equation 8.10">equation (8.10)</a> as follows:</p>
+<p>Dividing both sides of this equation by \(d\text{,}\) we obtain</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-1 = M - p_1 p_2  \cdots p_m\text{.}\tag{8.11}
-\end{equation}
+\begin{equation*}
+\left( \frac{a}{d} \right) \left( {x - x_0} \right ) = \left( \frac{b}{d} \right) 
+\left( {y_0 - y} \right)\text{.}
+\end{equation*}
 </div>
-<p xmlns:svg="http://www.w3.org/2000/svg">We have proved \(p_j \mid M\text{,}\) and since \(p_j\) is one of the prime factors of \(p_1 p_2 \cdots p_m\text{,}\) we can also conclude that \(p_j \mid \left( {p_1 p_2 \cdots p_m } \right)\text{.}\) Since \(p_j\) divides both of the terms on the right side of <a class="xref" data-knowl="./knowl/T_infiniteprimes2.html" title="Equation 8.11">equation (8.11)</a>, we can use this equation to conclude that \(p_j\) divides 1. This is a contradiction since a prime number is greater than 1 and cannot divide 1. Hence, our assumption that there are only finitely many primes is false, and so there must be infinitely many primes.</p></article></body>
+<p>This implies that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{a}{d} \text{ divides }  \left( \frac{b}{d} \right) ( {y_0 - y} )\text{.}
+\end{equation*}
+</div>
+<p>However, by <a class="xref" data-knowl="./knowl/exer_gcd-divbyda.html" title="Task 7.a">Task 7.a</a> in <a href="S_primefactorizations.html" class="internal" title="Section 8.2: Prime Numbers and Prime Factorizations">Section 8.2</a>, \(\gcd \!\left( \dfrac{a}{d}, \dfrac{b}{d} \right) = 1\text{,}\) and so by <a class="xref" data-knowl="./knowl/T_relativelyprimeprop.html" title="Theorem 8.2.6">Theorem 8.2.6</a>, we can conclude that \(\dfrac{a}{d}\) divides \(\left( {y_0 - y} \right)\text{.}\) This means that there exists an integer \(k\) such that \(y_0 - y = \dfrac{a}{d} k\text{,}\) and solving for \(y\) gives</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+y = y_0 - \frac{a}{d} k\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Substituting this value for \(y\) in <a class="xref" data-knowl="./knowl/eq_dioph3.html" title="Equation 8.15">equation (8.15)</a> and solving for \(x\) yields</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x = x_0 + \frac{b}{d} k\text{.}
+\end{equation*}
+</div>
+<p class="continuation">This proves that every solution of the Diophantine equation \(ax + by = c\) can be written in the form prescribed in <a class="xref" data-knowl="./knowl/eq_x0andy0.html" title="Equation 8.14">equation (8.14)</a>.</p></article></body>
 </html>

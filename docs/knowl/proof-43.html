@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-15T19:56:10-04:00       *-->
+<!--*       on 2021-10-19T10:18:58-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,26 @@
 </head>
 <body>
 <article class="hiddenproof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">We will prove <a class="xref" data-knowl="./knowl/T_imageofoperations1.html" title="Item 1">Item 1</a>. The proof of <a class="xref" data-knowl="./knowl/T_imageofoperations2.html" title="Item 2">Item 2</a> is <a class="xref" data-knowl="./knowl/exer_sec91-5.html" title="Exercise 5">Exercise 5</a>.</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">Assume that \(f\x S \to T\) is a function and let \(A\) and \(B\) be subsets of \(S\text{.}\) We will prove that \(f ( A \cap B ) \subseteq f ( A ) \cap f ( B )\) by proving that for all \(y \in T\text{,}\) if \(y \in f ( A \cap B )\text{,}\) then \(y \in f ( A ) \cap f ( B )\text{.}\)</p>
-<p>We assume that \(y \in f ( A \cap B )\text{.}\) This means that there exists an \(x \in A \cap B\) such that \(f ( x ) = y\text{.}\) Since \(x \in A \cap B\text{,}\) we conclude that \(x \in A\) and \(x \in B\text{.}\)</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">We will prove <a class="xref" data-knowl="./knowl/T_invimageofoperations2.html" title="Item 2">Item 2</a>. The proof of <a class="xref" data-knowl="./knowl/T_invimageofoperations1.html" title="Item 1">Item 1</a> is <a class="xref" data-knowl="./knowl/exer_sec91-6.html" title="Exercise 6">Exercise 6</a>.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Assume that \(f\x S \to T\) is a function and that \(C\) and \(D\) are subsets of \(T\text{.}\) We will prove that \(f^{-1} ( C \cup D ) = f^{-1} ( C ) \cup f^{-1} ( D )\) by proving that each set is a subset of the other.</p>
+<p>We start by letting \(x\) be an element of \(f^{-1} ( C \cup D )\text{.}\) This means that \(f ( x )\) is an element of \(C \cup D\text{.}\) Hence,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+f ( x ) \in C \text{ or }  f ( x ) \in D\text{.}
+\end{equation*}
+</div>
+<p class="continuation">In the case where \(f ( x ) \in C\text{,}\) we conclude that \(x \in f^{-1} ( C )\text{,}\) and hence that \(x \in f^{-1} ( C ) \cup f^{-1} ( D )\text{.}\) In the case where \(f ( x ) \in D\text{,}\) we see that \(x \in f^{-1} ( D )\text{,}\) and hence that \(x \in f^{-1} ( C ) \cup f^{-1} ( D )\text{.}\) So in both cases, \(x \in f^{-1} ( C ) \cup f^{-1} ( D )\text{,}\) and we have proved that \(f^{-1} ( C \cup D ) \subseteq f^{-1} ( C ) \cup f^{-1} ( D )\text{.}\)</p>
+<p>We now let \(t \in f^{-1} ( C ) \cup f^{-1} ( D )\text{.}\) This means that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+t \in f^{-1} ( C ) \text{ or }  t \in f^{-1} ( D )\text{.}
+\end{equation*}
+</div>
 <ul class="disc">
-<li><p xmlns:svg="http://www.w3.org/2000/svg">Since \(x \in A\) and \(f ( x ) = y\text{,}\) we conclude that \(y \in f ( A )\text{.}\)</p></li>
-<li><p xmlns:svg="http://www.w3.org/2000/svg">Since \(x \in B\) and \(f ( x ) = y\text{,}\) we conclude that \(y \in f ( B )\text{.}\)</p></li>
+<li><p xmlns:svg="http://www.w3.org/2000/svg">In the case where \(t \in f^{-1} ( C )\text{,}\) we conclude that \(f ( t ) \in C\) and hence that \(f ( t ) \in C \cup D\text{.}\) This means that \(t \in f^{-1} ( C \cup D )\text{.}\)</p></li>
+<li><p xmlns:svg="http://www.w3.org/2000/svg">Similarly, when \(t \in f^{-1} ( D )\text{,}\) it follows that \(f ( t ) \in D\) and hence that \(f ( t ) \in C \cup D\text{.}\) This means that \(t \in f^{-1} ( C \cup D )\text{.}\)</p></li>
 </ul>
-<p xmlns:svg="http://www.w3.org/2000/svg">Since \(y \in f ( A )\) and \(y \in f ( B )\text{,}\) \(y \in f ( A ) \cap f ( B )\text{.}\) This proves that if \(y \in f ( A \cap B )\text{,}\) then \(y \in f ( A ) \cap f ( B )\text{.}\) Hence \(f ( A \cap B ) \subseteq f ( A ) \cap f ( B )\text{.}\)</p></article><span class="incontext"><a href="S_functionsonsets.html#proof-43">in-context</a></span>
+<p xmlns:svg="http://www.w3.org/2000/svg">These two cases prove that if \(t \in f^{-1} ( C ) \cup f^{-1} ( D )\text{,}\) then \(t \in f^{-1} ( C \cup D )\text{.}\) Therefore, \(f^{-1} ( C ) \cup f^{-1} ( D ) \subseteq f^{-1} ( C \cup D )\text{.}\)</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Since we have now proved that each of the two sets is a subset of the other set, we can conclude that \(f^{-1} ( C \cup D ) = f^{-1} ( C ) \cup f^{-1} ( D )\text{.}\)</p></article><span class="incontext"><a href="S_functionsonsets.html#proof-43">in-context</a></span>
 </body>
 </html>

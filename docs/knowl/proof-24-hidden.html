@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-15T19:51:47-04:00       *-->
+<!--*       on 2021-10-19T10:14:40-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,32 +13,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="hiddenproof"><p xmlns:svg="http://www.w3.org/2000/svg">We will use a proof by mathematical induction. For this proof, we let \(P( n )\) be “\(n! &gt; 2^n\text{.}\)” We first prove that \(P( 4 )\) is true. Using \(n = 4\text{,}\) we see that \(4! = 24\) and \(2^4 = 16\text{.}\) This means that \(4! &gt; 2^4\) and, hence, \(P\left( 4 \right)\) is true.</p>
-<p>For the inductive step, we prove that for all \(k \in \mathbb{N}\) with \(k \geq 4\text{,}\) if \(P( k )\) is true, then \(P( k + 1 )\) is true. So let \(k\) be a natural number greater than or equal to 4, and assume that \(P( k )\) is true. That is, assume that</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-k! &gt; 2^k\text{.}\tag{4.16}
-\end{equation}
-</div>
-<p>The goal is to prove that \(P( {k + 1} )\) is true or that \(\left( {k + 1} \right)! &gt; 2^{k + 1}\text{.}\) Multiplying both sides of inequality <a class="xref" data-knowl="./knowl/eq_5h.html" title="Equation 4.16">(4.16)</a> by \(k + 1\) gives</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align}
-\left( k + 1 \right) \cdot k! \amp &gt; \left( k + 1 \right) 
-\cdot 2^k ,\text{  or }\notag\\
-\left( k + 1 \right)! \amp &gt; \left( k + 1 \right) \cdot 2^k \text{.}\tag{4.17}
-\end{align}
-</div>
-<p>Now, \(k \geq 4\text{.}\) Thus, \(k + 1 &gt; 2\text{,}\) and hence \(\left( k + 1 \right) \cdot 2^k &gt; 2 \cdot 2^k\text{.}\) This means that</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\left( k + 1 \right) \cdot 2^k &gt; 2^{k + 1}\text{.}\tag{4.18}
-\end{equation}
-</div>
-<p>Inequalities <a class="xref" data-knowl="./knowl/eq_5i.html" title="Equation 4.17">(4.17)</a> and <a class="xref" data-knowl="./knowl/eq_5j.html" title="Equation 4.18">(4.18)</a> show that</p>
+<body><article class="hiddenproof"><p xmlns:svg="http://www.w3.org/2000/svg">We will use the Second Principle of Mathematical Induction. We let \(P( n )\) be \(n\) is a prime number or \(n\) is a product of prime numbers.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">For the basis step, \(P ( 2 )\) is true since 2 is a prime number.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">To prove the inductive step, we let \(k\) be a natural number with \(k \geq 2\text{.}\) We assume that \(P( 2 ),P( 3 ), \ldots ,P( k )\) are true. That is, we assume that each of the natural numbers \(2,3, \ldots ,k\) is a prime number or a product of prime numbers. The goal is to prove that \(P( {k + 1} )\) is true or that \((k + 1)\) is a prime number or a product of prime numbers.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Case 1: If \(\left( {k + 1} \right)\) is a prime number, then \(P( {k + 1} )\) is true.</p>
+<p>Case 2: If \(\left( {k + 1} \right)\) is not a prime number, then \(\left( {k + 1} \right)\) can be factored into a product of natural numbers with each one being less than \(\left( {k + 1} \right)\text{.}\) That is, there exist natural numbers \(a\) and \(b\) with</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-(k + 1)! &gt; 2^{k + 1}\text{,}
+k + 1 = a \cdot b,  \text{ and }   1 \lt  a \leq k \text{ and }   1 \lt  b \leq k\text{.}
 \end{equation*}
 </div>
-<p class="continuation">and this proves that if \(P(k)\) is true, then \(P( {k + 1} )\) is true. Thus, the inductive step has been established, and so by the Extended Principle of Mathematical Induction, \(n! &gt; 2^n\) for each natural number \(n\) with \(n \geq 4\text{.}\)</p></article></body>
+<p xmlns:svg="http://www.w3.org/2000/svg">Using the inductive assumption, this means that \(P( a )\) and \(P( b )\) are both true. Consequently, \(a\) and \(b\) are prime numbers or are products of prime numbers. Since \(k + 1 = a \cdot b\text{,}\) we conclude that \(\left( {k + 1} \right)\) is a product of prime numbers. That is, we conclude that \(P\left( {k + 1} \right)\) is true. This proves the inductive step.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Hence, by the Second Principle of Mathematical Induction, we conclude that \(P( n )\) is true for all \(n \in \mathbb{N}\) with \(n \geq 2\text{,}\) and this means that each natural number greater than 1 is either a prime number or is a product of prime numbers.</p></article></body>
 </html>

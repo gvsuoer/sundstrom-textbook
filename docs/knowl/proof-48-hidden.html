@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-15T19:57:21-04:00       *-->
+<!--*       on 2021-10-19T10:20:45-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,14 +13,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><article class="hiddenproof"><p>Let \(\sim\) be an equivalence relation on the nonempty set \(A\text{,}\) and let \(\mathcal{C}\) be the collection of all equivalence classes determined by \(\sim\text{.}\) That is,</p>
+<body><article class="hiddenproof"><p>Let \(c\) and \(d\) be integers, not both equal to zero. Assume that \(q\) and \(r\) are integers such that \(c = d \cdot q + r\text{.}\) For ease of notation, we will let</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\mathcal{C} = \left\{ { {[ a ]} \mid a \in A} \right\}\!\text{.}
+m = \gcd( {c, d} )\text{  and  }  n = \gcd( {d, r} )\text{.}
 \end{equation*}
 </div>
-<p class="continuation">We will use <a class="xref" data-knowl="./knowl/T_propsofequivclasses.html" title="Theorem 7.3.5">Theorem 7.3.5</a> to prove that \(\mathcal{C}\) is a partition of \(A\text{.}\)</p>
-<p xmlns:svg="http://www.w3.org/2000/svg"><a class="xref" data-knowl="./knowl/T_propsofequivclasses1.html" title="Item 1">Item 1</a> of <a class="xref" data-knowl="./knowl/T_propsofequivclasses.html" title="Theorem 7.3.5">Theorem 7.3.5</a> states that for each \(a \in A\text{,}\) \(a \in [ a ]\text{.}\) In terms of the equivalence classes, this means that each equivalence class is nonempty since each element of \(A\) is in its own equivalence class. Consequently, \(\mathcal{C}\text{,}\) the collection of all equivalence classes determined by \(\sim\text{,}\) satisfies the first two conditions of the definition of a partition.</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">We must now show that the collection \(\mathcal{C}\) of all equivalence classes determined by \(\sim\) satisfies the third condition for being a partition. That is, we need to show that any two equivalence classes are either equal or are disjoint. However, this is exactly the result in <a class="xref" data-knowl="./knowl/T_propsofequivclasses3.html" title="Item 3">Item 3</a> of <a class="xref" data-knowl="./knowl/T_propsofequivclasses.html" title="Theorem 7.3.5">Theorem 7.3.5</a>.</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">Hence, we have proven that the collection \(\mathcal{C}\) of all equivalence classes determined by \(\sim\) is a partition of the set \(A\text{.}\)</p></article></body>
+<p>Now, \(m\) divides \(c\) and \(m\) divides \(d\text{.}\) Consequently, there exist integers \(x\) and \(y\) such that \(c = mx\) and \(d = my\text{.}\) Hence,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+r \amp = c - d \cdot q\\
+r \amp = mx - ( {my} )q\\
+r \amp = m ( {x - yq} )\text{.}
+\end{align*}
+</div>
+<p class="continuation">But this means that \(m\) divides \(r\text{.}\) Since \(m\) divides \(d\) and \(m\) divides \(r\text{,}\) \(m\) is less than or equal to \(\gcd( {d, r} )\text{.}\) Thus, \(m \leq n\text{.}\)</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Using a similar argument, we see that \(n\) divides \(d\) and \(n\) divides \(r\text{.}\) Since \(c = d \cdot q + r\text{,}\) we can prove that \(n\) divides \(c\text{.}\) Hence, \(n\) divides \(c\) and \(n\) divides \(d\text{.}\) Thus, \(n \leq \gcd( {c, d} )\) or \(n \leq m\text{.}\) We now have \(m \leq n\) and \(n \leq m\text{.}\) Hence, \(m = n\) and \(\gcd( {c, d} ) = \gcd( {d, r} )\text{.}\)</p></article></body>
 </html>

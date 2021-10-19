@@ -767,8 +767,8 @@
           Let <m>n</m> be a natural number and let <m>a,
           b, c, \text{ and }   d</m> be integers.
           We assume that <m>a \equiv b \pmod n</m> and
-          <m>c \equiv d \pmod n</m> and will prove that <m>\mod{(a + c)}{(b + d)}{n}</m>.
-          Since <m>\mod{a}{b}{n}</m> and <m>\mod{c}{d}{n}</m>,
+          <m>c \equiv d \pmod n</m> and will prove that <m>(a + c) \equiv (b + d) \pmod n</m>.
+          Since <m>a \equiv b \pmod n</m> and <m>c \equiv d \pmod n</m>,
           <m>n</m> divides <m>(a - b)</m> and <m>(c - d)</m> and so there exist integers 
           <m>k</m> and <m>q</m> such that
           <m>a - b = nk</m> and <m>c - d = nq</m>.
@@ -789,7 +789,7 @@
           Since <m>(k + q)</m> is an integer,
           this proves that <m>n</m> divides <m>(a + c) - (b + d)</m>,
           and hence,
-          we can conclude that <m>\mod{(a + c)}{(b + d)}{n}</m>.
+          we can conclude that <m>(a + c) \equiv (b + d) \pmod n</m>.
         </p>
       </solution>
     </exercise>
@@ -1041,7 +1041,7 @@
         </p>
         <p>
           We also know that <m>16 \equiv 1 \pmod 5</m>.
-          So we have <m>a^2 \equiv 16 \pmod 5</m> and <m>16 \equiv 1 \mod 5</m>,
+          So we have <m>a^2 \equiv 16 \pmod 5</m> and <m>16 \equiv 1 \pmod 5</m>,
           and we can now use the transitive property of congruence
           (<xref ref="T_modprops"></xref>)
           to conclude that <m>a^2 \equiv 1 \pmod 5</m>.
@@ -1070,34 +1070,34 @@
     <solution>
       <p>
         Case 2.
-        <m>\left( \mod{a}{2}{5} \right)</m>.
+        <m>\left( a \equiv 2 \pmod 5 \right)</m>.
         In this case,
         we use <xref ref="T_propsofcong"></xref> to conclude that
         <me>
-          \mod{a^2}{2^2}{5}  \text{ or }   \mod{a^2}{4}{5}
+          a^2 \equiv 2^2 \pmod 5  \text{ or }   a^2 \equiv 4 \pmod 5
         </me>.
       </p>
       <p>
-        This proves that if <m>\mod{a}{2}{5}</m>,
-        then <m>\mod{a^2}{4}{5}</m>.
+        This proves that if <m>a \equiv 2 \pmod 5</m>,
+        then <m>a^2 \equiv 4 \pmod 5</m>.
       </p>
       <p>
         Case 3.
-        <m>\left( \mod{a}{3}{5} \right)</m>.
+        <m>\left( a \equiv 3 \pmod 5 \right)</m>.
         In this case,
         we use <xref ref="T_propsofcong"></xref> to conclude that
         <me>
-          \mod{a^2}{3^2}{5}  \text{ or }   \mod{a^2}{9}{5}
+          a^2 \equiv 3^2 \pmod 5  \text{ or }   a^2 \equiv 9 \pmod 5
         </me>.
       </p>
       <p>
-        We also know that <m>\mod{9}{4}{5}</m>.
-        So we have <m>\mod{a^2}{9}{5}</m> and <m>\mod{9}{4}{5}</m>,
+        We also know that <m>9 \equiv 4 \pmod 5</m>.
+        So we have <m>a^2 \equiv 9 \pmod 5</m> and <m>9 \equiv 4 \pmod 5</m>,
         and we can now use the transitive property of congruence
         (<xref ref="T_modprops"></xref>)
-        to conclude that <m>\mod{a^2}{4}{5}</m>.
-        This proves that if <m>\mod{a}{3}{5}</m>,
-        then <m>\mod{a^2}{4}{5}</m>.
+        to conclude that <m>a^2 \equiv 4 \pmod 5</m>.
+        This proves that if <m>a \equiv 3 \pmod 5</m>,
+        then <m>a^2 \equiv 4 \pmod 5</m>.
       </p>
     </solution>
     </exercise>

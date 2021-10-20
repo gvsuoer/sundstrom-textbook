@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-19T10:15:08-04:00       *-->
+<!--*       on 2021-10-20T18:10:04-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,22 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>In <a href="S_2predicates.html" class="internal" title="Section 2.3: Open Sentences and Sets">Section 2.3</a>, we also defined two sets to be equal when they have precisely the same elements. For example,</p>
+<p>In general, the subset relation is described with the use of a universal quantifier since \(A \subseteq B\) means that for each element \(x\) of \(U\text{,}\) if \(x \in A\text{,}\) then \(x \in B\text{.}\) So when we negate this, we use an existential quantifier as follows:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\left\{ {\left. {x \in \mathbb{R}\,} \right|\;x^2  = 4} \right\} = 
-\left\{ { - 2,\;2} \right\}\!\text{.}
-\end{equation*}
+\begin{align*}
+A \subseteq B \amp \amp \text{ means } \amp \amp 
+\left( {\forall x \in U} \right)\left[ {\left( {x \in A} \right) \to 
+\left( {x \in B} \right)} \right]\\
+A \not\subseteq B \amp \amp \text{ means } \amp \amp 
+\mynot  \left( {\forall x \in U} \right)\left[ {\left( {x \in A} \right) \to 
+\left( {x \in B} \right)} \right]\\
+\amp \amp \amp \amp \left( {\exists x \in U} \right) \mynot  
+\left[ {\left( {x \in A} \right) \to \left( {x \in B} \right)} \right]\\
+\amp \amp \amp \amp \left( {\exists x \in U} \right)
+\left[ {\left( {x \in A} \right) \wedge \left( {x \notin B} \right)} \right]\text{.}
+\end{align*}
 </div>
+<p class="continuation">So we see that \(A \not\subseteq B\) means that there exists an \(x\) in \(U\) such that \(x \in A\) and \(x \notin B\text{.}\)</p>
 <span class="incontext"><a href="S_setoperations.html#p-2713">in-context</a></span>
 </body>
 </html>

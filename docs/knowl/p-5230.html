@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-19T10:20:52-04:00       *-->
+<!--*       on 2021-10-20T18:15:10-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,18 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">We will not give a formal proof of this theorem. Hopefully, the examples and activities provide evidence for its validity. The idea is to use the steps of the Euclidean Algorithm in reverse order to write \(\gcd( {a, b} )\) as a linear combination of \(a\) and \(b\text{.}\) For example, assume the completed table for the Euclidean Algorithm is</p>
+<p>From <a class="xref" data-knowl="./knowl/prog_usingeuclid.html" title="Progress Check 8.1.7">Progress Check 8.1.7</a>, \(\gcd ( {4208, 288} ) = 16\text{.}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+16 \amp = 64 - 48\\
+\amp = 64 - ( {112 - 64} ) = 64 \cdot 2 - 112\\
+\amp = ( {176 - 112} ) \cdot 2 - 112 = 176 \cdot 2 - 112 \cdot 3\\
+\amp = 176 \cdot 2 - ( {288 - 176} ) \cdot 3 = 176 \cdot 5 - 288 \cdot 3\\
+\amp = ( {4208 - 288 \cdot 14} ) \cdot 5 - 288 \cdot 3\\
+\amp = 4208 \cdot 5 + 288 \cdot ( { - 73} )\text{.}
+\end{align*}
+</div>
+<p class="continuation">So \(\gcd ( {4208, 288} ) = 16\text{,}\) and \(16 = 4208 \cdot 5 + 288 \cdot ( { - 73} )\text{.}\)</p>
 <span class="incontext"><a href="S_gcd.html#p-5230">in-context</a></span>
 </body>
 </html>

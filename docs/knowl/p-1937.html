@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-19T10:13:43-04:00       *-->
+<!--*       on 2021-10-20T18:08:39-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,28 +15,26 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Notice that the set of all integers that are congruent to 2 modulo 7 is</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\left\{  n \in \Z \mid n \equiv 2 \pmod7 \right\} = 
-\left\{ \ldots , - 19, - 12, - 5, 2, 9, 16, 23, \ldots \right\}\text{.}
-\end{equation*}
-</div>
-<p class="continuation">If we divide any integer in this set by 7 and write the result according to the Division Algorithm, we will get a remainder of 2. For example,</p>
+<p>To prove the transitive property, we let \(n \in \mathbb{N}\text{,}\) and let \(a\text{,}\) \(b\text{,}\) and \(c\) be integers. We assume that \(a \equiv b \pmod n\) and that \(b \equiv c \pmod n\text{.}\) We will use the definition of congruence modulo \(n\) to prove that \(a \equiv c \pmod n\text{.}\) Since \(a \equiv b \pmod n\) and \(b \equiv c \pmod n\text{,}\) we know that \(n \mid \left( a-b \right)\) and \(n \mid \left( b-c \right)\text{.}\) Hence, there exist integers \(k\) and \(q\) such that</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-2 \amp = 7 \cdot 0 + 2 \amp   -5 \amp = 7 \left( -1 \right) + 2\\
-9 \amp = 7 \cdot 1 + 2 \amp   -12 \amp = 7 \left( -2 \right) +2\\
-16 \amp = 7 \cdot 2 + 2 \amp   -19 \amp = 7 \left( -3 \right) +2\\
-23 \amp = 7 \cdot 3 + 2. \amp    \amp
+a -b \amp = nk\\
+b - c \amp = nq\text{.}
 \end{align*}
 </div>
-<p class="continuation">Is this a coincidence or is this always true? Let's look at the general case. For this, let \(n\) be a natural number and let \(a \in \mathbb{Z}\text{.}\) By the Division Algorithm, there exist unique integers \(q\) and \(r\) such that</p>
+<p class="continuation">By adding the corresponding sides of these two equations, we obtain</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-a = nq + r\text{ and } 0 \leq r \lt  n\text{.}
+\left( {a - b} \right) + \left( {b - c} \right) = nk + nq\text{.}
 \end{equation*}
 </div>
+<p class="continuation">If we simplify the left side of the last equation and factor the right side, we get</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+a - c = n\left( {k + q} \right)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">By the closure property of the integers, \(\left( {k + q} \right) \in \mathbb{Z}\text{,}\) and so this equation proves that \(n \mid \left(a-c \right)\) and hence that \(a \equiv c \pmod n\text{.}\) This completes the proof of the transitive property of congruence modulo \(n\text{.}\)</p>
 <span class="incontext"><a href="S_divalgo.html#p-1937">in-context</a></span>
 </body>
 </html>

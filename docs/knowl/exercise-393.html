@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-20T18:09:58-04:00       *-->
+<!--*       on 2021-10-21T15:48:36-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,35 @@
 </head>
 <body>
 <article class="exercise exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">20<span class="period">.</span></span>
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">21<span class="period">.</span></span><span class="space"> </span><span class="title">Evaluation of Proofs.</span>
 </h6>
-<div class="introduction"><p xmlns:svg="http://www.w3.org/2000/svg">Use the result in <a class="xref" data-knowl="./knowl/exer_lucasnumbers2.html" title="Exercise 19">Exercise 19</a>, previously proven results from <a class="xref" data-knowl="./knowl/exer_lucasnumbers.html" title="Exercise 18">Exercise 18</a>, or mathematical induction to prove each of the following results about Lucas numbers and Fibonacci numbers.</p></div>
+<div class="introduction"><p xmlns:svg="http://www.w3.org/2000/svg">See the instructions for <a class="xref" data-knowl="./knowl/exer_proofeval.html" title="Exercise 19: Evaluation of Proofs">Exercise 19</a> from <a href="S_directproof.html" class="internal" title="Section 3.1: Direct Proofs">Section 3.1</a>.</p></div>
 <article class="task exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="codenumber">(a)</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">For each \(n \in \mathbb{N}\text{,}\) \(L_n = \dfrac{{f_{2n} }}{{f_n }}\text{.}\)</p></article><article class="task exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="codenumber">(b)</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">For each \(n \in \mathbb{N}\text{,}\) \(f_{n+1} = \dfrac{f_n + L_n}{2}\text{.}\)</p></article><article class="task exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="codenumber">(c)</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">For each \(n \in \mathbb{N}\text{,}\) \(L_{n+1} = \dfrac{L_n +5f_n}{2}\text{.}\)</p></article><article class="task exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="codenumber">(d)</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">For each \(n \in \mathbb{N}\) with \(n \geq 2\text{,}\) \(L_n = f_{n+1} + f_{n-1}\text{.}\)</p></article></article><span class="incontext"><a href="S_recursion.html#exercise-393">in-context</a></span>
+<dl xmlns:svg="http://www.w3.org/2000/svg" class="description-list narrow">
+<dt>Proposition</dt>
+<dd><p>Let \(f_n\) be the \(n^\text{ th }\) Fibonacci number, and let \(\alpha\) be the positive solution of the equation \(x^2 = x + 1\text{.}\) So \(\alpha = \dfrac{1 + \sqrt{5}}{2}\text{.}\) For each natural number \(n\text{,}\) \(f_n \leq \alpha^{n-1}\text{.}\)</p></dd>
+<dt>Proof</dt>
+<dd>
+<p>We will use a proof by mathematical induction. For each natural number \(n\text{,}\) we let \(P( n )\) be, “\(f_n \leq \alpha^{n-1}\text{.}\)”</p>
+<p>We first note that \(P( 1 )\) is true since \(f_1 = 1\) and \(\alpha^0 = 1\text{.}\) We also notice that \(P( 2 )\) is true since \(f_2 = 1\) and, hence, \(f_2 \leq \alpha^1\text{.}\)</p>
+<p>We now let \(k\) be a natural number with \(k \geq 2\) and assume that \(P ( 1 )\text{,}\) \(P( 2 )\text{,}\) … , \(P( k )\) are all true. We now need to prove that \(P \left( k + 1 \right)\) is true or that \(f_{k+1} \leq \alpha^k\text{.}\)</p>
+<p>Since \(P( k -1 )\) and \(P ( k )\) are true, we know that \(f_{k-1} \leq \alpha^{k-2}\) and \(f_k \leq \alpha^{k-1}\text{.}\) Therefore,</p>
+<div class="displaymath">
+\begin{align*}
+f_{k + 1} \amp = f_k + f_{k-1}\\
+f_{k + 1} \amp \leq \alpha^{k-1} + \alpha^{k-2}\\
+f_{k + 1} \amp \leq \alpha^{k-2} \left(\alpha + 1 \right)\!\text{.}
+\end{align*}
+</div>
+<p class="continuation">We now use the fact that \(\alpha + 1 = \alpha^2\) and the preceding inequality to obtain</p>
+<div class="displaymath">
+\begin{align*}
+f_{k+1} \amp \leq \alpha^{k-2} \alpha^2\\
+f_{k+1} \amp \leq \alpha^k
+\end{align*}
+</div>
+<p class="continuation">This proves that if \(P( 1 )\text{,}\) \(P( 2 )\text{,}\) … , \(P( k )\) are true, then \(P(k + 1 )\) is true. Hence, by the Second Principle of Mathematical Induction, we conclude that for each natural number \(n\text{,}\) \(f_n \leq \alpha^{n-1}\text{.}\)</p>
+</dd>
+</dl></article></article><span class="incontext"><a href="S_recursion.html#exercise-393">in-context</a></span>
 </body>
 </html>

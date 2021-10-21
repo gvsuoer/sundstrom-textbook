@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-20T18:08:09-04:00       *-->
+<!--*       on 2021-10-21T15:46:45-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,24 +15,45 @@
 </head>
 <body>
 <article class="exercise exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">19<span class="period">.</span></span>
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">20<span class="period">.</span></span><span class="space"> </span><span class="title">Evaluation of Proofs.</span>
 </h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Using only the digits 1 through 9 one time each, is it possible to construct a 3 by 3 magic square with the digit 3 in the center square? That is, is it possible to construct a magic square of the form <div class="tabular-box natural-width"><table class="tabular">
-<tr>
-<td class="c m b2 r2 l2 t2 lines">\(a\)</td>
-<td class="c m b2 r2 l0 t2 lines">\(b\)</td>
-<td class="c m b2 r2 l0 t2 lines">\(c\)</td>
-</tr>
-<tr>
-<td class="c m b2 r2 l2 t0 lines">\(d\)</td>
-<td class="c m b2 r2 l0 t0 lines">3</td>
-<td class="c m b2 r2 l0 t0 lines">\(e\)</td>
-</tr>
-<tr>
-<td class="c m b2 r2 l2 t0 lines">\(f\)</td>
-<td class="c m b2 r2 l0 t0 lines">\(g\)</td>
-<td class="c m b2 r2 l0 t0 lines">\(h\)</td>
-</tr>
-</table></div> where \(a, b, c, d, e, f, g, h\) are all distinct digits, none of which is equal to 3? Either construct such a magic square or prove that it is not possible.</p></article><span class="incontext"><a href="S_contradiction.html#exercise-229">in-context</a></span>
+<div class="introduction"><p xmlns:svg="http://www.w3.org/2000/svg">See the instructions for <a class="xref" data-knowl="./knowl/exer_proofeval.html" title="Exercise 19: Evaluation of Proofs">Exercise 19</a> from <a href="S_directproof.html" class="internal" title="Section 3.1: Direct Proofs">Section 3.1</a>.</p></div>
+<article class="task exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="codenumber">(a)</span></h6>
+<dl xmlns:svg="http://www.w3.org/2000/svg" class="description-list narrow">
+<dt>Proposition</dt>
+<dd><p>For each real number \(x\text{,}\) if \(x\) is irrational and \(m\) is an integer, then \(mx\) is irrational.</p></dd>
+<dt>Proof</dt>
+<dd><p>We assume that \(x\) is a real number and is irrational. This means that for all integers \(a\) and \(b\) with \(b \ne 0\text{,}\) \(x \ne \dfrac{a}{b}\text{.}\) Hence, we may conclude that \(mx \ne \dfrac{ma}{b}\) and, therefore, \(mx\) is irrational.</p></dd>
+</dl></article><article class="task exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="codenumber">(b)</span></h6>
+<dl xmlns:svg="http://www.w3.org/2000/svg" class="description-list narrow">
+<dt>Proposition</dt>
+<dd><p>For all real numbers \(x\) and \(y\text{,}\) if \(x\) is irrational and \(y\) is rational, then \(x + y\) is irrational.</p></dd>
+<dt>Proof</dt>
+<dd>
+<p>We will use a proof by contradiction. So we assume that the proposition is false, which means that there exist real numbers \(x\) and \(y\) where \(x \notin \Q\text{,}\) \(y \in \Q\text{,}\) and \(x + y \in \Q\text{.}\) Since the rational numbers are closed under subtraction and \(x+y\) and \(y\) are rational, we see that</p>
+<div class="displaymath">
+\begin{equation*}
+\left(x + y \right) - y \in \Q\text{.}
+\end{equation*}
+</div>
+<p>However, \(\left( x + y \right) - y = x\text{,}\) and hence we can conclude that \(x \in \Q\text{.}\) This is a contradiction to the assumption that \(x \notin \Q\text{.}\) Therefore, the proposition is not false, and we have proven that for all real numbers \(x\) and \(y\text{,}\) if \(x\) is irrational and \(y\) is rational, then \(x + y\) is irrational.</p>
+</dd>
+</dl></article><article class="task exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="codenumber">(c)</span></h6>
+<dl xmlns:svg="http://www.w3.org/2000/svg" class="description-list narrow">
+<dt>Proposition</dt>
+<dd><p>For each real number \(x\text{,}\) \(x (1 - x) \leq \dfrac{1}{4}\text{.}\)</p></dd>
+<dt>Proof</dt>
+<dd>
+<p>A proof by contradiction will be used. So we assume the proposition is false. This means that there exists a real number \(x\) such that \(x (1 - x) &gt; \dfrac{1}{4}\text{.}\) If we multiply both sides of this inequality by 4, we obtain \(4x (1 - x) &gt; 1\text{.}\) However, if we let \(x = 3\text{,}\) we then see that</p>
+<div class="displaymath">
+\begin{align*}
+4x (1 - x) \amp &gt; 1\\
+4 \cdot 3 (1 - 3) \amp &gt; 1\\
+-12 \amp &gt; 1
+\end{align*}
+</div>
+<p>The last inequality is clearly a contradiction and so we have proved the proposition.</p>
+</dd>
+</dl></article></article><span class="incontext"><a href="S_contradiction.html#exercise-229">in-context</a></span>
 </body>
 </html>

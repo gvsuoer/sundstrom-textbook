@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-20T18:10:45-04:00       *-->
+<!--*       on 2021-10-21T15:49:25-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,19 +15,31 @@
 </head>
 <body>
 <article class="exercise exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">16<span class="period">.</span></span>
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">17<span class="period">.</span></span><span class="space"> </span><span class="title">Evaluation of Proofs.</span>
 </h6>
-<div class="introduction">
-<p>Let \(S\text{,}\) \(T\text{,}\) \(X\text{,}\) and \(Y\) be subsets of some universal set. Assume that</p>
-<ol class="lower-roman cols3">
-<li><p xmlns:svg="http://www.w3.org/2000/svg">\(S \cup T \subseteq X \cup Y\text{;}\)</p></li>
-<li><p xmlns:svg="http://www.w3.org/2000/svg">\(S \cap T = \emptyset\text{;}\) and</p></li>
-<li><p xmlns:svg="http://www.w3.org/2000/svg">\(X \subseteq S\text{.}\)</p></li>
-</ol>
-</div>
+<div class="introduction"><p xmlns:svg="http://www.w3.org/2000/svg">See the instructions for <a class="xref" data-knowl="./knowl/exer_proofeval.html" title="Exercise 19: Evaluation of Proofs">Exercise 19</a> from <a href="S_directproof.html" class="internal" title="Section 3.1: Direct Proofs">Section 3.1</a>.</p></div>
 <article class="task exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="codenumber">(a)</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Using assumption (i), what conclusion(s) can be made if it is known that \(a \in T\text{?}\)</p></article><article class="task exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="codenumber">(b)</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Using assumption (ii), what conclusion(s) can be made if it is known that \(a \in T\text{?}\)</p></article><article class="task exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="codenumber">(c)</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Using all three assumptions, either prove that \(T \subseteq Y\) or explain why it is not possible to do so.</p></article></article><span class="incontext"><a href="S_provingset.html#exercise-450">in-context</a></span>
+<dl xmlns:svg="http://www.w3.org/2000/svg" class="description-list narrow">
+<dt>Proposition</dt>
+<dd><p>Let \(A\text{,}\) \(B\text{,}\) and \(C\) be subsets of some universal set. If \(A \not \subseteq B\) and \(B \not \subseteq C\text{,}\) then \(A \not \subseteq C\text{.}\)</p></dd>
+<dt>Proof</dt>
+<dd><p>We assume that \(A\text{,}\) \(B\text{,}\) and \(C\) are subsets of some universal set and that \(A \not \subseteq B\) and \(B \not \subseteq C\text{.}\) This means that there exists an element \(x\) in \(A\) that is not in \(B\) and there exists an element \(x\) that is in \(B\) and not in \(C\text{.}\) Therefore, \(x \in A\) and \(x \notin C\text{,}\) and we have proved that \(A \not \subseteq C\text{.}\)</p></dd>
+</dl></article><article class="task exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="codenumber">(b)</span></h6>
+<dl xmlns:svg="http://www.w3.org/2000/svg" class="description-list narrow">
+<dt>Proposition</dt>
+<dd><p>Let \(A\text{,}\) \(B\text{,}\) and \(C\) be subsets of some universal set. If \(A \cap B = A \cap C\text{,}\) then \(B = C\text{.}\)</p></dd>
+<dt>Proof</dt>
+<dd>
+<p>We assume that \(A \cap B = A \cap C\) and will prove that \(B = C\text{.}\) We will first prove that \(B \subseteq C\text{.}\)</p>
+<p>So let \(x \in B\text{.}\) If \(x \in A\text{,}\) then \(x \in A \cap B\text{,}\) and hence, \(x \in A \cap C\text{.}\) From this we can conclude that \(x \in C\text{.}\) If \(x \notin A\text{,}\) then \(x \notin A \cap B\text{,}\) and hence, \(x \notin A \cap C\text{.}\) However, since \(x \notin A\text{,}\) we may conclude that \(x \in C\text{.}\) Therefore, \(B \subseteq C\text{.}\)</p>
+<p>The proof that \(C \subseteq B\) may be done in a similar manner. Hence, \(B = C\text{.}\)</p>
+</dd>
+</dl></article><article class="task exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="codenumber">(c)</span></h6>
+<dl xmlns:svg="http://www.w3.org/2000/svg" class="description-list narrow">
+<dt>Proposition</dt>
+<dd><p>Let \(A\text{,}\) \(B\text{,}\) and \(C\) be subsets of some universal set. If \(A \not \subseteq B\) and \(B \subseteq C\text{,}\) then \(A \not \subseteq C\text{.}\)</p></dd>
+<dt>Proof</dt>
+<dd><p>Assume that \(A \not \subseteq B\) and \(B \subseteq C\text{.}\) Since \(A \not \subseteq B\text{,}\) there exists an element \(x\) such that \(x \in A\) and \(x \notin B\text{.}\) Since \(B \subseteq C\text{,}\) we may conclude that \(x \notin C\text{.}\) Hence, \(x \in A\) and \(x \notin C\text{,}\) and we have proved that \(A \not \subseteq C\text{.}\)</p></dd>
+</dl></article></article><span class="incontext"><a href="S_provingset.html#exercise-450">in-context</a></span>
 </body>
 </html>

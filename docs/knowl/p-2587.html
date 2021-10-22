@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-21T15:48:30-04:00       *-->
+<!--*       on 2021-10-22T16:45:14-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,18 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Use the result in <a class="xref" data-knowl="./knowl/exer_sec53-fibf.html" title="Task 2.f">Task 2.f</a> of <a class="xref" data-knowl="./knowl/exer_sec53-fib.html" title="Exercise 2">Exercise 2</a> to prove that</p>
+<p>Let \(P( n )\) be, “\(f_{4n}\) is a multiple of 3.” Since \(f_4 = 3\text{,}\) \(P( 1 )\) is true.  If \(P( k )\) is true, then there exists an integer \(m\) such that \(f_{4k} = 3m\text{.}\)  We now need to prove that \(P(k+1)\) is true or that \(f_{4(k+1)}\) is a multiple of 3.  We use the following:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\frac{f_1^2  + f_2^2  +  \cdots  + f_n^2 + f_{n+1}^2}{f_1^2  + f_2^2  +  \cdots  
-+ f_n^2} = 1 + \frac{f_{n+1}}{f_n}\text{.}
-\end{equation*}
+\begin{align*}
+f_{4 \left( k + 1 \right)} \amp = f_{4k + 4}\\
+\amp = f_{4k+3} + f_{4k+2}\\
+\amp = \left( f_{4k+2} + f_{4k+1} \right) + \left( f_{4k+1} + f_{4k} \right)\\
+\amp = f_{4k+2} + 2 f_{4k+1} + f_{4k}\\
+\amp = \left( f_{4k+1} + f_{4k} \right) + 2 f_{4k+1} + f_{4k}\\
+\amp = 3f_{4k + 1} + 2f_{4k}
+\end{align*}
 </div>
+<p class="continuation">We now use the assumption that \(f_{4k} = 3m\) and the last equation to obtain \(f_{4(k+1)} = 3f_{4k + 1} + 2\cdot 3m\) and hence, \(f_{4(k+1)} = 3 \left( f_{4k +1} + 2m \right)\text{.}\)  Therefore, \(f_{4(k+1)}\) is a multiple of 3 and this completes the proof of the inductive step.</p>
 <span class="incontext"><a href="S_recursion.html#p-2587">in-context</a></span>
 </body>
 </html>

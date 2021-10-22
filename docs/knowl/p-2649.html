@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-21T15:48:37-04:00       *-->
+<!--*       on 2021-10-22T16:45:25-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,15 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">See the instructions for <a class="xref" data-knowl="./knowl/exer_proofeval.html" title="Exercise 19: Evaluation of Proofs">Exercise 19</a> from <a href="S_directproof.html" class="internal" title="Section 3.1: Direct Proofs">Section 3.1</a>.</p>
+<p>Let \(P(n)\) be, “\(L_n = 2f_{n+1} - f_n\text{.}\)” First, verify that \(P(1)\) and \(P(2)\) are true.  Now let \(k\) be a natural number with \(k \geq 2\) and assume that \(P(1)\text{,}\) \(P(2)\text{,}\) …, \(P(k)\) are all true. Since \(P(k)\) and \(P(k-1)\) are both assumed to be true, we can use them to help prove that \(P(k+1)\) must then be true as follows:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+L_{k+1} \amp = L_k + L_{k-1}\\
+\amp = \left( 2f_{k+1} - f_k \right) + \left( 2f_k - f_{k-1} \right)\\
+\amp = 2 \left( f_{k+1} + f_k \right) - \left( f_k + f_{k-1} \right)\\
+\amp = 2f_{k+2} - f_{k+1}\text{.}
+\end{align*}
+</div>
 <span class="incontext"><a href="S_recursion.html#p-2649">in-context</a></span>
 </body>
 </html>

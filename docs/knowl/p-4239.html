@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-21T15:51:51-04:00       *-->
+<!--*       on 2021-10-22T16:50:07-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,15 +15,19 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(A\) and \(B\) be nonempty sets and assume that \(f\x A \to B\) is a bijection. So let \(x \in A\) and let \(f( x ) = y\text{.}\) By <a class="xref" data-knowl="./knowl/T_inversenotation.html" title="Theorem 6.5.7">Theorem 6.5.7</a>, we can conclude that \(f^{ - 1} ( y ) = x\text{.}\) Therefore,</p>
+<p>We now assume that \(f^{ - 1}\) is a function from \(B\) to \(A\) and prove that \(f\) is a bijection. First, to prove that \(f\) is an injection, we assume that \(a_1 , a_2  \in A\) and that \(f( {a_1 } ) = f( {a_2 } )\text{.}\) We wish to show that \(a_1  = a_2\text{.}\) If we let \(b = f( {a_1 } ) = f( {a_2 } )\text{,}\) we can conclude that</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\left( {f^{ - 1}  \circ f} \right)( x ) \amp = f^{ - 1} \! \left( {f( x )} \right)\\
-\amp = f^{-1}( y )\\
-\amp = x\text{.}
-\end{align*}
+\begin{equation*}
+( {a_1 , b} ) \in f \text{ and } ( {a_2 , b} ) \in f\text{.}
+\end{equation*}
 </div>
-<p class="continuation">Hence, for each \(x \in A\text{,}\) \(\left( {f^{ - 1} \circ f} \right)( x ) = x\text{.}\)</p>
+<p class="continuation">But this means that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+( {b, a_1 } ) \in f^{ - 1} \text{ and } ( {b, a_2 } ) \in f^{ - 1}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Since we have assumed that \(f^{ - 1}\) is a function, we can conclude that \(a_1 = a_2\text{.}\) Hence, \(f\) is an injection.</p>
 <span class="incontext"><a href="S_inversefunctions.html#p-4239">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-21T15:54:32-04:00       *-->
+<!--*       on 2021-10-22T16:54:14-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,32 +15,18 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>To write formulas that will generate all the solutions, we first need to find one solution for \(144x + 225y = 27\text{.}\) This can sometimes be done by trial and error, but there is a systematic way to find a solution. The first step is to use the Euclidean Algorithm in reverse to write \(\gcd ( {144, 225} )\) as a linear combination of 144 and 225. See <a href="S_gcd.html" class="internal" title="Section 8.1: The Greatest Common Divisor">Section 8.1</a> to review how to do this. The result from using the Euclidean Algorithm in reverse for this situation is</p>
+<p>We now show that every solution of this equation can be written in the form described in <a class="xref" data-knowl="./knowl/eq_x0andy0.html" title="Equation 8.14">equation (8.14)</a>. So suppose that \(x\) and \(y\) are integers such that \(ax + by = c\text{.}\) Then</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-144 \cdot 11 + 225 \cdot ( {-7} ) = 9\text{.}
+( {ax + by} ) - ( {ax_0 + by_0} ) = c - c = 0\text{,}
 \end{equation*}
 </div>
-<p class="continuation">If we multiply both sides of this equation by 3, we obtain</p>
+<p class="continuation">and this equation can be rewritten in the following form:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-144 \cdot 33 + 225 \cdot ( {-21} ) = 27\text{.}
-\end{equation*}
+\begin{equation}
+a( {x - x_0} ) = b( {y_0 - y} )\text{.}\tag{8.15}
+\end{equation}
 </div>
-<p class="continuation">This means that \(x_0 = 33,
-y_0 = -21\) is a solution of the linear Diophantine equation \(144x + 225y = 27\text{.}\) We can now use <a class="xref" data-knowl="./knowl/T_lindioph2.html" title="Theorem 8.3.8">Theorem 8.3.8</a> to conclude that all solutions of this Diophantine equation can be written in the form</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-x = 33 + \frac{225}{9} k \qquad y = -21 -\frac{144}{9} k\text{,}
-\end{equation*}
-</div>
-<p class="continuation">where \(k \in \mathbb{Z}\text{.}\) Simplifying, we see that all solutions can be written in the form</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-x = 33 + 25 k \qquad y = -21 -16 k\text{,}
-\end{equation*}
-</div>
-<p class="continuation">where \(k \in \mathbb{Z}\text{.}\)</p>
 <span class="incontext"><a href="S_diophantine.html#p-5491">in-context</a></span>
 </body>
 </html>

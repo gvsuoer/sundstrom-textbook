@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-22T16:53:48-04:00       *-->
+<!--*       on 2021-10-25T15:02:48-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,30 +14,75 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="hiddenproof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">The first part of this theorem was proved in <a class="xref" data-knowl="./knowl/T_primefactors.html" title="Theorem 4.2.8">Theorem 4.2.8</a>. We will prove the second part of the theorem by induction on \(n\) using the Second Principle of Mathematical Induction. (See <a href="S_otherinduction.html" class="internal" title="Section 4.2: Other Forms of Mathematical Induction">Section 4.2</a>.) For each natural number \(n\) with \(n &gt; 1\text{,}\) let \(P( n )\) be <blockquote class="blockquote">If \(n = p_1 p_2 \cdots p_r\) and \(n = q_1 q_2 \cdots q_s\text{,}\) where \(p_1 , p_2 , \ldots, p_r\) and \(q_1 , q_2 , \ldots, q_s\) are primes with \(p_1 \leq p_2 \leq \cdots \leq p_r\) and \(q_1 \leq q_2 \leq \cdots \leq q_s\text{,}\) then \(r = s\text{,}\) and for each \(j\) from 1 to \(r\text{,}\) \(p_j = q_j\text{.}\)</blockquote></p>
-<p xmlns:svg="http://www.w3.org/2000/svg">For the basis step, we notice that since 2 is a prime number, its only factorization is \(2 = 1 \cdot 2\text{.}\) This means that the only equation of the form \(2 = p_1 p_2 \cdots p_r\text{,}\) where \(p_1 , p_2 , \ldots,
-p_r\) are prime numbers, is the case where \(r = 1\) and \(p_1 = 2\text{.}\) This proves that \(P( 2 )\) is true.</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">For the inductive step, let \(k \in \mathbb{N}\) with \(k \geq 2\text{.}\) We will assume that \(P( 2 ), P( 3 ), \ldots , P( k )\) are true. The goal now is to prove that \(P( {k + 1} )\) is true. To prove this, we assume that \((k + 1)\) has two prime factorizations and then prove that these prime factorizations are the same. So we assume that <blockquote class="blockquote">\(k + 1 = p_1 p_2 \cdots p_r\) and that \(k + 1 = q_1 q_2 \cdots q_s\text{,}\) where \(p_1 , p_2 , \ldots, p_r\) and \(q_1 , q_2 , \ldots, q_s\) are primes with \(p_1 \leq p_2 \leq \cdots \leq p_r\) and \(q_1 \leq q_2 \leq \cdots \leq q_s\text{.}\)</blockquote> We must now prove that \(r = s\text{,}\) and for each \(j\) from 1 to \(r\text{,}\) \(p_j = q_j\text{.}\) We can break our proof into two cases: (1) \(p_1 \leq q_1\text{;}\) and (2) \(q_1 \leq p_1\text{.}\) Since one of these must be true, and since the proofs will be similar, we can assume, without loss of generality, that \(p_1 \leq q_1\text{.}\)</p>
-<p>Since \(k + 1 = p_1 p_2  \cdots p_r\text{,}\) we know that \(p_1 \mid \left( {k + 1} \right)\text{,}\) and hence we may conclude that \(p_1 \mid \left( {q_1 q_2  \cdots q_s } \right)\text{.}\) We now use <a class="xref" data-knowl="./knowl/C_primedivides.html" title="Corollary 8.2.7">Corollary 8.2.7</a> to conclude that there exists a \(j\) with \(1 \leq j \leq s\) such that \(p_1 \mid q_j\text{.}\) Since \(p_1\) and \(q_j\) are primes, we conclude that</p>
+<article class="proof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof</span></h6>
+<p>The proof of <a class="xref" data-knowl="./knowl/T_lindiop2-1.html" title="Item 1">Item 1</a> is <a class="xref" data-knowl="./knowl/exer_lindioph2.html" title="Exercise 8.3.1">Exercise 8.3.1</a>. For <a class="xref" data-knowl="./knowl/T_lindiop2-2.html" title="Item 2">Item 2</a>, we let \(a\text{,}\) \(b\text{,}\) and \(c\) be integers with \(a \ne 0\) and \(b \ne 0\text{,}\) and let \(d = \gcd( a,b )\text{.}\) We also assume that \(d \mid c\text{.}\) Since \(d = \gcd( a,b )\text{,}\) <a class="xref" data-knowl="./knowl/T_gcdaslincomb.html" title="Theorem 8.1.12">Theorem 8.1.12</a> tells us that \(d\) is a linear combination of \(a\) and \(b\text{.}\) So there exist integers \(s\) and \(t\) such that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+d = as + bt\text{.}\tag{8.13}
+\end{equation}
+</div>
+<p>Since \(d \mid c\text{,}\) there exists an integer \(m\) such that \(c = dm\text{.}\) We can now multiply both sides of <a class="xref" data-knowl="./knowl/eq_lindioph1.html" title="Equation 8.13">equation (8.13)</a> by \(m\) and obtain</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+dm \amp = ( {as + bt} ) m\\
+c \amp a( sm ) + b( tm )\text{.}
+\end{align*}
+</div>
+<p class="continuation">This means that \(x = sm\text{,}\) \(y = tm\) is a solution of \(ax + by = c\text{,}\) and we have proved that the Diophantine equation \(ax + by = c\) has at least one solution.</p>
+<p>Now let \(x = x_0\text{,}\) \(y = y_0\) be any particular solution of \(ax + by = c\text{,}\) let \(k \in \mathbb{Z}\text{,}\) and let</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+x = x_0 + \frac{b}{d} k  \qquad  y = y_0 - \frac{a}{d} k\text{.}\tag{8.14}
+\end{equation}
+</div>
+<p>We now verify that for each \(k \in \mathbb{Z}\text{,}\) the equations in<a class="xref" data-knowl="./knowl/eq_x0andy0.html" title="Equation 8.14">equation (8.14)</a> produce a solution of \(ax + by = c\text{.}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+ax + by \amp = a \!\left( {x_0 + \frac{b}{d} k } \right) + b 
+\!\left( {y_0 - \frac{a}{d} k} \right )\\
+\amp = a x_0 + \frac{ab}{d} k + b y_0 - \frac{ab}{d} k\\
+\amp = a x_0 + b y_0\\
+\amp = c\text{.}
+\end{align*}
+</div>
+<p class="continuation">This proves that the Diophantine equation \(ax + by = c\) has infinitely many solutions.</p>
+<p>We now show that every solution of this equation can be written in the form described in <a class="xref" data-knowl="./knowl/eq_x0andy0.html" title="Equation 8.14">equation (8.14)</a>. So suppose that \(x\) and \(y\) are integers such that \(ax + by = c\text{.}\) Then</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-p_1  = q_j\text{.}
+( {ax + by} ) - ( {ax_0 + by_0} ) = c - c = 0\text{,}
 \end{equation*}
 </div>
-<p>We have also assumed that \(q_1  \leq q_j\) for all \(j\) and, hence, we know that \(q_1  \leq p_1\text{.}\) However, we have also assumed that \(p_1  \leq q_1\text{.}\) Hence,</p>
+<p class="continuation">and this equation can be rewritten in the following form:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+a( {x - x_0} ) = b( {y_0 - y} )\text{.}\tag{8.15}
+\end{equation}
+</div>
+<p>Dividing both sides of this equation by \(d\text{,}\) we obtain</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-p_1  = q_1\text{.}
+\left( \frac{a}{d} \right) \left( {x - x_0} \right ) = \left( \frac{b}{d} \right) 
+\left( {y_0 - y} \right)\text{.}
 \end{equation*}
 </div>
-<p>We now use this and the fact that \(k + 1 = p_1 p_2  \cdots p_r  = q_1 q_2  \cdots q_s\) to conclude that</p>
+<p>This implies that</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-p_2  \cdots p_r  = q_2  \cdots q_s\text{.}
+\frac{a}{d} \text{ divides }  \left( \frac{b}{d} \right) ( {y_0 - y} )\text{.}
 \end{equation*}
 </div>
-<p xmlns:svg="http://www.w3.org/2000/svg">The product in the previous equation is less that \(k + 1\text{.}\) Hence, we can apply our induction hypothesis to these factorizations and conclude that \(r = s\text{,}\) and for each \(j\) from 2 to \(r\text{,}\) \(p_j = q_j\text{.}\)</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">This completes the proof that if \(P( 2 ), P( 3 ), \ldots , P( k )\) are true, then \(P( {k + 1} )\) is true. Hence, by the Second Principle of Mathematical Induction, we conclude that \(P( n )\) is true for all \(n \in \mathbb{N}\) with \(n \geq 2\text{.}\) This completes the proof of the theorem.</p></article><span class="incontext"><a href="S_primefactorizations.html#proof-51">in-context</a></span>
+<p>However, by <a class="xref" data-knowl="./knowl/exer_gcd-divbyda.html" title="Task 7.a">Task 7.a</a> in <a href="S_primefactorizations.html" class="internal" title="Section 8.2: Prime Numbers and Prime Factorizations">Section 8.2</a>, \(\gcd \!\left( \dfrac{a}{d}, \dfrac{b}{d} \right) = 1\text{,}\) and so by <a class="xref" data-knowl="./knowl/T_relativelyprimeprop.html" title="Theorem 8.2.5">Theorem 8.2.5</a>, we can conclude that \(\dfrac{a}{d}\) divides \(\left( {y_0 - y} \right)\text{.}\) This means that there exists an integer \(k\) such that \(y_0 - y = \dfrac{a}{d} k\text{,}\) and solving for \(y\) gives</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+y = y_0 - \frac{a}{d} k\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Substituting this value for \(y\) in <a class="xref" data-knowl="./knowl/eq_dioph3.html" title="Equation 8.15">equation (8.15)</a> and solving for \(x\) yields</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x = x_0 + \frac{b}{d} k\text{.}
+\end{equation*}
+</div>
+<p class="continuation">This proves that every solution of the Diophantine equation \(ax + by = c\) can be written in the form prescribed in <a class="xref" data-knowl="./knowl/eq_x0andy0.html" title="Equation 8.14">equation (8.14)</a>. \(\blacksquare\)</p></article><span class="incontext"><a href="S_diophantine.html#proof-51">in-context</a></span>
 </body>
 </html>

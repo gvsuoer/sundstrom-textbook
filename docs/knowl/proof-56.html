@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-22T16:54:45-04:00       *-->
+<!--*       on 2021-10-25T15:03:13-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,30 +14,25 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="hiddenproof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">We will use a proof using induction on \(m\text{.}\) For each \(m \in \mathbb{N}\text{,}\) let \(P( m )\) be, “If \(A \subseteq \mathbb{N}_m\text{,}\) then \(A\) is finite and \(\text{ card} ( A ) \leq m\text{.}\)”</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">We first prove that \(P( 1 )\) is true. If \(A \subseteq \mathbb{N}_1\text{,}\) then \(A = \emptyset\) or \(A = \left\{ 1 \right\}\text{,}\) both of which are finite and have cardinality less than or equal to the cardinality of \(\mathbb{N}_1\text{.}\) This proves that \(P( 1 )\) is true.</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">For the inductive step, let \(k \in \mathbb{N}\) and assume that \(P( k )\) is true. That is, assume that if \(B \subseteq \mathbb{N}_k\text{,}\) then \(B\) is a finite set and \(\text{ card} ( B ) \leq k\text{.}\) We need to prove that \(P( k+1 )\) is true.</p>
-<p>So assume that \(A\) is a subset of \(\mathbb{N}_{k+1}\text{.}\) Then \(A - \left\{ k+1 \right\}\) is a subset of \(\mathbb{N}_k\text{.}\) Since \(P( k )\) is true, \(A - \left\{ k+1 \right\}\) is a finite set and</p>
+<article class="proof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof</span></h6>
+<p>Let \(B\) be a finite set and assume that \(A\) is a proper subset of \(B\text{.}\) Since \(A\) is a proper subset of \(B\text{,}\) there exists an element \(x\) in \(B - A\text{.}\) This means that \(A\) is a subset of \(B - \left\{ x \right\}\text{.}\) Hence, by <a class="xref" data-knowl="./knowl/T_finitesubsets.html" title="Theorem 9.1.8">Theorem 9.1.8</a>,</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\text{ card}  \!\left( A - \left\{ k+1 \right\} \right) \leq k\text{.}
+\text{ card}  ( A ) \leq \text{ card}  \!\left( B - \left\{ x \right\} \right)\text{.}
 \end{equation*}
 </div>
-<p xmlns:svg="http://www.w3.org/2000/svg">There are two cases to consider: Either \(k+1 \in A\) or \(k+1 \not \in A\text{.}\)</p>
-<p>If \(k+1 \not \in A\text{,}\) then \(A = A - \left\{ k+1 \right\}\text{.}\) Hence, \(A\) is finite and</p>
+<p>Also, by <a class="xref" data-knowl="./knowl/C_removeone.html" title="Corollary 9.1.9">Corollary 9.1.9</a></p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\text{ card}  ( A ) \leq k \lt  k+1\text{.}
+\text{ card}  \!\left( B - \left\{ x \right\} \right) = \text{ card}  ( B ) - 1\text{.}
 \end{equation*}
 </div>
-<p>If \(k+1 \in A\text{,}\) then \(A = ( A - \left\{ k+1 \right\} ) \cup \left\{ k+1 \right\}\text{.}\) Hence, by <a class="xref" data-knowl="./knowl/L_addone.html" title="Lemma 9.1.6">Lemma 9.1.6</a>, \(A\) is a finite set and</p>
+<p>Hence, we may conclude that \(\text{ card}  ( A ) \leq \text{ card}  ( B ) - 1\) and that</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\text{ card}  ( A ) = \text{ card}  \!\left(  A - \left\{ k+1 \right\}  \right) + 1\text{.}
+\text{ card}  ( A ) \lt  \text{ card}  ( B )\text{.}
 \end{equation*}
 </div>
-<p xmlns:svg="http://www.w3.org/2000/svg">Since \(\text{ card} \!\left( A - \left\{ k+1 \right\} \right) \leq k\text{,}\) we can conclude that \(\text{ card} ( A ) \leq k + 1\text{.}\)</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">This means that we have proved the inductive step. Hence, by mathematical induction, for each \(m \in \mathbb{N}\text{,}\) if \(A \subseteq \mathbb{N}_m\text{,}\) then \(A\) is finite and \(\text{ card} ( A ) \leq m\text{.}\)</p></article><span class="incontext"><a href="S_finitesets.html#proof-56">in-context</a></span>
+<p><a class="xref" data-knowl="./knowl/T_equivfinitesets.html" title="Theorem 9.1.5">Theorem 9.1.5</a> implies that \(B \not \approx A\text{.}\) This proves that a finite set is not equivalent to any of its proper subsets. \(\blacksquare\)</p></article><span class="incontext"><a href="S_finitesets.html#proof-56">in-context</a></span>
 </body>
 </html>

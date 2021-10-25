@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-22T16:30:58-04:00       *-->
+<!--*       on 2021-10-25T14:43:20-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -235,7 +235,50 @@
 <li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="pretext-content"></div></main>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="worksheet" id="PA_contradicton"><h3 class="heading hide-type">
+<span class="type">Beginning Activity</span> <span class="codenumber"></span> <span class="title">Beginning Activity 1: Proof by Contradiction</span><div class="print-links">
+<a href="PA_contradicton-a4.html" class="a4">A4</a><a href="PA_contradicton-letter.html" class="us">US</a>
+</div>
+</h3>
+<p id="p-1541">In <a class="xref" data-knowl="./knowl/D_tautology.html" title="Definition 2.1.7">Definition 2.1.7</a> in <a href="S_2logop.html" class="internal" title="Section 2.1: Statements and Logical Operators">Section 2.1</a>, we defined a <dfn class="terminology">tautology</dfn>  to be a compound statement \(S\) that is true for all possible combinations of truth values of the component statements that are part of \(S\text{.}\) We also defined <dfn class="terminology">contradiction</dfn>  to be a compound statement that is false for all possible combinations of truth values of the component statements that are part of \(S\text{.}\)</p>
+<p id="p-1542">That is, a tautology is necessarily true in all circumstances, and a contradiction is necessarily false in all circumstances.</p>
+<article class="exercise exercise-like" id="exercise-201"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="p-1543">Use truth tables to explain why \(\left( {P \vee \mynot P} \right)\) is a tautology and \(\left( {P \wedge \mynot P} \right)\) is a contradiction.</p></article><p id="p-1544">Another method of proof that is frequently used in mathematics is a <dfn class="terminology">proof by contradiction.</dfn>  This method is based on the fact that a statement \(X\) can only be true or false (and not both). The idea is to prove that the statement \(X\) is true by showing that it cannot be false. This is done by assuming that \(X\) is false and proving that this leads to a contradiction. (The contradiction often has the form \(\left( {R \wedge \mynot R} \right)\text{,}\) where \(R\) is some statement.) When this happens, we can conclude that the assumption that the statement \(X\) is false is incorrect and hence \(X\) cannot be false. Since it cannot be false, then \(X\) must be true.</p>
+<p id="p-1545">A logical basis for the contradiction method of proof is the tautology</p>
+<div class="displaymath">
+\begin{equation*}
+\left[ \mynot  X \to C \right] \to X\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where \(X\) is a statement and \(C\) is a contradiction. The following truth table establishes this tautology. <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b3 r2 l0 t0 lines">\(X\)</td>
+<td class="c m b3 r3 l0 t0 lines">\(C\)</td>
+<td class="c m b3 r1 l0 t0 lines">\(\mynot X\)</td>
+<td class="c m b3 r2 l0 t0 lines">\(\mynot X \to C\)</td>
+<td class="c m b3 r0 l0 t0 lines">\((\mynot X \to C) \to X\)</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r3 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">F</td>
+<td class="c m b0 r2 l0 t0 lines">T</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r3 l0 t0 lines">F</td>
+<td class="c m b0 r1 l0 t0 lines">T</td>
+<td class="c m b0 r2 l0 t0 lines">F</td>
+<td class="c m b0 r0 l0 t0 lines">T</td>
+</tr>
+</table></div> This tautology shows that if \(\mynot X\) leads to a contradiction, then \(X\) must be true. The previous truth table also shows that the statement \(\mynot X \to C\) is logically equivalent to \(X\text{.}\) This means that if we have proved that \(\mynot X\) leads to a contradiction, then we have proved statement \(X\text{.}\) So if we want to prove a statement \(X\) using a proof by contradiction, we assume that \(\mynot X\) is true and show that this leads to a contradiction.</p>
+<p id="p-1546">When we try to prove the conditional statement, “If \(P\) then \(Q\)” using a proof by contradiction, we must assume that \(P \to Q\) is false and show that this leads to a contradiction.</p>
+<article class="exercise exercise-like" id="exercise-202"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="p-1547">Use a truth table to show that \(\mynot \left( {P \to Q} \right)\) is logically equivalent to \(P \wedge \mynot Q\text{.}\)</p></article><p id="p-1548">The preceding logical equivalency shows that when we assume that \mbox{\(P \to Q\)} is false, we are assuming that \(P\) is true and \(Q\) is false. If we can prove that this leads to a contradiction, then we have shown that \(\mynot \left( {P \to Q} \right)\) is false and hence that \(P \to Q\) is true.</p>
+<article class="exercise exercise-like" id="LA_contradiction2-1"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="p-1549">Give a counterexample to show that the following statement is false. <blockquote class="blockquote" id="blockquote-108">For each real number \(x\text{,}\) \(\dfrac{1}{x(1 - x)} \geq 4\text{.}\)</blockquote></p></article><article class="exercise exercise-like" id="exercise-204"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="p-1550">When a statement is false, it is sometimes possible to add an assumption that will yield a true statement. This is usually done by using a conditional statement. So instead of working with the statement in <a class="xref" data-knowl="./knowl/LA_contradiction2-1.html" title="Exercise 3">Exercise 3</a>, we will work with a related statement that is obtained by adding an assumption (or assumptions) to the hypothesis. <blockquote class="blockquote" id="blockquote-109">For each real number \(x\text{,}\) if \(0 \lt x \lt 1\text{,}\) then \(\dfrac{1}{x(1 - x)} \geq 4\text{.}\)</blockquote> To begin a proof by contradiction for this statement, we need to assume the negation of the statement. To do this, we need to negate the entire statement, including the quantifier. Recall that the negation of a statement with a universal quantifier is a statement that contains an existential quantifier. (See <a class="xref" data-knowl="./knowl/T_negations.html" title="Theorem 2.4.5">Theorem 2.4.5</a>.) With this in mind, carefully write down all assumptions made at the beginning of a proof by contradiction for this statement.</p></article></section></div></main>
 </div>
 </body>
 </html>

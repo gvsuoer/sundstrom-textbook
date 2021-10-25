@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-22T16:50:45-04:00       *-->
+<!--*       on 2021-10-25T15:00:24-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -19,8 +19,29 @@
 </h6>
 <p>Let \(f\x S \to T\) be a function and let \(C\) and \(D\) be subsets of \(T\text{.}\) Then</p>
 <ol class="decimal">
-<li><p xmlns:svg="http://www.w3.org/2000/svg">\(f^{-1} ( C \cap D ) = f^{-1} ( C ) \cap f^{-1} ( D )\) </p></li>
-<li><p xmlns:svg="http://www.w3.org/2000/svg">\(f^{-1} ( C \cup D ) = f^{-1} ( C ) \cup f^{-1} ( D )\) </p></li>
-</ol></article><article class="hiddenproof"><a class="proof-knowl original" data-knowl="./knowl/proof-43-hidden.html" title="Proof 6.6.9.1"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><span class="incontext"><a href="S_functionsonsets.html#T_invimageofoperations">in-context</a></span>
+<li><p>\(f^{-1} ( C \cap D ) = f^{-1} ( C ) \cap f^{-1} ( D )\) </p></li>
+<li><p>\(f^{-1} ( C \cup D ) = f^{-1} ( C ) \cup f^{-1} ( D )\) </p></li>
+</ol></article><article class="proof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p>We will prove <a class="xref" data-knowl="./knowl/T_invimageofoperations2.html" title="Item 2">Item 2</a>. The proof of <a class="xref" data-knowl="./knowl/T_invimageofoperations1.html" title="Item 1">Item 1</a> is <a class="xref" data-knowl="./knowl/exer_sec91-6.html" title="Exercise 6">Exercise 6</a>.</p>
+<p>Assume that \(f\x S \to T\) is a function and that \(C\) and \(D\) are subsets of \(T\text{.}\) We will prove that \(f^{-1} ( C \cup D ) = f^{-1} ( C ) \cup f^{-1} ( D )\) by proving that each set is a subset of the other.</p>
+<p>We start by letting \(x\) be an element of \(f^{-1} ( C \cup D )\text{.}\) This means that \(f ( x )\) is an element of \(C \cup D\text{.}\) Hence,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+f ( x ) \in C \text{ or }  f ( x ) \in D\text{.}
+\end{equation*}
+</div>
+<p class="continuation">In the case where \(f ( x ) \in C\text{,}\) we conclude that \(x \in f^{-1} ( C )\text{,}\) and hence that \(x \in f^{-1} ( C ) \cup f^{-1} ( D )\text{.}\) In the case where \(f ( x ) \in D\text{,}\) we see that \(x \in f^{-1} ( D )\text{,}\) and hence that \(x \in f^{-1} ( C ) \cup f^{-1} ( D )\text{.}\) So in both cases, \(x \in f^{-1} ( C ) \cup f^{-1} ( D )\text{,}\) and we have proved that \(f^{-1} ( C \cup D ) \subseteq f^{-1} ( C ) \cup f^{-1} ( D )\text{.}\)</p>
+<p>We now let \(t \in f^{-1} ( C ) \cup f^{-1} ( D )\text{.}\) This means that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+t \in f^{-1} ( C ) \text{ or }  t \in f^{-1} ( D )\text{.}
+\end{equation*}
+</div>
+<ul class="disc">
+<li><p>In the case where \(t \in f^{-1} ( C )\text{,}\) we conclude that \(f ( t ) \in C\) and hence that \(f ( t ) \in C \cup D\text{.}\) This means that \(t \in f^{-1} ( C \cup D )\text{.}\)</p></li>
+<li><p>Similarly, when \(t \in f^{-1} ( D )\text{,}\) it follows that \(f ( t ) \in D\) and hence that \(f ( t ) \in C \cup D\text{.}\) This means that \(t \in f^{-1} ( C \cup D )\text{.}\)</p></li>
+</ul>
+<p>These two cases prove that if \(t \in f^{-1} ( C ) \cup f^{-1} ( D )\text{,}\) then \(t \in f^{-1} ( C \cup D )\text{.}\) Therefore, \(f^{-1} ( C ) \cup f^{-1} ( D ) \subseteq f^{-1} ( C \cup D )\text{.}\)</p>
+<p>Since we have now proved that each of the two sets is a subset of the other set, we can conclude that \(f^{-1} ( C \cup D ) = f^{-1} ( C ) \cup f^{-1} ( D )\text{.}\) \(\blacksquare\)</p></article><span class="incontext"><a href="S_functionsonsets.html#T_invimageofoperations">in-context</a></span>
 </body>
 </html>

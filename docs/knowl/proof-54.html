@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-22T16:54:42-04:00       *-->
+<!--*       on 2021-10-25T15:03:11-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,7 +14,30 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="hiddenproof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Suppose that \(A\) is a finite nonempty set, \(B\) is a set, and \(A \approx B\text{.}\) Since \(A\) is a finite set, there exists a \(k \in \mathbb{N}\) such that \(A \approx \mathbb{N}_k\text{.}\) We also have assumed that \(A \approx B\) and so by <a class="xref" data-knowl="./knowl/T_equivsets2.html" title="Item 2.b">Item 2.b</a> of <a class="xref" data-knowl="./knowl/T_equivsets.html" title="Theorem 9.1.2">Theorem 9.1.2</a> (in <a href="S_finitesets.html#PA_equivsets2" class="internal" title="Beginning Activity: Beginning Activity 2: Equivalent Sets, Part 2">Beginning Activity 2</a>), we can conclude that \(B \approx A\text{.}\) Since \(A \approx \mathbb{N}_k\text{,}\) we can use <a class="xref" data-knowl="./knowl/T_equivsets3.html" title="Item 2.c">Item 2.c</a> of <a class="xref" data-knowl="./knowl/T_equivsets.html" title="Theorem 9.1.2">Theorem 9.1.2</a> to conclude that \(B \approx \mathbb{N}_k\text{.}\) Thus, \(B\) is finite and has the same cardinality as \(A\text{.}\)</p></article><span class="incontext"><a href="S_finitesets.html#proof-54">in-context</a></span>
+<article class="proof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof</span></h6>
+<p>We will use a proof using induction on \(m\text{.}\) For each \(m \in \mathbb{N}\text{,}\) let \(P( m )\) be, “If \(A \subseteq \mathbb{N}_m\text{,}\) then \(A\) is finite and \(\text{ card} ( A ) \leq m\text{.}\)”</p>
+<p>We first prove that \(P( 1 )\) is true. If \(A \subseteq \mathbb{N}_1\text{,}\) then \(A = \emptyset\) or \(A = \left\{ 1 \right\}\text{,}\) both of which are finite and have cardinality less than or equal to the cardinality of \(\mathbb{N}_1\text{.}\) This proves that \(P( 1 )\) is true.</p>
+<p>For the inductive step, let \(k \in \mathbb{N}\) and assume that \(P( k )\) is true. That is, assume that if \(B \subseteq \mathbb{N}_k\text{,}\) then \(B\) is a finite set and \(\text{ card} ( B ) \leq k\text{.}\) We need to prove that \(P( k+1 )\) is true.</p>
+<p>So assume that \(A\) is a subset of \(\mathbb{N}_{k+1}\text{.}\) Then \(A - \left\{ k+1 \right\}\) is a subset of \(\mathbb{N}_k\text{.}\) Since \(P( k )\) is true, \(A - \left\{ k+1 \right\}\) is a finite set and</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\text{ card}  \!\left( A - \left\{ k+1 \right\} \right) \leq k\text{.}
+\end{equation*}
+</div>
+<p>There are two cases to consider: Either \(k+1 \in A\) or \(k+1 \not \in A\text{.}\)</p>
+<p>If \(k+1 \not \in A\text{,}\) then \(A = A - \left\{ k+1 \right\}\text{.}\) Hence, \(A\) is finite and</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\text{ card}  ( A ) \leq k \lt  k+1\text{.}
+\end{equation*}
+</div>
+<p>If \(k+1 \in A\text{,}\) then \(A = ( A - \left\{ k+1 \right\} ) \cup \left\{ k+1 \right\}\text{.}\) Hence, by <a class="xref" data-knowl="./knowl/L_addone.html" title="Lemma 9.1.6">Lemma 9.1.6</a>, \(A\) is a finite set and</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\text{ card}  ( A ) = \text{ card}  \!\left(  A - \left\{ k+1 \right\}  \right) + 1\text{.}
+\end{equation*}
+</div>
+<p>Since \(\text{ card} \!\left( A - \left\{ k+1 \right\} \right) \leq k\text{,}\) we can conclude that \(\text{ card} ( A ) \leq k + 1\text{.}\)</p>
+<p>This means that we have proved the inductive step. Hence, by mathematical induction, for each \(m \in \mathbb{N}\text{,}\) if \(A \subseteq \mathbb{N}_m\text{,}\) then \(A\) is finite and \(\text{ card} ( A ) \leq m\text{.}\) \(\blacksquare\)</p></article><span class="incontext"><a href="S_finitesets.html#proof-54">in-context</a></span>
 </body>
 </html>

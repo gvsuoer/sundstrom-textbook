@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-22T16:32:19-04:00       *-->
+<!--*       on 2021-10-25T14:44:54-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -240,7 +240,7 @@
 </h2>
 <section class="worksheet" id="PA_recursivesequences"><h3 class="heading hide-type">
 <span class="type">Beginning Activity</span> <span class="codenumber"></span> <span class="title">Beginning Activity 1: Recursively Defined Sequences</span><div class="print-links">
-<a href="PA_recursivesequences-A4.html" class="a4">A4</a><a href="PA_recursivesequences-letter.html" class="us">US</a>
+<a href="PA_recursivesequences-a4.html" class="a4">A4</a><a href="PA_recursivesequences-letter.html" class="us">US</a>
 </div>
 </h3>
 <p id="p-2532">In a proof by mathematical induction, we “start with a first step” and then prove that we can always go from one step to the next step. We can use this same idea to define a sequence as well. We can think of a <dfn class="terminology">sequence</dfn>  as an infinite list of numbers that are indexed by the natural numbers (or some infinite subset of \(\mathbb{N} \cup \left\{ 0 \right\}\)). We often write a sequence in the following form:</p>
@@ -250,7 +250,7 @@ a_1, a_2, \ldots,a_n, \ldots\text{.}
 \end{equation*}
 </div>
 <p id="p-2533">The number \(a_n\) is called the \(n^\text{ th }\) term of the sequence. One way to define a sequence is to give a specific formula for the \(n^\text{ th }\) term of the sequence such as \(a_n = \dfrac{1}{n}\text{.}\)</p>
-<p id="p-2534">Another way to define a sequence is to give a specific definition of the first term (or the first few terms) and then state, in general terms, how to determine \(a_{n + 1}\) in terms of \(n\) and the first \(n\) terms \(a_1 ,a_2 , \ldots ,a_n\text{.}\) This process is known as <dfn class="terminology">definition by recursion</dfn> and is  also called a <dfn class="terminology">recursive definition</dfn>.  The specific definition of the first term is called the <dfn class="terminology">initial condition</dfn>,  and the general definition of \(a_{n + 1}\) in terms of \(n\) and the first \(n\) terms \(a_1 ,a_2 , \ldots ,a_n\) is called the <dfn class="terminology">recurrence relation</dfn>.  (When more than one term is defined explicitly, we say that these are the initial conditions.) For example, we can define a sequence recursively as follows: <blockquote class="blockquote" id="blockquote-153">\(b_1 = 16\text{,}\) and for each \(n \in \mathbb{N}\text{,}\) \(b_{n + 1} = \dfrac{1}{2}b_n\text{.}\)</blockquote></p>
+<p id="p-2534">Another way to define a sequence is to give a specific definition of the first term (or the first few terms) and then state, in general terms, how to determine \(a_{n + 1}\) in terms of \(n\) and the first \(n\) terms \(a_1 ,a_2 , \ldots ,a_n\text{.}\) This process is known as <dfn class="terminology">definition by recursion</dfn> and is  also called a <dfn class="terminology">recursive definition</dfn>.  The specific definition of the first term is called the <dfn class="terminology">initial condition</dfn>,  and the general definition of \(a_{n + 1}\) in terms of \(n\) and the first \(n\) terms \(a_1 ,a_2 , \ldots ,a_n\) is called the <dfn class="terminology">recurrence relation</dfn>.  (When more than one term is defined explicitly, we say that these are the initial conditions.) For example, we can define a sequence recursively as follows: <blockquote class="blockquote" id="blockquote-154">\(b_1 = 16\text{,}\) and for each \(n \in \mathbb{N}\text{,}\) \(b_{n + 1} = \dfrac{1}{2}b_n\text{.}\)</blockquote></p>
 <p id="p-2535">Using \(n = 1\) and then \(n = 2\text{,}\) we then see that</p>
 <div class="displaymath">
 \begin{align*}
@@ -261,10 +261,10 @@ b_2 \amp = \frac{1}{2} b_1 \amp     b_3 \amp = \frac{1}{2} b_2\\
 </div>
 <article class="exercise exercise-like" id="PA_recursivesequences1"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
 <p id="p-2536">Calculate \(b_4\) through \(b_{10}\text{.}\) What seems to be happening to the values of \(b_n\) as \(n\) gets larger?</p></article><article class="exercise exercise-like" id="PA_recursivesequences2"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="p-2537">Define a sequence recursively as follows: <blockquote class="blockquote" id="blockquote-154">\(T_1 = 16\text{,}\) and for each \(n \in \mathbb{N}\text{,}\) \(T_{n + 1} = 16 + \dfrac{1}{2}T_n\text{.}\)</blockquote> Then \(T_2 = 16 + \dfrac{1}{2} T_1 = 16 + 8 = 24\text{.}\) Calculate \(T_3\) through \(T_{10}\text{.}\) What seems to be happening to the values of \(T_n\) as \(n\) gets larger?</p></article><p id="p-2538">The sequences in <a class="xref" data-knowl="./knowl/PA_recursivesequences1.html" title="Exercise 1">Exercise 1</a> and <a class="xref" data-knowl="./knowl/PA_recursivesequences2.html" title="Exercise 2">Exercise 2</a> can be generalized as follows: Let \(a\) and \(r\) be real numbers. Define two sequences recursively as follows: <blockquote class="blockquote" id="blockquote-155">\(a_1 = a\text{,}\) and for each \(n \in \mathbb{N}\text{,}\) \(a_{n + 1} = r \cdot a_n\text{.}\)</blockquote> <blockquote class="blockquote" id="blockquote-156">\(S_1 = a\text{,}\) and for each \(n \in \mathbb{N}\text{,}\) \(S_{n + 1} = a + r \cdot S_n\text{.}\)</blockquote></p>
+<p id="p-2537">Define a sequence recursively as follows: <blockquote class="blockquote" id="blockquote-155">\(T_1 = 16\text{,}\) and for each \(n \in \mathbb{N}\text{,}\) \(T_{n + 1} = 16 + \dfrac{1}{2}T_n\text{.}\)</blockquote> Then \(T_2 = 16 + \dfrac{1}{2} T_1 = 16 + 8 = 24\text{.}\) Calculate \(T_3\) through \(T_{10}\text{.}\) What seems to be happening to the values of \(T_n\) as \(n\) gets larger?</p></article><p id="p-2538">The sequences in <a class="xref" data-knowl="./knowl/PA_recursivesequences1.html" title="Exercise 1">Exercise 1</a> and <a class="xref" data-knowl="./knowl/PA_recursivesequences2.html" title="Exercise 2">Exercise 2</a> can be generalized as follows: Let \(a\) and \(r\) be real numbers. Define two sequences recursively as follows: <blockquote class="blockquote" id="blockquote-156">\(a_1 = a\text{,}\) and for each \(n \in \mathbb{N}\text{,}\) \(a_{n + 1} = r \cdot a_n\text{.}\)</blockquote> <blockquote class="blockquote" id="blockquote-157">\(S_1 = a\text{,}\) and for each \(n \in \mathbb{N}\text{,}\) \(S_{n + 1} = a + r \cdot S_n\text{.}\)</blockquote></p>
 <article class="exercise exercise-like" id="exercise-362"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <p id="p-2539">Determine formulas (in terms of \(a\) and \(r\)) for \(a_2\) through \(a_6\text{.}\) What do you think \(a_n\) is equal to (in terms of \(a\text{,}\) \(r\text{,}\) and \(n\))?</p></article><article class="exercise exercise-like" id="exercise-363"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
-<p id="p-2540">Determine formulas (in terms of \(a\) and \(r\)) for \(S_2\) through \(S_6\text{.}\) What do you think \(S_n\) is equal to (in terms of \(a\text{,}\) \(r\text{,}\) and \(n\))?</p></article><p id="p-2541">In <a href="S_otherinduction.html#PA_factorials" class="internal" title="Beginning Activity: Beginning Activity 1: Exploring a Proposition about Factorials">Beginning Activity 1</a> in <a href="S_otherinduction.html" class="internal" title="Section 4.2: Other Forms of Mathematical Induction">Section 4.2</a>, for each natural number \(n\text{,}\) we defined \(n!\text{,}\) read <dfn class="terminology">\(n\) factorial</dfn>,  as the product of the first \(n\) natural numbers. We also defined \(0!\) to be equal to 1. Now recursively define a sequence of numbers \(a_0 ,a_1 ,a_2 , \ldots\) as follows: <blockquote class="blockquote" id="blockquote-157">\(a_0 = 1\text{,}\) and</blockquote> <blockquote class="blockquote" id="blockquote-158">for each nonnegative integer \(n\text{,}\) \(a_{n + 1} = \left( {n + 1} \right) \cdot a_n\text{.}\)</blockquote></p>
+<p id="p-2540">Determine formulas (in terms of \(a\) and \(r\)) for \(S_2\) through \(S_6\text{.}\) What do you think \(S_n\) is equal to (in terms of \(a\text{,}\) \(r\text{,}\) and \(n\))?</p></article><p id="p-2541">In <a href="S_otherinduction.html#PA_factorials" class="internal" title="Beginning Activity: Beginning Activity 1: Exploring a Proposition about Factorials">Beginning Activity 1</a> in <a href="S_otherinduction.html" class="internal" title="Section 4.2: Other Forms of Mathematical Induction">Section 4.2</a>, for each natural number \(n\text{,}\) we defined \(n!\text{,}\) read <dfn class="terminology">\(n\) factorial</dfn>,  as the product of the first \(n\) natural numbers. We also defined \(0!\) to be equal to 1. Now recursively define a sequence of numbers \(a_0 ,a_1 ,a_2 , \ldots\) as follows: <blockquote class="blockquote" id="blockquote-158">\(a_0 = 1\text{,}\) and</blockquote> <blockquote class="blockquote" id="blockquote-159">for each nonnegative integer \(n\text{,}\) \(a_{n + 1} = \left( {n + 1} \right) \cdot a_n\text{.}\)</blockquote></p>
 <p id="p-2542">Using \(n=0\text{,}\) we see that this implies that \(a_1 =1 \cdot a_0 = 1 \cdot 1 = 1\text{.}\) Then using \(n = 1\text{,}\) we see that</p>
 <div class="displaymath">
 \begin{equation*}
@@ -277,13 +277,13 @@ a_2 = 2 a_1 = 2 \cdot 1 = 2\text{.}
 <p id="p-2545">Do you think it is possible to calculate \(a_n\) for any natural number \(n\text{?}\) Explain.</p></article><article class="exercise exercise-like" id="exercise-367"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
 <p id="p-2546">Compare the values of \(a_0 ,a_1 ,a_2 ,a_3 ,a_4 ,a_5\text{,}\) and \(a_6\) with those of \(0!,1!,2!,3!,4!,5!\text{,}\) and \(6!\text{.}\) What do you observe? We will use mathematical induction to prove a result about this sequence in <a class="xref" data-knowl="./knowl/exer_sec51-factorial.html" title="Exercise 1">Exercise 1</a>.</p></article></section><section class="worksheet" id="PA_fibonaccinumbers"><h3 class="heading hide-type">
 <span class="type">Beginning Activity</span> <span class="codenumber"></span> <span class="title">Beginning Activity 2: The Fibonacci Numbers</span><div class="print-links">
-<a href="PA_fibonaccinumbers-A4.html" class="a4">A4</a><a href="PA_fibonaccinumbers-letter.html" class="us">US</a>
+<a href="PA_fibonaccinumbers-a4.html" class="a4">A4</a><a href="PA_fibonaccinumbers-letter.html" class="us">US</a>
 </div>
 </h3>
 <p id="p-2547">The <dfn class="terminology">Fibonacci numbers</dfn>  are a sequence of natural numbers \(f_1 ,f_2 ,f_3 , \ldots ,f_n , \ldots\) defined recursively as follows:</p>
 <ul class="disc">
-<li id="li-352"><p id="p-2548">\(f_1 = 1\) and \(f_2 = 1\text{,}\) and</p></li>
-<li id="li-353"><p id="p-2549">For each natural number \(n\text{,}\) \(f_{n + 2} = f_{n + 1} + f_n\text{.}\)</p></li>
+<li id="li-357"><p id="p-2548">\(f_1 = 1\) and \(f_2 = 1\text{,}\) and</p></li>
+<li id="li-358"><p id="p-2549">For each natural number \(n\text{,}\) \(f_{n + 2} = f_{n + 1} + f_n\text{.}\)</p></li>
 </ul>
 <p class="continuation">In words, the recursion formula states that for any natural number \(n\) with \(n \geq 3\text{,}\) the \(n^{th}\) Fibonacci number is the sum of the two previous Fibonacci numbers. So we see that</p>
 <div class="displaymath">
@@ -300,7 +300,7 @@ f_5  \amp = f_4  + f_3 = 3 + 2 = 5\text{.}
 <p id="p-2553">Record any other observations about the values of the Fibonacci numbers or any patterns that you observe in the sequence of Fibonacci numbers. If necessary, compute more Fibonacci numbers.</p></article></section><section class="subsection" id="subsection-80"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">The Fibonacci Numbers</span>
 </h3>
-<p id="p-2554">The Fibonacci numbers form a famous sequence in mathematics that was investigated by Leonardo of Pisa  (1170 — 1250), who is better known as Fibonacci. Fibonacci introduced this sequence to the Western world as a solution of the following problem: <blockquote class="blockquote" id="blockquote-159">Suppose that a pair of adult rabbits (one male, one female) produces a pair of rabbits (one male, one female) each month.  Also, suppose that newborn rabbits become adults in two months and produce another pair of rabbits.  Starting with one adult pair of rabbits, how many pairs of rabbits will be produced each month for one year?</blockquote></p>
+<p id="p-2554">The Fibonacci numbers form a famous sequence in mathematics that was investigated by Leonardo of Pisa  (1170 — 1250), who is better known as Fibonacci. Fibonacci introduced this sequence to the Western world as a solution of the following problem: <blockquote class="blockquote" id="blockquote-160">Suppose that a pair of adult rabbits (one male, one female) produces a pair of rabbits (one male, one female) each month.  Also, suppose that newborn rabbits become adults in two months and produce another pair of rabbits.  Starting with one adult pair of rabbits, how many pairs of rabbits will be produced each month for one year?</blockquote></p>
 <p id="p-2555">Since we start with one adult pair, there will be one pair produced the first month, and since there is still only one adult pair, one pair will also be produced in the second month (since the new pair produced in the first month is not yet mature). In the third month, two pairs will be produced, one by the original pair and one by the pair which was produced in the first month. In the fourth month, three pairs will be produced, and in the fifth month, five pairs will be produced.</p>
 <p id="p-2556">The basic rule is that in a given month after the first two months, the number of adult pairs is the number of adult pairs one month ago plus the number of pairs born two months ago. This is summarized in <a class="xref" data-knowl="./knowl/T_fibonacci.html" title="Table 4.3.1: Fibonacci Numbers">Table 4.3.1</a>, where the number of pairs produced is equal to the number of adult pairs, and the number of adult pairs follows the Fibonacci sequence of numbers that we developed in <a href="S_recursion.html#PA_fibonaccinumbers" class="internal" title="Beginning Activity: Beginning Activity 2: The Fibonacci Numbers">Beginning Activity 2</a>.</p>
 <figure class="table table-like" id="T_fibonacci"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">4.3.1<span class="period">.</span></span><span class="space"> </span>Fibonacci Numbers</figcaption><div class="tabular-box natural-width"><table class="tabular">
@@ -356,7 +356,7 @@ f_5  \amp = f_4  + f_3 = 3 + 2 = 5\text{.}
 <td class="c m b0 r2 l0 t0 lines">21</td>
 <td class="c m b0 r0 l0 t0 lines">34</td>
 </tr>
-</table></div></figure><p id="p-2557">Historically, it is interesting to note that Indian mathematicians were studying these types of numerical sequences well before Fibonacci. In particular, about fifty years before Fibonacci introduced his sequence, Acharya Hemachandra (sometimes spelled Hemchandra)  (1089 — 1173) considered the following problem, which is from the biography of Hemachandra in the <span class="booktitle">MacTutor History of Mathematics Archive</span> at <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Hemchandra/" target="_blank"><code class="code-inline tex2jax_ignore">mathshistory.st-andrews.ac.uk/Biographies/Hemchandra</code></a>. <blockquote class="blockquote" id="blockquote-160">Suppose we assume that lines are composed of syllables which are either short or long. Suppose also that each long syllable takes twice as long to articulate as a short syllable. A line of length \(n\) contains \(n\) units where each short syllable is one unit and each long syllable is two units. Clearly a line of length \(n\) units takes the same time to articulate regardless of how it is composed. Hemchandra asks: How many different combinations of short and long syllables are possible in a line of length \(n\text{?}\)</blockquote></p>
+</table></div></figure><p id="p-2557">Historically, it is interesting to note that Indian mathematicians were studying these types of numerical sequences well before Fibonacci. In particular, about fifty years before Fibonacci introduced his sequence, Acharya Hemachandra (sometimes spelled Hemchandra)  (1089 — 1173) considered the following problem, which is from the biography of Hemachandra in the <span class="booktitle">MacTutor History of Mathematics Archive</span> at <a class="external" href="https://mathshistory.st-andrews.ac.uk/Biographies/Hemchandra/" target="_blank"><code class="code-inline tex2jax_ignore">mathshistory.st-andrews.ac.uk/Biographies/Hemchandra</code></a>. <blockquote class="blockquote" id="blockquote-161">Suppose we assume that lines are composed of syllables which are either short or long. Suppose also that each long syllable takes twice as long to articulate as a short syllable. A line of length \(n\) contains \(n\) units where each short syllable is one unit and each long syllable is two units. Clearly a line of length \(n\) units takes the same time to articulate regardless of how it is composed. Hemchandra asks: How many different combinations of short and long syllables are possible in a line of length \(n\text{?}\)</blockquote></p>
 <p id="p-2558">This is an important problem in the Sanskrit language since Sanskrit meters are based on duration rather than on accent as in the English Language. The answer to this question generates a sequence similar to the Fibonacci sequence. Suppose that \(h_n\) is the number of patterns of syllables of length \(n\text{.}\) We then see that \(h_1 = 1\) and \(h_2 = 2\text{.}\) Now let \(n\) be a natural number and consider pattern of length \(n + 2\text{.}\) This pattern either ends in a short syllable or a long syllable. If it ends in a short syllable and this syllable is removed, then there is a pattern of length \(n+1\text{,}\) and there are \(h_{n+1}\) such patterns. Similarly, if it ends in a long syllable and this syllable is removed, then there is a pattern of length \(n\text{,}\) and there are \(h_n\) such patterns. From this, we conclude that</p>
 <div class="displaymath">
 \begin{equation*}
@@ -372,7 +372,7 @@ h_{n+2} = h_{n+1} + h_n\text{.}
 \end{equation*}
 </div>
 <p class="continuation">As with many propositions associated with definitions by recursion, we can prove this using mathematical induction. The first step is to define the appropriate open sentence. For this, we can let \(P(n)\) be, “\(f_{3n}\) is an even natural number.”</p>
-<p id="p-2561">Notice that \(P( 1 )\) is true since \(f_3 = 2\text{.}\) We now need to prove the inductive step. To do this, we need to prove that for each \(k \in \mathbb{N}\text{,}\) <blockquote class="blockquote" id="blockquote-161">if \(P( k )\) is true, then \(P( {k + 1} )\) is true.</blockquote> That is, we need to prove that for each \(k \in \mathbb{N}\text{,}\) if \(f_{3k}\) is even, then \(f_{3\left( {k + 1} \right)}\) is even.</p>
+<p id="p-2561">Notice that \(P( 1 )\) is true since \(f_3 = 2\text{.}\) We now need to prove the inductive step. To do this, we need to prove that for each \(k \in \mathbb{N}\text{,}\) <blockquote class="blockquote" id="blockquote-162">if \(P( k )\) is true, then \(P( {k + 1} )\) is true.</blockquote> That is, we need to prove that for each \(k \in \mathbb{N}\text{,}\) if \(f_{3k}\) is even, then \(f_{3\left( {k + 1} \right)}\) is even.</p>
 <p id="p-2562">So let's analyze this conditional statement using a know-show table.</p>
 <div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
@@ -519,7 +519,7 @@ a_{k+1} \amp = \left( k + 1 \right)a_k\\
 <p class="continuation">This proves the inductive step that  if \(P(k)\) is true, then \(P(k+1)\) is true.</p>
 </div></div>
 </div></article><article class="exercise exercise-like" id="exer_sec53-fib"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<div class="introduction" id="introduction-216"><p id="p-2585">Assume that \(f_1 ,f_2 , \ldots ,f_n , \ldots\) are the Fibonacci numbers. Prove each of the following:</p></div>
+<div class="introduction" id="introduction-217"><p id="p-2585">Assume that \(f_1 ,f_2 , \ldots ,f_n , \ldots\) are the Fibonacci numbers. Prove each of the following:</p></div>
 <article class="task exercise-like" id="task-795"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <p id="p-2586">For each \(n \in \mathbb{N}\text{,}\) \(f_{4n}\) is a multiple of 3.</p>
 <div class="solutions">
@@ -578,7 +578,7 @@ f_1^2  + f_2^2  +  \cdots  + f_k^2 + f_{k+1}^2  \amp = f_{k+1} \left( f_k + f_{k
 + f_n^2} = 1 + \frac{f_{n+1}}{f_n}\text{.}
 \end{equation*}
 </div></article><article class="exercise exercise-like" id="exer_binet"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
-<div class="introduction" id="introduction-217">
+<div class="introduction" id="introduction-218">
 <p id="p-2597">The quadratic formula can be used to show that \(\alpha = \dfrac{1 + \sqrt{5}}{2}\) and \(\beta = \dfrac{1 - \sqrt{5}}{2}\) are the two real number solutions of the quadratic equation \(x^2 - x - 1 = 0\text{.}\) Notice that this implies that</p>
 <div class="displaymath">
 \begin{align*}
@@ -616,7 +616,7 @@ a_{k+1} \amp = r \cdot a_k\\
 <div class="solutions">
 <a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-187" id="answer-187"><span class="type">Answer.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-187"><div class="answer solution-like"><p id="p-2608">For the inductive step, use the assumption that \(S_k  = a\left( {\dfrac{{1 - r^k }}{{1 - r}}} \right)\) and the recursive definiton to write \(S_{k + 1}  = a + r \cdot S_k\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="exer_sec53-arithexample"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
-<div class="introduction" id="introduction-218"><p id="p-2609">For the sequence \(a_1 ,a_2 , \ldots ,a_n , \ldots\) , assume that \(a_1 = 2\) and that for each \(n \in \mathbb{N}\text{,}\) \(a_{n + 1} = a_n + 5\text{.}\)</p></div>
+<div class="introduction" id="introduction-219"><p id="p-2609">For the sequence \(a_1 ,a_2 , \ldots ,a_n , \ldots\) , assume that \(a_1 = 2\) and that for each \(n \in \mathbb{N}\text{,}\) \(a_{n + 1} = a_n + 5\text{.}\)</p></div>
 <article class="task exercise-like" id="task-805"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <p id="p-2610">Calculate \(a_2\) through \(a_6\text{.}\)</p>
 <div class="solutions">
@@ -627,13 +627,13 @@ a_{k+1} \amp = r \cdot a_k\\
 <a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-189" id="answer-189"><span class="type">Answer.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-189"><div class="answer solution-like"><p id="p-2613">One possibility is:  For each \(n \in \N\text{,}\) \(a_n = 2 + 5(n - 1)\text{.}\)</p></div></div>
 </div></article><article class="task exercise-like" id="task-807"><h6 class="heading"><span class="codenumber">(c)</span></h6>
 <p id="p-2614">Prove that your conjecture in <a class="xref" data-knowl="./knowl/exer_sec53-arithexampleb.html" title="Task 9.b">Task 9.b</a> is correct.</p></article></article><article class="exercise exercise-like" id="exer_sec53-arith"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
-<div class="introduction" id="introduction-219"><p id="p-2615">The sequence in <a class="xref" data-knowl="./knowl/exer_sec53-arithexample.html" title="Exercise 9">Exercise 9</a> is an example of an <dfn class="terminology">arithmetic sequence</dfn>.  An arithmetic sequence is defined recursively as follows: <blockquote class="blockquote" id="blockquote-162">Let \(c\) and \(d\) be real numbers. Define the sequence \(a_1 ,a_2 , \ldots ,a_n , \ldots\) by \(a_1 = c\) and for each \(n \in \mathbb{N}\text{,}\) \(a_{n + 1} = a_n + d\text{.}\)</blockquote></p></div>
+<div class="introduction" id="introduction-220"><p id="p-2615">The sequence in <a class="xref" data-knowl="./knowl/exer_sec53-arithexample.html" title="Exercise 9">Exercise 9</a> is an example of an <dfn class="terminology">arithmetic sequence</dfn>.  An arithmetic sequence is defined recursively as follows: <blockquote class="blockquote" id="blockquote-163">Let \(c\) and \(d\) be real numbers. Define the sequence \(a_1 ,a_2 , \ldots ,a_n , \ldots\) by \(a_1 = c\) and for each \(n \in \mathbb{N}\text{,}\) \(a_{n + 1} = a_n + d\text{.}\)</blockquote></p></div>
 <article class="task exercise-like" id="task-808"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <p id="p-2616">Determine formulas for \(a_3\) through \(a_8\text{.}\)</p></article><article class="task exercise-like" id="exer_sec53-arithb"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <p id="p-2617">Make a conjecture for a formula for \(a_n\) for each \(n \in \mathbb{N}\text{.}\)</p></article><article class="task exercise-like" id="task-810"><h6 class="heading"><span class="codenumber">(c)</span></h6>
 <p id="p-2618">Prove that your conjecture in <a class="xref" data-knowl="./knowl/exer_sec53-arithb.html" title="Task 10.b">Task 10.b</a> is correct.</p></article></article><article class="exercise exercise-like" id="exercise-383"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
 <p id="p-2619">For the sequence \(a_1 ,a_2 , \ldots ,a_n , \ldots\) , assume that \(a_1 = 1\text{,}\) \(a_2 = 5\text{,}\) and that for each \(n \in \mathbb{N}\) with \(n\geq 2\text{,}\) \(a_{n + 1} = a_n + 2a_{n-1}\text{.}\) Prove that for each natural number \(n\text{,}\) \(a_n = 2^n + (-1)^n\text{.}\)</p></article><article class="exercise exercise-like" id="exer_sec53-5"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
-<div class="introduction" id="introduction-220"><p id="p-2620">For the sequence \(a_1 ,a_2 , \ldots ,a_n , \ldots\) , assume that \(a_1 = 1\) and that for each \(n \in \mathbb{N}\text{,}\) \(a_{n + 1} = \sqrt {5 + a_n }\text{.}\)</p></div>
+<div class="introduction" id="introduction-221"><p id="p-2620">For the sequence \(a_1 ,a_2 , \ldots ,a_n , \ldots\) , assume that \(a_1 = 1\) and that for each \(n \in \mathbb{N}\text{,}\) \(a_{n + 1} = \sqrt {5 + a_n }\text{.}\)</p></div>
 <article class="task exercise-like" id="task-811"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <p id="p-2621">Calculate, or approximate, \(a_2\) through \(a_6\text{.}\)</p>
 <div class="solutions">
@@ -651,7 +651,7 @@ a_{k+1} = \sqrt{5 + a_k}\text{.}
 <p class="continuation">Since \(a_k \lt  3\text{,}\) this implies that \(a_{k+1} \lt  \sqrt{8}\) and hence, \(a_{k+1} \lt  3\text{.}\) This proves that if \(P \left( k \right)\) is true, then \(P \left( k + 1\right)\) is true.</p>
 </div></div>
 </div></article></article><article class="exercise exercise-like" id="exer_sec53-6"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
-<div class="introduction" id="introduction-221"><p id="p-2625">For the sequence \(a_1 ,a_2 , \ldots ,a_n , \ldots\) , assume that \(a_1 = 1\text{,}\) \(a_2 = 3\text{,}\) and that for each \(n \in \mathbb{N}\text{,}\) \(a_{n + 2} = 3a_{n + 1} - 2a_n\text{.}\)</p></div>
+<div class="introduction" id="introduction-222"><p id="p-2625">For the sequence \(a_1 ,a_2 , \ldots ,a_n , \ldots\) , assume that \(a_1 = 1\text{,}\) \(a_2 = 3\text{,}\) and that for each \(n \in \mathbb{N}\text{,}\) \(a_{n + 2} = 3a_{n + 1} - 2a_n\text{.}\)</p></div>
 <article class="task exercise-like" id="task-813"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <p id="p-2626">Calculate \(a_3\) through \(a_6\text{.}\)</p>
 <div class="solutions">
@@ -662,14 +662,14 @@ a_{k+1} = \sqrt{5 + a_k}\text{.}
 <a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-43" id="hint-43"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-43"><div class="hint solution-like"><p id="p-2629">Think in terms of powers of 2.</p></div></div>
 </div></article><article class="task exercise-like" id="task-815"><h6 class="heading"><span class="codenumber">(c)</span></h6>
 <p id="p-2630">Prove that your conjecture in <a class="xref" data-knowl="./knowl/exer_536b.html" title="Task 13.b">Task 13.b</a> is correct.</p></article></article><article class="exercise exercise-like" id="exer_sec53-7"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
-<div class="introduction" id="introduction-222"><p id="p-2631">For the sequence \(a_1 ,a_2 , \ldots ,a_n , \ldots\) , assume that \(a_1 = 1\text{,}\) \(a_2 = 1\text{,}\) and that for each \(n \in \mathbb{N}\text{,}\) \(a_{n + 2} = \dfrac{1}{2}\left( {a_{n + 1} + \dfrac{2}{{a_n }}} \right)\text{.}\)</p></div>
+<div class="introduction" id="introduction-223"><p id="p-2631">For the sequence \(a_1 ,a_2 , \ldots ,a_n , \ldots\) , assume that \(a_1 = 1\text{,}\) \(a_2 = 1\text{,}\) and that for each \(n \in \mathbb{N}\text{,}\) \(a_{n + 2} = \dfrac{1}{2}\left( {a_{n + 1} + \dfrac{2}{{a_n }}} \right)\text{.}\)</p></div>
 <article class="task exercise-like" id="task-816"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <p id="p-2632">Calculate \(a_3\) through \(a_6\text{.}\)</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-193" id="answer-193"><span class="type">Answer.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-answer-193"><div class="answer solution-like"><p id="p-2633">\(a_3 = \dfrac{3}{2}\text{,}\) \(a_4 =\dfrac{7}{4}\text{,}\) \(a_5 =\dfrac{37}{24}\text{,}\) \(a_6 =\dfrac{451}{336}\)</p></div></div>
 </div></article><article class="task exercise-like" id="task-817"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <p id="p-2634">Prove that for each \(n \in \mathbb{N}\text{,}\) \(1 \leq a_n \leq 2\text{.}\)</p></article></article><article class="exercise exercise-like" id="exer_sec53-8"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
-<div class="introduction" id="introduction-223">
+<div class="introduction" id="introduction-224">
 <p id="p-2635">For the sequence   \(a_1 ,a_2 , \ldots ,a_n , \ldots\text{,}\) assume that \(a_1=1\text{,}\) \(a_2=1\text{,}\) \(a_3=1\text{,}\) and for that each natural number \(n\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
@@ -680,7 +680,7 @@ a_{n+3} = a_{n+2} + a_{n+1} + a_n\text{.}
 <article class="task exercise-like" id="task-818"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <p id="p-2636">Compute \(a_4\text{,}\) \(a_5\text{,}\) \(a_6\text{,}\) and \(a_7\text{.}\)</p></article><article class="task exercise-like" id="task-819"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <p id="p-2637">Prove that for each natural number \(n\) with \(n&gt;1\text{,}\) \(a_n \leq 2^{n-2}\text{.}\)</p></article></article><article class="exercise exercise-like" id="exer_factorial"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
-<div class="introduction" id="introduction-224">
+<div class="introduction" id="introduction-225">
 <p id="p-2638">For the sequence \(a_1, a_2, \ldots, a_n, \ldots\text{,}\) assume that \(a_1 = 1\text{,}\) and that for each natural number \(n\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
@@ -704,11 +704,11 @@ a_4 \amp = 119 \amp a_7 \amp = 40319 \amp a_{10} \amp = 39916799
 <p id="p-2643">Prove your conjecture in <a class="xref" data-knowl="./knowl/exer_factorialc.html" title="Task 16.c">Task 16.c</a>.</p></article></article><article class="exercise exercise-like" id="exercise-389"><h6 class="heading"><span class="codenumber">17<span class="period">.</span></span></h6>
 <p id="p-2644">For the sequence \(a_1, a_2, \ldots,
 a_n, \ldots\) , assume that \(a_1 = 1\text{,}\) \(a_2 = 1\text{,}\) and for each \(n \in \N\text{,}\) \(a_{n+2} = a_{n+1} + 3a_n\text{.}\) Determine which terms in this sequence are divisible by 4 and prove that your answer is correct.</p></article><article class="exercise exercise-like" id="exer_lucasnumbers"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
-<div class="introduction" id="introduction-225">
+<div class="introduction" id="introduction-226">
 <p id="p-2645">The <dfn class="terminology">Lucas numbers</dfn>  are a sequence of natural numbers \(L_1, L_2, L_3, \ldots, L_n, \ldots \text{,}\) which are defined recursively as follows:</p>
 <ul class="disc">
-<li id="li-354"><p id="p-2646">\(L_1 = 1\) and \(L_2 = 3\text{,}\) and</p></li>
-<li id="li-355"><p id="p-2647">For each natural number \(n\text{,}\) \(L_{n+2} = L_{n+1} + L_n\text{.}\)</p></li>
+<li id="li-359"><p id="p-2646">\(L_1 = 1\) and \(L_2 = 3\text{,}\) and</p></li>
+<li id="li-360"><p id="p-2647">For each natural number \(n\text{,}\) \(L_{n+2} = L_{n+1} + L_n\text{.}\)</p></li>
 </ul>
 <p class="continuation">List the first 10 Lucas numbers and the first ten Fibonacci numbers and then prove each of the following propositions. The Second Principle of Mathematical Induction may be needed to prove some of these propositions.</p>
 </div>
@@ -730,7 +730,7 @@ L_{k+1} \amp = L_k + L_{k-1}\\
 <p id="p-2650">For each \(n \in \mathbb{N}\) with \(n \geq 2\text{,}\) \(5f_n = L_{n - 1} + L_{n + 1}\text{.}\)</p></article><article class="task exercise-like" id="task-826"><h6 class="heading"><span class="codenumber">(c)</span></h6>
 <p id="p-2651">For each \(n \in \mathbb{N}\) with \(n \geq 3\text{,}\) \(L_n = f_{n + 2} - f_{n - 2}\text{.}\)</p></article></article><article class="exercise exercise-like" id="exer_lucasnumbers2"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
 <p id="p-2652">There is a formula for the Lucas numbers similar to the formula for the Fibonacci numbers in <a class="xref" data-knowl="./knowl/exer_binet.html" title="Exercise 4">Exercise 4</a>. Let \(\alpha = \dfrac{1 + \sqrt{5}}{2}\) and \(\beta = \dfrac{1 - \sqrt{5}}{2}\text{.}\) Prove that for each \(n \in \N\text{,}\) \(L_n = \alpha^n + \beta^n\text{.}\)</p></article><article class="exercise exercise-like" id="exercise-392"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>
-<div class="introduction" id="introduction-226"><p id="p-2653">Use the result in <a class="xref" data-knowl="./knowl/exer_lucasnumbers2.html" title="Exercise 19">Exercise 19</a>, previously proven results from <a class="xref" data-knowl="./knowl/exer_lucasnumbers.html" title="Exercise 18">Exercise 18</a>, or mathematical induction to prove each of the following results about Lucas numbers and Fibonacci numbers.</p></div>
+<div class="introduction" id="introduction-227"><p id="p-2653">Use the result in <a class="xref" data-knowl="./knowl/exer_lucasnumbers2.html" title="Exercise 19">Exercise 19</a>, previously proven results from <a class="xref" data-knowl="./knowl/exer_lucasnumbers.html" title="Exercise 18">Exercise 18</a>, or mathematical induction to prove each of the following results about Lucas numbers and Fibonacci numbers.</p></div>
 <article class="task exercise-like" id="task-827"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <p id="p-2654">For each \(n \in \mathbb{N}\text{,}\) \(L_n = \dfrac{{f_{2n} }}{{f_n }}\text{.}\)</p></article><article class="task exercise-like" id="task-828"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <p id="p-2655">For each \(n \in \mathbb{N}\text{,}\) \(f_{n+1} = \dfrac{f_n + L_n}{2}\text{.}\)</p></article><article class="task exercise-like" id="task-829"><h6 class="heading"><span class="codenumber">(c)</span></h6>
@@ -738,12 +738,12 @@ L_{k+1} \amp = L_k + L_{k-1}\\
 <p id="p-2657">For each \(n \in \mathbb{N}\) with \(n \geq 2\text{,}\) \(L_n = f_{n+1} + f_{n-1}\text{.}\)</p></article></article><article class="exercise exercise-like" id="exercise-393"><h6 class="heading">
 <span class="codenumber">21<span class="period">.</span></span><span class="space"> </span><span class="title">Evaluation of Proofs.</span>
 </h6>
-<div class="introduction" id="introduction-227"><p id="p-2658">See the instructions for <a class="xref" data-knowl="./knowl/exer_proofeval.html" title="Exercise 19: Evaluation of Proofs">Exercise 19</a> from <a href="S_directproof.html" class="internal" title="Section 3.1: Direct Proofs">Section 3.1</a>.</p></div>
+<div class="introduction" id="introduction-228"><p id="p-2658">See the instructions for <a class="xref" data-knowl="./knowl/exer_proofeval.html" title="Exercise 19: Evaluation of Proofs">Exercise 19</a> from <a href="S_directproof.html" class="internal" title="Section 3.1: Direct Proofs">Section 3.1</a>.</p></div>
 <article class="task exercise-like" id="task-831"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <dl id="p-2659" class="description-list narrow">
-<dt id="li-356">Proposition</dt>
+<dt id="li-361">Proposition</dt>
 <dd><p id="p-2660">Let \(f_n\) be the \(n^\text{ th }\) Fibonacci number, and let \(\alpha\) be the positive solution of the equation \(x^2 = x + 1\text{.}\) So \(\alpha = \dfrac{1 + \sqrt{5}}{2}\text{.}\) For each natural number \(n\text{,}\) \(f_n \leq \alpha^{n-1}\text{.}\)</p></dd>
-<dt id="li-357">Proof</dt>
+<dt id="li-362">Proof</dt>
 <dd>
 <p id="p-2661">We will use a proof by mathematical induction. For each natural number \(n\text{,}\) we let \(P( n )\) be, “\(f_n \leq \alpha^{n-1}\text{.}\)”</p>
 <p id="p-2662">We first note that \(P( 1 )\) is true since \(f_1 = 1\) and \(\alpha^0 = 1\text{.}\) We also notice that \(P( 2 )\) is true since \(f_2 = 1\) and, hence, \(f_2 \leq \alpha^1\text{.}\)</p>
@@ -768,7 +768,7 @@ f_{k+1} \amp \leq \alpha^k
 </dl></article></article><article class="activity project-like" id="exer_compoundinterest"><h6 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">25</span><span class="period">.</span><span class="space"> </span><span class="title">Compound Interest.</span>
 </h6>
-<div class="introduction" id="introduction-228">
+<div class="introduction" id="introduction-229">
 <p id="p-2665">Assume that  \(R\)  dollars is deposited in an account that has an interest rate of  \(i\)  for each compounding period. A compounding period is some specified time period such as a month or a year. For each integer  \(n\)  with  \(n \geq 0\text{,}\) let  \(V_n\) be the amount of money in an account at the end of the \(n\)th compounding period. Then</p>
 <div class="displaymath">
 \begin{align*}
@@ -785,7 +785,7 @@ V_1 \amp = R + i \cdot R \amp V_2 \amp = V_1 + i \cdot V_1\\
 <p id="p-2669">Use <a class="xref" data-knowl="./knowl/P_geometricsequence.html" title="Theorem 4.3.4">Theorem 4.3.4</a> to determine a formula for \(V_n\) in terms of \(I\text{,}\) \(R\text{,}\) and \(n\text{.}\)</p></article></article><article class="activity project-like" id="exer_annuity"><h6 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">26</span><span class="period">.</span><span class="space"> </span><span class="title">The Future Value of an Ordinary Annuity.</span>
 </h6>
-<div class="introduction" id="introduction-229">
+<div class="introduction" id="introduction-230">
 <p id="p-2670">For an <dfn class="terminology">ordinary annuity</dfn>,  \(R\) dollars is deposited in an account at the end of each compounding period. It is assumed that the interest rate, \(i\text{,}\) per compounding period for the account remains constant. Let \(S_t\) represent the amount in the account at the end of the \(t\)th compounding period. \(S_t\) is frequently called the <dfn class="terminology">future value</dfn>  of the ordinary annuity. So  \(S_1  = R\text{.}\) To determine the amount after two months, we first note that the amount after one month will gain interest and grow to \(( {1 + i} )S_1\text{.}\) In addition, a new deposit of  \(R\)  dollars will be made at the end of the second month. So</p>
 <div class="displaymath">
 \begin{equation*}

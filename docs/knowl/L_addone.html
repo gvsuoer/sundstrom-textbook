@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-22T16:54:42-04:00       *-->
+<!--*       on 2021-10-25T15:03:09-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -17,6 +17,29 @@
 <article class="lemma theorem-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">9.1.6</span><span class="period">.</span>
 </h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">If \(A\) is a finite set and \(x \notin A\text{,}\) then \(A \cup \left\{ x \right\}\) is a finite set and \(\text{ card} \!\left( A \cup \left\{ x \right\} \right) = \text{ card} ( A ) + 1\text{.}\)</p></article><article class="hiddenproof"><a class="proof-knowl original" data-knowl="./knowl/proof-55-hidden.html" title="Proof 9.1.6.1"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><span class="incontext"><a href="S_finitesets.html#L_addone">in-context</a></span>
+<p>If \(A\) is a finite set and \(x \notin A\text{,}\) then \(A \cup \left\{ x \right\}\) is a finite set and \(\text{ card} \!\left( A \cup \left\{ x \right\} \right) = \text{ card} ( A ) + 1\text{.}\)</p></article><article class="proof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p>Let \(A\) be a finite set and assume \(\text{ card} ( A ) = k\text{,}\) where \(k = 0\) or \(k \in \mathbb{N}\text{.}\) Assume \(x \notin A\text{.}\)</p>
+<p>If \(A = \emptyset\text{,}\) then \(\text{ card} ( A ) = 0\) and \(A \cup \left\{ x \right\} = \left\{ x \right\}\text{,}\) which is equivalent to \(\mathbb{N}_1\text{.}\) Thus, \(A \cup \left\{ x \right\}\) is finite with cardinality 1, which equals \(\text{ card} ( A ) + 1\text{.}\)</p>
+<p>If \(A \ne \emptyset\text{,}\) then \(A \approx \mathbb{N}_k\text{,}\) for some \(k \in \mathbb{N}\text{.}\) This means that \(\text{ card} ( A ) = k\text{,}\) and there exists a bijection \(f\x A \to \mathbb{N}_k\text{.}\) We will now use this bijection to define a function \(g\x A \cup \left\{ x \right\} \to \mathbb{N}_{k+1}\) and then prove that the function \(g\) is a bijection. We define \(g\x A \cup \left\{ x \right\} \to \mathbb{N}_{k+1}\) as follows: For each \(t \in A \cup \left\{ x \right\}\text{,}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+g \left( t \right) = \left\{ \begin{gathered} f \left( t \right) \text{  if  } t 
+\in A  \\ k + 1 \text{  if  } t = x. \end{gathered}  \right.
+\end{equation*}
+</div>
+<p>To prove that \(g\) is an injection, we let \(x_1, x_2 \in A \cup \left\{ x \right\}\) and assume \(x_1 \ne x_2\text{.}\)</p>
+<ul class="disc">
+<li><p>If \(x_1, x_2 \in A\text{,}\) then since \(f\) is a bijection, \(f( x_1 ) \ne f ( x_2 )\text{,}\) and this implies that \(g( x_1 ) \ne g( x_2 )\text{.}\)</p></li>
+<li><p>If \(x_1 = x\text{,}\) then since \(x_2 \ne x_1\text{,}\) we conclude that \(x_2 \ne x\) and hence \(x_2 \in A\text{.}\) So \(g( x_1 ) = k + 1\text{,}\) and since \(f( x_2 ) \in \mathbb{N}_k\) and \(g( x_2 ) = f ( x_2 )\text{,}\) we can conclude that \(g( x_1 ) \ne g( x_2 )\text{.}\)</p></li>
+<li><p>The case where \(x_2 = x\) is handled similarly to the previous case.</p></li>
+</ul>
+<p>This proves that the function \(g\) is an injection. The proof that \(g\) is a surjection is <a class="xref" data-knowl="./knowl/exer_addonesurjection.html" title="Exercise 1">Exercise 1</a>. Since \(g\) is a bijection, we conclude that \(A \cup \left\{ x \right\} \approx \mathbb{N}_{k+1}\text{,}\) and</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\text{ card}  \!\left(A \cup \left\{ x \right\} \right) = k + 1\text{.}
+\end{equation*}
+</div>
+<p>Since \(\text{ card} \left(A \right) = k\text{,}\) we have proved that \(\text{ card} \!\left(A \cup \left\{ x \right\} \right) = 
+\text{ card} ( A ) + 1\text{.}\) \(\blacksquare\)</p></article><span class="incontext"><a href="S_finitesets.html#L_addone">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-22T16:52:10-04:00       *-->
+<!--*       on 2021-10-25T15:01:29-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,31 @@
 </head>
 <body>
 <article class="theorem theorem-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.3.5</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.3.4</span><span class="period">.</span>
 </h6>
 <p>Let \(A\) be a nonempty set and let \(\sim\) be an equivalence relation on the set \(A\text{.}\) Then,</p>
 <ol class="decimal">
-<li><p xmlns:svg="http://www.w3.org/2000/svg">For each \(a \in A\text{,}\) \(a \in [ a ]\text{.}\)</p></li>
-<li><p xmlns:svg="http://www.w3.org/2000/svg">For each \(a, b \in A\text{,}\) \(a \sim b\) if and only if \([ a ] = [ b ]\text{.}\)</p></li>
-<li><p xmlns:svg="http://www.w3.org/2000/svg">For each \(a, b \in A\text{,}\) \([ a ] = [ b ]\) or \([ a ] \cap [ b ] = \emptyset\text{.}\)</p></li>
-</ol></article><article class="hiddenproof"><a class="proof-knowl original" data-knowl="./knowl/proof-46-hidden.html" title="Proof 7.3.5.1"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article><span class="incontext"><a href="S_equivclasses.html#T_propsofequivclasses">in-context</a></span>
+<li><p>For each \(a \in A\text{,}\) \(a \in [ a ]\text{.}\)</p></li>
+<li><p>For each \(a, b \in A\text{,}\) \(a \sim b\) if and only if \([ a ] = [ b ]\text{.}\)</p></li>
+<li><p>For each \(a, b \in A\text{,}\) \([ a ] = [ b ]\) or \([ a ] \cap [ b ] = \emptyset\text{.}\)</p></li>
+</ol></article><article class="proof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p>Let \(A\) be a nonempty set and assume that \(\sim\) is an equivalence relation on \(A\text{.}\) To prove the first part of the theorem, let \(a \in A\text{.}\) Since \(\sim\) is an equivalence relation on \(A\text{,}\) it is reflexive on \(A\text{.}\) Thus, \(a \sim a\text{,}\) and we can conclude that \(a \in [ a ]\text{.}\)</p>
+<p>The second part of this theorem is a biconditional statement. We will prove it by proving two conditional statements. We will first prove that if \(a \sim b\text{,}\) then \([ a ] = [ b ]\text{.}\) So let \(a, b \in A\) and assume that \(a \sim b\text{.}\) We will now prove that the two sets \([ a ]\) and \([ b ]\) are equal. We will do this by proving that each is a subset of the other.</p>
+<p>First, assume that \(x \in [ a ]\text{.}\) Then, by definition, \(x \sim a\text{.}\) Since we have assumed that \(a \sim b\text{,}\) we can use the transitive property of \(\sim\) to conclude that \(x \sim b\text{,}\) and this means that \(x \in [ b ]\text{.}\) This proves that \([ a ] \subseteq [ b ]\text{.}\)</p>
+<p>We now assume that \(y \in [ b ]\text{.}\) This means that \(y \sim b\text{,}\) and hence by the symmetric property, that \(b \sim y\text{.}\) Again, we are assuming that \(a \sim b\text{.}\) So we have \(a \sim b\) and \(b \sim y\text{.}\) We use the transitive property to conclude that \(a \sim y\) and then, using the symmetric property, we conclude that \(y \sim a\text{.}\) This proves that \(y \in [ a ]\) and, hence, that \([ b ] \subseteq [ a ]\text{.}\) This means that we can conclude that if \(a \sim b\text{,}\) then \([ a ] = [ b ]\text{.}\)</p>
+<p>We must now prove that if \([ a ] = [ b ]\text{,}\) then \(a \sim b\text{.}\) Let \(a, b \in A\) and assume that \([ a ] = [ b ]\text{.}\) Using the first part of the theorem, we know that \(a \in [ a ]\) and since the two sets are equal, this tells us that \(a \in [ b ]\text{.}\) Hence by the definition of \([ b ]\text{,}\) we conclude that \(a \sim b\text{.}\) This completes the proof of the second part of the theorem.</p>
+<p>For the third part of the theorem, let \(a, b \in A\text{.}\) Since this part of the theorem is a disjunction, we will consider two cases: Either</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+[ a ] \cap [ b ] = \emptyset   \text{ or } [ a ] \cap [ b ] \ne \emptyset\text{.}
+\end{equation*}
+</div>
+<p>In the case where \([ a ] \cap [ b ] = \emptyset\text{,}\) the first part of the disjunction is true, and hence there is nothing to prove. So we assume that \([ a ] \cap [ b ] \ne \emptyset\) and will show that \([ a ] = [ b ]\text{.}\) Since \([ a ] \cap [ b ] \ne \emptyset\text{,}\) there is an element \(x\) in \(A\) such that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x \in [ a ] \cap [ b ]\text{.}
+\end{equation*}
+</div>
+<p>This means that \(x \in [ a ]\) and \(x \in [ b ]\text{.}\) Consequently, \(x \sim a\) and \(x \sim b\text{,}\) and so we can use the second part of the theorem to conclude that \([ x ] = [ a ]\) and \([ x ] = [ b ]\text{.}\) Hence, \([ a ] = [ b ]\text{,}\) and we have proven that \([ a ] = [ b ]\) or \([ a ] \cap [ b ] = \emptyset\text{.}\) \(\blacksquare\)</p></article><span class="incontext"><a href="S_equivclasses.html#T_propsofequivclasses">in-context</a></span>
 </body>
 </html>

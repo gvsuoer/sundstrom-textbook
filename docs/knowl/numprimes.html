@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-22T16:53:50-04:00       *-->
+<!--*       on 2021-10-25T15:02:32-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,32 @@
 </head>
 <body>
 <article class="li"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Item</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span><span class="space"> </span><span class="title">The Number of Prime Numbers.</span>
+<span class="type">Item</span><span class="period">.</span><span class="space"> </span><span class="title">The Number of Prime Numbers.</span>
 </h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Prime numbers have fascinated mathematicians for centuries. For example, we can easily start writing a list of prime numbers in ascending order. Following is a list of the prime numbers less than 100. <blockquote class="blockquote">2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97</blockquote></p>
-<p xmlns:svg="http://www.w3.org/2000/svg">This list contains the first 25 prime numbers. Does this list ever stop? The question was answered in <span class="booktitle">Euclid's Elements</span>, and the result is stated in <a class="xref" data-knowl="./knowl/T_infiniteprimes.html" title="Theorem 8.2.9">Theorem 8.2.9</a>. The proof of this theorem is considered to be one of the classical proofs by contradiction.</p>
+<p>Prime numbers have fascinated mathematicians for centuries. For example, we can easily start writing a list of prime numbers in ascending order. Following is a list of the prime numbers less than 100. <blockquote class="blockquote">2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97</blockquote></p>
+<p>This list contains the first 25 prime numbers. Does this list ever stop? The question was answered in <span xmlns:svg="http://www.w3.org/2000/svg" class="booktitle">Euclid's Elements</span>, and the result is stated in <a class="xref" data-knowl="./knowl/T_infiniteprimes.html" title="Theorem 8.2.9">Theorem 8.2.9</a>. The proof of this theorem is considered to be one of the classical proofs by contradiction.</p>
 <article class="theorem theorem-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.2.9</span><span class="period">.</span>
 </h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">There are infinitely many prime numbers.</p></article><article class="hiddenproof"><a class="proof-knowl original" data-knowl="./knowl/proof-52-hidden.html" title="Proof 8.2.9.1"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof<span class="period">.</span></span></h6></a></article></article><span class="incontext"><a href="S_primefactorizations.html#numprimes">in-context</a></span>
+<p>There are infinitely many prime numbers.</p></article><article class="proof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p>We will use a proof by contradiction. We assume that there are only finitely many primes, and let</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+p_1 , p_2 ,  \ldots , p_m
+\end{equation*}
+</div>
+<p class="continuation">be the list of all the primes. Let</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+M = p_1 p_2  \cdots p_m  + 1\text{.}\tag{8.10}
+\end{equation}
+</div>
+<p>Notice that \(M \ne 1\text{.}\) So \(M\) is either a prime number or, by the Fundamental Theorem of Arithmetic, \(M\) is a product of prime numbers. In either case, \(M\) has a factor that is a prime number. Since we have listed all the prime numbers, this means that there exists a natural number \(j\) with \(1 \leq j \leq m\) such that \(p_j \mid  M\text{.}\) Now, we can rewrite <a class="xref" data-knowl="./knowl/T_infiniteprimes1.html" title="Equation 8.10">equation (8.10)</a> as follows:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+1 = M - p_1 p_2  \cdots p_m\text{.}\tag{8.11}
+\end{equation}
+</div>
+<p>We have proved \(p_j \mid M\text{,}\) and since \(p_j\) is one of the prime factors of \(p_1 p_2 \cdots p_m\text{,}\) we can also conclude that \(p_j \mid \left( {p_1 p_2 \cdots p_m } \right)\text{.}\) Since \(p_j\) divides both of the terms on the right side of <a class="xref" data-knowl="./knowl/T_infiniteprimes2.html" title="Equation 8.11">equation (8.11)</a>, we can use this equation to conclude that \(p_j\) divides 1. This is a contradiction since a prime number is greater than 1 and cannot divide 1. Hence, our assumption that there are only finitely many primes is false, and so there must be infinitely many primes. \(\blacksquare\)</p></article></article><span class="incontext"><a href="S_primefactorizations.html#numprimes">in-context</a></span>
 </body>
 </html>

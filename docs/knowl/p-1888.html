@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-25T14:55:04-04:00       *-->
+<!--*       on 2021-10-26T14:49:55-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,22 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>We have been implicitly using the fact that an integer cannot be both even and odd. There are several ways to understand this fact, but one way is through the Division Algorithm. When we classify an integer as even or odd, we are doing so on the basis of the remainder (according to the Division Algorithm) when the integer is “divided” by 2. If  \(a \in \mathbb{Z}\text{,}\) then by the Division Algorithm there exist unique integers \(q\) and \(r\) such that</p>
+<p>One way to look at the Division Algorithm is that the integer  \(a\)  is either going to be a multiple of \(b\text{,}\) or it will lie between two multiples of \(b\text{.}\) Suppose that \(a\) is not a multiple of \(b\) and that it lies between the multiples \(b \cdot q\) and \(b\left( {q + 1} \right)\text{,}\) where \(q\) is some integer. This is shown on the number line in <a class="xref" data-knowl="./knowl/fig_divalgo.html" title="Figure 3.41">Figure 3.41</a>. <figure class="figure figure-like"><div xmlns:svg="http://www.w3.org/2000/svg" class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/figps-divalgo.svg" role="img" class="contained" alt=""></div>
+<figcaption xmlns:svg="http://www.w3.org/2000/svg"><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.41<span class="period">.</span></span><span class="space"> </span>Remainder for the Division Algorithm</figcaption></figure> If \(r\) represents the distance from \(b \cdot q\) to \(a\text{,}\) then</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-a = 2q + r\text{ and } 0 \leq r \lt  2\text{.}
-\end{equation*}
+\begin{align*}
+r \amp = a - b \cdot q,\text{ or }\\
+a \amp = b \cdot q + r\text{.}
+\end{align*}
 </div>
-<p class="continuation">This means that the remainder, \(r\text{,}\) can only be zero or one (and not both). When  \(r = 0\text{,}\) the integer is even, and when \(r = 1\text{,}\) the integer is odd.</p>
+<p class="continuation">From the diagram, also notice that  \(r\)  is less than the distance between \(b \cdot q\) and  \(b\left( {q + 1} \right)\text{.}\) Algebraically, this distance is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+b\left( {q + 1} \right) - b \cdot q \amp = b \cdot q + b - b \cdot q\\
+\amp = b\text{.}
+\end{align*}
+</div>
+<p class="continuation">Thus, in the case where  \(a\)  is not a multiple of  \(b\text{,}\) we get  \(0 \lt  r \lt  b\text{.}\)</p>
 <span class="incontext"><a href="S_divalgo.html#p-1888">in-context</a></span>
 </body>
 </html>

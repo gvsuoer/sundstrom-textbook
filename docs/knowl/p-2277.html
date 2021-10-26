@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-25T14:55:51-04:00       *-->
+<!--*       on 2021-10-26T14:50:43-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,25 +15,7 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>When proving the inductive step in a proof by induction, the key question is, <blockquote class="blockquote">How does knowing  \(P(  k )\) help us prove  \(P( {k + 1} )\text{?}\)</blockquote> In <a class="xref" data-knowl="./knowl/P_suminduction.html" title="Proposition 4.1.5">Proposition 4.1.5</a>, we were able to see that the way to answer this question was to add a certain expression to both sides of the equation given in  \(P(  k )\text{.}\) Sometimes the relationship between  \(P(  k )\)  and \(P( {k + 1} )\) is not as easy to see. For example, in <a href="S_mathinduction.html#PA_exploringstatements" class="internal" title="Beginning Activity: Beginning Activity 1: Exploring Statements of the Form \(\left( \forall n \in \N \right)\left( P(n) \right)\)">Beginning Activity 1</a>, we explored the following proposition: <blockquote class="blockquote">For each natural number \(n\text{,}\)  4  divides  \(\left( {5^n  - 1} \right)\text{.}\)</blockquote> This means that the open sentence, \(P( n )\text{,}\) is “4  divides  \(\left( {5^n  - 1} \right)\text{.}\)” So in the inductive step, we assume  \(k \in \mathbb{N}\) and that  4  divides  \(\left( {5^k  - 1} \right)\text{.}\) This means that there exists an integer  \(m\)  such that</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-5^k  - 1 = 4m\text{.}\tag{4.6}
-\end{equation}
-</div>
-<p class="continuation">In the backward process, the goal is to prove that 4 divides \(\left( {5^{k + 1}  - 1} \right)\text{.}\) This can be accomplished if we can prove that there exists an integer \(s\) such that</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-5^{k + 1}  - 1 = 4s\text{.}\tag{4.7}
-\end{equation}
-</div>
-<p class="continuation">We now need to see if there is anything in <a class="xref" data-knowl="./knowl/eq_5a.html" title="Equation 4.6">equation (4.6)</a> that can be used in <a class="xref" data-knowl="./knowl/eq_5b.html" title="Equation 4.7">equation (4.7)</a>. The key is to find something in the equation \(5^k - 1 = 4m\) that is related to something similar in the equation \(5^{k + 1}  - 1 = 4s\text{.}\) In this case, we notice that</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-5^{k + 1}  = 5 \cdot 5^k\text{.}
-\end{equation*}
-</div>
-<p class="continuation">So if we can solve \(5^k  - 1 = 4m\)  for  \(5^k\text{,}\) we could make a substitution for \(5^k\text{.}\) This is done in the proof of the following proposition.</p>
+<p>It is important to remember that the inductive step in an induction proof is a proof of a conditional statement. Although we did not explicitly use the forward-backward process in the inductive step for <a class="xref" data-knowl="./knowl/P_suminduction.html" title="Proposition 4.5">Proposition 4.5</a>, it was implicitly used in the discussion prior to <a class="xref" data-knowl="./knowl/P_suminduction.html" title="Proposition 4.5">Proposition 4.5</a>. The key question was, “How does knowing the sum of the first \(k\) squares help us find the sum of the first \(\left( {k + 1} \right)\) squares?”</p>
 <span class="incontext"><a href="S_mathinduction.html#p-2277">in-context</a></span>
 </body>
 </html>

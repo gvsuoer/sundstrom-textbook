@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-25T14:57:45-04:00       *-->
+<!--*       on 2021-10-26T14:52:29-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,36 +15,24 @@
 </head>
 <body>
 <article class="proof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof</span></h6>
-<p>We will only prove one of De Morgan's Laws, namely, the one that was explored in <a href="S_setproperties.html#PA_workingwithvenn2" class="internal" title="Beginning Activity: Beginning Activity 1: Exploring a Relationship between Two Sets">Beginning Activty 1</a>. The proofs of the other parts are left as exercises. Let \(A\) and \(B\) be subsets of some universal set \(U\text{.}\) We will prove that \(\left( {A \cup B} \right)^c  = A^c  \cap B^c\) by proving that an element is in \(\left( {A \cup B} \right)^c\) if and only if it is in \(A^c  \cap B^c\text{.}\) So let \(x\) be in the universal set \(U\text{.}\) Then</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-x \in \left( {A \cup B} \right)^c \text{  if and only if  }  x \notin A \cup B\text{,}\tag{5.7}
-\end{equation}
-</div>
-<p class="continuation">and</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-x \notin A \cup B\text{  if and only if  } x \notin A\text{  and  } x \notin B\text{.}\tag{5.8}
-\end{equation}
-</div>
-<p class="continuation">Combining <a class="xref" data-knowl="./knowl/eq_4d.html" title="Equation 5.7">equation (5.7)</a> and <a class="xref" data-knowl="./knowl/eq_4e.html" title="Equation 5.8">equation (5.8)</a>, we see that</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-x \in \left( {A \cup B} \right)^c \text{  if and only if  } x \notin A\text{  and  } x \notin B\text{.}\tag{5.9}
-\end{equation}
-</div>
-<p class="continuation">In addition, we know that</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-x \notin A \text{  and  }  x \notin B \text{  if and only if  }  x \in A^c \text{  and  }  x \in B^c\text{,}\tag{5.10}
-\end{equation}
-</div>
-<p class="continuation">and this is true if and only if \(x \in A^c  \cap B^c\text{.}\) So we can use <a class="xref" data-knowl="./knowl/eq_4f.html" title="Equation 5.9">equation (5.9)</a> and <a class="xref" data-knowl="./knowl/eq_4g.html" title="Equation 5.10">equation (5.10)</a> to conclude that</p>
+<p>To prove that these are equivalent conditions, we will prove that <a class="xref" data-knowl="./knowl/T_subsetitem1.html" title="Item 1">Item 1</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem2.html" title="Item 2">Item 2</a>, that <a class="xref" data-knowl="./knowl/T_subsetitem2.html" title="Item 2">Item 2</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem3.html" title="Item 3">Item 3</a>, and that <a class="xref" data-knowl="./knowl/T_subsetitem3.html" title="Item 3">Item 3</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem1.html" title="Item 1">Item 1</a>.</p>
+<p>Let \(A\) and \(B\) be subsets of some universal set \(U\text{.}\) We have proved that <a class="xref" data-knowl="./knowl/T_subsetitem1.html" title="Item 1">Item 1</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem2.html" title="Item 2">Item 2</a> in <a class="xref" data-knowl="./knowl/P_subsetprop.html" title="Proposition 5.26">Proposition 5.26</a>.</p>
+<p>To prove that <a class="xref" data-knowl="./knowl/T_subsetitem2.html" title="Item 2">Item 2</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem3.html" title="Item 3">Item 3</a>, we will assume that \(A \cap B^c  = \emptyset\) and use the fact that \(\emptyset^c = U\text{.}\) We then see that</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-x \in \left( {A \cup B} \right)^c \text{  if and only if  } x \in A^c  \cap B^c\text{,}
+\left( {A \cap B^c} \right)^c  = \emptyset^c\text{.}
 \end{equation*}
 </div>
-<p class="continuation">and, hence, that \(\left( {A \cup B} \right)^c  = A^c  \cap B^c\text{.}\) \(\blacksquare\)</p></article><span class="incontext"><a href="S_setproperties.html#proof-33">in-context</a></span>
+<p class="continuation">Then, using one of De Morgan's Laws, we obtain</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+A^c \cup \left(B^c \right)^c \amp = U\\
+A^c \cup B \amp  = U
+\end{align*}
+</div>
+<p>This completes the proof that <a class="xref" data-knowl="./knowl/T_subsetitem2.html" title="Item 2">Item 2</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem3.html" title="Item 3">Item 3</a>.</p>
+<p>We now need to prove that <a class="xref" data-knowl="./knowl/T_subsetitem3.html" title="Item 3">Item 3</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem1.html" title="Item 1">Item 1</a>. We assume that \(A^c \cup B = U\) and will prove that \(A \subseteq B\) by proving that every element of \(A\) must be in \(B\text{.}\)</p>
+<p>So let \(x \in A\text{.}\) Then we know that \(x \notin A^c\text{.}\) However, \(x \in U\) and since \(A^c \cup B = U\text{,}\) we can conclude that \(x \in A^c \cup B\text{.}\) Since \(x \notin A^c\text{,}\) we conclude that \(x \in B\text{.}\) This proves that \(A \subseteq B\) and hence that <a class="xref" data-knowl="./knowl/T_subsetitem3.html" title="Item 3">Item 3</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem1.html" title="Item 1">Item 1</a>.</p>
+<p>Since we have now proved that <a class="xref" data-knowl="./knowl/T_subsetitem1.html" title="Item 1">Item 1</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem2.html" title="Item 2">Item 2</a>, that <a class="xref" data-knowl="./knowl/T_subsetitem2.html" title="Item 2">Item 2</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem3.html" title="Item 3">Item 3</a>, and that <a class="xref" data-knowl="./knowl/T_subsetitem3.html" title="Item 3">Item 3</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem1.html" title="Item 1">Item 1</a>, we have proved that the three conditions are equivalent. \(\blacksquare\)</p></article><span class="incontext"><a href="S_setproperties.html#proof-33">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-25T14:56:28-04:00       *-->
+<!--*       on 2021-10-26T14:51:18-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,15 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Assume that \(f_1 ,f_2 , \ldots ,f_n , \ldots\) are the Fibonacci numbers. Prove each of the following:</p>
+<p>Let \(P(n)\) be \(a_n = n!\text{.}\)  Since \(a_0 = 1\) and \(0 ! = 1\text{,}\) we see that \(P(0)\) is true.  For the inductive step, we assume that \(k \in \N \cup \{0\}\) and that \(P(k)\) is true or that  \(a_k = k!\text{.}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+a_{k+1} \amp = \left( k + 1 \right)a_k\\
+\amp = \left( k + 1 \right) k!\\
+\amp = \left( k + 1 \right)!\text{.}
+\end{align*}
+</div>
+<p class="continuation">This proves the inductive step that  if \(P(k)\) is true, then \(P(k+1)\) is true.</p>
 <span class="incontext"><a href="S_recursion.html#p-2585">in-context</a></span>
 </body>
 </html>

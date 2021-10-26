@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-25T15:00:26-04:00       *-->
+<!--*       on 2021-10-26T14:55:46-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,14 +15,37 @@
 </head>
 <body>
 <article class="proof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof</span></h6>
-<p>We will prove <a class="xref" data-knowl="./knowl/T_imageofinvimage1.html" title="Item 1">Item 1</a>. The proof of <a class="xref" data-knowl="./knowl/T_imageofinvimage2.html" title="Item 2">Item 2</a> is <a class="xref" data-knowl="./knowl/exer_sec91-7.html" title="Exercise 7">Exercise 7</a>.</p>
-<p>To prove <a class="xref" data-knowl="./knowl/T_imageofinvimage1.html" title="Item 1">Item 1</a>, we will prove that for all \(a \in S\text{,}\) if \(a \in A\text{,}\) then</p>
-<p>\(a \in f^{-1} \!\left( f ( A ) \right)\text{.}\) So let \(a \in A\text{.}\) Then, by definition, \(f ( a ) \in f ( A )\text{.}\) We know that \(f ( A ) \subseteq T\text{,}\) and so \(f^{-1} \!\left( f ( A ) \right) \subseteq S\text{.}\) Notice that</p>
+<p>Let \(n \in \mathbb{N}\) and let \(a, b \in \mathbb{Z}\text{.}\) We will first prove that if \(a\) and \(b\) have the same remainder when divided by \(n\text{,}\) then \(a \equiv b \pmod n\text{.}\) So assume that \(a\) and \(b\) have the same remainder when divided by \(n\text{,}\) and let \(r\) be this common remainder. Then, by <a class="xref" data-knowl="./knowl/T_congtorem.html" title="Theorem 3.46">Theorem 3.46</a>,</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-f^{-1} \!\left( f ( A ) \right) = \left\{ x \in S \mid f ( x ) \in f ( A ) \right\}\text{.}
+a \equiv r \pmod n \text{  and  } b \equiv r \pmod n\!\text{.}
 \end{equation*}
 </div>
-<p class="continuation">Since \(f ( a ) \in f ( A )\text{,}\) we use this to conclude that \(a \in f^{-1}\!\left ( f ( A ) \right)\text{.}\) This proves that if \(a \in A\text{,}\) then \(a \in f^{-1} \!\left( f ( A ) \right)\text{,}\) and hence that \(A \subseteq f^{-1} \!\left( f ( A ) \right)\text{.}\) \(\blacksquare\)</p></article><span class="incontext"><a href="S_functionsonsets.html#proof-42">in-context</a></span>
+<p class="continuation">Since congruence modulo \(n\) is an equivalence relation, it is a symmetric relation. Hence, since \(b \equiv r \pmod n\text{,}\) we can conclude that \(r \equiv b \pmod n\text{.}\) Combining this with the fact that \(a \equiv r \pmod n\text{,}\) we now have</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+a \equiv r \pmod n\text{  and  } r \equiv b \pmod n\!\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We can now use the transitive property to conclude that \(a \equiv b \pmod n\text{.}\) This proves that if \(a\) and \(b\) have the same remainder when divided by \(n\text{,}\) then \(a \equiv b \pmod n\text{.}\)</p>
+<p>We will now prove that if \(a \equiv b \pmod n\text{,}\) then \(a\) and \(b\) have the same remainder when divided by \(n\text{.}\) Assume that \(a \equiv b \pmod n\text{,}\) and let \(r\) be the least nonnegative remainder when \(b\) is divided by \(n\text{.}\) Then \(0 \leq r \lt  n\) and, by <a class="xref" data-knowl="./knowl/T_congtorem.html" title="Theorem 3.46">Theorem 3.46</a>,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+b \equiv r \pmod n\!\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Now, using the facts that \(a \equiv b \pmod n\) and \(b \equiv r \pmod n\text{,}\) we can use the transitive property to conclude that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+a \equiv r \pmod n\!\text{.}
+\end{equation*}
+</div>
+<p class="continuation">This means that there exists an integer \(q\) such that \(a - r = nq\) or that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+a = nq + r\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Since we already know that \(0 \leq r \lt n\text{,}\) the last equation tells us that \(r\) is the least nonnegative remainder when \(a\) is divided by \(n\text{.}\) Hence we have proven that if \(a \equiv b \pmod n\text{,}\) then \(a\) and \(b\) have the same remainder when divided by \(n\text{.}\) \(\blacksquare\)</p></article><span class="incontext"><a href="S_equivrelations.html#proof-42">in-context</a></span>
 </body>
 </html>

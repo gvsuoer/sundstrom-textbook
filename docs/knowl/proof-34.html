@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-10-25T14:57:48-04:00       *-->
+<!--*       on 2021-10-26T14:52:51-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,24 +15,29 @@
 </head>
 <body>
 <article class="proof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof</span></h6>
-<p>To prove that these are equivalent conditions, we will prove that <a class="xref" data-knowl="./knowl/T_subsetitem1.html" title="Item 1">Item 1</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem2.html" title="Item 2">Item 2</a>, that <a class="xref" data-knowl="./knowl/T_subsetitem2.html" title="Item 2">Item 2</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem3.html" title="Item 3">Item 3</a>, and that <a class="xref" data-knowl="./knowl/T_subsetitem3.html" title="Item 3">Item 3</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem1.html" title="Item 1">Item 1</a>.</p>
-<p>Let \(A\) and \(B\) be subsets of some universal set \(U\text{.}\) We have proved that <a class="xref" data-knowl="./knowl/T_subsetitem1.html" title="Item 1">Item 1</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem2.html" title="Item 2">Item 2</a> in <a class="xref" data-knowl="./knowl/P_subsetprop.html" title="Proposition 5.2.11">Proposition 5.2.11</a>.</p>
-<p>To prove that <a class="xref" data-knowl="./knowl/T_subsetitem2.html" title="Item 2">Item 2</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem3.html" title="Item 3">Item 3</a>, we will assume that \(A \cap B^c  = \emptyset\) and use the fact that \(\emptyset^c = U\text{.}\) We then see that</p>
+<p>Let \(A\text{,}\) \(B\text{,}\) and \(C\) be sets. We will prove that \(A \times \left( {B \cup C} \right)\) is equal to \(\left( {A \times B} \right) \cup \left( {A \times C} \right)\) by proving that each set is a subset of the other set.</p>
+<p>To prove that \(A \times \left( {B \cup C} \right) \subseteq \left( {A \times B} \right) 
+\cup \left( {A \times C} \right)\text{,}\) we let \(u \in A \times \left( {B \cup C} \right)\text{.}\) Then there exists \(x \in A\) and there exists \(y \in B \cup C\) such that \(u = \left( {x,y} \right)\text{.}\) Since \(y \in B \cup C\text{,}\) we know that \(y \in B\) or \(y \in C\text{.}\)</p>
+<p>In the case where \(y \in B\text{,}\) we have \(u = \left( {x,y} \right)\text{,}\) where \(x \in A\) and \(y \in B\text{.}\) So in this case, \(u \in A \times B\text{,}\) and hence \(u \in \left( {A \times B} \right) \cup \left( {A \times C} \right)\text{.}\) Similarly, in the case where \(y \in C\text{,}\) we have \(u = \left( {x,y} \right)\text{,}\) where \(x \in A\) and \(y \in C\text{.}\) So in this case, \(u \in A \times C\) and, hence, \(u \in \left( {A \times B} \right) \cup \left( {A \times C} \right)\text{.}\)</p>
+<p>In both cases, \(u \in \left( {A \times B} \right) \cup \left( {A \times C} \right)\text{.}\) Hence, we may conclude that if \(u\) is an element of \(A \times \left( {B \cup C} \right)\text{,}\) then \(u \in \left( {A \times B} \right) \cup \left( {A \times C} \right)\text{,}\) and this proves that</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\left( {A \cap B^c} \right)^c  = \emptyset^c\text{.}
-\end{equation*}
+\begin{equation}
+A \times \left( {B \cup C} \right) \subseteq \left( {A \times B} \right) \cup 
+\left( {A \times C} \right)\!\text{.}\tag{5.15}
+\end{equation}
 </div>
-<p class="continuation">Then, using one of De Morgan's Laws, we obtain</p>
+<p>We must now prove that \(\left( {A \times B} \right) \cup \left( {A \times C} \right) 
+\subseteq A \times \left( {B \cup C} \right)\text{.}\) So we let \(v \in \left( {A \times B} \right) \cup \left( {A \times C} \right)\text{.}\) Then \(v \in \left( {A \times B} \right)\) or \(v \in \left( {A \times C} \right)\text{.}\)</p>
+<p>In the case where \(v \in \left( {A \times B} \right)\text{,}\) we know that there exists \(s \in A\) and there exists \(t \in B\) such that \(v = \left( {s,\;t} \right)\text{.}\) But since \(t \in B\text{,}\) we know that \(t \in B \cup C\text{,}\) and hence \(v \in A \times \left( {B \cup C} \right)\text{.}\) Similarly, in the case where \(v \in \left( {A \times C} \right)\text{,}\) we know that there exists \(s \in A\) and there exists \(t \in C\) such that \(v = \left( {s,t} \right)\text{.}\) But because \(t \in C\text{,}\) we can conclude that \(t \in B \cup C\) and, hence, \(v \in A \times \left( {B \cup C} \right)\text{.}\)</p>
+<p>In both cases, \(v \in A \times \left( {B \cup C} \right)\text{.}\) Hence, we may conclude that if</p>
+<p>\(v \in \left( {A \times B} \right) \cup \left( {A \times C} \right)\text{,}\) then \(v \in A \times \left( {B \cup C} \right)\text{,}\) and this proves that</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-A^c \cup \left(B^c \right)^c \amp = U\\
-A^c \cup B \amp  = U
-\end{align*}
+\begin{equation}
+\left( {A \times B} \right) \cup \left( {A \times C} \right) \subseteq A \times 
+\left( {B \cup C} \right)\!\text{.}\tag{5.16}
+\end{equation}
 </div>
-<p>This completes the proof that <a class="xref" data-knowl="./knowl/T_subsetitem2.html" title="Item 2">Item 2</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem3.html" title="Item 3">Item 3</a>.</p>
-<p>We now need to prove that <a class="xref" data-knowl="./knowl/T_subsetitem3.html" title="Item 3">Item 3</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem1.html" title="Item 1">Item 1</a>. We assume that \(A^c \cup B = U\) and will prove that \(A \subseteq B\) by proving that every element of \(A\) must be in \(B\text{.}\)</p>
-<p>So let \(x \in A\text{.}\) Then we know that \(x \notin A^c\text{.}\) However, \(x \in U\) and since \(A^c \cup B = U\text{,}\) we can conclude that \(x \in A^c \cup B\text{.}\) Since \(x \notin A^c\text{,}\) we conclude that \(x \in B\text{.}\) This proves that \(A \subseteq B\) and hence that <a class="xref" data-knowl="./knowl/T_subsetitem3.html" title="Item 3">Item 3</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem1.html" title="Item 1">Item 1</a>.</p>
-<p>Since we have now proved that <a class="xref" data-knowl="./knowl/T_subsetitem1.html" title="Item 1">Item 1</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem2.html" title="Item 2">Item 2</a>, that <a class="xref" data-knowl="./knowl/T_subsetitem2.html" title="Item 2">Item 2</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem3.html" title="Item 3">Item 3</a>, and that <a class="xref" data-knowl="./knowl/T_subsetitem3.html" title="Item 3">Item 3</a> implies <a class="xref" data-knowl="./knowl/T_subsetitem1.html" title="Item 1">Item 1</a>, we have proved that the three conditions are equivalent. \(\blacksquare\)</p></article><span class="incontext"><a href="S_setproperties.html#proof-34">in-context</a></span>
+<p>The relationships in <a class="xref" data-knowl="./knowl/eq_4m.html" title="Equation 5.15">equation (5.15)</a> and <a class="xref" data-knowl="./knowl/eq_4n.html" title="Equation 5.16">equation (5.16)</a> prove that \(A \times \left( {B \cup C} \right) = \left( {A \times B} \right) 
+\cup \left( {A \times C} \right)\text{.}\) \(\blacksquare\)</p></article><span class="incontext"><a href="S_cartesian.html#proof-34">in-context</a></span>
 </body>
 </html>

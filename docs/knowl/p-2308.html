@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-11-01T15:57:58-04:00       *-->
+<!--*       on 2021-11-03T16:23:02-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,32 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Use mathematical induction to prove each of the following:</p>
+<p>For each  \(n \in \mathbb{N}\text{,}\) let  \(P( n )\) be, \(2 + 5 + 8 +  \cdots  + (3n - 1) = \dfrac{{n( {3n + 1} )}}{2}\text{.}\) When we use \(n = 1\text{,}\) the summation on the left side of the equation is 2, and the right side is \(\dfrac{1(3 \cdot 1 + 1)}{2} = 2\text{.}\)  Therefore, \(P( 1 )\)  is true.   For the inductive step, let \(k \in \mathbb{N}\) and assume that \(P \left( k \right)\) is true.  Then,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+2 + 5 + 8 + \cdots  + \left( {3k - 1} \right) = \frac{{k \left( {3k + 1} \right)}}{2}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We now add \(3 \left( k + 1 \right) - 1\) to both sides of this equation. This gives</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+2 + 5 + 8 + \cdots  + (3k - 1) \amp\\
++ 3 \left( {k + 1} \right)-1 \amp =
+\frac{{k \left( {3k + 1} \right)}}{2} + \left( 3 \left( k + 1 \right) - 1 \right)\\
+\amp = \frac{{k \left( {3k + 1} \right)}}{2} + \left( {3k + 2} \right)
+\end{align*}
+</div>
+<p class="continuation">If we now combine the terms on the right side of the equation into a single fraction, we obtain</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+2 + 5 +  \cdots  + \left( {3k - 1} \right) + 3 \left( {k + 1} \right)-1 
+\amp = \frac{k \left( 3k + 1 \right) + 6k+4}{2}\\
+\amp = \frac{ 3k^2 + 7k + 4}{2}\\
+\amp = \frac{ \left( k + 1 \right) \left( 3k + 4 \right)}{2}\\
+\amp = \frac{ \left( k + 1 \right) \left( 3 \left( k + 1 \right) + 1 \right)}{2}
+\end{align*}
+</div>
+<p class="continuation">This proves that if  \(P\left( k \right)\) is true, then \(P\left( {k + 1} \right)\) is true.</p>
 <span class="incontext"><a href="S_mathinduction.html#p-2308">in-context</a></span>
 </body>
 </html>

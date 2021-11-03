@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-11-01T16:03:24-04:00       *-->
+<!--*       on 2021-11-03T16:28:36-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,34 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(R\) be a relation on a set \(A\text{.}\) If \(R\) is symmetric and transitive, then \(R\) is reflexive.</p>
+<dl xmlns:svg="http://www.w3.org/2000/svg" class="description-list narrow">
+<dt>Proposition</dt>
+<dd><p>Let \(\sim\) be a relation on \(\Z\) where for all \(a,
+b \in \Z\text{,}\) \(a \sim b\) if and only if \(\left( a + 2b \right) \equiv 0 \pmod 3\text{.}\) The relation \(\sim\) is an equivalence relation on \(\Z\text{.}\)</p></dd>
+<dt>Proof</dt>
+<dd>
+<p>Assume \(a \sim a\text{.}\) Then \(\left( a + 2a \right) \equiv 0 \pmod 3\) since</p>
+<p>\(\left( 3a \right) \equiv 0 \pmod 3\text{.}\) Therefore, \(\sim\) is reflexive on \(\Z\text{.}\) In addition, if \(a \sim b\text{,}\) then \(\left( a + 2b \right) \equiv 0 \pmod 3\text{,}\) and if we multiply both sides of this congruence by 2, we get</p>
+<div class="displaymath">
+\begin{align*}
+2\left( a + 2b \right) \amp \equiv 2 \cdot 0 \pmod 3\\
+\left( 2a + 4b \right) \amp \equiv 0 \pmod 3\\
+\left( 2a + b \right) \amp \equiv 0 \pmod 3\\
+\left( b + 2a \right) \amp \equiv 0 \pmod 3\text{.}
+\end{align*}
+</div>
+<p>This means that \(b \sim a\) and hence, \(\sim\) is symmetric.</p>
+<p>We now assume that \(\left( a + 2b \right) \equiv 0\pmod 3\) and \(\left( b + 2c \right) \equiv 0\pmod 3\text{.}\) By adding the corresponding sides of these two congruences, we obtain</p>
+<div class="displaymath">
+\begin{align*}
+\left( a + 2b \right) + \left( b + 2c \right) \amp \equiv 0 + 0 \pmod 3\\
+\left( a + 3b + 2c \right) \amp \equiv 0 \pmod 3\\
+\left( a + 2c \right) \amp \equiv 0 \pmod 3\text{.}
+\end{align*}
+</div>
+<p>Hence, the relation \(\sim\) is transitive and we have proved that \(\sim\) is an equivalence relation on \(\Z\text{.}\)</p>
+</dd>
+</dl>
 <span class="incontext"><a href="S_equivrelations.html#p-4822">in-context</a></span>
 </body>
 </html>

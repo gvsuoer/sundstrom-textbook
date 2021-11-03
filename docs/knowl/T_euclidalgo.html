@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-11-01T16:04:13-04:00       *-->
+<!--*       on 2021-11-03T16:29:26-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -25,17 +25,17 @@
 <p>Let \(a\) and \(b\) be integers with \(a \ne 0\) and \(b &gt; 0\text{,}\) and let \(d = \gcd( {a, b} )\text{.}\) By the Division Algorithm, there exist integers \(q_1\) and \(r_1\) such that</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
-a = b \cdot q_1  + r_1 \text{ ,  and  } 0 \leq r_1  \lt  b\text{.}\tag{8.1}
+a = b \cdot q_1  + r_1 \text{ ,  and  } 0 \leq r_1  \lt  b\text{.}\tag{71}
 \end{equation}
 </div>
-<p>If \(r_1 = 0\text{,}\) then <a class="xref" data-knowl="./knowl/eq_euclidalgo1.html" title="Equation 8.1">equation (8.1)</a> implies that \(b\) divides \(a\text{.}\) Hence, \(b = d = \gcd( {a, b} )\) and this number satisfies <a class="xref" data-knowl="./knowl/T_euclidalgo1.html" title="Item a">Condition a</a> and <a class="xref" data-knowl="./knowl/T_euclidalgo2.html" title="Item b">Condition b</a>.</p>
+<p>If \(r_1 = 0\text{,}\) then <a class="xref" data-knowl="./knowl/eq_euclidalgo1.html" title="Equation 71">equation (71)</a> implies that \(b\) divides \(a\text{.}\) Hence, \(b = d = \gcd( {a, b} )\) and this number satisfies <a class="xref" data-knowl="./knowl/T_euclidalgo1.html" title="Item a">Condition a</a> and <a class="xref" data-knowl="./knowl/T_euclidalgo2.html" title="Item b">Condition b</a>.</p>
 <p>If \(r_1  &gt; 0\text{,}\) then by <a class="xref" data-knowl="./knowl/L_gcdanddivalgo.html" title="Lemma 8.4">Lemma 8.4</a>, \(\gcd( {a, b} ) = \gcd( {b, r_1 } )\text{.}\) We use the Division Algorithm again to obtain integers \(q_2\) and \(r_2\) such that</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation}
-b = r_1  \cdot q_2  + r_2 \text{ ,  and  } 0 \leq r_2  \lt  r_1\text{.}\tag{8.2}
+b = r_1  \cdot q_2  + r_2 \text{ ,  and  } 0 \leq r_2  \lt  r_1\text{.}\tag{72}
 \end{equation}
 </div>
-<p>If \(r_2 = 0\text{,}\) then <a class="xref" data-knowl="./knowl/eq_euclidalgo2.html" title="Equation 8.2">equation (8.2)</a> implies that \(r_1\) divides \(b\text{.}\) This means that \(r_1 = \gcd( {b, r_1 } )\text{.}\) But we have already seen that \(\gcd( {a, b} ) = \gcd( {b, r_1 } )\text{.}\) Hence, \(r_1 = \gcd( {a, b} )\text{.}\) In addition, if \(k\) is an integer that divides both \(a\) and \(b\text{,}\) then, using <a class="xref" data-knowl="./knowl/eq_euclidalgo1.html" title="Equation 8.1">equation (8.1)</a>, we see that \(r_1 = a - b \cdot q_1\) and, hence \(k\) divides \(r_1\text{.}\) This shows that \(r_1 = \gcd( {a, b} )\) satisfies <a class="xref" data-knowl="./knowl/T_euclidalgo1.html" title="Item a">Condition a</a> and <a class="xref" data-knowl="./knowl/T_euclidalgo2.html" title="Item b">Condition b</a>.</p>
+<p>If \(r_2 = 0\text{,}\) then <a class="xref" data-knowl="./knowl/eq_euclidalgo2.html" title="Equation 72">equation (72)</a> implies that \(r_1\) divides \(b\text{.}\) This means that \(r_1 = \gcd( {b, r_1 } )\text{.}\) But we have already seen that \(\gcd( {a, b} ) = \gcd( {b, r_1 } )\text{.}\) Hence, \(r_1 = \gcd( {a, b} )\text{.}\) In addition, if \(k\) is an integer that divides both \(a\) and \(b\text{,}\) then, using <a class="xref" data-knowl="./knowl/eq_euclidalgo1.html" title="Equation 71">equation (71)</a>, we see that \(r_1 = a - b \cdot q_1\) and, hence \(k\) divides \(r_1\text{.}\) This shows that \(r_1 = \gcd( {a, b} )\) satisfies <a class="xref" data-knowl="./knowl/T_euclidalgo1.html" title="Item a">Condition a</a> and <a class="xref" data-knowl="./knowl/T_euclidalgo2.html" title="Item b">Condition b</a>.</p>
 <p>If \(r_2 &gt; 0\text{,}\) then by <a class="xref" data-knowl="./knowl/L_gcdanddivalgo.html" title="Lemma 8.4">Lemma 8.4</a>, \(\gcd( {b, r_1 } ) = \gcd( {r_1 , r_2 } )\text{.}\) But we have already seen that \(\gcd( {a, b} ) = \gcd( {b, r_1 } )\text{.}\) Hence, \(\gcd( {a, b} ) = \gcd( {r_1 , r_2 } )\text{.}\) We now continue to apply the Division Algorithm to produce a sequence of pairs of integers (all of which have the same greatest common divisor). This is summarized in the following table:</p>
 <div class="tabular-box natural-width"><table xmlns:svg="http://www.w3.org/2000/svg" class="tabular">
 <tr class="header-horizontal">

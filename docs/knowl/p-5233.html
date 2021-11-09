@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-11-03T16:29:32-04:00       *-->
+<!--*       on 2021-11-09T14:16:14-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,18 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Write \(\gcd( {4208, 288} )\) as a linear combination of 4208 and 288.</p>
+<p>From <a class="xref" data-knowl="./knowl/prog_usingeuclid.html" title="Progress Check 8.6">Progress Check 8.6</a>, \(\gcd ( {4208, 288} ) = 16\text{.}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+16 \amp = 64 - 48\\
+\amp = 64 - ( {112 - 64} ) = 64 \cdot 2 - 112\\
+\amp = ( {176 - 112} ) \cdot 2 - 112 = 176 \cdot 2 - 112 \cdot 3\\
+\amp = 176 \cdot 2 - ( {288 - 176} ) \cdot 3 = 176 \cdot 5 - 288 \cdot 3\\
+\amp = ( {4208 - 288 \cdot 14} ) \cdot 5 - 288 \cdot 3\\
+\amp = 4208 \cdot 5 + 288 \cdot ( { - 73} )\text{.}
+\end{align*}
+</div>
+<p class="continuation">So \(\gcd ( {4208, 288} ) = 16\text{,}\) and \(16 = 4208 \cdot 5 + 288 \cdot ( { - 73} )\text{.}\)</p>
 <span class="incontext"><a href="S_gcd.html#p-5233">in-context</a></span>
 </body>
 </html>

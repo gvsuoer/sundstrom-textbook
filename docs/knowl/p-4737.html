@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-11-03T16:28:23-04:00       *-->
+<!--*       on 2021-11-09T14:15:13-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,20 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(M\) be the relation on \(\mathbb{Z}\) defined as follows: <blockquote class="blockquote">For \(a, b \in \mathbb{Z}\text{,}\) \(a \mathrel{M} b\) if and only if \(a\) is a multiple of \(b\text{.}\)</blockquote></p>
+<p>So \(a \mathrel{M} b\) if and only if there exists a \(k \in \mathbb{Z}\) such that \(a = b k\text{.}\)</p>
+<ul class="disc">
+<li><p>The relation \(M\) is reflexive on \(\mathbb{Z}\) since for each \(x \in \mathbb{Z}\text{,}\) \(x = x \cdot 1\) and, hence, \(x \mathrel{M} x\text{.}\)</p></li>
+<li><p>Notice that \(4 \mathrel{M} 2\text{,}\) but \(2 \mathrel{\not \negthickspace M} 4\text{.}\) So there exist integers \(x\) and \(y\) such that \(x \mathrel{M} y\) but \(y \mathrel{\not \negthickspace M} x\text{.}\) Hence, the relation \(M\) is not symmetric.</p></li>
+<li>
+<p>Now assume that  \(x \mathrel{M} y\) and  \(y \mathrel{M} z\text{.}\) Then there exist integers  \(p\)  and  \(q\)  such that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x = y  p\text{  and  } y = z q\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Using the second equation to make a substitution in the first equation, we see that \(x = z \left( {p q} \right)\text{.}\) Since  \(p q \in \mathbb{Z}\text{,}\) we have shown that  \(x\)  is a multiple of  \(z\) and hence  \(x \mathrel{M} z\text{.}\) Therefore,  \(M\)  is a transitive relation.</p>
+</li>
+</ul>
 <span class="incontext"><a href="S_equivrelations.html#p-4737">in-context</a></span>
 </body>
 </html>

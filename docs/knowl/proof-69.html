@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-11-03T16:31:23-04:00       *-->
+<!--*       on 2021-11-09T14:17:53-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,6 +15,18 @@
 </head>
 <body>
 <article class="proof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof</span></h6>
-<p>Since \(\mathcal{P} ( \mathbb{N} )\) contains the infinite subset \(\left\{ \left\{ 1 \right\}, \left\{ 2 \right\}, \left\{ 3 \right\} \ldots \,\right\}\text{,}\) we can use <a class="xref" data-knowl="./knowl/T_subsetisinfinite.html" title="Theorem 9.13">Theorem 9.13</a>, to conclude that \(\mathcal{P} ( \mathbb{N} )\) is an infinite set. By Cantor's Theorem (<a class="xref" data-knowl="./knowl/T_cantor.html" title="Theorem 9.38: Cantor's Theorem">Theorem 9.38</a>), \(\mathbb{N}\) and \(\mathcal{P} ( \mathbb{N} )\) do not have the same cardinality. Therefore, \(\mathcal{P} ( \mathbb{N} )\) is not countable and hence is an uncountable set.</p></article><span class="incontext"><a href="S_uncountablesets.html#proof-69">in-context</a></span>
+<p>Let \(A\) be a set. If \(A = \emptyset\text{,}\) then \(\mathcal{P} ( A ) = \left\{ \emptyset \right\}\text{,}\) which has cardinality 1. Therefore, \(\emptyset\) and \(\mathcal{P} ( \emptyset )\) do not have the same cardinality.</p>
+<p>Now suppose that \(A \ne \emptyset\text{,}\) and let \(f\x  A \to \mathcal{P} ( A )\text{.}\) We will show that \(f\) cannot be a surjection, and hence there is no bijection from \(A\) to \(\mathcal{P} ( A )\text{.}\) This will prove that \(A\) is not equivalent to \(\mathcal{P} ( A )\text{.}\) Define</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+S = \left\{ x \in A \mid x \notin f ( x ) \right\}\text{.}
+\end{equation*}
+</div>
+<p>Assume that there exists a \(t\) in \(A\) such that \(f ( t ) = S\text{.}\) Now, either \(t \in S\) or \(t \notin S\text{.}\)</p>
+<ul class="disc">
+<li><p>If \(t \in S\text{,}\) then \(t \in \left\{ x \in A \mid x \notin f ( x ) \right\}\text{.}\) By the definition of \(S\text{,}\) this means that \(t \notin f ( t )\text{.}\) However, \(f ( t ) = S\) and so we conclude that \(t \notin S\text{.}\) But now we have \(t \in S\) and \(t \notin S\text{.}\) This is a contradiction.</p></li>
+<li><p>If \(t \notin S\text{,}\) then \(t \notin \left\{ x \in A \mid x \notin f ( x ) \right\}\text{.}\) By the definition of \(S\text{,}\) this means that \(t \in f ( t )\text{.}\) However, \(f ( t ) = S\) and so we conclude that \(t \in S\text{.}\) But now we have \(t \notin S\) and \(t \in S\text{.}\) This is a contradiction.</p></li>
+</ul>
+<p>So in both cases we have arrived at a contradiction. This means that there does not exist a \(t\) in \(A\) such that \(f ( t ) = S\text{.}\) Therefore, any function from \(A\) to \(\mathcal{P} ( A )\) is not a surjection and hence not a bijection. Hence, \(A\) and \(\mathcal{P} ( A )\) do not have the same cardinality.</p></article><span class="incontext"><a href="S_uncountablesets.html#proof-69">in-context</a></span>
 </body>
 </html>

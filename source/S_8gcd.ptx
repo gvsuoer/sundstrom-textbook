@@ -24,8 +24,8 @@
         </statement>
       </exercise>
 
-      <definition xml:id="gcd">
-        <statement>
+      <assemblage xml:id="gcd">
+        <title>Definition</title>
           <p>
             Let <m>a</m> and <m>b</m> be integers, not both 0.
             A <term>common divisor</term>
@@ -38,8 +38,8 @@
             The greatest common divisor of <m>a</m> and <m>b</m> is denoted by 
             <m>\gcd \left( {a, b} \right)</m>.
           </p>
-        </statement>
-      </definition>
+        
+      </assemblage>
 
       <exercise xml:id="PA_gcd1">
         <statement>
@@ -539,13 +539,13 @@
         and let <m>d = \gcd( {a, b} )</m>.
         By the Division Algorithm,
         there exist integers <m>q_1</m> and <m>r_1</m> such that
-        <men xml:id="eq_euclidalgo1">
-          a = b \cdot q_1  + r_1 \text{ ,  and  } 0 \leq r_1  \lt  b
-        </men>.
+        <me xml:id="eq_euclidalgo1">
+          a = b \cdot q_1  + r_1 \text{ ,  and  } 0 \leq r_1  \lt  b \qquad (1)
+        </me>.
       </p>
       <p>
         If <m>r_1 = 0</m>,
-        then <xref ref="eq_euclidalgo1">equation</xref> implies that <m>b</m> divides <m>a</m>.
+        then equation (1) implies that <m>b</m> divides <m>a</m>.
         Hence, <m>b = d = \gcd( {a, b} )</m> and this number satisfies 
         <xref ref="T_euclidalgo1">Condition</xref>
         and <xref ref="T_euclidalgo2">Condition</xref>.
@@ -554,19 +554,19 @@
         If <m>r_1  > 0</m>, then by <xref ref="L_gcdanddivalgo"></xref>,
         <m>\gcd( {a, b} ) = \gcd( {b, r_1 } )</m>.
         We use the Division Algorithm again to obtain integers <m>q_2</m> and <m>r_2</m> such that
-        <men xml:id="eq_euclidalgo2">
-          b = r_1  \cdot q_2  + r_2 \text{ ,  and  } 0 \leq r_2  \lt  r_1
-        </men>.
+        <me xml:id="eq_euclidalgo2">
+          b = r_1  \cdot q_2  + r_2 \text{ ,  and  } 0 \leq r_2  \lt  r_1 \qquad (2)
+        </me>.
       </p>
       <p>
         If <m>r_2 = 0</m>,
-        then <xref ref="eq_euclidalgo2">equation</xref> implies that <m>r_1</m> divides <m>b</m>.
+        then equation (2) implies that <m>r_1</m> divides <m>b</m>.
         This means that <m>r_1 = \gcd( {b, r_1 } )</m>.
         But we have already seen that <m>\gcd( {a, b} ) = \gcd( {b, r_1 } )</m>.
         Hence, <m>r_1 = \gcd( {a, b} )</m>.
         In addition,
         if <m>k</m> is an integer that divides both <m>a</m> and <m>b</m>, then,
-        using <xref ref="eq_euclidalgo1">equation</xref>,
+        using equation (1),
         we see that <m>r_1 = a - b \cdot q_1</m> and,
         hence <m>k</m> divides <m>r_1</m>.
         This shows that <m>r_1 = \gcd( {a, b} )</m> satisfies <xref ref="T_euclidalgo1">Condition</xref>
@@ -1024,8 +1024,8 @@
       More generally, we have the following definition.
     </p>
 
-    <definition xml:id="linearcombination">
-      <statement>
+    <assemblage xml:id="linearcombination">
+      <title>Definition</title>
         <p>
           Let <m>a</m> and <m>b</m> be integers.
           A <term>linear combination</term>
@@ -1033,8 +1033,7 @@
           of <m>a</m> and <m>b</m> is an integer of the form <m>ax + by</m>,
           where <m>x</m> and <m>y</m> are integers.
         </p>
-      </statement>
-    </definition>
+    </assemblage>
 
     <exercise xml:id="prog_gcdaslincomb">
       <title>Writing the gcd as a Linear Combination</title>

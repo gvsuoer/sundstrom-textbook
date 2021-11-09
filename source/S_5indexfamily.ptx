@@ -126,8 +126,8 @@
         One of the purposes of the work we have done so far in this activity was to show that 
         it is possible to define the union and intersection of a family of sets.
       </p>
-      <definition xml:id="D_familyoper">
-        <statement>
+      <assemblage xml:id="D_familyoper">
+        <title>Definition</title>
           <p>
             Let <m>\mathcal{C}</m> be a family of sets.
             The <term>union of <m>\mathbf{\mathcal{C}}</m></term>
@@ -152,8 +152,7 @@
               \in \mathscr{C} \right\}
             </me>
           </p>
-        </statement>
-      </definition>
+      </assemblage>
       <p>
         For example,
         consider the four sets <m>A</m>, <m>B</m>, <m>C</m>,
@@ -283,9 +282,9 @@
 
     </worksheet>
  
-  <subsection xml:id="sym_unionfiniteindex">
+  <subsection>
     <title>The Union and Intersection of an Indexed Family of Sets</title>
-    <p>
+    <p xml:id="sym_unionfiniteindex">
       One of the purposes of the beginning activities was to show that we often encounter 
       situations in which more than two sets are involved,
       and it is possible to define the union and intersection of more than two sets.
@@ -435,8 +434,8 @@
       <m>\Lambda</m> is the uppercase Greek letter lambda and <m>\alpha</m> is the 
       lowercase Greek letter alpha.
     </p>
-    <definition xml:id="D_indexfamily">
-      <statement>
+    <assemblage xml:id="D_indexfamily">
+      <title>Definition</title>
         <p>
           Let <m>\Lambda</m> be a nonempty set and suppose that for each <m>\alpha \in \Lambda</m>,
           there is a corresponding set <m>A_\alpha</m>.
@@ -450,8 +449,7 @@
           and <m>\Lambda</m> is called an
           <term>indexing set</term>.
         </p>
-      </statement>
-    </definition>
+    </assemblage>
 
     <exercise xml:id="prog_indexfamily">
       <title>Indexed Families of Sets</title>
@@ -529,8 +527,8 @@
       an indexed family of sets.
     </p>
 
-    <definition xml:id="D_indexoper">
-      <statement>
+    <assemblage xml:id="D_indexoper">
+      <title>Definition</title>
         <p>
           Let <m>\Lambda</m> be a nonempty indexing set and let
           <m>\mathscr{A} = \left\{ A_\alpha \mid \alpha \in \Lambda \right\}</m> be an 
@@ -560,8 +558,7 @@
             \alpha \in \Lambda,  x \in A_\alpha \right\}\!
           </me>.
         </p>
-      </statement>
-    </definition>
+    </assemblage>
 
     <example xml:id="exam_indexfamily">
       <title>A Family of Sets Indexed by the Positive Real Numbers</title>
@@ -787,10 +784,10 @@
         Hence, <m>x \in A_{\beta}^c</m>,
         which implies that <m>x \in \bigcup\limits_{\alpha \in \Lambda}^{}A_{\alpha}^c</m>.
         Therefore, we have proved that
-        <men xml:id="eq_indexproperties1">
+        <me xml:id="eq_indexproperties1">
           \left(\:\bigcap_{\alpha \in \Lambda}^{}A_\alpha \right)^c \subseteq 
-          \bigcup_{\alpha \in \Lambda}^{}A_{\alpha}^c
-        </men>.
+          \bigcup_{\alpha \in \Lambda}^{}A_{\alpha}^c \qquad (1)
+        </me>.
       </p>
       <p>
         We now let <m>y \in \bigcup\limits_{\alpha \in \Lambda}^{}A_{\alpha}^c</m>.
@@ -801,14 +798,13 @@
         and, hence,
         <m>y \in \left(\:\bigcap\limits_{\alpha \in \Lambda}^{}A_\alpha \right)^c</m>.
         This proves that
-        <men xml:id="eq_indexproperties2">
+        <me xml:id="eq_indexproperties2">
           \bigcup_{\alpha \in \Lambda}^{}A_{\alpha}^c \subseteq 
-          \left(\:\bigcap_{\alpha \in \Lambda}^{}A_\alpha \right)^c
-        </men>.
+          \left(\:\bigcap_{\alpha \in \Lambda}^{}A_\alpha \right)^c \qquad (2)
+        </me>.
       </p>
       <p>
-        Using the results in <xref ref="eq_indexproperties1">equation</xref> and 
-        <xref ref="eq_indexproperties2">equation</xref>,
+        Using the results in (1) and (2),
         we have proved that <m>\left(\:\bigcap\limits_{\alpha \in \Lambda}^{}A_\alpha \right)^c = 
         \bigcup\limits_{\alpha \in \Lambda}^{}A_{\alpha}^c</m>. 
       </p>
@@ -870,8 +866,8 @@
       <q>disjointness</q>
       for an indexed family of sets.
     </p>
-    <definition xml:id="D_disjointfamily">
-      <statement>
+    <assemblage xml:id="D_disjointfamily">
+      <title>Definition</title>
         <p>
           Let <m>\Lambda</m> be a nonempty indexing set,
           and let <m>\mathscr{A} = \left\{ A_\alpha \mid \alpha \in \Lambda \right\}</m> 
@@ -884,8 +880,7 @@
           if <m>A_\alpha \ne A_\beta</m>,
           then <m>A_\alpha \cap A_\beta = \emptyset</m>.
         </p>
-      </statement>
-    </definition>
+    </assemblage>
 
     <exercise xml:id="prog_disjoint">
       <title>Disjoint Families of Sets</title>
@@ -901,7 +896,7 @@
       <figure xml:id="fig_disjoint">
         <caption>Two Families of Indexed Sets</caption>
         <image width="75%" source="figps-disjoint"/>
-        <description>One figure has four sets, A1 to A4. No set overlaps. The second figure has 
+        <description>One figure has four sets, A1 to A4. No sets overlap. The second figure has 
         four sets, B1 to B4. B1 and B4 overlap, B2 and B3 overlap, and B3 and B4 overlap.</description>
       </figure>
       </introduction>

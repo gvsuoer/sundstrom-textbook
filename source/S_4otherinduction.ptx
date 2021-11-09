@@ -5,8 +5,8 @@
   
     <worksheet xml:id="PA_factorials">
       <title>Beginning Activity 1: Exploring a Proposition about Factorials</title>
-      <definition xml:id="nfactorial">
-        <statement>
+      <assemblage xml:id="nfactorial">
+        <title>Definition</title>
           <p>
             If <m>n</m> is a natural number,
             we define <term><m>\boldsymbol{n}</m> factorial</term>,
@@ -14,8 +14,7 @@
             denoted by <m>n!</m> , to be the product of the first <m>n</m> natural numbers.
             In addition, we define <m>0!</m> to be equal to 1.
           </p>
-        </statement>
-      </definition>
+      </assemblage>
       <p>
         Using this definition, we see that
         <md>
@@ -72,9 +71,9 @@
         <m>k! > 2^k</m> and would need to prove that <m>(k+1)! > 2^{k+1}</m>.
         Notice that if we multiply both sides of the inequality
         <m>k! > 2^k</m> by <m>(k + 1)</m>, we obtain
-        <men xml:id="pa_52inequality">
-          (k + 1)\cdot k! > (k + 1) 2^k
-        </men>.
+        <me xml:id="pa_52inequality">
+          (k + 1)\cdot k! > (k + 1) 2^k \qquad (1)
+        </me>.
       </p> 
 
         <exercise>
@@ -166,20 +165,20 @@
     <p>
           <idx><h>domino theory</h></idx>
       Mathematical induction is frequently used to prove statements of the form
-      <men xml:id="eq_5f">
-        \left( {\forall n \in \mathbb{N}} \right)\left( {P( n )} \right)
-      </men>,
+      <me xml:id="eq_5f">
+        \left( {\forall n \in \mathbb{N}} \right)\left( {P( n )} \right) \qquad (1)
+      </me>,
       where <m>P( n )</m> is an open sentence.
       This means that we are proving that every statement in the following infinite list is true.
-      <men xml:id="eq_5g">
-        P( 1 ),P( 2 ),P( 3 ), \ldots
-      </men>
+      <me xml:id="eq_5g">
+        P( 1 ),P( 2 ),P( 3 ), \ldots \qquad (2)
+      </me>
     </p>
     <p>
       The inductive step in a proof by induction is to prove that if one statement in this 
       infinite list of statements is true,
       then the next statement in the list must be true.
-      Now imagine that each statement in <xref ref="eq_5g">equation</xref> is a domino in a chain 
+      Now imagine that each statement in equation (2) is a domino in a chain 
       of dominoes.
       When we prove the inductive step,
       we are proving that if one domino is knocked over,
@@ -205,11 +204,10 @@
       <m>M</m> to be any integer.
       We are still only concerned with those integers that are greater than or equal to <m>M</m>.
 
-      <principle xml:id="principle-math-induct">
+      <assemblage xml:id="principle-math-induct">
         <title>The Extended Principle of Mathematical Induction</title>
         <idx><h>Extended Principle of Mathematical Induction</h></idx>
           <idx><h>mathematical induction</h><h>Extended Principle</h></idx>
-        <statement>
           <p>
             Let <m>M</m> be an integer.
             If <m>T</m> is a subset of <m>\mathbb{Z}</m> such that
@@ -229,8 +227,7 @@
             then <m>T</m> contains all integers greater than or equal to <m>M</m>.
             That is, <m>\left\{ n \in \mathbb{Z} \mid n \geq M \right\} \subseteq T</m>.
           </p>
-        </statement>
-      </principle>
+      </assemblage>
     </p>
   </subsection>
 
@@ -277,9 +274,8 @@
       This means that a proof using the Extended Principle of Mathematical Induction will 
       have the following form: 
     </p>
-    <example xml:id="subsubsec-using-epmi">
+    <assemblage xml:id="subsubsec-using-epmi">
       <title>Using the Extended Principle of Mathematical Induction</title>
-      <statement>
       <p>
         Let <m>M</m> be an integer.
         To prove: <m>\left( {\forall n \in \mathbb{Z} \text{ with } n \geq M} \right)
@@ -304,9 +300,8 @@
         We can then conclude that <m>P( n )</m> is true for all
         <m>n \in \mathbb{Z}</m> with <m>n \geq M</m>.
       </p>
-      </statement>
       
-    </example>
+    </assemblage>
   
     <p>
       This is basically the same procedure as the one for using the 
@@ -343,31 +338,31 @@
         So let <m>k</m> be a natural number greater than or equal to 4, and 
         assume that <m>P( k )</m> is true.
         That is, assume that
-        <men xml:id="eq_5h">
-          k! > 2^k
-        </men>.
+        <me xml:id="eq_5h">
+          k! > 2^k \qquad (1)
+        </me>.
       </p>
       <p>
         The goal is to prove that <m>P( {k + 1} )</m> is true or that 
         <m>\left( {k + 1} \right)! > 2^{k + 1}</m>.
-        Multiplying both sides of <xref ref="eq_5h">inequality</xref> by <m>k + 1</m> gives
-        <mdn>
-          <mrow number="no">\left( k + 1 \right) \cdot k! \amp > \left( k + 1 \right) 
-          \cdot 2^k ,\text{  or }</mrow>
-          <mrow xml:id="eq_5i">\left( k + 1 \right)! \amp > \left( k + 1 \right) \cdot 2^k </mrow>
-        </mdn>.
+        Multiplying both sides of inequality (1) by <m>k + 1</m> gives
+        <md>
+          <mrow>\left( k + 1 \right) \cdot k! \amp > \left( k + 1 \right) 
+          \cdot 2^k ,\text{  or } \amp \amp</mrow>
+          <mrow xml:id="eq_5i">\left( k + 1 \right)! \amp > \left( k + 1 \right) \cdot 2^k \amp \amp (2)</mrow>
+        </md>.
       </p>
       <p>
         Now, <m>k \geq 4</m>.
         Thus, <m>k + 1 > 2</m>,
         and hence <m>\left( k + 1 \right) \cdot 2^k > 2 \cdot 2^k</m>.
         This means that
-        <men xml:id="eq_5j">
-          \left( k + 1 \right) \cdot 2^k > 2^{k + 1}
-        </men>.
+        <me xml:id="eq_5j">
+          \left( k + 1 \right) \cdot 2^k > 2^{k + 1} \qquad (3)
+        </me>.
       </p>
       <p>
-        <xref ref="eq_5i">Inequality</xref> and <xref ref="eq_5j">inequality</xref> show that
+        Inequalities (2) and (3) show that
         <me>
           (k + 1)! > 2^{k + 1}
         </me>,
@@ -471,11 +466,10 @@
       we will state the extended version of the Second Principle.
       In many cases, we will use <m>M = 1</m> or <m>M = 0</m>.
     </p>
-    <principle xml:id="principle-math-induct2">
+    <assemblage xml:id="principle-math-induct2">
       <title>The Second Principle of Mathematical Induction</title>
         <idx><h>Second Principle of Mathematical Induction</h></idx>
         <idx><h>mathematical induction</h><h>Extended Principle</h></idx>
-      <statement>
         <p>
           Let <m>M</m> be an integer.
       If <m>T</m> is a subset of <m>\mathbb{Z}</m> such that
@@ -496,8 +490,7 @@
           then <m>T</m> contains all integers greater than or equal to <m>M</m>.
           That is, <m>\left\{ { {n \in \mathbb{Z} } \mid n \geq M} \right\} \subseteq T</m>.
         </p>
-      </statement>
-    </principle>
+    </assemblage>
 
   </subsection>
 
@@ -542,9 +535,8 @@
       This means that a proof using the Second Principle of Mathematical Induction will have 
       the following form:
     </p>
-    <example xml:id="using-secpmi">
+    <assemblage xml:id="using-secpmi">
       <title>Using the Second Principle of Mathematical Induction</title>
-      <statement>
       <p>
         Let  <m>M</m>  be an integer.  To prove:
         <m>\left( {\forall n \in \mathbb{Z} \text{ with }  n \geq M} \right)
@@ -571,8 +563,7 @@
         We can then conclude that <m>P( n )</m> is true for all <m>n \in \mathbb{Z}</m> with  
         <m>n \geq M</m>.
       </p>
-      </statement>
-    </example>
+    </assemblage>
   
     <p>
       We will use this procedure to prove the proposition suggested in 
@@ -860,12 +851,12 @@
                 <m>P \left( 2 \right)</m> is true since <m>3^2 = 9</m>, <m>1 + 2^2 = 5</m>, and 
                 <m>9 > 5</m>.
                 For the inductive step, we assume that <m>P \left( k \right)</m> is true and so
-                <men xml:id="exer42-1anseq">
-                  3^k > 1 + 2^k
-                </men>.
+                <me xml:id="exer42-1anseq">
+                  3^k > 1 + 2^k \qquad (1)
+                </me>.
                 To prove that <m>P(k+1)</m> is true, we must prove that 
                 <m>3^{k+1} > 1 + 2^{k+1}</m>.  Multiplying both sides 
-                <xref ref="exer42-1anseq">inequality</xref> by 3 gives
+                inequality (1) by 3 gives
                 <me>
                   3^{k + 1} > 3 + 3 \cdot 2^k
                 </me>.
@@ -906,12 +897,12 @@
           <m>k \geq 5</m>  and that <m>P(k)</m> is true or that <m>k^2 \lt  2^k</m>.  
           With these assumptions, we need to prove that <m>P(k+1)</m> is true or that 
           <m>(k+1)^2 \lt  2^{k+1}</m>.  We first note that
-          <men xml:id="exer42-2anseq">
-            ( k + 1 )^2 = k^2 + 2k + 1 \lt  2^k + 2k + 1
-          </men>.
+          <me xml:id="exer42-2anseq">
+            ( k + 1 )^2 = k^2 + 2k + 1 \lt  2^k + 2k + 1 \qquad (1)
+          </me>.
           Since <m>k \geq 5</m>, we see that <m>5k \lt  k^2</m> and so <m>2k + 3k \lt  k^2</m>.  
           However, <m>3k > 1</m> and so <m>2k + 1 \lt  2k + 3k \lt  k^2</m>.  
-          Combinining this with <xref ref="exer42-2anseq">inequality</xref>, we obtain 
+          Combinining this with inequality (1), we obtain 
           <m>(k+1)^2 \lt  2^k+ k^2</m>. 
           Using the assumption that <m>P(k)</m> is true <m>\left(k^2 \lt  2^k\right)</m>, we obtain
           <md>

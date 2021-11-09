@@ -179,8 +179,8 @@
       we refer to the equivalence classes as congruence classes.
     </p>
 
-    <definition xml:id="integersmodn">
-      <statement>
+    <assemblage xml:id="integersmodn">
+      <title>Definition</title>
         <p>
           Let <m>n \in \mathbb{N}</m>.
           The set of congruence classes for the relation of congruence modulo <m>n</m> on 
@@ -190,8 +190,8 @@
           or the set of integers mod <m>n</m>.
           We will denote this set of congruence classes by <m>\mathbb{Z}_{n}</m>.
         </p>
-      </statement>
-    </definition>
+      
+    </assemblage>
     
     <p>
       <xref ref="C_propsofcongclasses2"></xref> tells us that
@@ -380,8 +380,8 @@
       We say that these definitions of addition and multiplication are <term>well defined</term>.
     </p>
 
-    <definition xml:id="modulararithmetic">
-      <statement>
+    <assemblage xml:id="modulararithmetic">
+      <title>Definition</title>
         <p>
           Let <m>n \in \mathbb{N}</m>.
           <term>Addition and multiplication</term>
@@ -398,8 +398,7 @@
           is used to refer to the operations of addition and multiplication of congruence 
           classes in the integers modulo<nbsp/><m>n</m>.
         </p>
-      </statement>
-    </definition>
+    </assemblage>
     <p>
       So if <m>n \in \mathbb{N}</m>,
       then we have an addition and multiplication defined on <m>\mathbb{Z}_n</m>,
@@ -930,44 +929,44 @@
       We will use the case of <m>n = 7319</m> to illustrate the general process.
       We must use our standard place value system.
       By this, we mean that we will write <m>7319</m> as follows:
-      <men xml:id="eq_divideby9-1">
+      <me xml:id="eq_divideby9-1">
         7319 = \left( {7 \times 10^3 } \right) + \left( {3 \times 10^2 } \right) + \left( {1 
-        \times 10^1 } \right) + \left( 9 \times 10^0 \right)
-      </men>.
+        \times 10^1 } \right) + \left( 9 \times 10^0 \right) \qquad (1)
+      </me>.
     </p>
     <p>
       The idea is to now use the definition of addition and multiplication in
-      <m>\mathbb{Z}_9</m> to convert <xref ref="eq_divideby9-1">equation</xref> to an 
+      <m>\mathbb{Z}_9</m> to convert equation (1) to an 
       equation in <m>\mathbb{Z}_9</m>.
       We do this as follows:
-      <mdn>
-        <mrow number="no">\amp = [ {\left( {7 \times 10^3 } \right) + \left( {3 \times 10^2 }  
-        \right) + \left( {1 \times 10^1 } \right) + \left( 9 \times 10^0 \right)} ]</mrow>
-        <mrow number="no">\amp = [ {7 \times 10^3 } ] \oplus [ {3 \times 10^2 } ]  
-        \oplus [ {1 \times 10^1 } ] \oplus [ {9 \times 10^0 } ]</mrow>
+      <md>
+        <mrow>\amp = [ {\left( {7 \times 10^3 } \right) + \left( {3 \times 10^2 }  
+        \right) + \left( {1 \times 10^1 } \right) + \left( 9 \times 10^0 \right)} ] \amp \amp</mrow>
+        <mrow>\amp = [ {7 \times 10^3 } ] \oplus [ {3 \times 10^2 } ]  
+        \oplus [ {1 \times 10^1 } ] \oplus [ {9 \times 10^0 } ] \amp \amp</mrow>
         <mrow xml:id="eq_divideby9-2">\amp = \left( {[ 7 ] \odot [ {10^3 } ]} \right) 
         \oplus \left( {[ 3 ] \odot [ {10}^2 ]} \right) \oplus \left( {[ 1 ] \odot [ 10^ 1 ]} 
-        \right) \oplus \left( [ 9 ] \odot [ 1 ] \right)</mrow>
-      </mdn>.
+        \right) \oplus \left( [ 9 ] \odot [ 1 ] \right) \amp \amp (2)</mrow>
+      </md>.
     </p>
     <p>
       Since <m>10^3  \equiv 1 \pmod 9</m>,
       <m>10^2  \equiv 1 \pmod 9</m> and <m>10 \equiv 1 \pmod 9</m>,
       we can conclude that <m>[ 10^3 ] = [ 1 ]</m>,
       <m>[ {10^2 } ] = [ 1 ]</m> and <m>[ {10} ] = [ 1 ]</m>.
-      Hence, we can use these facts and  <xref ref="eq_divideby9-2">equation</xref> to obtain
-      <mdn>
-        <mrow number="no">[ {7319} ] \amp =\left( {[ 7 ] \odot [ {10^3 } ]} \right) \oplus 
+      Hence, we can use these facts and equation (2) to obtain
+      <md>
+        <mrow>[ {7319} ] \amp =\left( {[ 7 ] \odot [ {10^3 } ]} \right) \oplus 
         \left( {[ 3 ] \odot [ {10^2} ]} \right) \oplus \left( {[ 1 ] \odot [ 10 ]} \right) 
-        \oplus \left( [ 9 ] \odot [ 1 ] \right)</mrow>
-        <mrow number="no">\amp = \left( {[ 7 ] \odot [ 1 ]} \right) \oplus \left( {[ 3 ] 
+        \oplus \left( [ 9 ] \odot [ 1 ] \right) \amp \amp </mrow>
+        <mrow>\amp = \left( {[ 7 ] \odot [ 1 ]} \right) \oplus \left( {[ 3 ] 
         \odot [ 1 ]} \right) \oplus \left( {[ 1 ] \odot [ 1 ]} \right) \oplus \left( [ 9 ] 
-        \odot [ 1 ] \right)</mrow>
-        <mrow number="no">\amp = [ 7 ] \oplus [ 3 ] \oplus [ 1 ] \oplus [ 9 ]</mrow>
-        <mrow xml:id="eq_divideby9-3">\amp = [ {7 + 3 + 1 + 9} ]</mrow>
-      </mdn>.
+        \odot [ 1 ] \right) \amp \amp </mrow>
+        <mrow>\amp = [ 7 ] \oplus [ 3 ] \oplus [ 1 ] \oplus [ 9 ] \amp \amp </mrow>
+        <mrow xml:id="eq_divideby9-3">\amp = [ {7 + 3 + 1 + 9} ] \amp \amp (3)</mrow>
+      </md>.
 
-      <xref ref="eq_divideby9-3">equation</xref> tells us that 7319 has the same remainder when 
+      Equation (3) tells us that 7319 has the same remainder when 
       divided by 9 as the sum of its digits.
       It is easy to check that the sum of the digits is 20 and hence has a remainder of 2.
       This means that when 7319 is divided by 9, the remainder is 2.
@@ -976,7 +975,7 @@
       To prove that any natural number has the same remainder when divided by 9 as the sum of its digits,
       it is helpful to introduce notation for the decimal representation of a natural number.
       The notation we will use is similar to the notation for the number 7319 
-      in <xref ref="eq_divideby9-1">equation</xref>.
+      in equation (1).
     </p>
     <p>
       In general, if <m>n \in \mathbb{N}</m>,
@@ -993,18 +992,18 @@
     </p>
     <p>
       Using congruence classes for congruence modulo 9, we have
-      <mdn>
-        <mrow number="no">\amp = [ {\left( {a_k  \times 10^k } \right) + \left( {a_{k - 1}  
+      <md>
+        <mrow>\amp = [ {\left( {a_k  \times 10^k } \right) + \left( {a_{k - 1}  
         \times 10^{k - 1} } \right) +  \cdots  + \left( {a_1  \times 10^1 } \right) + 
-        \left( {a_0  \times 10^0 } \right)} ]</mrow>
-        <mrow number="no">\amp = [ {a_k  \times 10^k } ] \oplus [ {a_{k - 1}  
+        \left( {a_0  \times 10^0 } \right)} ] \amp \amp </mrow>
+        <mrow>\amp = [ {a_k  \times 10^k } ] \oplus [ {a_{k - 1}  
         \times 10^{k - 1} } ] \oplus  \cdots  \oplus [ {a_1  \times 10^1 } ] 
-        \oplus [ {a_0  \times 10^0 } ]</mrow>
-        <mrow number="no">\amp = \left( {[ {a_k } ] \odot [ {10^k } ]} \right) 
-        \oplus \left( {[ {a_{k - 1} } ] \odot [ {10^{k - 1} } ]} \right) \oplus \cdots</mrow>
+        \oplus [ {a_0  \times 10^0 } ] \amp \amp </mrow>
+        <mrow>\amp = \left( {[ {a_k } ] \odot [ {10^k } ]} \right) 
+        \oplus \left( {[ {a_{k - 1} } ] \odot [ {10^{k - 1} } ]} \right) \oplus \cdots \amp \amp </mrow>
         <mrow xml:id="eq_divideby9-4">\amp  \hspace{5cm} \oplus \left( {[ {a_1 } ] 
-        \odot [ {10^1 } ]} \right) \oplus \left( {[ {a_0 } ] \odot [ {10^0 } ]} \right)\!</mrow>
-      </mdn>.
+        \odot [ {10^1 } ]} \right) \oplus \left( {[ {a_0 } ] \odot [ {10^0 } ]} \right)\! \amp \amp (4)</mrow>
+      </md>.
     </p>
     <p>
       One last detail is needed.
@@ -1029,7 +1028,7 @@
       </me>,
     </p>
     <p>
-      Now using <xref ref="eq_divideby9-4">equation</xref> and <xref ref="P_poweroftenmod9"></xref>,
+      Now using equation (4) and <xref ref="P_poweroftenmod9"></xref>,
       we obtain
       <md>
         <mrow>[ n ] \amp = \left( {[ {a_k } ] \odot [ 1 ]} \right) \oplus 

@@ -25,8 +25,8 @@
         <m>m</m> divides an integer <m>n</m>.
       </p>
 
-      <definition xml:id="divides">
-        <statement>
+      <assemblage xml:id="divides">
+        <title>Definition</title>
           <p>
             A nonzero integer <m>m</m> <term>divides</term>
                 <idx><h>divides</h></idx>
@@ -44,8 +44,7 @@
             we frequently use the notation <m>a \mid b</m> as a shorthand for
             <q><m>a</m> divides <m>b</m>.</q>
           </p>
-        </statement>
-      </definition>
+      </assemblage>
 
       
       <paragraphs>
@@ -711,14 +710,14 @@
       <p>
         Since <m>a</m> divides <m>b</m> and <m>b</m> divides <m>c</m>,
         there exist integers <m>s</m> and <m>t</m> such that
-        <mdn>
-          <mrow xml:id="eq_3a">b \amp = a \cdot s, \text{ and }</mrow>
-          <mrow xml:id="eq_3b">c \amp = b \cdot t</mrow>
-        </mdn>.
+        <md>
+          <mrow xml:id="eq_3a">b \amp = a \cdot s, \text{ and } \amp \amp (1)</mrow>
+          <mrow xml:id="eq_3b">c \amp = b \cdot t \amp \amp (2)</mrow>
+        </md>.
       </p>
       <p>
-        We can now substitute the expression for <m>b</m> from <xref ref="eq_3a">equation</xref> 
-        into <xref ref="eq_3b">equation</xref>.
+        We can now substitute the expression for <m>b</m> from equation (1) 
+        into equation (2).
         This gives
         <me>
           c = ( {a \cdot s}) \cdot t
@@ -765,13 +764,13 @@
       Since <m>x</m> is an odd integer,
       there exists an integer <m>n</m> such that
       </blockquote>
-      <men xml:id="eq_3e">
-        x = 2n + 1
-      </men>.
+      <me xml:id="eq_3e">
+        x = 2n + 1 \qquad (1)
+      </me>.
 
     Later in the proof, there may be a line such as
     <blockquote>
-    Then, using the result in <xref ref="eq_3e">equation</xref>, we obtain <ellipsis/>.
+    Then, using the result in equation (1), we obtain <ellipsis/>.
     </blockquote>
 
     Notice that we did not number every equation in <xref ref="T_transdivide"></xref>. 
@@ -1098,8 +1097,8 @@
       define when two numbers are congruent modulo some natural number <m>n</m>.
     
 
-    <definition xml:id="congruence">
-      <statement>
+    <assemblage xml:id="congruence">
+      <title>Definition</title>
         <p>
           Let <m>n \in \mathbb{N}</m>.
           If <m>a</m> and <m>b</m> are integers,
@@ -1113,8 +1112,7 @@
           or
           <q><m>a</m> is congruent to <m>b</m> mod <m>n</m>.</q>
         </p>
-      </statement>
-    </definition>
+    </assemblage>
 
   
       Notice that we can use the definition of divides to say that <m>n</m> divides 
@@ -2201,6 +2199,7 @@
             <caption>Diagrams for <xref ref="exer_sec31-pythag"/></caption>
               <image width="50%" source="figps-pythag-triangle" xml:id="eq-triangles">
                 <description><!-- tk make description--></description>
+                <!-- Pythagorean theorem is a^2 + b^2 = c^2. -->
           </image>
           </figure>
         </p>

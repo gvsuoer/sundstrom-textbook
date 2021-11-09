@@ -88,8 +88,8 @@
         primarily from graphing equations with two variables.
         Following is a formal definition of an ordered pair.
       </p>
-      <definition xml:id="orderedpair">
-        <statement>
+      <assemblage xml:id="orderedpair">
+        <title>Definition</title>
           <p>
             Let <m>A</m> and <m>B</m> be sets.
             An <term>ordered pair</term>
@@ -112,15 +112,14 @@
             <m>a</m> is the <term>first coordinate</term>
             and <m>b</m> is the <term>second coordinate</term>.
           </p>
-        </statement>
-      </definition>
+      </assemblage>
       <p>
         We will now introduce a new set operation that gives a way of combining elements from 
         two given sets to form ordered pairs.
         The basic idea is that we will create a set of ordered pairs.
       </p>
-      <definition xml:id="cartesianproduct">
-        <statement>
+      <assemblage xml:id="cartesianproduct">
+        <title>Definition</title>
           <p>
             If <m>A</m> and <m>B</m> are sets,
             then the <term>Cartesian product</term>,
@@ -141,8 +140,7 @@
               \right\}
             </me>.
           </p>
-        </statement>
-      </definition>
+      </assemblage>
       <p>
         Let <m>A = \left\{ {1,2,3} \right\}</m> and <m>B = \left\{ {a,b} \right\}</m>.
       </p>
@@ -433,9 +431,9 @@
     </exercise>
   </subsection>
 
-  <subsection xml:id="sym_cartplane">
+  <subsection>
     <title>The Cartesian Plane</title>
-    <p>
+    <p xml:id="sym_cartplane1">
       In <xref text="custom" ref="PA_equationwith2vars">Beginning Activity 1</xref>,
       we sketched the graph of the equation
       <m>2x + 3y = 12</m> in the <m>xy</m>-plane.
@@ -445,7 +443,7 @@
       This plane is called the <term>Cartesian plane.</term>
           <idx><h>Cartesian plane</h></idx>
     </p>
-    <p>
+    <p xml:id="sym_cartplane2">
       The basic idea is that each ordered pair of real numbers corresponds to a point in the plane,
       and each point in the plane corresponds to an ordered pair of real numbers.
       This geometric representation of
@@ -788,38 +786,38 @@
       When we start by choosing an arbitrary element of <m>A \times \left( {B \cup C} \right)</m>,
       we could give that element a name.
       For example, we could start by letting
-      <men xml:id="eq_cartprod">
-        u \text{ be an element of }  A \times \left( {B \cup C} \right)\!
-      </men>.
+      <me xml:id="eq_cartprod">
+        u \text{ be an element of }  A \times \left( {B \cup C} \right)\! \qquad (1)
+      </me>.
 
       We can then use the definition of
       <q>ordered pair</q>
       to conclude that
-      <men xml:id="eq_cartprod2">
+      <me xml:id="eq_cartprod2">
         \text{ there exists }  x \in A  \text{ and there exists }  y \in B \cup C 
-        \text{ such that }   u = \left( {x,y} \right)
-      </men>.
+        \text{ such that }   u = \left( {x,y} \right) \qquad (2)
+      </me>.
 
       In order to prove that <m>A \times \left( {B \cup C} \right) \subseteq 
       \left( {A \times B} \right) \cup \left( {A \times C} \right)</m>,
-      we must now show that the ordered pair <m>u</m> from <xref ref="eq_cartprod">equation</xref> is 
+      we must now show that the ordered pair <m>u</m> from (1) is 
       in <m>\left( {A \times B} \right) \cup \left( {A \times C} \right)</m>.
       In order to do this,
       we can use the definition of set union and prove that
-      <men xml:id="eq_cartprod3">
-        u \in (A \times B) \text{ or }  u \in (A \times C)
-      </men>.
+      <me xml:id="eq_cartprod3">
+        u \in (A \times B) \text{ or }  u \in (A \times C) \qquad (3)
+      </me>.
 
       Since <m>u = (x, y)</m>,
-      we can prove <xref ref="eq_cartprod3">equation</xref> by proving that
-      <men xml:id="eq_cartprod4">
+      we can prove (3) by proving that
+      <me xml:id="eq_cartprod4">
         \left( x \in A \text{ and }  y \in B \right) \text{ or }  \left( x \in A \text{ and }  y 
-        \in C \right)
-      </men>.
+        \in C \right) \qquad (4)
+      </me>.
     </p>
     <p>
-      If we look at the sentences in <xref ref="eq_cartprod2">equation</xref> 
-      and <xref ref="eq_cartprod4">equation</xref>,
+      If we look at the sentences in (2) 
+      and (4),
       it would seem that we are very close to proving that <m>A \times \left( {B \cup C} \right) 
       \subseteq \left( {A \times B} \right) \cup \left( {A \times C} \right)</m>.
       Following is a proof of <xref ref="T_propsofcartprod2"/> of 
@@ -871,10 +869,10 @@
         Hence, we may conclude that if <m>u</m> is an element of <m>A \times \left( {B \cup C} \right)</m>,
         then <m>u \in \left( {A \times B} \right) \cup \left( {A \times C} \right)</m>,
         and this proves that
-        <men xml:id="eq_4m">
+        <me xml:id="eq_4m">
           A \times \left( {B \cup C} \right) \subseteq \left( {A \times B} \right) \cup 
-          \left( {A \times C} \right)\!
-        </men>.
+          \left( {A \times C} \right)\! \qquad (1)
+        </me>.
       </p>
       <p>
         We must now prove that <m>\left( {A \times B} \right) \cup \left( {A \times C} \right) 
@@ -903,13 +901,13 @@
       <p>
         <m>v \in \left( {A \times B} \right) \cup \left( {A \times C} \right)</m>,
         then <m>v \in A \times \left( {B \cup C} \right)</m>, and this proves that
-        <men xml:id="eq_4n">
+        <me xml:id="eq_4n">
           \left( {A \times B} \right) \cup \left( {A \times C} \right) \subseteq A \times 
-          \left( {B \cup C} \right)\!
-        </men>.
+          \left( {B \cup C} \right)\! \qquad (2)
+        </me>.
       </p>
       <p>
-        The relationships in <xref ref="eq_4m">equation</xref> and <xref ref="eq_4n">equation</xref> 
+        The relationships in (1) and (2)
         prove that <m>A \times \left( {B \cup C} \right) = \left( {A \times B} \right) 
         \cup \left( {A \times C} \right)</m>. 
       </p>

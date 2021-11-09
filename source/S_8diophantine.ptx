@@ -177,15 +177,14 @@
       we were interested only in integer solutions for certain equations.
       In such instances, we give the equation a special name.
     </p>
-    <definition xml:id="diophantineequation">
-      <statement>
+    <assemblage xml:id="diophantineequation">
+      <title>Definition</title>
         <p>
           An equation whose solutions are required to be integers is called a
           <term>Diophantine equation</term>.
               <idx><h>Diophantine equation</h></idx>
         </p>
-      </statement>
-    </definition>
+    </assemblage>
     <p>
       Diophantine equations are named in honor of the Greek mathematician Diophantus of 
       Alexandria <idx><h>Diophantus of Alexandria</h></idx>
@@ -202,16 +201,15 @@
       the solutions for a so-called Diophantine equation must be integers.
     </p>
 
-    <definition xml:id="lineardiophantine-one">
-      <statement>
+    <assemblage xml:id="lineardiophantine-one">
+      <title>Definition</title>
         <p>
           If <m>a</m> and <m>b</m> are integers with <m>a \ne 0</m>,
           then the equation <m>ax = b</m> is a
           <term>linear Diophantine equation in one variable</term>.
               <idx><h>Diophantine equation</h><h>linear in one variable</h></idx>
         </p>
-      </statement>
-    </definition>
+    </assemblage>
 
     <p>
       <xref ref="prop_lindiophone"></xref>
@@ -224,8 +222,8 @@
       the definition for a linear Diophantine equation in one variable.
     </p>
 
-    <definition xml:id="lineardiophantine">
-      <statement>
+    <assemblage xml:id="lineardiophantine">
+      <title>Definition</title>
         <p>
           Let <m>a</m>, <m>b</m>,
           and <m>c</m> be integers with <m>a \ne 0</m> and <m>b \ne 0</m>.
@@ -234,8 +232,8 @@
               <idx><h>Diophantine equation</h><h>linear in two variables</h></idx>
               <idx><h>linear Diophantine equations</h></idx>
         </p>
-      </statement>
-    </definition>
+      
+    </assemblage>
 
     <p>
       The equations that were investigated in <xref text="custom" ref="exploringlinear">Beginning Activity 2</xref>
@@ -530,14 +528,14 @@
         <xref ref="T_gcdaslincomb"></xref>
         tells us that <m>d</m> is a linear combination of <m>a</m> and <m>b</m>.
         So there exist integers <m>s</m> and <m>t</m> such that
-        <men xml:id="eq_lindioph1">
-          d = as + bt
-        </men>.
+        <me xml:id="eq_lindioph1">
+          d = as + bt \qquad (1)
+        </me>.
       </p>
       <p>
         Since <m>d \mid c</m>,
         there exists an integer <m>m</m> such that <m>c = dm</m>.
-        We can now multiply both sides of <xref ref="eq_lindioph1">equation</xref> by <m>m</m> 
+        We can now multiply both sides of equation (1) by <m>m</m> 
         and obtain
         <md>
           <mrow>dm \amp = ( {as + bt} ) m</mrow>
@@ -553,13 +551,13 @@
         Now let <m>x = x_0</m>,
         <m>y = y_0</m> be any particular solution of <m>ax + by = c</m>,
         let <m>k \in \mathbb{Z}</m>, and let
-        <men xml:id="eq_x0andy0">
-          x = x_0 + \frac{b}{d} k  \qquad  y = y_0 - \frac{a}{d} k
-        </men>.
+        <me xml:id="eq_x0andy0">
+          x = x_0 + \frac{b}{d} k  \qquad  y = y_0 - \frac{a}{d} k \qquad (2)
+        </me>.
       </p>
       <p>
         We now verify that for each <m>k \in \mathbb{Z}</m>,
-        the equations in<xref ref="eq_x0andy0">equation</xref> produce a solution of <m>ax + by = c</m>.
+        the equations in (2) produce a solution of <m>ax + by = c</m>.
         <md>
           <mrow>ax + by \amp = a \!\left( {x_0 + \frac{b}{d} k } \right) + b 
           \!\left( {y_0 - \frac{a}{d} k} \right )</mrow>
@@ -573,16 +571,16 @@
       </p>
       <p>
         We now show that every solution of this equation can be written in the form described 
-        in <xref ref="eq_x0andy0">equation</xref>.
+        in equation (2).
         So suppose that <m>x</m> and <m>y</m> are integers such that <m>ax + by = c</m>.
         Then
         <me>
           ( {ax + by} ) - ( {ax_0 + by_0} ) = c - c = 0
         </me>,
         and this equation can be rewritten in the following form:
-        <men xml:id="eq_dioph3">
-          a( {x - x_0} ) = b( {y_0 - y} )
-        </men>.
+        <me xml:id="eq_dioph3">
+          a( {x - x_0} ) = b( {y_0 - y} ) \qquad (3)
+        </me>.
       </p>
       <p>
         Dividing both sides of this equation by <m>d</m>, we obtain
@@ -608,7 +606,7 @@
           y = y_0 - \frac{a}{d} k
         </me>.
 
-        Substituting this value for <m>y</m> in <xref ref="eq_dioph3">equation</xref> and solving 
+        Substituting this value for <m>y</m> in equation (3) and solving 
         for <m>x</m> yields
         <me>
           x = x_0 + \frac{b}{d} k
@@ -616,7 +614,7 @@
 
         This proves that every solution of the Diophantine equation
         <m>ax + by = c</m> can be written in the form prescribed in 
-        <xref ref="eq_x0andy0">equation</xref>. 
+        (2). 
       </p>
     </proof>
     </theorem>

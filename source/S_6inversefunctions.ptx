@@ -201,9 +201,10 @@
       We now wish to explore under what conditions a set of ordered pairs can be used to define a function.
       Starting with a function <m>f\x  A \to B</m>,
       since <m>\text{ dom} ( f ) = A</m>, we know that
-      <men xml:id="eq_65a">
-        \text{ For every }   a \in A, \text{ there exists a }   b \in B  \text{ such that } ( {a, b} ) \in f
-      </men>.
+      <me xml:id="eq_65a">
+        \text{ For every }   a \in A, \text{ there exists a }   b \in B  \text{ such that } ( {a, b} ) 
+        \in f \qquad (1)
+      </me>.
     </p>
     <p>
       Specifically, we use <m>b = f( a )</m>.
@@ -215,16 +216,16 @@
       <m>( {a, c} )</m> in the function <m>f</m> where <m>a \in A</m>, <m>b,
       c \in B</m>, and <m>b \ne c</m>.
       We can formulate this as a conditional statement as follows:
-      <mdn>
-        <mrow number="no">\amp \text{ For every }  a \in A \text{ and every }  b, c \in B,</mrow>
+      <md>
+        <mrow number="no">\amp \text{ For every }  a \in A \text{ and every }  b, c \in B, \amp \amp</mrow>
         <mrow xml:id="eq_65b">\amp \text{ if }  ( {a, b} ) \in f  \text{ and }  ( {a, c} ) 
-        \in f, \text{ then }  b = c</mrow>
-      </mdn>.
+        \in f, \text{ then }  b = c \amp \amp (2)</mrow>
+      </md>.
     </p>
     <p>
       This also means that if we start with a subset <m>f</m> of
-      <m>A \times B</m> that satisfies conditions <xref ref="eq_65a">equation</xref> and 
-      <xref ref="eq_65b">equation</xref>,
+      <m>A \times B</m> that satisfies conditions (1) and 
+      (2),
       then we can consider <m>f</m> to be a function from <m>A</m> to <m>B</m> by using
       <m>b = f( a )</m> whenever <m>( {a, b} )</m> is in <m>f</m>.
       This proves the following theorem.
@@ -342,8 +343,8 @@
       This idea of reversing the roles of the first and second coordinates is the basis for 
       our definition of the inverse of a function.
     </p>
-    <definition xml:id="inversefunction">
-      <statement>
+    <assemblage xml:id="inversefunction">
+      <title>Definition</title>
         <p>
           Let <m>f\x A \to B</m> be a function.
           The <term>inverse of <m>\boldsymbol{f}</m></term>,
@@ -363,8 +364,7 @@
             f^{ - 1}  = \left\{ { {( {b, a} ) \in B \times A} \mid ( {a, b} ) \in f} \right\}\!
           </me>.
         </p>
-      </statement>
-    </definition>
+    </assemblage>
 
     <p>
       Notice that this definition does not state that <m>f^{ - 1}</m> is a function.
@@ -375,10 +375,12 @@
       from <m>B</m> to <m>A</m>.
       This fact, however, is not important to us now.
       We are mainly interested in the following question:
-      <blockquote>
+      <assemblage>
+        <p>
         Under what conditions will the inverse of the function
         <m>f\x A \to B</m> be a function from <m>B</m> to <m>A</m>?
-      </blockquote>
+        </p>
+      </assemblage>
     </p>
 
     <exercise xml:id="prog_exploringinverse">
@@ -848,6 +850,9 @@
     <figure xml:id="fig_bijectioncomposition">
       <caption>Composition of Two Bijections</caption>
       <image width="75%" source="figps-compinverse"/>
+      <!-- Injection: each input has one output -->
+      <!-- Surjection: each output in B has an input -->
+      <!-- Bijection: both an injection and a surjection -->
     </figure>
     <p>
       By <xref ref="T_compositefunctions"></xref>,
@@ -884,45 +889,45 @@
         Let <m>z \in C</m>.
         Since the function <m>g</m> is a surjection,
         there exists a <m>y \in B</m> such that
-        <men xml:id="eq_compofbij1">
-          g( y ) = z
-        </men>.
+        <me xml:id="eq_compofbij1">
+          g( y ) = z \qquad (1)
+        </me>.
       </p>
       <p>
         Also, since <m>f</m> is a surjection,
         there exists an <m>x \in A</m> such that
-        <men xml:id="eq_compofbij2">
-          f( x ) = y
-        </men>.
+        <me xml:id="eq_compofbij2">
+          f( x ) = y \qquad (2)
+        </me>.
       </p>
       <p>
         Now these two equations can be written in terms of the respective inverse functions as
-        <mdn>
-          <mrow xml:id="eq_compofbij3">g^{ - 1} ( z ) \amp = y; \text{ and }</mrow>
-          <mrow xml:id="eq_compofbij4">f^{ - 1} ( y ) \amp = x</mrow>
-        </mdn>.
+        <md>
+          <mrow xml:id="eq_compofbij3">g^{ - 1} ( z ) \amp = y; \text{ and } \amp \amp (3)</mrow>
+          <mrow xml:id="eq_compofbij4">f^{ - 1} ( y ) \amp = x \amp \amp (4)</mrow>
+        </md>.
       </p>
       <p>
-        Using <xref ref="eq_compofbij3">equation</xref> and <xref ref="eq_compofbij4">equation</xref>, 
+        Using equation (3) and equation (4), 
         we see that
-        <mdn>
-          <mrow number="no">\left( {f^{ - 1}  \circ g^{ - 1} } \right)( z ) \amp 
-          = f^{ - 1} \left( {g^{ - 1} ( z )} \right)</mrow>
-          <mrow number="no">\amp = f^{ - 1} ( y )</mrow>
-          <mrow xml:id="eq_compofbij5">\amp = x</mrow>
-        </mdn>.
+        <md>
+          <mrow>\left( {f^{ - 1}  \circ g^{ - 1} } \right)( z ) \amp 
+          = f^{ - 1} \left( {g^{ - 1} ( z )} \right) \amp \amp</mrow>
+          <mrow>\amp = f^{ - 1} ( y ) \amp \amp</mrow>
+          <mrow xml:id="eq_compofbij5">\amp = x \amp \amp (5)</mrow>
+        </md>.
       </p>
       <p>
-        Using <xref ref="eq_compofbij1">equation</xref> and<nbsp/><xref ref="eq_compofbij2">equation</xref> again,
+        Using equation (1) and equation (2) again,
         we see that <m>( {g \circ f} )( x ) = z</m>.
         However, in terms of the inverse function, this means that
-        <men xml:id="eq_compofbij6">
-          ( {g \circ f} )^{ - 1} ( z ) = x
-        </men>.
+        <me xml:id="eq_compofbij6">
+          ( {g \circ f} )^{ - 1} ( z ) = x \qquad (6)
+        </me>.
       </p>
       <p>
-        Comparing <xref ref="eq_compofbij5">equation</xref> and 
-        <xref ref="eq_compofbij6">equation</xref>, we have shown that for all <m>z \in C</m>,
+        Comparing equation (5) and 
+        equation (6), we have shown that for all <m>z \in C</m>,
       </p>
       <p>
         <m>( {g \circ f} )^{ - 1} ( z ) = ( {f^{ - 1} \circ g^{ - 1} } )( z )</m>.

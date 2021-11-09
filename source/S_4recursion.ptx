@@ -570,9 +570,9 @@
           we let <m>k</m> be a natural number and assume that <m>P( k )</m> is true.
           That is, assume that <m>f_{3k}</m> is an even natural number.
           This means that there exists an integer <m>m</m> such that
-          <men xml:id="eq_progfiba">
-            f_{3k}  = 2m
-          </men>.
+          <me xml:id="eq_progfiba">
+            f_{3k} = 2m \qquad (1)
+          </me>.
         </p>
         <p>
           We need to prove that <m>P( {k + 1} )</m> is true or that <m>f_{3\left( {k + 1} \right)}</m> is even.
@@ -587,16 +587,16 @@
           Using the recursion formula again,
           we get <m>f_{3k + 2}  = f_{3k + 1}  + f_{3k}</m>.
           Putting this all together, we see that
-          <mdn>
-            <mrow number="no">f_{3\left( {k + 1} \right)}  \amp = f_{3k + 3}</mrow>
-            <mrow number="no">\amp = f_{3k + 2}  + f_{3k + 1}</mrow>
-            <mrow number="no">\amp = \left( {f_{3k + 1}  + f_{3k} } \right) + f_{3k + 1}</mrow>
-            <mrow xml:id="eq_progfibb">\amp = 2f_{3k + 1}  + f_{3k}</mrow>
-          </mdn>.
+          <md>
+            <mrow>f_{3\left( {k + 1} \right)}  \amp = f_{3k + 3} \amp \amp </mrow>
+            <mrow>\amp = f_{3k + 2}  + f_{3k + 1} \amp \amp</mrow>
+            <mrow>\amp = \left( {f_{3k + 1}  + f_{3k} } \right) + f_{3k + 1} \amp \amp </mrow>
+            <mrow xml:id="eq_progfibb">\amp = 2f_{3k + 1}  + f_{3k} \amp \amp (2)</mrow>
+          </md>.
         </p>
         <p>
           We now substitute the expression for <m>f_{3k}</m> in 
-          <xref ref="eq_progfiba">equation</xref> into <xref ref="eq_progfibb">equation</xref>.
+          equation (1) into equation (2).
           This gives
           <md>
             <mrow>f_{3\left( {k + 1} \right)} \amp = 2f_{3k + 1}  + 2m</mrow>

@@ -50,8 +50,8 @@
         These sets are examples of some of the most common set operations,
         which are given in the following definitions.
       </p>
-      <definition xml:id="intersection">
-        <statement>
+      <assemblage xml:id="intersection">
+        <title>Definition</title>
           <p>
             Let <m>A</m> and <m>B</m> be subsets of some universal set <m>U</m>.
             The <term>intersection</term> <idx><h>intersection</h><h>of two sets</h></idx>
@@ -76,11 +76,10 @@
               A \cup B = \left\{ {x \in U} \mid {x \in A \text{  or  }  x \in B}  \right\}
             </me>.
           </p>
-        </statement>
-      </definition>
+      </assemblage>
 
-      <definition xml:id="setdiff">
-        <statement>
+      <assemblage xml:id="setdiff">
+        <title>Definition</title>
           <p>
             Let <m>A</m> and <m>B</m> be subsets of some universal set <m>U</m>.
             The <term>set difference</term>
@@ -112,8 +111,7 @@
               A^c  = \left\{ {x \in U} \mid {x \notin A} \right\}\!
             </me>.
           </p>
-        </statement>
-      </definition>
+      </assemblage>
       <p>
         For the rest of this beginning activity,
         the universal set is <m>U = \left\{ {0, 1, 2, 3, \ldots , 10} \right\}</m>,
@@ -316,7 +314,7 @@
     </worksheet>
 
   
-  <subsection xml:id="SS_propersubset">
+  <subsection>
     <title>Set Equality, Subsets, and Proper Subsets</title>
     <p>
       In <xref ref="S_2predicates"></xref>,
@@ -326,8 +324,8 @@
       See the definitions on <xref ref="D_setequality"></xref>.
       We need one more definition.
     </p>
-    <definition xml:id="propersubset">
-      <statement>
+    <assemblage xml:id="propersubset">
+      <title>Definition</title>
         <p>
           Let <m>A</m> and <m>B</m> be two sets contained in some universal set <m>U</m>.
           The set <m>A</m> is a <term>proper subset</term>
@@ -337,8 +335,7 @@
           When <m>A</m> is a proper subset of <m>B</m>,
           we write <m>A \subset B</m>.
         </p>
-      </statement>
-    </definition>
+    </assemblage>
     <p>
       One reason for the definition of proper subset is that each set is a subset of itself.
       That is, If <m>A</m> is a set,
@@ -364,7 +361,7 @@
       <m>Y</m> is not a subset of <m>X</m> since there exists an element of <m>Y</m> 
       (namely, 0) that is not in <m>X</m>.
     </p>
-    <p>
+    <p xml:id="SS_propersubset">
       In general, the subset relation is described with the use of a universal quantifier since
       <m>A \subseteq B</m> means that for each element <m>x</m> of <m>U</m>,
       if <m>x \in A</m>, then <m>x \in B</m>.
@@ -619,6 +616,7 @@
     <figure xml:id="fig_aintersectc">
       <caption>Venn Diagram for <m>A \cap C</m></caption>
       <image width="50%" source="figps-ainterc3"/>
+      <!-- More complicated Venn Diagram. -->
     </figure>
     <p>
       Finally, Venn diagrams can also be used to illustrate special relationships between sets.
@@ -661,6 +659,7 @@
                 <p>
                   <image width="50%" source="figps-venn3"/>
                   For the set <m>(A \cap B) \cap C</m>, region 5 is shaded.
+                  <!-- These all use the same image but refer to their numbered regions. -->
                 </p>
               </solution>
             </task>
@@ -760,8 +759,8 @@
       <m>\left( 5 \text{ and } \left\{ 5 \right\} \right)</m> is important when we discuss what 
       is called the power set of a given set.
     </p>
-    <definition xml:id="D_powerset">
-      <statement>
+    <assemblage xml:id="D_powerset">
+      <title>Definition</title>
         <p>
           If <m>A</m> is a subset of a universal set <m>U</m>,
           then the set whose members are all the subsets of <m>A</m> is called the 
@@ -777,17 +776,16 @@
 
           That is, <m>X \in \mathcal{P}( A )</m> if and only if <m>X \subseteq A</m>.
         </p>
-      </statement>
-    </definition>
+    </assemblage>
     <p>
       When dealing with the power set of <m>A</m>,
       we must always remember that
       <m>\emptyset  \subseteq A</m> and <m>A \subseteq A</m>.
       For example, if <m>A = \left\{ {a,b} \right\}</m>,
       then the subsets of <m>A</m> are
-      <men xml:id="eq_subsets2">
-        \emptyset,\left\{ a \right\}\!,\left\{ b \right\}\!,\left\{ {a,b} \right\}\!
-      </men>.
+      <me xml:id="eq_subsets2">
+        \emptyset,\left\{ a \right\}\!,\left\{ b \right\}\!,\left\{ {a,b} \right\}\! \qquad (1)
+      </me>.
     </p>
     <p>
       We can write this as
@@ -799,21 +797,21 @@
       Now let <m>B = \left\{ {a, b, c} \right\}</m>.
       Notice that <m>B = A \cup \{ c \}</m>.
       We can determine the subsets of <m>B</m> by starting with the subsets of <m>A</m> 
-      in <xref ref="eq_subsets2">equation</xref>.
+      in (1).
       We can form the other subsets of <m>B</m> by taking the union of each set 
-      in <xref ref="eq_subsets2">equation</xref> with the set <m>\{c \}</m>.
+      in (1) with the set <m>\{c \}</m>.
       This gives us the following subsets of <m>B</m>.
-      <men xml:id="eq_subsets2a">
-        \{ c \},\left\{ a, c \right\}\!,\left\{ b, c \right\}\!,\left\{ {a,b, c} \right\}\!
-      </men>.
+      <me xml:id="eq_subsets2a">
+        \{ c \},\left\{ a, c \right\}\!,\left\{ b, c \right\}\!,\left\{ {a,b, c} \right\}\! \qquad (2)
+      </me>.
 
-      So the subsets of <m>B</m> are those sets in <xref ref="eq_subsets2">equation</xref> 
-      combined with those sets in <xref ref="eq_subsets2a">equation</xref>.
+      So the subsets of <m>B</m> are those sets in (1) 
+      combined with those sets in (2).
       That is, the subsets of <m>B</m> are
-      <men xml:id="eq_subsets2b">
+      <me xml:id="eq_subsets2b">
         \emptyset,\left\{ a \right\}\!,\left\{ b \right\}\!,\left\{ {a,b} \right\}, \{ c \},
-        \left\{ a, c \right\}\!,\left\{ b, c \right\}\!,\left\{ {a,b, c} \right\}\!
-      </men>,
+        \left\{ a, c \right\}\!,\left\{ b, c \right\}\!,\left\{ {a,b, c} \right\}\! \qquad (3)
+      </me>,
       which means that
       <me>
         \mathcal{P}( B ) = \left\{ {\emptyset,\left\{ a \right\}\!, \left\{ b \right\}\!, 
@@ -856,16 +854,15 @@
       the set,
       so we give it the following name.
 
-    <definition xml:id="D_cardinality">
-      <statement>
+    <assemblage xml:id="D_cardinality">
+      <title>Definition</title>
         <p>
           The number of elements in a finite set <m>A</m> is called the <term>cardinality</term>
               <idx><h>cardinality</h></idx>
               <idx><h>cardinality</h><h>finite set</h></idx>
           of <m>A</m> and is denoted by <m>\card(A)</m>.
         </p>
-      </statement>
-    </definition>
+    </assemblage>
 
       For example, <m>\card (\emptyset) = 0</m>;
       <m>\card (\left\{ {a,b} \right\}) = 2</m>;

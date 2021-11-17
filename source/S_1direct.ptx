@@ -64,11 +64,13 @@
             </task>
 
       </exercise>
+<!-- tk overfull hbox -->
       <p>
         It is important to realize that mathematical definitions are not made randomly.
         In most cases,
         they are motivated by a mathematical concept that occurs frequently.
       </p>
+
       <exercise>
         <statement>
           <p>
@@ -83,15 +85,14 @@
       <title>Beginning Activity 2: Thinking about a Proof</title>
       <p>
         Consider the following proposition:
-      </p>
-      <dl>
+      
+      <assemblage xml:id="prop-odd">
         <title>Proposition</title>
-        <li xml:id="prop-odd">
           <p>
             If <m>x</m> and <m>y</m> are odd integers, then <m>x \cdot y</m>  is an odd integer.
           </p>
-        </li>
-      </dl>
+      </assemblage>
+      </p>
       <p>
         Think about how you might go about proving this proposition.
         A <term>direct proof</term>
@@ -132,6 +133,7 @@
             </p>
           </statement>
         </exercise>
+
         <p>
           In order to prove this proposition,
           we need to prove that whenever both <m>x</m> and <m>y</m> are odd integers,
@@ -139,6 +141,7 @@
           Since we cannot explore all possible pairs of integer values for <m>x</m> and <m>y</m>,
           we will use the definition of an odd integer to help us construct a proof.
         </p>
+        
         <exercise xml:id="PA_prev12-Q4">
         <statement>
           <p>
@@ -396,6 +399,10 @@
 
   
   <tabular>
+    <col width="20%"/>
+    <col width="40%"/>
+    <col width="40%"/>
+
     <row bottom="medium">
       <cell right="medium">
         Step
@@ -443,7 +450,9 @@
         <m>Q1</m>
       </cell>
       <cell right="medium">
-        There exists an integer <m>q</m> such that <m>xy = 2q + 1</m>
+        <p>
+          There exists an integer <m>q</m> such that <m>xy = 2q + 1</m>
+        </p>
       </cell>
       <cell>
       </cell>
@@ -549,6 +558,9 @@
     </p>
 
   <tabular>
+    <col width="20%"/>
+    <col width="40%"/>
+    <col width="40%"/>
     <row bottom="medium">
       <cell right="medium">
         Step
@@ -576,13 +588,11 @@
         <m>P1</m>
       </cell>
       <cell right="medium">
-        <line>  
-          There exist integers <m>m</m> and <m>n</m> 
-        </line>  
-        <line>  
-          such that <m>x = 2m + 1</m> and 
-          <m>y = 2n + 1</m>.
-        </line>
+          <p>
+            There exist integers <m>m</m> and <m>n</m> 
+            such that <m>x = 2m + 1</m> and 
+            <m>y = 2n + 1</m>.
+          </p>
       </cell>
       <cell>
         Definition of an odd integer.
@@ -637,10 +647,12 @@
         <m>Q1</m>
       </cell>
       <cell right="medium">
-        There exists an integer <m>q</m> such that <m>xy = 2q + 1</m>.
+        <p>
+          There exists an integer <m>q</m> such that <m>xy = 2q + 1</m>.
+        </p>
       </cell>
       <cell>
-        Use<nbsp /><m>q = (2mn + m + n)</m>
+        Use <m>q = (2mn + m + n)</m>
       </cell>
     </row>
     <row>

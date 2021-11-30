@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-11-12T17:40:36-05:00       *-->
+<!--*       on 2021-11-29T17:26:22-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,42 +13,29 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body>
-<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>For the inductive step, we prove that for all \(k \in \mathbb{N}\text{,}\) if \(P \left( k \right)\) is true, then \(P \left( k + 1 \right)\) is true. So let \(k\) be a natural number and assume that \(P(  k )\) is true. That is, assume that</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<p>When proving the inductive step in a proof by induction, the key question is, <blockquote class="blockquote">How does knowing  <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(P(  k )\)</span> help us prove  <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(P( {k + 1} )\text{?}\)</span>
+</blockquote> In <a href="" class="xref" data-knowl="./knowl/P_suminduction.html" title="Proposition 4.2">Proposition 4.2</a>, we were able to see that the way to answer this question was to add a certain expression to both sides of the equation given in  <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(P(  k )\text{.}\)</span> Sometimes the relationship between  <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(P(  k )\)</span>  and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(P( {k + 1} )\)</span> is not as easy to see. For example, in <a href="S_mathinduction.html#PA_exploringstatements" class="internal" title="Beginning Activity: Beginning Activity 1: Exploring Statements of the Form \(\left( \forall n \in \N \right)\left( P(n) \right)\)">Beginning Activity 1</a>, we explored the following proposition: <blockquote class="blockquote">For each natural number <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(n\text{,}\)</span>  4  divides  <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\left( {5^n  - 1} \right)\text{.}\)</span>
+</blockquote> This means that the open sentence, <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(P( n )\text{,}\)</span> is “4  divides  <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\left( {5^n  - 1} \right)\text{.}\)</span>” So in the inductive step, we assume  <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(k \in \mathbb{N}\)</span> and that  4  divides  <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\left( {5^k  - 1} \right)\text{.}\)</span> This means that there exists an integer  <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(m\)</span>  such that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
 \begin{equation*}
-4\text{  divides  } \left( {5^k  - 1} \right)\text{.}
+5^k  - 1 = 4m \qquad (1)\text{.}
 \end{equation*}
 </div>
-<p class="continuation">This means that there exists an integer \(m\) such that</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<p class="continuation">In the backward process, the goal is to prove that 4 divides <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\left( {5^{k + 1}  - 1} \right)\text{.}\)</span> This can be accomplished if we can prove that there exists an integer <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(s\)</span> such that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
 \begin{equation*}
-5^k  - 1 = 4m\text{.}
+5^{k + 1}  - 1 = 4s \qquad (2)\text{.}
 \end{equation*}
 </div>
-<p class="continuation">Thus,</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<p class="continuation">We now need to see if there is anything in equation (1) that can be used in equation (2). The key is to find something in the equation <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(5^k - 1 = 4m\)</span> that is related to something similar in the equation <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(5^{k + 1}  - 1 = 4s\text{.}\)</span> In this case, we notice that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
 \begin{equation*}
-5^k  = 4m + 1 \qquad (1)\text{.}
+5^{k + 1}  = 5 \cdot 5^k\text{.}
 \end{equation*}
 </div>
-<p class="continuation">In order to prove that \(P( k + 1 )\) is true, we must show that 4 divides \(\left( {5^{k + 1}  - 1} \right)\text{.}\) Since \(5^{k + 1}  = 5 \cdot 5^k\text{,}\) we can write</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-5^{k + 1}  - 1 = 5 \cdot 5^k  - 1 \qquad (2)\text{.}
-\end{equation*}
-</div>
-<p class="continuation">We now substitute the expression for \(5^k\) from equation (1) into equation (2). This gives</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-5^{k + 1}  - 1 \amp = 5 \cdot 5^k  - 1 \amp\\
-\amp = 5( {4m + 1} ) - 1 \amp\\
-\amp = ( {20m + 5} ) - 1 \amp\\
-\amp = 20m + 4 \amp\\
-\amp = 4( {5m + 1} ) \amp (3)
-\end{align*}
-</div>
+<p class="continuation">So if we can solve <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(5^k  - 1 = 4m\)</span>  for  <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(5^k\text{,}\)</span> we could make a substitution for <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(5^k\text{.}\)</span> This is done in the proof of the following proposition.</p>
 <span class="incontext"><a href="S_mathinduction.html#p-2279">in-context</a></span>
 </body>
 </html>

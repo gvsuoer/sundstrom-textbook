@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-11-12T17:41:10-05:00       *-->
+<!--*       on 2021-11-29T17:26:54-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,20 +13,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body>
-<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(P( n )\) be, “\(f_{4n}\) is a multiple of 3.” Since \(f_4 = 3\text{,}\) \(P( 1 )\) is true.  If \(P( k )\) is true, then there exists an integer \(m\) such that \(f_{4k} = 3m\text{.}\)  We now need to prove that \(P(k+1)\) is true or that \(f_{4(k+1)}\) is a multiple of 3.  We use the following:</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<body class="ignore-math">
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<p>Let <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(P(n)\)</span> be <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(a_n = n!\text{.}\)</span>  Since <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(a_0 = 1\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(0 ! = 1\text{,}\)</span> we see that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(P(0)\)</span> is true.  For the inductive step, we assume that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(k \in \N \cup \{0\}\)</span> and that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(P(k)\)</span> is true or that  <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(a_k = k!\text{.}\)</span></p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
 \begin{align*}
-f_{4 \left( k + 1 \right)} \amp = f_{4k + 4}\\
-\amp = f_{4k+3} + f_{4k+2}\\
-\amp = \left( f_{4k+2} + f_{4k+1} \right) + \left( f_{4k+1} + f_{4k} \right)\\
-\amp = f_{4k+2} + 2 f_{4k+1} + f_{4k}\\
-\amp = \left( f_{4k+1} + f_{4k} \right) + 2 f_{4k+1} + f_{4k}\\
-\amp = 3f_{4k + 1} + 2f_{4k}
+a_{k+1} \amp = \left( k + 1 \right)a_k\\
+\amp = \left( k + 1 \right) k!\\
+\amp = \left( k + 1 \right)!\text{.}
 \end{align*}
 </div>
-<p class="continuation">We now use the assumption that \(f_{4k} = 3m\) and the last equation to obtain \(f_{4(k+1)} = 3f_{4k + 1} + 2\cdot 3m\) and hence, \(f_{4(k+1)} = 3 \left( f_{4k +1} + 2m \right)\text{.}\)  Therefore, \(f_{4(k+1)}\) is a multiple of 3 and this completes the proof of the inductive step.</p>
+<p class="continuation">This proves the inductive step that  if <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(P(k)\)</span> is true, then <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(P(k+1)\)</span> is true.</p>
 <span class="incontext"><a href="S_recursion.html#p-2586">in-context</a></span>
 </body>
 </html>

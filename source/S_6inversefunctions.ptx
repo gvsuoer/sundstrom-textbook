@@ -15,7 +15,7 @@
     </p>
   </introduction>
 
-    <worksheet margin="1in" xml:id="PA_functionasordered">
+    <worksheet xml:id="PA_functionasordered">
       <title>Beginning Activity 1: Functions and Sets of Ordered Pairs</title>
       <p>
         When we graph a real function,
@@ -139,7 +139,7 @@
 
     </worksheet>
 
-    <worksheet margin="1in" xml:id="PA_compositionoftwo">
+    <worksheet xml:id="PA_compositionoftwo">
       <title>Beginning Activity 2: A Composition of Two Specific Functions</title>
       <p>
         Let <m>A = \left\{ {a, b, c, d} \right\}</m> and let <m>B = \left\{ {p, q, r, s} \right\}</m>.
@@ -345,15 +345,17 @@
     </p>
     <assemblage xml:id="inversefunction">
       <title>Definition</title>
+      <idx><h>inverse of a function</h></idx>
+      <idx><h>function</h><h>inverse of</h></idx>
+      <p>
       <notation>
         <usage><m>f^{ -1 }</m></usage>
         <description>the inverse of the function <m>f</m></description>
       </notation>
-        <p>
+        
           Let <m>f\x A \to B</m> be a function.
           The <term>inverse of <m>\boldsymbol{f}</m></term>,
-              <idx><h>inverse of a function</h></idx>
-              <idx><h>function</h><h>inverse of</h></idx> 
+               
           denoted by <m>f^{ - 1}</m>, is the set of ordered pairs 
           <m>\left\{ { {( {b, a} ) \in B \times A} \mid f( a ) = b} \right\}</m>.
           That is,
@@ -536,7 +538,7 @@
     </p>
     <figure xml:id="fig_inversenotfunction">
       <caption>The Inverse Is Not a Function</caption>
-      <image width="50%" source="figps-noinverse"/>
+      <image width="40%" source="figps-noinverse"/>
     </figure>
     <p>
       In this case, if we try to reverse the arrows,
@@ -666,14 +668,16 @@
 
   <subsection>
     <title>Inverse Function Notation</title>
+    
     <p>
+    <idx><h>invertible function</h></idx>
+    <idx><h>function</h><h>invertible</h></idx>
       In the situation where <m>f\x A \to B</m> is a bijection and
       <m>f^{ - 1}</m> is a function from <m>B</m> to <m>A</m>,
       we can write <m>f^{ - 1} \x B \to A</m>.
       In this case, we frequently say that <m>f</m> is an
       <term>invertible function</term>,
-          <idx><h>invertible function</h></idx>
-          <idx><h>function</h><h>invertible</h></idx>
+          
       and we usually do not use the ordered pair representation for either <m>f</m> or <m>f^{ - 1}</m>.
       Instead of writing <m>( {a, b} ) \in f</m>,
       we write <m>f( a ) = b</m>,
@@ -853,7 +857,7 @@
     </p>
     <figure xml:id="fig_bijectioncomposition">
       <caption>Composition of Two Bijections</caption>
-      <image width="75%" source="figps-compinverse"/>
+      <image width="70%" source="figps-compinverse"/>
       <!-- Injection: each input has one output -->
       <!-- Surjection: each output in B has an input -->
       <!-- Bijection: both an injection and a surjection -->
@@ -1121,12 +1125,13 @@
     </exercise>
 
     <exercise xml:id="sym_idfunc1">
+    <idx><h>identity function</h></idx>
       <statement>
         <p>
           In <xref ref="pr_equalfunc"></xref>,
           we defined the identity function on a set.
           The <term>identity function on the set <m>\boldsymbol{T}</m></term>,
-            <idx><h>identity function</h></idx>
+            
           denoted by <m>I_T</m> , is the function <m>I_T \x T \to T</m> defined by
           <m>I_T ( t ) = t</m> for every <m>t</m> in <m>T</m>.
           Explain how <xref ref="C_inversecomposition"></xref>
@@ -1505,6 +1510,8 @@
         </p>
       </task>
       <task xml:id="inversesine">
+      <idx><h>inverse sine function</h></idx>
+      <idx><h>arcsine function</h></idx>
       <notation>
         <usage><m>\text{Sin } ^{-1}</m></usage>
         <description>the inverse sine function</description>
@@ -1512,9 +1519,9 @@
         <p>
           The inverse of the function in <xref ref="A_inversesine2"/> is itself a function and 
           is called the <term>inverse sine function</term>
-          <idx><h>inverse sine function</h></idx>
+          
           (or sometimes the <term>arcsine function</term>).
-           <idx><h>arcsine function</h></idx>
+           
         </p>
         <p>
           What is the domain of the inverse sine function?

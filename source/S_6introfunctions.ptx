@@ -3,23 +3,28 @@
 <section xml:id="S_introfunctions">
   <title>Introduction to Functions</title>
   
-    <worksheet margin="1in" xml:id="PA_previousfunctions">
+    <worksheet xml:id="PA_previousfunctions">
       <title>Beginning Activity 1: Functions from Previous Courses</title>
+      <idx><h>function</h></idx>
+      <idx><h>domain</h><h>of a function</h></idx>
+      <idx><h>function</h><h>domain</h></idx>
+      <idx><h>codomain</h></idx>
+      <idx><h>function</h><h>codomain</h></idx>
       <p>
         One of the most important concepts in modern mathematics is that of a <term>function</term>.
         In previous mathematics courses,
         we have often thought of a function as some sort of input-output rule that assigns 
         exactly one output to each input.
         So in this context, a <term>function</term>
-            <idx><h>function</h></idx>
+            
         can be thought of as a procedure for associating with each element of some set,
         called the <term>domain of the function</term>,
-        <idx><h>domain</h><h>of a function</h></idx>
-            <idx><h>function</h><h>domain</h></idx>
+        
+            
         exactly one element of another set,
         called the <term>codomain of the function</term>.
-            <idx><h>codomain</h></idx>
-            <idx><h>function</h><h>codomain</h></idx>
+            
+            
         This procedure can be considered an input-output rule.
         The function takes the input,
         which is an element of the domain,
@@ -141,7 +146,7 @@
 
     </worksheet>
 
-    <worksheet margin="1in" xml:id="PA_otherfunctions">
+    <worksheet xml:id="PA_otherfunctions">
       <title>Beginning Activity 2: Some Other Types of Functions</title>
       <p>
         The domain and codomain of each of the functions in 
@@ -181,16 +186,18 @@
         </introduction>
           
             <task>
+            <idx><h>birthday function</h></idx>
               <p>
                 Explain why <m>b</m> really is a function.
                 We will call this the <term>birthday function</term>.
-                <idx><h>birthday function</h></idx>
+                
               </p>
             </task>
             <task>
+            <idx><h>Wiles, Andrew</h></idx>
               <p>
                 In 1995, Andrew Wiles
-                <idx><h>Wiles, Andrew</h></idx>
+                
                 became famous for publishing a proof of Fermat's Last Theorem.
                 (See A. D. Aczel,
                 <pubtitle>Fermat's Last Theorem: Unlocking the Secret of an Ancient 
@@ -228,6 +235,7 @@
           </exercise>
 
         <exercise xml:id="sym_sumdivisors">
+        <idx><h>sum of divisors function</h></idx>
         <notation>
           <usage><m>s ( n )</m></usage>
           <description>sum of the divisors of <m>n</m></description>
@@ -237,7 +245,7 @@
             Let  <m>s</m> be the function that associates with each natural number the sum of 
             its distinct natural number divisors.
             This is called the <term>sum of the divisors function</term>.
-              <idx><h>sum of divisors function</h></idx>
+              
             For example,
             the natural number divisors of 6 are 1, 2, 3, and 6, and so
             <md>
@@ -307,12 +315,14 @@
       Two such examples were introduced in <xref text="custom" ref="PA_otherfunctions">Beginning Activity 2</xref>.
     </p>
     <p>
+    <idx><h>birthday function</h></idx>
+    <idx><h>sum of divisors function</h></idx>
       For the <term>birthday function</term>,
-          <idx><h>birthday function</h></idx>
+          
       the domain would be the set of all people and the codomain would be the set of all 
       days in a leap year.
       For the <term>sum of the divisors function</term>,
-          <idx><h>sum of divisors function</h></idx>
+          
       the domain is the set <m>\mathbb{N}</m> of natural numbers,
       and the codomain could also be <m>\mathbb{N}</m>.
       In both of these cases,
@@ -324,13 +334,15 @@
     </p>
     <assemblage xml:id="function">
       <title>Definition</title>
+      <idx><h>function</h></idx>
+      <idx><h>mapping</h></idx>
         <p>
           A <term>function</term>
-              <idx><h>function</h></idx>
+              
           from a set <m>A</m> to a set <m>B</m> is a rule that associates with each 
           element <m>x</m> of the set <m>A</m> exactly one element of the set <m>B</m>.
           A function from <m>A</m> to <m>B</m> is also called a <term>mapping</term>
-              <idx><h>mapping</h></idx>
+              
           from <m>A</m> to <m>B</m>.
         </p>
     </assemblage>
@@ -357,6 +369,13 @@
 
     <assemblage xml:id="domainfunction">
       <title>Definition</title>
+      <idx><h>domain</h><h>of a function</h></idx>
+      <idx><h>function</h><h>domain</h></idx>
+      <idx><h>codomain</h></idx>
+      <idx><h>function</h><h>codomain</h></idx>
+      <idx><h>image</h><h>of an element</h></idx>
+      <idx><h>preimage</h><h>of an element</h></idx>
+      <p>
       <notation>
         <usage><m>\text{ dom} ( f )</m></usage>
         <description>domain of the function <m>f</m></description>
@@ -369,31 +388,32 @@
         <usage><m>f( x )</m></usage>
         <description>image of <m>x</m> under <m>f</m></description>
       </notation>
-        <p>
+        
           Let <m>f \colon A \to B</m>. (This is read,
           <q>Let <m>f</m> be a function from <m>A</m> to <m>B</m>.</q>
           ) The set <m>A</m> is called the <term>domain</term>
-              <idx><h>domain</h><h>of a function</h></idx>
-              <idx><h>function</h><h>domain</h></idx>
+              
           of the function <m>f</m>, and we write <m>A = \text{ dom} ( f )</m>.
           The set <m>B</m> is called the <term>codomain</term>
-              <idx><h>codomain</h></idx>
-              <idx><h>function</h><h>codomain</h></idx>
+              
           of the function <m>f</m>, and we write <m>B = \text{ codom} ( f )</m>.
           If <m>a \in A</m>,
           then the element of <m>B</m> that is associated with <m>a</m> is denoted by <m>f( a )</m> and is called the
           <term>image of <m>\boldsymbol{a}</m> under <m>\boldsymbol{f}</m></term>.
-              <idx><h>image</h><h>of an element</h></idx>
+              
           If <m>f( a ) = b</m>, with <m>b \in B</m>,
           then <m>a</m> is called a <term>preimage of
           <m>\boldsymbol{b}</m> for <m>\boldsymbol{f}</m></term>.
-              <idx><h>preimage</h><h>of an element</h></idx>
+              
         </p>
     </assemblage>
 
     <paragraphs xml:id="functionterms">
       <title>Some Function Terminology with an Example</title>.
-
+      <idx><h>independent variable</h></idx>
+      <idx><h>variable</h><h>independent</h></idx>
+      <idx><h>dependent variable</h></idx>
+      <idx><h>variable</h><h>dependent</h></idx>
     <p>
       When we have a function
       <m>f \colon A \to B</m>, we often write <m>y = f(x)</m>.
@@ -401,12 +421,11 @@
       we consider <m>x</m> to be an unspecified object that can be chosen from the set <m>A</m>,
       and we would say that <m>x</m> is the
       <term>independent variable</term>
-          <idx><h>independent variable</h></idx>
-          <idx><h>variable</h><h>independent</h></idx>
+          
       of the function <m>f</m> and <m>y</m> is the
       <term>dependent variable</term>
-          <idx><h>dependent variable</h></idx>
-          <idx><h>variable</h><h>dependent</h></idx>
+          
+          
       of the function <m>f</m>.
     </p>
     <p>
@@ -586,16 +605,18 @@
     </p>
     <assemblage xml:id="rangeandimage">
       <title>Definition</title>
+      <idx><h>range</h></idx>
+      <idx><h>function</h><h>range</h></idx> 
+      <p>
       <notation>
         <usage><m>\text{ range} ( f )</m></usage>
         <description>range of the function <m>f</m></description>
       </notation>
-        <p>
+        
           Let <m>f\x A \to B</m>.
           The set <m>\left\{ {f( x ) \mid x \in A} \right\}</m> is called the
           <term>range of the function <m>\boldsymbol{f}</m></term>
-              <idx><h>range</h></idx>
-              <idx><h>function</h><h>range</h></idx> 
+              
            and is denoted by <m>\text{ range} \left( f \right)</m>.
           The range of <m>f</m> is sometimes called the
           <term>image of the function <m>\boldsymbol{f}</m></term>
@@ -739,13 +760,15 @@
     </p>
     <figure xml:id="fig_functiongraph1">
       <caption>Graph of <m>y = g( x )</m>, where  <m>g( x ) = x^2  - 2x - 1</m></caption>
-      <image width="50%" source="figps-graphsec6-1">
+      <image width="45%" source="figps-graphsec6-1">
       <description>Graph of a parabola opening up 
           extending from x = -2 to x = 4 and y = -2 to y = 6.
           </description>
       </image>
     </figure>
     <p>
+    <idx><h>real function</h></idx>
+    <idx><h>function</h><h>real</h></idx>
       Every point on this graph corresponds to an ordered pair <m>\left( {x,\;y} \right)</m> of 
       real numbers,
       where <m>y = g( x ) = x^2  - 2x - 1</m>.
@@ -753,8 +776,7 @@
       we can only use this type of graph when both the domain and the codomain of the function 
       are subsets of the real numbers <m>\R</m>.
       Such a function is sometimes called a <term>real function</term>.
-          <idx><h>real function</h></idx>
-          <idx><h>function</h><h>real</h></idx>
+          
       The graph of a real function is a visual way to communicate information about the function.
       For example,
       the range of <m>g</m> is the set of all <m>y</m>-values that correspond to points on the graph.
@@ -783,7 +805,7 @@
       </p>
       <figure xml:id="fig_functiongraph2">
         <caption>Graph of <m>y = f( x )</m></caption>
-        <image width="50%" source="figps-graph2sec6-1"/>
+        <image width="45%" source="figps-graph2sec6-1"/>
         <description><!--This one doesn't tell you the equation. How to describe? --></description>
       </figure>
       </introduction>
@@ -842,6 +864,7 @@
 
   <subsection>
     <title>Arrow Diagrams</title>
+    <idx><h>arrow diagram</h></idx>
     <p>
       Sometimes the domain and codomain of a function are small,
       finite sets.
@@ -857,12 +880,12 @@
       This is a function since each element of the domain is mapped to exactly one element in <m>B</m>.
       A convenient way to illustrate or visualize this type of function is with a so-called 
       <term>arrow diagram</term>
-          <idx><h>arrow diagram</h></idx>
+          
       as shown in <xref ref="fig_arrow61-1"></xref>.
     </p>
     <figure xml:id="fig_arrow61-1">
       <caption>Arrow Diagram for a Function</caption>
-      <image width="50%" source="figps-arrow61-1x">
+      <image width="30%" source="figps-arrow61-1x">
         <description>
           Arrow diagram showing function F, A to B.
         </description>
@@ -889,7 +912,7 @@
       </p>
       <figure xml:id="fig_arrow61-2">
         <caption>Arrow Diagrams</caption>
-        <image width="75%" source="figps-arrow-exer611abc"/>
+        <image width="80%" source="figps-arrow-exer611abc"/>
       </figure>
       </introduction>
         
@@ -1115,11 +1138,12 @@
   </exercise>
 
   <exercise xml:id="exer_sec61-9">
+  <idx><h>real function</h></idx>
+  <idx><h>function</h><h>real</h></idx>
     <introduction>
       <p>
         Recall that a <term>real function</term>
-          <idx><h>real function</h></idx>
-          <idx><h>function</h><h>real</h></idx>
+          
           is a function whose domain and codomain are subsets of the real numbers  <m>\R</m>.
           (See <xref text="title" ref="realfunction"></xref>.)
           Most of the functions used in calculus are real functions.
@@ -1328,16 +1352,18 @@
   </exercise>
 
   <exercise xml:id="exer_sec62-5">
+  <idx><h>number of divisors function</h></idx> <m>d</m>
+  <idx><h>set of divisors function</h></idx>
     <introduction>
       <p>
         In <xref ref="exer_numberofdivisors"/>,
-          we introduced the <term>number of divisors function</term>
-            <idx><h>number of divisors function</h></idx> <m>d</m>.
+          we introduced the <term>number of divisors function</term>.
+            
           For this function, <m>d\x \mathbb{N} \to \mathbb{N}</m>,
           where <m>d( n )</m> is the number of natural number divisors of <m>n</m>.
           A function that is related to this function is the so-called
           <term>set of divisors function</term>.
-          <idx><h>set of divisors function</h></idx>
+          
         This can be defined as a function <m>S</m> that associates with each natural number the 
         set of its distinct natural number factors.
           For example,

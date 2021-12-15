@@ -3,7 +3,7 @@
 <section xml:id="S_provingset">
   <title>Proving Set Relationships</title>
   
-    <worksheet margin="1in" xml:id="PA_working2sets">
+    <worksheet xml:id="PA_working2sets">
       <title>Beginning Activity 1: Working with Two Specific Sets</title>
       <p>
         Let <m>S</m> be the set of all integers that are multiples of 6, and let <m>T</m> 
@@ -49,6 +49,7 @@
           </statement>
           </exercise>
           <exercise>
+          <idx><h>choose-an-element method</h></idx>
           <statement>
             <p>
               In order to prove that <m>S</m> is a subset of <m>T</m>,
@@ -62,7 +63,7 @@
             <p>
               This table is in the form of a proof method called the
               <term>choose-an-element method.</term>
-                <idx><h>choose-an-element method</h></idx>
+                
               This method is frequently used when we encounter a universal quantifier in a 
               statement in the backward process.
               (In this case, this is Step <m>Q1</m>.)
@@ -156,7 +157,7 @@
 
     </worksheet>
 
-    <worksheet margin="1in" xml:id="PA_workingvenn">
+    <worksheet xml:id="PA_workingvenn">
       <title>Beginning Activity 2: Working with Venn Diagrams</title>
       <exercise>
         <statement>
@@ -205,10 +206,11 @@
 
   <subsection xml:id="SS_choosemethod">
     <title>The Choose-an-Element Method</title>
+    <idx><h>choose-an-element method</h></idx>
     <p>
       The method of proof we will use in this section can be called the
       <term>choose-an-element method.</term>
-      <idx><h>choose-an-element method</h></idx>
+      
       This method was introduced in <xref text="custom" ref="PA_working2sets">Beginning Activity 1</xref>.
       This method is frequently used when we encounter a universal quantifier in a statement 
       in the backward process.
@@ -711,11 +713,12 @@
     </p>
     <assemblage xml:id="D_disjointsets">
       <title>Definition</title>
+      <idx><h>disjoint</h></idx>
+      <idx><h>disjoint sets</h></idx>
         <p>
           Let <m>A</m> and <m>B</m> be subsets of the universal set <m>U</m>.
           The sets <m>A</m> and <m>B</m> are said to be <term>disjoint</term>
-              <idx><h>disjoint</h></idx>
-              <idx><h>disjoint sets</h></idx>
+              
           provided that <m>A \cap B = \emptyset</m>.
         </p>
     </assemblage>
@@ -727,7 +730,7 @@
     </p>
     <figure xml:id="fig_asubsetb2">
       <caption>Venn Diagram with <m>A \subseteq B</m></caption>
-      <image width="50%" source="figps-asubsetb2">
+      <image width="45%" source="figps-asubsetb2">
       <description>
         A Venn diagram for the set A, which is a subset of B, which is itself a subset of 
         the universal set U. The area outside of B is shaded.
@@ -880,15 +883,17 @@
 
   <subsection>
     <title>A Final Comment</title>
+    <idx><h>element-chasing proof</h></idx>
+    <idx><h>proof</h><h>element-chasing</h></idx>
+    <idx><h>choose-an-element method</h></idx> 
     <p>
-      We have used the choose-an-element method <idx><h>choose-an-element method</h></idx> 
+      We have used the choose-an-element method 
       to prove <xref ref="P_SissubsetT"></xref>,
       <xref ref="P_setdifference"></xref>,
       and <xref ref="P_subsetprop"></xref>.
       Proofs involving sets that use this method are sometimes referred to as
       <term>element-chasing proofs.</term>
-          <idx><h>element-chasing proof</h></idx>
-          <idx><h>proof</h><h>element-chasing</h></idx>
+          
       This name is used since the basic method is to choose an arbitrary element from one set and
       <q>chase it</q>
       until you prove it must be in another set.

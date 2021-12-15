@@ -3,7 +3,7 @@
 <section xml:id="S_setoperations">
   <title>Sets and Operations on Sets</title>
 
-    <worksheet margin="1in" xml:id="PA_setops">
+    <worksheet xml:id="PA_setops">
       <title>Beginning Activity 1: Set Operations</title>
       <p>
         Before beginning this section,
@@ -52,18 +52,23 @@
       </p>
       <assemblage xml:id="intersection">
         <title>Definition</title>
-        <notation>
-          <usage><m>A \cap B</m></usage>
-          <description>intersection of <m>A</m> and <m>B</m></description>
-        </notation>
-        <notation>
-          <usage><m>A \cup B</m></usage>
-          <description>union of <m>A</m> and <m>B</m></description>
-        </notation>
+        
+        <idx><h>intersection</h><h>of two sets</h></idx>
+        <idx><h>set</h><h>intersection</h></idx>
+        <idx><h>union</h><h>of two sets</h></idx>
+        <idx><h>set</h><h>union</h></idx>
           <p>
+          <notation>
+            <usage><m>A \cap B</m></usage>
+            <description>intersection of <m>A</m> and <m>B</m></description>
+          </notation>
+          <notation>
+            <usage><m>A \cup B</m></usage>
+            <description>union of <m>A</m> and <m>B</m></description>
+          </notation>
             Let <m>A</m> and <m>B</m> be subsets of some universal set <m>U</m>.
-            The <term>intersection</term> <idx><h>intersection</h><h>of two sets</h></idx>
-                <idx><h>set</h><h>intersection</h></idx>
+            The <term>intersection</term> 
+                
             of <m>A</m> and <m>B</m>, written <m>A \cap B</m> and read
             <q><m>A</m> intersect <m>B</m>,</q>
             is the set of all elements that are in both <m>A</m> and <m>B</m>.
@@ -74,8 +79,7 @@
           </p>
           <p>
             The <term>union</term>
-                <idx><h>union</h><h>of two sets</h></idx>
-                <idx><h>set</h><h>union</h></idx>
+                
             of <m>A</m> and <m>B</m>, written <m>A \cup B</m> and read
             <q><m>A</m> union <m>B</m>,</q>
             is the set of all elements that are in <m>A</m> or in <m>B</m>.
@@ -88,22 +92,27 @@
 
       <assemblage xml:id="setdiff">
         <title>Definition</title>
-        <notation>
-          <usage><m>A^c</m></usage>
-          <description>complement of <m>A</m></description>
-        </notation>
-        <notation>
-          <usage><m>A - B</m></usage>
-          <description>set difference of <m>A</m> and <m>B</m></description>
-        </notation>
+        
+        <idx><h>difference of two sets</h></idx>
+        <idx><h>set</h><h>difference</h></idx>
+        <idx><h>relative complement</h></idx>
+        <idx><h>set</h><h>relative complement</h></idx>
+        <idx><h>complement of a set</h></idx>
+        <idx><h>set</h><h>complement</h></idx>
           <p>
+          <notation>
+            <usage><m>A^c</m></usage>
+            <description>complement of <m>A</m></description>
+          </notation>
+          <notation>
+            <usage><m>A - B</m></usage>
+            <description>set difference of <m>A</m> and <m>B</m></description>
+          </notation>
             Let <m>A</m> and <m>B</m> be subsets of some universal set <m>U</m>.
             The <term>set difference</term>
-                <idx><h>difference of two sets</h></idx>
-                <idx><h>set</h><h>difference</h></idx>
+                
             of <m>A</m> and <m>B</m>, or <term>relative complement</term>
-                <idx><h>relative complement</h></idx>
-                <idx><h>set</h><h>relative complement</h></idx>
+                
             of <m>B</m> with respect to <m>A</m>,
             written <m>A - B</m> and read
             <q><m>A</m> minus <m>B</m></q>
@@ -117,8 +126,7 @@
           </p>
           <p>
             The <term>complement</term>
-                <idx><h>complement of a set</h></idx>
-                <idx><h>set</h><h>complement</h></idx>
+                
             of the set <m>A</m>, written <m>A^c</m> and read
             <q>the complement of <m>A</m>,</q>
             is the set of all elements of <m>U</m> that are not in <m>A</m>.
@@ -204,14 +212,15 @@
 
     </worksheet>
     
-    <worksheet margin="1in" xml:id="PA_venn">
+    <worksheet xml:id="PA_venn">
       <title>Beginning Activity 2: Venn Diagrams for Two Sets</title>
+      <idx><h>Venn diagram</h></idx>
       <p>
         In <xref text="custom" ref="PA_setops">Beginning Activity 1</xref>,
         we worked with verbal and symbolic definitions of set operations.
         However, it is also helpful to have a visual representation of sets.
         <term>Venn diagrams</term> are used to
-            <idx><h>Venn diagram</h></idx>
+            
         represent sets by circles
         (or some other closed geometric shape)
         drawn inside a rectangle.
@@ -223,7 +232,7 @@
       </p>
       <figure xml:id="fig_venn2-prev">
         <caption>Venn Diagram for Two Sets</caption>
-        <image width="50%" source="figps-venn2">
+        <image width="45%" source="figps-venn2">
         <description>
           Venn Diagram with two circles A and B inside the universal set U. 
           A overlaps B creating 3 inner-circle regions. The leftmost is labelled 1, the center 2, 
@@ -274,7 +283,7 @@
       
       <figure xml:id="fig_union2">
         <caption>Venn Diagram for <m>A \cup B</m></caption>
-        <image width="50%" source="figps-aunionb">
+        <image width="45%" source="figps-aunionb">
         <description>
           Venn Diagram with two circles A and B inside the universal set U. 
           A overlaps B creating 3 inner-circle regions. The leftmost is labelled 1, the center 2, 
@@ -352,15 +361,17 @@
     </p>
     <assemblage xml:id="propersubset">
       <title>Definition</title>
-      <notation>
-        <usage><m>A \subset B</m></usage>
-        <description><m>A</m> is a proper subset of <m>B</m></description>
-      </notation>
+     
+      <idx><h>proper subset</h></idx>
+      <idx><h>subset</h><h>proper</h></idx>
         <p>
+        <notation>
+          <usage><m>A \subset B</m></usage>
+          <description><m>A</m> is a proper subset of <m>B</m></description>
+        </notation>
           Let <m>A</m> and <m>B</m> be two sets contained in some universal set <m>U</m>.
           The set <m>A</m> is a <term>proper subset</term>
-              <idx><h>proper subset</h></idx>
-              <idx><h>subset</h><h>proper</h></idx>
+              
           of <m>B</m> provided that <m>A \subseteq B</m> and <m>A \ne B</m>.
           When <m>A</m> is a proper subset of <m>B</m>,
           we write <m>A \subset B</m>.
@@ -645,7 +656,7 @@
     </p>
     <figure xml:id="fig_aintersectc">
       <caption>Venn Diagram for <m>A \cap C</m></caption>
-      <image width="50%" source="figps-ainterc3">
+      <image width="45%" source="figps-ainterc3">
         <description>
           A Venn diagram for three sets, A, B, and C. The intersection of A and C is shaded.
         </description>
@@ -661,7 +672,7 @@
     </p>
     <figure xml:id="fig_asubsetb">
       <caption>Venn Diagram Showing <m>A \subseteq B</m></caption>
-      <image width="50%" source="figps-asubsetb3">
+      <image width="45%" source="figps-asubsetb3">
       <description>
         Venn Diagram with three circles A, B, and C. B and C overlap and A is 
         completely inside B while overlapping C.
@@ -693,7 +704,7 @@
               </statement>
               <solution>
                 <p>
-                  <image width="50%" source="figps-venn3"/>
+                  <image width="40%" source="figps-venn3"/>
                   For the set <m>(A \cap B) \cap C</m>, region 5 is shaded.
                   <!-- tk These all use the same image but refer to their numbered regions. -->
                   <!-- Come back to these solutions later. Not the most accessible exercise. -->
@@ -708,7 +719,7 @@
               </statement>
               <solution>
                 <p>
-                  <image width="50%" source="figps-venn3"/>
+                  <image width="40%" source="figps-venn3"/>
                   For the set <m>(A \cap B) \cup C</m>,
                   the regions 2, 4, 5, 6, 7 are shaded.
                 </p>
@@ -722,7 +733,7 @@
               </statement>
               <solution>
                 <p>
-                  <image width="50%" source="figps-venn3"/>
+                  <image width="40%" source="figps-venn3"/>
                   For the set <m>(A^c \cup B)</m>,
                   the regions 2, 3, 5, 6, 7, 8 are shaded.
                 </p>
@@ -736,7 +747,7 @@
               </statement>
               <solution>
                 <p>
-                  <image width="50%" source="figps-venn3"/>
+                  <image width="40%" source="figps-venn3"/>
                   For the set <m>(A^c \cap (B \cup C))</m>,
                   the regions 3, 6, 7 are shaded.
                 </p>
@@ -754,7 +765,7 @@
           </statement>
           <solution>
             <p>
-              <image width="50%" source="figps-prog54-2"/>
+              <image width="40%" source="figps-prog54-2"/>
             </p>
           </solution>
         </task>
@@ -766,7 +777,7 @@
           </statement>
           <solution>
             <p>
-              <image width="50%" source="figps-prog54-3"/>
+              <image width="40%" source="figps-prog54-3"/>
             </p>
           </solution>
         </task>
@@ -798,16 +809,18 @@
     </p>
     <assemblage xml:id="D_powerset">
       <title>Definition</title>
-      <notation>
-        <usage><m>\mathcal(P)( A )</m></usage>
-        <description>power set of <m>A</m></description>
-      </notation>
+      
+      <idx><h>power set</h></idx>
+      <idx><h>set</h><h>power</h></idx>
         <p>
+        <notation>
+          <usage><m>\mathcal(P)( A )</m></usage>
+          <description>power set of <m>A</m></description>
+        </notation>
           If <m>A</m> is a subset of a universal set <m>U</m>,
           then the set whose members are all the subsets of <m>A</m> is called the 
           <term>power set</term>
-              <idx><h>power set</h></idx>
-              <idx><h>set</h><h>power</h></idx>
+              
           of <m>A</m>.
           We denote the power set of <m>A</m> by
           <m>\mathcal{P}( A )</m> . Symbolically, we write
@@ -897,14 +910,15 @@
 
     <assemblage xml:id="D_cardinality">
       <title>Definition</title>
-      <notation>
-        <usage><m>\left| A \right|</m></usage>
-        <description>cardinality of a finite set <m>A</m></description>
-      </notation>
+      
+      <idx><h>cardinality</h></idx>
+      <idx><h>cardinality</h><h>finite set</h></idx>
         <p>
-          The number of elements in a finite set <m>A</m> is called the <term>cardinality</term>
-              <idx><h>cardinality</h></idx>
-              <idx><h>cardinality</h><h>finite set</h></idx>
+        <notation>
+          <usage><m>\left| A \right|</m></usage>
+          <description>cardinality of a finite set <m>A</m></description>
+        </notation>
+          The number of elements in a finite set <m>A</m> is called the <term>cardinality</term> 
           of <m>A</m> and is denoted by <m>\card(A)</m>.
         </p>
     </assemblage>
@@ -923,11 +937,13 @@
 
   <subsection>
     <title>Standard Number Systems</title>
+    <idx><h>natural numbers</h></idx>
+    <idx><h>integers</h></idx>
     <p>
       We can use set notation to specify and help describe our standard number systems.
       The starting point is the set of
       <term>natural numbers</term>,
-          <idx><h>natural numbers</h></idx>
+          
       for which we use the roster method.
       <me>
         \N = \left\{ 1, 2, 3, 4, \ldots \;\right\}
@@ -935,7 +951,7 @@
     </p>
     <p>
       The <term>integers</term>
-          <idx><h>integers</h></idx>
+          
       consist of the natural numbers,
       the negatives of the natural numbers, and zero.
       If we let <m>\N^- = \left\{ \ldots, -4, -3, -2, -1 \right\}</m>,
@@ -959,13 +975,15 @@
       we see that <m>\Z \subseteq \Q</m>.
     </p>
     <p>
+    <idx><h>real numbers</h></idx>
+    <idx><h>irrational numbers</h></idx>
       We do not yet have the tools to give a complete description of the real numbers.
           
       We will simply say that the <term>real numbers</term>
-      <idx><h>real numbers</h></idx>
+      
       consist of the rational numbers and the
       <term>irrational numbers</term>.
-      <idx><h>irrational numbers</h></idx>
+     
       In effect, the irrational numbers are the complement of the set of rational numbers 
       <m>\Q</m> in <m>\R</m>.
       So
@@ -976,9 +994,10 @@
       </me>.
     </p>
     <p>
+    <idx><h>complex numbers</h></idx>
       A number system that we have not yet discussed is the set of
       <term>complex numbers</term>.
-          <idx><h>complex numbers</h></idx>
+          
       The complex numbers, <m>\mathbb{C}</m>,
       consist of all numbers of the form <m>a + bi</m>, where
       <m>a,
@@ -1896,11 +1915,12 @@
     </exercise>
 
     <exercise>
+    <idx><h>Law of Trichotomy</h></idx>
       <statement>
         <p>
           One of the properties of real numbers is the so-called
           <term>Law of Trichotomy</term>,
-            <idx><h>Law of Trichotomy</h></idx>
+            
           which states that if <m>a,
           b \in \R</m>, then exactly one of the following is true:
           <ul cols="3">
@@ -1958,12 +1978,13 @@
       <idx><h>interval</h><h>half-open</h></idx>
       <idx><h>closed ray</h></idx>
       <idx><h>ray</h><h>closed</h></idx>
+      <idx><h>interval</h></idx>
       
       <introduction>
         <p>
           In previous mathematics courses,
           we have frequently used subsets of the real numbers called <term>intervals</term>.
-            <idx><h>interval</h></idx>
+            
           There are some common names and notations for intervals.
           These are given in the following table,
           where it is assumed that <m>a</m> and <m>b</m> are real numbers and <m>a \lt b</m>.
@@ -2126,7 +2147,8 @@
 
     <activity xml:id="exer_powerset">
       <title>Proof of <xref ref="T_powerset"></xref></title>
-
+      <idx><h>power set</h></idx>
+      <idx><h>power set</h><h>cardinality</h></idx>
       <introduction>
         <p>
           To help with the proof by induction of <xref ref="T_powerset"></xref>,
@@ -2184,8 +2206,7 @@
           for each nonnegative integer <m>n</m>, we let <m>P ( n )</m> be,
           <q>If   a finite set has exactly <m>n</m>  elements,
           then  that set  has exactly  <m>2^n</m> subsets.</q>
-            <idx><h>power set</h></idx>
-            <idx><h>power set</h><h>cardinality</h></idx>
+            
         </p>
       </introduction>
 

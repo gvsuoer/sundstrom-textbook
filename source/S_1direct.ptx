@@ -2,14 +2,15 @@
 <section xml:id="S_1direct">
   <title>Constructing Direct Proofs</title>
 
-    <worksheet margin="1in" xml:id="PA_even">
+    <worksheet xml:id="PA_even">
     <title>Beginning Activity 1: Definition of Even and Odd Integers</title>
+    <idx><h>definition</h></idx>
       <p>
         Definitions play a very important role in mathematics.
         A direct proof of a proposition in mathematics is often a demonstration that the proposition 
         follows logically from certain definitions and previously proven propositions.
         A <term>definition</term>
-            <idx><h>definition</h></idx>
+            
         is an agreement that a particular word or phrase will stand for some object,
         property, or other concept that we expect to refer to often.
         In many elementary proofs, the answer to the question,
@@ -24,13 +25,14 @@
       </p>
       <assemblage xml:id="D_even">
         <title>Definition</title>
-        
+        <idx><h>even integer</h></idx>
+        <idx><h>odd integer</h></idx>
           <p>
             An integer <m>a</m> is an <term>even integer</term>
-                <idx><h>even integer</h></idx>
+                
             provided that there exists an integer <m>n</m> such that <m>a = 2n</m>.
             An integer <m>a</m> is an <term>odd integer</term>
-                <idx><h>odd integer</h></idx>
+                
             provided there exists an integer <m>n</m> such that <m>a = 2n + 1</m>.
           </p>
         
@@ -81,8 +83,10 @@
       </exercise>
     </worksheet>
 
-    <worksheet margin="1in" xml:id="PA_thinking">
+    <worksheet xml:id="PA_thinking">
       <title>Beginning Activity 2: Thinking about a Proof</title>
+      <idx><h>direct proof</h></idx>
+      <idx><h>proof</h><h>direct</h></idx>
       <p>
         Consider the following proposition:
       
@@ -96,8 +100,7 @@
       <p>
         Think about how you might go about proving this proposition.
         A <term>direct proof</term>
-            <idx><h>direct proof</h></idx>
-            <idx><h>proof</h><h>direct</h></idx>
+            
         of a conditional statement is a demonstration that the conclusion of the conditional statement follows logically from the hypothesis of the conditional statement.
         Definitions and previously proven propositions are used to justify each step in the proof.
         To help get started in proving this proposition,
@@ -259,6 +262,7 @@
       we proceed through a logical sequence of steps to arrive at the conclusion that <m>Q</m> is true.
     </p>
     <p>
+      <idx><h>know-show table</h></idx>
       Unfortunately,
       it is often not easy to discover how to start this logical sequence of steps.
       We will describe a method of exploration that often can help in discovering the steps of a proof.
@@ -267,7 +271,7 @@
       We will use a device called the <term>
       know-show table
       </term>
-          <idx><h>know-show table</h></idx>
+          
       to help organize our thoughts and the steps of the proof.
       This will be illustrated with the proposition from <xref text="custom" ref="PA_thinking">Beginning 
       Activty 2</xref>.
@@ -371,12 +375,13 @@
   </tabular>
 
     <p>
+    <idx><h>know-show table</h><h>backward question</h></idx>
       We have not yet filled in the reason for the last step because we do not yet know how we will 
       reach the goal.
       The idea now is to ask ourselves questions about what we know and what we are trying to prove.
       We usually start with the conclusion that we are trying to prove by asking a so-called
       <term>backward question.</term>
-      <idx><h>know-show table</h><h>backward question</h></idx>
+      
       The basic form of the question is,
       <q>Under what conditions can we conclude that <m>Q</m> is true?</q>
       How we ask the question is crucial since we must be able to answer it.
@@ -483,6 +488,7 @@
 
     
     <p>
+    <idx><h>know-show table</h><h>forward question</h></idx>
       We now focus our effort on proving statement <m>Q1</m> since we know that if we can prove 
       <m>Q1</m>, then we can conclude that <m>Q</m> is true.
       We ask a backward question about <m>Q1</m> such as,
@@ -491,7 +497,7 @@
       and so we look at the know portion of the table and try to connect the know portion to the 
       show portion. To do this, we work forward from step <m>P</m>,
       and this involves asking a <term>forward question.</term>
-      <idx><h>know-show table</h><h>forward question</h></idx>
+      
       The basic form of this type of question is,
       <q>What can we conclude from the fact that <m>P</m> is true?</q>
       In this case,
@@ -669,6 +675,7 @@
   </tabular>
 
     <p>
+    <idx><h>know-show table</h></idx>
       It is very important to realize that we have only constructed an outline of a proof.
       Mathematical proofs are not written in table form.
       They are written in narrative form using complete sentences and correct paragraph structure,
@@ -678,7 +685,7 @@
       That is, although the use of the backward process was essential in discovering the proof,
       when we write the proof in narrative form,
       we use the forward process described in the preceding table.
-          <idx><h>know-show table</h></idx>
+          
       A completed proof follows.
     </p>
 
@@ -726,8 +733,9 @@
 
   <subsection>
     <title>Writing Guidelines for Mathematics Proofs</title>
+    <idx><h>writing guidelines</h></idx>
     <p>
-          <idx><h>writing guidelines</h></idx>
+          
       At the risk of oversimplification,
       doing mathematics can be considered to have two distinct stages.
       The first stage is to convince yourself that you have solved the problem or proved a conjecture.
@@ -740,10 +748,11 @@
       wider audience.
     </p>
     <p>
+    <idx><h>proof</h><h>mathematical proof</h></idx>
       A <term>mathematical proof</term> is a convincing argument
       (within the accepted standards of the mathematical community)
       that a certain
-          <idx><h>proof</h><h>mathematical proof</h></idx>
+          
       mathematical statement is necessarily true.
       A proof generally uses deductive reasoning and logic but also contains some amount of 
       ordinary language (such as English).
@@ -956,11 +965,12 @@
 
   <subsection xml:id="subsec-proof-comments">
     <title>Some Comments about Constructing Direct Proofs</title>
+    <idx><h>direct proof</h></idx>
+    <idx><h>proof</h><h>direct</h></idx>
     <ol>
     <li xml:id="proofcomment1">
       <p>
-        <idx><h>direct proof</h></idx>
-        <idx><h>proof</h><h>direct</h></idx>
+        
         When we constructed the know-show table prior to writing a proof for 
         <xref ref="T_xyodd"></xref>,
         we had only one answer for the backward question and one answer for the forward question.
@@ -1071,8 +1081,6 @@
         <blockquote>
           How can I use these assumptions to prove the result?
         </blockquote>
-        <idx><h>direct proof</h></idx>
-        <idx><h>proof</h><h>direct</h></idx>
       </p>
     </li>
     </ol>
@@ -1134,10 +1142,11 @@
 
     <exercise xml:id="pr_pythag">
       <title>Constructing and Writing a Proof</title>
+      <idx><h>Pythagorean Theorem</h></idx>
       <statement>
         <p>
         The <term>Pythagorean Theorem</term>
-        <idx><h>Pythagorean Theorem</h></idx>
+        
         for right triangles states that if <m>a</m> and <m>b</m> are the lengths of the legs of 
         a right triangle and <m>c</m> is the length of the hypotenuse,
         then <m>a^2 + b^2 = c^2</m>
@@ -1592,6 +1601,9 @@
     </exercise>
 
     <exercise xml:id="exer_sec12-type">
+    <idx><h>type 0 integer</h></idx>
+    <idx><h>type 1 integer</h></idx>
+    <idx><h>type 2 integer</h></idx>
       <introduction>
         <p>
           An integer <m>a</m> is said to be a <term>type 0 integer</term>
@@ -1600,9 +1612,7 @@
           if there exists an integer <m>n</m> such that <m>a=3n+1</m>.
           An integer <m>a</m> is said to be a <term>type 2 integer</term>
           if there exists an integer <m>m</m> such that <m>a=3m+2</m>.
-          <idx><h>type 0 integer</h></idx>
-          <idx><h>type 1 integer</h></idx>
-          <idx><h>type 2 integer</h></idx>
+          
         </p>
       </introduction>
           <task xml:id="exer_mod3a">
@@ -1693,15 +1703,17 @@
     </exercise>
 
     <exercise xml:id="exer_sec12-11">
+    <idx><h>quadratic equation</h></idx>
+    <idx><h>quadratic formula</h></idx>
       <introduction>
         <p>
           Let <m>a</m>,
           <m>b</m>, and <m>c</m> be real numbers with <m>a \ne 0</m>.
           The solutions of the <term>quadratic equation</term>
           <m>ax^2 + bx + c = 0</m>
-          <idx><h>quadratic equation</h></idx>
+          
           are given by the <term>quadratic formula</term>,
-          <idx><h>quadratic formula</h></idx>
+          
           which states that the solutions are <m>x_1</m> and <m>x_2</m>, where
           <me>
           x_1 = \frac{-b + \sqrt{b^2 - 4ac}}{2a}  \text{ and }   x_2 = \frac{-b - \sqrt{b^2 - 4ac}}{2a}
@@ -1764,16 +1776,17 @@
 
     <activity xml:id="exer_pythag">
       <title>Pythagorean Triples</title>
+      <idx><h>Pythagorean triple</h></idx>
       <introduction>
         <p>
           Three natural numbers <m>a</m>, <m>b</m>,
           and <m>c</m> with <m>a \lt b \lt c</m> are said to form a
           <term>Pythagorean triple</term>
-          <idx><h>Pythagorean triple</h></idx>
+          
           provided that <m>a^2 + b^2 = c^2</m>.
           For example, 3, 4, and 5 form a Pythagorean triple since <m>3^2 + 4^2 = 5^2</m>.
           The study of Pythagorean triples began with the development of the
-          <term>Pythagorean Theorem</term> for right triangles,
+          Pythagorean Theorem for right triangles,
           which states that if <m>a</m> and <m>b</m> are the lengths of the legs of a right triangle 
           and <m>c</m> is the length of the hypotenuse,
           then <m>a^2 + b^2 = c^2</m>.

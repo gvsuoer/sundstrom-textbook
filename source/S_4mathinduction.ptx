@@ -3,7 +3,7 @@
 <section xml:id="S_mathinduction">
   <title>The Principle of Mathematical Induction</title>
   
-    <worksheet margin="1in" xml:id="PA_exploringstatements">
+    <worksheet xml:id="PA_exploringstatements">
       <title>Beginning Activity 1: Exploring Statements of the Form 
       <m>\left( \forall n \in \N \right)\left( P(n) \right)</m></title>
       <p>
@@ -121,7 +121,7 @@
       </p>
     </worksheet>
 
-    <worksheet margin="1in" xml:id="PA_propertyofN">
+    <worksheet xml:id="PA_propertyofN">
       <title>Beginning Activity 2: A Property of the Natural Numbers</title>
       <p>
         Intuitively,
@@ -136,10 +136,11 @@
       </p>
       <assemblage xml:id="D_inductiveset">
         <title>Definition</title>
+        <idx><h>inductive set</h></idx>
           <p>
             A set <m>T</m> that is a subset of <m>\mathbb{Z}</m> is an
             <term>inductive set</term>
-                <idx><h>inductive set</h></idx>
+                
             provided that for each integer <m>k</m>,
             if <m>k \in T</m>, then <m>k + 1 \in T</m>.
           </p>
@@ -487,6 +488,10 @@
 
   <subsection>
     <title>Using the Principle of Mathematical Induction</title>
+    <idx><h>mathematical induction</h><h>basis step</h></idx>
+    <idx><h>basis step</h></idx>
+    <idx><h>mathematical induction</h><h>inductive step</h></idx>
+    <idx><h>inductive step</h></idx>
     <p>
       The primary use of the Principle of Mathematical Induction is to prove statements of the 
       form
@@ -517,13 +522,11 @@
       </ol>
   
       The first step is called the <term>basis step</term>
-      <idx><h>mathematical induction</h><h>basis step</h></idx>
-          <idx><h>basis step</h></idx>
+      
       or the <term>initial step</term>,
       and the second step is called the
       <term>inductive step</term>.
-          <idx><h>mathematical induction</h><h>inductive step</h></idx>
-          <idx><h>inductive step</h></idx>
+          
       This means that a proof by mathematical induction will have the following form:
 
       
@@ -555,15 +558,17 @@
     </p>
 
     <p>
+    <idx><h>inductive assumption</h></idx>
+    <idx><h>inductive hypothesis</h></idx>
       Note that in the inductive step,
       we want to prove that the conditional statement
       <q>for each <m>k \in \N</m>, if <m>P(k)</m> then <m>P(k + 1)</m></q>
       is true.
       So we will start the inductive step by assuming that <m>P( k )</m> is true.
       This assumption is called the <term>inductive assumption</term>
-          <idx><h>inductive assumption</h></idx>
+          
       or the <term>inductive hypothesis.</term>
-          <idx><h>inductive hypothesis</h></idx>
+          
     </p>
     <p>
       The key to constructing a proof by induction is to discover how
@@ -684,8 +689,9 @@
 
   <subsection>
     <title>Writing Guideline</title>
+    <idx><h>writing guidelines</h></idx>
     <p>
-          <idx><h>writing guidelines</h></idx>
+          
       The proof of <xref ref="P_suminduction"></xref> shows a standard way to write an 
       induction proof.
       When writing a proof by mathematical induction,
@@ -1585,6 +1591,7 @@
             </p>
           </task>
           <task>
+          <idx><h>Wallis sine formulas</h></idx>
             <p>
               Use mathematical induction to prove that for each natural number <m>n</m>,
                 <md>
@@ -1595,10 +1602,11 @@
                   \frac{2 \cdot 4 \cdot 6 \cdots (2n)}{1 \cdot 3  \cdot 5 \cdots (2n + 1)}</mrow>
                 </md>.
                 These are known as the <term>Wallis sine formulas</term>.
-                <idx><h>Wallis sine formulas</h></idx>
+                
             </p>
           </task>
           <task>
+          <idx><h>Wallis cosine formulas</h></idx>
             <p>
               Use mathematical induction to prove that
                 <md>
@@ -1609,7 +1617,7 @@
                   \frac{2 \cdot 4 \cdot 6 \cdots (2n)}{1 \cdot 3 \cdot 5 \cdots (2n+1)}</mrow>
                 </md>.
                 These are known as the <term>Wallis cosine formulas</term>.
-                <idx><h>Wallis cosine formulas</h></idx>
+                
             </p>
           </task>
 
@@ -1876,7 +1884,7 @@
           
           <figure xml:id="fig_circleregions">
             <caption>Regions of Circles</caption>
-            <image width="50%" source="figps-circleregions">
+            <image width="40%" source="figps-circleregions">
             <description>
               Four circles with points on their circumference, and with lines connecting the 
               points to divide each circle into regions. With 1 point there is 1 region, 2 points 
@@ -1922,7 +1930,7 @@
           Are your conjectures correct or incorrect?
           <figure xml:id="fig_circleregions56">
             <caption>Regions of Circles</caption>
-              <image width="50%" source="figps-circle5-6">
+              <image width="45%" source="figps-circle5-6">
               <description>
                 a circle with five points on its circumference is divided into sixteen regions. 
                 A circle with six points on its circumference is divided into thirty two regions.

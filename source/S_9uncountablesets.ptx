@@ -3,7 +3,7 @@
 <section xml:id="S_uncountablesets">
   <title>Uncountable Sets</title>
 
-    <worksheet margin="1in" xml:id="PA_dodgeball">
+    <worksheet xml:id="PA_dodgeball">
       <title>The Game of Dodge Ball</title>
       <idx><h>Dodge Ball</h></idx>
       <p>
@@ -134,13 +134,14 @@
 
     </worksheet>
 
-    <worksheet margin="1in" xml:id="PA_powerset">
+    <worksheet xml:id="PA_powerset">
       <title>Beginning Activity 2: Functions from a Set to Its Power Set</title>
+      <idx><h>power set</h></idx>
       <p>
         Let <m>A</m> be a set.
         In <xref ref="S_setoperations"></xref>,
         we defined the <term>power set</term>
-            <idx><h>power set</h></idx>
+            
         <m>\mathcal{P} ( A )</m> of <m>A</m> to be the set of all subsets of <m>A</m>.
         This means that <m>X \in \mathcal{P} ( A )</m> if and only if <m>X \subseteq A</m>.
         <xref ref="T_powerset"></xref>
@@ -338,11 +339,12 @@
 
     <assemblage xml:id="normalized">
       <title>Definition</title>
+      <idx><h>decimal expression</h><h>normalized form</h></idx>
+      <idx><h>normalized form</h><h>of a decimal expression</h></idx>
         <p>
           A decimal representation of a real number <m>a</m> is in
           <term>normalized form</term>
-          <idx><h>decimal expression</h><h>normalized form</h></idx>
-              <idx><h>normalized form</h><h>of a decimal expression</h></idx>
+          
           provided that there is no natural number <m>k</m> such that for all natural numbers 
           <m>n</m> with <m>n > k</m>,
           <m>a_n = 9</m>.
@@ -461,15 +463,17 @@
 
     <exercise xml:id="prog_diagonal">
       <title>Dodge Ball and Cantor's Diagonal Argument</title>
+      <idx><h>Cantor's diagonal argument</h></idx>
+      <idx><h>Dodge Ball</h></idx>
       <statement>
       <p>
         The proof of <xref ref="T_uncountableinterval"></xref>
         is often referred to as <term>Cantor's diagonal argument</term>.
-            <idx><h>Cantor's diagonal argument</h></idx>
+            
         It is named after the mathematician Georg Cantor,
         who first published the proof in 1874.
         Explain the connection between the winning strategy for Player Two in Dodge Ball
-            <idx><h>Dodge Ball</h></idx>
+            
         (see <xref text="custom" ref="PA_dodgeball">Beginning Activity 1</xref>) and the proof of 
         <xref ref="T_uncountableinterval"></xref>
         using Cantor's diagonal argument.
@@ -500,24 +504,27 @@
     </exercise>
 
     <p>
+    <idx><h>continuum</h></idx>
       The open interval <m>( 0, 1 )</m> is our first example of an uncountable set.
       The cardinal number of <m>( 0, 1 )</m> is defined to be <m>\boldsymbol{c}</m>,
       which stands for <term>the cardinal number of the continuum</term>.
-          <idx><h>continuum</h></idx>
+          
       So the two infinite cardinal numbers we have seen are
       <m>\aleph_0</m> for countably infinite sets and <m>\boldsymbol{c}</m>.
     </p>
 
     <assemblage xml:id="cardinalityc">
       <title>Definition</title>
+      <idx><h>cardinality</h></idx>
+      <idx><h>cardinality</h><h><m>\boldsymbol{c}</m></h></idx> 
+      <p>
       <notation>
         <usage><m>\boldsymbol{c}</m></usage>
         <description>cardinal number of the continuum</description>
       </notation>
-        <p>
+        
           A set <m>A</m> is said to have <term>cardinality <m>\boldsymbol{c}</m></term>
-              <idx><h>cardinality</h></idx>
-              <idx><h>cardinality</h><h><m>\boldsymbol{c}</m></h></idx>  
+               
               provided that <m>A</m> is equivalent to <m>( 0, 1 )</m>.
           In this case,
           we write <m>\text{ card} ( A ) = \boldsymbol{c}</m> and say that the cardinal number 
@@ -648,9 +655,8 @@
 
   <subsection>
     <title>Cantor's Theorem</title>
-    <p>
           <idx><h>Cantor's Theorem</h></idx>
-    </p>
+          <idx><h>Cantor, Georg</h></idx>
     <p>
       We have now seen two different infinite cardinal numbers,
       <m>\aleph_0</m> and <m>\boldsymbol{c}</m>.
@@ -662,7 +668,7 @@
       The basis for this fact is the following theorem,
       which states that a set is not equivalent to its power set.
       The proof is due to Georg Cantor (1845<ndash/>1918),
-          <idx><h>Cantor, Georg</h></idx>
+          
       and the idea for this proof was explored in <xref text="custom" ref="PA_powerset">Beginning Activity 2</xref>.
       The basic idea of the proof is to prove that any function from a set <m>A</m> to its 
       power set cannot be a surjection.
@@ -837,6 +843,7 @@
           </p>
         </li>
         <li>
+        <idx><h>Continuum Hypothesis</h></idx>
           <p>
             In <xref ref="sec94_comment1">Comment</xref>,
             we indicated that <m>\mathcal{P} ( \mathbb{N} )</m> and
@@ -863,7 +870,7 @@
             <m>\boldsymbol{c}</m> is really the next cardinal number after <m>\aleph_0</m>.
             This conjecture has come to be known as the
             <term>Continuum Hypothesis</term>.
-              <idx><h>Continuum Hypothesis</h></idx>
+              
             Stated somewhat more formally,
             the Continuum Hypothesis is 
             <blockquote>
@@ -873,11 +880,13 @@
             The question of whether the Continuum Hypothesis is true or false is one of the 
             most famous problems in modern mathematics.
           </p>
-          <p>  
+          <p> 
+          <idx><h>G&#xf6;del, Kurt</h></idx>
+          <idx><h>Cohen, Paul</h></idx> 
             Through the combined work of Kurt G&#xf6;del
-              <idx><h>G&#xf6;del, Kurt</h></idx>
+              
             in the 1930s and Paul Cohen
-              <idx><h>Cohen, Paul</h></idx>
+              
             in 1963, it has been proved that the Continuum Hypothesis cannot be proved or 
             disproved from the standard axioms of set theory.
             This means that either the Continuum Hypothesis or its negation can be added to 

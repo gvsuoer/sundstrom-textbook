@@ -3,15 +3,16 @@
 <section xml:id="S_recursion">
   <title>Induction and Recursion</title>
   
-    <worksheet margin="1in" xml:id="PA_recursivesequences">
+    <worksheet xml:id="PA_recursivesequences">
       <title>Beginning Activity 1: Recursively Defined Sequences</title>
+      <idx><h>sequence</h></idx>
       <p>
         In a proof by mathematical induction, we
         <q>start with a first step</q>
         and then prove that we can always go from one step to the next step.
         We can use this same idea to define a sequence as well.
         We can think of a <term>sequence</term>
-            <idx><h>sequence</h></idx>
+            
         as an infinite list of numbers that are indexed by the natural numbers
         (or some infinite subset of <m>\mathbb{N} \cup \left\{ 0 \right\}</m>).
         We often write a sequence in the following form:
@@ -26,23 +27,27 @@
         <m>n^\text{ th }</m> term of the sequence such as <m>a_n = \dfrac{1}{n}</m>.
       </p>
       <p>
+      <idx><h>definition</h><h>by recursion</h></idx>
+      <idx><h>recursive definition</h></idx>
+      <idx><h>initial condition</h></idx>
+      <idx><h>recurrence relation</h></idx>
         Another way to define a sequence is to give a specific definition of the first term
         (or the first few terms)
         and then state, in general terms,
         how to determine <m>a_{n + 1}</m> in terms of <m>n</m> and the first <m>n</m> 
         terms <m>a_1 ,a_2 , \ldots ,a_n</m>.
         This process is known as <term>definition by recursion</term>
-        and is <idx><h>definition</h><h>by recursion</h></idx> also called a
+        and is  also called a
         <term>recursive definition</term>.
-            <idx><h>recursive definition</h></idx>
+            
         The specific definition of the first term is called the
         <term>initial condition</term>,
-            <idx><h>initial condition</h></idx>
+            
         and the general definition of
         <m>a_{n + 1}</m> in terms of <m>n</m> and the first <m>n</m> terms 
         <m>a_1 ,a_2 , \ldots ,a_n</m> is called the
         <term>recurrence relation</term>.
-            <idx><h>recurrence relation</h></idx>
+            
         (When more than one term is defined explicitly,
         we say that these are the initial conditions.) For example,
         we can define a sequence recursively as follows:
@@ -124,11 +129,12 @@
  
     
       <p>
+      <idx><h>factorial</h></idx>
         In <xref text="custom" ref="PA_factorials">Beginning Activity 1</xref>
         in <xref ref="S_otherinduction"></xref>,
         for each natural number <m>n</m>,
         we defined <m>n!</m>, read <term><m>n</m> factorial</term>,
-            <idx><h>factorial</h></idx>
+            
         as the product of the first <m>n</m> natural numbers.
         We also defined <m>0!</m> to be equal to 1.
         Now recursively define a sequence of numbers <m>a_0 ,a_1 ,a_2 , \ldots</m> as follows:
@@ -186,15 +192,16 @@
 
     </worksheet>
 
-    <worksheet margin="1in" xml:id="PA_fibonaccinumbers">
+    <worksheet xml:id="PA_fibonaccinumbers">
       <title>Beginning Activity 2: The Fibonacci Numbers</title>
+      <idx><h>Fibonacci numbers</h></idx>
       <notation>
         <usage><m>f_1, f_2, f_3, \ldots</m></usage>
         <description>Fibonacci numbers</description>
       </notation>
       <p>
         The <term>Fibonacci numbers</term>
-            <idx><h>Fibonacci numbers</h></idx>
+            
         are a sequence of natural numbers
         <m>f_1 ,f_2 ,f_3 , \ldots ,f_n , \ldots</m> defined recursively as follows:
         <ul>
@@ -260,10 +267,11 @@
   
   <subsection>
     <title>The Fibonacci Numbers</title>
+    <idx><h>Leonardo of Pisa</h></idx>
     <p>
       The Fibonacci numbers form a famous sequence in mathematics that was investigated by 
       Leonardo of Pisa
-          <idx><h>Leonardo of Pisa</h></idx>
+          
       (1170 <mdash/> 1250), who is better known as Fibonacci.
       Fibonacci introduced this sequence to the Western world as a solution of the following 
       problem:
@@ -362,13 +370,14 @@
     </table>
 
     <p>
+    <idx><h>Hemachandra, Acharya</h></idx>
       Historically,
       it is interesting to note that Indian mathematicians were studying these types of 
       numerical sequences well before Fibonacci.
       In particular,
       about fifty years before Fibonacci introduced his sequence, Acharya Hemachandra
       (sometimes spelled Hemchandra)
-          <idx><h>Hemachandra, Acharya</h></idx>
+          
       (1089 <mdash/> 1173) considered the following problem,
       which is from the biography of Hemachandra in the
       
@@ -410,13 +419,14 @@
       by Rachel Wells Hall in the February 2008 issue of <pubtitle>Math Horizons</pubtitle>.
     </p>
     <p>
+    <idx><h>Fibonacci Quarterly</h></idx>
       We will continue to use the Fibonacci sequence in this book.
       This sequence may not seem all that important or interesting.
       However, it turns out that this sequence occurs in nature frequently and has applications 
       in computer science.
       There is even a scholarly journal,
       <pubtitle>The Fibonacci Quarterly</pubtitle>,
-          <idx><h>Fibonacci Quarterly</h></idx>
+          
       devoted to the Fibonacci numbers.
     </p>
     <p>
@@ -635,10 +645,11 @@
     </md>.
   
     <p>
+    <idx><h>geometric sequence</h></idx>
+    <idx><h>sequence</h><h>geometric</h></idx>
       This is a recursive definition for a
       <term>geometric sequence</term>
-          <idx><h>geometric sequence</h></idx>
-          <idx><h>sequence</h><h>geometric</h></idx>
+          
       with <term>initial term</term> <m>a</m> and (common)
       <term>ratio</term> <m>r</m>.
       The basic idea is that the next term in the sequence is obtained by multiplying 
@@ -661,6 +672,7 @@
       The proof of this proposition is <xref ref="exer_geomseq"/>.
     </p>
     <p>
+    <idx><h>geometric series</h></idx>
       Another sequence that was introduced in <xref text="custom" ref="PA_recursivesequences">Beginning Activity 1</xref>
       is related to geometric series and is defined as follows:
     <md>
@@ -673,7 +685,7 @@
       For each <m>n \in \mathbb{N}</m>,
       the term <m>S_n</m> is a (finite)
       <term>geometric series</term>
-          <idx><h>geometric series</h></idx>
+          
       with <term>initial term</term> <m>a</m> and (common)
       <term>ratio</term> <m>r</m>.
       The work in <xref text="custom" ref="PA_recursivesequences">Beginning Activity 1</xref>
@@ -916,6 +928,7 @@
             </p>
           </task>
           <task xml:id="exer_binetc">
+          <idx><h>Binet's formula</h></idx>
             <p>
               Use induction to prove that for each natural number <m>n</m>,
               if <m>\alpha = \dfrac{1 + \sqrt{5}}{2}</m> and <m>\beta = \dfrac{1 - \sqrt{5}}{2}</m>,
@@ -923,7 +936,7 @@
             </p>
             <p>
               This formula for the <m>n^{th}</m> Fibonacci number is known as Binet's formula,
-                <idx><h>Binet's formula</h></idx>
+                
               named after the French mathematician Jacques Binet (1786 <mdash/> 1856).
             </p>
           </task>
@@ -1054,12 +1067,13 @@
     </exercise>
 
     <exercise xml:id="exer_sec53-arith">
+    <idx><h>arithmetic sequence</h></idx>
+    <idx><h>sequence</h><h>arithmetic</h></idx>
       <introduction>
         <p>
           The sequence in <xref ref="exer_sec53-arithexample"/> is an example of an
           <term>arithmetic sequence</term>.
-            <idx><h>arithmetic sequence</h></idx>
-            <idx><h>sequence</h><h>arithmetic</h></idx>
+            
           An arithmetic sequence is defined recursively as follows: 
           <blockquote>
             Let <m>c</m> and <m>d</m> 
@@ -1305,10 +1319,11 @@
     </exercise>
 
     <exercise xml:id="exer_lucasnumbers">
+    <idx><h>Lucas numbers</h></idx>
       <introduction>
         <p>
           The <term>Lucas numbers</term>
-            <idx><h>Lucas numbers</h></idx>
+            
           are a sequence of natural numbers <m>L_1, L_2, L_3, \ldots, L_n, \ldots </m>,
           which are defined recursively as follows:
         
@@ -1542,18 +1557,19 @@
 
     <activity xml:id="exer_annuity">
       <title>The Future Value of an Ordinary Annuity</title>
-
+      <idx><h>ordinary annuity</h></idx>
+      <idx><h>future value</h></idx>
         <introduction>
           <p>
             For an <term>ordinary annuity</term>,
-              <idx><h>ordinary annuity</h></idx>
+              
             <m>R</m> dollars is deposited in an account at the end of each compounding period.
             It is assumed that the interest rate, <m>i</m>,
             per compounding period for the account remains constant.
             Let <m>S_t</m> represent the amount in the account at the end of the 
             <m>t</m>th compounding period.
             <m>S_t</m> is frequently called the <term>future value</term>
-              <idx><h>future value</h></idx>
+             
             of the ordinary annuity.
             So  <m>S_1  = R</m>.
             To determine the amount after two months,

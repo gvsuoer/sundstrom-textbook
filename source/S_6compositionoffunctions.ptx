@@ -3,7 +3,7 @@
 <section xml:id="S_compositionoffunctions">
   <title>Composition of Functions</title>
   
-    <worksheet margin="1in" xml:id="PA_compositionintro">
+    <worksheet xml:id="PA_compositionintro">
       <title>Beginning Activity 1: Constructing a New Function</title>
       <p>
         Let <m>A = \left\{ {a, b, c, d} \right\}</m>,
@@ -27,7 +27,7 @@
 
       <figure xml:id="fig_preview64">
         <caption>Arrow Diagram Showing Two Functions</caption>
-        <image width="50%" source="figps-prev641">
+        <image width="40%" source="figps-prev641">
           <description>
             
           </description>
@@ -36,7 +36,7 @@
       </figure>
     </worksheet>
 
-    <worksheet margin="1in" xml:id="PA_verbaldescriptions">
+    <worksheet xml:id="PA_verbaldescriptions">
       <title>Beginning Activity 2: Verbal Descriptions of Functions</title>
       <p>
         The outputs of most real functions we have studied in previous mathematics courses have 
@@ -174,17 +174,21 @@
     </p>
     <assemblage xml:id="functioncomposition">
       <title>Definition</title>
-      <notation>
-        <usage><m>g \circ f:A \to C</m></usage>
-        <description>composition of functions <m>f</m> and <m>g</m></description>
-      </notation>
+      <idx><h>composition of functions</h></idx>
+      <idx><h>function</h><h>composition</h></idx>
+      <idx><h>function</h><h>composite</h></idx>
+      <idx><h>composite function</h></idx>
+      
         <p>
+        <notation>
+          <usage><m>g \circ f:A \to C</m></usage>
+          <description>composition of functions <m>f</m> and <m>g</m></description>
+        </notation>
           Let <m>A</m>, <m>B</m>, and <m>C</m> be nonempty sets,
           and let <m>f\x A \to B</m> and <m>g\x B \to C</m> be functions.
           The <term>composition of <m>\boldsymbol{f}</m> 
           and <m>\boldsymbol{g}</m></term> 
-            <idx><h>composition of functions</h></idx>
-            <idx><h>function</h><h>composition</h></idx>  
+              
           is the function <m>g \circ f\x A \to C</m> defined by
           <me>
             ( {g \circ f} )( x ) = g\left( {f( x )} \right)
@@ -192,23 +196,24 @@
           for all <m>x \in A</m>.
           We often refer to the function <m>g \circ f</m> as a
           <term>composite function</term>.
-              <idx><h>function</h><h>composite</h></idx>
-              <idx><h>composite function</h></idx>
+              
         </p>
       
     </assemblage>
 
     <p>
+    <idx><h>inner function</h></idx>
+    <idx><h>composition of functions</h><h>inner function</h></idx>
+    <idx><h>outer function</h></idx>
+    <idx><h>composition of functions</h><h>outer function</h></idx>
       It is helpful to think of the composite function <m>g \circ f</m> as
       <q><term><m>\boldsymbol{f}</m> followed by
       <m>\boldsymbol{g}</m>.</term></q>
       We then refer to <m>f</m> as the
       <term>inner function</term>
-          <idx><h>inner function</h></idx>
-          <idx><h>composition of functions</h><h>inner function</h></idx>
+          
       and <m>g</m> as the <term>outer function</term>.
-          <idx><h>outer function</h></idx>
-          <idx><h>composition of functions</h><h>outer function</h></idx>
+          
     </p>
   </subsection>
 
@@ -233,7 +238,7 @@
     </p>
     <figure xml:id="fig_arrow64-1">
       <caption>Arrow Diagram for Two Functions</caption>
-      <image width="50%" source="figps-sec641"/>
+      <image width="40%" source="figps-sec641"/>
     </figure>
     <p>
       If we follow the arrows from the set <m>A</m> to the set <m>C</m>,
@@ -243,7 +248,7 @@
     </p>
     <figure xml:id="fig_arrow64-2">
       <caption>Arrow Diagram for <m>g \circ f\x  A \to C</m></caption>
-      <image width="50%" source="figps-sec642"/>
+      <image width="40%" source="figps-sec642"/>
     </figure>
 
     <exercise xml:id="pr_compose">
@@ -290,11 +295,11 @@
 
   <subsection>
     <title>Decomposing Functions</title>
-          <idx><h>decomposing functions</h></idx>
-
+    <idx><h>decomposing functions</h></idx>
+    <idx><h>chain rule</h></idx>
     <p>
       We use the <term>chain rule</term>
-          <idx><h>chain rule</h></idx>
+          
       in calculus to find the derivative of a composite function.
       The first step in the process is to recognize a given function as a composite function.
       This can be done in many ways,
@@ -779,10 +784,11 @@
     </exercise>
 
     <exercise xml:id="exer_sec64-4">
+    <idx><h>identity function</h></idx>
       <introduction>
         <p>
           The <term>identity function</term>
-            <idx><h>identity function</h></idx>
+            
           on a set <m>S</m>, denoted by <m>I_S</m>, is defined as follows:
           <m>I_S \x S \to S</m> by <m>I_S ( x ) = x</m> for each <m>x \in S</m>.
           Let <m>f\x A \to B</m>.
@@ -1017,9 +1023,9 @@
         For this activity,
         it may be useful to draw your arrow diagrams in a triangular arrangement as follows:
         <!-- tk not accessible?  -->
-        <figure>
-          <image width="40%" source="figps-comparrow"/>
-        </figure>
+        
+          <image width="30%" source="figps-comparrow"/>
+        
         It might be helpful to consider examples where the sets are small.
         Try constructing examples where the set <m>A</m> has 2 elements,
         the set <m>B</m> has 3 elements,

@@ -17,7 +17,7 @@
     </p>
   </introduction>
   
-    <worksheet margin="1in" xml:id="PA_functionswithfinitedom">
+    <worksheet xml:id="PA_functionswithfinitedom">
       <title>Beginning Activity 1: Functions with Finite Domains</title>
       <p>
         Let <m>A</m> and <m>B</m> be sets.
@@ -60,7 +60,7 @@
       </p>
       <figure xml:id="fig_arrow63-1new">
         <caption>Arrow Diagram for Two Functions</caption>
-        <image width="70%" source="figps-arrow63-1new">
+        <image width="60%" source="figps-arrow63-1new">
           <description>
             Function f has different inputs which do not produce different outputs. 
             The range of function g does not equal the codomain.
@@ -145,7 +145,7 @@
 
     </worksheet>
 
-    <worksheet margin="1in" xml:id="PA_functionstatements">
+    <worksheet xml:id="PA_functionstatements">
       <title>Beginning Activity 2: Statements Involving Functions</title>
       <p>
         Let <m>A</m> and <m>B</m> be nonempty sets and let <m>f\x A \to B</m>.
@@ -266,10 +266,14 @@
     </p>
     <assemblage xml:id="injection">
       <title>Definition</title>
+      <idx><h>injection</h></idx>
+      <idx><h>one-to-one function</h></idx>
+      <idx><h>function</h><h>one-to-one</h></idx>
+      <idx><h>function</h><h>injective</h></idx>
         <p>
           Let <m>f:A \to B</m> be a function from the set <m>A</m> to the set <m>B</m>.
           The function <m>f</m> is called an <term>injection</term>
-              <idx><h>injection</h></idx>
+              
           provided that 
           <blockquote>
             for all <m>x_1 , x_2 \in A</m>,
@@ -277,10 +281,10 @@
           </blockquote>
           When <m>f</m> is an injection,
           we also say that <m>f</m> is a <term>one-to-one function</term>,
-              <idx><h>one-to-one function</h></idx>
-              <idx><h>function</h><h>one-to-one</h></idx>
+              
+              
           or that <m>f</m> is an <term>injective function</term>.
-              <idx><h>function</h><h>injective</h></idx>
+              
         </p>
     </assemblage>
     <p>
@@ -298,7 +302,7 @@
       or not being an injection.
     </p>
 
-    <!-- tk Made this an insight (which is renamed Summary). Something to come back to. -->
+    
     <assemblage>
       <title>
         Let <m>\boldsymbol{f\x A \to B}</m>
@@ -412,10 +416,14 @@
     </p>
     <assemblage xml:id="surjection">
       <title>Definition</title>
+      <idx><h>surjection</h></idx>
+      <idx><h>onto function</h></idx>
+      <idx><h>function</h><h>onto</h></idx>
+      <idx><h>function</h><h>surjective</h></idx>
         <p>
           Let <m>f\x A \to B</m> be a function from the set <m>A</m> to the set <m>B</m>.
           The function <m>f</m> is called a <term>surjection</term>
-              <idx><h>surjection</h></idx>
+              
           provided that the range of <m>f</m> equals the codomain of <m>f</m>.
           This means that 
           <blockquote>
@@ -425,12 +433,12 @@
           When <m>f</m> is a surjection,
           we also say that <m>f</m> is an
           <term>onto function</term>
-              <idx><h>onto function</h></idx>
-              <idx><h>function</h><h>onto</h></idx>
+              
+              
           or that <m>f</m> maps <m>\boldsymbol{A}</m>
           <term>onto <m>\boldsymbol{B}</m></term>.
           We also say that <m>f</m> is a <term>surjective function</term>.
-              <idx><h>function</h><h>surjective</h></idx>
+              
         </p>
     </assemblage>
     <p>
@@ -491,14 +499,16 @@
     </p>
     <assemblage xml:id="bijection">
       <title>Definition</title>
+      <idx><h>bijection</h></idx>
+      <idx><h>function</h><h>bijective</h></idx>
         <p>
           A <term>bijection</term>
-              <idx><h>bijection</h></idx>
+              
           is a function that is both an injection and a surjection.
           If the function <m>f</m> is a bijection,
           we also say that <m>f</m> is <term>one-to-one and onto</term>
           and that <m>f</m> is a <term>bijective function</term>.
-              <idx><h>function</h><h>bijective</h></idx>
+              
         </p>
     </assemblage>
 
@@ -1254,13 +1264,14 @@
     </exercise>
 
     <exercise xml:id="exer_sec63-sumdivisors">
+    <idx><h>sum of divisors function</h></idx>
       <statement>
         <p>
           Let <m>s\x\mathbb{N} \to \mathbb{N}</m>,
           where for each <m>n \in \mathbb{N}</m>,
           <m>s( n )</m> is the sum of the distinct natural number divisors of <m>n</m>.
           This is the <term>sum of the divisors function</term>
-            <idx><h>sum of divisors function</h></idx>
+            
           that was introduced in <xref text="custom" ref="PA_otherfunctions">Beginning Activity 2</xref>
           from <xref ref="S_introfunctions"></xref>.
           Is <m>s</m> an injection?
@@ -1271,12 +1282,13 @@
     </exercise>
 
     <exercise xml:id="exer_sec63-numdivisors">
+    <idx><h>number of divisors function</h></idx>
       <statement>
         <p>
           Let <m>d\x\mathbb{N} \to \mathbb{N}</m>,
           where <m>d( n )</m> is the number of natural number divisors of <m>n</m>.
           This is the <term>number of divisors function</term>
-            <idx><h>number of divisors function</h></idx>
+            
           introduced in <xref ref="exer_numberofdivisors"/> from 
           <xref ref="S_introfunctions"></xref>.
           Is the function <m>d</m> an injection?
@@ -1287,12 +1299,13 @@
     </exercise>
 
     <exercise xml:id="exer_sec63-9">
+    <idx><h>birthday function</h></idx>
       <statement>
         <p>
           In <xref text="custom" ref="PA_otherfunctions">Beginning Activity 2</xref>
           from <xref ref="S_introfunctions"></xref>,
           we introduced the <term>birthday function</term>.
-            <idx><h>birthday function</h></idx>
+            
           Is the birthday function an injection?
           Is it a surjection?
           Justify your conclusions.
@@ -1466,6 +1479,7 @@
     </exercise>
 
     <exercise>
+    <idx><h>projection function</h></idx>
       <introduction>
         <p>
           Let  <m>A</m>  and  <m>B</m>  be two nonempty sets.
@@ -1475,7 +1489,7 @@
           </me>
           for every  <m>( {a, b} ) \in A \times B</m>.
           This is the <term>first projection function</term>
-            <idx><h>projection function</h></idx>
+            
           introduced in <xref ref="sym_projfunc"/> in <xref ref="S_moreaboutfunctions"></xref>.
         </p>
       </introduction>
@@ -1669,12 +1683,14 @@
 
   <activity xml:id="exer_piecewisefunction">
     <title>Piecewise Defined Functions</title>
+    <idx><h>function</h><h>piecewise defined</h></idx>
+    <idx><h>piecewise defined function</h></idx>
     <introduction>
       <p>
         We often say that a function is a
           <term>piecewise defined function</term>
-            <idx><h>function</h><h>piecewise defined</h></idx>
-            <idx><h>piecewise defined function</h></idx>
+            
+            
           if it has different rules for determining the output for different parts of its domain.
           For example, we can define a function
           <m>f\x\R \to \R</m> by giving a rule for calculating <m>f(x)</m> when
@@ -1737,13 +1753,14 @@
     </introduction> 
 
     <task xml:id="sym_detfunc">
+    <idx><h>determinant</h></idx>
       <p>
         Define  <m>\det \x\mathcal{M}_2( \R ) \to \mathbb{R}</m> by
         <me>
           \det \left[ {\begin{array}{*{20}c} a \amp  b  \\ c \amp  d \end{array}  } \right] = ad - bc
         </me>.
         This is the <term>determinant function</term>
-          <idx><h>determinant</h></idx>
+          
         introduced in <xref ref="sym_determinant"/> from <xref ref="S_moreaboutfunctions"></xref>.
         Is the determinant function an injection?
         Is the determinant function a surjection?
@@ -1751,6 +1768,7 @@
       </p>
     </task>
     <task xml:id="sym_tranfunc">
+    <idx><h>transpose</h></idx>
       <p>
         Define <m>\text{ tran } \x\mathcal{M}_2( \R ) \to \mathcal{M}_2 ( \R )</m> by
         <me>
@@ -1758,7 +1776,7 @@
           \right] = A^T  = \left[ {\begin{array}{*{20}c} a \amp  c  \\ b \amp  d \end{array}  } \right]
         </me>.
         This is the <term>transpose function</term>
-          <idx><h>transpose</h></idx>
+          
         introduced in <xref ref="sym_transpose"/> from <xref ref="S_moreaboutfunctions"></xref>.
         Is the transpose function an injection?
         Is the transpose function a surjection?

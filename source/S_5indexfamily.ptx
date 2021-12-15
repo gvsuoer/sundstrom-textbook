@@ -108,6 +108,7 @@
       </exercise>
 
       <p>
+      <idx><h>family of sets</h></idx>
         We have already seen that the elements of a set may themselves be sets.
         For example, the power set of a set <m>T</m>,
         <m>\mathcal{P}( T )</m>, is the set of all subsets of <m>T</m>.
@@ -116,7 +117,7 @@
         sounds confusing, and so we often use the terms
         <term>collection</term>
         and <term>family</term>
-            <idx><h>family of sets</h></idx>
+            
         when we wish to emphasize that the elements of a given set are themselves sets.
         We would then say that the power set of <m>T</m> is the family
         (or collection)
@@ -136,11 +137,14 @@
           <usage><m>\bigcap\limits_{X \in \mathscr{C}}^{}X</m></usage>
           <description>intersection of a family of sets</description>
         </notation>
+        <idx><h>union</h><h>of a family of sets</h></idx>
+        <idx><h>family of sets</h><h>union</h></idx>
+        <idx><h>intersection</h><h>of a family of sets</h></idx>
+        <idx><h>family of sets</h><h>intersection</h></idx>
           <p>
             Let <m>\mathcal{C}</m> be a family of sets.
             The <term>union of <m>\mathbf{\mathcal{C}}</m></term>
-            <idx><h>union</h><h>of a family of sets</h></idx>
-                <idx><h>family of sets</h><h>union</h></idx>
+            
             is defined as the set of all elements that are in at least one of the sets in 
             <m>\mathcal{C}</m>.
             We write
@@ -151,8 +155,7 @@
           </p>
           <p>
             The <term>intersection of <m>\mathbf{\mathcal{C}}</m></term>
-            <idx><h>intersection</h><h>of a family of sets</h></idx>
-                <idx><h>family of sets</h><h>intersection</h></idx>
+            
             is defined as the set of all elements that are in all of the sets in <m>\mathcal{C}</m>.
             That is,
             <me xml:id="sym_bigcap">
@@ -464,14 +467,15 @@
         <usage><m>\left\{ A_\alpha \mid \alpha \in \Lambda \right\}</m></usage>
         <description>indexed family of sets</description>
       </notation>
+      <idx><h>indexed family of sets</h></idx>
+      <idx><h>family of sets</h><h>indexed</h></idx>
+      <idx><h>indexing set</h></idx>
         <p>
           Let <m>\Lambda</m> be a nonempty set and suppose that for each <m>\alpha \in \Lambda</m>,
           there is a corresponding set <m>A_\alpha</m>.
           The family of sets <m>\left\{ A_\alpha \mid \alpha \in \Lambda \right\}</m> is called an
           <term>indexed family of sets</term>
-              <idx><h>indexed family of sets</h></idx>
-              <idx><h>family of sets</h><h>indexed</h></idx>
-              <idx><h>indexing set</h></idx>
+              
           indexed by <m>\Lambda</m>.
           Each <m>\alpha \in \Lambda</m> is called an <term>index</term>
           and <m>\Lambda</m> is called an
@@ -565,14 +569,17 @@
         <usage><m>\bigcap\limits_{\alpha \in \Lambda}^{}A_\alpha</m></usage>
         <description>intersection of an indexed family of sets</description>
       </notation>
+      <idx><h>union</h><h>of an indexed family of sets</h></idx>
+      <idx><h>indexed family of sets</h><h>union</h></idx>
+      <idx><h>intersection</h><h>of an indexed family of sets</h></idx>
+      <idx><h>indexed family of sets</h><h>intersection</h></idx>
         <p>
           Let <m>\Lambda</m> be a nonempty indexing set and let
           <m>\mathscr{A} = \left\{ A_\alpha \mid \alpha \in \Lambda \right\}</m> be an 
           indexed family of sets.
           The <term>union over</term>
           <m>\mathbf{\mathscr{A}}</m> 
-              <idx><h>union</h><h>of an indexed family of sets</h></idx>
-              <idx><h>indexed family of sets</h><h>union</h></idx>
+              
           is defined as the set of all elements that are in at least one of sets <m>A_\alpha</m>,
           where <m>\alpha \in \Lambda</m>.
           We write
@@ -584,8 +591,7 @@
         <p>
           The <term>intersection over</term>
           <m>\mathbf{\mathscr{A}}</m> 
-              <idx><h>intersection</h><h>of an indexed family of sets</h></idx>
-              <idx><h>indexed family of sets</h><h>intersection</h></idx>
+              
           is the set of all elements that are in all of the sets
           <m>A_\alpha</m> for each <m>\alpha \in \Lambda</m>.
           That is,
@@ -784,10 +790,11 @@
           </ol>
         </p>
         <p>
+        <idx><h>De Morgan's Laws</h><h>for indexed family of sets</h></idx>
+        <idx><h>indexed family of sets</h><h>De Morgan's Laws</h></idx>
           <xref ref="T_indexproperties3"/> and <xref ref="T_indexproperties4"/> are known as
           <term>De Morgan's Laws</term>.
-              <idx><h>De Morgan's Laws</h><h>for indexed family of sets</h></idx>
-              <idx><h>indexed family of sets</h><h>De Morgan's Laws</h></idx>
+              
         </p>
       </statement>
     
@@ -848,11 +855,12 @@
     </theorem>
 
     <p>
+    <idx><h>distributive laws</h><h>for indexed family of sets</h></idx>
+    <idx><h>indexed family of sets</h><h>distributive laws</h></idx>
       Many of the other properties of set operations are also true for indexed families of sets.
       <xref ref="T_distributeindex"></xref>
       states the <term>distributive laws</term>
-          <idx><h>distributive laws</h><h>for indexed family of sets</h></idx>
-          <idx><h>indexed family of sets</h><h>distributive laws</h></idx>
+          
       for set operations.
     </p>
     <theorem xml:id="T_distributeindex">
@@ -904,14 +912,15 @@
     </p>
     <assemblage xml:id="D_disjointfamily">
       <title>Definition</title>
+      <idx><h>pairwise disjoint</h></idx>
+      <idx><h>disjoint</h><h>pairwise</h></idx>
         <p>
           Let <m>\Lambda</m> be a nonempty indexing set,
           and let <m>\mathscr{A} = \left\{ A_\alpha \mid \alpha \in \Lambda \right\}</m> 
           be an indexed family of sets.
           We say that <m>\mathscr{A}</m> is
           <term>pairwise disjoint</term>
-              <idx><h>pairwise disjoint</h></idx>
-              <idx><h>disjoint</h><h>pairwise</h></idx>
+              
           provided that for all <m>\alpha</m> and <m>\beta</m> in <m>\Lambda</m>,
           if <m>A_\alpha \ne A_\beta</m>,
           then <m>A_\alpha \cap A_\beta = \emptyset</m>.

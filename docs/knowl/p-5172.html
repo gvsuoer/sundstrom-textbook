@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-12-13T17:01:04-05:00       *-->
+<!--*       on 2021-12-17T10:27:36-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,24 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>We have already studied a good deal of number theory in this text in our discussion of proof methods. In particular, we have studied even and odd integers, divisibility of integers, congruence, and the Division Algorithm. See the summary <a href="S_3summary.html" class="internal" title="Section 3.7: Chapter 3 Summary">Section 3.7</a> for a summary of results concerning even and odd integers as well as results concerning properties of divisors. We reviewed some of these properties and the Division Algorithm in the beginning activities.</p>
+<p>One of the most important concepts in elementary number theory is that of the greatest common divisor of two integers. The definition for the greatest common divisor of two integers (not both zero) was given in <a href="S_gcd.html#PA_gcd" class="internal" title="Beginning Activity: Beginning Activity 1: The Greatest Common Divisor">Beginning Activity 1</a>.</p>
+<ol class="decimal">
+<li>
+<p>If <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(a, b \in \mathbb{Z}\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(a\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(b\)</span> are not both 0, and if <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(d \in \mathbb{N}\text{,}\)</span> then <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(d = \gcd( {a, b} )\)</span> provided that it satisfies all of the following properties:</p>
+<ul class="disc">
+<li><p><span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(d \mid a\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(d \mid b\text{.}\)</span> That is, <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(d\)</span> is a common divisor of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(a\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(b\text{.}\)</span></p></li>
+<li><p>If <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(k\)</span> is a natural number such that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(k \mid a\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(k \mid b\text{,}\)</span> then <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(k \leq d\text{.}\)</span> That is, any other common divisor of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(a\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(b\)</span> is less than or equal to <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(d\text{.}\)</span></p></li>
+</ul>
+</li>
+<li>
+<p>Consequently, a natural number <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(d\)</span> is not the greatest common divisor of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(a\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(b\)</span> provided that it does not satisfy at least one of these properties. That is, <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(d\)</span> is not equal to <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\gcd( {a, b} )\)</span> provided that</p>
+<ul class="disc">
+<li><p><span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(d\)</span> does not divide <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(a\)</span> or <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(d\)</span> does not divide <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(b\text{;}\)</span> or</p></li>
+<li><p>There exists a natural number <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(k\)</span> such that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(k \mid a\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(k \mid b\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(k &gt; d\text{.}\)</span></p></li>
+</ul>
+<p>This means that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(d\)</span> is not the greatest common divisor of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(a\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(b\)</span> provided that it is not a common divisor of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(a\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(b\)</span> or that there exists a common divisor of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(a\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(b\)</span> that is greater than <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(d\text{.}\)</span></p>
+</li>
+</ol>
 <span class="incontext"><a href="S_gcd.html#p-5172">in-context</a></span>
 </body>
 </html>

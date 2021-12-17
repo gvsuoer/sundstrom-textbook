@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-12-13T16:55:43-05:00       *-->
+<!--*       on 2021-12-17T10:21:59-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,35 @@
 </head>
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>We let <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(k\)</span> be a natural number and assume that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(2^k &gt; 1 + k\text{.}\)</span> Multiplying both sides of this inequality by 2, we see that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(2^{k+1} &gt; 2 + 2k\text{.}\)</span> However, <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(2 + 2k &gt; 2 + k\)</span> and, hence,</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+<dl xmlns:svg="http://www.w3.org/2000/svg" class="description-list narrow">
+<dt>Proposition</dt>
+<dd><p>Each natural number greater than or equal to 6 can be written as the sum of natural numbers, each of which is a 2 or a 5.</p></dd>
+<dt>Proof</dt>
+<dd>
+<p>We will use a proof by induction. For each natural number <span class="process-math">\(n\text{,}\)</span> we let <span class="process-math">\(P( n )\)</span> be, “There exist nonnegative integers <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> such that <span class="process-math">\(n = 2x + 5y\text{.}\)</span>” Since</p>
+<div class="displaymath process-math">
+\begin{align*}
+6 \amp = 3 \cdot 2 + 0 \cdot 5  \amp   7 \amp = 2 + 5\\
+8 \amp = 4 \cdot 2 + 0 \cdot 5  \amp   9 \amp = 2 \cdot 2 + 1 \cdot 5
+\end{align*}
+</div>
+<p class="continuation">we see that <span class="process-math">\(P(6 ), P(7 ), P(8 )\text{,}\)</span> and <span class="process-math">\(P( 9 )\)</span> are true.</p>
+<p>We now suppose that for some natural number <span class="process-math">\(k\)</span> with <span class="process-math">\(k \geq 10\)</span> that <span class="process-math">\(P(6 ), P (7 ), \ldots, P (k )\)</span> are true. Now</p>
+<div class="displaymath process-math">
 \begin{equation*}
-2^{k+1} &gt; 1 + \left(k + 1 \right)\!\text{.}
+k + 1 = \left(k - 4 \right) + 5\text{.}
 \end{equation*}
 </div>
-<p class="continuation">By mathematical induction, we conclude that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(2^n &gt; 1 + n\text{.}\)</span></p>
+<p>Since <span class="process-math">\(k \geq 10\text{,}\)</span> we see that <span class="process-math">\(k - 4 \geq 6\)</span> and, hence, <span class="process-math">\(P(k - 4 )\)</span> is true. So <span class="process-math">\(k - 4 = 2x + 5y\)</span> and, hence,</p>
+<div class="displaymath process-math">
+\begin{align*}
+k + 1 \amp = \left(2x + 5y \right) + 5\\
+\amp = 2x + 5 \left(y + 1 \right)\!
+\end{align*}
+</div>
+<p class="continuation">This proves that <span class="process-math">\(P(k + 1 )\)</span> is true, and hence, by the Second Principle of Mathematical Induction, we have proved that for each natural number <span class="process-math">\(n\)</span> with <span class="process-math">\(n \geq 6\text{,}\)</span> there exist nonnegative integers <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> such that <span class="process-math">\(n = 2x + 5y\text{.}\)</span></p>
+</dd>
+</dl>
 <span class="incontext"><a href="S_otherinduction.html#p-2518">in-context</a></span>
 </body>
 </html>

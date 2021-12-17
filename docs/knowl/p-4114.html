@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-12-13T16:58:52-05:00       *-->
+<!--*       on 2021-12-17T10:25:13-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,8 +15,25 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>The proof of <a href="" class="xref" data-knowl="./knowl/T_compositefunctions1.html" title="Item 1">Item 1</a> is <a href="" class="xref" data-knowl="./knowl/exer_compositefunctions1.html" title="Exercise 6">Exercise 6</a>. <a href="" class="xref" data-knowl="./knowl/T_compositefunctions3.html" title="Item 3">Item 3</a> is a direct consequence of the first two parts. We will discuss a process for constructing a proof of <a href="" class="xref" data-knowl="./knowl/T_compositefunctions2.html" title="Item 2">Item 2</a>. Using the forward-backward process, we first look at the conclusion of the conditional statement in <a href="" class="xref" data-knowl="./knowl/T_compositefunctions2.html" title="Item 2">Item 2</a>. The goal is to prove that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(g \circ f\)</span> is a surjection. Since <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(g \circ f\x A \to C\text{,}\)</span> this is equivalent to proving that <blockquote class="blockquote">For all <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(c \in C\text{,}\)</span> there exists an <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(a \in A\)</span> such that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(( {g \circ f} )( a ) = c\text{.}\)</span>
-</blockquote> Since this statement in the backward process uses a universal quantifier, we will use the choose-an-element method and choose an arbitrary element <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(c\)</span> in the set <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(C\text{.}\)</span> The goal now is to find an <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(a \in A\)</span> such that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(( {g \circ f} )( a ) = c\text{.}\)</span></p>
+<p>Now we can look at the hypotheses. In particular, we are assuming that both <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(f\x A \to B\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(g\x B \to C\)</span> are surjections. Since we have chosen <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(c \in C\text{,}\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(g\x B \to C\)</span> is a surjection, we know that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+\text{there exists a } b \in B \text{ such that } g( b ) = c\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Now, <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(b \in B\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(f\x A \to B\)</span> is a surjection. Hence</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+\text{there exists an } a \in A \text{ such that } f( a ) = b\text{.}
+\end{equation*}
+</div>
+<p class="continuation">If we now compute <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(( {g \circ f} )( a )\text{,}\)</span> we will see that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+( {g \circ f} )( a ) = g \left( f ( a ) \right) = g ( b ) = c\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We can now write the proof as follows:</p>
 <span class="incontext"><a href="S_compositionoffunctions.html#p-4114">in-context</a></span>
 </body>
 </html>

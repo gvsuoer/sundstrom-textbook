@@ -63,17 +63,17 @@
       <p>
         For another example, for each natural number <m>n</m>,
         we now let <m>Q( n )</m> be the following open sentence:
-        <me xml:id="eq_PAexplore">
-          1^2  + 2^2  + \, \cdots \, + n^2  = \frac{{n(n + 1)(2n + 1)}}{6} \qquad (1)
-        </me>.
+        <men xml:id="eq_PAexplore">
+          1^2  + 2^2  + \, \cdots \, + n^2  = \frac{{n(n + 1)(2n + 1)}}{6}
+        </men>.
       </p>
       <p>
         The expression on the left side of the previous equation is the sum of the squares 
         of the first <m>n</m> natural numbers.
         So when <m>n = 1</m>,
-        the left side of equation (1) is <m>1^2</m>.
+        the left side of equation <xref ref="eq_PAexplore"/> is <m>1^2</m>.
         When <m>n = 2</m>,
-        the left side of equation (1) is <m>1^2 + 2^2</m>.
+        the left side of equation <xref ref="eq_PAexplore"/> is <m>1^2 + 2^2</m>.
       </p>
         <exercise>
           <introduction>
@@ -649,22 +649,22 @@
         if <m>P ( k )</m> is true, then <m>P( k + 1 )</m> is true.
         So let <m>k</m> be a natural number and assume that <m>P( k )</m> is true.
         That is, assume that
-        <me xml:id="eq_suminduction1">
-          1^2  + 2^2  +  \cdots  + k^2  = \frac{{k(k + 1)(2k + 1)}}{6} \qquad (1)
-        </me>.
+        <men xml:id="eq_suminduction1">
+          1^2  + 2^2  +  \cdots  + k^2  = \frac{{k(k + 1)(2k + 1)}}{6}
+        </men>.
       </p>
       <p>
         The goal now is to prove that <m>P\left( {k + 1} \right)</m> is true.
         That is, it must be proved that
-        <md>
-          <mrow>1^2  + 2^2  + \, \cdots \, + k^2 + (k + 1)^2  
-            \amp = \frac{{(k + 1)\left[ {(k + 1) + 1} \right]\left[ {2(k + 1) + 1} \right]}}{6} \amp \amp </mrow>
-          <mrow xml:id="eq_suminduction2">\amp = \frac{{(k + 1)\left( k + 2\right) \left( 2k + 3 \right)}}{6} \amp \amp (2)</mrow>
-        </md>.
+        <mdn>
+          <mrow number="no">1^2  + 2^2  + \, \cdots \, + k^2 + (k + 1)^2  
+            \amp = \frac{{(k + 1)\left[ {(k + 1) + 1} \right]\left[ {2(k + 1) + 1} \right]}}{6}</mrow>
+          <mrow xml:id="eq_suminduction2">\amp = \frac{{(k + 1)\left( k + 2\right) \left( 2k + 3 \right)}}{6}</mrow>
+        </mdn>.
       </p>
       <p>
         To do this, we add <m>\left( {k + 1} \right)^2</m> to both sides of 
-        equation (1) and algebraically rewrite the right 
+        equation <xref ref="eq_suminduction1"/> and algebraically rewrite the right 
         side of the resulting equation.
         This gives
         <md>
@@ -675,7 +675,7 @@
           <mrow> \amp = \frac{{(k + 1)(k + 2)(2k + 3)}}{6}</mrow>
         </md>.
 
-        Comparing this result to equation (2),
+        Comparing this result to equation <xref ref="eq_suminduction2"/>,
         we see that if <m>P( k )</m> is true,
         then <m>P( {k + 1} )</m> is true.
         Hence, the inductive step has been established,
@@ -767,19 +767,19 @@
             <m>1 = \dfrac{1 \left( 1 + 1 \right)}{2}</m> shows that <m>P( 1 )</m> is true.
             Now let <m>k</m> be a natural number and assume that <m>P(k )</m> is true.
             That is, assume that
-            <me xml:id="prog_indexample1">
-              1 + 2 + 3 +  \cdots  + k = \frac{k \left( k + 1 \right)}{2} \qquad (1)
-            </me>.
+            <men xml:id="prog_indexample1">
+              1 + 2 + 3 +  \cdots  + k = \frac{k \left( k + 1 \right)}{2}
+            </men>.
           </p>
           <p>
             We now need to prove that <m>P(k +1 )</m> is true or that
-            <me xml:id="prog_indexample2">
+            <men xml:id="prog_indexample2">
               1 + 2 + 3 +  \cdots  + k + \left( k + 1 \right) = \frac{\left( k + 1 \right) 
-              \left(k + 2 \right)}{2} \qquad (2)
-            </me>.
+              \left(k + 2 \right)}{2}
+            </men>.
           </p>
           <p>
-            By adding <m>\left(k + 1 \right)</m> to both sides of equation (1,)
+            By adding <m>\left(k + 1 \right)</m> to both sides of equation <xref ref="prog_indexample1"/>
             we see that
             <md>
               <mrow>1 + 2 + 3 +  \cdots  + k + \left( k + 1 \right) 
@@ -790,7 +790,7 @@
             </md>
           </p>
           <p>
-            By comparing the last equation to equation (2),
+            By comparing the last equation to equation <xref ref="prog_indexample2"/>
             we see that we have proved that if <m>P(k )</m> is true,
             then <m>P( k + 1 )</m> is true,
             and the inductive step has been established.
@@ -855,18 +855,18 @@
           So in the inductive step,
           we assume  <m>k \in \mathbb{N}</m> and that  4  divides  <m>\left( {5^k  - 1} \right)</m>.
           This means that there exists an integer  <m>m</m>  such that
-          <me xml:id="eq_5a">
-            5^k  - 1 = 4m \qquad (1)
-          </me>.
+          <men xml:id="eq_5a">
+            5^k  - 1 = 4m
+          </men>.
           In the backward process,
           the goal is to prove that 4 divides <m>\left( {5^{k + 1}  - 1} \right)</m>.
           This can be accomplished if we can prove that there exists an integer <m>s</m> 
           such that
-          <me xml:id="eq_5b">
-            5^{k + 1}  - 1 = 4s \qquad (2)
-          </me>.
-          We now need to see if there is anything in equation (1) that 
-          can be used in equation (2).
+          <men xml:id="eq_5b">
+            5^{k + 1}  - 1 = 4s
+          </men>.
+          We now need to see if there is anything in equation <xref ref="eq_5a"/> that 
+          can be used in equation <xref ref="eq_5b"/>.
           The key is to find something in the equation
           <m>5^k - 1 = 4m</m> that is related to something similar in the equation 
           <m>5^{k + 1}  - 1 = 4s</m>.
@@ -913,34 +913,34 @@
         </me>.
  
         Thus,
-        <me xml:id="eq_5c">
-          5^k  = 4m + 1 \qquad (1)
-        </me>.
+        <men xml:id="eq_5c">
+          5^k  = 4m + 1
+        </men>.
 
         In order to prove that <m>P( k + 1 )</m> is true,
         we must show that 4 divides <m>\left( {5^{k + 1}  - 1} \right)</m>.
         Since <m>5^{k + 1}  = 5 \cdot 5^k</m>, we can write
-        <me xml:id="eq_5d">
-          5^{k + 1}  - 1 = 5 \cdot 5^k  - 1 \qquad (2)
-        </me>.
+        <men xml:id="eq_5d">
+          5^{k + 1}  - 1 = 5 \cdot 5^k  - 1
+        </men>.
  
-        We now substitute the expression for <m>5^k</m> from equation (1) 
-        into equation (2).
+        We now substitute the expression for <m>5^k</m> from equation <xref ref="eq_5c"/>
+        into equation <xref ref="eq_5d"/>.
         This gives
-        <md>
-          <mrow>5^{k + 1}  - 1 \amp = 5 \cdot 5^k  - 1 \amp</mrow>
-          <mrow>\amp = 5( {4m + 1} ) - 1 \amp</mrow>
-          <mrow>\amp = ( {20m + 5} ) - 1 \amp</mrow>
-          <mrow>\amp = 20m + 4 \amp</mrow>
-          <mrow xml:id="eq_5e">\amp = 4( {5m + 1} ) \amp (3)</mrow>
-        </md>
+        <mdn>
+          <mrow number="no">5^{k + 1}  - 1 \amp = 5 \cdot 5^k  - 1 \amp</mrow>
+          <mrow number="no">\amp = 5( {4m + 1} ) - 1 \amp</mrow>
+          <mrow number="no">\amp = ( {20m + 5} ) - 1 \amp</mrow>
+          <mrow number="no">\amp = 20m + 4 \amp</mrow>
+          <mrow xml:id="eq_5e">\amp = 4( {5m + 1} )</mrow>
+        </mdn>
       </p>
       <p>
         Since <m>\left( {5m + 1} \right)</m> is an integer,
-        equation (3) shows that 4 divides <m>\left( {5^{k + 1} - 1} \right)</m>.
+        equation <xref ref="eq_5e"/> shows that 4 divides <m>\left( {5^{k + 1} - 1} \right)</m>.
         Therefore, if <m>P( k )</m> is true,
         then <m>P( k + 1 )</m> is true and the inductive step has been established.
-        Thus, by <xref text="title" ref="principle-math-induction"/>,
+        Thus, by the Principle of Mathematical Induction,
         for every natural number <m>n</m>, 4 divides <m>\left( {5^n - 1} \right)</m>. 
         
       </p>
@@ -1844,17 +1844,17 @@
           Let  <m>k \in \mathbb{N}</m>.
           Assume that  <m>P(  k )</m> is true.
           That is, assume that
-          <me xml:id="eq_act16a">
-            1 + 2 +  \cdots  + k = \frac{{k^2  + k + 1}}{2} \qquad (1)
-          </me>.
+          <men xml:id="eq_act16a">
+            1 + 2 +  \cdots  + k = \frac{{k^2  + k + 1}}{2}
+          </men>.
           The goal is to prove that  <m>P( k + 1 )</m> is true.
           That is, we need to prove that
-          <me xml:id="eq_act16b">
+          <men xml:id="eq_act16b">
             1 + 2 +  \cdots  + k + \left( {k + 1} \right) = \frac{{\left( {k + 1} \right)^2  + 
-            \left( {k + 1} \right) + 1}}{2} \qquad (2)
-          </me>.
+            \left( {k + 1} \right) + 1}}{2}
+          </men>.
           To do this, we add  <m>\left( {k + 1} \right)</m> to both sides of 
-          equation (1).
+          equation <xref ref="eq_act16a"/>.
           This gives
           <md>
             <mrow>1 + 2 +  \cdots  + k + \left( {k + 1} \right) 

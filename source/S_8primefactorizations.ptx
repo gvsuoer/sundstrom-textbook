@@ -379,19 +379,19 @@
       We will first explore the forward-backward process for the proof.
       The goal is to prove that <m>a \mid c</m>.
       A standard way to do this is to prove that there exists an integer <m>q</m> such that
-      <me xml:id="eq_relprime1">
-        c = aq \qquad (1)
-      </me>.
+      <men xml:id="eq_relprime1">
+        c = aq
+      </men>.
     </p>
     <p>
       Since we are given that <m>a \mid \left( {bc} \right)</m>,
       there exists an integer <m>k</m> such that
-      <me xml:id="eq_relprime2">
-        bc = ak \qquad (2)
-      </me>.
+      <men xml:id="eq_relprime2">
+        bc = ak
+      </men>.
     </p>
     <p>
-      It may seem tempting to divide both sides of equation (2)  
+      It may seem tempting to divide both sides of equation <xref ref="eq_relprime2"/>
       by <m>b</m>,
       but if we do so,
       we run into problems with the fact that the integers are not closed under division.
@@ -400,7 +400,7 @@
       This means that <m>\gcd( {a, b} ) = 1</m>.
       How can we use this?
       This means that <m>a</m> and <m>b</m> have no common factors except for 1.
-      In light of equation (2),
+      In light of equation <xref ref="eq_relprime2"/>
       it seems reasonable that any factor of <m>a</m> must also be a factor of <m>c</m>.
       But how do we formalize this?
     </p>
@@ -408,34 +408,34 @@
       One conclusion that we can use is that since <m>\gcd( {a, b} ) = 1</m>,
       by <xref ref="T_relativelyprime"></xref>,
       there exist integers <m>m</m> and <m>n</m> such that
-      <me xml:id="eq_relprime3">
-        am + bn = 1 \qquad (3)
-      </me>.
+      <men xml:id="eq_relprime3">
+        am + bn = 1
+      </men>.
     </p>
     <p>
-      We may consider solving equation (3) for <m>b</m> and 
-      substituting this into equation (2).
+      We may consider solving equation <xref ref="eq_relprime3"/> for <m>b</m> and 
+      substituting this into equation <xref ref="eq_relprime2"/>
       The problem, again,
-      is that in order to solve equation (3) for <m>b</m>,
+      is that in order to solve equation <xref ref="eq_relprime3"/> for <m>b</m>,
       we need to divide by <m>n</m>.
     </p>
     <p>
       Before doing anything else,
-      we should look at the goal in equation (1).
-      We need to introduce <m>c</m> into equation (3).
-      One way to do this is to multiply both sides of equation (3) by <m>c</m>.
+      we should look at the goal in equation <xref ref="eq_relprime1"/>
+      We need to introduce <m>c</m> into equation <xref ref="eq_relprime3"/>
+      One way to do this is to multiply both sides of equation <xref ref="eq_relprime3"/> by <m>c</m>.
       (This keeps us in the system of integers since the integers are closed under multiplication.)
       This gives
-      <md>
-        <mrow number="no">\left( {am + bn} \right)c \amp = 1 \cdot c \amp \amp</mrow>
-        <mrow xml:id="eq_relprime4">acm + bcn \amp = c \amp \amp (4)</mrow>
-      </md>
+      <mdn>
+        <mrow number="no">\left( {am + bn} \right)c \amp = 1 \cdot c</mrow>
+        <mrow xml:id="eq_relprime4">acm + bcn \amp = c</mrow>
+      </mdn>
     </p>
     <p>
-      Notice that the left side of equation (4) contains a term,
+      Notice that the left side of equation <xref ref="eq_relprime4"/> contains a term,
       <m>bcn</m>, that contains <m>bc</m>.
-      This means that we can use equation (2) and substitute 
-      <m>bc = ak</m> in equation (4).
+      This means that we can use equation <xref ref="eq_relprime2"/> and substitute 
+      <m>bc = ak</m> in equation <xref ref="eq_relprime4"/>.
       After doing this,
       we can factor the left side of the equation to prove that <m>a \mid c</m>.
     </p>
@@ -457,9 +457,9 @@
         <p>
           Since <m>a</m> divides <m>bc</m>,
           there exists an integer <m>k</m> such that
-          <me xml:id="eq_814a">
-            bc = ak \qquad (1)
-          </me>.
+          <men xml:id="eq_814a">
+            bc = ak
+          </men>.
         </p>
         <p>
           In addition,
@@ -467,21 +467,21 @@
           <m>\gcd ( {a, b} ) = 1</m>.
           So by <xref ref="T_gcddivideslincombs"></xref>,
           there exist integers <m>m</m> and <m>n</m> such that
-          <me xml:id="eq_814b">
-            am + bn = 1 \qquad (2)
-          </me>.
+          <men xml:id="eq_814b">
+            am + bn = 1
+          </men>.
         </p>
         <p>
-          We now multiply both sides of equation (2) by <m>c</m>.
+          We now multiply both sides of equation <xref ref="eq_814b"/> by <m>c</m>.
           This gives
-          <md>
-            <mrow>( {am + bn} )c \amp = 1 \cdot c \amp \amp </mrow>
-            <mrow xml:id="eq_814c">acm + bcn \amp = c \amp \amp (3</mrow>
-          </md>
+          <mdn>
+            <mrow number="no">( {am + bn} )c \amp = 1 \cdot c</mrow>
+            <mrow xml:id="eq_814c">acm + bcn \amp = c</mrow>
+          </mdn>
         </p>
         <p>
           We can now use equation 1 to substitute <m>bc = ak</m> in 
-          equation (3) and obtain
+          equation <xref ref="eq_814c"/> and obtain
           <me>
             acm + akn = c
           </me>.
@@ -764,9 +764,9 @@
             </me>
             be the list of all the primes.
             Let
-            <me xml:id="T_infiniteprimes1">
-              M = p_1 p_2  \cdots p_m  + 1 \qquad (1)
-            </me>.
+            <men xml:id="T_infiniteprimes1">
+              M = p_1 p_2  \cdots p_m  + 1
+            </men>.
           </p>
           <p>
             Notice that <m>M \ne 1</m>.
@@ -777,17 +777,17 @@
             Since we have listed all the prime numbers,
             this means that there exists a natural number <m>j</m> with
             <m>1 \leq j \leq m</m> such that <m>p_j \mid  M</m>.
-            Now, we can rewrite equation (1) as follows:
-            <me xml:id="T_infiniteprimes2">
-              1 = M - p_1 p_2  \cdots p_m \qquad (2)
-            </me>.
+            Now, we can rewrite equation <xref ref="T_infiniteprimes1"/> as follows:
+            <men xml:id="T_infiniteprimes2">
+              1 = M - p_1 p_2  \cdots p_m
+            </men>.
           </p>
           <p>
             We have proved <m>p_j \mid M</m>,
             and since <m>p_j</m> is one of the prime factors of <m>p_1 p_2 \cdots p_m</m>,
             we can also conclude that <m>p_j \mid \left( {p_1 p_2 \cdots p_m } \right)</m>.
             Since <m>p_j</m> divides both of the terms on the right side of 
-            equation (2),
+            equation <xref ref="T_infiniteprimes2"/>,
             we can use this equation to conclude that <m>p_j</m> divides 1.
             This is a contradiction since a prime number is greater than 1 and cannot divide 1.
             Hence, our assumption that there are only finitely many primes is false,
@@ -1379,12 +1379,12 @@
           then there exist distinct prime numbers
           <m>p_1, p_2, \ldots,
           p_r</m> and natural numbers <m>\alpha_1, \alpha_2, \ldots, \alpha_r</m> such that
-          <me xml:id="A_squarerootsirrational1">
-            n = p_1^{\alpha_1} p_2^{\alpha_2} \cdots p_r^{\alpha_r} \qquad (1)
-          </me>.
+          <men xml:id="A_squarerootsirrational1">
+            n = p_1^{\alpha_1} p_2^{\alpha_2} \cdots p_r^{\alpha_r}
+          </men>.
           Using <m>r = 1</m> and <m>\alpha_1 = 1</m> for a prime number,
           explain why we can write any natural number greater than one in the form given in 
-          equation (1).
+          equation <xref ref="A_squarerootsirrational1"/>.
         </p>
       </task>
       <task>
@@ -1401,7 +1401,7 @@
       <task>
         <p>
           Let <m>n</m> be a natural number written in the form given in 
-          equation (1) in <xref ref="exer82_squareroot-a"/>
+          equation <xref ref="A_squarerootsirrational1"/> in <xref ref="exer82_squareroot-a"/>
           Prove that <m>n</m> is a perfect square if and only if for each natural number 
           <m>k</m> with
           <m>1 \leq k \leq r</m>, <m>\alpha_k</m> is even.

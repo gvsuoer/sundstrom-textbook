@@ -549,13 +549,13 @@
         and let <m>d = \gcd( {a, b} )</m>.
         By the Division Algorithm,
         there exist integers <m>q_1</m> and <m>r_1</m> such that
-        <me xml:id="eq_euclidalgo1">
-          a = b \cdot q_1  + r_1 \text{ ,  and  } 0 \leq r_1  \lt  b \qquad (1)
-        </me>.
+        <men xml:id="eq_euclidalgo1">
+          a = b \cdot q_1  + r_1 \text{ ,  and  } 0 \leq r_1  \lt  b
+        </men>.
       </p>
       <p>
         If <m>r_1 = 0</m>,
-        then equation (1) implies that <m>b</m> divides <m>a</m>.
+        then equation <xref ref="eq_euclidalgo1"/> implies that <m>b</m> divides <m>a</m>.
         Hence, <m>b = d = \gcd( {a, b} )</m> and this number satisfies 
         <xref ref="T_euclidalgo1">Condition</xref>
         and <xref ref="T_euclidalgo2">Condition</xref>.
@@ -564,19 +564,19 @@
         If <m>r_1  > 0</m>, then by <xref ref="L_gcdanddivalgo"></xref>,
         <m>\gcd( {a, b} ) = \gcd( {b, r_1 } )</m>.
         We use the Division Algorithm again to obtain integers <m>q_2</m> and <m>r_2</m> such that
-        <me xml:id="eq_euclidalgo2">
-          b = r_1  \cdot q_2  + r_2 \text{ ,  and  } 0 \leq r_2  \lt  r_1 \qquad (2)
-        </me>.
+        <men xml:id="eq_euclidalgo2">
+          b = r_1  \cdot q_2  + r_2 \text{ ,  and  } 0 \leq r_2  \lt  r_1
+        </men>.
       </p>
       <p>
         If <m>r_2 = 0</m>,
-        then equation (2) implies that <m>r_1</m> divides <m>b</m>.
+        then equation <xref ref="eq_euclidalgo2"/> implies that <m>r_1</m> divides <m>b</m>.
         This means that <m>r_1 = \gcd( {b, r_1 } )</m>.
         But we have already seen that <m>\gcd( {a, b} ) = \gcd( {b, r_1 } )</m>.
         Hence, <m>r_1 = \gcd( {a, b} )</m>.
         In addition,
         if <m>k</m> is an integer that divides both <m>a</m> and <m>b</m>, then,
-        using equation (1),
+        using equation <xref ref="eq_euclidalgo1"/>,
         we see that <m>r_1 = a - b \cdot q_1</m> and,
         hence <m>k</m> divides <m>r_1</m>.
         This shows that <m>r_1 = \gcd( {a, b} )</m> satisfies <xref ref="T_euclidalgo1">Condition</xref>

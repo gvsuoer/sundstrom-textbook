@@ -201,10 +201,10 @@
       We now wish to explore under what conditions a set of ordered pairs can be used to define a function.
       Starting with a function <m>f\x  A \to B</m>,
       since <m>\text{ dom} ( f ) = A</m>, we know that
-      <me xml:id="eq_65a">
+      <men xml:id="eq_65a">
         \text{ For every }   a \in A, \text{ there exists a }   b \in B  \text{ such that } ( {a, b} ) 
-        \in f \qquad (1)
-      </me>.
+        \in f
+      </men>.
     </p>
     <p>
       Specifically, we use <m>b = f( a )</m>.
@@ -216,16 +216,16 @@
       <m>( {a, c} )</m> in the function <m>f</m> where <m>a \in A</m>, <m>b,
       c \in B</m>, and <m>b \ne c</m>.
       We can formulate this as a conditional statement as follows:
-      <md>
+      <mdn>
         <mrow number="no">\amp \text{ For every }  a \in A \text{ and every }  b, c \in B, \amp \amp</mrow>
         <mrow xml:id="eq_65b">\amp \text{ if }  ( {a, b} ) \in f  \text{ and }  ( {a, c} ) 
-        \in f, \text{ then }  b = c \amp \amp (2)</mrow>
-      </md>
+        \in f, \text{ then }  b = c</mrow>
+      </mdn>
     </p>
     <p>
       This also means that if we start with a subset <m>f</m> of
-      <m>A \times B</m> that satisfies conditions (1) and 
-      (2),
+      <m>A \times B</m> that satisfies conditions <xref ref="eq_65a"/> and 
+      <xref ref="eq_65b"/>,
       then we can consider <m>f</m> to be a function from <m>A</m> to <m>B</m> by using
       <m>b = f( a )</m> whenever <m>( {a, b} )</m> is in <m>f</m>.
       This proves the following theorem.
@@ -897,45 +897,45 @@
         Let <m>z \in C</m>.
         Since the function <m>g</m> is a surjection,
         there exists a <m>y \in B</m> such that
-        <me xml:id="eq_compofbij1">
-          g( y ) = z \qquad (1)
-        </me>.
+        <men xml:id="eq_compofbij1">
+          g( y ) = z
+        </men>.
       </p>
       <p>
         Also, since <m>f</m> is a surjection,
         there exists an <m>x \in A</m> such that
-        <me xml:id="eq_compofbij2">
-          f( x ) = y \qquad (2)
-        </me>.
+        <men xml:id="eq_compofbij2">
+          f( x ) = y
+        </men>.
       </p>
       <p>
         Now these two equations can be written in terms of the respective inverse functions as
-        <md>
-          <mrow xml:id="eq_compofbij3">g^{ - 1} ( z ) \amp = y; \text{ and } \amp \amp (3)</mrow>
-          <mrow xml:id="eq_compofbij4">f^{ - 1} ( y ) \amp = x \amp \amp (4)</mrow>
-        </md>
+        <mdn>
+          <mrow xml:id="eq_compofbij3">g^{ - 1} ( z ) \amp = y; \text{ and }</mrow>
+          <mrow xml:id="eq_compofbij4">f^{ - 1} ( y ) \amp = x</mrow>
+        </mdn>
       </p>
       <p>
-        Using equation (3) and equation (4), 
+        Using equation <xref ref="eq_compofbij3"/> and equation <xref ref="eq_compofbij4"/>, 
         we see that
-        <md>
-          <mrow>\left( {f^{ - 1}  \circ g^{ - 1} } \right)( z ) \amp 
-          = f^{ - 1} \left( {g^{ - 1} ( z )} \right) \amp \amp</mrow>
-          <mrow>\amp = f^{ - 1} ( y ) \amp \amp</mrow>
-          <mrow xml:id="eq_compofbij5">\amp = x \amp \amp (5)</mrow>
-        </md>.
+        <mdn>
+          <mrow number="no">\left( {f^{ - 1}  \circ g^{ - 1} } \right)( z ) \amp 
+          = f^{ - 1} \left( {g^{ - 1} ( z )} \right)</mrow>
+          <mrow number="no">\amp = f^{ - 1} ( y )</mrow>
+          <mrow xml:id="eq_compofbij5">\amp = x</mrow>
+        </mdn>.
       </p>
       <p>
-        Using equation (1) and equation (2) again,
+        Using equation <xref ref="eq_compofbij1"/> and equation <xref ref="eq_compofbij2"/> again,
         we see that <m>( {g \circ f} )( x ) = z</m>.
         However, in terms of the inverse function, this means that
-        <me xml:id="eq_compofbij6">
-          ( {g \circ f} )^{ - 1} ( z ) = x \qquad (6)
-        </me>.
+        <men xml:id="eq_compofbij6">
+          ( {g \circ f} )^{ - 1} ( z ) = x
+        </men>.
       </p>
       <p>
-        Comparing equation (5) and 
-        equation (6), we have shown that for all <m>z \in C</m>,
+        Comparing equation <xref ref="eq_compofbij5"/> and 
+        equation <xref ref="eq_compofbij6"/>, we have shown that for all <m>z \in C</m>,
       </p>
       <p>
         <m>( {g \circ f} )^{ - 1} ( z ) = ( {f^{ - 1} \circ g^{ - 1} } )( z )</m>.

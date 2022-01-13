@@ -190,9 +190,9 @@
         but we do not know ahead of time what that contradiction will be.
         Using our assumptions,
         we can perform algebraic operations on the inequality
-        <me>
-          \frac{x}{y} + \frac{y}{x} \leq 2 \qquad (2) <!-- tk should this be (1)? -->
-        </me>
+        <men xml:id="ineq_contradict1">
+          \frac{x}{y} + \frac{y}{x} \leq 2
+        </men>
         until we obtain a contradiction.
       </p>
       
@@ -200,7 +200,7 @@
         <statement>
           <p>
             Try the following algebraic operations on the 
-            inequality in (2).
+            inequality in <xref ref="ineq_contradict1"/>.
             First, multiply both sides of the inequality by <m>xy</m>,
             which is a positive real number since <m>x > 0</m> and <m>y > 0</m>.
             Then, subtract <m>2xy</m> from both sides of this inequality and finally,
@@ -277,15 +277,15 @@
         We will use a proof by contradiction.
         So we assume that the proposition is false,
         or that there exists a real number <m>x</m> such that <m>0 \lt  x \lt  1</m> and
-        <me>
-          \dfrac{1}{x(1 - x)} \lt  4 \qquad (1)
-        </me>.
+        <men xml:id="eq_contradiction1">
+          \dfrac{1}{x(1 - x)} \lt  4
+        </men>.
       </p>
       <p>
         We note that since <m>0 \lt  x \lt  1</m>,
         we can conclude that <m>x > 0</m> and that <m>(1 - x)>0</m>.
         Hence, <m>x(1 - x) >0</m> and if we multiply both sides of  
-        inequality (1) by <m>x(1 - x)</m>,
+        inequality <xref ref="eq_contradiction1"/> by <m>x(1 - x)</m>,
         we obtain
         <me>
           1 \lt  4x(1 - x)
@@ -473,21 +473,21 @@
             Since <m>n \equiv 2 \pmod 4</m>,
             we know that 4 divides <m>n - 2</m>.
             Hence, there exists an integer <m>k</m> such that
-            <me>
-              n - 2 = 4k \qquad (1)
-            </me>.
+            <men xml:id="eq_contradiction2">
+              n - 2 = 4k
+            </men>.
           </p>
           <p>
             We can also use the assumption that
             <m>n \equiv 3 \pmod 6</m> to conclude that 6 divides <m>n - 3</m> and that there 
             exists an integer <m>m</m> such that
-            <me>
-              n - 3 = 6m \qquad (2)
-            </me>.
+            <men xml:id="eq_contradiction3">
+              n - 3 = 6m
+            </men>.
           </p>
           <p>
-            If we now solve equation (1) and equation
-            equation (2) for <m>n</m> and set the two expressions equal to each other,
+            If we now solve equation <xref ref="eq_contradiction2"/> and 
+            equation <xref ref="eq_contradiction3"/> for <m>n</m> and set the two expressions equal to each other,
             we obtain
             <me>
               4k + 2 = 6m + 3
@@ -842,25 +842,25 @@
         We will obtain a contradiction by showing that <m>m</m> and <m>n</m> must both be even.
         Squaring both sides of the last equation and using the fact that <m>r^2 = 2</m>,
         we obtain
-        <md>
+        <mdn>
           <mrow>2 \amp = \frac{{m^2 }}{{n^2 }} \amp</mrow>
-          <mrow xml:id="eq_3h">m^2  \amp = 2n^2 \amp (1)</mrow>
-        </md>
+          <mrow xml:id="eq_3h">m^2  \amp = 2n^2</mrow>
+        </mdn>
       </p>
       <p>
-        Equation (1) implies that <m>m^2</m> is even,
+        Equation <xref ref="eq_3h"/> implies that <m>m^2</m> is even,
         and hence,
         by <xref ref="T_n2odd"></xref>,
         <m>m</m> must be an even integer.
         This means that there exists an integer <m>p</m> such that <m>m = 2p</m>.
-        We can now substitute this into equation (1), which gives
-        <md>
-          <mrow>\left( {2p} \right)^2  \amp = 2n^2 \amp </mrow>
-          <mrow xml:id="eq_3i">4p^2  \amp = 2n^2 \amp (2)</mrow>
-        </md>
+        We can now substitute this into equation <xref ref="eq_3h"/>, which gives
+        <mdn>
+          <mrow number="no">\left( {2p} \right)^2  \amp = 2n^2 \amp </mrow>
+          <mrow xml:id="eq_3i">4p^2  \amp = 2n^2</mrow>
+        </mdn>
       </p>
       <p>
-        We can divide both sides of equation by 2 to obtain <m>n^2 = 2p^2</m>.
+        We can divide both sides of equation <xref ref="eq_3i"/> by 2 to obtain <m>n^2 = 2p^2</m>.
         Consequently,
         <m>n^2</m> is even and we can once again use <xref ref="T_n2odd"></xref>
         to conclude that <m>n</m> is an even integer.

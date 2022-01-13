@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-10-22T17:50:46-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><article class="hiddenproof"><p>To prove that \(\N \approx \Z\text{,}\) we will use the following function: \(f\x \N \to \Z\text{,}\) where</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+f ( n ) = \begin{cases}\dfrac{n}{2} \amp \text{ if \(n\) is even }  \\ \amp \\ \dfrac{1-n}{2} 
+\amp \text{ if \(n\) is odd } . \end{cases}
+\end{equation*}
+</div>
+<p>From our work in <a href="S_infinitesets.html#PA_functionNtoZ" class="internal" title="Beginning Activity: Beginning Activity 2: A Function from \(\boldsymbol{\N}\) to \(\boldsymbol{\Z}\)">Beginning Activity 2</a>, it appears that if \(n\) is an even natural number, then \(f ( n ) &gt; 0\text{,}\) and if \(n\) is an odd natural number, then \(f ( n ) \leq 0\text{.}\) So it seems reasonable to use cases to prove that \(f\) is a surjection and that \(f\) is an injection. To prove that \(f\) is a surjection, we let \(y \in \mathbb{Z}\text{.}\)</p>
+<ul class="disc">
+<li>
+<p>If \(y &gt; 0\text{,}\) then \(2y \in \mathbb{N}\text{,}\) and</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+f ( 2y ) = \frac{2y}{2} = y\text{.}
+\end{equation*}
+</div>
+</li>
+<li>
+<p>If \(y \leq 0\text{,}\) then \(-2y \geq 0\) and \(1 - 2y\) is an odd natural number. Hence,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+f ( 1 - 2y ) = \frac{1 - (1 - 2y )}{2} = \frac{2y}{2}=y\text{.}
+\end{equation*}
+</div>
+</li>
+</ul>
+<p xmlns:svg="http://www.w3.org/2000/svg">These two cases prove that if \(y \in \mathbb{Z}\text{,}\) then there exists an \(n \in \mathbb{N}\) such that \(f ( n ) = y\text{.}\) Hence, \(f\) is a surjection.</p>
+<p>To prove that \(f\) is an injection, we let \(m,
+n \in \mathbb{N}\) and assume that \(f ( m ) = f ( n )\text{.}\) First note that if one of \(m\) and \(n\) is odd and the other is even, then one of \(f ( m )\) and \(f ( n )\) is positive and the other is less than or equal to 0. So if \(f ( m ) = f ( n )\text{,}\) then both \(m\) and \(n\) must be even or both \(m\) and \(n\) must be odd.</p>
+<ul class="disc">
+<li>
+<p>If both \(m\) and \(n\) are even, then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+f ( m ) = f ( n ) \text{ implies that }
+\dfrac{m}{2} = \dfrac{n}{2}
+\end{equation*}
+</div>
+<p class="continuation">and hence that \(m = n\text{.}\)</p>
+</li>
+<li>
+<p>If both \(m\) and \(n\) are odd, then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+f ( m ) = f ( n ) \text{ implies that } \dfrac{1-m}{2} = \dfrac{1-n}{2}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">From this, we conclude that \(1 - m\) = \(1 - n\) and hence that \(m = n\text{.}\) This proves that if \(f ( m ) = f ( n )\text{,}\) then \(m = n\) and hence that \(f\) is an injection.</p>
+</li>
+</ul>
+<p xmlns:svg="http://www.w3.org/2000/svg">Since \(f\) is both a surjection and an injection, we see that \(f\) is a bijection and, therefore, \(\mathbb{N} \approx \mathbb{Z}\text{.}\) Hence, \(\mathbb{Z}\) is countably infinite and \(\text{ card} ( \Z ) = \aleph_0\text{.}\)</p></article></body>
+</html>

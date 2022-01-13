@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-01-13T15:38:57-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Quantifiers and Negations</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg">miniversion=0.6</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\mynot}{\neg}
+\newcommand{\card}{\mathbf{card}}
+\newcommand{\x}{:}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Mathematical Reasoning:</span> <span class="subtitle">Writing and Proof (Version 3)</span></a></h1>
+<p class="byline">Ted Sundstrom, Professor Emeritus</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_2predicates.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_2logic.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_2summary.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_2predicates.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C_2logic.html" title="Up">Up</a><a class="next-button button toolbar-item" href="S_2summary.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="fm-versions.html" data-scroll="fm-versions">Version 3 and Version 2.1</a></li>
+<li><a href="fm-student-note.html" data-scroll="fm-student-note">Note to Students</a></li>
+<li><a href="fm-preface.html" data-scroll="fm-preface">Preface</a></li>
+<li><a href="fm-imp-features.html" data-scroll="fm-imp-features">Important Features of the Book</a></li>
+<li><a href="fm-cont-org.html" data-scroll="fm-cont-org">Content and Organization</a></li>
+<li><a href="fm-inst-note.html" data-scroll="fm-inst-note">Supplementary Materials for the Instructor</a></li>
+<li><a href="fm_pubnote.html" data-scroll="fm_pubnote">Publisher's Note</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_1intro.html" data-scroll="C_1intro"><span class="codenumber">1</span> <span class="title">Introduction to Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_1prop.html" data-scroll="S_1prop">Statements and Conditional Statements</a></li>
+<li><a href="S_1direct.html" data-scroll="S_1direct">Constructing Direct Proofs</a></li>
+<li><a href="S_1summary.html" data-scroll="S_1summary">Chapter 1 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_2logic.html" data-scroll="C_2logic"><span class="codenumber">2</span> <span class="title">Logical Reasoning</span></a><ul>
+<li><a href="S_2logop.html" data-scroll="S_2logop">Statements and Logical Operators</a></li>
+<li><a href="S_logequiv.html" data-scroll="S_logequiv">Logically Equivalent Statements</a></li>
+<li><a href="S_2predicates.html" data-scroll="S_2predicates">Open Sentences and Sets</a></li>
+<li><a href="S_2quantifier.html" data-scroll="S_2quantifier" class="active">Quantifiers and Negations</a></li>
+<li><a href="S_2summary.html" data-scroll="S_2summary">Chapter 2 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_proofs.html" data-scroll="C_proofs"><span class="codenumber">3</span> <span class="title">Constructing and Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_directproof.html" data-scroll="S_directproof">Direct Proofs</a></li>
+<li><a href="S_moremethods.html" data-scroll="S_moremethods">More Methods of Proof</a></li>
+<li><a href="S_contradiction.html" data-scroll="S_contradiction">Proof by Contradiction</a></li>
+<li><a href="S_cases.html" data-scroll="S_cases">Using Cases in Proofs</a></li>
+<li><a href="S_divalgo.html" data-scroll="S_divalgo">The Division Algorithm and Congruence</a></li>
+<li><a href="S_reviewproofs.html" data-scroll="S_reviewproofs">Review of Proof Methods</a></li>
+<li><a href="S_3summary.html" data-scroll="S_3summary">Chapter 3 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_induction.html" data-scroll="C_induction"><span class="codenumber">4</span> <span class="title">Mathematical Induction</span></a><ul>
+<li><a href="S_mathinduction.html" data-scroll="S_mathinduction">The Principle of Mathematical Induction</a></li>
+<li><a href="S_otherinduction.html" data-scroll="S_otherinduction">Other Forms of Mathematical Induction</a></li>
+<li><a href="S_recursion.html" data-scroll="S_recursion">Induction and Recursion</a></li>
+<li><a href="S_4summary.html" data-scroll="S_4summary">Chapter 4 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_settheory.html" data-scroll="C_settheory"><span class="codenumber">5</span> <span class="title">Set Theory</span></a><ul>
+<li><a href="S_setoperations.html" data-scroll="S_setoperations">Sets and Operations on Sets</a></li>
+<li><a href="S_provingset.html" data-scroll="S_provingset">Proving Set Relationships</a></li>
+<li><a href="S_setproperties.html" data-scroll="S_setproperties">Properties of Set Operations</a></li>
+<li><a href="S_cartesian.html" data-scroll="S_cartesian">Cartesian Products</a></li>
+<li><a href="S_indexfamily.html" data-scroll="S_indexfamily">Indexed Families of Sets</a></li>
+<li><a href="S_5summary.html" data-scroll="S_5summary">Chapter 5 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_functions.html" data-scroll="C_functions"><span class="codenumber">6</span> <span class="title">Functions</span></a><ul>
+<li><a href="S_introfunctions.html" data-scroll="S_introfunctions">Introduction to Functions</a></li>
+<li><a href="S_moreaboutfunctions.html" data-scroll="S_moreaboutfunctions">More about Functions</a></li>
+<li><a href="S_typesoffunctions.html" data-scroll="S_typesoffunctions">Injections, Surjections, and Bijections</a></li>
+<li><a href="S_compositionoffunctions.html" data-scroll="S_compositionoffunctions">Composition of Functions</a></li>
+<li><a href="S_inversefunctions.html" data-scroll="S_inversefunctions">Inverse Functions</a></li>
+<li><a href="S_functionsonsets.html" data-scroll="S_functionsonsets">Functions Acting on Sets</a></li>
+<li><a href="S_6summary.html" data-scroll="S_6summary">Chapter 6 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_equivrelations.html" data-scroll="C_equivrelations"><span class="codenumber">7</span> <span class="title">Equivalence Relations</span></a><ul>
+<li><a href="S_relations.html" data-scroll="S_relations">Relations</a></li>
+<li><a href="S_equivrelations.html" data-scroll="S_equivrelations">Equivalence Relations</a></li>
+<li><a href="S_equivclasses.html" data-scroll="S_equivclasses">Equivalence Classes</a></li>
+<li><a href="S_modulararithmetic.html" data-scroll="S_modulararithmetic">Modular Arithmetic</a></li>
+<li><a href="section-37.html" data-scroll="section-37">Chapter 7 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_numbertheory.html" data-scroll="C_numbertheory"><span class="codenumber">8</span> <span class="title">Topics in Number Theory</span></a><ul>
+<li><a href="S_gcd.html" data-scroll="S_gcd">The Greatest Common Divisor</a></li>
+<li><a href="S_primefactorizations.html" data-scroll="S_primefactorizations">Prime Numbers and Prime Factorizations</a></li>
+<li><a href="S_diophantine.html" data-scroll="S_diophantine">Linear Diophantine Equations</a></li>
+<li><a href="section-41.html" data-scroll="section-41">Chapter 8 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_topicsinsets.html" data-scroll="C_topicsinsets"><span class="codenumber">9</span> <span class="title">Finite and Infinite Sets</span></a><ul>
+<li><a href="S_finitesets.html" data-scroll="S_finitesets">Finite Sets</a></li>
+<li><a href="S_infinitesets.html" data-scroll="S_infinitesets">Countable Sets</a></li>
+<li><a href="S_uncountablesets.html" data-scroll="S_uncountablesets">Uncountable Sets</a></li>
+<li><a href="section-45.html" data-scroll="section-45">Chapter 9 Summary</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="C_writingguides.html" data-scroll="C_writingguides"><span class="codenumber">A</span> <span class="title">Guidelines for Writing Mathematical Proofs</span></a></li>
+<li class="link"><a href="prog-answers.html" data-scroll="prog-answers"><span class="codenumber">B</span> <span class="title">Answers for the Progress Checks</span></a></li>
+<li class="link"><a href="exer-answers.html" data-scroll="exer-answers"><span class="codenumber">C</span> <span class="title">Answers and Hints for Selected Exercises</span></a></li>
+<li class="link"><a href="appendix-2.html" data-scroll="appendix-2"><span class="codenumber">D</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="S_2quantifier"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.4</span> <span class="title">Quantifiers and Negations</span>
+</h2>
+<section class="worksheet" id="PA_quantifier"><h3 class="heading hide-type">
+<span class="type">Beginning Activity</span> <span class="codenumber"></span> <span class="title">Beginning Activity 1: An Introduction to Quantifiers</span><div class="print-links">
+<a href="PA_quantifier-a4.html" class="a4">A4</a><a href="PA_quantifier-letter.html" class="us">US</a>
+</div>
+</h3>
+<p id="p-896">We have seen that one way to create a statement from an open sentence is to substitute a specific element from the universal set for each variable in the open sentence. Another way is to make some claim about the truth set of the open sentence. This is often done by using a quantifier. For example, if the universal set is <span class="process-math">\(\mathbb{R}\text{,}\)</span> then the following sentence is a statement. <blockquote class="blockquote" id="blockquote-64">For each real number <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(x^2 &gt; 0\text{.}\)</span>
+</blockquote> The phrase “For each real number <span class="process-math">\(x\)</span>” is said to <dfn class="terminology">quantify the variable</dfn> that follows it in the sense that the sentence is claiming that something is true for all real numbers. So this sentence is a statement (which happens to be false). <article class="assemblage assemblage-like" id="D_every"><h4 class="heading"><span class="title">Definition.</span></h4>
+<p id="p-897"> The phrase “for every” (or its equivalents) is called a <dfn class="terminology">universal quantifier</dfn>. The phrase “there exists” (or its equivalents) is called an <dfn class="terminology">existential quantifier</dfn>. The symbol <span class="process-math">\(\forall\)</span> is used to denote a universal quantifier, and the symbol <span class="process-math">\(\exists\)</span> is used to denote an existential quantifier.</p></article></p>
+<p id="p-898">Using this notation, the statement “For each real number <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(x^2 &gt; 0\)</span>” could be written in symbolic form as: <span class="process-math">\(\left( {\forall x \in \mathbb{R}} \right)\left( {x^2 &gt; 0} \right)\text{.}\)</span> The following is an example of a statement involving an existential quantifier. <blockquote class="blockquote" id="blockquote-65">There exists an integer <span class="process-math">\(x\)</span> such that <span class="process-math">\(3x - 2 = 0\text{.}\)</span>
+</blockquote> This could be written in symbolic form as</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\left( {\exists x \in \Z} \right) \left( 3x - 2 = 0 \right)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">This statement is false because there are no integers that are solutions of the linear equation <span class="process-math">\(3x - 2 = 0\text{.}\)</span> <a href="" class="xref" data-knowl="./knowl/T_quantifiers.html" title="Table 2.21: Properties of Quantifiers">Table 2.21</a> summarizes the facts about the two types of quantifiers.</p>
+<figure class="table table-like" id="T_quantifiers"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.21<span class="period">.</span></span><span class="space"> </span>Properties of Quantifiers</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b2 r2 l0 t0 lines">A statement<br>involving</th>
+<th scope="col" class="l m b2 r2 l0 t0 lines">Often has the form</th>
+<th scope="col" class="l m b2 r0 l0 t0 lines">The statement is true<br>provided that</th>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">A universal<br>quantifier:<br><span class="process-math">\(\left( \forall x, P(x) \right)\)</span>
+</td>
+<td class="l m b2 r2 l0 t0 lines">“For every <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(P(x)\text{,}\)</span>”<br>where <span class="process-math">\(P(x)\)</span> is a predicate.</td>
+<td class="l m b2 r0 l0 t0 lines">Every value of <span class="process-math">\(x\)</span> in<br>the universal set<br>makes <span class="process-math">\(P(x)\)</span> true.</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">An existential<br>quantifier:<br><span class="process-math">\(\left( \exists x, P(x) \right)\)</span>
+</td>
+<td class="l m b0 r2 l0 t0 lines">“There exists an <span class="process-math">\(x\)</span> such that <span class="process-math">\(P(x)\text{,}\)</span>”<br>where <span class="process-math">\(P(x)\)</span><br>is a predicate.</td>
+<td class="l m b0 r0 l0 t0 lines">There is at least one value<br>of <span class="process-math">\(x\)</span> in the universal set that<br>makes <span class="process-math">\(P(x)\)</span> true.</td>
+</tr>
+</table></div></figure><p id="p-899">In effect, the table indicates that the universally quantified statement is true provided that the truth set of the predicate equals the universal set, and the existentially quantified statement is true provided that the truth set of the predicate contains at least one element.</p>
+<p id="p-900">Each of the following sentences is a statement or an open sentence. Assume that the universal set for each variable in these sentences is the set of all real numbers. If a sentence is an open sentence (predicate), determine its truth set. If a sentence is a statement, determine whether it is true or false.</p>
+<article class="exercise exercise-like" id="exercise-109"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<p id="p-901"><span class="process-math">\(\left( \forall a \in \mathbb{R}\right) \left(a + 0 = a\right)\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-110"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-902"><span class="process-math">\(3x - 5 = 9\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-111"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-903"><span class="process-math">\(\sqrt x \in \mathbb{R}\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-112"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<p id="p-904"><span class="process-math">\(\sin( {2x} ) = 2( {\sin x} )( {\cos x})\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-113"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<p id="p-905"><span class="process-math">\(\left( \forall x \in \R\right) \left(\sin( {2x} ) = 2( {\sin x})( {\cos x}) \right)\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-114"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<p id="p-906"><span class="process-math">\(\left( \exists x \in \R \right)\left( x^2 + 1 = 0 \right)\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-115"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<p id="p-907"><span class="process-math">\(\left( \forall x \in \R \right) \left( x^3 \geq x^2 \right)\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-116"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<p id="p-908">If <span class="process-math">\(x^2 \geq 1\text{,}\)</span> then <span class="process-math">\(x \geq 1\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-117"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<p id="p-909"><span class="process-math">\(\left( \forall x \in \R \right)\left( \text{ If } x^2 \geq 1, \text{ then } x 
+\geq 1 \right)\text{.}\)</span></p></article></section><section class="worksheet" id="PA_negatequantifier"><h3 class="heading hide-type">
+<span class="type">Beginning Activity</span> <span class="codenumber"></span> <span class="title">Beginning Activity 2: Attempting to Negate Quantified Statements</span><div class="print-links">
+<a href="PA_negatequantifier-a4.html" class="a4">A4</a><a href="PA_negatequantifier-letter.html" class="us">US</a>
+</div>
+</h3>
+<article class="exercise exercise-like" id="exercise-118"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-79">
+<p id="p-910">Consider the following statement written in symbolic form:</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\left( {\forall x \in \mathbb{Z}} \right)\left( {x\text{ is a multiple of 2 } } 
+\right)\text{.}
+\end{equation*}
+</div>
+</div>
+<article class="task exercise-like" id="task-309"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-911">Write this statement as an English sentence.</p></article><article class="task exercise-like" id="negatequantifier2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-912">Is the statement true or false? Why?</p></article><article class="task exercise-like" id="task-311"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-913">How would you write the negation of this statement as an English sentence?</p></article><article class="task exercise-like" id="task-312"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-914">If possible, write your negation of this statement from <a href="" class="xref" data-knowl="./knowl/negatequantifier2.html" title="Task 1.b">Task 1.b</a> symbolically (using a quantifier).</p></article></article><article class="exercise exercise-like" id="exercise-119"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-80">
+<p id="p-915">Consider the following statement written in symbolic form:</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\left( {\exists x \in \mathbb{Z}} \right)\left( {x^3 &gt; 0} \right)\text{.}
+\end{equation*}
+</div>
+</div>
+<article class="task exercise-like" id="task-313"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-916">Write this statement as an English sentence.</p></article><article class="task exercise-like" id="negatequantifier6"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-917">Is the statement true or false? Why?</p></article><article class="task exercise-like" id="task-315"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-918">How would you write the negation of this statement as an English sentence?</p></article><article class="task exercise-like" id="task-316"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-919">If possible, write your negation of this statement from <a href="" class="xref" data-knowl="./knowl/negatequantifier6.html" title="Task 2.b">Task 2.b</a> symbolically (using a quantifier).</p></article></article></section><section class="introduction" id="introduction-81"><p id="p-920">We introduced the concepts of open sentences and quantifiers in <a href="S_2predicates.html" class="internal" title="Section 2.3: Open Sentences and Sets">Section 2.3</a>. Review the definitions given in <a href="" class="xref" data-knowl="./knowl/D_universal.html" title="Definition: Definition">Definition</a>, <a href="" class="xref" data-knowl="./knowl/D_truthset.html" title="Definition: Definition">Definition</a>, and <a href="" class="xref" data-knowl="./knowl/D_every.html" title="Definition: Definition">Definition</a>. </p></section><section class="subsection" id="SS_quant_eng"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Forms of Quantified Statements in English</span>
+</h3>
+<p id="p-921">There are many ways to write statements involving quantifiers in English. In some cases, the quantifiers are not apparent, and this often happens with conditional statements. The following examples illustrate these points. Each example contains a quantified statement written in symbolic form followed by several ways to write the statement in English.</p>
+<article class="example example-like" id="D_counterexample"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.22</span><span class="period">.</span>
+</h4>
+<div class="displaymath process-math">
+\begin{equation*}
+\left( {\forall x \in \mathbb{R}} \right)\left( {x^2 &gt; 0} \right)
+\end{equation*}
+</div>
+<ul id="p-922" class="disc">
+<li id="li-129"><p id="p-923">For each real number <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(x^2 &gt; 0\text{.}\)</span></p></li>
+<li id="li-130"><p id="p-924">The square of every real number is greater than 0.</p></li>
+<li id="li-131"><p id="p-925">The square of a real number is greater than 0.</p></li>
+<li id="li-132"><p id="p-926">If <span class="process-math">\(x \in \mathbb{R}\text{,}\)</span> then <span class="process-math">\(x^2 &gt; 0\text{.}\)</span></p></li>
+</ul>
+<p id="p-927"> In the second to the last example, the quantifier is not stated explicitly.  Care must be taken when reading this because it really does say the same thing as the previous examples. The last example illustrates the fact that conditional statements often contain a “hidden” universal quantifier.  If the universal set is  <span class="process-math">\(\R\text{,}\)</span> then the truth set of the open sentence  <span class="process-math">\(x^2  &gt; 0\)</span> is the set of all nonzero real numbers.  That is, the truth set is</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\left\{ {x \in \mathbb{R}} \mid x \ne 0 \right\}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">So the preceding statements are false.  For the conditional statement, the example using <span class="process-math">\(x = 0\)</span> produces a true hypothesis and a false conclusion.  This is a <dfn class="terminology">counterexample</dfn> that shows that the statement with a universal quantifier is false.</p></article><article class="example example-like" id="example-7"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.23</span><span class="period">.</span>
+</h4>
+<div class="displaymath process-math">
+\begin{equation*}
+\left( {\exists x \in \mathbb{R}} \right)\left( {x^2 = 5} \right)
+\end{equation*}
+</div>
+<ul id="p-928" class="disc">
+<li id="li-133"><p id="p-929">There exists a real number <span class="process-math">\(x\)</span> such that <span class="process-math">\(x^2 = 5\text{.}\)</span></p></li>
+<li id="li-134"><p id="p-930"><span class="process-math">\(x^2 = 5\)</span> for some real number <span class="process-math">\(x\text{.}\)</span></p></li>
+<li id="li-135"><p id="p-931">There is a real number whose square equals 5.</p></li>
+</ul>
+<p id="p-932">The second example is usually not used since it is not considered good writing practice to start a sentence with a mathematical symbol. If the universal set is <span class="process-math">\(\R\text{,}\)</span> then the truth set of the predicate “<span class="process-math">\(x^2 = 5\)</span>” is <span class="process-math">\(\left\{ { - \sqrt 5 ,\;\sqrt 5 } \right\}\text{.}\)</span> So these are all true statements.</p></article></section><section class="subsection" id="subsection-27"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Negations of Quantified Statements</span>
+</h3>
+<p id="p-933">In <a href="S_2quantifier.html#PA_quantifier" class="internal" title="Beginning Activity: Beginning Activity 1: An Introduction to Quantifiers">Beginning Activity 1</a>, we wrote negations of some quantified statements. This is a very important mathematical activity. As we will see in future sections, it is sometimes just as important to be able to describe when some object does not satisfy a certain property as it is to describe when the object satisfies the property. Our next task is to learn how to write negations of quantified statements in a useful English form.</p>
+<p id="p-934">We first look at the negation of a statement involving a universal quantifier. The general form for such a statement can be written as <span class="process-math">\(\left( {\forall x} \in U \right)\left( {P( x )} \right)\text{,}\)</span> where <span class="process-math">\(P( x )\)</span> is an open sentence and <span class="process-math">\(U\)</span> is the universal set for the variable <span class="process-math">\(x\text{.}\)</span> When we write</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\mynot  \left( {\forall x} \in U \right)\left[ {P\left( x \right)} \right]\text{,}
+\end{equation*}
+</div>
+<p class="continuation">we are asserting that the statement <span class="process-math">\(\left( {\forall x} \in U \right)\left[ {P( x )} \right]\)</span> is false. This is equivalent to saying that the truth set of the open sentence <span class="process-math">\(P( x )\)</span> is not the universal set. That is, there exists an element <span class="process-math">\(x\)</span> in the universal set <span class="process-math">\(U\)</span> such that <span class="process-math">\(P( x )\)</span> is false. This in turn means that there exists an element <span class="process-math">\(x\)</span> in <span class="process-math">\(U\)</span> such that <span class="process-math">\(\mynot  P( x )\)</span> is true, which is equivalent to saying that <span class="process-math">\(\left( {\exists x} \in U \right)\left[ {\mynot  P( x )} \right]\)</span> is true. This explains why the following result is true:</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\mynot  \left( {\forall x} \in U \right)\left[ {P( x )} \right] \equiv \left( {\exists x} 
+\in U \right)\left[ {\mynot  P( x )} \right]\text{.}
+\end{equation*}
+</div>
+<p id="p-935">Similarly, when we write</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\mynot  \left( {\exists x} \in U \right)\left[ {P( x )} \right]\text{,}
+\end{equation*}
+</div>
+<p class="continuation">we are asserting that the statement <span class="process-math">\(\left( {\exists x} \in U \right)\left[ {P( x )} \right]\)</span> is false. This is equivalent to saying that the truth set of the open sentence <span class="process-math">\(P( x )\)</span> is the empty set. That is, there is no element <span class="process-math">\(x\)</span> in the universal set <span class="process-math">\(U\)</span> such that <span class="process-math">\(P( x )\)</span> is true. This in turn means that for each element <span class="process-math">\(x\)</span> in <span class="process-math">\(U\text{,}\)</span> <span class="process-math">\(\mynot  P( x )\)</span> is true, and this is equivalent to saying that <span class="process-math">\(\left( {\forall x} \in U \right)\left[ {\mynot  P( x )} \right]\)</span> is true. This explains why the following result is true:</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\mynot  \left( {\exists x} \in U \right)\left[ {P( x )} \right] \equiv \left( {\forall x} 
+\in U \right)\left[ {\mynot  P( x )} \right]\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We summarize these results in the following theorem.</p>
+<article class="theorem theorem-like" id="T_negations"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.24</span><span class="period">.</span>
+</h4>
+<p id="p-936">For any open sentence <span class="process-math">\(P( x )\text{,}\)</span></p>
+<div class="displaymath process-math">
+\begin{align*}
+\mynot  \left( {\forall x} \in U \right)\left[ {P( x )} \right] \amp 
+\equiv \left( {\exists x} \in U \right)\left[ {\mynot  P( x )} \right]\text{ , and }\\
+\mynot  \left( {\exists x} \in U \right)\left[ {P( x )} \right] \amp 
+\equiv \left( {\forall x} \in U \right)\left[ {\mynot  P( x )} \right].
+\end{align*}
+</div></article><article class="example example-like" id="E_negations"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.25</span><span class="period">.</span><span class="space"> </span><span class="title">Negations of Quantified Statements.</span>
+</h4>
+<p id="p-937">Consider the following statement: <span class="process-math">\(\left( {\forall x \in \mathbb{R}} \right)\left( {x^3 \geq x^2 } \right)\text{.}\)</span></p>
+<p id="p-938">We can write this statement as an English sentence in several ways. Following are two different ways to do so.</p>
+<ul class="disc">
+<li id="li-136"><p id="p-939">For each real number <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(x^3 \geq x^2\text{.}\)</span></p></li>
+<li id="li-137"><p id="p-940">If <span class="process-math">\(x\)</span> is a real number, then <span class="process-math">\(x^3\)</span> is greater than or equal to <span class="process-math">\(x^2\text{.}\)</span></p></li>
+</ul>
+<p class="continuation">The second statement shows that in a conditional statement, there is often a hidden universal quantifier. This statement is false since there are real numbers <span class="process-math">\(x\)</span> for which <span class="process-math">\(x^3\)</span> is not greater than or equal to <span class="process-math">\(x^2\text{.}\)</span> For example, we could use <span class="process-math">\(x = - 1\)</span> or <span class="process-math">\(x = \frac{1}{2}\text{.}\)</span></p>
+<p id="p-941">This means that the negation must be true. We can form the negation as follows:</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\mynot  \left( {\forall x \in \mathbb{R}} \right)\left( {x^3  \geq x^2 } \right) \equiv 
+\left( {\exists x \in \mathbb{R}} \right)\mynot  \left( {x^3  \geq x^2 } \right)\text{.}
+\end{equation*}
+</div>
+<p id="p-942">In most cases, we want to write this negation in a way that does not use the negation symbol. In this case, we can now write the open sentence <span class="process-math">\(\mynot  \left( {x^3  \geq x^2 } \right)\)</span> as <span class="process-math">\(\left( {x^3  \lt  x^2 } \right)\text{.}\)</span> (That is, the negation of “is greater than or equal to” is “is less than.”) So we obtain the following:</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\mynot  \left( {\forall x \in \mathbb{R}} \right)\left( {x^3  \geq x^2 } \right) \equiv 
+\left( {\exists x \in \mathbb{R}} \right)\left( {x^3  \lt  x^2 } \right)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">The statement <span class="process-math">\(\left( {\exists x \in \mathbb{R}} \right)\left( {x^3 \lt x^2 } \right)\)</span> could be written in English as follows: <blockquote class="blockquote" id="blockquote-66">There exists a real number <span class="process-math">\(x\)</span> such that <span class="process-math">\(x^3 \lt x^2\text{.}\)</span>
+</blockquote> <blockquote class="blockquote" id="blockquote-67">There exists an <span class="process-math">\(x\)</span> such that <span class="process-math">\(x\)</span> is a real number and <span class="process-math">\(x^3 \lt x^2\text{.}\)</span>
+</blockquote></p></article><article class="exercise exercise-like" id="pr_negating"><h4 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">2.26</span><span class="period">.</span><span class="space"> </span><span class="title">Negating Quantified Statements.</span>
+</h4>
+<div class="introduction" id="introduction-82">
+<p id="p-943">For each of the following statements</p>
+<ol class="decimal">
+<li id="li-138"><p id="p-944">Write the statement in the form of an English sentence that does not use the symbols for quantifiers.</p></li>
+<li id="li-139"><p id="p-945">Write the negation of the statement in a symbolic form that does not use the negation symbol.</p></li>
+<li id="li-140"><p id="p-946">Write the negation of the statement in the form of an English sentence that does not use the symbols for quantifiers.</p></li>
+</ol>
+</div>
+<article class="task exercise-like" id="task-317"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-947"><span class="process-math">\(\left( \forall a \in \mathbb{R}\right) \left( a + 0 = a \right)\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-48" id="solution-48"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-48"><div class="solution solution-like"><ul id="p-948" class="disc">
+<li id="li-141"><p id="p-949">For each real number <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(a + 0 = a\text{.}\)</span></p></li>
+<li id="li-142"><p id="p-950"><span class="process-math">\((\exists a \in \mathbb{R})( a + 0 \ne a)\text{.}\)</span></p></li>
+<li id="li-143"><p id="p-951">There exists a real number <span class="process-math">\(a\)</span> such that <span class="process-math">\(a + 0 \ne a\text{.}\)</span></p></li>
+</ul></div></div>
+</div></article><article class="task exercise-like" id="task-318"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-952"><span class="process-math">\(\left( \forall x \in \mathbb{R} \right) \left[ \sin ( {2x} ) = 2 ( {\sin x} )
+( {\cos x} ) \right]\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-49" id="solution-49"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-49"><div class="solution solution-like"><ul id="p-953" class="disc">
+<li id="li-144"><p id="p-954">For each real number <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(\sin ( {2x} ) = 2( {\sin x} )( {\cos x} )\text{.}\)</span></p></li>
+<li id="li-145"><p id="p-955"><span class="process-math">\((\exists x \in \mathbb{R})( \sin ( {2x} ) \ne 2( {\sin x} )( {\cos x} ))\text{.}\)</span></p></li>
+<li id="li-146"><p id="p-956">There exists a real number <span class="process-math">\(x\)</span> such that <span class="process-math">\(\sin \left( {2x} \right) 
+\ne 2\left( {\sin x} \right)\left( {\cos x} \right)\text{.}\)</span></p></li>
+</ul></div></div>
+</div></article><article class="task exercise-like" id="task-319"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-957"><span class="process-math">\(\left( \forall x \in \mathbb{R} \right) \left( \tan ^2 x + 1 = \sec ^2 x \right)\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-50" id="solution-50"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-50"><div class="solution solution-like"><ul id="p-958" class="disc">
+<li id="li-147"><p id="p-959">For each real number <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(\tan ^2 x + 1 = \sec ^2 x\text{.}\)</span></p></li>
+<li id="li-148"><p id="p-960"><span class="process-math">\(\left( \exists x \in \mathbb{R}\right) \left( \tan ^2 x + 1 \ne \sec ^2 x 
+\right)\text{.}\)</span></p></li>
+<li id="li-149"><p id="p-961">There exists a real number <span class="process-math">\(x\)</span> such that <span class="process-math">\(\tan ^2 x + 1 \ne \sec ^2 x\text{.}\)</span></p></li>
+</ul></div></div>
+</div></article><article class="task exercise-like" id="task-320"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-962"><span class="process-math">\(\left( \exists x \in \mathbb{Q} \right) \left( x^2 - 3x - 7 = 0 \right)\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-51" id="solution-51"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-51"><div class="solution solution-like"><ul id="p-963" class="disc">
+<li id="li-150"><p id="p-964">There exists a rational number <span class="process-math">\(x\)</span> such that <span class="process-math">\(x^2 - 3x - 7 = 0\text{.}\)</span></p></li>
+<li id="li-151"><p id="p-965"><span class="process-math">\((\forall x \in \mathbb{Q}) \left( x^2 - 3x - 7 \ne 0 \right)\text{.}\)</span></p></li>
+<li id="li-152"><p id="p-966">For each rational number <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(x^2 - 3x - 7 \ne 0\text{.}\)</span></p></li>
+</ul></div></div>
+</div></article><article class="task exercise-like" id="task-321"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-967"><span class="process-math">\(\left( \exists x \in \mathbb{R} \right) \left( x^2 + 1 = 0 \right)\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-52" id="solution-52"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-52"><div class="solution solution-like"><ul id="p-968" class="disc">
+<li id="li-153"><p id="p-969">There exists a real number <span class="process-math">\(x\)</span> such that <span class="process-math">\(x^2 + 1 = 0\text{.}\)</span></p></li>
+<li id="li-154"><p id="p-970"><span class="process-math">\((\forall x \in \mathbb{R}) \left( \text{ } x^2 + 1 \ne 0 \right)\text{.}\)</span></p></li>
+<li id="li-155"><p id="p-971">For each real number <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(x^2 + 1 \ne 0\text{.}\)</span></p></li>
+</ul></div></div>
+</div></article></article></section><section class="subsection" id="D_counterexample2"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Counterexamples and Negations of Conditional Statements</span>
+</h3>
+<p id="p-972">The real number <span class="process-math">\(x = - 1\)</span> in the previous example was used to show that the statement <span class="process-math">\(\left( {\forall x \in \mathbb{R}} \right)\left( {x^3 \geq x^2 } \right)\)</span> is false. This is called a <dfn class="terminology">counterexample</dfn> to the statement.  In general, a <dfn class="terminology">counterexample</dfn> to a statement of the form <span class="process-math">\(\left( {\forall x} \right)\left[ {P( x )} \right]\)</span> is an object <span class="process-math">\(a\)</span> in the universal set <span class="process-math">\(U\)</span> for which <span class="process-math">\(P( a )\)</span> is false. It is an example that proves that <span class="process-math">\(\left( {\forall x} \right)\left[ {P( x )} \right]\)</span> is a false statement, and hence its negation, <span class="process-math">\(\left( {\exists x} \right)\left[ {\mynot P( x )} \right]\text{,}\)</span> is a true statement.</p>
+<p id="p-973">In the preceding example, we also wrote the universally quantified statement as a conditional statement. The number <span class="process-math">\(x =  - 1\)</span> is a counterexample for the statement If <span class="process-math">\(x\)</span> is a real number, then <span class="process-math">\(x^3\)</span> is greater than or equal to <span class="process-math">\(x^2\text{.}\)</span> So the number <span class="process-math">\(-1\)</span> is an example that makes the hypothesis of the conditional statement true and the conclusion false. Remember that a conditional statement often contains a “hidden” universal quantifier. Also, recall that in <a href="S_logequiv.html" class="internal" title="Section 2.2: Logically Equivalent Statements">Section 2.2</a> we saw that the negation of the conditional statement “If <span class="process-math">\(P\)</span> then <span class="process-math">\(Q\)</span>” is the statement “<span class="process-math">\(P\)</span> and not <span class="process-math">\(Q\text{.}\)</span>” Symbolically, this can be written as follows:</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\mynot  \left( {P \to Q} \right) \equiv \;P \wedge \mynot  Q\text{.}
+\end{equation*}
+</div>
+<p id="p-974">So when we specifically include the universal quantifier, the symbolic form of the negation of a conditional statement is</p>
+<div class="displaymath process-math">
+\begin{align*}
+\mynot  \left( {\forall x} \in U \right)\left[ {P( x ) \to Q( x )} \right] \amp 
+\equiv \left( {\exists x} \in U \right)\mynot  \left[ {P( x ) \to Q( x )} \right]\\
+\amp \equiv \left( {\exists x} \in U \right)\left[ {P( x ) \wedge \mynot  Q( x )} 
+\right]
+\end{align*}
+</div>
+<p id="p-975">That is,</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\mynot  \left( {\forall x} \in U \right)\left[ {P( x ) \to Q( x )} \right] \equiv 
+\left( {\exists x} \in U \right)\left[ {P( x ) \wedge \mynot  Q( x )} \right]\text{.}
+\end{equation*}
+</div>
+<article class="exercise exercise-like" id="pr_counterexamples"><h4 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">2.27</span><span class="period">.</span><span class="space"> </span><span class="title">Using Counterexamples.</span>
+</h4>
+<div class="introduction" id="introduction-83"><p id="p-976">Use counterexamples to explain why each of the following statements is false.</p></div>
+<article class="task exercise-like" id="task-322"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-977">For each integer <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(\left( n^2 + n + 1 \right)\)</span> is a prime number.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-53" id="solution-53"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-53"><div class="solution solution-like"><p id="p-978">A counterexample is <span class="process-math">\(n = 4\)</span> since <span class="process-math">\(4^2 + 4 + 1 = 21\text{,}\)</span> and 21 is not prime.</p></div></div>
+</div></article><article class="task exercise-like" id="task-323"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-979">For each real number <span class="process-math">\(x\text{,}\)</span> if <span class="process-math">\(x\)</span> is positive, then <span class="process-math">\(2x^2 &gt; x\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-54" id="solution-54"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-54"><div class="solution solution-like"><p id="p-980">A counterexample is <span class="process-math">\(x = \dfrac{1}{4}\)</span> since <span class="process-math">\(\dfrac{1}{4}\)</span> is positive and <span class="process-math">\(2 \left( \dfrac{1}{4} \right)^2 = \dfrac{1}{8}\)</span> and <span class="process-math">\(\dfrac{1}{8} \leq 
+\dfrac{1}{4}\text{.}\)</span></p></div></div>
+</div></article></article></section><section class="subsection" id="subsection-29"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Quantifiers in Definitions</span>
+</h3>
+<p id="p-981">Definitions of terms in mathematics often involve quantifiers. These definitions are often given in a form that does not use the symbols for quantifiers. Not only is it important to know a definition, it is also important to be able to write a negation of the definition. This will be illustrated with the definition of what it means to say that a natural number is a perfect square. <article class="assemblage assemblage-like" id="D_square"><h4 class="heading"><span class="title">Definition.</span></h4>
+<p id="p-982">A natural number <span class="process-math">\(n\)</span> is a <dfn class="terminology">perfect square</dfn>  provided that there exists a natural number <span class="process-math">\(k\)</span> such that <span class="process-math">\(n = k^2\text{.}\)</span></p></article></p>
+<p id="p-983">This definition can be written in symbolic form using appropriate quantifiers as follows: <blockquote class="blockquote" id="blockquote-68">A natural number <span class="process-math">\(n\)</span> is a <dfn class="terminology">perfect square</dfn> provided <span class="process-math">\(\left( {\exists k \in \mathbb{N}} \right) \! \left( {n = k^2 } \right)\text{.}\)</span>
+</blockquote></p>
+<p id="p-984">We frequently use the following steps to gain a better understanding of a definition.</p>
+<ol class="decimal">
+<li id="li-156"><p id="p-985">Examples of natural numbers that are perfect squares are 1, 4, 9, and 81 since <span class="process-math">\(1 = 1^2\text{,}\)</span> <span class="process-math">\(4 = 2^2\text{,}\)</span> <span class="process-math">\(9 = 3^2\text{,}\)</span> and <span class="process-math">\(81 = 9^2\text{.}\)</span></p></li>
+<li id="li-157"><p id="p-986">Examples of natural numbers that are not perfect squares are 2, 5, 10, and 50.</p></li>
+<li id="li-158">
+<p id="p-987">This definition gives two “conditions.” One is that the natural number <span class="process-math">\(n\)</span> is a perfect square and the other is that there exists a natural number <span class="process-math">\(k\)</span> such that <span class="process-math">\(n = k^2\text{.}\)</span> The definition states that these mean the same thing. So when we say that a natural number <span class="process-math">\(n\)</span> is not a perfect square, we need to negate the condition that  there exists a natural number <span class="process-math">\(k\)</span> such that <span class="process-math">\(n = k^2\text{.}\)</span> We can use the symbolic form to do this.</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\mynot \left( {\exists k \in \mathbb{N}} \right)\left( {n = k^2 } \right) \equiv \left( 
+\forall k \in \N \right) \left( n \ne k^2 \right)
+\end{equation*}
+</div>
+<p class="continuation">Notice that instead of writing <span class="process-math">\(\mynot \left(n = k^2 \right)\text{,}\)</span> we used the equivalent form of <span class="process-math">\(\left(n \ne k^2 \right)\text{.}\)</span> This will be easier to translate into an English sentence. So we can write, <blockquote class="blockquote" id="blockquote-69">A natural number <span class="process-math">\(n\)</span>  is not a perfect square provided that for every natural number <span class="process-math">\(k\text{,}\)</span> <span class="process-math">\(n \ne k^2\text{.}\)</span>
+</blockquote></p>
+</li>
+</ol>
+<p id="p-988">The preceding method illustrates a good method for trying to understand a new definition. Most textbooks will simply define a concept and leave it to the reader to do the preceding steps. Frequently, it is not sufficient just to read a definition and expect to understand the new term. We must provide examples that satisfy the definition, as well as examples that do not satisfy the definition, and we must be able to write a coherent negation of the definition.</p>
+<article class="exercise exercise-like" id="pr_mutliple3"><h4 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">2.28</span><span class="period">.</span><span class="space"> </span><span class="title">Multiples of Three.</span>
+</h4>
+<div class="introduction" id="introduction-84"><p id="p-989"><article class="assemblage assemblage-like" id="D_multiple3"><h5 class="heading"><span class="title">Definition.</span></h5>
+<p id="p-990">An integer <span class="process-math">\(n\)</span> is a <dfn class="terminology">multiple of 3</dfn> provided that there exists an integer <span class="process-math">\(k\)</span> such that <span class="process-math">\(n = 3k\text{.}\)</span></p></article></p></div>
+<article class="task exercise-like" id="task-324"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-991">Write this definition in symbolic form using quantifiers by completing the following: <blockquote class="blockquote" id="blockquote-70">An integer <span class="process-math">\(n\)</span> is a multiple of 3 provided that ….</blockquote></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-55" id="solution-55"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-55"><div class="solution solution-like"><p id="p-992">An integer <span class="process-math">\(n\)</span> is a multiple of 3 provided that <span class="process-math">\(\left( \exists k \in \Z \right) \left( n = 3k \right)\text{.}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-325"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-993">Give several examples of integers (including negative integers) that are multiples of 3.</p></article><article class="task exercise-like" id="task-326"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-994">Give several examples of integers (including negative integers) that are not multiples of 3.</p></article><article class="task exercise-like" id="task-327"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-995">Use the symbolic form of the definition of a multiple of 3 to complete the following sentence: “An integer <span class="process-math">\(n\)</span> is not a multiple of 3 provided that ….”</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-56" id="solution-56"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-56"><div class="solution solution-like"><p id="p-996">An integer <span class="process-math">\(n\)</span> is not a multiple of 3 provided that <span class="process-math">\(\left( \forall k \in \Z \right) \left( n \ne 3k \right)\text{.}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-328"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-997">Without using the symbols for quantifiers, complete the following sentence: “An integer <span class="process-math">\(n\)</span> is not a multiple of 3 provided that ….”</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-57" id="solution-57"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-57"><div class="solution solution-like"><p id="p-998">An integer <span class="process-math">\(n\)</span> is not a multiple of 3 provided that for every integer <span class="process-math">\(k\text{,}\)</span> <span class="process-math">\(n \ne 3k\text{.}\)</span></p></div></div>
+</div></article></article></section><section class="subsection" id="subsection-30"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Statements with More than One Quantifier</span>
+</h3>
+<p id="p-999">When a predicate contains more than one variable, each variable must be quantified to create a statement. For example, assume the universal set is the set of integers, <span class="process-math">\(\mathbb{Z}\text{,}\)</span> and let <span class="process-math">\(P\left( {x, y} \right)\)</span> be the predicate, “<span class="process-math">\(x + y = 0\text{.}\)</span>” We can create a statement from this predicate in several ways.</p>
+<ol class="decimal">
+<li id="twoquantifiers1">
+<p id="p-1000"><span class="process-math">\(\left( {\forall x \in \mathbb{Z}} \right)\left( {\forall y \in \mathbb{Z}} \right)
+\left( {x + y = 0} \right)\)</span></p>
+<p id="p-1001">We could read this as, “For all integers <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{,}\)</span> <span class="process-math">\(x + y = 0\text{.}\)</span>” This is a false statement since it is possible to find two integers whose sum is not zero <span class="process-math">\(\left( {2 + 3 \ne 0} \right)\text{.}\)</span></p>
+</li>
+<li id="twoquantifiers2">
+<p id="p-1002"><span class="process-math">\(\left( {\forall x \in \mathbb{Z}} \right)\left( {\exists y \in \mathbb{Z}} 
+\right)\left( {x + y = 0} \right)\)</span></p>
+<p id="p-1003">We could read this as, “For every integer <span class="process-math">\(x\text{,}\)</span> there exists an integer <span class="process-math">\(y\)</span> such that <span class="process-math">\(x + y = 0\text{.}\)</span>” This is a true statement.</p>
+</li>
+<li id="twoquantifiers3">
+<p id="p-1004"><span class="process-math">\(\left( {\exists x \in \mathbb{Z}} \right)\left( {\forall y \in \mathbb{Z}} 
+\right)\left( {x + y = 0} \right)\)</span></p>
+<p id="p-1005">We could read this as, “There exists an integer <span class="process-math">\(x\)</span> such that for each integer <span class="process-math">\(y\text{,}\)</span> <span class="process-math">\(x + y = 0\text{.}\)</span>” This is a false statement since there is no integer whose sum with each integer is zero.</p>
+</li>
+<li id="twoquantifiers4">
+<p id="p-1006"><span class="process-math">\(\left( {\exists x \in \mathbb{Z}} \right)\left( {\exists y \in \mathbb{Z}}
+\right)\left( {x + y = 0} \right)\)</span></p>
+<p id="p-1007">We could read this as, “There exist integers <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> such that <span class="process-math">\(x + y = 0\text{.}\)</span>” This is a true statement. For example, <span class="process-math">\(2 + \left( { - 2} \right) = 0\text{.}\)</span></p>
+</li>
+</ol>
+<p class="continuation">When we negate a statement with more than one quantifier, we consider each quantifier in turn and apply the appropriate part of <a href="" class="xref" data-knowl="./knowl/T_negations.html" title="Theorem 2.24">Theorem 2.24</a>. As an example, we will negate <a href="" class="xref" data-knowl="./knowl/twoquantifiers3.html" title="Item 3">Item 3</a> from the preceding list. The statement is</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\left( {\exists x \in \mathbb{Z}} \right)\left( {\forall y \in \mathbb{Z}} 
+\right)\left( {x + y = 0} \right)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We first treat this as a statement in the following form: <span class="process-math">\(\left( {\exists x \in \mathbb{Z}} \right)\left( {P( x )} \right)\)</span> where <span class="process-math">\(P( x )\)</span> is the predicate <span class="process-math">\(\left( {\forall y \in \mathbb{Z}} \right)\left( {x + y = 0} \right)\text{.}\)</span> Using <a href="" class="xref" data-knowl="./knowl/T_negations.html" title="Theorem 2.24">Theorem 2.24</a>, we have</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\mynot  \left( {\exists x \in \mathbb{Z}} \right)\left( {P( x )} \right) \equiv \left( 
+{\forall x \in \mathbb{Z}} \right)\left( {\mynot  P( x )} \right)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Using <a href="" class="xref" data-knowl="./knowl/T_negations.html" title="Theorem 2.24">Theorem 2.24</a> again, we obtain the following:</p>
+<div class="displaymath process-math">
+\begin{align*}
+\mynot  P( x ) \amp 
+\equiv \mynot  \left( {\forall y \in \mathbb{Z}} \right)\left( {x + y = 0} \right)\\
+\amp \equiv \left( {\exists y \in \mathbb{Z}} \right)\mynot  \left( {x + y = 0} \right)\\
+\amp \equiv \left( {\exists y \in \mathbb{Z}} \right)\left( {x + y \ne 0} \right)
+\end{align*}
+</div>
+<p class="continuation">Combining these two results, we obtain</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\mynot  \left( {\exists x \in \mathbb{Z}} \right)\left( {\forall y \in \mathbb{Z}} 
+\right)\left( {x + y = 0} \right) \equiv \left( {\forall x \in \mathbb{Z}} \right)\left( 
+{\exists y \in \mathbb{Z}} \right)\left( {x + y \ne 0} \right)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">The results are summarized in the following table.</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b2 r2 l0 t0 lines"></th>
+<th scope="col" class="l m b2 r2 l0 t0 lines">Symbolic Form</th>
+<th scope="col" class="l m b2 r0 l0 t0 lines">English Form</th>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">Statement</td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\left( {\exists x \in \mathbb{Z}} \right)\left( {\forall y \in 
+\mathbb{Z}} \right)\left( {x + y = 0} \right)\)</span></td>
+<td class="l m b2 r0 l0 t0 lines">There exists an integer<br><span class="process-math">\(x\)</span>  such that for each<br>integer   <span class="process-math">\(y\text{,}\)</span> <span class="process-math">\(x + y = 0\text{.}\)</span>
+</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">Negation</td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(\left( {\forall x \in \mathbb{Z}} \right)\left( {\exists y 
+\in \mathbb{Z}} \right)\left( {x + y \ne 0} \right)\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">For each integer  <span class="process-math">\(x\text{,}\)</span> there<br>exists an integer <span class="process-math">\(y\)</span> such<br>that <span class="process-math">\(x + y \ne 0\text{.}\)</span>
+</td>
+</tr>
+</table></div>
+<p id="p-1008">Since the given statement is false, its negation is true.</p>
+<p id="p-1009">We can construct a similar table for each of the four statements. The next table shows <a href="" class="xref" data-knowl="./knowl/twoquantifiers2.html" title="Item 2">Item 2</a>, which is true, and its negation, which is false.</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b2 r2 l0 t0 lines"></th>
+<th scope="col" class="l m b2 r2 l0 t0 lines">Symbolic Form</th>
+<th scope="col" class="l m b2 r0 l0 t0 lines">English Form</th>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">Statement</td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(\left( {\forall x \in \mathbb{Z}} \right)\left( {\exists y \in 
+\mathbb{Z}} \right)\left( {x + y = 0} \right)\)</span></td>
+<td class="l m b2 r0 l0 t0 lines">For every integer  <span class="process-math">\(x\text{,}\)</span><br>there exists an integer  <span class="process-math">\(y\)</span><br>such that <span class="process-math">\(x + y = 0\text{.}\)</span>
+</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">Negation</td>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(\left( {\exists x \in \mathbb{Z}} \right)\left( {\forall y \in 
+\mathbb{Z}} \right)\left( {x + y \ne 0} \right)\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">There exists an integer<br><span class="process-math">\(x\)</span>  such that for every<br>integer  <span class="process-math">\(y\text{,}\)</span>  <span class="process-math">\(x + y \ne 0\text{.}\)</span>
+</td>
+</tr>
+</table></div>
+<article class="exercise exercise-like" id="pr_twoquant"><h4 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">2.29</span><span class="period">.</span><span class="space"> </span><span class="title">Negating a Statement with Two Quantifiers.</span>
+</h4>
+<p id="p-1010">Write the negation of the statement</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\left( {\forall x \in \mathbb{Z}} \right)\left( {\forall y \in \mathbb{Z}} \right)\left( 
+{x + y = 0} \right)
+\end{equation*}
+</div>
+<p class="continuation">in symbolic form and as a sentence written in English.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-58" id="solution-58"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-58"><div class="solution solution-like">
+<p id="p-1011"><span class="process-math">\(\left( {\exists x \in \mathbb{Z}} \right)\left( {\exists y \in \mathbb{Z}} 
+\right)\left( {x + y \ne 0} \right)\text{.}\)</span></p>
+<p id="p-1012">There exist integers <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> such that <span class="process-math">\(x + y \ne 0\text{.}\)</span></p>
+</div></div>
+</div></article></section><section class="subsection" id="subsection-31"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Writing Guideline</span>
+</h3>
+<p id="p-1013">Try to use English and minimize the use of cumbersome notation. Do not use the special symbols for quantifiers <span class="process-math">\(\forall\)</span> (for all), <span class="process-math">\(\exists\)</span> (there exists), <span class="process-math">\(\mathrel\backepsilon\)</span> (such that), or <span class="process-math">\(\therefore\)</span> (therefore) in formal mathematical writing. It is often easier to write and usually easier to read, if the English words are used instead of the symbols. For example, why make the reader interpret</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\left( \forall x \in \R \right) \left( \exists y \in \R \right)\left( x + y = 0 \right)
+\end{equation*}
+</div>
+<p class="continuation">when it is possible to write <blockquote class="blockquote" id="blockquote-71">For each real number <span class="process-math">\(x\text{,}\)</span> there exists a real number <span class="process-math">\(y\)</span> such that <span class="process-math">\(x + y = 0\text{,}\)</span>
+</blockquote> or, more succinctly (if appropriate), <blockquote class="blockquote" id="blockquote-72">Every real number has an additive inverse.</blockquote></p></section><section class="exercises" id="exercises-6"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exer_sec24-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-85"><p id="p-1014">For each of the following, write the statement as an English sentence and then explain why the statement is false.</p></div>
+<article class="task exercise-like" id="task-329"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1015"><span class="process-math">\(\left(\exists x \in \mathbb{Q} \right) \left( x^2 - 3x - 7 = 0 \right)\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-91" id="answer-91"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-91"><div class="answer solution-like"><p id="p-1016">There exists a rational number <span class="process-math">\(x\)</span> such that <span class="process-math">\(x^2 - 3x - 7 = 0\text{.}\)</span> This statement is false since the solutions of the equation are <span class="process-math">\(x = \dfrac{3 \pm \sqrt{37}}{2}\text{,}\)</span> which are irrational numbers.</p></div></div>
+</div></article><article class="task exercise-like" id="task-330"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1017"><span class="process-math">\(\left( \exists x \in \mathbb{R} \right) \left( x^2 + 1 = 0 \right)\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-92" id="answer-92"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-92"><div class="answer solution-like"><p id="p-1018">There exists a real number <span class="process-math">\(x\)</span> such that <span class="process-math">\(x^2 + 1 = 0\text{.}\)</span> This statement is false since the only solutions of the equation are <span class="process-math">\(i\)</span> and <span class="process-math">\(-i\text{,}\)</span> which are not real numbers.</p></div></div>
+</div></article><article class="task exercise-like" id="task-331"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1019"><span class="process-math">\(\left( \exists m \in \N \right) \left( m^2 \lt 1 \right)\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-93" id="answer-93"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-93"><div class="answer solution-like"><p id="p-1020">There exists a natural number <span class="process-math">\(m\)</span> such that <span class="process-math">\(m^2 \lt 1\text{.}\)</span> This statement is false because if <span class="process-math">\(m\)</span> is a natural number, then <span class="process-math">\(m \geq 1\)</span> and hence, <span class="process-math">\(m^2 \geq 1\text{.}\)</span></p></div></div>
+</div></article></article><article class="exercise exercise-like" id="exer_sec24-2new"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-86"><p id="p-1021">For each of the following, use a counterexample to show that the statement is false. Then write the negation of the statement in English, without using symbols for quantifiers.</p></div>
+<article class="task exercise-like" id="task-332"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1022"><span class="process-math">\(\left( {\forall m \in \mathbb{Z}} \right)\left( {m^2 \text{ is even } } \right)\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-94" id="answer-94"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-94"><div class="answer solution-like"><p id="p-1023"><span class="process-math">\(m = 1\)</span> is a counterexample. The negation is: There exists a natural number <span class="process-math">\(m\)</span> such that <span class="process-math">\(m^2\)</span> is not even or there exists a natural number <span class="process-math">\(m\)</span> such that <span class="process-math">\(m^2\)</span> is odd.</p></div></div>
+</div></article><article class="task exercise-like" id="task-333"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1024"><span class="process-math">\(\left( {\forall x \in \mathbb{R}} \right)\left( {x^2 &gt; 0} \right)\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-95" id="answer-95"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-95"><div class="answer solution-like"><p id="p-1025"><span class="process-math">\(x = 0\)</span> is a counterexample. The negation is: There exists a real number <span class="process-math">\(x\)</span> such that <span class="process-math">\(x^2 \leq 0\text{.}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-334"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1026">For each real number <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(\sqrt{x} \in \R\text{.}\)</span></p></article><article class="task exercise-like" id="task-335"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-1027"><span class="process-math">\(\left( \forall m \in \Z \right) \left( \dfrac{m}{3} \in \Z \right)\text{.}\)</span></p></article><article class="task exercise-like" id="task-336"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-1028"><span class="process-math">\(\left( {\forall a \in \mathbb{Z}} \right)\left( {\sqrt {a^2 } = a} \right)\text{.}\)</span></p></article><article class="task exercise-like" id="task-337"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<p id="p-1029"><span class="process-math">\(\left( {\forall x \in \mathbb{R}} \right)\left( {\tan ^2 x + 1 = \sec ^2 x} 
+\right)\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-96" id="answer-96"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-96"><div class="answer solution-like"><p id="p-1030"><span class="process-math">\(x = \dfrac{\pi}{2}\)</span> is a counterexample. The negation is: There exists a real number <span class="process-math">\(x\)</span> such that <span class="process-math">\(\tan^2 x + 1 \ne \sec^2 x\text{.}\)</span></p></div></div>
+</div></article></article><article class="exercise exercise-like" id="exer_sec24-2"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-87">
+<p id="p-1031">For each of the following statements</p>
+<ul class="disc">
+<li id="li-163"><p id="p-1032">Write the statement as an English sentence that does not use the symbols for quantifiers.</p></li>
+<li id="li-164"><p id="p-1033">Write the negation of the statement in symbolic form in which the negation symbol is not used.</p></li>
+<li id="li-165"><p id="p-1034">Write a useful negation of the statement in an English sentence that does not use the symbols for quantifiers.</p></li>
+</ul>
+</div>
+<article class="task exercise-like" id="task-338"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1035"><span class="process-math">\(\left( {\exists x \in \mathbb{Q}} \right)\left( {x &gt; \sqrt 2 } \right)\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-97" id="answer-97"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-97"><div class="answer solution-like"><p id="p-1036">There exists a rational number <span class="process-math">\(x\)</span> such that <span class="process-math">\(x &gt; \sqrt{2}\text{.}\)</span> The negation is <span class="process-math">\(\left( {\forall x \in \mathbb{Q}} \right)
+\left( {x \leq \sqrt 2 } \right)\text{,}\)</span> which is, For each rational number <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(x \le \sqrt{2}\text{.}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-339"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1037"><span class="process-math">\(\left( {\forall x \in \mathbb{Q}} \right)\left( {x^2 - 2 \ne 0} \right)\text{.}\)</span></p></article><article class="task exercise-like" id="task-340"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1038"><span class="process-math">\(\left( {\forall x \in \mathbb{Z}} \right)\left( {x\text{ is even or } x\text{ is odd } } 
+\right)\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-98" id="answer-98"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-98"><div class="answer solution-like"><p id="p-1039">For each integer <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(x\)</span> is even or <span class="process-math">\(x\)</span> is odd. The negation is <span class="process-math">\(\left( \exists x \in \mathbb{Z} \right) \left( x 
+\text{ is odd and \(x\) is even }  \right)\text{,}\)</span> which is, There exists an integer <span class="process-math">\(x\)</span> such that <span class="process-math">\(x\)</span> is odd and <span class="process-math">\(x\)</span> is even.</p></div></div>
+</div></article><article class="task exercise-like" id="task-341"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-1040"><span class="process-math">\(\left( {\exists x \in \mathbb{Q}} \right)\left( {\sqrt 2 \lt x \lt \sqrt 3 } 
+\right)\text{.}\)</span></p>
+<p id="p-1041">Note: The sentence “<span class="process-math">\(\sqrt 2 \lt x \lt \sqrt 3\)</span>” is actually a conjuction. It means <span class="process-math">\(\sqrt 2 \lt x\)</span> and <span class="process-math">\(x \lt \sqrt 3\text{.}\)</span></p></article><article class="task exercise-like" id="task-342"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-1042"><span class="process-math">\(\left( {\forall x \in \mathbb{Z}} \right)\left( {\text{ If } x^2 \text{ is odd,
+then } x\text{ is odd } } \right)\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-99" id="answer-99"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-99"><div class="answer solution-like"><p id="p-1043">For each integer <span class="process-math">\(x\text{,}\)</span> if <span class="process-math">\(x^2\)</span> is odd, then <span class="process-math">\(x\)</span> is odd. The negation is <span class="process-math">\(\left( \exists x \in \mathbb{Z} \right) \left( x^2 
+\text{ is odd and \(x\) is even }  \right)\text{,}\)</span> which is, There exists an integer <span class="process-math">\(x\)</span> such that <span class="process-math">\(x^2\)</span> is odd and <span class="process-math">\(x\)</span> is even.</p></div></div>
+</div></article><article class="task exercise-like" id="task-343"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<p id="p-1044"><span class="process-math">\(\left( {\forall n \in \mathbb{N}} \right)\)</span> [If <span class="process-math">\(n\)</span> is a perfect square, then <span class="process-math">\(\left( {2^n - 1} \right)\)</span> is not a prime number].</p></article><article class="task exercise-like" id="task-344"><h5 class="heading"><span class="codenumber">(g)</span></h5>
+<p id="p-1045"><span class="process-math">\(\left( {\forall n \in \mathbb{N}} \right)\left( {n^2 - n + 41} \text{ is a prime number 
+} \right)\text{.}\)</span></p></article><article class="task exercise-like" id="task-345"><h5 class="heading"><span class="codenumber">(h)</span></h5>
+<p id="p-1046"><span class="process-math">\(\left( {\exists x \in \mathbb{R}} \right) \left( {\cos ( {2x} ) = 2( {\cos x} )} 
+\right)\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-100" id="answer-100"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-100"><div class="answer solution-like"><p id="p-1047">There exists a real number <span class="process-math">\(x\)</span> such that <span class="process-math">\(\cos \left( 2x \right) = 2 \left( \cos x \right)\text{.}\)</span> The negation is <span class="process-math">\(\left( {\forall x \in \mathbb{R}} \right) \left( \cos \left( 2x \right) \ne 2 \left( \cos x \right) \right)\text{,}\)</span> which is, For each real number <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(\cos \left( 2x \right) \ne 2 \left( \cos x \right)\text{.}\)</span></p></div></div>
+</div></article></article><article class="exercise exercise-like" id="exer_sec24-3"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-88"><p id="p-1048">Write each of the following statements as an English sentence that does not use the symbols for quantifiers.</p></div>
+<article class="task exercise-like" id="task-346"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1049"><span class="process-math">\(\left( {\exists m} \in \Z \right)\left( {\exists n} \in \Z \right)\left( {m &gt; n} 
+\right)\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-101" id="answer-101"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-101"><div class="answer solution-like"><p id="p-1050">There exist integers <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> such that <span class="process-math">\(m &gt; n\text{.}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-347"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1051"><span class="process-math">\(\left( {\exists m} \in \Z \right)\left( {\forall n} \in \Z \right)\left( {m &gt; n} 
+\right)\)</span></p></article><article class="task exercise-like" id="task-348"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1052"><span class="process-math">\(\left( {\forall m} \in \Z \right)\left( {\exists n} \in \Z \right)\left( {m &gt; n} 
+\right)\)</span></p></article><article class="task exercise-like" id="task-349"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-1053"><span class="process-math">\(\left( {\forall m}\in \Z \right)\left( {\forall n} \in \Z \right)\left( {m &gt; n} 
+\right)\)</span></p></article><article class="task exercise-like" id="task-350"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-1054"><span class="process-math">\(\left( {\exists n} \in \Z \right)\left( {\forall m} \in \Z \right)\left( {m^2 &gt; n} 
+\right)\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-102" id="answer-102"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-102"><div class="answer solution-like"><p id="p-1055">There exists an integer <span class="process-math">\(n\)</span> such that for each integer <span class="process-math">\(m\text{,}\)</span> <span class="process-math">\(m^2 &gt; n\text{.}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-351"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<p id="p-1056"><span class="process-math">\(\left( {\forall n} \in \Z \right)\left( {\exists m} \in \Z \right)\left( {m^2 &gt; n} 
+\right)\)</span></p></article></article><article class="exercise exercise-like" id="exer_sec24-4"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<p id="p-1057">Write the negation of each statement in <a href="" class="xref" data-knowl="./knowl/exer_sec24-3.html" title="Exercise 4">Exercise 4</a> in symbolic form and as an English sentence that does not use the symbols for quantifiers.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-103" id="answer-103"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-103"><div class="answer solution-like">
+<p id="p-1058">(a): <span class="process-math">\(\left( \forall m \right) \left( \forall n \right) \left( m \le n \right)\text{.}\)</span> For all integers <span class="process-math">\(m\)</span> and <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(m \le n\text{.}\)</span></p>
+<p id="p-1059">(e): <span class="process-math">\(\left( \forall n \right) \left( \exists m \right) \left( m^2 \le n \right)\text{.}\)</span> For each integer <span class="process-math">\(n\text{,}\)</span> there exists an integer <span class="process-math">\(m\)</span> such that  <span class="process-math">\(m^2 \le n\text{.}\)</span></p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="Exer_quantifier1"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-89">
+<p id="p-1060">Assume that the universal set is  <span class="process-math">\(\mathbb{Z}\text{.}\)</span> Consider the following sentence:</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\left( {\exists t \in \mathbb{Z}} \right)\left( {t \cdot x = 20} \right)\text{.}
+\end{equation*}
+</div>
+</div>
+<article class="task exercise-like" id="task-352"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1061">Explain why this sentence is an open sentence and not a statement.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-104" id="answer-104"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-104"><div class="answer solution-like"><p id="p-1062">It is not a statement since <span class="process-math">\(x\)</span> is an unquantified variable.</p></div></div>
+</div></article><article class="task exercise-like" id="task-353"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1063">If 5 is substituted for <span class="process-math">\(x\text{,}\)</span> is the resulting sentence a statement? If it is a statement, is the statement true or false?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-105" id="answer-105"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-105"><div class="answer solution-like"><p id="p-1064">It is a true statement.</p></div></div>
+</div></article><article class="task exercise-like" id="task-354"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1065">If 8 is substituted for <span class="process-math">\(x\text{,}\)</span> is the resulting sentence a statement? If it is a statement, is the statement true or false?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-106" id="answer-106"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-106"><div class="answer solution-like"><p id="p-1066">It is a false statement.</p></div></div>
+</div></article><article class="task exercise-like" id="task-355"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-1067">If <span class="process-math">\(-2\)</span> is substituted for <span class="process-math">\(x\text{,}\)</span> is the resulting sentence a statement? If it is a statement, is the statement true or false?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-107" id="answer-107"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-107"><div class="answer solution-like"><p id="p-1068">It is a true statement.</p></div></div>
+</div></article><article class="task exercise-like" id="task-356"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-1069">What is the truth set of the open sentence <span class="process-math">\(\left( {\exists t \in \mathbb{Z}} 
+\right)\left( {t \cdot x = 20} \right)\text{?}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-108" id="answer-108"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-108"><div class="answer solution-like"><p id="p-1070"><span class="process-math">\(\left\{ -20, -10, -5, -4, -2, -1, 1, 2, 4, 5, 10, 20 \right\}\)</span></p></div></div>
+</div></article></article><article class="exercise exercise-like" id="Exer_quantifier"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-90">
+<p id="p-1071">Assume that the universal set is  <span class="process-math">\(\mathbb{R}\text{.}\)</span> Consider the following sentence:</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\left( {\exists t \in \mathbb{R}} \right)\left( {t \cdot x = 20} \right)\text{.}
+\end{equation*}
+</div>
+</div>
+<article class="task exercise-like" id="task-357"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1072">Explain why this sentence is an open sentence and not a statement.</p></article><article class="task exercise-like" id="task-358"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1073">If 5 is substituted for <span class="process-math">\(x\text{,}\)</span> is the resulting sentence a statement? If it is a statement, is the statement true or false?</p></article><article class="task exercise-like" id="task-359"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1074">If <span class="process-math">\(\pi\)</span> is substituted for <span class="process-math">\(x\text{,}\)</span> is the resulting sentence a statement? If it is a statement, is the statement true or false?</p></article><article class="task exercise-like" id="task-360"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-1075">If <span class="process-math">\(0\)</span> is substituted for <span class="process-math">\(x\text{,}\)</span> is the resulting sentence a statement? If it is a statement, is the statement true or false?</p></article><article class="task exercise-like" id="task-361"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-1076">What is the truth set of the open sentence <span class="process-math">\(\left( {\exists t \in \mathbb{R}} 
+\right)\left( {t \cdot x = 20} \right)\text{?}\)</span></p></article></article><article class="exercise exercise-like" id="exer-z-star"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-91"><p id="p-1077">Let <span class="process-math">\(\Z^*\)</span> be the set of all nonzero integers.</p></div>
+<article class="task exercise-like" id="exer-z-stara"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1078">Use a counterexample to explain why the following statement is false: <blockquote class="blockquote" id="blockquote-73">For each <span class="process-math">\(x \in \Z^*\text{,}\)</span> there exists a <span class="process-math">\(y \in \Z^*\)</span> such that <span class="process-math">\(xy = 1\text{.}\)</span>
+</blockquote></p></article><article class="task exercise-like" id="exer-z-starb"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1079">Write the statement in <a href="" class="xref" data-knowl="./knowl/exer-z-stara.html" title="Task 8.a">Task 8.a</a> in symbolic form using appropriate symbols for quantifiers.</p></article><article class="task exercise-like" id="exer-z-starc"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1080">Write the negation of the statement in <a href="" class="xref" data-knowl="./knowl/exer-z-starb.html" title="Task 8.b">Task 8.b</a> in symbolic form using appropriate symbols for quantifiers.</p></article><article class="task exercise-like" id="task-365"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-1081">Write the negation from <a href="" class="xref" data-knowl="./knowl/exer-z-starc.html" title="Task 8.c">Task 8.c</a> in English without using the symbols for quantifiers.</p></article></article><article class="exercise exercise-like" id="exercise-132"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-92"><p id="p-1082">An integer <span class="process-math">\(m\)</span> is said to have the <dfn class="terminology">divides property</dfn> provided that for all integers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> if <span class="process-math">\(m\)</span> divides <span class="process-math">\(ab\text{,}\)</span> then <span class="process-math">\(m\)</span> divides <span class="process-math">\(a\)</span> or <span class="process-math">\(m\)</span> divides <span class="process-math">\(b\text{.}\)</span></p></div>
+<article class="task exercise-like" id="task-366"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1083">Using the symbols for quantifiers, write what it means to say that the integer <span class="process-math">\(m\)</span> has the divides property.</p></article><article class="task exercise-like" id="task-367"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1084">Using the symbols for quantifiers, write what it means to say that the integer <span class="process-math">\(m\)</span> does not have the divides property.</p></article><article class="task exercise-like" id="task-368"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1085">Write an English sentence stating what it means to say that the integer <span class="process-math">\(m\)</span> does not have the divides property.</p></article></article><article class="exercise exercise-like" id="exer_24-increasing"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-93"><p id="p-1086">In calculus, we define a function <span class="process-math">\(f\)</span> with domain <span class="process-math">\(\mathbb{R}\)</span> to be <dfn class="terminology">strictly increasing</dfn> provided that for all real numbers <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{,}\)</span> <span class="process-math">\(f\left( x \right) \lt f\left( y \right)\)</span> whenever <span class="process-math">\(x \lt y\text{.}\)</span> Complete each of the following sentences using the appropriate symbols for quantifiers:</p></div>
+<article class="task exercise-like" id="task-369"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1087">A function <span class="process-math">\(f\)</span> with domain <span class="process-math">\(\mathbb{R}\)</span> is strictly increasing provided that <span class="process-math">\(\ldots \text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-109" id="answer-109"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-109"><div class="answer solution-like"><p id="p-1088">A function <span class="process-math">\(f\)</span> with domain <span class="process-math">\(\R\)</span> is strictly increasing provided that <span class="process-math">\(\left( \forall x, y \in \R \right) \left[ \left( x \lt  y \right) \to 
+\left( f(x) \lt  f(y) \right) \right]\text{.}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-370"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1089">A function <span class="process-math">\(f\)</span> with domain <span class="process-math">\(\mathbb{R}\)</span> is not strictly increasing provided that <span class="process-math">\(\ldots \text{.}\)</span></p></article><article class="task exercise-like" id="task-371"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1090">Complete the following sentence in English without using symbols for quantifiers:</p>
+<p id="p-1091">A function <span class="process-math">\(f\)</span> with domain <span class="process-math">\(\mathbb{R}\)</span> is not strictly increasing provided that <span class="process-math">\(\ldots \text{.}\)</span></p></article></article><article class="exercise exercise-like" id="exer_24-continuous"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-94">
+<p id="p-1092">In calculus, we define a function <span class="process-math">\(f\)</span> to be <dfn class="terminology">continuous</dfn> at a real number <span class="process-math">\(a\)</span> provided that for every <span class="process-math">\(\varepsilon &gt; 0\text{,}\)</span> there exists a <span class="process-math">\(\delta &gt; 0\)</span> such that if <span class="process-math">\(\left| {x - a} \right| \lt \delta\text{,}\)</span> then <span class="process-math">\(\left| {f\left( x \right) - f\left( a \right)} \right| \lt \varepsilon\text{.}\)</span></p>
+<p id="p-1093">Note: The symbol <span class="process-math">\(\varepsilon\)</span> is the lowercase Greek letter epsilon, and the symbol <span class="process-math">\(\delta\)</span> is the lowercase Greek letter delta.</p>
+<p id="p-1094">Complete each of the following sentences using the appropriate symbols for quantifiers:</p>
+</div>
+<article class="task exercise-like" id="task-372"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1095">A function <span class="process-math">\(f\)</span> is continuous at the real number <span class="process-math">\(a\)</span> provided that <span class="process-math">\(\ldots \text{.}\)</span></p></article><article class="task exercise-like" id="task-373"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1096">A function <span class="process-math">\(f\)</span> is not continuous at the real number <span class="process-math">\(a\)</span> provided that <span class="process-math">\(\ldots \text{.}\)</span></p></article><article class="task exercise-like" id="task-374"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1097">Complete the following sentence in English without using symbols for quantifiers:</p>
+<p id="p-1098">A function <span class="process-math">\(f\)</span> is not continuous at the real number <span class="process-math">\(a\)</span> provided that <span class="process-math">\(\ldots \text{.}\)</span></p></article></article><article class="exercise exercise-like" id="exer_advanced"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-95"><p id="p-1099">The following exercises contain definitions or results from more advanced mathematics courses. Even though we may not understand all of the terms involved, it is still possible to recognize the structure of the given statements and write a meaningful negation of that statement.</p></div>
+<article class="task exercise-like" id="task-375"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1100">In abstract algebra, an operation <span class="process-math">\(*\)</span> on a set <span class="process-math">\(A\)</span> is called a <dfn class="terminology">commutative operation</dfn> provided that for all <span class="process-math">\(x, y \in A\text{,}\)</span> <span class="process-math">\(x * y = y * x\text{.}\)</span> Carefully explain what it means to say that an operation <span class="process-math">\(*\)</span> on a set <span class="process-math">\(A\)</span> is not a commutative operation.</p></article><article class="task exercise-like" id="task-376"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1101">In abstract algebra, a <dfn class="terminology">ring</dfn> consists of a nonempty set <span class="process-math">\(R\)</span> and two operations called addition and multiplication. A nonzero element <span class="process-math">\(a\)</span> in a ring <span class="process-math">\(R\)</span> is called a <em class="emphasis">zero divisor</em> provided that there exists a nonzero element <span class="process-math">\(b\)</span> in <span class="process-math">\(R\)</span> such that <span class="process-math">\(ab = 0\)</span> or <span class="process-math">\(ba = 0\text{.}\)</span> Carefully explain what it means to say that a nonzero element <span class="process-math">\(a\)</span> in a ring <span class="process-math">\(R\)</span> is not a zero divisor.</p></article><article class="task exercise-like" id="task-377"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1102">A set <span class="process-math">\(M\)</span> of real numbers is called a <dfn class="terminology">neighborhood</dfn> of a real number <span class="process-math">\(a\)</span> provided that there exists a positive real number <span class="process-math">\(\varepsilon\)</span> such that the open interval <span class="process-math">\((a - \varepsilon,
+a + \varepsilon)\)</span> is contained in <span class="process-math">\(M\text{.}\)</span> Carefully explain what it means to say that a set <span class="process-math">\(M\)</span> is not a neighborhood of a real number <span class="process-math">\(a\text{.}\)</span></p></article><article class="task exercise-like" id="task-378"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-1103">In advanced calculus, a sequence of real numbers <span class="process-math">\(\left(x_1, x_2, \ldots,
+x_k, \ldots \right)\)</span> is called a <dfn class="terminology">Cauchy sequence</dfn> provided that for each positive real number <span class="process-math">\(\varepsilon\text{,}\)</span> there exists a natural number <span class="process-math">\(N\)</span> such that for all <span class="process-math">\(m,
+n \in \N\text{,}\)</span> if <span class="process-math">\(m &gt; N\)</span> and <span class="process-math">\(n &gt; N\text{,}\)</span> then <span class="process-math">\(\left| x_n - x_m \right| \lt \varepsilon\text{.}\)</span> Carefully explain what it means to say that the sequence of real numbers <span class="process-math">\(\left(x_1, x_2, \ldots,
+x_k, \ldots \right)\)</span> is not a Cauchy sequence.</p></article></article><article class="activity project-like" id="exer_prime"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">8</span><span class="period">.</span><span class="space"> </span><span class="title">Prime Numbers.</span>
+</h4>
+<div class="introduction" id="introduction-96"><p id="p-1104">The following definition of a prime number is very important in many areas of mathematics. We will use this definition at various places in the text. It is introduced now as an example of how to work with a definition in mathematics. <article class="assemblage assemblage-like" id="D_prime"><h5 class="heading"><span class="title">Definition.</span></h5>
+<p id="p-1105">A natural number <span class="process-math">\(p\)</span> is a <dfn class="terminology">prime number</dfn> provided that it is greater than 1 and the only natural numbers that are factors of <span class="process-math">\(p\)</span> are 1 and <span class="process-math">\(p\text{.}\)</span> A natural number other than 1 that is not a prime number is a <dfn class="terminology">composite number</dfn>. The number 1 is neither prime nor composite.</p></article> Using the definition of a prime number, we see that 2, 3, 5, and 7 are prime numbers. Also, 4 is a composite number since <span class="process-math">\(4 = 2 \cdot 2\text{;}\)</span> 10 is a composite number since <span class="process-math">\(10 = 2 \cdot 5\text{;}\)</span> and 60 is a composite number since <span class="process-math">\(60 = 4 \cdot 15\text{.}\)</span></p></div>
+<article class="task exercise-like" id="task-379"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1106">Give examples of four natural numbers other than 2, 3, 5, and 7 that are prime numbers.</p></article><article class="task exercise-like" id="task-380"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1107">Explain why a natural number <span class="process-math">\(p\)</span> that is greater than 1 is a prime number provided that <blockquote class="blockquote" id="blockquote-74">For all <span class="process-math">\(d \in \mathbb{N}\text{,}\)</span> if <span class="process-math">\(d\)</span> is a factor of <span class="process-math">\(p\text{,}\)</span> then <span class="process-math">\(d = 1\)</span> or <span class="process-math">\(d = p\text{.}\)</span>
+</blockquote></p></article><article class="task exercise-like" id="task-381"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1108">Give examples of four natural numbers that are composite numbers and explain why they are composite numbers.</p></article><article class="task exercise-like" id="task-382"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-1109">Write a useful description of what it means to say that a natural number is a composite number (other than saying that it is not prime).</p></article></article><article class="activity project-like" id="A_upper"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">9</span><span class="period">.</span><span class="space"> </span><span class="title">Upper Bounds for Subsets of <span class="process-math">\(\boldsymbol{\R}\)</span>.</span>
+</h4>
+<div class="introduction" id="introduction-97"><p id="p-1110">Let <span class="process-math">\(A\)</span> be a subset of the real numbers. A number <span class="process-math">\(b\)</span> is called an <dfn class="terminology">upper bound</dfn> for the set <span class="process-math">\(A\)</span> provided that for each element <span class="process-math">\(x\)</span> in <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(x \leq b\text{.}\)</span></p></div>
+<article class="task exercise-like" id="task-383"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1111">Write this definition in symbolic form by completing the following: Let <span class="process-math">\(A\)</span> be a subset of the real numbers. A number <span class="process-math">\(b\)</span> is called an upper bound for the set <span class="process-math">\(A\)</span> provided that <span class="process-math">\(\ldots \text{.}\)</span></p></article><article class="task exercise-like" id="task-384"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1112">Give examples of three different upper bounds for the set <span class="process-math">\(A = \left\{ x \in \mathbb{R} \mid 1 \leq x \leq 3 \right\}\text{.}\)</span></p></article><article class="task exercise-like" id="task-385"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1113">Does the set <span class="process-math">\(B = \left\{ x \in \mathbb{R} \mid x &gt; 0 \right\}\)</span> have an upper bound? Explain.</p></article><article class="task exercise-like" id="A_upper4"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-1114">Give examples of three different real numbers that are not upper bounds for the set <span class="process-math">\(A = \left\{ x \in \mathbb{R} \mid 1 \leq x \leq 3 \right\}\text{.}\)</span></p></article><article class="task exercise-like" id="task-387"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-1115">Complete the following in symbolic form: “Let <span class="process-math">\(A\)</span> be a subset of <span class="process-math">\(\R\text{.}\)</span> A number <span class="process-math">\(b\)</span> is not an upper bound for the set <span class="process-math">\(A\)</span> provided that <span class="process-math">\(\ldots \text{.}\)</span>”</p></article><article class="task exercise-like" id="A_upper6"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<p id="p-1116">Without using the symbols for quantifiers, complete the following sentence: “Let <span class="process-math">\(A\)</span> be a subset of <span class="process-math">\(\R\text{.}\)</span> A number <span class="process-math">\(b\)</span> is not an upper bound for the set <span class="process-math">\(A\)</span> provided that <span class="process-math">\(\ldots \text{.}\)</span>”</p></article><article class="task exercise-like" id="task-389"><h5 class="heading"><span class="codenumber">(g)</span></h5>
+<p id="p-1117">Are your examples in <a href="" class="xref" data-knowl="./knowl/A_upper4.html" title="Task 9.d">Task 9.d</a> consistent with your work in <a href="" class="xref" data-knowl="./knowl/A_upper6.html" title="Task 9.f">Task 9.f</a>? Explain.</p></article></article><article class="activity project-like" id="exer_leastupper"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">10</span><span class="period">.</span><span class="space"> </span><span class="title">Least Upper Bound for a Subset of <span class="process-math">\(\boldsymbol{\R}\)</span>.</span>
+</h4>
+<div class="introduction" id="introduction-98">
+<p id="p-1118">In <a href="" class="xref" data-knowl="./knowl/A_upper.html" title="Activity 9: Upper Bounds for Subsets of \(\boldsymbol{\R}\)">Activity 9</a>, we introduced the definition of an upper bound for a subset of the real numbers. Assume that we know this definition and that we know what it means to say that a number is not an upper bound for a subset of the real numbers.</p>
+<p id="p-1119">Let <span class="process-math">\(A\)</span> be a subset of <span class="process-math">\(\mathbb{R}\text{.}\)</span> A real number <span class="process-math">\(\alpha\)</span> is the <dfn class="terminology">least upper bound</dfn> for <span class="process-math">\(A\)</span> provided that <span class="process-math">\(\alpha\)</span> is an upper bound for <span class="process-math">\(A\text{,}\)</span> and if <span class="process-math">\(\beta\)</span> is an upper bound for <span class="process-math">\(A\text{,}\)</span> then <span class="process-math">\(\alpha \leq \beta\text{.}\)</span></p>
+<p id="p-1120">Note: The symbol <span class="process-math">\(\alpha\)</span> is the lowercase Greek letter alpha, and the symbol <span class="process-math">\(\beta\)</span> is the lowercase Greek letter beta.</p>
+<p id="p-1121">If we define <span class="process-math">\(P\left( x \right)\)</span> to be “<span class="process-math">\(x\)</span> is an upper bound for <span class="process-math">\(A\text{,}\)</span>” then we can write the definition for least upper bound as follows: <blockquote class="blockquote" id="blockquote-75">A real number <span class="process-math">\(\alpha\)</span> is the <dfn class="terminology">least upper bound</dfn> for <span class="process-math">\(A\)</span> provided that <span class="process-math">\(P\left( \alpha \right) \wedge 
+\left[ {\left( {\forall \beta \in \mathbb{R}} \right)\left( {P\left( \beta \right) \to \left( 
+{\alpha \leq \beta } \right)} \right)} \right]\text{.}\)</span>
+</blockquote></p>
+</div>
+<article class="task exercise-like" id="task-390"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-1122">Why is a universal quantifier used for the real number <span class="process-math">\(\beta\text{?}\)</span></p></article><article class="task exercise-like" id="task-391"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-1123">Complete the following sentence in symbolic form: “A real number <span class="process-math">\(\alpha\)</span> is not the least upper bound for <span class="process-math">\(A\)</span> provided that <span class="process-math">\(\ldots \text{.}\)</span>”</p></article><article class="task exercise-like" id="task-392"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-1124">Complete the following sentence as an English sentence: “A real number <span class="process-math">\(\alpha\)</span> is not the least upper bound for <span class="process-math">\(A\)</span> provided that <span class="process-math">\(\ldots \text{.}\)</span>”</p></article></article></section></section></div></main>
+</div>
+</body>
+</html>

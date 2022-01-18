@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-13T17:55:46-05:00       *-->
+<!--*       on 2022-01-18T16:07:08-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,8 +15,39 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Using our standard configuration for a Venn diagram with three sets, regions 1, 2, and 3 are the regions that are shaded for both <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\left( {A \cup B} \right) - C\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\left( {A - C} \right) \cup 
-\left( {B - C} \right)\text{.}\)</span></p>
+<p>We will only prove one of De Morgan's Laws, namely, the one that was explored in <a href="S_setproperties.html#PA_workingwithvenn2" class="internal" title="Beginning Activity: Beginning Activity 1: Exploring a Relationship between Two Sets">Beginning Activty 1</a>. The proofs of the other parts are left as exercises. Let <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(A\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(B\)</span> be subsets of some universal set <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(U\text{.}\)</span> We will prove that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\left( {A \cup B} \right)^c  = A^c  \cap B^c\)</span> by proving that an element is in <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\left( {A \cup B} \right)^c\)</span> if and only if it is in <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(A^c  \cap B^c\text{.}\)</span> So let <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(x\)</span> be in the universal set <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(U\text{.}\)</span> Then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation}
+x \in \left( {A \cup B} \right)^c \text{  if and only if  }  x \notin A \cup B\text{,}\tag{43}
+\end{equation}
+</div>
+<p class="continuation">and</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation}
+x \notin A \cup B\text{  if and only if  } x \notin A\text{  and  } x \notin B\text{.}\tag{44}
+\end{equation}
+</div>
+<p class="continuation">Combining <a href="" class="xref" data-knowl="./knowl/eq_4d.html" title="Equation 43">(43)</a> and <a href="" class="xref" data-knowl="./knowl/eq_4e.html" title="Equation 44">(44)</a>, we see that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation}
+x \in \left( {A \cup B} \right)^c \text{  if and only if  } x \notin A\text{  and  } x 
+\notin B\text{.}\tag{45}
+\end{equation}
+</div>
+<p class="continuation">In addition, we know that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation}
+x \notin A \text{  and  }  x \notin B \text{  if and only if  }  x \in A^c \text{  and  }  
+x \in B^c\text{,}\tag{46}
+\end{equation}
+</div>
+<p class="continuation">and this is true if and only if <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(x \in A^c  \cap B^c\text{.}\)</span> So we can use equation <a href="" class="xref" data-knowl="./knowl/eq_4f.html" title="Equation 45">(45)</a> and equation <a href="" class="xref" data-knowl="./knowl/eq_4g.html" title="Equation 46">(46)</a> to conclude that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+x \in \left( {A \cup B} \right)^c \text{  if and only if  } x \in A^c  \cap B^c\text{,}
+\end{equation*}
+</div>
+<p class="continuation">and, hence, that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\left( {A \cup B} \right)^c  = A^c  \cap B^c\text{.}\)</span></p>
 <span class="incontext"><a href="S_setproperties.html#p-3163">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-13T17:53:47-05:00       *-->
+<!--*       on 2022-01-18T16:05:07-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,8 +15,26 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p> This is a technique that is often used to prove a so-called <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">existence theorem.</dfn> The objective of an existence theorem is to prove that a certain mathematical object exists. That is, the goal is usually to prove a statement of the form <blockquote class="blockquote">There exists an <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(x\)</span> such that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(P( x )\text{.}\)</span>
-</blockquote> For a constructive proof of such a proposition, we actually name, describe, or explain how to construct some object in the universe that makes <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(P( x )\)</span> true.</p>
+<p>As was indicated in <a href="S_moremethods.html" class="internal" title="Section 3.2: More Methods of Proof">Section 3.2</a>, we can sometimes use a logical equivalency to help prove a statement. For example, in order to prove a statement of the form</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation}
+P \to \left( {Q \vee R} \right)\text{,}\tag{13}
+\end{equation}
+</div>
+<p class="continuation">it is sometimes possible to use the logical equivalency</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+\left[ {P \to \left( {Q \vee R} \right)} \right] \equiv \left[ {\left( {P \wedge 
+\mynot  Q} \right) \to R} \right]\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We would then prove the statement</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation}
+\left( {P \wedge \mynot Q} \right) \to R\text{.}\tag{14}
+\end{equation}
+</div>
+<p class="continuation">Most often, this would use a direct proof for statement <a href="" class="xref" data-knowl="./knowl/eq_reviewproofs2.html" title="Equation 14">(14)</a> but other methods could also be used. Because of the logical equivalency, by proving statement <a href="" class="xref" data-knowl="./knowl/eq_reviewproofs2.html" title="Equation 14">(14)</a>, we have also proven the statement <a href="" class="xref" data-knowl="./knowl/eq_reviewproofs1.html" title="Equation 13">(13)</a>.</p>
 <span class="incontext"><a href="S_reviewproofs.html#p-2095">in-context</a></span>
 </body>
 </html>

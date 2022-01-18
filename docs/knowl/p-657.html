@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-13T17:51:18-05:00       *-->
+<!--*       on 2022-01-18T16:02:31-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,9 +15,14 @@
 </head>
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Let <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(a\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(b\)</span> be integers. Suppose we are trying to prove the following: <blockquote class="blockquote">If 3 is a factor of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(a \cdot b\text{,}\)</span> then 3 is a factor of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(a\)</span> or 3 is a factor of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(b\text{.}\)</span>
-</blockquote> Explain why we will have proven this statement if we prove the following: <blockquote class="blockquote">If 3 is a factor of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(a \cdot b\)</span> and 3 is not a factor of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(a\text{,}\)</span> then 3 is a factor of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(b\text{.}\)</span>
-</blockquote></p>
+<p>Although it is possible to use truth tables to show that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(P \to \left( {Q \vee R} \right)\)</span> is logically equivalent to <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\left( {P \wedge \mynot  Q} \right) \to R\text{,}\)</span> we instead use previously proven logical equivalencies to prove this logical equivalency. In this case, it may be easier to start working with <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\left( {P \wedge \mynot  Q} \right) \to R\text{.}\)</span> Start with</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+\left( {P \wedge \mynot  Q} \right) \to R \equiv \mynot 
+\left( P \wedge \mynot Q \right) \vee R\text{,}
+\end{equation*}
+</div>
+<p class="continuation">which is justified by the logical equivalency established in <a href="" class="xref" data-knowl="./knowl/PA_logequiv6.html" title="Exercise 5">Exercise 5</a> of <a href="S_logequiv.html#PA_logequiv" class="internal" title="Beginning Activity: Beginning Activity 1: Logically Equivalent Statements">Beginning Activity 1</a>. Continue by using one of De Morgan's Laws on <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\mynot \left( P \wedge \mynot Q \right)\text{.}\)</span></p>
 <span class="incontext"><a href="S_logequiv.html#p-657">in-context</a></span>
 </body>
 </html>

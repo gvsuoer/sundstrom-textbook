@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-13T17:51:18-05:00       *-->
+<!--*       on 2022-01-18T16:02:31-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,16 @@
 </head>
 <body class="ignore-math">
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>For this, let <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(P\)</span> be, “3 is a factor of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(a \cdot b\text{,}\)</span>” let <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(Q\)</span> be, “3 is a factor of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(a\text{,}\)</span>” and let <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(R\)</span> be, “3 is a factor of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(b\text{.}\)</span>” Then the stated proposition is written in the form <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(P \to \left( {Q \vee R} \right)\text{.}\)</span> Since this is logically equivalent to <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\left( {P \wedge \mynot Q} \right) \to R\text{,}\)</span> if we prove that if 3 is a factor of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(a \cdot b\)</span> and 3 is not a factor of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(a\text{,}\)</span> then 3 is a factor of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(b\text{,}\)</span> then we have proven the original proposition.</p>
+<p>Starting with the suggested equivalency, we obtain</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+\left( {P \wedge \mynot  Q} \right) \to R \amp \equiv \mynot \left( P 
+\wedge \mynot Q \right) \vee R\\
+\amp \equiv \left( \mynot P \vee \mynot \left( \mynot Q \right) \right) \vee R\\
+\amp \equiv \mynot P \vee \left( Q \vee R \right)\\
+\amp \equiv P \to \left( Q \vee R \right)
+\end{align*}
+</div>
 <span class="incontext"><a href="S_logequiv.html#p-658">in-context</a></span>
 </body>
 </html>

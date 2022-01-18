@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-13T17:57:38-05:00       *-->
+<!--*       on 2022-01-18T16:09:00-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,8 +14,31 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h6 class="heading"><span class="type">Paragraph</span></h6>
-<p><span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(F\x \R \to \R\)</span> by <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(F(x) = ( x^2 +3 )^3\)</span></p>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<p>We use the <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">chain rule</dfn> in calculus to find the derivative of a composite function. The first step in the process is to recognize a given function as a composite function. This can be done in many ways, but the work in <a href="S_compositionoffunctions.html#PA_verbaldescriptions" class="internal" title="Beginning Activity: Beginning Activity 2: Verbal Descriptions of Functions">Beginning Activity 2</a> can be used to decompose a function in a way that works well with the chain rule. The use of the terms “inner function” and “outer function” can also be helpful. The idea is that we use the last step in the process to represent the outer function, and the steps prior to that to represent the inner function. So for the function,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation*}
+f\x \mathbb{R} \to \mathbb{R}\text{  by  } f( x ) = ( {3x + 2} )^3\text{,}
+\end{equation*}
+</div>
+<p class="continuation">the last step in the verbal description table was to cube the result. This means that we will use the function <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(g\)</span> (the cubing function) as the outer function and will use the prior steps as the inner function. We will denote the inner function by <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(h\text{.}\)</span> So we let <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(h\x \R \to \R\)</span> by <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(h( x ) = 3x + 2\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(g\x \R \to \R\)</span> by <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(g( x ) = x^3\text{.}\)</span> Then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+( {g \circ h} )( x ) \amp = g\left( {h( x )} \right)\\
+\amp = g( {3x + 2} )\\
+\amp = ( {3x + 2} )^3\\
+\amp = f( x )\text{.}
+\end{align*}
+</div>
+<p class="continuation">We see that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(g \circ h = f\)</span> and, hence, we have “decomposed” the function <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(f\text{.}\)</span> It should be noted that there are other ways to write the function <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(f\)</span> as a composition of two functions, but the way just described is the one that works well with the chain rule. In this case, the chain rule gives</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+f'(x) \amp = ( g \circ h )'(x)\\
+\amp = g'(h(x))\; h'(x)\\
+\amp = 3(h(x))^2 \cdot 3\\
+\amp = 9 (3x + 2)^2
+\end{align*}
+</div>
 <span class="incontext"><a href="S_compositionoffunctions.html#p-4092">in-context</a></span>
 </body>
 </html>

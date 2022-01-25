@@ -11,6 +11,7 @@
       <source>source/main.ptx</source>
       <publication>publication/publication.ptx</publication>
       <output-dir>output/html</output-dir>
+      <stringparam key="html.css.extra" value="external/custom_style.css"/>
       <!-- <stringparam key="html.css.extra" value="../../assets/custom_css.css"/> For experimentation-->
     </target>
     <target name="latex">
@@ -24,12 +25,14 @@
       <stringparam key="exercise.inline.hint" value="no"/>
       <stringparam key="latex.geometry" value="paperheight=10in, paperwidth=8in, top=1in, bottom=1in, outer=1.4in, inner=1.8in"/>
       <stringparam key="latex.font.size" value="11pt"/>
+      <xsl>xsl/custom-latex.xsl</xsl>
     </target>
     <target name="pdf">
       <format>pdf</format>
       <source>source/main.ptx</source>
       <publication>publication/publication.ptx</publication>
       <output-dir>output/pdf</output-dir>
+      <xsl>xsl/custom-latex.xsl</xsl>
     </target>
   </targets>
   <executables>

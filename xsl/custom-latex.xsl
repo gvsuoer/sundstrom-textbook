@@ -95,19 +95,22 @@
 
 <xsl:param name="latex.preamble.late">
   <xsl:text>%This should load all the style information that ptx does not.&#xa;</xsl:text>
+    <xsl:text>% Change list titles to bold</xsl:text>
     <xsl:text>\renewcommand{\lititle}[1]{{\textbf{#1}}}&#xa;</xsl:text>
-    <!-- <xsl:text>%more commands? &#xa;</xsl:text> -->
     <xsl:text>\usepackage{setspace}&#xa;</xsl:text>
     <xsl:text>\usepackage{newtxtext, newtxmath}&#xa;</xsl:text>
+    <xsl:text>% Macro for horizontal line</xsl:text>
+    <xsl:text>\newcommand{\hbreak}{\vskip6pt \hrule \vskip6pt}</xsl:text>
     <xsl:text>\AtBeginEnvironment{assemblage}{\vskip\baselineskip}&#xa;</xsl:text>
     <xsl:text>\AfterEndEnvironment{assemblage}{\vskip\baselineskip}</xsl:text>
     <xsl:text>\AtBeginEnvironment{example}{\vskip\baselineskip}</xsl:text>
     <xsl:text>\AfterEndEnvironment{example}{\vskip\baselineskip}</xsl:text>
     <xsl:text>\AtBeginEnvironment{inlineexercise}{\vskip\baselineskip}</xsl:text>
-    <xsl:text>\AfterEndEnvironment{inlineexercise}{\vskip\baselineskip}</xsl:text>
+    <xsl:text>\AfterEndEnvironment{inlineexercise}{\hbreak}</xsl:text>
     <xsl:text>\AfterEndEnvironment{divisionexercise}{\vskip\baselineskip}</xsl:text>
+    <xsl:text>\AfterEndEnvironment{worksheet-subsection}{\hbreak}</xsl:text>
     <xsl:text>\setlength{\parskip}{0.27\baselineskip}</xsl:text>
-    <xsl:text>\setstretch{1.1}</xsl:text>
+    <!-- <xsl:text>\setstretch{1.1}</xsl:text> -->
 </xsl:param>
 
 

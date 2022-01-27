@@ -147,6 +147,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 \setfoot{}{\pagefont\thepage}{}%
 }%
 %% Two-page spread as in default LaTeX
+%% Custom
 \renewpagestyle{headings}{%
 \sethead%
 [\pagefont\thepage]%
@@ -158,6 +159,10 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 }%
 \pagestyle{headings}
 </xsl:text>
+</xsl:template>
+
+<xsl:template match="exercise.inline" mode="tcb-style">
+  <xsl:text>after title={\par \noindent},</xsl:text>
 </xsl:template>
 
 <!-- <xsl:template match="article|letter|memo" mode="titleps-headings">

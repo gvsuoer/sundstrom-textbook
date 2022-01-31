@@ -5,7 +5,7 @@
   border-right: none !important;
 } */
 
-/*change qed symbol:*/
+/* add black square after proofs */
 .pretext-content .proof:after{
     content: '\25A0';
     font-size: x-large;
@@ -13,10 +13,57 @@
     /* border-bottom: none !important; */
     margin-left: auto;
     margin-right: -0.45em;
-    margin-top:-1em;
+    margin-top:-1.3em;
     width: 1.5em;
     padding-bottom: 0.25em;
 }
+
+/* .pretext-content article.exercise.exercise-like > h4:nth-child(2) .title:after {
+  content: '\000A';
+  white-space: pre;
+  padding: 0.3em 0.5em;
+  margin-left: -0.8em;
+} */
+
+/* Add line break between inline exercise title and introduction */
+.pretext-content section.subsection article.exercise.exercise-like > .heading:after {
+  content: '\000A';
+  white-space: pre;
+  /* padding: 0.3em 0.5em;
+  margin-left: -0.8em; */
+}
+
+/* Bold list titles rather than italicize them */
+.pretext-content section li .title {
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Add line break between paragraphs title and body */
+/* .pretext-content .paragraphs .heading {
+  display: block;
+} */
+
+/* Update assemblage-like border color */
+.pretext-content .assemblage-like {
+  border-color:var(--chaptertoc);
+}
+
+/* Remove extra line break with level 5 and 6 heading */
+/* Was a problem in the solutions with two line breaks after task label */
+.pretext-content h5.heading.hide-type::after,
+.pretext-content h6.heading.hide-type::after {
+  content: "\0020";
+}
+
+/* .pretext-content section article > .heading::after,
+.pretext-content section section.paragraphs > .heading::after,
+.pretext-content section section article > .heading::after,
+.pretext-content section article > a > .heading::after,
+.pretext-content section section article > a > .heading::after,
+.pretext-content .abstract > .heading::after {
+    content: "\2009";
+} */
 
 /* article.proof > *:last-child{
   padding-bottom: 0em;

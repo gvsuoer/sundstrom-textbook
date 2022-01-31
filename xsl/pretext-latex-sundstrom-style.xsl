@@ -40,7 +40,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 <!-- Title Styles: -->
 <!-- %%%%%%%%%%%%% -->
 
-<xsl:template name="titlesec-chapter-style">
+<!-- <xsl:template name="titlesec-chapter-style">
     <xsl:text>\titleformat{\chapter}[display]
     	{\Large\filcenter\scshape\bfseries}
     	{\rule[4pt]{.3\textwidth}{2pt} \hspace{2ex} \large\textsc{\chaptertitlename} \thechapter \hspace{3ex} \rule[4pt]{0.3\textwidth}{2pt} }
@@ -48,22 +48,22 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
     	{\titlerule\vspace{1ex}\huge\textsc #1}
     	[\vspace{.75ex}\titlerule]
     \titlespacing*{\chapter}{0pt}{-2em}{2em}&#xa;</xsl:text>
-    <!-- <xsl:text>\titleformat{name=\chapter,numberless}
+    <xsl:text>\titleformat{name=\chapter,numberless}
       {\Large\filcenter\scshape\bfseries}
     	{\rule[4pt]{.3\textwidth}{2pt} \hspace{2ex} \large\textsc{\chaptertitlename} \thechapter \hspace{3ex} \rule[4pt]{0.3\textwidth}{2pt} }
     	{0.0em}
     	{\titlerule\vspace{1ex}\huge\textsc #1}
     	[\vspace{.75ex}\titlerule]
-    \titlespacing*{\chapter}{0pt}{-2em}{2em}&#xa;</xsl:text> -->
+    \titlespacing*{\chapter}{0pt}{-2em}{2em}&#xa;</xsl:text>
     <xsl:text>\titleformat{\subparagraph}[block]
       {\normalfont\filcenter\scshape\bfseries}
       {\theparagraph}
       {1em}
       {#1}
       [\normalsize\authorsptx]&#xa;</xsl:text>
-</xsl:template>
+</xsl:template> -->
 
-<xsl:template name="titlesec-section-style">
+<!-- <xsl:template name="titlesec-section-style">
     <xsl:text>\titleformat{\section}
     {\Large\filcenter\scshape\bfseries}
     {\thesection}
@@ -75,25 +75,25 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
     {}
     {0.0em}
     {#1}&#xa;</xsl:text>
-</xsl:template>
+</xsl:template> -->
 
-<xsl:template name="titlesec-subsection-style">
+<!-- <xsl:template name="titlesec-subsection-style">
     <xsl:text>\titleformat{\subsection}
     {\large\filcenter\scshape\bfseries}
     {\thesubsection}
     {1em}
     {#1}
     [\normalsize\authorsptx]&#xa;</xsl:text>
-</xsl:template>
+</xsl:template> -->
 
-<xsl:template name="titlesec-subsubsection-style">
+<!-- <xsl:template name="titlesec-subsubsection-style">
     <xsl:text>\titleformat{\subsubsection}
       {\filcenter\scshape\bfseries}
       {\thesubsubsection}
       {1em}
       {#1}
       [\normalsize\authorsptx]&#xa;</xsl:text>
-</xsl:template>
+</xsl:template> -->
 
 <!-- %%%%%%%%%%%%%%%% -->
 <!-- End Title Stiles -->
@@ -123,47 +123,72 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 <!-- mandatory argument with commands like \setfoot, \sethead,      -->
 <!-- \headrule, and \footrule.                                      -->
 <!-- See titleps.pdf in the "titlesec" package for more             -->
-<xsl:template match="book|article|letter|memo" mode="titleps-empty">
-</xsl:template>
+<!-- <xsl:template match="book|article|letter|memo" mode="titleps-empty">
+</xsl:template> -->
 
-<xsl:template match="book|article|letter|memo" mode="titleps-plain">
+<!-- <xsl:template match="book|article|letter|memo" mode="titleps-plain">
     <xsl:text>{
     \setfoot[][\thepage][]
     {}{\thepage}{}
     }</xsl:text>
-</xsl:template>
+</xsl:template> -->
 
 
 <!-- general headings -->
-<xsl:template match="book" mode="titleps-headings">
-    <xsl:text>{
+<xsl:template match="book" mode="titleps-style">
+    <!-- <xsl:text>{
     \sethead[{\footnotesize \textbf{\thepage}}~~~ \textsc{\scriptsize{\ifthechapter{\thechapter.~}{}\chaptertitle}}][][]
     {}{}{\textsc{\scriptsize{\ifthesection{\thesection.~\sectiontitle}{\chaptertitle}}} ~~~ {\footnotesize \textbf{\thepage}} }
     \setfoot[][][]
     {}{}{}
-    }</xsl:text>
+    }</xsl:text> -->
+    <xsl:text>%% Plain pages should have the same font for page numbers
+%% Custom template to change chapter and section titles in header
+%% No longer in all caps or italicized
+\renewpagestyle{plain}{%
+\setfoot{}{\pagefont\thepage}{}%
+}%
+%% Two-page spread as in default LaTeX
+%% Custom
+\renewpagestyle{headings}{%
+\sethead%
+[\pagefont\thepage]%
+[]
+[\pagefont{\ifthechapter{\chaptertitlename\space\thechapter.\space}{}\chaptertitle}]%
+{\pagefont{\ifthesection{\thesection.\space\sectiontitle}{}}}%
+{}%
+{\pagefont\thepage}\setheadrule{.8pt}%
+}%
+\pagestyle{headings}
+</xsl:text>
 </xsl:template>
 
-<xsl:template match="article|letter|memo" mode="titleps-headings">
+<!-- Add a line break after title of inline exercise (removing indent of body) -->
+<!-- Currently does not work -->
+<!-- <xsl:template match="exercise.inline" mode="tcb-style">
+  <xsl:text>after title={\par \noindent},</xsl:text>
+</xsl:template> -->
+
+<!-- <xsl:template match="article|letter|memo" mode="titleps-headings">
     <xsl:text>[\small\sffamily]{
     \sethead[\thepage][\sectiontitle][]
     {}{\sectiontitle}{\thepage}
     \setfoot[foot/even/headings/article][][]
     {foot/odd or one-sided/headings/article}{}{}
     }</xsl:text>
-</xsl:template>
+</xsl:template> -->
 
 <!-- Experiment with "empty", "plain", and "headings" to      -->
 <!-- see the effect of the above definitions (for "article")  -->
 <!-- employed in the sample article                           -->
 <!-- DO NOT set this to return empty text, errors will result -->
 <!-- You can comment it out, and let base definition execute  -->
-<xsl:template match="article" mode="titleps-global-style">
+<!-- <xsl:template match="article" mode="titleps-global-style">
     <xsl:text>plain</xsl:text>
-</xsl:template>
+</xsl:template> -->
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%% -->
-<!-- End Header/Footer Stiles -->
+<!-- End Header/Footer Styles -->
 <!-- %%%%%%%%%%%%%%%%%%%%%%%% -->
 
 
@@ -179,23 +204,23 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 
 <!-- "commentary" -->
 <!-- Green and ugly -->
-<xsl:template match="commentary" mode="tcb-style">
+<!-- <xsl:template match="commentary" mode="tcb-style">
     <xsl:text>enhanced, breakable, parbox=false, size=minimal, attach title to upper, after title={\space}, fonttitle=\bfseries, coltitle=black, colback=green</xsl:text>
-</xsl:template>
+</xsl:template> -->
 
 <!-- "objectives", "outcomes" -->
 <!-- Default tcb, identically -->
-<xsl:template match="objectives|outcomes" mode="tcb-style">
+<!-- <xsl:template match="objectives|outcomes" mode="tcb-style">
     <xsl:text/>
-</xsl:template>
+</xsl:template> -->
 
 <!-- "assemblage" -->
 <!-- Boxed title, borrowed from the AIM style -->
-<xsl:template match="assemblage" mode="tcb-style">
+<!-- <xsl:template match="assemblage" mode="tcb-style">
     <xsl:text>enhanced, boxrule=0.5pt, sharp corners, colback=MidnightBlue!5, colframe=MidnightBlue!20,&#xa;</xsl:text>
     <xsl:text>colbacktitle=MidnightBlue!25, coltitle=black, boxed title style={sharp corners, frame hidden},&#xa;</xsl:text>
     <xsl:text>fonttitle=\bfseries, attach boxed title to top left={xshift=4mm,yshift=-4mm,yshifttext=-2mm}, top=3mm,&#xa;</xsl:text>
-</xsl:template>
+</xsl:template> -->
 
 
 
@@ -207,7 +232,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 <!-- Each just slightly different                   -->
 
 <!-- Example styling from CLP -->
-<xsl:template match="&EXAMPLE-LIKE;" mode="tcb-style">
+<!-- <xsl:template match="&EXAMPLE-LIKE;" mode="tcb-style">
     <xsl:text>
       enhanced,
       breakable,
@@ -215,7 +240,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
       frame hidden,
       borderline west={1pt}{0mm}{MidnightBlue},
       overlay unbroken and last={
-        \draw[MidnightBlue, path fading=east, line width=.5pt] (frame.south west) -- (frame.south east);
+        \draw[MidnightBlue, path fading=east, line width=.5pt] (frame.south west) - - (frame.south east);
       },
       colback=white,
       coltitle=white,
@@ -226,7 +251,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
       after skip=1em,
       before skip=1em,
     </xsl:text>
-</xsl:template>
+</xsl:template> -->
 
 <xsl:template match="&PROJECT-LIKE;" mode="tcb-style">
   <!-- <xsl:text>

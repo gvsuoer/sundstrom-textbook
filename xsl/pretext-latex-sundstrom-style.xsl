@@ -143,6 +143,8 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
     {}{}{}
     }</xsl:text> -->
     <xsl:text>%% Plain pages should have the same font for page numbers
+%% Custom template to change chapter and section titles in header
+%% No longer in all caps or italicized
 \renewpagestyle{plain}{%
 \setfoot{}{\pagefont\thepage}{}%
 }%
@@ -161,9 +163,11 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 </xsl:text>
 </xsl:template>
 
-<xsl:template match="exercise.inline" mode="tcb-style">
+<!-- Add a line break after title of inline exercise (removing indent of body) -->
+<!-- Currently does not work -->
+<!-- <xsl:template match="exercise.inline" mode="tcb-style">
   <xsl:text>after title={\par \noindent},</xsl:text>
-</xsl:template>
+</xsl:template> -->
 
 <!-- <xsl:template match="article|letter|memo" mode="titleps-headings">
     <xsl:text>[\small\sffamily]{

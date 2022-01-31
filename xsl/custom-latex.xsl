@@ -101,6 +101,7 @@
     <xsl:text>\usepackage{newtxtext, newtxmath}&#xa;</xsl:text>
     <xsl:text>% Macro for horizontal line</xsl:text>
     <xsl:text>\newcommand{\hbreak}{\vskip6pt \hrule \vskip6pt}</xsl:text>
+    <xsl:text>% Add line break or hbreak before and after some elements</xsl:text>
     <xsl:text>\AtBeginEnvironment{assemblage}{\vskip\baselineskip}&#xa;</xsl:text>
     <xsl:text>\AfterEndEnvironment{assemblage}{\vskip\baselineskip}</xsl:text>
     <xsl:text>\AtBeginEnvironment{example}{\vskip\baselineskip}</xsl:text>

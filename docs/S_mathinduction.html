@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-20T13:28:11-05:00       *-->
+<!--*       on 2022-01-31T18:14:27-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -47,6 +47,7 @@
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="external/custom_style.css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="pretext-book ignore-math has-toc has-sidebar-left">
@@ -360,7 +361,7 @@ P(k+1)  \amp  \text{ is }  \amp  1^2  + 2^2  +  \cdots  + \left( {k + 1} \right)
 \begin{equation*}
 1^2  + 2^2  + \, \cdots \, + n^2  = \dfrac{{n(n + 1)(2n + 1)}}{6}\text{.}
 \end{equation*}
-</div></article><article class="proof" id="proof-20"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4>
+</div></article><article class="proof" id="proof-24"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4>
 <p id="p-2263">We will use a proof by mathematical induction. For each natural number <span class="process-math">\(n\text{,}\)</span> we let <span class="process-math">\(P( n )\)</span> be</p>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -430,7 +431,7 @@ P(k+1)  \amp  \text{ is }  \amp  1^2  + 2^2  +  \cdots  + \left( {k + 1} \right)
 </div>
 <p class="continuation">and complete the proof.</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-107" id="solution-107"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-107"><div class="solution solution-like">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-107" id="solution-107"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-107"><div class="solution solution-like"><article class="proof" id="proof-25"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
 <p id="p-2273">Let <span class="process-math">\(P( n )\)</span> be the predicate, “<span class="process-math">\(1 + 2 + 3 +  \cdots  + n = \dfrac{n \left( n + 1 \right)}{2}\text{.}\)</span>” For the basis step, notice that the equation <span class="process-math">\(1 = \dfrac{1 \left( 1 + 1 \right)}{2}\)</span> shows that <span class="process-math">\(P( 1 )\)</span> is true. Now let <span class="process-math">\(k\)</span> be a natural number and assume that <span class="process-math">\(P(k )\)</span> is true. That is, assume that</p>
 <div class="displaymath process-math">
 \begin{equation}
@@ -454,8 +455,7 @@ P(k+1)  \amp  \text{ is }  \amp  1^2  + 2^2  +  \cdots  + \left( {k + 1} \right)
 \amp = \frac{ \left(k + 1 \right) \left( k + 2 \right)}{2}
 \end{align*}
 </div>
-<p id="p-2276">By comparing the last equation to equation <a href="" class="xref" data-knowl="./knowl/prog_indexample2.html" title="Equation 19">(19)</a> we see that we have proved that if <span class="process-math">\(P(k )\)</span> is true, then <span class="process-math">\(P( k + 1 )\)</span> is true, and the inductive step has been established. Hence, by the Principle of Mathematical Induction, we have proved that for each integer <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(1 + 2 + 3 + \cdots + n = \dfrac{n \left( n + 1 \right)}{2}\text{.}\)</span></p>
-</div></div>
+<p id="p-2276">By comparing the last equation to equation <a href="" class="xref" data-knowl="./knowl/prog_indexample2.html" title="Equation 19">(19)</a> we see that we have proved that if <span class="process-math">\(P(k )\)</span> is true, then <span class="process-math">\(P( k + 1 )\)</span> is true, and the inductive step has been established. Hence, by the Principle of Mathematical Induction, we have proved that for each integer <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(1 + 2 + 3 + \cdots + n = \dfrac{n \left( n + 1 \right)}{2}\text{.}\)</span></p></article></div></div>
 </div></article></article></section><section class="subsection" id="subsection-75"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Some Comments about Mathematical Induction</span>
 </h3>
@@ -490,7 +490,7 @@ P(k+1)  \amp  \text{ is }  \amp  1^2  + 2^2  +  \cdots  + \left( {k + 1} \right)
 <article class="proposition theorem-like" id="P_divideinduction"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">4.4</span><span class="period">.</span>
 </h4>
-<p id="p-2281">For every natural number <span class="process-math">\(n\text{,}\)</span> 4 divides <span class="process-math">\(\left( {5^n - 1} \right)\text{.}\)</span></p></article><article class="proof" id="proof-21"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4>
+<p id="p-2281">For every natural number <span class="process-math">\(n\text{,}\)</span> 4 divides <span class="process-math">\(\left( {5^n - 1} \right)\text{.}\)</span></p></article><article class="proof" id="proof-26"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4>
 <p id="p-2282">(Proof by Mathematical Induction) For each natural number <span class="process-math">\(n\text{,}\)</span> let <span class="process-math">\(P( n )\)</span> be “4 divides <span class="process-math">\(\left( {5^n - 1} \right)\text{.}\)</span>” We first prove that <span class="process-math">\(P \left( 1 \right)\)</span> is true. Notice that when <span class="process-math">\(n = 1\text{,}\)</span> <span class="process-math">\(\left( {5^n - 1} \right) = 4\text{.}\)</span> Since 4 divides 4, <span class="process-math">\(P\left( 1 \right)\)</span> is true.</p>
 <p id="p-2283">For the inductive step, we prove that for all <span class="process-math">\(k \in \mathbb{N}\text{,}\)</span> if <span class="process-math">\(P \left( k \right)\)</span> is true, then <span class="process-math">\(P \left( k + 1 \right)\)</span> is true. So let <span class="process-math">\(k\)</span> be a natural number and assume that <span class="process-math">\(P(  k )\)</span> is true. That is, assume that</p>
 <div class="displaymath process-math">

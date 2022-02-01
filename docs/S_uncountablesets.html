@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-20T13:33:51-05:00       *-->
+<!--*       on 2022-01-31T18:20:00-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -47,6 +47,7 @@
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="external/custom_style.css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="pretext-book ignore-math has-toc has-sidebar-left">
@@ -295,7 +296,7 @@ f ( n ) = \mathbb{N} - \left\{n^2, n^2-2n \right\},
 <article class="theorem theorem-like" id="T_uncountableinterval"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.27</span><span class="period">.</span>
 </h4>
-<p id="p-5908">The open interval <span class="process-math">\(( 0, 1 )\)</span> is an uncountable set.</p></article><article class="proof" id="proof-67"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4>
+<p id="p-5908">The open interval <span class="process-math">\(( 0, 1 )\)</span> is an uncountable set.</p></article><article class="proof" id="proof-76"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4>
 <p id="p-5909">Since the interval <span class="process-math">\(( 0, 1 )\)</span> contains the infinite subset <span class="process-math">\(\left\{\dfrac{1}{2}, \dfrac{1}{3}, \dfrac{1}{4}, \ldots \,\right\}\text{,}\)</span> we can use <a href="" class="xref" data-knowl="./knowl/T_subsetisinfinite.html" title="Theorem 9.11">Theorem 9.11</a>, to conclude that <span class="process-math">\(( 0, 1 )\)</span> is an infinite set. So <span class="process-math">\(( 0, 1 )\)</span> is either countably infinite or uncountable. We will prove that <span class="process-math">\(( 0, 1 )\)</span> is uncountable by proving that any function from <span class="process-math">\(\N\)</span> to <span class="process-math">\((0, 1)\)</span> is not a surjection, and hence, there is no bijection from <span class="process-math">\(\N\)</span> to <span class="process-math">\((0, 1)\text{.}\)</span></p>
 <p id="p-5910">So suppose that <span class="process-math">\(f\x \mathbb{N} \to ( 0, 1 )\)</span> is a function. We will show that <span class="process-math">\(f\)</span> is not a surjection by showing that there exists an element in <span class="process-math">\(( 0, 1 )\)</span> that cannot be in the range of <span class="process-math">\(f\text{.}\)</span> Writing the images of the elements of <span class="process-math">\(\mathbb{N}\)</span> in normalized form, we can write</p>
 <div class="displaymath process-math">
@@ -349,8 +350,8 @@ f\x  ( 0, 1 ) \to ( a, b )
 <p class="continuation">that is a bijection and conclude that the open interval <span class="process-math">\(( 0, 1) \approx ( a, b )\text{.}\)</span></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-76" id="hint-76"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-76"><div class="hint solution-like"><p id="p-5924">Find a linear function that passes through the points <span class="process-math">\(( 0, a )\)</span> and <span class="process-math">\(( 1, b )\text{.}\)</span> Use this to define the function <span class="process-math">\(f\text{.}\)</span> Make sure you prove that this function <span class="process-math">\(f\)</span> is a bijection.</p></div></div>
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-296" id="solution-296"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-296"><div class="solution solution-like">
-<p id="p-5925">Proof: In order to find a bijection <span class="process-math">\(f\x  ( 0, 1 ) \to ( a, b )\text{,}\)</span> we will use the linear function through the points <span class="process-math">\(( 0, a )\)</span> and <span class="process-math">\(( 1, b )\text{.}\)</span> The slope is <span class="process-math">\(( b - a)\)</span> and the <span class="process-math">\(y\)</span>-intercept is <span class="process-math">\(( 0, a )\text{.}\)</span> So define <span class="process-math">\(f\x  ( 0, 1 ) \to ( a, b )\)</span> by <span class="process-math">\(f ( x ) = ( b - a )x + a\text{,}\)</span> for each <span class="process-math">\(x \in ( 0, 1 )\text{.}\)</span> Now, if <span class="process-math">\(x,
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-296" id="solution-296"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-296"><div class="solution solution-like"><article class="proof" id="proof-77"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="p-5925">In order to find a bijection <span class="process-math">\(f\x  ( 0, 1 ) \to ( a, b )\text{,}\)</span> we will use the linear function through the points <span class="process-math">\(( 0, a )\)</span> and <span class="process-math">\(( 1, b )\text{.}\)</span> The slope is <span class="process-math">\(( b - a)\)</span> and the <span class="process-math">\(y\)</span>-intercept is <span class="process-math">\(( 0, a )\text{.}\)</span> So define <span class="process-math">\(f\x  ( 0, 1 ) \to ( a, b )\)</span> by <span class="process-math">\(f ( x ) = ( b - a )x + a\text{,}\)</span> for each <span class="process-math">\(x \in ( 0, 1 )\text{.}\)</span> Now, if <span class="process-math">\(x,
 t \in ( 0, 1 )\)</span> and <span class="process-math">\(f ( x ) = f ( t )\text{,}\)</span> then</p>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -367,8 +368,7 @@ f ( x ) \amp = f \!\left( \frac{y - a}{b - a} \right)\\
 \amp = y\text{.}
 \end{align*}
 </div>
-<p id="p-5928">This proves that <span class="process-math">\(f\)</span> is a surjection. Hence, <span class="process-math">\(f\)</span> is a bijection and <span class="process-math">\(( 0, 1 ) \approx ( a, b )\text{.}\)</span> Therefore, <span class="process-math">\(( a, b )\)</span> is uncountable and has cardinality <span class="process-math">\(\boldsymbol{c}\text{.}\)</span></p>
-</div></div>
+<p id="p-5928">This proves that <span class="process-math">\(f\)</span> is a surjection. Hence, <span class="process-math">\(f\)</span> is a bijection and <span class="process-math">\(( 0, 1 ) \approx ( a, b )\text{.}\)</span> Therefore, <span class="process-math">\(( a, b )\)</span> is uncountable and has cardinality <span class="process-math">\(\boldsymbol{c}\text{.}\)</span></p></article></div></div>
 </div></article><article class="task exercise-like" id="task-1832"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <p id="p-5929">Let <span class="process-math">\(a, b, c, d\)</span> be real numbers with <span class="process-math">\(a \lt b\)</span> and <span class="process-math">\(c \lt d\text{.}\)</span> Prove that the open interaval <span class="process-math">\(( a, b )\)</span> is equivalent to the open interval <span class="process-math">\(( c, d )\text{.}\)</span></p>
 <div class="solutions">
@@ -377,7 +377,7 @@ b, c, d\)</span> are real numbers with <span class="process-math">\(a \lt b\)</s
 </div></article></article><article class="theorem theorem-like" id="T_realsuncount"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.31</span><span class="period">.</span>
 </h4>
-<p id="p-5931">The set of real numbers <span class="process-math">\(\mathbb{R}\)</span> is uncountable and has cardinality <span class="process-math">\(\boldsymbol{c}\text{.}\)</span></p></article><article class="proof" id="proof-68"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4>
+<p id="p-5931">The set of real numbers <span class="process-math">\(\mathbb{R}\)</span> is uncountable and has cardinality <span class="process-math">\(\boldsymbol{c}\text{.}\)</span></p></article><article class="proof" id="proof-78"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4>
 <p id="p-5932">Let <span class="process-math">\(f\x \left( -\dfrac{\pi}{2}, \dfrac{\pi}{2} \right) \to \mathbb{R}\)</span> be defined by <span class="process-math">\(f ( x ) = \tan x\text{,}\)</span> for each <span class="process-math">\(x \in \mathbb{R}\text{.}\)</span> The function <span class="process-math">\(f\)</span> is a bijection and, hence, <span class="process-math">\(\left(-\dfrac{\pi}{2}, \dfrac{\pi}{2} \right) \approx \mathbb{R}\text{.}\)</span> So by <a href="" class="xref" data-knowl="./knowl/T_openintervals.html" title="Theorem 9.29">Theorem 9.29</a>, <span class="process-math">\(\mathbb{R}\)</span> is uncountable and has cardinality <span class="process-math">\(\boldsymbol{c}\text{.}\)</span></p></article></section><section class="subsection" id="subsection-170"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Cantor's Theorem</span>
 </h3>
@@ -385,7 +385,7 @@ b, c, d\)</span> are real numbers with <span class="process-math">\(a \lt b\)</s
 <article class="theorem theorem-like" id="T_cantor"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.32</span><span class="period">.</span><span class="space"> </span><span class="title">Cantor's Theorem.</span>
 </h4>
-<p id="p-5934">For every set <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(A\)</span> and <span class="process-math">\(\mathcal{P} ( A )\)</span> do not have the same cardinality.</p></article><article class="proof" id="proof-69"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4>
+<p id="p-5934">For every set <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(A\)</span> and <span class="process-math">\(\mathcal{P} ( A )\)</span> do not have the same cardinality.</p></article><article class="proof" id="proof-79"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4>
 <p id="p-5935">Let <span class="process-math">\(A\)</span> be a set. If <span class="process-math">\(A = \emptyset\text{,}\)</span> then <span class="process-math">\(\mathcal{P} ( A ) = \left\{ \emptyset \right\}\text{,}\)</span> which has cardinality 1. Therefore, <span class="process-math">\(\emptyset\)</span> and <span class="process-math">\(\mathcal{P} ( \emptyset )\)</span> do not have the same cardinality.</p>
 <p id="p-5936">Now suppose that <span class="process-math">\(A \ne \emptyset\text{,}\)</span> and let <span class="process-math">\(f\x  A \to \mathcal{P} ( A )\text{.}\)</span> We will show that <span class="process-math">\(f\)</span> cannot be a surjection, and hence there is no bijection from <span class="process-math">\(A\)</span> to <span class="process-math">\(\mathcal{P} ( A )\text{.}\)</span> This will prove that <span class="process-math">\(A\)</span> is not equivalent to <span class="process-math">\(\mathcal{P} ( A )\text{.}\)</span> Define</p>
 <div class="displaymath process-math">
@@ -401,7 +401,7 @@ S = \left\{ x \in A \mid x \notin f ( x ) \right\}\text{.}
 <p id="p-5940">So in both cases we have arrived at a contradiction. This means that there does not exist a <span class="process-math">\(t\)</span> in <span class="process-math">\(A\)</span> such that <span class="process-math">\(f ( t ) = S\text{.}\)</span> Therefore, any function from <span class="process-math">\(A\)</span> to <span class="process-math">\(\mathcal{P} ( A )\)</span> is not a surjection and hence not a bijection. Hence, <span class="process-math">\(A\)</span> and <span class="process-math">\(\mathcal{P} ( A )\)</span> do not have the same cardinality.</p></article><article class="corollary theorem-like" id="C_cantor"><h4 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">9.33</span><span class="period">.</span>
 </h4>
-<p id="p-5941"><span class="process-math">\(\mathcal{P} ( \mathbb{N} )\)</span> is an infinite set that is not countably infinite.</p></article><article class="proof" id="proof-70"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4>
+<p id="p-5941"><span class="process-math">\(\mathcal{P} ( \mathbb{N} )\)</span> is an infinite set that is not countably infinite.</p></article><article class="proof" id="proof-80"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4>
 <p id="p-5942">Since <span class="process-math">\(\mathcal{P} ( \mathbb{N} )\)</span> contains the infinite subset <span class="process-math">\(\left\{ \left\{ 1 \right\}, \left\{ 2 \right\}, \left\{ 3 \right\} \ldots \,\right\}\text{,}\)</span> we can use <a href="" class="xref" data-knowl="./knowl/T_subsetisinfinite.html" title="Theorem 9.11">Theorem 9.11</a>, to conclude that <span class="process-math">\(\mathcal{P} ( \mathbb{N} )\)</span> is an infinite set. By Cantor's Theorem (<a href="" class="xref" data-knowl="./knowl/T_cantor.html" title="Theorem 9.32: Cantor's Theorem">Theorem 9.32</a>), <span class="process-math">\(\mathbb{N}\)</span> and <span class="process-math">\(\mathcal{P} ( \mathbb{N} )\)</span> do not have the same cardinality. Therefore, <span class="process-math">\(\mathcal{P} ( \mathbb{N} )\)</span> is not countable and hence is an uncountable set.</p></article></section><section class="subsection" id="subsection-171"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Some Final Comments about Uncountable Sets</span>
 </h3>

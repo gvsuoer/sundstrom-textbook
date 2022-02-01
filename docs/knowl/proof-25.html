@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-20T13:41:30-05:00       *-->
+<!--*       on 2022-01-31T18:25:30-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,20 +14,30 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="proof"><h4 class="heading"><span class="type">Proof</span></h4>
-<p>Let <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(S\)</span> be the set of all integers that are multiples of 6, and let <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(T\)</span> be the set of all even integers. We will show that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(S\)</span> is a subset of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(T\)</span> by showing that if an integer <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(x\)</span> is an element of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(S\text{,}\)</span> then it is also an element of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(T\text{.}\)</span></p>
-<p>Let <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(x \in S\text{.}\)</span> (Note: The use of the word “let” is often an indication that the we are choosing an arbitrary element.) This means that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(x\)</span> is a multiple of 6. Therefore, there exists an integer <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(m\)</span> such that</p>
+<article class="proof"><h6 class="heading"><span class="type">Proof</span></h6>
+<p>Let <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(P( n )\)</span> be the predicate, “<span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(1 + 2 + 3 +  \cdots  + n = \dfrac{n \left( n + 1 \right)}{2}\text{.}\)</span>” For the basis step, notice that the equation <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(1 = \dfrac{1 \left( 1 + 1 \right)}{2}\)</span> shows that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(P( 1 )\)</span> is true. Now let <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(k\)</span> be a natural number and assume that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(P(k )\)</span> is true. That is, assume that</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
-\begin{equation*}
-x = 6m\text{.}
-\end{equation*}
+\begin{equation}
+1 + 2 + 3 +  \cdots  + k = \frac{k \left( k + 1 \right)}{2}\text{.}\tag{18}
+\end{equation}
 </div>
-<p class="continuation">Since <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(6 = 2 \cdot 3\text{,}\)</span> this equation can be written in the form</p>
+<p>We now need to prove that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(P(k +1 )\)</span> is true or that</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
-\begin{equation*}
-x = 2( {3m})\text{.}
-\end{equation*}
+\begin{equation}
+1 + 2 + 3 +  \cdots  + k + \left( k + 1 \right) = \frac{\left( k + 1 \right) 
+\left(k + 2 \right)}{2}\text{.}\tag{19}
+\end{equation}
 </div>
-<p class="continuation">By closure properties of the integers, <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(3m\)</span> is an integer. Hence, this last equation proves that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(x\)</span> must be even. Therefore, we have shown that if <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(x\)</span> is an element of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(S\text{,}\)</span> then <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(x\)</span> is an element of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(T\text{,}\)</span> and hence that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(S \subseteq T\text{.}\)</span></p></article><span class="incontext"><a href="S_provingset.html#proof-25">in-context</a></span>
+<p>By adding <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(\left(k + 1 \right)\)</span> to both sides of equation <a href="" class="xref" data-knowl="./knowl/prog_indexample1.html" title="Equation 18">(18)</a> we see that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{align*}
+1 + 2 + 3 +  \cdots  + k + \left( k + 1 \right) 
+\amp = \frac{k \left( k + 1 \right)}{2} + \left( k + 1 \right)\\
+\amp = \frac{k \left( k + 1 \right) + 2 \left( k + 1 \right)}{2}\\
+\amp = \frac{k^2 + 3k + 2}{2}\\
+\amp = \frac{ \left(k + 1 \right) \left( k + 2 \right)}{2}
+\end{align*}
+</div>
+<p>By comparing the last equation to equation <a href="" class="xref" data-knowl="./knowl/prog_indexample2.html" title="Equation 19">(19)</a> we see that we have proved that if <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(P(k )\)</span> is true, then <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(P( k + 1 )\)</span> is true, and the inductive step has been established. Hence, by the Principle of Mathematical Induction, we have proved that for each integer <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(n\text{,}\)</span> <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(1 + 2 + 3 + \cdots + n = \dfrac{n \left( n + 1 \right)}{2}\text{.}\)</span></p></article><span class="incontext"><a href="S_mathinduction.html#proof-25">in-context</a></span>
 </body>
 </html>

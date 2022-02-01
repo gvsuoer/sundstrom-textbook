@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-20T13:32:12-05:00       *-->
+<!--*       on 2022-01-31T18:18:17-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -47,6 +47,7 @@
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/colors_blue_grey.css" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="external/custom_style.css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="pretext-book ignore-math has-toc has-sidebar-left">
@@ -357,7 +358,7 @@ C[ 2 ] \amp = \left\{ { {a \in \mathbb{Z} } \mid a \equiv 2 \pmod 3} \right\}\!\
 <li id="T_propsofequivclasses1"><p id="p-4894">For each <span class="process-math">\(a \in A\text{,}\)</span> <span class="process-math">\(a \in [ a ]\text{.}\)</span></p></li>
 <li id="T_propsofequivclasses2"><p id="p-4895">For each <span class="process-math">\(a, b \in A\text{,}\)</span> <span class="process-math">\(a \sim b\)</span> if and only if <span class="process-math">\([ a ] = [ b ]\text{.}\)</span></p></li>
 <li id="T_propsofequivclasses3"><p id="p-4896">For each <span class="process-math">\(a, b \in A\text{,}\)</span> <span class="process-math">\([ a ] = [ b ]\)</span> or <span class="process-math">\([ a ] \cap [ b ] = \emptyset\text{.}\)</span></p></li>
-</ol></article><article class="proof" id="proof-43"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4>
+</ol></article><article class="proof" id="proof-52"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4>
 <p id="p-4897">Let <span class="process-math">\(A\)</span> be a nonempty set and assume that <span class="process-math">\(\sim\)</span> is an equivalence relation on <span class="process-math">\(A\text{.}\)</span> To prove the first part of the theorem, let <span class="process-math">\(a \in A\text{.}\)</span> Since <span class="process-math">\(\sim\)</span> is an equivalence relation on <span class="process-math">\(A\text{,}\)</span> it is reflexive on <span class="process-math">\(A\text{.}\)</span> Thus, <span class="process-math">\(a \sim a\text{,}\)</span> and we can conclude that <span class="process-math">\(a \in [ a ]\text{.}\)</span></p>
 <p id="p-4898">The second part of this theorem is a biconditional statement. We will prove it by proving two conditional statements. We will first prove that if <span class="process-math">\(a \sim b\text{,}\)</span> then <span class="process-math">\([ a ] = [ b ]\text{.}\)</span> So let <span class="process-math">\(a, b \in A\)</span> and assume that <span class="process-math">\(a \sim b\text{.}\)</span> We will now prove that the two sets <span class="process-math">\([ a ]\)</span> and <span class="process-math">\([ b ]\)</span> are equal. We will do this by proving that each is a subset of the other.</p>
 <p id="p-4899">First, assume that <span class="process-math">\(x \in [ a ]\text{.}\)</span> Then, by definition, <span class="process-math">\(x \sim a\text{.}\)</span> Since we have assumed that <span class="process-math">\(a \sim b\text{,}\)</span> we can use the transitive property of <span class="process-math">\(\sim\)</span> to conclude that <span class="process-math">\(x \sim b\text{,}\)</span> and this means that <span class="process-math">\(x \in [ b ]\text{.}\)</span> This proves that <span class="process-math">\([ a ] \subseteq [ b ]\text{.}\)</span></p>
@@ -450,7 +451,7 @@ x \in [ a ] \cap [ b ]\text{.}
 <article class="theorem theorem-like" id="T_equivclasses-partition"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.22</span><span class="period">.</span>
 </h4>
-<p id="p-4930">Let <span class="process-math">\(\sim\)</span> be an equivalence relation on the nonempty set <span class="process-math">\(A\text{.}\)</span> Then the collection <span class="process-math">\(\mathcal{C}\)</span> of all equivalence classes determined by <span class="process-math">\(\sim\)</span> is a partition of the set <span class="process-math">\(A\text{.}\)</span></p></article><article class="proof" id="proof-44"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4>
+<p id="p-4930">Let <span class="process-math">\(\sim\)</span> be an equivalence relation on the nonempty set <span class="process-math">\(A\text{.}\)</span> Then the collection <span class="process-math">\(\mathcal{C}\)</span> of all equivalence classes determined by <span class="process-math">\(\sim\)</span> is a partition of the set <span class="process-math">\(A\text{.}\)</span></p></article><article class="proof" id="proof-53"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4>
 <p id="p-4931">Let <span class="process-math">\(\sim\)</span> be an equivalence relation on the nonempty set <span class="process-math">\(A\text{,}\)</span> and let <span class="process-math">\(\mathcal{C}\)</span> be the collection of all equivalence classes determined by <span class="process-math">\(\sim\text{.}\)</span> That is,</p>
 <div class="displaymath process-math">
 \begin{equation*}

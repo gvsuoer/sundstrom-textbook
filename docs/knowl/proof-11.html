@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-20T13:38:57-05:00       *-->
+<!--*       on 2022-01-31T18:24:12-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,30 +14,31 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="proof"><h4 class="heading"><span class="type">Proof</span></h4>
-<p>We will use a proof by contradiction. So we assume that the statement of the theorem is false. That is, we assume that <blockquote class="blockquote">
-<span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(r\)</span> is a real number, <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(r^2 = 2\text{,}\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(r\)</span> is a rational number.</blockquote></p>
-<p>Since <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(r\)</span> is a rational number, there exist integers <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(m\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(n\)</span> with <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(n &gt; 0\)</span> such that</p>
+<article class="proof"><h6 class="heading"><span class="type">Proof</span></h6>
+<p>We will use a proof by contradiction. Let <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(n \in \mathbb{Z}\)</span> and assume that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(n \equiv 2 \pmod 4\)</span> and that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(n \equiv 3 \pmod 6\text{.}\)</span> Since <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(n \equiv 2 \pmod 4\text{,}\)</span> we know that 4 divides <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(n - 2\text{.}\)</span> Hence, there exists an integer <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(k\)</span> such that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation}
+n - 2 = 4k\text{.}\tag{6}
+\end{equation}
+</div>
+<p>We can also use the assumption that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(n \equiv 3 \pmod 6\)</span> to conclude that 6 divides <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(n - 3\)</span> and that there exists an integer <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(m\)</span> such that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+\begin{equation}
+n - 3 = 6m\text{.}\tag{7}
+\end{equation}
+</div>
+<p>If we now solve equation <a href="" class="xref" data-knowl="./knowl/eq_contradiction2.html" title="Equation 6">(6)</a> and equation <a href="" class="xref" data-knowl="./knowl/eq_contradiction3.html" title="Equation 7">(7)</a> for <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(n\)</span> and set the two expressions equal to each other, we obtain</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
 \begin{equation*}
-r = \frac{m}{n}
+4k + 2 = 6m + 3\text{.}
 \end{equation*}
 </div>
-<p class="continuation">and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(m\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(n\)</span> have no common factor greater than 1. We will obtain a contradiction by showing that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(m\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(n\)</span> must both be even. Squaring both sides of the last equation and using the fact that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(r^2 = 2\text{,}\)</span> we obtain</p>
+<p>However, this equation can be rewritten as</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
-\begin{align}
-2 \amp = \frac{{m^2 }}{{n^2 }} \amp\tag{8}\\
-m^2  \amp = 2n^2\tag{9}
-\end{align}
+\begin{equation*}
+2\left( {2k + 1} \right) = 2\left( {3m + 1} \right) + 1\text{.}
+\end{equation*}
 </div>
-<p>Equation <a href="" class="xref" data-knowl="./knowl/eq_3h.html" title="Equation 9">(9)</a> implies that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(m^2\)</span> is even, and hence, by <a href="" class="xref" data-knowl="./knowl/T_n2odd.html" title="Theorem 3.8">Theorem 3.8</a>, <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(m\)</span> must be an even integer. This means that there exists an integer <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(p\)</span> such that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(m = 2p\text{.}\)</span> We can now substitute this into equation <a href="" class="xref" data-knowl="./knowl/eq_3h.html" title="Equation 9">(9)</a>, which gives</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
-\begin{align}
-\left( {2p} \right)^2  \amp = 2n^2 \amp \notag\\
-4p^2  \amp = 2n^2\tag{10}
-\end{align}
-</div>
-<p>We can divide both sides of equation <a href="" class="xref" data-knowl="./knowl/eq_3i.html" title="Equation 10">(10)</a> by 2 to obtain <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(n^2 = 2p^2\text{.}\)</span> Consequently, <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(n^2\)</span> is even and we can once again use <a href="" class="xref" data-knowl="./knowl/T_n2odd.html" title="Theorem 3.8">Theorem 3.8</a> to conclude that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(n\)</span> is an even integer.</p>
-<p>We have now established that both <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(m\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(n\)</span> are even. This means that 2 is a common factor of <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(m\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(n\text{,}\)</span> which contradicts the assumption that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(m\)</span> and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(n\)</span> have no common factor greater than 1. Consequently, the statement of the theorem cannot be false, and we have proved that if <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(r\)</span> is a real number such that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(r^2 = 2\text{,}\)</span> then <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(r\)</span> is an irrational number.</p></article><span class="incontext"><a href="S_contradiction.html#proof-11">in-context</a></span>
+<p>Since <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(2k + 1\)</span> is an integer and <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(3m + 1\)</span> is an integer, this last equation is a contradiction since the left side is an even integer and the right side is an odd integer. Hence, we have proven that if <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(n \equiv 2 \pmod 4\text{,}\)</span> then <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(n\not \equiv 3 \pmod 6\text{.}\)</span></p></article><span class="incontext"><a href="S_contradiction.html#proof-11">in-context</a></span>
 </body>
 </html>

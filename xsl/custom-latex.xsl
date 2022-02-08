@@ -14,10 +14,12 @@
 
 <!-- assumes this has been copied to mathbook/user -->
 <xsl:import pretext-href="pretext-latex.xsl" />
+<!-- <xsl:import pretext-href="C:\Users\oer\Documents\pretext-conversions\mathbook\pretext-latex.xsl" /> -->
 
 <xsl:import href="pretext-latex-sundstrom-style.xsl" />
 <!-- Assumes next file can be found in mathbook/user -->
 <xsl:import href="custom-common.xsl" />
+<!-- <xsl:import href="C:\Users\oer\Documents\pretext-conversions\mathbook\pretext-common.xsl" /> -->
 
 
 <xsl:param name="debug.exercises.forward" select="'yes'"/>
@@ -95,13 +97,13 @@
 
 <xsl:param name="latex.preamble.late">
   <xsl:text>%This should load all the style information that ptx does not.&#xa;</xsl:text>
-    <xsl:text>% Change list titles to bold</xsl:text>
+    <xsl:text>% Change list titles to bold&#xa;</xsl:text>
     <xsl:text>\renewcommand{\lititle}[1]{{\textbf{#1}}}&#xa;</xsl:text>
     <xsl:text>\usepackage{setspace}&#xa;</xsl:text>
     <xsl:text>\usepackage{newtxtext, newtxmath}&#xa;</xsl:text>
-    <xsl:text>% Macro for horizontal line</xsl:text>
-    <xsl:text>\newcommand{\hbreak}{\vskip6pt \hrule \vskip6pt}</xsl:text>
-    <xsl:text>% Add line break or hbreak before and after some elements</xsl:text>
+    <xsl:text>% Macro for horizontal line&#xa;</xsl:text>
+    <xsl:text>\newcommand{\hbreak}{\vskip6pt \hrule \vskip6pt}&#xa;</xsl:text>
+    <xsl:text>% Add line break or hbreak before and after some elements&#xa;</xsl:text>
     <xsl:text>\AtBeginEnvironment{assemblage}{\vskip\baselineskip}&#xa;</xsl:text>
     <xsl:text>\AfterEndEnvironment{assemblage}{\vskip\baselineskip}</xsl:text>
     <xsl:text>\AtBeginEnvironment{example}{\vskip\baselineskip}</xsl:text>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-31T18:30:47-05:00       *-->
+<!--*       on 2022-02-08T15:48:04-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,8 +14,35 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>As we will see in this section, the relationships between these sets are typical for an equivalence relation. The following example will show how different this can be for a relation that is not an equivalence relation.</p>
-<span class="incontext"><a href="S_equivclasses.html#p-4850">in-context</a></span>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<dl class="description-list narrow">
+<dt>Proposition</dt>
+<dd><p>Let <span class="process-math">\(\sim\)</span> be a relation on <span class="process-math">\(\Z\)</span> where for all <span class="process-math">\(a,
+b \in \Z\text{,}\)</span> <span class="process-math">\(a \sim b\)</span> if and only if <span class="process-math">\(\left( a + 2b \right) \equiv 0 \pmod 3\text{.}\)</span> The relation <span class="process-math">\(\sim\)</span> is an equivalence relation on <span class="process-math">\(\Z\text{.}\)</span></p></dd>
+<dt>Proof</dt>
+<dd>
+<p>Assume <span class="process-math">\(a \sim a\text{.}\)</span> Then <span class="process-math">\(\left( a + 2a \right) \equiv 0 \pmod 3\)</span> since</p>
+<p><span class="process-math">\(\left( 3a \right) \equiv 0 \pmod 3\text{.}\)</span> Therefore, <span class="process-math">\(\sim\)</span> is reflexive on <span class="process-math">\(\Z\text{.}\)</span> In addition, if <span class="process-math">\(a \sim b\text{,}\)</span> then <span class="process-math">\(\left( a + 2b \right) \equiv 0 \pmod 3\text{,}\)</span> and if we multiply both sides of this congruence by 2, we get</p>
+<div class="displaymath process-math">
+\begin{align*}
+2\left( a + 2b \right) \amp \equiv 2 \cdot 0 \pmod 3\\
+\left( 2a + 4b \right) \amp \equiv 0 \pmod 3\\
+\left( 2a + b \right) \amp \equiv 0 \pmod 3\\
+\left( b + 2a \right) \amp \equiv 0 \pmod 3\text{.}
+\end{align*}
+</div>
+<p>This means that <span class="process-math">\(b \sim a\)</span> and hence, <span class="process-math">\(\sim\)</span> is symmetric.</p>
+<p>We now assume that <span class="process-math">\(\left( a + 2b \right) \equiv 0\pmod 3\)</span> and <span class="process-math">\(\left( b + 2c \right) \equiv 0\pmod 3\text{.}\)</span> By adding the corresponding sides of these two congruences, we obtain</p>
+<div class="displaymath process-math">
+\begin{align*}
+\left( a + 2b \right) + \left( b + 2c \right) \amp \equiv 0 + 0 \pmod 3\\
+\left( a + 3b + 2c \right) \amp \equiv 0 \pmod 3\\
+\left( a + 2c \right) \amp \equiv 0 \pmod 3\text{.}
+\end{align*}
+</div>
+<p>Hence, the relation <span class="process-math">\(\sim\)</span> is transitive and we have proved that <span class="process-math">\(\sim\)</span> is an equivalence relation on <span class="process-math">\(\Z\text{.}\)</span></p>
+</dd>
+</dl>
+<span class="incontext"><a href="S_equivrelations.html#p-4850">in-context</a></span>
 </body>
 </html>

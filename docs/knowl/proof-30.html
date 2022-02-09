@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-31T18:26:08-05:00       *-->
+<!--*       on 2022-02-08T15:43:31-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,22 +15,22 @@
 </head>
 <body class="ignore-math">
 <article class="proof"><h5 class="heading"><span class="type">Proof</span></h5>
-<p>We will use a proof by induction. For each natural number <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(n\text{,}\)</span> we let <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(P( n )\)</span> be, <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(f_{3n}\)</span> is an even natural number.</p>
-<p>Since <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(f_3 = 2\text{,}\)</span> we see that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(P( 1 )\)</span> is true and this proves the basis step.</p>
-<p>For the inductive step, we let <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(k\)</span> be a natural number and assume that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(P( k )\)</span> is true. That is, assume that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(f_{3k}\)</span> is an even natural number. This means that there exists an integer <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(m\)</span> such that</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+<p>We will use a proof by induction. For each natural number <span class="process-math">\(n\text{,}\)</span> we let <span class="process-math">\(P( n )\)</span> be, <span class="process-math">\(f_{3n}\)</span> is an even natural number.</p>
+<p>Since <span class="process-math">\(f_3 = 2\text{,}\)</span> we see that <span class="process-math">\(P( 1 )\)</span> is true and this proves the basis step.</p>
+<p>For the inductive step, we let <span class="process-math">\(k\)</span> be a natural number and assume that <span class="process-math">\(P( k )\)</span> is true. That is, assume that <span class="process-math">\(f_{3k}\)</span> is an even natural number. This means that there exists an integer <span class="process-math">\(m\)</span> such that</p>
+<div class="displaymath process-math">
 \begin{equation}
 f_{3k} = 2m\text{.}\tag{35}
 \end{equation}
 </div>
-<p>We need to prove that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(P( {k + 1} )\)</span> is true or that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(f_{3\left( {k + 1} \right)}\)</span> is even. Notice that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(3( {k + 1} ) = 3k + 3\)</span> and, hence, <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(f_{3\left( {k + 1} \right)}  = f_{3k + 3}\text{.}\)</span> We can now use the recursion formula for the Fibonacci numbers to conclude that</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+<p>We need to prove that <span class="process-math">\(P( {k + 1} )\)</span> is true or that <span class="process-math">\(f_{3\left( {k + 1} \right)}\)</span> is even. Notice that <span class="process-math">\(3( {k + 1} ) = 3k + 3\)</span> and, hence, <span class="process-math">\(f_{3\left( {k + 1} \right)}  = f_{3k + 3}\text{.}\)</span> We can now use the recursion formula for the Fibonacci numbers to conclude that</p>
+<div class="displaymath process-math">
 \begin{equation*}
 f_{3k + 3}  = f_{3k + 2}  + f_{3k + 1}\text{.}
 \end{equation*}
 </div>
-<p>Using the recursion formula again, we get <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(f_{3k + 2}  = f_{3k + 1}  + f_{3k}\text{.}\)</span> Putting this all together, we see that</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+<p>Using the recursion formula again, we get <span class="process-math">\(f_{3k + 2}  = f_{3k + 1}  + f_{3k}\text{.}\)</span> Putting this all together, we see that</p>
+<div class="displaymath process-math">
 \begin{align}
 f_{3\left( {k + 1} \right)}  \amp = f_{3k + 3} \notag\\
 \amp = f_{3k + 2}  + f_{3k + 1}\notag\\
@@ -38,13 +38,13 @@ f_{3\left( {k + 1} \right)}  \amp = f_{3k + 3} \notag\\
 \amp = 2f_{3k + 1}  + f_{3k}\tag{36}
 \end{align}
 </div>
-<p>We now substitute the expression for <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(f_{3k}\)</span> in equation <a href="" class="xref" data-knowl="./knowl/eq_progfiba.html" title="Equation 35">(35)</a> into equation <a href="" class="xref" data-knowl="./knowl/recursion_eq2.html" title="Equation 36">(36)</a>. This gives</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath process-math">
+<p>We now substitute the expression for <span class="process-math">\(f_{3k}\)</span> in equation <a href="" class="xref" data-knowl="./knowl/eq_progfiba.html" title="Equation 35">(35)</a> into equation <a href="" class="xref" data-knowl="./knowl/recursion_eq2.html" title="Equation 36">(36)</a>. This gives</p>
+<div class="displaymath process-math">
 \begin{align*}
 f_{3\left( {k + 1} \right)} \amp = 2f_{3k + 1}  + 2m\\
 f_{3\left( {k + 1} \right)} \amp = 2\left( {f_{3k + 1}  + m} \right)
 \end{align*}
 </div>
-<p>This preceding equation shows that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(f_{3\left( {k + 1} \right)}\)</span> is even. Hence it has been proved that if <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(P\left( k \right)\)</span> is true, then <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(P\left( {k + 1} \right)\)</span> is true and the inductive step has been established. By the Principle of Mathematical Induction, this proves that for each natural number <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(n\text{,}\)</span> the Fibonacci number <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(f_{3n}\)</span> is an even natural number.</p></article><span class="incontext"><a href="S_recursion.html#proof-30">in-context</a></span>
+<p>This preceding equation shows that <span class="process-math">\(f_{3\left( {k + 1} \right)}\)</span> is even. Hence it has been proved that if <span class="process-math">\(P\left( k \right)\)</span> is true, then <span class="process-math">\(P\left( {k + 1} \right)\)</span> is true and the inductive step has been established. By the Principle of Mathematical Induction, this proves that for each natural number <span class="process-math">\(n\text{,}\)</span> the Fibonacci number <span class="process-math">\(f_{3n}\)</span> is an even natural number.</p></article><span class="incontext"><a href="S_recursion.html#proof-30">in-context</a></span>
 </body>
 </html>

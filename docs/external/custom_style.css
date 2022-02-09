@@ -39,6 +39,11 @@
   font-style: normal;
 }
 
+/* Add space after titles */
+.pretext-content section li .title:after {
+  content: '\20';
+}
+
 /* Add line break between paragraphs title and body */
 /* .pretext-content .paragraphs .heading {
   display: block;
@@ -48,6 +53,11 @@
 .pretext-content .assemblage-like {
   border-color:var(--chaptertoc);
 }
+
+/* Un-link knowl backgrounds to assemblages */
+/* .pretext-content .knowl-output .knowl .knowl-content > .solution-like.solution {
+  background:#f5f8ff;
+} */
 
 /* Remove extra line break with level 5 and 6 heading */
 /* Was a problem in the solutions with two line breaks after task label */

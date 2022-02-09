@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-31T18:24:49-05:00       *-->
+<!--*       on 2022-02-08T15:42:12-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,8 +14,54 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>The Division Algorithm  can sometimes be used to construct cases that can be used to prove a statement that is true for all integers. We have done this when we divided the integers into the even integers and the odd integers since even integers have a remainder of 0 when divided by 2 and odd integers have a remainder of 1 when divided by 2.</p>
+<h5 class="heading"><span class="type">Paragraph</span></h5>
+<ol class="decimal">
+<li><p>The Division Algorithm can be proven, but we have not yet studied the methods that are usually used to do so. In this text, we will treat the Division Algorithm as an axiom of the integers. The work in <a href="S_divalgo.html#PA_quotients" class="internal" title="Beginning Activity: Beginning Activity 1: Quotients and Remainders">Beginning Activity 1</a> provides some rationale that this is a reasonable axiom.</p></li>
+<li><p>The statement of the Division Algorithm contains the new phrase, “there exist unique integers <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> such that <span class="process-math">\(\ldots \text{.}\)</span>” This means that there is only one pair of integers <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> that satisfy both the conditions <span class="process-math">\(a = bq + r\)</span> and <span class="process-math">\(0 \leq r \lt b\text{.}\)</span> As we saw in <a href="S_divalgo.html#PA_quotients" class="internal" title="Beginning Activity: Beginning Activity 1: Quotients and Remainders">Beginning Activity 1</a>, there are several different ways to write the integer <span class="process-math">\(a\)</span> in the form <span class="process-math">\(a = bq + r\text{.}\)</span> However, there is only one way to do this and satisfy the additional condition that <span class="process-math">\(0 \leq r \lt b\text{.}\)</span></p></li>
+<li><p>In light of the previous comment, when we speak of <dfn class="terminology">the quotient</dfn> and <dfn class="terminology">the remainder</dfn> when we “divide an integer <span class="process-math">\(a\)</span> by the positive integer <span class="process-math">\(b\text{,}\)</span>” we will always mean the quotient <span class="process-math">\(\left( q \right)\)</span> and the remainder <span class="process-math">\(\left( r \right)\)</span> guaranteed by the Division Algorithm. So the remainder <span class="process-math">\(r\)</span> is the least nonnegative integer such that there exists an integer (quotient) <span class="process-math">\(q\)</span> with <span class="process-math">\(a = bq + r\text{.}\)</span></p></li>
+<li>
+<p>If  <span class="process-math">\(a \lt  0\text{,}\)</span> then we must be careful when writing the result of the Division Algorithm. For example, in <a href="" class="xref" data-knowl="./knowl/PA_quotients4.html" title="Exercise 4">Exercise 4</a> and <a href="" class="xref" data-knowl="./knowl/PA_quotients5.html" title="Exercise 5">Exercise 5</a> of <a href="S_divalgo.html#PA_quotients" class="internal" title="Beginning Activity: Beginning Activity 1: Quotients and Remainders">Beginning Activity 1</a>, with <span class="process-math">\(a =  - 17\)</span>  and <span class="process-math">\(b = 5\text{,}\)</span> we obtained <span class="process-math">\(-17 = 5\cdot(-4) + 3\text{,}\)</span> and so the quotient is <span class="process-math">\(-4\)</span> and the remainder is 3. Notice that this is different than the result from a calculator, which would be <span class="process-math">\(\dfrac{{ - 17}}{5} =  - 3.4\text{.}\)</span> But this means</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{{ - 17}}{5} =  - \left( {3 + \frac{4}{{10}}} \right) =  - 3 - \frac{2}{5}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">If we multiply both sides of this equation by 5, we obtain</p>
+<div class="displaymath process-math">
+\begin{equation*}
+{-17} = 5\left( { - 3} \right) + \left( { - 2} \right)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">This is not the result guaranteed by the Division Algorithm since the value of <span class="process-math">\(-2\)</span> does not satisfy the result of being greater than or equal to 0 and less than 5.</p>
+</li>
+<li>
+<p>One way to look at the Division Algorithm is that the integer  <span class="process-math">\(a\)</span>  is either going to be a multiple of <span class="process-math">\(b\text{,}\)</span> or it will lie between two multiples of <span class="process-math">\(b\text{.}\)</span> Suppose that <span class="process-math">\(a\)</span> is not a multiple of <span class="process-math">\(b\)</span> and that it lies between the multiples <span class="process-math">\(b \cdot q\)</span> and <span class="process-math">\(b\left( {q + 1} \right)\text{,}\)</span> where <span class="process-math">\(q\)</span> is some integer. This is shown on the number line in <a href="" class="xref" data-knowl="./knowl/fig_divalgo.html" title="Figure 3.31">Figure 3.31</a>. <figure class="figure figure-like"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/figps-divalgo.svg" role="img" class="contained" alt="A number line with the points bq, a, and b(q+1). A second line, labeled r, extends from bq to a."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.31<span class="period">.</span></span><span class="space"> </span>Remainder for the Division Algorithm</figcaption></figure> If <span class="process-math">\(r\)</span> represents the distance from <span class="process-math">\(b \cdot q\)</span> to <span class="process-math">\(a\text{,}\)</span> then</p>
+<div class="displaymath process-math">
+\begin{align*}
+r \amp = a - b \cdot q,\text{ or }\\
+a \amp = b \cdot q + r\text{.}
+\end{align*}
+</div>
+<p class="continuation">From the diagram, also notice that  <span class="process-math">\(r\)</span>  is less than the distance between <span class="process-math">\(b \cdot q\)</span> and  <span class="process-math">\(b\left( {q + 1} \right)\text{.}\)</span> Algebraically, this distance is</p>
+<div class="displaymath process-math">
+\begin{align*}
+b\left( {q + 1} \right) - b \cdot q \amp = b \cdot q + b - b \cdot q\\
+\amp = b\text{.}
+\end{align*}
+</div>
+<p class="continuation">Thus, in the case where  <span class="process-math">\(a\)</span>  is not a multiple of  <span class="process-math">\(b\text{,}\)</span> we get  <span class="process-math">\(0 \lt  r \lt  b\text{.}\)</span></p>
+</li>
+<li>
+<p>We have been implicitly using the fact that an integer cannot be both even and odd. There are several ways to understand this fact, but one way is through the Division Algorithm. When we classify an integer as even or odd, we are doing so on the basis of the remainder (according to the Division Algorithm) when the integer is “divided” by 2. If  <span class="process-math">\(a \in \mathbb{Z}\text{,}\)</span> then by the Division Algorithm there exist unique integers <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> such that</p>
+<div class="displaymath process-math">
+\begin{equation*}
+a = 2q + r\text{ and } 0 \leq r \lt  2\text{.}
+\end{equation*}
+</div>
+<p class="continuation">This means that the remainder, <span class="process-math">\(r\text{,}\)</span> can only be zero or one (and not both). When  <span class="process-math">\(r = 0\text{,}\)</span> the integer is even, and when <span class="process-math">\(r = 1\text{,}\)</span> the integer is odd.</p>
+</li>
+</ol>
 <span class="incontext"><a href="S_divalgo.html#p-1910">in-context</a></span>
 </body>
 </html>

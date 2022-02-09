@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-31T18:26:09-05:00       *-->
+<!--*       on 2022-02-08T15:43:30-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,8 +14,14 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>For the sequence <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(a_{0}, a_1 ,a_2 , \ldots , a_n , \ldots\)</span> , assume that <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(a_0 = 1\)</span> and that for each <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(n \in \mathbb{N} \cup \left\{ 0 \right\}\text{,}\)</span> <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(a_{n + 1} = \left( {n + 1} \right)a_n\text{.}\)</span> Use mathematical induction to prove that for each <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(n \in \mathbb{N} \cup \left\{ 0 \right\}\text{,}\)</span> <span xmlns:svg="http://www.w3.org/2000/svg" class="process-math">\(a_n = n!\text{.}\)</span></p>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<p>This is an important problem in the Sanskrit language since Sanskrit meters are based on duration rather than on accent as in the English Language. The answer to this question generates a sequence similar to the Fibonacci sequence. Suppose that <span class="process-math">\(h_n\)</span> is the number of patterns of syllables of length <span class="process-math">\(n\text{.}\)</span> We then see that <span class="process-math">\(h_1 = 1\)</span> and <span class="process-math">\(h_2 = 2\text{.}\)</span> Now let <span class="process-math">\(n\)</span> be a natural number and consider pattern of length <span class="process-math">\(n + 2\text{.}\)</span> This pattern either ends in a short syllable or a long syllable. If it ends in a short syllable and this syllable is removed, then there is a pattern of length <span class="process-math">\(n+1\text{,}\)</span> and there are <span class="process-math">\(h_{n+1}\)</span> such patterns. Similarly, if it ends in a long syllable and this syllable is removed, then there is a pattern of length <span class="process-math">\(n\text{,}\)</span> and there are <span class="process-math">\(h_n\)</span> such patterns. From this, we conclude that</p>
+<div class="displaymath process-math">
+\begin{equation*}
+h_{n+2} = h_{n+1} + h_n\text{.}
+\end{equation*}
+</div>
+<p class="continuation">This actually generates the sequence 1, 2, 3, 5, 8, 13, 21, …. For more information about Hemachandra, see the article <span class="articletitle">“Math for Poets and Drummers”</span> by Rachel Wells Hall in the February 2008 issue of <span class="booktitle">Math Horizons</span>.</p>
 <span class="incontext"><a href="S_recursion.html#p-2586">in-context</a></span>
 </body>
 </html>

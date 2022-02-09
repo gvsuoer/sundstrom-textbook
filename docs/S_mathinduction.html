@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-01-31T18:14:27-05:00       *-->
+<!--*       on 2022-02-08T15:32:24-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -9,11 +9,14 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US">
-<head>
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>The Principle of Mathematical Induction</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Mathematical Reasoning">
+<meta property="book:author" content="Ted Sundstrom, Professor Emeritus">
 <script>window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
@@ -36,22 +39,22 @@
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg">miniversion=0.6</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
-</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/colors_blue_grey.css" rel="stylesheet" type="text/css">
-<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="external/custom_style.css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="pretext-book ignore-math has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\R}{\mathbb R}
 \newcommand{\Q}{\mathbb Q}
@@ -66,11 +69,11 @@
 \)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="book-1.html"><span class="title">Mathematical Reasoning:</span> <span class="subtitle">Writing and Proof (Version 3)</span></a></h1>
+<h1 class="heading"><a href="book-1.html"><span class="title">Mathematical Reasoning:</span> <span class="subtitle">Writing and Proof (PreTeXt Edition)</span></a></h1>
 <p class="byline">Ted Sundstrom, Professor Emeritus</p>
 </div>
 </div></div>
-<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
 <a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="C_induction.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_induction.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_otherinduction.html" title="Next">Next</a></span>
@@ -80,106 +83,106 @@
 <button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="C_induction.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C_induction.html" title="Up">Up</a><a class="next-button button toolbar-item" href="S_otherinduction.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
-<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
 <li class="link frontmatter">
-<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
-<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
-<li><a href="fm-versions.html" data-scroll="fm-versions">Version 3 and Version 2.1</a></li>
-<li><a href="fm-student-note.html" data-scroll="fm-student-note">Note to Students</a></li>
-<li><a href="fm-preface.html" data-scroll="fm-preface">Preface</a></li>
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="fm_pub_note.html" data-scroll="fm_pub_note" class="internal">Publisher's Note</a></li>
+<li><a href="fm-student-note.html" data-scroll="fm-student-note" class="internal">Note to Students</a></li>
+<li><a href="fm-preface.html" data-scroll="fm-preface" class="internal">Preface</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="C_1intro.html" data-scroll="C_1intro"><span class="codenumber">1</span> <span class="title">Introduction to Writing Proofs in Mathematics</span></a><ul>
-<li><a href="S_1prop.html" data-scroll="S_1prop">Statements and Conditional Statements</a></li>
-<li><a href="S_1direct.html" data-scroll="S_1direct">Constructing Direct Proofs</a></li>
-<li><a href="S_1summary.html" data-scroll="S_1summary">Chapter 1 Summary</a></li>
+<a href="C_1intro.html" data-scroll="C_1intro" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_1prop.html" data-scroll="S_1prop" class="internal">Statements and Conditional Statements</a></li>
+<li><a href="S_1direct.html" data-scroll="S_1direct" class="internal">Constructing Direct Proofs</a></li>
+<li><a href="S_1summary.html" data-scroll="S_1summary" class="internal">Chapter 1 Summary</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="C_2logic.html" data-scroll="C_2logic"><span class="codenumber">2</span> <span class="title">Logical Reasoning</span></a><ul>
-<li><a href="S_2logop.html" data-scroll="S_2logop">Statements and Logical Operators</a></li>
-<li><a href="S_logequiv.html" data-scroll="S_logequiv">Logically Equivalent Statements</a></li>
-<li><a href="S_2predicates.html" data-scroll="S_2predicates">Open Sentences and Sets</a></li>
-<li><a href="S_2quantifier.html" data-scroll="S_2quantifier">Quantifiers and Negations</a></li>
-<li><a href="S_2summary.html" data-scroll="S_2summary">Chapter 2 Summary</a></li>
+<a href="C_2logic.html" data-scroll="C_2logic" class="internal"><span class="codenumber">2</span> <span class="title">Logical Reasoning</span></a><ul>
+<li><a href="S_2logop.html" data-scroll="S_2logop" class="internal">Statements and Logical Operators</a></li>
+<li><a href="S_logequiv.html" data-scroll="S_logequiv" class="internal">Logically Equivalent Statements</a></li>
+<li><a href="S_2predicates.html" data-scroll="S_2predicates" class="internal">Open Sentences and Sets</a></li>
+<li><a href="S_2quantifier.html" data-scroll="S_2quantifier" class="internal">Quantifiers and Negations</a></li>
+<li><a href="S_2summary.html" data-scroll="S_2summary" class="internal">Chapter 2 Summary</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="C_proofs.html" data-scroll="C_proofs"><span class="codenumber">3</span> <span class="title">Constructing and Writing Proofs in Mathematics</span></a><ul>
-<li><a href="S_directproof.html" data-scroll="S_directproof">Direct Proofs</a></li>
-<li><a href="S_moremethods.html" data-scroll="S_moremethods">More Methods of Proof</a></li>
-<li><a href="S_contradiction.html" data-scroll="S_contradiction">Proof by Contradiction</a></li>
-<li><a href="S_cases.html" data-scroll="S_cases">Using Cases in Proofs</a></li>
-<li><a href="S_divalgo.html" data-scroll="S_divalgo">The Division Algorithm and Congruence</a></li>
-<li><a href="S_reviewproofs.html" data-scroll="S_reviewproofs">Review of Proof Methods</a></li>
-<li><a href="S_3summary.html" data-scroll="S_3summary">Chapter 3 Summary</a></li>
+<a href="C_proofs.html" data-scroll="C_proofs" class="internal"><span class="codenumber">3</span> <span class="title">Constructing and Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_directproof.html" data-scroll="S_directproof" class="internal">Direct Proofs</a></li>
+<li><a href="S_moremethods.html" data-scroll="S_moremethods" class="internal">More Methods of Proof</a></li>
+<li><a href="S_contradiction.html" data-scroll="S_contradiction" class="internal">Proof by Contradiction</a></li>
+<li><a href="S_cases.html" data-scroll="S_cases" class="internal">Using Cases in Proofs</a></li>
+<li><a href="S_divalgo.html" data-scroll="S_divalgo" class="internal">The Division Algorithm and Congruence</a></li>
+<li><a href="S_reviewproofs.html" data-scroll="S_reviewproofs" class="internal">Review of Proof Methods</a></li>
+<li><a href="S_3summary.html" data-scroll="S_3summary" class="internal">Chapter 3 Summary</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="C_induction.html" data-scroll="C_induction"><span class="codenumber">4</span> <span class="title">Mathematical Induction</span></a><ul>
+<a href="C_induction.html" data-scroll="C_induction" class="internal"><span class="codenumber">4</span> <span class="title">Mathematical Induction</span></a><ul>
 <li><a href="S_mathinduction.html" data-scroll="S_mathinduction" class="active">The Principle of Mathematical Induction</a></li>
-<li><a href="S_otherinduction.html" data-scroll="S_otherinduction">Other Forms of Mathematical Induction</a></li>
-<li><a href="S_recursion.html" data-scroll="S_recursion">Induction and Recursion</a></li>
-<li><a href="S_4summary.html" data-scroll="S_4summary">Chapter 4 Summary</a></li>
+<li><a href="S_otherinduction.html" data-scroll="S_otherinduction" class="internal">Other Forms of Mathematical Induction</a></li>
+<li><a href="S_recursion.html" data-scroll="S_recursion" class="internal">Induction and Recursion</a></li>
+<li><a href="S_4summary.html" data-scroll="S_4summary" class="internal">Chapter 4 Summary</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="C_settheory.html" data-scroll="C_settheory"><span class="codenumber">5</span> <span class="title">Set Theory</span></a><ul>
-<li><a href="S_setoperations.html" data-scroll="S_setoperations">Sets and Operations on Sets</a></li>
-<li><a href="S_provingset.html" data-scroll="S_provingset">Proving Set Relationships</a></li>
-<li><a href="S_setproperties.html" data-scroll="S_setproperties">Properties of Set Operations</a></li>
-<li><a href="S_cartesian.html" data-scroll="S_cartesian">Cartesian Products</a></li>
-<li><a href="S_indexfamily.html" data-scroll="S_indexfamily">Indexed Families of Sets</a></li>
-<li><a href="S_5summary.html" data-scroll="S_5summary">Chapter 5 Summary</a></li>
+<a href="C_settheory.html" data-scroll="C_settheory" class="internal"><span class="codenumber">5</span> <span class="title">Set Theory</span></a><ul>
+<li><a href="S_setoperations.html" data-scroll="S_setoperations" class="internal">Sets and Operations on Sets</a></li>
+<li><a href="S_provingset.html" data-scroll="S_provingset" class="internal">Proving Set Relationships</a></li>
+<li><a href="S_setproperties.html" data-scroll="S_setproperties" class="internal">Properties of Set Operations</a></li>
+<li><a href="S_cartesian.html" data-scroll="S_cartesian" class="internal">Cartesian Products</a></li>
+<li><a href="S_indexfamily.html" data-scroll="S_indexfamily" class="internal">Indexed Families of Sets</a></li>
+<li><a href="S_5summary.html" data-scroll="S_5summary" class="internal">Chapter 5 Summary</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="C_functions.html" data-scroll="C_functions"><span class="codenumber">6</span> <span class="title">Functions</span></a><ul>
-<li><a href="S_introfunctions.html" data-scroll="S_introfunctions">Introduction to Functions</a></li>
-<li><a href="S_moreaboutfunctions.html" data-scroll="S_moreaboutfunctions">More about Functions</a></li>
-<li><a href="S_typesoffunctions.html" data-scroll="S_typesoffunctions">Injections, Surjections, and Bijections</a></li>
-<li><a href="S_compositionoffunctions.html" data-scroll="S_compositionoffunctions">Composition of Functions</a></li>
-<li><a href="S_inversefunctions.html" data-scroll="S_inversefunctions">Inverse Functions</a></li>
-<li><a href="S_functionsonsets.html" data-scroll="S_functionsonsets">Functions Acting on Sets</a></li>
-<li><a href="S_6summary.html" data-scroll="S_6summary">Chapter 6 Summary</a></li>
+<a href="C_functions.html" data-scroll="C_functions" class="internal"><span class="codenumber">6</span> <span class="title">Functions</span></a><ul>
+<li><a href="S_introfunctions.html" data-scroll="S_introfunctions" class="internal">Introduction to Functions</a></li>
+<li><a href="S_moreaboutfunctions.html" data-scroll="S_moreaboutfunctions" class="internal">More about Functions</a></li>
+<li><a href="S_typesoffunctions.html" data-scroll="S_typesoffunctions" class="internal">Injections, Surjections, and Bijections</a></li>
+<li><a href="S_compositionoffunctions.html" data-scroll="S_compositionoffunctions" class="internal">Composition of Functions</a></li>
+<li><a href="S_inversefunctions.html" data-scroll="S_inversefunctions" class="internal">Inverse Functions</a></li>
+<li><a href="S_functionsonsets.html" data-scroll="S_functionsonsets" class="internal">Functions Acting on Sets</a></li>
+<li><a href="S_6summary.html" data-scroll="S_6summary" class="internal">Chapter 6 Summary</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="C_equivrelations.html" data-scroll="C_equivrelations"><span class="codenumber">7</span> <span class="title">Equivalence Relations</span></a><ul>
-<li><a href="S_relations.html" data-scroll="S_relations">Relations</a></li>
-<li><a href="S_equivrelations.html" data-scroll="S_equivrelations">Equivalence Relations</a></li>
-<li><a href="S_equivclasses.html" data-scroll="S_equivclasses">Equivalence Classes</a></li>
-<li><a href="S_modulararithmetic.html" data-scroll="S_modulararithmetic">Modular Arithmetic</a></li>
-<li><a href="section-37.html" data-scroll="section-37">Chapter 7 Summary</a></li>
+<a href="C_equivrelations.html" data-scroll="C_equivrelations" class="internal"><span class="codenumber">7</span> <span class="title">Equivalence Relations</span></a><ul>
+<li><a href="S_relations.html" data-scroll="S_relations" class="internal">Relations</a></li>
+<li><a href="S_equivrelations.html" data-scroll="S_equivrelations" class="internal">Equivalence Relations</a></li>
+<li><a href="S_equivclasses.html" data-scroll="S_equivclasses" class="internal">Equivalence Classes</a></li>
+<li><a href="S_modulararithmetic.html" data-scroll="S_modulararithmetic" class="internal">Modular Arithmetic</a></li>
+<li><a href="section-37.html" data-scroll="section-37" class="internal">Chapter 7 Summary</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="C_numbertheory.html" data-scroll="C_numbertheory"><span class="codenumber">8</span> <span class="title">Topics in Number Theory</span></a><ul>
-<li><a href="S_gcd.html" data-scroll="S_gcd">The Greatest Common Divisor</a></li>
-<li><a href="S_primefactorizations.html" data-scroll="S_primefactorizations">Prime Numbers and Prime Factorizations</a></li>
-<li><a href="S_diophantine.html" data-scroll="S_diophantine">Linear Diophantine Equations</a></li>
-<li><a href="section-41.html" data-scroll="section-41">Chapter 8 Summary</a></li>
+<a href="C_numbertheory.html" data-scroll="C_numbertheory" class="internal"><span class="codenumber">8</span> <span class="title">Topics in Number Theory</span></a><ul>
+<li><a href="S_gcd.html" data-scroll="S_gcd" class="internal">The Greatest Common Divisor</a></li>
+<li><a href="S_primefactorizations.html" data-scroll="S_primefactorizations" class="internal">Prime Numbers and Prime Factorizations</a></li>
+<li><a href="S_diophantine.html" data-scroll="S_diophantine" class="internal">Linear Diophantine Equations</a></li>
+<li><a href="section-41.html" data-scroll="section-41" class="internal">Chapter 8 Summary</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="C_topicsinsets.html" data-scroll="C_topicsinsets"><span class="codenumber">9</span> <span class="title">Finite and Infinite Sets</span></a><ul>
-<li><a href="S_finitesets.html" data-scroll="S_finitesets">Finite Sets</a></li>
-<li><a href="S_infinitesets.html" data-scroll="S_infinitesets">Countable Sets</a></li>
-<li><a href="S_uncountablesets.html" data-scroll="S_uncountablesets">Uncountable Sets</a></li>
-<li><a href="section-45.html" data-scroll="section-45">Chapter 9 Summary</a></li>
+<a href="C_topicsinsets.html" data-scroll="C_topicsinsets" class="internal"><span class="codenumber">9</span> <span class="title">Finite and Infinite Sets</span></a><ul>
+<li><a href="S_finitesets.html" data-scroll="S_finitesets" class="internal">Finite Sets</a></li>
+<li><a href="S_infinitesets.html" data-scroll="S_infinitesets" class="internal">Countable Sets</a></li>
+<li><a href="S_uncountablesets.html" data-scroll="S_uncountablesets" class="internal">Uncountable Sets</a></li>
+<li><a href="section-45.html" data-scroll="section-45" class="internal">Chapter 9 Summary</a></li>
 </ul>
 </li>
-<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter"><span class="title">Back Matter</span></a></li>
-<li class="link"><a href="C_writingguides.html" data-scroll="C_writingguides"><span class="codenumber">A</span> <span class="title">Guidelines for Writing Mathematical Proofs</span></a></li>
-<li class="link"><a href="prog-answers.html" data-scroll="prog-answers"><span class="codenumber">B</span> <span class="title">Answers for the Progress Checks</span></a></li>
-<li class="link"><a href="exer-answers.html" data-scroll="exer-answers"><span class="codenumber">C</span> <span class="title">Answers and Hints for Selected Exercises</span></a></li>
-<li class="link"><a href="appendix-2.html" data-scroll="appendix-2"><span class="codenumber">D</span> <span class="title">List of Symbols</span></a></li>
-<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="C_writingguides.html" data-scroll="C_writingguides" class="internal"><span class="codenumber">A</span> <span class="title">Guidelines for Writing Mathematical Proofs</span></a></li>
+<li class="link"><a href="prog-answers.html" data-scroll="prog-answers" class="internal"><span class="codenumber">B</span> <span class="title">Answers for the Progress Checks</span></a></li>
+<li class="link"><a href="exer-answers.html" data-scroll="exer-answers" class="internal"><span class="codenumber">C</span> <span class="title">Answers and Hints for Selected Exercises</span></a></li>
+<li class="link"><a href="appendix-2.html" data-scroll="appendix-2" class="internal"><span class="codenumber">D</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="S_mathinduction"><h2 class="heading hide-type">
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="S_mathinduction"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.1</span> <span class="title">The Principle of Mathematical Induction</span>
 </h2>
 <section class="worksheet" id="PA_exploringstatements"><h3 class="heading hide-type">
@@ -187,124 +190,124 @@
 <a href="PA_exploringstatements-a4.html" class="a4">A4</a><a href="PA_exploringstatements-letter.html" class="us">US</a>
 </div>
 </h3>
-<p id="p-2193">One of the most fundamental sets in mathematics is the set of natural numbers <span class="process-math">\(\N\text{.}\)</span> In this section, we will learn a new proof technique, called mathematical induction, that is often used to prove statements of the form <span class="process-math">\(\left( \forall n \in \N \right)\left( P(n) \right)\text{.}\)</span> In <a href="S_otherinduction.html" class="internal" title="Section 4.2: Other Forms of Mathematical Induction">Section 4.2</a>, we will learn how to extend this method to statements of the form <span class="process-math">\(\left( \forall n \in T \right)\left( P(n) \right)\text{,}\)</span> where <span class="process-math">\(T\)</span> is a certain type of subset of the integers <span class="process-math">\(\Z\text{.}\)</span></p>
-<p id="p-2194">For each natural number <span class="process-math">\(n\text{,}\)</span> let <span class="process-math">\(P(n)\)</span> be the following open sentence:</p>
+<p id="p-2218">One of the most fundamental sets in mathematics is the set of natural numbers <span class="process-math">\(\N\text{.}\)</span> In this section, we will learn a new proof technique, called mathematical induction, that is often used to prove statements of the form <span class="process-math">\(\left( \forall n \in \N \right)\left( P(n) \right)\text{.}\)</span> In <a href="S_otherinduction.html" class="internal" title="Section 4.2: Other Forms of Mathematical Induction">Section 4.2</a>, we will learn how to extend this method to statements of the form <span class="process-math">\(\left( \forall n \in T \right)\left( P(n) \right)\text{,}\)</span> where <span class="process-math">\(T\)</span> is a certain type of subset of the integers <span class="process-math">\(\Z\text{.}\)</span></p>
+<p id="p-2219">For each natural number <span class="process-math">\(n\text{,}\)</span> let <span class="process-math">\(P(n)\)</span> be the following open sentence:</p>
 <div class="displaymath process-math">
 \begin{equation*}
 4 \text{ divides }   \left( {5^n  - 1} \right)\!\text{.}
 \end{equation*}
 </div>
 <article class="exercise exercise-like" id="exercise-301"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-2195">Does this open sentence become a true statement when <span class="process-math">\(n = 1\text{?}\)</span> That is, is 1 in the truth set of <span class="process-math">\(P(n)\text{?}\)</span></p></article><article class="exercise exercise-like" id="exercise-302"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<p id="p-2196">Does this open sentence become a true statement when <span class="process-math">\(n = 2\text{?}\)</span> That is, is 2 in the truth set of <span class="process-math">\(P(n)\text{?}\)</span></p></article><article class="exercise exercise-like" id="exercise-303"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<p id="p-2197">Choose at least four more natural numbers and determine whether the open sentence is true or false for each of your choices.</p></article><p id="p-2198">All of the examples that were used should provide evidence that the following proposition is true:</p>
+<p id="p-2220">Does this open sentence become a true statement when <span class="process-math">\(n = 1\text{?}\)</span> That is, is 1 in the truth set of <span class="process-math">\(P(n)\text{?}\)</span></p></article><article class="exercise exercise-like" id="exercise-302"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-2221">Does this open sentence become a true statement when <span class="process-math">\(n = 2\text{?}\)</span> That is, is 2 in the truth set of <span class="process-math">\(P(n)\text{?}\)</span></p></article><article class="exercise exercise-like" id="exercise-303"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-2222">Choose at least four more natural numbers and determine whether the open sentence is true or false for each of your choices.</p></article><p id="p-2223">All of the examples that were used should provide evidence that the following proposition is true:</p>
 <div class="displaymath process-math">
 \begin{equation*}
 \text{For each natural number } n, 4 \text{ divides } \left( {5^n - 1} \right)\text{.}
 \end{equation*}
 </div>
 <p class="continuation">We should keep in mind that no matter how many examples we try, we cannot prove this proposition with a list of examples because we can never check if 4 divides <span class="process-math">\(\left( {5^n - 1} \right)\)</span> for every natural number <span class="process-math">\(n\text{.}\)</span> Mathematical induction will provide a method for proving this proposition.</p>
-<p id="p-2199">For another example, for each natural number <span class="process-math">\(n\text{,}\)</span> we now let <span class="process-math">\(Q( n )\)</span> be the following open sentence:</p>
+<p id="p-2224">For another example, for each natural number <span class="process-math">\(n\text{,}\)</span> we now let <span class="process-math">\(Q( n )\)</span> be the following open sentence:</p>
 <div class="displaymath process-math">
 \begin{equation}
 1^2  + 2^2  + \, \cdots \, + n^2  = \frac{{n(n + 1)(2n + 1)}}{6}\text{.}\label{eq_PAexplore}\tag{15}
 \end{equation}
 </div>
-<p id="p-2200">The expression on the left side of the previous equation is the sum of the squares of the first <span class="process-math">\(n\)</span> natural numbers. So when <span class="process-math">\(n = 1\text{,}\)</span> the left side of equation <a href="" class="xref" data-knowl="./knowl/eq_PAexplore.html" title="Equation 15">(15)</a> is <span class="process-math">\(1^2\text{.}\)</span> When <span class="process-math">\(n = 2\text{,}\)</span> the left side of equation <a href="" class="xref" data-knowl="./knowl/eq_PAexplore.html" title="Equation 15">(15)</a> is <span class="process-math">\(1^2 + 2^2\text{.}\)</span></p>
+<p id="p-2225">The expression on the left side of the previous equation is the sum of the squares of the first <span class="process-math">\(n\)</span> natural numbers. So when <span class="process-math">\(n = 1\text{,}\)</span> the left side of equation <a href="" class="xref" data-knowl="./knowl/eq_PAexplore.html" title="Equation 15">(15)</a> is <span class="process-math">\(1^2\text{.}\)</span> When <span class="process-math">\(n = 2\text{,}\)</span> the left side of equation <a href="" class="xref" data-knowl="./knowl/eq_PAexplore.html" title="Equation 15">(15)</a> is <span class="process-math">\(1^2 + 2^2\text{.}\)</span></p>
 <article class="exercise exercise-like" id="exercise-304"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="introduction" id="introduction-188"><p id="p-2201">Does <span class="process-math">\(Q ( n )\)</span> become a true statement when</p></div>
+<div class="introduction" id="introduction-188"><p id="p-2226">Does <span class="process-math">\(Q ( n )\)</span> become a true statement when</p></div>
 <article class="task exercise-like" id="task-692"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-2202"><span class="process-math">\(n = 1\text{?}\)</span> (Is 1 in the truth set of <span class="process-math">\(Q ( n )\text{?}\)</span>)</p></article><article class="task exercise-like" id="task-693"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-2203"><span class="process-math">\(n = 2\text{?}\)</span> (Is 2 in the truth set of <span class="process-math">\(Q ( n )\text{?}\)</span>)</p></article><article class="task exercise-like" id="task-694"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-2204"><span class="process-math">\(n = 3\text{?}\)</span> (Is 3 in the truth set of <span class="process-math">\(Q ( n )\text{?}\)</span>)</p></article></article><article class="exercise exercise-like" id="exercise-305"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<p id="p-2205">Choose at least four more natural numbers and determine whether the open sentence is true or false for each of your choices. A table with the columns <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(1^2 + 2^2 + \, \cdots \, + n^2\text{,}\)</span> and <span class="process-math">\(\dfrac{{n(n + 1)(2n + 1)}}{6}\)</span> may help you organize your work.</p></article><p id="p-2206">All of the examples we have explored, should indicate the following proposition is true: <blockquote class="blockquote" id="blockquote-140">For each natural number <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(1^2 + 2^2 + \, \cdots \, + n^2 = \dfrac{{n(n + 1)(2n + 1)}}{6}\text{.}\)</span>
+<p id="p-2227"><span class="process-math">\(n = 1\text{?}\)</span> (Is 1 in the truth set of <span class="process-math">\(Q ( n )\text{?}\)</span>)</p></article><article class="task exercise-like" id="task-693"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-2228"><span class="process-math">\(n = 2\text{?}\)</span> (Is 2 in the truth set of <span class="process-math">\(Q ( n )\text{?}\)</span>)</p></article><article class="task exercise-like" id="task-694"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-2229"><span class="process-math">\(n = 3\text{?}\)</span> (Is 3 in the truth set of <span class="process-math">\(Q ( n )\text{?}\)</span>)</p></article></article><article class="exercise exercise-like" id="exercise-305"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<p id="p-2230">Choose at least four more natural numbers and determine whether the open sentence is true or false for each of your choices. A table with the columns <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(1^2 + 2^2 + \, \cdots \, + n^2\text{,}\)</span> and <span class="process-math">\(\dfrac{{n(n + 1)(2n + 1)}}{6}\)</span> may help you organize your work.</p></article><p id="p-2231">All of the examples we have explored, should indicate the following proposition is true: <blockquote class="blockquote" id="blockquote-140">For each natural number <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(1^2 + 2^2 + \, \cdots \, + n^2 = \dfrac{{n(n + 1)(2n + 1)}}{6}\text{.}\)</span>
 </blockquote> In this section, we will learn how to use mathematical induction to prove this statement.</p></section><section class="worksheet" id="PA_propertyofN"><h3 class="heading hide-type">
 <span class="type">Beginning Activity</span> <span class="codenumber"></span> <span class="title">Beginning Activity 2: A Property of the Natural Numbers</span><div class="print-links">
 <a href="PA_propertyofN-a4.html" class="a4">A4</a><a href="PA_propertyofN-letter.html" class="us">US</a>
 </div>
 </h3>
-<p id="p-2207">Intuitively, the natural numbers begin with the number 1, and then there is 2, then 3, then 4, and so on. Does this process of “starting with 1” and “adding 1 repeatedly” result in all the natural numbers? We will use the concept of an inductive set to explore this idea in this activity.</p>
+<p id="p-2232">Intuitively, the natural numbers begin with the number 1, and then there is 2, then 3, then 4, and so on. Does this process of “starting with 1” and “adding 1 repeatedly” result in all the natural numbers? We will use the concept of an inductive set to explore this idea in this activity.</p>
 <article class="assemblage assemblage-like" id="D_inductiveset"><h4 class="heading"><span class="title">Definition.</span></h4>
-<p id="p-2208">A set <span class="process-math">\(T\)</span> that is a subset of <span class="process-math">\(\mathbb{Z}\)</span> is an <dfn class="terminology">inductive set</dfn> provided that for each integer <span class="process-math">\(k\text{,}\)</span> if <span class="process-math">\(k \in T\text{,}\)</span> then <span class="process-math">\(k + 1 \in T\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-306"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<p id="p-2209">Carefully explain what it means to say that a subset <span class="process-math">\(T\)</span> of the integers <span class="process-math">\(\Z\)</span> is not an inductive set. This description should use an existential quantifier.</p></article><article class="exercise exercise-like" id="exercise-307"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="introduction" id="introduction-189"><p id="p-2210">Use the definition of an inductive set to determine which of the following sets are inductive sets and which are not. Do not worry about formal proofs, but if a set is not inductive, be sure to provide a specific counterexample that proves it is not inductive.</p></div>
+<p id="p-2233">A set <span class="process-math">\(T\)</span> that is a subset of <span class="process-math">\(\mathbb{Z}\)</span> is an <dfn class="terminology">inductive set</dfn> provided that for each integer <span class="process-math">\(k\text{,}\)</span> if <span class="process-math">\(k \in T\text{,}\)</span> then <span class="process-math">\(k + 1 \in T\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-306"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<p id="p-2234">Carefully explain what it means to say that a subset <span class="process-math">\(T\)</span> of the integers <span class="process-math">\(\Z\)</span> is not an inductive set. This description should use an existential quantifier.</p></article><article class="exercise exercise-like" id="exercise-307"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-189"><p id="p-2235">Use the definition of an inductive set to determine which of the following sets are inductive sets and which are not. Do not worry about formal proofs, but if a set is not inductive, be sure to provide a specific counterexample that proves it is not inductive.</p></div>
 <article class="task exercise-like" id="task-695"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-2211"><span class="process-math">\(A = \left\{ {1,2,3, \ldots ,20} \right\}\)</span></p></article><article class="task exercise-like" id="task-696"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-2212">The set of natural numbers, <span class="process-math">\(\mathbb{N}\)</span></p></article><article class="task exercise-like" id="task-697"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-2213"><span class="process-math">\(B = \left\{ { {n \in \mathbb{N}} \mid n \geq 5} \right\}\)</span></p></article><article class="task exercise-like" id="task-698"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<p id="p-2214"><span class="process-math">\(S = \left\{ { {n \in \mathbb{Z}} \mid n \geq - 3} \right\}\)</span></p></article><article class="task exercise-like" id="task-699"><h5 class="heading"><span class="codenumber">(e)</span></h5>
-<p id="p-2215"><span class="process-math">\(R = \left\{ { {n \in \mathbb{Z}} \mid n \leq 100} \right\}\)</span></p></article><article class="task exercise-like" id="task-700"><h5 class="heading"><span class="codenumber">(f)</span></h5>
-<p id="p-2216">The set of integers, <span class="process-math">\(\mathbb{Z}\)</span></p></article><article class="task exercise-like" id="task-701"><h5 class="heading"><span class="codenumber">(g)</span></h5>
-<p id="p-2217">The set of odd natural numbers.</p></article></article><article class="exercise exercise-like" id="PA_propertyofN6"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="introduction" id="introduction-190"><p id="p-2218">This part will explore one of the underlying mathematical ideas for a proof by induction. Assume that <span class="process-math">\(T \subseteq \mathbb{N}\)</span> and assume that <span class="process-math">\(1 \in T\)</span> and that <span class="process-math">\(T\)</span> is an inductive set. Use the definition of an inductive set to answer each of the following:</p></div>
+<p id="p-2236"><span class="process-math">\(A = \left\{ {1,2,3, \ldots ,20} \right\}\)</span></p></article><article class="task exercise-like" id="task-696"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-2237">The set of natural numbers, <span class="process-math">\(\mathbb{N}\)</span></p></article><article class="task exercise-like" id="task-697"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-2238"><span class="process-math">\(B = \left\{ { {n \in \mathbb{N}} \mid n \geq 5} \right\}\)</span></p></article><article class="task exercise-like" id="task-698"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-2239"><span class="process-math">\(S = \left\{ { {n \in \mathbb{Z}} \mid n \geq - 3} \right\}\)</span></p></article><article class="task exercise-like" id="task-699"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-2240"><span class="process-math">\(R = \left\{ { {n \in \mathbb{Z}} \mid n \leq 100} \right\}\)</span></p></article><article class="task exercise-like" id="task-700"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<p id="p-2241">The set of integers, <span class="process-math">\(\mathbb{Z}\)</span></p></article><article class="task exercise-like" id="task-701"><h5 class="heading"><span class="codenumber">(g)</span></h5>
+<p id="p-2242">The set of odd natural numbers.</p></article></article><article class="exercise exercise-like" id="PA_propertyofN6"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-190"><p id="p-2243">This part will explore one of the underlying mathematical ideas for a proof by induction. Assume that <span class="process-math">\(T \subseteq \mathbb{N}\)</span> and assume that <span class="process-math">\(1 \in T\)</span> and that <span class="process-math">\(T\)</span> is an inductive set. Use the definition of an inductive set to answer each of the following:</p></div>
 <article class="task exercise-like" id="task-702"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-2219">Is <span class="process-math">\(2 \in T\text{?}\)</span> Explain.</p></article><article class="task exercise-like" id="task-703"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-2220">Is <span class="process-math">\(3 \in T\text{?}\)</span> Explain.</p></article><article class="task exercise-like" id="task-704"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-2221">Is <span class="process-math">\(4 \in T\text{?}\)</span> Explain.</p></article><article class="task exercise-like" id="task-705"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<p id="p-2222">Is <span class="process-math">\(100 \in T\text{?}\)</span> Explain.</p></article><article class="task exercise-like" id="task-706"><h5 class="heading"><span class="codenumber">(e)</span></h5>
-<p id="p-2223">Do you think that <span class="process-math">\(T = \mathbb{N}\text{?}\)</span> Explain.</p></article></article></section><section class="subsection" id="SS_inductive-sets"><h3 class="heading hide-type">
+<p id="p-2244">Is <span class="process-math">\(2 \in T\text{?}\)</span> Explain.</p></article><article class="task exercise-like" id="task-703"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-2245">Is <span class="process-math">\(3 \in T\text{?}\)</span> Explain.</p></article><article class="task exercise-like" id="task-704"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-2246">Is <span class="process-math">\(4 \in T\text{?}\)</span> Explain.</p></article><article class="task exercise-like" id="task-705"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-2247">Is <span class="process-math">\(100 \in T\text{?}\)</span> Explain.</p></article><article class="task exercise-like" id="task-706"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-2248">Do you think that <span class="process-math">\(T = \mathbb{N}\text{?}\)</span> Explain.</p></article></article></section><section class="subsection" id="SS_inductive-sets"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Inductive Sets</span>
 </h3>
-<p id="p-2224">The two open sentences in <a href="S_mathinduction.html#PA_exploringstatements" class="internal" title="Beginning Activity: Beginning Activity 1: Exploring Statements of the Form \(\left( \forall n \in \N \right)\left( P(n) \right)\)">Beginning Activity 1</a> appeared to be true for all values of <span class="process-math">\(n\)</span> in the set of natural numbers, <span class="process-math">\(\mathbb{N}\text{.}\)</span> That is, the examples in this beginning activity provided evidence that the following two statements are true.</p>
+<p id="p-2249">The two open sentences in <a href="S_mathinduction.html#PA_exploringstatements" class="internal" title="Beginning Activity: Beginning Activity 1: Exploring Statements of the Form \left( \forall n \in \N \right)\left( P(n) \right)">Beginning Activity 1</a> appeared to be true for all values of <span class="process-math">\(n\)</span> in the set of natural numbers, <span class="process-math">\(\mathbb{N}\text{.}\)</span> That is, the examples in this beginning activity provided evidence that the following two statements are true.</p>
 <ul class="disc">
-<li id="conjecture1"><p id="p-2225">For each natural number <span class="process-math">\(n\text{,}\)</span> 4 divides <span class="process-math">\(\left( {5^n - 1} \right)\text{.}\)</span></p></li>
-<li id="conjecture2"><p id="p-2226">For each natural number <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(1^2 + 2^2 + \, \cdots \, + n^2 = \dfrac{{n(n + 1)(2n + 1)}}{6}\text{.}\)</span></p></li>
+<li id="conjecture1"><p id="p-2250">For each natural number <span class="process-math">\(n\text{,}\)</span> 4 divides <span class="process-math">\(\left( {5^n - 1} \right)\text{.}\)</span></p></li>
+<li id="conjecture2"><p id="p-2251">For each natural number <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(1^2 + 2^2 + \, \cdots \, + n^2 = \dfrac{{n(n + 1)(2n + 1)}}{6}\text{.}\)</span></p></li>
 </ul>
 <p class="continuation">One way of proving statements of this form uses the concept of an inductive set introduced in <a href="S_mathinduction.html#PA_propertyofN" class="internal" title="Beginning Activity: Beginning Activity 2: A Property of the Natural Numbers">Beginning Activity 2</a>. The idea is to prove that if one natural number makes the open sentence true, then the next one also makes the open sentence true. This is how we handle the phrase “and so on” when dealing with the natural numbers. In <a href="S_mathinduction.html#PA_propertyofN" class="internal" title="Beginning Activity: Beginning Activity 2: A Property of the Natural Numbers">Beginning Activity 2</a>, we saw that the number systems <span class="process-math">\(\N\)</span> and <span class="process-math">\(\Z\)</span> and other sets are inductive. What we are trying to do is somehow distinguish <span class="process-math">\(\N\)</span> from the other inductive sets. The way to do this was suggested in <a href="" class="xref" data-knowl="./knowl/PA_propertyofN6.html" title="Exercise 3">Exercise 3</a> of <a href="S_mathinduction.html#PA_propertyofN" class="internal" title="Beginning Activity: Beginning Activity 2: A Property of the Natural Numbers">Beginning Activity 2</a>. Although we will not prove it, the following statement should seem true.</p>
 <section class="paragraphs" id="inductivestatement1"><h4 class="heading"><span class="title">Statement 1.</span></h4>
-<p id="p-2227">For each subset <span class="process-math">\(T\)</span> of <span class="process-math">\(\N\text{,}\)</span> if <span class="process-math">\(1 \in T\)</span> and <span class="process-math">\(T\)</span> is inductive, then <span class="process-math">\(T = \mathbb{N}\text{.}\)</span></p></section><p id="p-2228">Notice that the integers, <span class="process-math">\(\mathbb{Z}\text{,}\)</span> and the set <span class="process-math">\(S = \left\{ {n \in \mathbb{Z} \mid n \geq - 3} \right\}\)</span> both contain 1 and both are inductive, but they both contain numbers other than natural numbers. For example, the following statement is false:</p>
+<p id="p-2252">For each subset <span class="process-math">\(T\)</span> of <span class="process-math">\(\N\text{,}\)</span> if <span class="process-math">\(1 \in T\)</span> and <span class="process-math">\(T\)</span> is inductive, then <span class="process-math">\(T = \mathbb{N}\text{.}\)</span></p></section><p id="p-2253">Notice that the integers, <span class="process-math">\(\mathbb{Z}\text{,}\)</span> and the set <span class="process-math">\(S = \left\{ {n \in \mathbb{Z} \mid n \geq - 3} \right\}\)</span> both contain 1 and both are inductive, but they both contain numbers other than natural numbers. For example, the following statement is false:</p>
 <section class="paragraphs" id="inductivestatement2"><h4 class="heading"><span class="title">Statement 2.</span></h4>
-<p id="p-2229">For each subset <span class="process-math">\(T\)</span> of <span class="process-math">\(\Z\text{,}\)</span> if <span class="process-math">\(1 \in T\)</span> and <span class="process-math">\(T\)</span> is inductive, then <span class="process-math">\(T = \mathbb{Z}\text{.}\)</span></p></section><p id="p-2230">The set <span class="process-math">\(S = \left\{ {n \in \mathbb{Z} \mid n \geq - 3} \right\} = 
+<p id="p-2254">For each subset <span class="process-math">\(T\)</span> of <span class="process-math">\(\Z\text{,}\)</span> if <span class="process-math">\(1 \in T\)</span> and <span class="process-math">\(T\)</span> is inductive, then <span class="process-math">\(T = \mathbb{Z}\text{.}\)</span></p></section><p id="p-2255">The set <span class="process-math">\(S = \left\{ {n \in \mathbb{Z} \mid n \geq - 3} \right\} = 
 \left\{ { -3, -2, -1,0,1,2,3, \ldots \: } \right\}\)</span> is a counterexample that shows that this statement is false.</p>
 <article class="exercise exercise-like" id="prog_inductivesets"><h4 class="heading">
 <span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Inductive Sets.</span>
 </h4>
-<div class="introduction" id="introduction-191"><p id="p-2231">Suppose that <span class="process-math">\(T\)</span> is an inductive subset of the integers. Which of the following statements are true, which are false, and for which ones is it not possible to tell?</p></div>
+<div class="introduction" id="introduction-191"><p id="p-2256">Suppose that <span class="process-math">\(T\)</span> is an inductive subset of the integers. Which of the following statements are true, which are false, and for which ones is it not possible to tell?</p></div>
 <article class="task exercise-like" id="task-707"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-2232"><span class="process-math">\(1 \in T\)</span> and <span class="process-math">\(5 \in T\text{.}\)</span></p>
+<p id="p-2257"><span class="process-math">\(1 \in T\)</span> and <span class="process-math">\(5 \in T\text{.}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-99" id="solution-99"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-99"><div class="solution solution-like"><p id="p-2233">It is not possible to tell if <span class="process-math">\(1 \in T\)</span> and <span class="process-math">\(5 \in T\text{.}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-99" id="solution-99"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-99"><div class="solution solution-like"><p id="p-2258">It is not possible to tell if <span class="process-math">\(1 \in T\)</span> and <span class="process-math">\(5 \in T\text{.}\)</span></p></div></div>
 </div></article><article class="task exercise-like" id="task-708"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-2234">If <span class="process-math">\(1 \in T\text{,}\)</span> then <span class="process-math">\(5 \in T\text{.}\)</span></p>
+<p id="p-2259">If <span class="process-math">\(1 \in T\text{,}\)</span> then <span class="process-math">\(5 \in T\text{.}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-100" id="solution-100"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-100"><div class="solution solution-like"><p id="p-2235">True.</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-100" id="solution-100"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-100"><div class="solution solution-like"><p id="p-2260">True.</p></div></div>
 </div></article><article class="task exercise-like" id="task-709"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-2236">If <span class="process-math">\(5 \notin T\text{,}\)</span> then <span class="process-math">\(2 \notin T\text{.}\)</span></p>
+<p id="p-2261">If <span class="process-math">\(5 \notin T\text{,}\)</span> then <span class="process-math">\(2 \notin T\text{.}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-101" id="solution-101"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-101"><div class="solution solution-like"><p id="p-2237">True. The contrapositive is, “If <span class="process-math">\(2 \in T\text{,}\)</span> then <span class="process-math">\(5 \in T\text{,}\)</span>” which is true.</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-101" id="solution-101"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-101"><div class="solution solution-like"><p id="p-2262">True. The contrapositive is, “If <span class="process-math">\(2 \in T\text{,}\)</span> then <span class="process-math">\(5 \in T\text{,}\)</span>” which is true.</p></div></div>
 </div></article><article class="task exercise-like" id="task-710"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<p id="p-2238">For each integer <span class="process-math">\(k\text{,}\)</span> if <span class="process-math">\(k \in T\text{,}\)</span> then <span class="process-math">\(k + 7 \in T\text{.}\)</span></p>
+<p id="p-2263">For each integer <span class="process-math">\(k\text{,}\)</span> if <span class="process-math">\(k \in T\text{,}\)</span> then <span class="process-math">\(k + 7 \in T\text{.}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-102" id="solution-102"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-102"><div class="solution solution-like"><p id="p-2239">True.</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-102" id="solution-102"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-102"><div class="solution solution-like"><p id="p-2264">True.</p></div></div>
 </div></article><article class="task exercise-like" id="task-711"><h5 class="heading"><span class="codenumber">(e)</span></h5>
-<p id="p-2240">For each integer <span class="process-math">\(k\text{,}\)</span> <span class="process-math">\(k \notin T\)</span> or <span class="process-math">\(k + 1 \in T\text{.}\)</span></p>
+<p id="p-2265">For each integer <span class="process-math">\(k\text{,}\)</span> <span class="process-math">\(k \notin T\)</span> or <span class="process-math">\(k + 1 \in T\text{.}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-103" id="solution-103"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-103"><div class="solution solution-like"><p id="p-2241">True, since “<span class="process-math">\(k \notin T\)</span> or <span class="process-math">\(k + 1 \in T\)</span>” is logically equivalent to “If <span class="process-math">\(k \in T\text{,}\)</span> then <span class="process-math">\(k + 1 \in T\text{.}\)</span>”</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-103" id="solution-103"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-103"><div class="solution solution-like"><p id="p-2266">True, since “<span class="process-math">\(k \notin T\)</span> or <span class="process-math">\(k + 1 \in T\)</span>” is logically equivalent to “If <span class="process-math">\(k \in T\text{,}\)</span> then <span class="process-math">\(k + 1 \in T\text{.}\)</span>”</p></div></div>
 </div></article><article class="task exercise-like" id="task-712"><h5 class="heading"><span class="codenumber">(f)</span></h5>
-<p id="p-2242">There exists an integer <span class="process-math">\(k\)</span> such that <span class="process-math">\(k \in T\)</span> and <span class="process-math">\(k + 1 \notin T\text{.}\)</span></p>
+<p id="p-2267">There exists an integer <span class="process-math">\(k\)</span> such that <span class="process-math">\(k \in T\)</span> and <span class="process-math">\(k + 1 \notin T\text{.}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-104" id="solution-104"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-104"><div class="solution solution-like"><p id="p-2243">False. If <span class="process-math">\(k \in T\text{,}\)</span> then <span class="process-math">\(k + 1 \in T\text{.}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-104" id="solution-104"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-104"><div class="solution solution-like"><p id="p-2268">False. If <span class="process-math">\(k \in T\text{,}\)</span> then <span class="process-math">\(k + 1 \in T\text{.}\)</span></p></div></div>
 </div></article><article class="task exercise-like" id="task-713"><h5 class="heading"><span class="codenumber">(g)</span></h5>
-<p id="p-2244">For each integer <span class="process-math">\(k\text{,}\)</span> if <span class="process-math">\(k + 1 \in T\text{,}\)</span> then <span class="process-math">\(k \in T\text{.}\)</span></p>
+<p id="p-2269">For each integer <span class="process-math">\(k\text{,}\)</span> if <span class="process-math">\(k + 1 \in T\text{,}\)</span> then <span class="process-math">\(k \in T\text{.}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-105" id="solution-105"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-105"><div class="solution solution-like"><p id="p-2245">It is not possible to tell if this is true. It is the converse of the conditional statement, “For each integer <span class="process-math">\(k\text{,}\)</span> if <span class="process-math">\(k \in T\text{,}\)</span> then <span class="process-math">\(k + 1 \in T\text{.}\)</span>”</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-105" id="solution-105"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-105"><div class="solution solution-like"><p id="p-2270">It is not possible to tell if this is true. It is the converse of the conditional statement, “For each integer <span class="process-math">\(k\text{,}\)</span> if <span class="process-math">\(k \in T\text{,}\)</span> then <span class="process-math">\(k + 1 \in T\text{.}\)</span>”</p></div></div>
 </div></article><article class="task exercise-like" id="task-714"><h5 class="heading"><span class="codenumber">(h)</span></h5>
-<p id="p-2246">For each integer <span class="process-math">\(k\text{,}\)</span> if <span class="process-math">\(k + 1 \notin T\text{,}\)</span> then <span class="process-math">\(k \notin T\text{.}\)</span></p>
+<p id="p-2271">For each integer <span class="process-math">\(k\text{,}\)</span> if <span class="process-math">\(k + 1 \notin T\text{,}\)</span> then <span class="process-math">\(k \notin T\text{.}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-106" id="solution-106"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-106"><div class="solution solution-like"><p id="p-2247">True. This is the contrapositive of the conditional statement, “For each integer <span class="process-math">\(k\text{,}\)</span> if <span class="process-math">\(k \in T\text{,}\)</span> then <span class="process-math">\(k + 1 \in T\text{.}\)</span>”</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-106" id="solution-106"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-106"><div class="solution solution-like"><p id="p-2272">True. This is the contrapositive of the conditional statement, “For each integer <span class="process-math">\(k\text{,}\)</span> if <span class="process-math">\(k \in T\text{,}\)</span> then <span class="process-math">\(k + 1 \in T\text{.}\)</span>”</p></div></div>
 </div></article></article></section><section class="subsection" id="subsection-71"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">The Principle of Mathematical Induction</span>
 </h3>
-<p id="p-2248">Although we proved that <a href="" class="xref" data-knowl="./knowl/inductivestatement2.html" title="Paragraphs: Statement 2">Statement 2</a> is false, in this text, we will not prove that <a href="" class="xref" data-knowl="./knowl/inductivestatement1.html" title="Paragraphs: Statement 1">Statement 1</a> is true. One reason for this is that we really do not have a formal definition of the natural numbers. However, we should be convinced that <a href="" class="xref" data-knowl="./knowl/inductivestatement1.html" title="Paragraphs: Statement 1">Statement 1</a> is true. We resolve this by making <a href="" class="xref" data-knowl="./knowl/inductivestatement1.html" title="Paragraphs: Statement 1">Statement 1</a> an axiom for the natural numbers so that this becomes one of the defining characteristics of the natural numbers. <article class="assemblage assemblage-like" id="principle-math-induction"><h4 class="heading"><span class="title">The Principle of Mathematical Induction.</span></h4>
-<p id="p-2249">If <span class="process-math">\(T\)</span> is a subset of <span class="process-math">\(\mathbb{N}\)</span> such that</p>
+<p id="p-2273">Although we proved that <a href="" class="xref" data-knowl="./knowl/inductivestatement2.html" title="Paragraphs: Statement 2">Statement 2</a> is false, in this text, we will not prove that <a href="" class="xref" data-knowl="./knowl/inductivestatement1.html" title="Paragraphs: Statement 1">Statement 1</a> is true. One reason for this is that we really do not have a formal definition of the natural numbers. However, we should be convinced that <a href="" class="xref" data-knowl="./knowl/inductivestatement1.html" title="Paragraphs: Statement 1">Statement 1</a> is true. We resolve this by making <a href="" class="xref" data-knowl="./knowl/inductivestatement1.html" title="Paragraphs: Statement 1">Statement 1</a> an axiom for the natural numbers so that this becomes one of the defining characteristics of the natural numbers. <article class="assemblage assemblage-like" id="principle-math-induction"><h4 class="heading"><span class="title">The Principle of Mathematical Induction.</span></h4>
+<p id="p-2274">If <span class="process-math">\(T\)</span> is a subset of <span class="process-math">\(\mathbb{N}\)</span> such that</p>
 <ol class="decimal">
-<li id="li-331"><p id="p-2250"><span class="process-math">\(1 \in T\text{,}\)</span> and</p></li>
-<li id="li-332"><p id="p-2251">For every <span class="process-math">\(k \in \mathbb{N}\text{,}\)</span> if <span class="process-math">\(k \in T\text{,}\)</span> then <span class="process-math">\(\left( {k + 1} \right) \in T\text{,}\)</span></p></li>
+<li id="li-347"><p id="p-2275"><span class="process-math">\(1 \in T\text{,}\)</span> and</p></li>
+<li id="li-348"><p id="p-2276">For every <span class="process-math">\(k \in \mathbb{N}\text{,}\)</span> if <span class="process-math">\(k \in T\text{,}\)</span> then <span class="process-math">\(\left( {k + 1} \right) \in T\text{,}\)</span></p></li>
 </ol>
 <p class="continuation">then <span class="process-math">\(T = \mathbb{N}\text{.}\)</span></p></article></p></section><section class="subsection" id="subsection-72"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Using the Principle of Mathematical Induction</span>
 </h3>
-<p id="p-2252">The primary use of the Principle of Mathematical Induction is to prove statements of the form</p>
+<p id="p-2277">The primary use of the Principle of Mathematical Induction is to prove statements of the form</p>
 <div class="displaymath process-math">
 \begin{equation*}
 \left( {\forall n \in \mathbb{N}} \right)\left( {P\left( n \right)} \right)\text{,}
@@ -312,20 +315,20 @@
 </div>
 <p class="continuation">where <span class="process-math">\(P( n )\)</span> is some open sentence. Recall that a universally quantified statement like the preceding one is true if and only if the truth set <span class="process-math">\(T\)</span> of the open sentence <span class="process-math">\(P( n )\)</span> is the set <span class="process-math">\(\N\text{.}\)</span> So our goal is to prove that <span class="process-math">\(T = \N\text{,}\)</span> which is the conclusion of <a href="" class="xref" data-knowl="./knowl/principle-math-induction.html" title="Definition: The Principle of Mathematical Induction">The Principle of Mathematical Induction</a> To verify the hypothesis of the <a href="" class="xref" data-knowl="./knowl/principle-math-induction.html" title="Definition: The Principle of Mathematical Induction">The Principle of Mathematical Induction</a>, we must</p>
 <ol class="decimal">
-<li id="li-333"><p id="p-2253">Prove that <span class="process-math">\(1 \in T\text{.}\)</span> That is, prove that <span class="process-math">\(P( 1 )\)</span> is true.</p></li>
-<li id="li-334"><p id="p-2254">Prove that if <span class="process-math">\(k \in T\text{,}\)</span> then <span class="process-math">\(\left( {k + 1} \right) \in T\text{.}\)</span> That is, prove that if <span class="process-math">\(P( k )\)</span> is true, then <span class="process-math">\(P( {k + 1} )\)</span> is true.</p></li>
+<li id="li-349"><p id="p-2278">Prove that <span class="process-math">\(1 \in T\text{.}\)</span> That is, prove that <span class="process-math">\(P( 1 )\)</span> is true.</p></li>
+<li id="li-350"><p id="p-2279">Prove that if <span class="process-math">\(k \in T\text{,}\)</span> then <span class="process-math">\(\left( {k + 1} \right) \in T\text{.}\)</span> That is, prove that if <span class="process-math">\(P( k )\)</span> is true, then <span class="process-math">\(P( {k + 1} )\)</span> is true.</p></li>
 </ol>
 <p class="continuation">The first step is called the <dfn class="terminology">basis step</dfn> or the <dfn class="terminology">initial step</dfn>, and the second step is called the <dfn class="terminology">inductive step</dfn>. This means that a proof by mathematical induction will have the following form: <article class="assemblage assemblage-like" id="proced-induct"><h4 class="heading"><span class="title">Procedure for a Proof by Mathematical Induction.</span></h4>
-<p id="p-2255">To prove: <span class="process-math">\(\left( {\forall n \in \mathbb{N}} \right)\left( {P\left( n \right)} \right)\)</span></p>
+<p id="p-2280">To prove: <span class="process-math">\(\left( {\forall n \in \mathbb{N}} \right)\left( {P\left( n \right)} \right)\)</span></p>
 <dl class="description-list">
-<dt id="li-335">Basis step:</dt>
-<dd><p id="p-2256">Prove  <span class="process-math">\(P( 1 )\text{.}\)</span></p></dd>
-<dt id="li-336">Inductive step:</dt>
-<dd><p id="p-2257">Prove that for each  <span class="process-math">\(k \in \mathbb{N}\text{,}\)</span> if <span class="process-math">\(P( k )\)</span> is true, then <span class="process-math">\(P( {k + 1} )\)</span> is true.</p></dd>
+<dt id="li-351">Basis step:</dt>
+<dd><p id="p-2281">Prove  <span class="process-math">\(P( 1 )\text{.}\)</span></p></dd>
+<dt id="li-352">Inductive step:</dt>
+<dd><p id="p-2282">Prove that for each  <span class="process-math">\(k \in \mathbb{N}\text{,}\)</span> if <span class="process-math">\(P( k )\)</span> is true, then <span class="process-math">\(P( {k + 1} )\)</span> is true.</p></dd>
 </dl>
-<p id="p-2258">We can then conclude that <span class="process-math">\(P( n )\)</span> is true for all <span class="process-math">\(n \in \mathbb{N}\text{.}\)</span></p></article></p>
-<p id="p-2259"> Note that in the inductive step, we want to prove that the conditional statement “for each <span class="process-math">\(k \in \N\text{,}\)</span> if <span class="process-math">\(P(k)\)</span> then <span class="process-math">\(P(k + 1)\)</span>” is true. So we will start the inductive step by assuming that <span class="process-math">\(P( k )\)</span> is true. This assumption is called the <dfn class="terminology">inductive assumption</dfn> or the <dfn class="terminology">inductive hypothesis.</dfn></p>
-<p id="p-2260">The key to constructing a proof by induction is to discover how <span class="process-math">\(P( {k + 1} )\)</span> is related to <span class="process-math">\(P( k )\)</span> for an arbitrary natural number <span class="process-math">\(k\text{.}\)</span> For example, in <a href="S_mathinduction.html#PA_exploringstatements" class="internal" title="Beginning Activity: Beginning Activity 1: Exploring Statements of the Form \(\left( \forall n \in \N \right)\left( P(n) \right)\)">Beginning Activity 1</a>, one of the open sentences <span class="process-math">\(P(n)\)</span> was</p>
+<p id="p-2283">We can then conclude that <span class="process-math">\(P( n )\)</span> is true for all <span class="process-math">\(n \in \mathbb{N}\text{.}\)</span></p></article></p>
+<p id="p-2284"> Note that in the inductive step, we want to prove that the conditional statement “for each <span class="process-math">\(k \in \N\text{,}\)</span> if <span class="process-math">\(P(k)\)</span> then <span class="process-math">\(P(k + 1)\)</span>” is true. So we will start the inductive step by assuming that <span class="process-math">\(P( k )\)</span> is true. This assumption is called the <dfn class="terminology">inductive assumption</dfn> or the <dfn class="terminology">inductive hypothesis.</dfn></p>
+<p id="p-2285">The key to constructing a proof by induction is to discover how <span class="process-math">\(P( {k + 1} )\)</span> is related to <span class="process-math">\(P( k )\)</span> for an arbitrary natural number <span class="process-math">\(k\text{.}\)</span> For example, in <a href="S_mathinduction.html#PA_exploringstatements" class="internal" title="Beginning Activity: Beginning Activity 1: Exploring Statements of the Form \left( \forall n \in \N \right)\left( P(n) \right)">Beginning Activity 1</a>, one of the open sentences <span class="process-math">\(P(n)\)</span> was</p>
 <div class="displaymath process-math">
 \begin{equation*}
 1^2  + 2^2  + \, \cdots \, + n^2  = \frac{{n(n + 1)(2n + 1)}}{6}\text{.}
@@ -352,36 +355,36 @@ P(k+1)  \amp  \text{ is }  \amp  1^2  + 2^2  +  \cdots  + \left( {k + 1} \right)
 \cdots \, + k^2  + \left( {k + 1} \right)^2\text{.}
 \end{equation*}
 </div>
-<p id="p-2261">This shows us that the left side of the equation for <span class="process-math">\(P( {k + 1} )\)</span> can be obtained from the left side of the equation for <span class="process-math">\(P( k )\)</span> by adding <span class="process-math">\(\left( {k + 1} \right)^2\text{.}\)</span> This is the motivation for proving the inductive step in the following proof.</p>
+<p id="p-2286">This shows us that the left side of the equation for <span class="process-math">\(P( {k + 1} )\)</span> can be obtained from the left side of the equation for <span class="process-math">\(P( k )\)</span> by adding <span class="process-math">\(\left( {k + 1} \right)^2\text{.}\)</span> This is the motivation for proving the inductive step in the following proof.</p>
 <article class="proposition theorem-like" id="P_suminduction"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">4.2</span><span class="period">.</span>
 </h4>
-<p id="p-2262">For each natural number <span class="process-math">\(n\text{,}\)</span></p>
+<p id="p-2287">For each natural number <span class="process-math">\(n\text{,}\)</span></p>
 <div class="displaymath process-math">
 \begin{equation*}
 1^2  + 2^2  + \, \cdots \, + n^2  = \dfrac{{n(n + 1)(2n + 1)}}{6}\text{.}
 \end{equation*}
 </div></article><article class="proof" id="proof-24"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4>
-<p id="p-2263">We will use a proof by mathematical induction. For each natural number <span class="process-math">\(n\text{,}\)</span> we let <span class="process-math">\(P( n )\)</span> be</p>
+<p id="p-2288">We will use a proof by mathematical induction. For each natural number <span class="process-math">\(n\text{,}\)</span> we let <span class="process-math">\(P( n )\)</span> be</p>
 <div class="displaymath process-math">
 \begin{equation*}
 1^2  + 2^2  +  \cdots  + n^2  = \dfrac{{n(n + 1)(2n + 1)}}{6}\text{.}
 \end{equation*}
 </div>
-<p id="p-2264">We first prove that <span class="process-math">\(P ( 1 )\)</span> is true. Notice that <span class="process-math">\(\dfrac{{1\left( {1 + 1} \right)\left( {2 \cdot 1 + 1} \right)}}{6} = 1\text{.}\)</span> This shows that</p>
+<p id="p-2289">We first prove that <span class="process-math">\(P ( 1 )\)</span> is true. Notice that <span class="process-math">\(\dfrac{{1\left( {1 + 1} \right)\left( {2 \cdot 1 + 1} \right)}}{6} = 1\text{.}\)</span> This shows that</p>
 <div class="displaymath process-math">
 \begin{equation*}
 1^2  = \dfrac{{1\left( {1 + 1} \right)\left( {2 \cdot 1 + 1} \right)}}{6}\text{,}
 \end{equation*}
 </div>
 <p class="continuation">which proves that <span class="process-math">\(P( 1 )\)</span> is true.</p>
-<p id="p-2265">For the inductive step, we prove that for each <span class="process-math">\(k \in \mathbb{N}\text{,}\)</span> if <span class="process-math">\(P ( k )\)</span> is true, then <span class="process-math">\(P( k + 1 )\)</span> is true. So let <span class="process-math">\(k\)</span> be a natural number and assume that <span class="process-math">\(P( k )\)</span> is true. That is, assume that</p>
+<p id="p-2290">For the inductive step, we prove that for each <span class="process-math">\(k \in \mathbb{N}\text{,}\)</span> if <span class="process-math">\(P ( k )\)</span> is true, then <span class="process-math">\(P( k + 1 )\)</span> is true. So let <span class="process-math">\(k\)</span> be a natural number and assume that <span class="process-math">\(P( k )\)</span> is true. That is, assume that</p>
 <div class="displaymath process-math">
 \begin{equation}
 1^2  + 2^2  +  \cdots  + k^2  = \frac{{k(k + 1)(2k + 1)}}{6}\text{.}\label{eq_suminduction1}\tag{16}
 \end{equation}
 </div>
-<p id="p-2266">The goal now is to prove that <span class="process-math">\(P\left( {k + 1} \right)\)</span> is true. That is, it must be proved that</p>
+<p id="p-2291">The goal now is to prove that <span class="process-math">\(P\left( {k + 1} \right)\)</span> is true. That is, it must be proved that</p>
 <div class="displaymath process-math">
 \begin{align}
 1^2  + 2^2  + \, \cdots \, + k^2 + (k + 1)^2  
@@ -389,7 +392,7 @@ P(k+1)  \amp  \text{ is }  \amp  1^2  + 2^2  +  \cdots  + \left( {k + 1} \right)
 \amp = \frac{{(k + 1)\left( k + 2\right) \left( 2k + 3 \right)}}{6}\text{.}\label{eq_suminduction2}\tag{17}
 \end{align}
 </div>
-<p id="p-2267">To do this, we add <span class="process-math">\(\left( {k + 1} \right)^2\)</span> to both sides of equation <a href="" class="xref" data-knowl="./knowl/eq_suminduction1.html" title="Equation 16">(16)</a> and algebraically rewrite the right side of the resulting equation. This gives</p>
+<p id="p-2292">To do this, we add <span class="process-math">\(\left( {k + 1} \right)^2\)</span> to both sides of equation <a href="" class="xref" data-knowl="./knowl/eq_suminduction1.html" title="Equation 16">(16)</a> and algebraically rewrite the right side of the resulting equation. This gives</p>
 <div class="displaymath process-math">
 \begin{align*}
 1^2  + 2^2  +  \cdots  + k^2  + (k + 1)^2 \amp = \frac{{k(k + 1)(2k + 1)}}{6} + (k + 1)^2\\
@@ -402,17 +405,17 @@ P(k+1)  \amp  \text{ is }  \amp  1^2  + 2^2  +  \cdots  + \left( {k + 1} \right)
 <p class="continuation">Comparing this result to equation <a href="" class="xref" data-knowl="./knowl/eq_suminduction2.html" title="Equation 17">(17)</a>, we see that if <span class="process-math">\(P( k )\)</span> is true, then <span class="process-math">\(P( {k + 1} )\)</span> is true. Hence, the inductive step has been established, and by the <a href="" class="xref" data-knowl="./knowl/principle-math-induction.html" title="Definition: The Principle of Mathematical Induction">The Principle of Mathematical Induction</a>, we have proved that for each natural number <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(1^2 + 2^2 + \, \cdots \, + n^2 = \dfrac{{n(n + 1)(2n + 1)}}{6}\text{.}\)</span></p></article></section><section class="subsection" id="subsection-73"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Writing Guideline</span>
 </h3>
-<p id="p-2268">The proof of <a href="" class="xref" data-knowl="./knowl/P_suminduction.html" title="Proposition 4.2">Proposition 4.2</a> shows a standard way to write an induction proof. When writing a proof by mathematical induction, we should follow the guideline that we always keep the reader informed. This means that at the beginning of the proof, we should state that a proof by induction will be used. We should then clearly define the open sentence <span class="process-math">\(P ( n )\)</span> that will be used in the proof.</p></section><section class="subsection" id="subsection-74"><h3 class="heading hide-type">
+<p id="p-2293">The proof of <a href="" class="xref" data-knowl="./knowl/P_suminduction.html" title="Proposition 4.2">Proposition 4.2</a> shows a standard way to write an induction proof. When writing a proof by mathematical induction, we should follow the guideline that we always keep the reader informed. This means that at the beginning of the proof, we should state that a proof by induction will be used. We should then clearly define the open sentence <span class="process-math">\(P ( n )\)</span> that will be used in the proof.</p></section><section class="subsection" id="subsection-74"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Summation Notation</span>
 </h3>
-<p id="p-2269">The result in <a href="" class="xref" data-knowl="./knowl/P_suminduction.html" title="Proposition 4.2">Proposition 4.2</a> could be written using summation notation as follows: <blockquote class="blockquote" id="blockquote-141">For each natural number <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(\sum\limits_{j = 1}^n {j^2 } = \dfrac{{n(n + 1)(2n + 1)}}{6}\text{.}\)</span>
+<p id="p-2294">The result in <a href="" class="xref" data-knowl="./knowl/P_suminduction.html" title="Proposition 4.2">Proposition 4.2</a> could be written using summation notation as follows: <blockquote class="blockquote" id="blockquote-141">For each natural number <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(\sum\limits_{j = 1}^n {j^2 } = \dfrac{{n(n + 1)(2n + 1)}}{6}\text{.}\)</span>
 </blockquote> In this case, we use <span class="process-math">\(j\)</span> for the index for the summation, and the notation <span class="process-math">\(\sum\limits_{j = 1}^n {j^2 }\)</span> tells us to add all the values of <span class="process-math">\(j^2\)</span> for <span class="process-math">\(j\)</span> from 1 to <span class="process-math">\(n\text{,}\)</span> inclusive. That is,</p>
 <div class="displaymath process-math">
 \begin{equation*}
 \sum\limits_{j = 1}^n {j^2 }  = 1^2  + 2^2  +  \cdots  + n^2\text{.}
 \end{equation*}
 </div>
-<p id="p-2270">So in the proof of <a href="" class="xref" data-knowl="./knowl/P_suminduction.html" title="Proposition 4.2">Proposition 4.2</a>, we would let <span class="process-math">\(P( n )\)</span> be <span class="process-math">\(\sum\limits_{j = 1}^n {j^2 }  = \dfrac{{n(n + 1)(2n + 1)}}{6}\text{,}\)</span> and we would use the fact that for each natural number <span class="process-math">\(k\text{,}\)</span></p>
+<p id="p-2295">So in the proof of <a href="" class="xref" data-knowl="./knowl/P_suminduction.html" title="Proposition 4.2">Proposition 4.2</a>, we would let <span class="process-math">\(P( n )\)</span> be <span class="process-math">\(\sum\limits_{j = 1}^n {j^2 }  = \dfrac{{n(n + 1)(2n + 1)}}{6}\text{,}\)</span> and we would use the fact that for each natural number <span class="process-math">\(k\text{,}\)</span></p>
 <div class="displaymath process-math">
 \begin{equation*}
 \sum\limits_{j = 1}^{k + 1} {j^2 }  = \left( {\sum\limits_{j = 1}^k {j^2 } } \right) + \left( {k + 1} \right)^2\text{.}
@@ -422,8 +425,8 @@ P(k+1)  \amp  \text{ is }  \amp  1^2  + 2^2  +  \cdots  + \left( {k + 1} \right)
 <span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">4.3</span><span class="period">.</span><span class="space"> </span><span class="title">An Example of a Proof by Induction.</span>
 </h4>
 <article class="task exercise-like" id="task-715"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-2271">Calculate <span class="process-math">\(1 + 2 + 3 + \cdots + n\)</span> and <span class="process-math">\(\dfrac{n(n + 1)}{2}\)</span> for several natural numbers <span class="process-math">\(n\text{.}\)</span> What do you observe?</p></article><article class="task exercise-like" id="task-716"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-2272">Use mathematical induction to prove that <span class="process-math">\(1 + 2 + 3 +  \cdots  + n = \dfrac{n \left( n + 1 \right)}{2}\text{.}\)</span> To do this, let <span class="process-math">\(P ( n )\)</span> be the open sentence, “<span class="process-math">\(1 + 2 + 3 +  \cdots  + n = \dfrac{n \left( n + 1 \right)}{2}\text{.}\)</span>” For the basis step, notice that the equation <span class="process-math">\(1 = \dfrac{1 \left( 1 + 1 \right)}{2}\)</span> shows that <span class="process-math">\(P( 1 )\)</span> is true. Now let <span class="process-math">\(k\)</span> be a natural number and assume that <span class="process-math">\(P (k )\)</span> is true. That is, assume that</p>
+<p id="p-2296">Calculate <span class="process-math">\(1 + 2 + 3 + \cdots + n\)</span> and <span class="process-math">\(\dfrac{n(n + 1)}{2}\)</span> for several natural numbers <span class="process-math">\(n\text{.}\)</span> What do you observe?</p></article><article class="task exercise-like" id="task-716"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-2297">Use mathematical induction to prove that <span class="process-math">\(1 + 2 + 3 +  \cdots  + n = \dfrac{n \left( n + 1 \right)}{2}\text{.}\)</span> To do this, let <span class="process-math">\(P ( n )\)</span> be the open sentence, “<span class="process-math">\(1 + 2 + 3 +  \cdots  + n = \dfrac{n \left( n + 1 \right)}{2}\text{.}\)</span>” For the basis step, notice that the equation <span class="process-math">\(1 = \dfrac{1 \left( 1 + 1 \right)}{2}\)</span> shows that <span class="process-math">\(P( 1 )\)</span> is true. Now let <span class="process-math">\(k\)</span> be a natural number and assume that <span class="process-math">\(P (k )\)</span> is true. That is, assume that</p>
 <div class="displaymath process-math">
 \begin{equation*}
 1 + 2 + 3 +  \cdots  + k = \frac{k \left( k + 1 \right)}{2}\text{,}
@@ -432,20 +435,20 @@ P(k+1)  \amp  \text{ is }  \amp  1^2  + 2^2  +  \cdots  + \left( {k + 1} \right)
 <p class="continuation">and complete the proof.</p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-107" id="solution-107"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-107"><div class="solution solution-like"><article class="proof" id="proof-25"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
-<p id="p-2273">Let <span class="process-math">\(P( n )\)</span> be the predicate, “<span class="process-math">\(1 + 2 + 3 +  \cdots  + n = \dfrac{n \left( n + 1 \right)}{2}\text{.}\)</span>” For the basis step, notice that the equation <span class="process-math">\(1 = \dfrac{1 \left( 1 + 1 \right)}{2}\)</span> shows that <span class="process-math">\(P( 1 )\)</span> is true. Now let <span class="process-math">\(k\)</span> be a natural number and assume that <span class="process-math">\(P(k )\)</span> is true. That is, assume that</p>
+<p id="p-2298">Let <span class="process-math">\(P( n )\)</span> be the predicate, “<span class="process-math">\(1 + 2 + 3 +  \cdots  + n = \dfrac{n \left( n + 1 \right)}{2}\text{.}\)</span>” For the basis step, notice that the equation <span class="process-math">\(1 = \dfrac{1 \left( 1 + 1 \right)}{2}\)</span> shows that <span class="process-math">\(P( 1 )\)</span> is true. Now let <span class="process-math">\(k\)</span> be a natural number and assume that <span class="process-math">\(P(k )\)</span> is true. That is, assume that</p>
 <div class="displaymath process-math">
 \begin{equation}
 1 + 2 + 3 +  \cdots  + k = \frac{k \left( k + 1 \right)}{2}\text{.}\label{prog_indexample1}\tag{18}
 \end{equation}
 </div>
-<p id="p-2274">We now need to prove that <span class="process-math">\(P(k +1 )\)</span> is true or that</p>
+<p id="p-2299">We now need to prove that <span class="process-math">\(P(k +1 )\)</span> is true or that</p>
 <div class="displaymath process-math">
 \begin{equation}
 1 + 2 + 3 +  \cdots  + k + \left( k + 1 \right) = \frac{\left( k + 1 \right) 
 \left(k + 2 \right)}{2}\text{.}\label{prog_indexample2}\tag{19}
 \end{equation}
 </div>
-<p id="p-2275">By adding <span class="process-math">\(\left(k + 1 \right)\)</span> to both sides of equation <a href="" class="xref" data-knowl="./knowl/prog_indexample1.html" title="Equation 18">(18)</a> we see that</p>
+<p id="p-2300">By adding <span class="process-math">\(\left(k + 1 \right)\)</span> to both sides of equation <a href="" class="xref" data-knowl="./knowl/prog_indexample1.html" title="Equation 18">(18)</a> we see that</p>
 <div class="displaymath process-math">
 \begin{align*}
 1 + 2 + 3 +  \cdots  + k + \left( k + 1 \right) 
@@ -455,17 +458,17 @@ P(k+1)  \amp  \text{ is }  \amp  1^2  + 2^2  +  \cdots  + \left( {k + 1} \right)
 \amp = \frac{ \left(k + 1 \right) \left( k + 2 \right)}{2}
 \end{align*}
 </div>
-<p id="p-2276">By comparing the last equation to equation <a href="" class="xref" data-knowl="./knowl/prog_indexample2.html" title="Equation 19">(19)</a> we see that we have proved that if <span class="process-math">\(P(k )\)</span> is true, then <span class="process-math">\(P( k + 1 )\)</span> is true, and the inductive step has been established. Hence, by the Principle of Mathematical Induction, we have proved that for each integer <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(1 + 2 + 3 + \cdots + n = \dfrac{n \left( n + 1 \right)}{2}\text{.}\)</span></p></article></div></div>
+<p id="p-2301">By comparing the last equation to equation <a href="" class="xref" data-knowl="./knowl/prog_indexample2.html" title="Equation 19">(19)</a> we see that we have proved that if <span class="process-math">\(P(k )\)</span> is true, then <span class="process-math">\(P( k + 1 )\)</span> is true, and the inductive step has been established. Hence, by the Principle of Mathematical Induction, we have proved that for each integer <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(1 + 2 + 3 + \cdots + n = \dfrac{n \left( n + 1 \right)}{2}\text{.}\)</span></p></article></div></div>
 </div></article></article></section><section class="subsection" id="subsection-75"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Some Comments about Mathematical Induction</span>
 </h3>
 <ol class="decimal">
-<li id="li-337"><p id="p-2277">The basis step is an essential part of a proof by induction. See <a href="" class="xref" data-knowl="./knowl/exer_basis.html" title="Activity 21: The Importance of the Basis Step">Activity 21</a> for an example that shows that the basis step is needed in a proof by induction.</p></li>
-<li id="li-338"><p id="p-2278"><a href="" class="xref" data-knowl="./knowl/exer_circleregions.html" title="Activity 22: Regions of a Circle">Activity 22</a> provides an example that shows the inductive step is also an essential part of a proof by mathematical induction.</p></li>
-<li id="li-339"><p id="p-2279">It is important to remember that the inductive step in an induction proof is a proof of a conditional statement. Although we did not explicitly use the forward-backward process in the inductive step for <a href="" class="xref" data-knowl="./knowl/P_suminduction.html" title="Proposition 4.2">Proposition 4.2</a>, it was implicitly used in the discussion prior to <a href="" class="xref" data-knowl="./knowl/P_suminduction.html" title="Proposition 4.2">Proposition 4.2</a>. The key question was, “How does knowing the sum of the first <span class="process-math">\(k\)</span> squares help us find the sum of the first <span class="process-math">\(\left( {k + 1} \right)\)</span> squares?”</p></li>
-<li id="li-340">
-<p id="p-2280">When proving the inductive step in a proof by induction, the key question is, <blockquote class="blockquote" id="blockquote-142">How does knowing  <span class="process-math">\(P(  k )\)</span> help us prove  <span class="process-math">\(P( {k + 1} )\text{?}\)</span>
-</blockquote> In <a href="" class="xref" data-knowl="./knowl/P_suminduction.html" title="Proposition 4.2">Proposition 4.2</a>, we were able to see that the way to answer this question was to add a certain expression to both sides of the equation given in  <span class="process-math">\(P(  k )\text{.}\)</span> Sometimes the relationship between  <span class="process-math">\(P(  k )\)</span>  and <span class="process-math">\(P( {k + 1} )\)</span> is not as easy to see. For example, in <a href="S_mathinduction.html#PA_exploringstatements" class="internal" title="Beginning Activity: Beginning Activity 1: Exploring Statements of the Form \(\left( \forall n \in \N \right)\left( P(n) \right)\)">Beginning Activity 1</a>, we explored the following proposition: <blockquote class="blockquote" id="blockquote-143">For each natural number <span class="process-math">\(n\text{,}\)</span>  4  divides  <span class="process-math">\(\left( {5^n  - 1} \right)\text{.}\)</span>
+<li id="li-353"><p id="p-2302">The basis step is an essential part of a proof by induction. See <a href="" class="xref" data-knowl="./knowl/exer_basis.html" title="Activity 21: The Importance of the Basis Step">Activity 21</a> for an example that shows that the basis step is needed in a proof by induction.</p></li>
+<li id="li-354"><p id="p-2303"><a href="" class="xref" data-knowl="./knowl/exer_circleregions.html" title="Activity 22: Regions of a Circle">Activity 22</a> provides an example that shows the inductive step is also an essential part of a proof by mathematical induction.</p></li>
+<li id="li-355"><p id="p-2304">It is important to remember that the inductive step in an induction proof is a proof of a conditional statement. Although we did not explicitly use the forward-backward process in the inductive step for <a href="" class="xref" data-knowl="./knowl/P_suminduction.html" title="Proposition 4.2">Proposition 4.2</a>, it was implicitly used in the discussion prior to <a href="" class="xref" data-knowl="./knowl/P_suminduction.html" title="Proposition 4.2">Proposition 4.2</a>. The key question was, “How does knowing the sum of the first <span class="process-math">\(k\)</span> squares help us find the sum of the first <span class="process-math">\(\left( {k + 1} \right)\)</span> squares?”</p></li>
+<li id="li-356">
+<p id="p-2305">When proving the inductive step in a proof by induction, the key question is, <blockquote class="blockquote" id="blockquote-142">How does knowing  <span class="process-math">\(P(  k )\)</span> help us prove  <span class="process-math">\(P( {k + 1} )\text{?}\)</span>
+</blockquote> In <a href="" class="xref" data-knowl="./knowl/P_suminduction.html" title="Proposition 4.2">Proposition 4.2</a>, we were able to see that the way to answer this question was to add a certain expression to both sides of the equation given in  <span class="process-math">\(P(  k )\text{.}\)</span> Sometimes the relationship between  <span class="process-math">\(P(  k )\)</span>  and <span class="process-math">\(P( {k + 1} )\)</span> is not as easy to see. For example, in <a href="S_mathinduction.html#PA_exploringstatements" class="internal" title="Beginning Activity: Beginning Activity 1: Exploring Statements of the Form \left( \forall n \in \N \right)\left( P(n) \right)">Beginning Activity 1</a>, we explored the following proposition: <blockquote class="blockquote" id="blockquote-143">For each natural number <span class="process-math">\(n\text{,}\)</span>  4  divides  <span class="process-math">\(\left( {5^n  - 1} \right)\text{.}\)</span>
 </blockquote> This means that the open sentence, <span class="process-math">\(P( n )\text{,}\)</span> is “4  divides  <span class="process-math">\(\left( {5^n  - 1} \right)\text{.}\)</span>” So in the inductive step, we assume  <span class="process-math">\(k \in \mathbb{N}\)</span> and that  4  divides  <span class="process-math">\(\left( {5^k  - 1} \right)\text{.}\)</span> This means that there exists an integer  <span class="process-math">\(m\)</span>  such that</p>
 <div class="displaymath process-math">
 \begin{equation}
@@ -490,9 +493,9 @@ P(k+1)  \amp  \text{ is }  \amp  1^2  + 2^2  +  \cdots  + \left( {k + 1} \right)
 <article class="proposition theorem-like" id="P_divideinduction"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">4.4</span><span class="period">.</span>
 </h4>
-<p id="p-2281">For every natural number <span class="process-math">\(n\text{,}\)</span> 4 divides <span class="process-math">\(\left( {5^n - 1} \right)\text{.}\)</span></p></article><article class="proof" id="proof-26"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4>
-<p id="p-2282">(Proof by Mathematical Induction) For each natural number <span class="process-math">\(n\text{,}\)</span> let <span class="process-math">\(P( n )\)</span> be “4 divides <span class="process-math">\(\left( {5^n - 1} \right)\text{.}\)</span>” We first prove that <span class="process-math">\(P \left( 1 \right)\)</span> is true. Notice that when <span class="process-math">\(n = 1\text{,}\)</span> <span class="process-math">\(\left( {5^n - 1} \right) = 4\text{.}\)</span> Since 4 divides 4, <span class="process-math">\(P\left( 1 \right)\)</span> is true.</p>
-<p id="p-2283">For the inductive step, we prove that for all <span class="process-math">\(k \in \mathbb{N}\text{,}\)</span> if <span class="process-math">\(P \left( k \right)\)</span> is true, then <span class="process-math">\(P \left( k + 1 \right)\)</span> is true. So let <span class="process-math">\(k\)</span> be a natural number and assume that <span class="process-math">\(P(  k )\)</span> is true. That is, assume that</p>
+<p id="p-2306">For every natural number <span class="process-math">\(n\text{,}\)</span> 4 divides <span class="process-math">\(\left( {5^n - 1} \right)\text{.}\)</span></p></article><article class="proof" id="proof-26"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4>
+<p id="p-2307">(Proof by Mathematical Induction) For each natural number <span class="process-math">\(n\text{,}\)</span> let <span class="process-math">\(P( n )\)</span> be “4 divides <span class="process-math">\(\left( {5^n - 1} \right)\text{.}\)</span>” We first prove that <span class="process-math">\(P \left( 1 \right)\)</span> is true. Notice that when <span class="process-math">\(n = 1\text{,}\)</span> <span class="process-math">\(\left( {5^n - 1} \right) = 4\text{.}\)</span> Since 4 divides 4, <span class="process-math">\(P\left( 1 \right)\)</span> is true.</p>
+<p id="p-2308">For the inductive step, we prove that for all <span class="process-math">\(k \in \mathbb{N}\text{,}\)</span> if <span class="process-math">\(P \left( k \right)\)</span> is true, then <span class="process-math">\(P \left( k + 1 \right)\)</span> is true. So let <span class="process-math">\(k\)</span> be a natural number and assume that <span class="process-math">\(P(  k )\)</span> is true. That is, assume that</p>
 <div class="displaymath process-math">
 \begin{equation*}
 4\text{  divides  } \left( {5^k  - 1} \right)\text{.}
@@ -526,24 +529,24 @@ P(k+1)  \amp  \text{ is }  \amp  1^2  + 2^2  +  \cdots  + \left( {k + 1} \right)
 \amp = 4( {5m + 1} )\label{eq_5e}\tag{24}
 \end{align}
 </div>
-<p id="p-2284">Since <span class="process-math">\(\left( {5m + 1} \right)\)</span> is an integer, equation <a href="" class="xref" data-knowl="./knowl/eq_5e.html" title="Equation 24">(24)</a> shows that 4 divides <span class="process-math">\(\left( {5^{k + 1} - 1} \right)\text{.}\)</span> Therefore, if <span class="process-math">\(P( k )\)</span> is true, then <span class="process-math">\(P( k + 1 )\)</span> is true and the inductive step has been established. Thus, by the Principle of Mathematical Induction, for every natural number <span class="process-math">\(n\text{,}\)</span> 4 divides <span class="process-math">\(\left( {5^n - 1} \right)\text{.}\)</span></p></article><p id="p-2285"><a href="" class="xref" data-knowl="./knowl/P_divideinduction.html" title="Proposition 4.4">Proposition 4.4</a> was stated in terms of “divides.” We can use congruence to state a proposition that is equivalent to <a href="" class="xref" data-knowl="./knowl/P_divideinduction.html" title="Proposition 4.4">Proposition 4.4</a>. The idea is that the sentence, 4 divides <span class="process-math">\(\left(5^n - 1 \right)\)</span> means that <span class="process-math">\(5^n \equiv 1 \pmod 4\text{.}\)</span> So the following proposition is equivalent to <a href="" class="xref" data-knowl="./knowl/P_divideinduction.html" title="Proposition 4.4">Proposition 4.4</a>.</p>
+<p id="p-2309">Since <span class="process-math">\(\left( {5m + 1} \right)\)</span> is an integer, equation <a href="" class="xref" data-knowl="./knowl/eq_5e.html" title="Equation 24">(24)</a> shows that 4 divides <span class="process-math">\(\left( {5^{k + 1} - 1} \right)\text{.}\)</span> Therefore, if <span class="process-math">\(P( k )\)</span> is true, then <span class="process-math">\(P( k + 1 )\)</span> is true and the inductive step has been established. Thus, by the Principle of Mathematical Induction, for every natural number <span class="process-math">\(n\text{,}\)</span> 4 divides <span class="process-math">\(\left( {5^n - 1} \right)\text{.}\)</span></p></article><p id="p-2310"><a href="" class="xref" data-knowl="./knowl/P_divideinduction.html" title="Proposition 4.4">Proposition 4.4</a> was stated in terms of “divides.” We can use congruence to state a proposition that is equivalent to <a href="" class="xref" data-knowl="./knowl/P_divideinduction.html" title="Proposition 4.4">Proposition 4.4</a>. The idea is that the sentence, 4 divides <span class="process-math">\(\left(5^n - 1 \right)\)</span> means that <span class="process-math">\(5^n \equiv 1 \pmod 4\text{.}\)</span> So the following proposition is equivalent to <a href="" class="xref" data-knowl="./knowl/P_divideinduction.html" title="Proposition 4.4">Proposition 4.4</a>.</p>
 <article class="proposition theorem-like" id="P_congruenceinduction"><h4 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">4.5</span><span class="period">.</span>
 </h4>
-<p id="p-2286">For every natural number <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(5^n \equiv 1 \pmod 4\text{.}\)</span></p></article><p id="p-2287">Since we have proved <a href="" class="xref" data-knowl="./knowl/P_divideinduction.html" title="Proposition 4.4">Proposition 4.4</a>, we have in effect proved <a href="" class="xref" data-knowl="./knowl/P_congruenceinduction.html" title="Proposition 4.5">Proposition 4.5</a>. However, we could have proved <a href="" class="xref" data-knowl="./knowl/P_congruenceinduction.html" title="Proposition 4.5">Proposition 4.5</a> first by using the results in <a href="" class="xref" data-knowl="./knowl/T_propsofcong.html" title="Theorem 3.34: Properties of Congruence Modulo">Theorem 3.34</a>. This will be done in the next progress check.</p>
+<p id="p-2311">For every natural number <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(5^n \equiv 1 \pmod 4\text{.}\)</span></p></article><p id="p-2312">Since we have proved <a href="" class="xref" data-knowl="./knowl/P_divideinduction.html" title="Proposition 4.4">Proposition 4.4</a>, we have in effect proved <a href="" class="xref" data-knowl="./knowl/P_congruenceinduction.html" title="Proposition 4.5">Proposition 4.5</a>. However, we could have proved <a href="" class="xref" data-knowl="./knowl/P_congruenceinduction.html" title="Proposition 4.5">Proposition 4.5</a> first by using the results in <a href="" class="xref" data-knowl="./knowl/T_propsofcong.html" title="Theorem 3.34: Properties of Congruence Modulo">Theorem 3.34</a>. This will be done in the next progress check.</p>
 <article class="exercise exercise-like" id="pr_congruenceinduction"><h4 class="heading">
 <span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">4.6</span><span class="period">.</span><span class="space"> </span><span class="title">Proof of Proposition 4.5.</span>
 </h4>
-<div class="introduction" id="introduction-192"><p id="p-2288">To prove <a href="" class="xref" data-knowl="./knowl/P_congruenceinduction.html" title="Proposition 4.5">Proposition 4.5</a>, we let <span class="process-math">\(P(n)\)</span> be <span class="process-math">\(5^n \equiv 1 \pmod 4\)</span> and notice that <span class="process-math">\(P(1)\)</span> is true since <span class="process-math">\(5 \equiv 1 \pmod 4\text{.}\)</span> For the inductive step, let <span class="process-math">\(k\)</span> be a natural number and assume that <span class="process-math">\(P(k)\)</span> is true. That is, assume that <span class="process-math">\(5^k \equiv 1 \pmod 4\text{.}\)</span></p></div>
+<div class="introduction" id="introduction-192"><p id="p-2313">To prove <a href="" class="xref" data-knowl="./knowl/P_congruenceinduction.html" title="Proposition 4.5">Proposition 4.5</a>, we let <span class="process-math">\(P(n)\)</span> be <span class="process-math">\(5^n \equiv 1 \pmod 4\)</span> and notice that <span class="process-math">\(P(1)\)</span> is true since <span class="process-math">\(5 \equiv 1 \pmod 4\text{.}\)</span> For the inductive step, let <span class="process-math">\(k\)</span> be a natural number and assume that <span class="process-math">\(P(k)\)</span> is true. That is, assume that <span class="process-math">\(5^k \equiv 1 \pmod 4\text{.}\)</span></p></div>
 <article class="task exercise-like" id="task-717"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-2289">What must be proved in order to prove that <span class="process-math">\(P(k+1)\)</span> is true?</p>
+<p id="p-2314">What must be proved in order to prove that <span class="process-math">\(P(k+1)\)</span> is true?</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-108" id="solution-108"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-108"><div class="solution solution-like"><p id="p-2290">To prove that <span class="process-math">\(P(k+1)\)</span> is true, we must prove <span class="process-math">\(5^{k+1} \equiv 1 \pmod 4\text{.}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-108" id="solution-108"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-108"><div class="solution solution-like"><p id="p-2315">To prove that <span class="process-math">\(P(k+1)\)</span> is true, we must prove <span class="process-math">\(5^{k+1} \equiv 1 \pmod 4\text{.}\)</span></p></div></div>
 </div></article><article class="task exercise-like" id="task-718"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-2291">Since <span class="process-math">\(5^{k+1} = 5 \cdot 5^k\text{,}\)</span> multiply both sides of the congruence <span class="process-math">\(5^k \equiv 1 \pmod 4\)</span> by 5. The results in <a href="" class="xref" data-knowl="./knowl/T_propsofcong.html" title="Theorem 3.34: Properties of Congruence Modulo">Theorem 3.34</a> justify this step.</p>
+<p id="p-2316">Since <span class="process-math">\(5^{k+1} = 5 \cdot 5^k\text{,}\)</span> multiply both sides of the congruence <span class="process-math">\(5^k \equiv 1 \pmod 4\)</span> by 5. The results in <a href="" class="xref" data-knowl="./knowl/T_propsofcong.html" title="Theorem 3.34: Properties of Congruence Modulo">Theorem 3.34</a> justify this step.</p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-109" id="solution-109"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-109"><div class="solution solution-like">
-<p id="p-2292">Since <span class="process-math">\(5^{k+1} = 5 \cdot 5^k\text{,}\)</span> we multiply both sides of the congruence <span class="process-math">\(5^{k} \equiv 1 \pmod 4\)</span> by 5 and obtain</p>
+<p id="p-2317">Since <span class="process-math">\(5^{k+1} = 5 \cdot 5^k\text{,}\)</span> we multiply both sides of the congruence <span class="process-math">\(5^{k} \equiv 1 \pmod 4\)</span> by 5 and obtain</p>
 <div class="displaymath process-math">
 \begin{equation*}
 5 \cdot 5^{k+1} \equiv 5 \cdot 1 \pmod 4  \text{ or } 5^{k+1} \equiv 5 \pmod 4\text{.}
@@ -551,48 +554,48 @@ P(k+1)  \amp  \text{ is }  \amp  1^2  + 2^2  +  \cdots  + \left( {k + 1} \right)
 </div>
 </div></div>
 </div></article><article class="task exercise-like" id="task-719"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-2293">Now complete the proof that for each <span class="process-math">\(k \in \N\text{,}\)</span> if <span class="process-math">\(P(k)\)</span> is true, then <span class="process-math">\(P(k+1)\)</span> is true and complete the induction proof of <a href="" class="xref" data-knowl="./knowl/P_congruenceinduction.html" title="Proposition 4.5">Proposition 4.5</a>.</p>
+<p id="p-2318">Now complete the proof that for each <span class="process-math">\(k \in \N\text{,}\)</span> if <span class="process-math">\(P(k)\)</span> is true, then <span class="process-math">\(P(k+1)\)</span> is true and complete the induction proof of <a href="" class="xref" data-knowl="./knowl/P_congruenceinduction.html" title="Proposition 4.5">Proposition 4.5</a>.</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-110" id="solution-110"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-110"><div class="solution solution-like"><p id="p-2294">Since <span class="process-math">\(5^{k+1} \equiv 5 \pmod 4\)</span> and we know that <span class="process-math">\(5 \equiv 1 \pmod 4\text{,}\)</span> we can use the transitive property of congruence to obtain <span class="process-math">\(5^{k+1} \equiv 1 \pmod 4\text{.}\)</span> This proves that if <span class="process-math">\(P(k)\)</span> is true, then <span class="process-math">\(P(k+1)\)</span> is true, and hence, by the Principle of Mathematical Induction, we have proved that for each natural number <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(5^{n} \equiv 1 \pmod 4\text{.}\)</span></p></div></div>
-</div></article><div class="conclusion" id="conclusion-6"><p id="p-2295">It might be nice to compare the proofs of <a href="" class="xref" data-knowl="./knowl/P_divideinduction.html" title="Proposition 4.4">Proposition 4.4</a> and <a href="" class="xref" data-knowl="./knowl/P_congruenceinduction.html" title="Proposition 4.5">Proposition 4.5</a> and decide which one is easier to understand.</p></div></article></section><section class="exercises" id="exercises-13"><h3 class="heading hide-type">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-110" id="solution-110"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-110"><div class="solution solution-like"><p id="p-2319">Since <span class="process-math">\(5^{k+1} \equiv 5 \pmod 4\)</span> and we know that <span class="process-math">\(5 \equiv 1 \pmod 4\text{,}\)</span> we can use the transitive property of congruence to obtain <span class="process-math">\(5^{k+1} \equiv 1 \pmod 4\text{.}\)</span> This proves that if <span class="process-math">\(P(k)\)</span> is true, then <span class="process-math">\(P(k+1)\)</span> is true, and hence, by the Principle of Mathematical Induction, we have proved that for each natural number <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(5^{n} \equiv 1 \pmod 4\text{.}\)</span></p></div></div>
+</div></article><div class="conclusion" id="conclusion-6"><p id="p-2320">It might be nice to compare the proofs of <a href="" class="xref" data-knowl="./knowl/P_divideinduction.html" title="Proposition 4.4">Proposition 4.4</a> and <a href="" class="xref" data-knowl="./knowl/P_congruenceinduction.html" title="Proposition 4.5">Proposition 4.5</a> and decide which one is easier to understand.</p></div></article></section><section class="exercises" id="exercises-13"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="exer_sec51-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="introduction" id="introduction-193"><p id="p-2296">Which of the following sets are inductive sets? Explain.</p></div>
+<div class="introduction" id="introduction-193"><p id="p-2321">Which of the following sets are inductive sets? Explain.</p></div>
 <article class="task exercise-like" id="task-720"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-2297"><span class="process-math">\(\mathbb{Z}\)</span></p>
+<p id="p-2322"><span class="process-math">\(\mathbb{Z}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-163" id="answer-163"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-163"><div class="answer solution-like"><p id="p-2298">This set is inductive.</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-163" id="answer-163"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-163"><div class="answer solution-like"><p id="p-2323">This set is inductive.</p></div></div>
 </div></article><article class="task exercise-like" id="task-721"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-2299"><span class="process-math">\(\left\{ {x \in \mathbb{N} \mid x \geq 4} \right\}\)</span></p>
+<p id="p-2324"><span class="process-math">\(\left\{ {x \in \mathbb{N} \mid x \geq 4} \right\}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-164" id="answer-164"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-164"><div class="answer solution-like"><p id="p-2300">This set is inductive.</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-164" id="answer-164"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-164"><div class="answer solution-like"><p id="p-2325">This set is inductive.</p></div></div>
 </div></article><article class="task exercise-like" id="task-722"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-2301"><span class="process-math">\(\left\{ {x \in \mathbb{Z} \mid x \leq 10} \right\}\)</span></p>
+<p id="p-2326"><span class="process-math">\(\left\{ {x \in \mathbb{Z} \mid x \leq 10} \right\}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-165" id="answer-165"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-165"><div class="answer solution-like"><p id="p-2302">This set is not inductive.</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-165" id="answer-165"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-165"><div class="answer solution-like"><p id="p-2327">This set is not inductive.</p></div></div>
 </div></article><article class="task exercise-like" id="task-723"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<p id="p-2303"><span class="process-math">\(\left\{ {1,2,3, \ldots ,500} \right\}\)</span></p>
+<p id="p-2328"><span class="process-math">\(\left\{ {1,2,3, \ldots ,500} \right\}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-166" id="answer-166"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-166"><div class="answer solution-like"><p id="p-2304">This set is not inductive.</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-166" id="answer-166"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-166"><div class="answer solution-like"><p id="p-2329">This set is not inductive.</p></div></div>
 </div></article></article><article class="exercise exercise-like" id="exer_sec51-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="introduction" id="introduction-194"><p id="p-2305">Explain the following.</p></div>
+<div class="introduction" id="introduction-194"><p id="p-2330">Explain the following.</p></div>
 <article class="task exercise-like" id="task-724"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-2306">Can a finite, nonempty set be inductive?</p>
+<p id="p-2331">Can a finite, nonempty set be inductive?</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-167" id="answer-167"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-167"><div class="answer solution-like"><p id="p-2307">A finite nonempty set is not inductive (why?).</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-167" id="answer-167"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-167"><div class="answer solution-like"><p id="p-2332">A finite nonempty set is not inductive (why?).</p></div></div>
 </div></article><article class="task exercise-like" id="task-725"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-2308">Is the empty set inductive?</p>
+<p id="p-2333">Is the empty set inductive?</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-168" id="answer-168"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-168"><div class="answer solution-like"><p id="p-2309">The empty set is inductive (why?).</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-168" id="answer-168"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-168"><div class="answer solution-like"><p id="p-2334">The empty set is inductive (why?).</p></div></div>
 </div></article></article><article class="exercise exercise-like" id="exer_sec51-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="introduction" id="introduction-195"><p id="p-2310">Use mathematical induction to prove each of the following:</p></div>
+<div class="introduction" id="introduction-195"><p id="p-2335">Use mathematical induction to prove each of the following:</p></div>
 <article class="task exercise-like" id="exer_inductionsum-a"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-2311">For each natural number <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(2 + 5 + 8 + \cdots + \left( {3n - 1} \right) = \dfrac{{n\left( {3n + 1} 
+<p id="p-2336">For each natural number <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(2 + 5 + 8 + \cdots + \left( {3n - 1} \right) = \dfrac{{n\left( {3n + 1} 
 \right)}}{2}\text{.}\)</span></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-169" id="answer-169"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-169"><div class="answer solution-like">
-<p id="p-2312">For each  <span class="process-math">\(n \in \mathbb{N}\text{,}\)</span> let  <span class="process-math">\(P( n )\)</span> be, <span class="process-math">\(2 + 5 + 8 +  \cdots  + (3n - 1) = \dfrac{{n( {3n + 1} )}}{2}\text{.}\)</span> When we use <span class="process-math">\(n = 1\text{,}\)</span> the summation on the left side of the equation is 2, and the right side is <span class="process-math">\(\dfrac{1(3 \cdot 1 + 1)}{2} = 2\text{.}\)</span>  Therefore, <span class="process-math">\(P( 1 )\)</span>  is true.   For the inductive step, let <span class="process-math">\(k \in \mathbb{N}\)</span> and assume that <span class="process-math">\(P \left( k \right)\)</span> is true.  Then,</p>
+<p id="p-2337">For each  <span class="process-math">\(n \in \mathbb{N}\text{,}\)</span> let  <span class="process-math">\(P( n )\)</span> be, <span class="process-math">\(2 + 5 + 8 +  \cdots  + (3n - 1) = \dfrac{{n( {3n + 1} )}}{2}\text{.}\)</span> When we use <span class="process-math">\(n = 1\text{,}\)</span> the summation on the left side of the equation is 2, and the right side is <span class="process-math">\(\dfrac{1(3 \cdot 1 + 1)}{2} = 2\text{.}\)</span>  Therefore, <span class="process-math">\(P( 1 )\)</span>  is true.   For the inductive step, let <span class="process-math">\(k \in \mathbb{N}\)</span> and assume that <span class="process-math">\(P \left( k \right)\)</span> is true.  Then,</p>
 <div class="displaymath process-math">
 \begin{equation*}
 2 + 5 + 8 + \cdots  + \left( {3k - 1} \right) = \frac{{k \left( {3k + 1} \right)}}{2}\text{.}
@@ -620,27 +623,27 @@ P(k+1)  \amp  \text{ is }  \amp  1^2  + 2^2  +  \cdots  + \left( {k + 1} \right)
 <p class="continuation">This proves that if  <span class="process-math">\(P\left( k \right)\)</span> is true, then <span class="process-math">\(P\left( {k + 1} \right)\)</span> is true.</p>
 </div></div>
 </div></article><article class="task exercise-like" id="task-727"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-2313">For each natural number <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(1 + 5 + 9 + \cdots + \left(4n - 3 \right) = n \left(2n - 1 \right)\text{.}\)</span></p></article><article class="task exercise-like" id="exer_51-3c"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-2314">For each natural number <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(1^3 + 2^3 + 3^3 + \cdots + n^3 = \left[ {\dfrac{{n\left( {n + 1} \right)}}{2}} 
+<p id="p-2338">For each natural number <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(1 + 5 + 9 + \cdots + \left(4n - 3 \right) = n \left(2n - 1 \right)\text{.}\)</span></p></article><article class="task exercise-like" id="exer_51-3c"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-2339">For each natural number <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(1^3 + 2^3 + 3^3 + \cdots + n^3 = \left[ {\dfrac{{n\left( {n + 1} \right)}}{2}} 
 \right]^2\text{.}\)</span></p></article></article><article class="exercise exercise-like" id="exercise-315"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<p id="p-2315">Based on the results in <a href="" class="xref" data-knowl="./knowl/prog_indexample.html" title="Progress Check 4.3: An Example of a Proof by Induction">Progress Check 4.3</a> and <a href="" class="xref" data-knowl="./knowl/exer_51-3c.html" title="Task 3.c">Task 3.c</a> from <a href="" class="xref" data-knowl="./knowl/exer_sec51-3.html" title="Exercise 3">Exercise 3</a>, if <span class="process-math">\(n \in \mathbb{N}\text{,}\)</span> is there any conclusion that can be made about the relationship between the sum <span class="process-math">\(\left( {1^3 + 2^3 + 3^3 + \cdots + n^3 } \right)\)</span> and the sum <span class="process-math">\(\left( {1 + 2 + 3 + \cdots + n} \right)\text{?}\)</span></p></article><article class="exercise exercise-like" id="exer_previnduction"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="introduction" id="introduction-196"><p id="p-2316">Instead of using induction, we can sometimes use previously proven results about a summation to obtain results about a different summation.</p></div>
+<p id="p-2340">Based on the results in <a href="" class="xref" data-knowl="./knowl/prog_indexample.html" title="Progress Check 4.3: An Example of a Proof by Induction">Progress Check 4.3</a> and <a href="" class="xref" data-knowl="./knowl/exer_51-3c.html" title="Task 3.c">Task 3.c</a> from <a href="" class="xref" data-knowl="./knowl/exer_sec51-3.html" title="Exercise 3">Exercise 3</a>, if <span class="process-math">\(n \in \mathbb{N}\text{,}\)</span> is there any conclusion that can be made about the relationship between the sum <span class="process-math">\(\left( {1^3 + 2^3 + 3^3 + \cdots + n^3 } \right)\)</span> and the sum <span class="process-math">\(\left( {1 + 2 + 3 + \cdots + n} \right)\text{?}\)</span></p></article><article class="exercise exercise-like" id="exer_previnduction"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-196"><p id="p-2341">Instead of using induction, we can sometimes use previously proven results about a summation to obtain results about a different summation.</p></div>
 <article class="task exercise-like" id="exer_previnduction-a"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-2317">Use the result in <a href="" class="xref" data-knowl="./knowl/prog_indexample.html" title="Progress Check 4.3: An Example of a Proof by Induction">Progress Check 4.3</a> to prove the following proposition: For each natural number <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(3 + 6 + 9 + \cdots + 3n = \dfrac{{3n\left( {n + 1} \right)}}{2}\text{.}\)</span></p></article><article class="task exercise-like" id="exer_previnduction-b"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-2318">Subtract <span class="process-math">\(n\)</span> from each side of the equation in <a href="" class="xref" data-knowl="./knowl/exer_previnduction-a.html" title="Task 5.a">Task 5.a</a> On the left side of this equation, explain why this can be done by subtracting <span class="process-math">\(1\)</span> from each term in the summation.</p></article><article class="task exercise-like" id="task-731"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-2319">Algebraically simplify the right side of the equation in <a href="" class="xref" data-knowl="./knowl/exer_previnduction-b.html" title="Task 5.b">Task 5.b</a> to obtain a formula for the sum <span class="process-math">\(2 + 5 + 8 + \cdots + \left( 3n - 1 \right)\text{.}\)</span> Compare this to <a href="" class="xref" data-knowl="./knowl/exer_inductionsum-a.html" title="Task 3.a">Task 3.a</a>.</p></article></article><article class="exercise exercise-like" id="exer_sec51-5"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="introduction" id="introduction-197"><p id="p-2320">Complete the following.</p></div>
+<p id="p-2342">Use the result in <a href="" class="xref" data-knowl="./knowl/prog_indexample.html" title="Progress Check 4.3: An Example of a Proof by Induction">Progress Check 4.3</a> to prove the following proposition: For each natural number <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(3 + 6 + 9 + \cdots + 3n = \dfrac{{3n\left( {n + 1} \right)}}{2}\text{.}\)</span></p></article><article class="task exercise-like" id="exer_previnduction-b"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-2343">Subtract <span class="process-math">\(n\)</span> from each side of the equation in <a href="" class="xref" data-knowl="./knowl/exer_previnduction-a.html" title="Task 5.a">Task 5.a</a> On the left side of this equation, explain why this can be done by subtracting <span class="process-math">\(1\)</span> from each term in the summation.</p></article><article class="task exercise-like" id="task-731"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-2344">Algebraically simplify the right side of the equation in <a href="" class="xref" data-knowl="./knowl/exer_previnduction-b.html" title="Task 5.b">Task 5.b</a> to obtain a formula for the sum <span class="process-math">\(2 + 5 + 8 + \cdots + \left( 3n - 1 \right)\text{.}\)</span> Compare this to <a href="" class="xref" data-knowl="./knowl/exer_inductionsum-a.html" title="Task 3.a">Task 3.a</a>.</p></article></article><article class="exercise exercise-like" id="exer_sec51-5"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-197"><p id="p-2345">Complete the following.</p></div>
 <article class="task exercise-like" id="exer_515a"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-2321">Calculate <span class="process-math">\(1 + 3 + 5 + \cdots + \left( {2n - 1} \right)\)</span> for several natural numbers <span class="process-math">\(n\text{.}\)</span></p></article><article class="task exercise-like" id="exer_515b"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-2322">Based on your work in <a href="" class="xref" data-knowl="./knowl/exer_515a.html" title="Task 6.a">Task 6.a</a>, if <span class="process-math">\(n \in \mathbb{N}\text{,}\)</span> make a conjecture about the value of the sum <span class="process-math">\(1 + 3 + 5 + \cdots + \left( {2n - 1} \right) = 
+<p id="p-2346">Calculate <span class="process-math">\(1 + 3 + 5 + \cdots + \left( {2n - 1} \right)\)</span> for several natural numbers <span class="process-math">\(n\text{.}\)</span></p></article><article class="task exercise-like" id="exer_515b"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-2347">Based on your work in <a href="" class="xref" data-knowl="./knowl/exer_515a.html" title="Task 6.a">Task 6.a</a>, if <span class="process-math">\(n \in \mathbb{N}\text{,}\)</span> make a conjecture about the value of the sum <span class="process-math">\(1 + 3 + 5 + \cdots + \left( {2n - 1} \right) = 
 \sum\limits_{j = 1}^n {\left( {2j - 1} \right)}\text{.}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-170" id="answer-170"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-170"><div class="answer solution-like"><p id="p-2323">The conjecture is that  for each  <span class="process-math">\(n \in \mathbb{N}\text{,}\)</span> <span class="process-math">\(1 + 3 + 5 + \cdots + (2n - 1) = n^2\text{.}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-170" id="answer-170"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-170"><div class="answer solution-like"><p id="p-2348">The conjecture is that  for each  <span class="process-math">\(n \in \mathbb{N}\text{,}\)</span> <span class="process-math">\(1 + 3 + 5 + \cdots + (2n - 1) = n^2\text{.}\)</span></p></div></div>
 </div></article><article class="task exercise-like" id="task-734"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-2324">Use mathematical induction to prove your conjecture in <a href="" class="xref" data-knowl="./knowl/exer_515b.html" title="Task 6.b">Task 6.b</a>.</p>
+<p id="p-2349">Use mathematical induction to prove your conjecture in <a href="" class="xref" data-knowl="./knowl/exer_515b.html" title="Task 6.b">Task 6.b</a>.</p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-171" id="answer-171"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-171"><div class="answer solution-like">
-<p id="p-2325">The key to the inductive step is that</p>
+<p id="p-2350">The key to the inductive step is that</p>
 <div class="displaymath process-math">
 \begin{align*}
 1 + 3 + 5 + \cdots + (2k - 1) \amp\\
@@ -651,20 +654,20 @@ P(k+1)  \amp  \text{ is }  \amp  1^2  + 2^2  +  \cdots  + \left( {k + 1} \right)
 </div>
 </div></div>
 </div></article></article><article class="exercise exercise-like" id="exer_mod3conjecture"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="introduction" id="introduction-198"><p id="p-2326">In <a href="S_directproof.html" class="internal" title="Section 3.1: Direct Proofs">Section 3.1</a>, we defined congruence modulo <span class="process-math">\(n\)</span> for a natural number <span class="process-math">\(n\text{,}\)</span> and in <a href="S_divalgo.html" class="internal" title="Section 3.5: The Division Algorithm and Congruence">Section 3.5</a>, we used the Division Algorithm to prove that each integer is congruent, modulo <span class="process-math">\(n\text{,}\)</span> to precisely one of the integers <span class="process-math">\(0,1,2, \ldots ,n - 1\)</span> (<a href="" class="xref" data-knowl="./knowl/C_congtorem.html" title="Corollary 3.38">Corollary 3.38</a>).</p></div>
+<div class="introduction" id="introduction-198"><p id="p-2351">In <a href="S_directproof.html" class="internal" title="Section 3.1: Direct Proofs">Section 3.1</a>, we defined congruence modulo <span class="process-math">\(n\)</span> for a natural number <span class="process-math">\(n\text{,}\)</span> and in <a href="S_divalgo.html" class="internal" title="Section 3.5: The Division Algorithm and Congruence">Section 3.5</a>, we used the Division Algorithm to prove that each integer is congruent, modulo <span class="process-math">\(n\text{,}\)</span> to precisely one of the integers <span class="process-math">\(0,1,2, \ldots ,n - 1\)</span> (<a href="" class="xref" data-knowl="./knowl/C_congtorem.html" title="Corollary 3.38">Corollary 3.38</a>).</p></div>
 <article class="task exercise-like" id="task-735"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-2327">Find the value of <span class="process-math">\(r\)</span> so that <span class="process-math">\(4 \equiv r \pmod 3\)</span> and <span class="process-math">\(r \in \left\{ {0,1,2} \right\}\text{.}\)</span></p></article><article class="task exercise-like" id="task-736"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-2328">Find the value of <span class="process-math">\(r\)</span> so that <span class="process-math">\(4^2 \equiv r \pmod 3\)</span> and <span class="process-math">\(r \in \left\{ {0,1,2} \right\}\text{.}\)</span></p></article><article class="task exercise-like" id="task-737"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-2329">Find the value of <span class="process-math">\(r\)</span> so that <span class="process-math">\(4^3 \equiv r \pmod 3\)</span> and <span class="process-math">\(r \in \left\{ {0,1,2} \right\}\text{.}\)</span></p></article><article class="task exercise-like" id="task-738"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<p id="p-2330">For two other values of <span class="process-math">\(n\text{,}\)</span> find the value of <span class="process-math">\(r\)</span> so that <span class="process-math">\(4^n \equiv r \pmod 3\)</span> and <span class="process-math">\(r \in \left\{ {0,1,2} \right\}\text{.}\)</span></p></article><article class="task exercise-like" id="task-739"><h5 class="heading"><span class="codenumber">(e)</span></h5>
-<p id="p-2331">If <span class="process-math">\(n \in \mathbb{N}\text{,}\)</span> make a conjecture concerning the value of <span class="process-math">\(r\)</span> where <span class="process-math">\(4^n \equiv r \pmod 3\)</span> and <span class="process-math">\(r \in \left\{ {0,1,2} \right\}\text{.}\)</span> This conjecture should be written as a self-contained proposition including an appropriate quantifier.</p>
+<p id="p-2352">Find the value of <span class="process-math">\(r\)</span> so that <span class="process-math">\(4 \equiv r \pmod 3\)</span> and <span class="process-math">\(r \in \left\{ {0,1,2} \right\}\text{.}\)</span></p></article><article class="task exercise-like" id="task-736"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-2353">Find the value of <span class="process-math">\(r\)</span> so that <span class="process-math">\(4^2 \equiv r \pmod 3\)</span> and <span class="process-math">\(r \in \left\{ {0,1,2} \right\}\text{.}\)</span></p></article><article class="task exercise-like" id="task-737"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-2354">Find the value of <span class="process-math">\(r\)</span> so that <span class="process-math">\(4^3 \equiv r \pmod 3\)</span> and <span class="process-math">\(r \in \left\{ {0,1,2} \right\}\text{.}\)</span></p></article><article class="task exercise-like" id="task-738"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-2355">For two other values of <span class="process-math">\(n\text{,}\)</span> find the value of <span class="process-math">\(r\)</span> so that <span class="process-math">\(4^n \equiv r \pmod 3\)</span> and <span class="process-math">\(r \in \left\{ {0,1,2} \right\}\text{.}\)</span></p></article><article class="task exercise-like" id="task-739"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-2356">If <span class="process-math">\(n \in \mathbb{N}\text{,}\)</span> make a conjecture concerning the value of <span class="process-math">\(r\)</span> where <span class="process-math">\(4^n \equiv r \pmod 3\)</span> and <span class="process-math">\(r \in \left\{ {0,1,2} \right\}\text{.}\)</span> This conjecture should be written as a self-contained proposition including an appropriate quantifier.</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-172" id="answer-172"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-172"><div class="answer solution-like"><p id="p-2332">For each natural number <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(4^n \equiv 1 \pmod 3\text{.}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-172" id="answer-172"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-172"><div class="answer solution-like"><p id="p-2357">For each natural number <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(4^n \equiv 1 \pmod 3\text{.}\)</span></p></div></div>
 </div></article><article class="task exercise-like" id="task-740"><h5 class="heading"><span class="codenumber">(f)</span></h5>
-<p id="p-2333">Use mathematical induction to prove your conjecture.</p>
+<p id="p-2358">Use mathematical induction to prove your conjecture.</p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-173" id="answer-173"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-173"><div class="answer solution-like">
-<p id="p-2334">For each natural number <span class="process-math">\(n\text{,}\)</span> let <span class="process-math">\(P(n)\)</span> be, “<span class="process-math">\(4^n \equiv 1 \pmod 3\text{.}\)</span>” Since <span class="process-math">\(4^1 \equiv 1 \pmod 3\text{,}\)</span> we see that <span class="process-math">\(P(1)\)</span> is true. Now let <span class="process-math">\(k \in \N\)</span> and assume that <span class="process-math">\(P(k)\)</span> is true. That is, assume that</p>
+<p id="p-2359">For each natural number <span class="process-math">\(n\text{,}\)</span> let <span class="process-math">\(P(n)\)</span> be, “<span class="process-math">\(4^n \equiv 1 \pmod 3\text{.}\)</span>” Since <span class="process-math">\(4^1 \equiv 1 \pmod 3\text{,}\)</span> we see that <span class="process-math">\(P(1)\)</span> is true. Now let <span class="process-math">\(k \in \N\)</span> and assume that <span class="process-math">\(P(k)\)</span> is true. That is, assume that</p>
 <div class="displaymath process-math">
 \begin{equation*}
 4^k \equiv 1 \pmod 3\text{.}
@@ -679,12 +682,12 @@ P(k+1)  \amp  \text{ is }  \amp  1^2  + 2^2  +  \cdots  + \left( {k + 1} \right)
 <p class="continuation">However, <span class="process-math">\(4 \equiv 1 \pmod 3\)</span> and so by using the transitive property of congruence, we see that <span class="process-math">\(4^{k+1} \equiv 1 \pmod 3\text{.}\)</span> This proves that if <span class="process-math">\(P(k)\)</span> is true, then <span class="process-math">\(P(k+1)\)</span> is true.</p>
 </div></div>
 </div></article></article><article class="exercise exercise-like" id="exer_sec51-6"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="introduction" id="introduction-199"><p id="p-2335">Use mathematical induction to prove each of the following:</p></div>
+<div class="introduction" id="introduction-199"><p id="p-2360">Use mathematical induction to prove each of the following:</p></div>
 <article class="task exercise-like" id="exer_516a"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-2336">For each natural number <span class="process-math">\(n\text{,}\)</span> 3 divides <span class="process-math">\(\left( {4^n - 1} \right)\text{.}\)</span></p>
+<p id="p-2361">For each natural number <span class="process-math">\(n\text{,}\)</span> 3 divides <span class="process-math">\(\left( {4^n - 1} \right)\text{.}\)</span></p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-174" id="answer-174"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-174"><div class="answer solution-like">
-<p id="p-2337">The key to the inductive step is that if <span class="process-math">\(4^k = 1 + 3m\text{,}\)</span> then <span class="process-math">\(4^k \cdot 4 = 4 ( 1 + 3m )\text{,}\)</span> which implies that</p>
+<p id="p-2362">The key to the inductive step is that if <span class="process-math">\(4^k = 1 + 3m\text{,}\)</span> then <span class="process-math">\(4^k \cdot 4 = 4 ( 1 + 3m )\text{,}\)</span> which implies that</p>
 <div class="displaymath process-math">
 \begin{equation*}
 4^{k+1} - 1 = 3 (1 + 4m )\text{.}
@@ -692,25 +695,25 @@ P(k+1)  \amp  \text{ is }  \amp  1^2  + 2^2  +  \cdots  + \left( {k + 1} \right)
 </div>
 </div></div>
 </div></article><article class="task exercise-like" id="task-742"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-2338">For each natural number <span class="process-math">\(n\text{,}\)</span> 6 divides <span class="process-math">\(\left( {n^3 - n} \right)\text{.}\)</span></p></article></article><article class="exercise exercise-like" id="exercise-320"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<p id="p-2339">In <a href="" class="xref" data-knowl="./knowl/exer_mod3conjecture.html" title="Exercise 7">Exercise 7</a>, we proved that for each natural number <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(4^n \equiv 1 \pmod 3\text{.}\)</span> Explain how this result is related to the proposition in <a href="" class="xref" data-knowl="./knowl/exer_516a.html" title="Task 8.a">Task 8.a</a> from <a href="" class="xref" data-knowl="./knowl/exer_sec51-6.html" title="Exercise 8">Exercise 8</a>.</p></article><article class="exercise exercise-like" id="exercise-321"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
-<p id="p-2340">Use mathematical induction to prove that for each natural number <span class="process-math">\(n\text{,}\)</span> 3 divides <span class="process-math">\(n^3 + 23n\text{.}\)</span> Compare this proof to the proof from <a href="" class="xref" data-knowl="./knowl/exer_case-ind.html" title="Exercise 19">Exercise 19</a> in <a href="S_divalgo.html" class="internal" title="Section 3.5: The Division Algorithm and Congruence">Section 3.5</a>.</p></article><article class="exercise exercise-like" id="exer_sec51-8"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
-<div class="introduction" id="introduction-200"><p id="p-2341">Complete the following.</p></div>
+<p id="p-2363">For each natural number <span class="process-math">\(n\text{,}\)</span> 6 divides <span class="process-math">\(\left( {n^3 - n} \right)\text{.}\)</span></p></article></article><article class="exercise exercise-like" id="exercise-320"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<p id="p-2364">In <a href="" class="xref" data-knowl="./knowl/exer_mod3conjecture.html" title="Exercise 7">Exercise 7</a>, we proved that for each natural number <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(4^n \equiv 1 \pmod 3\text{.}\)</span> Explain how this result is related to the proposition in <a href="" class="xref" data-knowl="./knowl/exer_516a.html" title="Task 8.a">Task 8.a</a> from <a href="" class="xref" data-knowl="./knowl/exer_sec51-6.html" title="Exercise 8">Exercise 8</a>.</p></article><article class="exercise exercise-like" id="exercise-321"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<p id="p-2365">Use mathematical induction to prove that for each natural number <span class="process-math">\(n\text{,}\)</span> 3 divides <span class="process-math">\(n^3 + 23n\text{.}\)</span> Compare this proof to the proof from <a href="" class="xref" data-knowl="./knowl/exer_case-ind.html" title="Exercise 19">Exercise 19</a> in <a href="S_divalgo.html" class="internal" title="Section 3.5: The Division Algorithm and Congruence">Section 3.5</a>.</p></article><article class="exercise exercise-like" id="exer_sec51-8"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-200"><p id="p-2366">Complete the following.</p></div>
 <article class="task exercise-like" id="exer_sec51-8a"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-2342">Calculate the value of <span class="process-math">\(5^n - 2^n\)</span> for <span class="process-math">\(n = 1\text{,}\)</span> <span class="process-math">\(n = 2\text{,}\)</span> <span class="process-math">\(n = 3\text{,}\)</span> <span class="process-math">\(n = 4\text{,}\)</span> <span class="process-math">\(n = 5\text{,}\)</span> and <span class="process-math">\(n = 6\text{.}\)</span></p></article><article class="task exercise-like" id="exer_sec51-8b"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-2343">Based on your work in <a href="" class="xref" data-knowl="./knowl/exer_sec51-8a.html" title="Task 11.a">Task 11.a</a>, make a conjecture about the values of <span class="process-math">\(5^n - 2^n\)</span> for each natural number <span class="process-math">\(n\text{.}\)</span></p></article><article class="task exercise-like" id="task-745"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-2344">Use mathematical induction to prove your conjecture in <a href="" class="xref" data-knowl="./knowl/exer_sec51-8b.html" title="Task 11.b">Task 11.b</a>.</p></article></article><article class="exercise exercise-like" id="exercise-323"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
-<p id="p-2345">Let <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> be distinct integers. Prove that for each natural number <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(\left( x - y \right)\)</span> divides <span class="process-math">\(\left( x^n - y^n \right)\text{.}\)</span> Explain why your conjecture in <a href="" class="xref" data-knowl="./knowl/exer_sec51-8.html" title="Exercise 11">Exercise 11</a> is a special case of this result.</p></article><article class="exercise exercise-like" id="exer_sec51-cong"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
-<p id="p-2346">Prove <a href="" class="xref" data-knowl="./knowl/T_propsofcong3.html" title="Item 3">Item 3</a> of <a href="" class="xref" data-knowl="./knowl/T_propsofcong.html" title="Theorem 3.34: Properties of Congruence Modulo">Theorem 3.34</a> from <a href="S_cases.html" class="internal" title="Section 3.4: Using Cases in Proofs">Section 3.4</a>. Let <span class="process-math">\(n \in \mathbb{N}\)</span> and let <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> be integers. For each <span class="process-math">\(m \in \N\text{,}\)</span> if <span class="process-math">\(a \equiv b \pmod n\text{,}\)</span> then <span class="process-math">\(a^m \equiv b^m \pmod n\text{.}\)</span></p>
+<p id="p-2367">Calculate the value of <span class="process-math">\(5^n - 2^n\)</span> for <span class="process-math">\(n = 1\text{,}\)</span> <span class="process-math">\(n = 2\text{,}\)</span> <span class="process-math">\(n = 3\text{,}\)</span> <span class="process-math">\(n = 4\text{,}\)</span> <span class="process-math">\(n = 5\text{,}\)</span> and <span class="process-math">\(n = 6\text{.}\)</span></p></article><article class="task exercise-like" id="exer_sec51-8b"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-2368">Based on your work in <a href="" class="xref" data-knowl="./knowl/exer_sec51-8a.html" title="Task 11.a">Task 11.a</a>, make a conjecture about the values of <span class="process-math">\(5^n - 2^n\)</span> for each natural number <span class="process-math">\(n\text{.}\)</span></p></article><article class="task exercise-like" id="task-745"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-2369">Use mathematical induction to prove your conjecture in <a href="" class="xref" data-knowl="./knowl/exer_sec51-8b.html" title="Task 11.b">Task 11.b</a>.</p></article></article><article class="exercise exercise-like" id="exercise-323"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<p id="p-2370">Let <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> be distinct integers. Prove that for each natural number <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(\left( x - y \right)\)</span> divides <span class="process-math">\(\left( x^n - y^n \right)\text{.}\)</span> Explain why your conjecture in <a href="" class="xref" data-knowl="./knowl/exer_sec51-8.html" title="Exercise 11">Exercise 11</a> is a special case of this result.</p></article><article class="exercise exercise-like" id="exer_sec51-cong"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
+<p id="p-2371">Prove <a href="" class="xref" data-knowl="./knowl/T_propsofcong3.html" title="Item 3">Item 3</a> of <a href="" class="xref" data-knowl="./knowl/T_propsofcong.html" title="Theorem 3.34: Properties of Congruence Modulo">Theorem 3.34</a> from <a href="S_cases.html" class="internal" title="Section 3.4: Using Cases in Proofs">Section 3.4</a>. Let <span class="process-math">\(n \in \mathbb{N}\)</span> and let <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> be integers. For each <span class="process-math">\(m \in \N\text{,}\)</span> if <span class="process-math">\(a \equiv b \pmod n\text{,}\)</span> then <span class="process-math">\(a^m \equiv b^m \pmod n\text{.}\)</span></p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-175" id="answer-175"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-175"><div class="answer solution-like"><p id="p-2347">Let <span class="process-math">\(k\)</span> be a natural number.  If <span class="process-math">\(a^k \equiv b^k \pmod n\text{,}\)</span> then since we are also assuming that <span class="process-math">\(a \equiv b \pmod n\text{,}\)</span> we can use Part (2) of <a href="" class="xref" data-knowl="./knowl/T_propsofcong.html" title="Theorem 3.34: Properties of Congruence Modulo">Theorem 3.34</a> to conclude that <span class="process-math">\(a \cdot a^k \equiv b \cdot b^k \pmod n\text{.}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-175" id="answer-175"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-175"><div class="answer solution-like"><p id="p-2372">Let <span class="process-math">\(k\)</span> be a natural number.  If <span class="process-math">\(a^k \equiv b^k \pmod n\text{,}\)</span> then since we are also assuming that <span class="process-math">\(a \equiv b \pmod n\text{,}\)</span> we can use Part (2) of <a href="" class="xref" data-knowl="./knowl/T_propsofcong.html" title="Theorem 3.34: Properties of Congruence Modulo">Theorem 3.34</a> to conclude that <span class="process-math">\(a \cdot a^k \equiv b \cdot b^k \pmod n\text{.}\)</span></p></div></div>
 </div></article><article class="exercise exercise-like" id="exer_sec51-13"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
-<p id="p-2348">Use mathematical induction to prove that the sum of the cubes of any three consecutive natural numbers is a multiple of 9.</p>
+<p id="p-2373">Use mathematical induction to prove that the sum of the cubes of any three consecutive natural numbers is a multiple of 9.</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-176" id="answer-176"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-176"><div class="answer solution-like"><p id="p-2349">Three consecutive natural numbers may be represent by <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(n + 1\text{,}\)</span> and <span class="process-math">\(n + 2\text{,}\)</span> where <span class="process-math">\(n\)</span> is a natural number.  For the inductive step, think before you try to do a lot of algebra. You should be able to complete a proof of the inductive step by expanding the cube of only one expression.</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-176" id="answer-176"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-176"><div class="answer solution-like"><p id="p-2374">Three consecutive natural numbers may be represent by <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(n + 1\text{,}\)</span> and <span class="process-math">\(n + 2\text{,}\)</span> where <span class="process-math">\(n\)</span> is a natural number.  For the inductive step, think before you try to do a lot of algebra. You should be able to complete a proof of the inductive step by expanding the cube of only one expression.</p></div></div>
 </div></article><article class="exercise exercise-like" id="exer_derivatives"><h4 class="heading"><span class="codenumber">15<span class="period">.</span></span></h4>
 <div class="introduction" id="introduction-201">
-<p id="p-2350">Let  <span class="process-math">\(a\)</span>  be a real number. We will explore the derivatives of the function <span class="process-math">\(f\left( x \right) = e^{ax}\text{.}\)</span> By using the chain rule, we see</p>
+<p id="p-2375">Let  <span class="process-math">\(a\)</span>  be a real number. We will explore the derivatives of the function <span class="process-math">\(f\left( x \right) = e^{ax}\text{.}\)</span> By using the chain rule, we see</p>
 <div class="displaymath process-math">
 \begin{equation*}
 \frac{d} {{dx}}\left( {e^{ax} } \right) = ae^{ax}\text{.}
@@ -719,12 +722,12 @@ P(k+1)  \amp  \text{ is }  \amp  1^2  + 2^2  +  \cdots  + \left( {k + 1} \right)
 <p class="continuation">Recall that the second derivative of a function is the derivative of the derivative function. Similarly, the third derivative is the derivative of the second derivative.</p>
 </div>
 <article class="task exercise-like" id="task-746"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-2351">What is <span class="process-math">\(\dfrac{{d^2 }}{{dx^2 }}\left( {e^{ax} } \right)\text{,}\)</span> the second derivative of <span class="process-math">\(e^{ax}\text{?}\)</span></p></article><article class="task exercise-like" id="task-747"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-2352">What is <span class="process-math">\(\dfrac{{d^3 }}{{dx^3 }}\left( {e^{ax} } \right)\text{,}\)</span> the third derivative of <span class="process-math">\(e^{ax}\text{?}\)</span></p></article><article class="task exercise-like" id="task-748"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-2353">Let <span class="process-math">\(n\)</span> be a natural number. Make a conjecture about the <span class="process-math">\(n^{\text{ th } }\)</span> derivative of the function <span class="process-math">\(f\left( x \right) = e^{ax}\text{.}\)</span> That is, what is <span class="process-math">\(\dfrac{{d^n }}{{dx^n }}\left( {e^{ax} } \right)\text{?}\)</span> This conjecture should be written as a self-contained proposition including an appropriate quantifier.</p></article><article class="task exercise-like" id="task-749"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<p id="p-2354">Use mathematical induction to prove your conjecture.</p></article></article><article class="exercise exercise-like" id="exer_wallis"><h4 class="heading"><span class="codenumber">16<span class="period">.</span></span></h4>
+<p id="p-2376">What is <span class="process-math">\(\dfrac{{d^2 }}{{dx^2 }}\left( {e^{ax} } \right)\text{,}\)</span> the second derivative of <span class="process-math">\(e^{ax}\text{?}\)</span></p></article><article class="task exercise-like" id="task-747"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-2377">What is <span class="process-math">\(\dfrac{{d^3 }}{{dx^3 }}\left( {e^{ax} } \right)\text{,}\)</span> the third derivative of <span class="process-math">\(e^{ax}\text{?}\)</span></p></article><article class="task exercise-like" id="task-748"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-2378">Let <span class="process-math">\(n\)</span> be a natural number. Make a conjecture about the <span class="process-math">\(n^{\text{ th } }\)</span> derivative of the function <span class="process-math">\(f\left( x \right) = e^{ax}\text{.}\)</span> That is, what is <span class="process-math">\(\dfrac{{d^n }}{{dx^n }}\left( {e^{ax} } \right)\text{?}\)</span> This conjecture should be written as a self-contained proposition including an appropriate quantifier.</p></article><article class="task exercise-like" id="task-749"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-2379">Use mathematical induction to prove your conjecture.</p></article></article><article class="exercise exercise-like" id="exer_wallis"><h4 class="heading"><span class="codenumber">16<span class="period">.</span></span></h4>
 <div class="introduction" id="introduction-202">
-<p id="p-2355">In calculus, it can be shown that</p>
+<p id="p-2380">In calculus, it can be shown that</p>
 <div class="displaymath process-math">
 \begin{align*}
 \int_{}^{} \sin^{\,2} x \, dx \amp = 
@@ -744,14 +747,14 @@ P(k+1)  \amp  \text{ is }  \amp  1^2  + 2^2  +  \cdots  + \left( {k + 1} \right)
 </div>
 </div>
 <article class="task exercise-like" id="task-750"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-2356">Determine the values of</p>
+<p id="p-2381">Determine the values of</p>
 <div class="displaymath process-math">
 \begin{equation*}
 \int_{0}^{\pi/2} \sin^{\,2} x \, dx \qquad \text{ and }  \qquad 
 \int_{0}^{\pi/2} \sin^{\,4} x \, dx\text{.}
 \end{equation*}
 </div></article><article class="task exercise-like" id="task-751"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-2357">Use mathematical induction to prove that for each natural number <span class="process-math">\(n\text{,}\)</span></p>
+<p id="p-2382">Use mathematical induction to prove that for each natural number <span class="process-math">\(n\text{,}\)</span></p>
 <div class="displaymath process-math">
 \begin{align*}
 \int_{0}^{\pi/2} \sin^{\,2n}x \, dx \amp = 
@@ -762,7 +765,7 @@ P(k+1)  \amp  \text{ is }  \amp  1^2  + 2^2  +  \cdots  + \left( {k + 1} \right)
 \end{align*}
 </div>
 <p class="continuation">These are known as the <dfn class="terminology">Wallis sine formulas</dfn>.</p></article><article class="task exercise-like" id="task-752"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-2358">Use mathematical induction to prove that</p>
+<p id="p-2383">Use mathematical induction to prove that</p>
 <div class="displaymath process-math">
 \begin{align*}
 \int_{0}^{\pi/2} \cos^{\,2n}x \, dx \amp = 
@@ -773,40 +776,40 @@ P(k+1)  \amp  \text{ is }  \amp  1^2  + 2^2  +  \cdots  + \left( {k + 1} \right)
 \end{align*}
 </div>
 <p class="continuation">These are known as the <dfn class="terminology">Wallis cosine formulas</dfn>.</p></article></article><article class="exercise exercise-like" id="exercise-328"><h4 class="heading"><span class="codenumber">17<span class="period">.</span></span></h4>
-<div class="introduction" id="introduction-203"><p id="p-2359">Complete the following.</p></div>
+<div class="introduction" id="introduction-203"><p id="p-2384">Complete the following.</p></div>
 <article class="task exercise-like" id="task-753"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-2360">Why is it not possible to use mathematical induction to prove a proposition of the form</p>
+<p id="p-2385">Why is it not possible to use mathematical induction to prove a proposition of the form</p>
 <div class="displaymath process-math">
 \begin{equation*}
 \left( {\forall x \in \mathbb{Q}} \right)\left( {P( x )} \right)\text{,}
 \end{equation*}
 </div>
 <p class="continuation">where  <span class="process-math">\(P( x )\)</span> is some predicate?</p></article><article class="task exercise-like" id="task-754"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-2361">Why is it not possible to use mathematical induction to prove a proposition of the form <blockquote class="blockquote" id="blockquote-144">For each real number <span class="process-math">\(x\)</span> with <span class="process-math">\(x \geq 1\text{,}\)</span> <span class="process-math">\(P( x )\text{,}\)</span> where <span class="process-math">\(P( x )\)</span> is some predicate?</blockquote></p></article></article><article class="exercise exercise-like" id="exercise-329"><h4 class="heading">
+<p id="p-2386">Why is it not possible to use mathematical induction to prove a proposition of the form <blockquote class="blockquote" id="blockquote-144">For each real number <span class="process-math">\(x\)</span> with <span class="process-math">\(x \geq 1\text{,}\)</span> <span class="process-math">\(P( x )\text{,}\)</span> where <span class="process-math">\(P( x )\)</span> is some predicate?</blockquote></p></article></article><article class="exercise exercise-like" id="exercise-329"><h4 class="heading">
 <span class="codenumber">18<span class="period">.</span></span><span class="space"> </span><span class="title">Evaluation of Proofs.</span>
 </h4>
-<div class="introduction" id="introduction-204"><p id="p-2362">See the instructions for <a href="" class="xref" data-knowl="./knowl/exer_proofeval.html" title="Exercise 19: Evaluation of Proofs">Exercise 19</a> on from <a href="S_directproof.html" class="internal" title="Section 3.1: Direct Proofs">Section 3.1</a>.</p></div>
+<div class="introduction" id="introduction-204"><p id="p-2387">See the instructions for <a href="" class="xref" data-knowl="./knowl/exer_proofeval.html" title="Exercise 19: Evaluation of Proofs">Exercise 19</a> on from <a href="S_directproof.html" class="internal" title="Section 3.1: Direct Proofs">Section 3.1</a>.</p></div>
 <article class="task exercise-like" id="task-755"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<dl id="p-2363" class="description-list narrow">
-<dt id="li-341">Proposition</dt>
-<dd><p id="p-2364">For each natural number <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(1 + 4 + 7 + \cdots + \left( 3n - 2 \right) = \dfrac{n \left(3n - 1 
+<dl id="p-2388" class="description-list narrow">
+<dt id="li-357">Proposition</dt>
+<dd><p id="p-2389">For each natural number <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(1 + 4 + 7 + \cdots + \left( 3n - 2 \right) = \dfrac{n \left(3n - 1 
 \right)}{2}\text{.}\)</span></p></dd>
-<dt id="li-342">Proof</dt>
+<dt id="li-358">Proof</dt>
 <dd>
-<p id="p-2365">We will prove this proposition using mathematical induction. So we let <span class="process-math">\(P ( n )\)</span> be the open sentence</p>
+<p id="p-2390">We will prove this proposition using mathematical induction. So we let <span class="process-math">\(P ( n )\)</span> be the open sentence</p>
 <div class="displaymath process-math">
 \begin{equation*}
 1 + 4 + 7 + \cdots + \left( 3n - 2 \right)\!\text{.}
 \end{equation*}
 </div>
-<p id="p-2366">Using <span class="process-math">\(n = 1\text{,}\)</span> we see that <span class="process-math">\(3n - 2 = 1\)</span> and hence, <span class="process-math">\(P \left( 1 \right)\)</span> is true.</p>
-<p id="p-2367">We now assume that <span class="process-math">\(P( k )\)</span> is true. That is,</p>
+<p id="p-2391">Using <span class="process-math">\(n = 1\text{,}\)</span> we see that <span class="process-math">\(3n - 2 = 1\)</span> and hence, <span class="process-math">\(P \left( 1 \right)\)</span> is true.</p>
+<p id="p-2392">We now assume that <span class="process-math">\(P( k )\)</span> is true. That is,</p>
 <div class="displaymath process-math">
 \begin{equation*}
 1 + 4 + 7 + \cdots + \left( 3k - 2 \right) = \frac{k \left(3k -1 \right)}{2}\text{.}
 \end{equation*}
 </div>
-<p id="p-2368">We then see that</p>
+<p id="p-2393">We then see that</p>
 <div class="displaymath process-math">
 \begin{align*}
 1 + 4 + 7 + \cdots + \left( 3k - 2 \right) + \left( 3 (k + 1) - 2 \right)
@@ -818,28 +821,28 @@ P(k+1)  \amp  \text{ is }  \amp  1^2  + 2^2  +  \cdots  + \left( {k + 1} \right)
 \frac{3k^2 +5k + 2}{2} \amp = \frac{3k^2 + 5k + 2}{2}\text{.}
 \end{align*}
 </div>
-<p id="p-2369">We have thus proved that <span class="process-math">\(P( k + 1 )\)</span> is true, and hence, we have proved the proposition.</p>
+<p id="p-2394">We have thus proved that <span class="process-math">\(P( k + 1 )\)</span> is true, and hence, we have proved the proposition.</p>
 </dd>
 </dl></article><article class="task exercise-like" id="task-756"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<dl id="p-2370" class="description-list narrow">
-<dt id="li-343">Proposition</dt>
-<dd><p id="p-2371">For each natural number <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(1 + 4 + 7 + \cdots + \left( 3n - 2 \right) = \dfrac{n \left(3n - 1 \right)}{2}\text{.}\)</span></p></dd>
-<dt id="li-344">Proof</dt>
+<dl id="p-2395" class="description-list narrow">
+<dt id="li-359">Proposition</dt>
+<dd><p id="p-2396">For each natural number <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(1 + 4 + 7 + \cdots + \left( 3n - 2 \right) = \dfrac{n \left(3n - 1 \right)}{2}\text{.}\)</span></p></dd>
+<dt id="li-360">Proof</dt>
 <dd>
-<p id="p-2372">We will prove this proposition using mathematical induction. So we let</p>
+<p id="p-2397">We will prove this proposition using mathematical induction. So we let</p>
 <div class="displaymath process-math">
 \begin{equation*}
 P( n ) = 1 + 4 + 7 + \cdots + \left( 3n - 2 \right)\!\text{.}
 \end{equation*}
 </div>
-<p id="p-2373">Using <span class="process-math">\(n = 1\text{,}\)</span> we see that <span class="process-math">\(P( 1 ) = 1\)</span> and hence, <span class="process-math">\(P( 1 )\)</span> is true.</p>
-<p id="p-2374">We now assume that <span class="process-math">\(P( k )\)</span> is true. That is,</p>
+<p id="p-2398">Using <span class="process-math">\(n = 1\text{,}\)</span> we see that <span class="process-math">\(P( 1 ) = 1\)</span> and hence, <span class="process-math">\(P( 1 )\)</span> is true.</p>
+<p id="p-2399">We now assume that <span class="process-math">\(P( k )\)</span> is true. That is,</p>
 <div class="displaymath process-math">
 \begin{equation*}
 1 + 4 + 7 + \cdots + \left( 3k - 2 \right) = \frac{k \left(3k -1 \right)}{2}\text{.}
 \end{equation*}
 </div>
-<p id="p-2375">We then see that</p>
+<p id="p-2400">We then see that</p>
 <div class="displaymath process-math">
 \begin{align*}
 P( k + 1 ) \amp = 1 + 4 + 7 + \cdots + \left( 3k - 2 \right) + 
@@ -850,31 +853,31 @@ P( k + 1 ) \amp = 1 + 4 + 7 + \cdots + \left( 3k - 2 \right) +
 \amp = \frac{\left(k + 1 \right) \left(3k + 2 \right)}{2}\text{.}
 \end{align*}
 </div>
-<p id="p-2376">We have thus proved that <span class="process-math">\(P( k + 1 )\)</span> is true, and hence, we have proved the proposition.</p>
+<p id="p-2401">We have thus proved that <span class="process-math">\(P( k + 1 )\)</span> is true, and hence, we have proved the proposition.</p>
 </dd>
 </dl></article><article class="task exercise-like" id="task-757"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<dl id="p-2377" class="description-list narrow">
-<dt id="li-345">Proposition</dt>
-<dd><p id="p-2378">All dogs are the same breed.</p></dd>
-<dt id="li-346">Proof</dt>
+<dl id="p-2402" class="description-list narrow">
+<dt id="li-361">Proposition</dt>
+<dd><p id="p-2403">All dogs are the same breed.</p></dd>
+<dt id="li-362">Proof</dt>
 <dd>
-<p id="p-2379">We will prove this proposition using mathematical induction. For each natural number <span class="process-math">\(n\text{,}\)</span> we let <span class="process-math">\(P( n )\)</span> be</p>
-<p id="p-2380">Any set of <span class="process-math">\(n\)</span> dogs consists entirely of dogs of the same breed.</p>
-<p id="p-2381">We will prove that for each natural number <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(P( n )\)</span> is true, which will prove that all dogs are the same breed. A set with only one dog consists entirely of dogs of the same breed and, hence, <span class="process-math">\(P( 1 )\)</span> is true.</p>
-<p id="p-2382">So we let <span class="process-math">\(k\)</span> be a natural number and assume that <span class="process-math">\(P( k )\)</span> is true, that is, that every set of <span class="process-math">\(k\)</span> dogs consists of dogs of the same breed. Now consider a set <span class="process-math">\(D\)</span> of <span class="process-math">\(k + 1\)</span> dogs, where</p>
+<p id="p-2404">We will prove this proposition using mathematical induction. For each natural number <span class="process-math">\(n\text{,}\)</span> we let <span class="process-math">\(P( n )\)</span> be</p>
+<p id="p-2405">Any set of <span class="process-math">\(n\)</span> dogs consists entirely of dogs of the same breed.</p>
+<p id="p-2406">We will prove that for each natural number <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(P( n )\)</span> is true, which will prove that all dogs are the same breed. A set with only one dog consists entirely of dogs of the same breed and, hence, <span class="process-math">\(P( 1 )\)</span> is true.</p>
+<p id="p-2407">So we let <span class="process-math">\(k\)</span> be a natural number and assume that <span class="process-math">\(P( k )\)</span> is true, that is, that every set of <span class="process-math">\(k\)</span> dogs consists of dogs of the same breed. Now consider a set <span class="process-math">\(D\)</span> of <span class="process-math">\(k + 1\)</span> dogs, where</p>
 <div class="displaymath process-math">
 \begin{equation*}
 D = \left\{ d_1, d_2, \ldots, d_k, d_{k+1} \right\}\!\text{.}
 \end{equation*}
 </div>
-<p id="p-2383">If we remove the dog <span class="process-math">\(d_1\)</span> from the set <span class="process-math">\(D\text{,}\)</span> we then have a set <span class="process-math">\(D_1\)</span> of <span class="process-math">\(k\)</span> dogs, and using the assumption that <span class="process-math">\(P( k )\)</span> is true, these dogs must all be of the same breed. Similarly, if we remove <span class="process-math">\(d_{k+1}\)</span> from the set <span class="process-math">\(D\text{,}\)</span> we again have a set <span class="process-math">\(D_2\)</span> of <span class="process-math">\(k\)</span> dogs, and these dogs must all be of the same breed. Since <span class="process-math">\(D = D_1 \cup D_2\text{,}\)</span> we have proved that all of the dogs in <span class="process-math">\(D\)</span> must be of the same breed.</p>
-<p id="p-2384">This proves that if <span class="process-math">\(P( k )\)</span> is true, then <span class="process-math">\(P( k + 1 )\)</span> is true and, hence, by mathematical induction, we have proved that for each natural number <span class="process-math">\(n\text{,}\)</span> any set of <span class="process-math">\(n\)</span> dogs consists entirely of dogs of the same breed.</p>
+<p id="p-2408">If we remove the dog <span class="process-math">\(d_1\)</span> from the set <span class="process-math">\(D\text{,}\)</span> we then have a set <span class="process-math">\(D_1\)</span> of <span class="process-math">\(k\)</span> dogs, and using the assumption that <span class="process-math">\(P( k )\)</span> is true, these dogs must all be of the same breed. Similarly, if we remove <span class="process-math">\(d_{k+1}\)</span> from the set <span class="process-math">\(D\text{,}\)</span> we again have a set <span class="process-math">\(D_2\)</span> of <span class="process-math">\(k\)</span> dogs, and these dogs must all be of the same breed. Since <span class="process-math">\(D = D_1 \cup D_2\text{,}\)</span> we have proved that all of the dogs in <span class="process-math">\(D\)</span> must be of the same breed.</p>
+<p id="p-2409">This proves that if <span class="process-math">\(P( k )\)</span> is true, then <span class="process-math">\(P( k + 1 )\)</span> is true and, hence, by mathematical induction, we have proved that for each natural number <span class="process-math">\(n\text{,}\)</span> any set of <span class="process-math">\(n\)</span> dogs consists entirely of dogs of the same breed.</p>
 </dd>
 </dl></article></article><article class="activity project-like" id="exer_basis"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">21</span><span class="period">.</span><span class="space"> </span><span class="title">The Importance of the Basis Step.</span>
 </h4>
 <div class="introduction" id="introduction-205">
-<p id="p-2385">Most of the work done in constructing a proof by induction is usually in proving the inductive step. This was certainly the case in <a href="" class="xref" data-knowl="./knowl/P_suminduction.html" title="Proposition 4.2">Proposition 4.2</a>. However, the basis step is an essential part of the proof. Without it, the proof is incomplete. To see this, let <span class="process-math">\(P( n )\)</span> be</p>
+<p id="p-2410">Most of the work done in constructing a proof by induction is usually in proving the inductive step. This was certainly the case in <a href="" class="xref" data-knowl="./knowl/P_suminduction.html" title="Proposition 4.2">Proposition 4.2</a>. However, the basis step is an essential part of the proof. Without it, the proof is incomplete. To see this, let <span class="process-math">\(P( n )\)</span> be</p>
 <div class="displaymath process-math">
 \begin{equation*}
 1 + 2 +  \cdots  + n = \frac{{n^2  + n + 1}}{2}\text{.}
@@ -882,7 +885,7 @@ D = \left\{ d_1, d_2, \ldots, d_k, d_{k+1} \right\}\!\text{.}
 </div>
 </div>
 <article class="task exercise-like" id="task-758"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-2386">Let  <span class="process-math">\(k \in \mathbb{N}\text{.}\)</span> Complete the following proof that if  <span class="process-math">\(P(  k )\)</span> is true, then  <span class="process-math">\(P( k + 1 )\)</span> is true. Let  <span class="process-math">\(k \in \mathbb{N}\text{.}\)</span> Assume that  <span class="process-math">\(P(  k )\)</span> is true. That is, assume that</p>
+<p id="p-2411">Let  <span class="process-math">\(k \in \mathbb{N}\text{.}\)</span> Complete the following proof that if  <span class="process-math">\(P(  k )\)</span> is true, then  <span class="process-math">\(P( k + 1 )\)</span> is true. Let  <span class="process-math">\(k \in \mathbb{N}\text{.}\)</span> Assume that  <span class="process-math">\(P(  k )\)</span> is true. That is, assume that</p>
 <div class="displaymath process-math">
 \begin{equation}
 1 + 2 +  \cdots  + k = \frac{{k^2  + k + 1}}{2}\text{.}\label{eq_act16a}\tag{25}
@@ -903,18 +906,18 @@ D = \left\{ d_1, d_2, \ldots, d_k, d_{k+1} \right\}\!\text{.}
 \amp = \cdots\text{.}
 \end{align*}
 </div></article><article class="task exercise-like" id="task-759"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-2387">Is <span class="process-math">\(P( 1 )\)</span> true? Is <span class="process-math">\(P( 2 )\)</span> true? What about <span class="process-math">\(P( 3 )\)</span> and <span class="process-math">\(P( 4 )\text{?}\)</span> Explain how this shows that the basis step is an essential part of a proof by induction.</p></article></article><article class="activity project-like" id="exer_circleregions"><h4 class="heading">
+<p id="p-2412">Is <span class="process-math">\(P( 1 )\)</span> true? Is <span class="process-math">\(P( 2 )\)</span> true? What about <span class="process-math">\(P( 3 )\)</span> and <span class="process-math">\(P( 4 )\text{?}\)</span> Explain how this shows that the basis step is an essential part of a proof by induction.</p></article></article><article class="activity project-like" id="exer_circleregions"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">22</span><span class="period">.</span><span class="space"> </span><span class="title">Regions of a Circle.</span>
 </h4>
-<div class="introduction" id="introduction-206"><p id="p-2388">Place <span class="process-math">\(n\)</span> equally spaced points on a circle and connect each pair of points with the chord of the circle determined by that pair of points. See <a href="" class="xref" data-knowl="./knowl/fig_circleregions.html" title="Figure 4.7">Figure 4.7</a>. <figure class="figure figure-like" id="fig_circleregions"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/figps-circleregions.svg" role="img" class="contained" alt="Four circles with points on their circumference, and with lines connecting the points to divide each circle into regions. With 1 point there is 1 region, 2 points make 2 regions, 3 points make 4 regions, 4 points make 8 regions."></div>
+<div class="introduction" id="introduction-206"><p id="p-2413">Place <span class="process-math">\(n\)</span> equally spaced points on a circle and connect each pair of points with the chord of the circle determined by that pair of points. See <a href="" class="xref" data-knowl="./knowl/fig_circleregions.html" title="Figure 4.7">Figure 4.7</a>. <figure class="figure figure-like" id="fig_circleregions"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="external/figps-circleregions.svg" role="img" class="contained" alt="Four circles with points on their circumference, and with lines connecting the points to divide each circle into regions. With 1 point there is 1 region, 2 points make 2 regions, 3 points make 4 regions, 4 points make 8 regions."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.7<span class="period">.</span></span><span class="space"> </span>Regions of Circles</figcaption></figure> Count the number of distinct regions within each circle. For example, with three points on the circle, there are four distinct regions. Organize your data in a table with two columns: “Number of Points on the Circle” and “Number of Distinct Regions in the Circle.”</p></div>
 <article class="task exercise-like" id="task-760"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-2389">How many regions are there when there are four equally spaced points on the circle?</p></article><article class="task exercise-like" id="A_circleregions1"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-2390">Based on the work so far, make a conjecture about how many distinct regions would you get with five equally spaced points.</p></article><article class="task exercise-like" id="A_circleregions2"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-2391">Based on the work so far, make a conjecture about how many distinct regions would you get with six equally spaced points.</p></article><article class="task exercise-like" id="task-763"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<p id="p-2392"><a href="" class="xref" data-knowl="./knowl/fig_circleregions56.html" title="Figure 4.8">Figure 4.8</a> shows the figures associated with <a href="" class="xref" data-knowl="./knowl/A_circleregions1.html" title="Task 22.b">Task 22.b</a> and <a href="" class="xref" data-knowl="./knowl/A_circleregions2.html" title="Task 22.c">Task 22.c</a> Count the number of regions in each case. Are your conjectures correct or incorrect? <figure class="figure figure-like" id="fig_circleregions56"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="external/figps-circle5-6.svg" role="img" class="contained" alt="a circle with five points on its circumference is divided into sixteen regions. A circle with six points on its circumference is divided into thirty two regions."></div>
+<p id="p-2414">How many regions are there when there are four equally spaced points on the circle?</p></article><article class="task exercise-like" id="A_circleregions1"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-2415">Based on the work so far, make a conjecture about how many distinct regions would you get with five equally spaced points.</p></article><article class="task exercise-like" id="A_circleregions2"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-2416">Based on the work so far, make a conjecture about how many distinct regions would you get with six equally spaced points.</p></article><article class="task exercise-like" id="task-763"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-2417"><a href="" class="xref" data-knowl="./knowl/fig_circleregions56.html" title="Figure 4.8">Figure 4.8</a> shows the figures associated with <a href="" class="xref" data-knowl="./knowl/A_circleregions1.html" title="Task 22.b">Task 22.b</a> and <a href="" class="xref" data-knowl="./knowl/A_circleregions2.html" title="Task 22.c">Task 22.c</a> Count the number of regions in each case. Are your conjectures correct or incorrect? <figure class="figure figure-like" id="fig_circleregions56"><div class="image-box" style="width: 45%; margin-left: 27.5%; margin-right: 27.5%;"><img src="external/figps-circle5-6.svg" role="img" class="contained" alt="a circle with five points on its circumference is divided into sixteen regions. A circle with six points on its circumference is divided into thirty two regions."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">4.8<span class="period">.</span></span><span class="space"> </span>Regions of Circles</figcaption></figure></p></article><article class="task exercise-like" id="task-764"><h5 class="heading"><span class="codenumber">(e)</span></h5>
-<p id="p-2393">Explain why this activity shows that the inductive step is an essential part of a proof by mathematical induction.</p></article></article></section></section></div></main>
+<p id="p-2418">Explain why this activity shows that the inductive step is an essential part of a proof by mathematical induction.</p></article></article></section></section></div></main>
 </div>
 </body>
 </html>

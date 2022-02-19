@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-08T15:42:13-05:00       *-->
+<!--*       on 2022-02-18T18:20:18-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,19 +15,22 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>If  <span class="process-math">\(a \lt  0\text{,}\)</span> then we must be careful when writing the result of the Division Algorithm. For example, in <a href="" class="xref" data-knowl="./knowl/PA_quotients4.html" title="Exercise 4">Exercise 4</a> and <a href="" class="xref" data-knowl="./knowl/PA_quotients5.html" title="Exercise 5">Exercise 5</a> of <a href="S_divalgo.html#PA_quotients" class="internal" title="Beginning Activity: Beginning Activity 1: Quotients and Remainders">Beginning Activity 1</a>, with <span class="process-math">\(a =  - 17\)</span>  and <span class="process-math">\(b = 5\text{,}\)</span> we obtained <span class="process-math">\(-17 = 5\cdot(-4) + 3\text{,}\)</span> and so the quotient is <span class="process-math">\(-4\)</span> and the remainder is 3. Notice that this is different than the result from a calculator, which would be <span class="process-math">\(\dfrac{{ - 17}}{5} =  - 3.4\text{.}\)</span> But this means</p>
+<p>One way to look at the Division Algorithm is that the integer  <span class="process-math">\(a\)</span>  is either going to be a multiple of <span class="process-math">\(b\text{,}\)</span> or it will lie between two multiples of <span class="process-math">\(b\text{.}\)</span> Suppose that <span class="process-math">\(a\)</span> is not a multiple of <span class="process-math">\(b\)</span> and that it lies between the multiples <span class="process-math">\(b \cdot q\)</span> and <span class="process-math">\(b\left( {q + 1} \right)\text{,}\)</span> where <span class="process-math">\(q\)</span> is some integer. This is shown on the number line in <a href="" class="xref" data-knowl="./knowl/fig_divalgo.html" title="Figure 3.31">Figure 3.31</a>. <figure class="figure figure-like"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/figps-divalgo.svg" role="img" class="contained" alt="A number line with the points bq, a, and b(q+1). A second line, labeled r, extends from bq to a."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.31<span class="period">.</span></span><span class="space"> </span>Remainder for the Division Algorithm</figcaption></figure> If <span class="process-math">\(r\)</span> represents the distance from <span class="process-math">\(b \cdot q\)</span> to <span class="process-math">\(a\text{,}\)</span> then</p>
 <div class="displaymath process-math">
-\begin{equation*}
-\frac{{ - 17}}{5} =  - \left( {3 + \frac{4}{{10}}} \right) =  - 3 - \frac{2}{5}\text{.}
-\end{equation*}
+\begin{align*}
+r \amp = a - b \cdot q,\text{ or }\\
+a \amp = b \cdot q + r\text{.}
+\end{align*}
 </div>
-<p class="continuation">If we multiply both sides of this equation by 5, we obtain</p>
+<p class="continuation">From the diagram, also notice that  <span class="process-math">\(r\)</span>  is less than the distance between <span class="process-math">\(b \cdot q\)</span> and  <span class="process-math">\(b\left( {q + 1} \right)\text{.}\)</span> Algebraically, this distance is</p>
 <div class="displaymath process-math">
-\begin{equation*}
-{-17} = 5\left( { - 3} \right) + \left( { - 2} \right)\text{.}
-\end{equation*}
+\begin{align*}
+b\left( {q + 1} \right) - b \cdot q \amp = b \cdot q + b - b \cdot q\\
+\amp = b\text{.}
+\end{align*}
 </div>
-<p class="continuation">This is not the result guaranteed by the Division Algorithm since the value of <span class="process-math">\(-2\)</span> does not satisfy the result of being greater than or equal to 0 and less than 5.</p>
+<p class="continuation">Thus, in the case where  <span class="process-math">\(a\)</span>  is not a multiple of  <span class="process-math">\(b\text{,}\)</span> we get  <span class="process-math">\(0 \lt  r \lt  b\text{.}\)</span></p>
 <span class="incontext"><a href="S_divalgo.html#p-1914">in-context</a></span>
 </body>
 </html>

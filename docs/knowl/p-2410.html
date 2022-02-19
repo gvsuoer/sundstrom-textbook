@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-08T15:43:12-05:00       *-->
+<!--*       on 2022-02-18T18:21:16-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,12 +14,27 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>Most of the work done in constructing a proof by induction is usually in proving the inductive step. This was certainly the case in <a href="" class="xref" data-knowl="./knowl/P_suminduction.html" title="Proposition 4.2">Proposition 4.2</a>. However, the basis step is an essential part of the proof. Without it, the proof is incomplete. To see this, let <span class="process-math">\(P( n )\)</span> be</p>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Let  <span class="process-math">\(k \in \mathbb{N}\text{.}\)</span> Complete the following proof that if  <span class="process-math">\(P(  k )\)</span> is true, then  <span class="process-math">\(P( k + 1 )\)</span> is true. Let  <span class="process-math">\(k \in \mathbb{N}\text{.}\)</span> Assume that  <span class="process-math">\(P(  k )\)</span> is true. That is, assume that</p>
 <div class="displaymath process-math">
-\begin{equation*}
-1 + 2 +  \cdots  + n = \frac{{n^2  + n + 1}}{2}\text{.}
-\end{equation*}
+\begin{equation}
+1 + 2 +  \cdots  + k = \frac{{k^2  + k + 1}}{2}\text{.}\tag{25}
+\end{equation}
+</div>
+<p class="continuation">The goal is to prove that  <span class="process-math">\(P( k + 1 )\)</span> is true. That is, we need to prove that</p>
+<div class="displaymath process-math">
+\begin{equation}
+1 + 2 +  \cdots  + k + \left( {k + 1} \right) = \frac{{\left( {k + 1} \right)^2  + 
+\left( {k + 1} \right) + 1}}{2}\text{.}\tag{26}
+\end{equation}
+</div>
+<p class="continuation">To do this, we add  <span class="process-math">\(\left( {k + 1} \right)\)</span> to both sides of equation <a href="" class="xref" data-knowl="./knowl/eq_act16a.html" title="Equation 25">(25)</a>. This gives</p>
+<div class="displaymath process-math">
+\begin{align*}
+1 + 2 +  \cdots  + k + \left( {k + 1} \right) 
+\amp = \frac{{k^2  + k + 1}}{2} + \left( {k + 1} \right)\\
+\amp = \cdots\text{.}
+\end{align*}
 </div>
 <span class="incontext"><a href="S_mathinduction.html#p-2410">in-context</a></span>
 </body>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-02-08T15:42:20-05:00       *-->
+<!--*       on 2022-02-18T18:20:25-05:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,27 +14,29 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
-<p>To prove the transitive property, we let <span class="process-math">\(n \in \mathbb{N}\text{,}\)</span> and let <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> be integers. We assume that <span class="process-math">\(a \equiv b \pmod n\)</span> and that <span class="process-math">\(b \equiv c \pmod n\text{.}\)</span> We will use the definition of congruence modulo <span class="process-math">\(n\)</span> to prove that <span class="process-math">\(a \equiv c \pmod n\text{.}\)</span> Since <span class="process-math">\(a \equiv b \pmod n\)</span> and <span class="process-math">\(b \equiv c \pmod n\text{,}\)</span> we know that <span class="process-math">\(n \mid \left( a-b \right)\)</span> and <span class="process-math">\(n \mid \left( b-c \right)\text{.}\)</span> Hence, there exist integers <span class="process-math">\(k\)</span> and <span class="process-math">\(q\)</span> such that</p>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<p>Notice that the set of all integers that are congruent to 2 modulo 7 is</p>
+<div class="displaymath process-math">
+\begin{equation*}
+\left\{  n \in \Z \mid n \equiv 2 \pmod7 \right\} = 
+\left\{ \ldots , - 19, - 12, - 5, 2, 9, 16, 23, \ldots \right\}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">If we divide any integer in this set by 7 and write the result according to the Division Algorithm, we will get a remainder of 2. For example,</p>
 <div class="displaymath process-math">
 \begin{align*}
-a -b \amp = nk\\
-b - c \amp = nq\text{.}
+2 \amp = 7 \cdot 0 + 2 \amp   -5 \amp = 7 \left( -1 \right) + 2\\
+9 \amp = 7 \cdot 1 + 2 \amp   -12 \amp = 7 \left( -2 \right) +2\\
+16 \amp = 7 \cdot 2 + 2 \amp   -19 \amp = 7 \left( -3 \right) +2\\
+23 \amp = 7 \cdot 3 + 2. \amp    \amp
 \end{align*}
 </div>
-<p class="continuation">By adding the corresponding sides of these two equations, we obtain</p>
+<p class="continuation">Is this a coincidence or is this always true? Let's look at the general case. For this, let <span class="process-math">\(n\)</span> be a natural number and let <span class="process-math">\(a \in \mathbb{Z}\text{.}\)</span> By the Division Algorithm, there exist unique integers <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> such that</p>
 <div class="displaymath process-math">
 \begin{equation*}
-\left( {a - b} \right) + \left( {b - c} \right) = nk + nq\text{.}
+a = nq + r\text{ and } 0 \leq r \lt  n\text{.}
 \end{equation*}
 </div>
-<p class="continuation">If we simplify the left side of the last equation and factor the right side, we get</p>
-<div class="displaymath process-math">
-\begin{equation*}
-a - c = n\left( {k + q} \right)\text{.}
-\end{equation*}
-</div>
-<p class="continuation">By the closure property of the integers, <span class="process-math">\(\left( {k + q} \right) \in \mathbb{Z}\text{,}\)</span> and so this equation proves that <span class="process-math">\(n \mid \left(a-c \right)\)</span> and hence that <span class="process-math">\(a \equiv c \pmod n\text{.}\)</span> This completes the proof of the transitive property of congruence modulo <span class="process-math">\(n\text{.}\)</span></p>
 <span class="incontext"><a href="S_divalgo.html#p-1972">in-context</a></span>
 </body>
 </html>

@@ -71,3 +71,20 @@ cd sundstrom-textbook
 ```
 
 Edit the files you would like to, then submit a pull request. Alternatively, you can submit an issue (the issues tab at the top of this page) so we and other developers may address it.
+
+
+## Divergences from PreTeXt
+
+Some of the major divergences from "typical" PreTeXt are listed below. While every attempt was made to follow the PreTeXt schema, certain aspects were not possible with the scope of this book.
+
+* Typically, PreTeXt proofs do not include "standard" end-of-proof markings such as QED or a black square. This is because, by default, proofs are set further from the margin and a partial border is put in place clearly indicating where the proof ends. As this textbook is somewhat unusual in that it is on *writing* proofs (rather than just containing them), we have added a black square to the end of each proof which follows the writing guidelines in the book. As such, some black squares may seem to be in the wrong place depending on your screen size. The PDF should not be affected by this.
+
+* Although definitions typically would go inside a `<definition>` block, the textbook does not number definitions. To remove numbers, we have placed all defintions inside an `<assemblage>` with "Defintion" as the title.
+
+* Most customizations to the LaTeX (and hence PDF) file can be found on the `xsl` directory. However, certain customizations are currently done manually after each update to the PreTeXt source.
+
+  1. The table of contents is relocated from the default place to directly after the copyright page.
+  2. The word "Answer" is removed from Appendix C as the title of the appendix indicates that answers are present. The word "Answer" would be redundant.
+  3. Extraneous dots are removed from the Appendices. 
+
+  For the specific code we use/remove, please [contact us by email](mailto:oer@gvsu.edu).

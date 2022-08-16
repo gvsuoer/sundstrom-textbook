@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-08-16T14:54:44-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.14</span><span class="period">.</span>
+</h4>
+<p>The set <span class="process-math">\(\Z\)</span> of integers is countably infinite, and so <span class="process-math">\(\text{ card} ( \Z ) = \aleph_0\text{.}\)</span></p></article><article class="proof"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4>
+<p>To prove that <span class="process-math">\(\N \approx \Z\text{,}\)</span> we will use the following function: <span class="process-math">\(f\x \N \to \Z\text{,}\)</span> where</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f ( n ) = \begin{cases}\dfrac{n}{2} \amp \text{ if \(n\) is even }  \\ \amp \\ \dfrac{1-n}{2} 
+\amp \text{ if \(n\) is odd } . \end{cases}
+\end{equation*}
+</div>
+<p>From our work in <a href="S_infinitesets.html#PA_functionNtoZ" class="internal" title="Beginning Activity: Beginning Activity 2: A Function from \boldsymbol{\N} to \boldsymbol{\Z}">Beginning Activity 2</a>, it appears that if <span class="process-math">\(n\)</span> is an even natural number, then <span class="process-math">\(f ( n ) &gt; 0\text{,}\)</span> and if <span class="process-math">\(n\)</span> is an odd natural number, then <span class="process-math">\(f ( n ) \leq 0\text{.}\)</span> So it seems reasonable to use cases to prove that <span class="process-math">\(f\)</span> is a surjection and that <span class="process-math">\(f\)</span> is an injection. To prove that <span class="process-math">\(f\)</span> is a surjection, we let <span class="process-math">\(y \in \mathbb{Z}\text{.}\)</span></p>
+<ul class="disc">
+<li>
+<p>If <span class="process-math">\(y &gt; 0\text{,}\)</span> then <span class="process-math">\(2y \in \mathbb{N}\text{,}\)</span> and</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f ( 2y ) = \frac{2y}{2} = y\text{.}
+\end{equation*}
+</div>
+</li>
+<li>
+<p>If <span class="process-math">\(y \leq 0\text{,}\)</span> then <span class="process-math">\(-2y \geq 0\)</span> and <span class="process-math">\(1 - 2y\)</span> is an odd natural number. Hence,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f ( 1 - 2y ) = \frac{1 - (1 - 2y )}{2} = \frac{2y}{2}=y\text{.}
+\end{equation*}
+</div>
+</li>
+</ul>
+<p>These two cases prove that if <span class="process-math">\(y \in \mathbb{Z}\text{,}\)</span> then there exists an <span class="process-math">\(n \in \mathbb{N}\)</span> such that <span class="process-math">\(f ( n ) = y\text{.}\)</span> Hence, <span class="process-math">\(f\)</span> is a surjection.</p>
+<p>To prove that <span class="process-math">\(f\)</span> is an injection, we let <span class="process-math">\(m,
+n \in \mathbb{N}\)</span> and assume that <span class="process-math">\(f ( m ) = f ( n )\text{.}\)</span> First note that if one of <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> is odd and the other is even, then one of <span class="process-math">\(f ( m )\)</span> and <span class="process-math">\(f ( n )\)</span> is positive and the other is less than or equal to 0. So if <span class="process-math">\(f ( m ) = f ( n )\text{,}\)</span> then both <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> must be even or both <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> must be odd.</p>
+<ul class="disc">
+<li>
+<p>If both <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> are even, then</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f ( m ) = f ( n ) \text{ implies that }
+\dfrac{m}{2} = \dfrac{n}{2}
+\end{equation*}
+</div>
+<p class="continuation">and hence that <span class="process-math">\(m = n\text{.}\)</span></p>
+</li>
+<li>
+<p>If both <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> are odd, then</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f ( m ) = f ( n ) \text{ implies that } \dfrac{1-m}{2} = \dfrac{1-n}{2}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">From this, we conclude that <span class="process-math">\(1 - m\)</span> = <span class="process-math">\(1 - n\)</span> and hence that <span class="process-math">\(m = n\text{.}\)</span> This proves that if <span class="process-math">\(f ( m ) = f ( n )\text{,}\)</span> then <span class="process-math">\(m = n\)</span> and hence that <span class="process-math">\(f\)</span> is an injection.</p>
+</li>
+</ul>
+<p>Since <span class="process-math">\(f\)</span> is both a surjection and an injection, we see that <span class="process-math">\(f\)</span> is a bijection and, therefore, <span class="process-math">\(\mathbb{N} \approx \mathbb{Z}\text{.}\)</span> Hence, <span class="process-math">\(\mathbb{Z}\)</span> is countably infinite and <span class="process-math">\(\text{ card} ( \Z ) = \aleph_0\text{.}\)</span></p></article><span class="incontext"><a href="S_infinitesets.html#T_ZequivtoN" class="internal">in-context</a></span>
+</body>
+</html>

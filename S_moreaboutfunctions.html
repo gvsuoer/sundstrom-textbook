@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-08-16T14:50:34-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>More about Functions</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Mathematical Reasoning">
+<meta property="book:author" content="Ted Sundstrom, Professor Emeritus">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="external/custom_style.css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\mynot}{\neg}
+\newcommand{\card}{\mathbf{card}}
+\newcommand{\x}{:}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Mathematical Reasoning:</span> <span class="subtitle">Writing and Proof (PreTeXt Edition)</span></a></h1>
+<p class="byline">Ted Sundstrom, Professor Emeritus</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_introfunctions.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_functions.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_typesoffunctions.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_introfunctions.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C_functions.html" title="Up">Up</a><a class="next-button button toolbar-item" href="S_typesoffunctions.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="fm_pub_note.html" data-scroll="fm_pub_note" class="internal">Publisher's Note</a></li>
+<li><a href="fm-student-note.html" data-scroll="fm-student-note" class="internal">Note to Students</a></li>
+<li><a href="fm-preface.html" data-scroll="fm-preface" class="internal">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_1intro.html" data-scroll="C_1intro" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_1prop.html" data-scroll="S_1prop" class="internal">Statements and Conditional Statements</a></li>
+<li><a href="S_1direct.html" data-scroll="S_1direct" class="internal">Constructing Direct Proofs</a></li>
+<li><a href="S_1summary.html" data-scroll="S_1summary" class="internal">Chapter 1 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_2logic.html" data-scroll="C_2logic" class="internal"><span class="codenumber">2</span> <span class="title">Logical Reasoning</span></a><ul>
+<li><a href="S_2logop.html" data-scroll="S_2logop" class="internal">Statements and Logical Operators</a></li>
+<li><a href="S_logequiv.html" data-scroll="S_logequiv" class="internal">Logically Equivalent Statements</a></li>
+<li><a href="S_2predicates.html" data-scroll="S_2predicates" class="internal">Open Sentences and Sets</a></li>
+<li><a href="S_2quantifier.html" data-scroll="S_2quantifier" class="internal">Quantifiers and Negations</a></li>
+<li><a href="S_2summary.html" data-scroll="S_2summary" class="internal">Chapter 2 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_proofs.html" data-scroll="C_proofs" class="internal"><span class="codenumber">3</span> <span class="title">Constructing and Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_directproof.html" data-scroll="S_directproof" class="internal">Direct Proofs</a></li>
+<li><a href="S_moremethods.html" data-scroll="S_moremethods" class="internal">More Methods of Proof</a></li>
+<li><a href="S_contradiction.html" data-scroll="S_contradiction" class="internal">Proof by Contradiction</a></li>
+<li><a href="S_cases.html" data-scroll="S_cases" class="internal">Using Cases in Proofs</a></li>
+<li><a href="S_divalgo.html" data-scroll="S_divalgo" class="internal">The Division Algorithm and Congruence</a></li>
+<li><a href="S_reviewproofs.html" data-scroll="S_reviewproofs" class="internal">Review of Proof Methods</a></li>
+<li><a href="S_3summary.html" data-scroll="S_3summary" class="internal">Chapter 3 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_induction.html" data-scroll="C_induction" class="internal"><span class="codenumber">4</span> <span class="title">Mathematical Induction</span></a><ul>
+<li><a href="S_mathinduction.html" data-scroll="S_mathinduction" class="internal">The Principle of Mathematical Induction</a></li>
+<li><a href="S_otherinduction.html" data-scroll="S_otherinduction" class="internal">Other Forms of Mathematical Induction</a></li>
+<li><a href="S_recursion.html" data-scroll="S_recursion" class="internal">Induction and Recursion</a></li>
+<li><a href="S_4summary.html" data-scroll="S_4summary" class="internal">Chapter 4 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_settheory.html" data-scroll="C_settheory" class="internal"><span class="codenumber">5</span> <span class="title">Set Theory</span></a><ul>
+<li><a href="S_setoperations.html" data-scroll="S_setoperations" class="internal">Sets and Operations on Sets</a></li>
+<li><a href="S_provingset.html" data-scroll="S_provingset" class="internal">Proving Set Relationships</a></li>
+<li><a href="S_setproperties.html" data-scroll="S_setproperties" class="internal">Properties of Set Operations</a></li>
+<li><a href="S_cartesian.html" data-scroll="S_cartesian" class="internal">Cartesian Products</a></li>
+<li><a href="S_indexfamily.html" data-scroll="S_indexfamily" class="internal">Indexed Families of Sets</a></li>
+<li><a href="S_5summary.html" data-scroll="S_5summary" class="internal">Chapter 5 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_functions.html" data-scroll="C_functions" class="internal"><span class="codenumber">6</span> <span class="title">Functions</span></a><ul>
+<li><a href="S_introfunctions.html" data-scroll="S_introfunctions" class="internal">Introduction to Functions</a></li>
+<li><a href="S_moreaboutfunctions.html" data-scroll="S_moreaboutfunctions" class="active">More about Functions</a></li>
+<li><a href="S_typesoffunctions.html" data-scroll="S_typesoffunctions" class="internal">Injections, Surjections, and Bijections</a></li>
+<li><a href="S_compositionoffunctions.html" data-scroll="S_compositionoffunctions" class="internal">Composition of Functions</a></li>
+<li><a href="S_inversefunctions.html" data-scroll="S_inversefunctions" class="internal">Inverse Functions</a></li>
+<li><a href="S_functionsonsets.html" data-scroll="S_functionsonsets" class="internal">Functions Acting on Sets</a></li>
+<li><a href="S_6summary.html" data-scroll="S_6summary" class="internal">Chapter 6 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_equivrelations.html" data-scroll="C_equivrelations" class="internal"><span class="codenumber">7</span> <span class="title">Equivalence Relations</span></a><ul>
+<li><a href="S_relations.html" data-scroll="S_relations" class="internal">Relations</a></li>
+<li><a href="S_equivrelations.html" data-scroll="S_equivrelations" class="internal">Equivalence Relations</a></li>
+<li><a href="S_equivclasses.html" data-scroll="S_equivclasses" class="internal">Equivalence Classes</a></li>
+<li><a href="S_modulararithmetic.html" data-scroll="S_modulararithmetic" class="internal">Modular Arithmetic</a></li>
+<li><a href="section-37.html" data-scroll="section-37" class="internal">Chapter 7 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_numbertheory.html" data-scroll="C_numbertheory" class="internal"><span class="codenumber">8</span> <span class="title">Topics in Number Theory</span></a><ul>
+<li><a href="S_gcd.html" data-scroll="S_gcd" class="internal">The Greatest Common Divisor</a></li>
+<li><a href="S_primefactorizations.html" data-scroll="S_primefactorizations" class="internal">Prime Numbers and Prime Factorizations</a></li>
+<li><a href="S_diophantine.html" data-scroll="S_diophantine" class="internal">Linear Diophantine Equations</a></li>
+<li><a href="section-41.html" data-scroll="section-41" class="internal">Chapter 8 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_topicsinsets.html" data-scroll="C_topicsinsets" class="internal"><span class="codenumber">9</span> <span class="title">Finite and Infinite Sets</span></a><ul>
+<li><a href="S_finitesets.html" data-scroll="S_finitesets" class="internal">Finite Sets</a></li>
+<li><a href="S_infinitesets.html" data-scroll="S_infinitesets" class="internal">Countable Sets</a></li>
+<li><a href="S_uncountablesets.html" data-scroll="S_uncountablesets" class="internal">Uncountable Sets</a></li>
+<li><a href="section-45.html" data-scroll="section-45" class="internal">Chapter 9 Summary</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="C_writingguides.html" data-scroll="C_writingguides" class="internal"><span class="codenumber">A</span> <span class="title">Guidelines for Writing Mathematical Proofs</span></a></li>
+<li class="link"><a href="prog-answers.html" data-scroll="prog-answers" class="internal"><span class="codenumber">B</span> <span class="title">Answers for the Progress Checks</span></a></li>
+<li class="link"><a href="exer-answers.html" data-scroll="exer-answers" class="internal"><span class="codenumber">C</span> <span class="title">Answers and Hints for Selected Exercises</span></a></li>
+<li class="link"><a href="appendix-2.html" data-scroll="appendix-2" class="internal"><span class="codenumber">D</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="S_moreaboutfunctions"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">6.2</span> <span class="title">More about Functions</span>
+</h2>
+<section class="introduction" id="introduction-323"><p id="p-3772">In <a href="S_introfunctions.html" class="internal" title="Section 6.1: Introduction to Functions">Section 6.1</a>, we have seen many examples of functions. We have also seen various ways to represent functions and to convey information about them. For example, we have seen that the rule for determining outputs of a function can be given by a formula, a graph, or a table of values. We have also seen that sometimes it is more convenient to give a verbal description of the rule for a function. In cases where the domain and codomain are small, finite sets, we used an arrow diagram to convey information about how inputs and outputs are associated without explicitly stating a rule. In this section, we will study some types of functions, some of which we may not have encountered in previous mathematics courses.</p></section><section class="worksheet" id="PA_diagonals"><h3 class="heading hide-type">
+<span class="type">Beginning Activity</span> <span class="codenumber"></span> <span class="title">Beginning Activity 1: The Number of Diagonals of a Polygon</span><div class="print-links">
+<a href="PA_diagonals-a4.html" class="a4">A4</a><a href="PA_diagonals-letter.html" class="us">US</a>
+</div>
+</h3>
+<p id="p-3773">A <dfn class="terminology">polygon</dfn> is a closed plane figure formed by the joining of three or more straight lines. For example, a <dfn class="terminology">triangle</dfn> is a polygon that has three sides; a <dfn class="terminology">quadrilateral</dfn> is a polygon that has four sides and includes squares, rectangles, and parallelograms; a <dfn class="terminology">pentagon</dfn> is a polygon that has five sides; and an <dfn class="terminology">octagon</dfn> is a polygon that has eight sides. A <dfn class="terminology">regular polygon</dfn> is one that has equal-length sides and congruent interior angles.</p>
+<p id="p-3774">A <dfn class="terminology">diagonal of a polygon</dfn> is a line segment that connects two nonadjacent vertices of the polygon. In this activity, we will assume that all polygons are <dfn class="terminology">convex polygons</dfn> so that, except for the vertices, each diagonal lies inside the polygon. For example, a triangle (3-sided polygon) has no diagonals and a rectangle has two diagonals.</p>
+<article class="exercise exercise-like" id="exercise-539"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<p id="p-3775">How many diagonals does any quadrilateral (4-sided polygon) have?</p></article><article class="exercise exercise-like" id="PA_diagonals2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-3776">Let <span class="process-math">\(D = \mathbb{N} - \left\{ {1, 2} \right\}\text{.}\)</span> Define <span class="process-math">\(d\x D \to \mathbb{N} \cup \left\{ 0 \right\}\)</span> so that <span class="process-math">\(d( n )\)</span> is the number of diagonals of a convex polygon with <span class="process-math">\(n\)</span> sides. Determine the values of <span class="process-math">\(d(3)\text{,}\)</span> <span class="process-math">\(d(4)\text{,}\)</span> <span class="process-math">\(d(5)\text{,}\)</span> <span class="process-math">\(d(6)\text{,}\)</span> <span class="process-math">\(d(7)\text{,}\)</span> and <span class="process-math">\(d(8)\text{.}\)</span> Arrange the results in the form of a table of values for the function <span class="process-math">\(d\text{.}\)</span></p></article><article class="exercise exercise-like" id="PA_diagonals3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-3777">Let  <span class="process-math">\(f\x \mathbb{R} \to \mathbb{R}\)</span>  be defined by</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f( x ) = \frac{{x\left( {x - 3} \right)}}{2}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Determine the values of <span class="process-math">\(f(0)\text{,}\)</span> <span class="process-math">\(f(1)\text{,}\)</span> <span class="process-math">\(f(2)\text{,}\)</span> <span class="process-math">\(f(3)\text{,}\)</span> <span class="process-math">\(f(4)\text{,}\)</span> <span class="process-math">\(f(5)\text{,}\)</span> <span class="process-math">\(f(6)\text{,}\)</span> <span class="process-math">\(f(7)\text{,}\)</span> <span class="process-math">\(f(8)\text{,}\)</span> and <span class="process-math">\(f(9)\text{.}\)</span> Arrange the results in the form of a table of values for the function <span class="process-math">\(f\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-542"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<p id="p-3778">Compare the functions in <a href="" class="xref" data-knowl="./knowl/PA_diagonals2.html" title="Exercise 2">Exercise 2</a> and <a href="" class="xref" data-knowl="./knowl/PA_diagonals3.html" title="Exercise 3">Exercise 3</a>. What are the similarities between the two functions and what are the differences? Should these two functions be considered equal functions? Explain.</p></article></section><section class="worksheet" id="PA_derivatives"><h3 class="heading hide-type">
+<span class="type">Beginning Activity</span> <span class="codenumber"></span> <span class="title">Beginning Activity 2: Derivatives</span><div class="print-links">
+<a href="PA_derivatives-a4.html" class="a4">A4</a><a href="PA_derivatives-letter.html" class="us">US</a>
+</div>
+</h3>
+<p id="p-3779">In calculus, we learned how to find the derivatives of certain functions. For example, if <span class="process-math">\(f( x ) = x^2( {\sin x} )\text{,}\)</span> then we can use the product rule to obtain</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f'( x ) = 2x( {\sin x} ) + x^2( {\cos x} )\text{.}
+\end{equation*}
+</div>
+<article class="exercise exercise-like" id="exercise-543"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-324"><p id="p-3780">If possible, find the derivative of each of the following functions:</p></div>
+<article class="task exercise-like" id="task-1223"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-3781"><span class="process-math">\(f( x ) = x^4 - 5x^3 + 3x - 7\)</span></p></article><article class="task exercise-like" id="task-1224"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-3782"><span class="process-math">\(g( x ) = \cos ( {5x} )\)</span></p></article><article class="task exercise-like" id="task-1225"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-3783"><span class="process-math">\(h( x ) = \dfrac{{\sin x}}{x}\)</span></p></article><article class="task exercise-like" id="task-1226"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-3784"><span class="process-math">\(k( x ) = e^{ - x^2 }\)</span></p></article><article class="task exercise-like" id="task-1227"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-3785"><span class="process-math">\(r( x ) = \left| x \right|\)</span></p></article></article><article class="exercise exercise-like" id="exercise-544"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-3786">Is it possible to think of differentiation as a function? Explain. If so, what would be the domain of the function, what could be the codomain of the function, and what is the rule for computing the element of the codomain (output) that is associated with a given element of the domain (input)?</p></article></section><section class="subsection" id="sub_functioncong"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Functions Involving Congruences</span>
+</h3>
+<p id="remainders"><a href="" class="xref" data-knowl="./knowl/T_congtorem.html" title="Theorem 3.37">Theorem 3.37</a> and <a href="" class="xref" data-knowl="./knowl/C_congtorem.html" title="Corollary 3.38">Corollary 3.38</a> state that an integer is congruent (mod <span class="process-math">\(n\)</span>) to its remainder when it is divided by <span class="process-math">\(n\text{.}\)</span> (Recall that we always mean the remainder guaranteed by the Division Algorithm, which is the least nonnegative remainder.) Since this remainder is unique and since the only possible remainders for division by <span class="process-math">\(n\)</span> are <span class="process-math">\(0, 1, 2,  \ldots , n - 1\text{,}\)</span> we then know that each integer is congruent, modulo <span class="process-math">\(n\text{,}\)</span> to precisely one of the integers <span class="process-math">\(0,1,2, \ldots ,n - 1\text{.}\)</span> So for each natural number <span class="process-math">\(n\text{,}\)</span> we will define a new set <span class="process-math">\(R_n\)</span> as the set of remainders upon division by <span class="process-math">\(n\text{.}\)</span> So</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/T_congtorem.html ./knowl/C_congtorem.html">
+\begin{equation*}
+R_n = \{ 0, 1, 2, \ldots , n - 1 \}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">For example, <span class="process-math">\(R_4 = \{0, 1, 2, 3 \}\)</span> and <span class="process-math">\(R_6 = \{ 0, 1, 2, 3, 4, 5 \}\text{.}\)</span> We will now explore a method to define a function from <span class="process-math">\(R_6\)</span> to <span class="process-math">\(R_6\text{.}\)</span></p>
+<p id="p-3788">For each <span class="process-math">\(x \in R_6\text{,}\)</span> we can compute <span class="process-math">\(x^2  + 3\)</span> and then determine the value of <span class="process-math">\(r\)</span> in <span class="process-math">\(R_6\)</span> so that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\left( {x^2  + 3} \right) \equiv r\pmod 6\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Since <span class="process-math">\(r\)</span> must be in <span class="process-math">\(R_6\text{,}\)</span> we must have <span class="process-math">\(0 \leq r \lt 6\text{.}\)</span> The results are shown in the following table.</p>
+<figure class="table table-like" id="Ta_congruence"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">6.9<span class="period">.</span></span><span class="space"> </span>Table of Values Defined by a Congruence</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c b b2 r2 l0 t0 lines"><span class="process-math">\(x\)</span></td>
+<td class="c b b2 r0 l0 t0 lines">
+<span class="process-math">\(r\)</span> where<br><span class="process-math">\(\left( x^2 + 3 \right) \equiv r \pmod 6\)</span>
+</td>
+</tr>
+<tr>
+<td class="c b b2 r2 l0 t0 lines">0</td>
+<td class="c b b2 r0 l0 t0 lines">3</td>
+</tr>
+<tr>
+<td class="c b b2 r2 l0 t0 lines">1</td>
+<td class="c b b2 r0 l0 t0 lines">4</td>
+</tr>
+<tr>
+<td class="c b b2 r2 l0 t0 lines">2</td>
+<td class="c b b2 r0 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="c b b2 r2 l0 t0 lines">3</td>
+<td class="c b b2 r0 l0 t0 lines">0</td>
+</tr>
+<tr>
+<td class="c b b2 r2 l0 t0 lines">4</td>
+<td class="c b b2 r0 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="c b b0 r2 l0 t0 lines">5</td>
+<td class="c b b0 r0 l0 t0 lines">4</td>
+</tr>
+</table></div></figure><p id="p-3789">The value of <span class="process-math">\(x\)</span> in the first column can be thought of as the input for a function with the value of <span class="process-math">\(r\)</span> in the second column as the corresponding output. Each input produces exactly one output. So we could write <span class="process-math">\(f:R_6 \to R_6\)</span> by</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f( x ) = r \text{ where } ( {x^2 + 3} ) \equiv r \pmod 6\text{.}
+\end{equation*}
+</div>
+<p class="continuation">This description and the notation for the outputs of this function are quite cumbersome. So we will use a more concise notation. We will, instead, write Let</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f\x R_6 \to R_6 \text{ by } f( x ) = \left( {x^2 + 3} \right) \pmod 6\text{.}
+\end{equation*}
+</div>
+<article class="exercise exercise-like" id="pr_congfunctions"><h4 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">6.10</span><span class="period">.</span><span class="space"> </span><span class="title">Functions Defined by Congruences.</span>
+</h4>
+<div class="introduction" id="introduction-325">
+<p id="p-3790">We have <span class="process-math">\(R_5 = \left\{ {0, 1, 2, 3, 4} \right\}\text{.}\)</span> Define</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-122">
+\begin{align*}
+\amp f\x R_5 \to R_5 \text{ by } f(x) = x^4 \pmod 5, \text{ for each } x \in R_5\\
+\amp g\x R_5 \to R_5 \text{ by } g(x) = x^5 \pmod 5 \text{ for each } x \in R_5
+\end{align*}
+</div>
+</div>
+<article class="task exercise-like" id="task-1228"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-3791">Determine <span class="process-math">\(f(0)\text{,}\)</span> <span class="process-math">\(f(1)\text{,}\)</span> <span class="process-math">\(f(2)\text{,}\)</span> <span class="process-math">\(f(3)\text{,}\)</span> and <span class="process-math">\(f(4)\)</span> and represent the function <span class="process-math">\(f\)</span> with an arrow diagram.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-194" id="solution-194"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-194"><div class="solution solution-like"><p id="p-3792"><span class="process-math">\(f(0) = 0\text{,}\)</span> <span class="process-math">\(f(1) = 1\text{,}\)</span> <span class="process-math">\(f(2) = 1\text{,}\)</span> <span class="process-math">\(f(3) = 1\text{,}\)</span> <span class="process-math">\(f(4) = 1\text{.}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-1229"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-3793">Determine <span class="process-math">\(g(0)\text{,}\)</span> <span class="process-math">\(g(1)\text{,}\)</span> <span class="process-math">\(g(2)\text{,}\)</span> <span class="process-math">\(g(3)\text{,}\)</span> and <span class="process-math">\(g(4)\)</span> and represent the function <span class="process-math">\(g\)</span> with an arrow diagram.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-195" id="solution-195"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-195"><div class="solution solution-like"><p id="p-3794"><span class="process-math">\(g(0) = 0\text{,}\)</span> <span class="process-math">\(g(1) = 1\text{,}\)</span> <span class="process-math">\(g(2) = 2\text{,}\)</span> <span class="process-math">\(g(3) = 3\text{,}\)</span> <span class="process-math">\(g(4) = 4\text{.}\)</span></p></div></div>
+</div></article></article></section><section class="subsection" id="subsection-112"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Equality of Functions</span>
+</h3>
+<p id="p-3795">The idea of equality of functions has been in the background of our discussion of functions, and it is now time to discuss it explicitly. The preliminary work for this discussion was <a href="S_moreaboutfunctions.html#PA_diagonals" class="internal" title="Beginning Activity: Beginning Activity 1: The Number of Diagonals of a Polygon">Beginning Activity 1</a>, in which <span class="process-math">\(D = \mathbb{N} - \left\{ {1, 2} \right\}\text{,}\)</span> and there were two functions:</p>
+<ul class="disc">
+<li id="li-500"><p id="p-3796"><span class="process-math">\(d\x D \to \mathbb{N} \cup \left\{ 0 \right\}\text{,}\)</span> where <span class="process-math">\(d( n )\)</span> is the number of diagonals of a convex polygon with <span class="process-math">\(n\)</span> sides</p></li>
+<li id="li-501"><p id="p-3797"><span class="process-math">\(f\x \mathbb{R} \to \mathbb{R}\text{,}\)</span> where <span class="process-math">\(f( x ) = \dfrac{{x\left( {x - 3} \right)}}{2}\text{,}\)</span> for each real number <span class="process-math">\(x\text{.}\)</span></p></li>
+</ul>
+<p id="p-3798">In <a href="S_moreaboutfunctions.html#PA_diagonals" class="internal" title="Beginning Activity: Beginning Activity 1: The Number of Diagonals of a Polygon">Beginning Activity 1</a>, we saw that these two functions produced the same outputs for certain values of the input (independent variable). For example, we can verify that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/PA_diagonals.html" id="md-123">
+\begin{align*}
+d( 3 ) \amp = f( 3 ) = 0, \qquad \amp d( 4 ) = f( 4 ) = 2,\\
+d( 5 ) \amp = f( 5 ) = 5, \qquad \text{ and }   \amp d( 6 ) = f( 6 ) = 9\text{.}
+\end{align*}
+</div>
+<p id="p-3799">Although the functions produce the same outputs for some inputs, these are two different functions. For example, the outputs of the function <span class="process-math">\(f\)</span> are determined by a formula, and the outputs of the function <span class="process-math">\(d\)</span> are determined by a verbal description. This is not enough, however, to say that these are two different functions. Based on the evidence from <a href="S_moreaboutfunctions.html#PA_diagonals" class="internal" title="Beginning Activity: Beginning Activity 1: The Number of Diagonals of a Polygon">Beginning Activity 1</a>, we might make the following conjecture: <blockquote class="blockquote" id="blockquote-197">For <span class="process-math">\(n \geq 3\text{,}\)</span> <span class="process-math">\(d( n ) = \dfrac{{n\left( {n - 3} \right)}}{2}\text{.}\)</span>
+</blockquote> Although we have not proved this statement, it is a true statement. (See <a href="" class="xref" data-knowl="./knowl/exer_sec62-6.html" title="Exercise 6">Exercise 6</a>.) However, we know the function <span class="process-math">\(d\)</span> and the function <span class="process-math">\(f\)</span> are not the same function. For example,</p>
+<ul class="disc">
+<li id="li-502"><p id="p-3800"><span class="process-math">\(f( 0 ) = 0\text{,}\)</span> but 0 is not in the domain of <span class="process-math">\(d\text{;}\)</span></p></li>
+<li id="li-503"><p id="p-3801"><span class="process-math">\(f( \pi ) = \dfrac{{\pi \left( {\pi - 3} \right)}}{2}\text{,}\)</span> but <span class="process-math">\(\pi\)</span> is not in the domain of <span class="process-math">\(d\text{.}\)</span></p></li>
+</ul>
+<p id="p-3802">We thus see the importance of considering the domain and codomain of each of the two functions in determining whether the two functions are equal or not. This motivates the following definition.</p>
+<article class="assemblage assemblage-like" id="functionequality"><h4 class="heading"><span class="title">Definition.</span></h4>
+<p id="p-3803">Two functions <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are <dfn class="terminology">equal</dfn> provided that</p>
+<ul class="disc">
+<li id="li-504"><p id="p-3804">The domain of <span class="process-math">\(f\)</span> equals the domain of <span class="process-math">\(g\text{.}\)</span> That is, <span class="process-math">\(\text{ dom} ( f ) = \text{ dom} ( g )\text{.}\)</span></p></li>
+<li id="li-505"><p id="p-3805">The codomain of <span class="process-math">\(f\)</span> equals the codomain of <span class="process-math">\(g\text{.}\)</span> That is, <span class="process-math">\(\text{ codom} ( f ) = \text{ codom} ( g )\text{.}\)</span></p></li>
+<li id="li-506"><p id="p-3806">For each <span class="process-math">\(x\)</span> in the domain of <span class="process-math">\(f\)</span> (which equals the domain of <span class="process-math">\(g\)</span>), <span class="process-math">\(f( x ) = g( x )\text{.}\)</span></p></li>
+</ul></article><article class="exercise exercise-like" id="pr_equalfunc"><h4 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">6.11</span><span class="period">.</span><span class="space"> </span><span class="title">Equality of Functions.</span>
+</h4>
+<p id="p-3807"> Let <span class="process-math">\(A\)</span> be a nonempty set. The <dfn class="terminology">identity function on the set <span class="process-math">\(\boldsymbol{A}\)</span></dfn> denoted by <span class="process-math">\(I_A\)</span> , is the function <span class="process-math">\(I_A\x A \to A\)</span> defined by <span class="process-math">\(I_A ( x ) = x\)</span> for every <span class="process-math">\(x\)</span> in <span class="process-math">\(A\text{.}\)</span> That is, for the identity map, the output is always equal to the input.</p>
+<p id="p-3808">For this progress check, we will use the functions <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> from <a href="" class="xref" data-knowl="./knowl/pr_congfunctions.html" title="Progress Check 6.10: Functions Defined by Congruences">Progress Check 6.10</a>. The identity function on the set <span class="process-math">\(R_5\)</span> is</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/pr_congfunctions.html ./knowl/pr_congfunctions.html">
+\begin{equation*}
+I_{R_5}:R_5 \to R_5 \text{ by } I_{R_5}(x) = x \pmod 5,
+\text{ for each } x \in R_5\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Is the identity function on <span class="process-math">\(R_5\)</span> equal to either of the functions <span class="process-math">\(f\)</span> or <span class="process-math">\(g\)</span> from <a href="" class="xref" data-knowl="./knowl/pr_congfunctions.html" title="Progress Check 6.10: Functions Defined by Congruences">Progress Check 6.10</a>? Explain.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-196" id="solution-196"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-196"><div class="solution solution-like"><p id="p-3809"><span class="process-math">\(I_{\Z_5} \ne f\)</span> and <span class="process-math">\(I_{\Z_5} = g\text{.}\)</span></p></div></div>
+</div></article></section><section class="subsection" id="subsection-113"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Mathematical Processes as Functions</span>
+</h3>
+<p id="p-3810">Certain mathematical processes can be thought of as functions. In <a href="S_moreaboutfunctions.html#PA_derivatives" class="internal" title="Beginning Activity: Beginning Activity 2: Derivatives">Beginning Activity 2</a>, we reviewed how to find the derivatives of certain functions, and we considered whether or not we could think of this differentiation process as a function. If we use a differentiable function as the input and consider the derivative of that function to be the output, then we have the makings of a function. Computer algebra systems such as <span class="booktitle">Maple</span> and <span class="booktitle">Mathematica</span> have this derivative function as one of their predefined operators.</p>
+<p id="p-3811">Different computer algebra systems will have different syntax for entering functions and for the derivative function. The first step will be to input a real function <span class="process-math">\(f\text{.}\)</span> This is usually done by entering a formula for <span class="process-math">\(f(x)\text{,}\)</span> which is valid for all real numbers <span class="process-math">\(x\)</span> for which <span class="process-math">\(f(x)\)</span> is defined. The next step is to apply the derivative function to the function <span class="process-math">\(f\text{.}\)</span> For purposes of illustration, we will use <span class="process-math">\(D\)</span> to represent this derivative function. So this function will give <span class="process-math">\(D(f) = f'\text{.}\)</span></p>
+<p id="p-3812">For example, if we enter</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+f(x) = x^2 \sin (x)
+\end{equation*}
+</div>
+<p class="continuation">for the function <span class="process-math">\(f\text{,}\)</span> we will get</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+D(f) = f',
+\text{ where } f'(x) = 2x\sin \left( x \right) + x^2 \cos \left( x \right)\text{.}
+\end{equation*}
+</div>
+<p id="p-3813">We must be careful when determining the domain for the derivative function since there are functions that are not differentiable. To make things reasonably easy, we will let <span class="process-math">\(F\)</span> be the set of all real functions that are differentiable and call this the domain of the derivative function <span class="process-math">\(D\text{.}\)</span> We will use the set <span class="process-math">\(T\)</span> of all real functions as the codomain. So our function <span class="process-math">\(D\)</span> is</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+D\x F \to T  \text{ by }  D( f ) = f'\text{.}
+\end{equation*}
+</div>
+<article class="exercise exercise-like" id="pr_average"><h4 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">6.12</span><span class="period">.</span><span class="space"> </span><span class="title">Average of a Finite Set of Numbers.</span>
+</h4>
+<div class="introduction" id="introduction-326">
+<p id="p-3814">Let <span class="process-math">\(A = \left\{ a_1, a_2, \ldots,
+a_n \right\}\)</span> be a finite set whose elements are the distinct real numbers <span class="process-math">\(a_1, a_2, \ldots, a_n\text{.}\)</span> We define the <dfn class="terminology">average of the set <span class="process-math">\(A\)</span></dfn> to be the real number <span class="process-math">\(\bar{A}\text{,}\)</span> where</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\bar{A} = \frac{a_1 + a_2 + \cdots + a_n}{n}\text{.}
+\end{equation*}
+</div>
+</div>
+<article class="task exercise-like" id="task-1230"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-3815">Find the average of <span class="process-math">\(A = \left\{ 3, 7, -1, 5 \right\}\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-197" id="solution-197"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-197"><div class="solution solution-like"><p id="p-3816">3.5</p></div></div>
+</div></article><article class="task exercise-like" id="task-1231"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-3817">Find the average of <span class="process-math">\(B = \left\{ 7, -2, 3.8, 4.2, 7.1 \right\}\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-198" id="solution-198"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-198"><div class="solution solution-like"><p id="p-3818">4.02</p></div></div>
+</div></article><article class="task exercise-like" id="task-1232"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-3819">Find the average of <span class="process-math">\(C = \left\{ \sqrt{2}, \sqrt{3}, \pi - \sqrt{3} \right\}\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-199" id="solution-199"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-199"><div class="solution solution-like"><p id="p-3820"><span class="process-math">\(\dfrac{\pi + \sqrt{2}}{4}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-1233"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-3821">Now let <span class="process-math">\(\mathscr{F}( \R )\)</span> be the set of all nonempty finite subsets of <span class="process-math">\(\R\text{.}\)</span> That is, a subset <span class="process-math">\(A\)</span> of <span class="process-math">\(\R\)</span> is in <span class="process-math">\(\mathscr{F}( \R )\)</span> if and only if <span class="process-math">\(A\)</span> contains only a finite number of elements. Carefully explain how the process of finding the average of a finite subset of <span class="process-math">\(\R\)</span> can be thought of as a function. In doing this, be sure to specify the domain of the function and the codomain of the function.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-200" id="solution-200"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-200"><div class="solution solution-like"><p id="p-3822">The process of finding the average of a finite set of real numbers can be thought of as a function from <span class="process-math">\(\mathcal{F} ( \R )\)</span> to <span class="process-math">\(\R\text{.}\)</span> So the domain is <span class="process-math">\(\mathcal{F} ( \R )\text{,}\)</span> the codomain is <span class="process-math">\(\R\text{,}\)</span> and we can define a function <span class="process-math">\(\text{ avg } : \mathcal{F} ( \R ) \to \R\)</span> as follows: If <span class="process-math">\(A \in \mathscr{F} ( \R )\)</span> and <span class="process-math">\(A = \left\{ a_1, a_2, \ldots,
+a_n \right\}\text{,}\)</span> then <span class="process-math">\(\text{ avg } ( A ) = \dfrac{a_1 + a_2 + \cdots + a_n}{n}\text{.}\)</span></p></div></div>
+</div></article></article></section><section class="subsection" id="subsection-114"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Sequences as Functions</span>
+</h3>
+<p id="p-3823">A sequence can be considered to be an infinite list of objects that are indexed (subscripted) by the natural numbers (or some infinite subset of <span class="process-math">\(\mathbb{N} \cup \left\{ 0 \right\}\)</span>). Using this idea, we often write a sequence in the following form:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+a_1 , a_2 ,  \ldots , a_n ,  \ldots\text{.}
+\end{equation*}
+</div>
+<p id="p-3824">In order to shorten our notation, we will often use the notation <span class="process-math">\(\left\langle {a_n } \right\rangle\)</span> to represent this sequence. Sometimes a formula can be used to represent the terms of a sequence, and we might include this formula as the <span class="process-math">\(n\)</span>th term in the list for a sequence such as in the following example:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+1, \frac{1}{2}, \frac{1}{3},  \ldots , \frac{1}{n},  \ldots\text{.}
+\end{equation*}
+</div>
+<p id="p-3825">In this case, the <span class="process-math">\(n^\text{ th }\)</span> term of the sequence is <span class="process-math">\(\dfrac{1}{n}\text{.}\)</span> If we know a formula for the <span class="process-math">\(n\)</span>th term, we often use this formula to represent the sequence. For example, we might say Define the sequence <span class="process-math">\(\left\langle {a_n } \right\rangle\)</span> by <span class="process-math">\(a_n  = \dfrac{1}{n}\)</span> for each <span class="process-math">\(n \in \mathbb{N}\text{.}\)</span> This shows that this sequence is a function with domain <span class="process-math">\(\mathbb{N}\text{.}\)</span> If it is understood that the domain is <span class="process-math">\(\N\text{,}\)</span> we could refer to this as the sequence <span class="process-math">\(\left\langle \dfrac{1}{n} \right \rangle\text{.}\)</span> Given an element of the domain, we can consider <span class="process-math">\(a_n\)</span> to be the output. In this case, we have used subscript notation to indicate the output rather than the usual function notation. We could just as easily write</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+a( n ) = \frac{1}{n} \text{ instead of }  a_n  = \frac{1}{n}\text{.}
+\end{equation*}
+</div>
+<p id="p-3826">We make the following formal definition.</p>
+<article class="assemblage assemblage-like" id="sequence"><h4 class="heading"><span class="title">Definition.</span></h4>
+<p id="p-3827">An (infinite) <dfn class="terminology">sequence</dfn> is a function whose domain is <span class="process-math">\(\mathbb{N}\)</span> or some infinite subset of <span class="process-math">\(\mathbb{N} \cup \left\{ 0 \right\}\text{.}\)</span></p></article><article class="exercise exercise-like" id="pr_sequences"><h4 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">6.13</span><span class="period">.</span><span class="space"> </span><span class="title">Sequences.</span>
+</h4>
+<div class="introduction" id="introduction-327"><p id="p-3828">Find the sixth and tenth terms of the following sequences, each of whose domain is <span class="process-math">\(\N\text{:}\)</span></p></div>
+<article class="task exercise-like" id="task-1234"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-3829"><span class="process-math">\(\dfrac{1}{3}, \dfrac{1}{6}, \dfrac{1}{9}, \dfrac{1}{12}, \ldots\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-201" id="solution-201"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-201"><div class="solution solution-like"><p id="p-3830">The sixth term is <span class="process-math">\(\dfrac{1}{18}\)</span> and the tenth term is <span class="process-math">\(\dfrac{1}{30}\text{.}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-1235"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-3831"><span class="process-math">\(\langle a_n \rangle\text{,}\)</span> where <span class="process-math">\(a_n = \dfrac{1}{n^2}\)</span> for each <span class="process-math">\(n \in \N\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-202" id="solution-202"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-202"><div class="solution solution-like"><p id="p-3832">The sixth term is <span class="process-math">\(\dfrac{1}{36}\)</span> and the tenth term is <span class="process-math">\(\dfrac{1}{100}\text{.}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-1236"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-3833"><span class="process-math">\(\langle (-1)^n \rangle\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-203" id="solution-203"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-203"><div class="solution solution-like"><p id="p-3834">The sixth term is <span class="process-math">\(1\)</span> and the tenth term is <span class="process-math">\(1\text{.}\)</span></p></div></div>
+</div></article></article></section><section class="subsection" id="SS_functiontwovar"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Functions of Two Variables</span>
+</h3>
+<p id="p-3835">In <a href="S_cartesian.html" class="internal" title="Section 5.4: Cartesian Products">Section 5.4</a>, we learned how to form the Cartesian product of two sets. Recall that a Cartesian product of two sets is a set of ordered pairs. For example, the set <span class="process-math">\(\Z \times \Z\)</span> is the set of all ordered pairs, where each coordinate of an ordered pair is an integer. Since a Cartesian product is a set, it could be used as the domain or codomain of a function. For example, we could use <span class="process-math">\(\Z \times \Z\)</span> as the domain of a function as follows: Let <span class="process-math">\(f\x \mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}\)</span> be defined by <span class="process-math">\(f( {m, n} ) = 2m + n\text{.}\)</span></p>
+<ul class="disc">
+<li id="li-507">
+<p id="p-3836">Technically, an element of  <span class="process-math">\(\mathbb{Z} \times \mathbb{Z}\)</span>  is an ordered pair, and so we should write  <span class="process-math">\(f( {( {m, n} )} )\)</span> for the output of the function <span class="process-math">\(f\)</span>   when the input is  the ordered pair <span class="process-math">\(\left( {m, n} \right)\text{.}\)</span> However, the double parentheses seem unnecessary in this context and there should be no confusion if we write <span class="process-math">\(f( {m, n} )\)</span> for the output of the function  <span class="process-math">\(f\)</span>   when the input is <span class="process-math">\(\left( {m, n} \right)\text{.}\)</span> So, for example, we simply write</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-124">
+\begin{align*}
+f( {3, 2} )    \amp = 2 \cdot 3 + 2 = 8,\text{ and }\\
+f( { - 4, 5} ) \amp = 2 \cdot \left( { - 4} \right) + 5 =  - 3\text{.}
+\end{align*}
+</div>
+</li>
+<li id="li-508"><p id="p-3837">Since the domain of this function is <span class="process-math">\(\Z \times \Z\)</span> and each element of <span class="process-math">\(\Z \times \Z\)</span> is an ordered pair of integers, we frequently call this type of function a <dfn class="terminology">function of two variables</dfn>.</p></li>
+</ul>
+<p id="p-3838">Finding the preimages of an element of the codomain for the function <span class="process-math">\(f\text{,}\)</span> <span class="process-math">\(\mathbb{Z}\text{,}\)</span> usually involves solving an equation with two variables. For example, to find the preimages of <span class="process-math">\(0 \in \mathbb{Z}\text{,}\)</span> we need to find all ordered pairs <span class="process-math">\(\left( {m, n} \right) \in \mathbb{Z} \times \mathbb{Z}\)</span> such that <span class="process-math">\(f( {m, n} ) = 0\text{.}\)</span> This means that we must find all ordered pairs <span class="process-math">\(\left( {m, n} \right) \in \mathbb{Z} \times \mathbb{Z}\)</span> such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+2m + n = 0\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Three such ordered pairs are <span class="process-math">\(\left( {0, 0} \right)\text{,}\)</span> <span class="process-math">\(\left( {1,  - 2} \right)\text{,}\)</span> and <span class="process-math">\(\left( { - 1, 2} \right)\text{.}\)</span> In fact, whenever we choose an integer value for <span class="process-math">\(m\text{,}\)</span> we can find a corresponding integer <span class="process-math">\(n\)</span> such that <span class="process-math">\(2m + n = 0\text{.}\)</span> This means that 0 has infinitely many preimages, and it may be difficult to specify the set of all of the preimages of 0 using the roster method. One way that can be used to specify this set is to use set builder notation and say that the following set consists of all of the preimages of 0:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\left\{ { {\left( {m, n} \right) \in \mathbb{Z} \times \mathbb{Z} } \mid 2m + n = 0} 
+\right\} = \left\{ { {\left( {m, n} \right) \in \mathbb{Z} \times \mathbb{Z} } \mid n 
+=  - 2m} \right\}\!\text{.}
+\end{equation*}
+</div>
+<p id="p-3839">The second formulation for this set was obtained by solving the equation <span class="process-math">\(2m + n = 0\)</span> for <span class="process-math">\(n\text{.}\)</span></p>
+<article class="exercise exercise-like" id="pr_function-two"><h4 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">6.14</span><span class="period">.</span><span class="space"> </span><span class="title">Working with a Function of Two Variables.</span>
+</h4>
+<div class="introduction" id="introduction-328"><p id="p-3840">Let <span class="process-math">\(g\x \mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}\)</span> be defined by <span class="process-math">\(g( {m, n} ) = m^2 - n\)</span> for all <span class="process-math">\(\left(m, n \right) \in \Z \times \Z\text{.}\)</span></p></div>
+<article class="task exercise-like" id="task-1237"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-3841">Determine <span class="process-math">\(g(0, 3)\text{,}\)</span> <span class="process-math">\(g(3,-2)\text{,}\)</span> <span class="process-math">\(g(-3, -2)\text{,}\)</span> and <span class="process-math">\(g(7, -1)\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-204" id="solution-204"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-204"><div class="solution solution-like"><p id="p-3842"><span class="process-math">\(g ( 0, 3 ) = -3\text{;}\)</span> <span class="process-math">\(g ( 3, -2 ) = 11\text{;}\)</span> <span class="process-math">\(g ( -3, -2 ) = 11\text{;}\)</span> <span class="process-math">\(g ( 7, -1 ) = 50\text{.}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-1238"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-3843">Determine the set of all preimages of the integer 0 for the function <span class="process-math">\(g\text{.}\)</span> Write your answer using set builder notation.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-205" id="solution-205"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-205"><div class="solution solution-like"><p id="p-3844"><span class="process-math">\(\left\{ (m, n) \in \Z \times \Z \mid n = m^2 \right\}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-1239"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-3845">Determine the set of all preimages of the integer 5 for the function <span class="process-math">\(g\text{.}\)</span> Write your answer using set builder notation.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-206" id="solution-206"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-206"><div class="solution solution-like"><p id="p-3846"><span class="process-math">\(\left\{ (m, n) \in \Z \times \Z \mid n = m^2 - 5 \right\}\)</span></p></div></div>
+</div></article></article></section><section class="exercises" id="exercises-22"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exer_sec62-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-329"><p id="p-3847">Let <span class="process-math">\(R_5 = \left\{ {0, 1, 2, 3, 4} \right\}\text{.}\)</span> Define <span class="process-math">\(f\x R_5 \to R_5\)</span> by <span class="process-math">\(f( x ) = x^2 + 4 \pmod 5\text{,}\)</span> and define <span class="process-math">\(g\x R_5 \to R_5\)</span> by <span class="process-math">\(g( x ) = (x + 1)(x + 4) \pmod 5\text{.}\)</span></p></div>
+<article class="task exercise-like" id="task-1240"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-3848">Calculate <span class="process-math">\(f( 0 )\text{,}\)</span> <span class="process-math">\(f( 1 ), f( 2 )\text{,}\)</span> <span class="process-math">\(f( 3 )\text{,}\)</span> and <span class="process-math">\(f( 4 )\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-302" id="answer-302"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-302"><div class="answer solution-like"><p id="p-3849"><span class="process-math">\(f( 0 ) = 4\text{,}\)</span> <span class="process-math">\(f( 1 ) = 0, f( 2 ) = 3\text{,}\)</span> <span class="process-math">\(f( 3 ) = 3\text{,}\)</span> <span class="process-math">\(f( 4 ) = 0\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-1241"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-3850">Calculate <span class="process-math">\(g( 0 )\text{,}\)</span> <span class="process-math">\(g( 1 ), g( 2 )\text{,}\)</span> <span class="process-math">\(g( 3 )\text{,}\)</span> and <span class="process-math">\(g( 4 )\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-303" id="answer-303"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-303"><div class="answer solution-like"><p id="p-3851"><span class="process-math">\(g( 0 ) = 4\text{,}\)</span> <span class="process-math">\(g( 1 ) = 0, g( 2 ) = 3\text{,}\)</span> <span class="process-math">\(g( 3 ) = 3\text{,}\)</span> <span class="process-math">\(g( 4 ) = 0\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-1242"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-3852">Is the function <span class="process-math">\(f\)</span> equal to the function <span class="process-math">\(g\text{?}\)</span> Explain.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-304" id="answer-304"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-304"><div class="answer solution-like"><p id="p-3853">The two functions are equal.</p></div></div>
+</div></article></article><article class="exercise exercise-like" id="exer_sec62-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-330"><p id="p-3854">Let <span class="process-math">\(R_6 = \left\{ {0, 1, 2, 3, 4, 5} \right\}\text{.}\)</span> Define <span class="process-math">\(f\x R_6 \to R_6\)</span> by <span class="process-math">\(f( x ) = x^2 + 4 \pmod 6\text{,}\)</span> and define <span class="process-math">\(g\x R_6 \to R_6\)</span> by <span class="process-math">\(g( x ) = (x + 1)(x + 4) \pmod 6\text{.}\)</span></p></div>
+<article class="task exercise-like" id="task-1243"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-3855">Calculate <span class="process-math">\(f( 0 )\text{,}\)</span> <span class="process-math">\(f( 1 ), f( 2 )\text{,}\)</span> <span class="process-math">\(f( 3 )\text{,}\)</span> <span class="process-math">\(f( 4 )\text{,}\)</span> and <span class="process-math">\(f( 5 )\text{.}\)</span></p></article><article class="task exercise-like" id="task-1244"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-3856">Calculate <span class="process-math">\(g( 0 )\text{,}\)</span> <span class="process-math">\(g( 1 ), g( 2 )\text{,}\)</span> <span class="process-math">\(g( 3 )\text{,}\)</span> <span class="process-math">\(g( 4 )\text{,}\)</span> and <span class="process-math">\(g( 5 )\text{.}\)</span></p></article><article class="task exercise-like" id="task-1245"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-3857">Is the function <span class="process-math">\(f\)</span> equal to the function <span class="process-math">\(g\text{?}\)</span> Explain.</p></article></article><article class="exercise exercise-like" id="exer62_realfunction"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-331"><p id="p-3858">Let <span class="process-math">\(f\x \left(\R - \{0 \} \right) \to \R\)</span> by <span class="process-math">\(f(x) = \dfrac{x^3 + 5x}{x}\)</span> and let <span class="process-math">\(g\x \R \to \R\)</span> by <span class="process-math">\(g(x) = x^2 + 5\text{.}\)</span></p></div>
+<article class="task exercise-like" id="task-1246"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-3859">Calculate <span class="process-math">\(f( 2 ), f( -2 )\text{,}\)</span> <span class="process-math">\(f( 3 )\text{,}\)</span> and <span class="process-math">\(f( \sqrt{2} )\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-305" id="answer-305"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-305"><div class="answer solution-like"><p id="p-3860"><span class="process-math">\(f(2) = 9\text{,}\)</span> <span class="process-math">\(f(-2) = 9\text{,}\)</span> <span class="process-math">\(f(3) = 14\text{,}\)</span> <span class="process-math">\(f(\sqrt{2} = 7\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-1247"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-3861">Calculate <span class="process-math">\(g( 0 )\text{,}\)</span> <span class="process-math">\(g( 2 ), g( -2 )\text{,}\)</span> <span class="process-math">\(g( 3 )\text{,}\)</span> and <span class="process-math">\(g( \sqrt{2} )\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-306" id="answer-306"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-306"><div class="answer solution-like"><p id="p-3862"><span class="process-math">\(g(0) = 5\text{,}\)</span> <span class="process-math">\(g(2) = 9\text{,}\)</span> <span class="process-math">\(g(-2) = 9\text{,}\)</span> <span class="process-math">\(g(3) = 14\text{,}\)</span> <span class="process-math">\(g(\sqrt{2}) = 7\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-1248"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-3863">Is the function <span class="process-math">\(f\)</span> equal to the function <span class="process-math">\(g\text{?}\)</span> Explain.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-307" id="answer-307"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-307"><div class="answer solution-like"><p id="p-3864">The function <span class="process-math">\(f\)</span> is not equal to the function <span class="process-math">\(g\)</span> since they do not have the same domain.</p></div></div>
+</div></article><article class="task exercise-like" id="task-1249"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-3865">Now let <span class="process-math">\(h\x \left(\R - \{0 \} \right) \to \R\)</span> by <span class="process-math">\(h(x) = x^2 + 5\text{.}\)</span> Is the function <span class="process-math">\(f\)</span> equal to the function <span class="process-math">\(h\text{?}\)</span> Explain.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-308" id="answer-308"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-308"><div class="answer solution-like"><p id="p-3866">The function <span class="process-math">\(h\)</span> is equal to the function <span class="process-math">\(f\)</span> since if <span class="process-math">\(x \ne 0\text{,}\)</span> then <span class="process-math">\(\dfrac{x^2 + 5x}{x} = x^2 + 5\text{.}\)</span></p></div></div>
+</div></article></article><article class="exercise exercise-like" id="exer_sec62-3"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-332"><p id="p-3867">Represent each of the following sequences as functions. In each case, state a domain, codomain, and rule for determining the outputs of the function. Also, determine if any of the sequences are equal.</p></div>
+<article class="task exercise-like" id="task-1250"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-3868"><span class="process-math">\(1, \dfrac{1}{4}, \dfrac{1}{9}, \dfrac{1}{{16}}, \ldots\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-309" id="answer-309"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-309"><div class="answer solution-like"><p id="p-3869"><span class="process-math">\(\left\langle {a_n } \right\rangle\text{,}\)</span>  where  <span class="process-math">\(a_n  = \dfrac{1}{{n^2 }}\)</span>  for each <span class="process-math">\(n \in \mathbb{N}\text{.}\)</span>  The domain is  <span class="process-math">\(\mathbb{N}\text{,}\)</span> and <span class="process-math">\(\Q\)</span> can be the codomain.</p></div></div>
+</div></article><article class="task exercise-like" id="task-1251"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-3870"><span class="process-math">\(\dfrac{1}{3}, \dfrac{1}{9}, \dfrac{1}{{27}}, \dfrac{1}{{81}}, \ldots\)</span></p></article><article class="task exercise-like" id="task-1252"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-3871"><span class="process-math">\(1, - 1, 1, - 1, 1, - 1, \ldots\)</span></p></article><article class="task exercise-like" id="task-1253"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-3872"><span class="process-math">\(\cos( 0 ), \cos( \pi ), \cos( {2\pi } ), \cos( {3\pi } ), \cos( {4\pi } ), \ldots\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-310" id="answer-310"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-310"><div class="answer solution-like"><p id="p-3873"><span class="process-math">\(\left\langle {a_n } \right\rangle\text{,}\)</span> where <span class="process-math">\(a_n  = \cos ( {n\pi } )\)</span> for each  <span class="process-math">\(n \in \mathbb{N} \cup {0}\text{.}\)</span> The domain is <span class="process-math">\(\mathbb{N} \cup {0}\text{,}\)</span> and <span class="process-math">\(\left\{ -1, 1 \right\}\)</span> can be the codomain. This sequence is equal to the sequence in Part (c).</p></div></div>
+</div></article></article><article class="exercise exercise-like" id="sym_projfunc"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-333"><p id="p-3874"> Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be two nonempty sets. There are two <dfn class="terminology">projection functions</dfn> with domain <span class="process-math">\(A \times B\text{,}\)</span> the Cartesian product of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{.}\)</span> One projection function will map an ordered pair to its first coordinate, and the other projection function will map the ordered pair to its second coordinate. So we define <blockquote class="blockquote" id="blockquote-198">
+<span class="process-math">\(p_1\x A \times B \to A\)</span> by <span class="process-math">\(p_1( {a, b} ) = a\)</span> for every <span class="process-math">\(( {a, b} ) \in A \times B\text{;}\)</span> and</blockquote> <blockquote class="blockquote" id="blockquote-199">
+<span class="process-math">\(p_2\x A \times B \to B\)</span> by <span class="process-math">\(p_2( {a, b} ) = b\)</span> for every <span class="process-math">\(( {a, b} ) \in A \times B\text{.}\)</span>
+</blockquote> Let <span class="process-math">\(A = \left\{ {1, 2} \right\}\)</span> and let <span class="process-math">\(B = \left\{ {x, y, z} \right\}\text{.}\)</span></p></div>
+<article class="task exercise-like" id="task-1254"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-3875">Determine the outputs for all possible inputs for the projection function <span class="process-math">\(p_1\x A \times B \to A\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-311" id="answer-311"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-311"><div class="answer solution-like"><p id="p-3876"><span class="process-math">\(p_1(1, x) = 1\text{,}\)</span> <span class="process-math">\(p_1(1, y) = 1\text{,}\)</span> <span class="process-math">\(p_1(1, z) = 1\text{,}\)</span> <span class="process-math">\(p_1(2, x) = 2\text{,}\)</span> <span class="process-math">\(p_1(2, y) = 2\text{,}\)</span> <span class="process-math">\(p_1(2, z) = 2\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-1255"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-3877">Determine the outputs for all possible inputs for the projection function <span class="process-math">\(p_2\x A \times B \to B\text{.}\)</span></p></article><article class="task exercise-like" id="task-1256"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-3878">What is the range of these projection functions?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-312" id="answer-312"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-312"><div class="answer solution-like"><p id="p-3879"><span class="process-math">\(\text{ range} ( p_1 ) = A\text{,}\)</span> <span class="process-math">\(\text{ range} ( p_2 ) = B\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-1257"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-3880">Is the following statement true or false? Explain. <blockquote class="blockquote" id="blockquote-200">For all <span class="process-math">\(( {m, n} ), ( {u, v} ) \in A \times B\text{,}\)</span> if <span class="process-math">\(( {m, n} ) \ne ( {u, v} )\text{,}\)</span> then <span class="process-math">\(p_1( {m, n} ) \ne p_1( {u, v} )\text{.}\)</span>
+</blockquote></p></article></article><article class="exercise exercise-like" id="exer_sec62-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<p id="p-3881">Let  <span class="process-math">\(D = \mathbb{N} - \left\{ {1, 2} \right\}\)</span> and define <span class="process-math">\(d\x D \to \mathbb{N} \cup \left\{ 0 \right\}\)</span>  by <span class="process-math">\(d( n ) =\)</span> the number of diagonals of a convex polygon with  <span class="process-math">\(n\)</span>  sides. In <a href="S_moreaboutfunctions.html#PA_diagonals" class="internal" title="Beginning Activity: Beginning Activity 1: The Number of Diagonals of a Polygon">Beginning Activity 1</a>, we showed that for values of <span class="process-math">\(n\)</span> from  3 through 8,</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/PA_diagonals.html">
+\begin{equation*}
+d( n ) = \frac{{n\left( {n - 3} \right)}}{2}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Use mathematical induction to prove that for all  <span class="process-math">\(n \in D\text{,}\)</span> <span class="process-math">\(d( n ) = \dfrac{{n\left( {n - 3} \right)}}{2}\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-45" id="hint-45"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-45"><div class="hint solution-like"><p id="p-3882">To get an idea of how to handle the inductive step, use a pentagon. First, form all the diagonals that can be made from  four  of the vertices. Then consider how to make new diagonals when the fifth vertex is used. This may generate an idea of how to proceed from a polygon with <span class="process-math">\(k\)</span> sides to a polygon with <span class="process-math">\(k + 1\)</span> sides.</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-313" id="answer-313"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-313"><div class="answer solution-like"><p id="p-3883">Start of the inductive step:  Let <span class="process-math">\(P ( n )\)</span> be “A convex polygon with <span class="process-math">\(n\)</span> sides has <span class="process-math">\(\dfrac{n ( n-3 )}{2}\)</span> diagonals.” Let <span class="process-math">\(k \in D\)</span> and assume that <span class="process-math">\(P ( k )\)</span> is true, that is, a convex polygon with <span class="process-math">\(k\)</span> sides has <span class="process-math">\(\dfrac{{k( {k - 3} )}}{2}\)</span> diagonals. Now let <span class="process-math">\(Q\)</span> be convex polygon with <span class="process-math">\(( {k + 1} )\)</span> sides. Let <span class="process-math">\(v\)</span> be one of the <span class="process-math">\(( {k + 1} )\)</span> vertices of <span class="process-math">\(Q\)</span>  and let <span class="process-math">\(u\)</span> and <span class="process-math">\(w\)</span>  be the two vertices adjacent to  <span class="process-math">\(v\text{.}\)</span> By drawing the line segment from <span class="process-math">\(u\)</span> to <span class="process-math">\(w\)</span> and omitting the vertex  <span class="process-math">\(v\text{,}\)</span> we form a convex polygon with <span class="process-math">\(k\)</span> sides. Now complete the inductive step.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exer_sec61-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-334"><p id="p-3884">Let <span class="process-math">\(f\x \Z \times \Z \to \mathbb{Z}\)</span> be defined by <span class="process-math">\(f( {m, n} ) = m + 3n\text{.}\)</span></p></div>
+<article class="task exercise-like" id="task-1258"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-3885">Calculate <span class="process-math">\(f( { - 3, 4} )\)</span> and <span class="process-math">\(f( { - 2, - 7} )\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-314" id="answer-314"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-314"><div class="answer solution-like"><p id="p-3886"><span class="process-math">\(f( { - 3, 4} ) = 9\text{,}\)</span> <span class="process-math">\(f( { - 2, - 7} ) = - 23\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-1259"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-3887">Determine the set of all the preimages of 4 by using set builder notation to describe the set of all <span class="process-math">\(\left( {m, n} \right) \in \mathbb{Z} \times \mathbb{Z}\)</span> such that <span class="process-math">\(f( {m, n} ) = 4\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-315" id="answer-315"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-315"><div class="answer solution-like"><p id="p-3888"><span class="process-math">\(\text{ range} (f) = \left\{ { {( {m, n} ) \in \mathbb{Z} \times \mathbb{Z} } 
+\mid m = 4 - 3n} \right\}\)</span></p></div></div>
+</div></article></article><article class="exercise exercise-like" id="exer_sec61-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-335"><p id="p-3889">Let <span class="process-math">\(g\x \mathbb{Z} \times \mathbb{Z} \to \mathbb{Z} \times \mathbb{Z}\)</span> be defined by <span class="process-math">\(g( {m, n} ) = \left( {2m, m - n} \right)\text{.}\)</span></p></div>
+<article class="task exercise-like" id="task-1260"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-3890">Calculate <span class="process-math">\(g( {3, 5} )\)</span> and <span class="process-math">\(g( { - 1, 4} )\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-316" id="answer-316"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-316"><div class="answer solution-like"><p id="p-3891"><span class="process-math">\(g ( 3, 5 ) = ( 6, -2 )\text{,}\)</span> <span class="process-math">\(g ( -1, 4 ) = ( -2, -5 )\text{.}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-1261"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-3892">Determine all the preimages of <span class="process-math">\(\left( {0, 0} \right)\text{.}\)</span> That is, find all <span class="process-math">\(( {m, n} ) \in \mathbb{Z} \times \mathbb{Z}\)</span> such that <span class="process-math">\(g( {m, n} ) = ( {0, 0} )\text{.}\)</span></p></article><article class="task exercise-like" id="task-1262"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-3893">Determine the set of all the preimages of <span class="process-math">\(( {8, - 3} )\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-317" id="answer-317"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-317"><div class="answer solution-like"><p id="p-3894">The set of preimages of <span class="process-math">\(( 8, -3 )\)</span> is <span class="process-math">\(\left\{ ( 4, 7 ) \right\}\text{.}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-1263"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-3895">Determine the set of all the preimages of <span class="process-math">\(( {1, 1} )\text{.}\)</span></p></article><article class="task exercise-like" id="task-1264"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-3896">Is the following proposition true or false? Justify your conclusion. <blockquote class="blockquote" id="blockquote-201">For each <span class="process-math">\(( {s, t} ) \in \mathbb{Z} \times \mathbb{Z}\text{,}\)</span> there exists an <span class="process-math">\(( {m, n}) \in \mathbb{Z} \times \mathbb{Z}\)</span> such that <span class="process-math">\(g( {m, n} ) = ( {s, t} )\text{.}\)</span>
+</blockquote></p></article></article><article class="exercise exercise-like" id="sym_determinant"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-336">
+<p id="p-3897"> A <dfn class="terminology">2 by 2 matrix over <span class="process-math">\(\mathbb{R}\)</span></dfn> is a rectangular array of four real numbers arranged in two rows and two columns. We usually write this array inside brackets (or parentheses) as follows:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+A = \left[ {\begin{array}{*{20}c} a \amp  b  \\ c \amp  d \end{array}  } \right]\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(c\text{,}\)</span> and <span class="process-math">\(d\)</span> are real numbers. The <em class="emphasis">determinant</em> of the 2 by 2 matrix <span class="process-math">\(A\text{,}\)</span> denoted by <span class="process-math">\(\det( A )\text{,}\)</span> is defined as</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\det( A ) = ad - bc\text{.}
+\end{equation*}
+</div>
+</div>
+<article class="task exercise-like" id="task-1265"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-3898">Calculate the determinant of each of the following matrices:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\left[ {\begin{array}{*{20}c} 3 \amp  5  \\ 4 \amp  1 \end{array}  } \right],\;
+\left[ {\begin{array}{*{20}c} 1 \amp  0  \\ 0 \amp  7 \end{array}  } \right],\;
+\text{ and } \left[ {\begin{array}{*{20}c} 3 \amp  { - 2}  \\ 5 \amp  0 \end{array}  } \right]\text{.}
+\end{equation*}
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-318" id="answer-318"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-318"><div class="answer solution-like"><p id="p-3899"><span class="process-math">\(\det \left[ {\begin{array}{*{20}c}
+3 \amp 5 \\
+4 \amp 1
+\end{array} } \right] = - 17, \det \left[ {\begin{array}{*{20}c}
+1 \amp 0 \\
+0 \amp 7
+\end{array} } \right] = 7, \text{ and det } \left[ {\begin{array}{*{20}c}
+3 \amp { - 2} \\
+5 \amp 0
+\end{array} } \right] = 10\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-1266"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-3900">Let <span class="process-math">\(\mathcal{M}_2( \R )\)</span> be the set of all 2 by 2 matrices over <span class="process-math">\(\R\text{.}\)</span> The mathematical process of finding the determinant of a 2 by 2 matrix over <span class="process-math">\(\R\)</span> can be thought of as a function. Explain carefully how to do so, including a clear statement of the domain and codomain of this function.</p></article></article><article class="exercise exercise-like" id="sym_transpose"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-337">
+<p id="p-3901"> Using the notation from <a href="" class="xref" data-knowl="./knowl/sym_determinant.html" title="Exercise 9">Exercise 9</a>, let</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/sym_determinant.html">
+\begin{equation*}
+A = \left[ {\begin{array}{*{20}c} a \amp  b  \\ c \amp  d \end{array}  } \right]
+\end{equation*}
+</div>
+<p class="continuation">be a  2 by 2  matrix over  <span class="process-math">\(\R\text{.}\)</span> The <dfn class="terminology">transpose of the matrix <span class="process-math">\(\boldsymbol{A}\)</span></dfn>, denoted by <span class="process-math">\(A^T\text{,}\)</span> is the 2 by 2 matrix over <span class="process-math">\(\mathbb{R}\)</span> defined by</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/sym_determinant.html">
+\begin{equation*}
+A^T  = \left[ {\begin{array}{*{20}c} a \amp  c  \\ b \amp  d \end{array}  } \right]\text{.}
+\end{equation*}
+</div>
+</div>
+<article class="task exercise-like" id="task-1267"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-3902">Calculate the transpose  of each of the following matrices:</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\left[ {\begin{array}{*{20}c} 3 \amp  5  \\ 4 \amp  1 \end{array}  } \right],\;
+\left[ {\begin{array}{*{20}c} 1 \amp  0  \\ 0 \amp  7 \end{array}  } \right],\;
+\text{ and } \left[ {\begin{array}{*{20}c} 3 \amp  { - 2}  \\ 5 \amp  0 \end{array}  } \right]\text{.}
+\end{equation*}
+</div></article><article class="task exercise-like" id="task-1268"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-3903">Let <span class="process-math">\(\mathcal{M}_2( \R )\)</span> be the set of all 2 by 2 matrices over <span class="process-math">\(\mathbb{R}\text{.}\)</span> The mathematical process of finding the transpose of a 2 by 2 matrix over <span class="process-math">\(\mathbb{R}\)</span> can be thought of as a function. Carefully explain how to do so, including a clear statement of the domain and codomain of this function.</p></article></article><article class="activity project-like" id="activity-35"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">35</span><span class="period">.</span><span class="space"> </span><span class="title">Integration as a Function.</span>
+</h4>
+<div class="introduction" id="introduction-338">
+<p id="p-3904">In calculus, we learned that if <span class="process-math">\(f\)</span> is real function that is continuous on the closed interval <span class="process-math">\(\left[ {a, b} \right]\text{,}\)</span> then the definite integral <span class="process-math">\(\int_a^b {f( x ) \, dx}\)</span> is a real number. In fact, one form of the <dfn class="terminology">Fundamental Theorem of Calculus</dfn> states that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\int_a^b {f( x ) \, dx} = F( b ) - F( a )\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where <span class="process-math">\(F\)</span> is any antiderivative of <span class="process-math">\(f\text{,}\)</span> that is, where  <span class="process-math">\(F \,' = f\text{.}\)</span></p>
+</div>
+<article class="task exercise-like" id="task-1269"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="introduction" id="introduction-339">
+<p id="p-3905">Let <span class="process-math">\(\left[ {a, b} \right]\)</span> be a closed interval of real numbers and let <span class="process-math">\(C {\left[ {a, b} \right]}\)</span> be the set of all real functions that are continuous on <span class="process-math">\(\left[ {a, b} \right]\text{.}\)</span> That is,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+C{\left[ {a, b} \right]}  = \left\{ {f\x \left[ {a, b} \right] \to \mathbb{R}  
+\mid f\text{ is continuous on } \left[ {a, b} \right]} \right\}\text{.}
+\end{equation*}
+</div>
+</div>
+<article class="task exercise-like" id="task-1270"><h6 class="heading"><span class="codenumber">(i)</span></h6>
+<p id="p-3906">Explain how the definite integral <span class="process-math">\(\int_a^b {f( x ) \, dx}\)</span> can be used to define a function <span class="process-math">\(I\)</span> from <span class="process-math">\(C{\left[ {a, b} \right]}\)</span> to <span class="process-math">\(\mathbb{R}\text{.}\)</span></p></article><article class="task exercise-like" id="task-1271"><h6 class="heading"><span class="codenumber">(ii)</span></h6>
+<p id="p-3907">Let <span class="process-math">\(\left[ {a, b} \right] = \left[ {0, 2} \right]\text{.}\)</span> Calculate <span class="process-math">\(I( f )\text{,}\)</span> where <span class="process-math">\(f( x ) = x^2 + 1\text{.}\)</span></p></article><article class="task exercise-like" id="task-1272"><h6 class="heading"><span class="codenumber">(iii)</span></h6>
+<p id="p-3908">Let <span class="process-math">\(\left[ {a, b} \right] = \left[ {0, 2} \right]\text{.}\)</span> Calculate <span class="process-math">\(I( g )\text{,}\)</span> where <span class="process-math">\(g( x ) = \sin ( {\pi x} )\text{.}\)</span></p></article><div class="conclusion" id="conclusion-8"><p id="p-3909">In calculus, we also learned how to determine the indefinite integral <span class="process-math">\(\int {f( x )} \;dx\)</span> of a continuous function  <span class="process-math">\(f\text{.}\)</span></p></div></article><article class="task exercise-like" id="task-1273"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-3910">Let <span class="process-math">\(f( x ) = x^2 + 1\)</span> and <span class="process-math">\(g(x) = \cos( 2x )\text{.}\)</span> Determine <span class="process-math">\(\int {f( x )} \;dx\)</span> and <span class="process-math">\(\int {g( x )} \;dx\text{.}\)</span></p></article><article class="task exercise-like" id="task-1274"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-3911">Let <span class="process-math">\(f\)</span> be a continuous function on the closed interval <span class="process-math">\(\left[ {0, 1} \right]\)</span> and let <span class="process-math">\(T\)</span> be the set of all real functions. Can the process of determining the indefinite integral of a continuous function be used to define a function from <span class="process-math">\(C{\left[ {0, 1} \right]}\)</span> to <span class="process-math">\(T\text{?}\)</span> Explain.</p></article><article class="task exercise-like" id="task-1275"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-3912">Another form of the Fundamental Theorem of Calculus states that if <span class="process-math">\(f\)</span> is continuous on the interval <span class="process-math">\(\left[ {a, b} \right]\)</span> and if</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+g( x ) = \int_a^x {f( t ) \, dt}
+\end{equation*}
+</div>
+<p class="continuation">for each <span class="process-math">\(x\)</span> in <span class="process-math">\(\left[ {a, b} \right]\text{,}\)</span> then <span class="process-math">\(g'\left( x \right) = f\left( x \right)\text{.}\)</span> That is, <span class="process-math">\(g\)</span> is an antiderivative of <span class="process-math">\(f\text{.}\)</span> Explain how this theorem can be used to define a function from <span class="process-math">\(C{\left[ {a,\;b} \right]}\)</span> to <span class="process-math">\(T\text{,}\)</span> where the output of the function is an antiderivative of the input. (Recall that <span class="process-math">\(T\)</span> is the set of all real functions.)</p></article></article></section></section></div></main>
+</div>
+</body>
+</html>

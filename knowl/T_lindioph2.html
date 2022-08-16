@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-08-16T14:54:31-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.24</span><span class="period">.</span>
+</h3>
+<p>Let <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> be integers with <span class="process-math">\(a \ne 0\)</span> and <span class="process-math">\(b \ne 0\text{,}\)</span> and let <span class="process-math">\(d = \gcd( a, b )\text{.}\)</span></p>
+<ol class="decimal">
+<li><p>If <span class="process-math">\(d\)</span> does not divide <span class="process-math">\(c\text{,}\)</span> then the linear Diophantine equation <span class="process-math">\(ax + by = c\)</span> has no solution.</p></li>
+<li>
+<p>If <span class="process-math">\(d\)</span> divides <span class="process-math">\(c\text{,}\)</span> then the linear Diophantine equation <span class="process-math">\(ax + by = c\)</span> has infinitely many solutions. In addition, if  <span class="process-math">\(\left( x_0, y_0 \right)\)</span> is a particular solution of this equation, then all the solutions of this equation can be written in the form</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+x = x_0 + \frac{b}{d} k   \text{ and }    y = y_0 - \frac{a}{d} k\text{,}
+\end{equation*}
+</div>
+<p class="continuation">for some integer  <span class="process-math">\(k\text{.}\)</span></p>
+</li>
+</ol></article><article class="proof"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3>
+<p>The proof of <a href="" class="xref" data-knowl="./knowl/T_lindiop2-1.html" title="Item 1">Item 1</a> is <a href="" class="xref" data-knowl="./knowl/exer_lindioph2.html" title="Exercise 8.3.1">Exercise 8.3.1</a>. For <a href="" class="xref" data-knowl="./knowl/T_lindiop2-2.html" title="Item 2">Item 2</a>, we let <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> be integers with <span class="process-math">\(a \ne 0\)</span> and <span class="process-math">\(b \ne 0\text{,}\)</span> and let <span class="process-math">\(d = \gcd( a,b )\text{.}\)</span> We also assume that <span class="process-math">\(d \mid c\text{.}\)</span> Since <span class="process-math">\(d = \gcd( a,b )\text{,}\)</span> <a href="" class="xref" data-knowl="./knowl/T_gcdaslincomb.html" title="Theorem 8.10">Theorem 8.10</a> tells us that <span class="process-math">\(d\)</span> is a linear combination of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span> So there exist integers <span class="process-math">\(s\)</span> and <span class="process-math">\(t\)</span> such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/T_lindiop2-1.html ./knowl/exer_lindioph2.html ./knowl/T_lindiop2-2.html ./knowl/T_gcdaslincomb.html">
+\begin{equation}
+d = as + bt\text{.}\tag{79}
+\end{equation}
+</div>
+<p>Since <span class="process-math">\(d \mid c\text{,}\)</span> there exists an integer <span class="process-math">\(m\)</span> such that <span class="process-math">\(c = dm\text{.}\)</span> We can now multiply both sides of equation <a href="" class="xref" data-knowl="./knowl/eq_lindioph1.html" title="Equation 79">(79)</a> by <span class="process-math">\(m\)</span> and obtain</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_lindioph1.html">
+\begin{align*}
+dm \amp = ( {as + bt} ) m\\
+c \amp a( sm ) + b( tm )\text{.}
+\end{align*}
+</div>
+<p class="continuation">This means that <span class="process-math">\(x = sm\text{,}\)</span> <span class="process-math">\(y = tm\)</span> is a solution of <span class="process-math">\(ax + by = c\text{,}\)</span> and we have proved that the Diophantine equation <span class="process-math">\(ax + by = c\)</span> has at least one solution.</p>
+<p>Now let <span class="process-math">\(x = x_0\text{,}\)</span> <span class="process-math">\(y = y_0\)</span> be any particular solution of <span class="process-math">\(ax + by = c\text{,}\)</span> let <span class="process-math">\(k \in \mathbb{Z}\text{,}\)</span> and let</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation}
+x = x_0 + \frac{b}{d} k  \qquad  y = y_0 - \frac{a}{d} k\text{.}\tag{80}
+\end{equation}
+</div>
+<p>We now verify that for each <span class="process-math">\(k \in \mathbb{Z}\text{,}\)</span> the equations in <a href="" class="xref" data-knowl="./knowl/eq_x0andy0.html" title="Equation 80">(80)</a> produce a solution of <span class="process-math">\(ax + by = c\text{.}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_x0andy0.html">
+\begin{align*}
+ax + by \amp = a \!\left( {x_0 + \frac{b}{d} k } \right) + b 
+\!\left( {y_0 - \frac{a}{d} k} \right )\\
+\amp = a x_0 + \frac{ab}{d} k + b y_0 - \frac{ab}{d} k\\
+\amp = a x_0 + b y_0\\
+\amp = c\text{.}
+\end{align*}
+</div>
+<p class="continuation">This proves that the Diophantine equation <span class="process-math">\(ax + by = c\)</span> has infinitely many solutions.</p>
+<p>We now show that every solution of this equation can be written in the form described in equation <a href="" class="xref" data-knowl="./knowl/eq_x0andy0.html" title="Equation 80">(80)</a>. So suppose that <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are integers such that <span class="process-math">\(ax + by = c\text{.}\)</span> Then</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_x0andy0.html">
+\begin{equation*}
+( {ax + by} ) - ( {ax_0 + by_0} ) = c - c = 0\text{,}
+\end{equation*}
+</div>
+<p class="continuation">and this equation can be rewritten in the following form:</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_x0andy0.html">
+\begin{equation}
+a( {x - x_0} ) = b( {y_0 - y} )\text{.}\tag{81}
+\end{equation}
+</div>
+<p>Dividing both sides of this equation by <span class="process-math">\(d\text{,}\)</span> we obtain</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\left( \frac{a}{d} \right) \left( {x - x_0} \right ) = \left( \frac{b}{d} \right) 
+\left( {y_0 - y} \right)\text{.}
+\end{equation*}
+</div>
+<p>This implies that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\frac{a}{d} \text{ divides }  \left( \frac{b}{d} \right) ( {y_0 - y} )\text{.}
+\end{equation*}
+</div>
+<p>However, by <a href="" class="xref" data-knowl="./knowl/exer_gcd-divbyda.html" title="Task 7.a">Task 7.a</a> in <a href="S_primefactorizations.html" class="internal" title="Section 8.2: Prime Numbers and Prime Factorizations">Section 8.2</a>, <span class="process-math">\(\gcd \!\left( \dfrac{a}{d}, \dfrac{b}{d} \right) = 1\text{,}\)</span> and so by <a href="" class="xref" data-knowl="./knowl/T_relativelyprimeprop.html" title="Theorem 8.14">Theorem 8.14</a>, we can conclude that <span class="process-math">\(\dfrac{a}{d}\)</span> divides <span class="process-math">\(\left( {y_0 - y} \right)\text{.}\)</span> This means that there exists an integer <span class="process-math">\(k\)</span> such that <span class="process-math">\(y_0 - y = \dfrac{a}{d} k\text{,}\)</span> and solving for <span class="process-math">\(y\)</span> gives</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exer_gcd-divbyda.html ./knowl/S_primefactorizations.html ./knowl/T_relativelyprimeprop.html ./knowl/eq_dioph3.html">
+\begin{equation*}
+y = y_0 - \frac{a}{d} k\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Substituting this value for <span class="process-math">\(y\)</span> in equation <a href="" class="xref" data-knowl="./knowl/eq_dioph3.html" title="Equation 81">(81)</a> and solving for <span class="process-math">\(x\)</span> yields</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/exer_gcd-divbyda.html ./knowl/S_primefactorizations.html ./knowl/T_relativelyprimeprop.html ./knowl/eq_dioph3.html">
+\begin{equation*}
+x = x_0 + \frac{b}{d} k\text{.}
+\end{equation*}
+</div>
+<p class="continuation">This proves that every solution of the Diophantine equation <span class="process-math">\(ax + by = c\)</span> can be written in the form prescribed in (2).</p></article><span class="incontext"><a href="S_diophantine.html#T_lindioph2" class="internal">in-context</a></span>
+</body>
+</html>

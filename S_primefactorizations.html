@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-08-16T14:51:12-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Prime Numbers and Prime Factorizations</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Mathematical Reasoning">
+<meta property="book:author" content="Ted Sundstrom, Professor Emeritus">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="external/custom_style.css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\mynot}{\neg}
+\newcommand{\card}{\mathbf{card}}
+\newcommand{\x}{:}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Mathematical Reasoning:</span> <span class="subtitle">Writing and Proof (PreTeXt Edition)</span></a></h1>
+<p class="byline">Ted Sundstrom, Professor Emeritus</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_gcd.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_numbertheory.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_diophantine.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_gcd.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C_numbertheory.html" title="Up">Up</a><a class="next-button button toolbar-item" href="S_diophantine.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="fm_pub_note.html" data-scroll="fm_pub_note" class="internal">Publisher's Note</a></li>
+<li><a href="fm-student-note.html" data-scroll="fm-student-note" class="internal">Note to Students</a></li>
+<li><a href="fm-preface.html" data-scroll="fm-preface" class="internal">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_1intro.html" data-scroll="C_1intro" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_1prop.html" data-scroll="S_1prop" class="internal">Statements and Conditional Statements</a></li>
+<li><a href="S_1direct.html" data-scroll="S_1direct" class="internal">Constructing Direct Proofs</a></li>
+<li><a href="S_1summary.html" data-scroll="S_1summary" class="internal">Chapter 1 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_2logic.html" data-scroll="C_2logic" class="internal"><span class="codenumber">2</span> <span class="title">Logical Reasoning</span></a><ul>
+<li><a href="S_2logop.html" data-scroll="S_2logop" class="internal">Statements and Logical Operators</a></li>
+<li><a href="S_logequiv.html" data-scroll="S_logequiv" class="internal">Logically Equivalent Statements</a></li>
+<li><a href="S_2predicates.html" data-scroll="S_2predicates" class="internal">Open Sentences and Sets</a></li>
+<li><a href="S_2quantifier.html" data-scroll="S_2quantifier" class="internal">Quantifiers and Negations</a></li>
+<li><a href="S_2summary.html" data-scroll="S_2summary" class="internal">Chapter 2 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_proofs.html" data-scroll="C_proofs" class="internal"><span class="codenumber">3</span> <span class="title">Constructing and Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_directproof.html" data-scroll="S_directproof" class="internal">Direct Proofs</a></li>
+<li><a href="S_moremethods.html" data-scroll="S_moremethods" class="internal">More Methods of Proof</a></li>
+<li><a href="S_contradiction.html" data-scroll="S_contradiction" class="internal">Proof by Contradiction</a></li>
+<li><a href="S_cases.html" data-scroll="S_cases" class="internal">Using Cases in Proofs</a></li>
+<li><a href="S_divalgo.html" data-scroll="S_divalgo" class="internal">The Division Algorithm and Congruence</a></li>
+<li><a href="S_reviewproofs.html" data-scroll="S_reviewproofs" class="internal">Review of Proof Methods</a></li>
+<li><a href="S_3summary.html" data-scroll="S_3summary" class="internal">Chapter 3 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_induction.html" data-scroll="C_induction" class="internal"><span class="codenumber">4</span> <span class="title">Mathematical Induction</span></a><ul>
+<li><a href="S_mathinduction.html" data-scroll="S_mathinduction" class="internal">The Principle of Mathematical Induction</a></li>
+<li><a href="S_otherinduction.html" data-scroll="S_otherinduction" class="internal">Other Forms of Mathematical Induction</a></li>
+<li><a href="S_recursion.html" data-scroll="S_recursion" class="internal">Induction and Recursion</a></li>
+<li><a href="S_4summary.html" data-scroll="S_4summary" class="internal">Chapter 4 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_settheory.html" data-scroll="C_settheory" class="internal"><span class="codenumber">5</span> <span class="title">Set Theory</span></a><ul>
+<li><a href="S_setoperations.html" data-scroll="S_setoperations" class="internal">Sets and Operations on Sets</a></li>
+<li><a href="S_provingset.html" data-scroll="S_provingset" class="internal">Proving Set Relationships</a></li>
+<li><a href="S_setproperties.html" data-scroll="S_setproperties" class="internal">Properties of Set Operations</a></li>
+<li><a href="S_cartesian.html" data-scroll="S_cartesian" class="internal">Cartesian Products</a></li>
+<li><a href="S_indexfamily.html" data-scroll="S_indexfamily" class="internal">Indexed Families of Sets</a></li>
+<li><a href="S_5summary.html" data-scroll="S_5summary" class="internal">Chapter 5 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_functions.html" data-scroll="C_functions" class="internal"><span class="codenumber">6</span> <span class="title">Functions</span></a><ul>
+<li><a href="S_introfunctions.html" data-scroll="S_introfunctions" class="internal">Introduction to Functions</a></li>
+<li><a href="S_moreaboutfunctions.html" data-scroll="S_moreaboutfunctions" class="internal">More about Functions</a></li>
+<li><a href="S_typesoffunctions.html" data-scroll="S_typesoffunctions" class="internal">Injections, Surjections, and Bijections</a></li>
+<li><a href="S_compositionoffunctions.html" data-scroll="S_compositionoffunctions" class="internal">Composition of Functions</a></li>
+<li><a href="S_inversefunctions.html" data-scroll="S_inversefunctions" class="internal">Inverse Functions</a></li>
+<li><a href="S_functionsonsets.html" data-scroll="S_functionsonsets" class="internal">Functions Acting on Sets</a></li>
+<li><a href="S_6summary.html" data-scroll="S_6summary" class="internal">Chapter 6 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_equivrelations.html" data-scroll="C_equivrelations" class="internal"><span class="codenumber">7</span> <span class="title">Equivalence Relations</span></a><ul>
+<li><a href="S_relations.html" data-scroll="S_relations" class="internal">Relations</a></li>
+<li><a href="S_equivrelations.html" data-scroll="S_equivrelations" class="internal">Equivalence Relations</a></li>
+<li><a href="S_equivclasses.html" data-scroll="S_equivclasses" class="internal">Equivalence Classes</a></li>
+<li><a href="S_modulararithmetic.html" data-scroll="S_modulararithmetic" class="internal">Modular Arithmetic</a></li>
+<li><a href="section-37.html" data-scroll="section-37" class="internal">Chapter 7 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_numbertheory.html" data-scroll="C_numbertheory" class="internal"><span class="codenumber">8</span> <span class="title">Topics in Number Theory</span></a><ul>
+<li><a href="S_gcd.html" data-scroll="S_gcd" class="internal">The Greatest Common Divisor</a></li>
+<li><a href="S_primefactorizations.html" data-scroll="S_primefactorizations" class="active">Prime Numbers and Prime Factorizations</a></li>
+<li><a href="S_diophantine.html" data-scroll="S_diophantine" class="internal">Linear Diophantine Equations</a></li>
+<li><a href="section-41.html" data-scroll="section-41" class="internal">Chapter 8 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_topicsinsets.html" data-scroll="C_topicsinsets" class="internal"><span class="codenumber">9</span> <span class="title">Finite and Infinite Sets</span></a><ul>
+<li><a href="S_finitesets.html" data-scroll="S_finitesets" class="internal">Finite Sets</a></li>
+<li><a href="S_infinitesets.html" data-scroll="S_infinitesets" class="internal">Countable Sets</a></li>
+<li><a href="S_uncountablesets.html" data-scroll="S_uncountablesets" class="internal">Uncountable Sets</a></li>
+<li><a href="section-45.html" data-scroll="section-45" class="internal">Chapter 9 Summary</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="C_writingguides.html" data-scroll="C_writingguides" class="internal"><span class="codenumber">A</span> <span class="title">Guidelines for Writing Mathematical Proofs</span></a></li>
+<li class="link"><a href="prog-answers.html" data-scroll="prog-answers" class="internal"><span class="codenumber">B</span> <span class="title">Answers for the Progress Checks</span></a></li>
+<li class="link"><a href="exer-answers.html" data-scroll="exer-answers" class="internal"><span class="codenumber">C</span> <span class="title">Answers and Hints for Selected Exercises</span></a></li>
+<li class="link"><a href="appendix-2.html" data-scroll="appendix-2" class="internal"><span class="codenumber">D</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="S_primefactorizations"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">8.2</span> <span class="title">Prime Numbers and Prime Factorizations</span>
+</h2>
+<section class="worksheet" id="PA_exporingexamples"><h3 class="heading hide-type">
+<span class="type">Beginning Activity</span> <span class="codenumber"></span> <span class="title">Beginning Activity 1: Exploring Examples where <span class="process-math">\(\boldsymbol{a}\)</span> Divides <span class="process-math">\(\boldsymbol{b \cdot c}\)</span></span><div class="print-links">
+<a href="PA_exporingexamples-a4.html" class="a4">A4</a><a href="PA_exporingexamples-letter.html" class="us">US</a>
+</div>
+</h3>
+<article class="exercise exercise-like" id="PA_exporingexamples1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<p id="p-5324">Find at least three different examples of nonzero integers <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> such that <span class="process-math">\(a \mid \left( {bc} \right)\)</span> but <span class="process-math">\(a\)</span> does not divide <span class="process-math">\(b\)</span> and <span class="process-math">\(a\)</span> does not divide <span class="process-math">\(c\text{.}\)</span> In each case, compute <span class="process-math">\(\gcd( {a, b} )\)</span> and <span class="process-math">\(\gcd( {a, c} )\text{.}\)</span></p></article><article class="exercise exercise-like" id="PA_exporingexamples2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-5325">Find at least three different examples of nonzero integers <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> such that <span class="process-math">\(\gcd( {a, b} ) = 1\)</span> and <span class="process-math">\(a \mid ( {bc} )\text{.}\)</span> In each example, is there any relation between the integers <span class="process-math">\(a\)</span> and <span class="process-math">\(c\text{?}\)</span></p></article><article class="exercise exercise-like" id="exercise-778"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-5326">Formulate a conjecture based on your work in <a href="" class="xref" data-knowl="./knowl/PA_exporingexamples1.html" title="Exercise 1">Exercise 1</a> and <a href="" class="xref" data-knowl="./knowl/PA_exporingexamples2.html" title="Exercise 2">Exercise 2</a>.</p></article></section><section class="worksheet" id="PA_primefactorization25"><h3 class="heading hide-type">
+<span class="type">Beginning Activity</span> <span class="codenumber"></span> <span class="title">Beginning Activity 2: Prime Factorizations</span><div class="print-links">
+<a href="PA_primefactorization25-a4.html" class="a4">A4</a><a href="PA_primefactorization25-letter.html" class="us">US</a>
+</div>
+</h3>
+<p id="p-5327">Recall that a natural number <span class="process-math">\(p\)</span> is a <dfn class="terminology">prime number</dfn> provided that it is greater than 1 and the only natural numbers that divide <span class="process-math">\(p\)</span> are 1 and <span class="process-math">\(p\text{.}\)</span> A natural number other than 1 that is not a prime number is a <dfn class="terminology">composite number</dfn>. The number 1 is neither prime nor composite. (See <a href="" class="xref" data-knowl="./knowl/exer_prime.html" title="Activity 8: Prime Numbers">Activity 8</a> from <a href="S_2quantifier.html" class="internal" title="Section 2.4: Quantifiers and Negations">Section 2.4</a>.)</p>
+<article class="exercise exercise-like" id="exercise-779"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<p id="p-5328">Give examples of four natural numbers that are prime and four natural numbers that are composite.</p></article><p id="p-5329"><a href="" class="xref" data-knowl="./knowl/T_primefactors.html" title="Theorem 4.11">Theorem 4.11</a> in <a href="S_otherinduction.html" class="internal" title="Section 4.2: Other Forms of Mathematical Induction">Section 4.2</a> states that every natural number greater than 1 is either a prime number or a product of prime numbers.</p>
+<p id="p-5330">When a composite number is written as a product of prime numbers, we say that we have obtained a <dfn class="terminology">prime factorization</dfn> of that composite number. For example, since <span class="process-math">\(60 = 2^2 \cdot 3 \cdot 5\text{,}\)</span> we say that <span class="process-math">\(2^2 \cdot 3 \cdot 5\)</span> is a prime factorization of 60. <article class="exercise exercise-like" id="PA_primefactorization25-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-5331">Write the number 40 as a product of prime numbers by first writing <span class="process-math">\(40 = 2 \cdot 20\)</span> and then factoring 20 into a product of primes. Next, write the number 40 as a product of prime numbers by first writing <span class="process-math">\(40 = 5 \mspace{1mu}\cdot\mspace{1mu} 8\)</span> and then factoring 8 into a product of primes.</p></article> <article class="exercise exercise-like" id="PA_primefactorization25-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-5332">In <a href="" class="xref" data-knowl="./knowl/PA_primefactorization25-2.html" title="Exercise 2">Exercise 2</a>, we used two different methods to obtain a prime factorization of 40. Did these methods produce the same prime factorization or different prime factorizations? Explain.</p></article> <article class="exercise exercise-like" id="exercise-782"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<p id="p-5333">Repeat <a href="" class="xref" data-knowl="./knowl/PA_primefactorization25-2.html" title="Exercise 2">Exercise 2</a> and <a href="" class="xref" data-knowl="./knowl/PA_primefactorization25-3.html" title="Exercise 3">Exercise 3</a> with 150. First, start with <span class="process-math">\(150 = 3 \cdot 50\text{,}\)</span> and then start with <span class="process-math">\(150 = 5 \cdot 30\text{.}\)</span></p></article></p></section><section class="subsection" id="subsection-154"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Greatest Common Divisors and Linear Combinations</span>
+</h3>
+<p id="p-5334">In <a href="S_gcd.html" class="internal" title="Section 8.1: The Greatest Common Divisor">Section 8.1</a>, we introduced the concept of the greatest common divisor of two integers. We showed how the Euclidean Algorithm can be used to find the greatest common divisor of two integers, <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> and also showed how to use the results of the Euclidean Algorithm to write the greatest common divisor of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> as a linear combination of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span></p>
+<p id="p-5335">In this section, we will use these results to help prove the so-called Fundamental Theorem of Arithmetic, which states that any natural number greater than 1 that is not prime can be written as product of primes in “essentially” only one way. This means that given two prime factorizations, the prime factors are exactly the same, and the only difference may be in the order in which the prime factors are written. We start with more results concerning greatest common divisors. We first prove <a href="" class="xref" data-knowl="./knowl/P_divlinearcomb.html" title="Proposition 5.22">Proposition 5.22</a>, which was part of <a href="" class="xref" data-knowl="./knowl/exer52-choose.html" title="Activity 30: Using the Choose-an-Element Method in a Different Setting">Activity 30</a> in <a href="S_provingset.html" class="internal" title="Section 5.2: Proving Set Relationships">Section 5.2</a> and <a href="" class="xref" data-knowl="./knowl/exer81_lincomb.html" title="Activity 47: Linear Combinations and the Greatest Common Divisor">Activity 47</a> in <a href="S_gcd.html" class="internal" title="Section 8.1: The Greatest Common Divisor">Section 8.1</a>.</p>
+<p id="p-5336"><a href="" class="xref" data-knowl="./knowl/P_divlinearcomb.html" title="Proposition 5.22">Proposition 5.22</a>: Let a, b, and t be integers with <span class="process-math">\(t \ne 0\text{.}\)</span> If <span class="process-math">\(t\)</span> divides <span class="process-math">\(a\)</span> and <span class="process-math">\(t\)</span> divides <span class="process-math">\(b\text{,}\)</span> then for all integers <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{,}\)</span> <span class="process-math">\(t\)</span> divides <span class="process-math">\(\left( ax + by \right)\text{.}\)</span> <article class="proof" id="proof-56"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4>
+<p id="p-5337">Let <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(t\)</span> be integers with <span class="process-math">\(t \ne 0\text{,}\)</span> and assume that <span class="process-math">\(t\)</span> divides <span class="process-math">\(a\)</span> and <span class="process-math">\(t\)</span> divides <span class="process-math">\(b\text{.}\)</span> We will prove that for all integers <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{,}\)</span> <span class="process-math">\(t\)</span> divides <span class="process-math">\((ax + by)\text{.}\)</span></p>
+<p id="p-5338">So let <span class="process-math">\(x \in \mathbb{Z}\)</span> and let <span class="process-math">\(y \in \mathbb{Z}\text{.}\)</span> Since <span class="process-math">\(t\)</span> divides <span class="process-math">\(a\text{,}\)</span> there exists an integer <span class="process-math">\(m\)</span> such that <span class="process-math">\(a = mt\)</span> and since <span class="process-math">\(t\)</span> divides <span class="process-math">\(b\text{,}\)</span> there exists an integer <span class="process-math">\(n\)</span> such that <span class="process-math">\(b = nt\text{.}\)</span> Using substitution and algebra, we then see that</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-184">
+\begin{align*}
+ax + by \amp = (mt)x + (nt)y\\
+\amp = t(mx + ny)
+\end{align*}
+</div>
+<p id="p-5339">Since <span class="process-math">\((mx + ny)\)</span> is an integer, the last equation proves that <span class="process-math">\(t\)</span> divides <span class="process-math">\(ax + by\)</span> and this proves that for all integers <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{,}\)</span> <span class="process-math">\(t\)</span> divides <span class="process-math">\((ax + by)\text{.}\)</span></p></article></p>
+<p id="p-5340">We now let <span class="process-math">\(a, b \in \mathbb{Z}\text{,}\)</span> not both 0, and let <span class="process-math">\(d = \gcd( {a, b} )\text{.}\)</span> <a href="" class="xref" data-knowl="./knowl/T_gcdaslincomb.html" title="Theorem 8.10">Theorem 8.10</a> states that <span class="process-math">\(d\)</span> can be written as a linear combination of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span> Now, since <span class="process-math">\(d \mid a\)</span> and <span class="process-math">\(d \mid b\text{,}\)</span> we can use the result of <a href="" class="xref" data-knowl="./knowl/P_divlinearcomb.html" title="Proposition 5.22">Proposition 5.22</a> to conclude that for all <span class="process-math">\(x,
+y \in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(d \mid \left( {ax + by} \right)\text{.}\)</span> This means that <span class="process-math">\(d\)</span> divides every linear combination of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span> In addition, this means that <span class="process-math">\(d\)</span> must be the smallest positive number that is a linear combination of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span> We summarize these results in <a href="" class="xref" data-knowl="./knowl/T_gcddivideslincombs.html" title="Theorem 8.11">Theorem 8.11</a>.</p>
+<article class="theorem theorem-like" id="T_gcddivideslincombs"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.11</span><span class="period">.</span>
+</h4>
+<p id="p-5341">Let <span class="process-math">\(a, b \in \mathbb{Z}\text{,}\)</span> not both 0.</p>
+<ol class="decimal">
+<li id="li-689"><p id="p-5342">The greatest common divisor, <span class="process-math">\(d\text{,}\)</span> is a linear combination of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span> That is, there exist integers <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> such that <span class="process-math">\(d = am + bn\text{.}\)</span></p></li>
+<li id="li-690"><p id="p-5343">The greatest common divisor, <span class="process-math">\(d\text{,}\)</span> divides every linear combination of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span> That is, for all <span class="process-math">\(x,
+y \in \mathbb{Z}\)</span> , <span class="process-math">\(d \mid \left( {ax + by} \right)\text{.}\)</span></p></li>
+<li id="li-691"><p id="p-5344">The greatest common divisor, <span class="process-math">\(d\text{,}\)</span> is the smallest positive number that is a linear combination of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span></p></li>
+</ol></article></section><section class="subsection" id="subsection-155"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Relatively Prime Integers</span>
+</h3>
+<p id="p-5345">In <a href="S_primefactorizations.html#PA_exporingexamples" class="internal" title="Beginning Activity: Beginning Activity 1: Exploring Examples where \boldsymbol{a} Divides \boldsymbol{b \cdot c}">Beginning Activity 1</a>, we constructed several examples of integers <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> such that <span class="process-math">\(a \mid \left( {bc} \right)\)</span> but <span class="process-math">\(a\)</span> does not divide <span class="process-math">\(b\)</span> and <span class="process-math">\(a\)</span> does not divide <span class="process-math">\(c\text{.}\)</span> For each example, we observed that <span class="process-math">\(\gcd( {a, b} ) \ne 1\)</span> and <span class="process-math">\(\gcd( {a, c} ) \ne 1\text{.}\)</span></p>
+<p id="p-5346">We also constructed several examples where <span class="process-math">\(a \mid \left( {bc} \right)\)</span> and <span class="process-math">\(\gcd( {a, b} ) = 1\text{.}\)</span> In all of these cases, we noted that <span class="process-math">\(a\)</span> divides <span class="process-math">\(c\text{.}\)</span> Integers whose greatest common divisor is equal to 1 are given a special name.</p>
+<article class="assemblage assemblage-like" id="relativelyprime"><h4 class="heading"><span class="title">Definition.</span></h4>
+<p id="p-5347">Two nonzero integers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are <dfn class="terminology">relatively prime</dfn> provided that <span class="process-math">\(\gcd( {a, b} ) = 1\text{.}\)</span></p></article><article class="exercise exercise-like" id="prog_relativelyprime"><h4 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">8.12</span><span class="period">.</span><span class="space"> </span><span class="title">Relatively Prime Integers.</span>
+</h4>
+<article class="task exercise-like" id="task-1689"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-5348">Construct at least three different examples where <span class="process-math">\(p\)</span> is a prime number, <span class="process-math">\(a \in \mathbb{Z}\)</span> , and <span class="process-math">\(p \mid a\text{.}\)</span> In each example, what is <span class="process-math">\(\gcd( {a, p} )\text{?}\)</span> Based on these examples, formulate a conjecture about <span class="process-math">\(\gcd( {a, p} )\)</span> when <span class="process-math">\(p \mid a\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-278" id="solution-278"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-278"><div class="solution solution-like"><p id="p-5349">If <span class="process-math">\(a, p \in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(p\)</span> is prime, and <span class="process-math">\(p\)</span> divides <span class="process-math">\(a\text{,}\)</span> then <span class="process-math">\(\gcd ( {a, p} ) = p\text{.}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-1690"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-5350">Construct at least three different examples where <span class="process-math">\(p\)</span> is a prime number, <span class="process-math">\(a \in \mathbb{Z}\)</span> , and <span class="process-math">\(p\)</span> does not divide <span class="process-math">\(a\text{.}\)</span> In each example, what is <span class="process-math">\(\gcd( {a, p} )\text{?}\)</span> Based on these examples, formulate a conjecture about <span class="process-math">\(\gcd( {a, p} )\)</span> when <span class="process-math">\(p\)</span> does not divide <span class="process-math">\(a\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-279" id="solution-279"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-279"><div class="solution solution-like"><p id="p-5351">If <span class="process-math">\(a, p \in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(p\)</span> is prime, and <span class="process-math">\(p\)</span> does not divide <span class="process-math">\(a\text{,}\)</span> then <span class="process-math">\(\gcd ( {a, p} ) = 1\text{.}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-1691"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-5352">Give at least three different examples of integers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> where <span class="process-math">\(a\)</span> is not prime, <span class="process-math">\(b\)</span> is not prime, and <span class="process-math">\(\gcd( {a, b} ) = 1\text{,}\)</span> or explain why it is not possible to construct such examples.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-280" id="solution-280"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-280"><div class="solution solution-like"><p id="p-5353">Three examples are <span class="process-math">\(\gcd ( {4, 9} ) = 1\text{,}\)</span> <span class="process-math">\(\gcd ( {15, 16} ) = 1\text{,}\)</span> <span class="process-math">\(\gcd ( {8, 25} ) = 1\text{.}\)</span></p></div></div>
+</div></article></article><article class="theorem theorem-like" id="T_relativelyprime"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.13</span><span class="period">.</span>
+</h4>
+<p id="p-5354">Let <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> be nonzero integers, and let <span class="process-math">\(p\)</span> be a prime number.</p>
+<ol class="decimal">
+<li id="T_relativelyprime1"><p id="p-5355">If <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are relatively prime, then there exist integers <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> such that <span class="process-math">\(am + bn = 1\text{.}\)</span> That is, 1 can be written as linear combination of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span></p></li>
+<li id="P_relativelyprime2"><p id="p-5356">If <span class="process-math">\(p \mid a\text{,}\)</span> then <span class="process-math">\(\gcd( {a, p} ) = p\text{.}\)</span></p></li>
+<li id="T_relativelyprime3"><p id="p-5357">If <span class="process-math">\(p\)</span> does not divide <span class="process-math">\(a\text{,}\)</span> then <span class="process-math">\(\gcd( {a, p} ) = 1\text{.}\)</span></p></li>
+</ol></article><p id="p-5358"><a href="" class="xref" data-knowl="./knowl/T_relativelyprime1.html" title="Item 1">Item 1</a> of <a href="" class="xref" data-knowl="./knowl/T_relativelyprime.html" title="Theorem 8.13">Theorem 8.13</a> is actually a corollary of <a href="" class="xref" data-knowl="./knowl/T_gcddivideslincombs.html" title="Theorem 8.11">Theorem 8.11</a>. <a href="" class="xref" data-knowl="./knowl/P_relativelyprime2.html" title="Item 2">Item 2</a> and <a href="" class="xref" data-knowl="./knowl/T_relativelyprime3.html" title="Item 3">Item 3</a> could have been the conjectures you formulated in <a href="" class="xref" data-knowl="./knowl/prog_relativelyprime.html" title="Progress Check 8.12: Relatively Prime Integers">Progress Check 8.12</a>. The proofs are included in <a href="" class="xref" data-knowl="./knowl/exer_sec82-1.html" title="Exercise 1">Exercise 1</a>.</p>
+<p id="p-5359">Given nonzero integers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> we have seen that it is possible to use the Euclidean Algorithm to write their greatest common divisor as a linear combination of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span> We have also seen that this can sometimes be a tedious, time-consuming process, which is why people have programmed computers to do this. Fortunately, in many proofs of number theory results, we do not actually have to construct this linear combination since simply knowing that it exists can be useful in proving results. This will be illustrated in the proof of <a href="" class="xref" data-knowl="./knowl/T_relativelyprimeprop.html" title="Theorem 8.14">Theorem 8.14</a>, which is based on work in <a href="S_primefactorizations.html#PA_exporingexamples" class="internal" title="Beginning Activity: Beginning Activity 1: Exploring Examples where \boldsymbol{a} Divides \boldsymbol{b \cdot c}">Beginning Activity 1</a>.</p>
+<article class="theorem theorem-like" id="T_relativelyprimeprop"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.14</span><span class="period">.</span>
+</h4>
+<p id="p-5360">Let <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\)</span> be nonzero integers and let <span class="process-math">\(c\)</span> be an integer. If <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are relatively prime and <span class="process-math">\(a \mid \left( {bc} \right)\text{,}\)</span> then <span class="process-math">\(a \mid c\text{.}\)</span></p></article><p id="p-5361">The explorations in <a href="S_primefactorizations.html#PA_exporingexamples" class="internal" title="Beginning Activity: Beginning Activity 1: Exploring Examples where \boldsymbol{a} Divides \boldsymbol{b \cdot c}">Beginning Activity 1</a> were related to this theorem. We will first explore the forward-backward process for the proof. The goal is to prove that <span class="process-math">\(a \mid c\text{.}\)</span> A standard way to do this is to prove that there exists an integer <span class="process-math">\(q\)</span> such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/PA_exporingexamples.html" id="eq_relprime1">
+\begin{equation}
+c = aq\text{.}\tag{69}
+\end{equation}
+</div>
+<p id="p-5362">Since we are given that <span class="process-math">\(a \mid \left( {bc} \right)\text{,}\)</span> there exists an integer <span class="process-math">\(k\)</span> such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="eq_relprime2">
+\begin{equation}
+bc = ak\text{.}\tag{70}
+\end{equation}
+</div>
+<p id="p-5363">It may seem tempting to divide both sides of equation <a href="" class="xref" data-knowl="./knowl/eq_relprime2.html" title="Equation 70">(70)</a> by <span class="process-math">\(b\text{,}\)</span> but if we do so, we run into problems with the fact that the integers are not closed under division. Instead, we look at the other part of the hypothesis, which is that <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are relatively prime. This means that <span class="process-math">\(\gcd( {a, b} ) = 1\text{.}\)</span> How can we use this? This means that <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> have no common factors except for 1. In light of equation <a href="" class="xref" data-knowl="./knowl/eq_relprime2.html" title="Equation 70">(70)</a> it seems reasonable that any factor of <span class="process-math">\(a\)</span> must also be a factor of <span class="process-math">\(c\text{.}\)</span> But how do we formalize this?</p>
+<p id="p-5364">One conclusion that we can use is that since <span class="process-math">\(\gcd( {a, b} ) = 1\text{,}\)</span> by <a href="" class="xref" data-knowl="./knowl/T_relativelyprime.html" title="Theorem 8.13">Theorem 8.13</a>, there exist integers <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/T_relativelyprime.html" id="eq_relprime3">
+\begin{equation}
+am + bn = 1\text{.}\tag{71}
+\end{equation}
+</div>
+<p id="p-5365">We may consider solving equation <a href="" class="xref" data-knowl="./knowl/eq_relprime3.html" title="Equation 71">(71)</a> for <span class="process-math">\(b\)</span> and substituting this into equation <a href="" class="xref" data-knowl="./knowl/eq_relprime2.html" title="Equation 70">(70)</a> The problem, again, is that in order to solve equation <a href="" class="xref" data-knowl="./knowl/eq_relprime3.html" title="Equation 71">(71)</a> for <span class="process-math">\(b\text{,}\)</span> we need to divide by <span class="process-math">\(n\text{.}\)</span></p>
+<p id="p-5366">Before doing anything else, we should look at the goal in equation <a href="" class="xref" data-knowl="./knowl/eq_relprime1.html" title="Equation 69">(69)</a> We need to introduce <span class="process-math">\(c\)</span> into equation <a href="" class="xref" data-knowl="./knowl/eq_relprime3.html" title="Equation 71">(71)</a> One way to do this is to multiply both sides of equation <a href="" class="xref" data-knowl="./knowl/eq_relprime3.html" title="Equation 71">(71)</a> by <span class="process-math">\(c\text{.}\)</span> (This keeps us in the system of integers since the integers are closed under multiplication.) This gives</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_relprime1.html ./knowl/eq_relprime3.html ./knowl/eq_relprime3.html" id="mdn-16">
+\begin{align}
+\left( {am + bn} \right)c \amp = 1 \cdot c\notag\\
+acm + bcn \amp = c\tag{72}
+\end{align}
+</div>
+<p id="p-5367">Notice that the left side of equation <a href="" class="xref" data-knowl="./knowl/eq_relprime4.html" title="Equation 72">(72)</a> contains a term, <span class="process-math">\(bcn\text{,}\)</span> that contains <span class="process-math">\(bc\text{.}\)</span> This means that we can use equation <a href="" class="xref" data-knowl="./knowl/eq_relprime2.html" title="Equation 70">(70)</a> and substitute <span class="process-math">\(bc = ak\)</span> in equation <a href="" class="xref" data-knowl="./knowl/eq_relprime4.html" title="Equation 72">(72)</a>. After doing this, we can factor the left side of the equation to prove that <span class="process-math">\(a \mid c\text{.}\)</span></p>
+<article class="exercise exercise-like" id="prog_relativelyprimeprop"><h4 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">8.15</span><span class="period">.</span><span class="space"> </span><span class="title">Completing the Proof of Theorem 8.14.</span>
+</h4>
+<p id="p-5368">Write a complete proof of <a href="" class="xref" data-knowl="./knowl/T_relativelyprimeprop.html" title="Theorem 8.14">Theorem 8.14</a>.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-281" id="solution-281"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-281"><div class="solution solution-like"><article class="proof" id="proof-57"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5>
+<p id="p-5369">Let <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> be integers. Assume that <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are relatively prime and <span class="process-math">\(a \mid ( {bc} )\text{.}\)</span> We will prove that <span class="process-math">\(a\)</span> divides <span class="process-math">\(c\text{.}\)</span></p>
+<p id="p-5370">Since <span class="process-math">\(a\)</span> divides <span class="process-math">\(bc\text{,}\)</span> there exists an integer <span class="process-math">\(k\)</span> such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="eq_814a">
+\begin{equation}
+bc = ak\text{.}\tag{73}
+\end{equation}
+</div>
+<p id="p-5371">In addition, we are assuming that <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are relatively prime and hence <span class="process-math">\(\gcd ( {a, b} ) = 1\text{.}\)</span> So by <a href="" class="xref" data-knowl="./knowl/T_gcddivideslincombs.html" title="Theorem 8.11">Theorem 8.11</a>, there exist integers <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/T_gcddivideslincombs.html" id="eq_814b">
+\begin{equation}
+am + bn = 1\text{.}\tag{74}
+\end{equation}
+</div>
+<p id="p-5372">We now multiply both sides of equation <a href="" class="xref" data-knowl="./knowl/eq_814b.html" title="Equation 74">(74)</a> by <span class="process-math">\(c\text{.}\)</span> This gives</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_814b.html" id="mdn-17">
+\begin{align}
+( {am + bn} )c \amp = 1 \cdot c\notag\\
+acm + bcn \amp = c\tag{75}
+\end{align}
+</div>
+<p id="p-5373">We can now use equation 1 to substitute <span class="process-math">\(bc = ak\)</span> in equation <a href="" class="xref" data-knowl="./knowl/eq_814c.html" title="Equation 75">(75)</a> and obtain</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/eq_814c.html">
+\begin{equation*}
+acm + akn = c\text{.}
+\end{equation*}
+</div>
+<p id="p-5374">If we now factor the left side of this last equation, we see that <span class="process-math">\(a( {cm + kn} ) = c\text{.}\)</span> Since <span class="process-math">\(( {cm + kn} )\)</span> is an integer, this proves that <span class="process-math">\(a\)</span> divides <span class="process-math">\(c\text{.}\)</span> Hence, we have proven that if <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are relatively prime and <span class="process-math">\(a \mid ( {bc} )\text{,}\)</span> then <span class="process-math">\(a \mid c\text{.}\)</span></p></article></div></div>
+</div></article><article class="corollary theorem-like" id="C_primedivides"><h4 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">8.16</span><span class="period">.</span>
+</h4>
+<ol class="decimal">
+<li id="C_primedivides1"><p id="p-5375">Let <span class="process-math">\(a, b \in \mathbb{Z}\text{,}\)</span> and let <span class="process-math">\(p\)</span> be a prime number. If <span class="process-math">\(p \mid \left( {ab} \right)\text{,}\)</span> then <span class="process-math">\(p \mid a\)</span> or <span class="process-math">\(p \mid b\text{.}\)</span></p></li>
+<li id="C_primedivides2"><p id="p-5376">Let <span class="process-math">\(p\)</span> be a prime number, let <span class="process-math">\(n \in \mathbb{N}\text{,}\)</span> and let <span class="process-math">\(a_1 ,a_2 , \ldots , a_n \in \mathbb{Z}\text{.}\)</span> If <span class="process-math">\(p \mid \left( {a_1 a_2 \cdots a_n } \right)\text{,}\)</span> then there exists a natural number <span class="process-math">\(k\)</span> with <span class="process-math">\(1 \leq k \leq n\)</span> such that <span class="process-math">\(p \mid a_k\text{.}\)</span></p></li>
+</ol></article><p id="p-5377"><a href="" class="xref" data-knowl="./knowl/C_primedivides1.html" title="Item 1">Item 1</a> of <a href="" class="xref" data-knowl="./knowl/C_primedivides.html" title="Corollary 8.16">Corollary 8.16</a> is a corollary of <a href="" class="xref" data-knowl="./knowl/T_relativelyprimeprop.html" title="Theorem 8.14">Theorem 8.14</a>. <a href="" class="xref" data-knowl="./knowl/C_primedivides2.html" title="Item 2">Item 2</a> is proved using mathematical induction. The basis step is the case where <span class="process-math">\(n = 1\text{,}\)</span> and <a href="" class="xref" data-knowl="./knowl/C_primedivides1.html" title="Item 1">Item 1</a> is the case where <span class="process-math">\(n = 2\text{.}\)</span> The proofs of these two results are included in <a href="" class="xref" data-knowl="./knowl/exer_sec82-2.html" title="Exercise 2">Exercise 2</a> and <a href="" class="xref" data-knowl="./knowl/exer_sec82-3.html" title="Exercise 3">Exercise 3</a>.</p></section><section class="subsection" id="subsection-156"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Historical Note</span>
+</h3>
+<p id="p-5378"><a href="" class="xref" data-knowl="./knowl/C_primedivides1.html" title="Item 1">Item 1</a> of <a href="" class="xref" data-knowl="./knowl/C_primedivides.html" title="Corollary 8.16">Corollary 8.16</a> is known as <dfn class="terminology">Euclid's Lemma</dfn>. Most people associate geometry with <span class="booktitle">Euclid's Elements</span>, but these books also contain many basic results in number theory. Many of the results that are contained in this section appeared in <span class="booktitle">Euclid's Elements</span>.</p></section><section class="subsection" id="subsection-157"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Prime Numbers and Prime Factorizations</span>
+</h3>
+<p id="p-5379">We are now ready to prove the Fundamental Theorem of Arithmetic. The first part of this theorem was proved in <a href="" class="xref" data-knowl="./knowl/T_primefactors.html" title="Theorem 4.11">Theorem 4.11</a> in <a href="S_otherinduction.html" class="internal" title="Section 4.2: Other Forms of Mathematical Induction">Section 4.2</a>. This theorem states that each natural number greater than 1 is either a prime number or is a product of prime numbers. Before we state the Fundamental Theorem of Arithmetic, we will discuss some notational conventions that will help us with the proof. We start with an example.</p>
+<p id="p-5380">We will use <span class="process-math">\(n = 120\text{.}\)</span> Since <span class="process-math">\(5 \mid 120\text{,}\)</span> we can write <span class="process-math">\(120 = 5 \cdot 24\text{.}\)</span> In addition, we can factor 24 as <span class="process-math">\(24 = 2 \cdot 2 \cdot 2 \cdot 3\text{.}\)</span> So we can write</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-185">
+\begin{align*}
+120 \amp = 5 \cdot 24\\
+\amp = 5 \left( 2 \cdot 2 \cdot 2 \cdot 3 \right)\text{.}
+\end{align*}
+</div>
+<p id="p-5381">This is a prime factorization of 120, but it is not the way we usually write this factorization. Most often, we will write the prime number factors in ascending order. So we write</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+120 = 2 \cdot 2 \cdot 2 \cdot 3 \cdot 5\text{  or  } 120 = 2^3  \cdot 3 \cdot 5\text{.}
+\end{equation*}
+</div>
+<p id="p-5382">Now, let <span class="process-math">\(n \in \mathbb{N}\text{.}\)</span> To write the prime factorization of <span class="process-math">\(n\)</span> with the prime factors in ascending order requires that if we write <span class="process-math">\(n = p_1 p_2 \cdots p_r\text{,}\)</span> where <span class="process-math">\(p_1 , p_2 , \ldots, p_r\)</span> are prime numbers, we will have <span class="process-math">\(p_1 \leq p_2 \leq \cdots \leq p_r\text{.}\)</span></p>
+<article class="theorem theorem-like" id="T_fundtheorem"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.17</span><span class="period">.</span><span class="space"> </span><span class="title">The Fundamental Theorem of Arithmetic.</span>
+</h4>
+<ol id="p-5383" class="decimal">
+<li id="li-697"><p id="p-5384">Each natural number greater than 1 is either a prime number or is a product of prime numbers.</p></li>
+<li id="li-698">
+<p id="p-5385">Let <span class="process-math">\(n \in \mathbb{N}\)</span> with <span class="process-math">\(n &gt; 1\text{.}\)</span> Assume that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+n = p_1 p_2  \cdots p_r \text{  and that  } n = q_1 q_2  \cdots q_s\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where  <span class="process-math">\(p_1 , p_2 ,  \ldots,
+p_r\)</span> and  <span class="process-math">\(q_1 , q_2 ,  \ldots,
+q_s\)</span> are primes with <span class="process-math">\(p_1  \leq p_2  \leq  \cdots  \leq p_r\)</span> and <span class="process-math">\(q_1  \leq q_2  \leq  \cdots  \leq q_s\text{.}\)</span> Then  <span class="process-math">\(r = s\text{,}\)</span> and for each  <span class="process-math">\(j\)</span>  from  1  to  r,  <span class="process-math">\(p_j  = q_j\text{.}\)</span></p>
+</li>
+</ol></article><article class="proof" id="proof-58"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4>
+<p id="p-5386">The first part of this theorem was proved in <a href="" class="xref" data-knowl="./knowl/T_primefactors.html" title="Theorem 4.11">Theorem 4.11</a>. We will prove the second part of the theorem by induction on <span class="process-math">\(n\)</span> using the Second Principle of Mathematical Induction. (See <a href="S_otherinduction.html" class="internal" title="Section 4.2: Other Forms of Mathematical Induction">Section 4.2</a>.) For each natural number <span class="process-math">\(n\)</span> with <span class="process-math">\(n &gt; 1\text{,}\)</span> let <span class="process-math">\(P( n )\)</span> be <blockquote class="blockquote" id="blockquote-238">If <span class="process-math">\(n = p_1 p_2 \cdots p_r\)</span> and <span class="process-math">\(n = q_1 q_2 \cdots q_s\text{,}\)</span> where <span class="process-math">\(p_1 , p_2 , \ldots, p_r\)</span> and <span class="process-math">\(q_1 , q_2 , \ldots, q_s\)</span> are primes with <span class="process-math">\(p_1 \leq p_2 \leq \cdots \leq p_r\)</span> and <span class="process-math">\(q_1 \leq q_2 \leq \cdots \leq q_s\text{,}\)</span> then <span class="process-math">\(r = s\text{,}\)</span> and for each <span class="process-math">\(j\)</span> from 1 to <span class="process-math">\(r\text{,}\)</span> <span class="process-math">\(p_j = q_j\text{.}\)</span>
+</blockquote></p>
+<p id="p-5387">For the basis step, we notice that since 2 is a prime number, its only factorization is <span class="process-math">\(2 = 1 \cdot 2\text{.}\)</span> This means that the only equation of the form <span class="process-math">\(2 = p_1 p_2 \cdots p_r\text{,}\)</span> where <span class="process-math">\(p_1 , p_2 , \ldots,
+p_r\)</span> are prime numbers, is the case where <span class="process-math">\(r = 1\)</span> and <span class="process-math">\(p_1 = 2\text{.}\)</span> This proves that <span class="process-math">\(P( 2 )\)</span> is true.</p>
+<p id="p-5388">For the inductive step, let <span class="process-math">\(k \in \mathbb{N}\)</span> with <span class="process-math">\(k \geq 2\text{.}\)</span> We will assume that <span class="process-math">\(P( 2 ), P( 3 ), \ldots , P( k )\)</span> are true. The goal now is to prove that <span class="process-math">\(P( {k + 1} )\)</span> is true. To prove this, we assume that <span class="process-math">\((k + 1)\)</span> has two prime factorizations and then prove that these prime factorizations are the same. So we assume that <blockquote class="blockquote" id="blockquote-239">
+<span class="process-math">\(k + 1 = p_1 p_2 \cdots p_r\)</span> and that <span class="process-math">\(k + 1 = q_1 q_2 \cdots q_s\text{,}\)</span> where <span class="process-math">\(p_1 , p_2 , \ldots, p_r\)</span> and <span class="process-math">\(q_1 , q_2 , \ldots, q_s\)</span> are primes with <span class="process-math">\(p_1 \leq p_2 \leq \cdots \leq p_r\)</span> and <span class="process-math">\(q_1 \leq q_2 \leq \cdots \leq q_s\text{.}\)</span>
+</blockquote> We must now prove that <span class="process-math">\(r = s\text{,}\)</span> and for each <span class="process-math">\(j\)</span> from 1 to <span class="process-math">\(r\text{,}\)</span> <span class="process-math">\(p_j = q_j\text{.}\)</span> We can break our proof into two cases: (1) <span class="process-math">\(p_1 \leq q_1\text{;}\)</span> and (2) <span class="process-math">\(q_1 \leq p_1\text{.}\)</span> Since one of these must be true, and since the proofs will be similar, we can assume, without loss of generality, that <span class="process-math">\(p_1 \leq q_1\text{.}\)</span></p>
+<p id="p-5389">Since <span class="process-math">\(k + 1 = p_1 p_2  \cdots p_r\text{,}\)</span> we know that <span class="process-math">\(p_1 \mid \left( {k + 1} \right)\text{,}\)</span> and hence we may conclude that <span class="process-math">\(p_1 \mid \left( {q_1 q_2  \cdots q_s } \right)\text{.}\)</span> We now use <a href="" class="xref" data-knowl="./knowl/C_primedivides.html" title="Corollary 8.16">Corollary 8.16</a> to conclude that there exists a <span class="process-math">\(j\)</span> with <span class="process-math">\(1 \leq j \leq s\)</span> such that <span class="process-math">\(p_1 \mid q_j\text{.}\)</span> Since <span class="process-math">\(p_1\)</span> and <span class="process-math">\(q_j\)</span> are primes, we conclude that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/C_primedivides.html">
+\begin{equation*}
+p_1  = q_j\text{.}
+\end{equation*}
+</div>
+<p id="p-5390">We have also assumed that <span class="process-math">\(q_1  \leq q_j\)</span> for all <span class="process-math">\(j\)</span> and, hence, we know that <span class="process-math">\(q_1  \leq p_1\text{.}\)</span> However, we have also assumed that <span class="process-math">\(p_1  \leq q_1\text{.}\)</span> Hence,</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+p_1  = q_1\text{.}
+\end{equation*}
+</div>
+<p id="p-5391">We now use this and the fact that <span class="process-math">\(k + 1 = p_1 p_2  \cdots p_r  = q_1 q_2  \cdots q_s\)</span> to conclude that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+p_2  \cdots p_r  = q_2  \cdots q_s\text{.}
+\end{equation*}
+</div>
+<p id="p-5392">The product in the previous equation is less than <span class="process-math">\(k + 1\text{.}\)</span> Hence, we can apply our induction hypothesis to these factorizations and conclude that <span class="process-math">\(r = s\text{,}\)</span> and for each <span class="process-math">\(j\)</span> from 2 to <span class="process-math">\(r\text{,}\)</span> <span class="process-math">\(p_j = q_j\text{.}\)</span></p>
+<p id="p-5393">This completes the proof that if <span class="process-math">\(P( 2 ), P( 3 ), \ldots , P( k )\)</span> are true, then <span class="process-math">\(P( {k + 1} )\)</span> is true. Hence, by the Second Principle of Mathematical Induction, we conclude that <span class="process-math">\(P( n )\)</span> is true for all <span class="process-math">\(n \in \mathbb{N}\)</span> with <span class="process-math">\(n \geq 2\text{.}\)</span> This completes the proof of the theorem.</p></article><p id="p-5394"> Note: We often shorten the result of the Fundamental Theorem of Arithmetic by simply saying that each natural number greater than one that is not a prime has a <dfn class="terminology">unique factorization</dfn> as a product of primes. This simply means that if <span class="process-math">\(n \in \mathbb{N}\text{,}\)</span> <span class="process-math">\(n &gt; 1\text{,}\)</span> and <span class="process-math">\(n\)</span> is not prime, then no matter how we choose to factor <span class="process-math">\(n\)</span> into a product of primes, we will always have the same prime factors. The only difference may be in the order in which we write the prime factors.</p></section><section class="subsection" id="subsection-158"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Further Results and Conjectures about Prime Numbers</span>
+</h3>
+<ul class="disc">
+<li id="numprimes">
+<span class="heading"><span class="title">The Number of Prime Numbers.</span></span><p id="p-5395">Prime numbers have fascinated mathematicians for centuries. For example, we can easily start writing a list of prime numbers in ascending order. Following is a list of the prime numbers less than 100. <blockquote class="blockquote" id="blockquote-240">2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97</blockquote></p>
+<p id="p-5396">This list contains the first 25 prime numbers. Does this list ever stop? The question was answered in <span class="booktitle">Euclid's Elements</span>, and the result is stated in <a href="" class="xref" data-knowl="./knowl/T_infiniteprimes.html" title="Theorem 8.18">Theorem 8.18</a>. The proof of this theorem is considered to be one of the classical proofs by contradiction.</p>
+<article class="theorem theorem-like" id="T_infiniteprimes"><h5 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.18</span><span class="period">.</span>
+</h5>
+<p id="p-5397">There are infinitely many prime numbers.</p></article><article class="proof" id="proof-59"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5>
+<p id="p-5398">We will use a proof by contradiction. We assume that there are only finitely many primes, and let</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+p_1 , p_2 ,  \ldots , p_m
+\end{equation*}
+</div>
+<p class="continuation">be the list of all the primes. Let</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="T_infiniteprimes1">
+\begin{equation}
+M = p_1 p_2  \cdots p_m  + 1\text{.}\tag{76}
+\end{equation}
+</div>
+<p id="p-5399">Notice that <span class="process-math">\(M \ne 1\text{.}\)</span> So <span class="process-math">\(M\)</span> is either a prime number or, by the Fundamental Theorem of Arithmetic, <span class="process-math">\(M\)</span> is a product of prime numbers. In either case, <span class="process-math">\(M\)</span> has a factor that is a prime number. Since we have listed all the prime numbers, this means that there exists a natural number <span class="process-math">\(j\)</span> with <span class="process-math">\(1 \leq j \leq m\)</span> such that <span class="process-math">\(p_j \mid  M\text{.}\)</span> Now, we can rewrite equation <a href="" class="xref" data-knowl="./knowl/T_infiniteprimes1.html" title="Equation 76">(76)</a> as follows:</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/T_infiniteprimes1.html" id="T_infiniteprimes2">
+\begin{equation}
+1 = M - p_1 p_2  \cdots p_m\text{.}\tag{77}
+\end{equation}
+</div>
+<p id="p-5400">We have proved <span class="process-math">\(p_j \mid M\text{,}\)</span> and since <span class="process-math">\(p_j\)</span> is one of the prime factors of <span class="process-math">\(p_1 p_2 \cdots p_m\text{,}\)</span> we can also conclude that <span class="process-math">\(p_j \mid \left( {p_1 p_2 \cdots p_m } \right)\text{.}\)</span> Since <span class="process-math">\(p_j\)</span> divides both of the terms on the right side of equation <a href="" class="xref" data-knowl="./knowl/T_infiniteprimes2.html" title="Equation 77">(77)</a>, we can use this equation to conclude that <span class="process-math">\(p_j\)</span> divides 1. This is a contradiction since a prime number is greater than 1 and cannot divide 1. Hence, our assumption that there are only finitely many primes is false, and so there must be infinitely many primes.</p></article>
+</li>
+<li id="dist-of-primes">
+<span class="heading"><span class="title">The Distribution of Prime Numbers.</span></span><p id="p-5401">There are infinitely many primes, but when we write a list of the prime numbers, we can see some long sequences of consecutive natural numbers that contain no prime numbers. For example, there are no prime numbers between 113 and 127. The following theorem shows that there exist arbitrarily long sequences of consecutive natural numbers containing no prime numbers. A guided proof of this theorem is included in <a href="" class="xref" data-knowl="./knowl/exer_consecutivecomposites.html" title="Exercise 15">Exercise 15</a>. <article class="theorem theorem-like" id="P_consecutivecomposites"><h5 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.19</span><span class="period">.</span>
+</h5>
+<p id="p-5402">For any natural number <span class="process-math">\(n\text{,}\)</span> there exist at least <span class="process-math">\(n\)</span> consecutive natural numbers that are composite numbers.</p></article></p>
+</li>
+</ul>
+<p id="p-5403">There are many unanswered questions about prime numbers, two of which will now be discussed.</p>
+<ul class="disc">
+<li id="conj_twinprime">
+<span class="heading"><span class="title">The Twin Prime Conjecture.</span></span><p id="p-5404">By looking at the list of the first 25 prime numbers, we see several cases where consecutive prime numbers differ by 2. Examples are:  3  and  5;  11 and  13;  17 and  19; 29  and  31. Such pairs of prime numbers are said to be <dfn class="terminology">twin primes</dfn>. How many twin primes exist? The answer is not known. The <dfn class="terminology">Twin Prime Conjecture</dfn> states that there are infinitely many twin primes. As of June 25, 2010, this is still a conjecture as it has not been proved or disproved. For some interesting information on prime numbers, visit the Web site <a class="external" href="http://primes.utm.edu/" target="_blank">The Prime Pages</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-8" id="fn-8"><sup> 8 </sup></a> where there is a link to The Largest Known Primes Web site. According to information at this site as of June 25, 2010, the largest known twin primes are</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\left( 65516468355 \times 2^{333333} - 1 \right) \text{ and } \left( 65516468355 \times 2^{333333} + 1 \right)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Each of these prime numbers contains 100355 digits.</p>
+</li>
+<li id="conj_goldbach">
+<span class="heading"><span class="title">Goldbach's Conjecture.</span></span><p id="p-5405">Given an even natural number, is it possible to write it as a sum of two prime numbers? For example,</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-186">
+\begin{align*}
+4 \amp = 2 + 2  \amp    6 \amp = 3 + 3  \amp   8 \amp = 5+3\\
+78 \amp = 37 + 41 \amp   90 \amp = 43 + 47  \amp   138 \amp = 67 + 71
+\end{align*}
+</div>
+<p class="continuation">One of the most famous unsolved problems in mathematics is a conjecture made by Christian Goldbach in a letter to Leonhard Euler in 1742. The conjecture, now known as <dfn class="terminology">Goldbach's Conjecture</dfn>, is as follows: <blockquote class="blockquote" id="blockquote-241">Every even integer greater than 2 can be expressed as the sum of two (not necessarily distinct) prime numbers.</blockquote> As of June 25, 2010, it is not known if this conjecture is true or false, although most mathematicians believe it to be true.</p>
+</li>
+</ul></section><section class="exercises" id="exercises-32"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exer_sec82-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-460"><p id="p-5406">Prove the second and third parts of <a href="" class="xref" data-knowl="./knowl/T_relativelyprime.html" title="Theorem 8.13">Theorem 8.13</a>.</p></div>
+<article class="task exercise-like" id="task-1692"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-5407">Let <span class="process-math">\(a\)</span> be a nonzero integer, and let <span class="process-math">\(p\)</span> be a prime number. If <span class="process-math">\(p \mid a\text{,}\)</span> then <span class="process-math">\(\gcd( {a, p} ) = p\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-50" id="hint-50"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-50"><div class="hint solution-like"><p id="p-5408">Use the fact that the only natural number divisors of a prime number <span class="process-math">\(p\)</span> are 1 and <span class="process-math">\(p\text{.}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-1693"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-5409">Let <span class="process-math">\(a\)</span> be a nonzero integer, and let <span class="process-math">\(p\)</span> be a prime number. If <span class="process-math">\(p\)</span> does not divide <span class="process-math">\(a\text{,}\)</span> then <span class="process-math">\(\gcd( {a, p} ) = 1\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-51" id="hint-51"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-51"><div class="hint solution-like"><p id="p-5410">Use the fact that the only natural number divisors of a prime number <span class="process-math">\(p\)</span> are 1 and <span class="process-math">\(p\text{.}\)</span></p></div></div>
+</div></article></article><article class="exercise exercise-like" id="exer_sec82-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-5411">Prove the first part of <a href="" class="xref" data-knowl="./knowl/C_primedivides.html" title="Corollary 8.16">Corollary 8.16</a>. Let <span class="process-math">\(a, b \in \mathbb{Z}\text{,}\)</span> and let <span class="process-math">\(p\)</span> be a prime number. If <span class="process-math">\(p \mid \left( {ab} \right)\text{,}\)</span> then <span class="process-math">\(p \mid a\)</span> or <span class="process-math">\(p \mid b\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-52" id="hint-52"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-52"><div class="hint solution-like"><p id="p-5412">Consider two cases: (1) <span class="process-math">\(p \mid a\text{;}\)</span> and (2) <span class="process-math">\(p\)</span> does not divide <span class="process-math">\(a\text{.}\)</span></p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-420" id="answer-420"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-420"><div class="answer solution-like"><p id="p-5413">Use cases: (1) <span class="process-math">\(p\)</span> divides <span class="process-math">\(a\text{;}\)</span> (2) <span class="process-math">\(p\)</span> does not divide <span class="process-math">\(a\text{.}\)</span> In the first case, the conclusion is automatically true. For the second case, use the fact that <span class="process-math">\(\gcd ( p, a ) = 1\)</span> and so we can use <a href="" class="xref" data-knowl="./knowl/T_relativelyprimeprop.html" title="Theorem 8.14">Theorem 8.14</a> to conclude that <span class="process-math">\(p\)</span> divides <span class="process-math">\(b\text{.}\)</span> Another option is to write the number 1 as a linear combination of <span class="process-math">\(a\)</span> and <span class="process-math">\(p\)</span> and then multiply both sides of the equation by <span class="process-math">\(b\text{.}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exer_sec82-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-5414">Use mathematical induction to prove the second part of <a href="" class="xref" data-knowl="./knowl/C_primedivides.html" title="Corollary 8.16">Corollary 8.16</a>. Let <span class="process-math">\(p\)</span> be a prime number, let <span class="process-math">\(n \in \mathbb{N}\text{,}\)</span> and let <span class="process-math">\(a_1 ,a_2 , \ldots , a_n \in \mathbb{Z}\text{.}\)</span> If <span class="process-math">\(p \mid \left( {a_1 a_2 \cdots a_n } \right)\text{,}\)</span> then there exists a <span class="process-math">\(k \in \mathbb{N}\)</span> with <span class="process-math">\(1 \leq k \leq n\)</span> such that <span class="process-math">\(p \mid a_k\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-53" id="hint-53"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-53"><div class="hint solution-like"><p id="p-5415">A hint for the inductive step: Write <span class="process-math">\(p \mid ( {a_1 a_2  \cdots a_m } )a_{m + 1}\text{.}\)</span> Then look at two cases: (1) <span class="process-math">\(p \mid a_{m + 1}\text{;}\)</span> (2) <span class="process-math">\(p\)</span> does not divide <span class="process-math">\(a_{m + 1}\text{.}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exer_lincombequalone"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-461"><p id="p-5416">Let <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> be nonzero integers.</p></div>
+<article class="task exercise-like" id="task-1694"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-5417">If there exist integers <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> such that <span class="process-math">\(ax + by = 1\text{,}\)</span> what conclusion can be made about <span class="process-math">\(\gcd( {a, b} )\text{?}\)</span> Explain.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-421" id="answer-421"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-421"><div class="answer solution-like"><p id="p-5418"><span class="process-math">\(\gcd ( a, b ) = 1\text{.}\)</span> Why?</p></div></div>
+</div></article><article class="task exercise-like" id="task-1695"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-5419">If there exist integers <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> such that <span class="process-math">\(ax + by = 2\text{,}\)</span> what conclusion can be made about <span class="process-math">\(\gcd( {a, b} )\text{?}\)</span> Explain.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-422" id="answer-422"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-422"><div class="answer solution-like"><p id="p-5420"><span class="process-math">\(\gcd ( a, b ) = 1\)</span> or <span class="process-math">\(\gcd ( a, b ) = 2\text{.}\)</span> Why?</p></div></div>
+</div></article></article><article class="exercise exercise-like" id="exer_sec82-gcdconsec"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-462"><p id="p-5421">Let <span class="process-math">\(a \in \Z\text{.}\)</span></p></div>
+<article class="task exercise-like" id="task-1696"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-5422">What is <span class="process-math">\(\gcd( {a, a + 1} )\text{?}\)</span> That is, what is the greatest common divisor of two consecutive integers? Justify your conclusion. \hint <a href="" class="xref" data-knowl="./knowl/exer_lincombequalone.html" title="Exercise 4">Exercise 4</a> might be helpful.</p></article><article class="task exercise-like" id="task-1697"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-5423">What conclusion can be made about <span class="process-math">\(\gcd( {a, a + 2} )\text{?}\)</span> That is, what conclusion can be made about the greatest common divisor of two integers that differ by 2? Justify your conclusion.</p></article></article><article class="exercise exercise-like" id="exer_sec82-moregcd"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-463"><p id="p-5424">Let <span class="process-math">\(a \in \Z\text{.}\)</span></p></div>
+<article class="task exercise-like" id="task-1698"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-5425">What conclusion can be made about <span class="process-math">\(\gcd( {a, a + 3} )\text{?}\)</span> That is, what conclusion can be made about the greatest common divisor of two integers that differ by 3? Justify your conclusion.</p></article><article class="task exercise-like" id="task-1699"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-5426">What conclusion can be made about <span class="process-math">\(\gcd( {a, a + 4} )\text{?}\)</span> That is, what conclusion can be made about the greatest common divisor of two integers that differ by 4? Justify your conclusion.</p></article></article><article class="exercise exercise-like" id="exer_gcd-divbyd"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-464"><p id="p-5427">Complete the following.</p></div>
+<article class="task exercise-like" id="exer_gcd-divbyda"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-5428">Let <span class="process-math">\(a = 16\)</span> and <span class="process-math">\(b = 28\text{.}\)</span> Determine the value of <span class="process-math">\(d = \gcd( a, b )\text{,}\)</span> and then determine the value of <span class="process-math">\(\gcd \!\left( {\dfrac{a}{d}, \dfrac{b}{d}} \right )\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-423" id="answer-423"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-423"><div class="answer solution-like"><p id="p-5429"><span class="process-math">\(\gcd \left( 16, 28 \right) = 4\text{.}\)</span> Also, <span class="process-math">\(\dfrac{16}{4} = 4\text{,}\)</span> <span class="process-math">\(\dfrac{28}{4} = 7\text{,}\)</span> and <span class="process-math">\(\gcd \left( 4, 7 \right) = 1\text{.}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-1701"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-5430">Repeat <a href="" class="xref" data-knowl="./knowl/exer_gcd-divbyda.html" title="Task 7.a">Task 7.a</a> with <span class="process-math">\(a = 10\)</span> and <span class="process-math">\(b = 45\text{.}\)</span></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-424" id="answer-424"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-424"><div class="answer solution-like"><p id="p-5431"><span class="process-math">\(\gcd \left( 10, 45 \right) = 5\text{.}\)</span> Also, <span class="process-math">\(\dfrac{10}{5} = 2\text{,}\)</span> <span class="process-math">\(\dfrac{45}{5} = 9\text{,}\)</span> and <span class="process-math">\(\gcd \left( 2, 9 \right) = 1\text{.}\)</span></p></div></div>
+</div></article><article class="task exercise-like" id="task-1702"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-5432">Let <span class="process-math">\(a, b \in \mathbb{Z}\text{,}\)</span> not both equal to 0, and let <span class="process-math">\(d = \gcd( a, b )\text{.}\)</span> Explain why <span class="process-math">\(\dfrac{a}{d}\)</span> and <span class="process-math">\(\dfrac{b}{d}\)</span> are integers. Then prove that <span class="process-math">\(\gcd \!\left( {\dfrac{a}{d}, \dfrac{b}{d}} \right ) = 1\text{.}\)</span></p>
+<p id="p-5433">This says that if you divide both <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> by their greatest common divisor, the result will be two relatively prime integers.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-54" id="hint-54"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-54"><div class="hint solution-like"><p id="p-5434">Start by writing <span class="process-math">\(d\)</span> as a linear combination of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span></p></div></div>
+</div></article></article><article class="exercise exercise-like" id="exer_sec82-truefalse"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-465"><p id="p-5435">Are the following propositions true or false? Justify your conclusions.</p></div>
+<article class="task exercise-like" id="task-1703"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-5436">For all integers <span class="process-math">\(a, b, \text{ and } c\text{,}\)</span> if <span class="process-math">\(a \mid c\)</span> and <span class="process-math">\(b \mid c\text{,}\)</span> then <span class="process-math">\(\left( {ab} \right) \mid c\text{.}\)</span></p></article><article class="task exercise-like" id="exer_sec82-truefalseb"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-5437">For all integers <span class="process-math">\(a, b, \text{ and } c\text{,}\)</span> if <span class="process-math">\(a \mid c\text{,}\)</span> <span class="process-math">\(b \mid c\)</span> and <span class="process-math">\(\gcd( {a, b} ) = 1\text{,}\)</span> then <span class="process-math">\(( {ab} ) \mid c\text{.}\)</span></p></article></article><article class="exercise exercise-like" id="exer_24divides-nsquaredminus1"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<p id="p-5438">In <a href="" class="xref" data-knowl="./knowl/exer_sec34-new9.html" title="Exercise 17">Exercise 17</a> in <a href="S_divalgo.html" class="internal" title="Section 3.5: The Division Algorithm and Congruence">Section 3.5</a>, it was proved that if <span class="process-math">\(n\)</span> is an odd integer, then <span class="process-math">\(8 \mid \left( n^2 - 1 \right)\text{.}\)</span> (This result was also proved in <a href="" class="xref" data-knowl="./knowl/exer_sec74-15.html" title="Exercise 19">Exercise 19</a> in <a href="S_modulararithmetic.html" class="internal" title="Section 7.4: Modular Arithmetic">Section 7.4</a>.) Now, prove the following proposition: <blockquote class="blockquote" id="blockquote-242">If <span class="process-math">\(n\)</span> is an odd integer and 3 does not divide <span class="process-math">\(n\text{,}\)</span> then <span class="process-math">\(24 \mid \left( n^2 - 1 \right)\text{.}\)</span>
+</blockquote></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-55" id="hint-55"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-55"><div class="hint solution-like"><p id="p-5439"><a href="" class="xref" data-knowl="./knowl/exer_sec82-truefalseb.html" title="Task 8.b">Task 8.b</a> of <a href="" class="xref" data-knowl="./knowl/exer_sec82-truefalse.html" title="Exercise 8">Exercise 8</a> can be helpful.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exer_82_10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-466"><p id="p-5440">Prove the following propositions. Use mathematical induction for <a href="" class="xref" data-knowl="./knowl/exer_82_10b.html" title="Task 10.b">Task 10.b</a></p></div>
+<article class="task exercise-like" id="exer_82_10a"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-5441">For all <span class="process-math">\(a, b, c \in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(\gcd(a, bc) = 1\)</span> if and only if <span class="process-math">\(\gcd( {a, b} ) = 1\)</span> and <span class="process-math">\(\gcd( {a, c} ) = 1\text{.}\)</span></p></article><article class="task exercise-like" id="exer_82_10b"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-5442">Let <span class="process-math">\(n \in \mathbb{N}\)</span> and let <span class="process-math">\(a,
+b_1 , b_2 , \ldots , b_n \in \mathbb{Z}\text{.}\)</span> If <span class="process-math">\(\gcd \!\left( {a, b_i } \right) = 1\)</span> for all <span class="process-math">\(i \in \mathbb{N}\)</span> with <span class="process-math">\(1 \leq i \leq n\text{,}\)</span> then <span class="process-math">\(\gcd \!\left( {a, b_1 b_2 \cdots b_n } \right) = 1\text{.}\)</span></p></article></article><article class="exercise exercise-like" id="exercise-795"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<p id="p-5443">Is the following proposition true or false? Justify your conclusion. <blockquote class="blockquote" id="blockquote-243">For all integers <span class="process-math">\(a, b, \text{ and } c\text{,}\)</span> if <span class="process-math">\(\gcd( {a, b} ) = 1\)</span> and <span class="process-math">\(c \mid \left( {a + b} \right)\text{,}\)</span> then <span class="process-math">\(\gcd( {a, c} ) = 1\)</span> and <span class="process-math">\(\gcd( {b, c} ) = 1\text{.}\)</span>
+</blockquote></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-425" id="answer-425"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-425"><div class="answer solution-like"><p id="p-5444">The statement is true. Start of a proof: If  <span class="process-math">\(\gcd ( {a, b} ) = 1\)</span> and <span class="process-math">\(c \mid ( {a + b} )\text{,}\)</span> then there exist integers <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> such that <span class="process-math">\(ax + by = 1\)</span> and there exists an integer <span class="process-math">\(m\)</span> such that <span class="process-math">\(a + b = cm\text{.}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-796"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<p id="p-5445">Is the following proposition true or false? Justify your conclusion. <blockquote class="blockquote" id="blockquote-244">If <span class="process-math">\(n \in \mathbb{N}\text{,}\)</span> then <span class="process-math">\(\gcd( {5n + 2, 12n + 5} ) = 1\text{.}\)</span>
+</blockquote></p></article><article class="exercise exercise-like" id="exer_fundtheoremcons"><h4 class="heading"><span class="codenumber">13<span class="period">.</span></span></h4>
+<p id="p-5446">Let <span class="process-math">\(y \in \mathbb{N}\text{.}\)</span> Use the Fundamental Theorem of Arithmetic to prove that there exists an odd natural number <span class="process-math">\(x\)</span> and a nonnegative integer <span class="process-math">\(k\)</span> such that <span class="process-math">\(y = 2^k x\text{.}\)</span></p></article><article class="exercise exercise-like" id="exer_sec82-primescong3"><h4 class="heading"><span class="codenumber">14<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-467"><p id="p-5447">Complete the following.</p></div>
+<article class="task exercise-like" id="task-1707"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-5448">Determine five different primes that are congruent to 3 modulo 4.</p></article><article class="task exercise-like" id="task-1708"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-5449">Prove that there are infinitely many primes that are congruent to 3 modulo 4.</p></article></article><article class="exercise exercise-like" id="exer_consecutivecomposites"><h4 class="heading"><span class="codenumber">15<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-468"><p id="p-5450">Let <span class="process-math">\(n \in \N\text{.}\)</span></p></div>
+<article class="task exercise-like" id="task-1709"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-5451">Prove that 2 divides <span class="process-math">\(\left[ {\left( {n + 1} \right)! + 2} \right]\text{.}\)</span></p></article><article class="task exercise-like" id="task-1710"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-5452">Prove that 3 divides <span class="process-math">\(\left[ {\left( {n + 1} \right)! + 3} \right]\text{.}\)</span></p></article><article class="task exercise-like" id="exer_consecutivecompositesc"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-5453">Prove that for each <span class="process-math">\(k \in \mathbb{N}\)</span> with <span class="process-math">\(2 \leq k \leq \left( {n + 1} \right)\text{,}\)</span> <span class="process-math">\(k\)</span> divides <span class="process-math">\(\left[ {\left( {n + 1} \right)! + k} \right]\text{.}\)</span></p></article><article class="task exercise-like" id="task-1712"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-5454">Use the result of <a href="" class="xref" data-knowl="./knowl/exer_consecutivecompositesc.html" title="Task 15.c">Task 15.c</a> to prove that for each <span class="process-math">\(n \in \mathbb{N}\text{,}\)</span> there exist at least <span class="process-math">\(n\)</span> consecutive composite natural numbers.</p></article></article><article class="exercise exercise-like" id="exercise-800"><h4 class="heading"><span class="codenumber">16<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-469"><p id="p-5455">The Twin Prime Conjecture states that there are infinitely many twin primes, but it is not known if this conjecture is true or false. The answers to the following questions, however, can be determined.</p></div>
+<article class="task exercise-like" id="task-1713"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-5456">How many pairs of primes <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> exist where <span class="process-math">\(q - p = 3\text{?}\)</span> That is, how many pairs of primes are there that differ by 3? Prove that your answer is correct. (One such pair is 2 and 5.)</p></article><article class="task exercise-like" id="task-1714"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-5457">How many triplets of primes of the form <span class="process-math">\(p\text{,}\)</span> <span class="process-math">\(p+2\text{,}\)</span> and <span class="process-math">\(p+4\)</span> are there? That is, how many triplets of primes exist where each prime is 2 more than the preceding prime? Prove that your answer is correct. Notice that one such triplet is 3, 5, and 7.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-56" id="hint-56"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-56"><div class="hint solution-like"><p id="p-5458">Try setting up cases using congruence modulo 3.</p></div></div>
+</div></article></article><article class="exercise exercise-like" id="exercise-801"><h4 class="heading"><span class="codenumber">17<span class="period">.</span></span></h4>
+<p id="p-5459">Prove the following proposition: <blockquote class="blockquote" id="blockquote-245">Let <span class="process-math">\(n \in \mathbb{N}\text{.}\)</span> For each <span class="process-math">\(a \in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(\gcd( {a, n} ) = 1\text{,}\)</span> then for every <span class="process-math">\(b \in \mathbb{Z}\text{,}\)</span> there exists an <span class="process-math">\(x \in \mathbb{Z}\)</span> such that <span class="process-math">\(ax \equiv b \pmod n\text{.}\)</span>
+</blockquote></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-57" id="hint-57"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-57"><div class="hint solution-like"><p id="p-5460">One way is to start by writing 1 as a linear combination of <span class="process-math">\(a\)</span> and <span class="process-math">\(n\text{.}\)</span></p></div></div>
+</div></article><article class="exercise exercise-like" id="exer_sec82-twinprimes"><h4 class="heading"><span class="codenumber">18<span class="period">.</span></span></h4>
+<p id="p-5461">Prove the following proposition: <blockquote class="blockquote" id="blockquote-246">For all natural numbers <span class="process-math">\(m\)</span> and <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> are twin primes other than the pair 3 and 5, then 36 divides <span class="process-math">\(mn + 1\)</span> and <span class="process-math">\(mn + 1\)</span> is a perfect square.</blockquote></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-58" id="hint-58"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-58"><div class="hint solution-like"><p id="p-5462">Look at several examples of twin primes. What do you notice about the number that is between the two twin primes? Set up cases based on this observation.</p></div></div>
+</div></article><article class="activity project-like" id="exer82_squareroot"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">48</span><span class="period">.</span><span class="space"> </span><span class="title">Square Roots and Irrational Numbers.</span>
+</h4>
+<div class="introduction" id="introduction-470"><p id="p-5463">In <a href="C_proofs.html" class="internal" title="Chapter 3: Constructing and Writing Proofs in Mathematics">Chapter 3</a>, we proved that some square roots (such as <span class="process-math">\(\sqrt{2}\)</span> and <span class="process-math">\(\sqrt{3}\)</span>) are irrational numbers. In this activity, we will use the Fundamental Theorem of Arithmetic to prove that if a natural number is not a perfect square, then its square root is an irrational number.</p></div>
+<article class="task exercise-like" id="exer82_squareroot-a"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-5464">Let <span class="process-math">\(n\)</span> be a natural number. Use the Fundamental Theorem of Arithmetic to explain why if <span class="process-math">\(n\)</span> is composite, then there exist distinct prime numbers <span class="process-math">\(p_1, p_2, \ldots,
+p_r\)</span> and natural numbers <span class="process-math">\(\alpha_1, \alpha_2, \ldots, \alpha_r\)</span> such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/A_squarerootsirrational1.html" id="A_squarerootsirrational1">
+\begin{equation}
+n = p_1^{\alpha_1} p_2^{\alpha_2} \cdots p_r^{\alpha_r}\text{.}\tag{78}
+\end{equation}
+</div>
+<p class="continuation">Using <span class="process-math">\(r = 1\)</span> and <span class="process-math">\(\alpha_1 = 1\)</span> for a prime number, explain why we can write any natural number greater than one in the form given in equation <a href="" class="xref" data-knowl="./knowl/A_squarerootsirrational1.html" title="Equation 78">(78)</a>.</p></article><article class="task exercise-like" id="task-1716"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-5465">A natural number <span class="process-math">\(b\)</span> is a <dfn class="terminology">perfect square</dfn> if and only if there exists a natural number <span class="process-math">\(a\)</span> such that <span class="process-math">\(b = a^2\text{.}\)</span> Explain why 36, 400, and 15876 are perfect squares. Then determine the prime factorization of these perfect squares. What do you notice about these prime factorizations?</p></article><article class="task exercise-like" id="task-1717"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-5466">Let <span class="process-math">\(n\)</span> be a natural number written in the form given in equation <a href="" class="xref" data-knowl="./knowl/A_squarerootsirrational1.html" title="Equation 78">(78)</a> in <a href="" class="xref" data-knowl="./knowl/exer82_squareroot-a.html" title="Task 48.a">Task 48.a</a> Prove that <span class="process-math">\(n\)</span> is a perfect square if and only if for each natural number <span class="process-math">\(k\)</span> with <span class="process-math">\(1 \leq k \leq r\text{,}\)</span> <span class="process-math">\(\alpha_k\)</span> is even.</p></article><article class="task exercise-like" id="task-1718"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-5467">Prove that for all natural numbers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n\)</span> is not a perfect square, then <span class="process-math">\(\sqrt{n}\)</span> is an irrational number.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-59" id="hint-59"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-59"><div class="hint solution-like"><p id="p-5468">Use a proof by contradiction.</p></div></div>
+</div></article></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-8"><div class="fn"><code class="code-inline tex2jax_ignore">primes.utm.edu/</code></div></div>
+</div></main>
+</div>
+</body>
+</html>

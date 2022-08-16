@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-08-16T14:49:58-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Beginning Activity 2: Using Cases in a Proof</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Mathematical Reasoning">
+<meta property="book:author" content="Ted Sundstrom, Professor Emeritus">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="external/custom_style.css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left standalone worksheet letter">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\mynot}{\neg}
+\newcommand{\card}{\mathbf{card}}
+\newcommand{\x}{:}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Mathematical Reasoning:</span> <span class="subtitle">Writing and Proof (PreTeXt Edition)</span></a></h1>
+<p class="byline">Ted Sundstrom, Professor Emeritus</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_cases.html#PA_logicalequiv" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="S_cases.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_cases.html#subsection-54" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_cases.html#PA_logicalequiv" title="Previous">Prev</a><a class="up-button button toolbar-item" href="S_cases.html" title="Up">Up</a><a class="next-button button toolbar-item" href="S_cases.html#subsection-54" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="fm_pub_note.html" data-scroll="fm_pub_note" class="internal">Publisher's Note</a></li>
+<li><a href="fm-student-note.html" data-scroll="fm-student-note" class="internal">Note to Students</a></li>
+<li><a href="fm-preface.html" data-scroll="fm-preface" class="internal">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_1intro.html" data-scroll="C_1intro" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_1prop.html" data-scroll="S_1prop" class="internal">Statements and Conditional Statements</a></li>
+<li><a href="S_1direct.html" data-scroll="S_1direct" class="internal">Constructing Direct Proofs</a></li>
+<li><a href="S_1summary.html" data-scroll="S_1summary" class="internal">Chapter 1 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_2logic.html" data-scroll="C_2logic" class="internal"><span class="codenumber">2</span> <span class="title">Logical Reasoning</span></a><ul>
+<li><a href="S_2logop.html" data-scroll="S_2logop" class="internal">Statements and Logical Operators</a></li>
+<li><a href="S_logequiv.html" data-scroll="S_logequiv" class="internal">Logically Equivalent Statements</a></li>
+<li><a href="S_2predicates.html" data-scroll="S_2predicates" class="internal">Open Sentences and Sets</a></li>
+<li><a href="S_2quantifier.html" data-scroll="S_2quantifier" class="internal">Quantifiers and Negations</a></li>
+<li><a href="S_2summary.html" data-scroll="S_2summary" class="internal">Chapter 2 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_proofs.html" data-scroll="C_proofs" class="internal"><span class="codenumber">3</span> <span class="title">Constructing and Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_directproof.html" data-scroll="S_directproof" class="internal">Direct Proofs</a></li>
+<li><a href="S_moremethods.html" data-scroll="S_moremethods" class="internal">More Methods of Proof</a></li>
+<li><a href="S_contradiction.html" data-scroll="S_contradiction" class="internal">Proof by Contradiction</a></li>
+<li><a href="S_cases.html" data-scroll="S_cases" class="internal">Using Cases in Proofs</a></li>
+<li><a href="S_divalgo.html" data-scroll="S_divalgo" class="internal">The Division Algorithm and Congruence</a></li>
+<li><a href="S_reviewproofs.html" data-scroll="S_reviewproofs" class="internal">Review of Proof Methods</a></li>
+<li><a href="S_3summary.html" data-scroll="S_3summary" class="internal">Chapter 3 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_induction.html" data-scroll="C_induction" class="internal"><span class="codenumber">4</span> <span class="title">Mathematical Induction</span></a><ul>
+<li><a href="S_mathinduction.html" data-scroll="S_mathinduction" class="internal">The Principle of Mathematical Induction</a></li>
+<li><a href="S_otherinduction.html" data-scroll="S_otherinduction" class="internal">Other Forms of Mathematical Induction</a></li>
+<li><a href="S_recursion.html" data-scroll="S_recursion" class="internal">Induction and Recursion</a></li>
+<li><a href="S_4summary.html" data-scroll="S_4summary" class="internal">Chapter 4 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_settheory.html" data-scroll="C_settheory" class="internal"><span class="codenumber">5</span> <span class="title">Set Theory</span></a><ul>
+<li><a href="S_setoperations.html" data-scroll="S_setoperations" class="internal">Sets and Operations on Sets</a></li>
+<li><a href="S_provingset.html" data-scroll="S_provingset" class="internal">Proving Set Relationships</a></li>
+<li><a href="S_setproperties.html" data-scroll="S_setproperties" class="internal">Properties of Set Operations</a></li>
+<li><a href="S_cartesian.html" data-scroll="S_cartesian" class="internal">Cartesian Products</a></li>
+<li><a href="S_indexfamily.html" data-scroll="S_indexfamily" class="internal">Indexed Families of Sets</a></li>
+<li><a href="S_5summary.html" data-scroll="S_5summary" class="internal">Chapter 5 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_functions.html" data-scroll="C_functions" class="internal"><span class="codenumber">6</span> <span class="title">Functions</span></a><ul>
+<li><a href="S_introfunctions.html" data-scroll="S_introfunctions" class="internal">Introduction to Functions</a></li>
+<li><a href="S_moreaboutfunctions.html" data-scroll="S_moreaboutfunctions" class="internal">More about Functions</a></li>
+<li><a href="S_typesoffunctions.html" data-scroll="S_typesoffunctions" class="internal">Injections, Surjections, and Bijections</a></li>
+<li><a href="S_compositionoffunctions.html" data-scroll="S_compositionoffunctions" class="internal">Composition of Functions</a></li>
+<li><a href="S_inversefunctions.html" data-scroll="S_inversefunctions" class="internal">Inverse Functions</a></li>
+<li><a href="S_functionsonsets.html" data-scroll="S_functionsonsets" class="internal">Functions Acting on Sets</a></li>
+<li><a href="S_6summary.html" data-scroll="S_6summary" class="internal">Chapter 6 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_equivrelations.html" data-scroll="C_equivrelations" class="internal"><span class="codenumber">7</span> <span class="title">Equivalence Relations</span></a><ul>
+<li><a href="S_relations.html" data-scroll="S_relations" class="internal">Relations</a></li>
+<li><a href="S_equivrelations.html" data-scroll="S_equivrelations" class="internal">Equivalence Relations</a></li>
+<li><a href="S_equivclasses.html" data-scroll="S_equivclasses" class="internal">Equivalence Classes</a></li>
+<li><a href="S_modulararithmetic.html" data-scroll="S_modulararithmetic" class="internal">Modular Arithmetic</a></li>
+<li><a href="section-37.html" data-scroll="section-37" class="internal">Chapter 7 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_numbertheory.html" data-scroll="C_numbertheory" class="internal"><span class="codenumber">8</span> <span class="title">Topics in Number Theory</span></a><ul>
+<li><a href="S_gcd.html" data-scroll="S_gcd" class="internal">The Greatest Common Divisor</a></li>
+<li><a href="S_primefactorizations.html" data-scroll="S_primefactorizations" class="internal">Prime Numbers and Prime Factorizations</a></li>
+<li><a href="S_diophantine.html" data-scroll="S_diophantine" class="internal">Linear Diophantine Equations</a></li>
+<li><a href="section-41.html" data-scroll="section-41" class="internal">Chapter 8 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_topicsinsets.html" data-scroll="C_topicsinsets" class="internal"><span class="codenumber">9</span> <span class="title">Finite and Infinite Sets</span></a><ul>
+<li><a href="S_finitesets.html" data-scroll="S_finitesets" class="internal">Finite Sets</a></li>
+<li><a href="S_infinitesets.html" data-scroll="S_infinitesets" class="internal">Countable Sets</a></li>
+<li><a href="S_uncountablesets.html" data-scroll="S_uncountablesets" class="internal">Uncountable Sets</a></li>
+<li><a href="section-45.html" data-scroll="section-45" class="internal">Chapter 9 Summary</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="C_writingguides.html" data-scroll="C_writingguides" class="internal"><span class="codenumber">A</span> <span class="title">Guidelines for Writing Mathematical Proofs</span></a></li>
+<li class="link"><a href="prog-answers.html" data-scroll="prog-answers" class="internal"><span class="codenumber">B</span> <span class="title">Answers for the Progress Checks</span></a></li>
+<li class="link"><a href="exer-answers.html" data-scroll="exer-answers" class="internal"><span class="codenumber">C</span> <span class="title">Answers and Hints for Selected Exercises</span></a></li>
+<li class="link"><a href="appendix-2.html" data-scroll="appendix-2" class="internal"><span class="codenumber">D</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="worksheet" id="PA_cases"><h3 class="heading hide-type">
+<span class="type">Beginning Activity</span> <span class="codenumber"></span> <span class="title">Beginning Activity 2: Using Cases in a Proof</span><div class="print-links">
+<a href="PA_cases-a4.html" class="a4">A4</a><a href="PA_cases-letter.html" class="us">US</a>
+</div>
+</h3>
+<p id="p-1749">The work in <a href="S_cases.html#PA_logicalequiv" class="internal" title="Beginning Activity: Beginning Activity 1: Using a Logical Equivalency">Beginning Activity 1</a> was meant to introduce the idea of using cases in a proof. The method of using cases is often used when the hypothesis of the proposition is a disjunction. This is justified by the logical equivalency</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/PA_logicalequiv.html ./knowl/T_logequiv.html ./knowl/exer_sec23-6.html">
+\begin{equation*}
+\left[ \left( {P \vee Q} \right) \to R \right] \equiv \left[ \left( {P \to R} \right) 
+\wedge \left( {Q \to R} \right) \right]\text{.}
+\end{equation*}
+</div>
+<p class="continuation">See <a href="" class="xref" data-knowl="./knowl/T_logequiv.html" title="Theorem 2.12: Important Logical Equivalencies">Theorem 2.12</a> and <a href="" class="xref" data-knowl="./knowl/exer_sec23-6.html" title="Exercise 6">Exercise 6</a>.</p>
+<p id="p-1750">In some other situations when we are trying to prove a proposition or a theorem about an element <span class="process-math">\(x\)</span> in some set <span class="process-math">\(U\text{,}\)</span> we often run into the problem that there does not seem to be enough information about <span class="process-math">\(x\)</span> to proceed. For example, consider the following proposition: <article class="assemblage assemblage-like" id="prop-ba34-2-even"><h4 class="heading"><span class="title">Proposition 1.</span></h4>
+<p id="p-1751">If <span class="process-math">\(n\)</span> is an integer, then <span class="process-math">\(\left( n^2 + n \right)\)</span> is an even integer.</p></article> If we were trying to write a direct proof of this proposition, the only thing we could assume is that <span class="process-math">\(n\)</span> is an integer. This is not much help. In a situation such as this, we will sometimes use cases to provide additional assumptions for the forward process of the proof. Cases are usually based on some common properties that the element <span class="process-math">\(x\)</span> may or may not possess. The cases must be chosen so that they exhaust all possibilities for the object <span class="process-math">\(x\)</span> in the hypothesis of the original proposition. For <a href="" class="xref" data-knowl="./knowl/prop-ba34-2-even.html" title="Definition: Proposition 1">Proposition 1</a>, we know that an integer must be even or it must be odd. We can thus use the following two cases for the integer <span class="process-math">\(n\text{:}\)</span></p>
+<ul class="disc">
+<li id="li-259"><p id="p-1752">The integer <span class="process-math">\(n\)</span> is an even integer;</p></li>
+<li id="li-260"><p id="p-1753">The integer <span class="process-math">\(n\)</span> is an odd integer.</p></li>
+</ul>
+<article class="exercise exercise-like" id="exercise-235"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<p id="p-1754">Complete the proof for the following proposition: <article class="assemblage assemblage-like" id="prop-ba34-2-even2"><h5 class="heading"><span class="title">Proposition 2.</span></h5>
+<p id="p-1755">If <span class="process-math">\(n\)</span> is an even integer, then <span class="process-math">\(n^2 + n\)</span> is an even integer.</p></article> <article class="proof" id="proof-14"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5>
+<p id="p-1756">Let <span class="process-math">\(n\)</span> be an even integer. Then there exists an integer <span class="process-math">\(m\)</span> such that <span class="process-math">\(n = 2m\text{.}\)</span> Substituting this into the expression <span class="process-math">\(n^2 + n\)</span> yields ….</p></article></p></article><article class="exercise exercise-like" id="exercise-236"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-1757">Construct a proof for the following proposition: <article class="assemblage assemblage-like" id="prop-ba34-2-odd"><h5 class="heading"><span class="title">Proposition 3.</span></h5>
+<p id="p-1758">If <span class="process-math">\(n\)</span> is an odd integer, then <span class="process-math">\(n^2 + n\)</span> is an even integer.</p></article></p></article><article class="exercise exercise-like" id="exercise-237"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-1759">Explain why the proofs of <a href="" class="xref" data-knowl="./knowl/prop-ba34-2-even2.html" title="Definition: Proposition 2">Proposition 2</a> and <a href="" class="xref" data-knowl="./knowl/prop-ba34-2-odd.html" title="Definition: Proposition 3">Proposition 3</a> can be used to construct a proof of <a href="" class="xref" data-knowl="./knowl/prop-ba34-2-even.html" title="Definition: Proposition 1">Proposition 1</a>.</p></article></section></div></main>
+</div>
+</body>
+</html>

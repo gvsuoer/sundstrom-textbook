@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-08-16T14:49:46-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Constructing Direct Proofs</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Mathematical Reasoning">
+<meta property="book:author" content="Ted Sundstrom, Professor Emeritus">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_blue_grey.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="external/custom_style.css">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\mynot}{\neg}
+\newcommand{\card}{\mathbf{card}}
+\newcommand{\x}{:}
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Mathematical Reasoning:</span> <span class="subtitle">Writing and Proof (PreTeXt Edition)</span></a></h1>
+<p class="byline">Ted Sundstrom, Professor Emeritus</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_1prop.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_1intro.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_1summary.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_1prop.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C_1intro.html" title="Up">Up</a><a class="next-button button toolbar-item" href="S_1summary.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="fm_pub_note.html" data-scroll="fm_pub_note" class="internal">Publisher's Note</a></li>
+<li><a href="fm-student-note.html" data-scroll="fm-student-note" class="internal">Note to Students</a></li>
+<li><a href="fm-preface.html" data-scroll="fm-preface" class="internal">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_1intro.html" data-scroll="C_1intro" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_1prop.html" data-scroll="S_1prop" class="internal">Statements and Conditional Statements</a></li>
+<li><a href="S_1direct.html" data-scroll="S_1direct" class="active">Constructing Direct Proofs</a></li>
+<li><a href="S_1summary.html" data-scroll="S_1summary" class="internal">Chapter 1 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_2logic.html" data-scroll="C_2logic" class="internal"><span class="codenumber">2</span> <span class="title">Logical Reasoning</span></a><ul>
+<li><a href="S_2logop.html" data-scroll="S_2logop" class="internal">Statements and Logical Operators</a></li>
+<li><a href="S_logequiv.html" data-scroll="S_logequiv" class="internal">Logically Equivalent Statements</a></li>
+<li><a href="S_2predicates.html" data-scroll="S_2predicates" class="internal">Open Sentences and Sets</a></li>
+<li><a href="S_2quantifier.html" data-scroll="S_2quantifier" class="internal">Quantifiers and Negations</a></li>
+<li><a href="S_2summary.html" data-scroll="S_2summary" class="internal">Chapter 2 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_proofs.html" data-scroll="C_proofs" class="internal"><span class="codenumber">3</span> <span class="title">Constructing and Writing Proofs in Mathematics</span></a><ul>
+<li><a href="S_directproof.html" data-scroll="S_directproof" class="internal">Direct Proofs</a></li>
+<li><a href="S_moremethods.html" data-scroll="S_moremethods" class="internal">More Methods of Proof</a></li>
+<li><a href="S_contradiction.html" data-scroll="S_contradiction" class="internal">Proof by Contradiction</a></li>
+<li><a href="S_cases.html" data-scroll="S_cases" class="internal">Using Cases in Proofs</a></li>
+<li><a href="S_divalgo.html" data-scroll="S_divalgo" class="internal">The Division Algorithm and Congruence</a></li>
+<li><a href="S_reviewproofs.html" data-scroll="S_reviewproofs" class="internal">Review of Proof Methods</a></li>
+<li><a href="S_3summary.html" data-scroll="S_3summary" class="internal">Chapter 3 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_induction.html" data-scroll="C_induction" class="internal"><span class="codenumber">4</span> <span class="title">Mathematical Induction</span></a><ul>
+<li><a href="S_mathinduction.html" data-scroll="S_mathinduction" class="internal">The Principle of Mathematical Induction</a></li>
+<li><a href="S_otherinduction.html" data-scroll="S_otherinduction" class="internal">Other Forms of Mathematical Induction</a></li>
+<li><a href="S_recursion.html" data-scroll="S_recursion" class="internal">Induction and Recursion</a></li>
+<li><a href="S_4summary.html" data-scroll="S_4summary" class="internal">Chapter 4 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_settheory.html" data-scroll="C_settheory" class="internal"><span class="codenumber">5</span> <span class="title">Set Theory</span></a><ul>
+<li><a href="S_setoperations.html" data-scroll="S_setoperations" class="internal">Sets and Operations on Sets</a></li>
+<li><a href="S_provingset.html" data-scroll="S_provingset" class="internal">Proving Set Relationships</a></li>
+<li><a href="S_setproperties.html" data-scroll="S_setproperties" class="internal">Properties of Set Operations</a></li>
+<li><a href="S_cartesian.html" data-scroll="S_cartesian" class="internal">Cartesian Products</a></li>
+<li><a href="S_indexfamily.html" data-scroll="S_indexfamily" class="internal">Indexed Families of Sets</a></li>
+<li><a href="S_5summary.html" data-scroll="S_5summary" class="internal">Chapter 5 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_functions.html" data-scroll="C_functions" class="internal"><span class="codenumber">6</span> <span class="title">Functions</span></a><ul>
+<li><a href="S_introfunctions.html" data-scroll="S_introfunctions" class="internal">Introduction to Functions</a></li>
+<li><a href="S_moreaboutfunctions.html" data-scroll="S_moreaboutfunctions" class="internal">More about Functions</a></li>
+<li><a href="S_typesoffunctions.html" data-scroll="S_typesoffunctions" class="internal">Injections, Surjections, and Bijections</a></li>
+<li><a href="S_compositionoffunctions.html" data-scroll="S_compositionoffunctions" class="internal">Composition of Functions</a></li>
+<li><a href="S_inversefunctions.html" data-scroll="S_inversefunctions" class="internal">Inverse Functions</a></li>
+<li><a href="S_functionsonsets.html" data-scroll="S_functionsonsets" class="internal">Functions Acting on Sets</a></li>
+<li><a href="S_6summary.html" data-scroll="S_6summary" class="internal">Chapter 6 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_equivrelations.html" data-scroll="C_equivrelations" class="internal"><span class="codenumber">7</span> <span class="title">Equivalence Relations</span></a><ul>
+<li><a href="S_relations.html" data-scroll="S_relations" class="internal">Relations</a></li>
+<li><a href="S_equivrelations.html" data-scroll="S_equivrelations" class="internal">Equivalence Relations</a></li>
+<li><a href="S_equivclasses.html" data-scroll="S_equivclasses" class="internal">Equivalence Classes</a></li>
+<li><a href="S_modulararithmetic.html" data-scroll="S_modulararithmetic" class="internal">Modular Arithmetic</a></li>
+<li><a href="section-37.html" data-scroll="section-37" class="internal">Chapter 7 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_numbertheory.html" data-scroll="C_numbertheory" class="internal"><span class="codenumber">8</span> <span class="title">Topics in Number Theory</span></a><ul>
+<li><a href="S_gcd.html" data-scroll="S_gcd" class="internal">The Greatest Common Divisor</a></li>
+<li><a href="S_primefactorizations.html" data-scroll="S_primefactorizations" class="internal">Prime Numbers and Prime Factorizations</a></li>
+<li><a href="S_diophantine.html" data-scroll="S_diophantine" class="internal">Linear Diophantine Equations</a></li>
+<li><a href="section-41.html" data-scroll="section-41" class="internal">Chapter 8 Summary</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_topicsinsets.html" data-scroll="C_topicsinsets" class="internal"><span class="codenumber">9</span> <span class="title">Finite and Infinite Sets</span></a><ul>
+<li><a href="S_finitesets.html" data-scroll="S_finitesets" class="internal">Finite Sets</a></li>
+<li><a href="S_infinitesets.html" data-scroll="S_infinitesets" class="internal">Countable Sets</a></li>
+<li><a href="S_uncountablesets.html" data-scroll="S_uncountablesets" class="internal">Uncountable Sets</a></li>
+<li><a href="section-45.html" data-scroll="section-45" class="internal">Chapter 9 Summary</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="C_writingguides.html" data-scroll="C_writingguides" class="internal"><span class="codenumber">A</span> <span class="title">Guidelines for Writing Mathematical Proofs</span></a></li>
+<li class="link"><a href="prog-answers.html" data-scroll="prog-answers" class="internal"><span class="codenumber">B</span> <span class="title">Answers for the Progress Checks</span></a></li>
+<li class="link"><a href="exer-answers.html" data-scroll="exer-answers" class="internal"><span class="codenumber">C</span> <span class="title">Answers and Hints for Selected Exercises</span></a></li>
+<li class="link"><a href="appendix-2.html" data-scroll="appendix-2" class="internal"><span class="codenumber">D</span> <span class="title">List of Symbols</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="S_1direct"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">Constructing Direct Proofs</span>
+</h2>
+<section class="worksheet" id="PA_even"><h3 class="heading hide-type">
+<span class="type">Beginning Activity</span> <span class="codenumber"></span> <span class="title">Beginning Activity 1: Definition of Even and Odd Integers</span><div class="print-links">
+<a href="PA_even-a4.html" class="a4">A4</a><a href="PA_even-letter.html" class="us">US</a>
+</div>
+</h3>
+<p id="p-313">Definitions play a very important role in mathematics. A direct proof of a proposition in mathematics is often a demonstration that the proposition follows logically from certain definitions and previously proven propositions. A <dfn class="terminology">definition</dfn> is an agreement that a particular word or phrase will stand for some object, property, or other concept that we expect to refer to often. In many elementary proofs, the answer to the question, “How do we prove a certain proposition?”, is often answered by means of a definition. For example, in <a href="" class="xref" data-knowl="./knowl/pr_explores.html" title="Progress Check 1.2: Explorations">Progress Check 1.2</a>, all of the examples should have indicated that the following conditional statement is true: <blockquote class="blockquote" id="blockquote-15">If <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are odd integers, then <span class="process-math">\(x \cdot y\)</span> is an odd integer.</blockquote> In order to construct a mathematical proof of this conditional statement, we need a precise definition of what it means to say that an integer is an even integer and what it means to say that an integer is an odd integer.</p>
+<article class="assemblage assemblage-like" id="D_even"><h4 class="heading"><span class="title">Definition.</span></h4>
+<p id="p-314">An integer <span class="process-math">\(a\)</span> is an <dfn class="terminology">even integer</dfn> provided that there exists an integer <span class="process-math">\(n\)</span> such that <span class="process-math">\(a = 2n\text{.}\)</span> An integer <span class="process-math">\(a\)</span> is an <dfn class="terminology">odd integer</dfn> provided there exists an integer <span class="process-math">\(n\)</span> such that <span class="process-math">\(a = 2n + 1\text{.}\)</span></p></article><p id="p-315">Using this definition, we can conclude that the integer 16 is an even integer since <span class="process-math">\(16 = 2 \cdot 8\)</span> and 8 is an integer. By answering the following questions, you should obtain a better understanding of these definitions. These questions are not here just to have questions in the textbook. Constructing and answering such questions is a way in which many mathematicians will try to gain a better understanding of a definition.</p>
+<article class="exercise exercise-like" id="PA_1-2"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-20"><p id="p-316">Use the definitions given above to</p></div>
+<article class="task exercise-like" id="task-88"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-317">Explain why 28, <span class="process-math">\(-42\text{,}\)</span> 24, and 0 are even integers.</p></article><article class="task exercise-like" id="task-89"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-318">Explain why 51, <span class="process-math">\(-11\text{,}\)</span> 1, and <span class="process-math">\(-1\)</span> are odd integers.</p></article></article><p id="p-319">It is important to realize that mathematical definitions are not made randomly. In most cases, they are motivated by a mathematical concept that occurs frequently.</p>
+<article class="exercise exercise-like" id="exercise-24"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-320">Are the definitions of even integers and odd integers consistent with your previous ideas about even and odd integers?</p></article></section><section class="worksheet" id="PA_thinking"><h3 class="heading hide-type">
+<span class="type">Beginning Activity</span> <span class="codenumber"></span> <span class="title">Beginning Activity 2: Thinking about a Proof</span><div class="print-links">
+<a href="PA_thinking-a4.html" class="a4">A4</a><a href="PA_thinking-letter.html" class="us">US</a>
+</div>
+</h3>
+<p id="p-321">Consider the following proposition: <article class="assemblage assemblage-like" id="prop-odd"><h4 class="heading"><span class="title">Proposition.</span></h4>
+<p id="p-322">If <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are odd integers, then <span class="process-math">\(x \cdot y\)</span>  is an odd integer.</p></article></p>
+<p id="p-323">Think about how you might go about proving this proposition. A <dfn class="terminology">direct proof</dfn> of a conditional statement is a demonstration that the conclusion of the conditional statement follows logically from the hypothesis of the conditional statement. Definitions and previously proven propositions are used to justify each step in the proof. To help get started in proving this proposition, answer the following questions:</p>
+<article class="exercise exercise-like" id="exercise-25"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<p id="p-324">The proposition is a conditional statement. What is the hypothesis of this conditional statement? What is the conclusion of this conditional statement?</p></article><article class="exercise exercise-like" id="exercise-26"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<p id="p-325">If <span class="process-math">\(x = 2\)</span> and <span class="process-math">\(y = 3\text{,}\)</span> then <span class="process-math">\(x \cdot y = 6\text{,}\)</span> and 6 is an even integer. Does this example prove that the proposition is false? Explain.</p></article><article class="exercise exercise-like" id="exercise-27"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<p id="p-326">If <span class="process-math">\(x = 5\)</span> and <span class="process-math">\(y = 3\text{,}\)</span> then <span class="process-math">\(x \cdot y = 15\text{.}\)</span> Does this example prove that the proposition is true? Explain.</p></article><p id="p-327">In order to prove this proposition, we need to prove that whenever both <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are odd integers, <span class="process-math">\(x \cdot y\)</span> is an odd integer. Since we cannot explore all possible pairs of integer values for <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{,}\)</span> we will use the definition of an odd integer to help us construct a proof.</p>
+<article class="exercise exercise-like" id="PA_prev12-Q4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<p id="p-328">To start a proof of this proposition, we will assume that the hypothesis of the conditional statement is true. So in this case, we assume that both <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are odd integers. We can then use the definition of an odd integer to conclude that there exists and integer <span class="process-math">\(m\)</span> such that <span class="process-math">\(x = 2m + 1\text{.}\)</span> Now use the definition of an odd integer to make a conclusion about the integer <span class="process-math">\(y\text{.}\)</span></p>
+<p id="p-329">Note: The definition of an odd integer says that a certain other integer exists. This definition may be applied to both <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span> However, do not use the same letter in both cases. To do so would imply that <span class="process-math">\(x = y\)</span> and we have not made that assumption. To be more specific, if <span class="process-math">\(x = 2m + 1\)</span> and <span class="process-math">\(y = 2m + 1\text{,}\)</span> then <span class="process-math">\(x = y\text{.}\)</span></p></article><article class="exercise exercise-like" id="PA_prev12-Q5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<p id="p-330">We need to prove that if the hypothesis is true, then the conclusion is true. So, in this case, we need to prove that <span class="process-math">\(x \cdot y\)</span> is an odd integer. At this point, we usually ask ourselves a so-called <dfn class="terminology">backward question</dfn>. In this case, we ask, “Under what conditions can we conclude that <span class="process-math">\(x \cdot y\)</span> is an odd integer?” Use the definition of an odd integer to answer this question.</p></article></section><section class="subsection" id="SS_properties"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Properties of Number Systems</span>
+</h3>
+<p id="p-331">At the end of <a href="S_1prop.html" class="internal" title="Section 1.1: Statements and Conditional Statements">Section 1.1</a>, we introduced notations for the standard number systems we use in mathematics and discussed their closure properties. For this text, it is assumed that the reader is familiar with these closure properties and the basic rules of algebra that apply to all real numbers that are given in <a href="" class="xref" data-knowl="./knowl/Ta_propertiesofreals.html" title="Table 1.9: Properties of the Real Numbers">Table 1.9</a>.</p>
+<figure class="table table-like" id="Ta_propertiesofreals"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.9<span class="period">.</span></span><span class="space"> </span>Properties of the Real Numbers</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b1 r2 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines">For all real numbers <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(y\text{,}\)</span> and <span class="process-math">\(z\)</span>
+</td>
+</tr>
+<tr>
+<td class="l m b1 r2 l0 t0 lines">Identity Properties</td>
+<td class="l m b1 r0 l0 t0 lines">
+<span class="process-math">\(x + 0 = x\)</span> and <span class="process-math">\(x \cdot 1 = x\)</span>
+</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines">Inverse Properties</td>
+<td class="l m b2 r0 l0 t0 lines">
+<span class="process-math">\(x + ( - x) = 0\)</span> and if <span class="process-math">\(x \ne 0\text{,}\)</span> then <span class="process-math">\(x \cdot \frac{1}{x} = 1\)</span>
+</td>
+</tr>
+<tr>
+<td class="l m b1 r2 l0 t0 lines">Commutative Properties</td>
+<td class="l m b1 r0 l0 t0 lines">
+<span class="process-math">\(x + y = y + x\)</span> and <span class="process-math">\(xy = yx\)</span>
+</td>
+</tr>
+<tr>
+<td class="l m b1 r2 l0 t0 lines">Associative Properties</td>
+<td class="l m b1 r0 l0 t0 lines">
+<span class="process-math">\((x + y) + z = x + (y + z)\)</span> and <span class="process-math">\((xy)z = x(yz)\)</span>
+</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">Distributive Properties</td>
+<td class="l m b0 r0 l0 t0 lines">
+<span class="process-math">\(x(y + z) = xy + xz\)</span> and <span class="process-math">\((y + z)x = yx + zx\)</span>
+</td>
+</tr>
+</table></div></figure></section><section class="subsection" id="subsection-7"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Constructing a Proof of a Conditional Statement</span>
+</h3>
+<p id="p-332">In order to prove that a conditional statement <span class="process-math">\(P \to Q\)</span> is true, we only need to prove that <span class="process-math">\(Q\)</span> is true whenever <span class="process-math">\(P\)</span> is true. This is because the conditional statement is true whenever the hypothesis is false. So in a direct proof of <span class="process-math">\(P \to Q\text{,}\)</span> we assume that <span class="process-math">\(P\)</span> is true, and using this assumption, we proceed through a logical sequence of steps to arrive at the conclusion that <span class="process-math">\(Q\)</span> is true.</p>
+<p id="p-333"> Unfortunately, it is often not easy to discover how to start this logical sequence of steps. We will describe a method of exploration that often can help in discovering the steps of a proof. This method will involve working forward from the hypothesis, <span class="process-math">\(P\text{,}\)</span> and backward from the conclusion, <span class="process-math">\(Q\text{.}\)</span> We will use a device called the <dfn class="terminology">know-show table</dfn> to help organize our thoughts and the steps of the proof. This will be illustrated with the proposition from <a href="S_1direct.html#PA_thinking" class="internal" title="Beginning Activity: Beginning Activity 2: Thinking about a Proof">Beginning Activty 2</a>.</p>
+<p id="p-334"><a href="" class="xref" data-knowl="./knowl/prop-odd.html" title="Definition: Proposition">Proposition</a> If  <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are odd integers, then <span class="process-math">\(x \cdot y\)</span>  is an odd integer.</p>
+<p id="p-335">The first step is to identify the hypothesis, <span class="process-math">\(P\text{,}\)</span> and the conclusion, <span class="process-math">\(Q\text{,}\)</span> of the conditional statement. In this case, we have the following: <blockquote class="blockquote" id="blockquote-16">
+<span class="process-math">\(P\text{:}\)</span> <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are odd integers.</blockquote> <blockquote class="blockquote" id="blockquote-17">
+<span class="process-math">\(Q\text{:}\)</span> <span class="process-math">\(x \cdot y\)</span> is an odd integer.</blockquote> We now treat <span class="process-math">\(P\)</span> as what we know (we have assumed it to be true) and treat <span class="process-math">\(Q\)</span> as what we want to show (that is, the goal). So we organize this by using <span class="process-math">\(P\)</span> as the first step in the know portion of the table and <span class="process-math">\(Q\)</span> as the last step in the show portion of the table. We will put the know portion of the table at the top and the show portion of the table at the bottom.</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r2 l0 t0 lines">Step</td>
+<td class="l m b2 r2 l0 t0 lines">Know</td>
+<td class="l m b2 r0 l0 t0 lines">Reason</td>
+</tr>
+<tr>
+<td class="l m b1 r2 l0 t0 lines"><span class="process-math">\(P\)</span></td>
+<td class="l m b1 r2 l0 t0 lines">
+<span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are odd integers.</td>
+<td class="l m b1 r0 l0 t0 lines">Hypothesis</td>
+</tr>
+<tr>
+<td class="l m b1 r2 l0 t0 lines"><span class="process-math">\(P1\)</span></td>
+<td class="l m b1 r2 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b1 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+</tr>
+<tr>
+<td class="l m b1 r2 l0 t0 lines"><span class="process-math">\(Q1\)</span></td>
+<td class="l m b1 r2 l0 t0 lines"></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b1 r2 l0 t0 lines"><span class="process-math">\(Q\)</span></td>
+<td class="l m b1 r2 l0 t0 lines">
+<span class="process-math">\(x \cdot y\)</span> is an odd integer.</td>
+<td class="l m b1 r0 l0 t0 lines">?</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">Step</td>
+<td class="l m b0 r2 l0 t0 lines">Show</td>
+<td class="l m b0 r0 l0 t0 lines">Reason</td>
+</tr>
+</table></div>
+<p id="p-336"> We have not yet filled in the reason for the last step because we do not yet know how we will reach the goal. The idea now is to ask ourselves questions about what we know and what we are trying to prove. We usually start with the conclusion that we are trying to prove by asking a so-called <dfn class="terminology">backward question.</dfn> The basic form of the question is, “Under what conditions can we conclude that <span class="process-math">\(Q\)</span> is true?” How we ask the question is crucial since we must be able to answer it. We should first try to ask and answer the question in an abstract manner and then apply it to the particular form of statement <span class="process-math">\(Q\text{.}\)</span></p>
+<p id="p-337">In this case, we are trying to prove that some integer is an odd integer. So our backward question could be, “How do we prove that an integer is odd?” At this time, the only way we have of answering this question is to use the definition of an odd integer. So our answer could be, “We need to prove that there exists an integer <span class="process-math">\(q\)</span> such that the integer equals <span class="process-math">\(2q + 1\text{.}\)</span>” We apply this answer to statement <span class="process-math">\(Q\)</span> and insert it as the next to last line in the know-show table.</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r2 l0 t0 lines">Step</td>
+<td class="l m b2 r2 l0 t0 lines">Know</td>
+<td class="l m b2 r0 l0 t0 lines">Reason</td>
+</tr>
+<tr>
+<td class="l m b1 r2 l0 t0 lines"><span class="process-math">\(P\)</span></td>
+<td class="l m b1 r2 l0 t0 lines">
+<span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are odd integers.</td>
+<td class="l m b1 r0 l0 t0 lines">Hypothesis</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(P1\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"></td>
+<td class="l m b2 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b1 r2 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\vdots\)</span></td>
+</tr>
+<tr>
+<td class="l m b1 r2 l0 t0 lines"><span class="process-math">\(Q1\)</span></td>
+<td class="l m b1 r2 l0 t0" style="max-width:240px;"><p id="p-338">There exists an integer <span class="process-math">\(q\)</span> such that <span class="process-math">\(xy = 2q + 1\)</span></p></td>
+<td class="l m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(Q\)</span></td>
+<td class="l m b2 r2 l0 t0 lines">
+<span class="process-math">\(x \cdot y\)</span> is an odd integer.</td>
+<td class="l m b2 r0 l0 t0 lines">Definition of an odd integer.</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines">Step</td>
+<td class="l m b0 r2 l0 t0 lines">Show</td>
+<td class="l m b0 r0 l0 t0 lines">Reason</td>
+</tr>
+</table></div>
+<p id="p-339"> We now focus our effort on proving statement <span class="process-math">\(Q1\)</span> since we know that if we can prove <span class="process-math">\(Q1\text{,}\)</span> then we can conclude that <span class="process-math">\(Q\)</span> is true. We ask a backward question about <span class="process-math">\(Q1\)</span> such as, “How can we prove that there exists an integer <span class="process-math">\(q\)</span> such that <span class="process-math">\(x \cdot y = 2q + 1\text{?}\)</span>” We may not have a ready answer for this question, and so we look at the know portion of the table and try to connect the know portion to the show portion. To do this, we work forward from step <span class="process-math">\(P\text{,}\)</span> and this involves asking a <dfn class="terminology">forward question.</dfn> The basic form of this type of question is, “What can we conclude from the fact that <span class="process-math">\(P\)</span> is true?” In this case, we can use the definition of an odd integer to conclude that there exist integers <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> such that <span class="process-math">\(x = 2m + 1\)</span> and <span class="process-math">\(y = 2n + 1\text{.}\)</span> We will call this Step <span class="process-math">\(P1\)</span> in the know-show table. It is important to notice that we were careful not to use the letter <span class="process-math">\(q\)</span> to denote these integers. If we had used <span class="process-math">\(q\)</span> again, we would be claiming that the same integer that gives <span class="process-math">\(x \cdot y = 2q + 1\)</span> also gives <span class="process-math">\(x = 2q + 1\text{.}\)</span> This is why we used <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> for the integers <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> since there is no guarantee that <span class="process-math">\(x\)</span> equals <span class="process-math">\(y\text{.}\)</span> The basic rule of thumb is to use a different symbol for each new object we introduce in a proof. So at this point, we have: <blockquote class="blockquote" id="blockquote-18">Step <span class="process-math">\(P1\text{.}\)</span> We know that there exist integers <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> such that <span class="process-math">\(x = 2m + 1\)</span> and <span class="process-math">\(y = 2n + 1\text{.}\)</span>
+</blockquote> <blockquote class="blockquote" id="blockquote-19">Step <span class="process-math">\(Q1\text{.}\)</span> We need to prove that there exists an integer <span class="process-math">\(q\)</span> such that <span class="process-math">\(x \cdot y = 2q + 1\text{.}\)</span>
+</blockquote></p>
+<p id="p-340">We must always be looking for a way to link the “know part” to the “show part”. There are conclusions we can make from <span class="process-math">\(P1\text{,}\)</span> but as we proceed, we must always keep in mind the form of statement in <span class="process-math">\(Q1\text{.}\)</span> The next forward question is, “What can we conclude about <span class="process-math">\(x \cdot y\)</span> from what we know?” One way to answer this is to use our prior knowledge of algebra. That is, we can first use substitution to write <span class="process-math">\(x \cdot y = \left( {2m + 1} \right)\left( {2n + 1} \right)\text{.}\)</span> Although this equation does not prove that <span class="process-math">\(x \cdot y\)</span> is odd, we can use algebra to try to rewrite the right side of this equation <span class="process-math">\(\left( {2m + 1} \right)\left( {2n + 1} \right)\)</span> in the form of an odd integer so that we can arrive at step <span class="process-math">\(Q1\text{.}\)</span> We first expand the right side of the equation to obtain</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-3">
+\begin{align*}
+x \cdot y \amp = (2m + 1)(2n + 1)\\
+\amp = 4mn + 2m + 2n + 1
+\end{align*}
+</div>
+<p id="p-341">Now compare the right side of the last equation to the right side of the equation in step <span class="process-math">\(Q1\text{.}\)</span> Sometimes the difficult part at this point is the realization that <span class="process-math">\(q\)</span> stands for some integer and that we only have to show that <span class="process-math">\(x \cdot y\)</span> equals two times some integer plus one. Can we now make that conclusion? The answer is yes because we can factor a 2 from the first three terms on the right side of the equation and obtain</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-4">
+\begin{align*}
+x \cdot y \amp = 4mn + 2m + 2n + 1\\
+\amp = 2 (2mn + m + n) + 1
+\end{align*}
+</div>
+<p id="p-342">We can now complete the table showing the outline of the proof as follows:</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b2 r2 l0 t0 lines">Step</td>
+<td class="l m b2 r2 l0 t0 lines">Know</td>
+<td class="l m b2 r0 l0 t0 lines">Reason</td>
+</tr>
+<tr>
+<td class="l m b1 r2 l0 t0 lines"><span class="process-math">\(P\)</span></td>
+<td class="l m b1 r2 l0 t0 lines">
+<span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are odd integers.</td>
+<td class="l m b1 r0 l0 t0 lines">Hypothesis</td>
+</tr>
+<tr>
+<td class="l m b1 r2 l0 t0 lines"><span class="process-math">\(P1\)</span></td>
+<td class="l m b1 r2 l0 t0" style="max-width:240px;"><p id="p-343">There exist integers <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> such that <span class="process-math">\(x = 2m + 1\)</span> and <span class="process-math">\(y = 2n + 1\text{.}\)</span></p></td>
+<td class="l m b1 r0 l0 t0 lines">Definition of an odd integer.</td>
+</tr>
+<tr>
+<td class="l m b1 r2 l0 t0 lines"><span class="process-math">\(P2\)</span></td>
+<td class="l m b1 r2 l0 t0 lines"><span class="process-math">\(xy = (2m + 1)(2n + 1)\)</span></td>
+<td class="l m b1 r0 l0 t0 lines">Substitution</td>
+</tr>
+<tr>
+<td class="l m b1 r2 l0 t0 lines"><span class="process-math">\(P3\)</span></td>
+<td class="l m b1 r2 l0 t0 lines"><span class="process-math">\(xy = 4mn + 2m + 2n + 1\)</span></td>
+<td class="l m b1 r0 l0 t0 lines">Algebra</td>
+</tr>
+<tr>
+<td class="l m b1 r2 l0 t0 lines"><span class="process-math">\(P4\)</span></td>
+<td class="l m b1 r2 l0 t0 lines"><span class="process-math">\(xy = 2(2mn + m + n) + 1\)</span></td>
+<td class="l m b1 r0 l0 t0 lines">Algebra</td>
+</tr>
+<tr>
+<td class="l m b1 r2 l0 t0 lines"><span class="process-math">\(P5\)</span></td>
+<td class="l m b1 r2 l0 t0 lines">
+<span class="process-math">\((2mn + m +n)\)</span> is an integer.</td>
+<td class="l m b1 r0 l0 t0 lines">Closure properties of the integers</td>
+</tr>
+<tr>
+<td class="l m b1 r2 l0 t0 lines"><span class="process-math">\(Q1\)</span></td>
+<td class="l m b1 r2 l0 t0" style="max-width:240px;"><p id="p-344">There exists an integer <span class="process-math">\(q\)</span> such that <span class="process-math">\(xy = 2q + 1\text{.}\)</span></p></td>
+<td class="l m b1 r0 l0 t0 lines">Use <span class="process-math">\(q = (2mn + m + n)\)</span>
+</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(Q\)</span></td>
+<td class="l m b0 r2 l0 t0 lines">
+<span class="process-math">\(x \cdot y\)</span> is an odd integer.</td>
+<td class="l m b0 r0 l0 t0 lines">Definition of an odd integer.</td>
+</tr>
+</table></div>
+<p id="p-345"> It is very important to realize that we have only constructed an outline of a proof. Mathematical proofs are not written in table form. They are written in narrative form using complete sentences and correct paragraph structure, and they follow certain conventions used in writing mathematics. In addition, most proofs are written only from the forward perspective. That is, although the use of the backward process was essential in discovering the proof, when we write the proof in narrative form, we use the forward process described in the preceding table. A completed proof follows.</p>
+<article class="theorem theorem-like" id="T_xyodd"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span>
+</h4>
+<p id="p-346">If <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are odd integers, then <span class="process-math">\(x \cdot y\)</span> is an odd integer.</p></article><article class="proof" id="proof-1"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4>
+<p id="p-347">We assume that <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are odd integers and will prove that <span class="process-math">\(x \cdot y\)</span> is an odd integer. Since <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are odd, there exist integers <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+x = 2m + 1 \text{ and }  y = 2n + 1\text{.}
+\end{equation*}
+</div>
+<p id="p-348">Using algebra, we obtain</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-5">
+\begin{align*}
+x \cdot y \amp = \left( {2m + 1} \right)\left( {2n + 1} \right)\\
+\amp = 4mn + 2m + 2n + 1\\
+\amp = 2\left( {2mn + m + n} \right) + 1\text{.}
+\end{align*}
+</div>
+<p id="p-349">Since <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> are integers and the integers are closed under addition and multiplication, we conclude that <span class="process-math">\(\left( {2mn + m + n} \right)\)</span> is an integer. This means that <span class="process-math">\(x \cdot y\)</span> has been written in the form <span class="process-math">\(\left( {2q + 1} \right)\)</span> for some integer <span class="process-math">\(q\text{,}\)</span> and hence, <span class="process-math">\(x \cdot y\)</span> is an odd integer. Consequently, it has been proven that if <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are odd integers, then <span class="process-math">\(x \cdot y\)</span> is an odd integer.</p></article></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Writing Guidelines for Mathematics Proofs</span>
+</h3>
+<p id="p-350">At the risk of oversimplification, doing mathematics can be considered to have two distinct stages. The first stage is to convince yourself that you have solved the problem or proved a conjecture. This stage is a creative one and is quite often how mathematics is actually done. The second equally important stage is to convince other people that you have solved the problem or proved the conjecture. This second stage often has little in common with the first stage in the sense that it does not really communicate the process by which you solved the problem or proved the conjecture. However, it is an important part of the process of communicating mathematical results to a wider audience.</p>
+<p id="p-351"> A <dfn class="terminology">mathematical proof</dfn> is a convincing argument (within the accepted standards of the mathematical community) that a certain mathematical statement is necessarily true. A proof generally uses deductive reasoning and logic but also contains some amount of ordinary language (such as English). A mathematical proof that you write should convince an appropriate audience that the result you are proving is in fact true. So we do not consider a proof complete until there is a well-written proof. So it is important to introduce some writing guidelines. The preceding proof was written according to the following basic guidelines for writing proofs. More writing guidelines will be given in <a href="C_proofs.html" class="internal" title="Chapter 3: Constructing and Writing Proofs in Mathematics">Chapter 3</a>.</p>
+<ol class="decimal">
+<li id="li-67">
+<span class="heading"><span class="title">Begin with a carefully worded statement of the theorem or result to be proven.</span></span><p id="p-352">This should be a simple declarative statement of the theorem or result. Do not simply rewrite the problem as stated in the textbook or given on a handout. Problems often begin with phrases such as “Show that” or “Prove that.” This should be reworded as a simple declarative statement of the theorem. Then skip a line and write “Proof” in italics or boldface font (when using a word processor). Begin the proof on the same line. Make sure that all paragraphs can be easily identified. Skipping a line between paragraphs or indenting each paragraph can accomplish this.</p>
+<p id="p-353">As an example, an exercise in a text might read, “Prove that if <span class="process-math">\(x\)</span> is an odd integer, then <span class="process-math">\(x^2\)</span> is an odd integer.” This could be started as follows: <blockquote class="blockquote" id="blockquote-20">
+<em class="emphasis">Theorem.</em> If <span class="process-math">\(x\)</span> is an odd integer, then <span class="process-math">\(x^2\)</span> is an odd integer.</blockquote> <blockquote class="blockquote" id="blockquote-21">
+<em class="emphasis">Proof</em>: We assume that <span class="process-math">\(x\)</span> is an odd integer <span class="process-math">\(\ldots\)</span>
+</blockquote></p>
+</li>
+<li id="li-68">
+<span class="heading"><span class="title">Begin the proof with a statement of your assumptions.</span></span><p id="p-354">Follow the statement of your assumptions with a statement of what you will prove. <blockquote class="blockquote" id="blockquote-22">Theorem. If <span class="process-math">\(x\)</span> is an odd integer, then <span class="process-math">\(x^2\)</span> is an odd integer.</blockquote> <blockquote class="blockquote" id="blockquote-23">Proof. We assume that <span class="process-math">\(x\)</span> is an odd integer and will prove that <span class="process-math">\(x^2\)</span> is an odd integer.</blockquote></p>
+</li>
+<li id="li-69">
+<span class="heading"><span class="title">Use the pronoun “we”.</span></span><p id="p-355">If a pronoun is used in a proof, the usual convention is to use “we” instead of “I.” The idea is to stress that you and the reader are doing the mathematics together. It will help encourage the reader to continue working through the mathematics. Notice that we started the proof of <a href="" class="xref" data-knowl="./knowl/T_xyodd.html" title="Theorem 1.10">Theorem 1.10</a> with “We assume that <span class="process-math">\(\ldots\)</span> .”</p>
+</li>
+<li id="li-70">
+<span class="heading"><span class="title">Use italics for variables when using a word processor.</span></span><p id="p-356">When using a word processor to write mathematics, the word processor needs to be capable of producing the appropriate mathematical symbols and equations. The mathematics that is written with a word processor should look like typeset mathematics. This means that italics is used for variables, boldface font is used for vectors, and regular font is used for mathematical terms such as the names of the trigonometric and logarithmic functions. For example, we do not write sin (x) or <em class="emphasis">sin (x)</em>. The proper way to typeset this is <span class="process-math">\(\sin (x)\text{.}\)</span></p>
+</li>
+<li id="li-71">
+<span class="heading"><span class="title">Display important equations and mathematical expressions.</span></span><p id="p-357">Equations and manipulations are often an integral part of mathematical exposition. Do not write equations, algebraic manipulations, or formulas in one column with reasons given in another column. Important equations and manipulations should be displayed. This means that they should be centered with blank lines before and after the equation or manipulations, and if the left side of the equations does not change, it should not be repeated. For example,</p>
+<p id="p-358">Using algebra, we obtain</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-6">
+\begin{align*}
+x \cdot y \amp = \left( {2m + 1} \right)\left( {2n + 1} \right)\\
+\amp = 4mn + 2m + 2n + 1\\
+\amp = 2\left( {2mn + m + n} \right) + 1\text{.}
+\end{align*}
+</div>
+<p class="continuation">Since <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> are integers, we conclude that <span class="process-math">\(\ldots\)</span> .</p>
+</li>
+<li id="li-72">
+<span class="heading"><span class="title">Tell the reader when the proof has been completed.</span></span><p id="p-359">Perhaps the best way to do this is to simply write, “This completes the proof.” Although it may seem repetitive, a good alternative is to finish a proof with a sentence that states precisely what has been proven. In any case, it is usually good practice to use some “end of proof symbol” such as <span class="process-math">\(\blacksquare\text{.}\)</span></p>
+</li>
+</ol>
+<article class="exercise exercise-like" id="prog_proving"><h4 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span><span class="space"> </span><span class="title">Proving Propositions.</span>
+</h4>
+<div class="introduction" id="introduction-21"><p id="p-360">Construct a know-show table for each of the following propositions and then write a formal proof for one of the propositions.</p></div>
+<article class="task exercise-like" id="task-90"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-361">If <span class="process-math">\(x\)</span> is an even integer and <span class="process-math">\(y\)</span> is an even integer, then <span class="process-math">\(x + y\)</span> is an even integer.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-25" id="solution-25"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-25"><div class="solution solution-like">
+<p id="p-362">We assume that <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are even integers and will prove that <span class="process-math">\(x+y\)</span> is an even integer. Since <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are even, there exist integers <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> such that <span class="process-math">\(x = 2m\)</span> and <span class="process-math">\(y = 2n\text{.}\)</span> We can then conclude that</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-7">
+\begin{align*}
+x + y \amp = 2m + 2n\\
+\amp = 2(m + n)
+\end{align*}
+</div>
+<p class="continuation">Since the integers are closed under addition, <span class="process-math">\(m + n\)</span> is an integer and the last equation shows that <span class="process-math">\(x + y\)</span> is an even integer. This proves that if <span class="process-math">\(x\)</span> is an even integer and <span class="process-math">\(y\)</span> is an even integer, then <span class="process-math">\(x + y\)</span> is an even integer.</p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-91"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-363">If <span class="process-math">\(x\)</span> is an even integer and <span class="process-math">\(y\)</span> is an odd integer, then <span class="process-math">\(x + y\)</span> is an odd integer.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-26" id="solution-26"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-26"><div class="solution solution-like">
+<p id="p-364">The other two parts would be written in a similar manner as Part (1). Only the algebraic details are shown below for (2) and (3).</p>
+<p id="p-365">If <span class="process-math">\(x\)</span> is an even integer and <span class="process-math">\(y\)</span> is an odd integer, then there exist integers <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> such that <span class="process-math">\(x = 2m\)</span> and <span class="process-math">\(y = 2n+1\text{.}\)</span> Then</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-8">
+\begin{align*}
+x + y \amp = 2m + (2n + 1)\\
+\amp = 2(m + n) + 1
+\end{align*}
+</div>
+<p class="continuation">Since the integers are closed under addition, <span class="process-math">\(m + n\)</span> is an integer and the last equation shows that <span class="process-math">\(x + y\)</span> is an odd integer. This proves that if <span class="process-math">\(x\)</span> is an even integer and <span class="process-math">\(y\)</span> is an odd integer, then <span class="process-math">\(x + y\)</span> is an odd integer.</p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-92"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-366">If <span class="process-math">\(x\)</span> is an odd integer and <span class="process-math">\(y\)</span> is an odd integer, then <span class="process-math">\(x + y\)</span> is an even integer.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-27" id="solution-27"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-27"><div class="solution solution-like">
+<p id="p-367">If <span class="process-math">\(x\)</span> is an odd integer and <span class="process-math">\(y\)</span> is an odd integer, then there exist integers <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> such that <span class="process-math">\(x = 2m+1\)</span> and <span class="process-math">\(y = 2n+1\text{.}\)</span> Then</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-9">
+\begin{align*}
+x + y \amp = (2m+1) + (2n + 1)\\
+\amp = 2(m + n + 1)
+\end{align*}
+</div>
+<p class="continuation">Since the integers are closed under addition, <span class="process-math">\(m + n+1\)</span> is an integer and the last equation shows that <span class="process-math">\(x + y\)</span> is an even integer. This proves that if <span class="process-math">\(x\)</span> is an odd integer and <span class="process-math">\(y\)</span> is an odd integer, then <span class="process-math">\(x + y\)</span> is an even integer.</p>
+</div></div>
+</div></article></article></section><section class="subsection" id="subsec-proof-comments"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Some Comments about Constructing Direct Proofs</span>
+</h3>
+<ol class="decimal">
+<li id="proofcomment1">
+<p id="p-368">When we constructed the know-show table prior to writing a proof for <a href="" class="xref" data-knowl="./knowl/T_xyodd.html" title="Theorem 1.10">Theorem 1.10</a>, we had only one answer for the backward question and one answer for the forward question. Often, there can be more than one answer for these questions. For example, consider the following statement: <blockquote class="blockquote" id="blockquote-24">If <span class="process-math">\(x\)</span> is an odd integer, then <span class="process-math">\(x^2\)</span> is an odd integer.</blockquote> The backward question for this could be, “How do I prove that an integer is an odd integer?” One way to answer this is to use the definition of an odd integer, but another way is to use the result of <a href="" class="xref" data-knowl="./knowl/T_xyodd.html" title="Theorem 1.10">Theorem 1.10</a>. That is, we can prove an integer is odd by proving that it is a product of two odd integers.</p>
+<p id="p-369">The difficulty then is deciding which answer to use. Sometimes we can tell by carefully watching the interplay between the forward process and the backward process. Other times, we may have to work with more than one possible answer.</p>
+</li>
+<li id="li-74"><p id="p-370">Sometimes we can use previously proven results to answer a forward question or a backward question. This was the case in the example given in <a href="" class="xref" data-knowl="./knowl/proofcomment1.html" title="Item 1">Item 1</a>, where <a href="" class="xref" data-knowl="./knowl/T_xyodd.html" title="Theorem 1.10">Theorem 1.10</a> was used to answer a backward question.</p></li>
+<li id="li-75"><p id="p-371">Although we start with two separate processes (forward and backward), the key to constructing a proof is to find a way to link these two processes. This can be difficult. One way to proceed is to use the know portion of the table to motivate answers to backward questions and to use the show portion of the table to motivate answers to forward questions.</p></li>
+<li id="li-76">
+<p id="p-372">Answering a backward question can sometimes be tricky. If the goal is the statement  <span class="process-math">\(Q\text{,}\)</span> we must construct the know-show table so that if we know that  <span class="process-math">\(Q1\)</span> is true, then we can conclude that <span class="process-math">\(Q\)</span> is true. It is sometimes easy to answer this in a way that if it is known that  <span class="process-math">\(Q\)</span> is true, then we can conclude that <span class="process-math">\(Q1\)</span> is true. For example, suppose the goal is to prove</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+y^2 = 4\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where  <span class="process-math">\(y\)</span>  is a real number. A backward question could be, “How do we prove the square of a real number equals four?” One possible answer is to prove that the real number equals 2. Another way is to prove that the real number equals <span class="process-math">\(-2\text{.}\)</span> This is an appropriate backward question, and these are appropriate answers.</p>
+<p id="p-373">However, if the goal is to prove</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+y = 2\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where  <span class="process-math">\(y\)</span>  is a real number, we could ask, “How do we prove a real number equals 2?” It is not appropriate to answer this question with “prove that the square of the real number equals 4.” This is because if <span class="process-math">\(y^2=4\text{,}\)</span> then it is not necessarily true that <span class="process-math">\(y=2\text{.}\)</span></p>
+</li>
+<li id="li-77"><p id="p-374">Finally, it is very important to realize that not every proof can be constructed by the use of a simple know-show table. Proofs will get more complicated than the ones that are in this section. The main point of this section is not the know-show table itself, but the way of thinking about a proof that is indicated by a know-show table. In most proofs, it is very important to specify carefully what it is that is being assumed and what it is that we are trying to prove. The process of asking the “backward questions” and the “forward questions” is the important part of the know-show table. It is very important to get into the “habit of mind” of working backward from what it is we are trying to prove and working forward from what it is we are assuming. Instead of immediately trying to write a complete proof, we need to stop, think, and ask questions such as <blockquote class="blockquote" id="blockquote-25">Just exactly what is it that I am trying to prove?</blockquote> <blockquote class="blockquote" id="blockquote-26">How can I prove this?</blockquote> <blockquote class="blockquote" id="blockquote-27">What methods do I have that may allow me to prove this?</blockquote> <blockquote class="blockquote" id="blockquote-28">What are the assumptions?</blockquote> <blockquote class="blockquote" id="blockquote-29">How can I use these assumptions to prove the result?</blockquote></p></li>
+</ol>
+<article class="exercise exercise-like" id="A_kstable2"><h4 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span><span class="space"> </span><span class="title">Exploring a Proposition.</span>
+</h4>
+<p id="p-375">Construct a table of values for <span class="process-math">\(\left( {3m^2 + 4m + 6} \right)\)</span> using at least six different integers for <span class="process-math">\(m\text{.}\)</span> Make one-half of the values for <span class="process-math">\(m\)</span> even integers and the other half odd integers. Is the following proposition true or false? <blockquote class="blockquote" id="blockquote-30">If <span class="process-math">\(m\)</span> is an odd integer, then <span class="process-math">\(\left(3m^2 + 4m + 6 \right)\)</span> is an odd integer.</blockquote></p>
+<p id="p-376">Justify your conclusion. This means that if the proposition is true, then you should write a proof of the proposition. If the proposition is false, you need to provide an example of an odd integer for which <span class="process-math">\(\left(3m^2 + 4m + 6 \right)\)</span> is an even integer.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-28" id="solution-28"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-28"><div class="solution solution-like">
+<p id="p-377">All examples should indicate the proposition is true. Following is a proof.</p>
+<article class="proof" id="proof-2"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5>
+<p id="p-378">We assume that <span class="process-math">\(m\)</span> is an odd integer and will prove that <span class="process-math">\(\left( 3m^2 + 4m + 6 \right)\)</span> is an odd integer. Since <span class="process-math">\(m\)</span> is an odd integer, there exists an integer <span class="process-math">\(k\)</span> such that <span class="process-math">\(m = 2k + 1\text{.}\)</span> Substituting this into the expression <span class="process-math">\(\left( 3m^2 + 4m + 6 \right)\)</span> and using algebra, we obtain</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-10">
+\begin{align*}
+3m^2 + 4m + 6 \amp = 3\left(2k + 1 \right)^2 + 4 \left(2k + 1 \right) + 6\\
+\amp = \left( 12k^2 + 12k + 3 \right) + \left( 8k + 4 \right) + 6\\
+\amp = 12k^2 + 20k + 13\\
+\amp = 12k^2 + 20k + 12 + 1\\
+\amp = 2 \left(6k^2 + 10k + 6 \right) + 1
+\end{align*}
+</div>
+<p id="p-379">By the closure properties of the integers, <span class="process-math">\(\left(6k^2 + 10k + 6 \right)\)</span> is an integer, and hence, the last equation shows that <span class="process-math">\(3m^2 + 4m + 6\)</span> is an odd integer. This proves that if <span class="process-math">\(m\)</span> is an odd integer, then <span class="process-math">\(\left( 3m^2 + 4m + 6 \right)\)</span> is an odd integer.</p></article>
+</div></div>
+</div></article><article class="exercise exercise-like" id="pr_pythag"><h4 class="heading">
+<span class="type">Progress Check</span><span class="space"> </span><span class="codenumber">1.13</span><span class="period">.</span><span class="space"> </span><span class="title">Constructing and Writing a Proof.</span>
+</h4>
+<p id="p-380">The <dfn class="terminology">Pythagorean Theorem</dfn> for right triangles states that if <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are the lengths of the legs of a right triangle and <span class="process-math">\(c\)</span> is the length of the hypotenuse, then <span class="process-math">\(a^2 + b^2 = c^2\)</span> For example, if <span class="process-math">\(a = 5\)</span> and <span class="process-math">\(b = 12\)</span> are the lengths of the two sides of a right triangle and if <span class="process-math">\(c\)</span> is the length of the hypotenuse, then the <span class="process-math">\(c^2 = 5^2 + 12^2\)</span> and so <span class="process-math">\(c^2 = 169\text{.}\)</span> Since <span class="process-math">\(c\)</span> is a length and must be positive, we conclude that <span class="process-math">\(c = 13\text{.}\)</span></p>
+<p id="p-381">Construct and provide a well-written proof for the following proposition. <blockquote class="blockquote" id="blockquote-31">Proposition: If <span class="process-math">\(m\)</span> is a real number and <span class="process-math">\(m\text{,}\)</span> <span class="process-math">\(m + 1\text{,}\)</span> and <span class="process-math">\(m + 2\)</span> are the lengths of the three sides of a right triangle, then <span class="process-math">\(m = 3\text{.}\)</span>
+</blockquote></p>
+<p id="p-382">Although this proposition uses different mathematical concepts than the one used in this section, the process of constructing a proof for this proposition is the same forward-backward method that was used to construct a proof for <a href="" class="xref" data-knowl="./knowl/T_xyodd.html" title="Theorem 1.10">Theorem 1.10</a>. However, the backward question, “How do we prove that <span class="process-math">\(m = 3\text{?}\)</span>” is simple but may be difficult to answer. The basic idea is to develop an equation from the forward process and show that <span class="process-math">\(m = 3\)</span> is a solution of that equation.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-29" id="solution-29"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-29"><div class="solution solution-like"><p id="p-383"><article class="proof" id="proof-3"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5>
+<p id="p-384">We let <span class="process-math">\(m\)</span> be a real number and assume that <span class="process-math">\(m\text{,}\)</span> <span class="process-math">\(m + 1\text{,}\)</span> and <span class="process-math">\(m + 2\)</span> are the lengths of the three sides of a right triangle. We will use the Pythagorean Theorem to prove that <span class="process-math">\(m = 3\text{.}\)</span> Since the hypotenuse is the longest of the three sides, the Pythagorean Theorem implies that <span class="process-math">\(m^2 + (m + 1)^2 = (m + 2)^2\text{.}\)</span> We will now use algebra to rewrite both sides of this equation as follows:</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-11">
+\begin{align*}
+m^2 + \left( m^2 + 2m + 1 \right) \amp = m^2 + 4m + 4\\
+2m^2 + 2m + 1 \amp = m^2 + 4m + 4
+\end{align*}
+</div>
+<p id="p-385">The last equation is a quadratic equation. To solve for <span class="process-math">\(m\text{,}\)</span> we rewrite the equation in standard form and then factor the left side. This gives</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-12">
+\begin{align*}
+m^2 - 2m - 3 \amp = 0\\
+(m - 3)(m + 1) \amp = 0
+\end{align*}
+</div>
+<p id="p-386">The two solutions of this equation are <span class="process-math">\(m = 3\)</span> and <span class="process-math">\(m = -1\text{.}\)</span> However, since <span class="process-math">\(m\)</span> is the length of a side of a right triangle, <span class="process-math">\(m\)</span> must be positive and we conclude that <span class="process-math">\(m = 3\text{.}\)</span> This proves that if <span class="process-math">\(m\text{,}\)</span> <span class="process-math">\(m + 1\text{,}\)</span> and <span class="process-math">\(m + 2\)</span> are the lengths of the three sides of a right triangle, then <span class="process-math">\(m = 3\text{.}\)</span></p></article></p></div></div>
+</div></article></section><section class="exercises" id="exercises-2"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exer_evenodd"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-22"><p id="p-387">Construct a know-show table for each of the following statements and then write a formal proof for one of the statements.</p></div>
+<article class="task exercise-like" id="task-93"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-388">If <span class="process-math">\(m\)</span> is an even integer, then <span class="process-math">\(m + 1\)</span> is an odd integer.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-tabular" data-refid="hk-answer-33" id="answer-33"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-33"><div class="answer solution-like"><p id="p-389"><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b2 r2 l0 t0 lines">Step</th>
+<th scope="col" class="l m b2 r2 l0 t0 lines">Know</th>
+<th scope="col" class="l m b2 r0 l0 t0 lines">Reason</th>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(P\)</span></td>
+<td class="l m b2 r2 l0 t0 lines">
+<span class="process-math">\(m\)</span> is an even integer.</td>
+<td class="l m b2 r0 l0 t0 lines">Hypothesis</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(P1\)</span></td>
+<td class="l m b2 r2 l0 t0 lines">There exists an integer <span class="process-math">\(k\)</span><br>such that <span class="process-math">\(m = 2k\text{.}\)</span>
+</td>
+<td class="l m b2 r0 l0 t0 lines">Definition of an even integer</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(P2\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(m + 1 = 2k + 1\)</span></td>
+<td class="l m b2 r0 l0 t0 lines">Algebra</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(Q1\)</span></td>
+<td class="l m b2 r2 l0 t0 lines">There exists an integer <span class="process-math">\(q\)</span><br>such that <span class="process-math">\(m +1 = 2q+1\text{.}\)</span>
+</td>
+<td class="l m b2 r0 l0 t0 lines">Substitution of <span class="process-math">\(k = q\)</span>
+</td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(Q\)</span></td>
+<td class="l m b0 r2 l0 t0 lines">
+<span class="process-math">\(m + 1\)</span> is an odd integer.</td>
+<td class="l m b0 r0 l0 t0 lines">Definition of an odd integer</td>
+</tr>
+</table></div></p></div></div>
+</div></article><article class="task exercise-like" id="task-94"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-390">If <span class="process-math">\(m\)</span> is an odd integer, then <span class="process-math">\(m + 1\)</span> is an even integer.</p></article></article><article class="exercise exercise-like" id="exer_evenoddadd"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-23"><p id="p-391">Construct a know-show table for each of the following statements and then write a formal proof for one of the statements.</p></div>
+<article class="task exercise-like" id="exer_evenoddadda"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-392">If <span class="process-math">\(x\)</span> is an even integer and <span class="process-math">\(y\)</span> is an even integer, then <span class="process-math">\(x + y\)</span> is an even integer.</p></article><article class="task exercise-like" id="exer_evenoddaddb"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-393">If <span class="process-math">\(x\)</span> is an even integer and <span class="process-math">\(y\)</span> is an odd integer, then <span class="process-math">\(x + y\)</span> is an odd integer.</p></article><article class="task exercise-like" id="task-97"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-394">If <span class="process-math">\(x\)</span> is an odd integer and <span class="process-math">\(y\)</span> is an odd integer, then <span class="process-math">\(x + y\)</span> is an even integer.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-34" id="answer-34"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-34"><div class="answer solution-like">
+<p id="p-395">We assume that <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are odd integers and will prove that <span class="process-math">\(x+y\)</span> is an even integer.  Since <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are odd, there exist integers <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> such that <span class="process-math">\(x = 2m + 1\)</span> and <span class="process-math">\(y = 2n+1\text{.}\)</span> Then</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-13">
+\begin{align*}
+x + y \amp = \left( 2m + 1 \right) + \left( 2n + 1 \right)\\
+\amp = 2m + 2n + 2\\
+\amp = 2 \left( m + n + 1 \right)\text{.}
+\end{align*}
+</div>
+<p class="continuation">Since the integers are closed under addition, <span class="process-math">\(\left( m + n + 1 \right)\)</span> is an integer, and hence the last equation shows that <span class="process-math">\(x + y\)</span> is even. Therefore, we have proven that if <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are odd integers, then <span class="process-math">\(x+y\)</span> is an even integer.</p>
+</div></div>
+</div></article></article><article class="exercise exercise-like" id="exer_evenoddmult"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-24"><p id="p-396">Construct a know-show table for each of the following statements and then write a formal proof for one of the statements.</p></div>
+<article class="task exercise-like" id="exer_evenoddmulta"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-397">If <span class="process-math">\(m\)</span> is an even integer and <span class="process-math">\(n\)</span> is an integer, then <span class="process-math">\(m \cdot n\)</span> is an even integer.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original has-tabular" data-refid="hk-answer-35" id="answer-35"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-35"><div class="answer solution-like"><p id="p-398"><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b2 r2 l0 t0 lines">Step</th>
+<th scope="col" class="l m b2 r2 l0 t0 lines">Know</th>
+<th scope="col" class="l m b2 r0 l0 t0 lines">Reason</th>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(P\)</span></td>
+<td class="l m b2 r2 l0 t0 lines">
+<span class="process-math">\(m\)</span> is an even integer and<br><span class="process-math">\(n\)</span> is an integer.</td>
+<td class="l m b2 r0 l0 t0 lines">Hypothesis</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(P1\)</span></td>
+<td class="l m b2 r2 l0 t0 lines">There exists an integer <span class="process-math">\(k\)</span> <span class="process-math">\(m = 2k\text{.}\)</span>
+</td>
+<td class="l m b2 r0 l0 t0 lines">Definition of an even integer.</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(P2\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(m \cdot n = \left( 2k \right) n\)</span></td>
+<td class="l m b2 r0 l0 t0 lines">Substitution</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(P3\)</span></td>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(m \cdot n = 2 \left( {kn} \right)\)</span></td>
+<td class="l m b2 r0 l0 t0 lines">Algebra</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(P4\)</span></td>
+<td class="l m b2 r2 l0 t0 lines">
+<span class="process-math">\(\left( {kn} \right)\)</span> is an integer</td>
+<td class="l m b2 r0 l0 t0 lines">Closure properties of the integers</td>
+</tr>
+<tr>
+<td class="l m b2 r2 l0 t0 lines"><span class="process-math">\(Q1\)</span></td>
+<td class="l m b2 r2 l0 t0 lines">There exists an integer <span class="process-math">\(q\)</span><br>such that <span class="process-math">\(m \cdot n = 2q\)</span>
+</td>
+<td class="l m b2 r0 l0 t0 lines"><span class="process-math">\(q = kn\text{.}\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r2 l0 t0 lines"><span class="process-math">\(Q\)</span></td>
+<td class="l m b0 r2 l0 t0 lines">
+<span class="process-math">\(m \cdot n\)</span> is an even integer.</td>
+<td class="l m b0 r0 l0 t0 lines">Definition of an even integer.</td>
+</tr>
+</table></div></p></div></div>
+</div></article><article class="task exercise-like" id="task-99"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-399">If <span class="process-math">\(n\)</span> is an even integer, then <span class="process-math">\(n^2\)</span> is an even integer.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-36" id="answer-36"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-36"><div class="answer solution-like"><p id="p-400">Use <a href="" class="xref" data-knowl="./knowl/exer_evenoddmulta.html" title="Task 3.a">Task 3.a</a> to answer this.</p></div></div>
+</div></article><article class="task exercise-like" id="exer_x2odd"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-401">If <span class="process-math">\(n\)</span> is an odd integer, then <span class="process-math">\(n^2\)</span> is an odd integer.</p></article></article><article class="exercise exercise-like" id="exer_5m_7"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-25"><p id="p-402">Construct a know-show table and write a complete proof for each of the following statements:</p></div>
+<article class="task exercise-like" id="task-101"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-403">If <span class="process-math">\(m\)</span> is an even integer, then <span class="process-math">\(5m + 7\)</span> is an odd integer.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-37" id="answer-37"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-37"><div class="answer solution-like">
+<p id="p-404">We assume that <span class="process-math">\(m\)</span> is an even integer and will prove that <span class="process-math">\(5m + 7\)</span> is an odd integer.  Since <span class="process-math">\(m\)</span> is an even integer, there exists an integer <span class="process-math">\(k\)</span> such that <span class="process-math">\(m = 2k\text{.}\)</span>  Using substitution and algebra, we see that</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-14">
+\begin{align*}
+5m + 7 \amp = 5(2k) + 7\\
+\amp = 10k + 6 + 1\\
+\amp = 2(5k + 3) + 1
+\end{align*}
+</div>
+<p class="continuation">By the closure properties of the integers, we conclude that <span class="process-math">\(5k + 3\)</span> is an integer, and so the last equation proves that <span class="process-math">\(5m + 7\)</span> is an odd integer.</p>
+<p id="p-405">Another proof. By <a href="" class="xref" data-knowl="./knowl/exer_evenoddadda.html" title="Task 2.a">Task 2.a</a> of <a href="" class="xref" data-knowl="./knowl/exer_evenoddadd.html" title="Exercise 2">Exercise 2</a>, <span class="process-math">\(5m\)</span> is an even integer.  Hence, by <a href="" class="xref" data-knowl="./knowl/exer_evenoddaddb.html" title="Task 2.b">Task 2.b</a> of <a href="" class="xref" data-knowl="./knowl/exer_evenoddadd.html" title="Exercise 2">Exercise 2</a>, <span class="process-math">\(5m + 7\)</span> is an even integer.</p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-102"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-406">If <span class="process-math">\(m\)</span> is an odd integer, then <span class="process-math">\(5m + 7\)</span> is an even integer.</p></article><article class="task exercise-like" id="task-103"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-407">If <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> are odd integers, then <span class="process-math">\(mn + 7\)</span> is an even integer.</p></article></article><article class="exercise exercise-like" id="exer_3m2"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-26"><p id="p-408">Construct a know-show table and write a complete proof for each of the following statements:</p></div>
+<article class="task exercise-like" id="task-104"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-409">If <span class="process-math">\(m\)</span> is an even integer, then <span class="process-math">\(3m^2 + 2m + 3\)</span> is an odd integer.</p></article><article class="task exercise-like" id="task-105"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-410">If <span class="process-math">\(m\)</span> is an odd integer, then <span class="process-math">\(3m^2 + 7m + 12\)</span> is an even integer.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-38" id="answer-38"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-38"><div class="answer solution-like">
+<p id="p-411">We assume that <span class="process-math">\(m\)</span> is an odd integer and will prove that <span class="process-math">\(3m^2 + 7m + 12\)</span> is an even integer.  Since <span class="process-math">\(m\)</span> is odd, there exists an integer <span class="process-math">\(k\)</span> such that <span class="process-math">\(m = 2k +1\text{.}\)</span> Hence,</p>
+<div class="displaymath process-math" data-contains-math-knowls="" id="md-15">
+\begin{align*}
+3m^2 + 7m + 12 \amp = 3 \left( 2k + 1 \right)^2 + 7 \left( 2k + 1 \right) + 12\\
+\amp = 12k^2 + 26k + 22\\
+\amp = 2 \left( 6k^2 + 13k + 11 \right)
+\end{align*}
+</div>
+<p class="continuation">By the closure properties of the integers, <span class="process-math">\(\left( 6k^2 + 13k + 11 \right)\)</span> is an integer. Hence, this proves that if <span class="process-math">\(m\)</span> is odd, then <span class="process-math">\(3m^2 + 7m + 12\)</span> is an even integer.</p>
+</div></div>
+</div></article></article><article class="exercise exercise-like" id="exer_sec12-7"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-27"><p id="p-412">In this section, it was noted that there is often more than one way to answer a backward question. For example, if the backward question is, “How can we prove that two real numbers are equal?”, one possible answer is to prove that their difference equals 0. Another possible answer is to prove that the first is less than or equal to the second and that the second is less than or equal to the first.</p></div>
+<article class="task exercise-like" id="task-106"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-413">Give at least one more answer to the backward question, “How can we prove that two real numbers are equal?”</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-39" id="answer-39"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-39"><div class="answer solution-like"><p id="p-414">Prove that they are not zero and their quotient is equal to 1.</p></div></div>
+</div></article><article class="task exercise-like" id="task-107"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-415">List as many answers as you can for the backward question, “How can we prove that a real number is equal to zero?”</p></article><article class="task exercise-like" id="task-108"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-416">List as many answers as you can for the backward question, “How can we prove that two lines are parallel?”</p></article><article class="task exercise-like" id="task-109"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-417">List as many answers as you can for the backward question, “How can we prove that a triangle is isosceles?”</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-40" id="answer-40"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-40"><div class="answer solution-like"><p id="p-418">Prove that two of the sides have the same length. Prove that the triangle has two congruent angles.  Prove that an altitude of the triangle is a perpendicular bisector of a side of the triangle.</p></div></div>
+</div></article></article><article class="exercise exercise-like" id="exer_sec12-new7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-28"><p id="p-419">Are the following statements true or false? Justify your conclusions.</p></div>
+<article class="task exercise-like" id="task-110"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-420">If <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> are integers, then <span class="process-math">\(ab + ac\)</span> is an even integer.</p></article><article class="task exercise-like" id="task-111"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-421">If <span class="process-math">\(b\)</span> and <span class="process-math">\(c\)</span> are odd integers and <span class="process-math">\(a\)</span> is an integer, then <span class="process-math">\(ab + ac\)</span> is an even integer.</p></article></article><article class="exercise exercise-like" id="exer_sec12-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<p id="p-422">Is the following statement true or false? Justify your conclusion. <blockquote class="blockquote" id="blockquote-32">If <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are nonnegative real numbers and <span class="process-math">\(a + b = 0\text{,}\)</span> then <span class="process-math">\(a = 0\text{.}\)</span>
+</blockquote></p>
+<p id="p-423">Either give a counterexample to show that it is false or outline a proof by completing a know-show table.</p></article><article class="exercise exercise-like" id="exer_sec12-type"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-29"><p id="p-424">An integer <span class="process-math">\(a\)</span> is said to be a <dfn class="terminology">type 0 integer</dfn> if there exists an integer <span class="process-math">\(n\)</span> such that <span class="process-math">\(a=3n\text{.}\)</span> An integer <span class="process-math">\(a\)</span> is said to be a <dfn class="terminology">type 1 integer</dfn> if there exists an integer <span class="process-math">\(n\)</span> such that <span class="process-math">\(a=3n+1\text{.}\)</span> An integer <span class="process-math">\(a\)</span> is said to be a <dfn class="terminology">type 2 integer</dfn> if there exists an integer <span class="process-math">\(m\)</span> such that <span class="process-math">\(a=3m+2\text{.}\)</span></p></div>
+<article class="task exercise-like" id="exer_mod3a"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-425">Give examples of at least four different integers that are type 1 integers.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-41" id="answer-41"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-41"><div class="answer solution-like"><p id="p-426">Some examples of type 1 integers are <span class="process-math">\(-5\text{,}\)</span> <span class="process-math">\(-2\text{,}\)</span> 1, 4, 7, 10.</p></div></div>
+</div></article><article class="task exercise-like" id="task-113"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-427">Give examples of at least four different integers that are type 2 integers.</p></article><article class="task exercise-like" id="task-114"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-428">By multiplying pairs of integers from the list in <a href="" class="xref" data-knowl="./knowl/exer_mod3a.html" title="Task 9.a">Task 9.a</a>, does it appear that the following statement is true or false? <blockquote class="blockquote" id="blockquote-33">If <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are both type 1 integers, then <span class="process-math">\(a \cdot b\)</span> is a type 1 integer.</blockquote></p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-42" id="answer-42"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-42"><div class="answer solution-like"><p id="p-429">All examples should indicate the proposition is true.</p></div></div>
+</div></article></article><article class="exercise exercise-like" id="exer_sec12-typeproof"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-30"><p id="p-430">Use the definitions in <a href="" class="xref" data-knowl="./knowl/exer_sec12-type.html" title="Exercise 9">Exercise 9</a> to help write a proof for each of the following statements:</p></div>
+<article class="task exercise-like" id="task-115"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-431">If <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are both type 1 integers, then <span class="process-math">\(a + b\)</span> is a type 2 integer.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-43" id="answer-43"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-43"><div class="answer solution-like">
+<p id="p-432">Let <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> be integers and assume that <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are both type 1 integers.  Then, there exist integers <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> such that <span class="process-math">\(a = 3m + 1\)</span> and <span class="process-math">\(b = 3n + 1\text{.}\)</span>  Now show that</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+a + b = 3 \left( m + n \right) + 2\text{.}
+\end{equation*}
+</div>
+<p class="continuation">The closure properties of the integers imply that <span class="process-math">\(m + n\)</span> is an integer. Therefore, the last equation tells us that <span class="process-math">\(a + b\)</span> is a type 2 integer. Hence, we have proved that if <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are both type 1 integers, then <span class="process-math">\(a + b\)</span> is a type 2 integer.</p>
+</div></div>
+</div></article><article class="task exercise-like" id="task-116"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-433">If <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are both type 2 integers, then <span class="process-math">\(a + b\)</span> is a type 1 integer.</p></article><article class="task exercise-like" id="task-117"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-434">If <span class="process-math">\(a\)</span> is a type 1 integer and <span class="process-math">\(b\)</span> is a type 2 integer, then <span class="process-math">\(a \cdot b\)</span> is a type 2 integer.</p></article><article class="task exercise-like" id="task-118"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-435">If <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are both type 2 integers, then <span class="process-math">\(a \cdot b\)</span> is type 1 integer.</p></article></article><article class="exercise exercise-like" id="exer_sec12-11"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-31">
+<p id="p-436">Let <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> be real numbers with <span class="process-math">\(a \ne 0\text{.}\)</span> The solutions of the <dfn class="terminology">quadratic equation</dfn> <span class="process-math">\(ax^2 + bx + c = 0\)</span> are given by the <dfn class="terminology">quadratic formula</dfn>, which states that the solutions are <span class="process-math">\(x_1\)</span> and <span class="process-math">\(x_2\text{,}\)</span> where</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+x_1 = \frac{-b + \sqrt{b^2 - 4ac}}{2a}  \text{ and }   x_2 = \frac{-b - \sqrt{b^2 - 4ac}}{2a}\text{.}
+\end{equation*}
+</div>
+</div>
+<article class="task exercise-like" id="task-119"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-437">Prove that the sum of the two solutions of the quadratic equation <span class="process-math">\(ax^2 + bx + c = 0\)</span> is equal to <span class="process-math">\(- \dfrac{b}{a}\text{.}\)</span></p></article><article class="task exercise-like" id="task-120"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-438">Prove that the product of the two solutions of the quadratic equation <span class="process-math">\(ax^2 + bx + c = 0\)</span> is equal to <span class="process-math">\(\dfrac{c}{a}\text{.}\)</span></p></article></article><article class="exercise exercise-like" id="exer_sec12-quadratic2"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<div class="introduction" id="introduction-32"><p id="p-439">See <a href="" class="xref" data-knowl="./knowl/exer_sec12-11.html" title="Exercise 11">Exercise 11</a> for the quadratic formula, which gives the solutions to a quadratic equation.</p></div>
+<article class="task exercise-like" id="task-121"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-440">Let <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> be real numbers with <span class="process-math">\(a \ne 0\text{.}\)</span> The discriminant of the quadratic equation <span class="process-math">\(ax^2 + bx + c = 0\)</span> is defined to be <span class="process-math">\(b^2 - 4ac\text{.}\)</span> Explain how to use this discriminant to determine if the quadratic equation has two real number solutions, one real number solution, or no real number solutions.</p></article><article class="task exercise-like" id="task-122"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-441">Prove that if <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> are real numbers with <span class="process-math">\(a &gt; 0\)</span> and <span class="process-math">\(c \lt 0\text{,}\)</span> then one solutions of the quadratic equation <span class="process-math">\(ax^2 + bx + c = 0\)</span> is a positive real number.</p></article><article class="task exercise-like" id="task-123"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-442">Prove that if <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> are real numbers with <span class="process-math">\(a \ne 0\text{,}\)</span> <span class="process-math">\(b &gt; 0\text{,}\)</span> and <span class="process-math">\(b \lt 2 \sqrt{ac}\text{,}\)</span> then the quadratic equation <span class="process-math">\(ax^2 + bx + c = 0\)</span> has no real number solutions.</p></article></article><article class="activity project-like" id="exer_pythag"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span><span class="space"> </span><span class="title">Pythagorean Triples.</span>
+</h4>
+<div class="introduction" id="introduction-33"><p id="p-443">Three natural numbers <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> with <span class="process-math">\(a \lt b \lt c\)</span> are said to form a <dfn class="terminology">Pythagorean triple</dfn> provided that <span class="process-math">\(a^2 + b^2 = c^2\text{.}\)</span> For example, 3, 4, and 5 form a Pythagorean triple since <span class="process-math">\(3^2 + 4^2 = 5^2\text{.}\)</span> The study of Pythagorean triples began with the development of the Pythagorean Theorem for right triangles, which states that if <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are the lengths of the legs of a right triangle and <span class="process-math">\(c\)</span> is the length of the hypotenuse, then <span class="process-math">\(a^2 + b^2 = c^2\text{.}\)</span> For example, if the lengths of the legs of a right triangle are 4 and 7 units, then <span class="process-math">\(c^2 = 4^2 + 7^2 = 63\text{,}\)</span> and the length of the hypotenuse must be <span class="process-math">\(\sqrt{63}\)</span> units (since the length must be a positive real number). Notice that <span class="process-math">\(4\text{,}\)</span> <span class="process-math">\(7\text{,}\)</span> and <span class="process-math">\(\sqrt{63}\)</span> are not a Pythagorean triple since <span class="process-math">\(\sqrt{63}\)</span> is not a natural number.</p></div>
+<article class="task exercise-like" id="task-124"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-444">Verify that each of the following triples of natural numbers forms a Pythagorean triple.</p>
+<ul class="disc cols3">
+<li id="li-78"><p id="p-445">3, 4, and 5</p></li>
+<li id="li-79"><p id="p-446">6, 8, and 10</p></li>
+<li id="li-80"><p id="p-447">8, 15, and 17</p></li>
+<li id="li-81"><p id="p-448">10, 24, and 26</p></li>
+<li id="li-82"><p id="p-449">12, 35, and 37</p></li>
+<li id="li-83"><p id="p-450">14, 48, and 50</p></li>
+</ul></article><article class="task exercise-like" id="task-125"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-451">Does there exist a Pythagorean triple of the form <span class="process-math">\(m\text{,}\)</span> <span class="process-math">\(m + 7\text{,}\)</span> and <span class="process-math">\(m + 8\text{,}\)</span> where <span class="process-math">\(m\)</span> is a natural number? If the answer is yes, determine all such Pythagorean triples. If the answer is no, prove that no such Pythagorean triple exists.</p></article><article class="task exercise-like" id="task-126"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-452">Does there exist a Pythagorean triple of the form <span class="process-math">\(m\text{,}\)</span> <span class="process-math">\(m + 11\text{,}\)</span> and <span class="process-math">\(m + 12\text{,}\)</span> where <span class="process-math">\(m\)</span> is a natural number? If the answer is yes, determine all such Pythagorean triples. If the answer is no, prove that no such Pythagorean triple exists.</p></article></article><article class="activity project-like" id="exer_morepythag"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span><span class="space"> </span><span class="title">More Work with Pythagorean Triples.</span>
+</h4>
+<div class="introduction" id="introduction-34">
+<p id="p-453">In <a href="" class="xref" data-knowl="./knowl/exer_pythag.html" title="Activity 2: Pythagorean Triples">Activity 2</a>, we verified that all of the following triples of natural numbers are Pythagorean triples:</p>
+<ul class="disc cols3">
+<li id="li-84"><p id="p-454">3, 4, and 5</p></li>
+<li id="li-85"><p id="p-455">6, 8, and 10</p></li>
+<li id="li-86"><p id="p-456">8, 15, and 17</p></li>
+<li id="li-87"><p id="p-457">10, 24, and 26</p></li>
+<li id="li-88"><p id="p-458">12, 35, and 37</p></li>
+<li id="li-89"><p id="p-459">14, 48, and 50</p></li>
+</ul>
+</div>
+<article class="task exercise-like" id="task-127"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-460">Focus on the least even natural number in each of these Pythagorean triples. Let <span class="process-math">\(n\)</span> be this even number and find <span class="process-math">\(m\)</span> so that <span class="process-math">\(n = 2m\text{.}\)</span> Now try to write formulas for the other two numbers in the Pythagorean triple in terms of <span class="process-math">\(m\text{.}\)</span> For example, for 3, 4, and 5, <span class="process-math">\(n = 4\)</span> and <span class="process-math">\(m = 2\text{.}\)</span> Once you think you have formulas, test your results with <span class="process-math">\(m = 10\text{.}\)</span> That is, check to see that you have a Pythagorean triple whose smallest even number is 20.</p></article><article class="task exercise-like" id="task-128"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-461">Write a proposition and then write a proof of the proposition. The proposition should be in the form: If <span class="process-math">\(m\)</span> is a natural number and <span class="process-math">\(m \geq 2\text{,}\)</span> then ……</p></article></article></section></section></div></main>
+</div>
+</body>
+</html>

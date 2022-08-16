@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-08-16T14:54:39-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="lemma theorem-like"><h4 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">9.5</span><span class="period">.</span>
+</h4>
+<p>For each natural number <span class="process-math">\(m\text{,}\)</span> if <span class="process-math">\(A \subseteq \mathbb{N}_m\text{,}\)</span> then <span class="process-math">\(A\)</span> is a finite set and <span class="process-math">\(\text{ card} \left( A \right) \leq m\text{.}\)</span></p></article><article class="proof"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4>
+<p>We will use a proof using induction on <span class="process-math">\(m\text{.}\)</span> For each <span class="process-math">\(m \in \mathbb{N}\text{,}\)</span> let <span class="process-math">\(P( m )\)</span> be, “If <span class="process-math">\(A \subseteq \mathbb{N}_m\text{,}\)</span> then <span class="process-math">\(A\)</span> is finite and <span class="process-math">\(\text{ card} ( A ) \leq m\text{.}\)</span>”</p>
+<p>We first prove that <span class="process-math">\(P( 1 )\)</span> is true. If <span class="process-math">\(A \subseteq \mathbb{N}_1\text{,}\)</span> then <span class="process-math">\(A = \emptyset\)</span> or <span class="process-math">\(A = \left\{ 1 \right\}\text{,}\)</span> both of which are finite and have cardinality less than or equal to the cardinality of <span class="process-math">\(\mathbb{N}_1\text{.}\)</span> This proves that <span class="process-math">\(P( 1 )\)</span> is true.</p>
+<p>For the inductive step, let <span class="process-math">\(k \in \mathbb{N}\)</span> and assume that <span class="process-math">\(P( k )\)</span> is true. That is, assume that if <span class="process-math">\(B \subseteq \mathbb{N}_k\text{,}\)</span> then <span class="process-math">\(B\)</span> is a finite set and <span class="process-math">\(\text{ card} ( B ) \leq k\text{.}\)</span> We need to prove that <span class="process-math">\(P( k+1 )\)</span> is true.</p>
+<p>So assume that <span class="process-math">\(A\)</span> is a subset of <span class="process-math">\(\mathbb{N}_{k+1}\text{.}\)</span> Then <span class="process-math">\(A - \left\{ k+1 \right\}\)</span> is a subset of <span class="process-math">\(\mathbb{N}_k\text{.}\)</span> Since <span class="process-math">\(P( k )\)</span> is true, <span class="process-math">\(A - \left\{ k+1 \right\}\)</span> is a finite set and</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\text{ card}  \!\left( A - \left\{ k+1 \right\} \right) \leq k\text{.}
+\end{equation*}
+</div>
+<p>There are two cases to consider: Either <span class="process-math">\(k+1 \in A\)</span> or <span class="process-math">\(k+1 \not \in A\text{.}\)</span></p>
+<p>If <span class="process-math">\(k+1 \not \in A\text{,}\)</span> then <span class="process-math">\(A = A - \left\{ k+1 \right\}\text{.}\)</span> Hence, <span class="process-math">\(A\)</span> is finite and</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+\text{ card}  ( A ) \leq k \lt  k+1\text{.}
+\end{equation*}
+</div>
+<p>If <span class="process-math">\(k+1 \in A\text{,}\)</span> then <span class="process-math">\(A = ( A - \left\{ k+1 \right\} ) \cup \left\{ k+1 \right\}\text{.}\)</span> Hence, by <a href="" class="xref" data-knowl="./knowl/L_addone.html" title="Lemma 9.4">Lemma 9.4</a>, <span class="process-math">\(A\)</span> is a finite set and</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/L_addone.html">
+\begin{equation*}
+\text{ card}  ( A ) = \text{ card}  \!\left(  A - \left\{ k+1 \right\}  \right) + 1\text{.}
+\end{equation*}
+</div>
+<p>Since <span class="process-math">\(\text{ card} \!\left( A - \left\{ k+1 \right\} \right) \leq k\text{,}\)</span> we can conclude that <span class="process-math">\(\text{ card} ( A ) \leq k + 1\text{.}\)</span></p>
+<p>This means that we have proved the inductive step. Hence, by mathematical induction, for each <span class="process-math">\(m \in \mathbb{N}\text{,}\)</span> if <span class="process-math">\(A \subseteq \mathbb{N}_m\text{,}\)</span> then <span class="process-math">\(A\)</span> is finite and <span class="process-math">\(\text{ card} ( A ) \leq m\text{.}\)</span></p></article><span class="incontext"><a href="S_finitesets.html#L_subsetsofNk" class="internal">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-08-16T14:53:58-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="activity project-like"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">42</span><span class="period">.</span><span class="space"> </span><span class="title">The Inverse of a Relation.</span>
+</h4>
+<div class="introduction">
+<p>In <a href="S_inversefunctions.html" class="internal" title="Section 6.5: Inverse Functions">Section 6.5</a>, we introduced the <em class="emphasis">inverse of a function</em>. If <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are nonempty sets and if <span class="process-math">\(f:A \to B\)</span> is a function, then the inverse of  <span class="process-math">\(f\text{,}\)</span> denoted by  <span class="process-math">\(f^{ - 1}\text{,}\)</span> is defined as</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/S_inversefunctions.html">
+\begin{align*}
+f^{ - 1}  \amp = \left\{ { {\left( {b, a} \right) \in B \times A } 
+\mid f\left( a \right) = b} \right\}\\
+\amp = \left\{ { {\left( {b, a} \right) \in B \times A } \mid \left( {a, b} 
+\right) \in f} \right\}\!\text{.}
+\end{align*}
+</div>
+<p class="continuation">Now that we know about relations, we see that  <span class="process-math">\(f^{ - 1}\)</span>  is always a relation from  <span class="process-math">\(B\)</span>  to <span class="process-math">\(A\text{.}\)</span> The concept of the inverse of a function is actually a special case of the more general concept of the inverse of a relation, which we now define.</p>
+<article class="assemblage assemblage-like"><h5 class="heading"><span class="title">Definition.</span></h5>
+<p> Let <span class="process-math">\(R\)</span> be a relation from the set <span class="process-math">\(A\)</span> to the set <span class="process-math">\(B\text{.}\)</span> The <dfn class="terminology">inverse of <span class="process-math">\(\boldsymbol{R}\)</span></dfn>, written <span class="process-math">\(R^{ - 1}\)</span> and read “<span class="process-math">\(R\)</span> inverse,” is the relation from <span class="process-math">\(B\)</span> to <span class="process-math">\(A\)</span> defined by</p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{align*}
+R^{ - 1} \amp = \left\{ { {\left( {y, x} \right) \in B \times A } \mid 
+\left( {x, y} \right) \in R} \right\}\text{ , or }\\
+R^{ - 1} \amp = \left\{ { {\left( {y, x} \right) \in B \times A } 
+\mid x \mathrel{R} y} \right\}\!\text{.}
+\end{align*}
+</div>
+<p>That is, <span class="process-math">\(R^{ - 1}\)</span> is the subset of <span class="process-math">\(B \times A\)</span> consisting of all ordered pairs <span class="process-math">\(\left( {y, x} \right)\)</span> such that <span class="process-math">\(x \mathrel{R} y\text{.}\)</span></p></article><p>For example, let <span class="process-math">\(D\)</span> be the “divides” relation on  <span class="process-math">\(\mathbb{Z}\text{.}\)</span>  See <a href="" class="xref" data-knowl="./knowl/prog_dividesrelation.html" title="Progress Check 7.4: The Divides Relation">Progress Check 7.4</a>. So</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prog_dividesrelation.html">
+\begin{equation*}
+D = \left\{ { {\left( {m, n} \right) \in \mathbb{Z} \times \mathbb{Z} } 
+\mid m\text{  divides  } n} \right\}\!\text{.}
+\end{equation*}
+</div>
+<p class="continuation">This means that we can write <span class="process-math">\(m \mid n\)</span> if and only if <span class="process-math">\(\left( {m, n} \right) 
+\in D\text{.}\)</span> So, in this case,</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prog_dividesrelation.html">
+\begin{align*}
+D^{ - 1}  \amp = \left\{ { {\left( {n, m} \right) \in \mathbb{Z} \times 
+\mathbb{Z} } \mid \left( {m, n} \right) \in D} \right\}\\
+\amp = \left\{ { {\left( {n, m} \right) \in \mathbb{Z} \times \mathbb{Z} } 
+\mid m\text{  divides  } n} \right\}\!\text{.}
+\end{align*}
+</div>
+<p class="continuation">Now, if we would like to focus on the first coordinate instead of the second coordinate in <span class="process-math">\(D^{ - 1}\text{,}\)</span> we know that “<span class="process-math">\(m\)</span>  divides  <span class="process-math">\(n\)</span>” means the same thing as “<span class="process-math">\(n\)</span>  is a multiple of  <span class="process-math">\(m\text{.}\)</span>” Hence,</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/prog_dividesrelation.html">
+\begin{equation*}
+D^{ - 1}  = \left\{ { {\left( {n, m} \right) \in \mathbb{Z} \times \mathbb{Z} } 
+\mid n\text{  is a multiple of  } m} \right\}\!\text{.}
+\end{equation*}
+</div>
+<p>We can say that the inverse of the “divides” relation on  <span class="process-math">\(\mathbb{Z}\)</span>  is the “is a multiple of” relation on  <span class="process-math">\(\mathbb{Z}\text{.}\)</span> <a href="" class="xref" data-knowl="./knowl/T_inverserelations.html" title="Theorem 7.10">Theorem 7.10</a>, which follows, contains some elementary facts about inverse relations.</p>
+<article class="theorem theorem-like"><h5 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.10</span><span class="period">.</span>
+</h5>
+<p>Let <span class="process-math">\(R\)</span> be a relation from the set <span class="process-math">\(A\)</span> to the set <span class="process-math">\(B\text{.}\)</span> Then</p>
+<ul class="disc">
+<li><p>The domain of <span class="process-math">\(R^{ - 1}\)</span> is the range of <span class="process-math">\(R\text{.}\)</span> That is, <span class="process-math">\(\text{ dom} \!\left( {R^{ - 1} } \right) = \text{ range} ( R )\text{.}\)</span></p></li>
+<li><p>The range of <span class="process-math">\(R^{ - 1}\)</span> is the domain of <span class="process-math">\(R\text{.}\)</span> That is, <span class="process-math">\(\text{ range} \!\left( {R^{ - 1} } \right) = \text{ dom} ( R )\text{.}\)</span></p></li>
+<li><p>The inverse of <span class="process-math">\(R^{ - 1}\)</span> is <span class="process-math">\(R\text{.}\)</span> That is, <span class="process-math">\(\left( {R^{ - 1} } \right)^{ - 1} = R\text{.}\)</span></p></li>
+</ul></article><p>To prove the first part of <a href="" class="xref" data-knowl="./knowl/T_inverserelations.html" title="Theorem 7.10">Theorem 7.10</a>, observe that the goal is to prove that two sets are equal,</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/T_inverserelations.html ./knowl/T_inverserelations.html ./knowl/T_inverserelations.html">
+\begin{equation*}
+\text{ dom} \!\left( {R^{ - 1} } \right) = \text{ range} ( R )\text{.}
+\end{equation*}
+</div>
+<p class="continuation">One way to do this is to prove that each is a subset of the other. To prove that <span class="process-math">\(\text{ dom} \!\left( {R^{ - 1} } \right) \subseteq \text{ range} ( R )\text{,}\)</span> we can start by choosing an arbitrary element of <span class="process-math">\(\text{ dom} \!\left( {R^{ - 1} } \right)\text{.}\)</span>  So let <span class="process-math">\(y \in \text{ dom} \!\left( {R^{ - 1} } \right)\text{.}\)</span>  The goal now is to prove that <span class="process-math">\(y~\in~\text{ range} ( R )\text{.}\)</span> What does it mean to say that <span class="process-math">\(y \in \text{ dom} \!\left( {R^{ - 1} } \right)\text{?}\)</span>  It means that there exists an <span class="process-math">\(x \in A\)</span>  such that</p>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/T_inverserelations.html ./knowl/T_inverserelations.html ./knowl/T_inverserelations.html">
+\begin{equation*}
+\left( {y, x} \right) \in R^{ - 1}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Now what does it mean to say that  <span class="process-math">\(( {y, x} ) \in R^{ - 1}\text{?}\)</span> It means that <span class="process-math">\(( {x, y} ) \in R\text{.}\)</span> What does this tell us about <span class="process-math">\(y\text{?}\)</span> Complete the proof of the first part of <a href="" class="xref" data-knowl="./knowl/T_inverserelations.html" title="Theorem 7.10">Theorem 7.10</a>. Then, complete the proofs of the other two parts of <a href="" class="xref" data-knowl="./knowl/T_inverserelations.html" title="Theorem 7.10">Theorem 7.10</a>.</p>
+</div></article><span class="incontext"><a href="S_relations.html#exer_provinginverse" class="internal">in-context</a></span>
+</body>
+</html>
